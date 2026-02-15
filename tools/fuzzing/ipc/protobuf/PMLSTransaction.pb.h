@@ -274,6 +274,13 @@ class Msg_RequestStateDelete final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_RequestStateDelete& default_instance() {
     return *internal_default_instance();
   }
@@ -391,6 +398,13 @@ class Reply_RequestStateDelete final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_RequestStateDelete& default_instance() {
     return *internal_default_instance();
   }
@@ -465,7 +479,11 @@ class Reply_RequestStateDelete final :
   enum : int {
     kAResultFieldNumber = 1,
   };
-  // bool a_result = 1;
+  // required bool a_result = 1;
+  bool has_a_result() const;
+  private:
+  bool _internal_has_a_result() const;
+  public:
   void clear_a_result();
   bool a_result() const;
   void set_a_result(bool value);
@@ -482,8 +500,9 @@ class Reply_RequestStateDelete final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_result_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMLSTransaction_2eproto;
@@ -519,6 +538,13 @@ class Msg_RequestGroupStateDelete final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_RequestGroupStateDelete& default_instance() {
@@ -649,9 +675,7 @@ class Msg_RequestGroupStateDelete final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_groupidentifier_;
-    mutable std::atomic<int> _a_groupidentifier_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
-    mutable std::atomic<int> _a_identifier_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -688,6 +712,13 @@ class Reply_RequestGroupStateDelete final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_RequestGroupStateDelete& default_instance() {
@@ -830,6 +861,13 @@ class Msg_RequestGenerateIdentityKeypair final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_RequestGenerateIdentityKeypair& default_instance() {
     return *internal_default_instance();
   }
@@ -945,6 +983,13 @@ class Reply_RequestGenerateIdentityKeypair final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_RequestGenerateIdentityKeypair& default_instance() {
@@ -1087,6 +1132,13 @@ class Msg_RequestGenerateCredentialBasic final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_RequestGenerateCredentialBasic& default_instance() {
     return *internal_default_instance();
   }
@@ -1192,7 +1244,6 @@ class Msg_RequestGenerateCredentialBasic final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_credname_;
-    mutable std::atomic<int> _a_credname_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1229,6 +1280,13 @@ class Reply_RequestGenerateCredentialBasic final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_RequestGenerateCredentialBasic& default_instance() {
@@ -1371,6 +1429,13 @@ class Msg_RequestGenerateKeyPackage final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_RequestGenerateKeyPackage& default_instance() {
     return *internal_default_instance();
   }
@@ -1499,9 +1564,7 @@ class Msg_RequestGenerateKeyPackage final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identity_;
-    mutable std::atomic<int> _a_identity_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_credential_;
-    mutable std::atomic<int> _a_credential_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1538,6 +1601,13 @@ class Reply_RequestGenerateKeyPackage final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_RequestGenerateKeyPackage& default_instance() {
@@ -1678,6 +1748,13 @@ class Msg_RequestGroupCreate final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_RequestGroupCreate& default_instance() {
@@ -1831,11 +1908,8 @@ class Msg_RequestGroupCreate final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
-    mutable std::atomic<int> _a_identifier_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_credential_;
-    mutable std::atomic<int> _a_credential_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_inoptgroupidentifier_;
-    mutable std::atomic<int> _a_inoptgroupidentifier_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1872,6 +1946,13 @@ class Reply_RequestGroupCreate final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_RequestGroupCreate& default_instance() {
@@ -2014,6 +2095,13 @@ class Msg_RequestGroupJoin final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_RequestGroupJoin& default_instance() {
     return *internal_default_instance();
   }
@@ -2142,9 +2230,7 @@ class Msg_RequestGroupJoin final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
-    mutable std::atomic<int> _a_identifier_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_welcome_;
-    mutable std::atomic<int> _a_welcome_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2181,6 +2267,13 @@ class Reply_RequestGroupJoin final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_RequestGroupJoin& default_instance() {
@@ -2321,6 +2414,13 @@ class Msg_RequestGroupAdd final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_RequestGroupAdd& default_instance() {
@@ -2474,11 +2574,8 @@ class Msg_RequestGroupAdd final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_groupidentifier_;
-    mutable std::atomic<int> _a_groupidentifier_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
-    mutable std::atomic<int> _a_identifier_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_keypackage_;
-    mutable std::atomic<int> _a_keypackage_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2515,6 +2612,13 @@ class Reply_RequestGroupAdd final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_RequestGroupAdd& default_instance() {
@@ -2655,6 +2759,13 @@ class Msg_RequestGroupProposeAdd final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_RequestGroupProposeAdd& default_instance() {
@@ -2808,11 +2919,8 @@ class Msg_RequestGroupProposeAdd final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_groupidentifier_;
-    mutable std::atomic<int> _a_groupidentifier_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
-    mutable std::atomic<int> _a_identifier_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_keypackage_;
-    mutable std::atomic<int> _a_keypackage_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2849,6 +2957,13 @@ class Reply_RequestGroupProposeAdd final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_RequestGroupProposeAdd& default_instance() {
@@ -2989,6 +3104,13 @@ class Msg_RequestGroupRemove final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_RequestGroupRemove& default_instance() {
@@ -3142,11 +3264,8 @@ class Msg_RequestGroupRemove final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_groupidentifier_;
-    mutable std::atomic<int> _a_groupidentifier_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
-    mutable std::atomic<int> _a_identifier_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_remidentifier_;
-    mutable std::atomic<int> _a_remidentifier_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -3183,6 +3302,13 @@ class Reply_RequestGroupRemove final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_RequestGroupRemove& default_instance() {
@@ -3323,6 +3449,13 @@ class Msg_RequestGroupProposeRemove final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_RequestGroupProposeRemove& default_instance() {
@@ -3476,11 +3609,8 @@ class Msg_RequestGroupProposeRemove final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_groupidentifier_;
-    mutable std::atomic<int> _a_groupidentifier_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
-    mutable std::atomic<int> _a_identifier_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_remidentifier_;
-    mutable std::atomic<int> _a_remidentifier_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -3517,6 +3647,13 @@ class Reply_RequestGroupProposeRemove final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_RequestGroupProposeRemove& default_instance() {
@@ -3659,6 +3796,13 @@ class Msg_RequestGroupClose final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_RequestGroupClose& default_instance() {
     return *internal_default_instance();
   }
@@ -3787,9 +3931,7 @@ class Msg_RequestGroupClose final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_groupidentifier_;
-    mutable std::atomic<int> _a_groupidentifier_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
-    mutable std::atomic<int> _a_identifier_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -3826,6 +3968,13 @@ class Reply_RequestGroupClose final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_RequestGroupClose& default_instance() {
@@ -3968,6 +4117,13 @@ class Msg_RequestGroupDetails final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_RequestGroupDetails& default_instance() {
     return *internal_default_instance();
   }
@@ -4096,9 +4252,7 @@ class Msg_RequestGroupDetails final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_groupidentifier_;
-    mutable std::atomic<int> _a_groupidentifier_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
-    mutable std::atomic<int> _a_identifier_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -4135,6 +4289,13 @@ class Reply_RequestGroupDetails final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_RequestGroupDetails& default_instance() {
@@ -4275,6 +4436,13 @@ class Msg_RequestSend final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_RequestSend& default_instance() {
@@ -4428,11 +4596,8 @@ class Msg_RequestSend final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_groupidentifier_;
-    mutable std::atomic<int> _a_groupidentifier_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
-    mutable std::atomic<int> _a_identifier_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_message_;
-    mutable std::atomic<int> _a_message_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -4469,6 +4634,13 @@ class Reply_RequestSend final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_RequestSend& default_instance() {
@@ -4611,6 +4783,13 @@ class Msg_RequestReceive final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_RequestReceive& default_instance() {
     return *internal_default_instance();
   }
@@ -4739,9 +4918,7 @@ class Msg_RequestReceive final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
-    mutable std::atomic<int> _a_identifier_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_message_;
-    mutable std::atomic<int> _a_message_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -4778,6 +4955,13 @@ class Reply_RequestReceive final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_RequestReceive& default_instance() {
@@ -4854,7 +5038,11 @@ class Reply_RequestReceive final :
   enum : int {
     kAResultFieldNumber = 1,
   };
-  // bytes a_result = 1;
+  // required bytes a_result = 1;
+  bool has_a_result() const;
+  private:
+  bool _internal_has_a_result() const;
+  public:
   void clear_a_result();
   const std::string& a_result() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4876,8 +5064,9 @@ class Reply_RequestReceive final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_result_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMLSTransaction_2eproto;
@@ -4913,6 +5102,13 @@ class Msg_RequestHasPendingProposals final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_RequestHasPendingProposals& default_instance() {
@@ -5043,9 +5239,7 @@ class Msg_RequestHasPendingProposals final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_groupidentifier_;
-    mutable std::atomic<int> _a_groupidentifier_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
-    mutable std::atomic<int> _a_identifier_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -5082,6 +5276,13 @@ class Reply_RequestHasPendingProposals final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_RequestHasPendingProposals& default_instance() {
@@ -5158,7 +5359,11 @@ class Reply_RequestHasPendingProposals final :
   enum : int {
     kAResultFieldNumber = 1,
   };
-  // bool a_result = 1;
+  // required bool a_result = 1;
+  bool has_a_result() const;
+  private:
+  bool _internal_has_a_result() const;
+  public:
   void clear_a_result();
   bool a_result() const;
   void set_a_result(bool value);
@@ -5175,8 +5380,9 @@ class Reply_RequestHasPendingProposals final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_result_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMLSTransaction_2eproto;
@@ -5212,6 +5418,13 @@ class Msg_RequestClearPendingProposals final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_RequestClearPendingProposals& default_instance() {
@@ -5342,9 +5555,7 @@ class Msg_RequestClearPendingProposals final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_groupidentifier_;
-    mutable std::atomic<int> _a_groupidentifier_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
-    mutable std::atomic<int> _a_identifier_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -5381,6 +5592,13 @@ class Reply_RequestClearPendingProposals final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_RequestClearPendingProposals& default_instance() {
@@ -5457,7 +5675,11 @@ class Reply_RequestClearPendingProposals final :
   enum : int {
     kAResultFieldNumber = 1,
   };
-  // bool a_result = 1;
+  // required bool a_result = 1;
+  bool has_a_result() const;
+  private:
+  bool _internal_has_a_result() const;
+  public:
   void clear_a_result();
   bool a_result() const;
   void set_a_result(bool value);
@@ -5474,8 +5696,9 @@ class Reply_RequestClearPendingProposals final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_result_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMLSTransaction_2eproto;
@@ -5511,6 +5734,13 @@ class Msg_RequestHasPendingCommit final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_RequestHasPendingCommit& default_instance() {
@@ -5641,9 +5871,7 @@ class Msg_RequestHasPendingCommit final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_groupidentifier_;
-    mutable std::atomic<int> _a_groupidentifier_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
-    mutable std::atomic<int> _a_identifier_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -5680,6 +5908,13 @@ class Reply_RequestHasPendingCommit final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_RequestHasPendingCommit& default_instance() {
@@ -5756,7 +5991,11 @@ class Reply_RequestHasPendingCommit final :
   enum : int {
     kAResultFieldNumber = 1,
   };
-  // bool a_result = 1;
+  // required bool a_result = 1;
+  bool has_a_result() const;
+  private:
+  bool _internal_has_a_result() const;
+  public:
   void clear_a_result();
   bool a_result() const;
   void set_a_result(bool value);
@@ -5773,8 +6012,9 @@ class Reply_RequestHasPendingCommit final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_result_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMLSTransaction_2eproto;
@@ -5810,6 +6050,13 @@ class Msg_RequestClearPendingCommit final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_RequestClearPendingCommit& default_instance() {
@@ -5940,9 +6187,7 @@ class Msg_RequestClearPendingCommit final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_groupidentifier_;
-    mutable std::atomic<int> _a_groupidentifier_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
-    mutable std::atomic<int> _a_identifier_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -5979,6 +6224,13 @@ class Reply_RequestClearPendingCommit final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_RequestClearPendingCommit& default_instance() {
@@ -6055,7 +6307,11 @@ class Reply_RequestClearPendingCommit final :
   enum : int {
     kAResultFieldNumber = 1,
   };
-  // bool a_result = 1;
+  // required bool a_result = 1;
+  bool has_a_result() const;
+  private:
+  bool _internal_has_a_result() const;
+  public:
   void clear_a_result();
   bool a_result() const;
   void set_a_result(bool value);
@@ -6072,8 +6328,9 @@ class Reply_RequestClearPendingCommit final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_result_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMLSTransaction_2eproto;
@@ -6109,6 +6366,13 @@ class Msg_RequestApplyPendingCommit final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_RequestApplyPendingCommit& default_instance() {
@@ -6239,9 +6503,7 @@ class Msg_RequestApplyPendingCommit final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_groupidentifier_;
-    mutable std::atomic<int> _a_groupidentifier_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
-    mutable std::atomic<int> _a_identifier_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -6278,6 +6540,13 @@ class Reply_RequestApplyPendingCommit final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_RequestApplyPendingCommit& default_instance() {
@@ -6354,7 +6623,11 @@ class Reply_RequestApplyPendingCommit final :
   enum : int {
     kAResultFieldNumber = 1,
   };
-  // bytes a_result = 1;
+  // required bytes a_result = 1;
+  bool has_a_result() const;
+  private:
+  bool _internal_has_a_result() const;
+  public:
   void clear_a_result();
   const std::string& a_result() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -6376,8 +6649,9 @@ class Reply_RequestApplyPendingCommit final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_result_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMLSTransaction_2eproto;
@@ -6413,6 +6687,13 @@ class Msg_RequestExportSecret final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_RequestExportSecret& default_instance() {
@@ -6581,7 +6862,11 @@ class Msg_RequestExportSecret final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_content();
 
-  // uint64 a_len = 5;
+  // required uint64 a_len = 5;
+  bool has_a_len() const;
+  private:
+  bool _internal_has_a_len() const;
+  public:
   void clear_a_len();
   uint64_t a_len() const;
   void set_a_len(uint64_t value);
@@ -6598,16 +6883,13 @@ class Msg_RequestExportSecret final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_groupidentifier_;
-    mutable std::atomic<int> _a_groupidentifier_cached_byte_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
-    mutable std::atomic<int> _a_identifier_cached_byte_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_label_;
-    mutable std::atomic<int> _a_label_cached_byte_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_content_;
-    mutable std::atomic<int> _a_content_cached_byte_size_;
-    uint64_t a_len_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_groupidentifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_label_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_content_;
+    uint64_t a_len_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMLSTransaction_2eproto;
@@ -6643,6 +6925,13 @@ class Reply_RequestExportSecret final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_RequestExportSecret& default_instance() {
@@ -6785,6 +7074,13 @@ class Msg_RequestGetGroupIdentifier final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_RequestGetGroupIdentifier& default_instance() {
     return *internal_default_instance();
   }
@@ -6890,7 +7186,6 @@ class Msg_RequestGetGroupIdentifier final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_message_;
-    mutable std::atomic<int> _a_message_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -6927,6 +7222,13 @@ class Reply_RequestGetGroupIdentifier final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_RequestGetGroupIdentifier& default_instance() {
@@ -7069,6 +7371,13 @@ class Msg_RequestGetGroupEpoch final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_RequestGetGroupEpoch& default_instance() {
     return *internal_default_instance();
   }
@@ -7174,7 +7483,6 @@ class Msg_RequestGetGroupEpoch final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_message_;
-    mutable std::atomic<int> _a_message_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -7211,6 +7519,13 @@ class Reply_RequestGetGroupEpoch final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_RequestGetGroupEpoch& default_instance() {
@@ -7335,9 +7650,17 @@ class Reply_RequestGetGroupEpoch final :
 
 // Reply_RequestStateDelete
 
-// bool a_result = 1;
+// required bool a_result = 1;
+inline bool Reply_RequestStateDelete::_internal_has_a_result() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_RequestStateDelete::has_a_result() const {
+  return _internal_has_a_result();
+}
 inline void Reply_RequestStateDelete::clear_a_result() {
   _impl_.a_result_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Reply_RequestStateDelete::_internal_a_result() const {
   return _impl_.a_result_;
@@ -7347,7 +7670,7 @@ inline bool Reply_RequestStateDelete::a_result() const {
   return _internal_a_result();
 }
 inline void Reply_RequestStateDelete::_internal_set_a_result(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_result_ = value;
 }
 inline void Reply_RequestStateDelete::set_a_result(bool value) {
@@ -9922,9 +10245,17 @@ Msg_RequestReceive::mutable_a_message() {
 
 // Reply_RequestReceive
 
-// bytes a_result = 1;
+// required bytes a_result = 1;
+inline bool Reply_RequestReceive::_internal_has_a_result() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_RequestReceive::has_a_result() const {
+  return _internal_has_a_result();
+}
 inline void Reply_RequestReceive::clear_a_result() {
   _impl_.a_result_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_RequestReceive::a_result() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestReceive.a_result)
@@ -9933,7 +10264,7 @@ inline const std::string& Reply_RequestReceive::a_result() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_RequestReceive::set_a_result(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_result_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestReceive.a_result)
 }
@@ -9946,22 +10277,32 @@ inline const std::string& Reply_RequestReceive::_internal_a_result() const {
   return _impl_.a_result_.Get();
 }
 inline void Reply_RequestReceive::_internal_set_a_result(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_result_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_RequestReceive::_internal_mutable_a_result() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_result_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_RequestReceive::release_a_result() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestReceive.a_result)
-  return _impl_.a_result_.Release();
+  if (!_internal_has_a_result()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_result_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_result_.IsDefault()) {
+    _impl_.a_result_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_RequestReceive::set_allocated_a_result(std::string* a_result) {
   if (a_result != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_result_.SetAllocated(a_result, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -10074,9 +10415,17 @@ Msg_RequestHasPendingProposals::mutable_a_identifier() {
 
 // Reply_RequestHasPendingProposals
 
-// bool a_result = 1;
+// required bool a_result = 1;
+inline bool Reply_RequestHasPendingProposals::_internal_has_a_result() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_RequestHasPendingProposals::has_a_result() const {
+  return _internal_has_a_result();
+}
 inline void Reply_RequestHasPendingProposals::clear_a_result() {
   _impl_.a_result_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Reply_RequestHasPendingProposals::_internal_a_result() const {
   return _impl_.a_result_;
@@ -10086,7 +10435,7 @@ inline bool Reply_RequestHasPendingProposals::a_result() const {
   return _internal_a_result();
 }
 inline void Reply_RequestHasPendingProposals::_internal_set_a_result(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_result_ = value;
 }
 inline void Reply_RequestHasPendingProposals::set_a_result(bool value) {
@@ -10196,9 +10545,17 @@ Msg_RequestClearPendingProposals::mutable_a_identifier() {
 
 // Reply_RequestClearPendingProposals
 
-// bool a_result = 1;
+// required bool a_result = 1;
+inline bool Reply_RequestClearPendingProposals::_internal_has_a_result() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_RequestClearPendingProposals::has_a_result() const {
+  return _internal_has_a_result();
+}
 inline void Reply_RequestClearPendingProposals::clear_a_result() {
   _impl_.a_result_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Reply_RequestClearPendingProposals::_internal_a_result() const {
   return _impl_.a_result_;
@@ -10208,7 +10565,7 @@ inline bool Reply_RequestClearPendingProposals::a_result() const {
   return _internal_a_result();
 }
 inline void Reply_RequestClearPendingProposals::_internal_set_a_result(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_result_ = value;
 }
 inline void Reply_RequestClearPendingProposals::set_a_result(bool value) {
@@ -10318,9 +10675,17 @@ Msg_RequestHasPendingCommit::mutable_a_identifier() {
 
 // Reply_RequestHasPendingCommit
 
-// bool a_result = 1;
+// required bool a_result = 1;
+inline bool Reply_RequestHasPendingCommit::_internal_has_a_result() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_RequestHasPendingCommit::has_a_result() const {
+  return _internal_has_a_result();
+}
 inline void Reply_RequestHasPendingCommit::clear_a_result() {
   _impl_.a_result_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Reply_RequestHasPendingCommit::_internal_a_result() const {
   return _impl_.a_result_;
@@ -10330,7 +10695,7 @@ inline bool Reply_RequestHasPendingCommit::a_result() const {
   return _internal_a_result();
 }
 inline void Reply_RequestHasPendingCommit::_internal_set_a_result(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_result_ = value;
 }
 inline void Reply_RequestHasPendingCommit::set_a_result(bool value) {
@@ -10440,9 +10805,17 @@ Msg_RequestClearPendingCommit::mutable_a_identifier() {
 
 // Reply_RequestClearPendingCommit
 
-// bool a_result = 1;
+// required bool a_result = 1;
+inline bool Reply_RequestClearPendingCommit::_internal_has_a_result() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_RequestClearPendingCommit::has_a_result() const {
+  return _internal_has_a_result();
+}
 inline void Reply_RequestClearPendingCommit::clear_a_result() {
   _impl_.a_result_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Reply_RequestClearPendingCommit::_internal_a_result() const {
   return _impl_.a_result_;
@@ -10452,7 +10825,7 @@ inline bool Reply_RequestClearPendingCommit::a_result() const {
   return _internal_a_result();
 }
 inline void Reply_RequestClearPendingCommit::_internal_set_a_result(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_result_ = value;
 }
 inline void Reply_RequestClearPendingCommit::set_a_result(bool value) {
@@ -10562,9 +10935,17 @@ Msg_RequestApplyPendingCommit::mutable_a_identifier() {
 
 // Reply_RequestApplyPendingCommit
 
-// bytes a_result = 1;
+// required bytes a_result = 1;
+inline bool Reply_RequestApplyPendingCommit::_internal_has_a_result() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_RequestApplyPendingCommit::has_a_result() const {
+  return _internal_has_a_result();
+}
 inline void Reply_RequestApplyPendingCommit::clear_a_result() {
   _impl_.a_result_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_RequestApplyPendingCommit::a_result() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestApplyPendingCommit.a_result)
@@ -10573,7 +10954,7 @@ inline const std::string& Reply_RequestApplyPendingCommit::a_result() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_RequestApplyPendingCommit::set_a_result(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_result_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestApplyPendingCommit.a_result)
 }
@@ -10586,22 +10967,32 @@ inline const std::string& Reply_RequestApplyPendingCommit::_internal_a_result() 
   return _impl_.a_result_.Get();
 }
 inline void Reply_RequestApplyPendingCommit::_internal_set_a_result(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_result_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_RequestApplyPendingCommit::_internal_mutable_a_result() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_result_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_RequestApplyPendingCommit::release_a_result() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestApplyPendingCommit.a_result)
-  return _impl_.a_result_.Release();
+  if (!_internal_has_a_result()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_result_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_result_.IsDefault()) {
+    _impl_.a_result_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_RequestApplyPendingCommit::set_allocated_a_result(std::string* a_result) {
   if (a_result != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_result_.SetAllocated(a_result, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -10804,9 +11195,17 @@ Msg_RequestExportSecret::mutable_a_content() {
   return _internal_mutable_a_content();
 }
 
-// uint64 a_len = 5;
+// required uint64 a_len = 5;
+inline bool Msg_RequestExportSecret::_internal_has_a_len() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_RequestExportSecret::has_a_len() const {
+  return _internal_has_a_len();
+}
 inline void Msg_RequestExportSecret::clear_a_len() {
   _impl_.a_len_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_RequestExportSecret::_internal_a_len() const {
   return _impl_.a_len_;
@@ -10816,7 +11215,7 @@ inline uint64_t Msg_RequestExportSecret::a_len() const {
   return _internal_a_len();
 }
 inline void Msg_RequestExportSecret::_internal_set_a_len(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_len_ = value;
 }
 inline void Msg_RequestExportSecret::set_a_len(uint64_t value) {

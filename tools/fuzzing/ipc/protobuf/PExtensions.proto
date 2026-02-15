@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/toolkit/components/extensions/PExtensions.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.extensions.PExtensions;
@@ -24,34 +24,34 @@ message Reply___delete__ {
 }
 
 message Msg_DocumentChange {
-  bytes a_bc = 1;
-  protobuf.mozilla.extensions.FrameTransitionData a_transitionData = 2;
+  required bytes a_bc = 1;
+  required protobuf.mozilla.extensions.FrameTransitionData a_transitionData = 2;
   optional bytes a_location = 3;
 }
 
 message Msg_HistoryChange {
-  bytes a_bc = 1;
-  protobuf.mozilla.extensions.FrameTransitionData a_transitionData = 2;
+  required bytes a_bc = 1;
+  required protobuf.mozilla.extensions.FrameTransitionData a_transitionData = 2;
   optional bytes a_location = 3;
-  bool a_isHistoryStateUpdated = 4;
-  bool a_isReferenceFragmentUpdated = 5;
+  required bool a_isHistoryStateUpdated = 4;
+  required bool a_isReferenceFragmentUpdated = 5;
 }
 
 message Msg_StateChange {
-  bytes a_bc = 1;
+  required bytes a_bc = 1;
   optional bytes a_requestURI = 2;
-  bytes a_status = 3;
-  uint32 a_stateFlags = 4;
+  required bytes a_status = 3;
+  required uint32 a_stateFlags = 4;
 }
 
 message Msg_CreatedNavigationTarget {
-  bytes a_bc = 1;
-  bytes a_sourceBC = 2;
-  string a_url = 3;
+  required bytes a_bc = 1;
+  required bytes a_sourceBC = 2;
+  required string a_url = 3;
 }
 
 message Msg_DOMContentLoaded {
-  bytes a_bc = 1;
+  required bytes a_bc = 1;
   optional bytes a_documentURI = 2;
 }
 

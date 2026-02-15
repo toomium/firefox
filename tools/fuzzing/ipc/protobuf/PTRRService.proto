@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/netwerk/dns/PTRRService.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.net.PTRRService;
@@ -18,14 +18,14 @@ import "PSMIPCTypes.proto";
 
 // Message declarations
 message Msg_NotifyNetworkConnectivityServiceObservers {
-  string a_aTopic = 1;
+  required string a_aTopic = 1;
 }
 
 message Msg_InitTRRConnectionInfo {
 }
 
 message Msg_SetConfirmationState {
-  uint32 a_aNewState = 1;
+  required uint32 a_aNewState = 1;
 }
 
 message Msg___delete__ {
@@ -39,15 +39,15 @@ message Msg_UpdatePlatformDNSInformation {
 }
 
 message Msg_UpdateParentalControlEnabled {
-  bool a_aEnabled = 1;
+  required bool a_aEnabled = 1;
 }
 
 message Msg_ClearDNSCache {
-  bool a_aTrrToo = 1;
+  required bool a_aTrrToo = 1;
 }
 
 message Msg_SetDetectedTrrURI {
-  string a_aURI = 1;
+  required string a_aURI = 1;
 }
 
 message Msg_SetDefaultTRRConnectionInfo {

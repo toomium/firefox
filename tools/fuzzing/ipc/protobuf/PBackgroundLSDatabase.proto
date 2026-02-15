@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/localstorage/PBackgroundLSDatabase.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.PBackgroundLSDatabase;
@@ -21,15 +21,15 @@ message Msg_AllowToClose {
 }
 
 message Msg_PBackgroundLSSnapshotConstructor {
-  sint64 a_actorid = 1;
-  string a_documentURI = 2;
-  string a_key = 3;
-  bool a_increasePeakUsage = 4;
-  sint64 a_minSize = 5;
+  required sint64 a_actorid = 1;
+  required string a_documentURI = 2;
+  required string a_key = 3;
+  required bool a_increasePeakUsage = 4;
+  required sint64 a_minSize = 5;
 }
 
 message Reply_PBackgroundLSSnapshotConstructor {
-  protobuf.mozilla.dom.LSSnapshotInitInfo a_initInfo = 1;
+  required protobuf.mozilla.dom.LSSnapshotInitInfo a_initInfo = 1;
 }
 
 message Msg_RequestAllowToClose {

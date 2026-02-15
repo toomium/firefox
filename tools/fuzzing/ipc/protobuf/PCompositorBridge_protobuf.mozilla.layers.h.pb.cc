@@ -22,7 +22,9 @@ namespace mozilla {
 namespace layers {
 PROTOBUF_CONSTEXPR FrameStats::FrameStats(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_compositestart_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_renderstart_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_compositeend_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
@@ -34,8 +36,7 @@ PROTOBUF_CONSTEXPR FrameStats::FrameStats(
   , /*decltype(_impl_.a_resourceuploadtime_)*/0
   , /*decltype(_impl_.a_gpucacheuploadtime_)*/0
   , /*decltype(_impl_.a_contentframetime_)*/0
-  , /*decltype(_impl_.a_skippedcomposites_)*/0u
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_skippedcomposites_)*/0u} {}
 struct FrameStatsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FrameStatsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -56,6 +57,49 @@ namespace layers {
 
 class FrameStats::_Internal {
  public:
+  using HasBits = decltype(std::declval<FrameStats>()._impl_._has_bits_);
+  static void set_has_a_id(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_compositestart(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_renderstart(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_a_compositeend(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_a_contentframetime(HasBits* has_bits) {
+    (*has_bits)[0] |= 2048u;
+  }
+  static void set_has_a_resourceuploadtime(HasBits* has_bits) {
+    (*has_bits)[0] |= 512u;
+  }
+  static void set_has_a_gpucacheuploadtime(HasBits* has_bits) {
+    (*has_bits)[0] |= 1024u;
+  }
+  static void set_has_a_transactionstart(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static void set_has_a_refreshstart(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
+  }
+  static void set_has_a_fwdtime(HasBits* has_bits) {
+    (*has_bits)[0] |= 64u;
+  }
+  static void set_has_a_scenebuilttime(HasBits* has_bits) {
+    (*has_bits)[0] |= 128u;
+  }
+  static void set_has_a_skippedcomposites(HasBits* has_bits) {
+    (*has_bits)[0] |= 4096u;
+  }
+  static void set_has_a_url(HasBits* has_bits) {
+    (*has_bits)[0] |= 256u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00001fff) ^ 0x00001fff) != 0;
+  }
 };
 
 FrameStats::FrameStats(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -68,7 +112,9 @@ FrameStats::FrameStats(const FrameStats& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   FrameStats* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_id_){}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_id_){}
     , decltype(_impl_.a_compositestart_){}
     , decltype(_impl_.a_renderstart_){}
     , decltype(_impl_.a_compositeend_){}
@@ -80,15 +126,14 @@ FrameStats::FrameStats(const FrameStats& from)
     , decltype(_impl_.a_resourceuploadtime_){}
     , decltype(_impl_.a_gpucacheuploadtime_){}
     , decltype(_impl_.a_contentframetime_){}
-    , decltype(_impl_.a_skippedcomposites_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_skippedcomposites_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_id_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_id_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_id().empty()) {
+  if (from._internal_has_a_id()) {
     _this->_impl_.a_id_.Set(from._internal_a_id(), 
       _this->GetArenaForAllocation());
   }
@@ -96,7 +141,7 @@ FrameStats::FrameStats(const FrameStats& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_compositestart_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_compositestart().empty()) {
+  if (from._internal_has_a_compositestart()) {
     _this->_impl_.a_compositestart_.Set(from._internal_a_compositestart(), 
       _this->GetArenaForAllocation());
   }
@@ -104,7 +149,7 @@ FrameStats::FrameStats(const FrameStats& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_renderstart_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_renderstart().empty()) {
+  if (from._internal_has_a_renderstart()) {
     _this->_impl_.a_renderstart_.Set(from._internal_a_renderstart(), 
       _this->GetArenaForAllocation());
   }
@@ -112,7 +157,7 @@ FrameStats::FrameStats(const FrameStats& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_compositeend_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_compositeend().empty()) {
+  if (from._internal_has_a_compositeend()) {
     _this->_impl_.a_compositeend_.Set(from._internal_a_compositeend(), 
       _this->GetArenaForAllocation());
   }
@@ -120,7 +165,7 @@ FrameStats::FrameStats(const FrameStats& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_transactionstart_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_transactionstart().empty()) {
+  if (from._internal_has_a_transactionstart()) {
     _this->_impl_.a_transactionstart_.Set(from._internal_a_transactionstart(), 
       _this->GetArenaForAllocation());
   }
@@ -128,7 +173,7 @@ FrameStats::FrameStats(const FrameStats& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_refreshstart_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_refreshstart().empty()) {
+  if (from._internal_has_a_refreshstart()) {
     _this->_impl_.a_refreshstart_.Set(from._internal_a_refreshstart(), 
       _this->GetArenaForAllocation());
   }
@@ -136,7 +181,7 @@ FrameStats::FrameStats(const FrameStats& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_fwdtime_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_fwdtime().empty()) {
+  if (from._internal_has_a_fwdtime()) {
     _this->_impl_.a_fwdtime_.Set(from._internal_a_fwdtime(), 
       _this->GetArenaForAllocation());
   }
@@ -144,7 +189,7 @@ FrameStats::FrameStats(const FrameStats& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_scenebuilttime_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_scenebuilttime().empty()) {
+  if (from._internal_has_a_scenebuilttime()) {
     _this->_impl_.a_scenebuilttime_.Set(from._internal_a_scenebuilttime(), 
       _this->GetArenaForAllocation());
   }
@@ -152,7 +197,7 @@ FrameStats::FrameStats(const FrameStats& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_url_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_url().empty()) {
+  if (from._internal_has_a_url()) {
     _this->_impl_.a_url_.Set(from._internal_a_url(), 
       _this->GetArenaForAllocation());
   }
@@ -167,7 +212,9 @@ inline void FrameStats::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_id_){}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_id_){}
     , decltype(_impl_.a_compositestart_){}
     , decltype(_impl_.a_renderstart_){}
     , decltype(_impl_.a_compositeend_){}
@@ -180,7 +227,6 @@ inline void FrameStats::SharedCtor(
     , decltype(_impl_.a_gpucacheuploadtime_){0}
     , decltype(_impl_.a_contentframetime_){0}
     , decltype(_impl_.a_skippedcomposites_){0u}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_id_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -252,28 +298,53 @@ void FrameStats::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_id_.ClearToEmpty();
-  _impl_.a_compositestart_.ClearToEmpty();
-  _impl_.a_renderstart_.ClearToEmpty();
-  _impl_.a_compositeend_.ClearToEmpty();
-  _impl_.a_transactionstart_.ClearToEmpty();
-  _impl_.a_refreshstart_.ClearToEmpty();
-  _impl_.a_fwdtime_.ClearToEmpty();
-  _impl_.a_scenebuilttime_.ClearToEmpty();
-  _impl_.a_url_.ClearToEmpty();
-  ::memset(&_impl_.a_resourceuploadtime_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.a_skippedcomposites_) -
-      reinterpret_cast<char*>(&_impl_.a_resourceuploadtime_)) + sizeof(_impl_.a_skippedcomposites_));
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x000000ffu) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_id_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_compositestart_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _impl_.a_renderstart_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _impl_.a_compositeend_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _impl_.a_transactionstart_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _impl_.a_refreshstart_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000040u) {
+      _impl_.a_fwdtime_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000080u) {
+      _impl_.a_scenebuilttime_.ClearNonDefaultToEmpty();
+    }
+  }
+  if (cached_has_bits & 0x00000100u) {
+    _impl_.a_url_.ClearNonDefaultToEmpty();
+  }
+  if (cached_has_bits & 0x00001e00u) {
+    ::memset(&_impl_.a_resourceuploadtime_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_skippedcomposites_) -
+        reinterpret_cast<char*>(&_impl_.a_resourceuploadtime_)) + sizeof(_impl_.a_skippedcomposites_));
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* FrameStats::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_id = 1;
+      // required bytes a_id = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_id();
@@ -282,7 +353,7 @@ const char* FrameStats::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // bytes a_compositeStart = 2;
+      // required bytes a_compositeStart = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_compositestart();
@@ -291,7 +362,7 @@ const char* FrameStats::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // bytes a_renderStart = 3;
+      // required bytes a_renderStart = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_renderstart();
@@ -300,7 +371,7 @@ const char* FrameStats::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // bytes a_compositeEnd = 4;
+      // required bytes a_compositeEnd = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_compositeend();
@@ -309,31 +380,34 @@ const char* FrameStats::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // sint32 a_contentFrameTime = 5;
+      // required sint32 a_contentFrameTime = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          _Internal::set_has_a_contentframetime(&has_bits);
           _impl_.a_contentframetime_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // double a_resourceUploadTime = 6;
+      // required double a_resourceUploadTime = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 49)) {
+          _Internal::set_has_a_resourceuploadtime(&has_bits);
           _impl_.a_resourceuploadtime_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
-      // double a_gpuCacheUploadTime = 7;
+      // required double a_gpuCacheUploadTime = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 57)) {
+          _Internal::set_has_a_gpucacheuploadtime(&has_bits);
           _impl_.a_gpucacheuploadtime_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
-      // bytes a_transactionStart = 8;
+      // required bytes a_transactionStart = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
           auto str = _internal_mutable_a_transactionstart();
@@ -342,7 +416,7 @@ const char* FrameStats::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // bytes a_refreshStart = 9;
+      // required bytes a_refreshStart = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
           auto str = _internal_mutable_a_refreshstart();
@@ -351,7 +425,7 @@ const char* FrameStats::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // bytes a_fwdTime = 10;
+      // required bytes a_fwdTime = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 82)) {
           auto str = _internal_mutable_a_fwdtime();
@@ -360,7 +434,7 @@ const char* FrameStats::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // bytes a_sceneBuiltTime = 11;
+      // required bytes a_sceneBuiltTime = 11;
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 90)) {
           auto str = _internal_mutable_a_scenebuilttime();
@@ -369,21 +443,21 @@ const char* FrameStats::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // uint32 a_skippedComposites = 12;
+      // required uint32 a_skippedComposites = 12;
       case 12:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 96)) {
+          _Internal::set_has_a_skippedcomposites(&has_bits);
           _impl_.a_skippedcomposites_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string a_url = 13;
+      // required string a_url = 13;
       case 13:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 106)) {
           auto str = _internal_mutable_a_url();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -403,6 +477,7 @@ const char* FrameStats::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -416,92 +491,81 @@ uint8_t* FrameStats::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_id = 1;
-  if (!this->_internal_a_id().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_id = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_id(), target);
   }
 
-  // bytes a_compositeStart = 2;
-  if (!this->_internal_a_compositestart().empty()) {
+  // required bytes a_compositeStart = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_a_compositestart(), target);
   }
 
-  // bytes a_renderStart = 3;
-  if (!this->_internal_a_renderstart().empty()) {
+  // required bytes a_renderStart = 3;
+  if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
         3, this->_internal_a_renderstart(), target);
   }
 
-  // bytes a_compositeEnd = 4;
-  if (!this->_internal_a_compositeend().empty()) {
+  // required bytes a_compositeEnd = 4;
+  if (cached_has_bits & 0x00000008u) {
     target = stream->WriteBytesMaybeAliased(
         4, this->_internal_a_compositeend(), target);
   }
 
-  // sint32 a_contentFrameTime = 5;
-  if (this->_internal_a_contentframetime() != 0) {
+  // required sint32 a_contentFrameTime = 5;
+  if (cached_has_bits & 0x00000800u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(5, this->_internal_a_contentframetime(), target);
   }
 
-  // double a_resourceUploadTime = 6;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_resourceuploadtime = this->_internal_a_resourceuploadtime();
-  uint64_t raw_a_resourceuploadtime;
-  memcpy(&raw_a_resourceuploadtime, &tmp_a_resourceuploadtime, sizeof(tmp_a_resourceuploadtime));
-  if (raw_a_resourceuploadtime != 0) {
+  // required double a_resourceUploadTime = 6;
+  if (cached_has_bits & 0x00000200u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(6, this->_internal_a_resourceuploadtime(), target);
   }
 
-  // double a_gpuCacheUploadTime = 7;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_gpucacheuploadtime = this->_internal_a_gpucacheuploadtime();
-  uint64_t raw_a_gpucacheuploadtime;
-  memcpy(&raw_a_gpucacheuploadtime, &tmp_a_gpucacheuploadtime, sizeof(tmp_a_gpucacheuploadtime));
-  if (raw_a_gpucacheuploadtime != 0) {
+  // required double a_gpuCacheUploadTime = 7;
+  if (cached_has_bits & 0x00000400u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(7, this->_internal_a_gpucacheuploadtime(), target);
   }
 
-  // bytes a_transactionStart = 8;
-  if (!this->_internal_a_transactionstart().empty()) {
+  // required bytes a_transactionStart = 8;
+  if (cached_has_bits & 0x00000010u) {
     target = stream->WriteBytesMaybeAliased(
         8, this->_internal_a_transactionstart(), target);
   }
 
-  // bytes a_refreshStart = 9;
-  if (!this->_internal_a_refreshstart().empty()) {
+  // required bytes a_refreshStart = 9;
+  if (cached_has_bits & 0x00000020u) {
     target = stream->WriteBytesMaybeAliased(
         9, this->_internal_a_refreshstart(), target);
   }
 
-  // bytes a_fwdTime = 10;
-  if (!this->_internal_a_fwdtime().empty()) {
+  // required bytes a_fwdTime = 10;
+  if (cached_has_bits & 0x00000040u) {
     target = stream->WriteBytesMaybeAliased(
         10, this->_internal_a_fwdtime(), target);
   }
 
-  // bytes a_sceneBuiltTime = 11;
-  if (!this->_internal_a_scenebuilttime().empty()) {
+  // required bytes a_sceneBuiltTime = 11;
+  if (cached_has_bits & 0x00000080u) {
     target = stream->WriteBytesMaybeAliased(
         11, this->_internal_a_scenebuilttime(), target);
   }
 
-  // uint32 a_skippedComposites = 12;
-  if (this->_internal_a_skippedcomposites() != 0) {
+  // required uint32 a_skippedComposites = 12;
+  if (cached_has_bits & 0x00001000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(12, this->_internal_a_skippedcomposites(), target);
   }
 
-  // string a_url = 13;
-  if (!this->_internal_a_url().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_url().data(), static_cast<int>(this->_internal_a_url().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.layers.FrameStats.a_url");
+  // required string a_url = 13;
+  if (cached_has_bits & 0x00000100u) {
     target = stream->WriteStringMaybeAliased(
         13, this->_internal_a_url(), target);
   }
@@ -514,104 +578,163 @@ uint8_t* FrameStats::_InternalSerialize(
   return target;
 }
 
-size_t FrameStats::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.FrameStats)
+size_t FrameStats::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.FrameStats)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_id = 1;
-  if (!this->_internal_a_id().empty()) {
+  if (_internal_has_a_id()) {
+    // required bytes a_id = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_id());
   }
 
-  // bytes a_compositeStart = 2;
-  if (!this->_internal_a_compositestart().empty()) {
+  if (_internal_has_a_compositestart()) {
+    // required bytes a_compositeStart = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_compositestart());
   }
 
-  // bytes a_renderStart = 3;
-  if (!this->_internal_a_renderstart().empty()) {
+  if (_internal_has_a_renderstart()) {
+    // required bytes a_renderStart = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_renderstart());
   }
 
-  // bytes a_compositeEnd = 4;
-  if (!this->_internal_a_compositeend().empty()) {
+  if (_internal_has_a_compositeend()) {
+    // required bytes a_compositeEnd = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_compositeend());
   }
 
-  // bytes a_transactionStart = 8;
-  if (!this->_internal_a_transactionstart().empty()) {
+  if (_internal_has_a_transactionstart()) {
+    // required bytes a_transactionStart = 8;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_transactionstart());
   }
 
-  // bytes a_refreshStart = 9;
-  if (!this->_internal_a_refreshstart().empty()) {
+  if (_internal_has_a_refreshstart()) {
+    // required bytes a_refreshStart = 9;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_refreshstart());
   }
 
-  // bytes a_fwdTime = 10;
-  if (!this->_internal_a_fwdtime().empty()) {
+  if (_internal_has_a_fwdtime()) {
+    // required bytes a_fwdTime = 10;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_fwdtime());
   }
 
-  // bytes a_sceneBuiltTime = 11;
-  if (!this->_internal_a_scenebuilttime().empty()) {
+  if (_internal_has_a_scenebuilttime()) {
+    // required bytes a_sceneBuiltTime = 11;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_scenebuilttime());
   }
 
-  // string a_url = 13;
-  if (!this->_internal_a_url().empty()) {
+  if (_internal_has_a_url()) {
+    // required string a_url = 13;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_url());
   }
 
-  // double a_resourceUploadTime = 6;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_resourceuploadtime = this->_internal_a_resourceuploadtime();
-  uint64_t raw_a_resourceuploadtime;
-  memcpy(&raw_a_resourceuploadtime, &tmp_a_resourceuploadtime, sizeof(tmp_a_resourceuploadtime));
-  if (raw_a_resourceuploadtime != 0) {
+  if (_internal_has_a_resourceuploadtime()) {
+    // required double a_resourceUploadTime = 6;
     total_size += 1 + 8;
   }
 
-  // double a_gpuCacheUploadTime = 7;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_gpucacheuploadtime = this->_internal_a_gpucacheuploadtime();
-  uint64_t raw_a_gpucacheuploadtime;
-  memcpy(&raw_a_gpucacheuploadtime, &tmp_a_gpucacheuploadtime, sizeof(tmp_a_gpucacheuploadtime));
-  if (raw_a_gpucacheuploadtime != 0) {
+  if (_internal_has_a_gpucacheuploadtime()) {
+    // required double a_gpuCacheUploadTime = 7;
     total_size += 1 + 8;
   }
 
-  // sint32 a_contentFrameTime = 5;
-  if (this->_internal_a_contentframetime() != 0) {
+  if (_internal_has_a_contentframetime()) {
+    // required sint32 a_contentFrameTime = 5;
     total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_contentframetime());
   }
 
-  // uint32 a_skippedComposites = 12;
-  if (this->_internal_a_skippedcomposites() != 0) {
+  if (_internal_has_a_skippedcomposites()) {
+    // required uint32 a_skippedComposites = 12;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_skippedcomposites());
   }
+
+  return total_size;
+}
+size_t FrameStats::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.FrameStats)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00001fff) ^ 0x00001fff) == 0) {  // All required fields are present.
+    // required bytes a_id = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_id());
+
+    // required bytes a_compositeStart = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_compositestart());
+
+    // required bytes a_renderStart = 3;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_renderstart());
+
+    // required bytes a_compositeEnd = 4;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_compositeend());
+
+    // required bytes a_transactionStart = 8;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_transactionstart());
+
+    // required bytes a_refreshStart = 9;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_refreshstart());
+
+    // required bytes a_fwdTime = 10;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_fwdtime());
+
+    // required bytes a_sceneBuiltTime = 11;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_scenebuilttime());
+
+    // required string a_url = 13;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_url());
+
+    // required double a_resourceUploadTime = 6;
+    total_size += 1 + 8;
+
+    // required double a_gpuCacheUploadTime = 7;
+    total_size += 1 + 8;
+
+    // required sint32 a_contentFrameTime = 5;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_contentframetime());
+
+    // required uint32 a_skippedComposites = 12;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_skippedcomposites());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -634,52 +757,50 @@ void FrameStats::MergeFrom(const FrameStats& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_id().empty()) {
-    _this->_internal_set_a_id(from._internal_a_id());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x000000ffu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_id(from._internal_a_id());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_compositestart(from._internal_a_compositestart());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_internal_set_a_renderstart(from._internal_a_renderstart());
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_internal_set_a_compositeend(from._internal_a_compositeend());
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_internal_set_a_transactionstart(from._internal_a_transactionstart());
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _this->_internal_set_a_refreshstart(from._internal_a_refreshstart());
+    }
+    if (cached_has_bits & 0x00000040u) {
+      _this->_internal_set_a_fwdtime(from._internal_a_fwdtime());
+    }
+    if (cached_has_bits & 0x00000080u) {
+      _this->_internal_set_a_scenebuilttime(from._internal_a_scenebuilttime());
+    }
   }
-  if (!from._internal_a_compositestart().empty()) {
-    _this->_internal_set_a_compositestart(from._internal_a_compositestart());
-  }
-  if (!from._internal_a_renderstart().empty()) {
-    _this->_internal_set_a_renderstart(from._internal_a_renderstart());
-  }
-  if (!from._internal_a_compositeend().empty()) {
-    _this->_internal_set_a_compositeend(from._internal_a_compositeend());
-  }
-  if (!from._internal_a_transactionstart().empty()) {
-    _this->_internal_set_a_transactionstart(from._internal_a_transactionstart());
-  }
-  if (!from._internal_a_refreshstart().empty()) {
-    _this->_internal_set_a_refreshstart(from._internal_a_refreshstart());
-  }
-  if (!from._internal_a_fwdtime().empty()) {
-    _this->_internal_set_a_fwdtime(from._internal_a_fwdtime());
-  }
-  if (!from._internal_a_scenebuilttime().empty()) {
-    _this->_internal_set_a_scenebuilttime(from._internal_a_scenebuilttime());
-  }
-  if (!from._internal_a_url().empty()) {
-    _this->_internal_set_a_url(from._internal_a_url());
-  }
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_resourceuploadtime = from._internal_a_resourceuploadtime();
-  uint64_t raw_a_resourceuploadtime;
-  memcpy(&raw_a_resourceuploadtime, &tmp_a_resourceuploadtime, sizeof(tmp_a_resourceuploadtime));
-  if (raw_a_resourceuploadtime != 0) {
-    _this->_internal_set_a_resourceuploadtime(from._internal_a_resourceuploadtime());
-  }
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_gpucacheuploadtime = from._internal_a_gpucacheuploadtime();
-  uint64_t raw_a_gpucacheuploadtime;
-  memcpy(&raw_a_gpucacheuploadtime, &tmp_a_gpucacheuploadtime, sizeof(tmp_a_gpucacheuploadtime));
-  if (raw_a_gpucacheuploadtime != 0) {
-    _this->_internal_set_a_gpucacheuploadtime(from._internal_a_gpucacheuploadtime());
-  }
-  if (from._internal_a_contentframetime() != 0) {
-    _this->_internal_set_a_contentframetime(from._internal_a_contentframetime());
-  }
-  if (from._internal_a_skippedcomposites() != 0) {
-    _this->_internal_set_a_skippedcomposites(from._internal_a_skippedcomposites());
+  if (cached_has_bits & 0x00001f00u) {
+    if (cached_has_bits & 0x00000100u) {
+      _this->_internal_set_a_url(from._internal_a_url());
+    }
+    if (cached_has_bits & 0x00000200u) {
+      _this->_impl_.a_resourceuploadtime_ = from._impl_.a_resourceuploadtime_;
+    }
+    if (cached_has_bits & 0x00000400u) {
+      _this->_impl_.a_gpucacheuploadtime_ = from._impl_.a_gpucacheuploadtime_;
+    }
+    if (cached_has_bits & 0x00000800u) {
+      _this->_impl_.a_contentframetime_ = from._impl_.a_contentframetime_;
+    }
+    if (cached_has_bits & 0x00001000u) {
+      _this->_impl_.a_skippedcomposites_ = from._impl_.a_skippedcomposites_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -692,6 +813,7 @@ void FrameStats::CopyFrom(const FrameStats& from) {
 }
 
 bool FrameStats::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -700,6 +822,7 @@ void FrameStats::InternalSwap(FrameStats* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_id_, lhs_arena,
       &other->_impl_.a_id_, rhs_arena

@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/network/PUDPSocket.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.net.PUDPSocket;
@@ -18,30 +18,30 @@ import "IPCStream.proto";
 
 // Message declarations
 message Msg_Bind {
-  protobuf.UDPAddressInfo a_addressInfo = 1;
-  bool a_addressReuse = 2;
-  bool a_loopback = 3;
-  uint32 a_recvBufferSize = 4;
-  uint32 a_sendBufferSize = 5;
+  required protobuf.UDPAddressInfo a_addressInfo = 1;
+  required bool a_addressReuse = 2;
+  required bool a_loopback = 3;
+  required uint32 a_recvBufferSize = 4;
+  required uint32 a_sendBufferSize = 5;
 }
 
 message Msg_Connect {
-  protobuf.UDPAddressInfo a_addressInfo = 1;
+  required protobuf.UDPAddressInfo a_addressInfo = 1;
 }
 
 message Msg_OutgoingData {
-  protobuf.UDPData a_data = 1;
-  protobuf.UDPSocketAddr a_addr = 2;
+  required protobuf.UDPData a_data = 1;
+  required protobuf.UDPSocketAddr a_addr = 2;
 }
 
 message Msg_JoinMulticast {
-  string a_multicastAddress = 1;
-  string a_iface = 2;
+  required string a_multicastAddress = 1;
+  required string a_iface = 2;
 }
 
 message Msg_LeaveMulticast {
-  string a_multicastAddress = 1;
-  string a_iface = 2;
+  required string a_multicastAddress = 1;
+  required string a_iface = 2;
 }
 
 message Msg_Close {
@@ -51,25 +51,25 @@ message Msg_RequestDelete {
 }
 
 message Msg_CallbackOpened {
-  protobuf.UDPAddressInfo a_addressInfo = 1;
+  required protobuf.UDPAddressInfo a_addressInfo = 1;
 }
 
 message Msg_CallbackConnected {
-  protobuf.UDPAddressInfo a_addressInfo = 1;
+  required protobuf.UDPAddressInfo a_addressInfo = 1;
 }
 
 message Msg_CallbackClosed {
 }
 
 message Msg_CallbackReceivedData {
-  protobuf.UDPAddressInfo a_addressInfo = 1;
+  required protobuf.UDPAddressInfo a_addressInfo = 1;
   repeated uint32 a_data = 2;
 }
 
 message Msg_CallbackError {
-  string a_message = 1;
-  string a_filename = 2;
-  uint32 a_lineNumber = 3;
+  required string a_message = 1;
+  required string a_filename = 2;
+  required uint32 a_lineNumber = 3;
 }
 
 message Msg___delete__ {

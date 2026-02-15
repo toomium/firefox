@@ -141,6 +141,13 @@ class Msg___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -256,6 +263,13 @@ class Reply___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply___delete__& default_instance() {
@@ -375,6 +389,13 @@ class Msg_Pause final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Pause& default_instance() {
     return *internal_default_instance();
   }
@@ -490,6 +511,13 @@ class Msg_Resume final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Resume& default_instance() {
@@ -609,6 +637,13 @@ class Msg_Cancel final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Cancel& default_instance() {
     return *internal_default_instance();
   }
@@ -724,6 +759,13 @@ class Msg_ForceEnd final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_ForceEnd& default_instance() {
@@ -843,6 +885,13 @@ class Msg_SetAudioOutputVolume final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_SetAudioOutputVolume& default_instance() {
     return *internal_default_instance();
   }
@@ -917,7 +966,11 @@ class Msg_SetAudioOutputVolume final :
   enum : int {
     kAAVolumeFieldNumber = 1,
   };
-  // float a_aVolume = 1;
+  // required float a_aVolume = 1;
+  bool has_a_avolume() const;
+  private:
+  bool _internal_has_a_avolume() const;
+  public:
   void clear_a_avolume();
   float a_avolume() const;
   void set_a_avolume(float value);
@@ -934,8 +987,9 @@ class Msg_SetAudioOutputVolume final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    float a_avolume_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    float a_avolume_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSpeechSynthesisRequest_2eproto;
@@ -971,6 +1025,13 @@ class Msg_OnEnd final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_OnEnd& default_instance() {
@@ -1049,7 +1110,11 @@ class Msg_OnEnd final :
     kAAElapsedTimeFieldNumber = 2,
     kAACharIndexFieldNumber = 3,
   };
-  // bool a_aIsError = 1;
+  // required bool a_aIsError = 1;
+  bool has_a_aiserror() const;
+  private:
+  bool _internal_has_a_aiserror() const;
+  public:
   void clear_a_aiserror();
   bool a_aiserror() const;
   void set_a_aiserror(bool value);
@@ -1058,7 +1123,11 @@ class Msg_OnEnd final :
   void _internal_set_a_aiserror(bool value);
   public:
 
-  // float a_aElapsedTime = 2;
+  // required float a_aElapsedTime = 2;
+  bool has_a_aelapsedtime() const;
+  private:
+  bool _internal_has_a_aelapsedtime() const;
+  public:
   void clear_a_aelapsedtime();
   float a_aelapsedtime() const;
   void set_a_aelapsedtime(float value);
@@ -1067,7 +1136,11 @@ class Msg_OnEnd final :
   void _internal_set_a_aelapsedtime(float value);
   public:
 
-  // uint32 a_aCharIndex = 3;
+  // required uint32 a_aCharIndex = 3;
+  bool has_a_acharindex() const;
+  private:
+  bool _internal_has_a_acharindex() const;
+  public:
   void clear_a_acharindex();
   uint32_t a_acharindex() const;
   void set_a_acharindex(uint32_t value);
@@ -1080,14 +1153,18 @@ class Msg_OnEnd final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     bool a_aiserror_;
     float a_aelapsedtime_;
     uint32_t a_acharindex_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSpeechSynthesisRequest_2eproto;
@@ -1123,6 +1200,13 @@ class Msg_OnStart final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_OnStart& default_instance() {
@@ -1199,7 +1283,11 @@ class Msg_OnStart final :
   enum : int {
     kAAUriFieldNumber = 1,
   };
-  // string a_aUri = 1;
+  // required string a_aUri = 1;
+  bool has_a_auri() const;
+  private:
+  bool _internal_has_a_auri() const;
+  public:
   void clear_a_auri();
   const std::string& a_auri() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1221,8 +1309,9 @@ class Msg_OnStart final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_auri_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_auri_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSpeechSynthesisRequest_2eproto;
@@ -1258,6 +1347,13 @@ class Msg_OnPause final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_OnPause& default_instance() {
@@ -1335,7 +1431,11 @@ class Msg_OnPause final :
     kAAElapsedTimeFieldNumber = 1,
     kAACharIndexFieldNumber = 2,
   };
-  // float a_aElapsedTime = 1;
+  // required float a_aElapsedTime = 1;
+  bool has_a_aelapsedtime() const;
+  private:
+  bool _internal_has_a_aelapsedtime() const;
+  public:
   void clear_a_aelapsedtime();
   float a_aelapsedtime() const;
   void set_a_aelapsedtime(float value);
@@ -1344,7 +1444,11 @@ class Msg_OnPause final :
   void _internal_set_a_aelapsedtime(float value);
   public:
 
-  // uint32 a_aCharIndex = 2;
+  // required uint32 a_aCharIndex = 2;
+  bool has_a_acharindex() const;
+  private:
+  bool _internal_has_a_acharindex() const;
+  public:
   void clear_a_acharindex();
   uint32_t a_acharindex() const;
   void set_a_acharindex(uint32_t value);
@@ -1357,13 +1461,17 @@ class Msg_OnPause final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     float a_aelapsedtime_;
     uint32_t a_acharindex_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSpeechSynthesisRequest_2eproto;
@@ -1399,6 +1507,13 @@ class Msg_OnResume final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_OnResume& default_instance() {
@@ -1476,7 +1591,11 @@ class Msg_OnResume final :
     kAAElapsedTimeFieldNumber = 1,
     kAACharIndexFieldNumber = 2,
   };
-  // float a_aElapsedTime = 1;
+  // required float a_aElapsedTime = 1;
+  bool has_a_aelapsedtime() const;
+  private:
+  bool _internal_has_a_aelapsedtime() const;
+  public:
   void clear_a_aelapsedtime();
   float a_aelapsedtime() const;
   void set_a_aelapsedtime(float value);
@@ -1485,7 +1604,11 @@ class Msg_OnResume final :
   void _internal_set_a_aelapsedtime(float value);
   public:
 
-  // uint32 a_aCharIndex = 2;
+  // required uint32 a_aCharIndex = 2;
+  bool has_a_acharindex() const;
+  private:
+  bool _internal_has_a_acharindex() const;
+  public:
   void clear_a_acharindex();
   uint32_t a_acharindex() const;
   void set_a_acharindex(uint32_t value);
@@ -1498,13 +1621,17 @@ class Msg_OnResume final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     float a_aelapsedtime_;
     uint32_t a_acharindex_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSpeechSynthesisRequest_2eproto;
@@ -1540,6 +1667,13 @@ class Msg_OnBoundary final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_OnBoundary& default_instance() {
@@ -1620,7 +1754,11 @@ class Msg_OnBoundary final :
     kAACharLengthFieldNumber = 4,
     kAArgcFieldNumber = 5,
   };
-  // string a_aName = 1;
+  // required string a_aName = 1;
+  bool has_a_aname() const;
+  private:
+  bool _internal_has_a_aname() const;
+  public:
   void clear_a_aname();
   const std::string& a_aname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1634,7 +1772,11 @@ class Msg_OnBoundary final :
   std::string* _internal_mutable_a_aname();
   public:
 
-  // float a_aElapsedTime = 2;
+  // required float a_aElapsedTime = 2;
+  bool has_a_aelapsedtime() const;
+  private:
+  bool _internal_has_a_aelapsedtime() const;
+  public:
   void clear_a_aelapsedtime();
   float a_aelapsedtime() const;
   void set_a_aelapsedtime(float value);
@@ -1643,7 +1785,11 @@ class Msg_OnBoundary final :
   void _internal_set_a_aelapsedtime(float value);
   public:
 
-  // uint32 a_aCharIndex = 3;
+  // required uint32 a_aCharIndex = 3;
+  bool has_a_acharindex() const;
+  private:
+  bool _internal_has_a_acharindex() const;
+  public:
   void clear_a_acharindex();
   uint32_t a_acharindex() const;
   void set_a_acharindex(uint32_t value);
@@ -1652,7 +1798,11 @@ class Msg_OnBoundary final :
   void _internal_set_a_acharindex(uint32_t value);
   public:
 
-  // uint32 a_aCharLength = 4;
+  // required uint32 a_aCharLength = 4;
+  bool has_a_acharlength() const;
+  private:
+  bool _internal_has_a_acharlength() const;
+  public:
   void clear_a_acharlength();
   uint32_t a_acharlength() const;
   void set_a_acharlength(uint32_t value);
@@ -1661,7 +1811,11 @@ class Msg_OnBoundary final :
   void _internal_set_a_acharlength(uint32_t value);
   public:
 
-  // uint32 a_argc = 5;
+  // required uint32 a_argc = 5;
+  bool has_a_argc() const;
+  private:
+  bool _internal_has_a_argc() const;
+  public:
   void clear_a_argc();
   uint32_t a_argc() const;
   void set_a_argc(uint32_t value);
@@ -1674,16 +1828,20 @@ class Msg_OnBoundary final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aname_;
     float a_aelapsedtime_;
     uint32_t a_acharindex_;
     uint32_t a_acharlength_;
     uint32_t a_argc_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSpeechSynthesisRequest_2eproto;
@@ -1719,6 +1877,13 @@ class Msg_OnMark final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_OnMark& default_instance() {
@@ -1797,7 +1962,11 @@ class Msg_OnMark final :
     kAAElapsedTimeFieldNumber = 2,
     kAACharIndexFieldNumber = 3,
   };
-  // string a_aName = 1;
+  // required string a_aName = 1;
+  bool has_a_aname() const;
+  private:
+  bool _internal_has_a_aname() const;
+  public:
   void clear_a_aname();
   const std::string& a_aname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1811,7 +1980,11 @@ class Msg_OnMark final :
   std::string* _internal_mutable_a_aname();
   public:
 
-  // float a_aElapsedTime = 2;
+  // required float a_aElapsedTime = 2;
+  bool has_a_aelapsedtime() const;
+  private:
+  bool _internal_has_a_aelapsedtime() const;
+  public:
   void clear_a_aelapsedtime();
   float a_aelapsedtime() const;
   void set_a_aelapsedtime(float value);
@@ -1820,7 +1993,11 @@ class Msg_OnMark final :
   void _internal_set_a_aelapsedtime(float value);
   public:
 
-  // uint32 a_aCharIndex = 3;
+  // required uint32 a_aCharIndex = 3;
+  bool has_a_acharindex() const;
+  private:
+  bool _internal_has_a_acharindex() const;
+  public:
   void clear_a_acharindex();
   uint32_t a_acharindex() const;
   void set_a_acharindex(uint32_t value);
@@ -1833,14 +2010,18 @@ class Msg_OnMark final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aname_;
     float a_aelapsedtime_;
     uint32_t a_acharindex_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSpeechSynthesisRequest_2eproto;
@@ -1880,9 +2061,17 @@ class Msg_OnMark final :
 
 // Msg_SetAudioOutputVolume
 
-// float a_aVolume = 1;
+// required float a_aVolume = 1;
+inline bool Msg_SetAudioOutputVolume::_internal_has_a_avolume() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_SetAudioOutputVolume::has_a_avolume() const {
+  return _internal_has_a_avolume();
+}
 inline void Msg_SetAudioOutputVolume::clear_a_avolume() {
   _impl_.a_avolume_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline float Msg_SetAudioOutputVolume::_internal_a_avolume() const {
   return _impl_.a_avolume_;
@@ -1892,7 +2081,7 @@ inline float Msg_SetAudioOutputVolume::a_avolume() const {
   return _internal_a_avolume();
 }
 inline void Msg_SetAudioOutputVolume::_internal_set_a_avolume(float value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_avolume_ = value;
 }
 inline void Msg_SetAudioOutputVolume::set_a_avolume(float value) {
@@ -1904,9 +2093,17 @@ inline void Msg_SetAudioOutputVolume::set_a_avolume(float value) {
 
 // Msg_OnEnd
 
-// bool a_aIsError = 1;
+// required bool a_aIsError = 1;
+inline bool Msg_OnEnd::_internal_has_a_aiserror() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_OnEnd::has_a_aiserror() const {
+  return _internal_has_a_aiserror();
+}
 inline void Msg_OnEnd::clear_a_aiserror() {
   _impl_.a_aiserror_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Msg_OnEnd::_internal_a_aiserror() const {
   return _impl_.a_aiserror_;
@@ -1916,7 +2113,7 @@ inline bool Msg_OnEnd::a_aiserror() const {
   return _internal_a_aiserror();
 }
 inline void Msg_OnEnd::_internal_set_a_aiserror(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aiserror_ = value;
 }
 inline void Msg_OnEnd::set_a_aiserror(bool value) {
@@ -1924,9 +2121,17 @@ inline void Msg_OnEnd::set_a_aiserror(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnEnd.a_aIsError)
 }
 
-// float a_aElapsedTime = 2;
+// required float a_aElapsedTime = 2;
+inline bool Msg_OnEnd::_internal_has_a_aelapsedtime() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_OnEnd::has_a_aelapsedtime() const {
+  return _internal_has_a_aelapsedtime();
+}
 inline void Msg_OnEnd::clear_a_aelapsedtime() {
   _impl_.a_aelapsedtime_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline float Msg_OnEnd::_internal_a_aelapsedtime() const {
   return _impl_.a_aelapsedtime_;
@@ -1936,7 +2141,7 @@ inline float Msg_OnEnd::a_aelapsedtime() const {
   return _internal_a_aelapsedtime();
 }
 inline void Msg_OnEnd::_internal_set_a_aelapsedtime(float value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aelapsedtime_ = value;
 }
 inline void Msg_OnEnd::set_a_aelapsedtime(float value) {
@@ -1944,9 +2149,17 @@ inline void Msg_OnEnd::set_a_aelapsedtime(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnEnd.a_aElapsedTime)
 }
 
-// uint32 a_aCharIndex = 3;
+// required uint32 a_aCharIndex = 3;
+inline bool Msg_OnEnd::_internal_has_a_acharindex() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_OnEnd::has_a_acharindex() const {
+  return _internal_has_a_acharindex();
+}
 inline void Msg_OnEnd::clear_a_acharindex() {
   _impl_.a_acharindex_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_OnEnd::_internal_a_acharindex() const {
   return _impl_.a_acharindex_;
@@ -1956,7 +2169,7 @@ inline uint32_t Msg_OnEnd::a_acharindex() const {
   return _internal_a_acharindex();
 }
 inline void Msg_OnEnd::_internal_set_a_acharindex(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_acharindex_ = value;
 }
 inline void Msg_OnEnd::set_a_acharindex(uint32_t value) {
@@ -1968,9 +2181,17 @@ inline void Msg_OnEnd::set_a_acharindex(uint32_t value) {
 
 // Msg_OnStart
 
-// string a_aUri = 1;
+// required string a_aUri = 1;
+inline bool Msg_OnStart::_internal_has_a_auri() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_OnStart::has_a_auri() const {
+  return _internal_has_a_auri();
+}
 inline void Msg_OnStart::clear_a_auri() {
   _impl_.a_auri_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_OnStart::a_auri() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnStart.a_aUri)
@@ -1979,7 +2200,7 @@ inline const std::string& Msg_OnStart::a_auri() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnStart::set_a_auri(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_auri_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnStart.a_aUri)
 }
@@ -1992,22 +2213,32 @@ inline const std::string& Msg_OnStart::_internal_a_auri() const {
   return _impl_.a_auri_.Get();
 }
 inline void Msg_OnStart::_internal_set_a_auri(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_auri_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OnStart::_internal_mutable_a_auri() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_auri_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OnStart::release_a_auri() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnStart.a_aUri)
-  return _impl_.a_auri_.Release();
+  if (!_internal_has_a_auri()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_auri_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_auri_.IsDefault()) {
+    _impl_.a_auri_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_OnStart::set_allocated_a_auri(std::string* a_auri) {
   if (a_auri != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_auri_.SetAllocated(a_auri, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2022,9 +2253,17 @@ inline void Msg_OnStart::set_allocated_a_auri(std::string* a_auri) {
 
 // Msg_OnPause
 
-// float a_aElapsedTime = 1;
+// required float a_aElapsedTime = 1;
+inline bool Msg_OnPause::_internal_has_a_aelapsedtime() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_OnPause::has_a_aelapsedtime() const {
+  return _internal_has_a_aelapsedtime();
+}
 inline void Msg_OnPause::clear_a_aelapsedtime() {
   _impl_.a_aelapsedtime_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline float Msg_OnPause::_internal_a_aelapsedtime() const {
   return _impl_.a_aelapsedtime_;
@@ -2034,7 +2273,7 @@ inline float Msg_OnPause::a_aelapsedtime() const {
   return _internal_a_aelapsedtime();
 }
 inline void Msg_OnPause::_internal_set_a_aelapsedtime(float value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aelapsedtime_ = value;
 }
 inline void Msg_OnPause::set_a_aelapsedtime(float value) {
@@ -2042,9 +2281,17 @@ inline void Msg_OnPause::set_a_aelapsedtime(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnPause.a_aElapsedTime)
 }
 
-// uint32 a_aCharIndex = 2;
+// required uint32 a_aCharIndex = 2;
+inline bool Msg_OnPause::_internal_has_a_acharindex() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_OnPause::has_a_acharindex() const {
+  return _internal_has_a_acharindex();
+}
 inline void Msg_OnPause::clear_a_acharindex() {
   _impl_.a_acharindex_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_OnPause::_internal_a_acharindex() const {
   return _impl_.a_acharindex_;
@@ -2054,7 +2301,7 @@ inline uint32_t Msg_OnPause::a_acharindex() const {
   return _internal_a_acharindex();
 }
 inline void Msg_OnPause::_internal_set_a_acharindex(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_acharindex_ = value;
 }
 inline void Msg_OnPause::set_a_acharindex(uint32_t value) {
@@ -2066,9 +2313,17 @@ inline void Msg_OnPause::set_a_acharindex(uint32_t value) {
 
 // Msg_OnResume
 
-// float a_aElapsedTime = 1;
+// required float a_aElapsedTime = 1;
+inline bool Msg_OnResume::_internal_has_a_aelapsedtime() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_OnResume::has_a_aelapsedtime() const {
+  return _internal_has_a_aelapsedtime();
+}
 inline void Msg_OnResume::clear_a_aelapsedtime() {
   _impl_.a_aelapsedtime_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline float Msg_OnResume::_internal_a_aelapsedtime() const {
   return _impl_.a_aelapsedtime_;
@@ -2078,7 +2333,7 @@ inline float Msg_OnResume::a_aelapsedtime() const {
   return _internal_a_aelapsedtime();
 }
 inline void Msg_OnResume::_internal_set_a_aelapsedtime(float value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aelapsedtime_ = value;
 }
 inline void Msg_OnResume::set_a_aelapsedtime(float value) {
@@ -2086,9 +2341,17 @@ inline void Msg_OnResume::set_a_aelapsedtime(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnResume.a_aElapsedTime)
 }
 
-// uint32 a_aCharIndex = 2;
+// required uint32 a_aCharIndex = 2;
+inline bool Msg_OnResume::_internal_has_a_acharindex() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_OnResume::has_a_acharindex() const {
+  return _internal_has_a_acharindex();
+}
 inline void Msg_OnResume::clear_a_acharindex() {
   _impl_.a_acharindex_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_OnResume::_internal_a_acharindex() const {
   return _impl_.a_acharindex_;
@@ -2098,7 +2361,7 @@ inline uint32_t Msg_OnResume::a_acharindex() const {
   return _internal_a_acharindex();
 }
 inline void Msg_OnResume::_internal_set_a_acharindex(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_acharindex_ = value;
 }
 inline void Msg_OnResume::set_a_acharindex(uint32_t value) {
@@ -2110,9 +2373,17 @@ inline void Msg_OnResume::set_a_acharindex(uint32_t value) {
 
 // Msg_OnBoundary
 
-// string a_aName = 1;
+// required string a_aName = 1;
+inline bool Msg_OnBoundary::_internal_has_a_aname() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_OnBoundary::has_a_aname() const {
+  return _internal_has_a_aname();
+}
 inline void Msg_OnBoundary::clear_a_aname() {
   _impl_.a_aname_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_OnBoundary::a_aname() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnBoundary.a_aName)
@@ -2121,7 +2392,7 @@ inline const std::string& Msg_OnBoundary::a_aname() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnBoundary::set_a_aname(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnBoundary.a_aName)
 }
@@ -2134,22 +2405,32 @@ inline const std::string& Msg_OnBoundary::_internal_a_aname() const {
   return _impl_.a_aname_.Get();
 }
 inline void Msg_OnBoundary::_internal_set_a_aname(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aname_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OnBoundary::_internal_mutable_a_aname() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aname_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OnBoundary::release_a_aname() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnBoundary.a_aName)
-  return _impl_.a_aname_.Release();
+  if (!_internal_has_a_aname()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aname_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aname_.IsDefault()) {
+    _impl_.a_aname_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_OnBoundary::set_allocated_a_aname(std::string* a_aname) {
   if (a_aname != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aname_.SetAllocated(a_aname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2160,9 +2441,17 @@ inline void Msg_OnBoundary::set_allocated_a_aname(std::string* a_aname) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnBoundary.a_aName)
 }
 
-// float a_aElapsedTime = 2;
+// required float a_aElapsedTime = 2;
+inline bool Msg_OnBoundary::_internal_has_a_aelapsedtime() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_OnBoundary::has_a_aelapsedtime() const {
+  return _internal_has_a_aelapsedtime();
+}
 inline void Msg_OnBoundary::clear_a_aelapsedtime() {
   _impl_.a_aelapsedtime_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline float Msg_OnBoundary::_internal_a_aelapsedtime() const {
   return _impl_.a_aelapsedtime_;
@@ -2172,7 +2461,7 @@ inline float Msg_OnBoundary::a_aelapsedtime() const {
   return _internal_a_aelapsedtime();
 }
 inline void Msg_OnBoundary::_internal_set_a_aelapsedtime(float value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aelapsedtime_ = value;
 }
 inline void Msg_OnBoundary::set_a_aelapsedtime(float value) {
@@ -2180,9 +2469,17 @@ inline void Msg_OnBoundary::set_a_aelapsedtime(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnBoundary.a_aElapsedTime)
 }
 
-// uint32 a_aCharIndex = 3;
+// required uint32 a_aCharIndex = 3;
+inline bool Msg_OnBoundary::_internal_has_a_acharindex() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_OnBoundary::has_a_acharindex() const {
+  return _internal_has_a_acharindex();
+}
 inline void Msg_OnBoundary::clear_a_acharindex() {
   _impl_.a_acharindex_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_OnBoundary::_internal_a_acharindex() const {
   return _impl_.a_acharindex_;
@@ -2192,7 +2489,7 @@ inline uint32_t Msg_OnBoundary::a_acharindex() const {
   return _internal_a_acharindex();
 }
 inline void Msg_OnBoundary::_internal_set_a_acharindex(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_acharindex_ = value;
 }
 inline void Msg_OnBoundary::set_a_acharindex(uint32_t value) {
@@ -2200,9 +2497,17 @@ inline void Msg_OnBoundary::set_a_acharindex(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnBoundary.a_aCharIndex)
 }
 
-// uint32 a_aCharLength = 4;
+// required uint32 a_aCharLength = 4;
+inline bool Msg_OnBoundary::_internal_has_a_acharlength() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool Msg_OnBoundary::has_a_acharlength() const {
+  return _internal_has_a_acharlength();
+}
 inline void Msg_OnBoundary::clear_a_acharlength() {
   _impl_.a_acharlength_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline uint32_t Msg_OnBoundary::_internal_a_acharlength() const {
   return _impl_.a_acharlength_;
@@ -2212,7 +2517,7 @@ inline uint32_t Msg_OnBoundary::a_acharlength() const {
   return _internal_a_acharlength();
 }
 inline void Msg_OnBoundary::_internal_set_a_acharlength(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_acharlength_ = value;
 }
 inline void Msg_OnBoundary::set_a_acharlength(uint32_t value) {
@@ -2220,9 +2525,17 @@ inline void Msg_OnBoundary::set_a_acharlength(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnBoundary.a_aCharLength)
 }
 
-// uint32 a_argc = 5;
+// required uint32 a_argc = 5;
+inline bool Msg_OnBoundary::_internal_has_a_argc() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool Msg_OnBoundary::has_a_argc() const {
+  return _internal_has_a_argc();
+}
 inline void Msg_OnBoundary::clear_a_argc() {
   _impl_.a_argc_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline uint32_t Msg_OnBoundary::_internal_a_argc() const {
   return _impl_.a_argc_;
@@ -2232,7 +2545,7 @@ inline uint32_t Msg_OnBoundary::a_argc() const {
   return _internal_a_argc();
 }
 inline void Msg_OnBoundary::_internal_set_a_argc(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.a_argc_ = value;
 }
 inline void Msg_OnBoundary::set_a_argc(uint32_t value) {
@@ -2244,9 +2557,17 @@ inline void Msg_OnBoundary::set_a_argc(uint32_t value) {
 
 // Msg_OnMark
 
-// string a_aName = 1;
+// required string a_aName = 1;
+inline bool Msg_OnMark::_internal_has_a_aname() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_OnMark::has_a_aname() const {
+  return _internal_has_a_aname();
+}
 inline void Msg_OnMark::clear_a_aname() {
   _impl_.a_aname_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_OnMark::a_aname() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnMark.a_aName)
@@ -2255,7 +2576,7 @@ inline const std::string& Msg_OnMark::a_aname() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnMark::set_a_aname(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnMark.a_aName)
 }
@@ -2268,22 +2589,32 @@ inline const std::string& Msg_OnMark::_internal_a_aname() const {
   return _impl_.a_aname_.Get();
 }
 inline void Msg_OnMark::_internal_set_a_aname(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aname_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OnMark::_internal_mutable_a_aname() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aname_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OnMark::release_a_aname() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnMark.a_aName)
-  return _impl_.a_aname_.Release();
+  if (!_internal_has_a_aname()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aname_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aname_.IsDefault()) {
+    _impl_.a_aname_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_OnMark::set_allocated_a_aname(std::string* a_aname) {
   if (a_aname != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aname_.SetAllocated(a_aname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2294,9 +2625,17 @@ inline void Msg_OnMark::set_allocated_a_aname(std::string* a_aname) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnMark.a_aName)
 }
 
-// float a_aElapsedTime = 2;
+// required float a_aElapsedTime = 2;
+inline bool Msg_OnMark::_internal_has_a_aelapsedtime() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_OnMark::has_a_aelapsedtime() const {
+  return _internal_has_a_aelapsedtime();
+}
 inline void Msg_OnMark::clear_a_aelapsedtime() {
   _impl_.a_aelapsedtime_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline float Msg_OnMark::_internal_a_aelapsedtime() const {
   return _impl_.a_aelapsedtime_;
@@ -2306,7 +2645,7 @@ inline float Msg_OnMark::a_aelapsedtime() const {
   return _internal_a_aelapsedtime();
 }
 inline void Msg_OnMark::_internal_set_a_aelapsedtime(float value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aelapsedtime_ = value;
 }
 inline void Msg_OnMark::set_a_aelapsedtime(float value) {
@@ -2314,9 +2653,17 @@ inline void Msg_OnMark::set_a_aelapsedtime(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnMark.a_aElapsedTime)
 }
 
-// uint32 a_aCharIndex = 3;
+// required uint32 a_aCharIndex = 3;
+inline bool Msg_OnMark::_internal_has_a_acharindex() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_OnMark::has_a_acharindex() const {
+  return _internal_has_a_acharindex();
+}
 inline void Msg_OnMark::clear_a_acharindex() {
   _impl_.a_acharindex_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_OnMark::_internal_a_acharindex() const {
   return _impl_.a_acharindex_;
@@ -2326,7 +2673,7 @@ inline uint32_t Msg_OnMark::a_acharindex() const {
   return _internal_a_acharindex();
 }
 inline void Msg_OnMark::_internal_set_a_acharindex(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_acharindex_ = value;
 }
 inline void Msg_OnMark::set_a_acharindex(uint32_t value) {

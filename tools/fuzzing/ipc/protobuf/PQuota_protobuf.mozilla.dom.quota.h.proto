@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/quota/PQuota.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.quota;
@@ -31,28 +31,28 @@ message StorageNameParams {
 }
 
 message GetFullOriginMetadataParams {
-  bytes a_persistenceType = 1;
-  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
+  required bytes a_persistenceType = 1;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
 }
 
 message ClearResetOriginParams {
-  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
-  bytes a_persistenceType = 2;
-  bool a_persistenceTypeIsExplicit = 3;
-  bytes a_clientType = 4;
-  bool a_clientTypeIsExplicit = 5;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
+  required bytes a_persistenceType = 2;
+  required bool a_persistenceTypeIsExplicit = 3;
+  required bytes a_clientType = 4;
+  required bool a_clientTypeIsExplicit = 5;
 }
 
 message PersistedParams {
-  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
 }
 
 message PersistParams {
-  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
 }
 
 message EstimateParams {
-  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
 }
 
 message RequestParams {

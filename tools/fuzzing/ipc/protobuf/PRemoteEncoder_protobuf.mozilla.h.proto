@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/media/ipc/PRemoteEncoder.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla;
@@ -20,9 +20,9 @@ message EncodedInputIPDL {
 }
 
 message EncodeInitCompletionIPDL {
-  string a_description = 1;
-  bool a_hardware = 2;
-  string a_hardwareReason = 3;
+  required string a_description = 1;
+  required bool a_hardware = 2;
+  required string a_hardwareReason = 3;
 }
 
 message EncodeInitResultIPDL {
@@ -34,7 +34,7 @@ message EncodeInitResultIPDL {
 
 message EncodeCompletionIPDL {
   optional bytes a_samples = 1;
-  uint32 a_ticketId = 2;
+  required uint32 a_ticketId = 2;
 }
 
 message EncodeResultIPDL {

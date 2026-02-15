@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/clients/manager/ClientIPCTypes.ipdlh
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom;
@@ -17,36 +17,36 @@ import "ProtocolTypes.proto";
 
 // Structs and unions declarations
 message ClientSourceConstructorArgs {
-  bytes a_id = 1;
+  required bytes a_id = 1;
   optional bytes a_agentClusterId = 2;
-  bytes a_type = 3;
-  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 4;
-  bytes a_creationTime = 5;
-  string a_url = 6;
-  bytes a_frameType = 7;
+  required bytes a_type = 3;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 4;
+  required bytes a_creationTime = 5;
+  required string a_url = 6;
+  required bytes a_frameType = 7;
 }
 
 message IPCClientInfo {
-  bytes a_id = 1;
+  required bytes a_id = 1;
   optional bytes a_agentClusterId = 2;
-  bytes a_type = 3;
-  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 4;
-  bytes a_creationTime = 5;
-  string a_url = 6;
-  bytes a_frameType = 7;
+  required bytes a_type = 3;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 4;
+  required bytes a_creationTime = 5;
+  required string a_url = 6;
+  required bytes a_frameType = 7;
   optional protobuf.mozilla.ipc.CSPInfo a_cspInfo = 8;
   optional protobuf.mozilla.ipc.CSPInfo a_preloadCspInfo = 9;
 }
 
 message IPCClientWindowState {
-  bytes a_visibilityState = 1;
-  bytes a_lastFocusTime = 2;
-  bytes a_storageAccess = 3;
-  bool a_focused = 4;
+  required bytes a_visibilityState = 1;
+  required bytes a_lastFocusTime = 2;
+  required bytes a_storageAccess = 3;
+  required bool a_focused = 4;
 }
 
 message IPCClientWorkerState {
-  bytes a_storageAccess = 1;
+  required bytes a_storageAccess = 1;
 }
 
 message IPCClientState {
@@ -57,8 +57,8 @@ message IPCClientState {
 }
 
 message ClientInfoAndState {
-  protobuf.mozilla.dom.IPCClientInfo a_info = 1;
-  protobuf.mozilla.dom.IPCClientState a_state = 2;
+  required protobuf.mozilla.dom.IPCClientInfo a_info = 1;
+  required protobuf.mozilla.dom.IPCClientState a_state = 2;
 }
 
 message PostMessageSource {
@@ -69,50 +69,50 @@ message PostMessageSource {
 }
 
 message ClientSourceExecutionReadyArgs {
-  string a_url = 1;
-  bytes a_frameType = 2;
+  required string a_url = 1;
+  required bytes a_frameType = 2;
 }
 
 message ClientControlledArgs {
-  protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_serviceWorker = 1;
+  required protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_serviceWorker = 1;
 }
 
 message ClientFocusArgs {
-  bytes a_callerType = 1;
+  required bytes a_callerType = 1;
 }
 
 message ClientNavigateArgs {
-  protobuf.mozilla.dom.IPCClientInfo a_target = 1;
-  string a_url = 2;
-  string a_baseURL = 3;
-  protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_serviceWorker = 4;
+  required protobuf.mozilla.dom.IPCClientInfo a_target = 1;
+  required string a_url = 2;
+  required string a_baseURL = 3;
+  required protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_serviceWorker = 4;
 }
 
 message ClientPostMessageArgs {
-  protobuf.mozilla.dom.ClonedMessageData a_clonedData = 1;
-  protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_serviceWorker = 2;
+  required protobuf.mozilla.dom.ClonedMessageData a_clonedData = 1;
+  required protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_serviceWorker = 2;
 }
 
 message ClientMatchAllArgs {
-  protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_serviceWorker = 1;
-  bytes a_type = 2;
-  bool a_includeUncontrolled = 3;
+  required protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_serviceWorker = 1;
+  required bytes a_type = 2;
+  required bool a_includeUncontrolled = 3;
 }
 
 message ClientClaimArgs {
-  protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_serviceWorker = 1;
+  required protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_serviceWorker = 1;
 }
 
 message ClientGetInfoAndStateArgs {
-  bytes a_id = 1;
-  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
+  required bytes a_id = 1;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
 }
 
 message ClientOpenWindowArgs {
-  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
   optional protobuf.mozilla.ipc.CSPInfo a_cspInfo = 2;
-  string a_url = 3;
-  string a_baseURL = 4;
+  required string a_url = 3;
+  required string a_baseURL = 4;
 }
 
 message ClientEvictBFCacheArgs {
@@ -137,9 +137,9 @@ message ClientList {
 }
 
 message ClientNavigateOpConstructorArgs {
-  bytes a_target = 1;
-  string a_url = 2;
-  string a_baseURL = 3;
+  required bytes a_target = 1;
+  required string a_url = 2;
+  required string a_baseURL = 3;
 }
 
 message ClientOpResult {

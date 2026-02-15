@@ -23,9 +23,10 @@ namespace psm {
 namespace PSelectTLSClientAuthCert {
 PROTOBUF_CONSTEXPR Msg_TLSClientAuthCertSelected::Msg_TLSClientAuthCertSelected(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_aselectedcertchainbytes_)*/{}
-  , /*decltype(_impl_.a_aselectedcertbytes_)*/nullptr
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_aselectedcertchainbytes_)*/{}
+  , /*decltype(_impl_.a_aselectedcertbytes_)*/nullptr} {}
 struct Msg_TLSClientAuthCertSelectedDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_TLSClientAuthCertSelectedDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -72,7 +73,14 @@ namespace PSelectTLSClientAuthCert {
 
 class Msg_TLSClientAuthCertSelected::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_TLSClientAuthCertSelected>()._impl_._has_bits_);
   static const ::protobuf::mozilla::psm::ByteArray& a_aselectedcertbytes(const Msg_TLSClientAuthCertSelected* msg);
+  static void set_has_a_aselectedcertbytes(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 const ::protobuf::mozilla::psm::ByteArray&
@@ -80,10 +88,8 @@ Msg_TLSClientAuthCertSelected::_Internal::a_aselectedcertbytes(const Msg_TLSClie
   return *msg->_impl_.a_aselectedcertbytes_;
 }
 void Msg_TLSClientAuthCertSelected::clear_a_aselectedcertbytes() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_aselectedcertbytes_ != nullptr) {
-    delete _impl_.a_aselectedcertbytes_;
-  }
-  _impl_.a_aselectedcertbytes_ = nullptr;
+  if (_impl_.a_aselectedcertbytes_ != nullptr) _impl_.a_aselectedcertbytes_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 void Msg_TLSClientAuthCertSelected::clear_a_aselectedcertchainbytes() {
   _impl_.a_aselectedcertchainbytes_.Clear();
@@ -98,9 +104,10 @@ Msg_TLSClientAuthCertSelected::Msg_TLSClientAuthCertSelected(const Msg_TLSClient
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_TLSClientAuthCertSelected* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_aselectedcertchainbytes_){from._impl_.a_aselectedcertchainbytes_}
-    , decltype(_impl_.a_aselectedcertbytes_){nullptr}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_aselectedcertchainbytes_){from._impl_.a_aselectedcertchainbytes_}
+    , decltype(_impl_.a_aselectedcertbytes_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_aselectedcertbytes()) {
@@ -114,9 +121,10 @@ inline void Msg_TLSClientAuthCertSelected::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_aselectedcertchainbytes_){arena}
-    , decltype(_impl_.a_aselectedcertbytes_){nullptr}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_aselectedcertchainbytes_){arena}
+    , decltype(_impl_.a_aselectedcertbytes_){nullptr}
   };
 }
 
@@ -146,20 +154,23 @@ void Msg_TLSClientAuthCertSelected::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_aselectedcertchainbytes_.Clear();
-  if (GetArenaForAllocation() == nullptr && _impl_.a_aselectedcertbytes_ != nullptr) {
-    delete _impl_.a_aselectedcertbytes_;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(_impl_.a_aselectedcertbytes_ != nullptr);
+    _impl_.a_aselectedcertbytes_->Clear();
   }
-  _impl_.a_aselectedcertbytes_ = nullptr;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_TLSClientAuthCertSelected::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.psm.ByteArray a_aSelectedCertBytes = 1;
+      // required .protobuf.mozilla.psm.ByteArray a_aSelectedCertBytes = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_aselectedcertbytes(), ptr);
@@ -196,6 +207,7 @@ const char* Msg_TLSClientAuthCertSelected::_InternalParse(const char* ptr, ::_pb
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -209,8 +221,9 @@ uint8_t* Msg_TLSClientAuthCertSelected::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.mozilla.psm.ByteArray a_aSelectedCertBytes = 1;
-  if (this->_internal_has_a_aselectedcertbytes()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required .protobuf.mozilla.psm.ByteArray a_aSelectedCertBytes = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_aselectedcertbytes(this),
         _Internal::a_aselectedcertbytes(this).GetCachedSize(), target, stream);
@@ -236,6 +249,12 @@ size_t Msg_TLSClientAuthCertSelected::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.psm.PSelectTLSClientAuthCert.Msg_TLSClientAuthCertSelected)
   size_t total_size = 0;
 
+  // required .protobuf.mozilla.psm.ByteArray a_aSelectedCertBytes = 1;
+  if (_internal_has_a_aselectedcertbytes()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_aselectedcertbytes_);
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -245,13 +264,6 @@ size_t Msg_TLSClientAuthCertSelected::ByteSizeLong() const {
   for (const auto& msg : this->_impl_.a_aselectedcertchainbytes_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
-  }
-
-  // .protobuf.mozilla.psm.ByteArray a_aSelectedCertBytes = 1;
-  if (this->_internal_has_a_aselectedcertbytes()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_aselectedcertbytes_);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -291,12 +303,14 @@ void Msg_TLSClientAuthCertSelected::CopyFrom(const Msg_TLSClientAuthCertSelected
 }
 
 bool Msg_TLSClientAuthCertSelected::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void Msg_TLSClientAuthCertSelected::InternalSwap(Msg_TLSClientAuthCertSelected* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_aselectedcertchainbytes_.InternalSwap(&other->_impl_.a_aselectedcertchainbytes_);
   swap(_impl_.a_aselectedcertbytes_, other->_impl_.a_aselectedcertbytes_);
 }

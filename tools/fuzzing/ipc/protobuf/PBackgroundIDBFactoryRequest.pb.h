@@ -106,6 +106,13 @@ class Msg___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -180,7 +187,7 @@ class Msg___delete__ final :
   enum : int {
     kAResponseFieldNumber = 1,
   };
-  // .protobuf.mozilla.dom.indexedDB.FactoryRequestResponse a_response = 1;
+  // required .protobuf.mozilla.dom.indexedDB.FactoryRequestResponse a_response = 1;
   bool has_a_response() const;
   private:
   bool _internal_has_a_response() const;
@@ -206,8 +213,9 @@ class Msg___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::protobuf::mozilla::dom::indexedDB::FactoryRequestResponse* a_response_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::protobuf::mozilla::dom::indexedDB::FactoryRequestResponse* a_response_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBFactoryRequest_2eproto;
@@ -243,6 +251,13 @@ class Reply___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply___delete__& default_instance() {
@@ -362,6 +377,13 @@ class Msg_Blocked final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Blocked& default_instance() {
     return *internal_default_instance();
   }
@@ -436,7 +458,11 @@ class Msg_Blocked final :
   enum : int {
     kACurrentVersionFieldNumber = 1,
   };
-  // uint64 a_currentVersion = 1;
+  // required uint64 a_currentVersion = 1;
+  bool has_a_currentversion() const;
+  private:
+  bool _internal_has_a_currentversion() const;
+  public:
   void clear_a_currentversion();
   uint64_t a_currentversion() const;
   void set_a_currentversion(uint64_t value);
@@ -453,8 +479,9 @@ class Msg_Blocked final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint64_t a_currentversion_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint64_t a_currentversion_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBFactoryRequest_2eproto;
@@ -470,9 +497,11 @@ class Msg_Blocked final :
 #endif  // __GNUC__
 // Msg___delete__
 
-// .protobuf.mozilla.dom.indexedDB.FactoryRequestResponse a_response = 1;
+// required .protobuf.mozilla.dom.indexedDB.FactoryRequestResponse a_response = 1;
 inline bool Msg___delete__::_internal_has_a_response() const {
-  return this != internal_default_instance() && _impl_.a_response_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_response_ != nullptr);
+  return value;
 }
 inline bool Msg___delete__::has_a_response() const {
   return _internal_has_a_response();
@@ -493,14 +522,14 @@ inline void Msg___delete__::unsafe_arena_set_allocated_a_response(
   }
   _impl_.a_response_ = a_response;
   if (a_response) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactoryRequest.Msg___delete__.a_response)
 }
 inline ::protobuf::mozilla::dom::indexedDB::FactoryRequestResponse* Msg___delete__::release_a_response() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::indexedDB::FactoryRequestResponse* temp = _impl_.a_response_;
   _impl_.a_response_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -516,13 +545,13 @@ inline ::protobuf::mozilla::dom::indexedDB::FactoryRequestResponse* Msg___delete
 }
 inline ::protobuf::mozilla::dom::indexedDB::FactoryRequestResponse* Msg___delete__::unsafe_arena_release_a_response() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactoryRequest.Msg___delete__.a_response)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::indexedDB::FactoryRequestResponse* temp = _impl_.a_response_;
   _impl_.a_response_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::indexedDB::FactoryRequestResponse* Msg___delete__::_internal_mutable_a_response() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_response_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::FactoryRequestResponse>(GetArenaForAllocation());
     _impl_.a_response_ = p;
@@ -547,9 +576,9 @@ inline void Msg___delete__::set_allocated_a_response(::protobuf::mozilla::dom::i
       a_response = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_response, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_response_ = a_response;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactoryRequest.Msg___delete__.a_response)
@@ -563,9 +592,17 @@ inline void Msg___delete__::set_allocated_a_response(::protobuf::mozilla::dom::i
 
 // Msg_Blocked
 
-// uint64 a_currentVersion = 1;
+// required uint64 a_currentVersion = 1;
+inline bool Msg_Blocked::_internal_has_a_currentversion() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_Blocked::has_a_currentversion() const {
+  return _internal_has_a_currentversion();
+}
 inline void Msg_Blocked::clear_a_currentversion() {
   _impl_.a_currentversion_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_Blocked::_internal_a_currentversion() const {
   return _impl_.a_currentversion_;
@@ -575,7 +612,7 @@ inline uint64_t Msg_Blocked::a_currentversion() const {
   return _internal_a_currentversion();
 }
 inline void Msg_Blocked::_internal_set_a_currentversion(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_currentversion_ = value;
 }
 inline void Msg_Blocked::set_a_currentversion(uint64_t value) {

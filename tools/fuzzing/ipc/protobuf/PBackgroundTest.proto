@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/ipc/glue/PBackgroundTest.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.ipc.PBackgroundTest;
@@ -16,7 +16,7 @@ package protobuf.mozilla.ipc.PBackgroundTest;
 
 // Message declarations
 message Msg___delete__ {
-  string a_testArg = 1;
+  required string a_testArg = 1;
 }
 
 message Reply___delete__ {

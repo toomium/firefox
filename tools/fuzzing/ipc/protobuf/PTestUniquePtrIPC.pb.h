@@ -98,6 +98,13 @@ class Msg_TestMessage final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_TestMessage& default_instance() {
     return *internal_default_instance();
   }
@@ -176,7 +183,11 @@ class Msg_TestMessage final :
     kAA3FieldNumber = 3,
     kAA5FieldNumber = 5,
   };
-  // bytes a_a1 = 1;
+  // required bytes a_a1 = 1;
+  bool has_a_a1() const;
+  private:
+  bool _internal_has_a_a1() const;
+  public:
   void clear_a_a1();
   const std::string& a_a1() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -190,7 +201,11 @@ class Msg_TestMessage final :
   std::string* _internal_mutable_a_a1();
   public:
 
-  // bytes a_a2 = 2;
+  // required bytes a_a2 = 2;
+  bool has_a_a2() const;
+  private:
+  bool _internal_has_a_a2() const;
+  public:
   void clear_a_a2();
   const std::string& a_a2() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -204,7 +219,11 @@ class Msg_TestMessage final :
   std::string* _internal_mutable_a_a2();
   public:
 
-  // bytes a_a4 = 4;
+  // required bytes a_a4 = 4;
+  bool has_a_a4() const;
+  private:
+  bool _internal_has_a_a4() const;
+  public:
   void clear_a_a4();
   const std::string& a_a4() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -218,7 +237,7 @@ class Msg_TestMessage final :
   std::string* _internal_mutable_a_a4();
   public:
 
-  // .protobuf.mozilla._ipdltest.DummyStruct a_a3 = 3;
+  // required .protobuf.mozilla._ipdltest.DummyStruct a_a3 = 3;
   bool has_a_a3() const;
   private:
   bool _internal_has_a_a3() const;
@@ -236,7 +255,7 @@ class Msg_TestMessage final :
       ::protobuf::mozilla::_ipdltest::DummyStruct* a_a3);
   ::protobuf::mozilla::_ipdltest::DummyStruct* unsafe_arena_release_a_a3();
 
-  // .protobuf.mozilla._ipdltest.DummyUnion a_a5 = 5;
+  // required .protobuf.mozilla._ipdltest.DummyUnion a_a5 = 5;
   bool has_a_a5() const;
   private:
   bool _internal_has_a_a5() const;
@@ -258,16 +277,20 @@ class Msg_TestMessage final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_a1_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_a2_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_a4_;
     ::protobuf::mozilla::_ipdltest::DummyStruct* a_a3_;
     ::protobuf::mozilla::_ipdltest::DummyUnion* a_a5_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestUniquePtrIPC_2eproto;
@@ -303,6 +326,13 @@ class Msg_TestSendReference final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_TestSendReference& default_instance() {
@@ -379,7 +409,11 @@ class Msg_TestSendReference final :
   enum : int {
     kAAFieldNumber = 1,
   };
-  // bytes a_a = 1;
+  // required bytes a_a = 1;
+  bool has_a_a() const;
+  private:
+  bool _internal_has_a_a() const;
+  public:
   void clear_a_a();
   const std::string& a_a() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -401,8 +435,9 @@ class Msg_TestSendReference final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_a_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_a_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestUniquePtrIPC_2eproto;
@@ -418,9 +453,17 @@ class Msg_TestSendReference final :
 #endif  // __GNUC__
 // Msg_TestMessage
 
-// bytes a_a1 = 1;
+// required bytes a_a1 = 1;
+inline bool Msg_TestMessage::_internal_has_a_a1() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_TestMessage::has_a_a1() const {
+  return _internal_has_a_a1();
+}
 inline void Msg_TestMessage::clear_a_a1() {
   _impl_.a_a1_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_TestMessage::a_a1() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestMessage.a_a1)
@@ -429,7 +472,7 @@ inline const std::string& Msg_TestMessage::a_a1() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_TestMessage::set_a_a1(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_a1_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestMessage.a_a1)
 }
@@ -442,22 +485,32 @@ inline const std::string& Msg_TestMessage::_internal_a_a1() const {
   return _impl_.a_a1_.Get();
 }
 inline void Msg_TestMessage::_internal_set_a_a1(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_a1_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_TestMessage::_internal_mutable_a_a1() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_a1_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_TestMessage::release_a_a1() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestMessage.a_a1)
-  return _impl_.a_a1_.Release();
+  if (!_internal_has_a_a1()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_a1_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_a1_.IsDefault()) {
+    _impl_.a_a1_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_TestMessage::set_allocated_a_a1(std::string* a_a1) {
   if (a_a1 != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_a1_.SetAllocated(a_a1, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -468,9 +521,17 @@ inline void Msg_TestMessage::set_allocated_a_a1(std::string* a_a1) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestMessage.a_a1)
 }
 
-// bytes a_a2 = 2;
+// required bytes a_a2 = 2;
+inline bool Msg_TestMessage::_internal_has_a_a2() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_TestMessage::has_a_a2() const {
+  return _internal_has_a_a2();
+}
 inline void Msg_TestMessage::clear_a_a2() {
   _impl_.a_a2_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_TestMessage::a_a2() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestMessage.a_a2)
@@ -479,7 +540,7 @@ inline const std::string& Msg_TestMessage::a_a2() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_TestMessage::set_a_a2(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_a2_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestMessage.a_a2)
 }
@@ -492,22 +553,32 @@ inline const std::string& Msg_TestMessage::_internal_a_a2() const {
   return _impl_.a_a2_.Get();
 }
 inline void Msg_TestMessage::_internal_set_a_a2(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_a2_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_TestMessage::_internal_mutable_a_a2() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_a2_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_TestMessage::release_a_a2() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestMessage.a_a2)
-  return _impl_.a_a2_.Release();
+  if (!_internal_has_a_a2()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_a2_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_a2_.IsDefault()) {
+    _impl_.a_a2_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_TestMessage::set_allocated_a_a2(std::string* a_a2) {
   if (a_a2 != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_a2_.SetAllocated(a_a2, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -518,9 +589,11 @@ inline void Msg_TestMessage::set_allocated_a_a2(std::string* a_a2) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestMessage.a_a2)
 }
 
-// .protobuf.mozilla._ipdltest.DummyStruct a_a3 = 3;
+// required .protobuf.mozilla._ipdltest.DummyStruct a_a3 = 3;
 inline bool Msg_TestMessage::_internal_has_a_a3() const {
-  return this != internal_default_instance() && _impl_.a_a3_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_a3_ != nullptr);
+  return value;
 }
 inline bool Msg_TestMessage::has_a_a3() const {
   return _internal_has_a_a3();
@@ -541,14 +614,14 @@ inline void Msg_TestMessage::unsafe_arena_set_allocated_a_a3(
   }
   _impl_.a_a3_ = a_a3;
   if (a_a3) {
-    
+    _impl_._has_bits_[0] |= 0x00000008u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000008u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestMessage.a_a3)
 }
 inline ::protobuf::mozilla::_ipdltest::DummyStruct* Msg_TestMessage::release_a_a3() {
-  
+  _impl_._has_bits_[0] &= ~0x00000008u;
   ::protobuf::mozilla::_ipdltest::DummyStruct* temp = _impl_.a_a3_;
   _impl_.a_a3_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -564,13 +637,13 @@ inline ::protobuf::mozilla::_ipdltest::DummyStruct* Msg_TestMessage::release_a_a
 }
 inline ::protobuf::mozilla::_ipdltest::DummyStruct* Msg_TestMessage::unsafe_arena_release_a_a3() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestMessage.a_a3)
-  
+  _impl_._has_bits_[0] &= ~0x00000008u;
   ::protobuf::mozilla::_ipdltest::DummyStruct* temp = _impl_.a_a3_;
   _impl_.a_a3_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::_ipdltest::DummyStruct* Msg_TestMessage::_internal_mutable_a_a3() {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   if (_impl_.a_a3_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::_ipdltest::DummyStruct>(GetArenaForAllocation());
     _impl_.a_a3_ = p;
@@ -595,17 +668,25 @@ inline void Msg_TestMessage::set_allocated_a_a3(::protobuf::mozilla::_ipdltest::
       a_a3 = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_a3, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000008u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000008u;
   }
   _impl_.a_a3_ = a_a3;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestMessage.a_a3)
 }
 
-// bytes a_a4 = 4;
+// required bytes a_a4 = 4;
+inline bool Msg_TestMessage::_internal_has_a_a4() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_TestMessage::has_a_a4() const {
+  return _internal_has_a_a4();
+}
 inline void Msg_TestMessage::clear_a_a4() {
   _impl_.a_a4_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& Msg_TestMessage::a_a4() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestMessage.a_a4)
@@ -614,7 +695,7 @@ inline const std::string& Msg_TestMessage::a_a4() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_TestMessage::set_a_a4(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000004u;
  _impl_.a_a4_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestMessage.a_a4)
 }
@@ -627,22 +708,32 @@ inline const std::string& Msg_TestMessage::_internal_a_a4() const {
   return _impl_.a_a4_.Get();
 }
 inline void Msg_TestMessage::_internal_set_a_a4(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_a4_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_TestMessage::_internal_mutable_a_a4() {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   return _impl_.a_a4_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_TestMessage::release_a_a4() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestMessage.a_a4)
-  return _impl_.a_a4_.Release();
+  if (!_internal_has_a_a4()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000004u;
+  auto* p = _impl_.a_a4_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_a4_.IsDefault()) {
+    _impl_.a_a4_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_TestMessage::set_allocated_a_a4(std::string* a_a4) {
   if (a_a4 != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.a_a4_.SetAllocated(a_a4, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -653,9 +744,11 @@ inline void Msg_TestMessage::set_allocated_a_a4(std::string* a_a4) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestMessage.a_a4)
 }
 
-// .protobuf.mozilla._ipdltest.DummyUnion a_a5 = 5;
+// required .protobuf.mozilla._ipdltest.DummyUnion a_a5 = 5;
 inline bool Msg_TestMessage::_internal_has_a_a5() const {
-  return this != internal_default_instance() && _impl_.a_a5_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_a5_ != nullptr);
+  return value;
 }
 inline bool Msg_TestMessage::has_a_a5() const {
   return _internal_has_a_a5();
@@ -676,14 +769,14 @@ inline void Msg_TestMessage::unsafe_arena_set_allocated_a_a5(
   }
   _impl_.a_a5_ = a_a5;
   if (a_a5) {
-    
+    _impl_._has_bits_[0] |= 0x00000010u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000010u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestMessage.a_a5)
 }
 inline ::protobuf::mozilla::_ipdltest::DummyUnion* Msg_TestMessage::release_a_a5() {
-  
+  _impl_._has_bits_[0] &= ~0x00000010u;
   ::protobuf::mozilla::_ipdltest::DummyUnion* temp = _impl_.a_a5_;
   _impl_.a_a5_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -699,13 +792,13 @@ inline ::protobuf::mozilla::_ipdltest::DummyUnion* Msg_TestMessage::release_a_a5
 }
 inline ::protobuf::mozilla::_ipdltest::DummyUnion* Msg_TestMessage::unsafe_arena_release_a_a5() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestMessage.a_a5)
-  
+  _impl_._has_bits_[0] &= ~0x00000010u;
   ::protobuf::mozilla::_ipdltest::DummyUnion* temp = _impl_.a_a5_;
   _impl_.a_a5_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::_ipdltest::DummyUnion* Msg_TestMessage::_internal_mutable_a_a5() {
-  
+  _impl_._has_bits_[0] |= 0x00000010u;
   if (_impl_.a_a5_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::_ipdltest::DummyUnion>(GetArenaForAllocation());
     _impl_.a_a5_ = p;
@@ -730,9 +823,9 @@ inline void Msg_TestMessage::set_allocated_a_a5(::protobuf::mozilla::_ipdltest::
       a_a5 = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_a5, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000010u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000010u;
   }
   _impl_.a_a5_ = a_a5;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestMessage.a_a5)
@@ -742,9 +835,17 @@ inline void Msg_TestMessage::set_allocated_a_a5(::protobuf::mozilla::_ipdltest::
 
 // Msg_TestSendReference
 
-// bytes a_a = 1;
+// required bytes a_a = 1;
+inline bool Msg_TestSendReference::_internal_has_a_a() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_TestSendReference::has_a_a() const {
+  return _internal_has_a_a();
+}
 inline void Msg_TestSendReference::clear_a_a() {
   _impl_.a_a_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_TestSendReference::a_a() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestSendReference.a_a)
@@ -753,7 +854,7 @@ inline const std::string& Msg_TestSendReference::a_a() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_TestSendReference::set_a_a(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_a_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestSendReference.a_a)
 }
@@ -766,22 +867,32 @@ inline const std::string& Msg_TestSendReference::_internal_a_a() const {
   return _impl_.a_a_.Get();
 }
 inline void Msg_TestSendReference::_internal_set_a_a(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_a_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_TestSendReference::_internal_mutable_a_a() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_a_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_TestSendReference::release_a_a() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestSendReference.a_a)
-  return _impl_.a_a_.Release();
+  if (!_internal_has_a_a()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_a_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_a_.IsDefault()) {
+    _impl_.a_a_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_TestSendReference::set_allocated_a_a(std::string* a_a) {
   if (a_a != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_a_.SetAllocated(a_a, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

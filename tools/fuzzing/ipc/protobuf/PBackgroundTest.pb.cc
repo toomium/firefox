@@ -23,8 +23,9 @@ namespace ipc {
 namespace PBackgroundTest {
 PROTOBUF_CONSTEXPR Msg___delete__::Msg___delete__(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_testarg_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_testarg_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg___delete__DefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg___delete__DefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -59,6 +60,13 @@ namespace PBackgroundTest {
 
 class Msg___delete__::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg___delete__>()._impl_._has_bits_);
+  static void set_has_a_testarg(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Msg___delete__::Msg___delete__(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -71,15 +79,16 @@ Msg___delete__::Msg___delete__(const Msg___delete__& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg___delete__* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_testarg_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_testarg_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_testarg_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_testarg_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_testarg().empty()) {
+  if (from._internal_has_a_testarg()) {
     _this->_impl_.a_testarg_.Set(from._internal_a_testarg(), 
       _this->GetArenaForAllocation());
   }
@@ -91,8 +100,9 @@ inline void Msg___delete__::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_testarg_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_testarg_){}
   };
   _impl_.a_testarg_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -124,23 +134,27 @@ void Msg___delete__::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_testarg_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_testarg_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg___delete__::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string a_testArg = 1;
+      // required string a_testArg = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_testarg();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -160,6 +174,7 @@ const char* Msg___delete__::_InternalParse(const char* ptr, ::_pbi::ParseContext
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -173,12 +188,9 @@ uint8_t* Msg___delete__::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string a_testArg = 1;
-  if (!this->_internal_a_testarg().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_testarg().data(), static_cast<int>(this->_internal_a_testarg().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.ipc.PBackgroundTest.Msg___delete__.a_testArg");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_testArg = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_testarg(), target);
   }
@@ -195,16 +207,15 @@ size_t Msg___delete__::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.ipc.PBackgroundTest.Msg___delete__)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string a_testArg = 1;
-  if (!this->_internal_a_testarg().empty()) {
+  // required string a_testArg = 1;
+  if (_internal_has_a_testarg()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_testarg());
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -227,7 +238,7 @@ void Msg___delete__::MergeFrom(const Msg___delete__& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_testarg().empty()) {
+  if (from._internal_has_a_testarg()) {
     _this->_internal_set_a_testarg(from._internal_a_testarg());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -241,6 +252,7 @@ void Msg___delete__::CopyFrom(const Msg___delete__& from) {
 }
 
 bool Msg___delete__::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -249,6 +261,7 @@ void Msg___delete__::InternalSwap(Msg___delete__* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_testarg_, lhs_arena,
       &other->_impl_.a_testarg_, rhs_arena

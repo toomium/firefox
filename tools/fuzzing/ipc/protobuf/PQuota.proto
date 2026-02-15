@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/quota/PQuota.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.quota.PQuota;
@@ -25,8 +25,8 @@ message Reply___delete__ {
 }
 
 message Msg_PQuotaRequestConstructor {
-  sint64 a_actorid = 1;
-  protobuf.mozilla.dom.quota.RequestParams a_params = 2;
+  required sint64 a_actorid = 1;
+  required protobuf.mozilla.dom.quota.RequestParams a_params = 2;
 }
 
 message Reply_PQuotaRequestConstructor {
@@ -36,236 +36,236 @@ message Msg_StorageInitialized {
 }
 
 message Reply_StorageInitialized {
-  protobuf.mozilla.ipc.BoolResponse a_response = 1;
+  required protobuf.mozilla.ipc.BoolResponse a_response = 1;
 }
 
 message Msg_PersistentStorageInitialized {
 }
 
 message Reply_PersistentStorageInitialized {
-  protobuf.mozilla.ipc.BoolResponse a_response = 1;
+  required protobuf.mozilla.ipc.BoolResponse a_response = 1;
 }
 
 message Msg_TemporaryStorageInitialized {
 }
 
 message Reply_TemporaryStorageInitialized {
-  protobuf.mozilla.ipc.BoolResponse a_response = 1;
+  required protobuf.mozilla.ipc.BoolResponse a_response = 1;
 }
 
 message Msg_TemporaryGroupInitialized {
-  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
 }
 
 message Reply_TemporaryGroupInitialized {
-  protobuf.mozilla.ipc.BoolResponse a_response = 1;
+  required protobuf.mozilla.ipc.BoolResponse a_response = 1;
 }
 
 message Msg_PersistentOriginInitialized {
-  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
 }
 
 message Reply_PersistentOriginInitialized {
-  protobuf.mozilla.ipc.BoolResponse a_response = 1;
+  required protobuf.mozilla.ipc.BoolResponse a_response = 1;
 }
 
 message Msg_TemporaryOriginInitialized {
-  bytes a_persistenceType = 1;
-  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
+  required bytes a_persistenceType = 1;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
 }
 
 message Reply_TemporaryOriginInitialized {
-  protobuf.mozilla.ipc.BoolResponse a_response = 1;
+  required protobuf.mozilla.ipc.BoolResponse a_response = 1;
 }
 
 message Msg_InitializeStorage {
 }
 
 message Reply_InitializeStorage {
-  protobuf.mozilla.ipc.BoolResponse a_response = 1;
+  required protobuf.mozilla.ipc.BoolResponse a_response = 1;
 }
 
 message Msg_InitializePersistentStorage {
 }
 
 message Reply_InitializePersistentStorage {
-  protobuf.mozilla.ipc.BoolResponse a_response = 1;
+  required protobuf.mozilla.ipc.BoolResponse a_response = 1;
 }
 
 message Msg_InitializeAllTemporaryOrigins {
 }
 
 message Reply_InitializeAllTemporaryOrigins {
-  protobuf.mozilla.ipc.BoolResponse a_response = 1;
+  required protobuf.mozilla.ipc.BoolResponse a_response = 1;
 }
 
 message Msg_InitializeTemporaryGroup {
-  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
 }
 
 message Reply_InitializeTemporaryGroup {
-  protobuf.mozilla.ipc.BoolResponse a_response = 1;
+  required protobuf.mozilla.ipc.BoolResponse a_response = 1;
 }
 
 message Msg_InitializePersistentOrigin {
-  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
 }
 
 message Reply_InitializePersistentOrigin {
-  protobuf.mozilla.ipc.BoolResponse a_response = 1;
+  required protobuf.mozilla.ipc.BoolResponse a_response = 1;
 }
 
 message Msg_InitializeTemporaryOrigin {
-  bytes a_persistenceType = 1;
-  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
-  bool a_createIfNonExistent = 3;
+  required bytes a_persistenceType = 1;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
+  required bool a_createIfNonExistent = 3;
 }
 
 message Reply_InitializeTemporaryOrigin {
-  protobuf.mozilla.ipc.BoolResponse a_response = 1;
+  required protobuf.mozilla.ipc.BoolResponse a_response = 1;
 }
 
 message Msg_InitializePersistentClient {
-  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
-  bytes a_clientType = 2;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
+  required bytes a_clientType = 2;
 }
 
 message Reply_InitializePersistentClient {
-  protobuf.mozilla.ipc.BoolResponse a_response = 1;
+  required protobuf.mozilla.ipc.BoolResponse a_response = 1;
 }
 
 message Msg_InitializeTemporaryClient {
-  bytes a_persistenceType = 1;
-  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
-  bytes a_clientType = 3;
-  bool a_createIfNonExistent = 4;
+  required bytes a_persistenceType = 1;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
+  required bytes a_clientType = 3;
+  required bool a_createIfNonExistent = 4;
 }
 
 message Reply_InitializeTemporaryClient {
-  protobuf.mozilla.ipc.BoolResponse a_response = 1;
+  required protobuf.mozilla.ipc.BoolResponse a_response = 1;
 }
 
 message Msg_InitializeTemporaryStorage {
 }
 
 message Reply_InitializeTemporaryStorage {
-  protobuf.mozilla.ipc.BoolResponse a_response = 1;
+  required protobuf.mozilla.ipc.BoolResponse a_response = 1;
 }
 
 message Msg_GetUsage {
-  bool a_getAll = 1;
-  bytes a_parentEndpoint = 2;
+  required bool a_getAll = 1;
+  required bytes a_parentEndpoint = 2;
 }
 
 message Reply_GetUsage {
-  protobuf.mozilla.dom.quota.OriginUsageMetadataArrayResponse a_response = 1;
+  required protobuf.mozilla.dom.quota.OriginUsageMetadataArrayResponse a_response = 1;
 }
 
 message Msg_GetOriginUsage {
-  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
-  bytes a_parentEndpoint = 2;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
+  required bytes a_parentEndpoint = 2;
 }
 
 message Reply_GetOriginUsage {
-  protobuf.mozilla.dom.quota.UsageInfoResponse a_response = 1;
+  required protobuf.mozilla.dom.quota.UsageInfoResponse a_response = 1;
 }
 
 message Msg_GetCachedOriginUsage {
-  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
 }
 
 message Reply_GetCachedOriginUsage {
-  protobuf.mozilla.ipc.UInt64Response a_response = 1;
+  required protobuf.mozilla.ipc.UInt64Response a_response = 1;
 }
 
 message Msg_ListOrigins {
 }
 
 message Reply_ListOrigins {
-  protobuf.mozilla.ipc.CStringArrayResponse a_response = 1;
+  required protobuf.mozilla.ipc.CStringArrayResponse a_response = 1;
 }
 
 message Msg_ListCachedOrigins {
 }
 
 message Reply_ListCachedOrigins {
-  protobuf.mozilla.ipc.CStringArrayResponse a_response = 1;
+  required protobuf.mozilla.ipc.CStringArrayResponse a_response = 1;
 }
 
 message Msg_ClearStoragesForOrigin {
   optional bytes a_persistenceType = 1;
-  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
 }
 
 message Reply_ClearStoragesForOrigin {
-  protobuf.mozilla.ipc.BoolResponse a_response = 1;
+  required protobuf.mozilla.ipc.BoolResponse a_response = 1;
 }
 
 message Msg_ClearStoragesForClient {
   optional bytes a_persistenceType = 1;
-  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
-  bytes a_clientType = 3;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
+  required bytes a_clientType = 3;
 }
 
 message Reply_ClearStoragesForClient {
-  protobuf.mozilla.ipc.BoolResponse a_response = 1;
+  required protobuf.mozilla.ipc.BoolResponse a_response = 1;
 }
 
 message Msg_ClearStoragesForOriginPrefix {
   optional bytes a_persistenceType = 1;
-  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
 }
 
 message Reply_ClearStoragesForOriginPrefix {
-  protobuf.mozilla.ipc.BoolResponse a_response = 1;
+  required protobuf.mozilla.ipc.BoolResponse a_response = 1;
 }
 
 message Msg_ClearStoragesForOriginAttributesPattern {
-  bytes a_pattern = 1;
+  required bytes a_pattern = 1;
 }
 
 message Reply_ClearStoragesForOriginAttributesPattern {
-  protobuf.mozilla.ipc.BoolResponse a_response = 1;
+  required protobuf.mozilla.ipc.BoolResponse a_response = 1;
 }
 
 message Msg_ClearStoragesForPrivateBrowsing {
 }
 
 message Reply_ClearStoragesForPrivateBrowsing {
-  protobuf.mozilla.ipc.BoolResponse a_response = 1;
+  required protobuf.mozilla.ipc.BoolResponse a_response = 1;
 }
 
 message Msg_ClearStorage {
 }
 
 message Reply_ClearStorage {
-  protobuf.mozilla.ipc.BoolResponse a_response = 1;
+  required protobuf.mozilla.ipc.BoolResponse a_response = 1;
 }
 
 message Msg_ShutdownStoragesForOrigin {
   optional bytes a_persistenceType = 1;
-  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
 }
 
 message Reply_ShutdownStoragesForOrigin {
-  protobuf.mozilla.ipc.BoolResponse a_response = 1;
+  required protobuf.mozilla.ipc.BoolResponse a_response = 1;
 }
 
 message Msg_ShutdownStoragesForClient {
   optional bytes a_persistenceType = 1;
-  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
-  bytes a_clientType = 3;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
+  required bytes a_clientType = 3;
 }
 
 message Reply_ShutdownStoragesForClient {
-  protobuf.mozilla.ipc.BoolResponse a_response = 1;
+  required protobuf.mozilla.ipc.BoolResponse a_response = 1;
 }
 
 message Msg_ShutdownStorage {
 }
 
 message Reply_ShutdownStorage {
-  protobuf.mozilla.ipc.BoolResponse a_response = 1;
+  required protobuf.mozilla.ipc.BoolResponse a_response = 1;
 }
 
 message Msg_StartIdleMaintenance {
@@ -275,11 +275,11 @@ message Msg_StopIdleMaintenance {
 }
 
 message Msg_AbortOperationsForProcess {
-  bytes a_contentParentId = 1;
+  required bytes a_contentParentId = 1;
 }
 
 message Msg_SetThumbnailPrivateIdentityId {
-  uint32 a_aThumbnailPrivateIdentityId = 1;
+  required uint32 a_aThumbnailPrivateIdentityId = 1;
 }
 
 // Parameter mappings stats:

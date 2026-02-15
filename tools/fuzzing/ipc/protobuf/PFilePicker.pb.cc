@@ -23,7 +23,9 @@ namespace dom {
 namespace PFilePicker {
 PROTOBUF_CONSTEXPR Msg_Open::Msg_Open(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_filters_)*/{}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_filters_)*/{}
   , /*decltype(_impl_.a_filternames_)*/{}
   , /*decltype(_impl_.a_rawfilters_)*/{}
   , /*decltype(_impl_.a_defaultfile_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
@@ -33,8 +35,7 @@ PROTOBUF_CONSTEXPR Msg_Open::Msg_Open(
   , /*decltype(_impl_.a_okbuttonlabel_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_capture_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_selectedtype_)*/0
-  , /*decltype(_impl_.a_addtorecentdocs_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_addtorecentdocs_)*/false} {}
 struct Msg_OpenDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_OpenDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -46,9 +47,10 @@ struct Msg_OpenDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_OpenDefaultTypeInternal _Msg_Open_default_instance_;
 PROTOBUF_CONSTEXPR Msg___delete__::Msg___delete__(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_result_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_data_)*/nullptr
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_result_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_data_)*/nullptr} {}
 struct Msg___delete__DefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg___delete__DefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -83,6 +85,34 @@ namespace PFilePicker {
 
 class Msg_Open::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_Open>()._impl_._has_bits_);
+  static void set_has_a_selectedtype(HasBits* has_bits) {
+    (*has_bits)[0] |= 64u;
+  }
+  static void set_has_a_addtorecentdocs(HasBits* has_bits) {
+    (*has_bits)[0] |= 128u;
+  }
+  static void set_has_a_defaultfile(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_defaultextension(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_displaydirectory(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_a_displayspecialdirectory(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_a_okbuttonlabel(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static void set_has_a_capture(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x000000ff) ^ 0x000000ff) != 0;
+  }
 };
 
 Msg_Open::Msg_Open(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -95,7 +125,9 @@ Msg_Open::Msg_Open(const Msg_Open& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_Open* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_filters_){from._impl_.a_filters_}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_filters_){from._impl_.a_filters_}
     , decltype(_impl_.a_filternames_){from._impl_.a_filternames_}
     , decltype(_impl_.a_rawfilters_){from._impl_.a_rawfilters_}
     , decltype(_impl_.a_defaultfile_){}
@@ -105,15 +137,14 @@ Msg_Open::Msg_Open(const Msg_Open& from)
     , decltype(_impl_.a_okbuttonlabel_){}
     , decltype(_impl_.a_capture_){}
     , decltype(_impl_.a_selectedtype_){}
-    , decltype(_impl_.a_addtorecentdocs_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_addtorecentdocs_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_defaultfile_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_defaultfile_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_defaultfile().empty()) {
+  if (from._internal_has_a_defaultfile()) {
     _this->_impl_.a_defaultfile_.Set(from._internal_a_defaultfile(), 
       _this->GetArenaForAllocation());
   }
@@ -121,7 +152,7 @@ Msg_Open::Msg_Open(const Msg_Open& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_defaultextension_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_defaultextension().empty()) {
+  if (from._internal_has_a_defaultextension()) {
     _this->_impl_.a_defaultextension_.Set(from._internal_a_defaultextension(), 
       _this->GetArenaForAllocation());
   }
@@ -129,7 +160,7 @@ Msg_Open::Msg_Open(const Msg_Open& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_displaydirectory_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_displaydirectory().empty()) {
+  if (from._internal_has_a_displaydirectory()) {
     _this->_impl_.a_displaydirectory_.Set(from._internal_a_displaydirectory(), 
       _this->GetArenaForAllocation());
   }
@@ -137,7 +168,7 @@ Msg_Open::Msg_Open(const Msg_Open& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_displayspecialdirectory_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_displayspecialdirectory().empty()) {
+  if (from._internal_has_a_displayspecialdirectory()) {
     _this->_impl_.a_displayspecialdirectory_.Set(from._internal_a_displayspecialdirectory(), 
       _this->GetArenaForAllocation());
   }
@@ -145,7 +176,7 @@ Msg_Open::Msg_Open(const Msg_Open& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_okbuttonlabel_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_okbuttonlabel().empty()) {
+  if (from._internal_has_a_okbuttonlabel()) {
     _this->_impl_.a_okbuttonlabel_.Set(from._internal_a_okbuttonlabel(), 
       _this->GetArenaForAllocation());
   }
@@ -153,7 +184,7 @@ Msg_Open::Msg_Open(const Msg_Open& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_capture_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_capture().empty()) {
+  if (from._internal_has_a_capture()) {
     _this->_impl_.a_capture_.Set(from._internal_a_capture(), 
       _this->GetArenaForAllocation());
   }
@@ -168,7 +199,9 @@ inline void Msg_Open::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_filters_){arena}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_filters_){arena}
     , decltype(_impl_.a_filternames_){arena}
     , decltype(_impl_.a_rawfilters_){arena}
     , decltype(_impl_.a_defaultfile_){}
@@ -179,7 +212,6 @@ inline void Msg_Open::SharedCtor(
     , decltype(_impl_.a_capture_){}
     , decltype(_impl_.a_selectedtype_){0}
     , decltype(_impl_.a_addtorecentdocs_){false}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_defaultfile_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -242,57 +274,76 @@ void Msg_Open::Clear() {
   _impl_.a_filters_.Clear();
   _impl_.a_filternames_.Clear();
   _impl_.a_rawfilters_.Clear();
-  _impl_.a_defaultfile_.ClearToEmpty();
-  _impl_.a_defaultextension_.ClearToEmpty();
-  _impl_.a_displaydirectory_.ClearToEmpty();
-  _impl_.a_displayspecialdirectory_.ClearToEmpty();
-  _impl_.a_okbuttonlabel_.ClearToEmpty();
-  _impl_.a_capture_.ClearToEmpty();
-  ::memset(&_impl_.a_selectedtype_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.a_addtorecentdocs_) -
-      reinterpret_cast<char*>(&_impl_.a_selectedtype_)) + sizeof(_impl_.a_addtorecentdocs_));
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000003fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_defaultfile_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_defaultextension_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _impl_.a_displaydirectory_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _impl_.a_displayspecialdirectory_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _impl_.a_okbuttonlabel_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _impl_.a_capture_.ClearNonDefaultToEmpty();
+    }
+  }
+  if (cached_has_bits & 0x000000c0u) {
+    ::memset(&_impl_.a_selectedtype_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_addtorecentdocs_) -
+        reinterpret_cast<char*>(&_impl_.a_selectedtype_)) + sizeof(_impl_.a_addtorecentdocs_));
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_Open::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // sint32 a_selectedType = 1;
+      // required sint32 a_selectedType = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_selectedtype(&has_bits);
           _impl_.a_selectedtype_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bool a_addToRecentDocs = 2;
+      // required bool a_addToRecentDocs = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_a_addtorecentdocs(&has_bits);
           _impl_.a_addtorecentdocs_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string a_defaultFile = 3;
+      // required string a_defaultFile = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_defaultfile();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // string a_defaultExtension = 4;
+      // required string a_defaultExtension = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_defaultextension();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -305,7 +356,6 @@ const char* Msg_Open::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
             auto str = _internal_add_a_filters();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            CHK_(::_pbi::VerifyUTF8(str, nullptr));
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<42>(ptr));
         } else
@@ -320,7 +370,6 @@ const char* Msg_Open::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
             auto str = _internal_add_a_filternames();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            CHK_(::_pbi::VerifyUTF8(str, nullptr));
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<50>(ptr));
         } else
@@ -335,43 +384,39 @@ const char* Msg_Open::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
             auto str = _internal_add_a_rawfilters();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            CHK_(::_pbi::VerifyUTF8(str, nullptr));
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<58>(ptr));
         } else
           goto handle_unusual;
         continue;
-      // string a_displayDirectory = 8;
+      // required string a_displayDirectory = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
           auto str = _internal_mutable_a_displaydirectory();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // string a_displaySpecialDirectory = 9;
+      // required string a_displaySpecialDirectory = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
           auto str = _internal_mutable_a_displayspecialdirectory();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // string a_okButtonLabel = 10;
+      // required string a_okButtonLabel = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 82)) {
           auto str = _internal_mutable_a_okbuttonlabel();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // bytes a_capture = 11;
+      // required bytes a_capture = 11;
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 90)) {
           auto str = _internal_mutable_a_capture();
@@ -396,6 +441,7 @@ const char* Msg_Open::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -409,34 +455,27 @@ uint8_t* Msg_Open::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // sint32 a_selectedType = 1;
-  if (this->_internal_a_selectedtype() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required sint32 a_selectedType = 1;
+  if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_a_selectedtype(), target);
   }
 
-  // bool a_addToRecentDocs = 2;
-  if (this->_internal_a_addtorecentdocs() != 0) {
+  // required bool a_addToRecentDocs = 2;
+  if (cached_has_bits & 0x00000080u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_addtorecentdocs(), target);
   }
 
-  // string a_defaultFile = 3;
-  if (!this->_internal_a_defaultfile().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_defaultfile().data(), static_cast<int>(this->_internal_a_defaultfile().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.PFilePicker.Msg_Open.a_defaultFile");
+  // required string a_defaultFile = 3;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_defaultfile(), target);
   }
 
-  // string a_defaultExtension = 4;
-  if (!this->_internal_a_defaultextension().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_defaultextension().data(), static_cast<int>(this->_internal_a_defaultextension().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.PFilePicker.Msg_Open.a_defaultExtension");
+  // required string a_defaultExtension = 4;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_a_defaultextension(), target);
   }
@@ -444,65 +483,41 @@ uint8_t* Msg_Open::_InternalSerialize(
   // repeated string a_filters = 5;
   for (int i = 0, n = this->_internal_a_filters_size(); i < n; i++) {
     const auto& s = this->_internal_a_filters(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.PFilePicker.Msg_Open.a_filters");
     target = stream->WriteString(5, s, target);
   }
 
   // repeated string a_filterNames = 6;
   for (int i = 0, n = this->_internal_a_filternames_size(); i < n; i++) {
     const auto& s = this->_internal_a_filternames(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.PFilePicker.Msg_Open.a_filterNames");
     target = stream->WriteString(6, s, target);
   }
 
   // repeated string a_rawFilters = 7;
   for (int i = 0, n = this->_internal_a_rawfilters_size(); i < n; i++) {
     const auto& s = this->_internal_a_rawfilters(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.PFilePicker.Msg_Open.a_rawFilters");
     target = stream->WriteString(7, s, target);
   }
 
-  // string a_displayDirectory = 8;
-  if (!this->_internal_a_displaydirectory().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_displaydirectory().data(), static_cast<int>(this->_internal_a_displaydirectory().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.PFilePicker.Msg_Open.a_displayDirectory");
+  // required string a_displayDirectory = 8;
+  if (cached_has_bits & 0x00000004u) {
     target = stream->WriteStringMaybeAliased(
         8, this->_internal_a_displaydirectory(), target);
   }
 
-  // string a_displaySpecialDirectory = 9;
-  if (!this->_internal_a_displayspecialdirectory().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_displayspecialdirectory().data(), static_cast<int>(this->_internal_a_displayspecialdirectory().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.PFilePicker.Msg_Open.a_displaySpecialDirectory");
+  // required string a_displaySpecialDirectory = 9;
+  if (cached_has_bits & 0x00000008u) {
     target = stream->WriteStringMaybeAliased(
         9, this->_internal_a_displayspecialdirectory(), target);
   }
 
-  // string a_okButtonLabel = 10;
-  if (!this->_internal_a_okbuttonlabel().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_okbuttonlabel().data(), static_cast<int>(this->_internal_a_okbuttonlabel().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.PFilePicker.Msg_Open.a_okButtonLabel");
+  // required string a_okButtonLabel = 10;
+  if (cached_has_bits & 0x00000010u) {
     target = stream->WriteStringMaybeAliased(
         10, this->_internal_a_okbuttonlabel(), target);
   }
 
-  // bytes a_capture = 11;
-  if (!this->_internal_a_capture().empty()) {
+  // required bytes a_capture = 11;
+  if (cached_has_bits & 0x00000020u) {
     target = stream->WriteBytesMaybeAliased(
         11, this->_internal_a_capture(), target);
   }
@@ -515,10 +530,108 @@ uint8_t* Msg_Open::_InternalSerialize(
   return target;
 }
 
+size_t Msg_Open::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PFilePicker.Msg_Open)
+  size_t total_size = 0;
+
+  if (_internal_has_a_defaultfile()) {
+    // required string a_defaultFile = 3;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_defaultfile());
+  }
+
+  if (_internal_has_a_defaultextension()) {
+    // required string a_defaultExtension = 4;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_defaultextension());
+  }
+
+  if (_internal_has_a_displaydirectory()) {
+    // required string a_displayDirectory = 8;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_displaydirectory());
+  }
+
+  if (_internal_has_a_displayspecialdirectory()) {
+    // required string a_displaySpecialDirectory = 9;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_displayspecialdirectory());
+  }
+
+  if (_internal_has_a_okbuttonlabel()) {
+    // required string a_okButtonLabel = 10;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_okbuttonlabel());
+  }
+
+  if (_internal_has_a_capture()) {
+    // required bytes a_capture = 11;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_capture());
+  }
+
+  if (_internal_has_a_selectedtype()) {
+    // required sint32 a_selectedType = 1;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_selectedtype());
+  }
+
+  if (_internal_has_a_addtorecentdocs()) {
+    // required bool a_addToRecentDocs = 2;
+    total_size += 1 + 1;
+  }
+
+  return total_size;
+}
 size_t Msg_Open::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PFilePicker.Msg_Open)
   size_t total_size = 0;
 
+  if (((_impl_._has_bits_[0] & 0x000000ff) ^ 0x000000ff) == 0) {  // All required fields are present.
+    // required string a_defaultFile = 3;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_defaultfile());
+
+    // required string a_defaultExtension = 4;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_defaultextension());
+
+    // required string a_displayDirectory = 8;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_displaydirectory());
+
+    // required string a_displaySpecialDirectory = 9;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_displayspecialdirectory());
+
+    // required string a_okButtonLabel = 10;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_okbuttonlabel());
+
+    // required bytes a_capture = 11;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_capture());
+
+    // required sint32 a_selectedType = 1;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_selectedtype());
+
+    // required bool a_addToRecentDocs = 2;
+    total_size += 1 + 1;
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -547,58 +660,6 @@ size_t Msg_Open::ByteSizeLong() const {
       _impl_.a_rawfilters_.Get(i));
   }
 
-  // string a_defaultFile = 3;
-  if (!this->_internal_a_defaultfile().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_defaultfile());
-  }
-
-  // string a_defaultExtension = 4;
-  if (!this->_internal_a_defaultextension().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_defaultextension());
-  }
-
-  // string a_displayDirectory = 8;
-  if (!this->_internal_a_displaydirectory().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_displaydirectory());
-  }
-
-  // string a_displaySpecialDirectory = 9;
-  if (!this->_internal_a_displayspecialdirectory().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_displayspecialdirectory());
-  }
-
-  // string a_okButtonLabel = 10;
-  if (!this->_internal_a_okbuttonlabel().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_okbuttonlabel());
-  }
-
-  // bytes a_capture = 11;
-  if (!this->_internal_a_capture().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_capture());
-  }
-
-  // sint32 a_selectedType = 1;
-  if (this->_internal_a_selectedtype() != 0) {
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_selectedtype());
-  }
-
-  // bool a_addToRecentDocs = 2;
-  if (this->_internal_a_addtorecentdocs() != 0) {
-    total_size += 1 + 1;
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -623,29 +684,33 @@ void Msg_Open::MergeFrom(const Msg_Open& from) {
   _this->_impl_.a_filters_.MergeFrom(from._impl_.a_filters_);
   _this->_impl_.a_filternames_.MergeFrom(from._impl_.a_filternames_);
   _this->_impl_.a_rawfilters_.MergeFrom(from._impl_.a_rawfilters_);
-  if (!from._internal_a_defaultfile().empty()) {
-    _this->_internal_set_a_defaultfile(from._internal_a_defaultfile());
-  }
-  if (!from._internal_a_defaultextension().empty()) {
-    _this->_internal_set_a_defaultextension(from._internal_a_defaultextension());
-  }
-  if (!from._internal_a_displaydirectory().empty()) {
-    _this->_internal_set_a_displaydirectory(from._internal_a_displaydirectory());
-  }
-  if (!from._internal_a_displayspecialdirectory().empty()) {
-    _this->_internal_set_a_displayspecialdirectory(from._internal_a_displayspecialdirectory());
-  }
-  if (!from._internal_a_okbuttonlabel().empty()) {
-    _this->_internal_set_a_okbuttonlabel(from._internal_a_okbuttonlabel());
-  }
-  if (!from._internal_a_capture().empty()) {
-    _this->_internal_set_a_capture(from._internal_a_capture());
-  }
-  if (from._internal_a_selectedtype() != 0) {
-    _this->_internal_set_a_selectedtype(from._internal_a_selectedtype());
-  }
-  if (from._internal_a_addtorecentdocs() != 0) {
-    _this->_internal_set_a_addtorecentdocs(from._internal_a_addtorecentdocs());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x000000ffu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_defaultfile(from._internal_a_defaultfile());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_defaultextension(from._internal_a_defaultextension());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_internal_set_a_displaydirectory(from._internal_a_displaydirectory());
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_internal_set_a_displayspecialdirectory(from._internal_a_displayspecialdirectory());
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_internal_set_a_okbuttonlabel(from._internal_a_okbuttonlabel());
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _this->_internal_set_a_capture(from._internal_a_capture());
+    }
+    if (cached_has_bits & 0x00000040u) {
+      _this->_impl_.a_selectedtype_ = from._impl_.a_selectedtype_;
+    }
+    if (cached_has_bits & 0x00000080u) {
+      _this->_impl_.a_addtorecentdocs_ = from._impl_.a_addtorecentdocs_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -658,6 +723,7 @@ void Msg_Open::CopyFrom(const Msg_Open& from) {
 }
 
 bool Msg_Open::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -666,6 +732,7 @@ void Msg_Open::InternalSwap(Msg_Open* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_filters_.InternalSwap(&other->_impl_.a_filters_);
   _impl_.a_filternames_.InternalSwap(&other->_impl_.a_filternames_);
   _impl_.a_rawfilters_.InternalSwap(&other->_impl_.a_rawfilters_);
@@ -710,7 +777,17 @@ std::string Msg_Open::GetTypeName() const {
 
 class Msg___delete__::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg___delete__>()._impl_._has_bits_);
   static const ::protobuf::mozilla::dom::MaybeInputData& a_data(const Msg___delete__* msg);
+  static void set_has_a_data(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_result(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 const ::protobuf::mozilla::dom::MaybeInputData&
@@ -718,10 +795,8 @@ Msg___delete__::_Internal::a_data(const Msg___delete__* msg) {
   return *msg->_impl_.a_data_;
 }
 void Msg___delete__::clear_a_data() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_data_ != nullptr) {
-    delete _impl_.a_data_;
-  }
-  _impl_.a_data_ = nullptr;
+  if (_impl_.a_data_ != nullptr) _impl_.a_data_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 Msg___delete__::Msg___delete__(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -733,16 +808,17 @@ Msg___delete__::Msg___delete__(const Msg___delete__& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg___delete__* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_result_){}
-    , decltype(_impl_.a_data_){nullptr}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_result_){}
+    , decltype(_impl_.a_data_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_result_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_result_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_result().empty()) {
+  if (from._internal_has_a_result()) {
     _this->_impl_.a_result_.Set(from._internal_a_result(), 
       _this->GetArenaForAllocation());
   }
@@ -757,9 +833,10 @@ inline void Msg___delete__::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_result_){}
-    , decltype(_impl_.a_data_){nullptr}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_result_){}
+    , decltype(_impl_.a_data_){nullptr}
   };
   _impl_.a_result_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -792,21 +869,28 @@ void Msg___delete__::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_result_.ClearToEmpty();
-  if (GetArenaForAllocation() == nullptr && _impl_.a_data_ != nullptr) {
-    delete _impl_.a_data_;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_result_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      GOOGLE_DCHECK(_impl_.a_data_ != nullptr);
+      _impl_.a_data_->Clear();
+    }
   }
-  _impl_.a_data_ = nullptr;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg___delete__::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.dom.MaybeInputData a_data = 1;
+      // required .protobuf.mozilla.dom.MaybeInputData a_data = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_data(), ptr);
@@ -814,7 +898,7 @@ const char* Msg___delete__::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // bytes a_result = 2;
+      // required bytes a_result = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_result();
@@ -839,6 +923,7 @@ const char* Msg___delete__::_InternalParse(const char* ptr, ::_pbi::ParseContext
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -852,15 +937,16 @@ uint8_t* Msg___delete__::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.mozilla.dom.MaybeInputData a_data = 1;
-  if (this->_internal_has_a_data()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required .protobuf.mozilla.dom.MaybeInputData a_data = 1;
+  if (cached_has_bits & 0x00000002u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_data(this),
         _Internal::a_data(this).GetCachedSize(), target, stream);
   }
 
-  // bytes a_result = 2;
-  if (!this->_internal_a_result().empty()) {
+  // required bytes a_result = 2;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_a_result(), target);
   }
@@ -873,27 +959,47 @@ uint8_t* Msg___delete__::_InternalSerialize(
   return target;
 }
 
-size_t Msg___delete__::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PFilePicker.Msg___delete__)
+size_t Msg___delete__::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PFilePicker.Msg___delete__)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_result = 2;
-  if (!this->_internal_a_result().empty()) {
+  if (_internal_has_a_result()) {
+    // required bytes a_result = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_result());
   }
 
-  // .protobuf.mozilla.dom.MaybeInputData a_data = 1;
-  if (this->_internal_has_a_data()) {
+  if (_internal_has_a_data()) {
+    // required .protobuf.mozilla.dom.MaybeInputData a_data = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_data_);
   }
+
+  return total_size;
+}
+size_t Msg___delete__::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PFilePicker.Msg___delete__)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required bytes a_result = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_result());
+
+    // required .protobuf.mozilla.dom.MaybeInputData a_data = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_data_);
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -916,12 +1022,15 @@ void Msg___delete__::MergeFrom(const Msg___delete__& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_result().empty()) {
-    _this->_internal_set_a_result(from._internal_a_result());
-  }
-  if (from._internal_has_a_data()) {
-    _this->_internal_mutable_a_data()->::protobuf::mozilla::dom::MaybeInputData::MergeFrom(
-        from._internal_a_data());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_result(from._internal_a_result());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_mutable_a_data()->::protobuf::mozilla::dom::MaybeInputData::MergeFrom(
+          from._internal_a_data());
+    }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -934,6 +1043,10 @@ void Msg___delete__::CopyFrom(const Msg___delete__& from) {
 }
 
 bool Msg___delete__::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (_internal_has_a_data()) {
+    if (!_impl_.a_data_->IsInitialized()) return false;
+  }
   return true;
 }
 
@@ -942,6 +1055,7 @@ void Msg___delete__::InternalSwap(Msg___delete__* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_result_, lhs_arena,
       &other->_impl_.a_result_, rhs_arena

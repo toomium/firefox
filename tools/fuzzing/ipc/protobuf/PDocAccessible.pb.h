@@ -247,6 +247,13 @@ class Msg_Shutdown final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Shutdown& default_instance() {
     return *internal_default_instance();
   }
@@ -364,6 +371,13 @@ class Msg_Event final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Event& default_instance() {
     return *internal_default_instance();
   }
@@ -439,7 +453,11 @@ class Msg_Event final :
     kAAIDFieldNumber = 1,
     kATypeFieldNumber = 2,
   };
-  // uint64 a_aID = 1;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
+  private:
+  bool _internal_has_a_aid() const;
+  public:
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -448,7 +466,11 @@ class Msg_Event final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // uint32 a_type = 2;
+  // required uint32 a_type = 2;
+  bool has_a_type() const;
+  private:
+  bool _internal_has_a_type() const;
+  public:
   void clear_a_type();
   uint32_t a_type() const;
   void set_a_type(uint32_t value);
@@ -461,13 +483,17 @@ class Msg_Event final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
     uint32_t a_type_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -503,6 +529,13 @@ class Msg_StateChangeEvent final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_StateChangeEvent& default_instance() {
@@ -581,7 +614,11 @@ class Msg_StateChangeEvent final :
     kAAStateFieldNumber = 2,
     kAAEnabledFieldNumber = 3,
   };
-  // uint64 a_aID = 1;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
+  private:
+  bool _internal_has_a_aid() const;
+  public:
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -590,7 +627,11 @@ class Msg_StateChangeEvent final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // uint64 a_aState = 2;
+  // required uint64 a_aState = 2;
+  bool has_a_astate() const;
+  private:
+  bool _internal_has_a_astate() const;
+  public:
   void clear_a_astate();
   uint64_t a_astate() const;
   void set_a_astate(uint64_t value);
@@ -599,7 +640,11 @@ class Msg_StateChangeEvent final :
   void _internal_set_a_astate(uint64_t value);
   public:
 
-  // bool a_aEnabled = 3;
+  // required bool a_aEnabled = 3;
+  bool has_a_aenabled() const;
+  private:
+  bool _internal_has_a_aenabled() const;
+  public:
   void clear_a_aenabled();
   bool a_aenabled() const;
   void set_a_aenabled(bool value);
@@ -612,14 +657,18 @@ class Msg_StateChangeEvent final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
     uint64_t a_astate_;
     bool a_aenabled_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -655,6 +704,13 @@ class Msg_CaretMoveEvent final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_CaretMoveEvent& default_instance() {
@@ -737,7 +793,11 @@ class Msg_CaretMoveEvent final :
     kAAFromUserFieldNumber = 7,
     kAAGranularityFieldNumber = 6,
   };
-  // bytes a_aCaretRect = 2;
+  // required bytes a_aCaretRect = 2;
+  bool has_a_acaretrect() const;
+  private:
+  bool _internal_has_a_acaretrect() const;
+  public:
   void clear_a_acaretrect();
   const std::string& a_acaretrect() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -751,7 +811,11 @@ class Msg_CaretMoveEvent final :
   std::string* _internal_mutable_a_acaretrect();
   public:
 
-  // uint64 a_aID = 1;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
+  private:
+  bool _internal_has_a_aid() const;
+  public:
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -760,7 +824,11 @@ class Msg_CaretMoveEvent final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // sint32 a_aOffset = 3;
+  // required sint32 a_aOffset = 3;
+  bool has_a_aoffset() const;
+  private:
+  bool _internal_has_a_aoffset() const;
+  public:
   void clear_a_aoffset();
   int32_t a_aoffset() const;
   void set_a_aoffset(int32_t value);
@@ -769,7 +837,11 @@ class Msg_CaretMoveEvent final :
   void _internal_set_a_aoffset(int32_t value);
   public:
 
-  // bool a_aIsSelectionCollapsed = 4;
+  // required bool a_aIsSelectionCollapsed = 4;
+  bool has_a_aisselectioncollapsed() const;
+  private:
+  bool _internal_has_a_aisselectioncollapsed() const;
+  public:
   void clear_a_aisselectioncollapsed();
   bool a_aisselectioncollapsed() const;
   void set_a_aisselectioncollapsed(bool value);
@@ -778,7 +850,11 @@ class Msg_CaretMoveEvent final :
   void _internal_set_a_aisselectioncollapsed(bool value);
   public:
 
-  // bool a_aIsAtEndOfLine = 5;
+  // required bool a_aIsAtEndOfLine = 5;
+  bool has_a_aisatendofline() const;
+  private:
+  bool _internal_has_a_aisatendofline() const;
+  public:
   void clear_a_aisatendofline();
   bool a_aisatendofline() const;
   void set_a_aisatendofline(bool value);
@@ -787,7 +863,11 @@ class Msg_CaretMoveEvent final :
   void _internal_set_a_aisatendofline(bool value);
   public:
 
-  // bool a_aFromUser = 7;
+  // required bool a_aFromUser = 7;
+  bool has_a_afromuser() const;
+  private:
+  bool _internal_has_a_afromuser() const;
+  public:
   void clear_a_afromuser();
   bool a_afromuser() const;
   void set_a_afromuser(bool value);
@@ -796,7 +876,11 @@ class Msg_CaretMoveEvent final :
   void _internal_set_a_afromuser(bool value);
   public:
 
-  // sint32 a_aGranularity = 6;
+  // required sint32 a_aGranularity = 6;
+  bool has_a_agranularity() const;
+  private:
+  bool _internal_has_a_agranularity() const;
+  public:
   void clear_a_agranularity();
   int32_t a_agranularity() const;
   void set_a_agranularity(int32_t value);
@@ -809,10 +893,15 @@ class Msg_CaretMoveEvent final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_acaretrect_;
     uint64_t a_aid_;
     int32_t a_aoffset_;
@@ -820,7 +909,6 @@ class Msg_CaretMoveEvent final :
     bool a_aisatendofline_;
     bool a_afromuser_;
     int32_t a_agranularity_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -856,6 +944,13 @@ class Msg_MutationEvents final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_MutationEvents& default_instance() {
@@ -997,6 +1092,13 @@ class Msg_RequestAckMutationEvents final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_RequestAckMutationEvents& default_instance() {
     return *internal_default_instance();
   }
@@ -1114,6 +1216,13 @@ class Msg_SelectionEvent final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_SelectionEvent& default_instance() {
     return *internal_default_instance();
   }
@@ -1190,7 +1299,11 @@ class Msg_SelectionEvent final :
     kAAWidgetIDFieldNumber = 2,
     kAATypeFieldNumber = 3,
   };
-  // uint64 a_aID = 1;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
+  private:
+  bool _internal_has_a_aid() const;
+  public:
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -1199,7 +1312,11 @@ class Msg_SelectionEvent final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // uint64 a_aWidgetID = 2;
+  // required uint64 a_aWidgetID = 2;
+  bool has_a_awidgetid() const;
+  private:
+  bool _internal_has_a_awidgetid() const;
+  public:
   void clear_a_awidgetid();
   uint64_t a_awidgetid() const;
   void set_a_awidgetid(uint64_t value);
@@ -1208,7 +1325,11 @@ class Msg_SelectionEvent final :
   void _internal_set_a_awidgetid(uint64_t value);
   public:
 
-  // uint32 a_aType = 3;
+  // required uint32 a_aType = 3;
+  bool has_a_atype() const;
+  private:
+  bool _internal_has_a_atype() const;
+  public:
   void clear_a_atype();
   uint32_t a_atype() const;
   void set_a_atype(uint32_t value);
@@ -1221,14 +1342,18 @@ class Msg_SelectionEvent final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
     uint64_t a_awidgetid_;
     uint32_t a_atype_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -1264,6 +1389,13 @@ class Msg_RoleChangedEvent final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_RoleChangedEvent& default_instance() {
@@ -1341,7 +1473,11 @@ class Msg_RoleChangedEvent final :
     kAARoleFieldNumber = 1,
     kAARoleMapEntryIndexFieldNumber = 2,
   };
-  // bytes a_aRole = 1;
+  // required bytes a_aRole = 1;
+  bool has_a_arole() const;
+  private:
+  bool _internal_has_a_arole() const;
+  public:
   void clear_a_arole();
   const std::string& a_arole() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1355,7 +1491,11 @@ class Msg_RoleChangedEvent final :
   std::string* _internal_mutable_a_arole();
   public:
 
-  // uint32 a_aRoleMapEntryIndex = 2;
+  // required uint32 a_aRoleMapEntryIndex = 2;
+  bool has_a_arolemapentryindex() const;
+  private:
+  bool _internal_has_a_arolemapentryindex() const;
+  public:
   void clear_a_arolemapentryindex();
   uint32_t a_arolemapentryindex() const;
   void set_a_arolemapentryindex(uint32_t value);
@@ -1368,13 +1508,17 @@ class Msg_RoleChangedEvent final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_arole_;
     uint32_t a_arolemapentryindex_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -1410,6 +1554,13 @@ class Msg_FocusEvent final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_FocusEvent& default_instance() {
@@ -1487,7 +1638,11 @@ class Msg_FocusEvent final :
     kAACaretRectFieldNumber = 2,
     kAAIDFieldNumber = 1,
   };
-  // bytes a_aCaretRect = 2;
+  // required bytes a_aCaretRect = 2;
+  bool has_a_acaretrect() const;
+  private:
+  bool _internal_has_a_acaretrect() const;
+  public:
   void clear_a_acaretrect();
   const std::string& a_acaretrect() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1501,7 +1656,11 @@ class Msg_FocusEvent final :
   std::string* _internal_mutable_a_acaretrect();
   public:
 
-  // uint64 a_aID = 1;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
+  private:
+  bool _internal_has_a_aid() const;
+  public:
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -1514,13 +1673,17 @@ class Msg_FocusEvent final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_acaretrect_;
     uint64_t a_aid_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -1556,6 +1719,13 @@ class Msg_ScrollingEvent final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_ScrollingEvent& default_instance() {
@@ -1637,7 +1807,11 @@ class Msg_ScrollingEvent final :
     kAAMaxScrollXFieldNumber = 5,
     kAAMaxScrollYFieldNumber = 6,
   };
-  // uint64 a_aID = 1;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
+  private:
+  bool _internal_has_a_aid() const;
+  public:
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -1646,7 +1820,11 @@ class Msg_ScrollingEvent final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // uint64 a_aType = 2;
+  // required uint64 a_aType = 2;
+  bool has_a_atype() const;
+  private:
+  bool _internal_has_a_atype() const;
+  public:
   void clear_a_atype();
   uint64_t a_atype() const;
   void set_a_atype(uint64_t value);
@@ -1655,7 +1833,11 @@ class Msg_ScrollingEvent final :
   void _internal_set_a_atype(uint64_t value);
   public:
 
-  // uint32 a_aScrollX = 3;
+  // required uint32 a_aScrollX = 3;
+  bool has_a_ascrollx() const;
+  private:
+  bool _internal_has_a_ascrollx() const;
+  public:
   void clear_a_ascrollx();
   uint32_t a_ascrollx() const;
   void set_a_ascrollx(uint32_t value);
@@ -1664,7 +1846,11 @@ class Msg_ScrollingEvent final :
   void _internal_set_a_ascrollx(uint32_t value);
   public:
 
-  // uint32 a_aScrollY = 4;
+  // required uint32 a_aScrollY = 4;
+  bool has_a_ascrolly() const;
+  private:
+  bool _internal_has_a_ascrolly() const;
+  public:
   void clear_a_ascrolly();
   uint32_t a_ascrolly() const;
   void set_a_ascrolly(uint32_t value);
@@ -1673,7 +1859,11 @@ class Msg_ScrollingEvent final :
   void _internal_set_a_ascrolly(uint32_t value);
   public:
 
-  // uint32 a_aMaxScrollX = 5;
+  // required uint32 a_aMaxScrollX = 5;
+  bool has_a_amaxscrollx() const;
+  private:
+  bool _internal_has_a_amaxscrollx() const;
+  public:
   void clear_a_amaxscrollx();
   uint32_t a_amaxscrollx() const;
   void set_a_amaxscrollx(uint32_t value);
@@ -1682,7 +1872,11 @@ class Msg_ScrollingEvent final :
   void _internal_set_a_amaxscrollx(uint32_t value);
   public:
 
-  // uint32 a_aMaxScrollY = 6;
+  // required uint32 a_aMaxScrollY = 6;
+  bool has_a_amaxscrolly() const;
+  private:
+  bool _internal_has_a_amaxscrolly() const;
+  public:
   void clear_a_amaxscrolly();
   uint32_t a_amaxscrolly() const;
   void set_a_amaxscrolly(uint32_t value);
@@ -1695,17 +1889,21 @@ class Msg_ScrollingEvent final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
     uint64_t a_atype_;
     uint32_t a_ascrollx_;
     uint32_t a_ascrolly_;
     uint32_t a_amaxscrollx_;
     uint32_t a_amaxscrolly_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -1741,6 +1939,13 @@ class Msg_AnnouncementEvent final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_AnnouncementEvent& default_instance() {
@@ -1819,7 +2024,11 @@ class Msg_AnnouncementEvent final :
     kAAIDFieldNumber = 1,
     kAAPriorityFieldNumber = 3,
   };
-  // string a_aAnnouncement = 2;
+  // required string a_aAnnouncement = 2;
+  bool has_a_aannouncement() const;
+  private:
+  bool _internal_has_a_aannouncement() const;
+  public:
   void clear_a_aannouncement();
   const std::string& a_aannouncement() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1833,7 +2042,11 @@ class Msg_AnnouncementEvent final :
   std::string* _internal_mutable_a_aannouncement();
   public:
 
-  // uint64 a_aID = 1;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
+  private:
+  bool _internal_has_a_aid() const;
+  public:
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -1842,7 +2055,11 @@ class Msg_AnnouncementEvent final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // uint32 a_aPriority = 3;
+  // required uint32 a_aPriority = 3;
+  bool has_a_apriority() const;
+  private:
+  bool _internal_has_a_apriority() const;
+  public:
   void clear_a_apriority();
   uint32_t a_apriority() const;
   void set_a_apriority(uint32_t value);
@@ -1855,14 +2072,18 @@ class Msg_AnnouncementEvent final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aannouncement_;
     uint64_t a_aid_;
     uint32_t a_apriority_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -1898,6 +2119,13 @@ class Msg_TextSelectionChangeEvent final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_TextSelectionChangeEvent& default_instance() {
@@ -1993,7 +2221,11 @@ class Msg_TextSelectionChangeEvent final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::a11y::TextRangeData >&
       a_aselection() const;
 
-  // uint64 a_aID = 1;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
+  private:
+  bool _internal_has_a_aid() const;
+  public:
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -2010,9 +2242,10 @@ class Msg_TextSelectionChangeEvent final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::a11y::TextRangeData > a_aselection_;
     uint64_t a_aid_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -2048,6 +2281,13 @@ class Msg_BindChildDoc final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_BindChildDoc& default_instance() {
@@ -2125,7 +2365,11 @@ class Msg_BindChildDoc final :
     kAAChildDocFieldNumber = 1,
     kAAIDFieldNumber = 2,
   };
-  // bytes a_aChildDoc = 1;
+  // required bytes a_aChildDoc = 1;
+  bool has_a_achilddoc() const;
+  private:
+  bool _internal_has_a_achilddoc() const;
+  public:
   void clear_a_achilddoc();
   const std::string& a_achilddoc() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2139,7 +2383,11 @@ class Msg_BindChildDoc final :
   std::string* _internal_mutable_a_achilddoc();
   public:
 
-  // uint64 a_aID = 2;
+  // required uint64 a_aID = 2;
+  bool has_a_aid() const;
+  private:
+  bool _internal_has_a_aid() const;
+  public:
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -2152,13 +2400,17 @@ class Msg_BindChildDoc final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_achilddoc_;
     uint64_t a_aid_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -2194,6 +2446,13 @@ class Msg_Cache final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Cache& default_instance() {
@@ -2289,7 +2548,11 @@ class Msg_Cache final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::a11y::CacheData >&
       a_adata() const;
 
-  // bytes a_aUpdateType = 1;
+  // required bytes a_aUpdateType = 1;
+  bool has_a_aupdatetype() const;
+  private:
+  bool _internal_has_a_aupdatetype() const;
+  public:
   void clear_a_aupdatetype();
   const std::string& a_aupdatetype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2311,9 +2574,10 @@ class Msg_Cache final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::a11y::CacheData > a_adata_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aupdatetype_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -2349,6 +2613,13 @@ class Msg_SelectedAccessiblesChanged final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_SelectedAccessiblesChanged& default_instance() {
@@ -2479,9 +2750,7 @@ class Msg_SelectedAccessiblesChanged final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t > a_aselectedids_;
-    mutable std::atomic<int> _a_aselectedids_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t > a_aunselectedids_;
-    mutable std::atomic<int> _a_aunselectedids_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2518,6 +2787,13 @@ class Msg_AccessiblesWillMove final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_AccessiblesWillMove& default_instance() {
@@ -2625,7 +2901,6 @@ class Msg_AccessiblesWillMove final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t > a_aids_;
-    mutable std::atomic<int> _a_aids_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2662,6 +2937,13 @@ class Msg___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg___delete__& default_instance() {
@@ -2781,6 +3063,13 @@ class Reply___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -2896,6 +3185,13 @@ class Msg_RestoreFocus final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_RestoreFocus& default_instance() {
@@ -3015,6 +3311,13 @@ class Msg_ScrollTo final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_ScrollTo& default_instance() {
     return *internal_default_instance();
   }
@@ -3090,7 +3393,11 @@ class Msg_ScrollTo final :
     kAAIDFieldNumber = 1,
     kAAScrollTypeFieldNumber = 2,
   };
-  // uint64 a_aID = 1;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
+  private:
+  bool _internal_has_a_aid() const;
+  public:
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -3099,7 +3406,11 @@ class Msg_ScrollTo final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // uint32 a_aScrollType = 2;
+  // required uint32 a_aScrollType = 2;
+  bool has_a_ascrolltype() const;
+  private:
+  bool _internal_has_a_ascrolltype() const;
+  public:
   void clear_a_ascrolltype();
   uint32_t a_ascrolltype() const;
   void set_a_ascrolltype(uint32_t value);
@@ -3112,13 +3423,17 @@ class Msg_ScrollTo final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
     uint32_t a_ascrolltype_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -3154,6 +3469,13 @@ class Msg_ScrollToPoint final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_ScrollToPoint& default_instance() {
@@ -3233,7 +3555,11 @@ class Msg_ScrollToPoint final :
     kAAXFieldNumber = 3,
     kAAYFieldNumber = 4,
   };
-  // uint64 a_aID = 1;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
+  private:
+  bool _internal_has_a_aid() const;
+  public:
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -3242,7 +3568,11 @@ class Msg_ScrollToPoint final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // uint32 a_aScrollType = 2;
+  // required uint32 a_aScrollType = 2;
+  bool has_a_ascrolltype() const;
+  private:
+  bool _internal_has_a_ascrolltype() const;
+  public:
   void clear_a_ascrolltype();
   uint32_t a_ascrolltype() const;
   void set_a_ascrolltype(uint32_t value);
@@ -3251,7 +3581,11 @@ class Msg_ScrollToPoint final :
   void _internal_set_a_ascrolltype(uint32_t value);
   public:
 
-  // sint32 a_aX = 3;
+  // required sint32 a_aX = 3;
+  bool has_a_ax() const;
+  private:
+  bool _internal_has_a_ax() const;
+  public:
   void clear_a_ax();
   int32_t a_ax() const;
   void set_a_ax(int32_t value);
@@ -3260,7 +3594,11 @@ class Msg_ScrollToPoint final :
   void _internal_set_a_ax(int32_t value);
   public:
 
-  // sint32 a_aY = 4;
+  // required sint32 a_aY = 4;
+  bool has_a_ay() const;
+  private:
+  bool _internal_has_a_ay() const;
+  public:
   void clear_a_ay();
   int32_t a_ay() const;
   void set_a_ay(int32_t value);
@@ -3273,15 +3611,19 @@ class Msg_ScrollToPoint final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
     uint32_t a_ascrolltype_;
     int32_t a_ax_;
     int32_t a_ay_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -3317,6 +3659,13 @@ class Msg_Announce final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Announce& default_instance() {
@@ -3395,7 +3744,11 @@ class Msg_Announce final :
     kAAIDFieldNumber = 1,
     kAAPriorityFieldNumber = 3,
   };
-  // string a_aAnnouncement = 2;
+  // required string a_aAnnouncement = 2;
+  bool has_a_aannouncement() const;
+  private:
+  bool _internal_has_a_aannouncement() const;
+  public:
   void clear_a_aannouncement();
   const std::string& a_aannouncement() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3409,7 +3762,11 @@ class Msg_Announce final :
   std::string* _internal_mutable_a_aannouncement();
   public:
 
-  // uint64 a_aID = 1;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
+  private:
+  bool _internal_has_a_aid() const;
+  public:
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -3418,7 +3775,11 @@ class Msg_Announce final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // uint32 a_aPriority = 3;
+  // required uint32 a_aPriority = 3;
+  bool has_a_apriority() const;
+  private:
+  bool _internal_has_a_apriority() const;
+  public:
   void clear_a_apriority();
   uint32_t a_apriority() const;
   void set_a_apriority(uint32_t value);
@@ -3431,14 +3792,18 @@ class Msg_Announce final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aannouncement_;
     uint64_t a_aid_;
     uint32_t a_apriority_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -3474,6 +3839,13 @@ class Msg_SetTextSelection final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_SetTextSelection& default_instance() {
@@ -3555,7 +3927,11 @@ class Msg_SetTextSelection final :
     kAASelectionNumFieldNumber = 5,
     kAASetFocusFieldNumber = 6,
   };
-  // uint64 a_aStartID = 1;
+  // required uint64 a_aStartID = 1;
+  bool has_a_astartid() const;
+  private:
+  bool _internal_has_a_astartid() const;
+  public:
   void clear_a_astartid();
   uint64_t a_astartid() const;
   void set_a_astartid(uint64_t value);
@@ -3564,7 +3940,11 @@ class Msg_SetTextSelection final :
   void _internal_set_a_astartid(uint64_t value);
   public:
 
-  // uint64 a_aEndID = 3;
+  // required uint64 a_aEndID = 3;
+  bool has_a_aendid() const;
+  private:
+  bool _internal_has_a_aendid() const;
+  public:
   void clear_a_aendid();
   uint64_t a_aendid() const;
   void set_a_aendid(uint64_t value);
@@ -3573,7 +3953,11 @@ class Msg_SetTextSelection final :
   void _internal_set_a_aendid(uint64_t value);
   public:
 
-  // sint32 a_aStartOffset = 2;
+  // required sint32 a_aStartOffset = 2;
+  bool has_a_astartoffset() const;
+  private:
+  bool _internal_has_a_astartoffset() const;
+  public:
   void clear_a_astartoffset();
   int32_t a_astartoffset() const;
   void set_a_astartoffset(int32_t value);
@@ -3582,7 +3966,11 @@ class Msg_SetTextSelection final :
   void _internal_set_a_astartoffset(int32_t value);
   public:
 
-  // sint32 a_aEndOffset = 4;
+  // required sint32 a_aEndOffset = 4;
+  bool has_a_aendoffset() const;
+  private:
+  bool _internal_has_a_aendoffset() const;
+  public:
   void clear_a_aendoffset();
   int32_t a_aendoffset() const;
   void set_a_aendoffset(int32_t value);
@@ -3591,7 +3979,11 @@ class Msg_SetTextSelection final :
   void _internal_set_a_aendoffset(int32_t value);
   public:
 
-  // sint32 a_aSelectionNum = 5;
+  // required sint32 a_aSelectionNum = 5;
+  bool has_a_aselectionnum() const;
+  private:
+  bool _internal_has_a_aselectionnum() const;
+  public:
   void clear_a_aselectionnum();
   int32_t a_aselectionnum() const;
   void set_a_aselectionnum(int32_t value);
@@ -3600,7 +3992,11 @@ class Msg_SetTextSelection final :
   void _internal_set_a_aselectionnum(int32_t value);
   public:
 
-  // bool a_aSetFocus = 6;
+  // required bool a_aSetFocus = 6;
+  bool has_a_asetfocus() const;
+  private:
+  bool _internal_has_a_asetfocus() const;
+  public:
   void clear_a_asetfocus();
   bool a_asetfocus() const;
   void set_a_asetfocus(bool value);
@@ -3613,17 +4009,21 @@ class Msg_SetTextSelection final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_astartid_;
     uint64_t a_aendid_;
     int32_t a_astartoffset_;
     int32_t a_aendoffset_;
     int32_t a_aselectionnum_;
     bool a_asetfocus_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -3659,6 +4059,13 @@ class Msg_RemoveTextSelection final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_RemoveTextSelection& default_instance() {
@@ -3736,7 +4143,11 @@ class Msg_RemoveTextSelection final :
     kAAIDFieldNumber = 1,
     kAASelectionNumFieldNumber = 2,
   };
-  // uint64 a_aID = 1;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
+  private:
+  bool _internal_has_a_aid() const;
+  public:
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -3745,7 +4156,11 @@ class Msg_RemoveTextSelection final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // sint32 a_aSelectionNum = 2;
+  // required sint32 a_aSelectionNum = 2;
+  bool has_a_aselectionnum() const;
+  private:
+  bool _internal_has_a_aselectionnum() const;
+  public:
   void clear_a_aselectionnum();
   int32_t a_aselectionnum() const;
   void set_a_aselectionnum(int32_t value);
@@ -3758,13 +4173,17 @@ class Msg_RemoveTextSelection final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
     int32_t a_aselectionnum_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -3800,6 +4219,13 @@ class Msg_ScrollTextLeafRangeIntoView final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_ScrollTextLeafRangeIntoView& default_instance() {
@@ -3880,7 +4306,11 @@ class Msg_ScrollTextLeafRangeIntoView final :
     kAAEndOffsetFieldNumber = 4,
     kAAScrollTypeFieldNumber = 5,
   };
-  // uint64 a_aStartID = 1;
+  // required uint64 a_aStartID = 1;
+  bool has_a_astartid() const;
+  private:
+  bool _internal_has_a_astartid() const;
+  public:
   void clear_a_astartid();
   uint64_t a_astartid() const;
   void set_a_astartid(uint64_t value);
@@ -3889,7 +4319,11 @@ class Msg_ScrollTextLeafRangeIntoView final :
   void _internal_set_a_astartid(uint64_t value);
   public:
 
-  // uint64 a_aEndID = 3;
+  // required uint64 a_aEndID = 3;
+  bool has_a_aendid() const;
+  private:
+  bool _internal_has_a_aendid() const;
+  public:
   void clear_a_aendid();
   uint64_t a_aendid() const;
   void set_a_aendid(uint64_t value);
@@ -3898,7 +4332,11 @@ class Msg_ScrollTextLeafRangeIntoView final :
   void _internal_set_a_aendid(uint64_t value);
   public:
 
-  // sint32 a_aStartOffset = 2;
+  // required sint32 a_aStartOffset = 2;
+  bool has_a_astartoffset() const;
+  private:
+  bool _internal_has_a_astartoffset() const;
+  public:
   void clear_a_astartoffset();
   int32_t a_astartoffset() const;
   void set_a_astartoffset(int32_t value);
@@ -3907,7 +4345,11 @@ class Msg_ScrollTextLeafRangeIntoView final :
   void _internal_set_a_astartoffset(int32_t value);
   public:
 
-  // sint32 a_aEndOffset = 4;
+  // required sint32 a_aEndOffset = 4;
+  bool has_a_aendoffset() const;
+  private:
+  bool _internal_has_a_aendoffset() const;
+  public:
   void clear_a_aendoffset();
   int32_t a_aendoffset() const;
   void set_a_aendoffset(int32_t value);
@@ -3916,7 +4358,11 @@ class Msg_ScrollTextLeafRangeIntoView final :
   void _internal_set_a_aendoffset(int32_t value);
   public:
 
-  // uint32 a_aScrollType = 5;
+  // required uint32 a_aScrollType = 5;
+  bool has_a_ascrolltype() const;
+  private:
+  bool _internal_has_a_ascrolltype() const;
+  public:
   void clear_a_ascrolltype();
   uint32_t a_ascrolltype() const;
   void set_a_ascrolltype(uint32_t value);
@@ -3929,16 +4375,20 @@ class Msg_ScrollTextLeafRangeIntoView final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_astartid_;
     uint64_t a_aendid_;
     int32_t a_astartoffset_;
     int32_t a_aendoffset_;
     uint32_t a_ascrolltype_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -3974,6 +4424,13 @@ class Msg_ScrollSubstringToPoint final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_ScrollSubstringToPoint& default_instance() {
@@ -4055,7 +4512,11 @@ class Msg_ScrollSubstringToPoint final :
     kAAXFieldNumber = 5,
     kAAYFieldNumber = 6,
   };
-  // uint64 a_aID = 1;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
+  private:
+  bool _internal_has_a_aid() const;
+  public:
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -4064,7 +4525,11 @@ class Msg_ScrollSubstringToPoint final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // sint32 a_aStartOffset = 2;
+  // required sint32 a_aStartOffset = 2;
+  bool has_a_astartoffset() const;
+  private:
+  bool _internal_has_a_astartoffset() const;
+  public:
   void clear_a_astartoffset();
   int32_t a_astartoffset() const;
   void set_a_astartoffset(int32_t value);
@@ -4073,7 +4538,11 @@ class Msg_ScrollSubstringToPoint final :
   void _internal_set_a_astartoffset(int32_t value);
   public:
 
-  // sint32 a_aEndOffset = 3;
+  // required sint32 a_aEndOffset = 3;
+  bool has_a_aendoffset() const;
+  private:
+  bool _internal_has_a_aendoffset() const;
+  public:
   void clear_a_aendoffset();
   int32_t a_aendoffset() const;
   void set_a_aendoffset(int32_t value);
@@ -4082,7 +4551,11 @@ class Msg_ScrollSubstringToPoint final :
   void _internal_set_a_aendoffset(int32_t value);
   public:
 
-  // uint32 a_aCoordinateType = 4;
+  // required uint32 a_aCoordinateType = 4;
+  bool has_a_acoordinatetype() const;
+  private:
+  bool _internal_has_a_acoordinatetype() const;
+  public:
   void clear_a_acoordinatetype();
   uint32_t a_acoordinatetype() const;
   void set_a_acoordinatetype(uint32_t value);
@@ -4091,7 +4564,11 @@ class Msg_ScrollSubstringToPoint final :
   void _internal_set_a_acoordinatetype(uint32_t value);
   public:
 
-  // sint32 a_aX = 5;
+  // required sint32 a_aX = 5;
+  bool has_a_ax() const;
+  private:
+  bool _internal_has_a_ax() const;
+  public:
   void clear_a_ax();
   int32_t a_ax() const;
   void set_a_ax(int32_t value);
@@ -4100,7 +4577,11 @@ class Msg_ScrollSubstringToPoint final :
   void _internal_set_a_ax(int32_t value);
   public:
 
-  // sint32 a_aY = 6;
+  // required sint32 a_aY = 6;
+  bool has_a_ay() const;
+  private:
+  bool _internal_has_a_ay() const;
+  public:
   void clear_a_ay();
   int32_t a_ay() const;
   void set_a_ay(int32_t value);
@@ -4113,17 +4594,21 @@ class Msg_ScrollSubstringToPoint final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
     int32_t a_astartoffset_;
     int32_t a_aendoffset_;
     uint32_t a_acoordinatetype_;
     int32_t a_ax_;
     int32_t a_ay_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -4159,6 +4644,13 @@ class Msg_ReplaceText final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_ReplaceText& default_instance() {
@@ -4236,7 +4728,11 @@ class Msg_ReplaceText final :
     kAATextFieldNumber = 2,
     kAAIDFieldNumber = 1,
   };
-  // string a_aText = 2;
+  // required string a_aText = 2;
+  bool has_a_atext() const;
+  private:
+  bool _internal_has_a_atext() const;
+  public:
   void clear_a_atext();
   const std::string& a_atext() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4250,7 +4746,11 @@ class Msg_ReplaceText final :
   std::string* _internal_mutable_a_atext();
   public:
 
-  // uint64 a_aID = 1;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
+  private:
+  bool _internal_has_a_aid() const;
+  public:
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -4263,13 +4763,17 @@ class Msg_ReplaceText final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atext_;
     uint64_t a_aid_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -4305,6 +4809,13 @@ class Msg_InsertText final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_InsertText& default_instance() {
@@ -4383,7 +4894,11 @@ class Msg_InsertText final :
     kAAIDFieldNumber = 1,
     kAAPositionFieldNumber = 3,
   };
-  // string a_aText = 2;
+  // required string a_aText = 2;
+  bool has_a_atext() const;
+  private:
+  bool _internal_has_a_atext() const;
+  public:
   void clear_a_atext();
   const std::string& a_atext() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4397,7 +4912,11 @@ class Msg_InsertText final :
   std::string* _internal_mutable_a_atext();
   public:
 
-  // uint64 a_aID = 1;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
+  private:
+  bool _internal_has_a_aid() const;
+  public:
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -4406,7 +4925,11 @@ class Msg_InsertText final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // sint32 a_aPosition = 3;
+  // required sint32 a_aPosition = 3;
+  bool has_a_aposition() const;
+  private:
+  bool _internal_has_a_aposition() const;
+  public:
   void clear_a_aposition();
   int32_t a_aposition() const;
   void set_a_aposition(int32_t value);
@@ -4419,14 +4942,18 @@ class Msg_InsertText final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atext_;
     uint64_t a_aid_;
     int32_t a_aposition_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -4462,6 +4989,13 @@ class Msg_CopyText final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_CopyText& default_instance() {
@@ -4540,7 +5074,11 @@ class Msg_CopyText final :
     kAAStartPosFieldNumber = 2,
     kAAEndPosFieldNumber = 3,
   };
-  // uint64 a_aID = 1;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
+  private:
+  bool _internal_has_a_aid() const;
+  public:
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -4549,7 +5087,11 @@ class Msg_CopyText final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // sint32 a_aStartPos = 2;
+  // required sint32 a_aStartPos = 2;
+  bool has_a_astartpos() const;
+  private:
+  bool _internal_has_a_astartpos() const;
+  public:
   void clear_a_astartpos();
   int32_t a_astartpos() const;
   void set_a_astartpos(int32_t value);
@@ -4558,7 +5100,11 @@ class Msg_CopyText final :
   void _internal_set_a_astartpos(int32_t value);
   public:
 
-  // sint32 a_aEndPos = 3;
+  // required sint32 a_aEndPos = 3;
+  bool has_a_aendpos() const;
+  private:
+  bool _internal_has_a_aendpos() const;
+  public:
   void clear_a_aendpos();
   int32_t a_aendpos() const;
   void set_a_aendpos(int32_t value);
@@ -4571,14 +5117,18 @@ class Msg_CopyText final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
     int32_t a_astartpos_;
     int32_t a_aendpos_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -4614,6 +5164,13 @@ class Msg_CutText final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_CutText& default_instance() {
@@ -4692,7 +5249,11 @@ class Msg_CutText final :
     kAAStartPosFieldNumber = 2,
     kAAEndPosFieldNumber = 3,
   };
-  // uint64 a_aID = 1;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
+  private:
+  bool _internal_has_a_aid() const;
+  public:
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -4701,7 +5262,11 @@ class Msg_CutText final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // sint32 a_aStartPos = 2;
+  // required sint32 a_aStartPos = 2;
+  bool has_a_astartpos() const;
+  private:
+  bool _internal_has_a_astartpos() const;
+  public:
   void clear_a_astartpos();
   int32_t a_astartpos() const;
   void set_a_astartpos(int32_t value);
@@ -4710,7 +5275,11 @@ class Msg_CutText final :
   void _internal_set_a_astartpos(int32_t value);
   public:
 
-  // sint32 a_aEndPos = 3;
+  // required sint32 a_aEndPos = 3;
+  bool has_a_aendpos() const;
+  private:
+  bool _internal_has_a_aendpos() const;
+  public:
   void clear_a_aendpos();
   int32_t a_aendpos() const;
   void set_a_aendpos(int32_t value);
@@ -4723,14 +5292,18 @@ class Msg_CutText final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
     int32_t a_astartpos_;
     int32_t a_aendpos_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -4766,6 +5339,13 @@ class Msg_DeleteText final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_DeleteText& default_instance() {
@@ -4844,7 +5424,11 @@ class Msg_DeleteText final :
     kAAStartPosFieldNumber = 2,
     kAAEndPosFieldNumber = 3,
   };
-  // uint64 a_aID = 1;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
+  private:
+  bool _internal_has_a_aid() const;
+  public:
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -4853,7 +5437,11 @@ class Msg_DeleteText final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // sint32 a_aStartPos = 2;
+  // required sint32 a_aStartPos = 2;
+  bool has_a_astartpos() const;
+  private:
+  bool _internal_has_a_astartpos() const;
+  public:
   void clear_a_astartpos();
   int32_t a_astartpos() const;
   void set_a_astartpos(int32_t value);
@@ -4862,7 +5450,11 @@ class Msg_DeleteText final :
   void _internal_set_a_astartpos(int32_t value);
   public:
 
-  // sint32 a_aEndPos = 3;
+  // required sint32 a_aEndPos = 3;
+  bool has_a_aendpos() const;
+  private:
+  bool _internal_has_a_aendpos() const;
+  public:
   void clear_a_aendpos();
   int32_t a_aendpos() const;
   void set_a_aendpos(int32_t value);
@@ -4875,14 +5467,18 @@ class Msg_DeleteText final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
     int32_t a_astartpos_;
     int32_t a_aendpos_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -4918,6 +5514,13 @@ class Msg_PasteText final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_PasteText& default_instance() {
@@ -4995,7 +5598,11 @@ class Msg_PasteText final :
     kAAIDFieldNumber = 1,
     kAAPositionFieldNumber = 2,
   };
-  // uint64 a_aID = 1;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
+  private:
+  bool _internal_has_a_aid() const;
+  public:
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -5004,7 +5611,11 @@ class Msg_PasteText final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // sint32 a_aPosition = 2;
+  // required sint32 a_aPosition = 2;
+  bool has_a_aposition() const;
+  private:
+  bool _internal_has_a_aposition() const;
+  public:
   void clear_a_aposition();
   int32_t a_aposition() const;
   void set_a_aposition(int32_t value);
@@ -5017,13 +5628,17 @@ class Msg_PasteText final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
     int32_t a_aposition_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -5059,6 +5674,13 @@ class Msg_TakeSelection final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_TakeSelection& default_instance() {
@@ -5135,7 +5757,11 @@ class Msg_TakeSelection final :
   enum : int {
     kAAIDFieldNumber = 1,
   };
-  // uint64 a_aID = 1;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
+  private:
+  bool _internal_has_a_aid() const;
+  public:
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -5152,8 +5778,9 @@ class Msg_TakeSelection final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint64_t a_aid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint64_t a_aid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -5189,6 +5816,13 @@ class Msg_SetSelected final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_SetSelected& default_instance() {
@@ -5266,7 +5900,11 @@ class Msg_SetSelected final :
     kAAIDFieldNumber = 1,
     kAASelectedFieldNumber = 2,
   };
-  // uint64 a_aID = 1;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
+  private:
+  bool _internal_has_a_aid() const;
+  public:
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -5275,7 +5913,11 @@ class Msg_SetSelected final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // bool a_aSelected = 2;
+  // required bool a_aSelected = 2;
+  bool has_a_aselected() const;
+  private:
+  bool _internal_has_a_aselected() const;
+  public:
   void clear_a_aselected();
   bool a_aselected() const;
   void set_a_aselected(bool value);
@@ -5288,13 +5930,17 @@ class Msg_SetSelected final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
     bool a_aselected_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -5330,6 +5976,13 @@ class Msg_DoActionAsync final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_DoActionAsync& default_instance() {
@@ -5407,7 +6060,11 @@ class Msg_DoActionAsync final :
     kAAIDFieldNumber = 1,
     kAAIndexFieldNumber = 2,
   };
-  // uint64 a_aID = 1;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
+  private:
+  bool _internal_has_a_aid() const;
+  public:
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -5416,7 +6073,11 @@ class Msg_DoActionAsync final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // uint32 a_aIndex = 2;
+  // required uint32 a_aIndex = 2;
+  bool has_a_aindex() const;
+  private:
+  bool _internal_has_a_aindex() const;
+  public:
   void clear_a_aindex();
   uint32_t a_aindex() const;
   void set_a_aindex(uint32_t value);
@@ -5429,13 +6090,17 @@ class Msg_DoActionAsync final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
     uint32_t a_aindex_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -5471,6 +6136,13 @@ class Msg_SetCurValue final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_SetCurValue& default_instance() {
@@ -5548,7 +6220,11 @@ class Msg_SetCurValue final :
     kAAIDFieldNumber = 1,
     kAAValueFieldNumber = 2,
   };
-  // uint64 a_aID = 1;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
+  private:
+  bool _internal_has_a_aid() const;
+  public:
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -5557,7 +6233,11 @@ class Msg_SetCurValue final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // double a_aValue = 2;
+  // required double a_aValue = 2;
+  bool has_a_avalue() const;
+  private:
+  bool _internal_has_a_avalue() const;
+  public:
   void clear_a_avalue();
   double a_avalue() const;
   void set_a_avalue(double value);
@@ -5570,13 +6250,17 @@ class Msg_SetCurValue final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
     double a_avalue_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -5612,6 +6296,13 @@ class Msg_TakeFocus final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_TakeFocus& default_instance() {
@@ -5688,7 +6379,11 @@ class Msg_TakeFocus final :
   enum : int {
     kAAIDFieldNumber = 1,
   };
-  // uint64 a_aID = 1;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
+  private:
+  bool _internal_has_a_aid() const;
+  public:
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -5705,8 +6400,9 @@ class Msg_TakeFocus final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint64_t a_aid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint64_t a_aid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -5742,6 +6438,13 @@ class Msg_VerifyCache final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_VerifyCache& default_instance() {
@@ -5838,7 +6541,11 @@ class Msg_VerifyCache final :
   std::string* _internal_mutable_a_afields();
   public:
 
-  // uint64 a_aID = 1;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
+  private:
+  bool _internal_has_a_aid() const;
+  public:
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -5847,7 +6554,11 @@ class Msg_VerifyCache final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // uint64 a_aCacheDomain = 2;
+  // required uint64 a_aCacheDomain = 2;
+  bool has_a_acachedomain() const;
+  private:
+  bool _internal_has_a_acachedomain() const;
+  public:
   void clear_a_acachedomain();
   uint64_t a_acachedomain() const;
   void set_a_acachedomain(uint64_t value);
@@ -5859,6 +6570,9 @@ class Msg_VerifyCache final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_VerifyCache)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5904,6 +6618,13 @@ class Msg_AckMutationEvents final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_AckMutationEvents& default_instance() {
@@ -6005,9 +6726,17 @@ class Msg_AckMutationEvents final :
 
 // Msg_Event
 
-// uint64 a_aID = 1;
+// required uint64 a_aID = 1;
+inline bool Msg_Event::_internal_has_a_aid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_Event::has_a_aid() const {
+  return _internal_has_a_aid();
+}
 inline void Msg_Event::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_Event::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -6017,7 +6746,7 @@ inline uint64_t Msg_Event::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_Event::_internal_set_a_aid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aid_ = value;
 }
 inline void Msg_Event::set_a_aid(uint64_t value) {
@@ -6025,9 +6754,17 @@ inline void Msg_Event::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_Event.a_aID)
 }
 
-// uint32 a_type = 2;
+// required uint32 a_type = 2;
+inline bool Msg_Event::_internal_has_a_type() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_Event::has_a_type() const {
+  return _internal_has_a_type();
+}
 inline void Msg_Event::clear_a_type() {
   _impl_.a_type_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_Event::_internal_a_type() const {
   return _impl_.a_type_;
@@ -6037,7 +6774,7 @@ inline uint32_t Msg_Event::a_type() const {
   return _internal_a_type();
 }
 inline void Msg_Event::_internal_set_a_type(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_type_ = value;
 }
 inline void Msg_Event::set_a_type(uint32_t value) {
@@ -6049,9 +6786,17 @@ inline void Msg_Event::set_a_type(uint32_t value) {
 
 // Msg_StateChangeEvent
 
-// uint64 a_aID = 1;
+// required uint64 a_aID = 1;
+inline bool Msg_StateChangeEvent::_internal_has_a_aid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_StateChangeEvent::has_a_aid() const {
+  return _internal_has_a_aid();
+}
 inline void Msg_StateChangeEvent::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_StateChangeEvent::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -6061,7 +6806,7 @@ inline uint64_t Msg_StateChangeEvent::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_StateChangeEvent::_internal_set_a_aid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aid_ = value;
 }
 inline void Msg_StateChangeEvent::set_a_aid(uint64_t value) {
@@ -6069,9 +6814,17 @@ inline void Msg_StateChangeEvent::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_StateChangeEvent.a_aID)
 }
 
-// uint64 a_aState = 2;
+// required uint64 a_aState = 2;
+inline bool Msg_StateChangeEvent::_internal_has_a_astate() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_StateChangeEvent::has_a_astate() const {
+  return _internal_has_a_astate();
+}
 inline void Msg_StateChangeEvent::clear_a_astate() {
   _impl_.a_astate_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_StateChangeEvent::_internal_a_astate() const {
   return _impl_.a_astate_;
@@ -6081,7 +6834,7 @@ inline uint64_t Msg_StateChangeEvent::a_astate() const {
   return _internal_a_astate();
 }
 inline void Msg_StateChangeEvent::_internal_set_a_astate(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_astate_ = value;
 }
 inline void Msg_StateChangeEvent::set_a_astate(uint64_t value) {
@@ -6089,9 +6842,17 @@ inline void Msg_StateChangeEvent::set_a_astate(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_StateChangeEvent.a_aState)
 }
 
-// bool a_aEnabled = 3;
+// required bool a_aEnabled = 3;
+inline bool Msg_StateChangeEvent::_internal_has_a_aenabled() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_StateChangeEvent::has_a_aenabled() const {
+  return _internal_has_a_aenabled();
+}
 inline void Msg_StateChangeEvent::clear_a_aenabled() {
   _impl_.a_aenabled_ = false;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline bool Msg_StateChangeEvent::_internal_a_aenabled() const {
   return _impl_.a_aenabled_;
@@ -6101,7 +6862,7 @@ inline bool Msg_StateChangeEvent::a_aenabled() const {
   return _internal_a_aenabled();
 }
 inline void Msg_StateChangeEvent::_internal_set_a_aenabled(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_aenabled_ = value;
 }
 inline void Msg_StateChangeEvent::set_a_aenabled(bool value) {
@@ -6113,9 +6874,17 @@ inline void Msg_StateChangeEvent::set_a_aenabled(bool value) {
 
 // Msg_CaretMoveEvent
 
-// uint64 a_aID = 1;
+// required uint64 a_aID = 1;
+inline bool Msg_CaretMoveEvent::_internal_has_a_aid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_CaretMoveEvent::has_a_aid() const {
+  return _internal_has_a_aid();
+}
 inline void Msg_CaretMoveEvent::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_CaretMoveEvent::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -6125,7 +6894,7 @@ inline uint64_t Msg_CaretMoveEvent::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_CaretMoveEvent::_internal_set_a_aid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aid_ = value;
 }
 inline void Msg_CaretMoveEvent::set_a_aid(uint64_t value) {
@@ -6133,9 +6902,17 @@ inline void Msg_CaretMoveEvent::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aID)
 }
 
-// bytes a_aCaretRect = 2;
+// required bytes a_aCaretRect = 2;
+inline bool Msg_CaretMoveEvent::_internal_has_a_acaretrect() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_CaretMoveEvent::has_a_acaretrect() const {
+  return _internal_has_a_acaretrect();
+}
 inline void Msg_CaretMoveEvent::clear_a_acaretrect() {
   _impl_.a_acaretrect_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_CaretMoveEvent::a_acaretrect() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aCaretRect)
@@ -6144,7 +6921,7 @@ inline const std::string& Msg_CaretMoveEvent::a_acaretrect() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CaretMoveEvent::set_a_acaretrect(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_acaretrect_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aCaretRect)
 }
@@ -6157,22 +6934,32 @@ inline const std::string& Msg_CaretMoveEvent::_internal_a_acaretrect() const {
   return _impl_.a_acaretrect_.Get();
 }
 inline void Msg_CaretMoveEvent::_internal_set_a_acaretrect(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_acaretrect_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_CaretMoveEvent::_internal_mutable_a_acaretrect() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_acaretrect_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_CaretMoveEvent::release_a_acaretrect() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aCaretRect)
-  return _impl_.a_acaretrect_.Release();
+  if (!_internal_has_a_acaretrect()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_acaretrect_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_acaretrect_.IsDefault()) {
+    _impl_.a_acaretrect_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_CaretMoveEvent::set_allocated_a_acaretrect(std::string* a_acaretrect) {
   if (a_acaretrect != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_acaretrect_.SetAllocated(a_acaretrect, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6183,9 +6970,17 @@ inline void Msg_CaretMoveEvent::set_allocated_a_acaretrect(std::string* a_acaret
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aCaretRect)
 }
 
-// sint32 a_aOffset = 3;
+// required sint32 a_aOffset = 3;
+inline bool Msg_CaretMoveEvent::_internal_has_a_aoffset() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_CaretMoveEvent::has_a_aoffset() const {
+  return _internal_has_a_aoffset();
+}
 inline void Msg_CaretMoveEvent::clear_a_aoffset() {
   _impl_.a_aoffset_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline int32_t Msg_CaretMoveEvent::_internal_a_aoffset() const {
   return _impl_.a_aoffset_;
@@ -6195,7 +6990,7 @@ inline int32_t Msg_CaretMoveEvent::a_aoffset() const {
   return _internal_a_aoffset();
 }
 inline void Msg_CaretMoveEvent::_internal_set_a_aoffset(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_aoffset_ = value;
 }
 inline void Msg_CaretMoveEvent::set_a_aoffset(int32_t value) {
@@ -6203,9 +6998,17 @@ inline void Msg_CaretMoveEvent::set_a_aoffset(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aOffset)
 }
 
-// bool a_aIsSelectionCollapsed = 4;
+// required bool a_aIsSelectionCollapsed = 4;
+inline bool Msg_CaretMoveEvent::_internal_has_a_aisselectioncollapsed() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool Msg_CaretMoveEvent::has_a_aisselectioncollapsed() const {
+  return _internal_has_a_aisselectioncollapsed();
+}
 inline void Msg_CaretMoveEvent::clear_a_aisselectioncollapsed() {
   _impl_.a_aisselectioncollapsed_ = false;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline bool Msg_CaretMoveEvent::_internal_a_aisselectioncollapsed() const {
   return _impl_.a_aisselectioncollapsed_;
@@ -6215,7 +7018,7 @@ inline bool Msg_CaretMoveEvent::a_aisselectioncollapsed() const {
   return _internal_a_aisselectioncollapsed();
 }
 inline void Msg_CaretMoveEvent::_internal_set_a_aisselectioncollapsed(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_aisselectioncollapsed_ = value;
 }
 inline void Msg_CaretMoveEvent::set_a_aisselectioncollapsed(bool value) {
@@ -6223,9 +7026,17 @@ inline void Msg_CaretMoveEvent::set_a_aisselectioncollapsed(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aIsSelectionCollapsed)
 }
 
-// bool a_aIsAtEndOfLine = 5;
+// required bool a_aIsAtEndOfLine = 5;
+inline bool Msg_CaretMoveEvent::_internal_has_a_aisatendofline() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool Msg_CaretMoveEvent::has_a_aisatendofline() const {
+  return _internal_has_a_aisatendofline();
+}
 inline void Msg_CaretMoveEvent::clear_a_aisatendofline() {
   _impl_.a_aisatendofline_ = false;
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline bool Msg_CaretMoveEvent::_internal_a_aisatendofline() const {
   return _impl_.a_aisatendofline_;
@@ -6235,7 +7046,7 @@ inline bool Msg_CaretMoveEvent::a_aisatendofline() const {
   return _internal_a_aisatendofline();
 }
 inline void Msg_CaretMoveEvent::_internal_set_a_aisatendofline(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.a_aisatendofline_ = value;
 }
 inline void Msg_CaretMoveEvent::set_a_aisatendofline(bool value) {
@@ -6243,9 +7054,17 @@ inline void Msg_CaretMoveEvent::set_a_aisatendofline(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aIsAtEndOfLine)
 }
 
-// sint32 a_aGranularity = 6;
+// required sint32 a_aGranularity = 6;
+inline bool Msg_CaretMoveEvent::_internal_has_a_agranularity() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool Msg_CaretMoveEvent::has_a_agranularity() const {
+  return _internal_has_a_agranularity();
+}
 inline void Msg_CaretMoveEvent::clear_a_agranularity() {
   _impl_.a_agranularity_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000040u;
 }
 inline int32_t Msg_CaretMoveEvent::_internal_a_agranularity() const {
   return _impl_.a_agranularity_;
@@ -6255,7 +7074,7 @@ inline int32_t Msg_CaretMoveEvent::a_agranularity() const {
   return _internal_a_agranularity();
 }
 inline void Msg_CaretMoveEvent::_internal_set_a_agranularity(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000040u;
   _impl_.a_agranularity_ = value;
 }
 inline void Msg_CaretMoveEvent::set_a_agranularity(int32_t value) {
@@ -6263,9 +7082,17 @@ inline void Msg_CaretMoveEvent::set_a_agranularity(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aGranularity)
 }
 
-// bool a_aFromUser = 7;
+// required bool a_aFromUser = 7;
+inline bool Msg_CaretMoveEvent::_internal_has_a_afromuser() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool Msg_CaretMoveEvent::has_a_afromuser() const {
+  return _internal_has_a_afromuser();
+}
 inline void Msg_CaretMoveEvent::clear_a_afromuser() {
   _impl_.a_afromuser_ = false;
+  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline bool Msg_CaretMoveEvent::_internal_a_afromuser() const {
   return _impl_.a_afromuser_;
@@ -6275,7 +7102,7 @@ inline bool Msg_CaretMoveEvent::a_afromuser() const {
   return _internal_a_afromuser();
 }
 inline void Msg_CaretMoveEvent::_internal_set_a_afromuser(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000020u;
   _impl_.a_afromuser_ = value;
 }
 inline void Msg_CaretMoveEvent::set_a_afromuser(bool value) {
@@ -6332,9 +7159,17 @@ Msg_MutationEvents::a_adata() const {
 
 // Msg_SelectionEvent
 
-// uint64 a_aID = 1;
+// required uint64 a_aID = 1;
+inline bool Msg_SelectionEvent::_internal_has_a_aid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_SelectionEvent::has_a_aid() const {
+  return _internal_has_a_aid();
+}
 inline void Msg_SelectionEvent::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_SelectionEvent::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -6344,7 +7179,7 @@ inline uint64_t Msg_SelectionEvent::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_SelectionEvent::_internal_set_a_aid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aid_ = value;
 }
 inline void Msg_SelectionEvent::set_a_aid(uint64_t value) {
@@ -6352,9 +7187,17 @@ inline void Msg_SelectionEvent::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectionEvent.a_aID)
 }
 
-// uint64 a_aWidgetID = 2;
+// required uint64 a_aWidgetID = 2;
+inline bool Msg_SelectionEvent::_internal_has_a_awidgetid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_SelectionEvent::has_a_awidgetid() const {
+  return _internal_has_a_awidgetid();
+}
 inline void Msg_SelectionEvent::clear_a_awidgetid() {
   _impl_.a_awidgetid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_SelectionEvent::_internal_a_awidgetid() const {
   return _impl_.a_awidgetid_;
@@ -6364,7 +7207,7 @@ inline uint64_t Msg_SelectionEvent::a_awidgetid() const {
   return _internal_a_awidgetid();
 }
 inline void Msg_SelectionEvent::_internal_set_a_awidgetid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_awidgetid_ = value;
 }
 inline void Msg_SelectionEvent::set_a_awidgetid(uint64_t value) {
@@ -6372,9 +7215,17 @@ inline void Msg_SelectionEvent::set_a_awidgetid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectionEvent.a_aWidgetID)
 }
 
-// uint32 a_aType = 3;
+// required uint32 a_aType = 3;
+inline bool Msg_SelectionEvent::_internal_has_a_atype() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_SelectionEvent::has_a_atype() const {
+  return _internal_has_a_atype();
+}
 inline void Msg_SelectionEvent::clear_a_atype() {
   _impl_.a_atype_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_SelectionEvent::_internal_a_atype() const {
   return _impl_.a_atype_;
@@ -6384,7 +7235,7 @@ inline uint32_t Msg_SelectionEvent::a_atype() const {
   return _internal_a_atype();
 }
 inline void Msg_SelectionEvent::_internal_set_a_atype(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_atype_ = value;
 }
 inline void Msg_SelectionEvent::set_a_atype(uint32_t value) {
@@ -6396,9 +7247,17 @@ inline void Msg_SelectionEvent::set_a_atype(uint32_t value) {
 
 // Msg_RoleChangedEvent
 
-// bytes a_aRole = 1;
+// required bytes a_aRole = 1;
+inline bool Msg_RoleChangedEvent::_internal_has_a_arole() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_RoleChangedEvent::has_a_arole() const {
+  return _internal_has_a_arole();
+}
 inline void Msg_RoleChangedEvent::clear_a_arole() {
   _impl_.a_arole_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_RoleChangedEvent::a_arole() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_RoleChangedEvent.a_aRole)
@@ -6407,7 +7266,7 @@ inline const std::string& Msg_RoleChangedEvent::a_arole() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_RoleChangedEvent::set_a_arole(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_arole_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_RoleChangedEvent.a_aRole)
 }
@@ -6420,22 +7279,32 @@ inline const std::string& Msg_RoleChangedEvent::_internal_a_arole() const {
   return _impl_.a_arole_.Get();
 }
 inline void Msg_RoleChangedEvent::_internal_set_a_arole(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_arole_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_RoleChangedEvent::_internal_mutable_a_arole() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_arole_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_RoleChangedEvent::release_a_arole() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_RoleChangedEvent.a_aRole)
-  return _impl_.a_arole_.Release();
+  if (!_internal_has_a_arole()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_arole_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_arole_.IsDefault()) {
+    _impl_.a_arole_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_RoleChangedEvent::set_allocated_a_arole(std::string* a_arole) {
   if (a_arole != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_arole_.SetAllocated(a_arole, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6446,9 +7315,17 @@ inline void Msg_RoleChangedEvent::set_allocated_a_arole(std::string* a_arole) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_RoleChangedEvent.a_aRole)
 }
 
-// uint32 a_aRoleMapEntryIndex = 2;
+// required uint32 a_aRoleMapEntryIndex = 2;
+inline bool Msg_RoleChangedEvent::_internal_has_a_arolemapentryindex() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_RoleChangedEvent::has_a_arolemapentryindex() const {
+  return _internal_has_a_arolemapentryindex();
+}
 inline void Msg_RoleChangedEvent::clear_a_arolemapentryindex() {
   _impl_.a_arolemapentryindex_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_RoleChangedEvent::_internal_a_arolemapentryindex() const {
   return _impl_.a_arolemapentryindex_;
@@ -6458,7 +7335,7 @@ inline uint32_t Msg_RoleChangedEvent::a_arolemapentryindex() const {
   return _internal_a_arolemapentryindex();
 }
 inline void Msg_RoleChangedEvent::_internal_set_a_arolemapentryindex(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_arolemapentryindex_ = value;
 }
 inline void Msg_RoleChangedEvent::set_a_arolemapentryindex(uint32_t value) {
@@ -6470,9 +7347,17 @@ inline void Msg_RoleChangedEvent::set_a_arolemapentryindex(uint32_t value) {
 
 // Msg_FocusEvent
 
-// uint64 a_aID = 1;
+// required uint64 a_aID = 1;
+inline bool Msg_FocusEvent::_internal_has_a_aid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_FocusEvent::has_a_aid() const {
+  return _internal_has_a_aid();
+}
 inline void Msg_FocusEvent::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_FocusEvent::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -6482,7 +7367,7 @@ inline uint64_t Msg_FocusEvent::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_FocusEvent::_internal_set_a_aid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aid_ = value;
 }
 inline void Msg_FocusEvent::set_a_aid(uint64_t value) {
@@ -6490,9 +7375,17 @@ inline void Msg_FocusEvent::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_FocusEvent.a_aID)
 }
 
-// bytes a_aCaretRect = 2;
+// required bytes a_aCaretRect = 2;
+inline bool Msg_FocusEvent::_internal_has_a_acaretrect() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_FocusEvent::has_a_acaretrect() const {
+  return _internal_has_a_acaretrect();
+}
 inline void Msg_FocusEvent::clear_a_acaretrect() {
   _impl_.a_acaretrect_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_FocusEvent::a_acaretrect() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_FocusEvent.a_aCaretRect)
@@ -6501,7 +7394,7 @@ inline const std::string& Msg_FocusEvent::a_acaretrect() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_FocusEvent::set_a_acaretrect(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_acaretrect_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_FocusEvent.a_aCaretRect)
 }
@@ -6514,22 +7407,32 @@ inline const std::string& Msg_FocusEvent::_internal_a_acaretrect() const {
   return _impl_.a_acaretrect_.Get();
 }
 inline void Msg_FocusEvent::_internal_set_a_acaretrect(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_acaretrect_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_FocusEvent::_internal_mutable_a_acaretrect() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_acaretrect_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_FocusEvent::release_a_acaretrect() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_FocusEvent.a_aCaretRect)
-  return _impl_.a_acaretrect_.Release();
+  if (!_internal_has_a_acaretrect()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_acaretrect_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_acaretrect_.IsDefault()) {
+    _impl_.a_acaretrect_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_FocusEvent::set_allocated_a_acaretrect(std::string* a_acaretrect) {
   if (a_acaretrect != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_acaretrect_.SetAllocated(a_acaretrect, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6544,9 +7447,17 @@ inline void Msg_FocusEvent::set_allocated_a_acaretrect(std::string* a_acaretrect
 
 // Msg_ScrollingEvent
 
-// uint64 a_aID = 1;
+// required uint64 a_aID = 1;
+inline bool Msg_ScrollingEvent::_internal_has_a_aid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_ScrollingEvent::has_a_aid() const {
+  return _internal_has_a_aid();
+}
 inline void Msg_ScrollingEvent::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_ScrollingEvent::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -6556,7 +7467,7 @@ inline uint64_t Msg_ScrollingEvent::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_ScrollingEvent::_internal_set_a_aid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aid_ = value;
 }
 inline void Msg_ScrollingEvent::set_a_aid(uint64_t value) {
@@ -6564,9 +7475,17 @@ inline void Msg_ScrollingEvent::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.a_aID)
 }
 
-// uint64 a_aType = 2;
+// required uint64 a_aType = 2;
+inline bool Msg_ScrollingEvent::_internal_has_a_atype() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_ScrollingEvent::has_a_atype() const {
+  return _internal_has_a_atype();
+}
 inline void Msg_ScrollingEvent::clear_a_atype() {
   _impl_.a_atype_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_ScrollingEvent::_internal_a_atype() const {
   return _impl_.a_atype_;
@@ -6576,7 +7495,7 @@ inline uint64_t Msg_ScrollingEvent::a_atype() const {
   return _internal_a_atype();
 }
 inline void Msg_ScrollingEvent::_internal_set_a_atype(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_atype_ = value;
 }
 inline void Msg_ScrollingEvent::set_a_atype(uint64_t value) {
@@ -6584,9 +7503,17 @@ inline void Msg_ScrollingEvent::set_a_atype(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.a_aType)
 }
 
-// uint32 a_aScrollX = 3;
+// required uint32 a_aScrollX = 3;
+inline bool Msg_ScrollingEvent::_internal_has_a_ascrollx() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_ScrollingEvent::has_a_ascrollx() const {
+  return _internal_has_a_ascrollx();
+}
 inline void Msg_ScrollingEvent::clear_a_ascrollx() {
   _impl_.a_ascrollx_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_ScrollingEvent::_internal_a_ascrollx() const {
   return _impl_.a_ascrollx_;
@@ -6596,7 +7523,7 @@ inline uint32_t Msg_ScrollingEvent::a_ascrollx() const {
   return _internal_a_ascrollx();
 }
 inline void Msg_ScrollingEvent::_internal_set_a_ascrollx(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_ascrollx_ = value;
 }
 inline void Msg_ScrollingEvent::set_a_ascrollx(uint32_t value) {
@@ -6604,9 +7531,17 @@ inline void Msg_ScrollingEvent::set_a_ascrollx(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.a_aScrollX)
 }
 
-// uint32 a_aScrollY = 4;
+// required uint32 a_aScrollY = 4;
+inline bool Msg_ScrollingEvent::_internal_has_a_ascrolly() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool Msg_ScrollingEvent::has_a_ascrolly() const {
+  return _internal_has_a_ascrolly();
+}
 inline void Msg_ScrollingEvent::clear_a_ascrolly() {
   _impl_.a_ascrolly_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline uint32_t Msg_ScrollingEvent::_internal_a_ascrolly() const {
   return _impl_.a_ascrolly_;
@@ -6616,7 +7551,7 @@ inline uint32_t Msg_ScrollingEvent::a_ascrolly() const {
   return _internal_a_ascrolly();
 }
 inline void Msg_ScrollingEvent::_internal_set_a_ascrolly(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_ascrolly_ = value;
 }
 inline void Msg_ScrollingEvent::set_a_ascrolly(uint32_t value) {
@@ -6624,9 +7559,17 @@ inline void Msg_ScrollingEvent::set_a_ascrolly(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.a_aScrollY)
 }
 
-// uint32 a_aMaxScrollX = 5;
+// required uint32 a_aMaxScrollX = 5;
+inline bool Msg_ScrollingEvent::_internal_has_a_amaxscrollx() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool Msg_ScrollingEvent::has_a_amaxscrollx() const {
+  return _internal_has_a_amaxscrollx();
+}
 inline void Msg_ScrollingEvent::clear_a_amaxscrollx() {
   _impl_.a_amaxscrollx_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline uint32_t Msg_ScrollingEvent::_internal_a_amaxscrollx() const {
   return _impl_.a_amaxscrollx_;
@@ -6636,7 +7579,7 @@ inline uint32_t Msg_ScrollingEvent::a_amaxscrollx() const {
   return _internal_a_amaxscrollx();
 }
 inline void Msg_ScrollingEvent::_internal_set_a_amaxscrollx(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.a_amaxscrollx_ = value;
 }
 inline void Msg_ScrollingEvent::set_a_amaxscrollx(uint32_t value) {
@@ -6644,9 +7587,17 @@ inline void Msg_ScrollingEvent::set_a_amaxscrollx(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.a_aMaxScrollX)
 }
 
-// uint32 a_aMaxScrollY = 6;
+// required uint32 a_aMaxScrollY = 6;
+inline bool Msg_ScrollingEvent::_internal_has_a_amaxscrolly() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool Msg_ScrollingEvent::has_a_amaxscrolly() const {
+  return _internal_has_a_amaxscrolly();
+}
 inline void Msg_ScrollingEvent::clear_a_amaxscrolly() {
   _impl_.a_amaxscrolly_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline uint32_t Msg_ScrollingEvent::_internal_a_amaxscrolly() const {
   return _impl_.a_amaxscrolly_;
@@ -6656,7 +7607,7 @@ inline uint32_t Msg_ScrollingEvent::a_amaxscrolly() const {
   return _internal_a_amaxscrolly();
 }
 inline void Msg_ScrollingEvent::_internal_set_a_amaxscrolly(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000020u;
   _impl_.a_amaxscrolly_ = value;
 }
 inline void Msg_ScrollingEvent::set_a_amaxscrolly(uint32_t value) {
@@ -6668,9 +7619,17 @@ inline void Msg_ScrollingEvent::set_a_amaxscrolly(uint32_t value) {
 
 // Msg_AnnouncementEvent
 
-// uint64 a_aID = 1;
+// required uint64 a_aID = 1;
+inline bool Msg_AnnouncementEvent::_internal_has_a_aid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_AnnouncementEvent::has_a_aid() const {
+  return _internal_has_a_aid();
+}
 inline void Msg_AnnouncementEvent::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_AnnouncementEvent::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -6680,7 +7639,7 @@ inline uint64_t Msg_AnnouncementEvent::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_AnnouncementEvent::_internal_set_a_aid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aid_ = value;
 }
 inline void Msg_AnnouncementEvent::set_a_aid(uint64_t value) {
@@ -6688,9 +7647,17 @@ inline void Msg_AnnouncementEvent::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent.a_aID)
 }
 
-// string a_aAnnouncement = 2;
+// required string a_aAnnouncement = 2;
+inline bool Msg_AnnouncementEvent::_internal_has_a_aannouncement() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_AnnouncementEvent::has_a_aannouncement() const {
+  return _internal_has_a_aannouncement();
+}
 inline void Msg_AnnouncementEvent::clear_a_aannouncement() {
   _impl_.a_aannouncement_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_AnnouncementEvent::a_aannouncement() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent.a_aAnnouncement)
@@ -6699,7 +7666,7 @@ inline const std::string& Msg_AnnouncementEvent::a_aannouncement() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AnnouncementEvent::set_a_aannouncement(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aannouncement_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent.a_aAnnouncement)
 }
@@ -6712,22 +7679,32 @@ inline const std::string& Msg_AnnouncementEvent::_internal_a_aannouncement() con
   return _impl_.a_aannouncement_.Get();
 }
 inline void Msg_AnnouncementEvent::_internal_set_a_aannouncement(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aannouncement_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_AnnouncementEvent::_internal_mutable_a_aannouncement() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aannouncement_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_AnnouncementEvent::release_a_aannouncement() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent.a_aAnnouncement)
-  return _impl_.a_aannouncement_.Release();
+  if (!_internal_has_a_aannouncement()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aannouncement_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aannouncement_.IsDefault()) {
+    _impl_.a_aannouncement_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_AnnouncementEvent::set_allocated_a_aannouncement(std::string* a_aannouncement) {
   if (a_aannouncement != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aannouncement_.SetAllocated(a_aannouncement, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6738,9 +7715,17 @@ inline void Msg_AnnouncementEvent::set_allocated_a_aannouncement(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent.a_aAnnouncement)
 }
 
-// uint32 a_aPriority = 3;
+// required uint32 a_aPriority = 3;
+inline bool Msg_AnnouncementEvent::_internal_has_a_apriority() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_AnnouncementEvent::has_a_apriority() const {
+  return _internal_has_a_apriority();
+}
 inline void Msg_AnnouncementEvent::clear_a_apriority() {
   _impl_.a_apriority_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_AnnouncementEvent::_internal_a_apriority() const {
   return _impl_.a_apriority_;
@@ -6750,7 +7735,7 @@ inline uint32_t Msg_AnnouncementEvent::a_apriority() const {
   return _internal_a_apriority();
 }
 inline void Msg_AnnouncementEvent::_internal_set_a_apriority(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_apriority_ = value;
 }
 inline void Msg_AnnouncementEvent::set_a_apriority(uint32_t value) {
@@ -6762,9 +7747,17 @@ inline void Msg_AnnouncementEvent::set_a_apriority(uint32_t value) {
 
 // Msg_TextSelectionChangeEvent
 
-// uint64 a_aID = 1;
+// required uint64 a_aID = 1;
+inline bool Msg_TextSelectionChangeEvent::_internal_has_a_aid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_TextSelectionChangeEvent::has_a_aid() const {
+  return _internal_has_a_aid();
+}
 inline void Msg_TextSelectionChangeEvent::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_TextSelectionChangeEvent::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -6774,7 +7767,7 @@ inline uint64_t Msg_TextSelectionChangeEvent::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_TextSelectionChangeEvent::_internal_set_a_aid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aid_ = value;
 }
 inline void Msg_TextSelectionChangeEvent::set_a_aid(uint64_t value) {
@@ -6823,9 +7816,17 @@ Msg_TextSelectionChangeEvent::a_aselection() const {
 
 // Msg_BindChildDoc
 
-// bytes a_aChildDoc = 1;
+// required bytes a_aChildDoc = 1;
+inline bool Msg_BindChildDoc::_internal_has_a_achilddoc() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_BindChildDoc::has_a_achilddoc() const {
+  return _internal_has_a_achilddoc();
+}
 inline void Msg_BindChildDoc::clear_a_achilddoc() {
   _impl_.a_achilddoc_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_BindChildDoc::a_achilddoc() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_BindChildDoc.a_aChildDoc)
@@ -6834,7 +7835,7 @@ inline const std::string& Msg_BindChildDoc::a_achilddoc() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_BindChildDoc::set_a_achilddoc(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_achilddoc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_BindChildDoc.a_aChildDoc)
 }
@@ -6847,22 +7848,32 @@ inline const std::string& Msg_BindChildDoc::_internal_a_achilddoc() const {
   return _impl_.a_achilddoc_.Get();
 }
 inline void Msg_BindChildDoc::_internal_set_a_achilddoc(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_achilddoc_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_BindChildDoc::_internal_mutable_a_achilddoc() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_achilddoc_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_BindChildDoc::release_a_achilddoc() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_BindChildDoc.a_aChildDoc)
-  return _impl_.a_achilddoc_.Release();
+  if (!_internal_has_a_achilddoc()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_achilddoc_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_achilddoc_.IsDefault()) {
+    _impl_.a_achilddoc_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_BindChildDoc::set_allocated_a_achilddoc(std::string* a_achilddoc) {
   if (a_achilddoc != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_achilddoc_.SetAllocated(a_achilddoc, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6873,9 +7884,17 @@ inline void Msg_BindChildDoc::set_allocated_a_achilddoc(std::string* a_achilddoc
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_BindChildDoc.a_aChildDoc)
 }
 
-// uint64 a_aID = 2;
+// required uint64 a_aID = 2;
+inline bool Msg_BindChildDoc::_internal_has_a_aid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_BindChildDoc::has_a_aid() const {
+  return _internal_has_a_aid();
+}
 inline void Msg_BindChildDoc::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_BindChildDoc::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -6885,7 +7904,7 @@ inline uint64_t Msg_BindChildDoc::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_BindChildDoc::_internal_set_a_aid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aid_ = value;
 }
 inline void Msg_BindChildDoc::set_a_aid(uint64_t value) {
@@ -6897,9 +7916,17 @@ inline void Msg_BindChildDoc::set_a_aid(uint64_t value) {
 
 // Msg_Cache
 
-// bytes a_aUpdateType = 1;
+// required bytes a_aUpdateType = 1;
+inline bool Msg_Cache::_internal_has_a_aupdatetype() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_Cache::has_a_aupdatetype() const {
+  return _internal_has_a_aupdatetype();
+}
 inline void Msg_Cache::clear_a_aupdatetype() {
   _impl_.a_aupdatetype_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_Cache::a_aupdatetype() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_Cache.a_aUpdateType)
@@ -6908,7 +7935,7 @@ inline const std::string& Msg_Cache::a_aupdatetype() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Cache::set_a_aupdatetype(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aupdatetype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_Cache.a_aUpdateType)
 }
@@ -6921,22 +7948,32 @@ inline const std::string& Msg_Cache::_internal_a_aupdatetype() const {
   return _impl_.a_aupdatetype_.Get();
 }
 inline void Msg_Cache::_internal_set_a_aupdatetype(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aupdatetype_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_Cache::_internal_mutable_a_aupdatetype() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aupdatetype_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_Cache::release_a_aupdatetype() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_Cache.a_aUpdateType)
-  return _impl_.a_aupdatetype_.Release();
+  if (!_internal_has_a_aupdatetype()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aupdatetype_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aupdatetype_.IsDefault()) {
+    _impl_.a_aupdatetype_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_Cache::set_allocated_a_aupdatetype(std::string* a_aupdatetype) {
   if (a_aupdatetype != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aupdatetype_.SetAllocated(a_aupdatetype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -7149,9 +8186,17 @@ Msg_AccessiblesWillMove::mutable_a_aids() {
 
 // Msg_ScrollTo
 
-// uint64 a_aID = 1;
+// required uint64 a_aID = 1;
+inline bool Msg_ScrollTo::_internal_has_a_aid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_ScrollTo::has_a_aid() const {
+  return _internal_has_a_aid();
+}
 inline void Msg_ScrollTo::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_ScrollTo::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -7161,7 +8206,7 @@ inline uint64_t Msg_ScrollTo::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_ScrollTo::_internal_set_a_aid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aid_ = value;
 }
 inline void Msg_ScrollTo::set_a_aid(uint64_t value) {
@@ -7169,9 +8214,17 @@ inline void Msg_ScrollTo::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTo.a_aID)
 }
 
-// uint32 a_aScrollType = 2;
+// required uint32 a_aScrollType = 2;
+inline bool Msg_ScrollTo::_internal_has_a_ascrolltype() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_ScrollTo::has_a_ascrolltype() const {
+  return _internal_has_a_ascrolltype();
+}
 inline void Msg_ScrollTo::clear_a_ascrolltype() {
   _impl_.a_ascrolltype_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_ScrollTo::_internal_a_ascrolltype() const {
   return _impl_.a_ascrolltype_;
@@ -7181,7 +8234,7 @@ inline uint32_t Msg_ScrollTo::a_ascrolltype() const {
   return _internal_a_ascrolltype();
 }
 inline void Msg_ScrollTo::_internal_set_a_ascrolltype(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_ascrolltype_ = value;
 }
 inline void Msg_ScrollTo::set_a_ascrolltype(uint32_t value) {
@@ -7193,9 +8246,17 @@ inline void Msg_ScrollTo::set_a_ascrolltype(uint32_t value) {
 
 // Msg_ScrollToPoint
 
-// uint64 a_aID = 1;
+// required uint64 a_aID = 1;
+inline bool Msg_ScrollToPoint::_internal_has_a_aid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_ScrollToPoint::has_a_aid() const {
+  return _internal_has_a_aid();
+}
 inline void Msg_ScrollToPoint::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_ScrollToPoint::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -7205,7 +8266,7 @@ inline uint64_t Msg_ScrollToPoint::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_ScrollToPoint::_internal_set_a_aid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aid_ = value;
 }
 inline void Msg_ScrollToPoint::set_a_aid(uint64_t value) {
@@ -7213,9 +8274,17 @@ inline void Msg_ScrollToPoint::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollToPoint.a_aID)
 }
 
-// uint32 a_aScrollType = 2;
+// required uint32 a_aScrollType = 2;
+inline bool Msg_ScrollToPoint::_internal_has_a_ascrolltype() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_ScrollToPoint::has_a_ascrolltype() const {
+  return _internal_has_a_ascrolltype();
+}
 inline void Msg_ScrollToPoint::clear_a_ascrolltype() {
   _impl_.a_ascrolltype_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_ScrollToPoint::_internal_a_ascrolltype() const {
   return _impl_.a_ascrolltype_;
@@ -7225,7 +8294,7 @@ inline uint32_t Msg_ScrollToPoint::a_ascrolltype() const {
   return _internal_a_ascrolltype();
 }
 inline void Msg_ScrollToPoint::_internal_set_a_ascrolltype(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_ascrolltype_ = value;
 }
 inline void Msg_ScrollToPoint::set_a_ascrolltype(uint32_t value) {
@@ -7233,9 +8302,17 @@ inline void Msg_ScrollToPoint::set_a_ascrolltype(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollToPoint.a_aScrollType)
 }
 
-// sint32 a_aX = 3;
+// required sint32 a_aX = 3;
+inline bool Msg_ScrollToPoint::_internal_has_a_ax() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_ScrollToPoint::has_a_ax() const {
+  return _internal_has_a_ax();
+}
 inline void Msg_ScrollToPoint::clear_a_ax() {
   _impl_.a_ax_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline int32_t Msg_ScrollToPoint::_internal_a_ax() const {
   return _impl_.a_ax_;
@@ -7245,7 +8322,7 @@ inline int32_t Msg_ScrollToPoint::a_ax() const {
   return _internal_a_ax();
 }
 inline void Msg_ScrollToPoint::_internal_set_a_ax(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_ax_ = value;
 }
 inline void Msg_ScrollToPoint::set_a_ax(int32_t value) {
@@ -7253,9 +8330,17 @@ inline void Msg_ScrollToPoint::set_a_ax(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollToPoint.a_aX)
 }
 
-// sint32 a_aY = 4;
+// required sint32 a_aY = 4;
+inline bool Msg_ScrollToPoint::_internal_has_a_ay() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool Msg_ScrollToPoint::has_a_ay() const {
+  return _internal_has_a_ay();
+}
 inline void Msg_ScrollToPoint::clear_a_ay() {
   _impl_.a_ay_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline int32_t Msg_ScrollToPoint::_internal_a_ay() const {
   return _impl_.a_ay_;
@@ -7265,7 +8350,7 @@ inline int32_t Msg_ScrollToPoint::a_ay() const {
   return _internal_a_ay();
 }
 inline void Msg_ScrollToPoint::_internal_set_a_ay(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_ay_ = value;
 }
 inline void Msg_ScrollToPoint::set_a_ay(int32_t value) {
@@ -7277,9 +8362,17 @@ inline void Msg_ScrollToPoint::set_a_ay(int32_t value) {
 
 // Msg_Announce
 
-// uint64 a_aID = 1;
+// required uint64 a_aID = 1;
+inline bool Msg_Announce::_internal_has_a_aid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_Announce::has_a_aid() const {
+  return _internal_has_a_aid();
+}
 inline void Msg_Announce::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_Announce::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -7289,7 +8382,7 @@ inline uint64_t Msg_Announce::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_Announce::_internal_set_a_aid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aid_ = value;
 }
 inline void Msg_Announce::set_a_aid(uint64_t value) {
@@ -7297,9 +8390,17 @@ inline void Msg_Announce::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce.a_aID)
 }
 
-// string a_aAnnouncement = 2;
+// required string a_aAnnouncement = 2;
+inline bool Msg_Announce::_internal_has_a_aannouncement() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_Announce::has_a_aannouncement() const {
+  return _internal_has_a_aannouncement();
+}
 inline void Msg_Announce::clear_a_aannouncement() {
   _impl_.a_aannouncement_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_Announce::a_aannouncement() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce.a_aAnnouncement)
@@ -7308,7 +8409,7 @@ inline const std::string& Msg_Announce::a_aannouncement() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Announce::set_a_aannouncement(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aannouncement_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce.a_aAnnouncement)
 }
@@ -7321,22 +8422,32 @@ inline const std::string& Msg_Announce::_internal_a_aannouncement() const {
   return _impl_.a_aannouncement_.Get();
 }
 inline void Msg_Announce::_internal_set_a_aannouncement(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aannouncement_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_Announce::_internal_mutable_a_aannouncement() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aannouncement_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_Announce::release_a_aannouncement() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce.a_aAnnouncement)
-  return _impl_.a_aannouncement_.Release();
+  if (!_internal_has_a_aannouncement()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aannouncement_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aannouncement_.IsDefault()) {
+    _impl_.a_aannouncement_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_Announce::set_allocated_a_aannouncement(std::string* a_aannouncement) {
   if (a_aannouncement != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aannouncement_.SetAllocated(a_aannouncement, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -7347,9 +8458,17 @@ inline void Msg_Announce::set_allocated_a_aannouncement(std::string* a_aannounce
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce.a_aAnnouncement)
 }
 
-// uint32 a_aPriority = 3;
+// required uint32 a_aPriority = 3;
+inline bool Msg_Announce::_internal_has_a_apriority() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_Announce::has_a_apriority() const {
+  return _internal_has_a_apriority();
+}
 inline void Msg_Announce::clear_a_apriority() {
   _impl_.a_apriority_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_Announce::_internal_a_apriority() const {
   return _impl_.a_apriority_;
@@ -7359,7 +8478,7 @@ inline uint32_t Msg_Announce::a_apriority() const {
   return _internal_a_apriority();
 }
 inline void Msg_Announce::_internal_set_a_apriority(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_apriority_ = value;
 }
 inline void Msg_Announce::set_a_apriority(uint32_t value) {
@@ -7371,9 +8490,17 @@ inline void Msg_Announce::set_a_apriority(uint32_t value) {
 
 // Msg_SetTextSelection
 
-// uint64 a_aStartID = 1;
+// required uint64 a_aStartID = 1;
+inline bool Msg_SetTextSelection::_internal_has_a_astartid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_SetTextSelection::has_a_astartid() const {
+  return _internal_has_a_astartid();
+}
 inline void Msg_SetTextSelection::clear_a_astartid() {
   _impl_.a_astartid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_SetTextSelection::_internal_a_astartid() const {
   return _impl_.a_astartid_;
@@ -7383,7 +8510,7 @@ inline uint64_t Msg_SetTextSelection::a_astartid() const {
   return _internal_a_astartid();
 }
 inline void Msg_SetTextSelection::_internal_set_a_astartid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_astartid_ = value;
 }
 inline void Msg_SetTextSelection::set_a_astartid(uint64_t value) {
@@ -7391,9 +8518,17 @@ inline void Msg_SetTextSelection::set_a_astartid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.a_aStartID)
 }
 
-// sint32 a_aStartOffset = 2;
+// required sint32 a_aStartOffset = 2;
+inline bool Msg_SetTextSelection::_internal_has_a_astartoffset() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_SetTextSelection::has_a_astartoffset() const {
+  return _internal_has_a_astartoffset();
+}
 inline void Msg_SetTextSelection::clear_a_astartoffset() {
   _impl_.a_astartoffset_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline int32_t Msg_SetTextSelection::_internal_a_astartoffset() const {
   return _impl_.a_astartoffset_;
@@ -7403,7 +8538,7 @@ inline int32_t Msg_SetTextSelection::a_astartoffset() const {
   return _internal_a_astartoffset();
 }
 inline void Msg_SetTextSelection::_internal_set_a_astartoffset(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_astartoffset_ = value;
 }
 inline void Msg_SetTextSelection::set_a_astartoffset(int32_t value) {
@@ -7411,9 +8546,17 @@ inline void Msg_SetTextSelection::set_a_astartoffset(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.a_aStartOffset)
 }
 
-// uint64 a_aEndID = 3;
+// required uint64 a_aEndID = 3;
+inline bool Msg_SetTextSelection::_internal_has_a_aendid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_SetTextSelection::has_a_aendid() const {
+  return _internal_has_a_aendid();
+}
 inline void Msg_SetTextSelection::clear_a_aendid() {
   _impl_.a_aendid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_SetTextSelection::_internal_a_aendid() const {
   return _impl_.a_aendid_;
@@ -7423,7 +8566,7 @@ inline uint64_t Msg_SetTextSelection::a_aendid() const {
   return _internal_a_aendid();
 }
 inline void Msg_SetTextSelection::_internal_set_a_aendid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aendid_ = value;
 }
 inline void Msg_SetTextSelection::set_a_aendid(uint64_t value) {
@@ -7431,9 +8574,17 @@ inline void Msg_SetTextSelection::set_a_aendid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.a_aEndID)
 }
 
-// sint32 a_aEndOffset = 4;
+// required sint32 a_aEndOffset = 4;
+inline bool Msg_SetTextSelection::_internal_has_a_aendoffset() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool Msg_SetTextSelection::has_a_aendoffset() const {
+  return _internal_has_a_aendoffset();
+}
 inline void Msg_SetTextSelection::clear_a_aendoffset() {
   _impl_.a_aendoffset_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline int32_t Msg_SetTextSelection::_internal_a_aendoffset() const {
   return _impl_.a_aendoffset_;
@@ -7443,7 +8594,7 @@ inline int32_t Msg_SetTextSelection::a_aendoffset() const {
   return _internal_a_aendoffset();
 }
 inline void Msg_SetTextSelection::_internal_set_a_aendoffset(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_aendoffset_ = value;
 }
 inline void Msg_SetTextSelection::set_a_aendoffset(int32_t value) {
@@ -7451,9 +8602,17 @@ inline void Msg_SetTextSelection::set_a_aendoffset(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.a_aEndOffset)
 }
 
-// sint32 a_aSelectionNum = 5;
+// required sint32 a_aSelectionNum = 5;
+inline bool Msg_SetTextSelection::_internal_has_a_aselectionnum() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool Msg_SetTextSelection::has_a_aselectionnum() const {
+  return _internal_has_a_aselectionnum();
+}
 inline void Msg_SetTextSelection::clear_a_aselectionnum() {
   _impl_.a_aselectionnum_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline int32_t Msg_SetTextSelection::_internal_a_aselectionnum() const {
   return _impl_.a_aselectionnum_;
@@ -7463,7 +8622,7 @@ inline int32_t Msg_SetTextSelection::a_aselectionnum() const {
   return _internal_a_aselectionnum();
 }
 inline void Msg_SetTextSelection::_internal_set_a_aselectionnum(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.a_aselectionnum_ = value;
 }
 inline void Msg_SetTextSelection::set_a_aselectionnum(int32_t value) {
@@ -7471,9 +8630,17 @@ inline void Msg_SetTextSelection::set_a_aselectionnum(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.a_aSelectionNum)
 }
 
-// bool a_aSetFocus = 6;
+// required bool a_aSetFocus = 6;
+inline bool Msg_SetTextSelection::_internal_has_a_asetfocus() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool Msg_SetTextSelection::has_a_asetfocus() const {
+  return _internal_has_a_asetfocus();
+}
 inline void Msg_SetTextSelection::clear_a_asetfocus() {
   _impl_.a_asetfocus_ = false;
+  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline bool Msg_SetTextSelection::_internal_a_asetfocus() const {
   return _impl_.a_asetfocus_;
@@ -7483,7 +8650,7 @@ inline bool Msg_SetTextSelection::a_asetfocus() const {
   return _internal_a_asetfocus();
 }
 inline void Msg_SetTextSelection::_internal_set_a_asetfocus(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000020u;
   _impl_.a_asetfocus_ = value;
 }
 inline void Msg_SetTextSelection::set_a_asetfocus(bool value) {
@@ -7495,9 +8662,17 @@ inline void Msg_SetTextSelection::set_a_asetfocus(bool value) {
 
 // Msg_RemoveTextSelection
 
-// uint64 a_aID = 1;
+// required uint64 a_aID = 1;
+inline bool Msg_RemoveTextSelection::_internal_has_a_aid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_RemoveTextSelection::has_a_aid() const {
+  return _internal_has_a_aid();
+}
 inline void Msg_RemoveTextSelection::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_RemoveTextSelection::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -7507,7 +8682,7 @@ inline uint64_t Msg_RemoveTextSelection::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_RemoveTextSelection::_internal_set_a_aid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aid_ = value;
 }
 inline void Msg_RemoveTextSelection::set_a_aid(uint64_t value) {
@@ -7515,9 +8690,17 @@ inline void Msg_RemoveTextSelection::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_RemoveTextSelection.a_aID)
 }
 
-// sint32 a_aSelectionNum = 2;
+// required sint32 a_aSelectionNum = 2;
+inline bool Msg_RemoveTextSelection::_internal_has_a_aselectionnum() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_RemoveTextSelection::has_a_aselectionnum() const {
+  return _internal_has_a_aselectionnum();
+}
 inline void Msg_RemoveTextSelection::clear_a_aselectionnum() {
   _impl_.a_aselectionnum_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline int32_t Msg_RemoveTextSelection::_internal_a_aselectionnum() const {
   return _impl_.a_aselectionnum_;
@@ -7527,7 +8710,7 @@ inline int32_t Msg_RemoveTextSelection::a_aselectionnum() const {
   return _internal_a_aselectionnum();
 }
 inline void Msg_RemoveTextSelection::_internal_set_a_aselectionnum(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aselectionnum_ = value;
 }
 inline void Msg_RemoveTextSelection::set_a_aselectionnum(int32_t value) {
@@ -7539,9 +8722,17 @@ inline void Msg_RemoveTextSelection::set_a_aselectionnum(int32_t value) {
 
 // Msg_ScrollTextLeafRangeIntoView
 
-// uint64 a_aStartID = 1;
+// required uint64 a_aStartID = 1;
+inline bool Msg_ScrollTextLeafRangeIntoView::_internal_has_a_astartid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_ScrollTextLeafRangeIntoView::has_a_astartid() const {
+  return _internal_has_a_astartid();
+}
 inline void Msg_ScrollTextLeafRangeIntoView::clear_a_astartid() {
   _impl_.a_astartid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_ScrollTextLeafRangeIntoView::_internal_a_astartid() const {
   return _impl_.a_astartid_;
@@ -7551,7 +8742,7 @@ inline uint64_t Msg_ScrollTextLeafRangeIntoView::a_astartid() const {
   return _internal_a_astartid();
 }
 inline void Msg_ScrollTextLeafRangeIntoView::_internal_set_a_astartid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_astartid_ = value;
 }
 inline void Msg_ScrollTextLeafRangeIntoView::set_a_astartid(uint64_t value) {
@@ -7559,9 +8750,17 @@ inline void Msg_ScrollTextLeafRangeIntoView::set_a_astartid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.a_aStartID)
 }
 
-// sint32 a_aStartOffset = 2;
+// required sint32 a_aStartOffset = 2;
+inline bool Msg_ScrollTextLeafRangeIntoView::_internal_has_a_astartoffset() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_ScrollTextLeafRangeIntoView::has_a_astartoffset() const {
+  return _internal_has_a_astartoffset();
+}
 inline void Msg_ScrollTextLeafRangeIntoView::clear_a_astartoffset() {
   _impl_.a_astartoffset_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline int32_t Msg_ScrollTextLeafRangeIntoView::_internal_a_astartoffset() const {
   return _impl_.a_astartoffset_;
@@ -7571,7 +8770,7 @@ inline int32_t Msg_ScrollTextLeafRangeIntoView::a_astartoffset() const {
   return _internal_a_astartoffset();
 }
 inline void Msg_ScrollTextLeafRangeIntoView::_internal_set_a_astartoffset(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_astartoffset_ = value;
 }
 inline void Msg_ScrollTextLeafRangeIntoView::set_a_astartoffset(int32_t value) {
@@ -7579,9 +8778,17 @@ inline void Msg_ScrollTextLeafRangeIntoView::set_a_astartoffset(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.a_aStartOffset)
 }
 
-// uint64 a_aEndID = 3;
+// required uint64 a_aEndID = 3;
+inline bool Msg_ScrollTextLeafRangeIntoView::_internal_has_a_aendid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_ScrollTextLeafRangeIntoView::has_a_aendid() const {
+  return _internal_has_a_aendid();
+}
 inline void Msg_ScrollTextLeafRangeIntoView::clear_a_aendid() {
   _impl_.a_aendid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_ScrollTextLeafRangeIntoView::_internal_a_aendid() const {
   return _impl_.a_aendid_;
@@ -7591,7 +8798,7 @@ inline uint64_t Msg_ScrollTextLeafRangeIntoView::a_aendid() const {
   return _internal_a_aendid();
 }
 inline void Msg_ScrollTextLeafRangeIntoView::_internal_set_a_aendid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aendid_ = value;
 }
 inline void Msg_ScrollTextLeafRangeIntoView::set_a_aendid(uint64_t value) {
@@ -7599,9 +8806,17 @@ inline void Msg_ScrollTextLeafRangeIntoView::set_a_aendid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.a_aEndID)
 }
 
-// sint32 a_aEndOffset = 4;
+// required sint32 a_aEndOffset = 4;
+inline bool Msg_ScrollTextLeafRangeIntoView::_internal_has_a_aendoffset() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool Msg_ScrollTextLeafRangeIntoView::has_a_aendoffset() const {
+  return _internal_has_a_aendoffset();
+}
 inline void Msg_ScrollTextLeafRangeIntoView::clear_a_aendoffset() {
   _impl_.a_aendoffset_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline int32_t Msg_ScrollTextLeafRangeIntoView::_internal_a_aendoffset() const {
   return _impl_.a_aendoffset_;
@@ -7611,7 +8826,7 @@ inline int32_t Msg_ScrollTextLeafRangeIntoView::a_aendoffset() const {
   return _internal_a_aendoffset();
 }
 inline void Msg_ScrollTextLeafRangeIntoView::_internal_set_a_aendoffset(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_aendoffset_ = value;
 }
 inline void Msg_ScrollTextLeafRangeIntoView::set_a_aendoffset(int32_t value) {
@@ -7619,9 +8834,17 @@ inline void Msg_ScrollTextLeafRangeIntoView::set_a_aendoffset(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.a_aEndOffset)
 }
 
-// uint32 a_aScrollType = 5;
+// required uint32 a_aScrollType = 5;
+inline bool Msg_ScrollTextLeafRangeIntoView::_internal_has_a_ascrolltype() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool Msg_ScrollTextLeafRangeIntoView::has_a_ascrolltype() const {
+  return _internal_has_a_ascrolltype();
+}
 inline void Msg_ScrollTextLeafRangeIntoView::clear_a_ascrolltype() {
   _impl_.a_ascrolltype_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline uint32_t Msg_ScrollTextLeafRangeIntoView::_internal_a_ascrolltype() const {
   return _impl_.a_ascrolltype_;
@@ -7631,7 +8854,7 @@ inline uint32_t Msg_ScrollTextLeafRangeIntoView::a_ascrolltype() const {
   return _internal_a_ascrolltype();
 }
 inline void Msg_ScrollTextLeafRangeIntoView::_internal_set_a_ascrolltype(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.a_ascrolltype_ = value;
 }
 inline void Msg_ScrollTextLeafRangeIntoView::set_a_ascrolltype(uint32_t value) {
@@ -7643,9 +8866,17 @@ inline void Msg_ScrollTextLeafRangeIntoView::set_a_ascrolltype(uint32_t value) {
 
 // Msg_ScrollSubstringToPoint
 
-// uint64 a_aID = 1;
+// required uint64 a_aID = 1;
+inline bool Msg_ScrollSubstringToPoint::_internal_has_a_aid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_ScrollSubstringToPoint::has_a_aid() const {
+  return _internal_has_a_aid();
+}
 inline void Msg_ScrollSubstringToPoint::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_ScrollSubstringToPoint::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -7655,7 +8886,7 @@ inline uint64_t Msg_ScrollSubstringToPoint::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_ScrollSubstringToPoint::_internal_set_a_aid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aid_ = value;
 }
 inline void Msg_ScrollSubstringToPoint::set_a_aid(uint64_t value) {
@@ -7663,9 +8894,17 @@ inline void Msg_ScrollSubstringToPoint::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.a_aID)
 }
 
-// sint32 a_aStartOffset = 2;
+// required sint32 a_aStartOffset = 2;
+inline bool Msg_ScrollSubstringToPoint::_internal_has_a_astartoffset() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_ScrollSubstringToPoint::has_a_astartoffset() const {
+  return _internal_has_a_astartoffset();
+}
 inline void Msg_ScrollSubstringToPoint::clear_a_astartoffset() {
   _impl_.a_astartoffset_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline int32_t Msg_ScrollSubstringToPoint::_internal_a_astartoffset() const {
   return _impl_.a_astartoffset_;
@@ -7675,7 +8914,7 @@ inline int32_t Msg_ScrollSubstringToPoint::a_astartoffset() const {
   return _internal_a_astartoffset();
 }
 inline void Msg_ScrollSubstringToPoint::_internal_set_a_astartoffset(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_astartoffset_ = value;
 }
 inline void Msg_ScrollSubstringToPoint::set_a_astartoffset(int32_t value) {
@@ -7683,9 +8922,17 @@ inline void Msg_ScrollSubstringToPoint::set_a_astartoffset(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.a_aStartOffset)
 }
 
-// sint32 a_aEndOffset = 3;
+// required sint32 a_aEndOffset = 3;
+inline bool Msg_ScrollSubstringToPoint::_internal_has_a_aendoffset() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_ScrollSubstringToPoint::has_a_aendoffset() const {
+  return _internal_has_a_aendoffset();
+}
 inline void Msg_ScrollSubstringToPoint::clear_a_aendoffset() {
   _impl_.a_aendoffset_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline int32_t Msg_ScrollSubstringToPoint::_internal_a_aendoffset() const {
   return _impl_.a_aendoffset_;
@@ -7695,7 +8942,7 @@ inline int32_t Msg_ScrollSubstringToPoint::a_aendoffset() const {
   return _internal_a_aendoffset();
 }
 inline void Msg_ScrollSubstringToPoint::_internal_set_a_aendoffset(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_aendoffset_ = value;
 }
 inline void Msg_ScrollSubstringToPoint::set_a_aendoffset(int32_t value) {
@@ -7703,9 +8950,17 @@ inline void Msg_ScrollSubstringToPoint::set_a_aendoffset(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.a_aEndOffset)
 }
 
-// uint32 a_aCoordinateType = 4;
+// required uint32 a_aCoordinateType = 4;
+inline bool Msg_ScrollSubstringToPoint::_internal_has_a_acoordinatetype() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool Msg_ScrollSubstringToPoint::has_a_acoordinatetype() const {
+  return _internal_has_a_acoordinatetype();
+}
 inline void Msg_ScrollSubstringToPoint::clear_a_acoordinatetype() {
   _impl_.a_acoordinatetype_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline uint32_t Msg_ScrollSubstringToPoint::_internal_a_acoordinatetype() const {
   return _impl_.a_acoordinatetype_;
@@ -7715,7 +8970,7 @@ inline uint32_t Msg_ScrollSubstringToPoint::a_acoordinatetype() const {
   return _internal_a_acoordinatetype();
 }
 inline void Msg_ScrollSubstringToPoint::_internal_set_a_acoordinatetype(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_acoordinatetype_ = value;
 }
 inline void Msg_ScrollSubstringToPoint::set_a_acoordinatetype(uint32_t value) {
@@ -7723,9 +8978,17 @@ inline void Msg_ScrollSubstringToPoint::set_a_acoordinatetype(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.a_aCoordinateType)
 }
 
-// sint32 a_aX = 5;
+// required sint32 a_aX = 5;
+inline bool Msg_ScrollSubstringToPoint::_internal_has_a_ax() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool Msg_ScrollSubstringToPoint::has_a_ax() const {
+  return _internal_has_a_ax();
+}
 inline void Msg_ScrollSubstringToPoint::clear_a_ax() {
   _impl_.a_ax_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline int32_t Msg_ScrollSubstringToPoint::_internal_a_ax() const {
   return _impl_.a_ax_;
@@ -7735,7 +8998,7 @@ inline int32_t Msg_ScrollSubstringToPoint::a_ax() const {
   return _internal_a_ax();
 }
 inline void Msg_ScrollSubstringToPoint::_internal_set_a_ax(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.a_ax_ = value;
 }
 inline void Msg_ScrollSubstringToPoint::set_a_ax(int32_t value) {
@@ -7743,9 +9006,17 @@ inline void Msg_ScrollSubstringToPoint::set_a_ax(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.a_aX)
 }
 
-// sint32 a_aY = 6;
+// required sint32 a_aY = 6;
+inline bool Msg_ScrollSubstringToPoint::_internal_has_a_ay() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool Msg_ScrollSubstringToPoint::has_a_ay() const {
+  return _internal_has_a_ay();
+}
 inline void Msg_ScrollSubstringToPoint::clear_a_ay() {
   _impl_.a_ay_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline int32_t Msg_ScrollSubstringToPoint::_internal_a_ay() const {
   return _impl_.a_ay_;
@@ -7755,7 +9026,7 @@ inline int32_t Msg_ScrollSubstringToPoint::a_ay() const {
   return _internal_a_ay();
 }
 inline void Msg_ScrollSubstringToPoint::_internal_set_a_ay(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000020u;
   _impl_.a_ay_ = value;
 }
 inline void Msg_ScrollSubstringToPoint::set_a_ay(int32_t value) {
@@ -7767,9 +9038,17 @@ inline void Msg_ScrollSubstringToPoint::set_a_ay(int32_t value) {
 
 // Msg_ReplaceText
 
-// uint64 a_aID = 1;
+// required uint64 a_aID = 1;
+inline bool Msg_ReplaceText::_internal_has_a_aid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_ReplaceText::has_a_aid() const {
+  return _internal_has_a_aid();
+}
 inline void Msg_ReplaceText::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_ReplaceText::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -7779,7 +9058,7 @@ inline uint64_t Msg_ReplaceText::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_ReplaceText::_internal_set_a_aid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aid_ = value;
 }
 inline void Msg_ReplaceText::set_a_aid(uint64_t value) {
@@ -7787,9 +9066,17 @@ inline void Msg_ReplaceText::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ReplaceText.a_aID)
 }
 
-// string a_aText = 2;
+// required string a_aText = 2;
+inline bool Msg_ReplaceText::_internal_has_a_atext() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_ReplaceText::has_a_atext() const {
+  return _internal_has_a_atext();
+}
 inline void Msg_ReplaceText::clear_a_atext() {
   _impl_.a_atext_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_ReplaceText::a_atext() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ReplaceText.a_aText)
@@ -7798,7 +9085,7 @@ inline const std::string& Msg_ReplaceText::a_atext() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ReplaceText::set_a_atext(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_atext_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ReplaceText.a_aText)
 }
@@ -7811,22 +9098,32 @@ inline const std::string& Msg_ReplaceText::_internal_a_atext() const {
   return _impl_.a_atext_.Get();
 }
 inline void Msg_ReplaceText::_internal_set_a_atext(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_atext_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_ReplaceText::_internal_mutable_a_atext() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_atext_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_ReplaceText::release_a_atext() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_ReplaceText.a_aText)
-  return _impl_.a_atext_.Release();
+  if (!_internal_has_a_atext()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_atext_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_atext_.IsDefault()) {
+    _impl_.a_atext_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_ReplaceText::set_allocated_a_atext(std::string* a_atext) {
   if (a_atext != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_atext_.SetAllocated(a_atext, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -7841,9 +9138,17 @@ inline void Msg_ReplaceText::set_allocated_a_atext(std::string* a_atext) {
 
 // Msg_InsertText
 
-// uint64 a_aID = 1;
+// required uint64 a_aID = 1;
+inline bool Msg_InsertText::_internal_has_a_aid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_InsertText::has_a_aid() const {
+  return _internal_has_a_aid();
+}
 inline void Msg_InsertText::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_InsertText::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -7853,7 +9158,7 @@ inline uint64_t Msg_InsertText::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_InsertText::_internal_set_a_aid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aid_ = value;
 }
 inline void Msg_InsertText::set_a_aid(uint64_t value) {
@@ -7861,9 +9166,17 @@ inline void Msg_InsertText::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.a_aID)
 }
 
-// string a_aText = 2;
+// required string a_aText = 2;
+inline bool Msg_InsertText::_internal_has_a_atext() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_InsertText::has_a_atext() const {
+  return _internal_has_a_atext();
+}
 inline void Msg_InsertText::clear_a_atext() {
   _impl_.a_atext_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_InsertText::a_atext() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.a_aText)
@@ -7872,7 +9185,7 @@ inline const std::string& Msg_InsertText::a_atext() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_InsertText::set_a_atext(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_atext_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.a_aText)
 }
@@ -7885,22 +9198,32 @@ inline const std::string& Msg_InsertText::_internal_a_atext() const {
   return _impl_.a_atext_.Get();
 }
 inline void Msg_InsertText::_internal_set_a_atext(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_atext_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_InsertText::_internal_mutable_a_atext() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_atext_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_InsertText::release_a_atext() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.a_aText)
-  return _impl_.a_atext_.Release();
+  if (!_internal_has_a_atext()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_atext_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_atext_.IsDefault()) {
+    _impl_.a_atext_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_InsertText::set_allocated_a_atext(std::string* a_atext) {
   if (a_atext != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_atext_.SetAllocated(a_atext, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -7911,9 +9234,17 @@ inline void Msg_InsertText::set_allocated_a_atext(std::string* a_atext) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.a_aText)
 }
 
-// sint32 a_aPosition = 3;
+// required sint32 a_aPosition = 3;
+inline bool Msg_InsertText::_internal_has_a_aposition() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_InsertText::has_a_aposition() const {
+  return _internal_has_a_aposition();
+}
 inline void Msg_InsertText::clear_a_aposition() {
   _impl_.a_aposition_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline int32_t Msg_InsertText::_internal_a_aposition() const {
   return _impl_.a_aposition_;
@@ -7923,7 +9254,7 @@ inline int32_t Msg_InsertText::a_aposition() const {
   return _internal_a_aposition();
 }
 inline void Msg_InsertText::_internal_set_a_aposition(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_aposition_ = value;
 }
 inline void Msg_InsertText::set_a_aposition(int32_t value) {
@@ -7935,9 +9266,17 @@ inline void Msg_InsertText::set_a_aposition(int32_t value) {
 
 // Msg_CopyText
 
-// uint64 a_aID = 1;
+// required uint64 a_aID = 1;
+inline bool Msg_CopyText::_internal_has_a_aid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_CopyText::has_a_aid() const {
+  return _internal_has_a_aid();
+}
 inline void Msg_CopyText::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_CopyText::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -7947,7 +9286,7 @@ inline uint64_t Msg_CopyText::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_CopyText::_internal_set_a_aid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aid_ = value;
 }
 inline void Msg_CopyText::set_a_aid(uint64_t value) {
@@ -7955,9 +9294,17 @@ inline void Msg_CopyText::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CopyText.a_aID)
 }
 
-// sint32 a_aStartPos = 2;
+// required sint32 a_aStartPos = 2;
+inline bool Msg_CopyText::_internal_has_a_astartpos() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_CopyText::has_a_astartpos() const {
+  return _internal_has_a_astartpos();
+}
 inline void Msg_CopyText::clear_a_astartpos() {
   _impl_.a_astartpos_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline int32_t Msg_CopyText::_internal_a_astartpos() const {
   return _impl_.a_astartpos_;
@@ -7967,7 +9314,7 @@ inline int32_t Msg_CopyText::a_astartpos() const {
   return _internal_a_astartpos();
 }
 inline void Msg_CopyText::_internal_set_a_astartpos(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_astartpos_ = value;
 }
 inline void Msg_CopyText::set_a_astartpos(int32_t value) {
@@ -7975,9 +9322,17 @@ inline void Msg_CopyText::set_a_astartpos(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CopyText.a_aStartPos)
 }
 
-// sint32 a_aEndPos = 3;
+// required sint32 a_aEndPos = 3;
+inline bool Msg_CopyText::_internal_has_a_aendpos() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_CopyText::has_a_aendpos() const {
+  return _internal_has_a_aendpos();
+}
 inline void Msg_CopyText::clear_a_aendpos() {
   _impl_.a_aendpos_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline int32_t Msg_CopyText::_internal_a_aendpos() const {
   return _impl_.a_aendpos_;
@@ -7987,7 +9342,7 @@ inline int32_t Msg_CopyText::a_aendpos() const {
   return _internal_a_aendpos();
 }
 inline void Msg_CopyText::_internal_set_a_aendpos(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_aendpos_ = value;
 }
 inline void Msg_CopyText::set_a_aendpos(int32_t value) {
@@ -7999,9 +9354,17 @@ inline void Msg_CopyText::set_a_aendpos(int32_t value) {
 
 // Msg_CutText
 
-// uint64 a_aID = 1;
+// required uint64 a_aID = 1;
+inline bool Msg_CutText::_internal_has_a_aid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_CutText::has_a_aid() const {
+  return _internal_has_a_aid();
+}
 inline void Msg_CutText::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_CutText::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -8011,7 +9374,7 @@ inline uint64_t Msg_CutText::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_CutText::_internal_set_a_aid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aid_ = value;
 }
 inline void Msg_CutText::set_a_aid(uint64_t value) {
@@ -8019,9 +9382,17 @@ inline void Msg_CutText::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CutText.a_aID)
 }
 
-// sint32 a_aStartPos = 2;
+// required sint32 a_aStartPos = 2;
+inline bool Msg_CutText::_internal_has_a_astartpos() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_CutText::has_a_astartpos() const {
+  return _internal_has_a_astartpos();
+}
 inline void Msg_CutText::clear_a_astartpos() {
   _impl_.a_astartpos_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline int32_t Msg_CutText::_internal_a_astartpos() const {
   return _impl_.a_astartpos_;
@@ -8031,7 +9402,7 @@ inline int32_t Msg_CutText::a_astartpos() const {
   return _internal_a_astartpos();
 }
 inline void Msg_CutText::_internal_set_a_astartpos(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_astartpos_ = value;
 }
 inline void Msg_CutText::set_a_astartpos(int32_t value) {
@@ -8039,9 +9410,17 @@ inline void Msg_CutText::set_a_astartpos(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CutText.a_aStartPos)
 }
 
-// sint32 a_aEndPos = 3;
+// required sint32 a_aEndPos = 3;
+inline bool Msg_CutText::_internal_has_a_aendpos() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_CutText::has_a_aendpos() const {
+  return _internal_has_a_aendpos();
+}
 inline void Msg_CutText::clear_a_aendpos() {
   _impl_.a_aendpos_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline int32_t Msg_CutText::_internal_a_aendpos() const {
   return _impl_.a_aendpos_;
@@ -8051,7 +9430,7 @@ inline int32_t Msg_CutText::a_aendpos() const {
   return _internal_a_aendpos();
 }
 inline void Msg_CutText::_internal_set_a_aendpos(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_aendpos_ = value;
 }
 inline void Msg_CutText::set_a_aendpos(int32_t value) {
@@ -8063,9 +9442,17 @@ inline void Msg_CutText::set_a_aendpos(int32_t value) {
 
 // Msg_DeleteText
 
-// uint64 a_aID = 1;
+// required uint64 a_aID = 1;
+inline bool Msg_DeleteText::_internal_has_a_aid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_DeleteText::has_a_aid() const {
+  return _internal_has_a_aid();
+}
 inline void Msg_DeleteText::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_DeleteText::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -8075,7 +9462,7 @@ inline uint64_t Msg_DeleteText::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_DeleteText::_internal_set_a_aid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aid_ = value;
 }
 inline void Msg_DeleteText::set_a_aid(uint64_t value) {
@@ -8083,9 +9470,17 @@ inline void Msg_DeleteText::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_DeleteText.a_aID)
 }
 
-// sint32 a_aStartPos = 2;
+// required sint32 a_aStartPos = 2;
+inline bool Msg_DeleteText::_internal_has_a_astartpos() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_DeleteText::has_a_astartpos() const {
+  return _internal_has_a_astartpos();
+}
 inline void Msg_DeleteText::clear_a_astartpos() {
   _impl_.a_astartpos_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline int32_t Msg_DeleteText::_internal_a_astartpos() const {
   return _impl_.a_astartpos_;
@@ -8095,7 +9490,7 @@ inline int32_t Msg_DeleteText::a_astartpos() const {
   return _internal_a_astartpos();
 }
 inline void Msg_DeleteText::_internal_set_a_astartpos(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_astartpos_ = value;
 }
 inline void Msg_DeleteText::set_a_astartpos(int32_t value) {
@@ -8103,9 +9498,17 @@ inline void Msg_DeleteText::set_a_astartpos(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_DeleteText.a_aStartPos)
 }
 
-// sint32 a_aEndPos = 3;
+// required sint32 a_aEndPos = 3;
+inline bool Msg_DeleteText::_internal_has_a_aendpos() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_DeleteText::has_a_aendpos() const {
+  return _internal_has_a_aendpos();
+}
 inline void Msg_DeleteText::clear_a_aendpos() {
   _impl_.a_aendpos_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline int32_t Msg_DeleteText::_internal_a_aendpos() const {
   return _impl_.a_aendpos_;
@@ -8115,7 +9518,7 @@ inline int32_t Msg_DeleteText::a_aendpos() const {
   return _internal_a_aendpos();
 }
 inline void Msg_DeleteText::_internal_set_a_aendpos(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_aendpos_ = value;
 }
 inline void Msg_DeleteText::set_a_aendpos(int32_t value) {
@@ -8127,9 +9530,17 @@ inline void Msg_DeleteText::set_a_aendpos(int32_t value) {
 
 // Msg_PasteText
 
-// uint64 a_aID = 1;
+// required uint64 a_aID = 1;
+inline bool Msg_PasteText::_internal_has_a_aid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PasteText::has_a_aid() const {
+  return _internal_has_a_aid();
+}
 inline void Msg_PasteText::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_PasteText::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -8139,7 +9550,7 @@ inline uint64_t Msg_PasteText::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_PasteText::_internal_set_a_aid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aid_ = value;
 }
 inline void Msg_PasteText::set_a_aid(uint64_t value) {
@@ -8147,9 +9558,17 @@ inline void Msg_PasteText::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_PasteText.a_aID)
 }
 
-// sint32 a_aPosition = 2;
+// required sint32 a_aPosition = 2;
+inline bool Msg_PasteText::_internal_has_a_aposition() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PasteText::has_a_aposition() const {
+  return _internal_has_a_aposition();
+}
 inline void Msg_PasteText::clear_a_aposition() {
   _impl_.a_aposition_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline int32_t Msg_PasteText::_internal_a_aposition() const {
   return _impl_.a_aposition_;
@@ -8159,7 +9578,7 @@ inline int32_t Msg_PasteText::a_aposition() const {
   return _internal_a_aposition();
 }
 inline void Msg_PasteText::_internal_set_a_aposition(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aposition_ = value;
 }
 inline void Msg_PasteText::set_a_aposition(int32_t value) {
@@ -8171,9 +9590,17 @@ inline void Msg_PasteText::set_a_aposition(int32_t value) {
 
 // Msg_TakeSelection
 
-// uint64 a_aID = 1;
+// required uint64 a_aID = 1;
+inline bool Msg_TakeSelection::_internal_has_a_aid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_TakeSelection::has_a_aid() const {
+  return _internal_has_a_aid();
+}
 inline void Msg_TakeSelection::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_TakeSelection::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -8183,7 +9610,7 @@ inline uint64_t Msg_TakeSelection::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_TakeSelection::_internal_set_a_aid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aid_ = value;
 }
 inline void Msg_TakeSelection::set_a_aid(uint64_t value) {
@@ -8195,9 +9622,17 @@ inline void Msg_TakeSelection::set_a_aid(uint64_t value) {
 
 // Msg_SetSelected
 
-// uint64 a_aID = 1;
+// required uint64 a_aID = 1;
+inline bool Msg_SetSelected::_internal_has_a_aid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_SetSelected::has_a_aid() const {
+  return _internal_has_a_aid();
+}
 inline void Msg_SetSelected::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_SetSelected::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -8207,7 +9642,7 @@ inline uint64_t Msg_SetSelected::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_SetSelected::_internal_set_a_aid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aid_ = value;
 }
 inline void Msg_SetSelected::set_a_aid(uint64_t value) {
@@ -8215,9 +9650,17 @@ inline void Msg_SetSelected::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetSelected.a_aID)
 }
 
-// bool a_aSelected = 2;
+// required bool a_aSelected = 2;
+inline bool Msg_SetSelected::_internal_has_a_aselected() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_SetSelected::has_a_aselected() const {
+  return _internal_has_a_aselected();
+}
 inline void Msg_SetSelected::clear_a_aselected() {
   _impl_.a_aselected_ = false;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool Msg_SetSelected::_internal_a_aselected() const {
   return _impl_.a_aselected_;
@@ -8227,7 +9670,7 @@ inline bool Msg_SetSelected::a_aselected() const {
   return _internal_a_aselected();
 }
 inline void Msg_SetSelected::_internal_set_a_aselected(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aselected_ = value;
 }
 inline void Msg_SetSelected::set_a_aselected(bool value) {
@@ -8239,9 +9682,17 @@ inline void Msg_SetSelected::set_a_aselected(bool value) {
 
 // Msg_DoActionAsync
 
-// uint64 a_aID = 1;
+// required uint64 a_aID = 1;
+inline bool Msg_DoActionAsync::_internal_has_a_aid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_DoActionAsync::has_a_aid() const {
+  return _internal_has_a_aid();
+}
 inline void Msg_DoActionAsync::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_DoActionAsync::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -8251,7 +9702,7 @@ inline uint64_t Msg_DoActionAsync::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_DoActionAsync::_internal_set_a_aid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aid_ = value;
 }
 inline void Msg_DoActionAsync::set_a_aid(uint64_t value) {
@@ -8259,9 +9710,17 @@ inline void Msg_DoActionAsync::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_DoActionAsync.a_aID)
 }
 
-// uint32 a_aIndex = 2;
+// required uint32 a_aIndex = 2;
+inline bool Msg_DoActionAsync::_internal_has_a_aindex() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_DoActionAsync::has_a_aindex() const {
+  return _internal_has_a_aindex();
+}
 inline void Msg_DoActionAsync::clear_a_aindex() {
   _impl_.a_aindex_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_DoActionAsync::_internal_a_aindex() const {
   return _impl_.a_aindex_;
@@ -8271,7 +9730,7 @@ inline uint32_t Msg_DoActionAsync::a_aindex() const {
   return _internal_a_aindex();
 }
 inline void Msg_DoActionAsync::_internal_set_a_aindex(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aindex_ = value;
 }
 inline void Msg_DoActionAsync::set_a_aindex(uint32_t value) {
@@ -8283,9 +9742,17 @@ inline void Msg_DoActionAsync::set_a_aindex(uint32_t value) {
 
 // Msg_SetCurValue
 
-// uint64 a_aID = 1;
+// required uint64 a_aID = 1;
+inline bool Msg_SetCurValue::_internal_has_a_aid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_SetCurValue::has_a_aid() const {
+  return _internal_has_a_aid();
+}
 inline void Msg_SetCurValue::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_SetCurValue::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -8295,7 +9762,7 @@ inline uint64_t Msg_SetCurValue::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_SetCurValue::_internal_set_a_aid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aid_ = value;
 }
 inline void Msg_SetCurValue::set_a_aid(uint64_t value) {
@@ -8303,9 +9770,17 @@ inline void Msg_SetCurValue::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetCurValue.a_aID)
 }
 
-// double a_aValue = 2;
+// required double a_aValue = 2;
+inline bool Msg_SetCurValue::_internal_has_a_avalue() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_SetCurValue::has_a_avalue() const {
+  return _internal_has_a_avalue();
+}
 inline void Msg_SetCurValue::clear_a_avalue() {
   _impl_.a_avalue_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline double Msg_SetCurValue::_internal_a_avalue() const {
   return _impl_.a_avalue_;
@@ -8315,7 +9790,7 @@ inline double Msg_SetCurValue::a_avalue() const {
   return _internal_a_avalue();
 }
 inline void Msg_SetCurValue::_internal_set_a_avalue(double value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_avalue_ = value;
 }
 inline void Msg_SetCurValue::set_a_avalue(double value) {
@@ -8327,9 +9802,17 @@ inline void Msg_SetCurValue::set_a_avalue(double value) {
 
 // Msg_TakeFocus
 
-// uint64 a_aID = 1;
+// required uint64 a_aID = 1;
+inline bool Msg_TakeFocus::_internal_has_a_aid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_TakeFocus::has_a_aid() const {
+  return _internal_has_a_aid();
+}
 inline void Msg_TakeFocus::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_TakeFocus::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -8339,7 +9822,7 @@ inline uint64_t Msg_TakeFocus::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_TakeFocus::_internal_set_a_aid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aid_ = value;
 }
 inline void Msg_TakeFocus::set_a_aid(uint64_t value) {
@@ -8351,9 +9834,17 @@ inline void Msg_TakeFocus::set_a_aid(uint64_t value) {
 
 // Msg_VerifyCache
 
-// uint64 a_aID = 1;
+// required uint64 a_aID = 1;
+inline bool Msg_VerifyCache::_internal_has_a_aid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_VerifyCache::has_a_aid() const {
+  return _internal_has_a_aid();
+}
 inline void Msg_VerifyCache::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_VerifyCache::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -8363,7 +9854,7 @@ inline uint64_t Msg_VerifyCache::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_VerifyCache::_internal_set_a_aid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aid_ = value;
 }
 inline void Msg_VerifyCache::set_a_aid(uint64_t value) {
@@ -8371,9 +9862,17 @@ inline void Msg_VerifyCache::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_VerifyCache.a_aID)
 }
 
-// uint64 a_aCacheDomain = 2;
+// required uint64 a_aCacheDomain = 2;
+inline bool Msg_VerifyCache::_internal_has_a_acachedomain() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_VerifyCache::has_a_acachedomain() const {
+  return _internal_has_a_acachedomain();
+}
 inline void Msg_VerifyCache::clear_a_acachedomain() {
   _impl_.a_acachedomain_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint64_t Msg_VerifyCache::_internal_a_acachedomain() const {
   return _impl_.a_acachedomain_;
@@ -8383,7 +9882,7 @@ inline uint64_t Msg_VerifyCache::a_acachedomain() const {
   return _internal_a_acachedomain();
 }
 inline void Msg_VerifyCache::_internal_set_a_acachedomain(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_acachedomain_ = value;
 }
 inline void Msg_VerifyCache::set_a_acachedomain(uint64_t value) {

@@ -5,13 +5,13 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/ipc/glue/ProtocolTypes.ipdlh
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.ipc;
 
 // Structs and unions declarations
 message ProtocolFdMapping {
-  uint32 a_protocolId = 1;
-  bytes a_fd = 2;
+  required uint32 a_protocolId = 1;
+  required bytes a_fd = 2;
 }

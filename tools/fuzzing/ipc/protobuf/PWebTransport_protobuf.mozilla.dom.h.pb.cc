@@ -81,8 +81,9 @@ struct BidirectionalStreamResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 BidirectionalStreamResponseDefaultTypeInternal _BidirectionalStreamResponse_default_instance_;
 PROTOBUF_CONSTEXPR ResetError::ResetError(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_error_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_error_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct ResetErrorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR ResetErrorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -94,8 +95,9 @@ struct ResetErrorDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ResetErrorDefaultTypeInternal _ResetError_default_instance_;
 PROTOBUF_CONSTEXPR StopSendingError::StopSendingError(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_error_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_error_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct StopSendingErrorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR StopSendingErrorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -131,8 +133,14 @@ namespace dom {
 class UnidirectionalStream::_Internal {
  public:
   using HasBits = decltype(std::declval<UnidirectionalStream>()._impl_._has_bits_);
+  static void set_has_a_streamid(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
   static void set_has_a_outstream(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000002) ^ 0x00000002) != 0;
   }
 };
 
@@ -220,9 +228,10 @@ const char* UnidirectionalStream::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // uint64 a_streamId = 1;
+      // required uint64 a_streamId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_streamid(&has_bits);
           _impl_.a_streamid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -267,14 +276,15 @@ uint8_t* UnidirectionalStream::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint64 a_streamId = 1;
-  if (this->_internal_a_streamid() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required uint64 a_streamId = 1;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_streamid(), target);
   }
 
   // optional bytes a_outStream = 2;
-  if (_internal_has_a_outstream()) {
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_a_outstream(), target);
   }
@@ -291,6 +301,10 @@ size_t UnidirectionalStream::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.UnidirectionalStream)
   size_t total_size = 0;
 
+  // required uint64 a_streamId = 1;
+  if (_internal_has_a_streamid()) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_streamid());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -301,11 +315,6 @@ size_t UnidirectionalStream::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_outstream());
-  }
-
-  // uint64 a_streamId = 1;
-  if (this->_internal_a_streamid() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_streamid());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -329,11 +338,15 @@ void UnidirectionalStream::MergeFrom(const UnidirectionalStream& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_outstream()) {
-    _this->_internal_set_a_outstream(from._internal_a_outstream());
-  }
-  if (from._internal_a_streamid() != 0) {
-    _this->_internal_set_a_streamid(from._internal_a_streamid());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_outstream(from._internal_a_outstream());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_streamid_ = from._impl_.a_streamid_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -346,6 +359,7 @@ void UnidirectionalStream::CopyFrom(const UnidirectionalStream& from) {
 }
 
 bool UnidirectionalStream::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -541,19 +555,20 @@ uint8_t* UnidirectionalStreamResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_mVnsresult = 1;
-  if (_internal_has_a_mvnsresult()) {
-    target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_a_mvnsresult(), target);
+  switch (content_case()) {
+    case kAMVnsresult: {
+      target = stream->WriteBytesMaybeAliased(
+          1, this->_internal_a_mvnsresult(), target);
+      break;
+    }
+    case kAMVUnidirectionalStream: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(2, _Internal::a_mvunidirectionalstream(this),
+          _Internal::a_mvunidirectionalstream(this).GetCachedSize(), target, stream);
+      break;
+    }
+    default: ;
   }
-
-  // .protobuf.mozilla.dom.UnidirectionalStream a_mVUnidirectionalStream = 2;
-  if (_internal_has_a_mvunidirectionalstream()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::a_mvunidirectionalstream(this),
-        _Internal::a_mvunidirectionalstream(this).GetCachedSize(), target, stream);
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
@@ -635,6 +650,20 @@ void UnidirectionalStreamResponse::CopyFrom(const UnidirectionalStreamResponse& 
 }
 
 bool UnidirectionalStreamResponse::IsInitialized() const {
+  switch (content_case()) {
+    case kAMVnsresult: {
+      break;
+    }
+    case kAMVUnidirectionalStream: {
+      if (_internal_has_a_mvunidirectionalstream()) {
+        if (!_impl_.content_.a_mvunidirectionalstream_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case CONTENT_NOT_SET: {
+      break;
+    }
+  }
   return true;
 }
 
@@ -655,11 +684,17 @@ std::string UnidirectionalStreamResponse::GetTypeName() const {
 class BidirectionalStream::_Internal {
  public:
   using HasBits = decltype(std::declval<BidirectionalStream>()._impl_._has_bits_);
+  static void set_has_a_streamid(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
   static void set_has_a_instream(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static void set_has_a_outstream(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000004) ^ 0x00000004) != 0;
   }
 };
 
@@ -767,9 +802,10 @@ const char* BidirectionalStream::_InternalParse(const char* ptr, ::_pbi::ParseCo
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // uint64 a_streamId = 1;
+      // required uint64 a_streamId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_streamid(&has_bits);
           _impl_.a_streamid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -823,20 +859,21 @@ uint8_t* BidirectionalStream::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint64 a_streamId = 1;
-  if (this->_internal_a_streamid() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required uint64 a_streamId = 1;
+  if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_streamid(), target);
   }
 
   // optional bytes a_inStream = 2;
-  if (_internal_has_a_instream()) {
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_a_instream(), target);
   }
 
   // optional bytes a_outStream = 3;
-  if (_internal_has_a_outstream()) {
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
         3, this->_internal_a_outstream(), target);
   }
@@ -853,6 +890,10 @@ size_t BidirectionalStream::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.BidirectionalStream)
   size_t total_size = 0;
 
+  // required uint64 a_streamId = 1;
+  if (_internal_has_a_streamid()) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_streamid());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -874,11 +915,6 @@ size_t BidirectionalStream::ByteSizeLong() const {
     }
 
   }
-  // uint64 a_streamId = 1;
-  if (this->_internal_a_streamid() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_streamid());
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -901,16 +937,17 @@ void BidirectionalStream::MergeFrom(const BidirectionalStream& from) {
   (void) cached_has_bits;
 
   cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
+  if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
       _this->_internal_set_a_instream(from._internal_a_instream());
     }
     if (cached_has_bits & 0x00000002u) {
       _this->_internal_set_a_outstream(from._internal_a_outstream());
     }
-  }
-  if (from._internal_a_streamid() != 0) {
-    _this->_internal_set_a_streamid(from._internal_a_streamid());
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.a_streamid_ = from._impl_.a_streamid_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -923,6 +960,7 @@ void BidirectionalStream::CopyFrom(const BidirectionalStream& from) {
 }
 
 bool BidirectionalStream::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1122,19 +1160,20 @@ uint8_t* BidirectionalStreamResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_mVnsresult = 1;
-  if (_internal_has_a_mvnsresult()) {
-    target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_a_mvnsresult(), target);
+  switch (content_case()) {
+    case kAMVnsresult: {
+      target = stream->WriteBytesMaybeAliased(
+          1, this->_internal_a_mvnsresult(), target);
+      break;
+    }
+    case kAMVBidirectionalStream: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(2, _Internal::a_mvbidirectionalstream(this),
+          _Internal::a_mvbidirectionalstream(this).GetCachedSize(), target, stream);
+      break;
+    }
+    default: ;
   }
-
-  // .protobuf.mozilla.dom.BidirectionalStream a_mVBidirectionalStream = 2;
-  if (_internal_has_a_mvbidirectionalstream()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::a_mvbidirectionalstream(this),
-        _Internal::a_mvbidirectionalstream(this).GetCachedSize(), target, stream);
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
@@ -1216,6 +1255,20 @@ void BidirectionalStreamResponse::CopyFrom(const BidirectionalStreamResponse& fr
 }
 
 bool BidirectionalStreamResponse::IsInitialized() const {
+  switch (content_case()) {
+    case kAMVnsresult: {
+      break;
+    }
+    case kAMVBidirectionalStream: {
+      if (_internal_has_a_mvbidirectionalstream()) {
+        if (!_impl_.content_.a_mvbidirectionalstream_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case CONTENT_NOT_SET: {
+      break;
+    }
+  }
   return true;
 }
 
@@ -1235,6 +1288,13 @@ std::string BidirectionalStreamResponse::GetTypeName() const {
 
 class ResetError::_Internal {
  public:
+  using HasBits = decltype(std::declval<ResetError>()._impl_._has_bits_);
+  static void set_has_a_error(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 ResetError::ResetError(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1247,15 +1307,16 @@ ResetError::ResetError(const ResetError& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   ResetError* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_error_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_error_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_error_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_error_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_error().empty()) {
+  if (from._internal_has_a_error()) {
     _this->_impl_.a_error_.Set(from._internal_a_error(), 
       _this->GetArenaForAllocation());
   }
@@ -1267,8 +1328,9 @@ inline void ResetError::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_error_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_error_){}
   };
   _impl_.a_error_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1300,17 +1362,22 @@ void ResetError::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_error_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_error_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* ResetError::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_error = 1;
+      // required bytes a_error = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_error();
@@ -1335,6 +1402,7 @@ const char* ResetError::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1348,8 +1416,9 @@ uint8_t* ResetError::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_error = 1;
-  if (!this->_internal_a_error().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_error = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_error(), target);
   }
@@ -1366,16 +1435,15 @@ size_t ResetError::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.ResetError)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_error = 1;
-  if (!this->_internal_a_error().empty()) {
+  // required bytes a_error = 1;
+  if (_internal_has_a_error()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_error());
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1398,7 +1466,7 @@ void ResetError::MergeFrom(const ResetError& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_error().empty()) {
+  if (from._internal_has_a_error()) {
     _this->_internal_set_a_error(from._internal_a_error());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1412,6 +1480,7 @@ void ResetError::CopyFrom(const ResetError& from) {
 }
 
 bool ResetError::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1420,6 +1489,7 @@ void ResetError::InternalSwap(ResetError* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_error_, lhs_arena,
       &other->_impl_.a_error_, rhs_arena
@@ -1435,6 +1505,13 @@ std::string ResetError::GetTypeName() const {
 
 class StopSendingError::_Internal {
  public:
+  using HasBits = decltype(std::declval<StopSendingError>()._impl_._has_bits_);
+  static void set_has_a_error(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 StopSendingError::StopSendingError(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1447,15 +1524,16 @@ StopSendingError::StopSendingError(const StopSendingError& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   StopSendingError* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_error_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_error_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_error_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_error_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_error().empty()) {
+  if (from._internal_has_a_error()) {
     _this->_impl_.a_error_.Set(from._internal_a_error(), 
       _this->GetArenaForAllocation());
   }
@@ -1467,8 +1545,9 @@ inline void StopSendingError::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_error_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_error_){}
   };
   _impl_.a_error_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1500,17 +1579,22 @@ void StopSendingError::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_error_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_error_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* StopSendingError::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_error = 1;
+      // required bytes a_error = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_error();
@@ -1535,6 +1619,7 @@ const char* StopSendingError::_InternalParse(const char* ptr, ::_pbi::ParseConte
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1548,8 +1633,9 @@ uint8_t* StopSendingError::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_error = 1;
-  if (!this->_internal_a_error().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_error = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_error(), target);
   }
@@ -1566,16 +1652,15 @@ size_t StopSendingError::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.StopSendingError)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_error = 1;
-  if (!this->_internal_a_error().empty()) {
+  // required bytes a_error = 1;
+  if (_internal_has_a_error()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_error());
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1598,7 +1683,7 @@ void StopSendingError::MergeFrom(const StopSendingError& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_error().empty()) {
+  if (from._internal_has_a_error()) {
     _this->_internal_set_a_error(from._internal_a_error());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1612,6 +1697,7 @@ void StopSendingError::CopyFrom(const StopSendingError& from) {
 }
 
 bool StopSendingError::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1620,6 +1706,7 @@ void StopSendingError::InternalSwap(StopSendingError* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_error_, lhs_arena,
       &other->_impl_.a_error_, rhs_arena
@@ -1827,20 +1914,21 @@ uint8_t* StreamResetOrStopSendingError::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.mozilla.dom.ResetError a_mVResetError = 1;
-  if (_internal_has_a_mvreseterror()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::a_mvreseterror(this),
-        _Internal::a_mvreseterror(this).GetCachedSize(), target, stream);
+  switch (content_case()) {
+    case kAMVResetError: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(1, _Internal::a_mvreseterror(this),
+          _Internal::a_mvreseterror(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVStopSendingError: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(2, _Internal::a_mvstopsendingerror(this),
+          _Internal::a_mvstopsendingerror(this).GetCachedSize(), target, stream);
+      break;
+    }
+    default: ;
   }
-
-  // .protobuf.mozilla.dom.StopSendingError a_mVStopSendingError = 2;
-  if (_internal_has_a_mvstopsendingerror()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::a_mvstopsendingerror(this),
-        _Internal::a_mvstopsendingerror(this).GetCachedSize(), target, stream);
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
@@ -1923,6 +2011,23 @@ void StreamResetOrStopSendingError::CopyFrom(const StreamResetOrStopSendingError
 }
 
 bool StreamResetOrStopSendingError::IsInitialized() const {
+  switch (content_case()) {
+    case kAMVResetError: {
+      if (_internal_has_a_mvreseterror()) {
+        if (!_impl_.content_.a_mvreseterror_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case kAMVStopSendingError: {
+      if (_internal_has_a_mvstopsendingerror()) {
+        if (!_impl_.content_.a_mvstopsendingerror_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case CONTENT_NOT_SET: {
+      break;
+    }
+  }
   return true;
 }
 

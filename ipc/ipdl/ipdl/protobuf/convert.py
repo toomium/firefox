@@ -6,7 +6,7 @@ import ipdl.lower
 from ipdl.protobuf.parser.proto_schema_parser import ast, generator
 import ipdl.type
 
-USE_PROTO3 = True
+USE_PROTO3 = False
 USE_LITE_RUNTIME = not (os.getenv('FUZZING_SNAPSHOT_LPM_DEBUG') == '1')
 
 

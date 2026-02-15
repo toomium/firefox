@@ -35,10 +35,11 @@ struct EncodedInputIPDLDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 EncodedInputIPDLDefaultTypeInternal _EncodedInputIPDL_default_instance_;
 PROTOBUF_CONSTEXPR EncodeInitCompletionIPDL::EncodeInitCompletionIPDL(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_description_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_description_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_hardwarereason_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_hardware_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_hardware_)*/false} {}
 struct EncodeInitCompletionIPDLDefaultTypeInternal {
   PROTOBUF_CONSTEXPR EncodeInitCompletionIPDLDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -248,18 +249,19 @@ uint8_t* EncodedInputIPDL::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_mVArrayOfRemoteAudioData = 1;
-  if (_internal_has_a_mvarrayofremoteaudiodata()) {
-    target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_a_mvarrayofremoteaudiodata(), target);
+  switch (content_case()) {
+    case kAMVArrayOfRemoteAudioData: {
+      target = stream->WriteBytesMaybeAliased(
+          1, this->_internal_a_mvarrayofremoteaudiodata(), target);
+      break;
+    }
+    case kAMVArrayOfRemoteVideoData: {
+      target = stream->WriteBytesMaybeAliased(
+          2, this->_internal_a_mvarrayofremotevideodata(), target);
+      break;
+    }
+    default: ;
   }
-
-  // bytes a_mVArrayOfRemoteVideoData = 2;
-  if (_internal_has_a_mvarrayofremotevideodata()) {
-    target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_a_mvarrayofremotevideodata(), target);
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
@@ -359,6 +361,19 @@ std::string EncodedInputIPDL::GetTypeName() const {
 
 class EncodeInitCompletionIPDL::_Internal {
  public:
+  using HasBits = decltype(std::declval<EncodeInitCompletionIPDL>()._impl_._has_bits_);
+  static void set_has_a_description(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_hardware(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_a_hardwarereason(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
+  }
 };
 
 EncodeInitCompletionIPDL::EncodeInitCompletionIPDL(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -371,17 +386,18 @@ EncodeInitCompletionIPDL::EncodeInitCompletionIPDL(const EncodeInitCompletionIPD
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   EncodeInitCompletionIPDL* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_description_){}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_description_){}
     , decltype(_impl_.a_hardwarereason_){}
-    , decltype(_impl_.a_hardware_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_hardware_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_description_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_description_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_description().empty()) {
+  if (from._internal_has_a_description()) {
     _this->_impl_.a_description_.Set(from._internal_a_description(), 
       _this->GetArenaForAllocation());
   }
@@ -389,7 +405,7 @@ EncodeInitCompletionIPDL::EncodeInitCompletionIPDL(const EncodeInitCompletionIPD
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_hardwarereason_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_hardwarereason().empty()) {
+  if (from._internal_has_a_hardwarereason()) {
     _this->_impl_.a_hardwarereason_.Set(from._internal_a_hardwarereason(), 
       _this->GetArenaForAllocation());
   }
@@ -402,10 +418,11 @@ inline void EncodeInitCompletionIPDL::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_description_){}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_description_){}
     , decltype(_impl_.a_hardwarereason_){}
     , decltype(_impl_.a_hardware_){false}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_description_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -442,43 +459,51 @@ void EncodeInitCompletionIPDL::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_description_.ClearToEmpty();
-  _impl_.a_hardwarereason_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_description_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_hardwarereason_.ClearNonDefaultToEmpty();
+    }
+  }
   _impl_.a_hardware_ = false;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* EncodeInitCompletionIPDL::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string a_description = 1;
+      // required string a_description = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_description();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // bool a_hardware = 2;
+      // required bool a_hardware = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_a_hardware(&has_bits);
           _impl_.a_hardware_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string a_hardwareReason = 3;
+      // required string a_hardwareReason = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_hardwarereason();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -498,6 +523,7 @@ const char* EncodeInitCompletionIPDL::_InternalParse(const char* ptr, ::_pbi::Pa
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -511,28 +537,21 @@ uint8_t* EncodeInitCompletionIPDL::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string a_description = 1;
-  if (!this->_internal_a_description().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_description().data(), static_cast<int>(this->_internal_a_description().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.EncodeInitCompletionIPDL.a_description");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_description = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_description(), target);
   }
 
-  // bool a_hardware = 2;
-  if (this->_internal_a_hardware() != 0) {
+  // required bool a_hardware = 2;
+  if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_hardware(), target);
   }
 
-  // string a_hardwareReason = 3;
-  if (!this->_internal_a_hardwarereason().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_hardwarereason().data(), static_cast<int>(this->_internal_a_hardwarereason().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.EncodeInitCompletionIPDL.a_hardwareReason");
+  // required string a_hardwareReason = 3;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_hardwarereason(), target);
   }
@@ -545,32 +564,55 @@ uint8_t* EncodeInitCompletionIPDL::_InternalSerialize(
   return target;
 }
 
-size_t EncodeInitCompletionIPDL::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.EncodeInitCompletionIPDL)
+size_t EncodeInitCompletionIPDL::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.EncodeInitCompletionIPDL)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string a_description = 1;
-  if (!this->_internal_a_description().empty()) {
+  if (_internal_has_a_description()) {
+    // required string a_description = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_description());
   }
 
-  // string a_hardwareReason = 3;
-  if (!this->_internal_a_hardwarereason().empty()) {
+  if (_internal_has_a_hardwarereason()) {
+    // required string a_hardwareReason = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_hardwarereason());
   }
 
-  // bool a_hardware = 2;
-  if (this->_internal_a_hardware() != 0) {
+  if (_internal_has_a_hardware()) {
+    // required bool a_hardware = 2;
     total_size += 1 + 1;
   }
+
+  return total_size;
+}
+size_t EncodeInitCompletionIPDL::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.EncodeInitCompletionIPDL)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
+    // required string a_description = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_description());
+
+    // required string a_hardwareReason = 3;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_hardwarereason());
+
+    // required bool a_hardware = 2;
+    total_size += 1 + 1;
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -593,14 +635,18 @@ void EncodeInitCompletionIPDL::MergeFrom(const EncodeInitCompletionIPDL& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_description().empty()) {
-    _this->_internal_set_a_description(from._internal_a_description());
-  }
-  if (!from._internal_a_hardwarereason().empty()) {
-    _this->_internal_set_a_hardwarereason(from._internal_a_hardwarereason());
-  }
-  if (from._internal_a_hardware() != 0) {
-    _this->_internal_set_a_hardware(from._internal_a_hardware());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_description(from._internal_a_description());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_hardwarereason(from._internal_a_hardwarereason());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.a_hardware_ = from._impl_.a_hardware_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -613,6 +659,7 @@ void EncodeInitCompletionIPDL::CopyFrom(const EncodeInitCompletionIPDL& from) {
 }
 
 bool EncodeInitCompletionIPDL::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -621,6 +668,7 @@ void EncodeInitCompletionIPDL::InternalSwap(EncodeInitCompletionIPDL* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_description_, lhs_arena,
       &other->_impl_.a_description_, rhs_arena
@@ -811,19 +859,20 @@ uint8_t* EncodeInitResultIPDL::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_mVMediaResult = 1;
-  if (_internal_has_a_mvmediaresult()) {
-    target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_a_mvmediaresult(), target);
+  switch (content_case()) {
+    case kAMVMediaResult: {
+      target = stream->WriteBytesMaybeAliased(
+          1, this->_internal_a_mvmediaresult(), target);
+      break;
+    }
+    case kAMVEncodeInitCompletionIPDL: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(2, _Internal::a_mvencodeinitcompletionipdl(this),
+          _Internal::a_mvencodeinitcompletionipdl(this).GetCachedSize(), target, stream);
+      break;
+    }
+    default: ;
   }
-
-  // .protobuf.mozilla.EncodeInitCompletionIPDL a_mVEncodeInitCompletionIPDL = 2;
-  if (_internal_has_a_mvencodeinitcompletionipdl()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::a_mvencodeinitcompletionipdl(this),
-        _Internal::a_mvencodeinitcompletionipdl(this).GetCachedSize(), target, stream);
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
@@ -905,6 +954,20 @@ void EncodeInitResultIPDL::CopyFrom(const EncodeInitResultIPDL& from) {
 }
 
 bool EncodeInitResultIPDL::IsInitialized() const {
+  switch (content_case()) {
+    case kAMVMediaResult: {
+      break;
+    }
+    case kAMVEncodeInitCompletionIPDL: {
+      if (_internal_has_a_mvencodeinitcompletionipdl()) {
+        if (!_impl_.content_.a_mvencodeinitcompletionipdl_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case CONTENT_NOT_SET: {
+      break;
+    }
+  }
   return true;
 }
 
@@ -927,6 +990,12 @@ class EncodeCompletionIPDL::_Internal {
   using HasBits = decltype(std::declval<EncodeCompletionIPDL>()._impl_._has_bits_);
   static void set_has_a_samples(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_ticketid(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000002) ^ 0x00000002) != 0;
   }
 };
 
@@ -1023,9 +1092,10 @@ const char* EncodeCompletionIPDL::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // uint32 a_ticketId = 2;
+      // required uint32 a_ticketId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_a_ticketid(&has_bits);
           _impl_.a_ticketid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
@@ -1061,14 +1131,15 @@ uint8_t* EncodeCompletionIPDL::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
   // optional bytes a_samples = 1;
-  if (_internal_has_a_samples()) {
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_samples(), target);
   }
 
-  // uint32 a_ticketId = 2;
-  if (this->_internal_a_ticketid() != 0) {
+  // required uint32 a_ticketId = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_ticketid(), target);
   }
@@ -1085,6 +1156,10 @@ size_t EncodeCompletionIPDL::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.EncodeCompletionIPDL)
   size_t total_size = 0;
 
+  // required uint32 a_ticketId = 2;
+  if (_internal_has_a_ticketid()) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_ticketid());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1095,11 +1170,6 @@ size_t EncodeCompletionIPDL::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_samples());
-  }
-
-  // uint32 a_ticketId = 2;
-  if (this->_internal_a_ticketid() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_ticketid());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1123,11 +1193,15 @@ void EncodeCompletionIPDL::MergeFrom(const EncodeCompletionIPDL& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_samples()) {
-    _this->_internal_set_a_samples(from._internal_a_samples());
-  }
-  if (from._internal_a_ticketid() != 0) {
-    _this->_internal_set_a_ticketid(from._internal_a_ticketid());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_samples(from._internal_a_samples());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_ticketid_ = from._impl_.a_ticketid_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1140,6 +1214,7 @@ void EncodeCompletionIPDL::CopyFrom(const EncodeCompletionIPDL& from) {
 }
 
 bool EncodeCompletionIPDL::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1335,19 +1410,20 @@ uint8_t* EncodeResultIPDL::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_mVMediaResult = 1;
-  if (_internal_has_a_mvmediaresult()) {
-    target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_a_mvmediaresult(), target);
+  switch (content_case()) {
+    case kAMVMediaResult: {
+      target = stream->WriteBytesMaybeAliased(
+          1, this->_internal_a_mvmediaresult(), target);
+      break;
+    }
+    case kAMVEncodeCompletionIPDL: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(2, _Internal::a_mvencodecompletionipdl(this),
+          _Internal::a_mvencodecompletionipdl(this).GetCachedSize(), target, stream);
+      break;
+    }
+    default: ;
   }
-
-  // .protobuf.mozilla.EncodeCompletionIPDL a_mVEncodeCompletionIPDL = 2;
-  if (_internal_has_a_mvencodecompletionipdl()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::a_mvencodecompletionipdl(this),
-        _Internal::a_mvencodecompletionipdl(this).GetCachedSize(), target, stream);
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
@@ -1429,6 +1505,20 @@ void EncodeResultIPDL::CopyFrom(const EncodeResultIPDL& from) {
 }
 
 bool EncodeResultIPDL::IsInitialized() const {
+  switch (content_case()) {
+    case kAMVMediaResult: {
+      break;
+    }
+    case kAMVEncodeCompletionIPDL: {
+      if (_internal_has_a_mvencodecompletionipdl()) {
+        if (!_impl_.content_.a_mvencodecompletionipdl_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case CONTENT_NOT_SET: {
+      break;
+    }
+  }
   return true;
 }
 

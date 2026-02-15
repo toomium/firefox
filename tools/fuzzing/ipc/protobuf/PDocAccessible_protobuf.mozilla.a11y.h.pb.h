@@ -119,6 +119,13 @@ class AccessibleData final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const AccessibleData& default_instance() {
     return *internal_default_instance();
   }
@@ -200,7 +207,11 @@ class AccessibleData final :
     kAIndexInParentFieldNumber = 4,
     kARoleMapEntryIndexFieldNumber = 7,
   };
-  // bytes a_Role = 2;
+  // required bytes a_Role = 2;
+  bool has_a_role() const;
+  private:
+  bool _internal_has_a_role() const;
+  public:
   void clear_a_role();
   const std::string& a_role() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -214,7 +225,11 @@ class AccessibleData final :
   std::string* _internal_mutable_a_role();
   public:
 
-  // bytes a_Type = 5;
+  // required bytes a_Type = 5;
+  bool has_a_type() const;
+  private:
+  bool _internal_has_a_type() const;
+  public:
   void clear_a_type();
   const std::string& a_type() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -228,7 +243,11 @@ class AccessibleData final :
   std::string* _internal_mutable_a_type();
   public:
 
-  // bytes a_GenericTypes = 6;
+  // required bytes a_GenericTypes = 6;
+  bool has_a_generictypes() const;
+  private:
+  bool _internal_has_a_generictypes() const;
+  public:
   void clear_a_generictypes();
   const std::string& a_generictypes() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -260,7 +279,11 @@ class AccessibleData final :
   std::string* _internal_mutable_a_cachefields();
   public:
 
-  // uint64 a_ID = 1;
+  // required uint64 a_ID = 1;
+  bool has_a_id() const;
+  private:
+  bool _internal_has_a_id() const;
+  public:
   void clear_a_id();
   uint64_t a_id() const;
   void set_a_id(uint64_t value);
@@ -269,7 +292,11 @@ class AccessibleData final :
   void _internal_set_a_id(uint64_t value);
   public:
 
-  // uint64 a_ParentID = 3;
+  // required uint64 a_ParentID = 3;
+  bool has_a_parentid() const;
+  private:
+  bool _internal_has_a_parentid() const;
+  public:
   void clear_a_parentid();
   uint64_t a_parentid() const;
   void set_a_parentid(uint64_t value);
@@ -278,7 +305,11 @@ class AccessibleData final :
   void _internal_set_a_parentid(uint64_t value);
   public:
 
-  // uint32 a_IndexInParent = 4;
+  // required uint32 a_IndexInParent = 4;
+  bool has_a_indexinparent() const;
+  private:
+  bool _internal_has_a_indexinparent() const;
+  public:
   void clear_a_indexinparent();
   uint32_t a_indexinparent() const;
   void set_a_indexinparent(uint32_t value);
@@ -287,7 +318,11 @@ class AccessibleData final :
   void _internal_set_a_indexinparent(uint32_t value);
   public:
 
-  // uint32 a_RoleMapEntryIndex = 7;
+  // required uint32 a_RoleMapEntryIndex = 7;
+  bool has_a_rolemapentryindex() const;
+  private:
+  bool _internal_has_a_rolemapentryindex() const;
+  public:
   void clear_a_rolemapentryindex();
   uint32_t a_rolemapentryindex() const;
   void set_a_rolemapentryindex(uint32_t value);
@@ -299,6 +334,9 @@ class AccessibleData final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.AccessibleData)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -349,6 +387,13 @@ class CacheEventData final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const CacheEventData& default_instance() {
@@ -444,7 +489,11 @@ class CacheEventData final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::a11y::CacheData >&
       a_adata() const;
 
-  // bytes a_UpdateType = 1;
+  // required bytes a_UpdateType = 1;
+  bool has_a_updatetype() const;
+  private:
+  bool _internal_has_a_updatetype() const;
+  public:
   void clear_a_updatetype();
   const std::string& a_updatetype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -466,9 +515,10 @@ class CacheEventData final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::a11y::CacheData > a_adata_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_updatetype_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_5fprotobuf_2emozilla_2ea11y_2eh_2eproto;
@@ -504,6 +554,13 @@ class ShowEventData final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const ShowEventData& default_instance() {
@@ -601,7 +658,11 @@ class ShowEventData final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::a11y::AccessibleData >&
       a_newtree() const;
 
-  // bool a_EventSuppressed = 2;
+  // required bool a_EventSuppressed = 2;
+  bool has_a_eventsuppressed() const;
+  private:
+  bool _internal_has_a_eventsuppressed() const;
+  public:
   void clear_a_eventsuppressed();
   bool a_eventsuppressed() const;
   void set_a_eventsuppressed(bool value);
@@ -610,7 +671,11 @@ class ShowEventData final :
   void _internal_set_a_eventsuppressed(bool value);
   public:
 
-  // bool a_Complete = 3;
+  // required bool a_Complete = 3;
+  bool has_a_complete() const;
+  private:
+  bool _internal_has_a_complete() const;
+  public:
   void clear_a_complete();
   bool a_complete() const;
   void set_a_complete(bool value);
@@ -619,7 +684,11 @@ class ShowEventData final :
   void _internal_set_a_complete(bool value);
   public:
 
-  // bool a_FromUser = 4;
+  // required bool a_FromUser = 4;
+  bool has_a_fromuser() const;
+  private:
+  bool _internal_has_a_fromuser() const;
+  public:
   void clear_a_fromuser();
   bool a_fromuser() const;
   void set_a_fromuser(bool value);
@@ -632,15 +701,19 @@ class ShowEventData final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::a11y::AccessibleData > a_newtree_;
     bool a_eventsuppressed_;
     bool a_complete_;
     bool a_fromuser_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_5fprotobuf_2emozilla_2ea11y_2eh_2eproto;
@@ -676,6 +749,13 @@ class HideEventData final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const HideEventData& default_instance() {
@@ -753,7 +833,11 @@ class HideEventData final :
     kAIDFieldNumber = 1,
     kAIsFromUserInputFieldNumber = 2,
   };
-  // uint64 a_ID = 1;
+  // required uint64 a_ID = 1;
+  bool has_a_id() const;
+  private:
+  bool _internal_has_a_id() const;
+  public:
   void clear_a_id();
   uint64_t a_id() const;
   void set_a_id(uint64_t value);
@@ -762,7 +846,11 @@ class HideEventData final :
   void _internal_set_a_id(uint64_t value);
   public:
 
-  // bool a_IsFromUserInput = 2;
+  // required bool a_IsFromUserInput = 2;
+  bool has_a_isfromuserinput() const;
+  private:
+  bool _internal_has_a_isfromuserinput() const;
+  public:
   void clear_a_isfromuserinput();
   bool a_isfromuserinput() const;
   void set_a_isfromuserinput(bool value);
@@ -775,13 +863,17 @@ class HideEventData final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_id_;
     bool a_isfromuserinput_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_5fprotobuf_2emozilla_2ea11y_2eh_2eproto;
@@ -817,6 +909,13 @@ class ReorderEventData final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const ReorderEventData& default_instance() {
@@ -894,7 +993,11 @@ class ReorderEventData final :
     kAIDFieldNumber = 1,
     kATypeFieldNumber = 2,
   };
-  // uint64 a_ID = 1;
+  // required uint64 a_ID = 1;
+  bool has_a_id() const;
+  private:
+  bool _internal_has_a_id() const;
+  public:
   void clear_a_id();
   uint64_t a_id() const;
   void set_a_id(uint64_t value);
@@ -903,7 +1006,11 @@ class ReorderEventData final :
   void _internal_set_a_id(uint64_t value);
   public:
 
-  // uint32 a_Type = 2;
+  // required uint32 a_Type = 2;
+  bool has_a_type() const;
+  private:
+  bool _internal_has_a_type() const;
+  public:
   void clear_a_type();
   uint32_t a_type() const;
   void set_a_type(uint32_t value);
@@ -916,13 +1023,17 @@ class ReorderEventData final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_id_;
     uint32_t a_type_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_5fprotobuf_2emozilla_2ea11y_2eh_2eproto;
@@ -958,6 +1069,13 @@ class TextChangeEventData final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const TextChangeEventData& default_instance() {
@@ -1039,7 +1157,11 @@ class TextChangeEventData final :
     kAIsInsertFieldNumber = 5,
     kAFromUserFieldNumber = 6,
   };
-  // string a_Str = 2;
+  // required string a_Str = 2;
+  bool has_a_str() const;
+  private:
+  bool _internal_has_a_str() const;
+  public:
   void clear_a_str();
   const std::string& a_str() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1053,7 +1175,11 @@ class TextChangeEventData final :
   std::string* _internal_mutable_a_str();
   public:
 
-  // uint64 a_ID = 1;
+  // required uint64 a_ID = 1;
+  bool has_a_id() const;
+  private:
+  bool _internal_has_a_id() const;
+  public:
   void clear_a_id();
   uint64_t a_id() const;
   void set_a_id(uint64_t value);
@@ -1062,7 +1188,11 @@ class TextChangeEventData final :
   void _internal_set_a_id(uint64_t value);
   public:
 
-  // sint32 a_Start = 3;
+  // required sint32 a_Start = 3;
+  bool has_a_start() const;
+  private:
+  bool _internal_has_a_start() const;
+  public:
   void clear_a_start();
   int32_t a_start() const;
   void set_a_start(int32_t value);
@@ -1071,7 +1201,11 @@ class TextChangeEventData final :
   void _internal_set_a_start(int32_t value);
   public:
 
-  // uint32 a_Len = 4;
+  // required uint32 a_Len = 4;
+  bool has_a_len() const;
+  private:
+  bool _internal_has_a_len() const;
+  public:
   void clear_a_len();
   uint32_t a_len() const;
   void set_a_len(uint32_t value);
@@ -1080,7 +1214,11 @@ class TextChangeEventData final :
   void _internal_set_a_len(uint32_t value);
   public:
 
-  // bool a_IsInsert = 5;
+  // required bool a_IsInsert = 5;
+  bool has_a_isinsert() const;
+  private:
+  bool _internal_has_a_isinsert() const;
+  public:
   void clear_a_isinsert();
   bool a_isinsert() const;
   void set_a_isinsert(bool value);
@@ -1089,7 +1227,11 @@ class TextChangeEventData final :
   void _internal_set_a_isinsert(bool value);
   public:
 
-  // bool a_FromUser = 6;
+  // required bool a_FromUser = 6;
+  bool has_a_fromuser() const;
+  private:
+  bool _internal_has_a_fromuser() const;
+  public:
   void clear_a_fromuser();
   bool a_fromuser() const;
   void set_a_fromuser(bool value);
@@ -1102,17 +1244,21 @@ class TextChangeEventData final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_str_;
     uint64_t a_id_;
     int32_t a_start_;
     uint32_t a_len_;
     bool a_isinsert_;
     bool a_fromuser_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_5fprotobuf_2emozilla_2ea11y_2eh_2eproto;
@@ -1148,6 +1294,13 @@ class MutationEventData final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const MutationEventData& default_instance() {
@@ -1394,6 +1547,13 @@ class TextRangeData final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const TextRangeData& default_instance() {
     return *internal_default_instance();
   }
@@ -1471,7 +1631,11 @@ class TextRangeData final :
     kAStartOffsetFieldNumber = 3,
     kAEndOffsetFieldNumber = 4,
   };
-  // uint64 a_StartID = 1;
+  // required uint64 a_StartID = 1;
+  bool has_a_startid() const;
+  private:
+  bool _internal_has_a_startid() const;
+  public:
   void clear_a_startid();
   uint64_t a_startid() const;
   void set_a_startid(uint64_t value);
@@ -1480,7 +1644,11 @@ class TextRangeData final :
   void _internal_set_a_startid(uint64_t value);
   public:
 
-  // uint64 a_EndID = 2;
+  // required uint64 a_EndID = 2;
+  bool has_a_endid() const;
+  private:
+  bool _internal_has_a_endid() const;
+  public:
   void clear_a_endid();
   uint64_t a_endid() const;
   void set_a_endid(uint64_t value);
@@ -1489,7 +1657,11 @@ class TextRangeData final :
   void _internal_set_a_endid(uint64_t value);
   public:
 
-  // sint32 a_StartOffset = 3;
+  // required sint32 a_StartOffset = 3;
+  bool has_a_startoffset() const;
+  private:
+  bool _internal_has_a_startoffset() const;
+  public:
   void clear_a_startoffset();
   int32_t a_startoffset() const;
   void set_a_startoffset(int32_t value);
@@ -1498,7 +1670,11 @@ class TextRangeData final :
   void _internal_set_a_startoffset(int32_t value);
   public:
 
-  // sint32 a_EndOffset = 4;
+  // required sint32 a_EndOffset = 4;
+  bool has_a_endoffset() const;
+  private:
+  bool _internal_has_a_endoffset() const;
+  public:
   void clear_a_endoffset();
   int32_t a_endoffset() const;
   void set_a_endoffset(int32_t value);
@@ -1511,15 +1687,19 @@ class TextRangeData final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_startid_;
     uint64_t a_endid_;
     int32_t a_startoffset_;
     int32_t a_endoffset_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_5fprotobuf_2emozilla_2ea11y_2eh_2eproto;
@@ -1535,9 +1715,17 @@ class TextRangeData final :
 #endif  // __GNUC__
 // AccessibleData
 
-// uint64 a_ID = 1;
+// required uint64 a_ID = 1;
+inline bool AccessibleData::_internal_has_a_id() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool AccessibleData::has_a_id() const {
+  return _internal_has_a_id();
+}
 inline void AccessibleData::clear_a_id() {
   _impl_.a_id_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline uint64_t AccessibleData::_internal_a_id() const {
   return _impl_.a_id_;
@@ -1547,7 +1735,7 @@ inline uint64_t AccessibleData::a_id() const {
   return _internal_a_id();
 }
 inline void AccessibleData::_internal_set_a_id(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.a_id_ = value;
 }
 inline void AccessibleData::set_a_id(uint64_t value) {
@@ -1555,9 +1743,17 @@ inline void AccessibleData::set_a_id(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.AccessibleData.a_ID)
 }
 
-// bytes a_Role = 2;
+// required bytes a_Role = 2;
+inline bool AccessibleData::_internal_has_a_role() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool AccessibleData::has_a_role() const {
+  return _internal_has_a_role();
+}
 inline void AccessibleData::clear_a_role() {
   _impl_.a_role_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& AccessibleData::a_role() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.AccessibleData.a_Role)
@@ -1566,7 +1762,7 @@ inline const std::string& AccessibleData::a_role() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void AccessibleData::set_a_role(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_role_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.AccessibleData.a_Role)
 }
@@ -1579,22 +1775,32 @@ inline const std::string& AccessibleData::_internal_a_role() const {
   return _impl_.a_role_.Get();
 }
 inline void AccessibleData::_internal_set_a_role(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_role_.Set(value, GetArenaForAllocation());
 }
 inline std::string* AccessibleData::_internal_mutable_a_role() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_role_.Mutable(GetArenaForAllocation());
 }
 inline std::string* AccessibleData::release_a_role() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.AccessibleData.a_Role)
-  return _impl_.a_role_.Release();
+  if (!_internal_has_a_role()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_role_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_role_.IsDefault()) {
+    _impl_.a_role_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void AccessibleData::set_allocated_a_role(std::string* a_role) {
   if (a_role != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_role_.SetAllocated(a_role, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1605,9 +1811,17 @@ inline void AccessibleData::set_allocated_a_role(std::string* a_role) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.AccessibleData.a_Role)
 }
 
-// uint64 a_ParentID = 3;
+// required uint64 a_ParentID = 3;
+inline bool AccessibleData::_internal_has_a_parentid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool AccessibleData::has_a_parentid() const {
+  return _internal_has_a_parentid();
+}
 inline void AccessibleData::clear_a_parentid() {
   _impl_.a_parentid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline uint64_t AccessibleData::_internal_a_parentid() const {
   return _impl_.a_parentid_;
@@ -1617,7 +1831,7 @@ inline uint64_t AccessibleData::a_parentid() const {
   return _internal_a_parentid();
 }
 inline void AccessibleData::_internal_set_a_parentid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000020u;
   _impl_.a_parentid_ = value;
 }
 inline void AccessibleData::set_a_parentid(uint64_t value) {
@@ -1625,9 +1839,17 @@ inline void AccessibleData::set_a_parentid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.AccessibleData.a_ParentID)
 }
 
-// uint32 a_IndexInParent = 4;
+// required uint32 a_IndexInParent = 4;
+inline bool AccessibleData::_internal_has_a_indexinparent() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool AccessibleData::has_a_indexinparent() const {
+  return _internal_has_a_indexinparent();
+}
 inline void AccessibleData::clear_a_indexinparent() {
   _impl_.a_indexinparent_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000040u;
 }
 inline uint32_t AccessibleData::_internal_a_indexinparent() const {
   return _impl_.a_indexinparent_;
@@ -1637,7 +1859,7 @@ inline uint32_t AccessibleData::a_indexinparent() const {
   return _internal_a_indexinparent();
 }
 inline void AccessibleData::_internal_set_a_indexinparent(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000040u;
   _impl_.a_indexinparent_ = value;
 }
 inline void AccessibleData::set_a_indexinparent(uint32_t value) {
@@ -1645,9 +1867,17 @@ inline void AccessibleData::set_a_indexinparent(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.AccessibleData.a_IndexInParent)
 }
 
-// bytes a_Type = 5;
+// required bytes a_Type = 5;
+inline bool AccessibleData::_internal_has_a_type() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool AccessibleData::has_a_type() const {
+  return _internal_has_a_type();
+}
 inline void AccessibleData::clear_a_type() {
   _impl_.a_type_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& AccessibleData::a_type() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.AccessibleData.a_Type)
@@ -1656,7 +1886,7 @@ inline const std::string& AccessibleData::a_type() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void AccessibleData::set_a_type(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_type_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.AccessibleData.a_Type)
 }
@@ -1669,22 +1899,32 @@ inline const std::string& AccessibleData::_internal_a_type() const {
   return _impl_.a_type_.Get();
 }
 inline void AccessibleData::_internal_set_a_type(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_type_.Set(value, GetArenaForAllocation());
 }
 inline std::string* AccessibleData::_internal_mutable_a_type() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_type_.Mutable(GetArenaForAllocation());
 }
 inline std::string* AccessibleData::release_a_type() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.AccessibleData.a_Type)
-  return _impl_.a_type_.Release();
+  if (!_internal_has_a_type()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_type_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_type_.IsDefault()) {
+    _impl_.a_type_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void AccessibleData::set_allocated_a_type(std::string* a_type) {
   if (a_type != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_type_.SetAllocated(a_type, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1695,9 +1935,17 @@ inline void AccessibleData::set_allocated_a_type(std::string* a_type) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.AccessibleData.a_Type)
 }
 
-// bytes a_GenericTypes = 6;
+// required bytes a_GenericTypes = 6;
+inline bool AccessibleData::_internal_has_a_generictypes() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool AccessibleData::has_a_generictypes() const {
+  return _internal_has_a_generictypes();
+}
 inline void AccessibleData::clear_a_generictypes() {
   _impl_.a_generictypes_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& AccessibleData::a_generictypes() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.AccessibleData.a_GenericTypes)
@@ -1706,7 +1954,7 @@ inline const std::string& AccessibleData::a_generictypes() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void AccessibleData::set_a_generictypes(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000004u;
  _impl_.a_generictypes_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.AccessibleData.a_GenericTypes)
 }
@@ -1719,22 +1967,32 @@ inline const std::string& AccessibleData::_internal_a_generictypes() const {
   return _impl_.a_generictypes_.Get();
 }
 inline void AccessibleData::_internal_set_a_generictypes(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_generictypes_.Set(value, GetArenaForAllocation());
 }
 inline std::string* AccessibleData::_internal_mutable_a_generictypes() {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   return _impl_.a_generictypes_.Mutable(GetArenaForAllocation());
 }
 inline std::string* AccessibleData::release_a_generictypes() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.AccessibleData.a_GenericTypes)
-  return _impl_.a_generictypes_.Release();
+  if (!_internal_has_a_generictypes()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000004u;
+  auto* p = _impl_.a_generictypes_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_generictypes_.IsDefault()) {
+    _impl_.a_generictypes_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void AccessibleData::set_allocated_a_generictypes(std::string* a_generictypes) {
   if (a_generictypes != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.a_generictypes_.SetAllocated(a_generictypes, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1745,9 +2003,17 @@ inline void AccessibleData::set_allocated_a_generictypes(std::string* a_generict
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.AccessibleData.a_GenericTypes)
 }
 
-// uint32 a_RoleMapEntryIndex = 7;
+// required uint32 a_RoleMapEntryIndex = 7;
+inline bool AccessibleData::_internal_has_a_rolemapentryindex() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
+  return value;
+}
+inline bool AccessibleData::has_a_rolemapentryindex() const {
+  return _internal_has_a_rolemapentryindex();
+}
 inline void AccessibleData::clear_a_rolemapentryindex() {
   _impl_.a_rolemapentryindex_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000080u;
 }
 inline uint32_t AccessibleData::_internal_a_rolemapentryindex() const {
   return _impl_.a_rolemapentryindex_;
@@ -1757,7 +2023,7 @@ inline uint32_t AccessibleData::a_rolemapentryindex() const {
   return _internal_a_rolemapentryindex();
 }
 inline void AccessibleData::_internal_set_a_rolemapentryindex(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000080u;
   _impl_.a_rolemapentryindex_ = value;
 }
 inline void AccessibleData::set_a_rolemapentryindex(uint32_t value) {
@@ -1767,7 +2033,7 @@ inline void AccessibleData::set_a_rolemapentryindex(uint32_t value) {
 
 // optional bytes a_CacheFields = 8;
 inline bool AccessibleData::_internal_has_a_cachefields() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
 inline bool AccessibleData::has_a_cachefields() const {
@@ -1775,7 +2041,7 @@ inline bool AccessibleData::has_a_cachefields() const {
 }
 inline void AccessibleData::clear_a_cachefields() {
   _impl_.a_cachefields_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline const std::string& AccessibleData::a_cachefields() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.AccessibleData.a_CacheFields)
@@ -1784,7 +2050,7 @@ inline const std::string& AccessibleData::a_cachefields() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void AccessibleData::set_a_cachefields(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ _impl_._has_bits_[0] |= 0x00000008u;
  _impl_.a_cachefields_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.AccessibleData.a_CacheFields)
 }
@@ -1797,11 +2063,11 @@ inline const std::string& AccessibleData::_internal_a_cachefields() const {
   return _impl_.a_cachefields_.Get();
 }
 inline void AccessibleData::_internal_set_a_cachefields(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_cachefields_.Set(value, GetArenaForAllocation());
 }
 inline std::string* AccessibleData::_internal_mutable_a_cachefields() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_._has_bits_[0] |= 0x00000008u;
   return _impl_.a_cachefields_.Mutable(GetArenaForAllocation());
 }
 inline std::string* AccessibleData::release_a_cachefields() {
@@ -1809,7 +2075,7 @@ inline std::string* AccessibleData::release_a_cachefields() {
   if (!_internal_has_a_cachefields()) {
     return nullptr;
   }
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000008u;
   auto* p = _impl_.a_cachefields_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (_impl_.a_cachefields_.IsDefault()) {
@@ -1820,9 +2086,9 @@ inline std::string* AccessibleData::release_a_cachefields() {
 }
 inline void AccessibleData::set_allocated_a_cachefields(std::string* a_cachefields) {
   if (a_cachefields != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    _impl_._has_bits_[0] |= 0x00000008u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    _impl_._has_bits_[0] &= ~0x00000008u;
   }
   _impl_.a_cachefields_.SetAllocated(a_cachefields, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1837,9 +2103,17 @@ inline void AccessibleData::set_allocated_a_cachefields(std::string* a_cachefiel
 
 // CacheEventData
 
-// bytes a_UpdateType = 1;
+// required bytes a_UpdateType = 1;
+inline bool CacheEventData::_internal_has_a_updatetype() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool CacheEventData::has_a_updatetype() const {
+  return _internal_has_a_updatetype();
+}
 inline void CacheEventData::clear_a_updatetype() {
   _impl_.a_updatetype_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& CacheEventData::a_updatetype() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.CacheEventData.a_UpdateType)
@@ -1848,7 +2122,7 @@ inline const std::string& CacheEventData::a_updatetype() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CacheEventData::set_a_updatetype(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_updatetype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.CacheEventData.a_UpdateType)
 }
@@ -1861,22 +2135,32 @@ inline const std::string& CacheEventData::_internal_a_updatetype() const {
   return _impl_.a_updatetype_.Get();
 }
 inline void CacheEventData::_internal_set_a_updatetype(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_updatetype_.Set(value, GetArenaForAllocation());
 }
 inline std::string* CacheEventData::_internal_mutable_a_updatetype() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_updatetype_.Mutable(GetArenaForAllocation());
 }
 inline std::string* CacheEventData::release_a_updatetype() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.CacheEventData.a_UpdateType)
-  return _impl_.a_updatetype_.Release();
+  if (!_internal_has_a_updatetype()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_updatetype_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_updatetype_.IsDefault()) {
+    _impl_.a_updatetype_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void CacheEventData::set_allocated_a_updatetype(std::string* a_updatetype) {
   if (a_updatetype != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_updatetype_.SetAllocated(a_updatetype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1968,9 +2252,17 @@ ShowEventData::a_newtree() const {
   return _impl_.a_newtree_;
 }
 
-// bool a_EventSuppressed = 2;
+// required bool a_EventSuppressed = 2;
+inline bool ShowEventData::_internal_has_a_eventsuppressed() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ShowEventData::has_a_eventsuppressed() const {
+  return _internal_has_a_eventsuppressed();
+}
 inline void ShowEventData::clear_a_eventsuppressed() {
   _impl_.a_eventsuppressed_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool ShowEventData::_internal_a_eventsuppressed() const {
   return _impl_.a_eventsuppressed_;
@@ -1980,7 +2272,7 @@ inline bool ShowEventData::a_eventsuppressed() const {
   return _internal_a_eventsuppressed();
 }
 inline void ShowEventData::_internal_set_a_eventsuppressed(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_eventsuppressed_ = value;
 }
 inline void ShowEventData::set_a_eventsuppressed(bool value) {
@@ -1988,9 +2280,17 @@ inline void ShowEventData::set_a_eventsuppressed(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.ShowEventData.a_EventSuppressed)
 }
 
-// bool a_Complete = 3;
+// required bool a_Complete = 3;
+inline bool ShowEventData::_internal_has_a_complete() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool ShowEventData::has_a_complete() const {
+  return _internal_has_a_complete();
+}
 inline void ShowEventData::clear_a_complete() {
   _impl_.a_complete_ = false;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool ShowEventData::_internal_a_complete() const {
   return _impl_.a_complete_;
@@ -2000,7 +2300,7 @@ inline bool ShowEventData::a_complete() const {
   return _internal_a_complete();
 }
 inline void ShowEventData::_internal_set_a_complete(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_complete_ = value;
 }
 inline void ShowEventData::set_a_complete(bool value) {
@@ -2008,9 +2308,17 @@ inline void ShowEventData::set_a_complete(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.ShowEventData.a_Complete)
 }
 
-// bool a_FromUser = 4;
+// required bool a_FromUser = 4;
+inline bool ShowEventData::_internal_has_a_fromuser() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool ShowEventData::has_a_fromuser() const {
+  return _internal_has_a_fromuser();
+}
 inline void ShowEventData::clear_a_fromuser() {
   _impl_.a_fromuser_ = false;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline bool ShowEventData::_internal_a_fromuser() const {
   return _impl_.a_fromuser_;
@@ -2020,7 +2328,7 @@ inline bool ShowEventData::a_fromuser() const {
   return _internal_a_fromuser();
 }
 inline void ShowEventData::_internal_set_a_fromuser(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_fromuser_ = value;
 }
 inline void ShowEventData::set_a_fromuser(bool value) {
@@ -2032,9 +2340,17 @@ inline void ShowEventData::set_a_fromuser(bool value) {
 
 // HideEventData
 
-// uint64 a_ID = 1;
+// required uint64 a_ID = 1;
+inline bool HideEventData::_internal_has_a_id() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool HideEventData::has_a_id() const {
+  return _internal_has_a_id();
+}
 inline void HideEventData::clear_a_id() {
   _impl_.a_id_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t HideEventData::_internal_a_id() const {
   return _impl_.a_id_;
@@ -2044,7 +2360,7 @@ inline uint64_t HideEventData::a_id() const {
   return _internal_a_id();
 }
 inline void HideEventData::_internal_set_a_id(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_id_ = value;
 }
 inline void HideEventData::set_a_id(uint64_t value) {
@@ -2052,9 +2368,17 @@ inline void HideEventData::set_a_id(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.HideEventData.a_ID)
 }
 
-// bool a_IsFromUserInput = 2;
+// required bool a_IsFromUserInput = 2;
+inline bool HideEventData::_internal_has_a_isfromuserinput() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool HideEventData::has_a_isfromuserinput() const {
+  return _internal_has_a_isfromuserinput();
+}
 inline void HideEventData::clear_a_isfromuserinput() {
   _impl_.a_isfromuserinput_ = false;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool HideEventData::_internal_a_isfromuserinput() const {
   return _impl_.a_isfromuserinput_;
@@ -2064,7 +2388,7 @@ inline bool HideEventData::a_isfromuserinput() const {
   return _internal_a_isfromuserinput();
 }
 inline void HideEventData::_internal_set_a_isfromuserinput(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_isfromuserinput_ = value;
 }
 inline void HideEventData::set_a_isfromuserinput(bool value) {
@@ -2076,9 +2400,17 @@ inline void HideEventData::set_a_isfromuserinput(bool value) {
 
 // ReorderEventData
 
-// uint64 a_ID = 1;
+// required uint64 a_ID = 1;
+inline bool ReorderEventData::_internal_has_a_id() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ReorderEventData::has_a_id() const {
+  return _internal_has_a_id();
+}
 inline void ReorderEventData::clear_a_id() {
   _impl_.a_id_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t ReorderEventData::_internal_a_id() const {
   return _impl_.a_id_;
@@ -2088,7 +2420,7 @@ inline uint64_t ReorderEventData::a_id() const {
   return _internal_a_id();
 }
 inline void ReorderEventData::_internal_set_a_id(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_id_ = value;
 }
 inline void ReorderEventData::set_a_id(uint64_t value) {
@@ -2096,9 +2428,17 @@ inline void ReorderEventData::set_a_id(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.ReorderEventData.a_ID)
 }
 
-// uint32 a_Type = 2;
+// required uint32 a_Type = 2;
+inline bool ReorderEventData::_internal_has_a_type() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool ReorderEventData::has_a_type() const {
+  return _internal_has_a_type();
+}
 inline void ReorderEventData::clear_a_type() {
   _impl_.a_type_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t ReorderEventData::_internal_a_type() const {
   return _impl_.a_type_;
@@ -2108,7 +2448,7 @@ inline uint32_t ReorderEventData::a_type() const {
   return _internal_a_type();
 }
 inline void ReorderEventData::_internal_set_a_type(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_type_ = value;
 }
 inline void ReorderEventData::set_a_type(uint32_t value) {
@@ -2120,9 +2460,17 @@ inline void ReorderEventData::set_a_type(uint32_t value) {
 
 // TextChangeEventData
 
-// uint64 a_ID = 1;
+// required uint64 a_ID = 1;
+inline bool TextChangeEventData::_internal_has_a_id() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool TextChangeEventData::has_a_id() const {
+  return _internal_has_a_id();
+}
 inline void TextChangeEventData::clear_a_id() {
   _impl_.a_id_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t TextChangeEventData::_internal_a_id() const {
   return _impl_.a_id_;
@@ -2132,7 +2480,7 @@ inline uint64_t TextChangeEventData::a_id() const {
   return _internal_a_id();
 }
 inline void TextChangeEventData::_internal_set_a_id(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_id_ = value;
 }
 inline void TextChangeEventData::set_a_id(uint64_t value) {
@@ -2140,9 +2488,17 @@ inline void TextChangeEventData::set_a_id(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.TextChangeEventData.a_ID)
 }
 
-// string a_Str = 2;
+// required string a_Str = 2;
+inline bool TextChangeEventData::_internal_has_a_str() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool TextChangeEventData::has_a_str() const {
+  return _internal_has_a_str();
+}
 inline void TextChangeEventData::clear_a_str() {
   _impl_.a_str_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& TextChangeEventData::a_str() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.TextChangeEventData.a_Str)
@@ -2151,7 +2507,7 @@ inline const std::string& TextChangeEventData::a_str() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void TextChangeEventData::set_a_str(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_str_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.TextChangeEventData.a_Str)
 }
@@ -2164,22 +2520,32 @@ inline const std::string& TextChangeEventData::_internal_a_str() const {
   return _impl_.a_str_.Get();
 }
 inline void TextChangeEventData::_internal_set_a_str(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_str_.Set(value, GetArenaForAllocation());
 }
 inline std::string* TextChangeEventData::_internal_mutable_a_str() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_str_.Mutable(GetArenaForAllocation());
 }
 inline std::string* TextChangeEventData::release_a_str() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.TextChangeEventData.a_Str)
-  return _impl_.a_str_.Release();
+  if (!_internal_has_a_str()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_str_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_str_.IsDefault()) {
+    _impl_.a_str_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void TextChangeEventData::set_allocated_a_str(std::string* a_str) {
   if (a_str != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_str_.SetAllocated(a_str, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2190,9 +2556,17 @@ inline void TextChangeEventData::set_allocated_a_str(std::string* a_str) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.TextChangeEventData.a_Str)
 }
 
-// sint32 a_Start = 3;
+// required sint32 a_Start = 3;
+inline bool TextChangeEventData::_internal_has_a_start() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool TextChangeEventData::has_a_start() const {
+  return _internal_has_a_start();
+}
 inline void TextChangeEventData::clear_a_start() {
   _impl_.a_start_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline int32_t TextChangeEventData::_internal_a_start() const {
   return _impl_.a_start_;
@@ -2202,7 +2576,7 @@ inline int32_t TextChangeEventData::a_start() const {
   return _internal_a_start();
 }
 inline void TextChangeEventData::_internal_set_a_start(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_start_ = value;
 }
 inline void TextChangeEventData::set_a_start(int32_t value) {
@@ -2210,9 +2584,17 @@ inline void TextChangeEventData::set_a_start(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.TextChangeEventData.a_Start)
 }
 
-// uint32 a_Len = 4;
+// required uint32 a_Len = 4;
+inline bool TextChangeEventData::_internal_has_a_len() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool TextChangeEventData::has_a_len() const {
+  return _internal_has_a_len();
+}
 inline void TextChangeEventData::clear_a_len() {
   _impl_.a_len_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline uint32_t TextChangeEventData::_internal_a_len() const {
   return _impl_.a_len_;
@@ -2222,7 +2604,7 @@ inline uint32_t TextChangeEventData::a_len() const {
   return _internal_a_len();
 }
 inline void TextChangeEventData::_internal_set_a_len(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_len_ = value;
 }
 inline void TextChangeEventData::set_a_len(uint32_t value) {
@@ -2230,9 +2612,17 @@ inline void TextChangeEventData::set_a_len(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.TextChangeEventData.a_Len)
 }
 
-// bool a_IsInsert = 5;
+// required bool a_IsInsert = 5;
+inline bool TextChangeEventData::_internal_has_a_isinsert() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool TextChangeEventData::has_a_isinsert() const {
+  return _internal_has_a_isinsert();
+}
 inline void TextChangeEventData::clear_a_isinsert() {
   _impl_.a_isinsert_ = false;
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline bool TextChangeEventData::_internal_a_isinsert() const {
   return _impl_.a_isinsert_;
@@ -2242,7 +2632,7 @@ inline bool TextChangeEventData::a_isinsert() const {
   return _internal_a_isinsert();
 }
 inline void TextChangeEventData::_internal_set_a_isinsert(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.a_isinsert_ = value;
 }
 inline void TextChangeEventData::set_a_isinsert(bool value) {
@@ -2250,9 +2640,17 @@ inline void TextChangeEventData::set_a_isinsert(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.TextChangeEventData.a_IsInsert)
 }
 
-// bool a_FromUser = 6;
+// required bool a_FromUser = 6;
+inline bool TextChangeEventData::_internal_has_a_fromuser() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool TextChangeEventData::has_a_fromuser() const {
+  return _internal_has_a_fromuser();
+}
 inline void TextChangeEventData::clear_a_fromuser() {
   _impl_.a_fromuser_ = false;
+  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline bool TextChangeEventData::_internal_a_fromuser() const {
   return _impl_.a_fromuser_;
@@ -2262,7 +2660,7 @@ inline bool TextChangeEventData::a_fromuser() const {
   return _internal_a_fromuser();
 }
 inline void TextChangeEventData::_internal_set_a_fromuser(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000020u;
   _impl_.a_fromuser_ = value;
 }
 inline void TextChangeEventData::set_a_fromuser(bool value) {
@@ -2657,9 +3055,17 @@ inline MutationEventData::ContentCase MutationEventData::content_case() const {
 
 // TextRangeData
 
-// uint64 a_StartID = 1;
+// required uint64 a_StartID = 1;
+inline bool TextRangeData::_internal_has_a_startid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool TextRangeData::has_a_startid() const {
+  return _internal_has_a_startid();
+}
 inline void TextRangeData::clear_a_startid() {
   _impl_.a_startid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t TextRangeData::_internal_a_startid() const {
   return _impl_.a_startid_;
@@ -2669,7 +3075,7 @@ inline uint64_t TextRangeData::a_startid() const {
   return _internal_a_startid();
 }
 inline void TextRangeData::_internal_set_a_startid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_startid_ = value;
 }
 inline void TextRangeData::set_a_startid(uint64_t value) {
@@ -2677,9 +3083,17 @@ inline void TextRangeData::set_a_startid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.TextRangeData.a_StartID)
 }
 
-// uint64 a_EndID = 2;
+// required uint64 a_EndID = 2;
+inline bool TextRangeData::_internal_has_a_endid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool TextRangeData::has_a_endid() const {
+  return _internal_has_a_endid();
+}
 inline void TextRangeData::clear_a_endid() {
   _impl_.a_endid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t TextRangeData::_internal_a_endid() const {
   return _impl_.a_endid_;
@@ -2689,7 +3103,7 @@ inline uint64_t TextRangeData::a_endid() const {
   return _internal_a_endid();
 }
 inline void TextRangeData::_internal_set_a_endid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_endid_ = value;
 }
 inline void TextRangeData::set_a_endid(uint64_t value) {
@@ -2697,9 +3111,17 @@ inline void TextRangeData::set_a_endid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.TextRangeData.a_EndID)
 }
 
-// sint32 a_StartOffset = 3;
+// required sint32 a_StartOffset = 3;
+inline bool TextRangeData::_internal_has_a_startoffset() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool TextRangeData::has_a_startoffset() const {
+  return _internal_has_a_startoffset();
+}
 inline void TextRangeData::clear_a_startoffset() {
   _impl_.a_startoffset_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline int32_t TextRangeData::_internal_a_startoffset() const {
   return _impl_.a_startoffset_;
@@ -2709,7 +3131,7 @@ inline int32_t TextRangeData::a_startoffset() const {
   return _internal_a_startoffset();
 }
 inline void TextRangeData::_internal_set_a_startoffset(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_startoffset_ = value;
 }
 inline void TextRangeData::set_a_startoffset(int32_t value) {
@@ -2717,9 +3139,17 @@ inline void TextRangeData::set_a_startoffset(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.TextRangeData.a_StartOffset)
 }
 
-// sint32 a_EndOffset = 4;
+// required sint32 a_EndOffset = 4;
+inline bool TextRangeData::_internal_has_a_endoffset() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool TextRangeData::has_a_endoffset() const {
+  return _internal_has_a_endoffset();
+}
 inline void TextRangeData::clear_a_endoffset() {
   _impl_.a_endoffset_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline int32_t TextRangeData::_internal_a_endoffset() const {
   return _impl_.a_endoffset_;
@@ -2729,7 +3159,7 @@ inline int32_t TextRangeData::a_endoffset() const {
   return _internal_a_endoffset();
 }
 inline void TextRangeData::_internal_set_a_endoffset(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_endoffset_ = value;
 }
 inline void TextRangeData::set_a_endoffset(int32_t value) {

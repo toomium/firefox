@@ -47,8 +47,14 @@ namespace a11y {
 class CacheData::_Internal {
  public:
   using HasBits = decltype(std::declval<CacheData>()._impl_._has_bits_);
+  static void set_has_a_id(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
   static void set_has_a_fields(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000002) ^ 0x00000002) != 0;
   }
 };
 
@@ -136,9 +142,10 @@ const char* CacheData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // uint64 a_ID = 1;
+      // required uint64 a_ID = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_id(&has_bits);
           _impl_.a_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -183,14 +190,15 @@ uint8_t* CacheData::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint64 a_ID = 1;
-  if (this->_internal_a_id() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required uint64 a_ID = 1;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_id(), target);
   }
 
   // optional bytes a_Fields = 2;
-  if (_internal_has_a_fields()) {
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_a_fields(), target);
   }
@@ -207,6 +215,10 @@ size_t CacheData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.a11y.CacheData)
   size_t total_size = 0;
 
+  // required uint64 a_ID = 1;
+  if (_internal_has_a_id()) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_id());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -217,11 +229,6 @@ size_t CacheData::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_fields());
-  }
-
-  // uint64 a_ID = 1;
-  if (this->_internal_a_id() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_id());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -245,11 +252,15 @@ void CacheData::MergeFrom(const CacheData& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_fields()) {
-    _this->_internal_set_a_fields(from._internal_a_fields());
-  }
-  if (from._internal_a_id() != 0) {
-    _this->_internal_set_a_id(from._internal_a_id());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_fields(from._internal_a_fields());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_id_ = from._impl_.a_id_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -262,6 +273,7 @@ void CacheData::CopyFrom(const CacheData& from) {
 }
 
 bool CacheData::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 

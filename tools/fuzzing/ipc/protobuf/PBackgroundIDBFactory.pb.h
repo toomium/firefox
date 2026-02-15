@@ -131,6 +131,13 @@ class Msg_DeleteMe final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_DeleteMe& default_instance() {
     return *internal_default_instance();
   }
@@ -248,6 +255,13 @@ class Msg_PBackgroundIDBFactoryRequestConstructor final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_PBackgroundIDBFactoryRequestConstructor& default_instance() {
     return *internal_default_instance();
   }
@@ -323,7 +337,7 @@ class Msg_PBackgroundIDBFactoryRequestConstructor final :
     kAParamsFieldNumber = 2,
     kAActoridFieldNumber = 1,
   };
-  // .protobuf.mozilla.dom.indexedDB.FactoryRequestParams a_params = 2;
+  // required .protobuf.mozilla.dom.indexedDB.FactoryRequestParams a_params = 2;
   bool has_a_params() const;
   private:
   bool _internal_has_a_params() const;
@@ -341,7 +355,11 @@ class Msg_PBackgroundIDBFactoryRequestConstructor final :
       ::protobuf::mozilla::dom::indexedDB::FactoryRequestParams* a_params);
   ::protobuf::mozilla::dom::indexedDB::FactoryRequestParams* unsafe_arena_release_a_params();
 
-  // sint64 a_actorid = 1;
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
   void clear_a_actorid();
   int64_t a_actorid() const;
   void set_a_actorid(int64_t value);
@@ -354,13 +372,17 @@ class Msg_PBackgroundIDBFactoryRequestConstructor final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::dom::indexedDB::FactoryRequestParams* a_params_;
     int64_t a_actorid_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBFactory_2eproto;
@@ -396,6 +418,13 @@ class Reply_PBackgroundIDBFactoryRequestConstructor final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_PBackgroundIDBFactoryRequestConstructor& default_instance() {
@@ -515,6 +544,13 @@ class Msg_GetDatabases final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_GetDatabases& default_instance() {
     return *internal_default_instance();
   }
@@ -590,7 +626,11 @@ class Msg_GetDatabases final :
     kAPersistenceTypeFieldNumber = 1,
     kAPrincipalInfoFieldNumber = 2,
   };
-  // bytes a_persistenceType = 1;
+  // required bytes a_persistenceType = 1;
+  bool has_a_persistencetype() const;
+  private:
+  bool _internal_has_a_persistencetype() const;
+  public:
   void clear_a_persistencetype();
   const std::string& a_persistencetype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -604,7 +644,7 @@ class Msg_GetDatabases final :
   std::string* _internal_mutable_a_persistencetype();
   public:
 
-  // .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
+  // required .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
   bool has_a_principalinfo() const;
   private:
   bool _internal_has_a_principalinfo() const;
@@ -626,13 +666,17 @@ class Msg_GetDatabases final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_persistencetype_;
     ::protobuf::mozilla::ipc::PrincipalInfo* a_principalinfo_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBFactory_2eproto;
@@ -668,6 +712,13 @@ class Reply_GetDatabases final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_GetDatabases& default_instance() {
@@ -744,7 +795,7 @@ class Reply_GetDatabases final :
   enum : int {
     kAResponseFieldNumber = 1,
   };
-  // .protobuf.mozilla.dom.indexedDB.GetDatabasesResponse a_response = 1;
+  // required .protobuf.mozilla.dom.indexedDB.GetDatabasesResponse a_response = 1;
   bool has_a_response() const;
   private:
   bool _internal_has_a_response() const;
@@ -770,8 +821,9 @@ class Reply_GetDatabases final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse* a_response_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse* a_response_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBFactory_2eproto;
@@ -807,6 +859,13 @@ class Msg___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg___delete__& default_instance() {
@@ -926,6 +985,13 @@ class Reply___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -1043,6 +1109,13 @@ class Msg_PBackgroundIDBDatabaseConstructor final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_PBackgroundIDBDatabaseConstructor& default_instance() {
     return *internal_default_instance();
   }
@@ -1119,7 +1192,11 @@ class Msg_PBackgroundIDBDatabaseConstructor final :
     kASpecFieldNumber = 2,
     kAActoridFieldNumber = 1,
   };
-  // bytes a_request = 3;
+  // required bytes a_request = 3;
+  bool has_a_request() const;
+  private:
+  bool _internal_has_a_request() const;
+  public:
   void clear_a_request();
   const std::string& a_request() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1133,7 +1210,7 @@ class Msg_PBackgroundIDBDatabaseConstructor final :
   std::string* _internal_mutable_a_request();
   public:
 
-  // .protobuf.mozilla.dom.indexedDB.DatabaseSpec a_spec = 2;
+  // required .protobuf.mozilla.dom.indexedDB.DatabaseSpec a_spec = 2;
   bool has_a_spec() const;
   private:
   bool _internal_has_a_spec() const;
@@ -1151,7 +1228,11 @@ class Msg_PBackgroundIDBDatabaseConstructor final :
       ::protobuf::mozilla::dom::indexedDB::DatabaseSpec* a_spec);
   ::protobuf::mozilla::dom::indexedDB::DatabaseSpec* unsafe_arena_release_a_spec();
 
-  // sint64 a_actorid = 1;
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
   void clear_a_actorid();
   int64_t a_actorid() const;
   void set_a_actorid(int64_t value);
@@ -1164,14 +1245,18 @@ class Msg_PBackgroundIDBDatabaseConstructor final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_request_;
     ::protobuf::mozilla::dom::indexedDB::DatabaseSpec* a_spec_;
     int64_t a_actorid_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBFactory_2eproto;
@@ -1207,6 +1292,13 @@ class Reply_PBackgroundIDBDatabaseConstructor final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_PBackgroundIDBDatabaseConstructor& default_instance() {
@@ -1308,9 +1400,17 @@ class Reply_PBackgroundIDBDatabaseConstructor final :
 
 // Msg_PBackgroundIDBFactoryRequestConstructor
 
-// sint64 a_actorid = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PBackgroundIDBFactoryRequestConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PBackgroundIDBFactoryRequestConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
 inline void Msg_PBackgroundIDBFactoryRequestConstructor::clear_a_actorid() {
   _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline int64_t Msg_PBackgroundIDBFactoryRequestConstructor::_internal_a_actorid() const {
   return _impl_.a_actorid_;
@@ -1320,7 +1420,7 @@ inline int64_t Msg_PBackgroundIDBFactoryRequestConstructor::a_actorid() const {
   return _internal_a_actorid();
 }
 inline void Msg_PBackgroundIDBFactoryRequestConstructor::_internal_set_a_actorid(int64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_actorid_ = value;
 }
 inline void Msg_PBackgroundIDBFactoryRequestConstructor::set_a_actorid(int64_t value) {
@@ -1328,9 +1428,11 @@ inline void Msg_PBackgroundIDBFactoryRequestConstructor::set_a_actorid(int64_t v
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactory.Msg_PBackgroundIDBFactoryRequestConstructor.a_actorid)
 }
 
-// .protobuf.mozilla.dom.indexedDB.FactoryRequestParams a_params = 2;
+// required .protobuf.mozilla.dom.indexedDB.FactoryRequestParams a_params = 2;
 inline bool Msg_PBackgroundIDBFactoryRequestConstructor::_internal_has_a_params() const {
-  return this != internal_default_instance() && _impl_.a_params_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_params_ != nullptr);
+  return value;
 }
 inline bool Msg_PBackgroundIDBFactoryRequestConstructor::has_a_params() const {
   return _internal_has_a_params();
@@ -1351,14 +1453,14 @@ inline void Msg_PBackgroundIDBFactoryRequestConstructor::unsafe_arena_set_alloca
   }
   _impl_.a_params_ = a_params;
   if (a_params) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactory.Msg_PBackgroundIDBFactoryRequestConstructor.a_params)
 }
 inline ::protobuf::mozilla::dom::indexedDB::FactoryRequestParams* Msg_PBackgroundIDBFactoryRequestConstructor::release_a_params() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::indexedDB::FactoryRequestParams* temp = _impl_.a_params_;
   _impl_.a_params_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1374,13 +1476,13 @@ inline ::protobuf::mozilla::dom::indexedDB::FactoryRequestParams* Msg_PBackgroun
 }
 inline ::protobuf::mozilla::dom::indexedDB::FactoryRequestParams* Msg_PBackgroundIDBFactoryRequestConstructor::unsafe_arena_release_a_params() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactory.Msg_PBackgroundIDBFactoryRequestConstructor.a_params)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::indexedDB::FactoryRequestParams* temp = _impl_.a_params_;
   _impl_.a_params_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::indexedDB::FactoryRequestParams* Msg_PBackgroundIDBFactoryRequestConstructor::_internal_mutable_a_params() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_params_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::FactoryRequestParams>(GetArenaForAllocation());
     _impl_.a_params_ = p;
@@ -1405,9 +1507,9 @@ inline void Msg_PBackgroundIDBFactoryRequestConstructor::set_allocated_a_params(
       a_params = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_params, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_params_ = a_params;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactory.Msg_PBackgroundIDBFactoryRequestConstructor.a_params)
@@ -1421,9 +1523,17 @@ inline void Msg_PBackgroundIDBFactoryRequestConstructor::set_allocated_a_params(
 
 // Msg_GetDatabases
 
-// bytes a_persistenceType = 1;
+// required bytes a_persistenceType = 1;
+inline bool Msg_GetDatabases::_internal_has_a_persistencetype() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_GetDatabases::has_a_persistencetype() const {
+  return _internal_has_a_persistencetype();
+}
 inline void Msg_GetDatabases::clear_a_persistencetype() {
   _impl_.a_persistencetype_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_GetDatabases::a_persistencetype() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactory.Msg_GetDatabases.a_persistenceType)
@@ -1432,7 +1542,7 @@ inline const std::string& Msg_GetDatabases::a_persistencetype() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GetDatabases::set_a_persistencetype(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_persistencetype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactory.Msg_GetDatabases.a_persistenceType)
 }
@@ -1445,22 +1555,32 @@ inline const std::string& Msg_GetDatabases::_internal_a_persistencetype() const 
   return _impl_.a_persistencetype_.Get();
 }
 inline void Msg_GetDatabases::_internal_set_a_persistencetype(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_persistencetype_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_GetDatabases::_internal_mutable_a_persistencetype() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_persistencetype_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_GetDatabases::release_a_persistencetype() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactory.Msg_GetDatabases.a_persistenceType)
-  return _impl_.a_persistencetype_.Release();
+  if (!_internal_has_a_persistencetype()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_persistencetype_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_persistencetype_.IsDefault()) {
+    _impl_.a_persistencetype_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_GetDatabases::set_allocated_a_persistencetype(std::string* a_persistencetype) {
   if (a_persistencetype != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_persistencetype_.SetAllocated(a_persistencetype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1471,9 +1591,11 @@ inline void Msg_GetDatabases::set_allocated_a_persistencetype(std::string* a_per
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactory.Msg_GetDatabases.a_persistenceType)
 }
 
-// .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
+// required .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
 inline bool Msg_GetDatabases::_internal_has_a_principalinfo() const {
-  return this != internal_default_instance() && _impl_.a_principalinfo_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_principalinfo_ != nullptr);
+  return value;
 }
 inline bool Msg_GetDatabases::has_a_principalinfo() const {
   return _internal_has_a_principalinfo();
@@ -1494,14 +1616,14 @@ inline void Msg_GetDatabases::unsafe_arena_set_allocated_a_principalinfo(
   }
   _impl_.a_principalinfo_ = a_principalinfo;
   if (a_principalinfo) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactory.Msg_GetDatabases.a_principalInfo)
 }
 inline ::protobuf::mozilla::ipc::PrincipalInfo* Msg_GetDatabases::release_a_principalinfo() {
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::ipc::PrincipalInfo* temp = _impl_.a_principalinfo_;
   _impl_.a_principalinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1517,13 +1639,13 @@ inline ::protobuf::mozilla::ipc::PrincipalInfo* Msg_GetDatabases::release_a_prin
 }
 inline ::protobuf::mozilla::ipc::PrincipalInfo* Msg_GetDatabases::unsafe_arena_release_a_principalinfo() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactory.Msg_GetDatabases.a_principalInfo)
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::ipc::PrincipalInfo* temp = _impl_.a_principalinfo_;
   _impl_.a_principalinfo_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::ipc::PrincipalInfo* Msg_GetDatabases::_internal_mutable_a_principalinfo() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   if (_impl_.a_principalinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ipc::PrincipalInfo>(GetArenaForAllocation());
     _impl_.a_principalinfo_ = p;
@@ -1548,9 +1670,9 @@ inline void Msg_GetDatabases::set_allocated_a_principalinfo(::protobuf::mozilla:
       a_principalinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_principalinfo, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_principalinfo_ = a_principalinfo;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactory.Msg_GetDatabases.a_principalInfo)
@@ -1560,9 +1682,11 @@ inline void Msg_GetDatabases::set_allocated_a_principalinfo(::protobuf::mozilla:
 
 // Reply_GetDatabases
 
-// .protobuf.mozilla.dom.indexedDB.GetDatabasesResponse a_response = 1;
+// required .protobuf.mozilla.dom.indexedDB.GetDatabasesResponse a_response = 1;
 inline bool Reply_GetDatabases::_internal_has_a_response() const {
-  return this != internal_default_instance() && _impl_.a_response_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_response_ != nullptr);
+  return value;
 }
 inline bool Reply_GetDatabases::has_a_response() const {
   return _internal_has_a_response();
@@ -1583,14 +1707,14 @@ inline void Reply_GetDatabases::unsafe_arena_set_allocated_a_response(
   }
   _impl_.a_response_ = a_response;
   if (a_response) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactory.Reply_GetDatabases.a_response)
 }
 inline ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse* Reply_GetDatabases::release_a_response() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse* temp = _impl_.a_response_;
   _impl_.a_response_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1606,13 +1730,13 @@ inline ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse* Reply_GetDatab
 }
 inline ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse* Reply_GetDatabases::unsafe_arena_release_a_response() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactory.Reply_GetDatabases.a_response)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse* temp = _impl_.a_response_;
   _impl_.a_response_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse* Reply_GetDatabases::_internal_mutable_a_response() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_response_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse>(GetArenaForAllocation());
     _impl_.a_response_ = p;
@@ -1637,9 +1761,9 @@ inline void Reply_GetDatabases::set_allocated_a_response(::protobuf::mozilla::do
       a_response = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_response, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_response_ = a_response;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactory.Reply_GetDatabases.a_response)
@@ -1657,9 +1781,17 @@ inline void Reply_GetDatabases::set_allocated_a_response(::protobuf::mozilla::do
 
 // Msg_PBackgroundIDBDatabaseConstructor
 
-// sint64 a_actorid = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PBackgroundIDBDatabaseConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_PBackgroundIDBDatabaseConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
 inline void Msg_PBackgroundIDBDatabaseConstructor::clear_a_actorid() {
   _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline int64_t Msg_PBackgroundIDBDatabaseConstructor::_internal_a_actorid() const {
   return _impl_.a_actorid_;
@@ -1669,7 +1801,7 @@ inline int64_t Msg_PBackgroundIDBDatabaseConstructor::a_actorid() const {
   return _internal_a_actorid();
 }
 inline void Msg_PBackgroundIDBDatabaseConstructor::_internal_set_a_actorid(int64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_actorid_ = value;
 }
 inline void Msg_PBackgroundIDBDatabaseConstructor::set_a_actorid(int64_t value) {
@@ -1677,9 +1809,11 @@ inline void Msg_PBackgroundIDBDatabaseConstructor::set_a_actorid(int64_t value) 
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactory.Msg_PBackgroundIDBDatabaseConstructor.a_actorid)
 }
 
-// .protobuf.mozilla.dom.indexedDB.DatabaseSpec a_spec = 2;
+// required .protobuf.mozilla.dom.indexedDB.DatabaseSpec a_spec = 2;
 inline bool Msg_PBackgroundIDBDatabaseConstructor::_internal_has_a_spec() const {
-  return this != internal_default_instance() && _impl_.a_spec_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_spec_ != nullptr);
+  return value;
 }
 inline bool Msg_PBackgroundIDBDatabaseConstructor::has_a_spec() const {
   return _internal_has_a_spec();
@@ -1700,14 +1834,14 @@ inline void Msg_PBackgroundIDBDatabaseConstructor::unsafe_arena_set_allocated_a_
   }
   _impl_.a_spec_ = a_spec;
   if (a_spec) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactory.Msg_PBackgroundIDBDatabaseConstructor.a_spec)
 }
 inline ::protobuf::mozilla::dom::indexedDB::DatabaseSpec* Msg_PBackgroundIDBDatabaseConstructor::release_a_spec() {
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::dom::indexedDB::DatabaseSpec* temp = _impl_.a_spec_;
   _impl_.a_spec_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1723,13 +1857,13 @@ inline ::protobuf::mozilla::dom::indexedDB::DatabaseSpec* Msg_PBackgroundIDBData
 }
 inline ::protobuf::mozilla::dom::indexedDB::DatabaseSpec* Msg_PBackgroundIDBDatabaseConstructor::unsafe_arena_release_a_spec() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactory.Msg_PBackgroundIDBDatabaseConstructor.a_spec)
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::dom::indexedDB::DatabaseSpec* temp = _impl_.a_spec_;
   _impl_.a_spec_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::indexedDB::DatabaseSpec* Msg_PBackgroundIDBDatabaseConstructor::_internal_mutable_a_spec() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   if (_impl_.a_spec_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::DatabaseSpec>(GetArenaForAllocation());
     _impl_.a_spec_ = p;
@@ -1754,17 +1888,25 @@ inline void Msg_PBackgroundIDBDatabaseConstructor::set_allocated_a_spec(::protob
       a_spec = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_spec, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_spec_ = a_spec;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactory.Msg_PBackgroundIDBDatabaseConstructor.a_spec)
 }
 
-// bytes a_request = 3;
+// required bytes a_request = 3;
+inline bool Msg_PBackgroundIDBDatabaseConstructor::_internal_has_a_request() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PBackgroundIDBDatabaseConstructor::has_a_request() const {
+  return _internal_has_a_request();
+}
 inline void Msg_PBackgroundIDBDatabaseConstructor::clear_a_request() {
   _impl_.a_request_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_PBackgroundIDBDatabaseConstructor::a_request() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactory.Msg_PBackgroundIDBDatabaseConstructor.a_request)
@@ -1773,7 +1915,7 @@ inline const std::string& Msg_PBackgroundIDBDatabaseConstructor::a_request() con
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PBackgroundIDBDatabaseConstructor::set_a_request(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_request_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactory.Msg_PBackgroundIDBDatabaseConstructor.a_request)
 }
@@ -1786,22 +1928,32 @@ inline const std::string& Msg_PBackgroundIDBDatabaseConstructor::_internal_a_req
   return _impl_.a_request_.Get();
 }
 inline void Msg_PBackgroundIDBDatabaseConstructor::_internal_set_a_request(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_request_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_PBackgroundIDBDatabaseConstructor::_internal_mutable_a_request() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_request_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_PBackgroundIDBDatabaseConstructor::release_a_request() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactory.Msg_PBackgroundIDBDatabaseConstructor.a_request)
-  return _impl_.a_request_.Release();
+  if (!_internal_has_a_request()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_request_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_request_.IsDefault()) {
+    _impl_.a_request_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_PBackgroundIDBDatabaseConstructor::set_allocated_a_request(std::string* a_request) {
   if (a_request != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_request_.SetAllocated(a_request, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/hal/sandbox/PHal.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.hal_sandbox.PHal;
@@ -17,26 +17,26 @@ import public "PHal_protobuf.mozilla.hal.h.proto";
 
 // Message declarations
 message Msg_NotifyBatteryChange {
-  protobuf.mozilla.hal.BatteryInformation a_aBatteryInfo = 1;
+  required protobuf.mozilla.hal.BatteryInformation a_aBatteryInfo = 1;
 }
 
 message Msg_NotifyNetworkChange {
-  protobuf.mozilla.hal.NetworkInformation a_aNetworkInfo = 1;
+  required protobuf.mozilla.hal.NetworkInformation a_aNetworkInfo = 1;
 }
 
 message Msg_NotifyWakeLockChange {
-  protobuf.mozilla.hal.WakeLockInformation a_aWakeLockInfo = 1;
+  required protobuf.mozilla.hal.WakeLockInformation a_aWakeLockInfo = 1;
 }
 
 message Msg_Vibrate {
   repeated uint32 a_pattern = 1;
   repeated uint64 a_id = 2;
-  bytes a_browser = 3;
+  required bytes a_browser = 3;
 }
 
 message Msg_CancelVibrate {
   repeated uint64 a_id = 1;
-  bytes a_browser = 2;
+  required bytes a_browser = 2;
 }
 
 message Msg_EnableBatteryNotifications {
@@ -49,7 +49,7 @@ message Msg_GetCurrentBatteryInformation {
 }
 
 message Reply_GetCurrentBatteryInformation {
-  protobuf.mozilla.hal.BatteryInformation a_aBatteryInfo = 1;
+  required protobuf.mozilla.hal.BatteryInformation a_aBatteryInfo = 1;
 }
 
 message Msg_EnableNetworkNotifications {
@@ -62,13 +62,13 @@ message Msg_GetCurrentNetworkInformation {
 }
 
 message Reply_GetCurrentNetworkInformation {
-  protobuf.mozilla.hal.NetworkInformation a_aNetworkInfo = 1;
+  required protobuf.mozilla.hal.NetworkInformation a_aNetworkInfo = 1;
 }
 
 message Msg_ModifyWakeLock {
-  string a_aTopic = 1;
-  bytes a_aLockAdjust = 2;
-  bytes a_aHiddenAdjust = 3;
+  required string a_aTopic = 1;
+  required bytes a_aLockAdjust = 2;
+  required bytes a_aHiddenAdjust = 3;
 }
 
 message Msg_EnableWakeLockNotifications {
@@ -78,38 +78,38 @@ message Msg_DisableWakeLockNotifications {
 }
 
 message Msg_GetWakeLockInfo {
-  string a_aTopic = 1;
+  required string a_aTopic = 1;
 }
 
 message Reply_GetWakeLockInfo {
-  protobuf.mozilla.hal.WakeLockInformation a_aWakeLockInfo = 1;
+  required protobuf.mozilla.hal.WakeLockInformation a_aWakeLockInfo = 1;
 }
 
 message Msg_LockScreenOrientation {
-  bytes a_aOrientation = 1;
+  required bytes a_aOrientation = 1;
 }
 
 message Reply_LockScreenOrientation {
-  bytes a_result = 1;
+  required bytes a_result = 1;
 }
 
 message Msg_UnlockScreenOrientation {
 }
 
 message Msg_PerformHapticFeedback {
-  sint32 a_aType = 1;
+  required sint32 a_aType = 1;
 }
 
 message Msg_NotifySensorChange {
-  protobuf.mozilla.hal.SensorData a_aSensorData = 1;
+  required protobuf.mozilla.hal.SensorData a_aSensorData = 1;
 }
 
 message Msg_EnableSensorNotifications {
-  bytes a_aSensor = 1;
+  required bytes a_aSensor = 1;
 }
 
 message Msg_DisableSensorNotifications {
-  bytes a_aSensor = 1;
+  required bytes a_aSensor = 1;
 }
 
 message Msg___delete__ {

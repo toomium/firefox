@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/ipc/DOMTypes.ipdlh
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom;
@@ -16,14 +16,14 @@ import "ProtocolTypes.proto";
 
 // Structs and unions declarations
 message MessagePortIdentifier {
-  bytes a_uuid = 1;
-  bytes a_destinationUuid = 2;
-  uint32 a_sequenceId = 3;
-  bool a_neutered = 4;
+  required bytes a_uuid = 1;
+  required bytes a_destinationUuid = 2;
+  required uint32 a_sequenceId = 3;
+  required bool a_neutered = 4;
 }
 
 message ClonedMessageData {
-  bytes a_data = 1;
+  required bytes a_data = 1;
   repeated protobuf.mozilla.dom.IPCBlob a_blobs = 2;
   repeated protobuf.mozilla.ipc.IPCStream a_inputStreams = 3;
   repeated protobuf.mozilla.dom.MessagePortIdentifier a_identifiers = 4;
@@ -40,7 +40,7 @@ message ClonedOrErrorMessageData {
 }
 
 message RefMessageData {
-  bytes a_uuid = 1;
+  required bytes a_uuid = 1;
 }
 
 message MessageDataType {
@@ -52,44 +52,44 @@ message MessageDataType {
 
 message MessageData {
   optional bytes a_agentClusterId = 1;
-  protobuf.mozilla.dom.MessageDataType a_data = 2;
+  required protobuf.mozilla.dom.MessageDataType a_data = 2;
 }
 
 message ScreenDetails {
-  bytes a_rect = 1;
-  bytes a_rectDisplayPix = 2;
-  bytes a_availRect = 3;
-  bytes a_availRectDisplayPix = 4;
-  sint32 a_pixelDepth = 5;
-  sint32 a_colorDepth = 6;
-  uint32 a_refreshRate = 7;
-  bytes a_contentsScaleFactor = 8;
-  bytes a_defaultCSSScaleFactor = 9;
-  float a_dpi = 10;
-  bytes a_orientation = 11;
-  uint32 a_orientationAngle = 12;
-  bool a_isPseudoDisplay = 13;
-  bool a_isHDR = 14;
+  required bytes a_rect = 1;
+  required bytes a_rectDisplayPix = 2;
+  required bytes a_availRect = 3;
+  required bytes a_availRectDisplayPix = 4;
+  required sint32 a_pixelDepth = 5;
+  required sint32 a_colorDepth = 6;
+  required uint32 a_refreshRate = 7;
+  required bytes a_contentsScaleFactor = 8;
+  required bytes a_defaultCSSScaleFactor = 9;
+  required float a_dpi = 10;
+  required bytes a_orientation = 11;
+  required uint32 a_orientationAngle = 12;
+  required bool a_isPseudoDisplay = 13;
+  required bool a_isHDR = 14;
 }
 
 message DimensionInfo {
-  bytes a_rect = 1;
-  bytes a_size = 2;
-  bytes a_clientOffset = 3;
-  bytes a_chromeOffset = 4;
+  required bytes a_rect = 1;
+  required bytes a_size = 2;
+  required bytes a_clientOffset = 3;
+  required bytes a_chromeOffset = 4;
 }
 
 message FrameScriptInfo {
-  string a_url = 1;
-  bool a_runInGlobalScope = 2;
+  required string a_url = 1;
+  required bool a_runInGlobalScope = 2;
 }
 
 message CreatedWindowInfo {
-  bytes a_rv = 1;
-  bool a_windowOpened = 2;
+  required bytes a_rv = 1;
+  required bool a_windowOpened = 2;
   repeated protobuf.mozilla.dom.FrameScriptInfo a_frameScripts = 3;
-  uint32 a_maxTouchPoints = 4;
-  protobuf.mozilla.dom.DimensionInfo a_dimensions = 5;
+  required uint32 a_maxTouchPoints = 4;
+  required protobuf.mozilla.dom.DimensionInfo a_dimensions = 5;
 }
 
 message DocShellLoadStateInit {
@@ -105,80 +105,80 @@ message DocShellLoadStateInit {
   optional bytes a_PostDataStream = 10;
   optional bytes a_HeadersStream = 11;
   optional bytes a_UnstrippedURI = 12;
-  uint64 a_LoadIdentifier = 13;
-  string a_Target = 14;
-  string a_TypeHint = 15;
-  string a_FileName = 16;
-  bytes a_SourceBrowsingContext = 17;
-  bytes a_TargetBrowsingContext = 18;
-  string a_TriggeringRemoteType = 19;
-  string a_SrcdocData = 20;
+  required uint64 a_LoadIdentifier = 13;
+  required string a_Target = 14;
+  required string a_TypeHint = 15;
+  required string a_FileName = 16;
+  required bytes a_SourceBrowsingContext = 17;
+  required bytes a_TargetBrowsingContext = 18;
+  required string a_TriggeringRemoteType = 19;
+  required string a_SrcdocData = 20;
   optional string a_OriginalURIString = 21;
   optional string a_RemoteTypeOverride = 22;
   optional bytes a_loadingSessionHistoryInfo = 23;
-  uint32 a_LoadType = 24;
-  uint32 a_LoadFlags = 25;
-  uint32 a_InternalLoadFlags = 26;
-  bytes a_userNavigationInvolvement = 27;
-  uint32 a_TriggeringSandboxFlags = 28;
-  uint64 a_TriggeringWindowId = 29;
-  bool a_TriggeringStorageAccess = 30;
-  bytes a_TriggeringClassificationFlags = 31;
+  required uint32 a_LoadType = 24;
+  required uint32 a_LoadFlags = 25;
+  required uint32 a_InternalLoadFlags = 26;
+  required bytes a_userNavigationInvolvement = 27;
+  required uint32 a_TriggeringSandboxFlags = 28;
+  required uint64 a_TriggeringWindowId = 29;
+  required bool a_TriggeringStorageAccess = 30;
+  required bytes a_TriggeringClassificationFlags = 31;
   optional sint32 a_CancelContentJSEpoch = 32;
-  bool a_ResultPrincipalURIIsSome = 33;
-  bool a_KeepResultPrincipalURIIfSet = 34;
-  bool a_LoadReplace = 35;
-  bool a_InheritPrincipal = 36;
-  bool a_PrincipalIsExplicit = 37;
-  bool a_ForceAllowDataURI = 38;
-  bool a_IsExemptFromHTTPSFirstMode = 39;
-  bool a_OriginalFrameSrc = 40;
-  bool a_ShouldCheckForRecursion = 41;
-  bool a_IsFormSubmission = 42;
-  bool a_FirstParty = 43;
-  bool a_HasValidUserGestureActivation = 44;
-  bool a_TextDirectiveUserActivation = 45;
-  bool a_AllowFocusMove = 46;
-  bool a_IsFromProcessingFrameAttributes = 47;
-  bytes a_SchemelessInput = 48;
-  bytes a_HttpsUpgradeTelemetry = 49;
-  bool a_ChannelInitialized = 50;
-  bool a_TryToReplaceWithSessionHistoryLoad = 51;
-  bool a_IsMetaRefresh = 52;
+  required bool a_ResultPrincipalURIIsSome = 33;
+  required bool a_KeepResultPrincipalURIIfSet = 34;
+  required bool a_LoadReplace = 35;
+  required bool a_InheritPrincipal = 36;
+  required bool a_PrincipalIsExplicit = 37;
+  required bool a_ForceAllowDataURI = 38;
+  required bool a_IsExemptFromHTTPSFirstMode = 39;
+  required bool a_OriginalFrameSrc = 40;
+  required bool a_ShouldCheckForRecursion = 41;
+  required bool a_IsFormSubmission = 42;
+  required bool a_FirstParty = 43;
+  required bool a_HasValidUserGestureActivation = 44;
+  required bool a_TextDirectiveUserActivation = 45;
+  required bool a_AllowFocusMove = 46;
+  required bool a_IsFromProcessingFrameAttributes = 47;
+  required bytes a_SchemelessInput = 48;
+  required bytes a_HttpsUpgradeTelemetry = 49;
+  required bool a_ChannelInitialized = 50;
+  required bool a_TryToReplaceWithSessionHistoryLoad = 51;
+  required bool a_IsMetaRefresh = 52;
 }
 
 message TimedChannelInfo {
-  sint32 a_redirectCount = 1;
-  sint32 a_internalRedirectCount = 2;
-  bytes a_asyncOpen = 3;
-  bytes a_channelCreation = 4;
-  bytes a_redirectStart = 5;
-  bytes a_redirectEnd = 6;
-  string a_initiatorType = 7;
-  bool a_allRedirectsSameOrigin = 8;
-  bool a_allRedirectsPassTimingAllowCheck = 9;
+  required sint32 a_redirectCount = 1;
+  required sint32 a_internalRedirectCount = 2;
+  required bytes a_asyncOpen = 3;
+  required bytes a_channelCreation = 4;
+  required bytes a_redirectStart = 5;
+  required bytes a_redirectEnd = 6;
+  required string a_initiatorType = 7;
+  required bool a_allRedirectsSameOrigin = 8;
+  required bool a_allRedirectsPassTimingAllowCheck = 9;
   optional bool a_timingAllowCheckForPrincipal = 10;
-  bool a_renderBlocking = 11;
-  bytes a_launchServiceWorkerStart = 12;
-  bytes a_launchServiceWorkerEnd = 13;
-  bytes a_dispatchFetchEventStart = 14;
-  bytes a_dispatchFetchEventEnd = 15;
-  bytes a_handleFetchEventStart = 16;
-  bytes a_handleFetchEventEnd = 17;
-  bytes a_responseStart = 18;
-  bytes a_responseEnd = 19;
+  required bool a_renderBlocking = 11;
+  required bytes a_launchServiceWorkerStart = 12;
+  required bytes a_launchServiceWorkerEnd = 13;
+  required bytes a_dispatchFetchEventStart = 14;
+  required bytes a_dispatchFetchEventEnd = 15;
+  required bytes a_handleFetchEventStart = 16;
+  required bytes a_handleFetchEventEnd = 17;
+  required bytes a_responseStart = 18;
+  required bytes a_responseEnd = 19;
 }
 
 message ReplacementChannelConfigInit {
-  uint32 a_redirectFlags = 1;
-  bytes a_classOfService = 2;
+  required uint32 a_redirectFlags = 1;
+  required bytes a_classOfService = 2;
   optional bool a_privateBrowsing = 3;
   optional string a_method = 4;
   optional bytes a_referrerInfo = 5;
   optional protobuf.mozilla.dom.TimedChannelInfo a_timedChannelInfo = 6;
   optional bytes a_uploadStream = 7;
-  uint64 a_uploadStreamLength = 8;
-  bool a_uploadStreamHasHeaders = 9;
+  required uint64 a_uploadStreamLength = 8;
+  required bool a_uploadStreamHasHeaders = 9;
   optional string a_contentType = 10;
   optional string a_contentLength = 11;
 }
@@ -202,59 +202,59 @@ message IPDLVariantValue {
 }
 
 message IDPLVariant {
-  uint32 a_type = 1;
-  protobuf.mozilla.dom.IPDLVariantValue a_data = 2;
+  required uint32 a_type = 1;
+  required protobuf.mozilla.dom.IPDLVariantValue a_data = 2;
 }
 
 message IPDLProperty {
-  string a_name = 1;
+  required string a_name = 1;
   optional bytes a_value = 2;
 }
 
 message ParentShowInfo {
-  string a_name = 1;
-  bool a_fakeShowInfo = 2;
-  bool a_isTransparent = 3;
-  float a_dpi = 4;
-  sint32 a_widgetRounding = 5;
-  double a_defaultScale = 6;
+  required string a_name = 1;
+  required bool a_fakeShowInfo = 2;
+  required bool a_isTransparent = 3;
+  required float a_dpi = 4;
+  required sint32 a_widgetRounding = 5;
+  required double a_defaultScale = 6;
 }
 
 message OwnerShowInfo {
-  bytes a_size = 1;
-  bytes a_scrollbarPreference = 2;
-  bytes a_sizeMode = 3;
+  required bytes a_size = 1;
+  required bytes a_scrollbarPreference = 2;
+  required bytes a_sizeMode = 3;
 }
 
 message IPCImage {
-  bytes a_data = 1;
-  uint32 a_stride = 2;
-  bytes a_format = 3;
-  bytes a_size = 4;
+  required bytes a_data = 1;
+  required uint32 a_stride = 2;
+  required bytes a_format = 3;
+  required bytes a_size = 4;
 }
 
 message IPCNotificationAction {
-  string a_name = 1;
-  string a_title = 2;
+  required string a_name = 1;
+  required string a_title = 2;
 }
 
 message IPCNotificationOptions {
-  string a_title = 1;
-  bytes a_dir = 2;
-  string a_lang = 3;
-  string a_body = 4;
-  string a_tag = 5;
-  string a_icon = 6;
-  bool a_requireInteraction = 7;
-  bool a_silent = 8;
+  required string a_title = 1;
+  required bytes a_dir = 2;
+  required string a_lang = 3;
+  required string a_body = 4;
+  required string a_tag = 5;
+  required string a_icon = 6;
+  required bool a_requireInteraction = 7;
+  required bool a_silent = 8;
   repeated uint32 a_vibrate = 9;
-  string a_dataSerialized = 10;
+  required string a_dataSerialized = 10;
   repeated protobuf.mozilla.dom.IPCNotificationAction a_actions = 11;
 }
 
 message IPCNotification {
-  string a_id = 1;
-  protobuf.mozilla.dom.IPCNotificationOptions a_options = 2;
+  required string a_id = 1;
+  required protobuf.mozilla.dom.IPCNotificationOptions a_options = 2;
 }
 
 message IPCNotificationsOrError {

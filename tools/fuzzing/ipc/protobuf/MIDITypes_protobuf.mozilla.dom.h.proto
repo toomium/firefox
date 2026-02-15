@@ -5,23 +5,23 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/midi/MIDITypes.ipdlh
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom;
 
 // Structs and unions declarations
 message MIDIPortInfo {
-  string a_id = 1;
-  string a_name = 2;
-  string a_manufacturer = 3;
-  string a_version = 4;
-  uint32 a_type = 5;
+  required string a_id = 1;
+  required string a_name = 2;
+  required string a_manufacturer = 3;
+  required string a_version = 4;
+  required uint32 a_type = 5;
 }
 
 message MIDIMessage {
   repeated uint32 a_data = 1;
-  bytes a_timestamp = 2;
+  required bytes a_timestamp = 2;
 }
 
 message MIDIPortList {

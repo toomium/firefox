@@ -99,6 +99,13 @@ class InputBlobs final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const InputBlobs& default_instance() {
     return *internal_default_instance();
   }
@@ -238,6 +245,13 @@ class InputDirectory final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const InputDirectory& default_instance() {
     return *internal_default_instance();
   }
@@ -331,7 +345,11 @@ class InputDirectory final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCBlob >&
       a_blobsinwebkitdirectory() const;
 
-  // string a_directoryPath = 1;
+  // required string a_directoryPath = 1;
+  bool has_a_directorypath() const;
+  private:
+  bool _internal_has_a_directorypath() const;
+  public:
   void clear_a_directorypath();
   const std::string& a_directorypath() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -353,9 +371,10 @@ class InputDirectory final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCBlob > a_blobsinwebkitdirectory_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_directorypath_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFilePicker_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -391,6 +410,13 @@ class MaybeInputData final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const MaybeInputData& default_instance() {
@@ -612,9 +638,17 @@ InputBlobs::a_blobs() const {
 
 // InputDirectory
 
-// string a_directoryPath = 1;
+// required string a_directoryPath = 1;
+inline bool InputDirectory::_internal_has_a_directorypath() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool InputDirectory::has_a_directorypath() const {
+  return _internal_has_a_directorypath();
+}
 inline void InputDirectory::clear_a_directorypath() {
   _impl_.a_directorypath_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& InputDirectory::a_directorypath() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.InputDirectory.a_directoryPath)
@@ -623,7 +657,7 @@ inline const std::string& InputDirectory::a_directorypath() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void InputDirectory::set_a_directorypath(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_directorypath_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.InputDirectory.a_directoryPath)
 }
@@ -636,22 +670,32 @@ inline const std::string& InputDirectory::_internal_a_directorypath() const {
   return _impl_.a_directorypath_.Get();
 }
 inline void InputDirectory::_internal_set_a_directorypath(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_directorypath_.Set(value, GetArenaForAllocation());
 }
 inline std::string* InputDirectory::_internal_mutable_a_directorypath() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_directorypath_.Mutable(GetArenaForAllocation());
 }
 inline std::string* InputDirectory::release_a_directorypath() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.InputDirectory.a_directoryPath)
-  return _impl_.a_directorypath_.Release();
+  if (!_internal_has_a_directorypath()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_directorypath_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_directorypath_.IsDefault()) {
+    _impl_.a_directorypath_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void InputDirectory::set_allocated_a_directorypath(std::string* a_directorypath) {
   if (a_directorypath != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_directorypath_.SetAllocated(a_directorypath, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

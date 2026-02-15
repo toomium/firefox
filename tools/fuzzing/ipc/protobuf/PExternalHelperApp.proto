@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/uriloader/exthandler/PExternalHelperApp.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.PExternalHelperApp;
@@ -16,21 +16,21 @@ package protobuf.mozilla.dom.PExternalHelperApp;
 
 // Message declarations
 message Msg_OnStartRequest {
-  string a_entityID = 1;
+  required string a_entityID = 1;
 }
 
 message Msg_OnDataAvailable {
-  string a_data = 1;
-  uint64 a_offset = 2;
-  uint32 a_count = 3;
+  required string a_data = 1;
+  required uint64 a_offset = 2;
+  required uint32 a_count = 3;
 }
 
 message Msg_OnStopRequest {
-  bytes a_code = 1;
+  required bytes a_code = 1;
 }
 
 message Msg_Cancel {
-  bytes a_aStatus = 1;
+  required bytes a_aStatus = 1;
 }
 
 message Msg___delete__ {

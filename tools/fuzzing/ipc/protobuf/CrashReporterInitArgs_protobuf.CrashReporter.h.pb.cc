@@ -21,8 +21,9 @@ namespace protobuf {
 namespace CrashReporter {
 PROTOBUF_CONSTEXPR CrashReporterInitArgs::CrashReporterInitArgs(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_threadid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_threadid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct CrashReporterInitArgsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR CrashReporterInitArgsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -41,6 +42,13 @@ namespace CrashReporter {
 
 class CrashReporterInitArgs::_Internal {
  public:
+  using HasBits = decltype(std::declval<CrashReporterInitArgs>()._impl_._has_bits_);
+  static void set_has_a_threadid(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 CrashReporterInitArgs::CrashReporterInitArgs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -53,15 +61,16 @@ CrashReporterInitArgs::CrashReporterInitArgs(const CrashReporterInitArgs& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   CrashReporterInitArgs* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_threadid_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_threadid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_threadid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_threadid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_threadid().empty()) {
+  if (from._internal_has_a_threadid()) {
     _this->_impl_.a_threadid_.Set(from._internal_a_threadid(), 
       _this->GetArenaForAllocation());
   }
@@ -73,8 +82,9 @@ inline void CrashReporterInitArgs::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_threadid_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_threadid_){}
   };
   _impl_.a_threadid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -106,17 +116,22 @@ void CrashReporterInitArgs::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_threadid_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_threadid_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* CrashReporterInitArgs::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_threadId = 1;
+      // required bytes a_threadId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_threadid();
@@ -141,6 +156,7 @@ const char* CrashReporterInitArgs::_InternalParse(const char* ptr, ::_pbi::Parse
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -154,8 +170,9 @@ uint8_t* CrashReporterInitArgs::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_threadId = 1;
-  if (!this->_internal_a_threadid().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_threadId = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_threadid(), target);
   }
@@ -172,16 +189,15 @@ size_t CrashReporterInitArgs::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.CrashReporter.CrashReporterInitArgs)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_threadId = 1;
-  if (!this->_internal_a_threadid().empty()) {
+  // required bytes a_threadId = 1;
+  if (_internal_has_a_threadid()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_threadid());
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -204,7 +220,7 @@ void CrashReporterInitArgs::MergeFrom(const CrashReporterInitArgs& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_threadid().empty()) {
+  if (from._internal_has_a_threadid()) {
     _this->_internal_set_a_threadid(from._internal_a_threadid());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -218,6 +234,7 @@ void CrashReporterInitArgs::CopyFrom(const CrashReporterInitArgs& from) {
 }
 
 bool CrashReporterInitArgs::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -226,6 +243,7 @@ void CrashReporterInitArgs::InternalSwap(CrashReporterInitArgs* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_threadid_, lhs_arena,
       &other->_impl_.a_threadid_, rhs_arena

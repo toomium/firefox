@@ -23,9 +23,10 @@ namespace dom {
 namespace PVsync {
 PROTOBUF_CONSTEXPR Msg_Notify::Msg_Notify(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_avsync_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_avsyncrate_)*/0
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_avsync_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_avsyncrate_)*/0} {}
 struct Msg_NotifyDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_NotifyDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -96,6 +97,16 @@ namespace PVsync {
 
 class Msg_Notify::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_Notify>()._impl_._has_bits_);
+  static void set_has_a_avsync(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_avsyncrate(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 Msg_Notify::Msg_Notify(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -108,16 +119,17 @@ Msg_Notify::Msg_Notify(const Msg_Notify& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_Notify* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_avsync_){}
-    , decltype(_impl_.a_avsyncrate_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_avsync_){}
+    , decltype(_impl_.a_avsyncrate_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_avsync_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_avsync_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_avsync().empty()) {
+  if (from._internal_has_a_avsync()) {
     _this->_impl_.a_avsync_.Set(from._internal_a_avsync(), 
       _this->GetArenaForAllocation());
   }
@@ -130,9 +142,10 @@ inline void Msg_Notify::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_avsync_){}
-    , decltype(_impl_.a_avsyncrate_){0}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_avsync_){}
+    , decltype(_impl_.a_avsyncrate_){0}
   };
   _impl_.a_avsync_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -164,18 +177,23 @@ void Msg_Notify::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_avsync_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_avsync_.ClearNonDefaultToEmpty();
+  }
   _impl_.a_avsyncrate_ = 0;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_Notify::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_aVsync = 1;
+      // required bytes a_aVsync = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_avsync();
@@ -184,9 +202,10 @@ const char* Msg_Notify::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // float a_aVsyncRate = 2;
+      // required float a_aVsyncRate = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 21)) {
+          _Internal::set_has_a_avsyncrate(&has_bits);
           _impl_.a_avsyncrate_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
           ptr += sizeof(float);
         } else
@@ -208,6 +227,7 @@ const char* Msg_Notify::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -221,18 +241,15 @@ uint8_t* Msg_Notify::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_aVsync = 1;
-  if (!this->_internal_a_avsync().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_aVsync = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_avsync(), target);
   }
 
-  // float a_aVsyncRate = 2;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_a_avsyncrate = this->_internal_a_avsyncrate();
-  uint32_t raw_a_avsyncrate;
-  memcpy(&raw_a_avsyncrate, &tmp_a_avsyncrate, sizeof(tmp_a_avsyncrate));
-  if (raw_a_avsyncrate != 0) {
+  // required float a_aVsyncRate = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(2, this->_internal_a_avsyncrate(), target);
   }
@@ -245,29 +262,43 @@ uint8_t* Msg_Notify::_InternalSerialize(
   return target;
 }
 
-size_t Msg_Notify::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PVsync.Msg_Notify)
+size_t Msg_Notify::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PVsync.Msg_Notify)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_aVsync = 1;
-  if (!this->_internal_a_avsync().empty()) {
+  if (_internal_has_a_avsync()) {
+    // required bytes a_aVsync = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_avsync());
   }
 
-  // float a_aVsyncRate = 2;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_a_avsyncrate = this->_internal_a_avsyncrate();
-  uint32_t raw_a_avsyncrate;
-  memcpy(&raw_a_avsyncrate, &tmp_a_avsyncrate, sizeof(tmp_a_avsyncrate));
-  if (raw_a_avsyncrate != 0) {
+  if (_internal_has_a_avsyncrate()) {
+    // required float a_aVsyncRate = 2;
     total_size += 1 + 4;
   }
+
+  return total_size;
+}
+size_t Msg_Notify::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PVsync.Msg_Notify)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required bytes a_aVsync = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_avsync());
+
+    // required float a_aVsyncRate = 2;
+    total_size += 1 + 4;
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -290,15 +321,15 @@ void Msg_Notify::MergeFrom(const Msg_Notify& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_avsync().empty()) {
-    _this->_internal_set_a_avsync(from._internal_a_avsync());
-  }
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_a_avsyncrate = from._internal_a_avsyncrate();
-  uint32_t raw_a_avsyncrate;
-  memcpy(&raw_a_avsyncrate, &tmp_a_avsyncrate, sizeof(tmp_a_avsyncrate));
-  if (raw_a_avsyncrate != 0) {
-    _this->_internal_set_a_avsyncrate(from._internal_a_avsyncrate());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_avsync(from._internal_a_avsync());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_avsyncrate_ = from._impl_.a_avsyncrate_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -311,6 +342,7 @@ void Msg_Notify::CopyFrom(const Msg_Notify& from) {
 }
 
 bool Msg_Notify::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -319,6 +351,7 @@ void Msg_Notify::InternalSwap(Msg_Notify* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_avsync_, lhs_arena,
       &other->_impl_.a_avsync_, rhs_arena

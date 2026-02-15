@@ -64,7 +64,13 @@ class Msg___delete__::_Internal {
   using HasBits = decltype(std::declval<Msg___delete__>()._impl_._has_bits_);
   static const ::protobuf::mozilla::dom::ClassifierInfo& a_info(const Msg___delete__* msg);
   static void set_has_a_info(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_errorcode(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -74,7 +80,7 @@ Msg___delete__::_Internal::a_info(const Msg___delete__* msg) {
 }
 void Msg___delete__::clear_a_info() {
   if (_impl_.a_info_ != nullptr) _impl_.a_info_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 Msg___delete__::Msg___delete__(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -96,7 +102,7 @@ Msg___delete__::Msg___delete__(const Msg___delete__& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_errorcode_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_errorcode().empty()) {
+  if (from._internal_has_a_errorcode()) {
     _this->_impl_.a_errorcode_.Set(from._internal_a_errorcode(), 
       _this->GetArenaForAllocation());
   }
@@ -147,11 +153,15 @@ void Msg___delete__::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_errorcode_.ClearToEmpty();
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.a_info_ != nullptr);
-    _impl_.a_info_->Clear();
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_errorcode_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      GOOGLE_DCHECK(_impl_.a_info_ != nullptr);
+      _impl_.a_info_->Clear();
+    }
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -172,7 +182,7 @@ const char* Msg___delete__::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // bytes a_errorCode = 2;
+      // required bytes a_errorCode = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_errorcode();
@@ -211,15 +221,16 @@ uint8_t* Msg___delete__::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
   // optional .protobuf.mozilla.dom.ClassifierInfo a_info = 1;
-  if (_internal_has_a_info()) {
+  if (cached_has_bits & 0x00000002u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_info(this),
         _Internal::a_info(this).GetCachedSize(), target, stream);
   }
 
-  // bytes a_errorCode = 2;
-  if (!this->_internal_a_errorcode().empty()) {
+  // required bytes a_errorCode = 2;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_a_errorcode(), target);
   }
@@ -236,20 +247,19 @@ size_t Msg___delete__::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PURLClassifier.Msg___delete__)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_errorCode = 2;
-  if (!this->_internal_a_errorcode().empty()) {
+  // required bytes a_errorCode = 2;
+  if (_internal_has_a_errorcode()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_errorcode());
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   // optional .protobuf.mozilla.dom.ClassifierInfo a_info = 1;
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
+  if (cached_has_bits & 0x00000002u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_info_);
@@ -276,12 +286,15 @@ void Msg___delete__::MergeFrom(const Msg___delete__& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_errorcode().empty()) {
-    _this->_internal_set_a_errorcode(from._internal_a_errorcode());
-  }
-  if (from._internal_has_a_info()) {
-    _this->_internal_mutable_a_info()->::protobuf::mozilla::dom::ClassifierInfo::MergeFrom(
-        from._internal_a_info());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_errorcode(from._internal_a_errorcode());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_mutable_a_info()->::protobuf::mozilla::dom::ClassifierInfo::MergeFrom(
+          from._internal_a_info());
+    }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -294,6 +307,10 @@ void Msg___delete__::CopyFrom(const Msg___delete__& from) {
 }
 
 bool Msg___delete__::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (_internal_has_a_info()) {
+    if (!_impl_.a_info_->IsInitialized()) return false;
+  }
   return true;
 }
 

@@ -22,9 +22,10 @@ namespace mozilla {
 namespace embedding {
 PROTOBUF_CONSTEXPR CStringKeyValue::CStringKeyValue(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_key_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_value_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_key_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_value_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct CStringKeyValueDefaultTypeInternal {
   PROTOBUF_CONSTEXPR CStringKeyValueDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -39,9 +40,7 @@ PROTOBUF_CONSTEXPR PrintData::PrintData(
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
   , /*decltype(_impl_.a_pageranges_)*/{}
-  , /*decltype(_impl_._a_pageranges_cached_byte_size_)*/{0}
   , /*decltype(_impl_.a_devmodedata_)*/{}
-  , /*decltype(_impl_._a_devmodedata_cached_byte_size_)*/{0}
   , /*decltype(_impl_.a_gtkprintsettings_)*/{}
   , /*decltype(_impl_.a_remoteprintjob_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_title_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
@@ -114,6 +113,16 @@ namespace embedding {
 
 class CStringKeyValue::_Internal {
  public:
+  using HasBits = decltype(std::declval<CStringKeyValue>()._impl_._has_bits_);
+  static void set_has_a_key(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_value(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 CStringKeyValue::CStringKeyValue(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -126,16 +135,17 @@ CStringKeyValue::CStringKeyValue(const CStringKeyValue& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   CStringKeyValue* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_key_){}
-    , decltype(_impl_.a_value_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_key_){}
+    , decltype(_impl_.a_value_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_key_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_key_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_key().empty()) {
+  if (from._internal_has_a_key()) {
     _this->_impl_.a_key_.Set(from._internal_a_key(), 
       _this->GetArenaForAllocation());
   }
@@ -143,7 +153,7 @@ CStringKeyValue::CStringKeyValue(const CStringKeyValue& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_value_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_value().empty()) {
+  if (from._internal_has_a_value()) {
     _this->_impl_.a_value_.Set(from._internal_a_value(), 
       _this->GetArenaForAllocation());
   }
@@ -155,9 +165,10 @@ inline void CStringKeyValue::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_key_){}
-    , decltype(_impl_.a_value_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_key_){}
+    , decltype(_impl_.a_value_){}
   };
   _impl_.a_key_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -194,34 +205,41 @@ void CStringKeyValue::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_key_.ClearToEmpty();
-  _impl_.a_value_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_key_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_value_.ClearNonDefaultToEmpty();
+    }
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* CStringKeyValue::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string a_key = 1;
+      // required string a_key = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_key();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // string a_value = 2;
+      // required string a_value = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_value();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -241,6 +259,7 @@ const char* CStringKeyValue::_InternalParse(const char* ptr, ::_pbi::ParseContex
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -254,22 +273,15 @@ uint8_t* CStringKeyValue::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string a_key = 1;
-  if (!this->_internal_a_key().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_key().data(), static_cast<int>(this->_internal_a_key().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.embedding.CStringKeyValue.a_key");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_key = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_key(), target);
   }
 
-  // string a_value = 2;
-  if (!this->_internal_a_value().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_value().data(), static_cast<int>(this->_internal_a_value().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.embedding.CStringKeyValue.a_value");
+  // required string a_value = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_value(), target);
   }
@@ -282,27 +294,47 @@ uint8_t* CStringKeyValue::_InternalSerialize(
   return target;
 }
 
-size_t CStringKeyValue::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.embedding.CStringKeyValue)
+size_t CStringKeyValue::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.embedding.CStringKeyValue)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string a_key = 1;
-  if (!this->_internal_a_key().empty()) {
+  if (_internal_has_a_key()) {
+    // required string a_key = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_key());
   }
 
-  // string a_value = 2;
-  if (!this->_internal_a_value().empty()) {
+  if (_internal_has_a_value()) {
+    // required string a_value = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_value());
   }
+
+  return total_size;
+}
+size_t CStringKeyValue::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.embedding.CStringKeyValue)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required string a_key = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_key());
+
+    // required string a_value = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_value());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -325,11 +357,14 @@ void CStringKeyValue::MergeFrom(const CStringKeyValue& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_key().empty()) {
-    _this->_internal_set_a_key(from._internal_a_key());
-  }
-  if (!from._internal_a_value().empty()) {
-    _this->_internal_set_a_value(from._internal_a_value());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_key(from._internal_a_key());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_value(from._internal_a_value());
+    }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -342,6 +377,7 @@ void CStringKeyValue::CopyFrom(const CStringKeyValue& from) {
 }
 
 bool CStringKeyValue::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -350,6 +386,7 @@ void CStringKeyValue::InternalSwap(CStringKeyValue* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_key_, lhs_arena,
       &other->_impl_.a_key_, rhs_arena
@@ -373,6 +410,160 @@ class PrintData::_Internal {
   static void set_has_a_remoteprintjob(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
+  static void set_has_a_edgetop(HasBits* has_bits) {
+    (*has_bits)[0] |= 8192u;
+  }
+  static void set_has_a_edgeleft(HasBits* has_bits) {
+    (*has_bits)[0] |= 16384u;
+  }
+  static void set_has_a_edgebottom(HasBits* has_bits) {
+    (*has_bits)[0] |= 32768u;
+  }
+  static void set_has_a_edgeright(HasBits* has_bits) {
+    (*has_bits)[0] |= 65536u;
+  }
+  static void set_has_a_margintop(HasBits* has_bits) {
+    (*has_bits)[0] |= 131072u;
+  }
+  static void set_has_a_marginleft(HasBits* has_bits) {
+    (*has_bits)[0] |= 262144u;
+  }
+  static void set_has_a_marginbottom(HasBits* has_bits) {
+    (*has_bits)[0] |= 524288u;
+  }
+  static void set_has_a_marginright(HasBits* has_bits) {
+    (*has_bits)[0] |= 1048576u;
+  }
+  static void set_has_a_unwriteablemargintop(HasBits* has_bits) {
+    (*has_bits)[0] |= 2097152u;
+  }
+  static void set_has_a_unwriteablemarginleft(HasBits* has_bits) {
+    (*has_bits)[0] |= 4194304u;
+  }
+  static void set_has_a_unwriteablemarginbottom(HasBits* has_bits) {
+    (*has_bits)[0] |= 8388608u;
+  }
+  static void set_has_a_unwriteablemarginright(HasBits* has_bits) {
+    (*has_bits)[0] |= 16777216u;
+  }
+  static void set_has_a_scaling(HasBits* has_bits) {
+    (*has_bits)[0] |= 33554432u;
+  }
+  static void set_has_a_printbgcolors(HasBits* has_bits) {
+    (*has_bits)[0] |= 67108864u;
+  }
+  static void set_has_a_printbgimages(HasBits* has_bits) {
+    (*has_bits)[0] |= 134217728u;
+  }
+  static void set_has_a_honorpagerulemargins(HasBits* has_bits) {
+    (*has_bits)[0] |= 268435456u;
+  }
+  static void set_has_a_usepagerulesizeaspapersize(HasBits* has_bits) {
+    (*has_bits)[0] |= 536870912u;
+  }
+  static void set_has_a_ignoreunwriteablemargins(HasBits* has_bits) {
+    (*has_bits)[0] |= 1073741824u;
+  }
+  static void set_has_a_showmarginguides(HasBits* has_bits) {
+    (*has_bits)[0] |= 2147483648u;
+  }
+  static void set_has_a_printselectiononly(HasBits* has_bits) {
+    (*has_bits)[1] |= 1u;
+  }
+  static void set_has_a_title(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_docurl(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_a_headerstrleft(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_a_headerstrcenter(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static void set_has_a_headerstrright(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
+  }
+  static void set_has_a_footerstrleft(HasBits* has_bits) {
+    (*has_bits)[0] |= 64u;
+  }
+  static void set_has_a_footerstrcenter(HasBits* has_bits) {
+    (*has_bits)[0] |= 128u;
+  }
+  static void set_has_a_footerstrright(HasBits* has_bits) {
+    (*has_bits)[0] |= 256u;
+  }
+  static void set_has_a_printsilent(HasBits* has_bits) {
+    (*has_bits)[1] |= 2u;
+  }
+  static void set_has_a_shrinktofit(HasBits* has_bits) {
+    (*has_bits)[1] |= 32u;
+  }
+  static void set_has_a_paperid(HasBits* has_bits) {
+    (*has_bits)[0] |= 512u;
+  }
+  static void set_has_a_paperwidth(HasBits* has_bits) {
+    (*has_bits)[1] |= 4u;
+  }
+  static void set_has_a_paperheight(HasBits* has_bits) {
+    (*has_bits)[1] |= 8u;
+  }
+  static void set_has_a_papersizeunit(HasBits* has_bits) {
+    (*has_bits)[1] |= 16u;
+  }
+  static void set_has_a_printreversed(HasBits* has_bits) {
+    (*has_bits)[1] |= 64u;
+  }
+  static void set_has_a_printincolor(HasBits* has_bits) {
+    (*has_bits)[1] |= 128u;
+  }
+  static void set_has_a_orientation(HasBits* has_bits) {
+    (*has_bits)[1] |= 512u;
+  }
+  static void set_has_a_numcopies(HasBits* has_bits) {
+    (*has_bits)[1] |= 1024u;
+  }
+  static void set_has_a_numpagespersheet(HasBits* has_bits) {
+    (*has_bits)[1] |= 2048u;
+  }
+  static void set_has_a_outputdestination(HasBits* has_bits) {
+    (*has_bits)[1] |= 4096u;
+  }
+  static void set_has_a_outputformat(HasBits* has_bits) {
+    (*has_bits)[1] |= 8192u;
+  }
+  static void set_has_a_printpagedelay(HasBits* has_bits) {
+    (*has_bits)[1] |= 16384u;
+  }
+  static void set_has_a_resolution(HasBits* has_bits) {
+    (*has_bits)[1] |= 32768u;
+  }
+  static void set_has_a_duplex(HasBits* has_bits) {
+    (*has_bits)[1] |= 65536u;
+  }
+  static void set_has_a_isinitializedfromprinter(HasBits* has_bits) {
+    (*has_bits)[1] |= 256u;
+  }
+  static void set_has_a_isinitializedfromprefs(HasBits* has_bits) {
+    (*has_bits)[1] |= 131072u;
+  }
+  static void set_has_a_drivername(HasBits* has_bits) {
+    (*has_bits)[0] |= 1024u;
+  }
+  static void set_has_a_devicename(HasBits* has_bits) {
+    (*has_bits)[0] |= 2048u;
+  }
+  static void set_has_a_disposition(HasBits* has_bits) {
+    (*has_bits)[0] |= 4096u;
+  }
+  static void set_has_a_destination(HasBits* has_bits) {
+    (*has_bits)[1] |= 262144u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return (((has_bits[0] & 0xfffffffe) ^ 0xfffffffe)
+       | ((has_bits[1] & 0x0007ffff) ^ 0x0007ffff)) != 0;
+  }
 };
 
 PrintData::PrintData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -388,9 +579,7 @@ PrintData::PrintData(const PrintData& from)
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.a_pageranges_){from._impl_.a_pageranges_}
-    , /*decltype(_impl_._a_pageranges_cached_byte_size_)*/{0}
     , decltype(_impl_.a_devmodedata_){from._impl_.a_devmodedata_}
-    , /*decltype(_impl_._a_devmodedata_cached_byte_size_)*/{0}
     , decltype(_impl_.a_gtkprintsettings_){from._impl_.a_gtkprintsettings_}
     , decltype(_impl_.a_remoteprintjob_){}
     , decltype(_impl_.a_title_){}
@@ -457,7 +646,7 @@ PrintData::PrintData(const PrintData& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_title_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_title().empty()) {
+  if (from._internal_has_a_title()) {
     _this->_impl_.a_title_.Set(from._internal_a_title(), 
       _this->GetArenaForAllocation());
   }
@@ -465,7 +654,7 @@ PrintData::PrintData(const PrintData& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_docurl_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_docurl().empty()) {
+  if (from._internal_has_a_docurl()) {
     _this->_impl_.a_docurl_.Set(from._internal_a_docurl(), 
       _this->GetArenaForAllocation());
   }
@@ -473,7 +662,7 @@ PrintData::PrintData(const PrintData& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_headerstrleft_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_headerstrleft().empty()) {
+  if (from._internal_has_a_headerstrleft()) {
     _this->_impl_.a_headerstrleft_.Set(from._internal_a_headerstrleft(), 
       _this->GetArenaForAllocation());
   }
@@ -481,7 +670,7 @@ PrintData::PrintData(const PrintData& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_headerstrcenter_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_headerstrcenter().empty()) {
+  if (from._internal_has_a_headerstrcenter()) {
     _this->_impl_.a_headerstrcenter_.Set(from._internal_a_headerstrcenter(), 
       _this->GetArenaForAllocation());
   }
@@ -489,7 +678,7 @@ PrintData::PrintData(const PrintData& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_headerstrright_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_headerstrright().empty()) {
+  if (from._internal_has_a_headerstrright()) {
     _this->_impl_.a_headerstrright_.Set(from._internal_a_headerstrright(), 
       _this->GetArenaForAllocation());
   }
@@ -497,7 +686,7 @@ PrintData::PrintData(const PrintData& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_footerstrleft_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_footerstrleft().empty()) {
+  if (from._internal_has_a_footerstrleft()) {
     _this->_impl_.a_footerstrleft_.Set(from._internal_a_footerstrleft(), 
       _this->GetArenaForAllocation());
   }
@@ -505,7 +694,7 @@ PrintData::PrintData(const PrintData& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_footerstrcenter_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_footerstrcenter().empty()) {
+  if (from._internal_has_a_footerstrcenter()) {
     _this->_impl_.a_footerstrcenter_.Set(from._internal_a_footerstrcenter(), 
       _this->GetArenaForAllocation());
   }
@@ -513,7 +702,7 @@ PrintData::PrintData(const PrintData& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_footerstrright_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_footerstrright().empty()) {
+  if (from._internal_has_a_footerstrright()) {
     _this->_impl_.a_footerstrright_.Set(from._internal_a_footerstrright(), 
       _this->GetArenaForAllocation());
   }
@@ -521,7 +710,7 @@ PrintData::PrintData(const PrintData& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_paperid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_paperid().empty()) {
+  if (from._internal_has_a_paperid()) {
     _this->_impl_.a_paperid_.Set(from._internal_a_paperid(), 
       _this->GetArenaForAllocation());
   }
@@ -529,7 +718,7 @@ PrintData::PrintData(const PrintData& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_drivername_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_drivername().empty()) {
+  if (from._internal_has_a_drivername()) {
     _this->_impl_.a_drivername_.Set(from._internal_a_drivername(), 
       _this->GetArenaForAllocation());
   }
@@ -537,7 +726,7 @@ PrintData::PrintData(const PrintData& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_devicename_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_devicename().empty()) {
+  if (from._internal_has_a_devicename()) {
     _this->_impl_.a_devicename_.Set(from._internal_a_devicename(), 
       _this->GetArenaForAllocation());
   }
@@ -545,7 +734,7 @@ PrintData::PrintData(const PrintData& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_disposition_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_disposition().empty()) {
+  if (from._internal_has_a_disposition()) {
     _this->_impl_.a_disposition_.Set(from._internal_a_disposition(), 
       _this->GetArenaForAllocation());
   }
@@ -563,9 +752,7 @@ inline void PrintData::SharedCtor(
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.a_pageranges_){arena}
-    , /*decltype(_impl_._a_pageranges_cached_byte_size_)*/{0}
     , decltype(_impl_.a_devmodedata_){arena}
-    , /*decltype(_impl_._a_devmodedata_cached_byte_size_)*/{0}
     , decltype(_impl_.a_gtkprintsettings_){arena}
     , decltype(_impl_.a_remoteprintjob_){}
     , decltype(_impl_.a_title_){}
@@ -716,31 +903,86 @@ void PrintData::Clear() {
   _impl_.a_devmodedata_.Clear();
   _impl_.a_gtkprintsettings_.Clear();
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_remoteprintjob_.ClearNonDefaultToEmpty();
+  if (cached_has_bits & 0x000000ffu) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_remoteprintjob_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_title_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _impl_.a_docurl_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _impl_.a_headerstrleft_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _impl_.a_headerstrcenter_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _impl_.a_headerstrright_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000040u) {
+      _impl_.a_footerstrleft_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000080u) {
+      _impl_.a_footerstrcenter_.ClearNonDefaultToEmpty();
+    }
   }
-  _impl_.a_title_.ClearToEmpty();
-  _impl_.a_docurl_.ClearToEmpty();
-  _impl_.a_headerstrleft_.ClearToEmpty();
-  _impl_.a_headerstrcenter_.ClearToEmpty();
-  _impl_.a_headerstrright_.ClearToEmpty();
-  _impl_.a_footerstrleft_.ClearToEmpty();
-  _impl_.a_footerstrcenter_.ClearToEmpty();
-  _impl_.a_footerstrright_.ClearToEmpty();
-  _impl_.a_paperid_.ClearToEmpty();
-  _impl_.a_drivername_.ClearToEmpty();
-  _impl_.a_devicename_.ClearToEmpty();
-  _impl_.a_disposition_.ClearToEmpty();
-  ::memset(&_impl_.a_edgetop_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.a_destination_) -
-      reinterpret_cast<char*>(&_impl_.a_edgetop_)) + sizeof(_impl_.a_destination_));
+  if (cached_has_bits & 0x00001f00u) {
+    if (cached_has_bits & 0x00000100u) {
+      _impl_.a_footerstrright_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000200u) {
+      _impl_.a_paperid_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000400u) {
+      _impl_.a_drivername_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000800u) {
+      _impl_.a_devicename_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00001000u) {
+      _impl_.a_disposition_.ClearNonDefaultToEmpty();
+    }
+  }
+  if (cached_has_bits & 0x0000e000u) {
+    ::memset(&_impl_.a_edgetop_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_edgebottom_) -
+        reinterpret_cast<char*>(&_impl_.a_edgetop_)) + sizeof(_impl_.a_edgebottom_));
+  }
+  if (cached_has_bits & 0x00ff0000u) {
+    ::memset(&_impl_.a_edgeright_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_unwriteablemarginbottom_) -
+        reinterpret_cast<char*>(&_impl_.a_edgeright_)) + sizeof(_impl_.a_unwriteablemarginbottom_));
+  }
+  if (cached_has_bits & 0xff000000u) {
+    ::memset(&_impl_.a_unwriteablemarginright_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_showmarginguides_) -
+        reinterpret_cast<char*>(&_impl_.a_unwriteablemarginright_)) + sizeof(_impl_.a_showmarginguides_));
+  }
+  cached_has_bits = _impl_._has_bits_[1];
+  if (cached_has_bits & 0x000000ffu) {
+    ::memset(&_impl_.a_printselectiononly_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_printincolor_) -
+        reinterpret_cast<char*>(&_impl_.a_printselectiononly_)) + sizeof(_impl_.a_printincolor_));
+  }
+  if (cached_has_bits & 0x0000ff00u) {
+    ::memset(&_impl_.a_isinitializedfromprinter_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_resolution_) -
+        reinterpret_cast<char*>(&_impl_.a_isinitializedfromprinter_)) + sizeof(_impl_.a_resolution_));
+  }
+  if (cached_has_bits & 0x00070000u) {
+    ::memset(&_impl_.a_duplex_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_destination_) -
+        reinterpret_cast<char*>(&_impl_.a_duplex_)) + sizeof(_impl_.a_destination_));
+  }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
@@ -754,161 +996,181 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // double a_edgeTop = 2;
+      // required double a_edgeTop = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 17)) {
+          _Internal::set_has_a_edgetop(&_impl_._has_bits_);
           _impl_.a_edgetop_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
-      // double a_edgeLeft = 3;
+      // required double a_edgeLeft = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 25)) {
+          _Internal::set_has_a_edgeleft(&_impl_._has_bits_);
           _impl_.a_edgeleft_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
-      // double a_edgeBottom = 4;
+      // required double a_edgeBottom = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 33)) {
+          _Internal::set_has_a_edgebottom(&_impl_._has_bits_);
           _impl_.a_edgebottom_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
-      // double a_edgeRight = 5;
+      // required double a_edgeRight = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 41)) {
+          _Internal::set_has_a_edgeright(&_impl_._has_bits_);
           _impl_.a_edgeright_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
-      // double a_marginTop = 6;
+      // required double a_marginTop = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 49)) {
+          _Internal::set_has_a_margintop(&_impl_._has_bits_);
           _impl_.a_margintop_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
-      // double a_marginLeft = 7;
+      // required double a_marginLeft = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 57)) {
+          _Internal::set_has_a_marginleft(&_impl_._has_bits_);
           _impl_.a_marginleft_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
-      // double a_marginBottom = 8;
+      // required double a_marginBottom = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 65)) {
+          _Internal::set_has_a_marginbottom(&_impl_._has_bits_);
           _impl_.a_marginbottom_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
-      // double a_marginRight = 9;
+      // required double a_marginRight = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 73)) {
+          _Internal::set_has_a_marginright(&_impl_._has_bits_);
           _impl_.a_marginright_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
-      // double a_unwriteableMarginTop = 10;
+      // required double a_unwriteableMarginTop = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 81)) {
+          _Internal::set_has_a_unwriteablemargintop(&_impl_._has_bits_);
           _impl_.a_unwriteablemargintop_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
-      // double a_unwriteableMarginLeft = 11;
+      // required double a_unwriteableMarginLeft = 11;
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 89)) {
+          _Internal::set_has_a_unwriteablemarginleft(&_impl_._has_bits_);
           _impl_.a_unwriteablemarginleft_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
-      // double a_unwriteableMarginBottom = 12;
+      // required double a_unwriteableMarginBottom = 12;
       case 12:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 97)) {
+          _Internal::set_has_a_unwriteablemarginbottom(&_impl_._has_bits_);
           _impl_.a_unwriteablemarginbottom_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
-      // double a_unwriteableMarginRight = 13;
+      // required double a_unwriteableMarginRight = 13;
       case 13:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 105)) {
+          _Internal::set_has_a_unwriteablemarginright(&_impl_._has_bits_);
           _impl_.a_unwriteablemarginright_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
-      // double a_scaling = 14;
+      // required double a_scaling = 14;
       case 14:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 113)) {
+          _Internal::set_has_a_scaling(&_impl_._has_bits_);
           _impl_.a_scaling_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
-      // bool a_printBGColors = 15;
+      // required bool a_printBGColors = 15;
       case 15:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 120)) {
+          _Internal::set_has_a_printbgcolors(&_impl_._has_bits_);
           _impl_.a_printbgcolors_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bool a_printBGImages = 16;
+      // required bool a_printBGImages = 16;
       case 16:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 128)) {
+          _Internal::set_has_a_printbgimages(&_impl_._has_bits_);
           _impl_.a_printbgimages_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bool a_honorPageRuleMargins = 17;
+      // required bool a_honorPageRuleMargins = 17;
       case 17:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 136)) {
+          _Internal::set_has_a_honorpagerulemargins(&_impl_._has_bits_);
           _impl_.a_honorpagerulemargins_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bool a_usePageRuleSizeAsPaperSize = 18;
+      // required bool a_usePageRuleSizeAsPaperSize = 18;
       case 18:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 144)) {
+          _Internal::set_has_a_usepagerulesizeaspapersize(&_impl_._has_bits_);
           _impl_.a_usepagerulesizeaspapersize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bool a_ignoreUnwriteableMargins = 19;
+      // required bool a_ignoreUnwriteableMargins = 19;
       case 19:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 152)) {
+          _Internal::set_has_a_ignoreunwriteablemargins(&_impl_._has_bits_);
           _impl_.a_ignoreunwriteablemargins_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bool a_showMarginGuides = 20;
+      // required bool a_showMarginGuides = 20;
       case 20:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 160)) {
+          _Internal::set_has_a_showmarginguides(&_impl_._has_bits_);
           _impl_.a_showmarginguides_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bool a_printSelectionOnly = 21;
+      // required bool a_printSelectionOnly = 21;
       case 21:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 168)) {
+          _Internal::set_has_a_printselectiononly(&_impl_._has_bits_);
           _impl_.a_printselectiononly_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -916,268 +1178,284 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         continue;
       // repeated sint32 a_pageRanges = 22;
       case 22:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 178)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 176)) {
+          ptr -= 2;
+          do {
+            ptr += 2;
+            _internal_add_a_pageranges(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<176>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 178) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedSInt32Parser(_internal_mutable_a_pageranges(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 176) {
-          _internal_add_a_pageranges(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string a_title = 23;
+      // required string a_title = 23;
       case 23:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 186)) {
           auto str = _internal_mutable_a_title();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // string a_docURL = 24;
+      // required string a_docURL = 24;
       case 24:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 194)) {
           auto str = _internal_mutable_a_docurl();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // string a_headerStrLeft = 25;
+      // required string a_headerStrLeft = 25;
       case 25:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 202)) {
           auto str = _internal_mutable_a_headerstrleft();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // string a_headerStrCenter = 26;
+      // required string a_headerStrCenter = 26;
       case 26:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 210)) {
           auto str = _internal_mutable_a_headerstrcenter();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // string a_headerStrRight = 27;
+      // required string a_headerStrRight = 27;
       case 27:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 218)) {
           auto str = _internal_mutable_a_headerstrright();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // string a_footerStrLeft = 28;
+      // required string a_footerStrLeft = 28;
       case 28:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 226)) {
           auto str = _internal_mutable_a_footerstrleft();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // string a_footerStrCenter = 29;
+      // required string a_footerStrCenter = 29;
       case 29:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 234)) {
           auto str = _internal_mutable_a_footerstrcenter();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // string a_footerStrRight = 30;
+      // required string a_footerStrRight = 30;
       case 30:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 242)) {
           auto str = _internal_mutable_a_footerstrright();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // bool a_printSilent = 31;
+      // required bool a_printSilent = 31;
       case 31:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 248)) {
+          _Internal::set_has_a_printsilent(&_impl_._has_bits_);
           _impl_.a_printsilent_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bool a_shrinkToFit = 32;
+      // required bool a_shrinkToFit = 32;
       case 32:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 0)) {
+          _Internal::set_has_a_shrinktofit(&_impl_._has_bits_);
           _impl_.a_shrinktofit_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string a_paperId = 33;
+      // required string a_paperId = 33;
       case 33:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_paperid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // double a_paperWidth = 34;
+      // required double a_paperWidth = 34;
       case 34:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 17)) {
+          _Internal::set_has_a_paperwidth(&_impl_._has_bits_);
           _impl_.a_paperwidth_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
-      // double a_paperHeight = 35;
+      // required double a_paperHeight = 35;
       case 35:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 25)) {
+          _Internal::set_has_a_paperheight(&_impl_._has_bits_);
           _impl_.a_paperheight_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
-      // sint32 a_paperSizeUnit = 36;
+      // required sint32 a_paperSizeUnit = 36;
       case 36:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _Internal::set_has_a_papersizeunit(&_impl_._has_bits_);
           _impl_.a_papersizeunit_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bool a_printReversed = 37;
+      // required bool a_printReversed = 37;
       case 37:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          _Internal::set_has_a_printreversed(&_impl_._has_bits_);
           _impl_.a_printreversed_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bool a_printInColor = 38;
+      // required bool a_printInColor = 38;
       case 38:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
+          _Internal::set_has_a_printincolor(&_impl_._has_bits_);
           _impl_.a_printincolor_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // sint32 a_orientation = 39;
+      // required sint32 a_orientation = 39;
       case 39:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
+          _Internal::set_has_a_orientation(&_impl_._has_bits_);
           _impl_.a_orientation_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // sint32 a_numCopies = 40;
+      // required sint32 a_numCopies = 40;
       case 40:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
+          _Internal::set_has_a_numcopies(&_impl_._has_bits_);
           _impl_.a_numcopies_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // sint32 a_numPagesPerSheet = 41;
+      // required sint32 a_numPagesPerSheet = 41;
       case 41:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 72)) {
+          _Internal::set_has_a_numpagespersheet(&_impl_._has_bits_);
           _impl_.a_numpagespersheet_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // sint32 a_outputDestination = 42;
+      // required sint32 a_outputDestination = 42;
       case 42:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 80)) {
+          _Internal::set_has_a_outputdestination(&_impl_._has_bits_);
           _impl_.a_outputdestination_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // sint32 a_outputFormat = 43;
+      // required sint32 a_outputFormat = 43;
       case 43:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 88)) {
+          _Internal::set_has_a_outputformat(&_impl_._has_bits_);
           _impl_.a_outputformat_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // sint32 a_printPageDelay = 44;
+      // required sint32 a_printPageDelay = 44;
       case 44:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 96)) {
+          _Internal::set_has_a_printpagedelay(&_impl_._has_bits_);
           _impl_.a_printpagedelay_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // sint32 a_resolution = 45;
+      // required sint32 a_resolution = 45;
       case 45:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 104)) {
+          _Internal::set_has_a_resolution(&_impl_._has_bits_);
           _impl_.a_resolution_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // sint32 a_duplex = 46;
+      // required sint32 a_duplex = 46;
       case 46:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 112)) {
+          _Internal::set_has_a_duplex(&_impl_._has_bits_);
           _impl_.a_duplex_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bool a_isInitializedFromPrinter = 47;
+      // required bool a_isInitializedFromPrinter = 47;
       case 47:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 120)) {
+          _Internal::set_has_a_isinitializedfromprinter(&_impl_._has_bits_);
           _impl_.a_isinitializedfromprinter_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bool a_isInitializedFromPrefs = 48;
+      // required bool a_isInitializedFromPrefs = 48;
       case 48:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 128)) {
+          _Internal::set_has_a_isinitializedfromprefs(&_impl_._has_bits_);
           _impl_.a_isinitializedfromprefs_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string a_driverName = 49;
+      // required string a_driverName = 49;
       case 49:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 138)) {
           auto str = _internal_mutable_a_drivername();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // string a_deviceName = 50;
+      // required string a_deviceName = 50;
       case 50:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 146)) {
           auto str = _internal_mutable_a_devicename();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
       // repeated uint32 a_devModeData = 51;
       case 51:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 154)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 152)) {
+          ptr -= 2;
+          do {
+            ptr += 2;
+            _internal_add_a_devmodedata(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<408>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 154) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_devmodedata(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 152) {
-          _internal_add_a_devmodedata(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1195,19 +1473,19 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // string a_disposition = 53;
+      // required string a_disposition = 53;
       case 53:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 170)) {
           auto str = _internal_mutable_a_disposition();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // uint32 a_destination = 54;
+      // required uint32 a_destination = 54;
       case 54:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 176)) {
+          _Internal::set_has_a_destination(&_impl_._has_bits_);
           _impl_.a_destination_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
@@ -1229,7 +1507,6 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1243,420 +1520,317 @@ uint8_t* PrintData::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
   // optional bytes a_remotePrintJob = 1;
-  if (_internal_has_a_remoteprintjob()) {
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_remoteprintjob(), target);
   }
 
-  // double a_edgeTop = 2;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_edgetop = this->_internal_a_edgetop();
-  uint64_t raw_a_edgetop;
-  memcpy(&raw_a_edgetop, &tmp_a_edgetop, sizeof(tmp_a_edgetop));
-  if (raw_a_edgetop != 0) {
+  // required double a_edgeTop = 2;
+  if (cached_has_bits & 0x00002000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(2, this->_internal_a_edgetop(), target);
   }
 
-  // double a_edgeLeft = 3;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_edgeleft = this->_internal_a_edgeleft();
-  uint64_t raw_a_edgeleft;
-  memcpy(&raw_a_edgeleft, &tmp_a_edgeleft, sizeof(tmp_a_edgeleft));
-  if (raw_a_edgeleft != 0) {
+  // required double a_edgeLeft = 3;
+  if (cached_has_bits & 0x00004000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(3, this->_internal_a_edgeleft(), target);
   }
 
-  // double a_edgeBottom = 4;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_edgebottom = this->_internal_a_edgebottom();
-  uint64_t raw_a_edgebottom;
-  memcpy(&raw_a_edgebottom, &tmp_a_edgebottom, sizeof(tmp_a_edgebottom));
-  if (raw_a_edgebottom != 0) {
+  // required double a_edgeBottom = 4;
+  if (cached_has_bits & 0x00008000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(4, this->_internal_a_edgebottom(), target);
   }
 
-  // double a_edgeRight = 5;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_edgeright = this->_internal_a_edgeright();
-  uint64_t raw_a_edgeright;
-  memcpy(&raw_a_edgeright, &tmp_a_edgeright, sizeof(tmp_a_edgeright));
-  if (raw_a_edgeright != 0) {
+  // required double a_edgeRight = 5;
+  if (cached_has_bits & 0x00010000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(5, this->_internal_a_edgeright(), target);
   }
 
-  // double a_marginTop = 6;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_margintop = this->_internal_a_margintop();
-  uint64_t raw_a_margintop;
-  memcpy(&raw_a_margintop, &tmp_a_margintop, sizeof(tmp_a_margintop));
-  if (raw_a_margintop != 0) {
+  // required double a_marginTop = 6;
+  if (cached_has_bits & 0x00020000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(6, this->_internal_a_margintop(), target);
   }
 
-  // double a_marginLeft = 7;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_marginleft = this->_internal_a_marginleft();
-  uint64_t raw_a_marginleft;
-  memcpy(&raw_a_marginleft, &tmp_a_marginleft, sizeof(tmp_a_marginleft));
-  if (raw_a_marginleft != 0) {
+  // required double a_marginLeft = 7;
+  if (cached_has_bits & 0x00040000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(7, this->_internal_a_marginleft(), target);
   }
 
-  // double a_marginBottom = 8;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_marginbottom = this->_internal_a_marginbottom();
-  uint64_t raw_a_marginbottom;
-  memcpy(&raw_a_marginbottom, &tmp_a_marginbottom, sizeof(tmp_a_marginbottom));
-  if (raw_a_marginbottom != 0) {
+  // required double a_marginBottom = 8;
+  if (cached_has_bits & 0x00080000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(8, this->_internal_a_marginbottom(), target);
   }
 
-  // double a_marginRight = 9;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_marginright = this->_internal_a_marginright();
-  uint64_t raw_a_marginright;
-  memcpy(&raw_a_marginright, &tmp_a_marginright, sizeof(tmp_a_marginright));
-  if (raw_a_marginright != 0) {
+  // required double a_marginRight = 9;
+  if (cached_has_bits & 0x00100000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(9, this->_internal_a_marginright(), target);
   }
 
-  // double a_unwriteableMarginTop = 10;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_unwriteablemargintop = this->_internal_a_unwriteablemargintop();
-  uint64_t raw_a_unwriteablemargintop;
-  memcpy(&raw_a_unwriteablemargintop, &tmp_a_unwriteablemargintop, sizeof(tmp_a_unwriteablemargintop));
-  if (raw_a_unwriteablemargintop != 0) {
+  // required double a_unwriteableMarginTop = 10;
+  if (cached_has_bits & 0x00200000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(10, this->_internal_a_unwriteablemargintop(), target);
   }
 
-  // double a_unwriteableMarginLeft = 11;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_unwriteablemarginleft = this->_internal_a_unwriteablemarginleft();
-  uint64_t raw_a_unwriteablemarginleft;
-  memcpy(&raw_a_unwriteablemarginleft, &tmp_a_unwriteablemarginleft, sizeof(tmp_a_unwriteablemarginleft));
-  if (raw_a_unwriteablemarginleft != 0) {
+  // required double a_unwriteableMarginLeft = 11;
+  if (cached_has_bits & 0x00400000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(11, this->_internal_a_unwriteablemarginleft(), target);
   }
 
-  // double a_unwriteableMarginBottom = 12;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_unwriteablemarginbottom = this->_internal_a_unwriteablemarginbottom();
-  uint64_t raw_a_unwriteablemarginbottom;
-  memcpy(&raw_a_unwriteablemarginbottom, &tmp_a_unwriteablemarginbottom, sizeof(tmp_a_unwriteablemarginbottom));
-  if (raw_a_unwriteablemarginbottom != 0) {
+  // required double a_unwriteableMarginBottom = 12;
+  if (cached_has_bits & 0x00800000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(12, this->_internal_a_unwriteablemarginbottom(), target);
   }
 
-  // double a_unwriteableMarginRight = 13;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_unwriteablemarginright = this->_internal_a_unwriteablemarginright();
-  uint64_t raw_a_unwriteablemarginright;
-  memcpy(&raw_a_unwriteablemarginright, &tmp_a_unwriteablemarginright, sizeof(tmp_a_unwriteablemarginright));
-  if (raw_a_unwriteablemarginright != 0) {
+  // required double a_unwriteableMarginRight = 13;
+  if (cached_has_bits & 0x01000000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(13, this->_internal_a_unwriteablemarginright(), target);
   }
 
-  // double a_scaling = 14;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_scaling = this->_internal_a_scaling();
-  uint64_t raw_a_scaling;
-  memcpy(&raw_a_scaling, &tmp_a_scaling, sizeof(tmp_a_scaling));
-  if (raw_a_scaling != 0) {
+  // required double a_scaling = 14;
+  if (cached_has_bits & 0x02000000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(14, this->_internal_a_scaling(), target);
   }
 
-  // bool a_printBGColors = 15;
-  if (this->_internal_a_printbgcolors() != 0) {
+  // required bool a_printBGColors = 15;
+  if (cached_has_bits & 0x04000000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(15, this->_internal_a_printbgcolors(), target);
   }
 
-  // bool a_printBGImages = 16;
-  if (this->_internal_a_printbgimages() != 0) {
+  // required bool a_printBGImages = 16;
+  if (cached_has_bits & 0x08000000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(16, this->_internal_a_printbgimages(), target);
   }
 
-  // bool a_honorPageRuleMargins = 17;
-  if (this->_internal_a_honorpagerulemargins() != 0) {
+  // required bool a_honorPageRuleMargins = 17;
+  if (cached_has_bits & 0x10000000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(17, this->_internal_a_honorpagerulemargins(), target);
   }
 
-  // bool a_usePageRuleSizeAsPaperSize = 18;
-  if (this->_internal_a_usepagerulesizeaspapersize() != 0) {
+  // required bool a_usePageRuleSizeAsPaperSize = 18;
+  if (cached_has_bits & 0x20000000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(18, this->_internal_a_usepagerulesizeaspapersize(), target);
   }
 
-  // bool a_ignoreUnwriteableMargins = 19;
-  if (this->_internal_a_ignoreunwriteablemargins() != 0) {
+  // required bool a_ignoreUnwriteableMargins = 19;
+  if (cached_has_bits & 0x40000000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(19, this->_internal_a_ignoreunwriteablemargins(), target);
   }
 
-  // bool a_showMarginGuides = 20;
-  if (this->_internal_a_showmarginguides() != 0) {
+  // required bool a_showMarginGuides = 20;
+  if (cached_has_bits & 0x80000000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(20, this->_internal_a_showmarginguides(), target);
   }
 
-  // bool a_printSelectionOnly = 21;
-  if (this->_internal_a_printselectiononly() != 0) {
+  cached_has_bits = _impl_._has_bits_[1];
+  // required bool a_printSelectionOnly = 21;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(21, this->_internal_a_printselectiononly(), target);
   }
 
   // repeated sint32 a_pageRanges = 22;
-  {
-    int byte_size = _impl_._a_pageranges_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteSInt32Packed(
-          22, _internal_a_pageranges(), byte_size, target);
-    }
+  for (int i = 0, n = this->_internal_a_pageranges_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(22, this->_internal_a_pageranges(i), target);
   }
 
-  // string a_title = 23;
-  if (!this->_internal_a_title().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_title().data(), static_cast<int>(this->_internal_a_title().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.embedding.PrintData.a_title");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_title = 23;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         23, this->_internal_a_title(), target);
   }
 
-  // string a_docURL = 24;
-  if (!this->_internal_a_docurl().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_docurl().data(), static_cast<int>(this->_internal_a_docurl().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.embedding.PrintData.a_docURL");
+  // required string a_docURL = 24;
+  if (cached_has_bits & 0x00000004u) {
     target = stream->WriteStringMaybeAliased(
         24, this->_internal_a_docurl(), target);
   }
 
-  // string a_headerStrLeft = 25;
-  if (!this->_internal_a_headerstrleft().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_headerstrleft().data(), static_cast<int>(this->_internal_a_headerstrleft().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.embedding.PrintData.a_headerStrLeft");
+  // required string a_headerStrLeft = 25;
+  if (cached_has_bits & 0x00000008u) {
     target = stream->WriteStringMaybeAliased(
         25, this->_internal_a_headerstrleft(), target);
   }
 
-  // string a_headerStrCenter = 26;
-  if (!this->_internal_a_headerstrcenter().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_headerstrcenter().data(), static_cast<int>(this->_internal_a_headerstrcenter().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.embedding.PrintData.a_headerStrCenter");
+  // required string a_headerStrCenter = 26;
+  if (cached_has_bits & 0x00000010u) {
     target = stream->WriteStringMaybeAliased(
         26, this->_internal_a_headerstrcenter(), target);
   }
 
-  // string a_headerStrRight = 27;
-  if (!this->_internal_a_headerstrright().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_headerstrright().data(), static_cast<int>(this->_internal_a_headerstrright().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.embedding.PrintData.a_headerStrRight");
+  // required string a_headerStrRight = 27;
+  if (cached_has_bits & 0x00000020u) {
     target = stream->WriteStringMaybeAliased(
         27, this->_internal_a_headerstrright(), target);
   }
 
-  // string a_footerStrLeft = 28;
-  if (!this->_internal_a_footerstrleft().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_footerstrleft().data(), static_cast<int>(this->_internal_a_footerstrleft().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.embedding.PrintData.a_footerStrLeft");
+  // required string a_footerStrLeft = 28;
+  if (cached_has_bits & 0x00000040u) {
     target = stream->WriteStringMaybeAliased(
         28, this->_internal_a_footerstrleft(), target);
   }
 
-  // string a_footerStrCenter = 29;
-  if (!this->_internal_a_footerstrcenter().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_footerstrcenter().data(), static_cast<int>(this->_internal_a_footerstrcenter().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.embedding.PrintData.a_footerStrCenter");
+  // required string a_footerStrCenter = 29;
+  if (cached_has_bits & 0x00000080u) {
     target = stream->WriteStringMaybeAliased(
         29, this->_internal_a_footerstrcenter(), target);
   }
 
-  // string a_footerStrRight = 30;
-  if (!this->_internal_a_footerstrright().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_footerstrright().data(), static_cast<int>(this->_internal_a_footerstrright().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.embedding.PrintData.a_footerStrRight");
+  // required string a_footerStrRight = 30;
+  if (cached_has_bits & 0x00000100u) {
     target = stream->WriteStringMaybeAliased(
         30, this->_internal_a_footerstrright(), target);
   }
 
-  // bool a_printSilent = 31;
-  if (this->_internal_a_printsilent() != 0) {
+  cached_has_bits = _impl_._has_bits_[1];
+  // required bool a_printSilent = 31;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(31, this->_internal_a_printsilent(), target);
   }
 
-  // bool a_shrinkToFit = 32;
-  if (this->_internal_a_shrinktofit() != 0) {
+  // required bool a_shrinkToFit = 32;
+  if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(32, this->_internal_a_shrinktofit(), target);
   }
 
-  // string a_paperId = 33;
-  if (!this->_internal_a_paperid().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_paperid().data(), static_cast<int>(this->_internal_a_paperid().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.embedding.PrintData.a_paperId");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_paperId = 33;
+  if (cached_has_bits & 0x00000200u) {
     target = stream->WriteStringMaybeAliased(
         33, this->_internal_a_paperid(), target);
   }
 
-  // double a_paperWidth = 34;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_paperwidth = this->_internal_a_paperwidth();
-  uint64_t raw_a_paperwidth;
-  memcpy(&raw_a_paperwidth, &tmp_a_paperwidth, sizeof(tmp_a_paperwidth));
-  if (raw_a_paperwidth != 0) {
+  cached_has_bits = _impl_._has_bits_[1];
+  // required double a_paperWidth = 34;
+  if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(34, this->_internal_a_paperwidth(), target);
   }
 
-  // double a_paperHeight = 35;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_paperheight = this->_internal_a_paperheight();
-  uint64_t raw_a_paperheight;
-  memcpy(&raw_a_paperheight, &tmp_a_paperheight, sizeof(tmp_a_paperheight));
-  if (raw_a_paperheight != 0) {
+  // required double a_paperHeight = 35;
+  if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(35, this->_internal_a_paperheight(), target);
   }
 
-  // sint32 a_paperSizeUnit = 36;
-  if (this->_internal_a_papersizeunit() != 0) {
+  // required sint32 a_paperSizeUnit = 36;
+  if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(36, this->_internal_a_papersizeunit(), target);
   }
 
-  // bool a_printReversed = 37;
-  if (this->_internal_a_printreversed() != 0) {
+  // required bool a_printReversed = 37;
+  if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(37, this->_internal_a_printreversed(), target);
   }
 
-  // bool a_printInColor = 38;
-  if (this->_internal_a_printincolor() != 0) {
+  // required bool a_printInColor = 38;
+  if (cached_has_bits & 0x00000080u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(38, this->_internal_a_printincolor(), target);
   }
 
-  // sint32 a_orientation = 39;
-  if (this->_internal_a_orientation() != 0) {
+  // required sint32 a_orientation = 39;
+  if (cached_has_bits & 0x00000200u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(39, this->_internal_a_orientation(), target);
   }
 
-  // sint32 a_numCopies = 40;
-  if (this->_internal_a_numcopies() != 0) {
+  // required sint32 a_numCopies = 40;
+  if (cached_has_bits & 0x00000400u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(40, this->_internal_a_numcopies(), target);
   }
 
-  // sint32 a_numPagesPerSheet = 41;
-  if (this->_internal_a_numpagespersheet() != 0) {
+  // required sint32 a_numPagesPerSheet = 41;
+  if (cached_has_bits & 0x00000800u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(41, this->_internal_a_numpagespersheet(), target);
   }
 
-  // sint32 a_outputDestination = 42;
-  if (this->_internal_a_outputdestination() != 0) {
+  // required sint32 a_outputDestination = 42;
+  if (cached_has_bits & 0x00001000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(42, this->_internal_a_outputdestination(), target);
   }
 
-  // sint32 a_outputFormat = 43;
-  if (this->_internal_a_outputformat() != 0) {
+  // required sint32 a_outputFormat = 43;
+  if (cached_has_bits & 0x00002000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(43, this->_internal_a_outputformat(), target);
   }
 
-  // sint32 a_printPageDelay = 44;
-  if (this->_internal_a_printpagedelay() != 0) {
+  // required sint32 a_printPageDelay = 44;
+  if (cached_has_bits & 0x00004000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(44, this->_internal_a_printpagedelay(), target);
   }
 
-  // sint32 a_resolution = 45;
-  if (this->_internal_a_resolution() != 0) {
+  // required sint32 a_resolution = 45;
+  if (cached_has_bits & 0x00008000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(45, this->_internal_a_resolution(), target);
   }
 
-  // sint32 a_duplex = 46;
-  if (this->_internal_a_duplex() != 0) {
+  // required sint32 a_duplex = 46;
+  if (cached_has_bits & 0x00010000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(46, this->_internal_a_duplex(), target);
   }
 
-  // bool a_isInitializedFromPrinter = 47;
-  if (this->_internal_a_isinitializedfromprinter() != 0) {
+  // required bool a_isInitializedFromPrinter = 47;
+  if (cached_has_bits & 0x00000100u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(47, this->_internal_a_isinitializedfromprinter(), target);
   }
 
-  // bool a_isInitializedFromPrefs = 48;
-  if (this->_internal_a_isinitializedfromprefs() != 0) {
+  // required bool a_isInitializedFromPrefs = 48;
+  if (cached_has_bits & 0x00020000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(48, this->_internal_a_isinitializedfromprefs(), target);
   }
 
-  // string a_driverName = 49;
-  if (!this->_internal_a_drivername().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_drivername().data(), static_cast<int>(this->_internal_a_drivername().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.embedding.PrintData.a_driverName");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_driverName = 49;
+  if (cached_has_bits & 0x00000400u) {
     target = stream->WriteStringMaybeAliased(
         49, this->_internal_a_drivername(), target);
   }
 
-  // string a_deviceName = 50;
-  if (!this->_internal_a_devicename().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_devicename().data(), static_cast<int>(this->_internal_a_devicename().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.embedding.PrintData.a_deviceName");
+  // required string a_deviceName = 50;
+  if (cached_has_bits & 0x00000800u) {
     target = stream->WriteStringMaybeAliased(
         50, this->_internal_a_devicename(), target);
   }
 
   // repeated uint32 a_devModeData = 51;
-  {
-    int byte_size = _impl_._a_devmodedata_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteUInt32Packed(
-          51, _internal_a_devmodedata(), byte_size, target);
-    }
+  for (int i = 0, n = this->_internal_a_devmodedata_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(51, this->_internal_a_devmodedata(i), target);
   }
 
   // repeated .protobuf.mozilla.embedding.CStringKeyValue a_GTKPrintSettings = 52;
@@ -1667,18 +1841,15 @@ uint8_t* PrintData::_InternalSerialize(
         InternalWriteMessage(52, repfield, repfield.GetCachedSize(), target, stream);
   }
 
-  // string a_disposition = 53;
-  if (!this->_internal_a_disposition().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_disposition().data(), static_cast<int>(this->_internal_a_disposition().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.embedding.PrintData.a_disposition");
+  // required string a_disposition = 53;
+  if (cached_has_bits & 0x00001000u) {
     target = stream->WriteStringMaybeAliased(
         53, this->_internal_a_disposition(), target);
   }
 
-  // uint32 a_destination = 54;
-  if (this->_internal_a_destination() != 0) {
+  cached_has_bits = _impl_._has_bits_[1];
+  // required uint32 a_destination = 54;
+  if (cached_has_bits & 0x00040000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(54, this->_internal_a_destination(), target);
   }
@@ -1691,10 +1862,509 @@ uint8_t* PrintData::_InternalSerialize(
   return target;
 }
 
+size_t PrintData::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.embedding.PrintData)
+  size_t total_size = 0;
+
+  if (_internal_has_a_title()) {
+    // required string a_title = 23;
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_title());
+  }
+
+  if (_internal_has_a_docurl()) {
+    // required string a_docURL = 24;
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_docurl());
+  }
+
+  if (_internal_has_a_headerstrleft()) {
+    // required string a_headerStrLeft = 25;
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_headerstrleft());
+  }
+
+  if (_internal_has_a_headerstrcenter()) {
+    // required string a_headerStrCenter = 26;
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_headerstrcenter());
+  }
+
+  if (_internal_has_a_headerstrright()) {
+    // required string a_headerStrRight = 27;
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_headerstrright());
+  }
+
+  if (_internal_has_a_footerstrleft()) {
+    // required string a_footerStrLeft = 28;
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_footerstrleft());
+  }
+
+  if (_internal_has_a_footerstrcenter()) {
+    // required string a_footerStrCenter = 29;
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_footerstrcenter());
+  }
+
+  if (_internal_has_a_footerstrright()) {
+    // required string a_footerStrRight = 30;
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_footerstrright());
+  }
+
+  if (_internal_has_a_paperid()) {
+    // required string a_paperId = 33;
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_paperid());
+  }
+
+  if (_internal_has_a_drivername()) {
+    // required string a_driverName = 49;
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_drivername());
+  }
+
+  if (_internal_has_a_devicename()) {
+    // required string a_deviceName = 50;
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_devicename());
+  }
+
+  if (_internal_has_a_disposition()) {
+    // required string a_disposition = 53;
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_disposition());
+  }
+
+  if (_internal_has_a_edgetop()) {
+    // required double a_edgeTop = 2;
+    total_size += 1 + 8;
+  }
+
+  if (_internal_has_a_edgeleft()) {
+    // required double a_edgeLeft = 3;
+    total_size += 1 + 8;
+  }
+
+  if (_internal_has_a_edgebottom()) {
+    // required double a_edgeBottom = 4;
+    total_size += 1 + 8;
+  }
+
+  if (_internal_has_a_edgeright()) {
+    // required double a_edgeRight = 5;
+    total_size += 1 + 8;
+  }
+
+  if (_internal_has_a_margintop()) {
+    // required double a_marginTop = 6;
+    total_size += 1 + 8;
+  }
+
+  if (_internal_has_a_marginleft()) {
+    // required double a_marginLeft = 7;
+    total_size += 1 + 8;
+  }
+
+  if (_internal_has_a_marginbottom()) {
+    // required double a_marginBottom = 8;
+    total_size += 1 + 8;
+  }
+
+  if (_internal_has_a_marginright()) {
+    // required double a_marginRight = 9;
+    total_size += 1 + 8;
+  }
+
+  if (_internal_has_a_unwriteablemargintop()) {
+    // required double a_unwriteableMarginTop = 10;
+    total_size += 1 + 8;
+  }
+
+  if (_internal_has_a_unwriteablemarginleft()) {
+    // required double a_unwriteableMarginLeft = 11;
+    total_size += 1 + 8;
+  }
+
+  if (_internal_has_a_unwriteablemarginbottom()) {
+    // required double a_unwriteableMarginBottom = 12;
+    total_size += 1 + 8;
+  }
+
+  if (_internal_has_a_unwriteablemarginright()) {
+    // required double a_unwriteableMarginRight = 13;
+    total_size += 1 + 8;
+  }
+
+  if (_internal_has_a_scaling()) {
+    // required double a_scaling = 14;
+    total_size += 1 + 8;
+  }
+
+  if (_internal_has_a_printbgcolors()) {
+    // required bool a_printBGColors = 15;
+    total_size += 1 + 1;
+  }
+
+  if (_internal_has_a_printbgimages()) {
+    // required bool a_printBGImages = 16;
+    total_size += 2 + 1;
+  }
+
+  if (_internal_has_a_honorpagerulemargins()) {
+    // required bool a_honorPageRuleMargins = 17;
+    total_size += 2 + 1;
+  }
+
+  if (_internal_has_a_usepagerulesizeaspapersize()) {
+    // required bool a_usePageRuleSizeAsPaperSize = 18;
+    total_size += 2 + 1;
+  }
+
+  if (_internal_has_a_ignoreunwriteablemargins()) {
+    // required bool a_ignoreUnwriteableMargins = 19;
+    total_size += 2 + 1;
+  }
+
+  if (_internal_has_a_showmarginguides()) {
+    // required bool a_showMarginGuides = 20;
+    total_size += 2 + 1;
+  }
+
+  if (_internal_has_a_printselectiononly()) {
+    // required bool a_printSelectionOnly = 21;
+    total_size += 2 + 1;
+  }
+
+  if (_internal_has_a_printsilent()) {
+    // required bool a_printSilent = 31;
+    total_size += 2 + 1;
+  }
+
+  if (_internal_has_a_paperwidth()) {
+    // required double a_paperWidth = 34;
+    total_size += 2 + 8;
+  }
+
+  if (_internal_has_a_paperheight()) {
+    // required double a_paperHeight = 35;
+    total_size += 2 + 8;
+  }
+
+  if (_internal_has_a_papersizeunit()) {
+    // required sint32 a_paperSizeUnit = 36;
+    total_size += 2 +
+      ::_pbi::WireFormatLite::SInt32Size(
+        this->_internal_a_papersizeunit());
+  }
+
+  if (_internal_has_a_shrinktofit()) {
+    // required bool a_shrinkToFit = 32;
+    total_size += 2 + 1;
+  }
+
+  if (_internal_has_a_printreversed()) {
+    // required bool a_printReversed = 37;
+    total_size += 2 + 1;
+  }
+
+  if (_internal_has_a_printincolor()) {
+    // required bool a_printInColor = 38;
+    total_size += 2 + 1;
+  }
+
+  if (_internal_has_a_isinitializedfromprinter()) {
+    // required bool a_isInitializedFromPrinter = 47;
+    total_size += 2 + 1;
+  }
+
+  if (_internal_has_a_orientation()) {
+    // required sint32 a_orientation = 39;
+    total_size += 2 +
+      ::_pbi::WireFormatLite::SInt32Size(
+        this->_internal_a_orientation());
+  }
+
+  if (_internal_has_a_numcopies()) {
+    // required sint32 a_numCopies = 40;
+    total_size += 2 +
+      ::_pbi::WireFormatLite::SInt32Size(
+        this->_internal_a_numcopies());
+  }
+
+  if (_internal_has_a_numpagespersheet()) {
+    // required sint32 a_numPagesPerSheet = 41;
+    total_size += 2 +
+      ::_pbi::WireFormatLite::SInt32Size(
+        this->_internal_a_numpagespersheet());
+  }
+
+  if (_internal_has_a_outputdestination()) {
+    // required sint32 a_outputDestination = 42;
+    total_size += 2 +
+      ::_pbi::WireFormatLite::SInt32Size(
+        this->_internal_a_outputdestination());
+  }
+
+  if (_internal_has_a_outputformat()) {
+    // required sint32 a_outputFormat = 43;
+    total_size += 2 +
+      ::_pbi::WireFormatLite::SInt32Size(
+        this->_internal_a_outputformat());
+  }
+
+  if (_internal_has_a_printpagedelay()) {
+    // required sint32 a_printPageDelay = 44;
+    total_size += 2 +
+      ::_pbi::WireFormatLite::SInt32Size(
+        this->_internal_a_printpagedelay());
+  }
+
+  if (_internal_has_a_resolution()) {
+    // required sint32 a_resolution = 45;
+    total_size += 2 +
+      ::_pbi::WireFormatLite::SInt32Size(
+        this->_internal_a_resolution());
+  }
+
+  if (_internal_has_a_duplex()) {
+    // required sint32 a_duplex = 46;
+    total_size += 2 +
+      ::_pbi::WireFormatLite::SInt32Size(
+        this->_internal_a_duplex());
+  }
+
+  if (_internal_has_a_isinitializedfromprefs()) {
+    // required bool a_isInitializedFromPrefs = 48;
+    total_size += 2 + 1;
+  }
+
+  if (_internal_has_a_destination()) {
+    // required uint32 a_destination = 54;
+    total_size += 2 +
+      ::_pbi::WireFormatLite::UInt32Size(
+        this->_internal_a_destination());
+  }
+
+  return total_size;
+}
 size_t PrintData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.embedding.PrintData)
   size_t total_size = 0;
 
+  if ((((_impl_._has_bits_[0] & 0xfffffffe) ^ 0xfffffffe)
+       | ((_impl_._has_bits_[1] & 0x0007ffff) ^ 0x0007ffff)) == 0) {  // All required fields are present.
+    // required string a_title = 23;
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_title());
+
+    // required string a_docURL = 24;
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_docurl());
+
+    // required string a_headerStrLeft = 25;
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_headerstrleft());
+
+    // required string a_headerStrCenter = 26;
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_headerstrcenter());
+
+    // required string a_headerStrRight = 27;
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_headerstrright());
+
+    // required string a_footerStrLeft = 28;
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_footerstrleft());
+
+    // required string a_footerStrCenter = 29;
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_footerstrcenter());
+
+    // required string a_footerStrRight = 30;
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_footerstrright());
+
+    // required string a_paperId = 33;
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_paperid());
+
+    // required string a_driverName = 49;
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_drivername());
+
+    // required string a_deviceName = 50;
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_devicename());
+
+    // required string a_disposition = 53;
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_disposition());
+
+    // required double a_edgeTop = 2;
+    total_size += 1 + 8;
+
+    // required double a_edgeLeft = 3;
+    total_size += 1 + 8;
+
+    // required double a_edgeBottom = 4;
+    total_size += 1 + 8;
+
+    // required double a_edgeRight = 5;
+    total_size += 1 + 8;
+
+    // required double a_marginTop = 6;
+    total_size += 1 + 8;
+
+    // required double a_marginLeft = 7;
+    total_size += 1 + 8;
+
+    // required double a_marginBottom = 8;
+    total_size += 1 + 8;
+
+    // required double a_marginRight = 9;
+    total_size += 1 + 8;
+
+    // required double a_unwriteableMarginTop = 10;
+    total_size += 1 + 8;
+
+    // required double a_unwriteableMarginLeft = 11;
+    total_size += 1 + 8;
+
+    // required double a_unwriteableMarginBottom = 12;
+    total_size += 1 + 8;
+
+    // required double a_unwriteableMarginRight = 13;
+    total_size += 1 + 8;
+
+    // required double a_scaling = 14;
+    total_size += 1 + 8;
+
+    // required bool a_printBGColors = 15;
+    total_size += 1 + 1;
+
+    // required bool a_printBGImages = 16;
+    total_size += 2 + 1;
+
+    // required bool a_honorPageRuleMargins = 17;
+    total_size += 2 + 1;
+
+    // required bool a_usePageRuleSizeAsPaperSize = 18;
+    total_size += 2 + 1;
+
+    // required bool a_ignoreUnwriteableMargins = 19;
+    total_size += 2 + 1;
+
+    // required bool a_showMarginGuides = 20;
+    total_size += 2 + 1;
+
+    // required bool a_printSelectionOnly = 21;
+    total_size += 2 + 1;
+
+    // required bool a_printSilent = 31;
+    total_size += 2 + 1;
+
+    // required double a_paperWidth = 34;
+    total_size += 2 + 8;
+
+    // required double a_paperHeight = 35;
+    total_size += 2 + 8;
+
+    // required sint32 a_paperSizeUnit = 36;
+    total_size += 2 +
+      ::_pbi::WireFormatLite::SInt32Size(
+        this->_internal_a_papersizeunit());
+
+    // required bool a_shrinkToFit = 32;
+    total_size += 2 + 1;
+
+    // required bool a_printReversed = 37;
+    total_size += 2 + 1;
+
+    // required bool a_printInColor = 38;
+    total_size += 2 + 1;
+
+    // required bool a_isInitializedFromPrinter = 47;
+    total_size += 2 + 1;
+
+    // required sint32 a_orientation = 39;
+    total_size += 2 +
+      ::_pbi::WireFormatLite::SInt32Size(
+        this->_internal_a_orientation());
+
+    // required sint32 a_numCopies = 40;
+    total_size += 2 +
+      ::_pbi::WireFormatLite::SInt32Size(
+        this->_internal_a_numcopies());
+
+    // required sint32 a_numPagesPerSheet = 41;
+    total_size += 2 +
+      ::_pbi::WireFormatLite::SInt32Size(
+        this->_internal_a_numpagespersheet());
+
+    // required sint32 a_outputDestination = 42;
+    total_size += 2 +
+      ::_pbi::WireFormatLite::SInt32Size(
+        this->_internal_a_outputdestination());
+
+    // required sint32 a_outputFormat = 43;
+    total_size += 2 +
+      ::_pbi::WireFormatLite::SInt32Size(
+        this->_internal_a_outputformat());
+
+    // required sint32 a_printPageDelay = 44;
+    total_size += 2 +
+      ::_pbi::WireFormatLite::SInt32Size(
+        this->_internal_a_printpagedelay());
+
+    // required sint32 a_resolution = 45;
+    total_size += 2 +
+      ::_pbi::WireFormatLite::SInt32Size(
+        this->_internal_a_resolution());
+
+    // required sint32 a_duplex = 46;
+    total_size += 2 +
+      ::_pbi::WireFormatLite::SInt32Size(
+        this->_internal_a_duplex());
+
+    // required bool a_isInitializedFromPrefs = 48;
+    total_size += 2 + 1;
+
+    // required uint32 a_destination = 54;
+    total_size += 2 +
+      ::_pbi::WireFormatLite::UInt32Size(
+        this->_internal_a_destination());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1703,13 +2373,8 @@ size_t PrintData::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       SInt32Size(this->_impl_.a_pageranges_);
-    if (data_size > 0) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
-    int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._a_pageranges_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
+    total_size += 2 *
+                  ::_pbi::FromIntSize(this->_internal_a_pageranges_size());
     total_size += data_size;
   }
 
@@ -1717,13 +2382,8 @@ size_t PrintData::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_devmodedata_);
-    if (data_size > 0) {
-      total_size += 2 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
-    int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._a_devmodedata_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
+    total_size += 2 *
+                  ::_pbi::FromIntSize(this->_internal_a_devmodedata_size());
     total_size += data_size;
   }
 
@@ -1740,360 +2400,6 @@ size_t PrintData::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_remoteprintjob());
-  }
-
-  // string a_title = 23;
-  if (!this->_internal_a_title().empty()) {
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_title());
-  }
-
-  // string a_docURL = 24;
-  if (!this->_internal_a_docurl().empty()) {
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_docurl());
-  }
-
-  // string a_headerStrLeft = 25;
-  if (!this->_internal_a_headerstrleft().empty()) {
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_headerstrleft());
-  }
-
-  // string a_headerStrCenter = 26;
-  if (!this->_internal_a_headerstrcenter().empty()) {
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_headerstrcenter());
-  }
-
-  // string a_headerStrRight = 27;
-  if (!this->_internal_a_headerstrright().empty()) {
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_headerstrright());
-  }
-
-  // string a_footerStrLeft = 28;
-  if (!this->_internal_a_footerstrleft().empty()) {
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_footerstrleft());
-  }
-
-  // string a_footerStrCenter = 29;
-  if (!this->_internal_a_footerstrcenter().empty()) {
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_footerstrcenter());
-  }
-
-  // string a_footerStrRight = 30;
-  if (!this->_internal_a_footerstrright().empty()) {
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_footerstrright());
-  }
-
-  // string a_paperId = 33;
-  if (!this->_internal_a_paperid().empty()) {
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_paperid());
-  }
-
-  // string a_driverName = 49;
-  if (!this->_internal_a_drivername().empty()) {
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_drivername());
-  }
-
-  // string a_deviceName = 50;
-  if (!this->_internal_a_devicename().empty()) {
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_devicename());
-  }
-
-  // string a_disposition = 53;
-  if (!this->_internal_a_disposition().empty()) {
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_disposition());
-  }
-
-  // double a_edgeTop = 2;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_edgetop = this->_internal_a_edgetop();
-  uint64_t raw_a_edgetop;
-  memcpy(&raw_a_edgetop, &tmp_a_edgetop, sizeof(tmp_a_edgetop));
-  if (raw_a_edgetop != 0) {
-    total_size += 1 + 8;
-  }
-
-  // double a_edgeLeft = 3;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_edgeleft = this->_internal_a_edgeleft();
-  uint64_t raw_a_edgeleft;
-  memcpy(&raw_a_edgeleft, &tmp_a_edgeleft, sizeof(tmp_a_edgeleft));
-  if (raw_a_edgeleft != 0) {
-    total_size += 1 + 8;
-  }
-
-  // double a_edgeBottom = 4;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_edgebottom = this->_internal_a_edgebottom();
-  uint64_t raw_a_edgebottom;
-  memcpy(&raw_a_edgebottom, &tmp_a_edgebottom, sizeof(tmp_a_edgebottom));
-  if (raw_a_edgebottom != 0) {
-    total_size += 1 + 8;
-  }
-
-  // double a_edgeRight = 5;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_edgeright = this->_internal_a_edgeright();
-  uint64_t raw_a_edgeright;
-  memcpy(&raw_a_edgeright, &tmp_a_edgeright, sizeof(tmp_a_edgeright));
-  if (raw_a_edgeright != 0) {
-    total_size += 1 + 8;
-  }
-
-  // double a_marginTop = 6;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_margintop = this->_internal_a_margintop();
-  uint64_t raw_a_margintop;
-  memcpy(&raw_a_margintop, &tmp_a_margintop, sizeof(tmp_a_margintop));
-  if (raw_a_margintop != 0) {
-    total_size += 1 + 8;
-  }
-
-  // double a_marginLeft = 7;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_marginleft = this->_internal_a_marginleft();
-  uint64_t raw_a_marginleft;
-  memcpy(&raw_a_marginleft, &tmp_a_marginleft, sizeof(tmp_a_marginleft));
-  if (raw_a_marginleft != 0) {
-    total_size += 1 + 8;
-  }
-
-  // double a_marginBottom = 8;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_marginbottom = this->_internal_a_marginbottom();
-  uint64_t raw_a_marginbottom;
-  memcpy(&raw_a_marginbottom, &tmp_a_marginbottom, sizeof(tmp_a_marginbottom));
-  if (raw_a_marginbottom != 0) {
-    total_size += 1 + 8;
-  }
-
-  // double a_marginRight = 9;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_marginright = this->_internal_a_marginright();
-  uint64_t raw_a_marginright;
-  memcpy(&raw_a_marginright, &tmp_a_marginright, sizeof(tmp_a_marginright));
-  if (raw_a_marginright != 0) {
-    total_size += 1 + 8;
-  }
-
-  // double a_unwriteableMarginTop = 10;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_unwriteablemargintop = this->_internal_a_unwriteablemargintop();
-  uint64_t raw_a_unwriteablemargintop;
-  memcpy(&raw_a_unwriteablemargintop, &tmp_a_unwriteablemargintop, sizeof(tmp_a_unwriteablemargintop));
-  if (raw_a_unwriteablemargintop != 0) {
-    total_size += 1 + 8;
-  }
-
-  // double a_unwriteableMarginLeft = 11;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_unwriteablemarginleft = this->_internal_a_unwriteablemarginleft();
-  uint64_t raw_a_unwriteablemarginleft;
-  memcpy(&raw_a_unwriteablemarginleft, &tmp_a_unwriteablemarginleft, sizeof(tmp_a_unwriteablemarginleft));
-  if (raw_a_unwriteablemarginleft != 0) {
-    total_size += 1 + 8;
-  }
-
-  // double a_unwriteableMarginBottom = 12;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_unwriteablemarginbottom = this->_internal_a_unwriteablemarginbottom();
-  uint64_t raw_a_unwriteablemarginbottom;
-  memcpy(&raw_a_unwriteablemarginbottom, &tmp_a_unwriteablemarginbottom, sizeof(tmp_a_unwriteablemarginbottom));
-  if (raw_a_unwriteablemarginbottom != 0) {
-    total_size += 1 + 8;
-  }
-
-  // double a_unwriteableMarginRight = 13;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_unwriteablemarginright = this->_internal_a_unwriteablemarginright();
-  uint64_t raw_a_unwriteablemarginright;
-  memcpy(&raw_a_unwriteablemarginright, &tmp_a_unwriteablemarginright, sizeof(tmp_a_unwriteablemarginright));
-  if (raw_a_unwriteablemarginright != 0) {
-    total_size += 1 + 8;
-  }
-
-  // double a_scaling = 14;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_scaling = this->_internal_a_scaling();
-  uint64_t raw_a_scaling;
-  memcpy(&raw_a_scaling, &tmp_a_scaling, sizeof(tmp_a_scaling));
-  if (raw_a_scaling != 0) {
-    total_size += 1 + 8;
-  }
-
-  // bool a_printBGColors = 15;
-  if (this->_internal_a_printbgcolors() != 0) {
-    total_size += 1 + 1;
-  }
-
-  // bool a_printBGImages = 16;
-  if (this->_internal_a_printbgimages() != 0) {
-    total_size += 2 + 1;
-  }
-
-  // bool a_honorPageRuleMargins = 17;
-  if (this->_internal_a_honorpagerulemargins() != 0) {
-    total_size += 2 + 1;
-  }
-
-  // bool a_usePageRuleSizeAsPaperSize = 18;
-  if (this->_internal_a_usepagerulesizeaspapersize() != 0) {
-    total_size += 2 + 1;
-  }
-
-  // bool a_ignoreUnwriteableMargins = 19;
-  if (this->_internal_a_ignoreunwriteablemargins() != 0) {
-    total_size += 2 + 1;
-  }
-
-  // bool a_showMarginGuides = 20;
-  if (this->_internal_a_showmarginguides() != 0) {
-    total_size += 2 + 1;
-  }
-
-  // bool a_printSelectionOnly = 21;
-  if (this->_internal_a_printselectiononly() != 0) {
-    total_size += 2 + 1;
-  }
-
-  // bool a_printSilent = 31;
-  if (this->_internal_a_printsilent() != 0) {
-    total_size += 2 + 1;
-  }
-
-  // double a_paperWidth = 34;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_paperwidth = this->_internal_a_paperwidth();
-  uint64_t raw_a_paperwidth;
-  memcpy(&raw_a_paperwidth, &tmp_a_paperwidth, sizeof(tmp_a_paperwidth));
-  if (raw_a_paperwidth != 0) {
-    total_size += 2 + 8;
-  }
-
-  // double a_paperHeight = 35;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_paperheight = this->_internal_a_paperheight();
-  uint64_t raw_a_paperheight;
-  memcpy(&raw_a_paperheight, &tmp_a_paperheight, sizeof(tmp_a_paperheight));
-  if (raw_a_paperheight != 0) {
-    total_size += 2 + 8;
-  }
-
-  // sint32 a_paperSizeUnit = 36;
-  if (this->_internal_a_papersizeunit() != 0) {
-    total_size += 2 +
-      ::_pbi::WireFormatLite::SInt32Size(
-        this->_internal_a_papersizeunit());
-  }
-
-  // bool a_shrinkToFit = 32;
-  if (this->_internal_a_shrinktofit() != 0) {
-    total_size += 2 + 1;
-  }
-
-  // bool a_printReversed = 37;
-  if (this->_internal_a_printreversed() != 0) {
-    total_size += 2 + 1;
-  }
-
-  // bool a_printInColor = 38;
-  if (this->_internal_a_printincolor() != 0) {
-    total_size += 2 + 1;
-  }
-
-  // bool a_isInitializedFromPrinter = 47;
-  if (this->_internal_a_isinitializedfromprinter() != 0) {
-    total_size += 2 + 1;
-  }
-
-  // sint32 a_orientation = 39;
-  if (this->_internal_a_orientation() != 0) {
-    total_size += 2 +
-      ::_pbi::WireFormatLite::SInt32Size(
-        this->_internal_a_orientation());
-  }
-
-  // sint32 a_numCopies = 40;
-  if (this->_internal_a_numcopies() != 0) {
-    total_size += 2 +
-      ::_pbi::WireFormatLite::SInt32Size(
-        this->_internal_a_numcopies());
-  }
-
-  // sint32 a_numPagesPerSheet = 41;
-  if (this->_internal_a_numpagespersheet() != 0) {
-    total_size += 2 +
-      ::_pbi::WireFormatLite::SInt32Size(
-        this->_internal_a_numpagespersheet());
-  }
-
-  // sint32 a_outputDestination = 42;
-  if (this->_internal_a_outputdestination() != 0) {
-    total_size += 2 +
-      ::_pbi::WireFormatLite::SInt32Size(
-        this->_internal_a_outputdestination());
-  }
-
-  // sint32 a_outputFormat = 43;
-  if (this->_internal_a_outputformat() != 0) {
-    total_size += 2 +
-      ::_pbi::WireFormatLite::SInt32Size(
-        this->_internal_a_outputformat());
-  }
-
-  // sint32 a_printPageDelay = 44;
-  if (this->_internal_a_printpagedelay() != 0) {
-    total_size += 2 +
-      ::_pbi::WireFormatLite::SInt32Size(
-        this->_internal_a_printpagedelay());
-  }
-
-  // sint32 a_resolution = 45;
-  if (this->_internal_a_resolution() != 0) {
-    total_size += 2 +
-      ::_pbi::WireFormatLite::SInt32Size(
-        this->_internal_a_resolution());
-  }
-
-  // sint32 a_duplex = 46;
-  if (this->_internal_a_duplex() != 0) {
-    total_size += 2 +
-      ::_pbi::WireFormatLite::SInt32Size(
-        this->_internal_a_duplex());
-  }
-
-  // bool a_isInitializedFromPrefs = 48;
-  if (this->_internal_a_isinitializedfromprefs() != 0) {
-    total_size += 2 + 1;
-  }
-
-  // uint32 a_destination = 54;
-  if (this->_internal_a_destination() != 0) {
-    total_size += 2 +
-      ::_pbi::WireFormatLite::UInt32Size(
-        this->_internal_a_destination());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2120,218 +2426,180 @@ void PrintData::MergeFrom(const PrintData& from) {
   _this->_impl_.a_pageranges_.MergeFrom(from._impl_.a_pageranges_);
   _this->_impl_.a_devmodedata_.MergeFrom(from._impl_.a_devmodedata_);
   _this->_impl_.a_gtkprintsettings_.MergeFrom(from._impl_.a_gtkprintsettings_);
-  if (from._internal_has_a_remoteprintjob()) {
-    _this->_internal_set_a_remoteprintjob(from._internal_a_remoteprintjob());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x000000ffu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_remoteprintjob(from._internal_a_remoteprintjob());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_title(from._internal_a_title());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_internal_set_a_docurl(from._internal_a_docurl());
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_internal_set_a_headerstrleft(from._internal_a_headerstrleft());
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_internal_set_a_headerstrcenter(from._internal_a_headerstrcenter());
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _this->_internal_set_a_headerstrright(from._internal_a_headerstrright());
+    }
+    if (cached_has_bits & 0x00000040u) {
+      _this->_internal_set_a_footerstrleft(from._internal_a_footerstrleft());
+    }
+    if (cached_has_bits & 0x00000080u) {
+      _this->_internal_set_a_footerstrcenter(from._internal_a_footerstrcenter());
+    }
   }
-  if (!from._internal_a_title().empty()) {
-    _this->_internal_set_a_title(from._internal_a_title());
+  if (cached_has_bits & 0x0000ff00u) {
+    if (cached_has_bits & 0x00000100u) {
+      _this->_internal_set_a_footerstrright(from._internal_a_footerstrright());
+    }
+    if (cached_has_bits & 0x00000200u) {
+      _this->_internal_set_a_paperid(from._internal_a_paperid());
+    }
+    if (cached_has_bits & 0x00000400u) {
+      _this->_internal_set_a_drivername(from._internal_a_drivername());
+    }
+    if (cached_has_bits & 0x00000800u) {
+      _this->_internal_set_a_devicename(from._internal_a_devicename());
+    }
+    if (cached_has_bits & 0x00001000u) {
+      _this->_internal_set_a_disposition(from._internal_a_disposition());
+    }
+    if (cached_has_bits & 0x00002000u) {
+      _this->_impl_.a_edgetop_ = from._impl_.a_edgetop_;
+    }
+    if (cached_has_bits & 0x00004000u) {
+      _this->_impl_.a_edgeleft_ = from._impl_.a_edgeleft_;
+    }
+    if (cached_has_bits & 0x00008000u) {
+      _this->_impl_.a_edgebottom_ = from._impl_.a_edgebottom_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
-  if (!from._internal_a_docurl().empty()) {
-    _this->_internal_set_a_docurl(from._internal_a_docurl());
+  if (cached_has_bits & 0x00ff0000u) {
+    if (cached_has_bits & 0x00010000u) {
+      _this->_impl_.a_edgeright_ = from._impl_.a_edgeright_;
+    }
+    if (cached_has_bits & 0x00020000u) {
+      _this->_impl_.a_margintop_ = from._impl_.a_margintop_;
+    }
+    if (cached_has_bits & 0x00040000u) {
+      _this->_impl_.a_marginleft_ = from._impl_.a_marginleft_;
+    }
+    if (cached_has_bits & 0x00080000u) {
+      _this->_impl_.a_marginbottom_ = from._impl_.a_marginbottom_;
+    }
+    if (cached_has_bits & 0x00100000u) {
+      _this->_impl_.a_marginright_ = from._impl_.a_marginright_;
+    }
+    if (cached_has_bits & 0x00200000u) {
+      _this->_impl_.a_unwriteablemargintop_ = from._impl_.a_unwriteablemargintop_;
+    }
+    if (cached_has_bits & 0x00400000u) {
+      _this->_impl_.a_unwriteablemarginleft_ = from._impl_.a_unwriteablemarginleft_;
+    }
+    if (cached_has_bits & 0x00800000u) {
+      _this->_impl_.a_unwriteablemarginbottom_ = from._impl_.a_unwriteablemarginbottom_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
-  if (!from._internal_a_headerstrleft().empty()) {
-    _this->_internal_set_a_headerstrleft(from._internal_a_headerstrleft());
+  if (cached_has_bits & 0xff000000u) {
+    if (cached_has_bits & 0x01000000u) {
+      _this->_impl_.a_unwriteablemarginright_ = from._impl_.a_unwriteablemarginright_;
+    }
+    if (cached_has_bits & 0x02000000u) {
+      _this->_impl_.a_scaling_ = from._impl_.a_scaling_;
+    }
+    if (cached_has_bits & 0x04000000u) {
+      _this->_impl_.a_printbgcolors_ = from._impl_.a_printbgcolors_;
+    }
+    if (cached_has_bits & 0x08000000u) {
+      _this->_impl_.a_printbgimages_ = from._impl_.a_printbgimages_;
+    }
+    if (cached_has_bits & 0x10000000u) {
+      _this->_impl_.a_honorpagerulemargins_ = from._impl_.a_honorpagerulemargins_;
+    }
+    if (cached_has_bits & 0x20000000u) {
+      _this->_impl_.a_usepagerulesizeaspapersize_ = from._impl_.a_usepagerulesizeaspapersize_;
+    }
+    if (cached_has_bits & 0x40000000u) {
+      _this->_impl_.a_ignoreunwriteablemargins_ = from._impl_.a_ignoreunwriteablemargins_;
+    }
+    if (cached_has_bits & 0x80000000u) {
+      _this->_impl_.a_showmarginguides_ = from._impl_.a_showmarginguides_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
-  if (!from._internal_a_headerstrcenter().empty()) {
-    _this->_internal_set_a_headerstrcenter(from._internal_a_headerstrcenter());
+  cached_has_bits = from._impl_._has_bits_[1];
+  if (cached_has_bits & 0x000000ffu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_impl_.a_printselectiononly_ = from._impl_.a_printselectiononly_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_printsilent_ = from._impl_.a_printsilent_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.a_paperwidth_ = from._impl_.a_paperwidth_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.a_paperheight_ = from._impl_.a_paperheight_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_impl_.a_papersizeunit_ = from._impl_.a_papersizeunit_;
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _this->_impl_.a_shrinktofit_ = from._impl_.a_shrinktofit_;
+    }
+    if (cached_has_bits & 0x00000040u) {
+      _this->_impl_.a_printreversed_ = from._impl_.a_printreversed_;
+    }
+    if (cached_has_bits & 0x00000080u) {
+      _this->_impl_.a_printincolor_ = from._impl_.a_printincolor_;
+    }
+    _this->_impl_._has_bits_[1] |= cached_has_bits;
   }
-  if (!from._internal_a_headerstrright().empty()) {
-    _this->_internal_set_a_headerstrright(from._internal_a_headerstrright());
+  if (cached_has_bits & 0x0000ff00u) {
+    if (cached_has_bits & 0x00000100u) {
+      _this->_impl_.a_isinitializedfromprinter_ = from._impl_.a_isinitializedfromprinter_;
+    }
+    if (cached_has_bits & 0x00000200u) {
+      _this->_impl_.a_orientation_ = from._impl_.a_orientation_;
+    }
+    if (cached_has_bits & 0x00000400u) {
+      _this->_impl_.a_numcopies_ = from._impl_.a_numcopies_;
+    }
+    if (cached_has_bits & 0x00000800u) {
+      _this->_impl_.a_numpagespersheet_ = from._impl_.a_numpagespersheet_;
+    }
+    if (cached_has_bits & 0x00001000u) {
+      _this->_impl_.a_outputdestination_ = from._impl_.a_outputdestination_;
+    }
+    if (cached_has_bits & 0x00002000u) {
+      _this->_impl_.a_outputformat_ = from._impl_.a_outputformat_;
+    }
+    if (cached_has_bits & 0x00004000u) {
+      _this->_impl_.a_printpagedelay_ = from._impl_.a_printpagedelay_;
+    }
+    if (cached_has_bits & 0x00008000u) {
+      _this->_impl_.a_resolution_ = from._impl_.a_resolution_;
+    }
+    _this->_impl_._has_bits_[1] |= cached_has_bits;
   }
-  if (!from._internal_a_footerstrleft().empty()) {
-    _this->_internal_set_a_footerstrleft(from._internal_a_footerstrleft());
-  }
-  if (!from._internal_a_footerstrcenter().empty()) {
-    _this->_internal_set_a_footerstrcenter(from._internal_a_footerstrcenter());
-  }
-  if (!from._internal_a_footerstrright().empty()) {
-    _this->_internal_set_a_footerstrright(from._internal_a_footerstrright());
-  }
-  if (!from._internal_a_paperid().empty()) {
-    _this->_internal_set_a_paperid(from._internal_a_paperid());
-  }
-  if (!from._internal_a_drivername().empty()) {
-    _this->_internal_set_a_drivername(from._internal_a_drivername());
-  }
-  if (!from._internal_a_devicename().empty()) {
-    _this->_internal_set_a_devicename(from._internal_a_devicename());
-  }
-  if (!from._internal_a_disposition().empty()) {
-    _this->_internal_set_a_disposition(from._internal_a_disposition());
-  }
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_edgetop = from._internal_a_edgetop();
-  uint64_t raw_a_edgetop;
-  memcpy(&raw_a_edgetop, &tmp_a_edgetop, sizeof(tmp_a_edgetop));
-  if (raw_a_edgetop != 0) {
-    _this->_internal_set_a_edgetop(from._internal_a_edgetop());
-  }
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_edgeleft = from._internal_a_edgeleft();
-  uint64_t raw_a_edgeleft;
-  memcpy(&raw_a_edgeleft, &tmp_a_edgeleft, sizeof(tmp_a_edgeleft));
-  if (raw_a_edgeleft != 0) {
-    _this->_internal_set_a_edgeleft(from._internal_a_edgeleft());
-  }
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_edgebottom = from._internal_a_edgebottom();
-  uint64_t raw_a_edgebottom;
-  memcpy(&raw_a_edgebottom, &tmp_a_edgebottom, sizeof(tmp_a_edgebottom));
-  if (raw_a_edgebottom != 0) {
-    _this->_internal_set_a_edgebottom(from._internal_a_edgebottom());
-  }
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_edgeright = from._internal_a_edgeright();
-  uint64_t raw_a_edgeright;
-  memcpy(&raw_a_edgeright, &tmp_a_edgeright, sizeof(tmp_a_edgeright));
-  if (raw_a_edgeright != 0) {
-    _this->_internal_set_a_edgeright(from._internal_a_edgeright());
-  }
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_margintop = from._internal_a_margintop();
-  uint64_t raw_a_margintop;
-  memcpy(&raw_a_margintop, &tmp_a_margintop, sizeof(tmp_a_margintop));
-  if (raw_a_margintop != 0) {
-    _this->_internal_set_a_margintop(from._internal_a_margintop());
-  }
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_marginleft = from._internal_a_marginleft();
-  uint64_t raw_a_marginleft;
-  memcpy(&raw_a_marginleft, &tmp_a_marginleft, sizeof(tmp_a_marginleft));
-  if (raw_a_marginleft != 0) {
-    _this->_internal_set_a_marginleft(from._internal_a_marginleft());
-  }
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_marginbottom = from._internal_a_marginbottom();
-  uint64_t raw_a_marginbottom;
-  memcpy(&raw_a_marginbottom, &tmp_a_marginbottom, sizeof(tmp_a_marginbottom));
-  if (raw_a_marginbottom != 0) {
-    _this->_internal_set_a_marginbottom(from._internal_a_marginbottom());
-  }
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_marginright = from._internal_a_marginright();
-  uint64_t raw_a_marginright;
-  memcpy(&raw_a_marginright, &tmp_a_marginright, sizeof(tmp_a_marginright));
-  if (raw_a_marginright != 0) {
-    _this->_internal_set_a_marginright(from._internal_a_marginright());
-  }
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_unwriteablemargintop = from._internal_a_unwriteablemargintop();
-  uint64_t raw_a_unwriteablemargintop;
-  memcpy(&raw_a_unwriteablemargintop, &tmp_a_unwriteablemargintop, sizeof(tmp_a_unwriteablemargintop));
-  if (raw_a_unwriteablemargintop != 0) {
-    _this->_internal_set_a_unwriteablemargintop(from._internal_a_unwriteablemargintop());
-  }
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_unwriteablemarginleft = from._internal_a_unwriteablemarginleft();
-  uint64_t raw_a_unwriteablemarginleft;
-  memcpy(&raw_a_unwriteablemarginleft, &tmp_a_unwriteablemarginleft, sizeof(tmp_a_unwriteablemarginleft));
-  if (raw_a_unwriteablemarginleft != 0) {
-    _this->_internal_set_a_unwriteablemarginleft(from._internal_a_unwriteablemarginleft());
-  }
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_unwriteablemarginbottom = from._internal_a_unwriteablemarginbottom();
-  uint64_t raw_a_unwriteablemarginbottom;
-  memcpy(&raw_a_unwriteablemarginbottom, &tmp_a_unwriteablemarginbottom, sizeof(tmp_a_unwriteablemarginbottom));
-  if (raw_a_unwriteablemarginbottom != 0) {
-    _this->_internal_set_a_unwriteablemarginbottom(from._internal_a_unwriteablemarginbottom());
-  }
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_unwriteablemarginright = from._internal_a_unwriteablemarginright();
-  uint64_t raw_a_unwriteablemarginright;
-  memcpy(&raw_a_unwriteablemarginright, &tmp_a_unwriteablemarginright, sizeof(tmp_a_unwriteablemarginright));
-  if (raw_a_unwriteablemarginright != 0) {
-    _this->_internal_set_a_unwriteablemarginright(from._internal_a_unwriteablemarginright());
-  }
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_scaling = from._internal_a_scaling();
-  uint64_t raw_a_scaling;
-  memcpy(&raw_a_scaling, &tmp_a_scaling, sizeof(tmp_a_scaling));
-  if (raw_a_scaling != 0) {
-    _this->_internal_set_a_scaling(from._internal_a_scaling());
-  }
-  if (from._internal_a_printbgcolors() != 0) {
-    _this->_internal_set_a_printbgcolors(from._internal_a_printbgcolors());
-  }
-  if (from._internal_a_printbgimages() != 0) {
-    _this->_internal_set_a_printbgimages(from._internal_a_printbgimages());
-  }
-  if (from._internal_a_honorpagerulemargins() != 0) {
-    _this->_internal_set_a_honorpagerulemargins(from._internal_a_honorpagerulemargins());
-  }
-  if (from._internal_a_usepagerulesizeaspapersize() != 0) {
-    _this->_internal_set_a_usepagerulesizeaspapersize(from._internal_a_usepagerulesizeaspapersize());
-  }
-  if (from._internal_a_ignoreunwriteablemargins() != 0) {
-    _this->_internal_set_a_ignoreunwriteablemargins(from._internal_a_ignoreunwriteablemargins());
-  }
-  if (from._internal_a_showmarginguides() != 0) {
-    _this->_internal_set_a_showmarginguides(from._internal_a_showmarginguides());
-  }
-  if (from._internal_a_printselectiononly() != 0) {
-    _this->_internal_set_a_printselectiononly(from._internal_a_printselectiononly());
-  }
-  if (from._internal_a_printsilent() != 0) {
-    _this->_internal_set_a_printsilent(from._internal_a_printsilent());
-  }
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_paperwidth = from._internal_a_paperwidth();
-  uint64_t raw_a_paperwidth;
-  memcpy(&raw_a_paperwidth, &tmp_a_paperwidth, sizeof(tmp_a_paperwidth));
-  if (raw_a_paperwidth != 0) {
-    _this->_internal_set_a_paperwidth(from._internal_a_paperwidth());
-  }
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_paperheight = from._internal_a_paperheight();
-  uint64_t raw_a_paperheight;
-  memcpy(&raw_a_paperheight, &tmp_a_paperheight, sizeof(tmp_a_paperheight));
-  if (raw_a_paperheight != 0) {
-    _this->_internal_set_a_paperheight(from._internal_a_paperheight());
-  }
-  if (from._internal_a_papersizeunit() != 0) {
-    _this->_internal_set_a_papersizeunit(from._internal_a_papersizeunit());
-  }
-  if (from._internal_a_shrinktofit() != 0) {
-    _this->_internal_set_a_shrinktofit(from._internal_a_shrinktofit());
-  }
-  if (from._internal_a_printreversed() != 0) {
-    _this->_internal_set_a_printreversed(from._internal_a_printreversed());
-  }
-  if (from._internal_a_printincolor() != 0) {
-    _this->_internal_set_a_printincolor(from._internal_a_printincolor());
-  }
-  if (from._internal_a_isinitializedfromprinter() != 0) {
-    _this->_internal_set_a_isinitializedfromprinter(from._internal_a_isinitializedfromprinter());
-  }
-  if (from._internal_a_orientation() != 0) {
-    _this->_internal_set_a_orientation(from._internal_a_orientation());
-  }
-  if (from._internal_a_numcopies() != 0) {
-    _this->_internal_set_a_numcopies(from._internal_a_numcopies());
-  }
-  if (from._internal_a_numpagespersheet() != 0) {
-    _this->_internal_set_a_numpagespersheet(from._internal_a_numpagespersheet());
-  }
-  if (from._internal_a_outputdestination() != 0) {
-    _this->_internal_set_a_outputdestination(from._internal_a_outputdestination());
-  }
-  if (from._internal_a_outputformat() != 0) {
-    _this->_internal_set_a_outputformat(from._internal_a_outputformat());
-  }
-  if (from._internal_a_printpagedelay() != 0) {
-    _this->_internal_set_a_printpagedelay(from._internal_a_printpagedelay());
-  }
-  if (from._internal_a_resolution() != 0) {
-    _this->_internal_set_a_resolution(from._internal_a_resolution());
-  }
-  if (from._internal_a_duplex() != 0) {
-    _this->_internal_set_a_duplex(from._internal_a_duplex());
-  }
-  if (from._internal_a_isinitializedfromprefs() != 0) {
-    _this->_internal_set_a_isinitializedfromprefs(from._internal_a_isinitializedfromprefs());
-  }
-  if (from._internal_a_destination() != 0) {
-    _this->_internal_set_a_destination(from._internal_a_destination());
+  if (cached_has_bits & 0x00070000u) {
+    if (cached_has_bits & 0x00010000u) {
+      _this->_impl_.a_duplex_ = from._impl_.a_duplex_;
+    }
+    if (cached_has_bits & 0x00020000u) {
+      _this->_impl_.a_isinitializedfromprefs_ = from._impl_.a_isinitializedfromprefs_;
+    }
+    if (cached_has_bits & 0x00040000u) {
+      _this->_impl_.a_destination_ = from._impl_.a_destination_;
+    }
+    _this->_impl_._has_bits_[1] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -2344,6 +2612,9 @@ void PrintData::CopyFrom(const PrintData& from) {
 }
 
 bool PrintData::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_gtkprintsettings_))
+    return false;
   return true;
 }
 
@@ -2353,6 +2624,7 @@ void PrintData::InternalSwap(PrintData* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  swap(_impl_._has_bits_[1], other->_impl_._has_bits_[1]);
   _impl_.a_pageranges_.InternalSwap(&other->_impl_.a_pageranges_);
   _impl_.a_devmodedata_.InternalSwap(&other->_impl_.a_devmodedata_);
   _impl_.a_gtkprintsettings_.InternalSwap(&other->_impl_.a_gtkprintsettings_);

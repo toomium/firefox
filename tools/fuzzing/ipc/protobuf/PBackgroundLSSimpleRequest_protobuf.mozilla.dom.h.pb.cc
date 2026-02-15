@@ -22,8 +22,9 @@ namespace mozilla {
 namespace dom {
 PROTOBUF_CONSTEXPR LSSimpleRequestPreloadedResponse::LSSimpleRequestPreloadedResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_preloaded_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_preloaded_)*/false} {}
 struct LSSimpleRequestPreloadedResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR LSSimpleRequestPreloadedResponseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -71,6 +72,13 @@ namespace dom {
 
 class LSSimpleRequestPreloadedResponse::_Internal {
  public:
+  using HasBits = decltype(std::declval<LSSimpleRequestPreloadedResponse>()._impl_._has_bits_);
+  static void set_has_a_preloaded(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 LSSimpleRequestPreloadedResponse::LSSimpleRequestPreloadedResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -83,8 +91,9 @@ LSSimpleRequestPreloadedResponse::LSSimpleRequestPreloadedResponse(const LSSimpl
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   LSSimpleRequestPreloadedResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_preloaded_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_preloaded_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_preloaded_ = from._impl_.a_preloaded_;
@@ -96,8 +105,9 @@ inline void LSSimpleRequestPreloadedResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_preloaded_){false}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_preloaded_){false}
   };
 }
 
@@ -125,18 +135,21 @@ void LSSimpleRequestPreloadedResponse::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_preloaded_ = false;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* LSSimpleRequestPreloadedResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool a_preloaded = 1;
+      // required bool a_preloaded = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_preloaded(&has_bits);
           _impl_.a_preloaded_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -158,6 +171,7 @@ const char* LSSimpleRequestPreloadedResponse::_InternalParse(const char* ptr, ::
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -171,8 +185,9 @@ uint8_t* LSSimpleRequestPreloadedResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool a_preloaded = 1;
-  if (this->_internal_a_preloaded() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bool a_preloaded = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_preloaded(), target);
   }
@@ -189,14 +204,13 @@ size_t LSSimpleRequestPreloadedResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.LSSimpleRequestPreloadedResponse)
   size_t total_size = 0;
 
+  // required bool a_preloaded = 1;
+  if (_internal_has_a_preloaded()) {
+    total_size += 1 + 1;
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // bool a_preloaded = 1;
-  if (this->_internal_a_preloaded() != 0) {
-    total_size += 1 + 1;
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -219,7 +233,7 @@ void LSSimpleRequestPreloadedResponse::MergeFrom(const LSSimpleRequestPreloadedR
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_a_preloaded() != 0) {
+  if (from._internal_has_a_preloaded()) {
     _this->_internal_set_a_preloaded(from._internal_a_preloaded());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -233,12 +247,14 @@ void LSSimpleRequestPreloadedResponse::CopyFrom(const LSSimpleRequestPreloadedRe
 }
 
 bool LSSimpleRequestPreloadedResponse::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void LSSimpleRequestPreloadedResponse::InternalSwap(LSSimpleRequestPreloadedResponse* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_preloaded_, other->_impl_.a_preloaded_);
 }
 
@@ -423,6 +439,8 @@ void LSSimpleRequestGetStateResponse::CopyFrom(const LSSimpleRequestGetStateResp
 }
 
 bool LSSimpleRequestGetStateResponse::IsInitialized() const {
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_iteminfos_))
+    return false;
   return true;
 }
 
@@ -650,26 +668,26 @@ uint8_t* LSSimpleRequestResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_mVnsresult = 1;
-  if (_internal_has_a_mvnsresult()) {
-    target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_a_mvnsresult(), target);
+  switch (content_case()) {
+    case kAMVnsresult: {
+      target = stream->WriteBytesMaybeAliased(
+          1, this->_internal_a_mvnsresult(), target);
+      break;
+    }
+    case kAMVLSSimpleRequestPreloadedResponse: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(2, _Internal::a_mvlssimplerequestpreloadedresponse(this),
+          _Internal::a_mvlssimplerequestpreloadedresponse(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVLSSimpleRequestGetStateResponse: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(3, _Internal::a_mvlssimplerequestgetstateresponse(this),
+          _Internal::a_mvlssimplerequestgetstateresponse(this).GetCachedSize(), target, stream);
+      break;
+    }
+    default: ;
   }
-
-  // .protobuf.mozilla.dom.LSSimpleRequestPreloadedResponse a_mVLSSimpleRequestPreloadedResponse = 2;
-  if (_internal_has_a_mvlssimplerequestpreloadedresponse()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::a_mvlssimplerequestpreloadedresponse(this),
-        _Internal::a_mvlssimplerequestpreloadedresponse(this).GetCachedSize(), target, stream);
-  }
-
-  // .protobuf.mozilla.dom.LSSimpleRequestGetStateResponse a_mVLSSimpleRequestGetStateResponse = 3;
-  if (_internal_has_a_mvlssimplerequestgetstateresponse()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::a_mvlssimplerequestgetstateresponse(this),
-        _Internal::a_mvlssimplerequestgetstateresponse(this).GetCachedSize(), target, stream);
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
@@ -763,6 +781,26 @@ void LSSimpleRequestResponse::CopyFrom(const LSSimpleRequestResponse& from) {
 }
 
 bool LSSimpleRequestResponse::IsInitialized() const {
+  switch (content_case()) {
+    case kAMVnsresult: {
+      break;
+    }
+    case kAMVLSSimpleRequestPreloadedResponse: {
+      if (_internal_has_a_mvlssimplerequestpreloadedresponse()) {
+        if (!_impl_.content_.a_mvlssimplerequestpreloadedresponse_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case kAMVLSSimpleRequestGetStateResponse: {
+      if (_internal_has_a_mvlssimplerequestgetstateresponse()) {
+        if (!_impl_.content_.a_mvlssimplerequestgetstateresponse_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case CONTENT_NOT_SET: {
+      break;
+    }
+  }
   return true;
 }
 

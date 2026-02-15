@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/hal/sandbox/PHal.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.hal;
@@ -13,26 +13,26 @@ package protobuf.mozilla.hal;
 
 // Structs and unions declarations
 message BatteryInformation {
-  double a_level = 1;
-  bool a_charging = 2;
-  double a_remainingTime = 3;
+  required double a_level = 1;
+  required bool a_charging = 2;
+  required double a_remainingTime = 3;
 }
 
 message SensorData {
-  bytes a_sensor = 1;
-  bytes a_timestamp = 2;
+  required bytes a_sensor = 1;
+  required bytes a_timestamp = 2;
   repeated float a_values = 3;
 }
 
 message NetworkInformation {
-  uint32 a_type = 1;
-  bool a_isWifi = 2;
-  uint32 a_dhcpGateway = 3;
+  required uint32 a_type = 1;
+  required bool a_isWifi = 2;
+  required uint32 a_dhcpGateway = 3;
 }
 
 message WakeLockInformation {
-  string a_topic = 1;
-  uint32 a_numLocks = 2;
-  uint32 a_numHidden = 3;
+  required string a_topic = 1;
+  required uint32 a_numLocks = 2;
+  required uint32 a_numHidden = 3;
   repeated uint64 a_lockingProcesses = 4;
 }

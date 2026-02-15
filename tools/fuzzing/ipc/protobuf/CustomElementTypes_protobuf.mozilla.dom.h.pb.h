@@ -106,6 +106,13 @@ class IPCFormDataValue final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const IPCFormDataValue& default_instance() {
     return *internal_default_instance();
   }
@@ -284,6 +291,13 @@ class FormDataTuple final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const FormDataTuple& default_instance() {
     return *internal_default_instance();
   }
@@ -359,7 +373,11 @@ class FormDataTuple final :
     kANameFieldNumber = 1,
     kAValueFieldNumber = 2,
   };
-  // string a_name = 1;
+  // required string a_name = 1;
+  bool has_a_name() const;
+  private:
+  bool _internal_has_a_name() const;
+  public:
   void clear_a_name();
   const std::string& a_name() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -373,7 +391,7 @@ class FormDataTuple final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // .protobuf.mozilla.dom.IPCFormDataValue a_value = 2;
+  // required .protobuf.mozilla.dom.IPCFormDataValue a_value = 2;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -395,13 +413,17 @@ class FormDataTuple final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_name_;
     ::protobuf::mozilla::dom::IPCFormDataValue* a_value_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_CustomElementTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -437,6 +459,13 @@ class CustomElementFormValue_a_type_mVArrayOfFormDataTuple final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const CustomElementFormValue_a_type_mVArrayOfFormDataTuple& default_instance() {
@@ -576,6 +605,13 @@ class CustomElementFormValue final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const CustomElementFormValue& default_instance() {
@@ -802,6 +838,13 @@ class CustomElementTuple final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const CustomElementTuple& default_instance() {
     return *internal_default_instance();
   }
@@ -877,7 +920,7 @@ class CustomElementTuple final :
     kAValueFieldNumber = 1,
     kAStateFieldNumber = 2,
   };
-  // .protobuf.mozilla.dom.CustomElementFormValue a_value = 1;
+  // required .protobuf.mozilla.dom.CustomElementFormValue a_value = 1;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -895,7 +938,7 @@ class CustomElementTuple final :
       ::protobuf::mozilla::dom::CustomElementFormValue* a_value);
   ::protobuf::mozilla::dom::CustomElementFormValue* unsafe_arena_release_a_value();
 
-  // .protobuf.mozilla.dom.CustomElementFormValue a_state = 2;
+  // required .protobuf.mozilla.dom.CustomElementFormValue a_state = 2;
   bool has_a_state() const;
   private:
   bool _internal_has_a_state() const;
@@ -917,13 +960,17 @@ class CustomElementTuple final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::dom::CustomElementFormValue* a_value_;
     ::protobuf::mozilla::dom::CustomElementFormValue* a_state_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_CustomElementTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -1106,9 +1153,17 @@ inline IPCFormDataValue::ContentCase IPCFormDataValue::content_case() const {
 
 // FormDataTuple
 
-// string a_name = 1;
+// required string a_name = 1;
+inline bool FormDataTuple::_internal_has_a_name() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool FormDataTuple::has_a_name() const {
+  return _internal_has_a_name();
+}
 inline void FormDataTuple::clear_a_name() {
   _impl_.a_name_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& FormDataTuple::a_name() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FormDataTuple.a_name)
@@ -1117,7 +1172,7 @@ inline const std::string& FormDataTuple::a_name() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FormDataTuple::set_a_name(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FormDataTuple.a_name)
 }
@@ -1130,22 +1185,32 @@ inline const std::string& FormDataTuple::_internal_a_name() const {
   return _impl_.a_name_.Get();
 }
 inline void FormDataTuple::_internal_set_a_name(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_name_.Set(value, GetArenaForAllocation());
 }
 inline std::string* FormDataTuple::_internal_mutable_a_name() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_name_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FormDataTuple::release_a_name() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FormDataTuple.a_name)
-  return _impl_.a_name_.Release();
+  if (!_internal_has_a_name()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_name_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_name_.IsDefault()) {
+    _impl_.a_name_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void FormDataTuple::set_allocated_a_name(std::string* a_name) {
   if (a_name != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_name_.SetAllocated(a_name, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1156,18 +1221,18 @@ inline void FormDataTuple::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FormDataTuple.a_name)
 }
 
-// .protobuf.mozilla.dom.IPCFormDataValue a_value = 2;
+// required .protobuf.mozilla.dom.IPCFormDataValue a_value = 2;
 inline bool FormDataTuple::_internal_has_a_value() const {
-  return this != internal_default_instance() && _impl_.a_value_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_value_ != nullptr);
+  return value;
 }
 inline bool FormDataTuple::has_a_value() const {
   return _internal_has_a_value();
 }
 inline void FormDataTuple::clear_a_value() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_value_ != nullptr) {
-    delete _impl_.a_value_;
-  }
-  _impl_.a_value_ = nullptr;
+  if (_impl_.a_value_ != nullptr) _impl_.a_value_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const ::protobuf::mozilla::dom::IPCFormDataValue& FormDataTuple::_internal_a_value() const {
   const ::protobuf::mozilla::dom::IPCFormDataValue* p = _impl_.a_value_;
@@ -1185,14 +1250,14 @@ inline void FormDataTuple::unsafe_arena_set_allocated_a_value(
   }
   _impl_.a_value_ = a_value;
   if (a_value) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FormDataTuple.a_value)
 }
 inline ::protobuf::mozilla::dom::IPCFormDataValue* FormDataTuple::release_a_value() {
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::dom::IPCFormDataValue* temp = _impl_.a_value_;
   _impl_.a_value_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1208,13 +1273,13 @@ inline ::protobuf::mozilla::dom::IPCFormDataValue* FormDataTuple::release_a_valu
 }
 inline ::protobuf::mozilla::dom::IPCFormDataValue* FormDataTuple::unsafe_arena_release_a_value() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FormDataTuple.a_value)
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::dom::IPCFormDataValue* temp = _impl_.a_value_;
   _impl_.a_value_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::IPCFormDataValue* FormDataTuple::_internal_mutable_a_value() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   if (_impl_.a_value_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::IPCFormDataValue>(GetArenaForAllocation());
     _impl_.a_value_ = p;
@@ -1238,9 +1303,9 @@ inline void FormDataTuple::set_allocated_a_value(::protobuf::mozilla::dom::IPCFo
       a_value = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_value, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_value_ = a_value;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FormDataTuple.a_value)
@@ -1612,18 +1677,18 @@ inline CustomElementFormValue::ContentCase CustomElementFormValue::content_case(
 
 // CustomElementTuple
 
-// .protobuf.mozilla.dom.CustomElementFormValue a_value = 1;
+// required .protobuf.mozilla.dom.CustomElementFormValue a_value = 1;
 inline bool CustomElementTuple::_internal_has_a_value() const {
-  return this != internal_default_instance() && _impl_.a_value_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_value_ != nullptr);
+  return value;
 }
 inline bool CustomElementTuple::has_a_value() const {
   return _internal_has_a_value();
 }
 inline void CustomElementTuple::clear_a_value() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_value_ != nullptr) {
-    delete _impl_.a_value_;
-  }
-  _impl_.a_value_ = nullptr;
+  if (_impl_.a_value_ != nullptr) _impl_.a_value_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const ::protobuf::mozilla::dom::CustomElementFormValue& CustomElementTuple::_internal_a_value() const {
   const ::protobuf::mozilla::dom::CustomElementFormValue* p = _impl_.a_value_;
@@ -1641,14 +1706,14 @@ inline void CustomElementTuple::unsafe_arena_set_allocated_a_value(
   }
   _impl_.a_value_ = a_value;
   if (a_value) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.CustomElementTuple.a_value)
 }
 inline ::protobuf::mozilla::dom::CustomElementFormValue* CustomElementTuple::release_a_value() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::CustomElementFormValue* temp = _impl_.a_value_;
   _impl_.a_value_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1664,13 +1729,13 @@ inline ::protobuf::mozilla::dom::CustomElementFormValue* CustomElementTuple::rel
 }
 inline ::protobuf::mozilla::dom::CustomElementFormValue* CustomElementTuple::unsafe_arena_release_a_value() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.CustomElementTuple.a_value)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::CustomElementFormValue* temp = _impl_.a_value_;
   _impl_.a_value_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::CustomElementFormValue* CustomElementTuple::_internal_mutable_a_value() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_value_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::CustomElementFormValue>(GetArenaForAllocation());
     _impl_.a_value_ = p;
@@ -1694,26 +1759,26 @@ inline void CustomElementTuple::set_allocated_a_value(::protobuf::mozilla::dom::
       a_value = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_value, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_value_ = a_value;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.CustomElementTuple.a_value)
 }
 
-// .protobuf.mozilla.dom.CustomElementFormValue a_state = 2;
+// required .protobuf.mozilla.dom.CustomElementFormValue a_state = 2;
 inline bool CustomElementTuple::_internal_has_a_state() const {
-  return this != internal_default_instance() && _impl_.a_state_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_state_ != nullptr);
+  return value;
 }
 inline bool CustomElementTuple::has_a_state() const {
   return _internal_has_a_state();
 }
 inline void CustomElementTuple::clear_a_state() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_state_ != nullptr) {
-    delete _impl_.a_state_;
-  }
-  _impl_.a_state_ = nullptr;
+  if (_impl_.a_state_ != nullptr) _impl_.a_state_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const ::protobuf::mozilla::dom::CustomElementFormValue& CustomElementTuple::_internal_a_state() const {
   const ::protobuf::mozilla::dom::CustomElementFormValue* p = _impl_.a_state_;
@@ -1731,14 +1796,14 @@ inline void CustomElementTuple::unsafe_arena_set_allocated_a_state(
   }
   _impl_.a_state_ = a_state;
   if (a_state) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.CustomElementTuple.a_state)
 }
 inline ::protobuf::mozilla::dom::CustomElementFormValue* CustomElementTuple::release_a_state() {
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::dom::CustomElementFormValue* temp = _impl_.a_state_;
   _impl_.a_state_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1754,13 +1819,13 @@ inline ::protobuf::mozilla::dom::CustomElementFormValue* CustomElementTuple::rel
 }
 inline ::protobuf::mozilla::dom::CustomElementFormValue* CustomElementTuple::unsafe_arena_release_a_state() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.CustomElementTuple.a_state)
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::dom::CustomElementFormValue* temp = _impl_.a_state_;
   _impl_.a_state_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::CustomElementFormValue* CustomElementTuple::_internal_mutable_a_state() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   if (_impl_.a_state_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::CustomElementFormValue>(GetArenaForAllocation());
     _impl_.a_state_ = p;
@@ -1784,9 +1849,9 @@ inline void CustomElementTuple::set_allocated_a_state(::protobuf::mozilla::dom::
       a_state = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_state, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_state_ = a_state;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.CustomElementTuple.a_state)

@@ -113,6 +113,13 @@ class Msg_Ping final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Ping& default_instance() {
     return *internal_default_instance();
   }
@@ -230,6 +237,13 @@ class Reply_Ping final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_Ping& default_instance() {
     return *internal_default_instance();
   }
@@ -304,7 +318,11 @@ class Reply_Ping final :
   enum : int {
     kAOneFieldNumber = 1,
   };
-  // bool a_one = 1;
+  // required bool a_one = 1;
+  bool has_a_one() const;
+  private:
+  bool _internal_has_a_one() const;
+  public:
   void clear_a_one();
   bool a_one() const;
   void set_a_one(bool value);
@@ -321,8 +339,9 @@ class Reply_Ping final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_one_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_one_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestAsyncReturns_2eproto;
@@ -358,6 +377,13 @@ class Msg_NoReturn final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_NoReturn& default_instance() {
@@ -477,6 +503,13 @@ class Reply_NoReturn final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_NoReturn& default_instance() {
     return *internal_default_instance();
   }
@@ -551,7 +584,11 @@ class Reply_NoReturn final :
   enum : int {
     kAUnusedFieldNumber = 1,
   };
-  // bool a_unused = 1;
+  // required bool a_unused = 1;
+  bool has_a_unused() const;
+  private:
+  bool _internal_has_a_unused() const;
+  public:
   void clear_a_unused();
   bool a_unused() const;
   void set_a_unused(bool value);
@@ -568,8 +605,9 @@ class Reply_NoReturn final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_unused_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_unused_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestAsyncReturns_2eproto;
@@ -605,6 +643,13 @@ class Msg_Pong final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Pong& default_instance() {
@@ -724,6 +769,13 @@ class Reply_Pong final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_Pong& default_instance() {
     return *internal_default_instance();
   }
@@ -799,7 +851,11 @@ class Reply_Pong final :
     kAParam1FieldNumber = 1,
     kAParam2FieldNumber = 2,
   };
-  // uint32 a_param1 = 1;
+  // required uint32 a_param1 = 1;
+  bool has_a_param1() const;
+  private:
+  bool _internal_has_a_param1() const;
+  public:
   void clear_a_param1();
   uint32_t a_param1() const;
   void set_a_param1(uint32_t value);
@@ -808,7 +864,11 @@ class Reply_Pong final :
   void _internal_set_a_param1(uint32_t value);
   public:
 
-  // uint32 a_param2 = 2;
+  // required uint32 a_param2 = 2;
+  bool has_a_param2() const;
+  private:
+  bool _internal_has_a_param2() const;
+  public:
   void clear_a_param2();
   uint32_t a_param2() const;
   void set_a_param2(uint32_t value);
@@ -821,13 +881,17 @@ class Reply_Pong final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t a_param1_;
     uint32_t a_param2_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestAsyncReturns_2eproto;
@@ -847,9 +911,17 @@ class Reply_Pong final :
 
 // Reply_Ping
 
-// bool a_one = 1;
+// required bool a_one = 1;
+inline bool Reply_Ping::_internal_has_a_one() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_Ping::has_a_one() const {
+  return _internal_has_a_one();
+}
 inline void Reply_Ping::clear_a_one() {
   _impl_.a_one_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Reply_Ping::_internal_a_one() const {
   return _impl_.a_one_;
@@ -859,7 +931,7 @@ inline bool Reply_Ping::a_one() const {
   return _internal_a_one();
 }
 inline void Reply_Ping::_internal_set_a_one(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_one_ = value;
 }
 inline void Reply_Ping::set_a_one(bool value) {
@@ -875,9 +947,17 @@ inline void Reply_Ping::set_a_one(bool value) {
 
 // Reply_NoReturn
 
-// bool a_unused = 1;
+// required bool a_unused = 1;
+inline bool Reply_NoReturn::_internal_has_a_unused() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_NoReturn::has_a_unused() const {
+  return _internal_has_a_unused();
+}
 inline void Reply_NoReturn::clear_a_unused() {
   _impl_.a_unused_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Reply_NoReturn::_internal_a_unused() const {
   return _impl_.a_unused_;
@@ -887,7 +967,7 @@ inline bool Reply_NoReturn::a_unused() const {
   return _internal_a_unused();
 }
 inline void Reply_NoReturn::_internal_set_a_unused(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_unused_ = value;
 }
 inline void Reply_NoReturn::set_a_unused(bool value) {
@@ -903,9 +983,17 @@ inline void Reply_NoReturn::set_a_unused(bool value) {
 
 // Reply_Pong
 
-// uint32 a_param1 = 1;
+// required uint32 a_param1 = 1;
+inline bool Reply_Pong::_internal_has_a_param1() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_Pong::has_a_param1() const {
+  return _internal_has_a_param1();
+}
 inline void Reply_Pong::clear_a_param1() {
   _impl_.a_param1_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Reply_Pong::_internal_a_param1() const {
   return _impl_.a_param1_;
@@ -915,7 +1003,7 @@ inline uint32_t Reply_Pong::a_param1() const {
   return _internal_a_param1();
 }
 inline void Reply_Pong::_internal_set_a_param1(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_param1_ = value;
 }
 inline void Reply_Pong::set_a_param1(uint32_t value) {
@@ -923,9 +1011,17 @@ inline void Reply_Pong::set_a_param1(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestAsyncReturns.Reply_Pong.a_param1)
 }
 
-// uint32 a_param2 = 2;
+// required uint32 a_param2 = 2;
+inline bool Reply_Pong::_internal_has_a_param2() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Reply_Pong::has_a_param2() const {
+  return _internal_has_a_param2();
+}
 inline void Reply_Pong::clear_a_param2() {
   _impl_.a_param2_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Reply_Pong::_internal_a_param2() const {
   return _impl_.a_param2_;
@@ -935,7 +1031,7 @@ inline uint32_t Reply_Pong::a_param2() const {
   return _internal_a_param2();
 }
 inline void Reply_Pong::_internal_set_a_param2(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_param2_ = value;
 }
 inline void Reply_Pong::set_a_param2(uint32_t value) {

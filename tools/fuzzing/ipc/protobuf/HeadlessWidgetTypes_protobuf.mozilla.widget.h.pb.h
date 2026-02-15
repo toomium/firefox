@@ -90,6 +90,13 @@ class HeadlessCompositorWidgetInitData final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const HeadlessCompositorWidgetInitData& default_instance() {
     return *internal_default_instance();
   }
@@ -164,7 +171,11 @@ class HeadlessCompositorWidgetInitData final :
   enum : int {
     kAInitialClientSizeFieldNumber = 1,
   };
-  // bytes a_InitialClientSize = 1;
+  // required bytes a_InitialClientSize = 1;
+  bool has_a_initialclientsize() const;
+  private:
+  bool _internal_has_a_initialclientsize() const;
+  public:
   void clear_a_initialclientsize();
   const std::string& a_initialclientsize() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -186,8 +197,9 @@ class HeadlessCompositorWidgetInitData final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_initialclientsize_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_initialclientsize_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_HeadlessWidgetTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto;
@@ -203,9 +215,17 @@ class HeadlessCompositorWidgetInitData final :
 #endif  // __GNUC__
 // HeadlessCompositorWidgetInitData
 
-// bytes a_InitialClientSize = 1;
+// required bytes a_InitialClientSize = 1;
+inline bool HeadlessCompositorWidgetInitData::_internal_has_a_initialclientsize() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool HeadlessCompositorWidgetInitData::has_a_initialclientsize() const {
+  return _internal_has_a_initialclientsize();
+}
 inline void HeadlessCompositorWidgetInitData::clear_a_initialclientsize() {
   _impl_.a_initialclientsize_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& HeadlessCompositorWidgetInitData::a_initialclientsize() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.widget.HeadlessCompositorWidgetInitData.a_InitialClientSize)
@@ -214,7 +234,7 @@ inline const std::string& HeadlessCompositorWidgetInitData::a_initialclientsize(
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HeadlessCompositorWidgetInitData::set_a_initialclientsize(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_initialclientsize_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.widget.HeadlessCompositorWidgetInitData.a_InitialClientSize)
 }
@@ -227,22 +247,32 @@ inline const std::string& HeadlessCompositorWidgetInitData::_internal_a_initialc
   return _impl_.a_initialclientsize_.Get();
 }
 inline void HeadlessCompositorWidgetInitData::_internal_set_a_initialclientsize(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_initialclientsize_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HeadlessCompositorWidgetInitData::_internal_mutable_a_initialclientsize() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_initialclientsize_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HeadlessCompositorWidgetInitData::release_a_initialclientsize() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.widget.HeadlessCompositorWidgetInitData.a_InitialClientSize)
-  return _impl_.a_initialclientsize_.Release();
+  if (!_internal_has_a_initialclientsize()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_initialclientsize_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_initialclientsize_.IsDefault()) {
+    _impl_.a_initialclientsize_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void HeadlessCompositorWidgetInitData::set_allocated_a_initialclientsize(std::string* a_initialclientsize) {
   if (a_initialclientsize != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_initialclientsize_.SetAllocated(a_initialclientsize, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

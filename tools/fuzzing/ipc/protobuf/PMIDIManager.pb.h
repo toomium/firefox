@@ -102,6 +102,13 @@ class Msg_Refresh final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Refresh& default_instance() {
     return *internal_default_instance();
   }
@@ -217,6 +224,13 @@ class Msg_Shutdown final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Shutdown& default_instance() {
@@ -336,6 +350,13 @@ class Msg_MIDIPortListUpdate final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_MIDIPortListUpdate& default_instance() {
     return *internal_default_instance();
   }
@@ -410,7 +431,7 @@ class Msg_MIDIPortListUpdate final :
   enum : int {
     kAAPortListFieldNumber = 1,
   };
-  // .protobuf.mozilla.dom.MIDIPortList a_aPortList = 1;
+  // required .protobuf.mozilla.dom.MIDIPortList a_aPortList = 1;
   bool has_a_aportlist() const;
   private:
   bool _internal_has_a_aportlist() const;
@@ -436,8 +457,9 @@ class Msg_MIDIPortListUpdate final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::protobuf::mozilla::dom::MIDIPortList* a_aportlist_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::protobuf::mozilla::dom::MIDIPortList* a_aportlist_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMIDIManager_2eproto;
@@ -461,9 +483,11 @@ class Msg_MIDIPortListUpdate final :
 
 // Msg_MIDIPortListUpdate
 
-// .protobuf.mozilla.dom.MIDIPortList a_aPortList = 1;
+// required .protobuf.mozilla.dom.MIDIPortList a_aPortList = 1;
 inline bool Msg_MIDIPortListUpdate::_internal_has_a_aportlist() const {
-  return this != internal_default_instance() && _impl_.a_aportlist_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_aportlist_ != nullptr);
+  return value;
 }
 inline bool Msg_MIDIPortListUpdate::has_a_aportlist() const {
   return _internal_has_a_aportlist();
@@ -484,14 +508,14 @@ inline void Msg_MIDIPortListUpdate::unsafe_arena_set_allocated_a_aportlist(
   }
   _impl_.a_aportlist_ = a_aportlist;
   if (a_aportlist) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PMIDIManager.Msg_MIDIPortListUpdate.a_aPortList)
 }
 inline ::protobuf::mozilla::dom::MIDIPortList* Msg_MIDIPortListUpdate::release_a_aportlist() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::MIDIPortList* temp = _impl_.a_aportlist_;
   _impl_.a_aportlist_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -507,13 +531,13 @@ inline ::protobuf::mozilla::dom::MIDIPortList* Msg_MIDIPortListUpdate::release_a
 }
 inline ::protobuf::mozilla::dom::MIDIPortList* Msg_MIDIPortListUpdate::unsafe_arena_release_a_aportlist() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMIDIManager.Msg_MIDIPortListUpdate.a_aPortList)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::MIDIPortList* temp = _impl_.a_aportlist_;
   _impl_.a_aportlist_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::MIDIPortList* Msg_MIDIPortListUpdate::_internal_mutable_a_aportlist() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_aportlist_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::MIDIPortList>(GetArenaForAllocation());
     _impl_.a_aportlist_ = p;
@@ -538,9 +562,9 @@ inline void Msg_MIDIPortListUpdate::set_allocated_a_aportlist(::protobuf::mozill
       a_aportlist = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_aportlist, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aportlist_ = a_aportlist;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMIDIManager.Msg_MIDIPortListUpdate.a_aPortList)

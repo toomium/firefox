@@ -47,8 +47,9 @@ struct Reply___delete__DefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply___delete__DefaultTypeInternal _Reply___delete___default_instance_;
 PROTOBUF_CONSTEXPR Msg_ExecuteCommand::Msg_ExecuteCommand(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_acommand_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_acommand_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_ExecuteCommandDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ExecuteCommandDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -60,9 +61,10 @@ struct Msg_ExecuteCommandDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_ExecuteCommandDefaultTypeInternal _Msg_ExecuteCommand_default_instance_;
 PROTOBUF_CONSTEXPR Msg_PTestShellCommandConstructor::Msg_PTestShellCommandConstructor(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_acommand_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_actorid_)*/int64_t{0}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_acommand_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_actorid_)*/int64_t{0}} {}
 struct Msg_PTestShellCommandConstructorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_PTestShellCommandConstructorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -393,6 +395,13 @@ std::string Reply___delete__::GetTypeName() const {
 
 class Msg_ExecuteCommand::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_ExecuteCommand>()._impl_._has_bits_);
+  static void set_has_a_acommand(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Msg_ExecuteCommand::Msg_ExecuteCommand(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -405,15 +414,16 @@ Msg_ExecuteCommand::Msg_ExecuteCommand(const Msg_ExecuteCommand& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_ExecuteCommand* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_acommand_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_acommand_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_acommand_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_acommand_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_acommand().empty()) {
+  if (from._internal_has_a_acommand()) {
     _this->_impl_.a_acommand_.Set(from._internal_a_acommand(), 
       _this->GetArenaForAllocation());
   }
@@ -425,8 +435,9 @@ inline void Msg_ExecuteCommand::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_acommand_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_acommand_){}
   };
   _impl_.a_acommand_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -458,23 +469,27 @@ void Msg_ExecuteCommand::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_acommand_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_acommand_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_ExecuteCommand::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string a_aCommand = 1;
+      // required string a_aCommand = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_acommand();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -494,6 +509,7 @@ const char* Msg_ExecuteCommand::_InternalParse(const char* ptr, ::_pbi::ParseCon
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -507,12 +523,9 @@ uint8_t* Msg_ExecuteCommand::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string a_aCommand = 1;
-  if (!this->_internal_a_acommand().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_acommand().data(), static_cast<int>(this->_internal_a_acommand().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.ipc.PTestShell.Msg_ExecuteCommand.a_aCommand");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_aCommand = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_acommand(), target);
   }
@@ -529,16 +542,15 @@ size_t Msg_ExecuteCommand::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.ipc.PTestShell.Msg_ExecuteCommand)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string a_aCommand = 1;
-  if (!this->_internal_a_acommand().empty()) {
+  // required string a_aCommand = 1;
+  if (_internal_has_a_acommand()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_acommand());
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -561,7 +573,7 @@ void Msg_ExecuteCommand::MergeFrom(const Msg_ExecuteCommand& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_acommand().empty()) {
+  if (from._internal_has_a_acommand()) {
     _this->_internal_set_a_acommand(from._internal_a_acommand());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -575,6 +587,7 @@ void Msg_ExecuteCommand::CopyFrom(const Msg_ExecuteCommand& from) {
 }
 
 bool Msg_ExecuteCommand::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -583,6 +596,7 @@ void Msg_ExecuteCommand::InternalSwap(Msg_ExecuteCommand* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_acommand_, lhs_arena,
       &other->_impl_.a_acommand_, rhs_arena
@@ -598,6 +612,16 @@ std::string Msg_ExecuteCommand::GetTypeName() const {
 
 class Msg_PTestShellCommandConstructor::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_PTestShellCommandConstructor>()._impl_._has_bits_);
+  static void set_has_a_actorid(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_acommand(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 Msg_PTestShellCommandConstructor::Msg_PTestShellCommandConstructor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -610,16 +634,17 @@ Msg_PTestShellCommandConstructor::Msg_PTestShellCommandConstructor(const Msg_PTe
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_PTestShellCommandConstructor* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_acommand_){}
-    , decltype(_impl_.a_actorid_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_acommand_){}
+    , decltype(_impl_.a_actorid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_acommand_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_acommand_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_acommand().empty()) {
+  if (from._internal_has_a_acommand()) {
     _this->_impl_.a_acommand_.Set(from._internal_a_acommand(), 
       _this->GetArenaForAllocation());
   }
@@ -632,9 +657,10 @@ inline void Msg_PTestShellCommandConstructor::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_acommand_){}
-    , decltype(_impl_.a_actorid_){int64_t{0}}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_acommand_){}
+    , decltype(_impl_.a_actorid_){int64_t{0}}
   };
   _impl_.a_acommand_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -666,32 +692,37 @@ void Msg_PTestShellCommandConstructor::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_acommand_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_acommand_.ClearNonDefaultToEmpty();
+  }
   _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_PTestShellCommandConstructor::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // sint64 a_actorid = 1;
+      // required sint64 a_actorid = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_actorid(&has_bits);
           _impl_.a_actorid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string a_aCommand = 2;
+      // required string a_aCommand = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_acommand();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -711,6 +742,7 @@ const char* Msg_PTestShellCommandConstructor::_InternalParse(const char* ptr, ::
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -724,18 +756,15 @@ uint8_t* Msg_PTestShellCommandConstructor::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // sint64 a_actorid = 1;
-  if (this->_internal_a_actorid() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required sint64 a_actorid = 1;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_actorid(), target);
   }
 
-  // string a_aCommand = 2;
-  if (!this->_internal_a_acommand().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_acommand().data(), static_cast<int>(this->_internal_a_acommand().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.ipc.PTestShell.Msg_PTestShellCommandConstructor.a_aCommand");
+  // required string a_aCommand = 2;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_acommand(), target);
   }
@@ -748,25 +777,43 @@ uint8_t* Msg_PTestShellCommandConstructor::_InternalSerialize(
   return target;
 }
 
-size_t Msg_PTestShellCommandConstructor::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.ipc.PTestShell.Msg_PTestShellCommandConstructor)
+size_t Msg_PTestShellCommandConstructor::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.ipc.PTestShell.Msg_PTestShellCommandConstructor)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string a_aCommand = 2;
-  if (!this->_internal_a_acommand().empty()) {
+  if (_internal_has_a_acommand()) {
+    // required string a_aCommand = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_acommand());
   }
 
-  // sint64 a_actorid = 1;
-  if (this->_internal_a_actorid() != 0) {
+  if (_internal_has_a_actorid()) {
+    // required sint64 a_actorid = 1;
     total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
   }
+
+  return total_size;
+}
+size_t Msg_PTestShellCommandConstructor::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.ipc.PTestShell.Msg_PTestShellCommandConstructor)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required string a_aCommand = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_acommand());
+
+    // required sint64 a_actorid = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -789,11 +836,15 @@ void Msg_PTestShellCommandConstructor::MergeFrom(const Msg_PTestShellCommandCons
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_acommand().empty()) {
-    _this->_internal_set_a_acommand(from._internal_a_acommand());
-  }
-  if (from._internal_a_actorid() != 0) {
-    _this->_internal_set_a_actorid(from._internal_a_actorid());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_acommand(from._internal_a_acommand());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_actorid_ = from._impl_.a_actorid_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -806,6 +857,7 @@ void Msg_PTestShellCommandConstructor::CopyFrom(const Msg_PTestShellCommandConst
 }
 
 bool Msg_PTestShellCommandConstructor::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -814,6 +866,7 @@ void Msg_PTestShellCommandConstructor::InternalSwap(Msg_PTestShellCommandConstru
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_acommand_, lhs_arena,
       &other->_impl_.a_acommand_, rhs_arena

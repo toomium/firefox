@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/gfx/vr/ipc/PVRLayer.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.gfx.PVRLayer;
@@ -17,10 +17,10 @@ import "LayersSurfaces.proto";
 
 // Message declarations
 message Msg_SubmitFrame {
-  protobuf.mozilla.layers.SurfaceDescriptor a_aTexture = 1;
-  uint64 a_aFrameId = 2;
-  bytes a_aLeftEyeRect = 3;
-  bytes a_aRightEyeRect = 4;
+  required protobuf.mozilla.layers.SurfaceDescriptor a_aTexture = 1;
+  required uint64 a_aFrameId = 2;
+  required bytes a_aLeftEyeRect = 3;
+  required bytes a_aRightEyeRect = 4;
 }
 
 message Msg_Destroy {

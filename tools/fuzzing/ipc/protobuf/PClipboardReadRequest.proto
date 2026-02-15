@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/widget/PClipboardReadRequest.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.PClipboardReadRequest;
@@ -23,7 +23,7 @@ message Msg_GetData {
 }
 
 message Reply_GetData {
-  protobuf.mozilla.dom.IPCTransferableDataOrError a_aTransferableData = 1;
+  required protobuf.mozilla.dom.IPCTransferableDataOrError a_aTransferableData = 1;
 }
 
 message Msg_GetDataSync {
@@ -31,7 +31,7 @@ message Msg_GetDataSync {
 }
 
 message Reply_GetDataSync {
-  protobuf.mozilla.dom.IPCTransferableDataOrError a_aTransferableData = 1;
+  required protobuf.mozilla.dom.IPCTransferableDataOrError a_aTransferableData = 1;
 }
 
 message Msg___delete__ {

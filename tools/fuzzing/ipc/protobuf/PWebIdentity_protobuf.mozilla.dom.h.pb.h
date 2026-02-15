@@ -94,6 +94,13 @@ class IPCIdentityCredential final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const IPCIdentityCredential& default_instance() {
     return *internal_default_instance();
   }
@@ -169,7 +176,11 @@ class IPCIdentityCredential final :
     kAIdFieldNumber = 1,
     kATokenFieldNumber = 2,
   };
-  // string a_id = 1;
+  // required string a_id = 1;
+  bool has_a_id() const;
+  private:
+  bool _internal_has_a_id() const;
+  public:
   void clear_a_id();
   const std::string& a_id() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -248,6 +259,13 @@ class WebIdentityGetCredentialResponse final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const WebIdentityGetCredentialResponse& default_instance() {
@@ -406,9 +424,17 @@ class WebIdentityGetCredentialResponse final :
 #endif  // __GNUC__
 // IPCIdentityCredential
 
-// string a_id = 1;
+// required string a_id = 1;
+inline bool IPCIdentityCredential::_internal_has_a_id() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool IPCIdentityCredential::has_a_id() const {
+  return _internal_has_a_id();
+}
 inline void IPCIdentityCredential::clear_a_id() {
   _impl_.a_id_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& IPCIdentityCredential::a_id() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCIdentityCredential.a_id)
@@ -417,7 +443,7 @@ inline const std::string& IPCIdentityCredential::a_id() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCIdentityCredential::set_a_id(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCIdentityCredential.a_id)
 }
@@ -430,22 +456,32 @@ inline const std::string& IPCIdentityCredential::_internal_a_id() const {
   return _impl_.a_id_.Get();
 }
 inline void IPCIdentityCredential::_internal_set_a_id(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_id_.Set(value, GetArenaForAllocation());
 }
 inline std::string* IPCIdentityCredential::_internal_mutable_a_id() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_id_.Mutable(GetArenaForAllocation());
 }
 inline std::string* IPCIdentityCredential::release_a_id() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCIdentityCredential.a_id)
-  return _impl_.a_id_.Release();
+  if (!_internal_has_a_id()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_id_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_id_.IsDefault()) {
+    _impl_.a_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void IPCIdentityCredential::set_allocated_a_id(std::string* a_id) {
   if (a_id != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_id_.SetAllocated(a_id, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -458,7 +494,7 @@ inline void IPCIdentityCredential::set_allocated_a_id(std::string* a_id) {
 
 // optional string a_token = 2;
 inline bool IPCIdentityCredential::_internal_has_a_token() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
 inline bool IPCIdentityCredential::has_a_token() const {
@@ -466,7 +502,7 @@ inline bool IPCIdentityCredential::has_a_token() const {
 }
 inline void IPCIdentityCredential::clear_a_token() {
   _impl_.a_token_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& IPCIdentityCredential::a_token() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCIdentityCredential.a_token)
@@ -475,7 +511,7 @@ inline const std::string& IPCIdentityCredential::a_token() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCIdentityCredential::set_a_token(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_token_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCIdentityCredential.a_token)
 }
@@ -488,11 +524,11 @@ inline const std::string& IPCIdentityCredential::_internal_a_token() const {
   return _impl_.a_token_.Get();
 }
 inline void IPCIdentityCredential::_internal_set_a_token(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_token_.Set(value, GetArenaForAllocation());
 }
 inline std::string* IPCIdentityCredential::_internal_mutable_a_token() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_token_.Mutable(GetArenaForAllocation());
 }
 inline std::string* IPCIdentityCredential::release_a_token() {
@@ -500,7 +536,7 @@ inline std::string* IPCIdentityCredential::release_a_token() {
   if (!_internal_has_a_token()) {
     return nullptr;
   }
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
   auto* p = _impl_.a_token_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (_impl_.a_token_.IsDefault()) {
@@ -511,9 +547,9 @@ inline std::string* IPCIdentityCredential::release_a_token() {
 }
 inline void IPCIdentityCredential::set_allocated_a_token(std::string* a_token) {
   if (a_token != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_token_.SetAllocated(a_token, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

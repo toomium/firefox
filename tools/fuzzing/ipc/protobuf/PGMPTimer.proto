@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/media/gmp/PGMPTimer.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.gmp.PGMPTimer;
@@ -16,12 +16,12 @@ package protobuf.mozilla.gmp.PGMPTimer;
 
 // Message declarations
 message Msg_TimerExpired {
-  uint32 a_aTimerId = 1;
+  required uint32 a_aTimerId = 1;
 }
 
 message Msg_SetTimer {
-  uint32 a_aTimerId = 1;
-  uint32 a_aTimeoutMs = 2;
+  required uint32 a_aTimerId = 1;
+  required uint32 a_aTimeoutMs = 2;
 }
 
 message Msg___delete__ {

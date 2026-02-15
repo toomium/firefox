@@ -23,8 +23,9 @@ namespace dom {
 namespace PSpeechSynthesis {
 PROTOBUF_CONSTEXPR Msg_VoiceAdded::Msg_VoiceAdded(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_avoice_)*/nullptr
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_avoice_)*/nullptr} {}
 struct Msg_VoiceAddedDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_VoiceAddedDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -36,8 +37,9 @@ struct Msg_VoiceAddedDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_VoiceAddedDefaultTypeInternal _Msg_VoiceAdded_default_instance_;
 PROTOBUF_CONSTEXPR Msg_VoiceRemoved::Msg_VoiceRemoved(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_auri_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_auri_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_VoiceRemovedDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_VoiceRemovedDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -49,9 +51,10 @@ struct Msg_VoiceRemovedDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_VoiceRemovedDefaultTypeInternal _Msg_VoiceRemoved_default_instance_;
 PROTOBUF_CONSTEXPR Msg_SetDefaultVoice::Msg_SetDefaultVoice(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_auri_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_aisdefault_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_auri_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_aisdefault_)*/false} {}
 struct Msg_SetDefaultVoiceDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_SetDefaultVoiceDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -63,8 +66,9 @@ struct Msg_SetDefaultVoiceDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_SetDefaultVoiceDefaultTypeInternal _Msg_SetDefaultVoice_default_instance_;
 PROTOBUF_CONSTEXPR Msg_IsSpeakingChanged::Msg_IsSpeakingChanged(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_aisspeaking_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_aisspeaking_)*/false} {}
 struct Msg_IsSpeakingChangedDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_IsSpeakingChangedDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -88,8 +92,9 @@ struct Msg_NotifyVoicesChangedDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_NotifyVoicesChangedDefaultTypeInternal _Msg_NotifyVoicesChanged_default_instance_;
 PROTOBUF_CONSTEXPR Msg_NotifyVoicesError::Msg_NotifyVoicesError(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_aerror_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_aerror_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_NotifyVoicesErrorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_NotifyVoicesErrorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -101,10 +106,11 @@ struct Msg_NotifyVoicesErrorDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_NotifyVoicesErrorDefaultTypeInternal _Msg_NotifyVoicesError_default_instance_;
 PROTOBUF_CONSTEXPR Msg_InitialVoicesAndState::Msg_InitialVoicesAndState(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_avoices_)*/{}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_avoices_)*/{}
   , /*decltype(_impl_.a_adefaults_)*/{}
-  , /*decltype(_impl_.a_aisspeaking_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_aisspeaking_)*/false} {}
 struct Msg_InitialVoicesAndStateDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_InitialVoicesAndStateDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -140,15 +146,16 @@ struct Reply___delete__DefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply___delete__DefaultTypeInternal _Reply___delete___default_instance_;
 PROTOBUF_CONSTEXPR Msg_PSpeechSynthesisRequestConstructor::Msg_PSpeechSynthesisRequestConstructor(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_atext_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_atext_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_auri_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_alang_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_actorid_)*/int64_t{0}
   , /*decltype(_impl_.a_avolume_)*/0
   , /*decltype(_impl_.a_arate_)*/0
   , /*decltype(_impl_.a_apitch_)*/0
-  , /*decltype(_impl_.a_ashouldresistfingerprinting_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_ashouldresistfingerprinting_)*/false} {}
 struct Msg_PSpeechSynthesisRequestConstructorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_PSpeechSynthesisRequestConstructorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -183,7 +190,14 @@ namespace PSpeechSynthesis {
 
 class Msg_VoiceAdded::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_VoiceAdded>()._impl_._has_bits_);
   static const ::protobuf::mozilla::dom::RemoteVoice& a_avoice(const Msg_VoiceAdded* msg);
+  static void set_has_a_avoice(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 const ::protobuf::mozilla::dom::RemoteVoice&
@@ -191,10 +205,8 @@ Msg_VoiceAdded::_Internal::a_avoice(const Msg_VoiceAdded* msg) {
   return *msg->_impl_.a_avoice_;
 }
 void Msg_VoiceAdded::clear_a_avoice() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_avoice_ != nullptr) {
-    delete _impl_.a_avoice_;
-  }
-  _impl_.a_avoice_ = nullptr;
+  if (_impl_.a_avoice_ != nullptr) _impl_.a_avoice_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Msg_VoiceAdded::Msg_VoiceAdded(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -206,8 +218,9 @@ Msg_VoiceAdded::Msg_VoiceAdded(const Msg_VoiceAdded& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_VoiceAdded* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_avoice_){nullptr}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_avoice_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_avoice()) {
@@ -221,8 +234,9 @@ inline void Msg_VoiceAdded::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_avoice_){nullptr}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_avoice_){nullptr}
   };
 }
 
@@ -250,20 +264,23 @@ void Msg_VoiceAdded::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && _impl_.a_avoice_ != nullptr) {
-    delete _impl_.a_avoice_;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(_impl_.a_avoice_ != nullptr);
+    _impl_.a_avoice_->Clear();
   }
-  _impl_.a_avoice_ = nullptr;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_VoiceAdded::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.dom.RemoteVoice a_aVoice = 1;
+      // required .protobuf.mozilla.dom.RemoteVoice a_aVoice = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_avoice(), ptr);
@@ -287,6 +304,7 @@ const char* Msg_VoiceAdded::_InternalParse(const char* ptr, ::_pbi::ParseContext
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -300,8 +318,9 @@ uint8_t* Msg_VoiceAdded::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.mozilla.dom.RemoteVoice a_aVoice = 1;
-  if (this->_internal_has_a_avoice()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required .protobuf.mozilla.dom.RemoteVoice a_aVoice = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_avoice(this),
         _Internal::a_avoice(this).GetCachedSize(), target, stream);
@@ -319,16 +338,15 @@ size_t Msg_VoiceAdded::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PSpeechSynthesis.Msg_VoiceAdded)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .protobuf.mozilla.dom.RemoteVoice a_aVoice = 1;
-  if (this->_internal_has_a_avoice()) {
+  // required .protobuf.mozilla.dom.RemoteVoice a_aVoice = 1;
+  if (_internal_has_a_avoice()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_avoice_);
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -366,12 +384,17 @@ void Msg_VoiceAdded::CopyFrom(const Msg_VoiceAdded& from) {
 }
 
 bool Msg_VoiceAdded::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (_internal_has_a_avoice()) {
+    if (!_impl_.a_avoice_->IsInitialized()) return false;
+  }
   return true;
 }
 
 void Msg_VoiceAdded::InternalSwap(Msg_VoiceAdded* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_avoice_, other->_impl_.a_avoice_);
 }
 
@@ -384,6 +407,13 @@ std::string Msg_VoiceAdded::GetTypeName() const {
 
 class Msg_VoiceRemoved::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_VoiceRemoved>()._impl_._has_bits_);
+  static void set_has_a_auri(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Msg_VoiceRemoved::Msg_VoiceRemoved(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -396,15 +426,16 @@ Msg_VoiceRemoved::Msg_VoiceRemoved(const Msg_VoiceRemoved& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_VoiceRemoved* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_auri_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_auri_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_auri_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_auri_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_auri().empty()) {
+  if (from._internal_has_a_auri()) {
     _this->_impl_.a_auri_.Set(from._internal_a_auri(), 
       _this->GetArenaForAllocation());
   }
@@ -416,8 +447,9 @@ inline void Msg_VoiceRemoved::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_auri_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_auri_){}
   };
   _impl_.a_auri_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -449,23 +481,27 @@ void Msg_VoiceRemoved::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_auri_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_auri_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_VoiceRemoved::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string a_aUri = 1;
+      // required string a_aUri = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_auri();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -485,6 +521,7 @@ const char* Msg_VoiceRemoved::_InternalParse(const char* ptr, ::_pbi::ParseConte
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -498,12 +535,9 @@ uint8_t* Msg_VoiceRemoved::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string a_aUri = 1;
-  if (!this->_internal_a_auri().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_auri().data(), static_cast<int>(this->_internal_a_auri().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.PSpeechSynthesis.Msg_VoiceRemoved.a_aUri");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_aUri = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_auri(), target);
   }
@@ -520,16 +554,15 @@ size_t Msg_VoiceRemoved::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PSpeechSynthesis.Msg_VoiceRemoved)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string a_aUri = 1;
-  if (!this->_internal_a_auri().empty()) {
+  // required string a_aUri = 1;
+  if (_internal_has_a_auri()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_auri());
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -552,7 +585,7 @@ void Msg_VoiceRemoved::MergeFrom(const Msg_VoiceRemoved& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_auri().empty()) {
+  if (from._internal_has_a_auri()) {
     _this->_internal_set_a_auri(from._internal_a_auri());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -566,6 +599,7 @@ void Msg_VoiceRemoved::CopyFrom(const Msg_VoiceRemoved& from) {
 }
 
 bool Msg_VoiceRemoved::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -574,6 +608,7 @@ void Msg_VoiceRemoved::InternalSwap(Msg_VoiceRemoved* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_auri_, lhs_arena,
       &other->_impl_.a_auri_, rhs_arena
@@ -589,6 +624,16 @@ std::string Msg_VoiceRemoved::GetTypeName() const {
 
 class Msg_SetDefaultVoice::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_SetDefaultVoice>()._impl_._has_bits_);
+  static void set_has_a_auri(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_aisdefault(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 Msg_SetDefaultVoice::Msg_SetDefaultVoice(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -601,16 +646,17 @@ Msg_SetDefaultVoice::Msg_SetDefaultVoice(const Msg_SetDefaultVoice& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_SetDefaultVoice* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_auri_){}
-    , decltype(_impl_.a_aisdefault_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_auri_){}
+    , decltype(_impl_.a_aisdefault_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_auri_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_auri_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_auri().empty()) {
+  if (from._internal_has_a_auri()) {
     _this->_impl_.a_auri_.Set(from._internal_a_auri(), 
       _this->GetArenaForAllocation());
   }
@@ -623,9 +669,10 @@ inline void Msg_SetDefaultVoice::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_auri_){}
-    , decltype(_impl_.a_aisdefault_){false}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_auri_){}
+    , decltype(_impl_.a_aisdefault_){false}
   };
   _impl_.a_auri_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -657,30 +704,35 @@ void Msg_SetDefaultVoice::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_auri_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_auri_.ClearNonDefaultToEmpty();
+  }
   _impl_.a_aisdefault_ = false;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_SetDefaultVoice::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string a_aUri = 1;
+      // required string a_aUri = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_auri();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // bool a_aIsDefault = 2;
+      // required bool a_aIsDefault = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_a_aisdefault(&has_bits);
           _impl_.a_aisdefault_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -702,6 +754,7 @@ const char* Msg_SetDefaultVoice::_InternalParse(const char* ptr, ::_pbi::ParseCo
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -715,18 +768,15 @@ uint8_t* Msg_SetDefaultVoice::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string a_aUri = 1;
-  if (!this->_internal_a_auri().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_auri().data(), static_cast<int>(this->_internal_a_auri().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.PSpeechSynthesis.Msg_SetDefaultVoice.a_aUri");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_aUri = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_auri(), target);
   }
 
-  // bool a_aIsDefault = 2;
-  if (this->_internal_a_aisdefault() != 0) {
+  // required bool a_aIsDefault = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_aisdefault(), target);
   }
@@ -739,25 +789,43 @@ uint8_t* Msg_SetDefaultVoice::_InternalSerialize(
   return target;
 }
 
-size_t Msg_SetDefaultVoice::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PSpeechSynthesis.Msg_SetDefaultVoice)
+size_t Msg_SetDefaultVoice::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PSpeechSynthesis.Msg_SetDefaultVoice)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string a_aUri = 1;
-  if (!this->_internal_a_auri().empty()) {
+  if (_internal_has_a_auri()) {
+    // required string a_aUri = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_auri());
   }
 
-  // bool a_aIsDefault = 2;
-  if (this->_internal_a_aisdefault() != 0) {
+  if (_internal_has_a_aisdefault()) {
+    // required bool a_aIsDefault = 2;
     total_size += 1 + 1;
   }
+
+  return total_size;
+}
+size_t Msg_SetDefaultVoice::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PSpeechSynthesis.Msg_SetDefaultVoice)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required string a_aUri = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_auri());
+
+    // required bool a_aIsDefault = 2;
+    total_size += 1 + 1;
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -780,11 +848,15 @@ void Msg_SetDefaultVoice::MergeFrom(const Msg_SetDefaultVoice& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_auri().empty()) {
-    _this->_internal_set_a_auri(from._internal_a_auri());
-  }
-  if (from._internal_a_aisdefault() != 0) {
-    _this->_internal_set_a_aisdefault(from._internal_a_aisdefault());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_auri(from._internal_a_auri());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_aisdefault_ = from._impl_.a_aisdefault_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -797,6 +869,7 @@ void Msg_SetDefaultVoice::CopyFrom(const Msg_SetDefaultVoice& from) {
 }
 
 bool Msg_SetDefaultVoice::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -805,6 +878,7 @@ void Msg_SetDefaultVoice::InternalSwap(Msg_SetDefaultVoice* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_auri_, lhs_arena,
       &other->_impl_.a_auri_, rhs_arena
@@ -821,6 +895,13 @@ std::string Msg_SetDefaultVoice::GetTypeName() const {
 
 class Msg_IsSpeakingChanged::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_IsSpeakingChanged>()._impl_._has_bits_);
+  static void set_has_a_aisspeaking(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Msg_IsSpeakingChanged::Msg_IsSpeakingChanged(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -833,8 +914,9 @@ Msg_IsSpeakingChanged::Msg_IsSpeakingChanged(const Msg_IsSpeakingChanged& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_IsSpeakingChanged* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_aisspeaking_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_aisspeaking_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_aisspeaking_ = from._impl_.a_aisspeaking_;
@@ -846,8 +928,9 @@ inline void Msg_IsSpeakingChanged::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_aisspeaking_){false}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_aisspeaking_){false}
   };
 }
 
@@ -875,18 +958,21 @@ void Msg_IsSpeakingChanged::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_aisspeaking_ = false;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_IsSpeakingChanged::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool a_aIsSpeaking = 1;
+      // required bool a_aIsSpeaking = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_aisspeaking(&has_bits);
           _impl_.a_aisspeaking_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -908,6 +994,7 @@ const char* Msg_IsSpeakingChanged::_InternalParse(const char* ptr, ::_pbi::Parse
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -921,8 +1008,9 @@ uint8_t* Msg_IsSpeakingChanged::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool a_aIsSpeaking = 1;
-  if (this->_internal_a_aisspeaking() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bool a_aIsSpeaking = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_aisspeaking(), target);
   }
@@ -939,14 +1027,13 @@ size_t Msg_IsSpeakingChanged::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PSpeechSynthesis.Msg_IsSpeakingChanged)
   size_t total_size = 0;
 
+  // required bool a_aIsSpeaking = 1;
+  if (_internal_has_a_aisspeaking()) {
+    total_size += 1 + 1;
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // bool a_aIsSpeaking = 1;
-  if (this->_internal_a_aisspeaking() != 0) {
-    total_size += 1 + 1;
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -969,7 +1056,7 @@ void Msg_IsSpeakingChanged::MergeFrom(const Msg_IsSpeakingChanged& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_a_aisspeaking() != 0) {
+  if (from._internal_has_a_aisspeaking()) {
     _this->_internal_set_a_aisspeaking(from._internal_a_aisspeaking());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -983,12 +1070,14 @@ void Msg_IsSpeakingChanged::CopyFrom(const Msg_IsSpeakingChanged& from) {
 }
 
 bool Msg_IsSpeakingChanged::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void Msg_IsSpeakingChanged::InternalSwap(Msg_IsSpeakingChanged* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_aisspeaking_, other->_impl_.a_aisspeaking_);
 }
 
@@ -1149,6 +1238,13 @@ std::string Msg_NotifyVoicesChanged::GetTypeName() const {
 
 class Msg_NotifyVoicesError::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_NotifyVoicesError>()._impl_._has_bits_);
+  static void set_has_a_aerror(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Msg_NotifyVoicesError::Msg_NotifyVoicesError(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1161,15 +1257,16 @@ Msg_NotifyVoicesError::Msg_NotifyVoicesError(const Msg_NotifyVoicesError& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_NotifyVoicesError* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_aerror_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_aerror_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_aerror_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_aerror_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_aerror().empty()) {
+  if (from._internal_has_a_aerror()) {
     _this->_impl_.a_aerror_.Set(from._internal_a_aerror(), 
       _this->GetArenaForAllocation());
   }
@@ -1181,8 +1278,9 @@ inline void Msg_NotifyVoicesError::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_aerror_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_aerror_){}
   };
   _impl_.a_aerror_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1214,23 +1312,27 @@ void Msg_NotifyVoicesError::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_aerror_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_aerror_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_NotifyVoicesError::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string a_aError = 1;
+      // required string a_aError = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_aerror();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1250,6 +1352,7 @@ const char* Msg_NotifyVoicesError::_InternalParse(const char* ptr, ::_pbi::Parse
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1263,12 +1366,9 @@ uint8_t* Msg_NotifyVoicesError::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string a_aError = 1;
-  if (!this->_internal_a_aerror().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_aerror().data(), static_cast<int>(this->_internal_a_aerror().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.PSpeechSynthesis.Msg_NotifyVoicesError.a_aError");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_aError = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_aerror(), target);
   }
@@ -1285,16 +1385,15 @@ size_t Msg_NotifyVoicesError::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PSpeechSynthesis.Msg_NotifyVoicesError)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string a_aError = 1;
-  if (!this->_internal_a_aerror().empty()) {
+  // required string a_aError = 1;
+  if (_internal_has_a_aerror()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_aerror());
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1317,7 +1416,7 @@ void Msg_NotifyVoicesError::MergeFrom(const Msg_NotifyVoicesError& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_aerror().empty()) {
+  if (from._internal_has_a_aerror()) {
     _this->_internal_set_a_aerror(from._internal_a_aerror());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1331,6 +1430,7 @@ void Msg_NotifyVoicesError::CopyFrom(const Msg_NotifyVoicesError& from) {
 }
 
 bool Msg_NotifyVoicesError::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1339,6 +1439,7 @@ void Msg_NotifyVoicesError::InternalSwap(Msg_NotifyVoicesError* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_aerror_, lhs_arena,
       &other->_impl_.a_aerror_, rhs_arena
@@ -1354,6 +1455,13 @@ std::string Msg_NotifyVoicesError::GetTypeName() const {
 
 class Msg_InitialVoicesAndState::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_InitialVoicesAndState>()._impl_._has_bits_);
+  static void set_has_a_aisspeaking(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 void Msg_InitialVoicesAndState::clear_a_avoices() {
@@ -1369,10 +1477,11 @@ Msg_InitialVoicesAndState::Msg_InitialVoicesAndState(const Msg_InitialVoicesAndS
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_InitialVoicesAndState* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_avoices_){from._impl_.a_avoices_}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_avoices_){from._impl_.a_avoices_}
     , decltype(_impl_.a_adefaults_){from._impl_.a_adefaults_}
-    , decltype(_impl_.a_aisspeaking_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_aisspeaking_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_aisspeaking_ = from._impl_.a_aisspeaking_;
@@ -1384,10 +1493,11 @@ inline void Msg_InitialVoicesAndState::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_avoices_){arena}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_avoices_){arena}
     , decltype(_impl_.a_adefaults_){arena}
     , decltype(_impl_.a_aisspeaking_){false}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
 
@@ -1419,11 +1529,13 @@ void Msg_InitialVoicesAndState::Clear() {
   _impl_.a_avoices_.Clear();
   _impl_.a_adefaults_.Clear();
   _impl_.a_aisspeaking_ = false;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_InitialVoicesAndState::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
@@ -1450,15 +1562,15 @@ const char* Msg_InitialVoicesAndState::_InternalParse(const char* ptr, ::_pbi::P
             auto str = _internal_add_a_adefaults();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            CHK_(::_pbi::VerifyUTF8(str, nullptr));
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else
           goto handle_unusual;
         continue;
-      // bool a_aIsSpeaking = 3;
+      // required bool a_aIsSpeaking = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_a_aisspeaking(&has_bits);
           _impl_.a_aisspeaking_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -1480,6 +1592,7 @@ const char* Msg_InitialVoicesAndState::_InternalParse(const char* ptr, ::_pbi::P
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1504,15 +1617,12 @@ uint8_t* Msg_InitialVoicesAndState::_InternalSerialize(
   // repeated string a_aDefaults = 2;
   for (int i = 0, n = this->_internal_a_adefaults_size(); i < n; i++) {
     const auto& s = this->_internal_a_adefaults(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.a_aDefaults");
     target = stream->WriteString(2, s, target);
   }
 
-  // bool a_aIsSpeaking = 3;
-  if (this->_internal_a_aisspeaking() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bool a_aIsSpeaking = 3;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_aisspeaking(), target);
   }
@@ -1529,6 +1639,10 @@ size_t Msg_InitialVoicesAndState::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState)
   size_t total_size = 0;
 
+  // required bool a_aIsSpeaking = 3;
+  if (_internal_has_a_aisspeaking()) {
+    total_size += 1 + 1;
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1546,11 +1660,6 @@ size_t Msg_InitialVoicesAndState::ByteSizeLong() const {
   for (int i = 0, n = _impl_.a_adefaults_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
       _impl_.a_adefaults_.Get(i));
-  }
-
-  // bool a_aIsSpeaking = 3;
-  if (this->_internal_a_aisspeaking() != 0) {
-    total_size += 1 + 1;
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1576,7 +1685,7 @@ void Msg_InitialVoicesAndState::MergeFrom(const Msg_InitialVoicesAndState& from)
 
   _this->_impl_.a_avoices_.MergeFrom(from._impl_.a_avoices_);
   _this->_impl_.a_adefaults_.MergeFrom(from._impl_.a_adefaults_);
-  if (from._internal_a_aisspeaking() != 0) {
+  if (from._internal_has_a_aisspeaking()) {
     _this->_internal_set_a_aisspeaking(from._internal_a_aisspeaking());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1590,12 +1699,16 @@ void Msg_InitialVoicesAndState::CopyFrom(const Msg_InitialVoicesAndState& from) 
 }
 
 bool Msg_InitialVoicesAndState::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_avoices_))
+    return false;
   return true;
 }
 
 void Msg_InitialVoicesAndState::InternalSwap(Msg_InitialVoicesAndState* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_avoices_.InternalSwap(&other->_impl_.a_avoices_);
   _impl_.a_adefaults_.InternalSwap(&other->_impl_.a_adefaults_);
   swap(_impl_.a_aisspeaking_, other->_impl_.a_aisspeaking_);
@@ -1906,6 +2019,34 @@ std::string Reply___delete__::GetTypeName() const {
 
 class Msg_PSpeechSynthesisRequestConstructor::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_PSpeechSynthesisRequestConstructor>()._impl_._has_bits_);
+  static void set_has_a_actorid(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_a_atext(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_auri(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_alang(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_a_avolume(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static void set_has_a_arate(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
+  }
+  static void set_has_a_apitch(HasBits* has_bits) {
+    (*has_bits)[0] |= 64u;
+  }
+  static void set_has_a_ashouldresistfingerprinting(HasBits* has_bits) {
+    (*has_bits)[0] |= 128u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x000000ff) ^ 0x000000ff) != 0;
+  }
 };
 
 Msg_PSpeechSynthesisRequestConstructor::Msg_PSpeechSynthesisRequestConstructor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1918,22 +2059,23 @@ Msg_PSpeechSynthesisRequestConstructor::Msg_PSpeechSynthesisRequestConstructor(c
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_PSpeechSynthesisRequestConstructor* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_atext_){}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_atext_){}
     , decltype(_impl_.a_auri_){}
     , decltype(_impl_.a_alang_){}
     , decltype(_impl_.a_actorid_){}
     , decltype(_impl_.a_avolume_){}
     , decltype(_impl_.a_arate_){}
     , decltype(_impl_.a_apitch_){}
-    , decltype(_impl_.a_ashouldresistfingerprinting_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_ashouldresistfingerprinting_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_atext_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_atext_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_atext().empty()) {
+  if (from._internal_has_a_atext()) {
     _this->_impl_.a_atext_.Set(from._internal_a_atext(), 
       _this->GetArenaForAllocation());
   }
@@ -1941,7 +2083,7 @@ Msg_PSpeechSynthesisRequestConstructor::Msg_PSpeechSynthesisRequestConstructor(c
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_auri_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_auri().empty()) {
+  if (from._internal_has_a_auri()) {
     _this->_impl_.a_auri_.Set(from._internal_a_auri(), 
       _this->GetArenaForAllocation());
   }
@@ -1949,7 +2091,7 @@ Msg_PSpeechSynthesisRequestConstructor::Msg_PSpeechSynthesisRequestConstructor(c
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_alang_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_alang().empty()) {
+  if (from._internal_has_a_alang()) {
     _this->_impl_.a_alang_.Set(from._internal_a_alang(), 
       _this->GetArenaForAllocation());
   }
@@ -1964,7 +2106,9 @@ inline void Msg_PSpeechSynthesisRequestConstructor::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_atext_){}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_atext_){}
     , decltype(_impl_.a_auri_){}
     , decltype(_impl_.a_alang_){}
     , decltype(_impl_.a_actorid_){int64_t{0}}
@@ -1972,7 +2116,6 @@ inline void Msg_PSpeechSynthesisRequestConstructor::SharedCtor(
     , decltype(_impl_.a_arate_){0}
     , decltype(_impl_.a_apitch_){0}
     , decltype(_impl_.a_ashouldresistfingerprinting_){false}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_atext_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2014,86 +2157,101 @@ void Msg_PSpeechSynthesisRequestConstructor::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_atext_.ClearToEmpty();
-  _impl_.a_auri_.ClearToEmpty();
-  _impl_.a_alang_.ClearToEmpty();
-  ::memset(&_impl_.a_actorid_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.a_ashouldresistfingerprinting_) -
-      reinterpret_cast<char*>(&_impl_.a_actorid_)) + sizeof(_impl_.a_ashouldresistfingerprinting_));
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_atext_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_auri_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _impl_.a_alang_.ClearNonDefaultToEmpty();
+    }
+  }
+  if (cached_has_bits & 0x000000f8u) {
+    ::memset(&_impl_.a_actorid_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_ashouldresistfingerprinting_) -
+        reinterpret_cast<char*>(&_impl_.a_actorid_)) + sizeof(_impl_.a_ashouldresistfingerprinting_));
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_PSpeechSynthesisRequestConstructor::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // sint64 a_actorid = 1;
+      // required sint64 a_actorid = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_actorid(&has_bits);
           _impl_.a_actorid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string a_aText = 2;
+      // required string a_aText = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_atext();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // string a_aUri = 3;
+      // required string a_aUri = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_auri();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // string a_aLang = 4;
+      // required string a_aLang = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_alang();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // float a_aVolume = 5;
+      // required float a_aVolume = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 45)) {
+          _Internal::set_has_a_avolume(&has_bits);
           _impl_.a_avolume_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
           ptr += sizeof(float);
         } else
           goto handle_unusual;
         continue;
-      // float a_aRate = 6;
+      // required float a_aRate = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 53)) {
+          _Internal::set_has_a_arate(&has_bits);
           _impl_.a_arate_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
           ptr += sizeof(float);
         } else
           goto handle_unusual;
         continue;
-      // float a_aPitch = 7;
+      // required float a_aPitch = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 61)) {
+          _Internal::set_has_a_apitch(&has_bits);
           _impl_.a_apitch_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
           ptr += sizeof(float);
         } else
           goto handle_unusual;
         continue;
-      // bool a_aShouldResistFingerprinting = 8;
+      // required bool a_aShouldResistFingerprinting = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
+          _Internal::set_has_a_ashouldresistfingerprinting(&has_bits);
           _impl_.a_ashouldresistfingerprinting_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -2115,6 +2273,7 @@ const char* Msg_PSpeechSynthesisRequestConstructor::_InternalParse(const char* p
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -2128,74 +2287,51 @@ uint8_t* Msg_PSpeechSynthesisRequestConstructor::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // sint64 a_actorid = 1;
-  if (this->_internal_a_actorid() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required sint64 a_actorid = 1;
+  if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_actorid(), target);
   }
 
-  // string a_aText = 2;
-  if (!this->_internal_a_atext().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_atext().data(), static_cast<int>(this->_internal_a_atext().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aText");
+  // required string a_aText = 2;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_atext(), target);
   }
 
-  // string a_aUri = 3;
-  if (!this->_internal_a_auri().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_auri().data(), static_cast<int>(this->_internal_a_auri().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aUri");
+  // required string a_aUri = 3;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_auri(), target);
   }
 
-  // string a_aLang = 4;
-  if (!this->_internal_a_alang().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_alang().data(), static_cast<int>(this->_internal_a_alang().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aLang");
+  // required string a_aLang = 4;
+  if (cached_has_bits & 0x00000004u) {
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_a_alang(), target);
   }
 
-  // float a_aVolume = 5;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_a_avolume = this->_internal_a_avolume();
-  uint32_t raw_a_avolume;
-  memcpy(&raw_a_avolume, &tmp_a_avolume, sizeof(tmp_a_avolume));
-  if (raw_a_avolume != 0) {
+  // required float a_aVolume = 5;
+  if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(5, this->_internal_a_avolume(), target);
   }
 
-  // float a_aRate = 6;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_a_arate = this->_internal_a_arate();
-  uint32_t raw_a_arate;
-  memcpy(&raw_a_arate, &tmp_a_arate, sizeof(tmp_a_arate));
-  if (raw_a_arate != 0) {
+  // required float a_aRate = 6;
+  if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(6, this->_internal_a_arate(), target);
   }
 
-  // float a_aPitch = 7;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_a_apitch = this->_internal_a_apitch();
-  uint32_t raw_a_apitch;
-  memcpy(&raw_a_apitch, &tmp_a_apitch, sizeof(tmp_a_apitch));
-  if (raw_a_apitch != 0) {
+  // required float a_aPitch = 7;
+  if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(7, this->_internal_a_apitch(), target);
   }
 
-  // bool a_aShouldResistFingerprinting = 8;
-  if (this->_internal_a_ashouldresistfingerprinting() != 0) {
+  // required bool a_aShouldResistFingerprinting = 8;
+  if (cached_has_bits & 0x00000080u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(8, this->_internal_a_ashouldresistfingerprinting(), target);
   }
@@ -2208,71 +2344,99 @@ uint8_t* Msg_PSpeechSynthesisRequestConstructor::_InternalSerialize(
   return target;
 }
 
-size_t Msg_PSpeechSynthesisRequestConstructor::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor)
+size_t Msg_PSpeechSynthesisRequestConstructor::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string a_aText = 2;
-  if (!this->_internal_a_atext().empty()) {
+  if (_internal_has_a_atext()) {
+    // required string a_aText = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_atext());
   }
 
-  // string a_aUri = 3;
-  if (!this->_internal_a_auri().empty()) {
+  if (_internal_has_a_auri()) {
+    // required string a_aUri = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_auri());
   }
 
-  // string a_aLang = 4;
-  if (!this->_internal_a_alang().empty()) {
+  if (_internal_has_a_alang()) {
+    // required string a_aLang = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_alang());
   }
 
-  // sint64 a_actorid = 1;
-  if (this->_internal_a_actorid() != 0) {
+  if (_internal_has_a_actorid()) {
+    // required sint64 a_actorid = 1;
     total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
   }
 
-  // float a_aVolume = 5;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_a_avolume = this->_internal_a_avolume();
-  uint32_t raw_a_avolume;
-  memcpy(&raw_a_avolume, &tmp_a_avolume, sizeof(tmp_a_avolume));
-  if (raw_a_avolume != 0) {
+  if (_internal_has_a_avolume()) {
+    // required float a_aVolume = 5;
     total_size += 1 + 4;
   }
 
-  // float a_aRate = 6;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_a_arate = this->_internal_a_arate();
-  uint32_t raw_a_arate;
-  memcpy(&raw_a_arate, &tmp_a_arate, sizeof(tmp_a_arate));
-  if (raw_a_arate != 0) {
+  if (_internal_has_a_arate()) {
+    // required float a_aRate = 6;
     total_size += 1 + 4;
   }
 
-  // float a_aPitch = 7;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_a_apitch = this->_internal_a_apitch();
-  uint32_t raw_a_apitch;
-  memcpy(&raw_a_apitch, &tmp_a_apitch, sizeof(tmp_a_apitch));
-  if (raw_a_apitch != 0) {
+  if (_internal_has_a_apitch()) {
+    // required float a_aPitch = 7;
     total_size += 1 + 4;
   }
 
-  // bool a_aShouldResistFingerprinting = 8;
-  if (this->_internal_a_ashouldresistfingerprinting() != 0) {
+  if (_internal_has_a_ashouldresistfingerprinting()) {
+    // required bool a_aShouldResistFingerprinting = 8;
     total_size += 1 + 1;
   }
+
+  return total_size;
+}
+size_t Msg_PSpeechSynthesisRequestConstructor::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x000000ff) ^ 0x000000ff) == 0) {  // All required fields are present.
+    // required string a_aText = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_atext());
+
+    // required string a_aUri = 3;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_auri());
+
+    // required string a_aLang = 4;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_alang());
+
+    // required sint64 a_actorid = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
+
+    // required float a_aVolume = 5;
+    total_size += 1 + 4;
+
+    // required float a_aRate = 6;
+    total_size += 1 + 4;
+
+    // required float a_aPitch = 7;
+    total_size += 1 + 4;
+
+    // required bool a_aShouldResistFingerprinting = 8;
+    total_size += 1 + 1;
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -2295,41 +2459,33 @@ void Msg_PSpeechSynthesisRequestConstructor::MergeFrom(const Msg_PSpeechSynthesi
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_atext().empty()) {
-    _this->_internal_set_a_atext(from._internal_a_atext());
-  }
-  if (!from._internal_a_auri().empty()) {
-    _this->_internal_set_a_auri(from._internal_a_auri());
-  }
-  if (!from._internal_a_alang().empty()) {
-    _this->_internal_set_a_alang(from._internal_a_alang());
-  }
-  if (from._internal_a_actorid() != 0) {
-    _this->_internal_set_a_actorid(from._internal_a_actorid());
-  }
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_a_avolume = from._internal_a_avolume();
-  uint32_t raw_a_avolume;
-  memcpy(&raw_a_avolume, &tmp_a_avolume, sizeof(tmp_a_avolume));
-  if (raw_a_avolume != 0) {
-    _this->_internal_set_a_avolume(from._internal_a_avolume());
-  }
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_a_arate = from._internal_a_arate();
-  uint32_t raw_a_arate;
-  memcpy(&raw_a_arate, &tmp_a_arate, sizeof(tmp_a_arate));
-  if (raw_a_arate != 0) {
-    _this->_internal_set_a_arate(from._internal_a_arate());
-  }
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_a_apitch = from._internal_a_apitch();
-  uint32_t raw_a_apitch;
-  memcpy(&raw_a_apitch, &tmp_a_apitch, sizeof(tmp_a_apitch));
-  if (raw_a_apitch != 0) {
-    _this->_internal_set_a_apitch(from._internal_a_apitch());
-  }
-  if (from._internal_a_ashouldresistfingerprinting() != 0) {
-    _this->_internal_set_a_ashouldresistfingerprinting(from._internal_a_ashouldresistfingerprinting());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x000000ffu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_atext(from._internal_a_atext());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_auri(from._internal_a_auri());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_internal_set_a_alang(from._internal_a_alang());
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.a_actorid_ = from._impl_.a_actorid_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_impl_.a_avolume_ = from._impl_.a_avolume_;
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _this->_impl_.a_arate_ = from._impl_.a_arate_;
+    }
+    if (cached_has_bits & 0x00000040u) {
+      _this->_impl_.a_apitch_ = from._impl_.a_apitch_;
+    }
+    if (cached_has_bits & 0x00000080u) {
+      _this->_impl_.a_ashouldresistfingerprinting_ = from._impl_.a_ashouldresistfingerprinting_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -2342,6 +2498,7 @@ void Msg_PSpeechSynthesisRequestConstructor::CopyFrom(const Msg_PSpeechSynthesis
 }
 
 bool Msg_PSpeechSynthesisRequestConstructor::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -2350,6 +2507,7 @@ void Msg_PSpeechSynthesisRequestConstructor::InternalSwap(Msg_PSpeechSynthesisRe
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_atext_, lhs_arena,
       &other->_impl_.a_atext_, rhs_arena

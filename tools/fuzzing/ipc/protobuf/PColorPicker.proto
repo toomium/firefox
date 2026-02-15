@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/ipc/PColorPicker.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.PColorPicker;
@@ -19,11 +19,11 @@ message Msg_Open {
 }
 
 message Msg_Update {
-  string a_color = 1;
+  required string a_color = 1;
 }
 
 message Msg___delete__ {
-  string a_color = 1;
+  required string a_color = 1;
 }
 
 message Reply___delete__ {

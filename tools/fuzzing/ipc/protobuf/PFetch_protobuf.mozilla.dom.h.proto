@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/fetch/PFetch.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom;
@@ -19,16 +19,16 @@ import "PerformanceTimingTypes.proto";
 
 // Structs and unions declarations
 message FetchOpArgs {
-  protobuf.mozilla.dom.IPCInternalRequest a_request = 1;
-  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
-  string a_workerScript = 3;
-  protobuf.mozilla.dom.IPCClientInfo a_clientInfo = 4;
+  required protobuf.mozilla.dom.IPCInternalRequest a_request = 1;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
+  required string a_workerScript = 3;
+  required protobuf.mozilla.dom.IPCClientInfo a_clientInfo = 4;
   optional protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_controller = 5;
   optional protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 6;
-  bool a_needOnDataAvailable = 7;
-  bool a_hasCSPEventListener = 8;
-  uint64 a_associatedBrowsingContextID = 9;
-  bool a_isThirdPartyContext = 10;
-  bool a_isWorkerRequest = 11;
-  bool a_isOn3PCBExceptionList = 12;
+  required bool a_needOnDataAvailable = 7;
+  required bool a_hasCSPEventListener = 8;
+  required uint64 a_associatedBrowsingContextID = 9;
+  required bool a_isThirdPartyContext = 10;
+  required bool a_isWorkerRequest = 11;
+  required bool a_isOn3PCBExceptionList = 12;
 }

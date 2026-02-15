@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/cookiestore/PCookieStore.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.PCookieStore;
@@ -19,17 +19,17 @@ import "NeckoChannelParams.proto";
 
 // Message declarations
 message Msg_GetRequest {
-  bytes a_cookieURI = 1;
-  bytes a_attrs = 2;
+  required bytes a_cookieURI = 1;
+  required bytes a_attrs = 2;
   optional bytes a_partitionedAttrs = 3;
-  bool a_thirdPartyContext = 4;
-  bool a_partitionForeign = 5;
-  bool a_usingStorageAccess = 6;
-  bool a_isOn3PCBExceptionList = 7;
-  bool a_matchName = 8;
-  string a_name = 9;
-  string a_path = 10;
-  bool a_onlyFirstMatch = 11;
+  required bool a_thirdPartyContext = 4;
+  required bool a_partitionForeign = 5;
+  required bool a_usingStorageAccess = 6;
+  required bool a_isOn3PCBExceptionList = 7;
+  required bool a_matchName = 8;
+  required string a_name = 9;
+  required string a_path = 10;
+  required bool a_onlyFirstMatch = 11;
 }
 
 message Reply_GetRequest {
@@ -37,48 +37,48 @@ message Reply_GetRequest {
 }
 
 message Msg_SetRequest {
-  bytes a_cookieURI = 1;
-  bytes a_attrs = 2;
-  bool a_thirdPartyContext = 3;
-  bool a_partitionForeign = 4;
-  bool a_usingStorageAccess = 5;
-  bool a_isOn3PCBExceptionList = 6;
-  string a_name = 7;
-  string a_value = 8;
-  bool a_session = 9;
-  sint64 a_expires = 10;
-  string a_domain = 11;
-  string a_path = 12;
-  sint32 a_sameSite = 13;
-  bool a_partitioned = 14;
-  bytes a_operationId = 15;
+  required bytes a_cookieURI = 1;
+  required bytes a_attrs = 2;
+  required bool a_thirdPartyContext = 3;
+  required bool a_partitionForeign = 4;
+  required bool a_usingStorageAccess = 5;
+  required bool a_isOn3PCBExceptionList = 6;
+  required string a_name = 7;
+  required string a_value = 8;
+  required bool a_session = 9;
+  required sint64 a_expires = 10;
+  required string a_domain = 11;
+  required string a_path = 12;
+  required sint32 a_sameSite = 13;
+  required bool a_partitioned = 14;
+  required bytes a_operationId = 15;
 }
 
 message Reply_SetRequest {
-  bool a_waitForNotification = 1;
+  required bool a_waitForNotification = 1;
 }
 
 message Msg_DeleteRequest {
-  bytes a_cookieURI = 1;
-  bytes a_attrs = 2;
-  bool a_thirdPartyContext = 3;
-  bool a_partitionForeign = 4;
-  bool a_usingStorageAccess = 5;
-  bool a_isOn3PCBExceptionList = 6;
-  string a_name = 7;
-  string a_domain = 8;
-  string a_path = 9;
-  bool a_partitioned = 10;
-  bytes a_operationID = 11;
+  required bytes a_cookieURI = 1;
+  required bytes a_attrs = 2;
+  required bool a_thirdPartyContext = 3;
+  required bool a_partitionForeign = 4;
+  required bool a_usingStorageAccess = 5;
+  required bool a_isOn3PCBExceptionList = 6;
+  required string a_name = 7;
+  required string a_domain = 8;
+  required string a_path = 9;
+  required bool a_partitioned = 10;
+  required bytes a_operationID = 11;
 }
 
 message Reply_DeleteRequest {
-  bool a_waitForNotification = 1;
+  required bool a_waitForNotification = 1;
 }
 
 message Msg_GetSubscriptionsRequest {
-  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
-  string a_scopeURL = 2;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
+  required string a_scopeURL = 2;
 }
 
 message Reply_GetSubscriptionsRequest {
@@ -86,14 +86,14 @@ message Reply_GetSubscriptionsRequest {
 }
 
 message Msg_SubscribeOrUnsubscribeRequest {
-  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
-  string a_scopeURL = 2;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
+  required string a_scopeURL = 2;
   repeated protobuf.mozilla.dom.CookieSubscription a_subscriptions = 3;
-  bool a_subscribe = 4;
+  required bool a_subscribe = 4;
 }
 
 message Reply_SubscribeOrUnsubscribeRequest {
-  bool a_result = 1;
+  required bool a_result = 1;
 }
 
 message Msg_Close {

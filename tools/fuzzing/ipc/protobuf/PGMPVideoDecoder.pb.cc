@@ -23,11 +23,11 @@ namespace gmp {
 namespace PGMPVideoDecoder {
 PROTOBUF_CONSTEXPR Msg_InitDecode::Msg_InitDecode(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_acodecspecific_)*/{}
-  , /*decltype(_impl_._a_acodecspecific_cached_byte_size_)*/{0}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_acodecspecific_)*/{}
   , /*decltype(_impl_.a_acodecsettings_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_acorecount_)*/0
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_acorecount_)*/0} {}
 struct Msg_InitDecodeDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_InitDecodeDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -39,8 +39,9 @@ struct Msg_InitDecodeDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_InitDecodeDefaultTypeInternal _Msg_InitDecode_default_instance_;
 PROTOBUF_CONSTEXPR Msg_GiveShmem::Msg_GiveShmem(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_aoutputshmem_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_aoutputshmem_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_GiveShmemDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_GiveShmemDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -52,13 +53,13 @@ struct Msg_GiveShmemDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_GiveShmemDefaultTypeInternal _Msg_GiveShmem_default_instance_;
 PROTOBUF_CONSTEXPR Msg_Decode::Msg_Decode(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_acodecspecificinfo_)*/{}
-  , /*decltype(_impl_._a_acodecspecificinfo_cached_byte_size_)*/{0}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_acodecspecificinfo_)*/{}
   , /*decltype(_impl_.a_ainputshmem_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_ainputframe_)*/nullptr
   , /*decltype(_impl_.a_arendertimems_)*/int64_t{0}
-  , /*decltype(_impl_.a_amissingframes_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_amissingframes_)*/false} {}
 struct Msg_DecodeDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_DecodeDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -118,8 +119,9 @@ struct Reply___delete__DefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply___delete__DefaultTypeInternal _Reply___delete___default_instance_;
 PROTOBUF_CONSTEXPR Msg_ReturnShmem::Msg_ReturnShmem(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_ainputshmem_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_ainputshmem_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_ReturnShmemDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ReturnShmemDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -131,10 +133,10 @@ struct Msg_ReturnShmemDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_ReturnShmemDefaultTypeInternal _Msg_ReturnShmem_default_instance_;
 PROTOBUF_CONSTEXPR Msg_DecodedData::Msg_DecodedData(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_adecodeddata_)*/{}
-  , /*decltype(_impl_._a_adecodeddata_cached_byte_size_)*/{0}
-  , /*decltype(_impl_.a_adecodedframe_)*/nullptr
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_adecodeddata_)*/{}
+  , /*decltype(_impl_.a_adecodedframe_)*/nullptr} {}
 struct Msg_DecodedDataDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_DecodedDataDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -146,9 +148,10 @@ struct Msg_DecodedDataDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_DecodedDataDefaultTypeInternal _Msg_DecodedData_default_instance_;
 PROTOBUF_CONSTEXPR Msg_DecodedShmem::Msg_DecodedShmem(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_adecodedshmem_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_adecodedframe_)*/nullptr
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_adecodedshmem_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_adecodedframe_)*/nullptr} {}
 struct Msg_DecodedShmemDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_DecodedShmemDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -160,8 +163,9 @@ struct Msg_DecodedShmemDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_DecodedShmemDefaultTypeInternal _Msg_DecodedShmem_default_instance_;
 PROTOBUF_CONSTEXPR Msg_ReceivedDecodedReferenceFrame::Msg_ReceivedDecodedReferenceFrame(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_apictureid_)*/uint64_t{0u}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_apictureid_)*/uint64_t{0u}} {}
 struct Msg_ReceivedDecodedReferenceFrameDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ReceivedDecodedReferenceFrameDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -173,8 +177,9 @@ struct Msg_ReceivedDecodedReferenceFrameDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_ReceivedDecodedReferenceFrameDefaultTypeInternal _Msg_ReceivedDecodedReferenceFrame_default_instance_;
 PROTOBUF_CONSTEXPR Msg_ReceivedDecodedFrame::Msg_ReceivedDecodedFrame(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_apictureid_)*/uint64_t{0u}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_apictureid_)*/uint64_t{0u}} {}
 struct Msg_ReceivedDecodedFrameDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ReceivedDecodedFrameDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -222,8 +227,9 @@ struct Msg_ResetCompleteDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_ResetCompleteDefaultTypeInternal _Msg_ResetComplete_default_instance_;
 PROTOBUF_CONSTEXPR Msg_Error::Msg_Error(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_aerr_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_aerr_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_ErrorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ErrorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -258,6 +264,16 @@ namespace PGMPVideoDecoder {
 
 class Msg_InitDecode::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_InitDecode>()._impl_._has_bits_);
+  static void set_has_a_acodecsettings(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_acorecount(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 Msg_InitDecode::Msg_InitDecode(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -270,18 +286,18 @@ Msg_InitDecode::Msg_InitDecode(const Msg_InitDecode& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_InitDecode* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_acodecspecific_){from._impl_.a_acodecspecific_}
-    , /*decltype(_impl_._a_acodecspecific_cached_byte_size_)*/{0}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_acodecspecific_){from._impl_.a_acodecspecific_}
     , decltype(_impl_.a_acodecsettings_){}
-    , decltype(_impl_.a_acorecount_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_acorecount_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_acodecsettings_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_acodecsettings_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_acodecsettings().empty()) {
+  if (from._internal_has_a_acodecsettings()) {
     _this->_impl_.a_acodecsettings_.Set(from._internal_a_acodecsettings(), 
       _this->GetArenaForAllocation());
   }
@@ -294,11 +310,11 @@ inline void Msg_InitDecode::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_acodecspecific_){arena}
-    , /*decltype(_impl_._a_acodecspecific_cached_byte_size_)*/{0}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_acodecspecific_){arena}
     , decltype(_impl_.a_acodecsettings_){}
     , decltype(_impl_.a_acorecount_){0}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_acodecsettings_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -332,18 +348,23 @@ void Msg_InitDecode::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_acodecspecific_.Clear();
-  _impl_.a_acodecsettings_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_acodecsettings_.ClearNonDefaultToEmpty();
+  }
   _impl_.a_acorecount_ = 0;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_InitDecode::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_aCodecSettings = 1;
+      // required bytes a_aCodecSettings = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_acodecsettings();
@@ -354,18 +375,24 @@ const char* Msg_InitDecode::_InternalParse(const char* ptr, ::_pbi::ParseContext
         continue;
       // repeated uint32 a_aCodecSpecific = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            _internal_add_a_acodecspecific(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 18) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_acodecspecific(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 16) {
-          _internal_add_a_acodecspecific(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // sint32 a_aCoreCount = 3;
+      // required sint32 a_aCoreCount = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_a_acorecount(&has_bits);
           _impl_.a_acorecount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
@@ -387,6 +414,7 @@ const char* Msg_InitDecode::_InternalParse(const char* ptr, ::_pbi::ParseContext
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -400,23 +428,21 @@ uint8_t* Msg_InitDecode::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_aCodecSettings = 1;
-  if (!this->_internal_a_acodecsettings().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_aCodecSettings = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_acodecsettings(), target);
   }
 
   // repeated uint32 a_aCodecSpecific = 2;
-  {
-    int byte_size = _impl_._a_acodecspecific_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteUInt32Packed(
-          2, _internal_a_acodecspecific(), byte_size, target);
-    }
+  for (int i = 0, n = this->_internal_a_acodecspecific_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_acodecspecific(i), target);
   }
 
-  // sint32 a_aCoreCount = 3;
-  if (this->_internal_a_acorecount() != 0) {
+  // required sint32 a_aCoreCount = 3;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_a_acorecount(), target);
   }
@@ -429,10 +455,40 @@ uint8_t* Msg_InitDecode::_InternalSerialize(
   return target;
 }
 
+size_t Msg_InitDecode::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.gmp.PGMPVideoDecoder.Msg_InitDecode)
+  size_t total_size = 0;
+
+  if (_internal_has_a_acodecsettings()) {
+    // required bytes a_aCodecSettings = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_acodecsettings());
+  }
+
+  if (_internal_has_a_acorecount()) {
+    // required sint32 a_aCoreCount = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_acorecount());
+  }
+
+  return total_size;
+}
 size_t Msg_InitDecode::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gmp.PGMPVideoDecoder.Msg_InitDecode)
   size_t total_size = 0;
 
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required bytes a_aCodecSettings = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_acodecsettings());
+
+    // required sint32 a_aCoreCount = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_acorecount());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -441,26 +497,9 @@ size_t Msg_InitDecode::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_acodecspecific_);
-    if (data_size > 0) {
-      total_size += 1 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
-    int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._a_acodecspecific_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
+    total_size += 1 *
+                  ::_pbi::FromIntSize(this->_internal_a_acodecspecific_size());
     total_size += data_size;
-  }
-
-  // bytes a_aCodecSettings = 1;
-  if (!this->_internal_a_acodecsettings().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_acodecsettings());
-  }
-
-  // sint32 a_aCoreCount = 3;
-  if (this->_internal_a_acorecount() != 0) {
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_acorecount());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -485,11 +524,15 @@ void Msg_InitDecode::MergeFrom(const Msg_InitDecode& from) {
   (void) cached_has_bits;
 
   _this->_impl_.a_acodecspecific_.MergeFrom(from._impl_.a_acodecspecific_);
-  if (!from._internal_a_acodecsettings().empty()) {
-    _this->_internal_set_a_acodecsettings(from._internal_a_acodecsettings());
-  }
-  if (from._internal_a_acorecount() != 0) {
-    _this->_internal_set_a_acorecount(from._internal_a_acorecount());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_acodecsettings(from._internal_a_acodecsettings());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_acorecount_ = from._impl_.a_acorecount_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -502,6 +545,7 @@ void Msg_InitDecode::CopyFrom(const Msg_InitDecode& from) {
 }
 
 bool Msg_InitDecode::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -510,6 +554,7 @@ void Msg_InitDecode::InternalSwap(Msg_InitDecode* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_acodecspecific_.InternalSwap(&other->_impl_.a_acodecspecific_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_acodecsettings_, lhs_arena,
@@ -527,6 +572,13 @@ std::string Msg_InitDecode::GetTypeName() const {
 
 class Msg_GiveShmem::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_GiveShmem>()._impl_._has_bits_);
+  static void set_has_a_aoutputshmem(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Msg_GiveShmem::Msg_GiveShmem(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -539,15 +591,16 @@ Msg_GiveShmem::Msg_GiveShmem(const Msg_GiveShmem& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_GiveShmem* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_aoutputshmem_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_aoutputshmem_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_aoutputshmem_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_aoutputshmem_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_aoutputshmem().empty()) {
+  if (from._internal_has_a_aoutputshmem()) {
     _this->_impl_.a_aoutputshmem_.Set(from._internal_a_aoutputshmem(), 
       _this->GetArenaForAllocation());
   }
@@ -559,8 +612,9 @@ inline void Msg_GiveShmem::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_aoutputshmem_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_aoutputshmem_){}
   };
   _impl_.a_aoutputshmem_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -592,17 +646,22 @@ void Msg_GiveShmem::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_aoutputshmem_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_aoutputshmem_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_GiveShmem::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_aOutputShmem = 1;
+      // required bytes a_aOutputShmem = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_aoutputshmem();
@@ -627,6 +686,7 @@ const char* Msg_GiveShmem::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -640,8 +700,9 @@ uint8_t* Msg_GiveShmem::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_aOutputShmem = 1;
-  if (!this->_internal_a_aoutputshmem().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_aOutputShmem = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_aoutputshmem(), target);
   }
@@ -658,16 +719,15 @@ size_t Msg_GiveShmem::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gmp.PGMPVideoDecoder.Msg_GiveShmem)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_aOutputShmem = 1;
-  if (!this->_internal_a_aoutputshmem().empty()) {
+  // required bytes a_aOutputShmem = 1;
+  if (_internal_has_a_aoutputshmem()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_aoutputshmem());
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -690,7 +750,7 @@ void Msg_GiveShmem::MergeFrom(const Msg_GiveShmem& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_aoutputshmem().empty()) {
+  if (from._internal_has_a_aoutputshmem()) {
     _this->_internal_set_a_aoutputshmem(from._internal_a_aoutputshmem());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -704,6 +764,7 @@ void Msg_GiveShmem::CopyFrom(const Msg_GiveShmem& from) {
 }
 
 bool Msg_GiveShmem::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -712,6 +773,7 @@ void Msg_GiveShmem::InternalSwap(Msg_GiveShmem* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_aoutputshmem_, lhs_arena,
       &other->_impl_.a_aoutputshmem_, rhs_arena
@@ -727,7 +789,23 @@ std::string Msg_GiveShmem::GetTypeName() const {
 
 class Msg_Decode::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_Decode>()._impl_._has_bits_);
   static const ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData& a_ainputframe(const Msg_Decode* msg);
+  static void set_has_a_ainputframe(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_ainputshmem(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_amissingframes(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_a_arendertimems(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x0000000f) ^ 0x0000000f) != 0;
+  }
 };
 
 const ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData&
@@ -735,10 +813,8 @@ Msg_Decode::_Internal::a_ainputframe(const Msg_Decode* msg) {
   return *msg->_impl_.a_ainputframe_;
 }
 void Msg_Decode::clear_a_ainputframe() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_ainputframe_ != nullptr) {
-    delete _impl_.a_ainputframe_;
-  }
-  _impl_.a_ainputframe_ = nullptr;
+  if (_impl_.a_ainputframe_ != nullptr) _impl_.a_ainputframe_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 Msg_Decode::Msg_Decode(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -750,20 +826,20 @@ Msg_Decode::Msg_Decode(const Msg_Decode& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_Decode* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_acodecspecificinfo_){from._impl_.a_acodecspecificinfo_}
-    , /*decltype(_impl_._a_acodecspecificinfo_cached_byte_size_)*/{0}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_acodecspecificinfo_){from._impl_.a_acodecspecificinfo_}
     , decltype(_impl_.a_ainputshmem_){}
     , decltype(_impl_.a_ainputframe_){nullptr}
     , decltype(_impl_.a_arendertimems_){}
-    , decltype(_impl_.a_amissingframes_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_amissingframes_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_ainputshmem_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_ainputshmem_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_ainputshmem().empty()) {
+  if (from._internal_has_a_ainputshmem()) {
     _this->_impl_.a_ainputshmem_.Set(from._internal_a_ainputshmem(), 
       _this->GetArenaForAllocation());
   }
@@ -781,13 +857,13 @@ inline void Msg_Decode::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_acodecspecificinfo_){arena}
-    , /*decltype(_impl_._a_acodecspecificinfo_cached_byte_size_)*/{0}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_acodecspecificinfo_){arena}
     , decltype(_impl_.a_ainputshmem_){}
     , decltype(_impl_.a_ainputframe_){nullptr}
     , decltype(_impl_.a_arendertimems_){int64_t{0}}
     , decltype(_impl_.a_amissingframes_){false}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_ainputshmem_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -822,24 +898,33 @@ void Msg_Decode::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_acodecspecificinfo_.Clear();
-  _impl_.a_ainputshmem_.ClearToEmpty();
-  if (GetArenaForAllocation() == nullptr && _impl_.a_ainputframe_ != nullptr) {
-    delete _impl_.a_ainputframe_;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_ainputshmem_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      GOOGLE_DCHECK(_impl_.a_ainputframe_ != nullptr);
+      _impl_.a_ainputframe_->Clear();
+    }
   }
-  _impl_.a_ainputframe_ = nullptr;
-  ::memset(&_impl_.a_arendertimems_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.a_amissingframes_) -
-      reinterpret_cast<char*>(&_impl_.a_arendertimems_)) + sizeof(_impl_.a_amissingframes_));
+  if (cached_has_bits & 0x0000000cu) {
+    ::memset(&_impl_.a_arendertimems_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_amissingframes_) -
+        reinterpret_cast<char*>(&_impl_.a_arendertimems_)) + sizeof(_impl_.a_amissingframes_));
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_Decode::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.gmp.GMPVideoEncodedFrameData a_aInputFrame = 1;
+      // required .protobuf.mozilla.gmp.GMPVideoEncodedFrameData a_aInputFrame = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_ainputframe(), ptr);
@@ -847,7 +932,7 @@ const char* Msg_Decode::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // bytes a_aInputShmem = 2;
+      // required bytes a_aInputShmem = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_ainputshmem();
@@ -856,9 +941,10 @@ const char* Msg_Decode::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // bool a_aMissingFrames = 3;
+      // required bool a_aMissingFrames = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_a_amissingframes(&has_bits);
           _impl_.a_amissingframes_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -866,18 +952,24 @@ const char* Msg_Decode::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         continue;
       // repeated uint32 a_aCodecSpecificInfo = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            _internal_add_a_acodecspecificinfo(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<32>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 34) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_acodecspecificinfo(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 32) {
-          _internal_add_a_acodecspecificinfo(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // sint64 a_aRenderTimeMs = 5;
+      // required sint64 a_aRenderTimeMs = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          _Internal::set_has_a_arendertimems(&has_bits);
           _impl_.a_arendertimems_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
@@ -899,6 +991,7 @@ const char* Msg_Decode::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -912,36 +1005,34 @@ uint8_t* Msg_Decode::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.mozilla.gmp.GMPVideoEncodedFrameData a_aInputFrame = 1;
-  if (this->_internal_has_a_ainputframe()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required .protobuf.mozilla.gmp.GMPVideoEncodedFrameData a_aInputFrame = 1;
+  if (cached_has_bits & 0x00000002u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_ainputframe(this),
         _Internal::a_ainputframe(this).GetCachedSize(), target, stream);
   }
 
-  // bytes a_aInputShmem = 2;
-  if (!this->_internal_a_ainputshmem().empty()) {
+  // required bytes a_aInputShmem = 2;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_a_ainputshmem(), target);
   }
 
-  // bool a_aMissingFrames = 3;
-  if (this->_internal_a_amissingframes() != 0) {
+  // required bool a_aMissingFrames = 3;
+  if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_amissingframes(), target);
   }
 
   // repeated uint32 a_aCodecSpecificInfo = 4;
-  {
-    int byte_size = _impl_._a_acodecspecificinfo_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteUInt32Packed(
-          4, _internal_a_acodecspecificinfo(), byte_size, target);
-    }
+  for (int i = 0, n = this->_internal_a_acodecspecificinfo_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(4, this->_internal_a_acodecspecificinfo(i), target);
   }
 
-  // sint64 a_aRenderTimeMs = 5;
-  if (this->_internal_a_arendertimems() != 0) {
+  // required sint64 a_aRenderTimeMs = 5;
+  if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(5, this->_internal_a_arendertimems(), target);
   }
@@ -954,10 +1045,60 @@ uint8_t* Msg_Decode::_InternalSerialize(
   return target;
 }
 
+size_t Msg_Decode::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.gmp.PGMPVideoDecoder.Msg_Decode)
+  size_t total_size = 0;
+
+  if (_internal_has_a_ainputshmem()) {
+    // required bytes a_aInputShmem = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_ainputshmem());
+  }
+
+  if (_internal_has_a_ainputframe()) {
+    // required .protobuf.mozilla.gmp.GMPVideoEncodedFrameData a_aInputFrame = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_ainputframe_);
+  }
+
+  if (_internal_has_a_arendertimems()) {
+    // required sint64 a_aRenderTimeMs = 5;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_arendertimems());
+  }
+
+  if (_internal_has_a_amissingframes()) {
+    // required bool a_aMissingFrames = 3;
+    total_size += 1 + 1;
+  }
+
+  return total_size;
+}
 size_t Msg_Decode::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gmp.PGMPVideoDecoder.Msg_Decode)
   size_t total_size = 0;
 
+  if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
+    // required bytes a_aInputShmem = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_ainputshmem());
+
+    // required .protobuf.mozilla.gmp.GMPVideoEncodedFrameData a_aInputFrame = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_ainputframe_);
+
+    // required sint64 a_aRenderTimeMs = 5;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_arendertimems());
+
+    // required bool a_aMissingFrames = 3;
+    total_size += 1 + 1;
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -966,38 +1107,9 @@ size_t Msg_Decode::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_acodecspecificinfo_);
-    if (data_size > 0) {
-      total_size += 1 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
-    int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._a_acodecspecificinfo_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
+    total_size += 1 *
+                  ::_pbi::FromIntSize(this->_internal_a_acodecspecificinfo_size());
     total_size += data_size;
-  }
-
-  // bytes a_aInputShmem = 2;
-  if (!this->_internal_a_ainputshmem().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_ainputshmem());
-  }
-
-  // .protobuf.mozilla.gmp.GMPVideoEncodedFrameData a_aInputFrame = 1;
-  if (this->_internal_has_a_ainputframe()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_ainputframe_);
-  }
-
-  // sint64 a_aRenderTimeMs = 5;
-  if (this->_internal_a_arendertimems() != 0) {
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_arendertimems());
-  }
-
-  // bool a_aMissingFrames = 3;
-  if (this->_internal_a_amissingframes() != 0) {
-    total_size += 1 + 1;
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1022,18 +1134,22 @@ void Msg_Decode::MergeFrom(const Msg_Decode& from) {
   (void) cached_has_bits;
 
   _this->_impl_.a_acodecspecificinfo_.MergeFrom(from._impl_.a_acodecspecificinfo_);
-  if (!from._internal_a_ainputshmem().empty()) {
-    _this->_internal_set_a_ainputshmem(from._internal_a_ainputshmem());
-  }
-  if (from._internal_has_a_ainputframe()) {
-    _this->_internal_mutable_a_ainputframe()->::protobuf::mozilla::gmp::GMPVideoEncodedFrameData::MergeFrom(
-        from._internal_a_ainputframe());
-  }
-  if (from._internal_a_arendertimems() != 0) {
-    _this->_internal_set_a_arendertimems(from._internal_a_arendertimems());
-  }
-  if (from._internal_a_amissingframes() != 0) {
-    _this->_internal_set_a_amissingframes(from._internal_a_amissingframes());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000000fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_ainputshmem(from._internal_a_ainputshmem());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_mutable_a_ainputframe()->::protobuf::mozilla::gmp::GMPVideoEncodedFrameData::MergeFrom(
+          from._internal_a_ainputframe());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.a_arendertimems_ = from._impl_.a_arendertimems_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.a_amissingframes_ = from._impl_.a_amissingframes_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1046,6 +1162,10 @@ void Msg_Decode::CopyFrom(const Msg_Decode& from) {
 }
 
 bool Msg_Decode::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (_internal_has_a_ainputframe()) {
+    if (!_impl_.a_ainputframe_->IsInitialized()) return false;
+  }
   return true;
 }
 
@@ -1054,6 +1174,7 @@ void Msg_Decode::InternalSwap(Msg_Decode* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_acodecspecificinfo_.InternalSwap(&other->_impl_.a_acodecspecificinfo_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_ainputshmem_, lhs_arena,
@@ -1668,6 +1789,13 @@ std::string Reply___delete__::GetTypeName() const {
 
 class Msg_ReturnShmem::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_ReturnShmem>()._impl_._has_bits_);
+  static void set_has_a_ainputshmem(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Msg_ReturnShmem::Msg_ReturnShmem(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1680,15 +1808,16 @@ Msg_ReturnShmem::Msg_ReturnShmem(const Msg_ReturnShmem& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_ReturnShmem* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_ainputshmem_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_ainputshmem_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_ainputshmem_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_ainputshmem_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_ainputshmem().empty()) {
+  if (from._internal_has_a_ainputshmem()) {
     _this->_impl_.a_ainputshmem_.Set(from._internal_a_ainputshmem(), 
       _this->GetArenaForAllocation());
   }
@@ -1700,8 +1829,9 @@ inline void Msg_ReturnShmem::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_ainputshmem_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_ainputshmem_){}
   };
   _impl_.a_ainputshmem_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1733,17 +1863,22 @@ void Msg_ReturnShmem::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_ainputshmem_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_ainputshmem_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_ReturnShmem::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_aInputShmem = 1;
+      // required bytes a_aInputShmem = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_ainputshmem();
@@ -1768,6 +1903,7 @@ const char* Msg_ReturnShmem::_InternalParse(const char* ptr, ::_pbi::ParseContex
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1781,8 +1917,9 @@ uint8_t* Msg_ReturnShmem::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_aInputShmem = 1;
-  if (!this->_internal_a_ainputshmem().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_aInputShmem = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_ainputshmem(), target);
   }
@@ -1799,16 +1936,15 @@ size_t Msg_ReturnShmem::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gmp.PGMPVideoDecoder.Msg_ReturnShmem)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_aInputShmem = 1;
-  if (!this->_internal_a_ainputshmem().empty()) {
+  // required bytes a_aInputShmem = 1;
+  if (_internal_has_a_ainputshmem()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_ainputshmem());
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1831,7 +1967,7 @@ void Msg_ReturnShmem::MergeFrom(const Msg_ReturnShmem& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_ainputshmem().empty()) {
+  if (from._internal_has_a_ainputshmem()) {
     _this->_internal_set_a_ainputshmem(from._internal_a_ainputshmem());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1845,6 +1981,7 @@ void Msg_ReturnShmem::CopyFrom(const Msg_ReturnShmem& from) {
 }
 
 bool Msg_ReturnShmem::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1853,6 +1990,7 @@ void Msg_ReturnShmem::InternalSwap(Msg_ReturnShmem* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_ainputshmem_, lhs_arena,
       &other->_impl_.a_ainputshmem_, rhs_arena
@@ -1868,7 +2006,14 @@ std::string Msg_ReturnShmem::GetTypeName() const {
 
 class Msg_DecodedData::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_DecodedData>()._impl_._has_bits_);
   static const ::protobuf::mozilla::gmp::GMPVideoi420FrameData& a_adecodedframe(const Msg_DecodedData* msg);
+  static void set_has_a_adecodedframe(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 const ::protobuf::mozilla::gmp::GMPVideoi420FrameData&
@@ -1876,10 +2021,8 @@ Msg_DecodedData::_Internal::a_adecodedframe(const Msg_DecodedData* msg) {
   return *msg->_impl_.a_adecodedframe_;
 }
 void Msg_DecodedData::clear_a_adecodedframe() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_adecodedframe_ != nullptr) {
-    delete _impl_.a_adecodedframe_;
-  }
-  _impl_.a_adecodedframe_ = nullptr;
+  if (_impl_.a_adecodedframe_ != nullptr) _impl_.a_adecodedframe_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Msg_DecodedData::Msg_DecodedData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -1891,10 +2034,10 @@ Msg_DecodedData::Msg_DecodedData(const Msg_DecodedData& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_DecodedData* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_adecodeddata_){from._impl_.a_adecodeddata_}
-    , /*decltype(_impl_._a_adecodeddata_cached_byte_size_)*/{0}
-    , decltype(_impl_.a_adecodedframe_){nullptr}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_adecodeddata_){from._impl_.a_adecodeddata_}
+    , decltype(_impl_.a_adecodedframe_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_adecodedframe()) {
@@ -1908,10 +2051,10 @@ inline void Msg_DecodedData::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_adecodeddata_){arena}
-    , /*decltype(_impl_._a_adecodeddata_cached_byte_size_)*/{0}
-    , decltype(_impl_.a_adecodedframe_){nullptr}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_adecodeddata_){arena}
+    , decltype(_impl_.a_adecodedframe_){nullptr}
   };
 }
 
@@ -1941,20 +2084,23 @@ void Msg_DecodedData::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_adecodeddata_.Clear();
-  if (GetArenaForAllocation() == nullptr && _impl_.a_adecodedframe_ != nullptr) {
-    delete _impl_.a_adecodedframe_;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(_impl_.a_adecodedframe_ != nullptr);
+    _impl_.a_adecodedframe_->Clear();
   }
-  _impl_.a_adecodedframe_ = nullptr;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_DecodedData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.gmp.GMPVideoi420FrameData a_aDecodedFrame = 1;
+      // required .protobuf.mozilla.gmp.GMPVideoi420FrameData a_aDecodedFrame = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_adecodedframe(), ptr);
@@ -1964,11 +2110,16 @@ const char* Msg_DecodedData::_InternalParse(const char* ptr, ::_pbi::ParseContex
         continue;
       // repeated uint32 a_aDecodedData = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            _internal_add_a_adecodeddata(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 18) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_adecodeddata(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 16) {
-          _internal_add_a_adecodeddata(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1989,6 +2140,7 @@ const char* Msg_DecodedData::_InternalParse(const char* ptr, ::_pbi::ParseContex
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -2002,20 +2154,18 @@ uint8_t* Msg_DecodedData::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.mozilla.gmp.GMPVideoi420FrameData a_aDecodedFrame = 1;
-  if (this->_internal_has_a_adecodedframe()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required .protobuf.mozilla.gmp.GMPVideoi420FrameData a_aDecodedFrame = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_adecodedframe(this),
         _Internal::a_adecodedframe(this).GetCachedSize(), target, stream);
   }
 
   // repeated uint32 a_aDecodedData = 2;
-  {
-    int byte_size = _impl_._a_adecodeddata_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteUInt32Packed(
-          2, _internal_a_adecodeddata(), byte_size, target);
-    }
+  for (int i = 0, n = this->_internal_a_adecodeddata_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_adecodeddata(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2030,6 +2180,12 @@ size_t Msg_DecodedData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gmp.PGMPVideoDecoder.Msg_DecodedData)
   size_t total_size = 0;
 
+  // required .protobuf.mozilla.gmp.GMPVideoi420FrameData a_aDecodedFrame = 1;
+  if (_internal_has_a_adecodedframe()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_adecodedframe_);
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2038,21 +2194,9 @@ size_t Msg_DecodedData::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_adecodeddata_);
-    if (data_size > 0) {
-      total_size += 1 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
-    int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._a_adecodeddata_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
+    total_size += 1 *
+                  ::_pbi::FromIntSize(this->_internal_a_adecodeddata_size());
     total_size += data_size;
-  }
-
-  // .protobuf.mozilla.gmp.GMPVideoi420FrameData a_aDecodedFrame = 1;
-  if (this->_internal_has_a_adecodedframe()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_adecodedframe_);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2092,12 +2236,17 @@ void Msg_DecodedData::CopyFrom(const Msg_DecodedData& from) {
 }
 
 bool Msg_DecodedData::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (_internal_has_a_adecodedframe()) {
+    if (!_impl_.a_adecodedframe_->IsInitialized()) return false;
+  }
   return true;
 }
 
 void Msg_DecodedData::InternalSwap(Msg_DecodedData* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_adecodeddata_.InternalSwap(&other->_impl_.a_adecodeddata_);
   swap(_impl_.a_adecodedframe_, other->_impl_.a_adecodedframe_);
 }
@@ -2111,7 +2260,17 @@ std::string Msg_DecodedData::GetTypeName() const {
 
 class Msg_DecodedShmem::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_DecodedShmem>()._impl_._has_bits_);
   static const ::protobuf::mozilla::gmp::GMPVideoi420FrameData& a_adecodedframe(const Msg_DecodedShmem* msg);
+  static void set_has_a_adecodedframe(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_adecodedshmem(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 const ::protobuf::mozilla::gmp::GMPVideoi420FrameData&
@@ -2119,10 +2278,8 @@ Msg_DecodedShmem::_Internal::a_adecodedframe(const Msg_DecodedShmem* msg) {
   return *msg->_impl_.a_adecodedframe_;
 }
 void Msg_DecodedShmem::clear_a_adecodedframe() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_adecodedframe_ != nullptr) {
-    delete _impl_.a_adecodedframe_;
-  }
-  _impl_.a_adecodedframe_ = nullptr;
+  if (_impl_.a_adecodedframe_ != nullptr) _impl_.a_adecodedframe_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 Msg_DecodedShmem::Msg_DecodedShmem(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -2134,16 +2291,17 @@ Msg_DecodedShmem::Msg_DecodedShmem(const Msg_DecodedShmem& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_DecodedShmem* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_adecodedshmem_){}
-    , decltype(_impl_.a_adecodedframe_){nullptr}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_adecodedshmem_){}
+    , decltype(_impl_.a_adecodedframe_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_adecodedshmem_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_adecodedshmem_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_adecodedshmem().empty()) {
+  if (from._internal_has_a_adecodedshmem()) {
     _this->_impl_.a_adecodedshmem_.Set(from._internal_a_adecodedshmem(), 
       _this->GetArenaForAllocation());
   }
@@ -2158,9 +2316,10 @@ inline void Msg_DecodedShmem::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_adecodedshmem_){}
-    , decltype(_impl_.a_adecodedframe_){nullptr}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_adecodedshmem_){}
+    , decltype(_impl_.a_adecodedframe_){nullptr}
   };
   _impl_.a_adecodedshmem_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2193,21 +2352,28 @@ void Msg_DecodedShmem::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_adecodedshmem_.ClearToEmpty();
-  if (GetArenaForAllocation() == nullptr && _impl_.a_adecodedframe_ != nullptr) {
-    delete _impl_.a_adecodedframe_;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_adecodedshmem_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      GOOGLE_DCHECK(_impl_.a_adecodedframe_ != nullptr);
+      _impl_.a_adecodedframe_->Clear();
+    }
   }
-  _impl_.a_adecodedframe_ = nullptr;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_DecodedShmem::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.gmp.GMPVideoi420FrameData a_aDecodedFrame = 1;
+      // required .protobuf.mozilla.gmp.GMPVideoi420FrameData a_aDecodedFrame = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_adecodedframe(), ptr);
@@ -2215,7 +2381,7 @@ const char* Msg_DecodedShmem::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // bytes a_aDecodedShmem = 2;
+      // required bytes a_aDecodedShmem = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_adecodedshmem();
@@ -2240,6 +2406,7 @@ const char* Msg_DecodedShmem::_InternalParse(const char* ptr, ::_pbi::ParseConte
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -2253,15 +2420,16 @@ uint8_t* Msg_DecodedShmem::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.mozilla.gmp.GMPVideoi420FrameData a_aDecodedFrame = 1;
-  if (this->_internal_has_a_adecodedframe()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required .protobuf.mozilla.gmp.GMPVideoi420FrameData a_aDecodedFrame = 1;
+  if (cached_has_bits & 0x00000002u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_adecodedframe(this),
         _Internal::a_adecodedframe(this).GetCachedSize(), target, stream);
   }
 
-  // bytes a_aDecodedShmem = 2;
-  if (!this->_internal_a_adecodedshmem().empty()) {
+  // required bytes a_aDecodedShmem = 2;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_a_adecodedshmem(), target);
   }
@@ -2274,27 +2442,47 @@ uint8_t* Msg_DecodedShmem::_InternalSerialize(
   return target;
 }
 
-size_t Msg_DecodedShmem::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gmp.PGMPVideoDecoder.Msg_DecodedShmem)
+size_t Msg_DecodedShmem::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.gmp.PGMPVideoDecoder.Msg_DecodedShmem)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_aDecodedShmem = 2;
-  if (!this->_internal_a_adecodedshmem().empty()) {
+  if (_internal_has_a_adecodedshmem()) {
+    // required bytes a_aDecodedShmem = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_adecodedshmem());
   }
 
-  // .protobuf.mozilla.gmp.GMPVideoi420FrameData a_aDecodedFrame = 1;
-  if (this->_internal_has_a_adecodedframe()) {
+  if (_internal_has_a_adecodedframe()) {
+    // required .protobuf.mozilla.gmp.GMPVideoi420FrameData a_aDecodedFrame = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_adecodedframe_);
   }
+
+  return total_size;
+}
+size_t Msg_DecodedShmem::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gmp.PGMPVideoDecoder.Msg_DecodedShmem)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required bytes a_aDecodedShmem = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_adecodedshmem());
+
+    // required .protobuf.mozilla.gmp.GMPVideoi420FrameData a_aDecodedFrame = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_adecodedframe_);
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -2317,12 +2505,15 @@ void Msg_DecodedShmem::MergeFrom(const Msg_DecodedShmem& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_adecodedshmem().empty()) {
-    _this->_internal_set_a_adecodedshmem(from._internal_a_adecodedshmem());
-  }
-  if (from._internal_has_a_adecodedframe()) {
-    _this->_internal_mutable_a_adecodedframe()->::protobuf::mozilla::gmp::GMPVideoi420FrameData::MergeFrom(
-        from._internal_a_adecodedframe());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_adecodedshmem(from._internal_a_adecodedshmem());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_mutable_a_adecodedframe()->::protobuf::mozilla::gmp::GMPVideoi420FrameData::MergeFrom(
+          from._internal_a_adecodedframe());
+    }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -2335,6 +2526,10 @@ void Msg_DecodedShmem::CopyFrom(const Msg_DecodedShmem& from) {
 }
 
 bool Msg_DecodedShmem::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (_internal_has_a_adecodedframe()) {
+    if (!_impl_.a_adecodedframe_->IsInitialized()) return false;
+  }
   return true;
 }
 
@@ -2343,6 +2538,7 @@ void Msg_DecodedShmem::InternalSwap(Msg_DecodedShmem* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_adecodedshmem_, lhs_arena,
       &other->_impl_.a_adecodedshmem_, rhs_arena
@@ -2359,6 +2555,13 @@ std::string Msg_DecodedShmem::GetTypeName() const {
 
 class Msg_ReceivedDecodedReferenceFrame::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_ReceivedDecodedReferenceFrame>()._impl_._has_bits_);
+  static void set_has_a_apictureid(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Msg_ReceivedDecodedReferenceFrame::Msg_ReceivedDecodedReferenceFrame(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2371,8 +2574,9 @@ Msg_ReceivedDecodedReferenceFrame::Msg_ReceivedDecodedReferenceFrame(const Msg_R
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_ReceivedDecodedReferenceFrame* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_apictureid_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_apictureid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_apictureid_ = from._impl_.a_apictureid_;
@@ -2384,8 +2588,9 @@ inline void Msg_ReceivedDecodedReferenceFrame::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_apictureid_){uint64_t{0u}}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_apictureid_){uint64_t{0u}}
   };
 }
 
@@ -2413,18 +2618,21 @@ void Msg_ReceivedDecodedReferenceFrame::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_apictureid_ = uint64_t{0u};
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_ReceivedDecodedReferenceFrame::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // uint64 a_aPictureId = 1;
+      // required uint64 a_aPictureId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_apictureid(&has_bits);
           _impl_.a_apictureid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -2446,6 +2654,7 @@ const char* Msg_ReceivedDecodedReferenceFrame::_InternalParse(const char* ptr, :
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -2459,8 +2668,9 @@ uint8_t* Msg_ReceivedDecodedReferenceFrame::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint64 a_aPictureId = 1;
-  if (this->_internal_a_apictureid() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required uint64 a_aPictureId = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_apictureid(), target);
   }
@@ -2477,14 +2687,13 @@ size_t Msg_ReceivedDecodedReferenceFrame::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gmp.PGMPVideoDecoder.Msg_ReceivedDecodedReferenceFrame)
   size_t total_size = 0;
 
+  // required uint64 a_aPictureId = 1;
+  if (_internal_has_a_apictureid()) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_apictureid());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // uint64 a_aPictureId = 1;
-  if (this->_internal_a_apictureid() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_apictureid());
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -2507,7 +2716,7 @@ void Msg_ReceivedDecodedReferenceFrame::MergeFrom(const Msg_ReceivedDecodedRefer
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_a_apictureid() != 0) {
+  if (from._internal_has_a_apictureid()) {
     _this->_internal_set_a_apictureid(from._internal_a_apictureid());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -2521,12 +2730,14 @@ void Msg_ReceivedDecodedReferenceFrame::CopyFrom(const Msg_ReceivedDecodedRefere
 }
 
 bool Msg_ReceivedDecodedReferenceFrame::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void Msg_ReceivedDecodedReferenceFrame::InternalSwap(Msg_ReceivedDecodedReferenceFrame* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_apictureid_, other->_impl_.a_apictureid_);
 }
 
@@ -2539,6 +2750,13 @@ std::string Msg_ReceivedDecodedReferenceFrame::GetTypeName() const {
 
 class Msg_ReceivedDecodedFrame::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_ReceivedDecodedFrame>()._impl_._has_bits_);
+  static void set_has_a_apictureid(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Msg_ReceivedDecodedFrame::Msg_ReceivedDecodedFrame(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2551,8 +2769,9 @@ Msg_ReceivedDecodedFrame::Msg_ReceivedDecodedFrame(const Msg_ReceivedDecodedFram
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_ReceivedDecodedFrame* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_apictureid_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_apictureid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_apictureid_ = from._impl_.a_apictureid_;
@@ -2564,8 +2783,9 @@ inline void Msg_ReceivedDecodedFrame::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_apictureid_){uint64_t{0u}}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_apictureid_){uint64_t{0u}}
   };
 }
 
@@ -2593,18 +2813,21 @@ void Msg_ReceivedDecodedFrame::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_apictureid_ = uint64_t{0u};
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_ReceivedDecodedFrame::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // uint64 a_aPictureId = 1;
+      // required uint64 a_aPictureId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_apictureid(&has_bits);
           _impl_.a_apictureid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -2626,6 +2849,7 @@ const char* Msg_ReceivedDecodedFrame::_InternalParse(const char* ptr, ::_pbi::Pa
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -2639,8 +2863,9 @@ uint8_t* Msg_ReceivedDecodedFrame::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint64 a_aPictureId = 1;
-  if (this->_internal_a_apictureid() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required uint64 a_aPictureId = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_apictureid(), target);
   }
@@ -2657,14 +2882,13 @@ size_t Msg_ReceivedDecodedFrame::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gmp.PGMPVideoDecoder.Msg_ReceivedDecodedFrame)
   size_t total_size = 0;
 
+  // required uint64 a_aPictureId = 1;
+  if (_internal_has_a_apictureid()) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_apictureid());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // uint64 a_aPictureId = 1;
-  if (this->_internal_a_apictureid() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_apictureid());
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -2687,7 +2911,7 @@ void Msg_ReceivedDecodedFrame::MergeFrom(const Msg_ReceivedDecodedFrame& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_a_apictureid() != 0) {
+  if (from._internal_has_a_apictureid()) {
     _this->_internal_set_a_apictureid(from._internal_a_apictureid());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -2701,12 +2925,14 @@ void Msg_ReceivedDecodedFrame::CopyFrom(const Msg_ReceivedDecodedFrame& from) {
 }
 
 bool Msg_ReceivedDecodedFrame::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void Msg_ReceivedDecodedFrame::InternalSwap(Msg_ReceivedDecodedFrame* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_apictureid_, other->_impl_.a_apictureid_);
 }
 
@@ -3163,6 +3389,13 @@ std::string Msg_ResetComplete::GetTypeName() const {
 
 class Msg_Error::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_Error>()._impl_._has_bits_);
+  static void set_has_a_aerr(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Msg_Error::Msg_Error(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -3175,15 +3408,16 @@ Msg_Error::Msg_Error(const Msg_Error& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_Error* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_aerr_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_aerr_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_aerr_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_aerr_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_aerr().empty()) {
+  if (from._internal_has_a_aerr()) {
     _this->_impl_.a_aerr_.Set(from._internal_a_aerr(), 
       _this->GetArenaForAllocation());
   }
@@ -3195,8 +3429,9 @@ inline void Msg_Error::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_aerr_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_aerr_){}
   };
   _impl_.a_aerr_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3228,17 +3463,22 @@ void Msg_Error::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_aerr_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_aerr_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_Error::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_aErr = 1;
+      // required bytes a_aErr = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_aerr();
@@ -3263,6 +3503,7 @@ const char* Msg_Error::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -3276,8 +3517,9 @@ uint8_t* Msg_Error::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_aErr = 1;
-  if (!this->_internal_a_aerr().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_aErr = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_aerr(), target);
   }
@@ -3294,16 +3536,15 @@ size_t Msg_Error::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gmp.PGMPVideoDecoder.Msg_Error)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_aErr = 1;
-  if (!this->_internal_a_aerr().empty()) {
+  // required bytes a_aErr = 1;
+  if (_internal_has_a_aerr()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_aerr());
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -3326,7 +3567,7 @@ void Msg_Error::MergeFrom(const Msg_Error& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_aerr().empty()) {
+  if (from._internal_has_a_aerr()) {
     _this->_internal_set_a_aerr(from._internal_a_aerr());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -3340,6 +3581,7 @@ void Msg_Error::CopyFrom(const Msg_Error& from) {
 }
 
 bool Msg_Error::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -3348,6 +3590,7 @@ void Msg_Error::InternalSwap(Msg_Error* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_aerr_, lhs_arena,
       &other->_impl_.a_aerr_, rhs_arena

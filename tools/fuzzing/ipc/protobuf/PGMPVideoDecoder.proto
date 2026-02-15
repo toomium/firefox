@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/media/gmp/PGMPVideoDecoder.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.gmp.PGMPVideoDecoder;
@@ -17,21 +17,21 @@ import "GMPTypes.proto";
 
 // Message declarations
 message Msg_InitDecode {
-  bytes a_aCodecSettings = 1;
+  required bytes a_aCodecSettings = 1;
   repeated uint32 a_aCodecSpecific = 2;
-  sint32 a_aCoreCount = 3;
+  required sint32 a_aCoreCount = 3;
 }
 
 message Msg_GiveShmem {
-  bytes a_aOutputShmem = 1;
+  required bytes a_aOutputShmem = 1;
 }
 
 message Msg_Decode {
-  protobuf.mozilla.gmp.GMPVideoEncodedFrameData a_aInputFrame = 1;
-  bytes a_aInputShmem = 2;
-  bool a_aMissingFrames = 3;
+  required protobuf.mozilla.gmp.GMPVideoEncodedFrameData a_aInputFrame = 1;
+  required bytes a_aInputShmem = 2;
+  required bool a_aMissingFrames = 3;
   repeated uint32 a_aCodecSpecificInfo = 4;
-  sint64 a_aRenderTimeMs = 5;
+  required sint64 a_aRenderTimeMs = 5;
 }
 
 message Msg_Reset {
@@ -47,25 +47,25 @@ message Reply___delete__ {
 }
 
 message Msg_ReturnShmem {
-  bytes a_aInputShmem = 1;
+  required bytes a_aInputShmem = 1;
 }
 
 message Msg_DecodedData {
-  protobuf.mozilla.gmp.GMPVideoi420FrameData a_aDecodedFrame = 1;
+  required protobuf.mozilla.gmp.GMPVideoi420FrameData a_aDecodedFrame = 1;
   repeated uint32 a_aDecodedData = 2;
 }
 
 message Msg_DecodedShmem {
-  protobuf.mozilla.gmp.GMPVideoi420FrameData a_aDecodedFrame = 1;
-  bytes a_aDecodedShmem = 2;
+  required protobuf.mozilla.gmp.GMPVideoi420FrameData a_aDecodedFrame = 1;
+  required bytes a_aDecodedShmem = 2;
 }
 
 message Msg_ReceivedDecodedReferenceFrame {
-  uint64 a_aPictureId = 1;
+  required uint64 a_aPictureId = 1;
 }
 
 message Msg_ReceivedDecodedFrame {
-  uint64 a_aPictureId = 1;
+  required uint64 a_aPictureId = 1;
 }
 
 message Msg_InputDataExhausted {
@@ -78,7 +78,7 @@ message Msg_ResetComplete {
 }
 
 message Msg_Error {
-  bytes a_aErr = 1;
+  required bytes a_aErr = 1;
 }
 
 message Msg_Shutdown {

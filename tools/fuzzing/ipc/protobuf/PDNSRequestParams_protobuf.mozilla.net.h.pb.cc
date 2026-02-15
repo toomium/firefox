@@ -22,15 +22,16 @@ namespace mozilla {
 namespace net {
 PROTOBUF_CONSTEXPR DNSRecord::DNSRecord(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_addrs_)*/{}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_addrs_)*/{}
   , /*decltype(_impl_.a_canonicalname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_effectivetrrmode_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_lastupdate_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_trrfetchduration_)*/0
   , /*decltype(_impl_.a_trrfetchdurationnetworkonly_)*/0
   , /*decltype(_impl_.a_istrr_)*/false
-  , /*decltype(_impl_.a_ttl_)*/0u
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_ttl_)*/0u} {}
 struct DNSRecordDefaultTypeInternal {
   PROTOBUF_CONSTEXPR DNSRecordDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -65,6 +66,31 @@ namespace net {
 
 class DNSRecord::_Internal {
  public:
+  using HasBits = decltype(std::declval<DNSRecord>()._impl_._has_bits_);
+  static void set_has_a_canonicalname(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_trrfetchduration(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_a_trrfetchdurationnetworkonly(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static void set_has_a_istrr(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
+  }
+  static void set_has_a_effectivetrrmode(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_ttl(HasBits* has_bits) {
+    (*has_bits)[0] |= 64u;
+  }
+  static void set_has_a_lastupdate(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x0000007f) ^ 0x0000007f) != 0;
+  }
 };
 
 DNSRecord::DNSRecord(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -77,22 +103,23 @@ DNSRecord::DNSRecord(const DNSRecord& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   DNSRecord* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_addrs_){from._impl_.a_addrs_}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_addrs_){from._impl_.a_addrs_}
     , decltype(_impl_.a_canonicalname_){}
     , decltype(_impl_.a_effectivetrrmode_){}
     , decltype(_impl_.a_lastupdate_){}
     , decltype(_impl_.a_trrfetchduration_){}
     , decltype(_impl_.a_trrfetchdurationnetworkonly_){}
     , decltype(_impl_.a_istrr_){}
-    , decltype(_impl_.a_ttl_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_ttl_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_canonicalname_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_canonicalname_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_canonicalname().empty()) {
+  if (from._internal_has_a_canonicalname()) {
     _this->_impl_.a_canonicalname_.Set(from._internal_a_canonicalname(), 
       _this->GetArenaForAllocation());
   }
@@ -100,7 +127,7 @@ DNSRecord::DNSRecord(const DNSRecord& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_effectivetrrmode_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_effectivetrrmode().empty()) {
+  if (from._internal_has_a_effectivetrrmode()) {
     _this->_impl_.a_effectivetrrmode_.Set(from._internal_a_effectivetrrmode(), 
       _this->GetArenaForAllocation());
   }
@@ -108,7 +135,7 @@ DNSRecord::DNSRecord(const DNSRecord& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_lastupdate_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_lastupdate().empty()) {
+  if (from._internal_has_a_lastupdate()) {
     _this->_impl_.a_lastupdate_.Set(from._internal_a_lastupdate(), 
       _this->GetArenaForAllocation());
   }
@@ -123,7 +150,9 @@ inline void DNSRecord::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_addrs_){arena}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_addrs_){arena}
     , decltype(_impl_.a_canonicalname_){}
     , decltype(_impl_.a_effectivetrrmode_){}
     , decltype(_impl_.a_lastupdate_){}
@@ -131,7 +160,6 @@ inline void DNSRecord::SharedCtor(
     , decltype(_impl_.a_trrfetchdurationnetworkonly_){0}
     , decltype(_impl_.a_istrr_){false}
     , decltype(_impl_.a_ttl_){0u}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_canonicalname_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -175,28 +203,40 @@ void DNSRecord::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_addrs_.Clear();
-  _impl_.a_canonicalname_.ClearToEmpty();
-  _impl_.a_effectivetrrmode_.ClearToEmpty();
-  _impl_.a_lastupdate_.ClearToEmpty();
-  ::memset(&_impl_.a_trrfetchduration_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.a_ttl_) -
-      reinterpret_cast<char*>(&_impl_.a_trrfetchduration_)) + sizeof(_impl_.a_ttl_));
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_canonicalname_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_effectivetrrmode_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _impl_.a_lastupdate_.ClearNonDefaultToEmpty();
+    }
+  }
+  if (cached_has_bits & 0x00000078u) {
+    ::memset(&_impl_.a_trrfetchduration_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_ttl_) -
+        reinterpret_cast<char*>(&_impl_.a_trrfetchduration_)) + sizeof(_impl_.a_ttl_));
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* DNSRecord::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string a_canonicalName = 1;
+      // required string a_canonicalName = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_canonicalname();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -214,31 +254,34 @@ const char* DNSRecord::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // double a_trrFetchDuration = 3;
+      // required double a_trrFetchDuration = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 25)) {
+          _Internal::set_has_a_trrfetchduration(&has_bits);
           _impl_.a_trrfetchduration_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
-      // double a_trrFetchDurationNetworkOnly = 4;
+      // required double a_trrFetchDurationNetworkOnly = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 33)) {
+          _Internal::set_has_a_trrfetchdurationnetworkonly(&has_bits);
           _impl_.a_trrfetchdurationnetworkonly_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
-      // bool a_isTRR = 5;
+      // required bool a_isTRR = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          _Internal::set_has_a_istrr(&has_bits);
           _impl_.a_istrr_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bytes a_effectiveTRRMode = 6;
+      // required bytes a_effectiveTRRMode = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           auto str = _internal_mutable_a_effectivetrrmode();
@@ -247,15 +290,16 @@ const char* DNSRecord::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // uint32 a_ttl = 7;
+      // required uint32 a_ttl = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
+          _Internal::set_has_a_ttl(&has_bits);
           _impl_.a_ttl_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bytes a_lastUpdate = 8;
+      // required bytes a_lastUpdate = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
           auto str = _internal_mutable_a_lastupdate();
@@ -280,6 +324,7 @@ const char* DNSRecord::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -293,12 +338,9 @@ uint8_t* DNSRecord::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string a_canonicalName = 1;
-  if (!this->_internal_a_canonicalname().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_canonicalname().data(), static_cast<int>(this->_internal_a_canonicalname().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.net.DNSRecord.a_canonicalName");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_canonicalName = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_canonicalname(), target);
   }
@@ -309,46 +351,38 @@ uint8_t* DNSRecord::_InternalSerialize(
     target = stream->WriteBytes(2, s, target);
   }
 
-  // double a_trrFetchDuration = 3;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_trrfetchduration = this->_internal_a_trrfetchduration();
-  uint64_t raw_a_trrfetchduration;
-  memcpy(&raw_a_trrfetchduration, &tmp_a_trrfetchduration, sizeof(tmp_a_trrfetchduration));
-  if (raw_a_trrfetchduration != 0) {
+  // required double a_trrFetchDuration = 3;
+  if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(3, this->_internal_a_trrfetchduration(), target);
   }
 
-  // double a_trrFetchDurationNetworkOnly = 4;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_trrfetchdurationnetworkonly = this->_internal_a_trrfetchdurationnetworkonly();
-  uint64_t raw_a_trrfetchdurationnetworkonly;
-  memcpy(&raw_a_trrfetchdurationnetworkonly, &tmp_a_trrfetchdurationnetworkonly, sizeof(tmp_a_trrfetchdurationnetworkonly));
-  if (raw_a_trrfetchdurationnetworkonly != 0) {
+  // required double a_trrFetchDurationNetworkOnly = 4;
+  if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(4, this->_internal_a_trrfetchdurationnetworkonly(), target);
   }
 
-  // bool a_isTRR = 5;
-  if (this->_internal_a_istrr() != 0) {
+  // required bool a_isTRR = 5;
+  if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_a_istrr(), target);
   }
 
-  // bytes a_effectiveTRRMode = 6;
-  if (!this->_internal_a_effectivetrrmode().empty()) {
+  // required bytes a_effectiveTRRMode = 6;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
         6, this->_internal_a_effectivetrrmode(), target);
   }
 
-  // uint32 a_ttl = 7;
-  if (this->_internal_a_ttl() != 0) {
+  // required uint32 a_ttl = 7;
+  if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(7, this->_internal_a_ttl(), target);
   }
 
-  // bytes a_lastUpdate = 8;
-  if (!this->_internal_a_lastupdate().empty()) {
+  // required bytes a_lastUpdate = 8;
+  if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
         8, this->_internal_a_lastupdate(), target);
   }
@@ -361,10 +395,88 @@ uint8_t* DNSRecord::_InternalSerialize(
   return target;
 }
 
+size_t DNSRecord::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.DNSRecord)
+  size_t total_size = 0;
+
+  if (_internal_has_a_canonicalname()) {
+    // required string a_canonicalName = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_canonicalname());
+  }
+
+  if (_internal_has_a_effectivetrrmode()) {
+    // required bytes a_effectiveTRRMode = 6;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_effectivetrrmode());
+  }
+
+  if (_internal_has_a_lastupdate()) {
+    // required bytes a_lastUpdate = 8;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_lastupdate());
+  }
+
+  if (_internal_has_a_trrfetchduration()) {
+    // required double a_trrFetchDuration = 3;
+    total_size += 1 + 8;
+  }
+
+  if (_internal_has_a_trrfetchdurationnetworkonly()) {
+    // required double a_trrFetchDurationNetworkOnly = 4;
+    total_size += 1 + 8;
+  }
+
+  if (_internal_has_a_istrr()) {
+    // required bool a_isTRR = 5;
+    total_size += 1 + 1;
+  }
+
+  if (_internal_has_a_ttl()) {
+    // required uint32 a_ttl = 7;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_ttl());
+  }
+
+  return total_size;
+}
 size_t DNSRecord::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.DNSRecord)
   size_t total_size = 0;
 
+  if (((_impl_._has_bits_[0] & 0x0000007f) ^ 0x0000007f) == 0) {  // All required fields are present.
+    // required string a_canonicalName = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_canonicalname());
+
+    // required bytes a_effectiveTRRMode = 6;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_effectivetrrmode());
+
+    // required bytes a_lastUpdate = 8;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_lastupdate());
+
+    // required double a_trrFetchDuration = 3;
+    total_size += 1 + 8;
+
+    // required double a_trrFetchDurationNetworkOnly = 4;
+    total_size += 1 + 8;
+
+    // required bool a_isTRR = 5;
+    total_size += 1 + 1;
+
+    // required uint32 a_ttl = 7;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_ttl());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -375,55 +487,6 @@ size_t DNSRecord::ByteSizeLong() const {
   for (int i = 0, n = _impl_.a_addrs_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.a_addrs_.Get(i));
-  }
-
-  // string a_canonicalName = 1;
-  if (!this->_internal_a_canonicalname().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_canonicalname());
-  }
-
-  // bytes a_effectiveTRRMode = 6;
-  if (!this->_internal_a_effectivetrrmode().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_effectivetrrmode());
-  }
-
-  // bytes a_lastUpdate = 8;
-  if (!this->_internal_a_lastupdate().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_lastupdate());
-  }
-
-  // double a_trrFetchDuration = 3;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_trrfetchduration = this->_internal_a_trrfetchduration();
-  uint64_t raw_a_trrfetchduration;
-  memcpy(&raw_a_trrfetchduration, &tmp_a_trrfetchduration, sizeof(tmp_a_trrfetchduration));
-  if (raw_a_trrfetchduration != 0) {
-    total_size += 1 + 8;
-  }
-
-  // double a_trrFetchDurationNetworkOnly = 4;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_trrfetchdurationnetworkonly = this->_internal_a_trrfetchdurationnetworkonly();
-  uint64_t raw_a_trrfetchdurationnetworkonly;
-  memcpy(&raw_a_trrfetchdurationnetworkonly, &tmp_a_trrfetchdurationnetworkonly, sizeof(tmp_a_trrfetchdurationnetworkonly));
-  if (raw_a_trrfetchdurationnetworkonly != 0) {
-    total_size += 1 + 8;
-  }
-
-  // bool a_isTRR = 5;
-  if (this->_internal_a_istrr() != 0) {
-    total_size += 1 + 1;
-  }
-
-  // uint32 a_ttl = 7;
-  if (this->_internal_a_ttl() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_ttl());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -448,34 +511,30 @@ void DNSRecord::MergeFrom(const DNSRecord& from) {
   (void) cached_has_bits;
 
   _this->_impl_.a_addrs_.MergeFrom(from._impl_.a_addrs_);
-  if (!from._internal_a_canonicalname().empty()) {
-    _this->_internal_set_a_canonicalname(from._internal_a_canonicalname());
-  }
-  if (!from._internal_a_effectivetrrmode().empty()) {
-    _this->_internal_set_a_effectivetrrmode(from._internal_a_effectivetrrmode());
-  }
-  if (!from._internal_a_lastupdate().empty()) {
-    _this->_internal_set_a_lastupdate(from._internal_a_lastupdate());
-  }
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_trrfetchduration = from._internal_a_trrfetchduration();
-  uint64_t raw_a_trrfetchduration;
-  memcpy(&raw_a_trrfetchduration, &tmp_a_trrfetchduration, sizeof(tmp_a_trrfetchduration));
-  if (raw_a_trrfetchduration != 0) {
-    _this->_internal_set_a_trrfetchduration(from._internal_a_trrfetchduration());
-  }
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_trrfetchdurationnetworkonly = from._internal_a_trrfetchdurationnetworkonly();
-  uint64_t raw_a_trrfetchdurationnetworkonly;
-  memcpy(&raw_a_trrfetchdurationnetworkonly, &tmp_a_trrfetchdurationnetworkonly, sizeof(tmp_a_trrfetchdurationnetworkonly));
-  if (raw_a_trrfetchdurationnetworkonly != 0) {
-    _this->_internal_set_a_trrfetchdurationnetworkonly(from._internal_a_trrfetchdurationnetworkonly());
-  }
-  if (from._internal_a_istrr() != 0) {
-    _this->_internal_set_a_istrr(from._internal_a_istrr());
-  }
-  if (from._internal_a_ttl() != 0) {
-    _this->_internal_set_a_ttl(from._internal_a_ttl());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000007fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_canonicalname(from._internal_a_canonicalname());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_effectivetrrmode(from._internal_a_effectivetrrmode());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_internal_set_a_lastupdate(from._internal_a_lastupdate());
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.a_trrfetchduration_ = from._impl_.a_trrfetchduration_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_impl_.a_trrfetchdurationnetworkonly_ = from._impl_.a_trrfetchdurationnetworkonly_;
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _this->_impl_.a_istrr_ = from._impl_.a_istrr_;
+    }
+    if (cached_has_bits & 0x00000040u) {
+      _this->_impl_.a_ttl_ = from._impl_.a_ttl_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -488,6 +547,7 @@ void DNSRecord::CopyFrom(const DNSRecord& from) {
 }
 
 bool DNSRecord::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -496,6 +556,7 @@ void DNSRecord::InternalSwap(DNSRecord* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_addrs_.InternalSwap(&other->_impl_.a_addrs_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_canonicalname_, lhs_arena,
@@ -713,25 +774,25 @@ uint8_t* DNSRequestResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.mozilla.net.DNSRecord a_mVDNSRecord = 1;
-  if (_internal_has_a_mvdnsrecord()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::a_mvdnsrecord(this),
-        _Internal::a_mvdnsrecord(this).GetCachedSize(), target, stream);
+  switch (content_case()) {
+    case kAMVDNSRecord: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(1, _Internal::a_mvdnsrecord(this),
+          _Internal::a_mvdnsrecord(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVIPCTypeRecord: {
+      target = stream->WriteBytesMaybeAliased(
+          2, this->_internal_a_mvipctyperecord(), target);
+      break;
+    }
+    case kAMVnsresult: {
+      target = stream->WriteBytesMaybeAliased(
+          3, this->_internal_a_mvnsresult(), target);
+      break;
+    }
+    default: ;
   }
-
-  // bytes a_mVIPCTypeRecord = 2;
-  if (_internal_has_a_mvipctyperecord()) {
-    target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_a_mvipctyperecord(), target);
-  }
-
-  // bytes a_mVnsresult = 3;
-  if (_internal_has_a_mvnsresult()) {
-    target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_a_mvnsresult(), target);
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
@@ -824,6 +885,23 @@ void DNSRequestResponse::CopyFrom(const DNSRequestResponse& from) {
 }
 
 bool DNSRequestResponse::IsInitialized() const {
+  switch (content_case()) {
+    case kAMVDNSRecord: {
+      if (_internal_has_a_mvdnsrecord()) {
+        if (!_impl_.content_.a_mvdnsrecord_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case kAMVIPCTypeRecord: {
+      break;
+    }
+    case kAMVnsresult: {
+      break;
+    }
+    case CONTENT_NOT_SET: {
+      break;
+    }
+  }
   return true;
 }
 

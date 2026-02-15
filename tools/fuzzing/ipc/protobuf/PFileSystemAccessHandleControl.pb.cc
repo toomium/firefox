@@ -35,8 +35,9 @@ struct Msg_CloseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_CloseDefaultTypeInternal _Msg_Close_default_instance_;
 PROTOBUF_CONSTEXPR Reply_Close::Reply_Close(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_ok_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_ok_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Reply_CloseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_CloseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -207,6 +208,13 @@ std::string Msg_Close::GetTypeName() const {
 
 class Reply_Close::_Internal {
  public:
+  using HasBits = decltype(std::declval<Reply_Close>()._impl_._has_bits_);
+  static void set_has_a_ok(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Reply_Close::Reply_Close(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -219,15 +227,16 @@ Reply_Close::Reply_Close(const Reply_Close& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_Close* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_ok_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_ok_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_ok_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_ok_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_ok().empty()) {
+  if (from._internal_has_a_ok()) {
     _this->_impl_.a_ok_.Set(from._internal_a_ok(), 
       _this->GetArenaForAllocation());
   }
@@ -239,8 +248,9 @@ inline void Reply_Close::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_ok_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_ok_){}
   };
   _impl_.a_ok_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -272,17 +282,22 @@ void Reply_Close::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_ok_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_ok_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Reply_Close::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_ok = 1;
+      // required bytes a_ok = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_ok();
@@ -307,6 +322,7 @@ const char* Reply_Close::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -320,8 +336,9 @@ uint8_t* Reply_Close::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_ok = 1;
-  if (!this->_internal_a_ok().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_ok = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_ok(), target);
   }
@@ -338,16 +355,15 @@ size_t Reply_Close::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PFileSystemAccessHandleControl.Reply_Close)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_ok = 1;
-  if (!this->_internal_a_ok().empty()) {
+  // required bytes a_ok = 1;
+  if (_internal_has_a_ok()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_ok());
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -370,7 +386,7 @@ void Reply_Close::MergeFrom(const Reply_Close& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_ok().empty()) {
+  if (from._internal_has_a_ok()) {
     _this->_internal_set_a_ok(from._internal_a_ok());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -384,6 +400,7 @@ void Reply_Close::CopyFrom(const Reply_Close& from) {
 }
 
 bool Reply_Close::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -392,6 +409,7 @@ void Reply_Close::InternalSwap(Reply_Close* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_ok_, lhs_arena,
       &other->_impl_.a_ok_, rhs_arena

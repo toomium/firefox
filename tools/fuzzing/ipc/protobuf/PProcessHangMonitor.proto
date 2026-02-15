@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/ipc/PProcessHangMonitor.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.PProcessHangMonitor;
@@ -15,7 +15,7 @@ import public "PProcessHangMonitor_protobuf.mozilla.h.proto";
 
 // Message declarations
 message Msg_HangEvidence {
-  protobuf.mozilla.SlowScriptData a_data = 1;
+  required protobuf.mozilla.SlowScriptData a_data = 1;
 }
 
 message Msg_ClearHang {
@@ -34,23 +34,23 @@ message Msg_EndStartingDebugger {
 }
 
 message Msg_PaintWhileInterruptingJS {
-  bytes a_tabId = 1;
+  required bytes a_tabId = 1;
 }
 
 message Msg_UnloadLayersWhileInterruptingJS {
-  bytes a_tabId = 1;
+  required bytes a_tabId = 1;
 }
 
 message Msg_CancelContentJSExecutionIfRunning {
-  bytes a_tabId = 1;
-  bytes a_aNavigationType = 2;
-  sint32 a_aNavigationIndex = 3;
+  required bytes a_tabId = 1;
+  required bytes a_aNavigationType = 2;
+  required sint32 a_aNavigationIndex = 3;
   optional string a_aNavigationURI = 4;
-  sint32 a_aEpoch = 5;
+  required sint32 a_aEpoch = 5;
 }
 
 message Msg_SetMainThreadQoSPriority {
-  bytes a_qosPriority = 1;
+  required bytes a_qosPriority = 1;
 }
 
 // Parameter mappings stats:

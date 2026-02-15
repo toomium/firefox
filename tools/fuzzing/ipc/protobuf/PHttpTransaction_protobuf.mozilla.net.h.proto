@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/netwerk/protocol/http/PHttpTransaction.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.net;
@@ -15,10 +15,10 @@ import "NeckoChannelParams.proto";
 
 // Structs and unions declarations
 message NetworkAddressArg {
-  bytes a_selfAddr = 1;
-  bytes a_peerAddr = 2;
-  bool a_resolvedByTRR = 3;
-  bytes a_mode = 4;
-  bytes a_trrSkipReason = 5;
-  bool a_echConfigUsed = 6;
+  required bytes a_selfAddr = 1;
+  required bytes a_peerAddr = 2;
+  required bool a_resolvedByTRR = 3;
+  required bytes a_mode = 4;
+  required bytes a_trrSkipReason = 5;
+  required bool a_echConfigUsed = 6;
 }

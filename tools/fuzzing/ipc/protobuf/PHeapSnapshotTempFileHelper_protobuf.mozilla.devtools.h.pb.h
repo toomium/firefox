@@ -94,6 +94,13 @@ class OpenedFile final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const OpenedFile& default_instance() {
     return *internal_default_instance();
   }
@@ -170,7 +177,11 @@ class OpenedFile final :
     kASnapshotIdFieldNumber = 2,
     kADescriptorFieldNumber = 3,
   };
-  // string a_path = 1;
+  // required string a_path = 1;
+  bool has_a_path() const;
+  private:
+  bool _internal_has_a_path() const;
+  public:
   void clear_a_path();
   const std::string& a_path() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -184,7 +195,11 @@ class OpenedFile final :
   std::string* _internal_mutable_a_path();
   public:
 
-  // string a_snapshotId = 2;
+  // required string a_snapshotId = 2;
+  bool has_a_snapshotid() const;
+  private:
+  bool _internal_has_a_snapshotid() const;
+  public:
   void clear_a_snapshotid();
   const std::string& a_snapshotid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -198,7 +213,11 @@ class OpenedFile final :
   std::string* _internal_mutable_a_snapshotid();
   public:
 
-  // bytes a_descriptor = 3;
+  // required bytes a_descriptor = 3;
+  bool has_a_descriptor() const;
+  private:
+  bool _internal_has_a_descriptor() const;
+  public:
   void clear_a_descriptor();
   const std::string& a_descriptor() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -216,14 +235,18 @@ class OpenedFile final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_path_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_snapshotid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_descriptor_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHeapSnapshotTempFileHelper_5fprotobuf_2emozilla_2edevtools_2eh_2eproto;
@@ -259,6 +282,13 @@ class OpenHeapSnapshotTempFileResponse final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const OpenHeapSnapshotTempFileResponse& default_instance() {
@@ -417,9 +447,17 @@ class OpenHeapSnapshotTempFileResponse final :
 #endif  // __GNUC__
 // OpenedFile
 
-// string a_path = 1;
+// required string a_path = 1;
+inline bool OpenedFile::_internal_has_a_path() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool OpenedFile::has_a_path() const {
+  return _internal_has_a_path();
+}
 inline void OpenedFile::clear_a_path() {
   _impl_.a_path_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& OpenedFile::a_path() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.devtools.OpenedFile.a_path)
@@ -428,7 +466,7 @@ inline const std::string& OpenedFile::a_path() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpenedFile::set_a_path(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_path_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.devtools.OpenedFile.a_path)
 }
@@ -441,22 +479,32 @@ inline const std::string& OpenedFile::_internal_a_path() const {
   return _impl_.a_path_.Get();
 }
 inline void OpenedFile::_internal_set_a_path(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_path_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpenedFile::_internal_mutable_a_path() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_path_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpenedFile::release_a_path() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.devtools.OpenedFile.a_path)
-  return _impl_.a_path_.Release();
+  if (!_internal_has_a_path()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_path_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_path_.IsDefault()) {
+    _impl_.a_path_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void OpenedFile::set_allocated_a_path(std::string* a_path) {
   if (a_path != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_path_.SetAllocated(a_path, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -467,9 +515,17 @@ inline void OpenedFile::set_allocated_a_path(std::string* a_path) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.devtools.OpenedFile.a_path)
 }
 
-// string a_snapshotId = 2;
+// required string a_snapshotId = 2;
+inline bool OpenedFile::_internal_has_a_snapshotid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool OpenedFile::has_a_snapshotid() const {
+  return _internal_has_a_snapshotid();
+}
 inline void OpenedFile::clear_a_snapshotid() {
   _impl_.a_snapshotid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& OpenedFile::a_snapshotid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.devtools.OpenedFile.a_snapshotId)
@@ -478,7 +534,7 @@ inline const std::string& OpenedFile::a_snapshotid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpenedFile::set_a_snapshotid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_snapshotid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.devtools.OpenedFile.a_snapshotId)
 }
@@ -491,22 +547,32 @@ inline const std::string& OpenedFile::_internal_a_snapshotid() const {
   return _impl_.a_snapshotid_.Get();
 }
 inline void OpenedFile::_internal_set_a_snapshotid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_snapshotid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpenedFile::_internal_mutable_a_snapshotid() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_snapshotid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpenedFile::release_a_snapshotid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.devtools.OpenedFile.a_snapshotId)
-  return _impl_.a_snapshotid_.Release();
+  if (!_internal_has_a_snapshotid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_snapshotid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_snapshotid_.IsDefault()) {
+    _impl_.a_snapshotid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void OpenedFile::set_allocated_a_snapshotid(std::string* a_snapshotid) {
   if (a_snapshotid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_snapshotid_.SetAllocated(a_snapshotid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -517,9 +583,17 @@ inline void OpenedFile::set_allocated_a_snapshotid(std::string* a_snapshotid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.devtools.OpenedFile.a_snapshotId)
 }
 
-// bytes a_descriptor = 3;
+// required bytes a_descriptor = 3;
+inline bool OpenedFile::_internal_has_a_descriptor() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool OpenedFile::has_a_descriptor() const {
+  return _internal_has_a_descriptor();
+}
 inline void OpenedFile::clear_a_descriptor() {
   _impl_.a_descriptor_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& OpenedFile::a_descriptor() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.devtools.OpenedFile.a_descriptor)
@@ -528,7 +602,7 @@ inline const std::string& OpenedFile::a_descriptor() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpenedFile::set_a_descriptor(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000004u;
  _impl_.a_descriptor_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.devtools.OpenedFile.a_descriptor)
 }
@@ -541,22 +615,32 @@ inline const std::string& OpenedFile::_internal_a_descriptor() const {
   return _impl_.a_descriptor_.Get();
 }
 inline void OpenedFile::_internal_set_a_descriptor(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_descriptor_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpenedFile::_internal_mutable_a_descriptor() {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   return _impl_.a_descriptor_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpenedFile::release_a_descriptor() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.devtools.OpenedFile.a_descriptor)
-  return _impl_.a_descriptor_.Release();
+  if (!_internal_has_a_descriptor()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000004u;
+  auto* p = _impl_.a_descriptor_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_descriptor_.IsDefault()) {
+    _impl_.a_descriptor_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void OpenedFile::set_allocated_a_descriptor(std::string* a_descriptor) {
   if (a_descriptor != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.a_descriptor_.SetAllocated(a_descriptor, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

@@ -22,9 +22,10 @@ namespace mozilla {
 namespace layers {
 PROTOBUF_CONSTEXPR RecordedFrameData::RecordedFrameData(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_timeoffset_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_length_)*/0u
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_timeoffset_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_length_)*/0u} {}
 struct RecordedFrameDataDefaultTypeInternal {
   PROTOBUF_CONSTEXPR RecordedFrameDataDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -36,10 +37,11 @@ struct RecordedFrameDataDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RecordedFrameDataDefaultTypeInternal _RecordedFrameData_default_instance_;
 PROTOBUF_CONSTEXPR FrameRecording::FrameRecording(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_frames_)*/{}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_frames_)*/{}
   , /*decltype(_impl_.a_starttime_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_bytes_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_bytes_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct FrameRecordingDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FrameRecordingDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -60,6 +62,16 @@ namespace layers {
 
 class RecordedFrameData::_Internal {
  public:
+  using HasBits = decltype(std::declval<RecordedFrameData>()._impl_._has_bits_);
+  static void set_has_a_timeoffset(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_length(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 RecordedFrameData::RecordedFrameData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -72,16 +84,17 @@ RecordedFrameData::RecordedFrameData(const RecordedFrameData& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   RecordedFrameData* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_timeoffset_){}
-    , decltype(_impl_.a_length_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_timeoffset_){}
+    , decltype(_impl_.a_length_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_timeoffset_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_timeoffset_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_timeoffset().empty()) {
+  if (from._internal_has_a_timeoffset()) {
     _this->_impl_.a_timeoffset_.Set(from._internal_a_timeoffset(), 
       _this->GetArenaForAllocation());
   }
@@ -94,9 +107,10 @@ inline void RecordedFrameData::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_timeoffset_){}
-    , decltype(_impl_.a_length_){0u}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_timeoffset_){}
+    , decltype(_impl_.a_length_){0u}
   };
   _impl_.a_timeoffset_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -128,18 +142,23 @@ void RecordedFrameData::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_timeoffset_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_timeoffset_.ClearNonDefaultToEmpty();
+  }
   _impl_.a_length_ = 0u;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* RecordedFrameData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_timeOffset = 1;
+      // required bytes a_timeOffset = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_timeoffset();
@@ -148,9 +167,10 @@ const char* RecordedFrameData::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // uint32 a_length = 2;
+      // required uint32 a_length = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_a_length(&has_bits);
           _impl_.a_length_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
@@ -172,6 +192,7 @@ const char* RecordedFrameData::_InternalParse(const char* ptr, ::_pbi::ParseCont
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -185,14 +206,15 @@ uint8_t* RecordedFrameData::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_timeOffset = 1;
-  if (!this->_internal_a_timeoffset().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_timeOffset = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_timeoffset(), target);
   }
 
-  // uint32 a_length = 2;
-  if (this->_internal_a_length() != 0) {
+  // required uint32 a_length = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_length(), target);
   }
@@ -205,25 +227,43 @@ uint8_t* RecordedFrameData::_InternalSerialize(
   return target;
 }
 
-size_t RecordedFrameData::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.RecordedFrameData)
+size_t RecordedFrameData::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.RecordedFrameData)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_timeOffset = 1;
-  if (!this->_internal_a_timeoffset().empty()) {
+  if (_internal_has_a_timeoffset()) {
+    // required bytes a_timeOffset = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_timeoffset());
   }
 
-  // uint32 a_length = 2;
-  if (this->_internal_a_length() != 0) {
+  if (_internal_has_a_length()) {
+    // required uint32 a_length = 2;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_length());
   }
+
+  return total_size;
+}
+size_t RecordedFrameData::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.RecordedFrameData)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required bytes a_timeOffset = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_timeoffset());
+
+    // required uint32 a_length = 2;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_length());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -246,11 +286,15 @@ void RecordedFrameData::MergeFrom(const RecordedFrameData& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_timeoffset().empty()) {
-    _this->_internal_set_a_timeoffset(from._internal_a_timeoffset());
-  }
-  if (from._internal_a_length() != 0) {
-    _this->_internal_set_a_length(from._internal_a_length());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_timeoffset(from._internal_a_timeoffset());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_length_ = from._impl_.a_length_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -263,6 +307,7 @@ void RecordedFrameData::CopyFrom(const RecordedFrameData& from) {
 }
 
 bool RecordedFrameData::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -271,6 +316,7 @@ void RecordedFrameData::InternalSwap(RecordedFrameData* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_timeoffset_, lhs_arena,
       &other->_impl_.a_timeoffset_, rhs_arena
@@ -287,6 +333,16 @@ std::string RecordedFrameData::GetTypeName() const {
 
 class FrameRecording::_Internal {
  public:
+  using HasBits = decltype(std::declval<FrameRecording>()._impl_._has_bits_);
+  static void set_has_a_starttime(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_bytes(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 FrameRecording::FrameRecording(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -299,17 +355,18 @@ FrameRecording::FrameRecording(const FrameRecording& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   FrameRecording* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_frames_){from._impl_.a_frames_}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_frames_){from._impl_.a_frames_}
     , decltype(_impl_.a_starttime_){}
-    , decltype(_impl_.a_bytes_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_bytes_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_starttime_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_starttime_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_starttime().empty()) {
+  if (from._internal_has_a_starttime()) {
     _this->_impl_.a_starttime_.Set(from._internal_a_starttime(), 
       _this->GetArenaForAllocation());
   }
@@ -317,7 +374,7 @@ FrameRecording::FrameRecording(const FrameRecording& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_bytes_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_bytes().empty()) {
+  if (from._internal_has_a_bytes()) {
     _this->_impl_.a_bytes_.Set(from._internal_a_bytes(), 
       _this->GetArenaForAllocation());
   }
@@ -329,10 +386,11 @@ inline void FrameRecording::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_frames_){arena}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_frames_){arena}
     , decltype(_impl_.a_starttime_){}
     , decltype(_impl_.a_bytes_){}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_starttime_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -371,18 +429,27 @@ void FrameRecording::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_frames_.Clear();
-  _impl_.a_starttime_.ClearToEmpty();
-  _impl_.a_bytes_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_starttime_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_bytes_.ClearNonDefaultToEmpty();
+    }
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* FrameRecording::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_startTime = 1;
+      // required bytes a_startTime = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_starttime();
@@ -404,7 +471,7 @@ const char* FrameRecording::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // bytes a_bytes = 3;
+      // required bytes a_bytes = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_bytes();
@@ -429,6 +496,7 @@ const char* FrameRecording::_InternalParse(const char* ptr, ::_pbi::ParseContext
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -442,8 +510,9 @@ uint8_t* FrameRecording::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_startTime = 1;
-  if (!this->_internal_a_starttime().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_startTime = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_starttime(), target);
   }
@@ -456,8 +525,8 @@ uint8_t* FrameRecording::_InternalSerialize(
         InternalWriteMessage(2, repfield, repfield.GetCachedSize(), target, stream);
   }
 
-  // bytes a_bytes = 3;
-  if (!this->_internal_a_bytes().empty()) {
+  // required bytes a_bytes = 3;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
         3, this->_internal_a_bytes(), target);
   }
@@ -470,10 +539,44 @@ uint8_t* FrameRecording::_InternalSerialize(
   return target;
 }
 
+size_t FrameRecording::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.FrameRecording)
+  size_t total_size = 0;
+
+  if (_internal_has_a_starttime()) {
+    // required bytes a_startTime = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_starttime());
+  }
+
+  if (_internal_has_a_bytes()) {
+    // required bytes a_bytes = 3;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_bytes());
+  }
+
+  return total_size;
+}
 size_t FrameRecording::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.FrameRecording)
   size_t total_size = 0;
 
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required bytes a_startTime = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_starttime());
+
+    // required bytes a_bytes = 3;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_bytes());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -483,20 +586,6 @@ size_t FrameRecording::ByteSizeLong() const {
   for (const auto& msg : this->_impl_.a_frames_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
-  }
-
-  // bytes a_startTime = 1;
-  if (!this->_internal_a_starttime().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_starttime());
-  }
-
-  // bytes a_bytes = 3;
-  if (!this->_internal_a_bytes().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_bytes());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -521,11 +610,14 @@ void FrameRecording::MergeFrom(const FrameRecording& from) {
   (void) cached_has_bits;
 
   _this->_impl_.a_frames_.MergeFrom(from._impl_.a_frames_);
-  if (!from._internal_a_starttime().empty()) {
-    _this->_internal_set_a_starttime(from._internal_a_starttime());
-  }
-  if (!from._internal_a_bytes().empty()) {
-    _this->_internal_set_a_bytes(from._internal_a_bytes());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_starttime(from._internal_a_starttime());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_bytes(from._internal_a_bytes());
+    }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -538,6 +630,9 @@ void FrameRecording::CopyFrom(const FrameRecording& from) {
 }
 
 bool FrameRecording::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_frames_))
+    return false;
   return true;
 }
 
@@ -546,6 +641,7 @@ void FrameRecording::InternalSwap(FrameRecording* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_frames_.InternalSwap(&other->_impl_.a_frames_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_starttime_, lhs_arena,

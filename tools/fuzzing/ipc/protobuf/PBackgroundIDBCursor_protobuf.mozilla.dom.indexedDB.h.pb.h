@@ -142,6 +142,13 @@ class ContinueParams final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const ContinueParams& default_instance() {
     return *internal_default_instance();
   }
@@ -216,7 +223,11 @@ class ContinueParams final :
   enum : int {
     kAKeyFieldNumber = 1,
   };
-  // bytes a_key = 1;
+  // required bytes a_key = 1;
+  bool has_a_key() const;
+  private:
+  bool _internal_has_a_key() const;
+  public:
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -238,8 +249,9 @@ class ContinueParams final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBCursor_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
@@ -275,6 +287,13 @@ class ContinuePrimaryKeyParams final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const ContinuePrimaryKeyParams& default_instance() {
@@ -352,7 +371,11 @@ class ContinuePrimaryKeyParams final :
     kAKeyFieldNumber = 1,
     kAPrimaryKeyFieldNumber = 2,
   };
-  // bytes a_key = 1;
+  // required bytes a_key = 1;
+  bool has_a_key() const;
+  private:
+  bool _internal_has_a_key() const;
+  public:
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -366,7 +389,11 @@ class ContinuePrimaryKeyParams final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // bytes a_primaryKey = 2;
+  // required bytes a_primaryKey = 2;
+  bool has_a_primarykey() const;
+  private:
+  bool _internal_has_a_primarykey() const;
+  public:
   void clear_a_primarykey();
   const std::string& a_primarykey() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -384,13 +411,17 @@ class ContinuePrimaryKeyParams final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_primarykey_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBCursor_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
@@ -426,6 +457,13 @@ class AdvanceParams final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const AdvanceParams& default_instance() {
@@ -502,7 +540,11 @@ class AdvanceParams final :
   enum : int {
     kACountFieldNumber = 1,
   };
-  // uint32 a_count = 1;
+  // required uint32 a_count = 1;
+  bool has_a_count() const;
+  private:
+  bool _internal_has_a_count() const;
+  public:
   void clear_a_count();
   uint32_t a_count() const;
   void set_a_count(uint32_t value);
@@ -519,8 +561,9 @@ class AdvanceParams final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint32_t a_count_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint32_t a_count_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBCursor_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
@@ -556,6 +599,13 @@ class CursorRequestParams final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const CursorRequestParams& default_instance() {
@@ -758,6 +808,13 @@ class ObjectStoreCursorResponse final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const ObjectStoreCursorResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -833,7 +890,11 @@ class ObjectStoreCursorResponse final :
     kAKeyFieldNumber = 1,
     kACloneInfoFieldNumber = 2,
   };
-  // bytes a_key = 1;
+  // required bytes a_key = 1;
+  bool has_a_key() const;
+  private:
+  bool _internal_has_a_key() const;
+  public:
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -847,7 +908,7 @@ class ObjectStoreCursorResponse final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // .protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo a_cloneInfo = 2;
+  // required .protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo a_cloneInfo = 2;
   bool has_a_cloneinfo() const;
   private:
   bool _internal_has_a_cloneinfo() const;
@@ -869,13 +930,17 @@ class ObjectStoreCursorResponse final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
     ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* a_cloneinfo_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBCursor_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
@@ -911,6 +976,13 @@ class ObjectStoreKeyCursorResponse final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const ObjectStoreKeyCursorResponse& default_instance() {
@@ -987,7 +1059,11 @@ class ObjectStoreKeyCursorResponse final :
   enum : int {
     kAKeyFieldNumber = 1,
   };
-  // bytes a_key = 1;
+  // required bytes a_key = 1;
+  bool has_a_key() const;
+  private:
+  bool _internal_has_a_key() const;
+  public:
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1009,8 +1085,9 @@ class ObjectStoreKeyCursorResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBCursor_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
@@ -1046,6 +1123,13 @@ class IndexCursorResponse final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const IndexCursorResponse& default_instance() {
@@ -1125,7 +1209,11 @@ class IndexCursorResponse final :
     kAObjectKeyFieldNumber = 3,
     kACloneInfoFieldNumber = 4,
   };
-  // bytes a_key = 1;
+  // required bytes a_key = 1;
+  bool has_a_key() const;
+  private:
+  bool _internal_has_a_key() const;
+  public:
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1139,7 +1227,11 @@ class IndexCursorResponse final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // bytes a_sortKey = 2;
+  // required bytes a_sortKey = 2;
+  bool has_a_sortkey() const;
+  private:
+  bool _internal_has_a_sortkey() const;
+  public:
   void clear_a_sortkey();
   const std::string& a_sortkey() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1153,7 +1245,11 @@ class IndexCursorResponse final :
   std::string* _internal_mutable_a_sortkey();
   public:
 
-  // bytes a_objectKey = 3;
+  // required bytes a_objectKey = 3;
+  bool has_a_objectkey() const;
+  private:
+  bool _internal_has_a_objectkey() const;
+  public:
   void clear_a_objectkey();
   const std::string& a_objectkey() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1167,7 +1263,7 @@ class IndexCursorResponse final :
   std::string* _internal_mutable_a_objectkey();
   public:
 
-  // .protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo a_cloneInfo = 4;
+  // required .protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo a_cloneInfo = 4;
   bool has_a_cloneinfo() const;
   private:
   bool _internal_has_a_cloneinfo() const;
@@ -1189,15 +1285,19 @@ class IndexCursorResponse final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_sortkey_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_objectkey_;
     ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* a_cloneinfo_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBCursor_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
@@ -1233,6 +1333,13 @@ class IndexKeyCursorResponse final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const IndexKeyCursorResponse& default_instance() {
@@ -1311,7 +1418,11 @@ class IndexKeyCursorResponse final :
     kASortKeyFieldNumber = 2,
     kAObjectKeyFieldNumber = 3,
   };
-  // bytes a_key = 1;
+  // required bytes a_key = 1;
+  bool has_a_key() const;
+  private:
+  bool _internal_has_a_key() const;
+  public:
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1325,7 +1436,11 @@ class IndexKeyCursorResponse final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // bytes a_sortKey = 2;
+  // required bytes a_sortKey = 2;
+  bool has_a_sortkey() const;
+  private:
+  bool _internal_has_a_sortkey() const;
+  public:
   void clear_a_sortkey();
   const std::string& a_sortkey() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1339,7 +1454,11 @@ class IndexKeyCursorResponse final :
   std::string* _internal_mutable_a_sortkey();
   public:
 
-  // bytes a_objectKey = 3;
+  // required bytes a_objectKey = 3;
+  bool has_a_objectkey() const;
+  private:
+  bool _internal_has_a_objectkey() const;
+  public:
   void clear_a_objectkey();
   const std::string& a_objectkey() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1357,14 +1476,18 @@ class IndexKeyCursorResponse final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_sortkey_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_objectkey_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBCursor_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
@@ -1400,6 +1523,13 @@ class CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse& default_instance() {
@@ -1541,6 +1671,13 @@ class CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -1678,6 +1815,13 @@ class CursorResponse_a_type_mVArrayOfIndexCursorResponse final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const CursorResponse_a_type_mVArrayOfIndexCursorResponse& default_instance() {
@@ -1819,6 +1963,13 @@ class CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -1956,6 +2107,13 @@ class CursorResponse final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const CursorResponse& default_instance() {
@@ -2207,9 +2365,17 @@ class CursorResponse final :
 #endif  // __GNUC__
 // ContinueParams
 
-// bytes a_key = 1;
+// required bytes a_key = 1;
+inline bool ContinueParams::_internal_has_a_key() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ContinueParams::has_a_key() const {
+  return _internal_has_a_key();
+}
 inline void ContinueParams::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& ContinueParams::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.ContinueParams.a_key)
@@ -2218,7 +2384,7 @@ inline const std::string& ContinueParams::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ContinueParams::set_a_key(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.ContinueParams.a_key)
 }
@@ -2231,22 +2397,32 @@ inline const std::string& ContinueParams::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void ContinueParams::_internal_set_a_key(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* ContinueParams::_internal_mutable_a_key() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* ContinueParams::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.ContinueParams.a_key)
-  return _impl_.a_key_.Release();
+  if (!_internal_has_a_key()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_key_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void ContinueParams::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2261,9 +2437,17 @@ inline void ContinueParams::set_allocated_a_key(std::string* a_key) {
 
 // ContinuePrimaryKeyParams
 
-// bytes a_key = 1;
+// required bytes a_key = 1;
+inline bool ContinuePrimaryKeyParams::_internal_has_a_key() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ContinuePrimaryKeyParams::has_a_key() const {
+  return _internal_has_a_key();
+}
 inline void ContinuePrimaryKeyParams::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& ContinuePrimaryKeyParams::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams.a_key)
@@ -2272,7 +2456,7 @@ inline const std::string& ContinuePrimaryKeyParams::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ContinuePrimaryKeyParams::set_a_key(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams.a_key)
 }
@@ -2285,22 +2469,32 @@ inline const std::string& ContinuePrimaryKeyParams::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void ContinuePrimaryKeyParams::_internal_set_a_key(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* ContinuePrimaryKeyParams::_internal_mutable_a_key() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* ContinuePrimaryKeyParams::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams.a_key)
-  return _impl_.a_key_.Release();
+  if (!_internal_has_a_key()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_key_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void ContinuePrimaryKeyParams::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2311,9 +2505,17 @@ inline void ContinuePrimaryKeyParams::set_allocated_a_key(std::string* a_key) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams.a_key)
 }
 
-// bytes a_primaryKey = 2;
+// required bytes a_primaryKey = 2;
+inline bool ContinuePrimaryKeyParams::_internal_has_a_primarykey() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool ContinuePrimaryKeyParams::has_a_primarykey() const {
+  return _internal_has_a_primarykey();
+}
 inline void ContinuePrimaryKeyParams::clear_a_primarykey() {
   _impl_.a_primarykey_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& ContinuePrimaryKeyParams::a_primarykey() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams.a_primaryKey)
@@ -2322,7 +2524,7 @@ inline const std::string& ContinuePrimaryKeyParams::a_primarykey() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ContinuePrimaryKeyParams::set_a_primarykey(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_primarykey_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams.a_primaryKey)
 }
@@ -2335,22 +2537,32 @@ inline const std::string& ContinuePrimaryKeyParams::_internal_a_primarykey() con
   return _impl_.a_primarykey_.Get();
 }
 inline void ContinuePrimaryKeyParams::_internal_set_a_primarykey(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_primarykey_.Set(value, GetArenaForAllocation());
 }
 inline std::string* ContinuePrimaryKeyParams::_internal_mutable_a_primarykey() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_primarykey_.Mutable(GetArenaForAllocation());
 }
 inline std::string* ContinuePrimaryKeyParams::release_a_primarykey() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams.a_primaryKey)
-  return _impl_.a_primarykey_.Release();
+  if (!_internal_has_a_primarykey()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_primarykey_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_primarykey_.IsDefault()) {
+    _impl_.a_primarykey_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void ContinuePrimaryKeyParams::set_allocated_a_primarykey(std::string* a_primarykey) {
   if (a_primarykey != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_primarykey_.SetAllocated(a_primarykey, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2365,9 +2577,17 @@ inline void ContinuePrimaryKeyParams::set_allocated_a_primarykey(std::string* a_
 
 // AdvanceParams
 
-// uint32 a_count = 1;
+// required uint32 a_count = 1;
+inline bool AdvanceParams::_internal_has_a_count() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool AdvanceParams::has_a_count() const {
+  return _internal_has_a_count();
+}
 inline void AdvanceParams::clear_a_count() {
   _impl_.a_count_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t AdvanceParams::_internal_a_count() const {
   return _impl_.a_count_;
@@ -2377,7 +2597,7 @@ inline uint32_t AdvanceParams::a_count() const {
   return _internal_a_count();
 }
 inline void AdvanceParams::_internal_set_a_count(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_count_ = value;
 }
 inline void AdvanceParams::set_a_count(uint32_t value) {
@@ -2624,9 +2844,17 @@ inline CursorRequestParams::ContentCase CursorRequestParams::content_case() cons
 
 // ObjectStoreCursorResponse
 
-// bytes a_key = 1;
+// required bytes a_key = 1;
+inline bool ObjectStoreCursorResponse::_internal_has_a_key() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ObjectStoreCursorResponse::has_a_key() const {
+  return _internal_has_a_key();
+}
 inline void ObjectStoreCursorResponse::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& ObjectStoreCursorResponse::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse.a_key)
@@ -2635,7 +2863,7 @@ inline const std::string& ObjectStoreCursorResponse::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ObjectStoreCursorResponse::set_a_key(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse.a_key)
 }
@@ -2648,22 +2876,32 @@ inline const std::string& ObjectStoreCursorResponse::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void ObjectStoreCursorResponse::_internal_set_a_key(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* ObjectStoreCursorResponse::_internal_mutable_a_key() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* ObjectStoreCursorResponse::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse.a_key)
-  return _impl_.a_key_.Release();
+  if (!_internal_has_a_key()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_key_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void ObjectStoreCursorResponse::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2674,9 +2912,11 @@ inline void ObjectStoreCursorResponse::set_allocated_a_key(std::string* a_key) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse.a_key)
 }
 
-// .protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo a_cloneInfo = 2;
+// required .protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo a_cloneInfo = 2;
 inline bool ObjectStoreCursorResponse::_internal_has_a_cloneinfo() const {
-  return this != internal_default_instance() && _impl_.a_cloneinfo_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_cloneinfo_ != nullptr);
+  return value;
 }
 inline bool ObjectStoreCursorResponse::has_a_cloneinfo() const {
   return _internal_has_a_cloneinfo();
@@ -2697,14 +2937,14 @@ inline void ObjectStoreCursorResponse::unsafe_arena_set_allocated_a_cloneinfo(
   }
   _impl_.a_cloneinfo_ = a_cloneinfo;
   if (a_cloneinfo) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse.a_cloneInfo)
 }
 inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* ObjectStoreCursorResponse::release_a_cloneinfo() {
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* temp = _impl_.a_cloneinfo_;
   _impl_.a_cloneinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -2720,13 +2960,13 @@ inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* O
 }
 inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* ObjectStoreCursorResponse::unsafe_arena_release_a_cloneinfo() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse.a_cloneInfo)
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* temp = _impl_.a_cloneinfo_;
   _impl_.a_cloneinfo_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* ObjectStoreCursorResponse::_internal_mutable_a_cloneinfo() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   if (_impl_.a_cloneinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo>(GetArenaForAllocation());
     _impl_.a_cloneinfo_ = p;
@@ -2751,9 +2991,9 @@ inline void ObjectStoreCursorResponse::set_allocated_a_cloneinfo(::protobuf::moz
       a_cloneinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_cloneinfo, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_cloneinfo_ = a_cloneinfo;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse.a_cloneInfo)
@@ -2763,9 +3003,17 @@ inline void ObjectStoreCursorResponse::set_allocated_a_cloneinfo(::protobuf::moz
 
 // ObjectStoreKeyCursorResponse
 
-// bytes a_key = 1;
+// required bytes a_key = 1;
+inline bool ObjectStoreKeyCursorResponse::_internal_has_a_key() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ObjectStoreKeyCursorResponse::has_a_key() const {
+  return _internal_has_a_key();
+}
 inline void ObjectStoreKeyCursorResponse::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& ObjectStoreKeyCursorResponse::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.ObjectStoreKeyCursorResponse.a_key)
@@ -2774,7 +3022,7 @@ inline const std::string& ObjectStoreKeyCursorResponse::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ObjectStoreKeyCursorResponse::set_a_key(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.ObjectStoreKeyCursorResponse.a_key)
 }
@@ -2787,22 +3035,32 @@ inline const std::string& ObjectStoreKeyCursorResponse::_internal_a_key() const 
   return _impl_.a_key_.Get();
 }
 inline void ObjectStoreKeyCursorResponse::_internal_set_a_key(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* ObjectStoreKeyCursorResponse::_internal_mutable_a_key() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* ObjectStoreKeyCursorResponse::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.ObjectStoreKeyCursorResponse.a_key)
-  return _impl_.a_key_.Release();
+  if (!_internal_has_a_key()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_key_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void ObjectStoreKeyCursorResponse::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2817,9 +3075,17 @@ inline void ObjectStoreKeyCursorResponse::set_allocated_a_key(std::string* a_key
 
 // IndexCursorResponse
 
-// bytes a_key = 1;
+// required bytes a_key = 1;
+inline bool IndexCursorResponse::_internal_has_a_key() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool IndexCursorResponse::has_a_key() const {
+  return _internal_has_a_key();
+}
 inline void IndexCursorResponse::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& IndexCursorResponse::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_key)
@@ -2828,7 +3094,7 @@ inline const std::string& IndexCursorResponse::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IndexCursorResponse::set_a_key(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_key)
 }
@@ -2841,22 +3107,32 @@ inline const std::string& IndexCursorResponse::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void IndexCursorResponse::_internal_set_a_key(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* IndexCursorResponse::_internal_mutable_a_key() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* IndexCursorResponse::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_key)
-  return _impl_.a_key_.Release();
+  if (!_internal_has_a_key()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_key_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void IndexCursorResponse::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2867,9 +3143,17 @@ inline void IndexCursorResponse::set_allocated_a_key(std::string* a_key) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_key)
 }
 
-// bytes a_sortKey = 2;
+// required bytes a_sortKey = 2;
+inline bool IndexCursorResponse::_internal_has_a_sortkey() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool IndexCursorResponse::has_a_sortkey() const {
+  return _internal_has_a_sortkey();
+}
 inline void IndexCursorResponse::clear_a_sortkey() {
   _impl_.a_sortkey_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& IndexCursorResponse::a_sortkey() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_sortKey)
@@ -2878,7 +3162,7 @@ inline const std::string& IndexCursorResponse::a_sortkey() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IndexCursorResponse::set_a_sortkey(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_sortkey_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_sortKey)
 }
@@ -2891,22 +3175,32 @@ inline const std::string& IndexCursorResponse::_internal_a_sortkey() const {
   return _impl_.a_sortkey_.Get();
 }
 inline void IndexCursorResponse::_internal_set_a_sortkey(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_sortkey_.Set(value, GetArenaForAllocation());
 }
 inline std::string* IndexCursorResponse::_internal_mutable_a_sortkey() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_sortkey_.Mutable(GetArenaForAllocation());
 }
 inline std::string* IndexCursorResponse::release_a_sortkey() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_sortKey)
-  return _impl_.a_sortkey_.Release();
+  if (!_internal_has_a_sortkey()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_sortkey_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_sortkey_.IsDefault()) {
+    _impl_.a_sortkey_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void IndexCursorResponse::set_allocated_a_sortkey(std::string* a_sortkey) {
   if (a_sortkey != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_sortkey_.SetAllocated(a_sortkey, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2917,9 +3211,17 @@ inline void IndexCursorResponse::set_allocated_a_sortkey(std::string* a_sortkey)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_sortKey)
 }
 
-// bytes a_objectKey = 3;
+// required bytes a_objectKey = 3;
+inline bool IndexCursorResponse::_internal_has_a_objectkey() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool IndexCursorResponse::has_a_objectkey() const {
+  return _internal_has_a_objectkey();
+}
 inline void IndexCursorResponse::clear_a_objectkey() {
   _impl_.a_objectkey_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& IndexCursorResponse::a_objectkey() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_objectKey)
@@ -2928,7 +3230,7 @@ inline const std::string& IndexCursorResponse::a_objectkey() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IndexCursorResponse::set_a_objectkey(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000004u;
  _impl_.a_objectkey_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_objectKey)
 }
@@ -2941,22 +3243,32 @@ inline const std::string& IndexCursorResponse::_internal_a_objectkey() const {
   return _impl_.a_objectkey_.Get();
 }
 inline void IndexCursorResponse::_internal_set_a_objectkey(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_objectkey_.Set(value, GetArenaForAllocation());
 }
 inline std::string* IndexCursorResponse::_internal_mutable_a_objectkey() {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   return _impl_.a_objectkey_.Mutable(GetArenaForAllocation());
 }
 inline std::string* IndexCursorResponse::release_a_objectkey() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_objectKey)
-  return _impl_.a_objectkey_.Release();
+  if (!_internal_has_a_objectkey()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000004u;
+  auto* p = _impl_.a_objectkey_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_objectkey_.IsDefault()) {
+    _impl_.a_objectkey_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void IndexCursorResponse::set_allocated_a_objectkey(std::string* a_objectkey) {
   if (a_objectkey != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.a_objectkey_.SetAllocated(a_objectkey, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2967,9 +3279,11 @@ inline void IndexCursorResponse::set_allocated_a_objectkey(std::string* a_object
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_objectKey)
 }
 
-// .protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo a_cloneInfo = 4;
+// required .protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo a_cloneInfo = 4;
 inline bool IndexCursorResponse::_internal_has_a_cloneinfo() const {
-  return this != internal_default_instance() && _impl_.a_cloneinfo_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_cloneinfo_ != nullptr);
+  return value;
 }
 inline bool IndexCursorResponse::has_a_cloneinfo() const {
   return _internal_has_a_cloneinfo();
@@ -2990,14 +3304,14 @@ inline void IndexCursorResponse::unsafe_arena_set_allocated_a_cloneinfo(
   }
   _impl_.a_cloneinfo_ = a_cloneinfo;
   if (a_cloneinfo) {
-    
+    _impl_._has_bits_[0] |= 0x00000008u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000008u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_cloneInfo)
 }
 inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* IndexCursorResponse::release_a_cloneinfo() {
-  
+  _impl_._has_bits_[0] &= ~0x00000008u;
   ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* temp = _impl_.a_cloneinfo_;
   _impl_.a_cloneinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -3013,13 +3327,13 @@ inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* I
 }
 inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* IndexCursorResponse::unsafe_arena_release_a_cloneinfo() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_cloneInfo)
-  
+  _impl_._has_bits_[0] &= ~0x00000008u;
   ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* temp = _impl_.a_cloneinfo_;
   _impl_.a_cloneinfo_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* IndexCursorResponse::_internal_mutable_a_cloneinfo() {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   if (_impl_.a_cloneinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo>(GetArenaForAllocation());
     _impl_.a_cloneinfo_ = p;
@@ -3044,9 +3358,9 @@ inline void IndexCursorResponse::set_allocated_a_cloneinfo(::protobuf::mozilla::
       a_cloneinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_cloneinfo, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000008u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000008u;
   }
   _impl_.a_cloneinfo_ = a_cloneinfo;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_cloneInfo)
@@ -3056,9 +3370,17 @@ inline void IndexCursorResponse::set_allocated_a_cloneinfo(::protobuf::mozilla::
 
 // IndexKeyCursorResponse
 
-// bytes a_key = 1;
+// required bytes a_key = 1;
+inline bool IndexKeyCursorResponse::_internal_has_a_key() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool IndexKeyCursorResponse::has_a_key() const {
+  return _internal_has_a_key();
+}
 inline void IndexKeyCursorResponse::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& IndexKeyCursorResponse::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.a_key)
@@ -3067,7 +3389,7 @@ inline const std::string& IndexKeyCursorResponse::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IndexKeyCursorResponse::set_a_key(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.a_key)
 }
@@ -3080,22 +3402,32 @@ inline const std::string& IndexKeyCursorResponse::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void IndexKeyCursorResponse::_internal_set_a_key(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* IndexKeyCursorResponse::_internal_mutable_a_key() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* IndexKeyCursorResponse::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.a_key)
-  return _impl_.a_key_.Release();
+  if (!_internal_has_a_key()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_key_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void IndexKeyCursorResponse::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3106,9 +3438,17 @@ inline void IndexKeyCursorResponse::set_allocated_a_key(std::string* a_key) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.a_key)
 }
 
-// bytes a_sortKey = 2;
+// required bytes a_sortKey = 2;
+inline bool IndexKeyCursorResponse::_internal_has_a_sortkey() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool IndexKeyCursorResponse::has_a_sortkey() const {
+  return _internal_has_a_sortkey();
+}
 inline void IndexKeyCursorResponse::clear_a_sortkey() {
   _impl_.a_sortkey_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& IndexKeyCursorResponse::a_sortkey() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.a_sortKey)
@@ -3117,7 +3457,7 @@ inline const std::string& IndexKeyCursorResponse::a_sortkey() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IndexKeyCursorResponse::set_a_sortkey(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_sortkey_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.a_sortKey)
 }
@@ -3130,22 +3470,32 @@ inline const std::string& IndexKeyCursorResponse::_internal_a_sortkey() const {
   return _impl_.a_sortkey_.Get();
 }
 inline void IndexKeyCursorResponse::_internal_set_a_sortkey(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_sortkey_.Set(value, GetArenaForAllocation());
 }
 inline std::string* IndexKeyCursorResponse::_internal_mutable_a_sortkey() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_sortkey_.Mutable(GetArenaForAllocation());
 }
 inline std::string* IndexKeyCursorResponse::release_a_sortkey() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.a_sortKey)
-  return _impl_.a_sortkey_.Release();
+  if (!_internal_has_a_sortkey()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_sortkey_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_sortkey_.IsDefault()) {
+    _impl_.a_sortkey_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void IndexKeyCursorResponse::set_allocated_a_sortkey(std::string* a_sortkey) {
   if (a_sortkey != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_sortkey_.SetAllocated(a_sortkey, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3156,9 +3506,17 @@ inline void IndexKeyCursorResponse::set_allocated_a_sortkey(std::string* a_sortk
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.a_sortKey)
 }
 
-// bytes a_objectKey = 3;
+// required bytes a_objectKey = 3;
+inline bool IndexKeyCursorResponse::_internal_has_a_objectkey() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool IndexKeyCursorResponse::has_a_objectkey() const {
+  return _internal_has_a_objectkey();
+}
 inline void IndexKeyCursorResponse::clear_a_objectkey() {
   _impl_.a_objectkey_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& IndexKeyCursorResponse::a_objectkey() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.a_objectKey)
@@ -3167,7 +3525,7 @@ inline const std::string& IndexKeyCursorResponse::a_objectkey() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IndexKeyCursorResponse::set_a_objectkey(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000004u;
  _impl_.a_objectkey_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.a_objectKey)
 }
@@ -3180,22 +3538,32 @@ inline const std::string& IndexKeyCursorResponse::_internal_a_objectkey() const 
   return _impl_.a_objectkey_.Get();
 }
 inline void IndexKeyCursorResponse::_internal_set_a_objectkey(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_objectkey_.Set(value, GetArenaForAllocation());
 }
 inline std::string* IndexKeyCursorResponse::_internal_mutable_a_objectkey() {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   return _impl_.a_objectkey_.Mutable(GetArenaForAllocation());
 }
 inline std::string* IndexKeyCursorResponse::release_a_objectkey() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.a_objectKey)
-  return _impl_.a_objectkey_.Release();
+  if (!_internal_has_a_objectkey()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000004u;
+  auto* p = _impl_.a_objectkey_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_objectkey_.IsDefault()) {
+    _impl_.a_objectkey_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void IndexKeyCursorResponse::set_allocated_a_objectkey(std::string* a_objectkey) {
   if (a_objectkey != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.a_objectkey_.SetAllocated(a_objectkey, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

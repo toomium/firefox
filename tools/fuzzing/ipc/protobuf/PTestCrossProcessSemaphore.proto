@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/ipc/ipdl/test/gtest/PTestCrossProcessSemaphore.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla._ipdltest.PTestCrossProcessSemaphore;
@@ -14,7 +14,7 @@ package protobuf.mozilla._ipdltest.PTestCrossProcessSemaphore;
 
 // Message declarations
 message Msg_CrossProcessSemaphore {
-  bytes a_aSem = 1;
+  required bytes a_aSem = 1;
 }
 
 // Parameter mappings stats:

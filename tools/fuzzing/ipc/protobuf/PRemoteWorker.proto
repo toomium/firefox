@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/workers/remoteworkers/PRemoteWorker.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.PRemoteWorker;
@@ -19,19 +19,19 @@ import "RemoteWorkerTypes.proto";
 
 // Message declarations
 message Msg_Created {
-  bool a_aStatus = 1;
+  required bool a_aStatus = 1;
 }
 
 message Msg_Error {
-  protobuf.mozilla.dom.ErrorValue a_aValue = 1;
+  required protobuf.mozilla.dom.ErrorValue a_aValue = 1;
 }
 
 message Msg_NotifyLock {
-  bool a_aCreated = 1;
+  required bool a_aCreated = 1;
 }
 
 message Msg_NotifyWebTransport {
-  bool a_aCreated = 1;
+  required bool a_aCreated = 1;
 }
 
 message Msg_Close {
@@ -41,12 +41,12 @@ message Msg_SetServiceWorkerSkipWaitingFlag {
 }
 
 message Reply_SetServiceWorkerSkipWaitingFlag {
-  bool a_aOk = 1;
+  required bool a_aOk = 1;
 }
 
 message Msg_PFetchEventOpProxyConstructor {
-  sint64 a_actorid = 1;
-  protobuf.mozilla.dom.ParentToChildServiceWorkerFetchEventOpArgs a_aArgs = 2;
+  required sint64 a_actorid = 1;
+  required protobuf.mozilla.dom.ParentToChildServiceWorkerFetchEventOpArgs a_aArgs = 2;
 }
 
 message Reply_PFetchEventOpProxyConstructor {
@@ -59,15 +59,15 @@ message Reply___delete__ {
 }
 
 message Msg_ExecOp {
-  protobuf.mozilla.dom.SharedWorkerOpArgs a_aArgs = 1;
+  required protobuf.mozilla.dom.SharedWorkerOpArgs a_aArgs = 1;
 }
 
 message Msg_ExecServiceWorkerOp {
-  protobuf.mozilla.dom.ServiceWorkerOpArgs a_aArgs = 1;
+  required protobuf.mozilla.dom.ServiceWorkerOpArgs a_aArgs = 1;
 }
 
 message Reply_ExecServiceWorkerOp {
-  protobuf.mozilla.dom.ServiceWorkerOpResult a_aResult = 1;
+  required protobuf.mozilla.dom.ServiceWorkerOpResult a_aResult = 1;
 }
 
 // Parameter mappings stats:

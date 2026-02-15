@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/ipc/ipdl/test/gtest/PTestDescendant.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla._ipdltest.PTestDescendant;
@@ -16,7 +16,7 @@ package protobuf.mozilla._ipdltest.PTestDescendant;
 
 // Message declarations
 message Msg_PTestDescendantSubConstructor {
-  sint64 a_actorid = 1;
+  required sint64 a_actorid = 1;
   optional bytes a_dummy = 2;
 }
 
@@ -24,7 +24,7 @@ message Reply_PTestDescendantSubConstructor {
 }
 
 message Msg_Test {
-  bytes a_a = 1;
+  required bytes a_a = 1;
 }
 
 message Msg___delete__ {
@@ -34,7 +34,7 @@ message Reply___delete__ {
 }
 
 message Msg_Ok {
-  bytes a_a = 1;
+  required bytes a_a = 1;
 }
 
 // Parameter mappings stats:

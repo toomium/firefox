@@ -105,6 +105,13 @@ class Msg_PTestMultiMgrsBottomConstructor final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_PTestMultiMgrsBottomConstructor& default_instance() {
     return *internal_default_instance();
   }
@@ -179,7 +186,11 @@ class Msg_PTestMultiMgrsBottomConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // sint64 a_actorid = 1;
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
   void clear_a_actorid();
   int64_t a_actorid() const;
   void set_a_actorid(int64_t value);
@@ -196,8 +207,9 @@ class Msg_PTestMultiMgrsBottomConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    int64_t a_actorid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestMultiMgrsRight_2eproto;
@@ -233,6 +245,13 @@ class Reply_PTestMultiMgrsBottomConstructor final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_PTestMultiMgrsBottomConstructor& default_instance() {
@@ -352,6 +371,13 @@ class Msg___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -469,6 +495,13 @@ class Reply___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -564,9 +597,17 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_PTestMultiMgrsBottomConstructor
 
-// sint64 a_actorid = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PTestMultiMgrsBottomConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PTestMultiMgrsBottomConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
 inline void Msg_PTestMultiMgrsBottomConstructor::clear_a_actorid() {
   _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline int64_t Msg_PTestMultiMgrsBottomConstructor::_internal_a_actorid() const {
   return _impl_.a_actorid_;
@@ -576,7 +617,7 @@ inline int64_t Msg_PTestMultiMgrsBottomConstructor::a_actorid() const {
   return _internal_a_actorid();
 }
 inline void Msg_PTestMultiMgrsBottomConstructor::_internal_set_a_actorid(int64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_actorid_ = value;
 }
 inline void Msg_PTestMultiMgrsBottomConstructor::set_a_actorid(int64_t value) {

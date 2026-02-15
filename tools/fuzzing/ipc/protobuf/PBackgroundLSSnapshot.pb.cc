@@ -159,8 +159,9 @@ struct Msg_LoadedDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_LoadedDefaultTypeInternal _Msg_Loaded_default_instance_;
 PROTOBUF_CONSTEXPR Msg_LoadValueAndMoreItems::Msg_LoadValueAndMoreItems(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_key_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_key_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_LoadValueAndMoreItemsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_LoadValueAndMoreItemsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -172,9 +173,10 @@ struct Msg_LoadValueAndMoreItemsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_LoadValueAndMoreItemsDefaultTypeInternal _Msg_LoadValueAndMoreItems_default_instance_;
 PROTOBUF_CONSTEXPR Reply_LoadValueAndMoreItems::Reply_LoadValueAndMoreItems(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_iteminfos_)*/{}
-  , /*decltype(_impl_.a_value_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_iteminfos_)*/{}
+  , /*decltype(_impl_.a_value_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Reply_LoadValueAndMoreItemsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_LoadValueAndMoreItemsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -211,8 +213,9 @@ struct Reply_LoadKeysDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_LoadKeysDefaultTypeInternal _Reply_LoadKeys_default_instance_;
 PROTOBUF_CONSTEXPR Msg_IncreasePeakUsage::Msg_IncreasePeakUsage(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_minsize_)*/int64_t{0}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_minsize_)*/int64_t{0}} {}
 struct Msg_IncreasePeakUsageDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_IncreasePeakUsageDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -224,8 +227,9 @@ struct Msg_IncreasePeakUsageDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_IncreasePeakUsageDefaultTypeInternal _Msg_IncreasePeakUsage_default_instance_;
 PROTOBUF_CONSTEXPR Reply_IncreasePeakUsage::Reply_IncreasePeakUsage(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_size_)*/int64_t{0}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_size_)*/int64_t{0}} {}
 struct Reply_IncreasePeakUsageDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_IncreasePeakUsageDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -604,6 +608,8 @@ void Msg_AsyncCheckpoint::CopyFrom(const Msg_AsyncCheckpoint& from) {
 }
 
 bool Msg_AsyncCheckpoint::IsInitialized() const {
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_writeinfos_))
+    return false;
   return true;
 }
 
@@ -794,6 +800,8 @@ void Msg_AsyncCheckpointAndNotify::CopyFrom(const Msg_AsyncCheckpointAndNotify& 
 }
 
 bool Msg_AsyncCheckpointAndNotify::IsInitialized() const {
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_writeandnotifyinfos_))
+    return false;
   return true;
 }
 
@@ -984,6 +992,8 @@ void Msg_SyncCheckpoint::CopyFrom(const Msg_SyncCheckpoint& from) {
 }
 
 bool Msg_SyncCheckpoint::IsInitialized() const {
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_writeinfos_))
+    return false;
   return true;
 }
 
@@ -1322,6 +1332,8 @@ void Msg_SyncCheckpointAndNotify::CopyFrom(const Msg_SyncCheckpointAndNotify& fr
 }
 
 bool Msg_SyncCheckpointAndNotify::IsInitialized() const {
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_writeandnotifyinfos_))
+    return false;
   return true;
 }
 
@@ -2080,6 +2092,13 @@ std::string Msg_Loaded::GetTypeName() const {
 
 class Msg_LoadValueAndMoreItems::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_LoadValueAndMoreItems>()._impl_._has_bits_);
+  static void set_has_a_key(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Msg_LoadValueAndMoreItems::Msg_LoadValueAndMoreItems(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2092,15 +2111,16 @@ Msg_LoadValueAndMoreItems::Msg_LoadValueAndMoreItems(const Msg_LoadValueAndMoreI
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_LoadValueAndMoreItems* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_key_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_key_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_key_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_key_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_key().empty()) {
+  if (from._internal_has_a_key()) {
     _this->_impl_.a_key_.Set(from._internal_a_key(), 
       _this->GetArenaForAllocation());
   }
@@ -2112,8 +2132,9 @@ inline void Msg_LoadValueAndMoreItems::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_key_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_key_){}
   };
   _impl_.a_key_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2145,23 +2166,27 @@ void Msg_LoadValueAndMoreItems::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_key_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_key_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_LoadValueAndMoreItems::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string a_key = 1;
+      // required string a_key = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_key();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -2181,6 +2206,7 @@ const char* Msg_LoadValueAndMoreItems::_InternalParse(const char* ptr, ::_pbi::P
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -2194,12 +2220,9 @@ uint8_t* Msg_LoadValueAndMoreItems::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string a_key = 1;
-  if (!this->_internal_a_key().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_key().data(), static_cast<int>(this->_internal_a_key().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_LoadValueAndMoreItems.a_key");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_key = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_key(), target);
   }
@@ -2216,16 +2239,15 @@ size_t Msg_LoadValueAndMoreItems::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_LoadValueAndMoreItems)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string a_key = 1;
-  if (!this->_internal_a_key().empty()) {
+  // required string a_key = 1;
+  if (_internal_has_a_key()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_key());
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -2248,7 +2270,7 @@ void Msg_LoadValueAndMoreItems::MergeFrom(const Msg_LoadValueAndMoreItems& from)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_key().empty()) {
+  if (from._internal_has_a_key()) {
     _this->_internal_set_a_key(from._internal_a_key());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -2262,6 +2284,7 @@ void Msg_LoadValueAndMoreItems::CopyFrom(const Msg_LoadValueAndMoreItems& from) 
 }
 
 bool Msg_LoadValueAndMoreItems::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -2270,6 +2293,7 @@ void Msg_LoadValueAndMoreItems::InternalSwap(Msg_LoadValueAndMoreItems* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_key_, lhs_arena,
       &other->_impl_.a_key_, rhs_arena
@@ -2285,6 +2309,13 @@ std::string Msg_LoadValueAndMoreItems::GetTypeName() const {
 
 class Reply_LoadValueAndMoreItems::_Internal {
  public:
+  using HasBits = decltype(std::declval<Reply_LoadValueAndMoreItems>()._impl_._has_bits_);
+  static void set_has_a_value(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 void Reply_LoadValueAndMoreItems::clear_a_iteminfos() {
@@ -2300,16 +2331,17 @@ Reply_LoadValueAndMoreItems::Reply_LoadValueAndMoreItems(const Reply_LoadValueAn
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_LoadValueAndMoreItems* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_iteminfos_){from._impl_.a_iteminfos_}
-    , decltype(_impl_.a_value_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_iteminfos_){from._impl_.a_iteminfos_}
+    , decltype(_impl_.a_value_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_value_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_value_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_value().empty()) {
+  if (from._internal_has_a_value()) {
     _this->_impl_.a_value_.Set(from._internal_a_value(), 
       _this->GetArenaForAllocation());
   }
@@ -2321,9 +2353,10 @@ inline void Reply_LoadValueAndMoreItems::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_iteminfos_){arena}
-    , decltype(_impl_.a_value_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_iteminfos_){arena}
+    , decltype(_impl_.a_value_){}
   };
   _impl_.a_value_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2357,17 +2390,22 @@ void Reply_LoadValueAndMoreItems::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_iteminfos_.Clear();
-  _impl_.a_value_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_value_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Reply_LoadValueAndMoreItems::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_value = 1;
+      // required bytes a_value = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_value();
@@ -2405,6 +2443,7 @@ const char* Reply_LoadValueAndMoreItems::_InternalParse(const char* ptr, ::_pbi:
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -2418,8 +2457,9 @@ uint8_t* Reply_LoadValueAndMoreItems::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_value = 1;
-  if (!this->_internal_a_value().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_value = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_value(), target);
   }
@@ -2444,6 +2484,12 @@ size_t Reply_LoadValueAndMoreItems::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadValueAndMoreItems)
   size_t total_size = 0;
 
+  // required bytes a_value = 1;
+  if (_internal_has_a_value()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_value());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2453,13 +2499,6 @@ size_t Reply_LoadValueAndMoreItems::ByteSizeLong() const {
   for (const auto& msg : this->_impl_.a_iteminfos_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
-  }
-
-  // bytes a_value = 1;
-  if (!this->_internal_a_value().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_value());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2484,7 +2523,7 @@ void Reply_LoadValueAndMoreItems::MergeFrom(const Reply_LoadValueAndMoreItems& f
   (void) cached_has_bits;
 
   _this->_impl_.a_iteminfos_.MergeFrom(from._impl_.a_iteminfos_);
-  if (!from._internal_a_value().empty()) {
+  if (from._internal_has_a_value()) {
     _this->_internal_set_a_value(from._internal_a_value());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -2498,6 +2537,9 @@ void Reply_LoadValueAndMoreItems::CopyFrom(const Reply_LoadValueAndMoreItems& fr
 }
 
 bool Reply_LoadValueAndMoreItems::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_iteminfos_))
+    return false;
   return true;
 }
 
@@ -2506,6 +2548,7 @@ void Reply_LoadValueAndMoreItems::InternalSwap(Reply_LoadValueAndMoreItems* othe
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_iteminfos_.InternalSwap(&other->_impl_.a_iteminfos_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_value_, lhs_arena,
@@ -2742,7 +2785,6 @@ const char* Reply_LoadKeys::_InternalParse(const char* ptr, ::_pbi::ParseContext
             auto str = _internal_add_a_keys();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            CHK_(::_pbi::VerifyUTF8(str, nullptr));
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
         } else
@@ -2780,10 +2822,6 @@ uint8_t* Reply_LoadKeys::_InternalSerialize(
   // repeated string a_keys = 1;
   for (int i = 0, n = this->_internal_a_keys_size(); i < n; i++) {
     const auto& s = this->_internal_a_keys(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadKeys.a_keys");
     target = stream->WriteString(1, s, target);
   }
 
@@ -2862,6 +2900,13 @@ std::string Reply_LoadKeys::GetTypeName() const {
 
 class Msg_IncreasePeakUsage::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_IncreasePeakUsage>()._impl_._has_bits_);
+  static void set_has_a_minsize(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Msg_IncreasePeakUsage::Msg_IncreasePeakUsage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2874,8 +2919,9 @@ Msg_IncreasePeakUsage::Msg_IncreasePeakUsage(const Msg_IncreasePeakUsage& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_IncreasePeakUsage* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_minsize_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_minsize_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_minsize_ = from._impl_.a_minsize_;
@@ -2887,8 +2933,9 @@ inline void Msg_IncreasePeakUsage::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_minsize_){int64_t{0}}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_minsize_){int64_t{0}}
   };
 }
 
@@ -2916,18 +2963,21 @@ void Msg_IncreasePeakUsage::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_minsize_ = int64_t{0};
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_IncreasePeakUsage::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // sint64 a_minSize = 1;
+      // required sint64 a_minSize = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_minsize(&has_bits);
           _impl_.a_minsize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
@@ -2949,6 +2999,7 @@ const char* Msg_IncreasePeakUsage::_InternalParse(const char* ptr, ::_pbi::Parse
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -2962,8 +3013,9 @@ uint8_t* Msg_IncreasePeakUsage::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // sint64 a_minSize = 1;
-  if (this->_internal_a_minsize() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required sint64 a_minSize = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_minsize(), target);
   }
@@ -2980,14 +3032,13 @@ size_t Msg_IncreasePeakUsage::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_IncreasePeakUsage)
   size_t total_size = 0;
 
+  // required sint64 a_minSize = 1;
+  if (_internal_has_a_minsize()) {
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_minsize());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // sint64 a_minSize = 1;
-  if (this->_internal_a_minsize() != 0) {
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_minsize());
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -3010,7 +3061,7 @@ void Msg_IncreasePeakUsage::MergeFrom(const Msg_IncreasePeakUsage& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_a_minsize() != 0) {
+  if (from._internal_has_a_minsize()) {
     _this->_internal_set_a_minsize(from._internal_a_minsize());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -3024,12 +3075,14 @@ void Msg_IncreasePeakUsage::CopyFrom(const Msg_IncreasePeakUsage& from) {
 }
 
 bool Msg_IncreasePeakUsage::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void Msg_IncreasePeakUsage::InternalSwap(Msg_IncreasePeakUsage* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_minsize_, other->_impl_.a_minsize_);
 }
 
@@ -3042,6 +3095,13 @@ std::string Msg_IncreasePeakUsage::GetTypeName() const {
 
 class Reply_IncreasePeakUsage::_Internal {
  public:
+  using HasBits = decltype(std::declval<Reply_IncreasePeakUsage>()._impl_._has_bits_);
+  static void set_has_a_size(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Reply_IncreasePeakUsage::Reply_IncreasePeakUsage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -3054,8 +3114,9 @@ Reply_IncreasePeakUsage::Reply_IncreasePeakUsage(const Reply_IncreasePeakUsage& 
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_IncreasePeakUsage* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_size_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_size_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_size_ = from._impl_.a_size_;
@@ -3067,8 +3128,9 @@ inline void Reply_IncreasePeakUsage::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_size_){int64_t{0}}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_size_){int64_t{0}}
   };
 }
 
@@ -3096,18 +3158,21 @@ void Reply_IncreasePeakUsage::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_size_ = int64_t{0};
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Reply_IncreasePeakUsage::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // sint64 a_size = 1;
+      // required sint64 a_size = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_size(&has_bits);
           _impl_.a_size_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
@@ -3129,6 +3194,7 @@ const char* Reply_IncreasePeakUsage::_InternalParse(const char* ptr, ::_pbi::Par
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -3142,8 +3208,9 @@ uint8_t* Reply_IncreasePeakUsage::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // sint64 a_size = 1;
-  if (this->_internal_a_size() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required sint64 a_size = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_size(), target);
   }
@@ -3160,14 +3227,13 @@ size_t Reply_IncreasePeakUsage::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_IncreasePeakUsage)
   size_t total_size = 0;
 
+  // required sint64 a_size = 1;
+  if (_internal_has_a_size()) {
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_size());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // sint64 a_size = 1;
-  if (this->_internal_a_size() != 0) {
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_size());
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -3190,7 +3256,7 @@ void Reply_IncreasePeakUsage::MergeFrom(const Reply_IncreasePeakUsage& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_a_size() != 0) {
+  if (from._internal_has_a_size()) {
     _this->_internal_set_a_size(from._internal_a_size());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -3204,12 +3270,14 @@ void Reply_IncreasePeakUsage::CopyFrom(const Reply_IncreasePeakUsage& from) {
 }
 
 bool Reply_IncreasePeakUsage::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void Reply_IncreasePeakUsage::InternalSwap(Reply_IncreasePeakUsage* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_size_, other->_impl_.a_size_);
 }
 

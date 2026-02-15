@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/security/manager/ssl/PSMIPCTypes.ipdlh
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.psm;
@@ -38,6 +38,6 @@ message IPCClientCertObject {
 }
 
 message DelegatedCredentialInfoArg {
-  uint32 a_scheme = 1;
-  uint32 a_authKeyBits = 2;
+  required uint32 a_scheme = 1;
+  required uint32 a_authKeyBits = 2;
 }

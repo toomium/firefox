@@ -129,6 +129,13 @@ class Msg_OnTransportAvailable final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_OnTransportAvailable& default_instance() {
     return *internal_default_instance();
   }
@@ -269,6 +276,13 @@ class Msg_OnError final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_OnError& default_instance() {
     return *internal_default_instance();
   }
@@ -343,7 +357,11 @@ class Msg_OnError final :
   enum : int {
     kAAStatusFieldNumber = 1,
   };
-  // bytes a_aStatus = 1;
+  // required bytes a_aStatus = 1;
+  bool has_a_astatus() const;
+  private:
+  bool _internal_has_a_astatus() const;
+  public:
   void clear_a_astatus();
   const std::string& a_astatus() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -365,8 +383,9 @@ class Msg_OnError final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_astatus_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_astatus_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebSocketConnection_2eproto;
@@ -402,6 +421,13 @@ class Msg_OnTCPClosed final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_OnTCPClosed& default_instance() {
@@ -521,6 +547,13 @@ class Msg_OnDataReceived final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_OnDataReceived& default_instance() {
     return *internal_default_instance();
   }
@@ -626,7 +659,6 @@ class Msg_OnDataReceived final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_adata_;
-    mutable std::atomic<int> _a_adata_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -663,6 +695,13 @@ class Msg_OnUpgradeFailed final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_OnUpgradeFailed& default_instance() {
@@ -739,7 +778,11 @@ class Msg_OnUpgradeFailed final :
   enum : int {
     kAAReasonFieldNumber = 1,
   };
-  // bytes a_aReason = 1;
+  // required bytes a_aReason = 1;
+  bool has_a_areason() const;
+  private:
+  bool _internal_has_a_areason() const;
+  public:
   void clear_a_areason();
   const std::string& a_areason() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -761,8 +804,9 @@ class Msg_OnUpgradeFailed final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_areason_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_areason_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebSocketConnection_2eproto;
@@ -798,6 +842,13 @@ class Msg_WriteOutputData final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_WriteOutputData& default_instance() {
@@ -905,7 +956,6 @@ class Msg_WriteOutputData final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_adata_;
-    mutable std::atomic<int> _a_adata_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -942,6 +992,13 @@ class Msg_StartReading final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_StartReading& default_instance() {
@@ -1061,6 +1118,13 @@ class Msg_DrainSocketData final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_DrainSocketData& default_instance() {
     return *internal_default_instance();
   }
@@ -1178,6 +1242,13 @@ class Msg___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -1293,6 +1364,13 @@ class Reply___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply___delete__& default_instance() {
@@ -1462,9 +1540,17 @@ inline void Msg_OnTransportAvailable::set_allocated_a_asecurityinfo(std::string*
 
 // Msg_OnError
 
-// bytes a_aStatus = 1;
+// required bytes a_aStatus = 1;
+inline bool Msg_OnError::_internal_has_a_astatus() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_OnError::has_a_astatus() const {
+  return _internal_has_a_astatus();
+}
 inline void Msg_OnError::clear_a_astatus() {
   _impl_.a_astatus_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_OnError::a_astatus() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebSocketConnection.Msg_OnError.a_aStatus)
@@ -1473,7 +1559,7 @@ inline const std::string& Msg_OnError::a_astatus() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnError::set_a_astatus(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_astatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketConnection.Msg_OnError.a_aStatus)
 }
@@ -1486,22 +1572,32 @@ inline const std::string& Msg_OnError::_internal_a_astatus() const {
   return _impl_.a_astatus_.Get();
 }
 inline void Msg_OnError::_internal_set_a_astatus(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_astatus_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OnError::_internal_mutable_a_astatus() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_astatus_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OnError::release_a_astatus() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PWebSocketConnection.Msg_OnError.a_aStatus)
-  return _impl_.a_astatus_.Release();
+  if (!_internal_has_a_astatus()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_astatus_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_astatus_.IsDefault()) {
+    _impl_.a_astatus_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_OnError::set_allocated_a_astatus(std::string* a_astatus) {
   if (a_astatus != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_astatus_.SetAllocated(a_astatus, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1571,9 +1667,17 @@ Msg_OnDataReceived::mutable_a_adata() {
 
 // Msg_OnUpgradeFailed
 
-// bytes a_aReason = 1;
+// required bytes a_aReason = 1;
+inline bool Msg_OnUpgradeFailed::_internal_has_a_areason() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_OnUpgradeFailed::has_a_areason() const {
+  return _internal_has_a_areason();
+}
 inline void Msg_OnUpgradeFailed::clear_a_areason() {
   _impl_.a_areason_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_OnUpgradeFailed::a_areason() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebSocketConnection.Msg_OnUpgradeFailed.a_aReason)
@@ -1582,7 +1686,7 @@ inline const std::string& Msg_OnUpgradeFailed::a_areason() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnUpgradeFailed::set_a_areason(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_areason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketConnection.Msg_OnUpgradeFailed.a_aReason)
 }
@@ -1595,22 +1699,32 @@ inline const std::string& Msg_OnUpgradeFailed::_internal_a_areason() const {
   return _impl_.a_areason_.Get();
 }
 inline void Msg_OnUpgradeFailed::_internal_set_a_areason(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_areason_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OnUpgradeFailed::_internal_mutable_a_areason() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_areason_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OnUpgradeFailed::release_a_areason() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PWebSocketConnection.Msg_OnUpgradeFailed.a_aReason)
-  return _impl_.a_areason_.Release();
+  if (!_internal_has_a_areason()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_areason_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_areason_.IsDefault()) {
+    _impl_.a_areason_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_OnUpgradeFailed::set_allocated_a_areason(std::string* a_areason) {
   if (a_areason != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_areason_.SetAllocated(a_areason, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

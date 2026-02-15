@@ -36,9 +36,10 @@ struct IPCFormDataValueDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 IPCFormDataValueDefaultTypeInternal _IPCFormDataValue_default_instance_;
 PROTOBUF_CONSTEXPR FormDataTuple::FormDataTuple(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_value_)*/nullptr
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_value_)*/nullptr} {}
 struct FormDataTupleDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FormDataTupleDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -77,9 +78,10 @@ struct CustomElementFormValueDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CustomElementFormValueDefaultTypeInternal _CustomElementFormValue_default_instance_;
 PROTOBUF_CONSTEXPR CustomElementTuple::CustomElementTuple(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_value_)*/nullptr
-  , /*decltype(_impl_.a_state_)*/nullptr
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_value_)*/nullptr
+  , /*decltype(_impl_.a_state_)*/nullptr} {}
 struct CustomElementTupleDefaultTypeInternal {
   PROTOBUF_CONSTEXPR CustomElementTupleDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -216,7 +218,6 @@ const char* IPCFormDataValue::_InternalParse(const char* ptr, ::_pbi::ParseConte
           auto str = _internal_mutable_a_mvnsstring();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -249,22 +250,19 @@ uint8_t* IPCFormDataValue::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_mVBlobImpl = 1;
-  if (_internal_has_a_mvblobimpl()) {
-    target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_a_mvblobimpl(), target);
+  switch (content_case()) {
+    case kAMVBlobImpl: {
+      target = stream->WriteBytesMaybeAliased(
+          1, this->_internal_a_mvblobimpl(), target);
+      break;
+    }
+    case kAMVnsString: {
+      target = stream->WriteStringMaybeAliased(
+          2, this->_internal_a_mvnsstring(), target);
+      break;
+    }
+    default: ;
   }
-
-  // string a_mVnsString = 2;
-  if (_internal_has_a_mvnsstring()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_mvnsstring().data(), static_cast<int>(this->_internal_a_mvnsstring().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.IPCFormDataValue.a_mVnsString");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_a_mvnsstring(), target);
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
@@ -364,7 +362,17 @@ std::string IPCFormDataValue::GetTypeName() const {
 
 class FormDataTuple::_Internal {
  public:
+  using HasBits = decltype(std::declval<FormDataTuple>()._impl_._has_bits_);
+  static void set_has_a_name(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
   static const ::protobuf::mozilla::dom::IPCFormDataValue& a_value(const FormDataTuple* msg);
+  static void set_has_a_value(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 const ::protobuf::mozilla::dom::IPCFormDataValue&
@@ -381,16 +389,17 @@ FormDataTuple::FormDataTuple(const FormDataTuple& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   FormDataTuple* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_name_){}
-    , decltype(_impl_.a_value_){nullptr}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_name_){}
+    , decltype(_impl_.a_value_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_name_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_name().empty()) {
+  if (from._internal_has_a_name()) {
     _this->_impl_.a_name_.Set(from._internal_a_name(), 
       _this->GetArenaForAllocation());
   }
@@ -405,9 +414,10 @@ inline void FormDataTuple::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_name_){}
-    , decltype(_impl_.a_value_){nullptr}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_name_){}
+    , decltype(_impl_.a_value_){nullptr}
   };
   _impl_.a_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -440,31 +450,37 @@ void FormDataTuple::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_name_.ClearToEmpty();
-  if (GetArenaForAllocation() == nullptr && _impl_.a_value_ != nullptr) {
-    delete _impl_.a_value_;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_name_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      GOOGLE_DCHECK(_impl_.a_value_ != nullptr);
+      _impl_.a_value_->Clear();
+    }
   }
-  _impl_.a_value_ = nullptr;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* FormDataTuple::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string a_name = 1;
+      // required string a_name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.dom.IPCFormDataValue a_value = 2;
+      // required .protobuf.mozilla.dom.IPCFormDataValue a_value = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_value(), ptr);
@@ -488,6 +504,7 @@ const char* FormDataTuple::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -501,18 +518,15 @@ uint8_t* FormDataTuple::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string a_name = 1;
-  if (!this->_internal_a_name().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_name().data(), static_cast<int>(this->_internal_a_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.FormDataTuple.a_name");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_name = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_name(), target);
   }
 
-  // .protobuf.mozilla.dom.IPCFormDataValue a_value = 2;
-  if (this->_internal_has_a_value()) {
+  // required .protobuf.mozilla.dom.IPCFormDataValue a_value = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::a_value(this),
         _Internal::a_value(this).GetCachedSize(), target, stream);
@@ -526,27 +540,47 @@ uint8_t* FormDataTuple::_InternalSerialize(
   return target;
 }
 
-size_t FormDataTuple::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.FormDataTuple)
+size_t FormDataTuple::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.FormDataTuple)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string a_name = 1;
-  if (!this->_internal_a_name().empty()) {
+  if (_internal_has_a_name()) {
+    // required string a_name = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_name());
   }
 
-  // .protobuf.mozilla.dom.IPCFormDataValue a_value = 2;
-  if (this->_internal_has_a_value()) {
+  if (_internal_has_a_value()) {
+    // required .protobuf.mozilla.dom.IPCFormDataValue a_value = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_value_);
   }
+
+  return total_size;
+}
+size_t FormDataTuple::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.FormDataTuple)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required string a_name = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_name());
+
+    // required .protobuf.mozilla.dom.IPCFormDataValue a_value = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_value_);
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -569,12 +603,15 @@ void FormDataTuple::MergeFrom(const FormDataTuple& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_name().empty()) {
-    _this->_internal_set_a_name(from._internal_a_name());
-  }
-  if (from._internal_has_a_value()) {
-    _this->_internal_mutable_a_value()->::protobuf::mozilla::dom::IPCFormDataValue::MergeFrom(
-        from._internal_a_value());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_name(from._internal_a_name());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_mutable_a_value()->::protobuf::mozilla::dom::IPCFormDataValue::MergeFrom(
+          from._internal_a_value());
+    }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -587,6 +624,7 @@ void FormDataTuple::CopyFrom(const FormDataTuple& from) {
 }
 
 bool FormDataTuple::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -595,6 +633,7 @@ void FormDataTuple::InternalSwap(FormDataTuple* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_name_, lhs_arena,
       &other->_impl_.a_name_, rhs_arena
@@ -780,6 +819,8 @@ void CustomElementFormValue_a_type_mVArrayOfFormDataTuple::CopyFrom(const Custom
 }
 
 bool CustomElementFormValue_a_type_mVArrayOfFormDataTuple::IsInitialized() const {
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_mvarrayofformdatatuple_))
+    return false;
   return true;
 }
 
@@ -962,7 +1003,6 @@ const char* CustomElementFormValue::_InternalParse(const char* ptr, ::_pbi::Pars
           auto str = _internal_mutable_a_mvnsstring();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1003,35 +1043,30 @@ uint8_t* CustomElementFormValue::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_mVvoid_t = 1;
-  if (_internal_has_a_mvvoid_t()) {
-    target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_a_mvvoid_t(), target);
+  switch (content_case()) {
+    case kAMVvoidT: {
+      target = stream->WriteBytesMaybeAliased(
+          1, this->_internal_a_mvvoid_t(), target);
+      break;
+    }
+    case kAMVBlobImpl: {
+      target = stream->WriteBytesMaybeAliased(
+          2, this->_internal_a_mvblobimpl(), target);
+      break;
+    }
+    case kAMVnsString: {
+      target = stream->WriteStringMaybeAliased(
+          3, this->_internal_a_mvnsstring(), target);
+      break;
+    }
+    case kAMVArrayOfFormDataTuple: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(4, _Internal::a_mvarrayofformdatatuple(this),
+          _Internal::a_mvarrayofformdatatuple(this).GetCachedSize(), target, stream);
+      break;
+    }
+    default: ;
   }
-
-  // bytes a_mVBlobImpl = 2;
-  if (_internal_has_a_mvblobimpl()) {
-    target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_a_mvblobimpl(), target);
-  }
-
-  // string a_mVnsString = 3;
-  if (_internal_has_a_mvnsstring()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_mvnsstring().data(), static_cast<int>(this->_internal_a_mvnsstring().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.CustomElementFormValue.a_mVnsString");
-    target = stream->WriteStringMaybeAliased(
-        3, this->_internal_a_mvnsstring(), target);
-  }
-
-  // .protobuf.mozilla.dom.CustomElementFormValue.a_type_mVArrayOfFormDataTuple a_mVArrayOfFormDataTuple = 4;
-  if (_internal_has_a_mvarrayofformdatatuple()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(4, _Internal::a_mvarrayofformdatatuple(this),
-        _Internal::a_mvarrayofformdatatuple(this).GetCachedSize(), target, stream);
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
@@ -1135,6 +1170,26 @@ void CustomElementFormValue::CopyFrom(const CustomElementFormValue& from) {
 }
 
 bool CustomElementFormValue::IsInitialized() const {
+  switch (content_case()) {
+    case kAMVvoidT: {
+      break;
+    }
+    case kAMVBlobImpl: {
+      break;
+    }
+    case kAMVnsString: {
+      break;
+    }
+    case kAMVArrayOfFormDataTuple: {
+      if (_internal_has_a_mvarrayofformdatatuple()) {
+        if (!_impl_.content_.a_mvarrayofformdatatuple_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case CONTENT_NOT_SET: {
+      break;
+    }
+  }
   return true;
 }
 
@@ -1154,8 +1209,18 @@ std::string CustomElementFormValue::GetTypeName() const {
 
 class CustomElementTuple::_Internal {
  public:
+  using HasBits = decltype(std::declval<CustomElementTuple>()._impl_._has_bits_);
   static const ::protobuf::mozilla::dom::CustomElementFormValue& a_value(const CustomElementTuple* msg);
+  static void set_has_a_value(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
   static const ::protobuf::mozilla::dom::CustomElementFormValue& a_state(const CustomElementTuple* msg);
+  static void set_has_a_state(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 const ::protobuf::mozilla::dom::CustomElementFormValue&
@@ -1176,9 +1241,10 @@ CustomElementTuple::CustomElementTuple(const CustomElementTuple& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   CustomElementTuple* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_value_){nullptr}
-    , decltype(_impl_.a_state_){nullptr}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_value_){nullptr}
+    , decltype(_impl_.a_state_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_value()) {
@@ -1195,9 +1261,10 @@ inline void CustomElementTuple::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_value_){nullptr}
-    , decltype(_impl_.a_state_){nullptr}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_value_){nullptr}
+    , decltype(_impl_.a_state_){nullptr}
   };
 }
 
@@ -1226,24 +1293,29 @@ void CustomElementTuple::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && _impl_.a_value_ != nullptr) {
-    delete _impl_.a_value_;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      GOOGLE_DCHECK(_impl_.a_value_ != nullptr);
+      _impl_.a_value_->Clear();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      GOOGLE_DCHECK(_impl_.a_state_ != nullptr);
+      _impl_.a_state_->Clear();
+    }
   }
-  _impl_.a_value_ = nullptr;
-  if (GetArenaForAllocation() == nullptr && _impl_.a_state_ != nullptr) {
-    delete _impl_.a_state_;
-  }
-  _impl_.a_state_ = nullptr;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* CustomElementTuple::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.dom.CustomElementFormValue a_value = 1;
+      // required .protobuf.mozilla.dom.CustomElementFormValue a_value = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_value(), ptr);
@@ -1251,7 +1323,7 @@ const char* CustomElementTuple::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.dom.CustomElementFormValue a_state = 2;
+      // required .protobuf.mozilla.dom.CustomElementFormValue a_state = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_state(), ptr);
@@ -1275,6 +1347,7 @@ const char* CustomElementTuple::_InternalParse(const char* ptr, ::_pbi::ParseCon
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1288,15 +1361,16 @@ uint8_t* CustomElementTuple::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.mozilla.dom.CustomElementFormValue a_value = 1;
-  if (this->_internal_has_a_value()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required .protobuf.mozilla.dom.CustomElementFormValue a_value = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_value(this),
         _Internal::a_value(this).GetCachedSize(), target, stream);
   }
 
-  // .protobuf.mozilla.dom.CustomElementFormValue a_state = 2;
-  if (this->_internal_has_a_state()) {
+  // required .protobuf.mozilla.dom.CustomElementFormValue a_state = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::a_state(this),
         _Internal::a_state(this).GetCachedSize(), target, stream);
@@ -1310,27 +1384,47 @@ uint8_t* CustomElementTuple::_InternalSerialize(
   return target;
 }
 
-size_t CustomElementTuple::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.CustomElementTuple)
+size_t CustomElementTuple::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.CustomElementTuple)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .protobuf.mozilla.dom.CustomElementFormValue a_value = 1;
-  if (this->_internal_has_a_value()) {
+  if (_internal_has_a_value()) {
+    // required .protobuf.mozilla.dom.CustomElementFormValue a_value = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_value_);
   }
 
-  // .protobuf.mozilla.dom.CustomElementFormValue a_state = 2;
-  if (this->_internal_has_a_state()) {
+  if (_internal_has_a_state()) {
+    // required .protobuf.mozilla.dom.CustomElementFormValue a_state = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_state_);
   }
+
+  return total_size;
+}
+size_t CustomElementTuple::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.CustomElementTuple)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required .protobuf.mozilla.dom.CustomElementFormValue a_value = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_value_);
+
+    // required .protobuf.mozilla.dom.CustomElementFormValue a_state = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_state_);
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1353,13 +1447,16 @@ void CustomElementTuple::MergeFrom(const CustomElementTuple& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_value()) {
-    _this->_internal_mutable_a_value()->::protobuf::mozilla::dom::CustomElementFormValue::MergeFrom(
-        from._internal_a_value());
-  }
-  if (from._internal_has_a_state()) {
-    _this->_internal_mutable_a_state()->::protobuf::mozilla::dom::CustomElementFormValue::MergeFrom(
-        from._internal_a_state());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_mutable_a_value()->::protobuf::mozilla::dom::CustomElementFormValue::MergeFrom(
+          from._internal_a_value());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_mutable_a_state()->::protobuf::mozilla::dom::CustomElementFormValue::MergeFrom(
+          from._internal_a_state());
+    }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1372,12 +1469,20 @@ void CustomElementTuple::CopyFrom(const CustomElementTuple& from) {
 }
 
 bool CustomElementTuple::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (_internal_has_a_value()) {
+    if (!_impl_.a_value_->IsInitialized()) return false;
+  }
+  if (_internal_has_a_state()) {
+    if (!_impl_.a_state_->IsInitialized()) return false;
+  }
   return true;
 }
 
 void CustomElementTuple::InternalSwap(CustomElementTuple* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(CustomElementTuple, _impl_.a_state_)
       + sizeof(CustomElementTuple::_impl_.a_state_)

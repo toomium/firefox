@@ -110,6 +110,13 @@ class Msg_prompt final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_prompt& default_instance() {
     return *internal_default_instance();
   }
@@ -225,6 +232,13 @@ class Msg_Destroy final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Destroy& default_instance() {
@@ -344,6 +358,13 @@ class Msg_NotifyResult final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_NotifyResult& default_instance() {
     return *internal_default_instance();
   }
@@ -437,7 +458,11 @@ class Msg_NotifyResult final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::PermissionChoice >&
       a_choices() const;
 
-  // bool a_allow = 1;
+  // required bool a_allow = 1;
+  bool has_a_allow() const;
+  private:
+  bool _internal_has_a_allow() const;
+  public:
   void clear_a_allow();
   bool a_allow() const;
   void set_a_allow(bool value);
@@ -454,9 +479,10 @@ class Msg_NotifyResult final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::PermissionChoice > a_choices_;
     bool a_allow_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PContentPermissionRequest_2eproto;
@@ -492,6 +518,13 @@ class Msg___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg___delete__& default_instance() {
@@ -611,6 +644,13 @@ class Reply___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -714,9 +754,17 @@ class Reply___delete__ final :
 
 // Msg_NotifyResult
 
-// bool a_allow = 1;
+// required bool a_allow = 1;
+inline bool Msg_NotifyResult::_internal_has_a_allow() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_NotifyResult::has_a_allow() const {
+  return _internal_has_a_allow();
+}
 inline void Msg_NotifyResult::clear_a_allow() {
   _impl_.a_allow_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Msg_NotifyResult::_internal_a_allow() const {
   return _impl_.a_allow_;
@@ -726,7 +774,7 @@ inline bool Msg_NotifyResult::a_allow() const {
   return _internal_a_allow();
 }
 inline void Msg_NotifyResult::_internal_set_a_allow(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_allow_ = value;
 }
 inline void Msg_NotifyResult::set_a_allow(bool value) {

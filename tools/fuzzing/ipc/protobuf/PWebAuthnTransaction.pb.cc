@@ -23,8 +23,9 @@ namespace dom {
 namespace PWebAuthnTransaction {
 PROTOBUF_CONSTEXPR Msg_RequestRegister::Msg_RequestRegister(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_atransactioninfo_)*/nullptr
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_atransactioninfo_)*/nullptr} {}
 struct Msg_RequestRegisterDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_RequestRegisterDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -36,8 +37,9 @@ struct Msg_RequestRegisterDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_RequestRegisterDefaultTypeInternal _Msg_RequestRegister_default_instance_;
 PROTOBUF_CONSTEXPR Reply_RequestRegister::Reply_RequestRegister(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_response_)*/nullptr
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_response_)*/nullptr} {}
 struct Reply_RequestRegisterDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_RequestRegisterDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -49,8 +51,9 @@ struct Reply_RequestRegisterDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_RequestRegisterDefaultTypeInternal _Reply_RequestRegister_default_instance_;
 PROTOBUF_CONSTEXPR Msg_RequestSign::Msg_RequestSign(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_atransactioninfo_)*/nullptr
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_atransactioninfo_)*/nullptr} {}
 struct Msg_RequestSignDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_RequestSignDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -62,8 +65,9 @@ struct Msg_RequestSignDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_RequestSignDefaultTypeInternal _Msg_RequestSign_default_instance_;
 PROTOBUF_CONSTEXPR Reply_RequestSign::Reply_RequestSign(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_response_)*/nullptr
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_response_)*/nullptr} {}
 struct Reply_RequestSignDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_RequestSignDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -87,8 +91,9 @@ struct Msg_RequestIsUVPAADefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_RequestIsUVPAADefaultTypeInternal _Msg_RequestIsUVPAA_default_instance_;
 PROTOBUF_CONSTEXPR Reply_RequestIsUVPAA::Reply_RequestIsUVPAA(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_available_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_available_)*/false} {}
 struct Reply_RequestIsUVPAADefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_RequestIsUVPAADefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -147,7 +152,14 @@ namespace PWebAuthnTransaction {
 
 class Msg_RequestRegister::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_RequestRegister>()._impl_._has_bits_);
   static const ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo& a_atransactioninfo(const Msg_RequestRegister* msg);
+  static void set_has_a_atransactioninfo(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 const ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo&
@@ -155,10 +167,8 @@ Msg_RequestRegister::_Internal::a_atransactioninfo(const Msg_RequestRegister* ms
   return *msg->_impl_.a_atransactioninfo_;
 }
 void Msg_RequestRegister::clear_a_atransactioninfo() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_atransactioninfo_ != nullptr) {
-    delete _impl_.a_atransactioninfo_;
-  }
-  _impl_.a_atransactioninfo_ = nullptr;
+  if (_impl_.a_atransactioninfo_ != nullptr) _impl_.a_atransactioninfo_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Msg_RequestRegister::Msg_RequestRegister(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -170,8 +180,9 @@ Msg_RequestRegister::Msg_RequestRegister(const Msg_RequestRegister& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_RequestRegister* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_atransactioninfo_){nullptr}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_atransactioninfo_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_atransactioninfo()) {
@@ -185,8 +196,9 @@ inline void Msg_RequestRegister::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_atransactioninfo_){nullptr}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_atransactioninfo_){nullptr}
   };
 }
 
@@ -214,20 +226,23 @@ void Msg_RequestRegister::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && _impl_.a_atransactioninfo_ != nullptr) {
-    delete _impl_.a_atransactioninfo_;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(_impl_.a_atransactioninfo_ != nullptr);
+    _impl_.a_atransactioninfo_->Clear();
   }
-  _impl_.a_atransactioninfo_ = nullptr;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_RequestRegister::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.dom.WebAuthnMakeCredentialInfo a_aTransactionInfo = 1;
+      // required .protobuf.mozilla.dom.WebAuthnMakeCredentialInfo a_aTransactionInfo = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_atransactioninfo(), ptr);
@@ -251,6 +266,7 @@ const char* Msg_RequestRegister::_InternalParse(const char* ptr, ::_pbi::ParseCo
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -264,8 +280,9 @@ uint8_t* Msg_RequestRegister::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.mozilla.dom.WebAuthnMakeCredentialInfo a_aTransactionInfo = 1;
-  if (this->_internal_has_a_atransactioninfo()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required .protobuf.mozilla.dom.WebAuthnMakeCredentialInfo a_aTransactionInfo = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_atransactioninfo(this),
         _Internal::a_atransactioninfo(this).GetCachedSize(), target, stream);
@@ -283,16 +300,15 @@ size_t Msg_RequestRegister::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PWebAuthnTransaction.Msg_RequestRegister)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .protobuf.mozilla.dom.WebAuthnMakeCredentialInfo a_aTransactionInfo = 1;
-  if (this->_internal_has_a_atransactioninfo()) {
+  // required .protobuf.mozilla.dom.WebAuthnMakeCredentialInfo a_aTransactionInfo = 1;
+  if (_internal_has_a_atransactioninfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_atransactioninfo_);
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -330,12 +346,17 @@ void Msg_RequestRegister::CopyFrom(const Msg_RequestRegister& from) {
 }
 
 bool Msg_RequestRegister::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (_internal_has_a_atransactioninfo()) {
+    if (!_impl_.a_atransactioninfo_->IsInitialized()) return false;
+  }
   return true;
 }
 
 void Msg_RequestRegister::InternalSwap(Msg_RequestRegister* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_atransactioninfo_, other->_impl_.a_atransactioninfo_);
 }
 
@@ -348,7 +369,14 @@ std::string Msg_RequestRegister::GetTypeName() const {
 
 class Reply_RequestRegister::_Internal {
  public:
+  using HasBits = decltype(std::declval<Reply_RequestRegister>()._impl_._has_bits_);
   static const ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse& a_response(const Reply_RequestRegister* msg);
+  static void set_has_a_response(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 const ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse&
@@ -356,10 +384,8 @@ Reply_RequestRegister::_Internal::a_response(const Reply_RequestRegister* msg) {
   return *msg->_impl_.a_response_;
 }
 void Reply_RequestRegister::clear_a_response() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_response_ != nullptr) {
-    delete _impl_.a_response_;
-  }
-  _impl_.a_response_ = nullptr;
+  if (_impl_.a_response_ != nullptr) _impl_.a_response_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Reply_RequestRegister::Reply_RequestRegister(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -371,8 +397,9 @@ Reply_RequestRegister::Reply_RequestRegister(const Reply_RequestRegister& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_RequestRegister* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_response_){nullptr}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_response_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_response()) {
@@ -386,8 +413,9 @@ inline void Reply_RequestRegister::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_response_){nullptr}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_response_){nullptr}
   };
 }
 
@@ -415,20 +443,23 @@ void Reply_RequestRegister::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && _impl_.a_response_ != nullptr) {
-    delete _impl_.a_response_;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(_impl_.a_response_ != nullptr);
+    _impl_.a_response_->Clear();
   }
-  _impl_.a_response_ = nullptr;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Reply_RequestRegister::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.dom.WebAuthnMakeCredentialResponse a_response = 1;
+      // required .protobuf.mozilla.dom.WebAuthnMakeCredentialResponse a_response = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_response(), ptr);
@@ -452,6 +483,7 @@ const char* Reply_RequestRegister::_InternalParse(const char* ptr, ::_pbi::Parse
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -465,8 +497,9 @@ uint8_t* Reply_RequestRegister::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.mozilla.dom.WebAuthnMakeCredentialResponse a_response = 1;
-  if (this->_internal_has_a_response()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required .protobuf.mozilla.dom.WebAuthnMakeCredentialResponse a_response = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_response(this),
         _Internal::a_response(this).GetCachedSize(), target, stream);
@@ -484,16 +517,15 @@ size_t Reply_RequestRegister::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PWebAuthnTransaction.Reply_RequestRegister)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .protobuf.mozilla.dom.WebAuthnMakeCredentialResponse a_response = 1;
-  if (this->_internal_has_a_response()) {
+  // required .protobuf.mozilla.dom.WebAuthnMakeCredentialResponse a_response = 1;
+  if (_internal_has_a_response()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_response_);
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -531,12 +563,17 @@ void Reply_RequestRegister::CopyFrom(const Reply_RequestRegister& from) {
 }
 
 bool Reply_RequestRegister::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (_internal_has_a_response()) {
+    if (!_impl_.a_response_->IsInitialized()) return false;
+  }
   return true;
 }
 
 void Reply_RequestRegister::InternalSwap(Reply_RequestRegister* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_response_, other->_impl_.a_response_);
 }
 
@@ -549,7 +586,14 @@ std::string Reply_RequestRegister::GetTypeName() const {
 
 class Msg_RequestSign::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_RequestSign>()._impl_._has_bits_);
   static const ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo& a_atransactioninfo(const Msg_RequestSign* msg);
+  static void set_has_a_atransactioninfo(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 const ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo&
@@ -557,10 +601,8 @@ Msg_RequestSign::_Internal::a_atransactioninfo(const Msg_RequestSign* msg) {
   return *msg->_impl_.a_atransactioninfo_;
 }
 void Msg_RequestSign::clear_a_atransactioninfo() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_atransactioninfo_ != nullptr) {
-    delete _impl_.a_atransactioninfo_;
-  }
-  _impl_.a_atransactioninfo_ = nullptr;
+  if (_impl_.a_atransactioninfo_ != nullptr) _impl_.a_atransactioninfo_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Msg_RequestSign::Msg_RequestSign(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -572,8 +614,9 @@ Msg_RequestSign::Msg_RequestSign(const Msg_RequestSign& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_RequestSign* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_atransactioninfo_){nullptr}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_atransactioninfo_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_atransactioninfo()) {
@@ -587,8 +630,9 @@ inline void Msg_RequestSign::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_atransactioninfo_){nullptr}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_atransactioninfo_){nullptr}
   };
 }
 
@@ -616,20 +660,23 @@ void Msg_RequestSign::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && _impl_.a_atransactioninfo_ != nullptr) {
-    delete _impl_.a_atransactioninfo_;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(_impl_.a_atransactioninfo_ != nullptr);
+    _impl_.a_atransactioninfo_->Clear();
   }
-  _impl_.a_atransactioninfo_ = nullptr;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_RequestSign::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.dom.WebAuthnGetAssertionInfo a_aTransactionInfo = 1;
+      // required .protobuf.mozilla.dom.WebAuthnGetAssertionInfo a_aTransactionInfo = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_atransactioninfo(), ptr);
@@ -653,6 +700,7 @@ const char* Msg_RequestSign::_InternalParse(const char* ptr, ::_pbi::ParseContex
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -666,8 +714,9 @@ uint8_t* Msg_RequestSign::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.mozilla.dom.WebAuthnGetAssertionInfo a_aTransactionInfo = 1;
-  if (this->_internal_has_a_atransactioninfo()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required .protobuf.mozilla.dom.WebAuthnGetAssertionInfo a_aTransactionInfo = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_atransactioninfo(this),
         _Internal::a_atransactioninfo(this).GetCachedSize(), target, stream);
@@ -685,16 +734,15 @@ size_t Msg_RequestSign::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PWebAuthnTransaction.Msg_RequestSign)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .protobuf.mozilla.dom.WebAuthnGetAssertionInfo a_aTransactionInfo = 1;
-  if (this->_internal_has_a_atransactioninfo()) {
+  // required .protobuf.mozilla.dom.WebAuthnGetAssertionInfo a_aTransactionInfo = 1;
+  if (_internal_has_a_atransactioninfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_atransactioninfo_);
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -732,12 +780,17 @@ void Msg_RequestSign::CopyFrom(const Msg_RequestSign& from) {
 }
 
 bool Msg_RequestSign::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (_internal_has_a_atransactioninfo()) {
+    if (!_impl_.a_atransactioninfo_->IsInitialized()) return false;
+  }
   return true;
 }
 
 void Msg_RequestSign::InternalSwap(Msg_RequestSign* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_atransactioninfo_, other->_impl_.a_atransactioninfo_);
 }
 
@@ -750,7 +803,14 @@ std::string Msg_RequestSign::GetTypeName() const {
 
 class Reply_RequestSign::_Internal {
  public:
+  using HasBits = decltype(std::declval<Reply_RequestSign>()._impl_._has_bits_);
   static const ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse& a_response(const Reply_RequestSign* msg);
+  static void set_has_a_response(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 const ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse&
@@ -758,10 +818,8 @@ Reply_RequestSign::_Internal::a_response(const Reply_RequestSign* msg) {
   return *msg->_impl_.a_response_;
 }
 void Reply_RequestSign::clear_a_response() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_response_ != nullptr) {
-    delete _impl_.a_response_;
-  }
-  _impl_.a_response_ = nullptr;
+  if (_impl_.a_response_ != nullptr) _impl_.a_response_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Reply_RequestSign::Reply_RequestSign(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -773,8 +831,9 @@ Reply_RequestSign::Reply_RequestSign(const Reply_RequestSign& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_RequestSign* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_response_){nullptr}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_response_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_response()) {
@@ -788,8 +847,9 @@ inline void Reply_RequestSign::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_response_){nullptr}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_response_){nullptr}
   };
 }
 
@@ -817,20 +877,23 @@ void Reply_RequestSign::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && _impl_.a_response_ != nullptr) {
-    delete _impl_.a_response_;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(_impl_.a_response_ != nullptr);
+    _impl_.a_response_->Clear();
   }
-  _impl_.a_response_ = nullptr;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Reply_RequestSign::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.dom.WebAuthnGetAssertionResponse a_response = 1;
+      // required .protobuf.mozilla.dom.WebAuthnGetAssertionResponse a_response = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_response(), ptr);
@@ -854,6 +917,7 @@ const char* Reply_RequestSign::_InternalParse(const char* ptr, ::_pbi::ParseCont
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -867,8 +931,9 @@ uint8_t* Reply_RequestSign::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.mozilla.dom.WebAuthnGetAssertionResponse a_response = 1;
-  if (this->_internal_has_a_response()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required .protobuf.mozilla.dom.WebAuthnGetAssertionResponse a_response = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_response(this),
         _Internal::a_response(this).GetCachedSize(), target, stream);
@@ -886,16 +951,15 @@ size_t Reply_RequestSign::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PWebAuthnTransaction.Reply_RequestSign)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .protobuf.mozilla.dom.WebAuthnGetAssertionResponse a_response = 1;
-  if (this->_internal_has_a_response()) {
+  // required .protobuf.mozilla.dom.WebAuthnGetAssertionResponse a_response = 1;
+  if (_internal_has_a_response()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_response_);
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -933,12 +997,17 @@ void Reply_RequestSign::CopyFrom(const Reply_RequestSign& from) {
 }
 
 bool Reply_RequestSign::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (_internal_has_a_response()) {
+    if (!_impl_.a_response_->IsInitialized()) return false;
+  }
   return true;
 }
 
 void Reply_RequestSign::InternalSwap(Reply_RequestSign* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_response_, other->_impl_.a_response_);
 }
 
@@ -1099,6 +1168,13 @@ std::string Msg_RequestIsUVPAA::GetTypeName() const {
 
 class Reply_RequestIsUVPAA::_Internal {
  public:
+  using HasBits = decltype(std::declval<Reply_RequestIsUVPAA>()._impl_._has_bits_);
+  static void set_has_a_available(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Reply_RequestIsUVPAA::Reply_RequestIsUVPAA(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1111,8 +1187,9 @@ Reply_RequestIsUVPAA::Reply_RequestIsUVPAA(const Reply_RequestIsUVPAA& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_RequestIsUVPAA* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_available_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_available_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_available_ = from._impl_.a_available_;
@@ -1124,8 +1201,9 @@ inline void Reply_RequestIsUVPAA::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_available_){false}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_available_){false}
   };
 }
 
@@ -1153,18 +1231,21 @@ void Reply_RequestIsUVPAA::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_available_ = false;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Reply_RequestIsUVPAA::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool a_available = 1;
+      // required bool a_available = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_available(&has_bits);
           _impl_.a_available_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -1186,6 +1267,7 @@ const char* Reply_RequestIsUVPAA::_InternalParse(const char* ptr, ::_pbi::ParseC
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1199,8 +1281,9 @@ uint8_t* Reply_RequestIsUVPAA::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool a_available = 1;
-  if (this->_internal_a_available() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bool a_available = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_available(), target);
   }
@@ -1217,14 +1300,13 @@ size_t Reply_RequestIsUVPAA::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PWebAuthnTransaction.Reply_RequestIsUVPAA)
   size_t total_size = 0;
 
+  // required bool a_available = 1;
+  if (_internal_has_a_available()) {
+    total_size += 1 + 1;
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // bool a_available = 1;
-  if (this->_internal_a_available() != 0) {
-    total_size += 1 + 1;
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1247,7 +1329,7 @@ void Reply_RequestIsUVPAA::MergeFrom(const Reply_RequestIsUVPAA& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_a_available() != 0) {
+  if (from._internal_has_a_available()) {
     _this->_internal_set_a_available(from._internal_a_available());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1261,12 +1343,14 @@ void Reply_RequestIsUVPAA::CopyFrom(const Reply_RequestIsUVPAA& from) {
 }
 
 bool Reply_RequestIsUVPAA::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void Reply_RequestIsUVPAA::InternalSwap(Reply_RequestIsUVPAA* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_available_, other->_impl_.a_available_);
 }
 

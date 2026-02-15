@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/ipc/ipdl/test/gtest/PTestDestroyNested.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla._ipdltest.PTestDestroyNested;
@@ -16,7 +16,7 @@ package protobuf.mozilla._ipdltest.PTestDestroyNested;
 
 // Message declarations
 message Msg_PTestDestroyNestedSubConstructor {
-  sint64 a_actorid = 1;
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PTestDestroyNestedSubConstructor {

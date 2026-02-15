@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/gfx/layers/ipc/PUiCompositorController.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.layers.PUiCompositorController;
@@ -23,54 +23,54 @@ message Msg_Resume {
 }
 
 message Reply_Resume {
-  bool a_aOutResumed = 1;
+  required bool a_aOutResumed = 1;
 }
 
 message Msg_ResumeAndResize {
-  sint32 a_aX = 1;
-  sint32 a_aY = 2;
-  sint32 a_aWidth = 3;
-  sint32 a_aHeight = 4;
+  required sint32 a_aX = 1;
+  required sint32 a_aY = 2;
+  required sint32 a_aWidth = 3;
+  required sint32 a_aHeight = 4;
 }
 
 message Reply_ResumeAndResize {
-  bool a_aOutResumed = 1;
+  required bool a_aOutResumed = 1;
 }
 
 message Msg_InvalidateAndRender {
 }
 
 message Msg_MaxToolbarHeight {
-  sint32 a_aHeight = 1;
+  required sint32 a_aHeight = 1;
 }
 
 message Msg_FixedBottomOffset {
-  sint32 a_aOffset = 1;
+  required sint32 a_aOffset = 1;
 }
 
 message Msg_DefaultClearColor {
-  uint32 a_aColor = 1;
+  required uint32 a_aColor = 1;
 }
 
 message Msg_RequestScreenPixels {
 }
 
 message Msg_EnableLayerUpdateNotifications {
-  bool a_aEnable = 1;
+  required bool a_aEnable = 1;
 }
 
 message Msg_ToolbarAnimatorMessageFromCompositor {
-  sint32 a_aMessage = 1;
+  required sint32 a_aMessage = 1;
 }
 
 message Msg_NotifyCompositorScrollUpdate {
-  bytes a_aUpdate = 1;
+  required bytes a_aUpdate = 1;
 }
 
 message Msg_ScreenPixels {
-  bytes a_aMem = 1;
-  bytes a_aSize = 2;
-  bool a_aNeedsYFlip = 3;
+  required bytes a_aMem = 1;
+  required bytes a_aSize = 2;
+  required bool a_aNeedsYFlip = 3;
 }
 
 // Parameter mappings stats:

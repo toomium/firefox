@@ -115,6 +115,13 @@ class UnidirectionalStream final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const UnidirectionalStream& default_instance() {
     return *internal_default_instance();
   }
@@ -208,7 +215,11 @@ class UnidirectionalStream final :
   std::string* _internal_mutable_a_outstream();
   public:
 
-  // uint64 a_streamId = 1;
+  // required uint64 a_streamId = 1;
+  bool has_a_streamid() const;
+  private:
+  bool _internal_has_a_streamid() const;
+  public:
   void clear_a_streamid();
   uint64_t a_streamid() const;
   void set_a_streamid(uint64_t value);
@@ -264,6 +275,13 @@ class UnidirectionalStreamResponse final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const UnidirectionalStreamResponse& default_instance() {
@@ -444,6 +462,13 @@ class BidirectionalStream final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const BidirectionalStream& default_instance() {
     return *internal_default_instance();
   }
@@ -556,7 +581,11 @@ class BidirectionalStream final :
   std::string* _internal_mutable_a_outstream();
   public:
 
-  // uint64 a_streamId = 1;
+  // required uint64 a_streamId = 1;
+  bool has_a_streamid() const;
+  private:
+  bool _internal_has_a_streamid() const;
+  public:
   void clear_a_streamid();
   uint64_t a_streamid() const;
   void set_a_streamid(uint64_t value);
@@ -613,6 +642,13 @@ class BidirectionalStreamResponse final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const BidirectionalStreamResponse& default_instance() {
@@ -793,6 +829,13 @@ class ResetError final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const ResetError& default_instance() {
     return *internal_default_instance();
   }
@@ -867,7 +910,11 @@ class ResetError final :
   enum : int {
     kAErrorFieldNumber = 1,
   };
-  // bytes a_error = 1;
+  // required bytes a_error = 1;
+  bool has_a_error() const;
+  private:
+  bool _internal_has_a_error() const;
+  public:
   void clear_a_error();
   const std::string& a_error() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -889,8 +936,9 @@ class ResetError final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_error_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_error_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -926,6 +974,13 @@ class StopSendingError final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const StopSendingError& default_instance() {
@@ -1002,7 +1057,11 @@ class StopSendingError final :
   enum : int {
     kAErrorFieldNumber = 1,
   };
-  // bytes a_error = 1;
+  // required bytes a_error = 1;
+  bool has_a_error() const;
+  private:
+  bool _internal_has_a_error() const;
+  public:
   void clear_a_error();
   const std::string& a_error() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1024,8 +1083,9 @@ class StopSendingError final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_error_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_error_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -1061,6 +1121,13 @@ class StreamResetOrStopSendingError final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const StreamResetOrStopSendingError& default_instance() {
@@ -1219,9 +1286,17 @@ class StreamResetOrStopSendingError final :
 #endif  // __GNUC__
 // UnidirectionalStream
 
-// uint64 a_streamId = 1;
+// required uint64 a_streamId = 1;
+inline bool UnidirectionalStream::_internal_has_a_streamid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool UnidirectionalStream::has_a_streamid() const {
+  return _internal_has_a_streamid();
+}
 inline void UnidirectionalStream::clear_a_streamid() {
   _impl_.a_streamid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t UnidirectionalStream::_internal_a_streamid() const {
   return _impl_.a_streamid_;
@@ -1231,7 +1306,7 @@ inline uint64_t UnidirectionalStream::a_streamid() const {
   return _internal_a_streamid();
 }
 inline void UnidirectionalStream::_internal_set_a_streamid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_streamid_ = value;
 }
 inline void UnidirectionalStream::set_a_streamid(uint64_t value) {
@@ -1475,9 +1550,17 @@ inline UnidirectionalStreamResponse::ContentCase UnidirectionalStreamResponse::c
 
 // BidirectionalStream
 
-// uint64 a_streamId = 1;
+// required uint64 a_streamId = 1;
+inline bool BidirectionalStream::_internal_has_a_streamid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool BidirectionalStream::has_a_streamid() const {
+  return _internal_has_a_streamid();
+}
 inline void BidirectionalStream::clear_a_streamid() {
   _impl_.a_streamid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint64_t BidirectionalStream::_internal_a_streamid() const {
   return _impl_.a_streamid_;
@@ -1487,7 +1570,7 @@ inline uint64_t BidirectionalStream::a_streamid() const {
   return _internal_a_streamid();
 }
 inline void BidirectionalStream::_internal_set_a_streamid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_streamid_ = value;
 }
 inline void BidirectionalStream::set_a_streamid(uint64_t value) {
@@ -1799,9 +1882,17 @@ inline BidirectionalStreamResponse::ContentCase BidirectionalStreamResponse::con
 
 // ResetError
 
-// bytes a_error = 1;
+// required bytes a_error = 1;
+inline bool ResetError::_internal_has_a_error() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ResetError::has_a_error() const {
+  return _internal_has_a_error();
+}
 inline void ResetError::clear_a_error() {
   _impl_.a_error_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& ResetError::a_error() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ResetError.a_error)
@@ -1810,7 +1901,7 @@ inline const std::string& ResetError::a_error() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ResetError::set_a_error(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_error_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ResetError.a_error)
 }
@@ -1823,22 +1914,32 @@ inline const std::string& ResetError::_internal_a_error() const {
   return _impl_.a_error_.Get();
 }
 inline void ResetError::_internal_set_a_error(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_error_.Set(value, GetArenaForAllocation());
 }
 inline std::string* ResetError::_internal_mutable_a_error() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_error_.Mutable(GetArenaForAllocation());
 }
 inline std::string* ResetError::release_a_error() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ResetError.a_error)
-  return _impl_.a_error_.Release();
+  if (!_internal_has_a_error()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_error_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_error_.IsDefault()) {
+    _impl_.a_error_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void ResetError::set_allocated_a_error(std::string* a_error) {
   if (a_error != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_error_.SetAllocated(a_error, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1853,9 +1954,17 @@ inline void ResetError::set_allocated_a_error(std::string* a_error) {
 
 // StopSendingError
 
-// bytes a_error = 1;
+// required bytes a_error = 1;
+inline bool StopSendingError::_internal_has_a_error() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool StopSendingError::has_a_error() const {
+  return _internal_has_a_error();
+}
 inline void StopSendingError::clear_a_error() {
   _impl_.a_error_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& StopSendingError::a_error() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.StopSendingError.a_error)
@@ -1864,7 +1973,7 @@ inline const std::string& StopSendingError::a_error() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void StopSendingError::set_a_error(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_error_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.StopSendingError.a_error)
 }
@@ -1877,22 +1986,32 @@ inline const std::string& StopSendingError::_internal_a_error() const {
   return _impl_.a_error_.Get();
 }
 inline void StopSendingError::_internal_set_a_error(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_error_.Set(value, GetArenaForAllocation());
 }
 inline std::string* StopSendingError::_internal_mutable_a_error() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_error_.Mutable(GetArenaForAllocation());
 }
 inline std::string* StopSendingError::release_a_error() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.StopSendingError.a_error)
-  return _impl_.a_error_.Release();
+  if (!_internal_has_a_error()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_error_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_error_.IsDefault()) {
+    _impl_.a_error_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void StopSendingError::set_allocated_a_error(std::string* a_error) {
   if (a_error != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_error_.SetAllocated(a_error, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

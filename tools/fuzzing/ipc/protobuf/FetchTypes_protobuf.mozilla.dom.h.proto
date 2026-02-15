@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/fetch/FetchTypes.ipdlh
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom;
@@ -17,12 +17,12 @@ import "NeckoChannelParams.proto";
 
 // Structs and unions declarations
 message HeadersEntry {
-  string a_name = 1;
-  string a_value = 2;
+  required string a_name = 1;
+  required string a_value = 2;
 }
 
 message ParentToParentStream {
-  bytes a_uuid = 1;
+  required bytes a_uuid = 1;
 }
 
 message ParentToChildStream {
@@ -33,7 +33,7 @@ message ParentToChildStream {
 }
 
 message ChildToParentStream {
-  protobuf.mozilla.ipc.IPCStream a_stream = 1;
+  required protobuf.mozilla.ipc.IPCStream a_stream = 1;
 }
 
 message BodyStreamVariant {
@@ -45,77 +45,77 @@ message BodyStreamVariant {
 }
 
 message IPCInternalRequest {
-  string a_method = 1;
+  required string a_method = 1;
   repeated string a_urlList = 2;
-  bytes a_headersGuard = 3;
+  required bytes a_headersGuard = 3;
   repeated protobuf.mozilla.dom.HeadersEntry a_headers = 4;
   optional protobuf.mozilla.dom.BodyStreamVariant a_body = 5;
-  sint64 a_bodySize = 6;
-  string a_preferredAlternativeDataType = 7;
-  bytes a_contentPolicyType = 8;
-  sint32 a_internalPriority = 9;
-  string a_referrer = 10;
-  bytes a_referrerPolicy = 11;
-  bytes a_environmentReferrerPolicy = 12;
-  bytes a_requestMode = 13;
-  bytes a_requestCredentials = 14;
-  bytes a_cacheMode = 15;
-  bytes a_requestRedirect = 16;
-  bytes a_requestPriority = 17;
-  string a_integrity = 18;
-  bool a_keepalive = 19;
-  string a_fragment = 20;
+  required sint64 a_bodySize = 6;
+  required string a_preferredAlternativeDataType = 7;
+  required bytes a_contentPolicyType = 8;
+  required sint32 a_internalPriority = 9;
+  required string a_referrer = 10;
+  required bytes a_referrerPolicy = 11;
+  required bytes a_environmentReferrerPolicy = 12;
+  required bytes a_requestMode = 13;
+  required bytes a_requestCredentials = 14;
+  required bytes a_cacheMode = 15;
+  required bytes a_requestRedirect = 16;
+  required bytes a_requestPriority = 17;
+  required string a_integrity = 18;
+  required bool a_keepalive = 19;
+  required string a_fragment = 20;
   optional protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 21;
   optional protobuf.mozilla.ipc.PrincipalInfo a_interceptionTriggeringPrincipalInfo = 22;
-  bytes a_interceptionContentPolicyType = 23;
+  required bytes a_interceptionContentPolicyType = 23;
   repeated protobuf.mozilla.net.RedirectHistoryEntryInfo a_interceptionRedirectChain = 24;
-  bool a_interceptionFromThirdParty = 25;
-  bytes a_embedderPolicy = 26;
+  required bool a_interceptionFromThirdParty = 25;
+  required bytes a_embedderPolicy = 26;
 }
 
 message InternalResponseMetadata {
-  bytes a_type = 1;
+  required bytes a_type = 1;
   repeated string a_urlList = 2;
-  uint32 a_status = 3;
-  string a_statusText = 4;
-  bytes a_headersGuard = 5;
+  required uint32 a_status = 3;
+  required string a_statusText = 4;
+  required bytes a_headersGuard = 5;
   repeated protobuf.mozilla.dom.HeadersEntry a_headers = 6;
-  bytes a_errorCode = 7;
-  string a_alternativeDataType = 8;
+  required bytes a_errorCode = 7;
+  required string a_alternativeDataType = 8;
   optional bytes a_securityInfo = 9;
   optional protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 10;
-  string a_bodyBlobURISpec = 11;
-  string a_bodyLocalPath = 12;
-  bytes a_credentialsMode = 13;
+  required string a_bodyBlobURISpec = 11;
+  required string a_bodyLocalPath = 12;
+  required bytes a_credentialsMode = 13;
 }
 
 message ParentToParentInternalResponse {
-  protobuf.mozilla.dom.InternalResponseMetadata a_metadata = 1;
+  required protobuf.mozilla.dom.InternalResponseMetadata a_metadata = 1;
   optional protobuf.mozilla.dom.ParentToParentStream a_body = 2;
-  sint64 a_bodySize = 3;
+  required sint64 a_bodySize = 3;
   optional protobuf.mozilla.dom.ParentToParentStream a_alternativeBody = 4;
 }
 
 message ParentToChildInternalResponse {
-  protobuf.mozilla.dom.InternalResponseMetadata a_metadata = 1;
+  required protobuf.mozilla.dom.InternalResponseMetadata a_metadata = 1;
   optional protobuf.mozilla.dom.ParentToChildStream a_body = 2;
-  sint64 a_bodySize = 3;
+  required sint64 a_bodySize = 3;
   optional protobuf.mozilla.dom.ParentToChildStream a_alternativeBody = 4;
 }
 
 message ChildToParentInternalResponse {
-  protobuf.mozilla.dom.InternalResponseMetadata a_metadata = 1;
+  required protobuf.mozilla.dom.InternalResponseMetadata a_metadata = 1;
   optional protobuf.mozilla.dom.ChildToParentStream a_body = 2;
-  sint64 a_bodySize = 3;
+  required sint64 a_bodySize = 3;
   optional protobuf.mozilla.dom.ChildToParentStream a_alternativeBody = 4;
 }
 
 message ResponseTiming {
-  protobuf.mozilla.dom.IPCPerformanceTimingData a_timingData = 1;
-  string a_initiatorType = 2;
-  string a_entryName = 3;
+  required protobuf.mozilla.dom.IPCPerformanceTimingData a_timingData = 1;
+  required string a_initiatorType = 2;
+  required string a_entryName = 3;
 }
 
 message ResponseEndArgs {
-  bytes a_endReason = 1;
+  required bytes a_endReason = 1;
 }

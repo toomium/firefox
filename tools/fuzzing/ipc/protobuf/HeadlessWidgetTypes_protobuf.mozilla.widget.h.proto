@@ -5,12 +5,12 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/widget/headless/HeadlessWidgetTypes.ipdlh
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.widget;
 
 // Structs and unions declarations
 message HeadlessCompositorWidgetInitData {
-  bytes a_InitialClientSize = 1;
+  required bytes a_InitialClientSize = 1;
 }

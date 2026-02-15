@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/clients/manager/PClientNavigateOp.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.PClientNavigateOp;
@@ -17,7 +17,7 @@ import "ClientIPCTypes.proto";
 
 // Message declarations
 message Msg___delete__ {
-  protobuf.mozilla.dom.ClientOpResult a_aResult = 1;
+  required protobuf.mozilla.dom.ClientOpResult a_aResult = 1;
 }
 
 message Reply___delete__ {

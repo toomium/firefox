@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/localstorage/PBackgroundLSRequest.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom;
@@ -13,16 +13,16 @@ package protobuf.mozilla.dom;
 
 // Structs and unions declarations
 message LSRequestPreloadDatastoreResponse {
-  bool a_invalidated = 1;
+  required bool a_invalidated = 1;
 }
 
 message LSRequestPrepareDatastoreResponse {
-  bytes a_databaseChildEndpoint = 1;
-  bool a_invalidated = 2;
+  required bytes a_databaseChildEndpoint = 1;
+  required bool a_invalidated = 2;
 }
 
 message LSRequestPrepareObserverResponse {
-  uint64 a_observerId = 1;
+  required uint64 a_observerId = 1;
 }
 
 message LSRequestResponse {

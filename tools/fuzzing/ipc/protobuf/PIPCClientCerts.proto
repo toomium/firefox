@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/security/manager/ssl/PIPCClientCerts.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.psm.PIPCClientCerts;
@@ -24,13 +24,13 @@ message Reply_FindObjects {
 }
 
 message Msg_Sign {
-  protobuf.mozilla.psm.ByteArray a_aCert = 1;
-  protobuf.mozilla.psm.ByteArray a_aData = 2;
-  protobuf.mozilla.psm.ByteArray a_aParams = 3;
+  required protobuf.mozilla.psm.ByteArray a_aCert = 1;
+  required protobuf.mozilla.psm.ByteArray a_aData = 2;
+  required protobuf.mozilla.psm.ByteArray a_aParams = 3;
 }
 
 message Reply_Sign {
-  protobuf.mozilla.psm.ByteArray a_aSignature = 1;
+  required protobuf.mozilla.psm.ByteArray a_aSignature = 1;
 }
 
 message Msg___delete__ {

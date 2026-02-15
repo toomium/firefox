@@ -110,6 +110,13 @@ class ByteArray final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const ByteArray& default_instance() {
     return *internal_default_instance();
   }
@@ -215,7 +222,6 @@ class ByteArray final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_data_;
-    mutable std::atomic<int> _a_data_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -252,6 +258,13 @@ class ECKey final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const ECKey& default_instance() {
@@ -382,9 +395,7 @@ class ECKey final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_params_;
-    mutable std::atomic<int> _a_params_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_cert_;
-    mutable std::atomic<int> _a_cert_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -421,6 +432,13 @@ class RSAKey final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const RSAKey& default_instance() {
@@ -551,9 +569,7 @@ class RSAKey final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_modulus_;
-    mutable std::atomic<int> _a_modulus_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_cert_;
-    mutable std::atomic<int> _a_cert_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -590,6 +606,13 @@ class Certificate final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Certificate& default_instance() {
@@ -697,7 +720,6 @@ class Certificate final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_der_;
-    mutable std::atomic<int> _a_der_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -734,6 +756,13 @@ class IPCClientCertObject final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const IPCClientCertObject& default_instance() {
@@ -936,6 +965,13 @@ class DelegatedCredentialInfoArg final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const DelegatedCredentialInfoArg& default_instance() {
     return *internal_default_instance();
   }
@@ -1011,7 +1047,11 @@ class DelegatedCredentialInfoArg final :
     kASchemeFieldNumber = 1,
     kAAuthKeyBitsFieldNumber = 2,
   };
-  // uint32 a_scheme = 1;
+  // required uint32 a_scheme = 1;
+  bool has_a_scheme() const;
+  private:
+  bool _internal_has_a_scheme() const;
+  public:
   void clear_a_scheme();
   uint32_t a_scheme() const;
   void set_a_scheme(uint32_t value);
@@ -1020,7 +1060,11 @@ class DelegatedCredentialInfoArg final :
   void _internal_set_a_scheme(uint32_t value);
   public:
 
-  // uint32 a_authKeyBits = 2;
+  // required uint32 a_authKeyBits = 2;
+  bool has_a_authkeybits() const;
+  private:
+  bool _internal_has_a_authkeybits() const;
+  public:
   void clear_a_authkeybits();
   uint32_t a_authkeybits() const;
   void set_a_authkeybits(uint32_t value);
@@ -1033,13 +1077,17 @@ class DelegatedCredentialInfoArg final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t a_scheme_;
     uint32_t a_authkeybits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSMIPCTypes_5fprotobuf_2emozilla_2epsm_2eh_2eproto;
@@ -1588,9 +1636,17 @@ inline IPCClientCertObject::ContentCase IPCClientCertObject::content_case() cons
 
 // DelegatedCredentialInfoArg
 
-// uint32 a_scheme = 1;
+// required uint32 a_scheme = 1;
+inline bool DelegatedCredentialInfoArg::_internal_has_a_scheme() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool DelegatedCredentialInfoArg::has_a_scheme() const {
+  return _internal_has_a_scheme();
+}
 inline void DelegatedCredentialInfoArg::clear_a_scheme() {
   _impl_.a_scheme_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t DelegatedCredentialInfoArg::_internal_a_scheme() const {
   return _impl_.a_scheme_;
@@ -1600,7 +1656,7 @@ inline uint32_t DelegatedCredentialInfoArg::a_scheme() const {
   return _internal_a_scheme();
 }
 inline void DelegatedCredentialInfoArg::_internal_set_a_scheme(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_scheme_ = value;
 }
 inline void DelegatedCredentialInfoArg::set_a_scheme(uint32_t value) {
@@ -1608,9 +1664,17 @@ inline void DelegatedCredentialInfoArg::set_a_scheme(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.DelegatedCredentialInfoArg.a_scheme)
 }
 
-// uint32 a_authKeyBits = 2;
+// required uint32 a_authKeyBits = 2;
+inline bool DelegatedCredentialInfoArg::_internal_has_a_authkeybits() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool DelegatedCredentialInfoArg::has_a_authkeybits() const {
+  return _internal_has_a_authkeybits();
+}
 inline void DelegatedCredentialInfoArg::clear_a_authkeybits() {
   _impl_.a_authkeybits_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t DelegatedCredentialInfoArg::_internal_a_authkeybits() const {
   return _impl_.a_authkeybits_;
@@ -1620,7 +1684,7 @@ inline uint32_t DelegatedCredentialInfoArg::a_authkeybits() const {
   return _internal_a_authkeybits();
 }
 inline void DelegatedCredentialInfoArg::_internal_set_a_authkeybits(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_authkeybits_ = value;
 }
 inline void DelegatedCredentialInfoArg::set_a_authkeybits(uint32_t value) {

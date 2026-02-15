@@ -22,8 +22,9 @@ namespace mozilla {
 namespace dom {
 PROTOBUF_CONSTEXPR LSRequestPreloadDatastoreResponse::LSRequestPreloadDatastoreResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_invalidated_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_invalidated_)*/false} {}
 struct LSRequestPreloadDatastoreResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR LSRequestPreloadDatastoreResponseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -35,9 +36,10 @@ struct LSRequestPreloadDatastoreResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LSRequestPreloadDatastoreResponseDefaultTypeInternal _LSRequestPreloadDatastoreResponse_default_instance_;
 PROTOBUF_CONSTEXPR LSRequestPrepareDatastoreResponse::LSRequestPrepareDatastoreResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_databasechildendpoint_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_invalidated_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_databasechildendpoint_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_invalidated_)*/false} {}
 struct LSRequestPrepareDatastoreResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR LSRequestPrepareDatastoreResponseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -49,8 +51,9 @@ struct LSRequestPrepareDatastoreResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LSRequestPrepareDatastoreResponseDefaultTypeInternal _LSRequestPrepareDatastoreResponse_default_instance_;
 PROTOBUF_CONSTEXPR LSRequestPrepareObserverResponse::LSRequestPrepareObserverResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_observerid_)*/uint64_t{0u}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_observerid_)*/uint64_t{0u}} {}
 struct LSRequestPrepareObserverResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR LSRequestPrepareObserverResponseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -85,6 +88,13 @@ namespace dom {
 
 class LSRequestPreloadDatastoreResponse::_Internal {
  public:
+  using HasBits = decltype(std::declval<LSRequestPreloadDatastoreResponse>()._impl_._has_bits_);
+  static void set_has_a_invalidated(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 LSRequestPreloadDatastoreResponse::LSRequestPreloadDatastoreResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -97,8 +107,9 @@ LSRequestPreloadDatastoreResponse::LSRequestPreloadDatastoreResponse(const LSReq
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   LSRequestPreloadDatastoreResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_invalidated_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_invalidated_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_invalidated_ = from._impl_.a_invalidated_;
@@ -110,8 +121,9 @@ inline void LSRequestPreloadDatastoreResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_invalidated_){false}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_invalidated_){false}
   };
 }
 
@@ -139,18 +151,21 @@ void LSRequestPreloadDatastoreResponse::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_invalidated_ = false;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* LSRequestPreloadDatastoreResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool a_invalidated = 1;
+      // required bool a_invalidated = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_invalidated(&has_bits);
           _impl_.a_invalidated_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -172,6 +187,7 @@ const char* LSRequestPreloadDatastoreResponse::_InternalParse(const char* ptr, :
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -185,8 +201,9 @@ uint8_t* LSRequestPreloadDatastoreResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool a_invalidated = 1;
-  if (this->_internal_a_invalidated() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bool a_invalidated = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_invalidated(), target);
   }
@@ -203,14 +220,13 @@ size_t LSRequestPreloadDatastoreResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.LSRequestPreloadDatastoreResponse)
   size_t total_size = 0;
 
+  // required bool a_invalidated = 1;
+  if (_internal_has_a_invalidated()) {
+    total_size += 1 + 1;
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // bool a_invalidated = 1;
-  if (this->_internal_a_invalidated() != 0) {
-    total_size += 1 + 1;
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -233,7 +249,7 @@ void LSRequestPreloadDatastoreResponse::MergeFrom(const LSRequestPreloadDatastor
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_a_invalidated() != 0) {
+  if (from._internal_has_a_invalidated()) {
     _this->_internal_set_a_invalidated(from._internal_a_invalidated());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -247,12 +263,14 @@ void LSRequestPreloadDatastoreResponse::CopyFrom(const LSRequestPreloadDatastore
 }
 
 bool LSRequestPreloadDatastoreResponse::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void LSRequestPreloadDatastoreResponse::InternalSwap(LSRequestPreloadDatastoreResponse* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_invalidated_, other->_impl_.a_invalidated_);
 }
 
@@ -265,6 +283,16 @@ std::string LSRequestPreloadDatastoreResponse::GetTypeName() const {
 
 class LSRequestPrepareDatastoreResponse::_Internal {
  public:
+  using HasBits = decltype(std::declval<LSRequestPrepareDatastoreResponse>()._impl_._has_bits_);
+  static void set_has_a_databasechildendpoint(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_invalidated(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 LSRequestPrepareDatastoreResponse::LSRequestPrepareDatastoreResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -277,16 +305,17 @@ LSRequestPrepareDatastoreResponse::LSRequestPrepareDatastoreResponse(const LSReq
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   LSRequestPrepareDatastoreResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_databasechildendpoint_){}
-    , decltype(_impl_.a_invalidated_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_databasechildendpoint_){}
+    , decltype(_impl_.a_invalidated_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_databasechildendpoint_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_databasechildendpoint_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_databasechildendpoint().empty()) {
+  if (from._internal_has_a_databasechildendpoint()) {
     _this->_impl_.a_databasechildendpoint_.Set(from._internal_a_databasechildendpoint(), 
       _this->GetArenaForAllocation());
   }
@@ -299,9 +328,10 @@ inline void LSRequestPrepareDatastoreResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_databasechildendpoint_){}
-    , decltype(_impl_.a_invalidated_){false}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_databasechildendpoint_){}
+    , decltype(_impl_.a_invalidated_){false}
   };
   _impl_.a_databasechildendpoint_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -333,18 +363,23 @@ void LSRequestPrepareDatastoreResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_databasechildendpoint_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_databasechildendpoint_.ClearNonDefaultToEmpty();
+  }
   _impl_.a_invalidated_ = false;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* LSRequestPrepareDatastoreResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_databaseChildEndpoint = 1;
+      // required bytes a_databaseChildEndpoint = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_databasechildendpoint();
@@ -353,9 +388,10 @@ const char* LSRequestPrepareDatastoreResponse::_InternalParse(const char* ptr, :
         } else
           goto handle_unusual;
         continue;
-      // bool a_invalidated = 2;
+      // required bool a_invalidated = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_a_invalidated(&has_bits);
           _impl_.a_invalidated_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -377,6 +413,7 @@ const char* LSRequestPrepareDatastoreResponse::_InternalParse(const char* ptr, :
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -390,14 +427,15 @@ uint8_t* LSRequestPrepareDatastoreResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_databaseChildEndpoint = 1;
-  if (!this->_internal_a_databasechildendpoint().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_databaseChildEndpoint = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_databasechildendpoint(), target);
   }
 
-  // bool a_invalidated = 2;
-  if (this->_internal_a_invalidated() != 0) {
+  // required bool a_invalidated = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_invalidated(), target);
   }
@@ -410,25 +448,43 @@ uint8_t* LSRequestPrepareDatastoreResponse::_InternalSerialize(
   return target;
 }
 
-size_t LSRequestPrepareDatastoreResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.LSRequestPrepareDatastoreResponse)
+size_t LSRequestPrepareDatastoreResponse::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.LSRequestPrepareDatastoreResponse)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_databaseChildEndpoint = 1;
-  if (!this->_internal_a_databasechildendpoint().empty()) {
+  if (_internal_has_a_databasechildendpoint()) {
+    // required bytes a_databaseChildEndpoint = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_databasechildendpoint());
   }
 
-  // bool a_invalidated = 2;
-  if (this->_internal_a_invalidated() != 0) {
+  if (_internal_has_a_invalidated()) {
+    // required bool a_invalidated = 2;
     total_size += 1 + 1;
   }
+
+  return total_size;
+}
+size_t LSRequestPrepareDatastoreResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.LSRequestPrepareDatastoreResponse)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required bytes a_databaseChildEndpoint = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_databasechildendpoint());
+
+    // required bool a_invalidated = 2;
+    total_size += 1 + 1;
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -451,11 +507,15 @@ void LSRequestPrepareDatastoreResponse::MergeFrom(const LSRequestPrepareDatastor
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_databasechildendpoint().empty()) {
-    _this->_internal_set_a_databasechildendpoint(from._internal_a_databasechildendpoint());
-  }
-  if (from._internal_a_invalidated() != 0) {
-    _this->_internal_set_a_invalidated(from._internal_a_invalidated());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_databasechildendpoint(from._internal_a_databasechildendpoint());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_invalidated_ = from._impl_.a_invalidated_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -468,6 +528,7 @@ void LSRequestPrepareDatastoreResponse::CopyFrom(const LSRequestPrepareDatastore
 }
 
 bool LSRequestPrepareDatastoreResponse::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -476,6 +537,7 @@ void LSRequestPrepareDatastoreResponse::InternalSwap(LSRequestPrepareDatastoreRe
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_databasechildendpoint_, lhs_arena,
       &other->_impl_.a_databasechildendpoint_, rhs_arena
@@ -492,6 +554,13 @@ std::string LSRequestPrepareDatastoreResponse::GetTypeName() const {
 
 class LSRequestPrepareObserverResponse::_Internal {
  public:
+  using HasBits = decltype(std::declval<LSRequestPrepareObserverResponse>()._impl_._has_bits_);
+  static void set_has_a_observerid(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 LSRequestPrepareObserverResponse::LSRequestPrepareObserverResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -504,8 +573,9 @@ LSRequestPrepareObserverResponse::LSRequestPrepareObserverResponse(const LSReque
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   LSRequestPrepareObserverResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_observerid_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_observerid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_observerid_ = from._impl_.a_observerid_;
@@ -517,8 +587,9 @@ inline void LSRequestPrepareObserverResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_observerid_){uint64_t{0u}}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_observerid_){uint64_t{0u}}
   };
 }
 
@@ -546,18 +617,21 @@ void LSRequestPrepareObserverResponse::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_observerid_ = uint64_t{0u};
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* LSRequestPrepareObserverResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // uint64 a_observerId = 1;
+      // required uint64 a_observerId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_observerid(&has_bits);
           _impl_.a_observerid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -579,6 +653,7 @@ const char* LSRequestPrepareObserverResponse::_InternalParse(const char* ptr, ::
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -592,8 +667,9 @@ uint8_t* LSRequestPrepareObserverResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint64 a_observerId = 1;
-  if (this->_internal_a_observerid() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required uint64 a_observerId = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_observerid(), target);
   }
@@ -610,14 +686,13 @@ size_t LSRequestPrepareObserverResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.LSRequestPrepareObserverResponse)
   size_t total_size = 0;
 
+  // required uint64 a_observerId = 1;
+  if (_internal_has_a_observerid()) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_observerid());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // uint64 a_observerId = 1;
-  if (this->_internal_a_observerid() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_observerid());
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -640,7 +715,7 @@ void LSRequestPrepareObserverResponse::MergeFrom(const LSRequestPrepareObserverR
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_a_observerid() != 0) {
+  if (from._internal_has_a_observerid()) {
     _this->_internal_set_a_observerid(from._internal_a_observerid());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -654,12 +729,14 @@ void LSRequestPrepareObserverResponse::CopyFrom(const LSRequestPrepareObserverRe
 }
 
 bool LSRequestPrepareObserverResponse::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void LSRequestPrepareObserverResponse::InternalSwap(LSRequestPrepareObserverResponse* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_observerid_, other->_impl_.a_observerid_);
 }
 
@@ -920,33 +997,32 @@ uint8_t* LSRequestResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_mVnsresult = 1;
-  if (_internal_has_a_mvnsresult()) {
-    target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_a_mvnsresult(), target);
+  switch (content_case()) {
+    case kAMVnsresult: {
+      target = stream->WriteBytesMaybeAliased(
+          1, this->_internal_a_mvnsresult(), target);
+      break;
+    }
+    case kAMVLSRequestPreloadDatastoreResponse: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(2, _Internal::a_mvlsrequestpreloaddatastoreresponse(this),
+          _Internal::a_mvlsrequestpreloaddatastoreresponse(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVLSRequestPrepareDatastoreResponse: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(3, _Internal::a_mvlsrequestpreparedatastoreresponse(this),
+          _Internal::a_mvlsrequestpreparedatastoreresponse(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVLSRequestPrepareObserverResponse: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(4, _Internal::a_mvlsrequestprepareobserverresponse(this),
+          _Internal::a_mvlsrequestprepareobserverresponse(this).GetCachedSize(), target, stream);
+      break;
+    }
+    default: ;
   }
-
-  // .protobuf.mozilla.dom.LSRequestPreloadDatastoreResponse a_mVLSRequestPreloadDatastoreResponse = 2;
-  if (_internal_has_a_mvlsrequestpreloaddatastoreresponse()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::a_mvlsrequestpreloaddatastoreresponse(this),
-        _Internal::a_mvlsrequestpreloaddatastoreresponse(this).GetCachedSize(), target, stream);
-  }
-
-  // .protobuf.mozilla.dom.LSRequestPrepareDatastoreResponse a_mVLSRequestPrepareDatastoreResponse = 3;
-  if (_internal_has_a_mvlsrequestpreparedatastoreresponse()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::a_mvlsrequestpreparedatastoreresponse(this),
-        _Internal::a_mvlsrequestpreparedatastoreresponse(this).GetCachedSize(), target, stream);
-  }
-
-  // .protobuf.mozilla.dom.LSRequestPrepareObserverResponse a_mVLSRequestPrepareObserverResponse = 4;
-  if (_internal_has_a_mvlsrequestprepareobserverresponse()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(4, _Internal::a_mvlsrequestprepareobserverresponse(this),
-        _Internal::a_mvlsrequestprepareobserverresponse(this).GetCachedSize(), target, stream);
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
@@ -1052,6 +1128,32 @@ void LSRequestResponse::CopyFrom(const LSRequestResponse& from) {
 }
 
 bool LSRequestResponse::IsInitialized() const {
+  switch (content_case()) {
+    case kAMVnsresult: {
+      break;
+    }
+    case kAMVLSRequestPreloadDatastoreResponse: {
+      if (_internal_has_a_mvlsrequestpreloaddatastoreresponse()) {
+        if (!_impl_.content_.a_mvlsrequestpreloaddatastoreresponse_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case kAMVLSRequestPrepareDatastoreResponse: {
+      if (_internal_has_a_mvlsrequestpreparedatastoreresponse()) {
+        if (!_impl_.content_.a_mvlsrequestpreparedatastoreresponse_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case kAMVLSRequestPrepareObserverResponse: {
+      if (_internal_has_a_mvlsrequestprepareobserverresponse()) {
+        if (!_impl_.content_.a_mvlsrequestprepareobserverresponse_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case CONTENT_NOT_SET: {
+      break;
+    }
+  }
   return true;
 }
 

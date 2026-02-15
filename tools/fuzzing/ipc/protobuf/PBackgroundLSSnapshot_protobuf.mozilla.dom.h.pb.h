@@ -115,6 +115,13 @@ class LSSetItemInfo final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const LSSetItemInfo& default_instance() {
     return *internal_default_instance();
   }
@@ -190,7 +197,11 @@ class LSSetItemInfo final :
     kAKeyFieldNumber = 1,
     kAValueFieldNumber = 2,
   };
-  // string a_key = 1;
+  // required string a_key = 1;
+  bool has_a_key() const;
+  private:
+  bool _internal_has_a_key() const;
+  public:
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -204,7 +215,11 @@ class LSSetItemInfo final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // bytes a_value = 2;
+  // required bytes a_value = 2;
+  bool has_a_value() const;
+  private:
+  bool _internal_has_a_value() const;
+  public:
   void clear_a_value();
   const std::string& a_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -222,13 +237,17 @@ class LSSetItemInfo final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_value_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -264,6 +283,13 @@ class LSRemoveItemInfo final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const LSRemoveItemInfo& default_instance() {
@@ -340,7 +366,11 @@ class LSRemoveItemInfo final :
   enum : int {
     kAKeyFieldNumber = 1,
   };
-  // string a_key = 1;
+  // required string a_key = 1;
+  bool has_a_key() const;
+  private:
+  bool _internal_has_a_key() const;
+  public:
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -362,8 +392,9 @@ class LSRemoveItemInfo final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -399,6 +430,13 @@ class LSClearInfo final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const LSClearInfo& default_instance() {
@@ -516,6 +554,13 @@ class LSWriteInfo final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const LSWriteInfo& default_instance() {
@@ -718,6 +763,13 @@ class LSSetItemAndNotifyInfo final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const LSSetItemAndNotifyInfo& default_instance() {
     return *internal_default_instance();
   }
@@ -794,7 +846,11 @@ class LSSetItemAndNotifyInfo final :
     kAOldValueFieldNumber = 2,
     kAValueFieldNumber = 3,
   };
-  // string a_key = 1;
+  // required string a_key = 1;
+  bool has_a_key() const;
+  private:
+  bool _internal_has_a_key() const;
+  public:
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -808,7 +864,11 @@ class LSSetItemAndNotifyInfo final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // bytes a_oldValue = 2;
+  // required bytes a_oldValue = 2;
+  bool has_a_oldvalue() const;
+  private:
+  bool _internal_has_a_oldvalue() const;
+  public:
   void clear_a_oldvalue();
   const std::string& a_oldvalue() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -822,7 +882,11 @@ class LSSetItemAndNotifyInfo final :
   std::string* _internal_mutable_a_oldvalue();
   public:
 
-  // bytes a_value = 3;
+  // required bytes a_value = 3;
+  bool has_a_value() const;
+  private:
+  bool _internal_has_a_value() const;
+  public:
   void clear_a_value();
   const std::string& a_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -840,14 +904,18 @@ class LSSetItemAndNotifyInfo final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_oldvalue_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_value_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -883,6 +951,13 @@ class LSRemoveItemAndNotifyInfo final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const LSRemoveItemAndNotifyInfo& default_instance() {
@@ -960,7 +1035,11 @@ class LSRemoveItemAndNotifyInfo final :
     kAKeyFieldNumber = 1,
     kAOldValueFieldNumber = 2,
   };
-  // string a_key = 1;
+  // required string a_key = 1;
+  bool has_a_key() const;
+  private:
+  bool _internal_has_a_key() const;
+  public:
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -974,7 +1053,11 @@ class LSRemoveItemAndNotifyInfo final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // bytes a_oldValue = 2;
+  // required bytes a_oldValue = 2;
+  bool has_a_oldvalue() const;
+  private:
+  bool _internal_has_a_oldvalue() const;
+  public:
   void clear_a_oldvalue();
   const std::string& a_oldvalue() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -992,13 +1075,17 @@ class LSRemoveItemAndNotifyInfo final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_oldvalue_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -1034,6 +1121,13 @@ class LSWriteAndNotifyInfo final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const LSWriteAndNotifyInfo& default_instance() {
@@ -1214,9 +1308,17 @@ class LSWriteAndNotifyInfo final :
 #endif  // __GNUC__
 // LSSetItemInfo
 
-// string a_key = 1;
+// required string a_key = 1;
+inline bool LSSetItemInfo::_internal_has_a_key() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool LSSetItemInfo::has_a_key() const {
+  return _internal_has_a_key();
+}
 inline void LSSetItemInfo::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& LSSetItemInfo::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSetItemInfo.a_key)
@@ -1225,7 +1327,7 @@ inline const std::string& LSSetItemInfo::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LSSetItemInfo::set_a_key(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSetItemInfo.a_key)
 }
@@ -1238,22 +1340,32 @@ inline const std::string& LSSetItemInfo::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void LSSetItemInfo::_internal_set_a_key(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* LSSetItemInfo::_internal_mutable_a_key() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* LSSetItemInfo::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSSetItemInfo.a_key)
-  return _impl_.a_key_.Release();
+  if (!_internal_has_a_key()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_key_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void LSSetItemInfo::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1264,9 +1376,17 @@ inline void LSSetItemInfo::set_allocated_a_key(std::string* a_key) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSSetItemInfo.a_key)
 }
 
-// bytes a_value = 2;
+// required bytes a_value = 2;
+inline bool LSSetItemInfo::_internal_has_a_value() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool LSSetItemInfo::has_a_value() const {
+  return _internal_has_a_value();
+}
 inline void LSSetItemInfo::clear_a_value() {
   _impl_.a_value_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& LSSetItemInfo::a_value() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSetItemInfo.a_value)
@@ -1275,7 +1395,7 @@ inline const std::string& LSSetItemInfo::a_value() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LSSetItemInfo::set_a_value(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSetItemInfo.a_value)
 }
@@ -1288,22 +1408,32 @@ inline const std::string& LSSetItemInfo::_internal_a_value() const {
   return _impl_.a_value_.Get();
 }
 inline void LSSetItemInfo::_internal_set_a_value(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_value_.Set(value, GetArenaForAllocation());
 }
 inline std::string* LSSetItemInfo::_internal_mutable_a_value() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_value_.Mutable(GetArenaForAllocation());
 }
 inline std::string* LSSetItemInfo::release_a_value() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSSetItemInfo.a_value)
-  return _impl_.a_value_.Release();
+  if (!_internal_has_a_value()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_value_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_value_.IsDefault()) {
+    _impl_.a_value_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void LSSetItemInfo::set_allocated_a_value(std::string* a_value) {
   if (a_value != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_value_.SetAllocated(a_value, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1318,9 +1448,17 @@ inline void LSSetItemInfo::set_allocated_a_value(std::string* a_value) {
 
 // LSRemoveItemInfo
 
-// string a_key = 1;
+// required string a_key = 1;
+inline bool LSRemoveItemInfo::_internal_has_a_key() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool LSRemoveItemInfo::has_a_key() const {
+  return _internal_has_a_key();
+}
 inline void LSRemoveItemInfo::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& LSRemoveItemInfo::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSRemoveItemInfo.a_key)
@@ -1329,7 +1467,7 @@ inline const std::string& LSRemoveItemInfo::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LSRemoveItemInfo::set_a_key(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSRemoveItemInfo.a_key)
 }
@@ -1342,22 +1480,32 @@ inline const std::string& LSRemoveItemInfo::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void LSRemoveItemInfo::_internal_set_a_key(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* LSRemoveItemInfo::_internal_mutable_a_key() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* LSRemoveItemInfo::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSRemoveItemInfo.a_key)
-  return _impl_.a_key_.Release();
+  if (!_internal_has_a_key()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_key_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void LSRemoveItemInfo::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1611,9 +1759,17 @@ inline LSWriteInfo::ContentCase LSWriteInfo::content_case() const {
 
 // LSSetItemAndNotifyInfo
 
-// string a_key = 1;
+// required string a_key = 1;
+inline bool LSSetItemAndNotifyInfo::_internal_has_a_key() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool LSSetItemAndNotifyInfo::has_a_key() const {
+  return _internal_has_a_key();
+}
 inline void LSSetItemAndNotifyInfo::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& LSSetItemAndNotifyInfo::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_key)
@@ -1622,7 +1778,7 @@ inline const std::string& LSSetItemAndNotifyInfo::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LSSetItemAndNotifyInfo::set_a_key(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_key)
 }
@@ -1635,22 +1791,32 @@ inline const std::string& LSSetItemAndNotifyInfo::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void LSSetItemAndNotifyInfo::_internal_set_a_key(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* LSSetItemAndNotifyInfo::_internal_mutable_a_key() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* LSSetItemAndNotifyInfo::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_key)
-  return _impl_.a_key_.Release();
+  if (!_internal_has_a_key()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_key_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void LSSetItemAndNotifyInfo::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1661,9 +1827,17 @@ inline void LSSetItemAndNotifyInfo::set_allocated_a_key(std::string* a_key) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_key)
 }
 
-// bytes a_oldValue = 2;
+// required bytes a_oldValue = 2;
+inline bool LSSetItemAndNotifyInfo::_internal_has_a_oldvalue() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool LSSetItemAndNotifyInfo::has_a_oldvalue() const {
+  return _internal_has_a_oldvalue();
+}
 inline void LSSetItemAndNotifyInfo::clear_a_oldvalue() {
   _impl_.a_oldvalue_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& LSSetItemAndNotifyInfo::a_oldvalue() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_oldValue)
@@ -1672,7 +1846,7 @@ inline const std::string& LSSetItemAndNotifyInfo::a_oldvalue() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LSSetItemAndNotifyInfo::set_a_oldvalue(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_oldvalue_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_oldValue)
 }
@@ -1685,22 +1859,32 @@ inline const std::string& LSSetItemAndNotifyInfo::_internal_a_oldvalue() const {
   return _impl_.a_oldvalue_.Get();
 }
 inline void LSSetItemAndNotifyInfo::_internal_set_a_oldvalue(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_oldvalue_.Set(value, GetArenaForAllocation());
 }
 inline std::string* LSSetItemAndNotifyInfo::_internal_mutable_a_oldvalue() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_oldvalue_.Mutable(GetArenaForAllocation());
 }
 inline std::string* LSSetItemAndNotifyInfo::release_a_oldvalue() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_oldValue)
-  return _impl_.a_oldvalue_.Release();
+  if (!_internal_has_a_oldvalue()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_oldvalue_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_oldvalue_.IsDefault()) {
+    _impl_.a_oldvalue_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void LSSetItemAndNotifyInfo::set_allocated_a_oldvalue(std::string* a_oldvalue) {
   if (a_oldvalue != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_oldvalue_.SetAllocated(a_oldvalue, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1711,9 +1895,17 @@ inline void LSSetItemAndNotifyInfo::set_allocated_a_oldvalue(std::string* a_oldv
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_oldValue)
 }
 
-// bytes a_value = 3;
+// required bytes a_value = 3;
+inline bool LSSetItemAndNotifyInfo::_internal_has_a_value() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool LSSetItemAndNotifyInfo::has_a_value() const {
+  return _internal_has_a_value();
+}
 inline void LSSetItemAndNotifyInfo::clear_a_value() {
   _impl_.a_value_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& LSSetItemAndNotifyInfo::a_value() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_value)
@@ -1722,7 +1914,7 @@ inline const std::string& LSSetItemAndNotifyInfo::a_value() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LSSetItemAndNotifyInfo::set_a_value(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000004u;
  _impl_.a_value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_value)
 }
@@ -1735,22 +1927,32 @@ inline const std::string& LSSetItemAndNotifyInfo::_internal_a_value() const {
   return _impl_.a_value_.Get();
 }
 inline void LSSetItemAndNotifyInfo::_internal_set_a_value(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_value_.Set(value, GetArenaForAllocation());
 }
 inline std::string* LSSetItemAndNotifyInfo::_internal_mutable_a_value() {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   return _impl_.a_value_.Mutable(GetArenaForAllocation());
 }
 inline std::string* LSSetItemAndNotifyInfo::release_a_value() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_value)
-  return _impl_.a_value_.Release();
+  if (!_internal_has_a_value()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000004u;
+  auto* p = _impl_.a_value_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_value_.IsDefault()) {
+    _impl_.a_value_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void LSSetItemAndNotifyInfo::set_allocated_a_value(std::string* a_value) {
   if (a_value != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.a_value_.SetAllocated(a_value, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1765,9 +1967,17 @@ inline void LSSetItemAndNotifyInfo::set_allocated_a_value(std::string* a_value) 
 
 // LSRemoveItemAndNotifyInfo
 
-// string a_key = 1;
+// required string a_key = 1;
+inline bool LSRemoveItemAndNotifyInfo::_internal_has_a_key() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool LSRemoveItemAndNotifyInfo::has_a_key() const {
+  return _internal_has_a_key();
+}
 inline void LSRemoveItemAndNotifyInfo::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& LSRemoveItemAndNotifyInfo::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.a_key)
@@ -1776,7 +1986,7 @@ inline const std::string& LSRemoveItemAndNotifyInfo::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LSRemoveItemAndNotifyInfo::set_a_key(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.a_key)
 }
@@ -1789,22 +1999,32 @@ inline const std::string& LSRemoveItemAndNotifyInfo::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void LSRemoveItemAndNotifyInfo::_internal_set_a_key(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* LSRemoveItemAndNotifyInfo::_internal_mutable_a_key() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* LSRemoveItemAndNotifyInfo::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.a_key)
-  return _impl_.a_key_.Release();
+  if (!_internal_has_a_key()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_key_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void LSRemoveItemAndNotifyInfo::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1815,9 +2035,17 @@ inline void LSRemoveItemAndNotifyInfo::set_allocated_a_key(std::string* a_key) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.a_key)
 }
 
-// bytes a_oldValue = 2;
+// required bytes a_oldValue = 2;
+inline bool LSRemoveItemAndNotifyInfo::_internal_has_a_oldvalue() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool LSRemoveItemAndNotifyInfo::has_a_oldvalue() const {
+  return _internal_has_a_oldvalue();
+}
 inline void LSRemoveItemAndNotifyInfo::clear_a_oldvalue() {
   _impl_.a_oldvalue_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& LSRemoveItemAndNotifyInfo::a_oldvalue() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.a_oldValue)
@@ -1826,7 +2054,7 @@ inline const std::string& LSRemoveItemAndNotifyInfo::a_oldvalue() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LSRemoveItemAndNotifyInfo::set_a_oldvalue(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_oldvalue_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.a_oldValue)
 }
@@ -1839,22 +2067,32 @@ inline const std::string& LSRemoveItemAndNotifyInfo::_internal_a_oldvalue() cons
   return _impl_.a_oldvalue_.Get();
 }
 inline void LSRemoveItemAndNotifyInfo::_internal_set_a_oldvalue(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_oldvalue_.Set(value, GetArenaForAllocation());
 }
 inline std::string* LSRemoveItemAndNotifyInfo::_internal_mutable_a_oldvalue() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_oldvalue_.Mutable(GetArenaForAllocation());
 }
 inline std::string* LSRemoveItemAndNotifyInfo::release_a_oldvalue() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.a_oldValue)
-  return _impl_.a_oldvalue_.Release();
+  if (!_internal_has_a_oldvalue()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_oldvalue_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_oldvalue_.IsDefault()) {
+    _impl_.a_oldvalue_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void LSRemoveItemAndNotifyInfo::set_allocated_a_oldvalue(std::string* a_oldvalue) {
   if (a_oldvalue != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_oldvalue_.SetAllocated(a_oldvalue, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

@@ -184,6 +184,13 @@ class Msg_PVRLayerConstructor final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_PVRLayerConstructor& default_instance() {
     return *internal_default_instance();
   }
@@ -260,7 +267,11 @@ class Msg_PVRLayerConstructor final :
     kAADisplayIDFieldNumber = 2,
     kAAGroupFieldNumber = 3,
   };
-  // sint64 a_actorid = 1;
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
   void clear_a_actorid();
   int64_t a_actorid() const;
   void set_a_actorid(int64_t value);
@@ -269,7 +280,11 @@ class Msg_PVRLayerConstructor final :
   void _internal_set_a_actorid(int64_t value);
   public:
 
-  // uint32 a_aDisplayID = 2;
+  // required uint32 a_aDisplayID = 2;
+  bool has_a_adisplayid() const;
+  private:
+  bool _internal_has_a_adisplayid() const;
+  public:
   void clear_a_adisplayid();
   uint32_t a_adisplayid() const;
   void set_a_adisplayid(uint32_t value);
@@ -278,7 +293,11 @@ class Msg_PVRLayerConstructor final :
   void _internal_set_a_adisplayid(uint32_t value);
   public:
 
-  // uint32 a_aGroup = 3;
+  // required uint32 a_aGroup = 3;
+  bool has_a_agroup() const;
+  private:
+  bool _internal_has_a_agroup() const;
+  public:
   void clear_a_agroup();
   uint32_t a_agroup() const;
   void set_a_agroup(uint32_t value);
@@ -291,14 +310,18 @@ class Msg_PVRLayerConstructor final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     int64_t a_actorid_;
     uint32_t a_adisplayid_;
     uint32_t a_agroup_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVRManager_2eproto;
@@ -334,6 +357,13 @@ class Reply_PVRLayerConstructor final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_PVRLayerConstructor& default_instance() {
@@ -453,6 +483,13 @@ class Msg_DetectRuntimes final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_DetectRuntimes& default_instance() {
     return *internal_default_instance();
   }
@@ -568,6 +605,13 @@ class Msg_RefreshDisplays final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_RefreshDisplays& default_instance() {
@@ -687,6 +731,13 @@ class Msg_SetGroupMask final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_SetGroupMask& default_instance() {
     return *internal_default_instance();
   }
@@ -762,7 +813,11 @@ class Msg_SetGroupMask final :
     kAADisplayIDFieldNumber = 1,
     kAAGroupMaskFieldNumber = 2,
   };
-  // uint32 a_aDisplayID = 1;
+  // required uint32 a_aDisplayID = 1;
+  bool has_a_adisplayid() const;
+  private:
+  bool _internal_has_a_adisplayid() const;
+  public:
   void clear_a_adisplayid();
   uint32_t a_adisplayid() const;
   void set_a_adisplayid(uint32_t value);
@@ -771,7 +826,11 @@ class Msg_SetGroupMask final :
   void _internal_set_a_adisplayid(uint32_t value);
   public:
 
-  // uint32 a_aGroupMask = 2;
+  // required uint32 a_aGroupMask = 2;
+  bool has_a_agroupmask() const;
+  private:
+  bool _internal_has_a_agroupmask() const;
+  public:
   void clear_a_agroupmask();
   uint32_t a_agroupmask() const;
   void set_a_agroupmask(uint32_t value);
@@ -784,13 +843,17 @@ class Msg_SetGroupMask final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t a_adisplayid_;
     uint32_t a_agroupmask_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVRManager_2eproto;
@@ -826,6 +889,13 @@ class Msg_SetHaveEventListener final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_SetHaveEventListener& default_instance() {
@@ -902,7 +972,11 @@ class Msg_SetHaveEventListener final :
   enum : int {
     kAAHaveEventListenerFieldNumber = 1,
   };
-  // bool a_aHaveEventListener = 1;
+  // required bool a_aHaveEventListener = 1;
+  bool has_a_ahaveeventlistener() const;
+  private:
+  bool _internal_has_a_ahaveeventlistener() const;
+  public:
   void clear_a_ahaveeventlistener();
   bool a_ahaveeventlistener() const;
   void set_a_ahaveeventlistener(bool value);
@@ -919,8 +993,9 @@ class Msg_SetHaveEventListener final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_ahaveeventlistener_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_ahaveeventlistener_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVRManager_2eproto;
@@ -956,6 +1031,13 @@ class Msg_ControllerListenerAdded final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_ControllerListenerAdded& default_instance() {
@@ -1075,6 +1157,13 @@ class Msg_ControllerListenerRemoved final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_ControllerListenerRemoved& default_instance() {
     return *internal_default_instance();
   }
@@ -1192,6 +1281,13 @@ class Msg_VibrateHaptic final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_VibrateHaptic& default_instance() {
     return *internal_default_instance();
   }
@@ -1270,7 +1366,11 @@ class Msg_VibrateHaptic final :
     kAAPromiseIDFieldNumber = 5,
     kAADurationFieldNumber = 4,
   };
-  // bytes a_aGamepadHandle = 1;
+  // required bytes a_aGamepadHandle = 1;
+  bool has_a_agamepadhandle() const;
+  private:
+  bool _internal_has_a_agamepadhandle() const;
+  public:
   void clear_a_agamepadhandle();
   const std::string& a_agamepadhandle() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1284,7 +1384,11 @@ class Msg_VibrateHaptic final :
   std::string* _internal_mutable_a_agamepadhandle();
   public:
 
-  // double a_aIntensity = 3;
+  // required double a_aIntensity = 3;
+  bool has_a_aintensity() const;
+  private:
+  bool _internal_has_a_aintensity() const;
+  public:
   void clear_a_aintensity();
   double a_aintensity() const;
   void set_a_aintensity(double value);
@@ -1293,7 +1397,11 @@ class Msg_VibrateHaptic final :
   void _internal_set_a_aintensity(double value);
   public:
 
-  // uint32 a_aHapticIndex = 2;
+  // required uint32 a_aHapticIndex = 2;
+  bool has_a_ahapticindex() const;
+  private:
+  bool _internal_has_a_ahapticindex() const;
+  public:
   void clear_a_ahapticindex();
   uint32_t a_ahapticindex() const;
   void set_a_ahapticindex(uint32_t value);
@@ -1302,7 +1410,11 @@ class Msg_VibrateHaptic final :
   void _internal_set_a_ahapticindex(uint32_t value);
   public:
 
-  // uint32 a_aPromiseID = 5;
+  // required uint32 a_aPromiseID = 5;
+  bool has_a_apromiseid() const;
+  private:
+  bool _internal_has_a_apromiseid() const;
+  public:
   void clear_a_apromiseid();
   uint32_t a_apromiseid() const;
   void set_a_apromiseid(uint32_t value);
@@ -1311,7 +1423,11 @@ class Msg_VibrateHaptic final :
   void _internal_set_a_apromiseid(uint32_t value);
   public:
 
-  // double a_aDuration = 4;
+  // required double a_aDuration = 4;
+  bool has_a_aduration() const;
+  private:
+  bool _internal_has_a_aduration() const;
+  public:
   void clear_a_aduration();
   double a_aduration() const;
   void set_a_aduration(double value);
@@ -1324,16 +1440,20 @@ class Msg_VibrateHaptic final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_agamepadhandle_;
     double a_aintensity_;
     uint32_t a_ahapticindex_;
     uint32_t a_apromiseid_;
     double a_aduration_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVRManager_2eproto;
@@ -1369,6 +1489,13 @@ class Msg_StopVibrateHaptic final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_StopVibrateHaptic& default_instance() {
@@ -1445,7 +1572,11 @@ class Msg_StopVibrateHaptic final :
   enum : int {
     kAAGamepadHandleFieldNumber = 1,
   };
-  // bytes a_aGamepadHandle = 1;
+  // required bytes a_aGamepadHandle = 1;
+  bool has_a_agamepadhandle() const;
+  private:
+  bool _internal_has_a_agamepadhandle() const;
+  public:
   void clear_a_agamepadhandle();
   const std::string& a_agamepadhandle() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1467,8 +1598,9 @@ class Msg_StopVibrateHaptic final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_agamepadhandle_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_agamepadhandle_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVRManager_2eproto;
@@ -1504,6 +1636,13 @@ class Msg_StartVRNavigation final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_StartVRNavigation& default_instance() {
@@ -1580,7 +1719,11 @@ class Msg_StartVRNavigation final :
   enum : int {
     kAADeviceIDFieldNumber = 1,
   };
-  // uint32 a_aDeviceID = 1;
+  // required uint32 a_aDeviceID = 1;
+  bool has_a_adeviceid() const;
+  private:
+  bool _internal_has_a_adeviceid() const;
+  public:
   void clear_a_adeviceid();
   uint32_t a_adeviceid() const;
   void set_a_adeviceid(uint32_t value);
@@ -1597,8 +1740,9 @@ class Msg_StartVRNavigation final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint32_t a_adeviceid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint32_t a_adeviceid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVRManager_2eproto;
@@ -1634,6 +1778,13 @@ class Msg_StopVRNavigation final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_StopVRNavigation& default_instance() {
@@ -1711,7 +1862,11 @@ class Msg_StopVRNavigation final :
     kAADurationFieldNumber = 2,
     kAADeviceIDFieldNumber = 1,
   };
-  // bytes a_aDuration = 2;
+  // required bytes a_aDuration = 2;
+  bool has_a_aduration() const;
+  private:
+  bool _internal_has_a_aduration() const;
+  public:
   void clear_a_aduration();
   const std::string& a_aduration() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1725,7 +1880,11 @@ class Msg_StopVRNavigation final :
   std::string* _internal_mutable_a_aduration();
   public:
 
-  // uint32 a_aDeviceID = 1;
+  // required uint32 a_aDeviceID = 1;
+  bool has_a_adeviceid() const;
+  private:
+  bool _internal_has_a_adeviceid() const;
+  public:
   void clear_a_adeviceid();
   uint32_t a_adeviceid() const;
   void set_a_adeviceid(uint32_t value);
@@ -1738,13 +1897,17 @@ class Msg_StopVRNavigation final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aduration_;
     uint32_t a_adeviceid_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVRManager_2eproto;
@@ -1780,6 +1943,13 @@ class Msg_StartActivity final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_StartActivity& default_instance() {
@@ -1899,6 +2069,13 @@ class Msg_StopActivity final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_StopActivity& default_instance() {
     return *internal_default_instance();
   }
@@ -2016,6 +2193,13 @@ class Msg_RunPuppet final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_RunPuppet& default_instance() {
     return *internal_default_instance();
   }
@@ -2121,7 +2305,6 @@ class Msg_RunPuppet final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t > a_buffer_;
-    mutable std::atomic<int> _a_buffer_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2158,6 +2341,13 @@ class Msg_ResetPuppet final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_ResetPuppet& default_instance() {
@@ -2277,6 +2467,13 @@ class Msg_UpdateDisplayInfo final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_UpdateDisplayInfo& default_instance() {
     return *internal_default_instance();
   }
@@ -2351,7 +2548,11 @@ class Msg_UpdateDisplayInfo final :
   enum : int {
     kAADisplayInfoFieldNumber = 1,
   };
-  // bytes a_aDisplayInfo = 1;
+  // required bytes a_aDisplayInfo = 1;
+  bool has_a_adisplayinfo() const;
+  private:
+  bool _internal_has_a_adisplayinfo() const;
+  public:
   void clear_a_adisplayinfo();
   const std::string& a_adisplayinfo() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2373,8 +2574,9 @@ class Msg_UpdateDisplayInfo final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_adisplayinfo_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_adisplayinfo_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVRManager_2eproto;
@@ -2410,6 +2612,13 @@ class Msg_UpdateRuntimeCapabilities final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_UpdateRuntimeCapabilities& default_instance() {
@@ -2486,7 +2695,11 @@ class Msg_UpdateRuntimeCapabilities final :
   enum : int {
     kAACapabilitiesFieldNumber = 1,
   };
-  // bytes a_aCapabilities = 1;
+  // required bytes a_aCapabilities = 1;
+  bool has_a_acapabilities() const;
+  private:
+  bool _internal_has_a_acapabilities() const;
+  public:
   void clear_a_acapabilities();
   const std::string& a_acapabilities() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2508,8 +2721,9 @@ class Msg_UpdateRuntimeCapabilities final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_acapabilities_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_acapabilities_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVRManager_2eproto;
@@ -2545,6 +2759,13 @@ class Msg_ReplyGamepadVibrateHaptic final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_ReplyGamepadVibrateHaptic& default_instance() {
@@ -2621,7 +2842,11 @@ class Msg_ReplyGamepadVibrateHaptic final :
   enum : int {
     kAAPromiseIDFieldNumber = 1,
   };
-  // uint32 a_aPromiseID = 1;
+  // required uint32 a_aPromiseID = 1;
+  bool has_a_apromiseid() const;
+  private:
+  bool _internal_has_a_apromiseid() const;
+  public:
   void clear_a_apromiseid();
   uint32_t a_apromiseid() const;
   void set_a_apromiseid(uint32_t value);
@@ -2638,8 +2863,9 @@ class Msg_ReplyGamepadVibrateHaptic final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint32_t a_apromiseid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint32_t a_apromiseid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVRManager_2eproto;
@@ -2675,6 +2901,13 @@ class Msg_NotifyPuppetCommandBufferCompleted final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_NotifyPuppetCommandBufferCompleted& default_instance() {
@@ -2751,7 +2984,11 @@ class Msg_NotifyPuppetCommandBufferCompleted final :
   enum : int {
     kAASuccessFieldNumber = 1,
   };
-  // bool a_aSuccess = 1;
+  // required bool a_aSuccess = 1;
+  bool has_a_asuccess() const;
+  private:
+  bool _internal_has_a_asuccess() const;
+  public:
   void clear_a_asuccess();
   bool a_asuccess() const;
   void set_a_asuccess(bool value);
@@ -2768,8 +3005,9 @@ class Msg_NotifyPuppetCommandBufferCompleted final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_asuccess_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_asuccess_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVRManager_2eproto;
@@ -2805,6 +3043,13 @@ class Msg_NotifyPuppetResetComplete final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_NotifyPuppetResetComplete& default_instance() {
@@ -2924,6 +3169,13 @@ class Msg___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -3041,6 +3293,13 @@ class Reply___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -3136,9 +3395,17 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_PVRLayerConstructor
 
-// sint64 a_actorid = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PVRLayerConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PVRLayerConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
 inline void Msg_PVRLayerConstructor::clear_a_actorid() {
   _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline int64_t Msg_PVRLayerConstructor::_internal_a_actorid() const {
   return _impl_.a_actorid_;
@@ -3148,7 +3415,7 @@ inline int64_t Msg_PVRLayerConstructor::a_actorid() const {
   return _internal_a_actorid();
 }
 inline void Msg_PVRLayerConstructor::_internal_set_a_actorid(int64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_actorid_ = value;
 }
 inline void Msg_PVRLayerConstructor::set_a_actorid(int64_t value) {
@@ -3156,9 +3423,17 @@ inline void Msg_PVRLayerConstructor::set_a_actorid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_PVRLayerConstructor.a_actorid)
 }
 
-// uint32 a_aDisplayID = 2;
+// required uint32 a_aDisplayID = 2;
+inline bool Msg_PVRLayerConstructor::_internal_has_a_adisplayid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PVRLayerConstructor::has_a_adisplayid() const {
+  return _internal_has_a_adisplayid();
+}
 inline void Msg_PVRLayerConstructor::clear_a_adisplayid() {
   _impl_.a_adisplayid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_PVRLayerConstructor::_internal_a_adisplayid() const {
   return _impl_.a_adisplayid_;
@@ -3168,7 +3443,7 @@ inline uint32_t Msg_PVRLayerConstructor::a_adisplayid() const {
   return _internal_a_adisplayid();
 }
 inline void Msg_PVRLayerConstructor::_internal_set_a_adisplayid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_adisplayid_ = value;
 }
 inline void Msg_PVRLayerConstructor::set_a_adisplayid(uint32_t value) {
@@ -3176,9 +3451,17 @@ inline void Msg_PVRLayerConstructor::set_a_adisplayid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_PVRLayerConstructor.a_aDisplayID)
 }
 
-// uint32 a_aGroup = 3;
+// required uint32 a_aGroup = 3;
+inline bool Msg_PVRLayerConstructor::_internal_has_a_agroup() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_PVRLayerConstructor::has_a_agroup() const {
+  return _internal_has_a_agroup();
+}
 inline void Msg_PVRLayerConstructor::clear_a_agroup() {
   _impl_.a_agroup_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_PVRLayerConstructor::_internal_a_agroup() const {
   return _impl_.a_agroup_;
@@ -3188,7 +3471,7 @@ inline uint32_t Msg_PVRLayerConstructor::a_agroup() const {
   return _internal_a_agroup();
 }
 inline void Msg_PVRLayerConstructor::_internal_set_a_agroup(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_agroup_ = value;
 }
 inline void Msg_PVRLayerConstructor::set_a_agroup(uint32_t value) {
@@ -3212,9 +3495,17 @@ inline void Msg_PVRLayerConstructor::set_a_agroup(uint32_t value) {
 
 // Msg_SetGroupMask
 
-// uint32 a_aDisplayID = 1;
+// required uint32 a_aDisplayID = 1;
+inline bool Msg_SetGroupMask::_internal_has_a_adisplayid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_SetGroupMask::has_a_adisplayid() const {
+  return _internal_has_a_adisplayid();
+}
 inline void Msg_SetGroupMask::clear_a_adisplayid() {
   _impl_.a_adisplayid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Msg_SetGroupMask::_internal_a_adisplayid() const {
   return _impl_.a_adisplayid_;
@@ -3224,7 +3515,7 @@ inline uint32_t Msg_SetGroupMask::a_adisplayid() const {
   return _internal_a_adisplayid();
 }
 inline void Msg_SetGroupMask::_internal_set_a_adisplayid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_adisplayid_ = value;
 }
 inline void Msg_SetGroupMask::set_a_adisplayid(uint32_t value) {
@@ -3232,9 +3523,17 @@ inline void Msg_SetGroupMask::set_a_adisplayid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_SetGroupMask.a_aDisplayID)
 }
 
-// uint32 a_aGroupMask = 2;
+// required uint32 a_aGroupMask = 2;
+inline bool Msg_SetGroupMask::_internal_has_a_agroupmask() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_SetGroupMask::has_a_agroupmask() const {
+  return _internal_has_a_agroupmask();
+}
 inline void Msg_SetGroupMask::clear_a_agroupmask() {
   _impl_.a_agroupmask_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_SetGroupMask::_internal_a_agroupmask() const {
   return _impl_.a_agroupmask_;
@@ -3244,7 +3543,7 @@ inline uint32_t Msg_SetGroupMask::a_agroupmask() const {
   return _internal_a_agroupmask();
 }
 inline void Msg_SetGroupMask::_internal_set_a_agroupmask(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_agroupmask_ = value;
 }
 inline void Msg_SetGroupMask::set_a_agroupmask(uint32_t value) {
@@ -3256,9 +3555,17 @@ inline void Msg_SetGroupMask::set_a_agroupmask(uint32_t value) {
 
 // Msg_SetHaveEventListener
 
-// bool a_aHaveEventListener = 1;
+// required bool a_aHaveEventListener = 1;
+inline bool Msg_SetHaveEventListener::_internal_has_a_ahaveeventlistener() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_SetHaveEventListener::has_a_ahaveeventlistener() const {
+  return _internal_has_a_ahaveeventlistener();
+}
 inline void Msg_SetHaveEventListener::clear_a_ahaveeventlistener() {
   _impl_.a_ahaveeventlistener_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Msg_SetHaveEventListener::_internal_a_ahaveeventlistener() const {
   return _impl_.a_ahaveeventlistener_;
@@ -3268,7 +3575,7 @@ inline bool Msg_SetHaveEventListener::a_ahaveeventlistener() const {
   return _internal_a_ahaveeventlistener();
 }
 inline void Msg_SetHaveEventListener::_internal_set_a_ahaveeventlistener(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_ahaveeventlistener_ = value;
 }
 inline void Msg_SetHaveEventListener::set_a_ahaveeventlistener(bool value) {
@@ -3288,9 +3595,17 @@ inline void Msg_SetHaveEventListener::set_a_ahaveeventlistener(bool value) {
 
 // Msg_VibrateHaptic
 
-// bytes a_aGamepadHandle = 1;
+// required bytes a_aGamepadHandle = 1;
+inline bool Msg_VibrateHaptic::_internal_has_a_agamepadhandle() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_VibrateHaptic::has_a_agamepadhandle() const {
+  return _internal_has_a_agamepadhandle();
+}
 inline void Msg_VibrateHaptic::clear_a_agamepadhandle() {
   _impl_.a_agamepadhandle_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_VibrateHaptic::a_agamepadhandle() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.a_aGamepadHandle)
@@ -3299,7 +3614,7 @@ inline const std::string& Msg_VibrateHaptic::a_agamepadhandle() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_VibrateHaptic::set_a_agamepadhandle(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_agamepadhandle_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.a_aGamepadHandle)
 }
@@ -3312,22 +3627,32 @@ inline const std::string& Msg_VibrateHaptic::_internal_a_agamepadhandle() const 
   return _impl_.a_agamepadhandle_.Get();
 }
 inline void Msg_VibrateHaptic::_internal_set_a_agamepadhandle(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_agamepadhandle_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_VibrateHaptic::_internal_mutable_a_agamepadhandle() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_agamepadhandle_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_VibrateHaptic::release_a_agamepadhandle() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.a_aGamepadHandle)
-  return _impl_.a_agamepadhandle_.Release();
+  if (!_internal_has_a_agamepadhandle()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_agamepadhandle_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_agamepadhandle_.IsDefault()) {
+    _impl_.a_agamepadhandle_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_VibrateHaptic::set_allocated_a_agamepadhandle(std::string* a_agamepadhandle) {
   if (a_agamepadhandle != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_agamepadhandle_.SetAllocated(a_agamepadhandle, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3338,9 +3663,17 @@ inline void Msg_VibrateHaptic::set_allocated_a_agamepadhandle(std::string* a_aga
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.a_aGamepadHandle)
 }
 
-// uint32 a_aHapticIndex = 2;
+// required uint32 a_aHapticIndex = 2;
+inline bool Msg_VibrateHaptic::_internal_has_a_ahapticindex() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_VibrateHaptic::has_a_ahapticindex() const {
+  return _internal_has_a_ahapticindex();
+}
 inline void Msg_VibrateHaptic::clear_a_ahapticindex() {
   _impl_.a_ahapticindex_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_VibrateHaptic::_internal_a_ahapticindex() const {
   return _impl_.a_ahapticindex_;
@@ -3350,7 +3683,7 @@ inline uint32_t Msg_VibrateHaptic::a_ahapticindex() const {
   return _internal_a_ahapticindex();
 }
 inline void Msg_VibrateHaptic::_internal_set_a_ahapticindex(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_ahapticindex_ = value;
 }
 inline void Msg_VibrateHaptic::set_a_ahapticindex(uint32_t value) {
@@ -3358,9 +3691,17 @@ inline void Msg_VibrateHaptic::set_a_ahapticindex(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.a_aHapticIndex)
 }
 
-// double a_aIntensity = 3;
+// required double a_aIntensity = 3;
+inline bool Msg_VibrateHaptic::_internal_has_a_aintensity() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_VibrateHaptic::has_a_aintensity() const {
+  return _internal_has_a_aintensity();
+}
 inline void Msg_VibrateHaptic::clear_a_aintensity() {
   _impl_.a_aintensity_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline double Msg_VibrateHaptic::_internal_a_aintensity() const {
   return _impl_.a_aintensity_;
@@ -3370,7 +3711,7 @@ inline double Msg_VibrateHaptic::a_aintensity() const {
   return _internal_a_aintensity();
 }
 inline void Msg_VibrateHaptic::_internal_set_a_aintensity(double value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aintensity_ = value;
 }
 inline void Msg_VibrateHaptic::set_a_aintensity(double value) {
@@ -3378,9 +3719,17 @@ inline void Msg_VibrateHaptic::set_a_aintensity(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.a_aIntensity)
 }
 
-// double a_aDuration = 4;
+// required double a_aDuration = 4;
+inline bool Msg_VibrateHaptic::_internal_has_a_aduration() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool Msg_VibrateHaptic::has_a_aduration() const {
+  return _internal_has_a_aduration();
+}
 inline void Msg_VibrateHaptic::clear_a_aduration() {
   _impl_.a_aduration_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline double Msg_VibrateHaptic::_internal_a_aduration() const {
   return _impl_.a_aduration_;
@@ -3390,7 +3739,7 @@ inline double Msg_VibrateHaptic::a_aduration() const {
   return _internal_a_aduration();
 }
 inline void Msg_VibrateHaptic::_internal_set_a_aduration(double value) {
-  
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.a_aduration_ = value;
 }
 inline void Msg_VibrateHaptic::set_a_aduration(double value) {
@@ -3398,9 +3747,17 @@ inline void Msg_VibrateHaptic::set_a_aduration(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.a_aDuration)
 }
 
-// uint32 a_aPromiseID = 5;
+// required uint32 a_aPromiseID = 5;
+inline bool Msg_VibrateHaptic::_internal_has_a_apromiseid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool Msg_VibrateHaptic::has_a_apromiseid() const {
+  return _internal_has_a_apromiseid();
+}
 inline void Msg_VibrateHaptic::clear_a_apromiseid() {
   _impl_.a_apromiseid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline uint32_t Msg_VibrateHaptic::_internal_a_apromiseid() const {
   return _impl_.a_apromiseid_;
@@ -3410,7 +3767,7 @@ inline uint32_t Msg_VibrateHaptic::a_apromiseid() const {
   return _internal_a_apromiseid();
 }
 inline void Msg_VibrateHaptic::_internal_set_a_apromiseid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_apromiseid_ = value;
 }
 inline void Msg_VibrateHaptic::set_a_apromiseid(uint32_t value) {
@@ -3422,9 +3779,17 @@ inline void Msg_VibrateHaptic::set_a_apromiseid(uint32_t value) {
 
 // Msg_StopVibrateHaptic
 
-// bytes a_aGamepadHandle = 1;
+// required bytes a_aGamepadHandle = 1;
+inline bool Msg_StopVibrateHaptic::_internal_has_a_agamepadhandle() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_StopVibrateHaptic::has_a_agamepadhandle() const {
+  return _internal_has_a_agamepadhandle();
+}
 inline void Msg_StopVibrateHaptic::clear_a_agamepadhandle() {
   _impl_.a_agamepadhandle_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_StopVibrateHaptic::a_agamepadhandle() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_StopVibrateHaptic.a_aGamepadHandle)
@@ -3433,7 +3798,7 @@ inline const std::string& Msg_StopVibrateHaptic::a_agamepadhandle() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_StopVibrateHaptic::set_a_agamepadhandle(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_agamepadhandle_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_StopVibrateHaptic.a_aGamepadHandle)
 }
@@ -3446,22 +3811,32 @@ inline const std::string& Msg_StopVibrateHaptic::_internal_a_agamepadhandle() co
   return _impl_.a_agamepadhandle_.Get();
 }
 inline void Msg_StopVibrateHaptic::_internal_set_a_agamepadhandle(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_agamepadhandle_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_StopVibrateHaptic::_internal_mutable_a_agamepadhandle() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_agamepadhandle_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_StopVibrateHaptic::release_a_agamepadhandle() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PVRManager.Msg_StopVibrateHaptic.a_aGamepadHandle)
-  return _impl_.a_agamepadhandle_.Release();
+  if (!_internal_has_a_agamepadhandle()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_agamepadhandle_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_agamepadhandle_.IsDefault()) {
+    _impl_.a_agamepadhandle_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_StopVibrateHaptic::set_allocated_a_agamepadhandle(std::string* a_agamepadhandle) {
   if (a_agamepadhandle != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_agamepadhandle_.SetAllocated(a_agamepadhandle, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3476,9 +3851,17 @@ inline void Msg_StopVibrateHaptic::set_allocated_a_agamepadhandle(std::string* a
 
 // Msg_StartVRNavigation
 
-// uint32 a_aDeviceID = 1;
+// required uint32 a_aDeviceID = 1;
+inline bool Msg_StartVRNavigation::_internal_has_a_adeviceid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_StartVRNavigation::has_a_adeviceid() const {
+  return _internal_has_a_adeviceid();
+}
 inline void Msg_StartVRNavigation::clear_a_adeviceid() {
   _impl_.a_adeviceid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Msg_StartVRNavigation::_internal_a_adeviceid() const {
   return _impl_.a_adeviceid_;
@@ -3488,7 +3871,7 @@ inline uint32_t Msg_StartVRNavigation::a_adeviceid() const {
   return _internal_a_adeviceid();
 }
 inline void Msg_StartVRNavigation::_internal_set_a_adeviceid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_adeviceid_ = value;
 }
 inline void Msg_StartVRNavigation::set_a_adeviceid(uint32_t value) {
@@ -3500,9 +3883,17 @@ inline void Msg_StartVRNavigation::set_a_adeviceid(uint32_t value) {
 
 // Msg_StopVRNavigation
 
-// uint32 a_aDeviceID = 1;
+// required uint32 a_aDeviceID = 1;
+inline bool Msg_StopVRNavigation::_internal_has_a_adeviceid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_StopVRNavigation::has_a_adeviceid() const {
+  return _internal_has_a_adeviceid();
+}
 inline void Msg_StopVRNavigation::clear_a_adeviceid() {
   _impl_.a_adeviceid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_StopVRNavigation::_internal_a_adeviceid() const {
   return _impl_.a_adeviceid_;
@@ -3512,7 +3903,7 @@ inline uint32_t Msg_StopVRNavigation::a_adeviceid() const {
   return _internal_a_adeviceid();
 }
 inline void Msg_StopVRNavigation::_internal_set_a_adeviceid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_adeviceid_ = value;
 }
 inline void Msg_StopVRNavigation::set_a_adeviceid(uint32_t value) {
@@ -3520,9 +3911,17 @@ inline void Msg_StopVRNavigation::set_a_adeviceid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_StopVRNavigation.a_aDeviceID)
 }
 
-// bytes a_aDuration = 2;
+// required bytes a_aDuration = 2;
+inline bool Msg_StopVRNavigation::_internal_has_a_aduration() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_StopVRNavigation::has_a_aduration() const {
+  return _internal_has_a_aduration();
+}
 inline void Msg_StopVRNavigation::clear_a_aduration() {
   _impl_.a_aduration_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_StopVRNavigation::a_aduration() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_StopVRNavigation.a_aDuration)
@@ -3531,7 +3930,7 @@ inline const std::string& Msg_StopVRNavigation::a_aduration() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_StopVRNavigation::set_a_aduration(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aduration_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_StopVRNavigation.a_aDuration)
 }
@@ -3544,22 +3943,32 @@ inline const std::string& Msg_StopVRNavigation::_internal_a_aduration() const {
   return _impl_.a_aduration_.Get();
 }
 inline void Msg_StopVRNavigation::_internal_set_a_aduration(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aduration_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_StopVRNavigation::_internal_mutable_a_aduration() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aduration_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_StopVRNavigation::release_a_aduration() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PVRManager.Msg_StopVRNavigation.a_aDuration)
-  return _impl_.a_aduration_.Release();
+  if (!_internal_has_a_aduration()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aduration_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aduration_.IsDefault()) {
+    _impl_.a_aduration_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_StopVRNavigation::set_allocated_a_aduration(std::string* a_aduration) {
   if (a_aduration != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aduration_.SetAllocated(a_aduration, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3637,9 +4046,17 @@ Msg_RunPuppet::mutable_a_buffer() {
 
 // Msg_UpdateDisplayInfo
 
-// bytes a_aDisplayInfo = 1;
+// required bytes a_aDisplayInfo = 1;
+inline bool Msg_UpdateDisplayInfo::_internal_has_a_adisplayinfo() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_UpdateDisplayInfo::has_a_adisplayinfo() const {
+  return _internal_has_a_adisplayinfo();
+}
 inline void Msg_UpdateDisplayInfo::clear_a_adisplayinfo() {
   _impl_.a_adisplayinfo_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_UpdateDisplayInfo::a_adisplayinfo() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_UpdateDisplayInfo.a_aDisplayInfo)
@@ -3648,7 +4065,7 @@ inline const std::string& Msg_UpdateDisplayInfo::a_adisplayinfo() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_UpdateDisplayInfo::set_a_adisplayinfo(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_adisplayinfo_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_UpdateDisplayInfo.a_aDisplayInfo)
 }
@@ -3661,22 +4078,32 @@ inline const std::string& Msg_UpdateDisplayInfo::_internal_a_adisplayinfo() cons
   return _impl_.a_adisplayinfo_.Get();
 }
 inline void Msg_UpdateDisplayInfo::_internal_set_a_adisplayinfo(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_adisplayinfo_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_UpdateDisplayInfo::_internal_mutable_a_adisplayinfo() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_adisplayinfo_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_UpdateDisplayInfo::release_a_adisplayinfo() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PVRManager.Msg_UpdateDisplayInfo.a_aDisplayInfo)
-  return _impl_.a_adisplayinfo_.Release();
+  if (!_internal_has_a_adisplayinfo()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_adisplayinfo_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_adisplayinfo_.IsDefault()) {
+    _impl_.a_adisplayinfo_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_UpdateDisplayInfo::set_allocated_a_adisplayinfo(std::string* a_adisplayinfo) {
   if (a_adisplayinfo != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_adisplayinfo_.SetAllocated(a_adisplayinfo, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3691,9 +4118,17 @@ inline void Msg_UpdateDisplayInfo::set_allocated_a_adisplayinfo(std::string* a_a
 
 // Msg_UpdateRuntimeCapabilities
 
-// bytes a_aCapabilities = 1;
+// required bytes a_aCapabilities = 1;
+inline bool Msg_UpdateRuntimeCapabilities::_internal_has_a_acapabilities() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_UpdateRuntimeCapabilities::has_a_acapabilities() const {
+  return _internal_has_a_acapabilities();
+}
 inline void Msg_UpdateRuntimeCapabilities::clear_a_acapabilities() {
   _impl_.a_acapabilities_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_UpdateRuntimeCapabilities::a_acapabilities() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_UpdateRuntimeCapabilities.a_aCapabilities)
@@ -3702,7 +4137,7 @@ inline const std::string& Msg_UpdateRuntimeCapabilities::a_acapabilities() const
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_UpdateRuntimeCapabilities::set_a_acapabilities(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_acapabilities_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_UpdateRuntimeCapabilities.a_aCapabilities)
 }
@@ -3715,22 +4150,32 @@ inline const std::string& Msg_UpdateRuntimeCapabilities::_internal_a_acapabiliti
   return _impl_.a_acapabilities_.Get();
 }
 inline void Msg_UpdateRuntimeCapabilities::_internal_set_a_acapabilities(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_acapabilities_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_UpdateRuntimeCapabilities::_internal_mutable_a_acapabilities() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_acapabilities_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_UpdateRuntimeCapabilities::release_a_acapabilities() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PVRManager.Msg_UpdateRuntimeCapabilities.a_aCapabilities)
-  return _impl_.a_acapabilities_.Release();
+  if (!_internal_has_a_acapabilities()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_acapabilities_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_acapabilities_.IsDefault()) {
+    _impl_.a_acapabilities_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_UpdateRuntimeCapabilities::set_allocated_a_acapabilities(std::string* a_acapabilities) {
   if (a_acapabilities != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_acapabilities_.SetAllocated(a_acapabilities, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3745,9 +4190,17 @@ inline void Msg_UpdateRuntimeCapabilities::set_allocated_a_acapabilities(std::st
 
 // Msg_ReplyGamepadVibrateHaptic
 
-// uint32 a_aPromiseID = 1;
+// required uint32 a_aPromiseID = 1;
+inline bool Msg_ReplyGamepadVibrateHaptic::_internal_has_a_apromiseid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_ReplyGamepadVibrateHaptic::has_a_apromiseid() const {
+  return _internal_has_a_apromiseid();
+}
 inline void Msg_ReplyGamepadVibrateHaptic::clear_a_apromiseid() {
   _impl_.a_apromiseid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Msg_ReplyGamepadVibrateHaptic::_internal_a_apromiseid() const {
   return _impl_.a_apromiseid_;
@@ -3757,7 +4210,7 @@ inline uint32_t Msg_ReplyGamepadVibrateHaptic::a_apromiseid() const {
   return _internal_a_apromiseid();
 }
 inline void Msg_ReplyGamepadVibrateHaptic::_internal_set_a_apromiseid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_apromiseid_ = value;
 }
 inline void Msg_ReplyGamepadVibrateHaptic::set_a_apromiseid(uint32_t value) {
@@ -3769,9 +4222,17 @@ inline void Msg_ReplyGamepadVibrateHaptic::set_a_apromiseid(uint32_t value) {
 
 // Msg_NotifyPuppetCommandBufferCompleted
 
-// bool a_aSuccess = 1;
+// required bool a_aSuccess = 1;
+inline bool Msg_NotifyPuppetCommandBufferCompleted::_internal_has_a_asuccess() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_NotifyPuppetCommandBufferCompleted::has_a_asuccess() const {
+  return _internal_has_a_asuccess();
+}
 inline void Msg_NotifyPuppetCommandBufferCompleted::clear_a_asuccess() {
   _impl_.a_asuccess_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Msg_NotifyPuppetCommandBufferCompleted::_internal_a_asuccess() const {
   return _impl_.a_asuccess_;
@@ -3781,7 +4242,7 @@ inline bool Msg_NotifyPuppetCommandBufferCompleted::a_asuccess() const {
   return _internal_a_asuccess();
 }
 inline void Msg_NotifyPuppetCommandBufferCompleted::_internal_set_a_asuccess(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_asuccess_ = value;
 }
 inline void Msg_NotifyPuppetCommandBufferCompleted::set_a_asuccess(bool value) {

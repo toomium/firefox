@@ -47,8 +47,9 @@ struct Msg_ShutdownDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_ShutdownDefaultTypeInternal _Msg_Shutdown_default_instance_;
 PROTOBUF_CONSTEXPR Msg_MIDIPortListUpdate::Msg_MIDIPortListUpdate(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_aportlist_)*/nullptr
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_aportlist_)*/nullptr} {}
 struct Msg_MIDIPortListUpdateDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_MIDIPortListUpdateDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -367,7 +368,14 @@ std::string Msg_Shutdown::GetTypeName() const {
 
 class Msg_MIDIPortListUpdate::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_MIDIPortListUpdate>()._impl_._has_bits_);
   static const ::protobuf::mozilla::dom::MIDIPortList& a_aportlist(const Msg_MIDIPortListUpdate* msg);
+  static void set_has_a_aportlist(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 const ::protobuf::mozilla::dom::MIDIPortList&
@@ -375,10 +383,8 @@ Msg_MIDIPortListUpdate::_Internal::a_aportlist(const Msg_MIDIPortListUpdate* msg
   return *msg->_impl_.a_aportlist_;
 }
 void Msg_MIDIPortListUpdate::clear_a_aportlist() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_aportlist_ != nullptr) {
-    delete _impl_.a_aportlist_;
-  }
-  _impl_.a_aportlist_ = nullptr;
+  if (_impl_.a_aportlist_ != nullptr) _impl_.a_aportlist_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Msg_MIDIPortListUpdate::Msg_MIDIPortListUpdate(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -390,8 +396,9 @@ Msg_MIDIPortListUpdate::Msg_MIDIPortListUpdate(const Msg_MIDIPortListUpdate& fro
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_MIDIPortListUpdate* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_aportlist_){nullptr}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_aportlist_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_aportlist()) {
@@ -405,8 +412,9 @@ inline void Msg_MIDIPortListUpdate::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_aportlist_){nullptr}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_aportlist_){nullptr}
   };
 }
 
@@ -434,20 +442,23 @@ void Msg_MIDIPortListUpdate::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && _impl_.a_aportlist_ != nullptr) {
-    delete _impl_.a_aportlist_;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(_impl_.a_aportlist_ != nullptr);
+    _impl_.a_aportlist_->Clear();
   }
-  _impl_.a_aportlist_ = nullptr;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_MIDIPortListUpdate::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.dom.MIDIPortList a_aPortList = 1;
+      // required .protobuf.mozilla.dom.MIDIPortList a_aPortList = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_aportlist(), ptr);
@@ -471,6 +482,7 @@ const char* Msg_MIDIPortListUpdate::_InternalParse(const char* ptr, ::_pbi::Pars
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -484,8 +496,9 @@ uint8_t* Msg_MIDIPortListUpdate::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.mozilla.dom.MIDIPortList a_aPortList = 1;
-  if (this->_internal_has_a_aportlist()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required .protobuf.mozilla.dom.MIDIPortList a_aPortList = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_aportlist(this),
         _Internal::a_aportlist(this).GetCachedSize(), target, stream);
@@ -503,16 +516,15 @@ size_t Msg_MIDIPortListUpdate::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PMIDIManager.Msg_MIDIPortListUpdate)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .protobuf.mozilla.dom.MIDIPortList a_aPortList = 1;
-  if (this->_internal_has_a_aportlist()) {
+  // required .protobuf.mozilla.dom.MIDIPortList a_aPortList = 1;
+  if (_internal_has_a_aportlist()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_aportlist_);
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -550,12 +562,17 @@ void Msg_MIDIPortListUpdate::CopyFrom(const Msg_MIDIPortListUpdate& from) {
 }
 
 bool Msg_MIDIPortListUpdate::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (_internal_has_a_aportlist()) {
+    if (!_impl_.a_aportlist_->IsInitialized()) return false;
+  }
   return true;
 }
 
 void Msg_MIDIPortListUpdate::InternalSwap(Msg_MIDIPortListUpdate* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_aportlist_, other->_impl_.a_aportlist_);
 }
 

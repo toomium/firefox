@@ -113,6 +113,13 @@ class Msg_GetData final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_GetData& default_instance() {
     return *internal_default_instance();
   }
@@ -258,6 +265,13 @@ class Reply_GetData final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_GetData& default_instance() {
     return *internal_default_instance();
   }
@@ -332,7 +346,7 @@ class Reply_GetData final :
   enum : int {
     kAATransferableDataFieldNumber = 1,
   };
-  // .protobuf.mozilla.dom.IPCTransferableDataOrError a_aTransferableData = 1;
+  // required .protobuf.mozilla.dom.IPCTransferableDataOrError a_aTransferableData = 1;
   bool has_a_atransferabledata() const;
   private:
   bool _internal_has_a_atransferabledata() const;
@@ -358,8 +372,9 @@ class Reply_GetData final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::protobuf::mozilla::dom::IPCTransferableDataOrError* a_atransferabledata_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::protobuf::mozilla::dom::IPCTransferableDataOrError* a_atransferabledata_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PClipboardReadRequest_2eproto;
@@ -395,6 +410,13 @@ class Msg_GetDataSync final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_GetDataSync& default_instance() {
@@ -542,6 +564,13 @@ class Reply_GetDataSync final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_GetDataSync& default_instance() {
     return *internal_default_instance();
   }
@@ -616,7 +645,7 @@ class Reply_GetDataSync final :
   enum : int {
     kAATransferableDataFieldNumber = 1,
   };
-  // .protobuf.mozilla.dom.IPCTransferableDataOrError a_aTransferableData = 1;
+  // required .protobuf.mozilla.dom.IPCTransferableDataOrError a_aTransferableData = 1;
   bool has_a_atransferabledata() const;
   private:
   bool _internal_has_a_atransferabledata() const;
@@ -642,8 +671,9 @@ class Reply_GetDataSync final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::protobuf::mozilla::dom::IPCTransferableDataOrError* a_atransferabledata_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::protobuf::mozilla::dom::IPCTransferableDataOrError* a_atransferabledata_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PClipboardReadRequest_2eproto;
@@ -679,6 +709,13 @@ class Msg___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg___delete__& default_instance() {
@@ -796,6 +833,13 @@ class Reply___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply___delete__& default_instance() {
@@ -972,9 +1016,11 @@ Msg_GetData::mutable_a_aflavors() {
 
 // Reply_GetData
 
-// .protobuf.mozilla.dom.IPCTransferableDataOrError a_aTransferableData = 1;
+// required .protobuf.mozilla.dom.IPCTransferableDataOrError a_aTransferableData = 1;
 inline bool Reply_GetData::_internal_has_a_atransferabledata() const {
-  return this != internal_default_instance() && _impl_.a_atransferabledata_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_atransferabledata_ != nullptr);
+  return value;
 }
 inline bool Reply_GetData::has_a_atransferabledata() const {
   return _internal_has_a_atransferabledata();
@@ -995,14 +1041,14 @@ inline void Reply_GetData::unsafe_arena_set_allocated_a_atransferabledata(
   }
   _impl_.a_atransferabledata_ = a_atransferabledata;
   if (a_atransferabledata) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PClipboardReadRequest.Reply_GetData.a_aTransferableData)
 }
 inline ::protobuf::mozilla::dom::IPCTransferableDataOrError* Reply_GetData::release_a_atransferabledata() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::IPCTransferableDataOrError* temp = _impl_.a_atransferabledata_;
   _impl_.a_atransferabledata_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1018,13 +1064,13 @@ inline ::protobuf::mozilla::dom::IPCTransferableDataOrError* Reply_GetData::rele
 }
 inline ::protobuf::mozilla::dom::IPCTransferableDataOrError* Reply_GetData::unsafe_arena_release_a_atransferabledata() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.PClipboardReadRequest.Reply_GetData.a_aTransferableData)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::IPCTransferableDataOrError* temp = _impl_.a_atransferabledata_;
   _impl_.a_atransferabledata_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::IPCTransferableDataOrError* Reply_GetData::_internal_mutable_a_atransferabledata() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_atransferabledata_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::IPCTransferableDataOrError>(GetArenaForAllocation());
     _impl_.a_atransferabledata_ = p;
@@ -1049,9 +1095,9 @@ inline void Reply_GetData::set_allocated_a_atransferabledata(::protobuf::mozilla
       a_atransferabledata = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_atransferabledata, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_atransferabledata_ = a_atransferabledata;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PClipboardReadRequest.Reply_GetData.a_aTransferableData)
@@ -1140,9 +1186,11 @@ Msg_GetDataSync::mutable_a_aflavors() {
 
 // Reply_GetDataSync
 
-// .protobuf.mozilla.dom.IPCTransferableDataOrError a_aTransferableData = 1;
+// required .protobuf.mozilla.dom.IPCTransferableDataOrError a_aTransferableData = 1;
 inline bool Reply_GetDataSync::_internal_has_a_atransferabledata() const {
-  return this != internal_default_instance() && _impl_.a_atransferabledata_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_atransferabledata_ != nullptr);
+  return value;
 }
 inline bool Reply_GetDataSync::has_a_atransferabledata() const {
   return _internal_has_a_atransferabledata();
@@ -1163,14 +1211,14 @@ inline void Reply_GetDataSync::unsafe_arena_set_allocated_a_atransferabledata(
   }
   _impl_.a_atransferabledata_ = a_atransferabledata;
   if (a_atransferabledata) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PClipboardReadRequest.Reply_GetDataSync.a_aTransferableData)
 }
 inline ::protobuf::mozilla::dom::IPCTransferableDataOrError* Reply_GetDataSync::release_a_atransferabledata() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::IPCTransferableDataOrError* temp = _impl_.a_atransferabledata_;
   _impl_.a_atransferabledata_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1186,13 +1234,13 @@ inline ::protobuf::mozilla::dom::IPCTransferableDataOrError* Reply_GetDataSync::
 }
 inline ::protobuf::mozilla::dom::IPCTransferableDataOrError* Reply_GetDataSync::unsafe_arena_release_a_atransferabledata() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.PClipboardReadRequest.Reply_GetDataSync.a_aTransferableData)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::IPCTransferableDataOrError* temp = _impl_.a_atransferabledata_;
   _impl_.a_atransferabledata_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::IPCTransferableDataOrError* Reply_GetDataSync::_internal_mutable_a_atransferabledata() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_atransferabledata_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::IPCTransferableDataOrError>(GetArenaForAllocation());
     _impl_.a_atransferabledata_ = p;
@@ -1217,9 +1265,9 @@ inline void Reply_GetDataSync::set_allocated_a_atransferabledata(::protobuf::moz
       a_atransferabledata = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_atransferabledata, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_atransferabledata_ = a_atransferabledata;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PClipboardReadRequest.Reply_GetDataSync.a_aTransferableData)

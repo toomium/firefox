@@ -102,6 +102,13 @@ class OpenDatabaseRequestResponse final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const OpenDatabaseRequestResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -176,7 +183,11 @@ class OpenDatabaseRequestResponse final :
   enum : int {
     kADatabaseFieldNumber = 1,
   };
-  // bytes a_database = 1;
+  // required bytes a_database = 1;
+  bool has_a_database() const;
+  private:
+  bool _internal_has_a_database() const;
+  public:
   void clear_a_database();
   const std::string& a_database() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -198,8 +209,9 @@ class OpenDatabaseRequestResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_database_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_database_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
@@ -235,6 +247,13 @@ class DeleteDatabaseRequestResponse final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const DeleteDatabaseRequestResponse& default_instance() {
@@ -311,7 +330,11 @@ class DeleteDatabaseRequestResponse final :
   enum : int {
     kAPreviousVersionFieldNumber = 1,
   };
-  // uint64 a_previousVersion = 1;
+  // required uint64 a_previousVersion = 1;
+  bool has_a_previousversion() const;
+  private:
+  bool _internal_has_a_previousversion() const;
+  public:
   void clear_a_previousversion();
   uint64_t a_previousversion() const;
   void set_a_previousversion(uint64_t value);
@@ -328,8 +351,9 @@ class DeleteDatabaseRequestResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint64_t a_previousversion_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint64_t a_previousversion_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
@@ -365,6 +389,13 @@ class FactoryRequestResponse final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const FactoryRequestResponse& default_instance() {
@@ -545,9 +576,17 @@ class FactoryRequestResponse final :
 #endif  // __GNUC__
 // OpenDatabaseRequestResponse
 
-// bytes a_database = 1;
+// required bytes a_database = 1;
+inline bool OpenDatabaseRequestResponse::_internal_has_a_database() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool OpenDatabaseRequestResponse::has_a_database() const {
+  return _internal_has_a_database();
+}
 inline void OpenDatabaseRequestResponse::clear_a_database() {
   _impl_.a_database_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& OpenDatabaseRequestResponse::a_database() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.OpenDatabaseRequestResponse.a_database)
@@ -556,7 +595,7 @@ inline const std::string& OpenDatabaseRequestResponse::a_database() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpenDatabaseRequestResponse::set_a_database(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_database_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.OpenDatabaseRequestResponse.a_database)
 }
@@ -569,22 +608,32 @@ inline const std::string& OpenDatabaseRequestResponse::_internal_a_database() co
   return _impl_.a_database_.Get();
 }
 inline void OpenDatabaseRequestResponse::_internal_set_a_database(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_database_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpenDatabaseRequestResponse::_internal_mutable_a_database() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_database_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpenDatabaseRequestResponse::release_a_database() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.OpenDatabaseRequestResponse.a_database)
-  return _impl_.a_database_.Release();
+  if (!_internal_has_a_database()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_database_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_database_.IsDefault()) {
+    _impl_.a_database_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void OpenDatabaseRequestResponse::set_allocated_a_database(std::string* a_database) {
   if (a_database != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_database_.SetAllocated(a_database, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -599,9 +648,17 @@ inline void OpenDatabaseRequestResponse::set_allocated_a_database(std::string* a
 
 // DeleteDatabaseRequestResponse
 
-// uint64 a_previousVersion = 1;
+// required uint64 a_previousVersion = 1;
+inline bool DeleteDatabaseRequestResponse::_internal_has_a_previousversion() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool DeleteDatabaseRequestResponse::has_a_previousversion() const {
+  return _internal_has_a_previousversion();
+}
 inline void DeleteDatabaseRequestResponse::clear_a_previousversion() {
   _impl_.a_previousversion_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t DeleteDatabaseRequestResponse::_internal_a_previousversion() const {
   return _impl_.a_previousversion_;
@@ -611,7 +668,7 @@ inline uint64_t DeleteDatabaseRequestResponse::a_previousversion() const {
   return _internal_a_previousversion();
 }
 inline void DeleteDatabaseRequestResponse::_internal_set_a_previousversion(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_previousversion_ = value;
 }
 inline void DeleteDatabaseRequestResponse::set_a_previousversion(uint64_t value) {

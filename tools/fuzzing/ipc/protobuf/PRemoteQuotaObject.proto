@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/quota/PRemoteQuotaObject.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.quota.PRemoteQuotaObject;
@@ -14,12 +14,12 @@ package protobuf.mozilla.dom.quota.PRemoteQuotaObject;
 
 // Message declarations
 message Msg_MaybeUpdateSize {
-  sint64 a_size = 1;
-  bool a_truncate = 2;
+  required sint64 a_size = 1;
+  required bool a_truncate = 2;
 }
 
 message Reply_MaybeUpdateSize {
-  bool a_result = 1;
+  required bool a_result = 1;
 }
 
 // Parameter mappings stats:

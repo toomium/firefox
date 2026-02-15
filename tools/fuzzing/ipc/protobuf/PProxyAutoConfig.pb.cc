@@ -23,11 +23,12 @@ namespace net {
 namespace PProxyAutoConfig {
 PROTOBUF_CONSTEXPR Msg_ConfigurePAC::Msg_ConfigurePAC(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_apacuri_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_apacuri_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_apacscriptdata_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_aincludepath_)*/false
-  , /*decltype(_impl_.a_aextraheapsize_)*/0u
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_aextraheapsize_)*/0u} {}
 struct Msg_ConfigurePACDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ConfigurePACDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -39,9 +40,10 @@ struct Msg_ConfigurePACDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_ConfigurePACDefaultTypeInternal _Msg_ConfigurePAC_default_instance_;
 PROTOBUF_CONSTEXPR Msg_GetProxyForURI::Msg_GetProxyForURI(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_atesturi_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_atesthost_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_atesturi_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_atesthost_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_GetProxyForURIDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_GetProxyForURIDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -53,9 +55,10 @@ struct Msg_GetProxyForURIDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_GetProxyForURIDefaultTypeInternal _Msg_GetProxyForURI_default_instance_;
 PROTOBUF_CONSTEXPR Reply_GetProxyForURI::Reply_GetProxyForURI(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_astatus_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_aresult_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_astatus_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_aresult_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Reply_GetProxyForURIDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_GetProxyForURIDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -78,6 +81,22 @@ namespace PProxyAutoConfig {
 
 class Msg_ConfigurePAC::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_ConfigurePAC>()._impl_._has_bits_);
+  static void set_has_a_apacuri(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_apacscriptdata(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_aincludepath(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_a_aextraheapsize(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x0000000f) ^ 0x0000000f) != 0;
+  }
 };
 
 Msg_ConfigurePAC::Msg_ConfigurePAC(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -90,18 +109,19 @@ Msg_ConfigurePAC::Msg_ConfigurePAC(const Msg_ConfigurePAC& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_ConfigurePAC* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_apacuri_){}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_apacuri_){}
     , decltype(_impl_.a_apacscriptdata_){}
     , decltype(_impl_.a_aincludepath_){}
-    , decltype(_impl_.a_aextraheapsize_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_aextraheapsize_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_apacuri_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_apacuri_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_apacuri().empty()) {
+  if (from._internal_has_a_apacuri()) {
     _this->_impl_.a_apacuri_.Set(from._internal_a_apacuri(), 
       _this->GetArenaForAllocation());
   }
@@ -109,7 +129,7 @@ Msg_ConfigurePAC::Msg_ConfigurePAC(const Msg_ConfigurePAC& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_apacscriptdata_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_apacscriptdata().empty()) {
+  if (from._internal_has_a_apacscriptdata()) {
     _this->_impl_.a_apacscriptdata_.Set(from._internal_a_apacscriptdata(), 
       _this->GetArenaForAllocation());
   }
@@ -124,11 +144,12 @@ inline void Msg_ConfigurePAC::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_apacuri_){}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_apacuri_){}
     , decltype(_impl_.a_apacscriptdata_){}
     , decltype(_impl_.a_aincludepath_){false}
     , decltype(_impl_.a_aextraheapsize_){0u}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_apacuri_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -165,51 +186,62 @@ void Msg_ConfigurePAC::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_apacuri_.ClearToEmpty();
-  _impl_.a_apacscriptdata_.ClearToEmpty();
-  ::memset(&_impl_.a_aincludepath_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.a_aextraheapsize_) -
-      reinterpret_cast<char*>(&_impl_.a_aincludepath_)) + sizeof(_impl_.a_aextraheapsize_));
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_apacuri_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_apacscriptdata_.ClearNonDefaultToEmpty();
+    }
+  }
+  if (cached_has_bits & 0x0000000cu) {
+    ::memset(&_impl_.a_aincludepath_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_aextraheapsize_) -
+        reinterpret_cast<char*>(&_impl_.a_aincludepath_)) + sizeof(_impl_.a_aextraheapsize_));
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_ConfigurePAC::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string a_aPACURI = 1;
+      // required string a_aPACURI = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_apacuri();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // string a_aPACScriptData = 2;
+      // required string a_aPACScriptData = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_apacscriptdata();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // bool a_aIncludePath = 3;
+      // required bool a_aIncludePath = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_a_aincludepath(&has_bits);
           _impl_.a_aincludepath_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // uint32 a_aExtraHeapSize = 4;
+      // required uint32 a_aExtraHeapSize = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _Internal::set_has_a_aextraheapsize(&has_bits);
           _impl_.a_aextraheapsize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
@@ -231,6 +263,7 @@ const char* Msg_ConfigurePAC::_InternalParse(const char* ptr, ::_pbi::ParseConte
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -244,34 +277,27 @@ uint8_t* Msg_ConfigurePAC::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string a_aPACURI = 1;
-  if (!this->_internal_a_apacuri().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_apacuri().data(), static_cast<int>(this->_internal_a_apacuri().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.a_aPACURI");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_aPACURI = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_apacuri(), target);
   }
 
-  // string a_aPACScriptData = 2;
-  if (!this->_internal_a_apacscriptdata().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_apacscriptdata().data(), static_cast<int>(this->_internal_a_apacscriptdata().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.a_aPACScriptData");
+  // required string a_aPACScriptData = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_apacscriptdata(), target);
   }
 
-  // bool a_aIncludePath = 3;
-  if (this->_internal_a_aincludepath() != 0) {
+  // required bool a_aIncludePath = 3;
+  if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_aincludepath(), target);
   }
 
-  // uint32 a_aExtraHeapSize = 4;
-  if (this->_internal_a_aextraheapsize() != 0) {
+  // required uint32 a_aExtraHeapSize = 4;
+  if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(4, this->_internal_a_aextraheapsize(), target);
   }
@@ -284,37 +310,63 @@ uint8_t* Msg_ConfigurePAC::_InternalSerialize(
   return target;
 }
 
-size_t Msg_ConfigurePAC::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC)
+size_t Msg_ConfigurePAC::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string a_aPACURI = 1;
-  if (!this->_internal_a_apacuri().empty()) {
+  if (_internal_has_a_apacuri()) {
+    // required string a_aPACURI = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_apacuri());
   }
 
-  // string a_aPACScriptData = 2;
-  if (!this->_internal_a_apacscriptdata().empty()) {
+  if (_internal_has_a_apacscriptdata()) {
+    // required string a_aPACScriptData = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_apacscriptdata());
   }
 
-  // bool a_aIncludePath = 3;
-  if (this->_internal_a_aincludepath() != 0) {
+  if (_internal_has_a_aincludepath()) {
+    // required bool a_aIncludePath = 3;
     total_size += 1 + 1;
   }
 
-  // uint32 a_aExtraHeapSize = 4;
-  if (this->_internal_a_aextraheapsize() != 0) {
+  if (_internal_has_a_aextraheapsize()) {
+    // required uint32 a_aExtraHeapSize = 4;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_aextraheapsize());
   }
+
+  return total_size;
+}
+size_t Msg_ConfigurePAC::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
+    // required string a_aPACURI = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_apacuri());
+
+    // required string a_aPACScriptData = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_apacscriptdata());
+
+    // required bool a_aIncludePath = 3;
+    total_size += 1 + 1;
+
+    // required uint32 a_aExtraHeapSize = 4;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_aextraheapsize());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -337,17 +389,21 @@ void Msg_ConfigurePAC::MergeFrom(const Msg_ConfigurePAC& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_apacuri().empty()) {
-    _this->_internal_set_a_apacuri(from._internal_a_apacuri());
-  }
-  if (!from._internal_a_apacscriptdata().empty()) {
-    _this->_internal_set_a_apacscriptdata(from._internal_a_apacscriptdata());
-  }
-  if (from._internal_a_aincludepath() != 0) {
-    _this->_internal_set_a_aincludepath(from._internal_a_aincludepath());
-  }
-  if (from._internal_a_aextraheapsize() != 0) {
-    _this->_internal_set_a_aextraheapsize(from._internal_a_aextraheapsize());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000000fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_apacuri(from._internal_a_apacuri());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_apacscriptdata(from._internal_a_apacscriptdata());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.a_aincludepath_ = from._impl_.a_aincludepath_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.a_aextraheapsize_ = from._impl_.a_aextraheapsize_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -360,6 +416,7 @@ void Msg_ConfigurePAC::CopyFrom(const Msg_ConfigurePAC& from) {
 }
 
 bool Msg_ConfigurePAC::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -368,6 +425,7 @@ void Msg_ConfigurePAC::InternalSwap(Msg_ConfigurePAC* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_apacuri_, lhs_arena,
       &other->_impl_.a_apacuri_, rhs_arena
@@ -393,6 +451,16 @@ std::string Msg_ConfigurePAC::GetTypeName() const {
 
 class Msg_GetProxyForURI::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_GetProxyForURI>()._impl_._has_bits_);
+  static void set_has_a_atesturi(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_atesthost(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 Msg_GetProxyForURI::Msg_GetProxyForURI(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -405,16 +473,17 @@ Msg_GetProxyForURI::Msg_GetProxyForURI(const Msg_GetProxyForURI& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_GetProxyForURI* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_atesturi_){}
-    , decltype(_impl_.a_atesthost_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_atesturi_){}
+    , decltype(_impl_.a_atesthost_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_atesturi_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_atesturi_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_atesturi().empty()) {
+  if (from._internal_has_a_atesturi()) {
     _this->_impl_.a_atesturi_.Set(from._internal_a_atesturi(), 
       _this->GetArenaForAllocation());
   }
@@ -422,7 +491,7 @@ Msg_GetProxyForURI::Msg_GetProxyForURI(const Msg_GetProxyForURI& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_atesthost_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_atesthost().empty()) {
+  if (from._internal_has_a_atesthost()) {
     _this->_impl_.a_atesthost_.Set(from._internal_a_atesthost(), 
       _this->GetArenaForAllocation());
   }
@@ -434,9 +503,10 @@ inline void Msg_GetProxyForURI::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_atesturi_){}
-    , decltype(_impl_.a_atesthost_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_atesturi_){}
+    , decltype(_impl_.a_atesthost_){}
   };
   _impl_.a_atesturi_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -473,34 +543,41 @@ void Msg_GetProxyForURI::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_atesturi_.ClearToEmpty();
-  _impl_.a_atesthost_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_atesturi_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_atesthost_.ClearNonDefaultToEmpty();
+    }
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_GetProxyForURI::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string a_aTestURI = 1;
+      // required string a_aTestURI = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_atesturi();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // string a_aTestHost = 2;
+      // required string a_aTestHost = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_atesthost();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -520,6 +597,7 @@ const char* Msg_GetProxyForURI::_InternalParse(const char* ptr, ::_pbi::ParseCon
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -533,22 +611,15 @@ uint8_t* Msg_GetProxyForURI::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string a_aTestURI = 1;
-  if (!this->_internal_a_atesturi().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_atesturi().data(), static_cast<int>(this->_internal_a_atesturi().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI.a_aTestURI");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_aTestURI = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_atesturi(), target);
   }
 
-  // string a_aTestHost = 2;
-  if (!this->_internal_a_atesthost().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_atesthost().data(), static_cast<int>(this->_internal_a_atesthost().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI.a_aTestHost");
+  // required string a_aTestHost = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_atesthost(), target);
   }
@@ -561,27 +632,47 @@ uint8_t* Msg_GetProxyForURI::_InternalSerialize(
   return target;
 }
 
-size_t Msg_GetProxyForURI::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI)
+size_t Msg_GetProxyForURI::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string a_aTestURI = 1;
-  if (!this->_internal_a_atesturi().empty()) {
+  if (_internal_has_a_atesturi()) {
+    // required string a_aTestURI = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_atesturi());
   }
 
-  // string a_aTestHost = 2;
-  if (!this->_internal_a_atesthost().empty()) {
+  if (_internal_has_a_atesthost()) {
+    // required string a_aTestHost = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_atesthost());
   }
+
+  return total_size;
+}
+size_t Msg_GetProxyForURI::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required string a_aTestURI = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_atesturi());
+
+    // required string a_aTestHost = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_atesthost());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -604,11 +695,14 @@ void Msg_GetProxyForURI::MergeFrom(const Msg_GetProxyForURI& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_atesturi().empty()) {
-    _this->_internal_set_a_atesturi(from._internal_a_atesturi());
-  }
-  if (!from._internal_a_atesthost().empty()) {
-    _this->_internal_set_a_atesthost(from._internal_a_atesthost());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_atesturi(from._internal_a_atesturi());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_atesthost(from._internal_a_atesthost());
+    }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -621,6 +715,7 @@ void Msg_GetProxyForURI::CopyFrom(const Msg_GetProxyForURI& from) {
 }
 
 bool Msg_GetProxyForURI::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -629,6 +724,7 @@ void Msg_GetProxyForURI::InternalSwap(Msg_GetProxyForURI* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_atesturi_, lhs_arena,
       &other->_impl_.a_atesturi_, rhs_arena
@@ -648,6 +744,16 @@ std::string Msg_GetProxyForURI::GetTypeName() const {
 
 class Reply_GetProxyForURI::_Internal {
  public:
+  using HasBits = decltype(std::declval<Reply_GetProxyForURI>()._impl_._has_bits_);
+  static void set_has_a_astatus(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_aresult(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 Reply_GetProxyForURI::Reply_GetProxyForURI(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -660,16 +766,17 @@ Reply_GetProxyForURI::Reply_GetProxyForURI(const Reply_GetProxyForURI& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_GetProxyForURI* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_astatus_){}
-    , decltype(_impl_.a_aresult_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_astatus_){}
+    , decltype(_impl_.a_aresult_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_astatus_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_astatus_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_astatus().empty()) {
+  if (from._internal_has_a_astatus()) {
     _this->_impl_.a_astatus_.Set(from._internal_a_astatus(), 
       _this->GetArenaForAllocation());
   }
@@ -677,7 +784,7 @@ Reply_GetProxyForURI::Reply_GetProxyForURI(const Reply_GetProxyForURI& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_aresult_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_aresult().empty()) {
+  if (from._internal_has_a_aresult()) {
     _this->_impl_.a_aresult_.Set(from._internal_a_aresult(), 
       _this->GetArenaForAllocation());
   }
@@ -689,9 +796,10 @@ inline void Reply_GetProxyForURI::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_astatus_){}
-    , decltype(_impl_.a_aresult_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_astatus_){}
+    , decltype(_impl_.a_aresult_){}
   };
   _impl_.a_astatus_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -728,18 +836,27 @@ void Reply_GetProxyForURI::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_astatus_.ClearToEmpty();
-  _impl_.a_aresult_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_astatus_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_aresult_.ClearNonDefaultToEmpty();
+    }
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Reply_GetProxyForURI::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_aStatus = 1;
+      // required bytes a_aStatus = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_astatus();
@@ -748,13 +865,12 @@ const char* Reply_GetProxyForURI::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // string a_aResult = 2;
+      // required string a_aResult = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_aresult();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -774,6 +890,7 @@ const char* Reply_GetProxyForURI::_InternalParse(const char* ptr, ::_pbi::ParseC
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -787,18 +904,15 @@ uint8_t* Reply_GetProxyForURI::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_aStatus = 1;
-  if (!this->_internal_a_astatus().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_aStatus = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_astatus(), target);
   }
 
-  // string a_aResult = 2;
-  if (!this->_internal_a_aresult().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_aresult().data(), static_cast<int>(this->_internal_a_aresult().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI.a_aResult");
+  // required string a_aResult = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_aresult(), target);
   }
@@ -811,27 +925,47 @@ uint8_t* Reply_GetProxyForURI::_InternalSerialize(
   return target;
 }
 
-size_t Reply_GetProxyForURI::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI)
+size_t Reply_GetProxyForURI::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_aStatus = 1;
-  if (!this->_internal_a_astatus().empty()) {
+  if (_internal_has_a_astatus()) {
+    // required bytes a_aStatus = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_astatus());
   }
 
-  // string a_aResult = 2;
-  if (!this->_internal_a_aresult().empty()) {
+  if (_internal_has_a_aresult()) {
+    // required string a_aResult = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_aresult());
   }
+
+  return total_size;
+}
+size_t Reply_GetProxyForURI::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required bytes a_aStatus = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_astatus());
+
+    // required string a_aResult = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_aresult());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -854,11 +988,14 @@ void Reply_GetProxyForURI::MergeFrom(const Reply_GetProxyForURI& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_astatus().empty()) {
-    _this->_internal_set_a_astatus(from._internal_a_astatus());
-  }
-  if (!from._internal_a_aresult().empty()) {
-    _this->_internal_set_a_aresult(from._internal_a_aresult());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_astatus(from._internal_a_astatus());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_aresult(from._internal_a_aresult());
+    }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -871,6 +1008,7 @@ void Reply_GetProxyForURI::CopyFrom(const Reply_GetProxyForURI& from) {
 }
 
 bool Reply_GetProxyForURI::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -879,6 +1017,7 @@ void Reply_GetProxyForURI::InternalSwap(Reply_GetProxyForURI* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_astatus_, lhs_arena,
       &other->_impl_.a_astatus_, rhs_arena

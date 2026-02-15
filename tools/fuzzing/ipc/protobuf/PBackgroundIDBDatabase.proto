@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/indexedDB/PBackgroundIDBDatabase.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.indexedDB.PBackgroundIDBDatabase;
@@ -28,18 +28,18 @@ message Msg_Close {
 }
 
 message Msg_PBackgroundIDBDatabaseFileConstructor {
-  sint64 a_actorid = 1;
-  protobuf.mozilla.dom.IPCBlob a_blob = 2;
+  required sint64 a_actorid = 1;
+  required protobuf.mozilla.dom.IPCBlob a_blob = 2;
 }
 
 message Reply_PBackgroundIDBDatabaseFileConstructor {
 }
 
 message Msg_PBackgroundIDBTransactionConstructor {
-  sint64 a_actorid = 1;
+  required sint64 a_actorid = 1;
   repeated string a_objectStoreNames = 2;
-  bytes a_mode = 3;
-  bytes a_durability = 4;
+  required bytes a_mode = 3;
+  required bytes a_durability = 4;
 }
 
 message Reply_PBackgroundIDBTransactionConstructor {
@@ -52,7 +52,7 @@ message Reply___delete__ {
 }
 
 message Msg_VersionChange {
-  uint64 a_oldVersion = 1;
+  required uint64 a_oldVersion = 1;
   optional uint64 a_newVersion = 2;
 }
 
@@ -63,11 +63,11 @@ message Msg_CloseAfterInvalidationComplete {
 }
 
 message Msg_PBackgroundIDBVersionChangeTransactionConstructor {
-  sint64 a_actorid = 1;
-  uint64 a_currentVersion = 2;
-  uint64 a_requestedVersion = 3;
-  sint64 a_nextObjectStoreId = 4;
-  sint64 a_nextIndexId = 5;
+  required sint64 a_actorid = 1;
+  required uint64 a_currentVersion = 2;
+  required uint64 a_requestedVersion = 3;
+  required sint64 a_nextObjectStoreId = 4;
+  required sint64 a_nextIndexId = 5;
 }
 
 message Reply_PBackgroundIDBVersionChangeTransactionConstructor {

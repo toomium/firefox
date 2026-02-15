@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/netwerk/ipc/PFileChannel.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.net.PFileChannel;
@@ -23,11 +23,11 @@ message Reply___delete__ {
 }
 
 message Msg_NotifyListeners {
-  protobuf.mozilla.net.FileChannelInfo a_aFileChannelInfo = 1;
+  required protobuf.mozilla.net.FileChannelInfo a_aFileChannelInfo = 1;
 }
 
 message Msg_SetChannelIdForRedirect {
-  uint64 a_aChannelId = 1;
+  required uint64 a_aChannelId = 1;
 }
 
 // Parameter mappings stats:

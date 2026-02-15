@@ -129,6 +129,13 @@ class IPCTransferableDataString final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const IPCTransferableDataString& default_instance() {
     return *internal_default_instance();
   }
@@ -203,7 +210,11 @@ class IPCTransferableDataString final :
   enum : int {
     kADataFieldNumber = 1,
   };
-  // bytes a_data = 1;
+  // required bytes a_data = 1;
+  bool has_a_data() const;
+  private:
+  bool _internal_has_a_data() const;
+  public:
   void clear_a_data();
   const std::string& a_data() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -225,8 +236,9 @@ class IPCTransferableDataString final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_data_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_data_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -262,6 +274,13 @@ class IPCTransferableDataCString final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const IPCTransferableDataCString& default_instance() {
@@ -338,7 +357,11 @@ class IPCTransferableDataCString final :
   enum : int {
     kADataFieldNumber = 1,
   };
-  // bytes a_data = 1;
+  // required bytes a_data = 1;
+  bool has_a_data() const;
+  private:
+  bool _internal_has_a_data() const;
+  public:
   void clear_a_data();
   const std::string& a_data() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -360,8 +383,9 @@ class IPCTransferableDataCString final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_data_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_data_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -397,6 +421,13 @@ class IPCTransferableDataInputStream final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const IPCTransferableDataInputStream& default_instance() {
@@ -473,7 +504,11 @@ class IPCTransferableDataInputStream final :
   enum : int {
     kADataFieldNumber = 1,
   };
-  // bytes a_data = 1;
+  // required bytes a_data = 1;
+  bool has_a_data() const;
+  private:
+  bool _internal_has_a_data() const;
+  public:
   void clear_a_data();
   const std::string& a_data() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -495,8 +530,9 @@ class IPCTransferableDataInputStream final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_data_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_data_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -532,6 +568,13 @@ class IPCTransferableDataImageContainer final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const IPCTransferableDataImageContainer& default_instance() {
@@ -608,7 +651,7 @@ class IPCTransferableDataImageContainer final :
   enum : int {
     kAImageFieldNumber = 1,
   };
-  // .protobuf.mozilla.dom.IPCImage a_image = 1;
+  // required .protobuf.mozilla.dom.IPCImage a_image = 1;
   bool has_a_image() const;
   private:
   bool _internal_has_a_image() const;
@@ -634,8 +677,9 @@ class IPCTransferableDataImageContainer final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::protobuf::mozilla::dom::IPCImage* a_image_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::protobuf::mozilla::dom::IPCImage* a_image_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -671,6 +715,13 @@ class IPCTransferableDataBlob final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const IPCTransferableDataBlob& default_instance() {
@@ -747,7 +798,7 @@ class IPCTransferableDataBlob final :
   enum : int {
     kABlobFieldNumber = 1,
   };
-  // .protobuf.mozilla.dom.IPCBlob a_blob = 1;
+  // required .protobuf.mozilla.dom.IPCBlob a_blob = 1;
   bool has_a_blob() const;
   private:
   bool _internal_has_a_blob() const;
@@ -773,8 +824,9 @@ class IPCTransferableDataBlob final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::protobuf::mozilla::dom::IPCBlob* a_blob_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::protobuf::mozilla::dom::IPCBlob* a_blob_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -810,6 +862,13 @@ class IPCTransferableDataType final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const IPCTransferableDataType& default_instance() {
@@ -1056,6 +1115,13 @@ class IPCTransferableDataItem final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const IPCTransferableDataItem& default_instance() {
     return *internal_default_instance();
   }
@@ -1131,7 +1197,11 @@ class IPCTransferableDataItem final :
     kAFlavorFieldNumber = 1,
     kADataFieldNumber = 2,
   };
-  // string a_flavor = 1;
+  // required string a_flavor = 1;
+  bool has_a_flavor() const;
+  private:
+  bool _internal_has_a_flavor() const;
+  public:
   void clear_a_flavor();
   const std::string& a_flavor() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1145,7 +1215,7 @@ class IPCTransferableDataItem final :
   std::string* _internal_mutable_a_flavor();
   public:
 
-  // .protobuf.mozilla.dom.IPCTransferableDataType a_data = 2;
+  // required .protobuf.mozilla.dom.IPCTransferableDataType a_data = 2;
   bool has_a_data() const;
   private:
   bool _internal_has_a_data() const;
@@ -1167,13 +1237,17 @@ class IPCTransferableDataItem final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_flavor_;
     ::protobuf::mozilla::dom::IPCTransferableDataType* a_data_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -1209,6 +1283,13 @@ class IPCTransferableData final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const IPCTransferableData& default_instance() {
@@ -1348,6 +1429,13 @@ class IPCTransferableDataOrError final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const IPCTransferableDataOrError& default_instance() {
@@ -1528,6 +1616,13 @@ class IPCTransferable final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const IPCTransferable& default_instance() {
     return *internal_default_instance();
   }
@@ -1625,7 +1720,11 @@ class IPCTransferable final :
   std::string* _internal_mutable_a_dataprincipal();
   public:
 
-  // bytes a_contentPolicyType = 5;
+  // required bytes a_contentPolicyType = 5;
+  bool has_a_contentpolicytype() const;
+  private:
+  bool _internal_has_a_contentpolicytype() const;
+  public:
   void clear_a_contentpolicytype();
   const std::string& a_contentpolicytype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1657,7 +1756,7 @@ class IPCTransferable final :
   std::string* _internal_mutable_a_referrerinfo();
   public:
 
-  // .protobuf.mozilla.dom.IPCTransferableData a_data = 1;
+  // required .protobuf.mozilla.dom.IPCTransferableData a_data = 1;
   bool has_a_data() const;
   private:
   bool _internal_has_a_data() const;
@@ -1693,7 +1792,11 @@ class IPCTransferable final :
       ::protobuf::mozilla::net::CookieJarSettingsArgs* a_cookiejarsettings);
   ::protobuf::mozilla::net::CookieJarSettingsArgs* unsafe_arena_release_a_cookiejarsettings();
 
-  // bool a_isPrivateData = 2;
+  // required bool a_isPrivateData = 2;
+  bool has_a_isprivatedata() const;
+  private:
+  bool _internal_has_a_isprivatedata() const;
+  public:
   void clear_a_isprivatedata();
   bool a_isprivatedata() const;
   void set_a_isprivatedata(bool value);
@@ -1705,6 +1808,9 @@ class IPCTransferable final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCTransferable)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1733,9 +1839,17 @@ class IPCTransferable final :
 #endif  // __GNUC__
 // IPCTransferableDataString
 
-// bytes a_data = 1;
+// required bytes a_data = 1;
+inline bool IPCTransferableDataString::_internal_has_a_data() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool IPCTransferableDataString::has_a_data() const {
+  return _internal_has_a_data();
+}
 inline void IPCTransferableDataString::clear_a_data() {
   _impl_.a_data_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& IPCTransferableDataString::a_data() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableDataString.a_data)
@@ -1744,7 +1858,7 @@ inline const std::string& IPCTransferableDataString::a_data() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCTransferableDataString::set_a_data(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCTransferableDataString.a_data)
 }
@@ -1757,22 +1871,32 @@ inline const std::string& IPCTransferableDataString::_internal_a_data() const {
   return _impl_.a_data_.Get();
 }
 inline void IPCTransferableDataString::_internal_set_a_data(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_data_.Set(value, GetArenaForAllocation());
 }
 inline std::string* IPCTransferableDataString::_internal_mutable_a_data() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_data_.Mutable(GetArenaForAllocation());
 }
 inline std::string* IPCTransferableDataString::release_a_data() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataString.a_data)
-  return _impl_.a_data_.Release();
+  if (!_internal_has_a_data()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_data_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_data_.IsDefault()) {
+    _impl_.a_data_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void IPCTransferableDataString::set_allocated_a_data(std::string* a_data) {
   if (a_data != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_data_.SetAllocated(a_data, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1787,9 +1911,17 @@ inline void IPCTransferableDataString::set_allocated_a_data(std::string* a_data)
 
 // IPCTransferableDataCString
 
-// bytes a_data = 1;
+// required bytes a_data = 1;
+inline bool IPCTransferableDataCString::_internal_has_a_data() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool IPCTransferableDataCString::has_a_data() const {
+  return _internal_has_a_data();
+}
 inline void IPCTransferableDataCString::clear_a_data() {
   _impl_.a_data_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& IPCTransferableDataCString::a_data() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableDataCString.a_data)
@@ -1798,7 +1930,7 @@ inline const std::string& IPCTransferableDataCString::a_data() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCTransferableDataCString::set_a_data(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCTransferableDataCString.a_data)
 }
@@ -1811,22 +1943,32 @@ inline const std::string& IPCTransferableDataCString::_internal_a_data() const {
   return _impl_.a_data_.Get();
 }
 inline void IPCTransferableDataCString::_internal_set_a_data(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_data_.Set(value, GetArenaForAllocation());
 }
 inline std::string* IPCTransferableDataCString::_internal_mutable_a_data() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_data_.Mutable(GetArenaForAllocation());
 }
 inline std::string* IPCTransferableDataCString::release_a_data() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataCString.a_data)
-  return _impl_.a_data_.Release();
+  if (!_internal_has_a_data()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_data_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_data_.IsDefault()) {
+    _impl_.a_data_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void IPCTransferableDataCString::set_allocated_a_data(std::string* a_data) {
   if (a_data != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_data_.SetAllocated(a_data, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1841,9 +1983,17 @@ inline void IPCTransferableDataCString::set_allocated_a_data(std::string* a_data
 
 // IPCTransferableDataInputStream
 
-// bytes a_data = 1;
+// required bytes a_data = 1;
+inline bool IPCTransferableDataInputStream::_internal_has_a_data() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool IPCTransferableDataInputStream::has_a_data() const {
+  return _internal_has_a_data();
+}
 inline void IPCTransferableDataInputStream::clear_a_data() {
   _impl_.a_data_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& IPCTransferableDataInputStream::a_data() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableDataInputStream.a_data)
@@ -1852,7 +2002,7 @@ inline const std::string& IPCTransferableDataInputStream::a_data() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCTransferableDataInputStream::set_a_data(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCTransferableDataInputStream.a_data)
 }
@@ -1865,22 +2015,32 @@ inline const std::string& IPCTransferableDataInputStream::_internal_a_data() con
   return _impl_.a_data_.Get();
 }
 inline void IPCTransferableDataInputStream::_internal_set_a_data(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_data_.Set(value, GetArenaForAllocation());
 }
 inline std::string* IPCTransferableDataInputStream::_internal_mutable_a_data() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_data_.Mutable(GetArenaForAllocation());
 }
 inline std::string* IPCTransferableDataInputStream::release_a_data() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataInputStream.a_data)
-  return _impl_.a_data_.Release();
+  if (!_internal_has_a_data()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_data_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_data_.IsDefault()) {
+    _impl_.a_data_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void IPCTransferableDataInputStream::set_allocated_a_data(std::string* a_data) {
   if (a_data != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_data_.SetAllocated(a_data, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1895,9 +2055,11 @@ inline void IPCTransferableDataInputStream::set_allocated_a_data(std::string* a_
 
 // IPCTransferableDataImageContainer
 
-// .protobuf.mozilla.dom.IPCImage a_image = 1;
+// required .protobuf.mozilla.dom.IPCImage a_image = 1;
 inline bool IPCTransferableDataImageContainer::_internal_has_a_image() const {
-  return this != internal_default_instance() && _impl_.a_image_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_image_ != nullptr);
+  return value;
 }
 inline bool IPCTransferableDataImageContainer::has_a_image() const {
   return _internal_has_a_image();
@@ -1918,14 +2080,14 @@ inline void IPCTransferableDataImageContainer::unsafe_arena_set_allocated_a_imag
   }
   _impl_.a_image_ = a_image;
   if (a_image) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCTransferableDataImageContainer.a_image)
 }
 inline ::protobuf::mozilla::dom::IPCImage* IPCTransferableDataImageContainer::release_a_image() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::IPCImage* temp = _impl_.a_image_;
   _impl_.a_image_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1941,13 +2103,13 @@ inline ::protobuf::mozilla::dom::IPCImage* IPCTransferableDataImageContainer::re
 }
 inline ::protobuf::mozilla::dom::IPCImage* IPCTransferableDataImageContainer::unsafe_arena_release_a_image() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataImageContainer.a_image)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::IPCImage* temp = _impl_.a_image_;
   _impl_.a_image_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::IPCImage* IPCTransferableDataImageContainer::_internal_mutable_a_image() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_image_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::IPCImage>(GetArenaForAllocation());
     _impl_.a_image_ = p;
@@ -1972,9 +2134,9 @@ inline void IPCTransferableDataImageContainer::set_allocated_a_image(::protobuf:
       a_image = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_image, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_image_ = a_image;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferableDataImageContainer.a_image)
@@ -1984,9 +2146,11 @@ inline void IPCTransferableDataImageContainer::set_allocated_a_image(::protobuf:
 
 // IPCTransferableDataBlob
 
-// .protobuf.mozilla.dom.IPCBlob a_blob = 1;
+// required .protobuf.mozilla.dom.IPCBlob a_blob = 1;
 inline bool IPCTransferableDataBlob::_internal_has_a_blob() const {
-  return this != internal_default_instance() && _impl_.a_blob_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_blob_ != nullptr);
+  return value;
 }
 inline bool IPCTransferableDataBlob::has_a_blob() const {
   return _internal_has_a_blob();
@@ -2007,14 +2171,14 @@ inline void IPCTransferableDataBlob::unsafe_arena_set_allocated_a_blob(
   }
   _impl_.a_blob_ = a_blob;
   if (a_blob) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCTransferableDataBlob.a_blob)
 }
 inline ::protobuf::mozilla::dom::IPCBlob* IPCTransferableDataBlob::release_a_blob() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.a_blob_;
   _impl_.a_blob_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -2030,13 +2194,13 @@ inline ::protobuf::mozilla::dom::IPCBlob* IPCTransferableDataBlob::release_a_blo
 }
 inline ::protobuf::mozilla::dom::IPCBlob* IPCTransferableDataBlob::unsafe_arena_release_a_blob() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataBlob.a_blob)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.a_blob_;
   _impl_.a_blob_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::IPCBlob* IPCTransferableDataBlob::_internal_mutable_a_blob() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_blob_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::IPCBlob>(GetArenaForAllocation());
     _impl_.a_blob_ = p;
@@ -2061,9 +2225,9 @@ inline void IPCTransferableDataBlob::set_allocated_a_blob(::protobuf::mozilla::d
       a_blob = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_blob, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_blob_ = a_blob;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferableDataBlob.a_blob)
@@ -2456,9 +2620,17 @@ inline IPCTransferableDataType::ContentCase IPCTransferableDataType::content_cas
 
 // IPCTransferableDataItem
 
-// string a_flavor = 1;
+// required string a_flavor = 1;
+inline bool IPCTransferableDataItem::_internal_has_a_flavor() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool IPCTransferableDataItem::has_a_flavor() const {
+  return _internal_has_a_flavor();
+}
 inline void IPCTransferableDataItem::clear_a_flavor() {
   _impl_.a_flavor_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& IPCTransferableDataItem::a_flavor() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableDataItem.a_flavor)
@@ -2467,7 +2639,7 @@ inline const std::string& IPCTransferableDataItem::a_flavor() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCTransferableDataItem::set_a_flavor(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_flavor_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCTransferableDataItem.a_flavor)
 }
@@ -2480,22 +2652,32 @@ inline const std::string& IPCTransferableDataItem::_internal_a_flavor() const {
   return _impl_.a_flavor_.Get();
 }
 inline void IPCTransferableDataItem::_internal_set_a_flavor(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_flavor_.Set(value, GetArenaForAllocation());
 }
 inline std::string* IPCTransferableDataItem::_internal_mutable_a_flavor() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_flavor_.Mutable(GetArenaForAllocation());
 }
 inline std::string* IPCTransferableDataItem::release_a_flavor() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataItem.a_flavor)
-  return _impl_.a_flavor_.Release();
+  if (!_internal_has_a_flavor()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_flavor_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_flavor_.IsDefault()) {
+    _impl_.a_flavor_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void IPCTransferableDataItem::set_allocated_a_flavor(std::string* a_flavor) {
   if (a_flavor != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_flavor_.SetAllocated(a_flavor, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2506,18 +2688,18 @@ inline void IPCTransferableDataItem::set_allocated_a_flavor(std::string* a_flavo
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferableDataItem.a_flavor)
 }
 
-// .protobuf.mozilla.dom.IPCTransferableDataType a_data = 2;
+// required .protobuf.mozilla.dom.IPCTransferableDataType a_data = 2;
 inline bool IPCTransferableDataItem::_internal_has_a_data() const {
-  return this != internal_default_instance() && _impl_.a_data_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_data_ != nullptr);
+  return value;
 }
 inline bool IPCTransferableDataItem::has_a_data() const {
   return _internal_has_a_data();
 }
 inline void IPCTransferableDataItem::clear_a_data() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_data_ != nullptr) {
-    delete _impl_.a_data_;
-  }
-  _impl_.a_data_ = nullptr;
+  if (_impl_.a_data_ != nullptr) _impl_.a_data_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const ::protobuf::mozilla::dom::IPCTransferableDataType& IPCTransferableDataItem::_internal_a_data() const {
   const ::protobuf::mozilla::dom::IPCTransferableDataType* p = _impl_.a_data_;
@@ -2535,14 +2717,14 @@ inline void IPCTransferableDataItem::unsafe_arena_set_allocated_a_data(
   }
   _impl_.a_data_ = a_data;
   if (a_data) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCTransferableDataItem.a_data)
 }
 inline ::protobuf::mozilla::dom::IPCTransferableDataType* IPCTransferableDataItem::release_a_data() {
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::dom::IPCTransferableDataType* temp = _impl_.a_data_;
   _impl_.a_data_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -2558,13 +2740,13 @@ inline ::protobuf::mozilla::dom::IPCTransferableDataType* IPCTransferableDataIte
 }
 inline ::protobuf::mozilla::dom::IPCTransferableDataType* IPCTransferableDataItem::unsafe_arena_release_a_data() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataItem.a_data)
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::dom::IPCTransferableDataType* temp = _impl_.a_data_;
   _impl_.a_data_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::IPCTransferableDataType* IPCTransferableDataItem::_internal_mutable_a_data() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   if (_impl_.a_data_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::IPCTransferableDataType>(GetArenaForAllocation());
     _impl_.a_data_ = p;
@@ -2588,9 +2770,9 @@ inline void IPCTransferableDataItem::set_allocated_a_data(::protobuf::mozilla::d
       a_data = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_data, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_data_ = a_data;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferableDataItem.a_data)
@@ -2808,18 +2990,18 @@ inline IPCTransferableDataOrError::ContentCase IPCTransferableDataOrError::conte
 
 // IPCTransferable
 
-// .protobuf.mozilla.dom.IPCTransferableData a_data = 1;
+// required .protobuf.mozilla.dom.IPCTransferableData a_data = 1;
 inline bool IPCTransferable::_internal_has_a_data() const {
-  return this != internal_default_instance() && _impl_.a_data_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_data_ != nullptr);
+  return value;
 }
 inline bool IPCTransferable::has_a_data() const {
   return _internal_has_a_data();
 }
 inline void IPCTransferable::clear_a_data() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_data_ != nullptr) {
-    delete _impl_.a_data_;
-  }
-  _impl_.a_data_ = nullptr;
+  if (_impl_.a_data_ != nullptr) _impl_.a_data_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline const ::protobuf::mozilla::dom::IPCTransferableData& IPCTransferable::_internal_a_data() const {
   const ::protobuf::mozilla::dom::IPCTransferableData* p = _impl_.a_data_;
@@ -2837,14 +3019,14 @@ inline void IPCTransferable::unsafe_arena_set_allocated_a_data(
   }
   _impl_.a_data_ = a_data;
   if (a_data) {
-    
+    _impl_._has_bits_[0] |= 0x00000008u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000008u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCTransferable.a_data)
 }
 inline ::protobuf::mozilla::dom::IPCTransferableData* IPCTransferable::release_a_data() {
-  
+  _impl_._has_bits_[0] &= ~0x00000008u;
   ::protobuf::mozilla::dom::IPCTransferableData* temp = _impl_.a_data_;
   _impl_.a_data_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -2860,13 +3042,13 @@ inline ::protobuf::mozilla::dom::IPCTransferableData* IPCTransferable::release_a
 }
 inline ::protobuf::mozilla::dom::IPCTransferableData* IPCTransferable::unsafe_arena_release_a_data() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferable.a_data)
-  
+  _impl_._has_bits_[0] &= ~0x00000008u;
   ::protobuf::mozilla::dom::IPCTransferableData* temp = _impl_.a_data_;
   _impl_.a_data_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::IPCTransferableData* IPCTransferable::_internal_mutable_a_data() {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   if (_impl_.a_data_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::IPCTransferableData>(GetArenaForAllocation());
     _impl_.a_data_ = p;
@@ -2890,17 +3072,25 @@ inline void IPCTransferable::set_allocated_a_data(::protobuf::mozilla::dom::IPCT
       a_data = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_data, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000008u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000008u;
   }
   _impl_.a_data_ = a_data;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferable.a_data)
 }
 
-// bool a_isPrivateData = 2;
+// required bool a_isPrivateData = 2;
+inline bool IPCTransferable::_internal_has_a_isprivatedata() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool IPCTransferable::has_a_isprivatedata() const {
+  return _internal_has_a_isprivatedata();
+}
 inline void IPCTransferable::clear_a_isprivatedata() {
   _impl_.a_isprivatedata_ = false;
+  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline bool IPCTransferable::_internal_a_isprivatedata() const {
   return _impl_.a_isprivatedata_;
@@ -2910,7 +3100,7 @@ inline bool IPCTransferable::a_isprivatedata() const {
   return _internal_a_isprivatedata();
 }
 inline void IPCTransferable::_internal_set_a_isprivatedata(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000020u;
   _impl_.a_isprivatedata_ = value;
 }
 inline void IPCTransferable::set_a_isprivatedata(bool value) {
@@ -2988,7 +3178,7 @@ inline void IPCTransferable::set_allocated_a_dataprincipal(std::string* a_datapr
 
 // optional .protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 4;
 inline bool IPCTransferable::_internal_has_a_cookiejarsettings() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_cookiejarsettings_ != nullptr);
   return value;
 }
@@ -3011,14 +3201,14 @@ inline void IPCTransferable::unsafe_arena_set_allocated_a_cookiejarsettings(
   }
   _impl_.a_cookiejarsettings_ = a_cookiejarsettings;
   if (a_cookiejarsettings) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    _impl_._has_bits_[0] |= 0x00000010u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    _impl_._has_bits_[0] &= ~0x00000010u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCTransferable.a_cookieJarSettings)
 }
 inline ::protobuf::mozilla::net::CookieJarSettingsArgs* IPCTransferable::release_a_cookiejarsettings() {
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  _impl_._has_bits_[0] &= ~0x00000010u;
   ::protobuf::mozilla::net::CookieJarSettingsArgs* temp = _impl_.a_cookiejarsettings_;
   _impl_.a_cookiejarsettings_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -3034,13 +3224,13 @@ inline ::protobuf::mozilla::net::CookieJarSettingsArgs* IPCTransferable::release
 }
 inline ::protobuf::mozilla::net::CookieJarSettingsArgs* IPCTransferable::unsafe_arena_release_a_cookiejarsettings() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferable.a_cookieJarSettings)
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  _impl_._has_bits_[0] &= ~0x00000010u;
   ::protobuf::mozilla::net::CookieJarSettingsArgs* temp = _impl_.a_cookiejarsettings_;
   _impl_.a_cookiejarsettings_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::net::CookieJarSettingsArgs* IPCTransferable::_internal_mutable_a_cookiejarsettings() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_._has_bits_[0] |= 0x00000010u;
   if (_impl_.a_cookiejarsettings_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::net::CookieJarSettingsArgs>(GetArenaForAllocation());
     _impl_.a_cookiejarsettings_ = p;
@@ -3065,17 +3255,25 @@ inline void IPCTransferable::set_allocated_a_cookiejarsettings(::protobuf::mozil
       a_cookiejarsettings = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_cookiejarsettings, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000004u;
+    _impl_._has_bits_[0] |= 0x00000010u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    _impl_._has_bits_[0] &= ~0x00000010u;
   }
   _impl_.a_cookiejarsettings_ = a_cookiejarsettings;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferable.a_cookieJarSettings)
 }
 
-// bytes a_contentPolicyType = 5;
+// required bytes a_contentPolicyType = 5;
+inline bool IPCTransferable::_internal_has_a_contentpolicytype() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool IPCTransferable::has_a_contentpolicytype() const {
+  return _internal_has_a_contentpolicytype();
+}
 inline void IPCTransferable::clear_a_contentpolicytype() {
   _impl_.a_contentpolicytype_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& IPCTransferable::a_contentpolicytype() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferable.a_contentPolicyType)
@@ -3084,7 +3282,7 @@ inline const std::string& IPCTransferable::a_contentpolicytype() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCTransferable::set_a_contentpolicytype(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_contentpolicytype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCTransferable.a_contentPolicyType)
 }
@@ -3097,22 +3295,32 @@ inline const std::string& IPCTransferable::_internal_a_contentpolicytype() const
   return _impl_.a_contentpolicytype_.Get();
 }
 inline void IPCTransferable::_internal_set_a_contentpolicytype(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_contentpolicytype_.Set(value, GetArenaForAllocation());
 }
 inline std::string* IPCTransferable::_internal_mutable_a_contentpolicytype() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_contentpolicytype_.Mutable(GetArenaForAllocation());
 }
 inline std::string* IPCTransferable::release_a_contentpolicytype() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferable.a_contentPolicyType)
-  return _impl_.a_contentpolicytype_.Release();
+  if (!_internal_has_a_contentpolicytype()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_contentpolicytype_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_contentpolicytype_.IsDefault()) {
+    _impl_.a_contentpolicytype_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void IPCTransferable::set_allocated_a_contentpolicytype(std::string* a_contentpolicytype) {
   if (a_contentpolicytype != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_contentpolicytype_.SetAllocated(a_contentpolicytype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3125,7 +3333,7 @@ inline void IPCTransferable::set_allocated_a_contentpolicytype(std::string* a_co
 
 // optional bytes a_referrerInfo = 6;
 inline bool IPCTransferable::_internal_has_a_referrerinfo() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
 inline bool IPCTransferable::has_a_referrerinfo() const {
@@ -3133,7 +3341,7 @@ inline bool IPCTransferable::has_a_referrerinfo() const {
 }
 inline void IPCTransferable::clear_a_referrerinfo() {
   _impl_.a_referrerinfo_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& IPCTransferable::a_referrerinfo() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferable.a_referrerInfo)
@@ -3142,7 +3350,7 @@ inline const std::string& IPCTransferable::a_referrerinfo() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCTransferable::set_a_referrerinfo(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ _impl_._has_bits_[0] |= 0x00000004u;
  _impl_.a_referrerinfo_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCTransferable.a_referrerInfo)
 }
@@ -3155,11 +3363,11 @@ inline const std::string& IPCTransferable::_internal_a_referrerinfo() const {
   return _impl_.a_referrerinfo_.Get();
 }
 inline void IPCTransferable::_internal_set_a_referrerinfo(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_referrerinfo_.Set(value, GetArenaForAllocation());
 }
 inline std::string* IPCTransferable::_internal_mutable_a_referrerinfo() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_._has_bits_[0] |= 0x00000004u;
   return _impl_.a_referrerinfo_.Mutable(GetArenaForAllocation());
 }
 inline std::string* IPCTransferable::release_a_referrerinfo() {
@@ -3167,7 +3375,7 @@ inline std::string* IPCTransferable::release_a_referrerinfo() {
   if (!_internal_has_a_referrerinfo()) {
     return nullptr;
   }
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
   auto* p = _impl_.a_referrerinfo_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (_impl_.a_referrerinfo_.IsDefault()) {
@@ -3178,9 +3386,9 @@ inline std::string* IPCTransferable::release_a_referrerinfo() {
 }
 inline void IPCTransferable::set_allocated_a_referrerinfo(std::string* a_referrerinfo) {
   if (a_referrerinfo != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.a_referrerinfo_.SetAllocated(a_referrerinfo, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

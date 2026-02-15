@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/workers/remoteworkers/PRemoteWorkerNonLifeCycleOpController.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.PRemoteWorkerNonLifeCycleOpController;
@@ -22,19 +22,19 @@ message Msg_Terminated {
 }
 
 message Msg_Error {
-  protobuf.mozilla.dom.ErrorValue a_aValue = 1;
+  required protobuf.mozilla.dom.ErrorValue a_aValue = 1;
 }
 
 message Msg_ExecOp {
-  protobuf.mozilla.dom.SharedWorkerOpArgs a_aOpArgs = 1;
+  required protobuf.mozilla.dom.SharedWorkerOpArgs a_aOpArgs = 1;
 }
 
 message Msg_ExecServiceWorkerOp {
-  protobuf.mozilla.dom.ServiceWorkerOpArgs a_aOpArgs = 1;
+  required protobuf.mozilla.dom.ServiceWorkerOpArgs a_aOpArgs = 1;
 }
 
 message Reply_ExecServiceWorkerOp {
-  protobuf.mozilla.dom.ServiceWorkerOpResult a_aResult = 1;
+  required protobuf.mozilla.dom.ServiceWorkerOpResult a_aResult = 1;
 }
 
 message Msg_Shutdown {

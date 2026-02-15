@@ -5,20 +5,20 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/webgpu/ipc/PWebGPUTypes.ipdlh
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.webgpu;
 
 // Structs and unions declarations
 message BufferMapSuccess {
-  uint64 a_offset = 1;
-  uint64 a_size = 2;
-  bool a_writable = 3;
+  required uint64 a_offset = 1;
+  required uint64 a_size = 2;
+  required bool a_writable = 3;
 }
 
 message BufferMapError {
-  string a_message = 1;
+  required string a_message = 1;
 }
 
 message BufferMapResult {

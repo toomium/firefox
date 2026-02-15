@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/ipc/PTabContext.ipdlh
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom;
@@ -13,13 +13,13 @@ package protobuf.mozilla.dom;
 
 // Structs and unions declarations
 message PopupIPCTabContext {
-  bytes a_opener = 1;
-  uint64 a_chromeOuterWindowID = 2;
+  required bytes a_opener = 1;
+  required uint64 a_chromeOuterWindowID = 2;
 }
 
 message FrameIPCTabContext {
-  uint64 a_chromeOuterWindowID = 1;
-  uint32 a_maxTouchPoints = 2;
+  required uint64 a_chromeOuterWindowID = 1;
+  required uint32 a_maxTouchPoints = 2;
 }
 
 message IPCTabContext {

@@ -224,19 +224,20 @@ uint8_t* IPCBlobOrError::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.mozilla.dom.IPCBlob a_mVIPCBlob = 1;
-  if (_internal_has_a_mvipcblob()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::a_mvipcblob(this),
-        _Internal::a_mvipcblob(this).GetCachedSize(), target, stream);
+  switch (content_case()) {
+    case kAMVIPCBlob: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(1, _Internal::a_mvipcblob(this),
+          _Internal::a_mvipcblob(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVnsresult: {
+      target = stream->WriteBytesMaybeAliased(
+          2, this->_internal_a_mvnsresult(), target);
+      break;
+    }
+    default: ;
   }
-
-  // bytes a_mVnsresult = 2;
-  if (_internal_has_a_mvnsresult()) {
-    target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_a_mvnsresult(), target);
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
@@ -318,6 +319,20 @@ void IPCBlobOrError::CopyFrom(const IPCBlobOrError& from) {
 }
 
 bool IPCBlobOrError::IsInitialized() const {
+  switch (content_case()) {
+    case kAMVIPCBlob: {
+      if (_internal_has_a_mvipcblob()) {
+        if (!_impl_.content_.a_mvipcblob_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case kAMVnsresult: {
+      break;
+    }
+    case CONTENT_NOT_SET: {
+      break;
+    }
+  }
   return true;
 }
 

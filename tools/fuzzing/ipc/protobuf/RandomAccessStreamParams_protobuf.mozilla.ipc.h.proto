@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/ipc/glue/RandomAccessStreamParams.ipdlh
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.ipc;
@@ -14,13 +14,13 @@ import "IPCQuotaObject.proto";
 
 // Structs and unions declarations
 message FileRandomAccessStreamParams {
-  bytes a_fileDescriptor = 1;
-  sint32 a_behaviorFlags = 2;
+  required bytes a_fileDescriptor = 1;
+  required sint32 a_behaviorFlags = 2;
 }
 
 message LimitingFileRandomAccessStreamParams {
-  protobuf.mozilla.ipc.FileRandomAccessStreamParams a_fileRandomAccessStreamParams = 1;
-  protobuf.mozilla.dom.quota.IPCQuotaObject a_quotaObject = 2;
+  required protobuf.mozilla.ipc.FileRandomAccessStreamParams a_fileRandomAccessStreamParams = 1;
+  required protobuf.mozilla.dom.quota.IPCQuotaObject a_quotaObject = 2;
 }
 
 message RandomAccessStreamParams {

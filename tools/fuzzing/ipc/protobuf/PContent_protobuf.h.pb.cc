@@ -204,24 +204,24 @@ uint8_t* ChromeRegistryItem::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_mVChromePackage = 1;
-  if (_internal_has_a_mvchromepackage()) {
-    target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_a_mvchromepackage(), target);
+  switch (content_case()) {
+    case kAMVChromePackage: {
+      target = stream->WriteBytesMaybeAliased(
+          1, this->_internal_a_mvchromepackage(), target);
+      break;
+    }
+    case kAMVOverrideMapping: {
+      target = stream->WriteBytesMaybeAliased(
+          2, this->_internal_a_mvoverridemapping(), target);
+      break;
+    }
+    case kAMVSubstitutionMapping: {
+      target = stream->WriteBytesMaybeAliased(
+          3, this->_internal_a_mvsubstitutionmapping(), target);
+      break;
+    }
+    default: ;
   }
-
-  // bytes a_mVOverrideMapping = 2;
-  if (_internal_has_a_mvoverridemapping()) {
-    target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_a_mvoverridemapping(), target);
-  }
-
-  // bytes a_mVSubstitutionMapping = 3;
-  if (_internal_has_a_mvsubstitutionmapping()) {
-    target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_a_mvsubstitutionmapping(), target);
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);

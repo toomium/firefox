@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/simpledb/PBackgroundSDBRequest.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom;
@@ -19,7 +19,7 @@ message SDBRequestSeekResponse {
 }
 
 message SDBRequestReadResponse {
-  string a_data = 1;
+  required string a_data = 1;
 }
 
 message SDBRequestWriteResponse {

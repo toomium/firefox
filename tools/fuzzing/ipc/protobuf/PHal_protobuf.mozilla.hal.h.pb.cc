@@ -22,10 +22,11 @@ namespace mozilla {
 namespace hal {
 PROTOBUF_CONSTEXPR BatteryInformation::BatteryInformation(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_level_)*/0
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_level_)*/0
   , /*decltype(_impl_.a_remainingtime_)*/0
-  , /*decltype(_impl_.a_charging_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_charging_)*/false} {}
 struct BatteryInformationDefaultTypeInternal {
   PROTOBUF_CONSTEXPR BatteryInformationDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -37,10 +38,11 @@ struct BatteryInformationDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 BatteryInformationDefaultTypeInternal _BatteryInformation_default_instance_;
 PROTOBUF_CONSTEXPR SensorData::SensorData(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_values_)*/{}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_values_)*/{}
   , /*decltype(_impl_.a_sensor_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_timestamp_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_timestamp_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct SensorDataDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SensorDataDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -52,10 +54,11 @@ struct SensorDataDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SensorDataDefaultTypeInternal _SensorData_default_instance_;
 PROTOBUF_CONSTEXPR NetworkInformation::NetworkInformation(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_type_)*/0u
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_type_)*/0u
   , /*decltype(_impl_.a_iswifi_)*/false
-  , /*decltype(_impl_.a_dhcpgateway_)*/0u
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_dhcpgateway_)*/0u} {}
 struct NetworkInformationDefaultTypeInternal {
   PROTOBUF_CONSTEXPR NetworkInformationDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -67,12 +70,12 @@ struct NetworkInformationDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 NetworkInformationDefaultTypeInternal _NetworkInformation_default_instance_;
 PROTOBUF_CONSTEXPR WakeLockInformation::WakeLockInformation(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_lockingprocesses_)*/{}
-  , /*decltype(_impl_._a_lockingprocesses_cached_byte_size_)*/{0}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_lockingprocesses_)*/{}
   , /*decltype(_impl_.a_topic_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_numlocks_)*/0u
-  , /*decltype(_impl_.a_numhidden_)*/0u
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_numhidden_)*/0u} {}
 struct WakeLockInformationDefaultTypeInternal {
   PROTOBUF_CONSTEXPR WakeLockInformationDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -93,6 +96,19 @@ namespace hal {
 
 class BatteryInformation::_Internal {
  public:
+  using HasBits = decltype(std::declval<BatteryInformation>()._impl_._has_bits_);
+  static void set_has_a_level(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_charging(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_a_remainingtime(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
+  }
 };
 
 BatteryInformation::BatteryInformation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -105,10 +121,11 @@ BatteryInformation::BatteryInformation(const BatteryInformation& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   BatteryInformation* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_level_){}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_level_){}
     , decltype(_impl_.a_remainingtime_){}
-    , decltype(_impl_.a_charging_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_charging_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   ::memcpy(&_impl_.a_level_, &from._impl_.a_level_,
@@ -122,10 +139,11 @@ inline void BatteryInformation::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_level_){0}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_level_){0}
     , decltype(_impl_.a_remainingtime_){0}
     , decltype(_impl_.a_charging_){false}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
 
@@ -152,37 +170,45 @@ void BatteryInformation::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&_impl_.a_level_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.a_charging_) -
-      reinterpret_cast<char*>(&_impl_.a_level_)) + sizeof(_impl_.a_charging_));
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    ::memset(&_impl_.a_level_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_charging_) -
+        reinterpret_cast<char*>(&_impl_.a_level_)) + sizeof(_impl_.a_charging_));
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* BatteryInformation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // double a_level = 1;
+      // required double a_level = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 9)) {
+          _Internal::set_has_a_level(&has_bits);
           _impl_.a_level_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
-      // bool a_charging = 2;
+      // required bool a_charging = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_a_charging(&has_bits);
           _impl_.a_charging_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // double a_remainingTime = 3;
+      // required double a_remainingTime = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 25)) {
+          _Internal::set_has_a_remainingtime(&has_bits);
           _impl_.a_remainingtime_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
@@ -204,6 +230,7 @@ const char* BatteryInformation::_InternalParse(const char* ptr, ::_pbi::ParseCon
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -217,28 +244,21 @@ uint8_t* BatteryInformation::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // double a_level = 1;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_level = this->_internal_a_level();
-  uint64_t raw_a_level;
-  memcpy(&raw_a_level, &tmp_a_level, sizeof(tmp_a_level));
-  if (raw_a_level != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required double a_level = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(1, this->_internal_a_level(), target);
   }
 
-  // bool a_charging = 2;
-  if (this->_internal_a_charging() != 0) {
+  // required bool a_charging = 2;
+  if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_charging(), target);
   }
 
-  // double a_remainingTime = 3;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_remainingtime = this->_internal_a_remainingtime();
-  uint64_t raw_a_remainingtime;
-  memcpy(&raw_a_remainingtime, &tmp_a_remainingtime, sizeof(tmp_a_remainingtime));
-  if (raw_a_remainingtime != 0) {
+  // required double a_remainingTime = 3;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(3, this->_internal_a_remainingtime(), target);
   }
@@ -251,36 +271,47 @@ uint8_t* BatteryInformation::_InternalSerialize(
   return target;
 }
 
+size_t BatteryInformation::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.hal.BatteryInformation)
+  size_t total_size = 0;
+
+  if (_internal_has_a_level()) {
+    // required double a_level = 1;
+    total_size += 1 + 8;
+  }
+
+  if (_internal_has_a_remainingtime()) {
+    // required double a_remainingTime = 3;
+    total_size += 1 + 8;
+  }
+
+  if (_internal_has_a_charging()) {
+    // required bool a_charging = 2;
+    total_size += 1 + 1;
+  }
+
+  return total_size;
+}
 size_t BatteryInformation::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal.BatteryInformation)
   size_t total_size = 0;
 
+  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
+    // required double a_level = 1;
+    total_size += 1 + 8;
+
+    // required double a_remainingTime = 3;
+    total_size += 1 + 8;
+
+    // required bool a_charging = 2;
+    total_size += 1 + 1;
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // double a_level = 1;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_level = this->_internal_a_level();
-  uint64_t raw_a_level;
-  memcpy(&raw_a_level, &tmp_a_level, sizeof(tmp_a_level));
-  if (raw_a_level != 0) {
-    total_size += 1 + 8;
-  }
-
-  // double a_remainingTime = 3;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_remainingtime = this->_internal_a_remainingtime();
-  uint64_t raw_a_remainingtime;
-  memcpy(&raw_a_remainingtime, &tmp_a_remainingtime, sizeof(tmp_a_remainingtime));
-  if (raw_a_remainingtime != 0) {
-    total_size += 1 + 8;
-  }
-
-  // bool a_charging = 2;
-  if (this->_internal_a_charging() != 0) {
-    total_size += 1 + 1;
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -303,22 +334,18 @@ void BatteryInformation::MergeFrom(const BatteryInformation& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_level = from._internal_a_level();
-  uint64_t raw_a_level;
-  memcpy(&raw_a_level, &tmp_a_level, sizeof(tmp_a_level));
-  if (raw_a_level != 0) {
-    _this->_internal_set_a_level(from._internal_a_level());
-  }
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_remainingtime = from._internal_a_remainingtime();
-  uint64_t raw_a_remainingtime;
-  memcpy(&raw_a_remainingtime, &tmp_a_remainingtime, sizeof(tmp_a_remainingtime));
-  if (raw_a_remainingtime != 0) {
-    _this->_internal_set_a_remainingtime(from._internal_a_remainingtime());
-  }
-  if (from._internal_a_charging() != 0) {
-    _this->_internal_set_a_charging(from._internal_a_charging());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_impl_.a_level_ = from._impl_.a_level_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_remainingtime_ = from._impl_.a_remainingtime_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.a_charging_ = from._impl_.a_charging_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -331,12 +358,14 @@ void BatteryInformation::CopyFrom(const BatteryInformation& from) {
 }
 
 bool BatteryInformation::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void BatteryInformation::InternalSwap(BatteryInformation* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(BatteryInformation, _impl_.a_charging_)
       + sizeof(BatteryInformation::_impl_.a_charging_)
@@ -354,6 +383,16 @@ std::string BatteryInformation::GetTypeName() const {
 
 class SensorData::_Internal {
  public:
+  using HasBits = decltype(std::declval<SensorData>()._impl_._has_bits_);
+  static void set_has_a_sensor(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_timestamp(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 SensorData::SensorData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -366,17 +405,18 @@ SensorData::SensorData(const SensorData& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SensorData* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_values_){from._impl_.a_values_}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_values_){from._impl_.a_values_}
     , decltype(_impl_.a_sensor_){}
-    , decltype(_impl_.a_timestamp_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_timestamp_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_sensor_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_sensor_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_sensor().empty()) {
+  if (from._internal_has_a_sensor()) {
     _this->_impl_.a_sensor_.Set(from._internal_a_sensor(), 
       _this->GetArenaForAllocation());
   }
@@ -384,7 +424,7 @@ SensorData::SensorData(const SensorData& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_timestamp_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_timestamp().empty()) {
+  if (from._internal_has_a_timestamp()) {
     _this->_impl_.a_timestamp_.Set(from._internal_a_timestamp(), 
       _this->GetArenaForAllocation());
   }
@@ -396,10 +436,11 @@ inline void SensorData::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_values_){arena}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_values_){arena}
     , decltype(_impl_.a_sensor_){}
     , decltype(_impl_.a_timestamp_){}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_sensor_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -438,18 +479,27 @@ void SensorData::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_values_.Clear();
-  _impl_.a_sensor_.ClearToEmpty();
-  _impl_.a_timestamp_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_sensor_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_timestamp_.ClearNonDefaultToEmpty();
+    }
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* SensorData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_sensor = 1;
+      // required bytes a_sensor = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_sensor();
@@ -458,7 +508,7 @@ const char* SensorData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // bytes a_timestamp = 2;
+      // required bytes a_timestamp = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_timestamp();
@@ -469,12 +519,17 @@ const char* SensorData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         continue;
       // repeated float a_values = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 29)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            _internal_add_a_values(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
+            ptr += sizeof(float);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<29>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 26) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(_internal_mutable_a_values(), ptr, ctx);
           CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 29) {
-          _internal_add_a_values(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
-          ptr += sizeof(float);
         } else
           goto handle_unusual;
         continue;
@@ -494,6 +549,7 @@ const char* SensorData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -507,21 +563,23 @@ uint8_t* SensorData::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_sensor = 1;
-  if (!this->_internal_a_sensor().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_sensor = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_sensor(), target);
   }
 
-  // bytes a_timestamp = 2;
-  if (!this->_internal_a_timestamp().empty()) {
+  // required bytes a_timestamp = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_a_timestamp(), target);
   }
 
   // repeated float a_values = 3;
-  if (this->_internal_a_values_size() > 0) {
-    target = stream->WriteFixedPacked(3, _internal_a_values(), target);
+  for (int i = 0, n = this->_internal_a_values_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(3, this->_internal_a_values(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -532,10 +590,44 @@ uint8_t* SensorData::_InternalSerialize(
   return target;
 }
 
+size_t SensorData::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.hal.SensorData)
+  size_t total_size = 0;
+
+  if (_internal_has_a_sensor()) {
+    // required bytes a_sensor = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_sensor());
+  }
+
+  if (_internal_has_a_timestamp()) {
+    // required bytes a_timestamp = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_timestamp());
+  }
+
+  return total_size;
+}
 size_t SensorData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal.SensorData)
   size_t total_size = 0;
 
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required bytes a_sensor = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_sensor());
+
+    // required bytes a_timestamp = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_timestamp());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -544,25 +636,9 @@ size_t SensorData::ByteSizeLong() const {
   {
     unsigned int count = static_cast<unsigned int>(this->_internal_a_values_size());
     size_t data_size = 4UL * count;
-    if (data_size > 0) {
-      total_size += 1 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
+    total_size += 1 *
+                  ::_pbi::FromIntSize(this->_internal_a_values_size());
     total_size += data_size;
-  }
-
-  // bytes a_sensor = 1;
-  if (!this->_internal_a_sensor().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_sensor());
-  }
-
-  // bytes a_timestamp = 2;
-  if (!this->_internal_a_timestamp().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_timestamp());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -587,11 +663,14 @@ void SensorData::MergeFrom(const SensorData& from) {
   (void) cached_has_bits;
 
   _this->_impl_.a_values_.MergeFrom(from._impl_.a_values_);
-  if (!from._internal_a_sensor().empty()) {
-    _this->_internal_set_a_sensor(from._internal_a_sensor());
-  }
-  if (!from._internal_a_timestamp().empty()) {
-    _this->_internal_set_a_timestamp(from._internal_a_timestamp());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_sensor(from._internal_a_sensor());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_timestamp(from._internal_a_timestamp());
+    }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -604,6 +683,7 @@ void SensorData::CopyFrom(const SensorData& from) {
 }
 
 bool SensorData::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -612,6 +692,7 @@ void SensorData::InternalSwap(SensorData* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_values_.InternalSwap(&other->_impl_.a_values_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_sensor_, lhs_arena,
@@ -632,6 +713,19 @@ std::string SensorData::GetTypeName() const {
 
 class NetworkInformation::_Internal {
  public:
+  using HasBits = decltype(std::declval<NetworkInformation>()._impl_._has_bits_);
+  static void set_has_a_type(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_iswifi(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_dhcpgateway(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
+  }
 };
 
 NetworkInformation::NetworkInformation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -644,10 +738,11 @@ NetworkInformation::NetworkInformation(const NetworkInformation& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   NetworkInformation* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_type_){}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_type_){}
     , decltype(_impl_.a_iswifi_){}
-    , decltype(_impl_.a_dhcpgateway_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_dhcpgateway_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   ::memcpy(&_impl_.a_type_, &from._impl_.a_type_,
@@ -661,10 +756,11 @@ inline void NetworkInformation::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_type_){0u}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_type_){0u}
     , decltype(_impl_.a_iswifi_){false}
     , decltype(_impl_.a_dhcpgateway_){0u}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
 
@@ -691,37 +787,45 @@ void NetworkInformation::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&_impl_.a_type_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.a_dhcpgateway_) -
-      reinterpret_cast<char*>(&_impl_.a_type_)) + sizeof(_impl_.a_dhcpgateway_));
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    ::memset(&_impl_.a_type_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_dhcpgateway_) -
+        reinterpret_cast<char*>(&_impl_.a_type_)) + sizeof(_impl_.a_dhcpgateway_));
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* NetworkInformation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // uint32 a_type = 1;
+      // required uint32 a_type = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_type(&has_bits);
           _impl_.a_type_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bool a_isWifi = 2;
+      // required bool a_isWifi = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_a_iswifi(&has_bits);
           _impl_.a_iswifi_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // uint32 a_dhcpGateway = 3;
+      // required uint32 a_dhcpGateway = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_a_dhcpgateway(&has_bits);
           _impl_.a_dhcpgateway_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
@@ -743,6 +847,7 @@ const char* NetworkInformation::_InternalParse(const char* ptr, ::_pbi::ParseCon
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -756,20 +861,21 @@ uint8_t* NetworkInformation::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 a_type = 1;
-  if (this->_internal_a_type() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required uint32 a_type = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_type(), target);
   }
 
-  // bool a_isWifi = 2;
-  if (this->_internal_a_iswifi() != 0) {
+  // required bool a_isWifi = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_iswifi(), target);
   }
 
-  // uint32 a_dhcpGateway = 3;
-  if (this->_internal_a_dhcpgateway() != 0) {
+  // required uint32 a_dhcpGateway = 3;
+  if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_dhcpgateway(), target);
   }
@@ -782,28 +888,47 @@ uint8_t* NetworkInformation::_InternalSerialize(
   return target;
 }
 
+size_t NetworkInformation::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.hal.NetworkInformation)
+  size_t total_size = 0;
+
+  if (_internal_has_a_type()) {
+    // required uint32 a_type = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_type());
+  }
+
+  if (_internal_has_a_iswifi()) {
+    // required bool a_isWifi = 2;
+    total_size += 1 + 1;
+  }
+
+  if (_internal_has_a_dhcpgateway()) {
+    // required uint32 a_dhcpGateway = 3;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_dhcpgateway());
+  }
+
+  return total_size;
+}
 size_t NetworkInformation::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal.NetworkInformation)
   size_t total_size = 0;
 
+  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
+    // required uint32 a_type = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_type());
+
+    // required bool a_isWifi = 2;
+    total_size += 1 + 1;
+
+    // required uint32 a_dhcpGateway = 3;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_dhcpgateway());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // uint32 a_type = 1;
-  if (this->_internal_a_type() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_type());
-  }
-
-  // bool a_isWifi = 2;
-  if (this->_internal_a_iswifi() != 0) {
-    total_size += 1 + 1;
-  }
-
-  // uint32 a_dhcpGateway = 3;
-  if (this->_internal_a_dhcpgateway() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_dhcpgateway());
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -826,14 +951,18 @@ void NetworkInformation::MergeFrom(const NetworkInformation& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_a_type() != 0) {
-    _this->_internal_set_a_type(from._internal_a_type());
-  }
-  if (from._internal_a_iswifi() != 0) {
-    _this->_internal_set_a_iswifi(from._internal_a_iswifi());
-  }
-  if (from._internal_a_dhcpgateway() != 0) {
-    _this->_internal_set_a_dhcpgateway(from._internal_a_dhcpgateway());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_impl_.a_type_ = from._impl_.a_type_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_iswifi_ = from._impl_.a_iswifi_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.a_dhcpgateway_ = from._impl_.a_dhcpgateway_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -846,12 +975,14 @@ void NetworkInformation::CopyFrom(const NetworkInformation& from) {
 }
 
 bool NetworkInformation::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void NetworkInformation::InternalSwap(NetworkInformation* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(NetworkInformation, _impl_.a_dhcpgateway_)
       + sizeof(NetworkInformation::_impl_.a_dhcpgateway_)
@@ -869,6 +1000,19 @@ std::string NetworkInformation::GetTypeName() const {
 
 class WakeLockInformation::_Internal {
  public:
+  using HasBits = decltype(std::declval<WakeLockInformation>()._impl_._has_bits_);
+  static void set_has_a_topic(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_numlocks(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_numhidden(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
+  }
 };
 
 WakeLockInformation::WakeLockInformation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -881,19 +1025,19 @@ WakeLockInformation::WakeLockInformation(const WakeLockInformation& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WakeLockInformation* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_lockingprocesses_){from._impl_.a_lockingprocesses_}
-    , /*decltype(_impl_._a_lockingprocesses_cached_byte_size_)*/{0}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_lockingprocesses_){from._impl_.a_lockingprocesses_}
     , decltype(_impl_.a_topic_){}
     , decltype(_impl_.a_numlocks_){}
-    , decltype(_impl_.a_numhidden_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_numhidden_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_topic_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_topic_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_topic().empty()) {
+  if (from._internal_has_a_topic()) {
     _this->_impl_.a_topic_.Set(from._internal_a_topic(), 
       _this->GetArenaForAllocation());
   }
@@ -908,12 +1052,12 @@ inline void WakeLockInformation::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_lockingprocesses_){arena}
-    , /*decltype(_impl_._a_lockingprocesses_cached_byte_size_)*/{0}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_lockingprocesses_){arena}
     , decltype(_impl_.a_topic_){}
     , decltype(_impl_.a_numlocks_){0u}
     , decltype(_impl_.a_numhidden_){0u}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_topic_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -947,40 +1091,48 @@ void WakeLockInformation::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_lockingprocesses_.Clear();
-  _impl_.a_topic_.ClearToEmpty();
-  ::memset(&_impl_.a_numlocks_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.a_numhidden_) -
-      reinterpret_cast<char*>(&_impl_.a_numlocks_)) + sizeof(_impl_.a_numhidden_));
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_topic_.ClearNonDefaultToEmpty();
+  }
+  if (cached_has_bits & 0x00000006u) {
+    ::memset(&_impl_.a_numlocks_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_numhidden_) -
+        reinterpret_cast<char*>(&_impl_.a_numlocks_)) + sizeof(_impl_.a_numhidden_));
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* WakeLockInformation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string a_topic = 1;
+      // required string a_topic = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_topic();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // uint32 a_numLocks = 2;
+      // required uint32 a_numLocks = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_a_numlocks(&has_bits);
           _impl_.a_numlocks_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // uint32 a_numHidden = 3;
+      // required uint32 a_numHidden = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_a_numhidden(&has_bits);
           _impl_.a_numhidden_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
@@ -988,11 +1140,16 @@ const char* WakeLockInformation::_InternalParse(const char* ptr, ::_pbi::ParseCo
         continue;
       // repeated uint64 a_lockingProcesses = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            _internal_add_a_lockingprocesses(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<32>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 34) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt64Parser(_internal_mutable_a_lockingprocesses(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 32) {
-          _internal_add_a_lockingprocesses(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1013,6 +1170,7 @@ const char* WakeLockInformation::_InternalParse(const char* ptr, ::_pbi::ParseCo
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1026,35 +1184,29 @@ uint8_t* WakeLockInformation::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string a_topic = 1;
-  if (!this->_internal_a_topic().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_topic().data(), static_cast<int>(this->_internal_a_topic().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.hal.WakeLockInformation.a_topic");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_topic = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_topic(), target);
   }
 
-  // uint32 a_numLocks = 2;
-  if (this->_internal_a_numlocks() != 0) {
+  // required uint32 a_numLocks = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_numlocks(), target);
   }
 
-  // uint32 a_numHidden = 3;
-  if (this->_internal_a_numhidden() != 0) {
+  // required uint32 a_numHidden = 3;
+  if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_numhidden(), target);
   }
 
   // repeated uint64 a_lockingProcesses = 4;
-  {
-    int byte_size = _impl_._a_lockingprocesses_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteUInt64Packed(
-          4, _internal_a_lockingprocesses(), byte_size, target);
-    }
+  for (int i = 0, n = this->_internal_a_lockingprocesses_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(4, this->_internal_a_lockingprocesses(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1065,10 +1217,48 @@ uint8_t* WakeLockInformation::_InternalSerialize(
   return target;
 }
 
+size_t WakeLockInformation::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.hal.WakeLockInformation)
+  size_t total_size = 0;
+
+  if (_internal_has_a_topic()) {
+    // required string a_topic = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_topic());
+  }
+
+  if (_internal_has_a_numlocks()) {
+    // required uint32 a_numLocks = 2;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_numlocks());
+  }
+
+  if (_internal_has_a_numhidden()) {
+    // required uint32 a_numHidden = 3;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_numhidden());
+  }
+
+  return total_size;
+}
 size_t WakeLockInformation::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal.WakeLockInformation)
   size_t total_size = 0;
 
+  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
+    // required string a_topic = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_topic());
+
+    // required uint32 a_numLocks = 2;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_numlocks());
+
+    // required uint32 a_numHidden = 3;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_numhidden());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1077,31 +1267,9 @@ size_t WakeLockInformation::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt64Size(this->_impl_.a_lockingprocesses_);
-    if (data_size > 0) {
-      total_size += 1 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
-    int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._a_lockingprocesses_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
+    total_size += 1 *
+                  ::_pbi::FromIntSize(this->_internal_a_lockingprocesses_size());
     total_size += data_size;
-  }
-
-  // string a_topic = 1;
-  if (!this->_internal_a_topic().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_topic());
-  }
-
-  // uint32 a_numLocks = 2;
-  if (this->_internal_a_numlocks() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_numlocks());
-  }
-
-  // uint32 a_numHidden = 3;
-  if (this->_internal_a_numhidden() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_numhidden());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1126,14 +1294,18 @@ void WakeLockInformation::MergeFrom(const WakeLockInformation& from) {
   (void) cached_has_bits;
 
   _this->_impl_.a_lockingprocesses_.MergeFrom(from._impl_.a_lockingprocesses_);
-  if (!from._internal_a_topic().empty()) {
-    _this->_internal_set_a_topic(from._internal_a_topic());
-  }
-  if (from._internal_a_numlocks() != 0) {
-    _this->_internal_set_a_numlocks(from._internal_a_numlocks());
-  }
-  if (from._internal_a_numhidden() != 0) {
-    _this->_internal_set_a_numhidden(from._internal_a_numhidden());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_topic(from._internal_a_topic());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_numlocks_ = from._impl_.a_numlocks_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.a_numhidden_ = from._impl_.a_numhidden_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1146,6 +1318,7 @@ void WakeLockInformation::CopyFrom(const WakeLockInformation& from) {
 }
 
 bool WakeLockInformation::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1154,6 +1327,7 @@ void WakeLockInformation::InternalSwap(WakeLockInformation* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_lockingprocesses_.InternalSwap(&other->_impl_.a_lockingprocesses_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_topic_, lhs_arena,

@@ -134,6 +134,13 @@ class Msg___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -251,6 +258,13 @@ class Reply___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -366,6 +380,13 @@ class Msg_CheckAsync final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_CheckAsync& default_instance() {
@@ -513,6 +534,13 @@ class Reply_CheckAsync final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_CheckAsync& default_instance() {
     return *internal_default_instance();
   }
@@ -656,6 +684,13 @@ class Msg_SetDictionary final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_SetDictionary& default_instance() {
     return *internal_default_instance();
   }
@@ -730,7 +765,11 @@ class Msg_SetDictionary final :
   enum : int {
     kAADictionaryFieldNumber = 1,
   };
-  // string a_aDictionary = 1;
+  // required string a_aDictionary = 1;
+  bool has_a_adictionary() const;
+  private:
+  bool _internal_has_a_adictionary() const;
+  public:
   void clear_a_adictionary();
   const std::string& a_adictionary() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -752,8 +791,9 @@ class Msg_SetDictionary final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_adictionary_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_adictionary_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteSpellcheckEngine_2eproto;
@@ -789,6 +829,13 @@ class Reply_SetDictionary final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_SetDictionary& default_instance() {
@@ -865,7 +912,11 @@ class Reply_SetDictionary final :
   enum : int {
     kASuccessFieldNumber = 1,
   };
-  // bool a_success = 1;
+  // required bool a_success = 1;
+  bool has_a_success() const;
+  private:
+  bool _internal_has_a_success() const;
+  public:
   void clear_a_success();
   bool a_success() const;
   void set_a_success(bool value);
@@ -882,8 +933,9 @@ class Reply_SetDictionary final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_success_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_success_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteSpellcheckEngine_2eproto;
@@ -919,6 +971,13 @@ class Msg_SetDictionaries final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_SetDictionaries& default_instance() {
@@ -1066,6 +1125,13 @@ class Reply_SetDictionaries final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_SetDictionaries& default_instance() {
     return *internal_default_instance();
   }
@@ -1140,7 +1206,11 @@ class Reply_SetDictionaries final :
   enum : int {
     kASuccessFieldNumber = 1,
   };
-  // bool a_success = 1;
+  // required bool a_success = 1;
+  bool has_a_success() const;
+  private:
+  bool _internal_has_a_success() const;
+  public:
   void clear_a_success();
   bool a_success() const;
   void set_a_success(bool value);
@@ -1157,8 +1227,9 @@ class Reply_SetDictionaries final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_success_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_success_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteSpellcheckEngine_2eproto;
@@ -1194,6 +1265,13 @@ class Msg_Suggest final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Suggest& default_instance() {
@@ -1271,7 +1349,11 @@ class Msg_Suggest final :
     kAAWordFieldNumber = 1,
     kAACountFieldNumber = 2,
   };
-  // string a_aWord = 1;
+  // required string a_aWord = 1;
+  bool has_a_aword() const;
+  private:
+  bool _internal_has_a_aword() const;
+  public:
   void clear_a_aword();
   const std::string& a_aword() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1285,7 +1367,11 @@ class Msg_Suggest final :
   std::string* _internal_mutable_a_aword();
   public:
 
-  // uint32 a_aCount = 2;
+  // required uint32 a_aCount = 2;
+  bool has_a_acount() const;
+  private:
+  bool _internal_has_a_acount() const;
+  public:
   void clear_a_acount();
   uint32_t a_acount() const;
   void set_a_acount(uint32_t value);
@@ -1298,13 +1384,17 @@ class Msg_Suggest final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aword_;
     uint32_t a_acount_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteSpellcheckEngine_2eproto;
@@ -1340,6 +1430,13 @@ class Reply_Suggest final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_Suggest& default_instance() {
@@ -1487,6 +1584,13 @@ class Msg_SetDictionaryFromList final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_SetDictionaryFromList& default_instance() {
     return *internal_default_instance();
   }
@@ -1632,6 +1736,13 @@ class Reply_SetDictionaryFromList final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_SetDictionaryFromList& default_instance() {
     return *internal_default_instance();
   }
@@ -1707,7 +1818,11 @@ class Reply_SetDictionaryFromList final :
     kAADictionaryFieldNumber = 2,
     kAASuccessFieldNumber = 1,
   };
-  // string a_aDictionary = 2;
+  // required string a_aDictionary = 2;
+  bool has_a_adictionary() const;
+  private:
+  bool _internal_has_a_adictionary() const;
+  public:
   void clear_a_adictionary();
   const std::string& a_adictionary() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1721,7 +1836,11 @@ class Reply_SetDictionaryFromList final :
   std::string* _internal_mutable_a_adictionary();
   public:
 
-  // bool a_aSuccess = 1;
+  // required bool a_aSuccess = 1;
+  bool has_a_asuccess() const;
+  private:
+  bool _internal_has_a_asuccess() const;
+  public:
   void clear_a_asuccess();
   bool a_asuccess() const;
   void set_a_asuccess(bool value);
@@ -1734,13 +1853,17 @@ class Reply_SetDictionaryFromList final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_adictionary_;
     bool a_asuccess_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteSpellcheckEngine_2eproto;
@@ -1894,9 +2017,17 @@ Reply_CheckAsync::mutable_a_aismisspelled() {
 
 // Msg_SetDictionary
 
-// string a_aDictionary = 1;
+// required string a_aDictionary = 1;
+inline bool Msg_SetDictionary::_internal_has_a_adictionary() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_SetDictionary::has_a_adictionary() const {
+  return _internal_has_a_adictionary();
+}
 inline void Msg_SetDictionary::clear_a_adictionary() {
   _impl_.a_adictionary_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_SetDictionary::a_adictionary() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionary.a_aDictionary)
@@ -1905,7 +2036,7 @@ inline const std::string& Msg_SetDictionary::a_adictionary() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SetDictionary::set_a_adictionary(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_adictionary_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionary.a_aDictionary)
 }
@@ -1918,22 +2049,32 @@ inline const std::string& Msg_SetDictionary::_internal_a_adictionary() const {
   return _impl_.a_adictionary_.Get();
 }
 inline void Msg_SetDictionary::_internal_set_a_adictionary(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_adictionary_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_SetDictionary::_internal_mutable_a_adictionary() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_adictionary_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_SetDictionary::release_a_adictionary() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionary.a_aDictionary)
-  return _impl_.a_adictionary_.Release();
+  if (!_internal_has_a_adictionary()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_adictionary_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_adictionary_.IsDefault()) {
+    _impl_.a_adictionary_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_SetDictionary::set_allocated_a_adictionary(std::string* a_adictionary) {
   if (a_adictionary != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_adictionary_.SetAllocated(a_adictionary, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1948,9 +2089,17 @@ inline void Msg_SetDictionary::set_allocated_a_adictionary(std::string* a_adicti
 
 // Reply_SetDictionary
 
-// bool a_success = 1;
+// required bool a_success = 1;
+inline bool Reply_SetDictionary::_internal_has_a_success() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_SetDictionary::has_a_success() const {
+  return _internal_has_a_success();
+}
 inline void Reply_SetDictionary::clear_a_success() {
   _impl_.a_success_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Reply_SetDictionary::_internal_a_success() const {
   return _impl_.a_success_;
@@ -1960,7 +2109,7 @@ inline bool Reply_SetDictionary::a_success() const {
   return _internal_a_success();
 }
 inline void Reply_SetDictionary::_internal_set_a_success(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_success_ = value;
 }
 inline void Reply_SetDictionary::set_a_success(bool value) {
@@ -2051,9 +2200,17 @@ Msg_SetDictionaries::mutable_a_adictionaries() {
 
 // Reply_SetDictionaries
 
-// bool a_success = 1;
+// required bool a_success = 1;
+inline bool Reply_SetDictionaries::_internal_has_a_success() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_SetDictionaries::has_a_success() const {
+  return _internal_has_a_success();
+}
 inline void Reply_SetDictionaries::clear_a_success() {
   _impl_.a_success_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Reply_SetDictionaries::_internal_a_success() const {
   return _impl_.a_success_;
@@ -2063,7 +2220,7 @@ inline bool Reply_SetDictionaries::a_success() const {
   return _internal_a_success();
 }
 inline void Reply_SetDictionaries::_internal_set_a_success(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_success_ = value;
 }
 inline void Reply_SetDictionaries::set_a_success(bool value) {
@@ -2075,9 +2232,17 @@ inline void Reply_SetDictionaries::set_a_success(bool value) {
 
 // Msg_Suggest
 
-// string a_aWord = 1;
+// required string a_aWord = 1;
+inline bool Msg_Suggest::_internal_has_a_aword() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_Suggest::has_a_aword() const {
+  return _internal_has_a_aword();
+}
 inline void Msg_Suggest::clear_a_aword() {
   _impl_.a_aword_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_Suggest::a_aword() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_Suggest.a_aWord)
@@ -2086,7 +2251,7 @@ inline const std::string& Msg_Suggest::a_aword() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Suggest::set_a_aword(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aword_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_Suggest.a_aWord)
 }
@@ -2099,22 +2264,32 @@ inline const std::string& Msg_Suggest::_internal_a_aword() const {
   return _impl_.a_aword_.Get();
 }
 inline void Msg_Suggest::_internal_set_a_aword(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aword_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_Suggest::_internal_mutable_a_aword() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aword_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_Suggest::release_a_aword() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_Suggest.a_aWord)
-  return _impl_.a_aword_.Release();
+  if (!_internal_has_a_aword()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aword_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aword_.IsDefault()) {
+    _impl_.a_aword_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_Suggest::set_allocated_a_aword(std::string* a_aword) {
   if (a_aword != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aword_.SetAllocated(a_aword, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2125,9 +2300,17 @@ inline void Msg_Suggest::set_allocated_a_aword(std::string* a_aword) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_Suggest.a_aWord)
 }
 
-// uint32 a_aCount = 2;
+// required uint32 a_aCount = 2;
+inline bool Msg_Suggest::_internal_has_a_acount() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_Suggest::has_a_acount() const {
+  return _internal_has_a_acount();
+}
 inline void Msg_Suggest::clear_a_acount() {
   _impl_.a_acount_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_Suggest::_internal_a_acount() const {
   return _impl_.a_acount_;
@@ -2137,7 +2320,7 @@ inline uint32_t Msg_Suggest::a_acount() const {
   return _internal_a_acount();
 }
 inline void Msg_Suggest::_internal_set_a_acount(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_acount_ = value;
 }
 inline void Msg_Suggest::set_a_acount(uint32_t value) {
@@ -2307,9 +2490,17 @@ Msg_SetDictionaryFromList::mutable_a_alist() {
 
 // Reply_SetDictionaryFromList
 
-// bool a_aSuccess = 1;
+// required bool a_aSuccess = 1;
+inline bool Reply_SetDictionaryFromList::_internal_has_a_asuccess() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Reply_SetDictionaryFromList::has_a_asuccess() const {
+  return _internal_has_a_asuccess();
+}
 inline void Reply_SetDictionaryFromList::clear_a_asuccess() {
   _impl_.a_asuccess_ = false;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool Reply_SetDictionaryFromList::_internal_a_asuccess() const {
   return _impl_.a_asuccess_;
@@ -2319,7 +2510,7 @@ inline bool Reply_SetDictionaryFromList::a_asuccess() const {
   return _internal_a_asuccess();
 }
 inline void Reply_SetDictionaryFromList::_internal_set_a_asuccess(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_asuccess_ = value;
 }
 inline void Reply_SetDictionaryFromList::set_a_asuccess(bool value) {
@@ -2327,9 +2518,17 @@ inline void Reply_SetDictionaryFromList::set_a_asuccess(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaryFromList.a_aSuccess)
 }
 
-// string a_aDictionary = 2;
+// required string a_aDictionary = 2;
+inline bool Reply_SetDictionaryFromList::_internal_has_a_adictionary() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_SetDictionaryFromList::has_a_adictionary() const {
+  return _internal_has_a_adictionary();
+}
 inline void Reply_SetDictionaryFromList::clear_a_adictionary() {
   _impl_.a_adictionary_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_SetDictionaryFromList::a_adictionary() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaryFromList.a_aDictionary)
@@ -2338,7 +2537,7 @@ inline const std::string& Reply_SetDictionaryFromList::a_adictionary() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_SetDictionaryFromList::set_a_adictionary(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_adictionary_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaryFromList.a_aDictionary)
 }
@@ -2351,22 +2550,32 @@ inline const std::string& Reply_SetDictionaryFromList::_internal_a_adictionary()
   return _impl_.a_adictionary_.Get();
 }
 inline void Reply_SetDictionaryFromList::_internal_set_a_adictionary(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_adictionary_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_SetDictionaryFromList::_internal_mutable_a_adictionary() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_adictionary_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_SetDictionaryFromList::release_a_adictionary() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaryFromList.a_aDictionary)
-  return _impl_.a_adictionary_.Release();
+  if (!_internal_has_a_adictionary()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_adictionary_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_adictionary_.IsDefault()) {
+    _impl_.a_adictionary_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_SetDictionaryFromList::set_allocated_a_adictionary(std::string* a_adictionary) {
   if (a_adictionary != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_adictionary_.SetAllocated(a_adictionary, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

@@ -5,7 +5,7 @@
 
 // Generated from PSocketProcess.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.net;
@@ -17,29 +17,29 @@ import "PrefsTypes.proto";
 
 // Structs and unions declarations
 message HttpHandlerInitArgs {
-  string a_mLegacyAppName = 1;
-  string a_mLegacyAppVersion = 2;
-  string a_mPlatform = 3;
-  string a_mOscpu = 4;
-  string a_mMisc = 5;
-  string a_mProduct = 6;
-  string a_mProductSub = 7;
-  string a_mAppName = 8;
-  string a_mAppVersion = 9;
-  string a_mCompatFirefox = 10;
-  string a_mCompatDevice = 11;
-  string a_mDeviceModelId = 12;
+  required string a_mLegacyAppName = 1;
+  required string a_mLegacyAppVersion = 2;
+  required string a_mPlatform = 3;
+  required string a_mOscpu = 4;
+  required string a_mMisc = 5;
+  required string a_mProduct = 6;
+  required string a_mProductSub = 7;
+  required string a_mAppName = 8;
+  required string a_mAppVersion = 9;
+  required string a_mCompatFirefox = 10;
+  required string a_mCompatDevice = 11;
+  required string a_mDeviceModelId = 12;
 }
 
 message SocketDataArgs {
-  uint64 a_totalSent = 1;
-  uint64 a_totalRecv = 2;
+  required uint64 a_totalSent = 1;
+  required uint64 a_totalRecv = 2;
   repeated bytes a_info = 3;
 }
 
 message SocketPorcessInitAttributes {
-  bool a_mOffline = 1;
-  bool a_mConnectivity = 2;
-  bool a_mInitSandbox = 3;
+  required bool a_mOffline = 1;
+  required bool a_mConnectivity = 2;
+  required bool a_mInitSandbox = 3;
   optional bytes a_mSandboxBroker = 4;
 }

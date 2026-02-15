@@ -5,7 +5,7 @@
 
 // Generated from PWebrtcGlobal.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.PWebrtcGlobal;
@@ -22,20 +22,20 @@ message Reply___delete__ {
 }
 
 message Msg_PeerConnectionCreated {
-  string a_aPcId = 1;
-  bool a_aIsLongTermStatsDisabled = 2;
+  required string a_aPcId = 1;
+  required bool a_aIsLongTermStatsDisabled = 2;
 }
 
 message Msg_PeerConnectionDestroyed {
-  string a_aPcId = 1;
+  required string a_aPcId = 1;
 }
 
 message Msg_PeerConnectionFinalStats {
-  bytes a_aFinalStats = 1;
+  required bytes a_aFinalStats = 1;
 }
 
 message Msg_GetStats {
-  string a_aPcIdFilter = 1;
+  required string a_aPcIdFilter = 1;
 }
 
 message Reply_GetStats {
@@ -49,14 +49,14 @@ message Msg_GetLog {
 }
 
 message Reply_GetLog {
-  bytes a_logs = 1;
+  required bytes a_logs = 1;
 }
 
 message Msg_ClearLog {
 }
 
 message Msg_SetAecLogging {
-  bool a_aEnable = 1;
+  required bool a_aEnable = 1;
 }
 
 // Parameter mappings stats:

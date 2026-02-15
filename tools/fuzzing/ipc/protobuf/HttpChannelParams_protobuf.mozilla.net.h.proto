@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/netwerk/protocol/http/HttpChannelParams.ipdlh
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.net;
@@ -18,37 +18,37 @@ import "IPCStream.proto";
 message HttpChannelOnStartRequestArgs {
   optional bytes a_securityInfo = 1;
   optional bytes a_overrideReferrerInfo = 2;
-  uint64 a_cacheEntryId = 3;
-  sint64 a_altDataLength = 4;
-  string a_altDataType = 5;
+  required uint64 a_cacheEntryId = 3;
+  required sint64 a_altDataLength = 4;
+  required string a_altDataType = 5;
   repeated string a_cookieHeaders = 6;
-  bytes a_selfAddr = 7;
-  bytes a_peerAddr = 8;
-  protobuf.mozilla.net.ResourceTimingStructArgs a_timing = 9;
-  protobuf.mozilla.net.ParentLoadInfoForwarderArgs a_loadInfoForwarder = 10;
-  bytes a_channelStatus = 11;
-  bytes a_effectiveTRRMode = 12;
-  bytes a_trrSkipReason = 13;
-  uint32 a_cacheFetchCount = 14;
-  uint32 a_cacheExpirationTime = 15;
-  uint32 a_cacheKey = 16;
+  required bytes a_selfAddr = 7;
+  required bytes a_peerAddr = 8;
+  required protobuf.mozilla.net.ResourceTimingStructArgs a_timing = 9;
+  required protobuf.mozilla.net.ParentLoadInfoForwarderArgs a_loadInfoForwarder = 10;
+  required bytes a_channelStatus = 11;
+  required bytes a_effectiveTRRMode = 12;
+  required bytes a_trrSkipReason = 13;
+  required uint32 a_cacheFetchCount = 14;
+  required uint32 a_cacheExpirationTime = 15;
+  required uint32 a_cacheKey = 16;
   optional uint32 a_multiPartID = 17;
-  bool a_isFromCache = 18;
-  bool a_isRacing = 19;
-  bool a_cacheEntryAvailable = 20;
-  bool a_deliveringAltData = 21;
-  bool a_applyConversion = 22;
-  bool a_isResolvedByTRR = 23;
-  bool a_allRedirectsSameOrigin = 24;
-  bool a_isFirstPartOfMultiPart = 25;
-  bool a_isLastPartOfMultiPart = 26;
-  bytes a_openerPolicy = 27;
-  bool a_shouldWaitForOnStartRequestSent = 28;
-  bool a_dataFromSocketProcess = 29;
-  bool a_hasHTTPSRR = 30;
-  bool a_isProxyUsed = 31;
-  uint32 a_redirectCount = 32;
-  string a_protocolVersion = 33;
+  required bool a_isFromCache = 18;
+  required bool a_isRacing = 19;
+  required bool a_cacheEntryAvailable = 20;
+  required bool a_deliveringAltData = 21;
+  required bool a_applyConversion = 22;
+  required bool a_isResolvedByTRR = 23;
+  required bool a_allRedirectsSameOrigin = 24;
+  required bool a_isFirstPartOfMultiPart = 25;
+  required bool a_isLastPartOfMultiPart = 26;
+  required bytes a_openerPolicy = 27;
+  required bool a_shouldWaitForOnStartRequestSent = 28;
+  required bool a_dataFromSocketProcess = 29;
+  required bool a_hasHTTPSRR = 30;
+  required bool a_isProxyUsed = 31;
+  required uint32 a_redirectCount = 32;
+  required string a_protocolVersion = 33;
 }
 
 message HttpChannelAltDataStream {

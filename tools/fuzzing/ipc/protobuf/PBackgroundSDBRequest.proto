@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/simpledb/PBackgroundSDBRequest.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.PBackgroundSDBRequest;
@@ -17,7 +17,7 @@ import public "PBackgroundSDBRequest_protobuf.mozilla.dom.h.proto";
 
 // Message declarations
 message Msg___delete__ {
-  protobuf.mozilla.dom.SDBRequestResponse a_response = 1;
+  required protobuf.mozilla.dom.SDBRequestResponse a_response = 1;
 }
 
 message Reply___delete__ {

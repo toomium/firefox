@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/netwerk/protocol/websocket/PWebSocketEventListener.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.net.PWebSocketEventListener;
@@ -16,40 +16,40 @@ package protobuf.mozilla.net.PWebSocketEventListener;
 
 // Message declarations
 message Msg_WebSocketCreated {
-  uint32 a_awebSocketSerialID = 1;
-  string a_aURI = 2;
-  string a_aProtocols = 3;
+  required uint32 a_awebSocketSerialID = 1;
+  required string a_aURI = 2;
+  required string a_aProtocols = 3;
 }
 
 message Msg_WebSocketOpened {
-  uint32 a_awebSocketSerialID = 1;
-  string a_aEffectiveURI = 2;
-  string a_aProtocols = 3;
-  string a_aExtensions = 4;
-  uint64 a_aHttpChannelId = 5;
+  required uint32 a_awebSocketSerialID = 1;
+  required string a_aEffectiveURI = 2;
+  required string a_aProtocols = 3;
+  required string a_aExtensions = 4;
+  required uint64 a_aHttpChannelId = 5;
 }
 
 message Msg_WebSocketMessageAvailable {
-  uint32 a_awebSocketSerialID = 1;
-  string a_aData = 2;
-  uint32 a_aMessageType = 3;
+  required uint32 a_awebSocketSerialID = 1;
+  required string a_aData = 2;
+  required uint32 a_aMessageType = 3;
 }
 
 message Msg_WebSocketClosed {
-  uint32 a_awebSocketSerialID = 1;
-  bool a_aWasClean = 2;
-  uint32 a_aCode = 3;
-  string a_aReason = 4;
+  required uint32 a_awebSocketSerialID = 1;
+  required bool a_aWasClean = 2;
+  required uint32 a_aCode = 3;
+  required string a_aReason = 4;
 }
 
 message Msg_FrameReceived {
-  uint32 a_aWebSocketSerialID = 1;
-  bytes a_aFrameData = 2;
+  required uint32 a_aWebSocketSerialID = 1;
+  required bytes a_aFrameData = 2;
 }
 
 message Msg_FrameSent {
-  uint32 a_aWebSocketSerialID = 1;
-  bytes a_aFrameData = 2;
+  required uint32 a_aWebSocketSerialID = 1;
+  required bytes a_aFrameData = 2;
 }
 
 message Msg___delete__ {

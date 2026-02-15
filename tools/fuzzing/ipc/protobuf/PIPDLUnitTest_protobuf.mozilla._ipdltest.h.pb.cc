@@ -22,13 +22,14 @@ namespace mozilla {
 namespace _ipdltest {
 PROTOBUF_CONSTEXPR TestPartResult::TestPartResult(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_filename_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_filename_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_summary_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_failed_)*/false
   , /*decltype(_impl_.a_fatal_)*/false
-  , /*decltype(_impl_.a_linenumber_)*/0
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_linenumber_)*/0} {}
 struct TestPartResultDefaultTypeInternal {
   PROTOBUF_CONSTEXPR TestPartResultDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -49,6 +50,28 @@ namespace _ipdltest {
 
 class TestPartResult::_Internal {
  public:
+  using HasBits = decltype(std::declval<TestPartResult>()._impl_._has_bits_);
+  static void set_has_a_failed(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_a_fatal(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static void set_has_a_filename(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_linenumber(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
+  }
+  static void set_has_a_summary(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_message(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x0000003f) ^ 0x0000003f) != 0;
+  }
 };
 
 TestPartResult::TestPartResult(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -61,20 +84,21 @@ TestPartResult::TestPartResult(const TestPartResult& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   TestPartResult* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_filename_){}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_filename_){}
     , decltype(_impl_.a_summary_){}
     , decltype(_impl_.a_message_){}
     , decltype(_impl_.a_failed_){}
     , decltype(_impl_.a_fatal_){}
-    , decltype(_impl_.a_linenumber_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_linenumber_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_filename_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_filename_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_filename().empty()) {
+  if (from._internal_has_a_filename()) {
     _this->_impl_.a_filename_.Set(from._internal_a_filename(), 
       _this->GetArenaForAllocation());
   }
@@ -82,7 +106,7 @@ TestPartResult::TestPartResult(const TestPartResult& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_summary_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_summary().empty()) {
+  if (from._internal_has_a_summary()) {
     _this->_impl_.a_summary_.Set(from._internal_a_summary(), 
       _this->GetArenaForAllocation());
   }
@@ -90,7 +114,7 @@ TestPartResult::TestPartResult(const TestPartResult& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_message_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_message().empty()) {
+  if (from._internal_has_a_message()) {
     _this->_impl_.a_message_.Set(from._internal_a_message(), 
       _this->GetArenaForAllocation());
   }
@@ -105,13 +129,14 @@ inline void TestPartResult::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_filename_){}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_filename_){}
     , decltype(_impl_.a_summary_){}
     , decltype(_impl_.a_message_){}
     , decltype(_impl_.a_failed_){false}
     , decltype(_impl_.a_fatal_){false}
     , decltype(_impl_.a_linenumber_){0}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_filename_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -153,72 +178,85 @@ void TestPartResult::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_filename_.ClearToEmpty();
-  _impl_.a_summary_.ClearToEmpty();
-  _impl_.a_message_.ClearToEmpty();
-  ::memset(&_impl_.a_failed_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.a_linenumber_) -
-      reinterpret_cast<char*>(&_impl_.a_failed_)) + sizeof(_impl_.a_linenumber_));
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_filename_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_summary_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _impl_.a_message_.ClearNonDefaultToEmpty();
+    }
+  }
+  if (cached_has_bits & 0x00000038u) {
+    ::memset(&_impl_.a_failed_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_linenumber_) -
+        reinterpret_cast<char*>(&_impl_.a_failed_)) + sizeof(_impl_.a_linenumber_));
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* TestPartResult::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool a_failed = 1;
+      // required bool a_failed = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_failed(&has_bits);
           _impl_.a_failed_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bool a_fatal = 2;
+      // required bool a_fatal = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_a_fatal(&has_bits);
           _impl_.a_fatal_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string a_filename = 3;
+      // required string a_filename = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_filename();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // sint32 a_lineNumber = 4;
+      // required sint32 a_lineNumber = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _Internal::set_has_a_linenumber(&has_bits);
           _impl_.a_linenumber_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string a_summary = 5;
+      // required string a_summary = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_a_summary();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // string a_message = 6;
+      // required string a_message = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           auto str = _internal_mutable_a_message();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -238,6 +276,7 @@ const char* TestPartResult::_InternalParse(const char* ptr, ::_pbi::ParseContext
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -251,50 +290,39 @@ uint8_t* TestPartResult::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool a_failed = 1;
-  if (this->_internal_a_failed() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bool a_failed = 1;
+  if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_failed(), target);
   }
 
-  // bool a_fatal = 2;
-  if (this->_internal_a_fatal() != 0) {
+  // required bool a_fatal = 2;
+  if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_fatal(), target);
   }
 
-  // string a_filename = 3;
-  if (!this->_internal_a_filename().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_filename().data(), static_cast<int>(this->_internal_a_filename().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla._ipdltest.TestPartResult.a_filename");
+  // required string a_filename = 3;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_filename(), target);
   }
 
-  // sint32 a_lineNumber = 4;
-  if (this->_internal_a_linenumber() != 0) {
+  // required sint32 a_lineNumber = 4;
+  if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(4, this->_internal_a_linenumber(), target);
   }
 
-  // string a_summary = 5;
-  if (!this->_internal_a_summary().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_summary().data(), static_cast<int>(this->_internal_a_summary().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla._ipdltest.TestPartResult.a_summary");
+  // required string a_summary = 5;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         5, this->_internal_a_summary(), target);
   }
 
-  // string a_message = 6;
-  if (!this->_internal_a_message().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_message().data(), static_cast<int>(this->_internal_a_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla._ipdltest.TestPartResult.a_message");
+  // required string a_message = 6;
+  if (cached_has_bits & 0x00000004u) {
     target = stream->WriteStringMaybeAliased(
         6, this->_internal_a_message(), target);
   }
@@ -307,49 +335,83 @@ uint8_t* TestPartResult::_InternalSerialize(
   return target;
 }
 
-size_t TestPartResult::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.TestPartResult)
+size_t TestPartResult::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla._ipdltest.TestPartResult)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string a_filename = 3;
-  if (!this->_internal_a_filename().empty()) {
+  if (_internal_has_a_filename()) {
+    // required string a_filename = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_filename());
   }
 
-  // string a_summary = 5;
-  if (!this->_internal_a_summary().empty()) {
+  if (_internal_has_a_summary()) {
+    // required string a_summary = 5;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_summary());
   }
 
-  // string a_message = 6;
-  if (!this->_internal_a_message().empty()) {
+  if (_internal_has_a_message()) {
+    // required string a_message = 6;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_message());
   }
 
-  // bool a_failed = 1;
-  if (this->_internal_a_failed() != 0) {
+  if (_internal_has_a_failed()) {
+    // required bool a_failed = 1;
     total_size += 1 + 1;
   }
 
-  // bool a_fatal = 2;
-  if (this->_internal_a_fatal() != 0) {
+  if (_internal_has_a_fatal()) {
+    // required bool a_fatal = 2;
     total_size += 1 + 1;
   }
 
-  // sint32 a_lineNumber = 4;
-  if (this->_internal_a_linenumber() != 0) {
+  if (_internal_has_a_linenumber()) {
+    // required sint32 a_lineNumber = 4;
     total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_linenumber());
   }
+
+  return total_size;
+}
+size_t TestPartResult::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.TestPartResult)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x0000003f) ^ 0x0000003f) == 0) {  // All required fields are present.
+    // required string a_filename = 3;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_filename());
+
+    // required string a_summary = 5;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_summary());
+
+    // required string a_message = 6;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_message());
+
+    // required bool a_failed = 1;
+    total_size += 1 + 1;
+
+    // required bool a_fatal = 2;
+    total_size += 1 + 1;
+
+    // required sint32 a_lineNumber = 4;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_linenumber());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -372,23 +434,27 @@ void TestPartResult::MergeFrom(const TestPartResult& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_filename().empty()) {
-    _this->_internal_set_a_filename(from._internal_a_filename());
-  }
-  if (!from._internal_a_summary().empty()) {
-    _this->_internal_set_a_summary(from._internal_a_summary());
-  }
-  if (!from._internal_a_message().empty()) {
-    _this->_internal_set_a_message(from._internal_a_message());
-  }
-  if (from._internal_a_failed() != 0) {
-    _this->_internal_set_a_failed(from._internal_a_failed());
-  }
-  if (from._internal_a_fatal() != 0) {
-    _this->_internal_set_a_fatal(from._internal_a_fatal());
-  }
-  if (from._internal_a_linenumber() != 0) {
-    _this->_internal_set_a_linenumber(from._internal_a_linenumber());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000003fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_filename(from._internal_a_filename());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_summary(from._internal_a_summary());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_internal_set_a_message(from._internal_a_message());
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.a_failed_ = from._impl_.a_failed_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_impl_.a_fatal_ = from._impl_.a_fatal_;
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _this->_impl_.a_linenumber_ = from._impl_.a_linenumber_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -401,6 +467,7 @@ void TestPartResult::CopyFrom(const TestPartResult& from) {
 }
 
 bool TestPartResult::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -409,6 +476,7 @@ void TestPartResult::InternalSwap(TestPartResult* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_filename_, lhs_arena,
       &other->_impl_.a_filename_, rhs_arena

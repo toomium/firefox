@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/webbrowserpersist/PWebBrowserPersistSerialize.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.PWebBrowserPersistSerialize;
@@ -20,8 +20,8 @@ message Msg_WriteData {
 }
 
 message Msg___delete__ {
-  string a_aContentType = 1;
-  bytes a_aStatus = 2;
+  required string a_aContentType = 1;
+  required bytes a_aStatus = 2;
 }
 
 message Reply___delete__ {

@@ -22,8 +22,9 @@ namespace mozilla {
 namespace widget {
 PROTOBUF_CONSTEXPR HeadlessCompositorWidgetInitData::HeadlessCompositorWidgetInitData(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_initialclientsize_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_initialclientsize_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct HeadlessCompositorWidgetInitDataDefaultTypeInternal {
   PROTOBUF_CONSTEXPR HeadlessCompositorWidgetInitDataDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -44,6 +45,13 @@ namespace widget {
 
 class HeadlessCompositorWidgetInitData::_Internal {
  public:
+  using HasBits = decltype(std::declval<HeadlessCompositorWidgetInitData>()._impl_._has_bits_);
+  static void set_has_a_initialclientsize(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 HeadlessCompositorWidgetInitData::HeadlessCompositorWidgetInitData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -56,15 +64,16 @@ HeadlessCompositorWidgetInitData::HeadlessCompositorWidgetInitData(const Headles
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   HeadlessCompositorWidgetInitData* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_initialclientsize_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_initialclientsize_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_initialclientsize_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_initialclientsize_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_initialclientsize().empty()) {
+  if (from._internal_has_a_initialclientsize()) {
     _this->_impl_.a_initialclientsize_.Set(from._internal_a_initialclientsize(), 
       _this->GetArenaForAllocation());
   }
@@ -76,8 +85,9 @@ inline void HeadlessCompositorWidgetInitData::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_initialclientsize_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_initialclientsize_){}
   };
   _impl_.a_initialclientsize_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -109,17 +119,22 @@ void HeadlessCompositorWidgetInitData::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_initialclientsize_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_initialclientsize_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* HeadlessCompositorWidgetInitData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_InitialClientSize = 1;
+      // required bytes a_InitialClientSize = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_initialclientsize();
@@ -144,6 +159,7 @@ const char* HeadlessCompositorWidgetInitData::_InternalParse(const char* ptr, ::
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -157,8 +173,9 @@ uint8_t* HeadlessCompositorWidgetInitData::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_InitialClientSize = 1;
-  if (!this->_internal_a_initialclientsize().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_InitialClientSize = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_initialclientsize(), target);
   }
@@ -175,16 +192,15 @@ size_t HeadlessCompositorWidgetInitData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.widget.HeadlessCompositorWidgetInitData)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_InitialClientSize = 1;
-  if (!this->_internal_a_initialclientsize().empty()) {
+  // required bytes a_InitialClientSize = 1;
+  if (_internal_has_a_initialclientsize()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_initialclientsize());
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -207,7 +223,7 @@ void HeadlessCompositorWidgetInitData::MergeFrom(const HeadlessCompositorWidgetI
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_initialclientsize().empty()) {
+  if (from._internal_has_a_initialclientsize()) {
     _this->_internal_set_a_initialclientsize(from._internal_a_initialclientsize());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -221,6 +237,7 @@ void HeadlessCompositorWidgetInitData::CopyFrom(const HeadlessCompositorWidgetIn
 }
 
 bool HeadlessCompositorWidgetInitData::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -229,6 +246,7 @@ void HeadlessCompositorWidgetInitData::InternalSwap(HeadlessCompositorWidgetInit
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_initialclientsize_, lhs_arena,
       &other->_impl_.a_initialclientsize_, rhs_arena

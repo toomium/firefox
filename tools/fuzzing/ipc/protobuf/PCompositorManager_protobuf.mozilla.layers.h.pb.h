@@ -103,6 +103,13 @@ class WidgetCompositorOptions final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const WidgetCompositorOptions& default_instance() {
     return *internal_default_instance();
   }
@@ -182,7 +189,11 @@ class WidgetCompositorOptions final :
     kAInnerWindowIdFieldNumber = 6,
     kAUseExternalSurfaceSizeFieldNumber = 4,
   };
-  // bytes a_scale = 1;
+  // required bytes a_scale = 1;
+  bool has_a_scale() const;
+  private:
+  bool _internal_has_a_scale() const;
+  public:
   void clear_a_scale();
   const std::string& a_scale() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -196,7 +207,11 @@ class WidgetCompositorOptions final :
   std::string* _internal_mutable_a_scale();
   public:
 
-  // bytes a_vsyncRate = 2;
+  // required bytes a_vsyncRate = 2;
+  bool has_a_vsyncrate() const;
+  private:
+  bool _internal_has_a_vsyncrate() const;
+  public:
   void clear_a_vsyncrate();
   const std::string& a_vsyncrate() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -210,7 +225,11 @@ class WidgetCompositorOptions final :
   std::string* _internal_mutable_a_vsyncrate();
   public:
 
-  // bytes a_options = 3;
+  // required bytes a_options = 3;
+  bool has_a_options() const;
+  private:
+  bool _internal_has_a_options() const;
+  public:
   void clear_a_options();
   const std::string& a_options() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -224,7 +243,11 @@ class WidgetCompositorOptions final :
   std::string* _internal_mutable_a_options();
   public:
 
-  // bytes a_surfaceSize = 5;
+  // required bytes a_surfaceSize = 5;
+  bool has_a_surfacesize() const;
+  private:
+  bool _internal_has_a_surfacesize() const;
+  public:
   void clear_a_surfacesize();
   const std::string& a_surfacesize() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -238,7 +261,11 @@ class WidgetCompositorOptions final :
   std::string* _internal_mutable_a_surfacesize();
   public:
 
-  // uint64 a_innerWindowId = 6;
+  // required uint64 a_innerWindowId = 6;
+  bool has_a_innerwindowid() const;
+  private:
+  bool _internal_has_a_innerwindowid() const;
+  public:
   void clear_a_innerwindowid();
   uint64_t a_innerwindowid() const;
   void set_a_innerwindowid(uint64_t value);
@@ -247,7 +274,11 @@ class WidgetCompositorOptions final :
   void _internal_set_a_innerwindowid(uint64_t value);
   public:
 
-  // bool a_useExternalSurfaceSize = 4;
+  // required bool a_useExternalSurfaceSize = 4;
+  bool has_a_useexternalsurfacesize() const;
+  private:
+  bool _internal_has_a_useexternalsurfacesize() const;
+  public:
   void clear_a_useexternalsurfacesize();
   bool a_useexternalsurfacesize() const;
   void set_a_useexternalsurfacesize(bool value);
@@ -260,17 +291,21 @@ class WidgetCompositorOptions final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_scale_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_vsyncrate_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_options_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_surfacesize_;
     uint64_t a_innerwindowid_;
     bool a_useexternalsurfacesize_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCompositorManager_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
@@ -306,6 +341,13 @@ class ContentCompositorOptions final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const ContentCompositorOptions& default_instance() {
@@ -425,6 +467,13 @@ class SameProcessWidgetCompositorOptions final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const SameProcessWidgetCompositorOptions& default_instance() {
     return *internal_default_instance();
   }
@@ -540,6 +589,13 @@ class CompositorBridgeOptions final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const CompositorBridgeOptions& default_instance() {
@@ -720,9 +776,17 @@ class CompositorBridgeOptions final :
 #endif  // __GNUC__
 // WidgetCompositorOptions
 
-// bytes a_scale = 1;
+// required bytes a_scale = 1;
+inline bool WidgetCompositorOptions::_internal_has_a_scale() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool WidgetCompositorOptions::has_a_scale() const {
+  return _internal_has_a_scale();
+}
 inline void WidgetCompositorOptions::clear_a_scale() {
   _impl_.a_scale_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& WidgetCompositorOptions::a_scale() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.WidgetCompositorOptions.a_scale)
@@ -731,7 +795,7 @@ inline const std::string& WidgetCompositorOptions::a_scale() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WidgetCompositorOptions::set_a_scale(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_scale_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.WidgetCompositorOptions.a_scale)
 }
@@ -744,22 +808,32 @@ inline const std::string& WidgetCompositorOptions::_internal_a_scale() const {
   return _impl_.a_scale_.Get();
 }
 inline void WidgetCompositorOptions::_internal_set_a_scale(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_scale_.Set(value, GetArenaForAllocation());
 }
 inline std::string* WidgetCompositorOptions::_internal_mutable_a_scale() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_scale_.Mutable(GetArenaForAllocation());
 }
 inline std::string* WidgetCompositorOptions::release_a_scale() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.WidgetCompositorOptions.a_scale)
-  return _impl_.a_scale_.Release();
+  if (!_internal_has_a_scale()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_scale_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_scale_.IsDefault()) {
+    _impl_.a_scale_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void WidgetCompositorOptions::set_allocated_a_scale(std::string* a_scale) {
   if (a_scale != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_scale_.SetAllocated(a_scale, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -770,9 +844,17 @@ inline void WidgetCompositorOptions::set_allocated_a_scale(std::string* a_scale)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.WidgetCompositorOptions.a_scale)
 }
 
-// bytes a_vsyncRate = 2;
+// required bytes a_vsyncRate = 2;
+inline bool WidgetCompositorOptions::_internal_has_a_vsyncrate() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool WidgetCompositorOptions::has_a_vsyncrate() const {
+  return _internal_has_a_vsyncrate();
+}
 inline void WidgetCompositorOptions::clear_a_vsyncrate() {
   _impl_.a_vsyncrate_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& WidgetCompositorOptions::a_vsyncrate() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.WidgetCompositorOptions.a_vsyncRate)
@@ -781,7 +863,7 @@ inline const std::string& WidgetCompositorOptions::a_vsyncrate() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WidgetCompositorOptions::set_a_vsyncrate(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_vsyncrate_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.WidgetCompositorOptions.a_vsyncRate)
 }
@@ -794,22 +876,32 @@ inline const std::string& WidgetCompositorOptions::_internal_a_vsyncrate() const
   return _impl_.a_vsyncrate_.Get();
 }
 inline void WidgetCompositorOptions::_internal_set_a_vsyncrate(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_vsyncrate_.Set(value, GetArenaForAllocation());
 }
 inline std::string* WidgetCompositorOptions::_internal_mutable_a_vsyncrate() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_vsyncrate_.Mutable(GetArenaForAllocation());
 }
 inline std::string* WidgetCompositorOptions::release_a_vsyncrate() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.WidgetCompositorOptions.a_vsyncRate)
-  return _impl_.a_vsyncrate_.Release();
+  if (!_internal_has_a_vsyncrate()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_vsyncrate_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_vsyncrate_.IsDefault()) {
+    _impl_.a_vsyncrate_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void WidgetCompositorOptions::set_allocated_a_vsyncrate(std::string* a_vsyncrate) {
   if (a_vsyncrate != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_vsyncrate_.SetAllocated(a_vsyncrate, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -820,9 +912,17 @@ inline void WidgetCompositorOptions::set_allocated_a_vsyncrate(std::string* a_vs
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.WidgetCompositorOptions.a_vsyncRate)
 }
 
-// bytes a_options = 3;
+// required bytes a_options = 3;
+inline bool WidgetCompositorOptions::_internal_has_a_options() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool WidgetCompositorOptions::has_a_options() const {
+  return _internal_has_a_options();
+}
 inline void WidgetCompositorOptions::clear_a_options() {
   _impl_.a_options_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& WidgetCompositorOptions::a_options() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.WidgetCompositorOptions.a_options)
@@ -831,7 +931,7 @@ inline const std::string& WidgetCompositorOptions::a_options() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WidgetCompositorOptions::set_a_options(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000004u;
  _impl_.a_options_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.WidgetCompositorOptions.a_options)
 }
@@ -844,22 +944,32 @@ inline const std::string& WidgetCompositorOptions::_internal_a_options() const {
   return _impl_.a_options_.Get();
 }
 inline void WidgetCompositorOptions::_internal_set_a_options(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_options_.Set(value, GetArenaForAllocation());
 }
 inline std::string* WidgetCompositorOptions::_internal_mutable_a_options() {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   return _impl_.a_options_.Mutable(GetArenaForAllocation());
 }
 inline std::string* WidgetCompositorOptions::release_a_options() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.WidgetCompositorOptions.a_options)
-  return _impl_.a_options_.Release();
+  if (!_internal_has_a_options()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000004u;
+  auto* p = _impl_.a_options_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_options_.IsDefault()) {
+    _impl_.a_options_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void WidgetCompositorOptions::set_allocated_a_options(std::string* a_options) {
   if (a_options != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.a_options_.SetAllocated(a_options, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -870,9 +980,17 @@ inline void WidgetCompositorOptions::set_allocated_a_options(std::string* a_opti
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.WidgetCompositorOptions.a_options)
 }
 
-// bool a_useExternalSurfaceSize = 4;
+// required bool a_useExternalSurfaceSize = 4;
+inline bool WidgetCompositorOptions::_internal_has_a_useexternalsurfacesize() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool WidgetCompositorOptions::has_a_useexternalsurfacesize() const {
+  return _internal_has_a_useexternalsurfacesize();
+}
 inline void WidgetCompositorOptions::clear_a_useexternalsurfacesize() {
   _impl_.a_useexternalsurfacesize_ = false;
+  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline bool WidgetCompositorOptions::_internal_a_useexternalsurfacesize() const {
   return _impl_.a_useexternalsurfacesize_;
@@ -882,7 +1000,7 @@ inline bool WidgetCompositorOptions::a_useexternalsurfacesize() const {
   return _internal_a_useexternalsurfacesize();
 }
 inline void WidgetCompositorOptions::_internal_set_a_useexternalsurfacesize(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000020u;
   _impl_.a_useexternalsurfacesize_ = value;
 }
 inline void WidgetCompositorOptions::set_a_useexternalsurfacesize(bool value) {
@@ -890,9 +1008,17 @@ inline void WidgetCompositorOptions::set_a_useexternalsurfacesize(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.WidgetCompositorOptions.a_useExternalSurfaceSize)
 }
 
-// bytes a_surfaceSize = 5;
+// required bytes a_surfaceSize = 5;
+inline bool WidgetCompositorOptions::_internal_has_a_surfacesize() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool WidgetCompositorOptions::has_a_surfacesize() const {
+  return _internal_has_a_surfacesize();
+}
 inline void WidgetCompositorOptions::clear_a_surfacesize() {
   _impl_.a_surfacesize_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline const std::string& WidgetCompositorOptions::a_surfacesize() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.WidgetCompositorOptions.a_surfaceSize)
@@ -901,7 +1027,7 @@ inline const std::string& WidgetCompositorOptions::a_surfacesize() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WidgetCompositorOptions::set_a_surfacesize(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000008u;
  _impl_.a_surfacesize_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.WidgetCompositorOptions.a_surfaceSize)
 }
@@ -914,22 +1040,32 @@ inline const std::string& WidgetCompositorOptions::_internal_a_surfacesize() con
   return _impl_.a_surfacesize_.Get();
 }
 inline void WidgetCompositorOptions::_internal_set_a_surfacesize(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_surfacesize_.Set(value, GetArenaForAllocation());
 }
 inline std::string* WidgetCompositorOptions::_internal_mutable_a_surfacesize() {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   return _impl_.a_surfacesize_.Mutable(GetArenaForAllocation());
 }
 inline std::string* WidgetCompositorOptions::release_a_surfacesize() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.WidgetCompositorOptions.a_surfaceSize)
-  return _impl_.a_surfacesize_.Release();
+  if (!_internal_has_a_surfacesize()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000008u;
+  auto* p = _impl_.a_surfacesize_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_surfacesize_.IsDefault()) {
+    _impl_.a_surfacesize_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void WidgetCompositorOptions::set_allocated_a_surfacesize(std::string* a_surfacesize) {
   if (a_surfacesize != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000008u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000008u;
   }
   _impl_.a_surfacesize_.SetAllocated(a_surfacesize, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -940,9 +1076,17 @@ inline void WidgetCompositorOptions::set_allocated_a_surfacesize(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.WidgetCompositorOptions.a_surfaceSize)
 }
 
-// uint64 a_innerWindowId = 6;
+// required uint64 a_innerWindowId = 6;
+inline bool WidgetCompositorOptions::_internal_has_a_innerwindowid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool WidgetCompositorOptions::has_a_innerwindowid() const {
+  return _internal_has_a_innerwindowid();
+}
 inline void WidgetCompositorOptions::clear_a_innerwindowid() {
   _impl_.a_innerwindowid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline uint64_t WidgetCompositorOptions::_internal_a_innerwindowid() const {
   return _impl_.a_innerwindowid_;
@@ -952,7 +1096,7 @@ inline uint64_t WidgetCompositorOptions::a_innerwindowid() const {
   return _internal_a_innerwindowid();
 }
 inline void WidgetCompositorOptions::_internal_set_a_innerwindowid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.a_innerwindowid_ = value;
 }
 inline void WidgetCompositorOptions::set_a_innerwindowid(uint64_t value) {

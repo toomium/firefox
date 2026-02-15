@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/gfx/ipc/PCanvasManager.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.gfx.PCanvasManager;
@@ -16,39 +16,39 @@ package protobuf.mozilla.gfx.PCanvasManager;
 
 // Message declarations
 message Msg_PCanvasConstructor {
-  sint64 a_actorid = 1;
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PCanvasConstructor {
 }
 
 message Msg_PWebGLConstructor {
-  sint64 a_actorid = 1;
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PWebGLConstructor {
 }
 
 message Msg_PWebGPUConstructor {
-  sint64 a_actorid = 1;
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PWebGPUConstructor {
 }
 
 message Msg_Initialize {
-  uint32 a_aManagerId = 1;
+  required uint32 a_aManagerId = 1;
 }
 
 message Msg_GetSnapshot {
-  uint32 a_aManagerId = 1;
-  bytes a_aProtocolId = 2;
+  required uint32 a_aManagerId = 1;
+  required bytes a_aProtocolId = 2;
   optional bytes a_ownerId = 3;
   optional bytes a_commandEncoderId = 4;
 }
 
 message Reply_GetSnapshot {
-  bytes a_ret = 1;
+  required bytes a_ret = 1;
 }
 
 // Parameter mappings stats:

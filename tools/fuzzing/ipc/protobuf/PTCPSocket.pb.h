@@ -134,6 +134,13 @@ class Msg_Open final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Open& default_instance() {
     return *internal_default_instance();
   }
@@ -211,7 +218,11 @@ class Msg_Open final :
     kAUseSSLFieldNumber = 3,
     kAUseArrayBuffersFieldNumber = 4,
   };
-  // string a_host = 1;
+  // required string a_host = 1;
+  bool has_a_host() const;
+  private:
+  bool _internal_has_a_host() const;
+  public:
   void clear_a_host();
   const std::string& a_host() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -225,7 +236,11 @@ class Msg_Open final :
   std::string* _internal_mutable_a_host();
   public:
 
-  // uint32 a_port = 2;
+  // required uint32 a_port = 2;
+  bool has_a_port() const;
+  private:
+  bool _internal_has_a_port() const;
+  public:
   void clear_a_port();
   uint32_t a_port() const;
   void set_a_port(uint32_t value);
@@ -234,7 +249,11 @@ class Msg_Open final :
   void _internal_set_a_port(uint32_t value);
   public:
 
-  // bool a_useSSL = 3;
+  // required bool a_useSSL = 3;
+  bool has_a_usessl() const;
+  private:
+  bool _internal_has_a_usessl() const;
+  public:
   void clear_a_usessl();
   bool a_usessl() const;
   void set_a_usessl(bool value);
@@ -243,7 +262,11 @@ class Msg_Open final :
   void _internal_set_a_usessl(bool value);
   public:
 
-  // bool a_useArrayBuffers = 4;
+  // required bool a_useArrayBuffers = 4;
+  bool has_a_usearraybuffers() const;
+  private:
+  bool _internal_has_a_usearraybuffers() const;
+  public:
   void clear_a_usearraybuffers();
   bool a_usearraybuffers() const;
   void set_a_usearraybuffers(bool value);
@@ -256,15 +279,19 @@ class Msg_Open final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_host_;
     uint32_t a_port_;
     bool a_usessl_;
     bool a_usearraybuffers_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTCPSocket_2eproto;
@@ -300,6 +327,13 @@ class Msg_Data final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Data& default_instance() {
@@ -376,7 +410,7 @@ class Msg_Data final :
   enum : int {
     kADataFieldNumber = 1,
   };
-  // .protobuf.SendableData a_data = 1;
+  // required .protobuf.SendableData a_data = 1;
   bool has_a_data() const;
   private:
   bool _internal_has_a_data() const;
@@ -402,8 +436,9 @@ class Msg_Data final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::protobuf::SendableData* a_data_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::protobuf::SendableData* a_data_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTCPSocket_2eproto;
@@ -439,6 +474,13 @@ class Msg_StartTLS final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_StartTLS& default_instance() {
@@ -558,6 +600,13 @@ class Msg_Suspend final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Suspend& default_instance() {
     return *internal_default_instance();
   }
@@ -673,6 +722,13 @@ class Msg_Resume final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Resume& default_instance() {
@@ -792,6 +848,13 @@ class Msg_Close final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Close& default_instance() {
     return *internal_default_instance();
   }
@@ -909,6 +972,13 @@ class Msg_Callback final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Callback& default_instance() {
     return *internal_default_instance();
   }
@@ -985,7 +1055,11 @@ class Msg_Callback final :
     kADataFieldNumber = 2,
     kAReadyStateFieldNumber = 3,
   };
-  // string a_type = 1;
+  // required string a_type = 1;
+  bool has_a_type() const;
+  private:
+  bool _internal_has_a_type() const;
+  public:
   void clear_a_type();
   const std::string& a_type() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -999,7 +1073,7 @@ class Msg_Callback final :
   std::string* _internal_mutable_a_type();
   public:
 
-  // .protobuf.CallbackData a_data = 2;
+  // required .protobuf.CallbackData a_data = 2;
   bool has_a_data() const;
   private:
   bool _internal_has_a_data() const;
@@ -1017,7 +1091,11 @@ class Msg_Callback final :
       ::protobuf::CallbackData* a_data);
   ::protobuf::CallbackData* unsafe_arena_release_a_data();
 
-  // uint32 a_readyState = 3;
+  // required uint32 a_readyState = 3;
+  bool has_a_readystate() const;
+  private:
+  bool _internal_has_a_readystate() const;
+  public:
   void clear_a_readystate();
   uint32_t a_readystate() const;
   void set_a_readystate(uint32_t value);
@@ -1030,14 +1108,18 @@ class Msg_Callback final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_type_;
     ::protobuf::CallbackData* a_data_;
     uint32_t a_readystate_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTCPSocket_2eproto;
@@ -1073,6 +1155,13 @@ class Msg_UpdateBufferedAmount final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_UpdateBufferedAmount& default_instance() {
@@ -1150,7 +1239,11 @@ class Msg_UpdateBufferedAmount final :
     kABufferedAmountFieldNumber = 1,
     kATrackingNumberFieldNumber = 2,
   };
-  // uint32 a_bufferedAmount = 1;
+  // required uint32 a_bufferedAmount = 1;
+  bool has_a_bufferedamount() const;
+  private:
+  bool _internal_has_a_bufferedamount() const;
+  public:
   void clear_a_bufferedamount();
   uint32_t a_bufferedamount() const;
   void set_a_bufferedamount(uint32_t value);
@@ -1159,7 +1252,11 @@ class Msg_UpdateBufferedAmount final :
   void _internal_set_a_bufferedamount(uint32_t value);
   public:
 
-  // uint32 a_trackingNumber = 2;
+  // required uint32 a_trackingNumber = 2;
+  bool has_a_trackingnumber() const;
+  private:
+  bool _internal_has_a_trackingnumber() const;
+  public:
   void clear_a_trackingnumber();
   uint32_t a_trackingnumber() const;
   void set_a_trackingnumber(uint32_t value);
@@ -1172,13 +1269,17 @@ class Msg_UpdateBufferedAmount final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t a_bufferedamount_;
     uint32_t a_trackingnumber_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTCPSocket_2eproto;
@@ -1214,6 +1315,13 @@ class Msg_RequestDelete final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_RequestDelete& default_instance() {
@@ -1333,6 +1441,13 @@ class Msg___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -1450,6 +1565,13 @@ class Reply___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -1545,9 +1667,17 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_Open
 
-// string a_host = 1;
+// required string a_host = 1;
+inline bool Msg_Open::_internal_has_a_host() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_Open::has_a_host() const {
+  return _internal_has_a_host();
+}
 inline void Msg_Open::clear_a_host() {
   _impl_.a_host_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_Open::a_host() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PTCPSocket.Msg_Open.a_host)
@@ -1556,7 +1686,7 @@ inline const std::string& Msg_Open::a_host() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Open::set_a_host(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_host_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTCPSocket.Msg_Open.a_host)
 }
@@ -1569,22 +1699,32 @@ inline const std::string& Msg_Open::_internal_a_host() const {
   return _impl_.a_host_.Get();
 }
 inline void Msg_Open::_internal_set_a_host(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_host_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_Open::_internal_mutable_a_host() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_host_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_Open::release_a_host() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PTCPSocket.Msg_Open.a_host)
-  return _impl_.a_host_.Release();
+  if (!_internal_has_a_host()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_host_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_host_.IsDefault()) {
+    _impl_.a_host_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_Open::set_allocated_a_host(std::string* a_host) {
   if (a_host != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_host_.SetAllocated(a_host, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1595,9 +1735,17 @@ inline void Msg_Open::set_allocated_a_host(std::string* a_host) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PTCPSocket.Msg_Open.a_host)
 }
 
-// uint32 a_port = 2;
+// required uint32 a_port = 2;
+inline bool Msg_Open::_internal_has_a_port() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_Open::has_a_port() const {
+  return _internal_has_a_port();
+}
 inline void Msg_Open::clear_a_port() {
   _impl_.a_port_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_Open::_internal_a_port() const {
   return _impl_.a_port_;
@@ -1607,7 +1755,7 @@ inline uint32_t Msg_Open::a_port() const {
   return _internal_a_port();
 }
 inline void Msg_Open::_internal_set_a_port(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_port_ = value;
 }
 inline void Msg_Open::set_a_port(uint32_t value) {
@@ -1615,9 +1763,17 @@ inline void Msg_Open::set_a_port(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTCPSocket.Msg_Open.a_port)
 }
 
-// bool a_useSSL = 3;
+// required bool a_useSSL = 3;
+inline bool Msg_Open::_internal_has_a_usessl() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_Open::has_a_usessl() const {
+  return _internal_has_a_usessl();
+}
 inline void Msg_Open::clear_a_usessl() {
   _impl_.a_usessl_ = false;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline bool Msg_Open::_internal_a_usessl() const {
   return _impl_.a_usessl_;
@@ -1627,7 +1783,7 @@ inline bool Msg_Open::a_usessl() const {
   return _internal_a_usessl();
 }
 inline void Msg_Open::_internal_set_a_usessl(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_usessl_ = value;
 }
 inline void Msg_Open::set_a_usessl(bool value) {
@@ -1635,9 +1791,17 @@ inline void Msg_Open::set_a_usessl(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTCPSocket.Msg_Open.a_useSSL)
 }
 
-// bool a_useArrayBuffers = 4;
+// required bool a_useArrayBuffers = 4;
+inline bool Msg_Open::_internal_has_a_usearraybuffers() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool Msg_Open::has_a_usearraybuffers() const {
+  return _internal_has_a_usearraybuffers();
+}
 inline void Msg_Open::clear_a_usearraybuffers() {
   _impl_.a_usearraybuffers_ = false;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline bool Msg_Open::_internal_a_usearraybuffers() const {
   return _impl_.a_usearraybuffers_;
@@ -1647,7 +1811,7 @@ inline bool Msg_Open::a_usearraybuffers() const {
   return _internal_a_usearraybuffers();
 }
 inline void Msg_Open::_internal_set_a_usearraybuffers(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_usearraybuffers_ = value;
 }
 inline void Msg_Open::set_a_usearraybuffers(bool value) {
@@ -1659,9 +1823,11 @@ inline void Msg_Open::set_a_usearraybuffers(bool value) {
 
 // Msg_Data
 
-// .protobuf.SendableData a_data = 1;
+// required .protobuf.SendableData a_data = 1;
 inline bool Msg_Data::_internal_has_a_data() const {
-  return this != internal_default_instance() && _impl_.a_data_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_data_ != nullptr);
+  return value;
 }
 inline bool Msg_Data::has_a_data() const {
   return _internal_has_a_data();
@@ -1682,14 +1848,14 @@ inline void Msg_Data::unsafe_arena_set_allocated_a_data(
   }
   _impl_.a_data_ = a_data;
   if (a_data) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PTCPSocket.Msg_Data.a_data)
 }
 inline ::protobuf::SendableData* Msg_Data::release_a_data() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::SendableData* temp = _impl_.a_data_;
   _impl_.a_data_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1705,13 +1871,13 @@ inline ::protobuf::SendableData* Msg_Data::release_a_data() {
 }
 inline ::protobuf::SendableData* Msg_Data::unsafe_arena_release_a_data() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PTCPSocket.Msg_Data.a_data)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::SendableData* temp = _impl_.a_data_;
   _impl_.a_data_ = nullptr;
   return temp;
 }
 inline ::protobuf::SendableData* Msg_Data::_internal_mutable_a_data() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_data_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::SendableData>(GetArenaForAllocation());
     _impl_.a_data_ = p;
@@ -1736,9 +1902,9 @@ inline void Msg_Data::set_allocated_a_data(::protobuf::SendableData* a_data) {
       a_data = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_data, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_data_ = a_data;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PTCPSocket.Msg_Data.a_data)
@@ -1764,9 +1930,17 @@ inline void Msg_Data::set_allocated_a_data(::protobuf::SendableData* a_data) {
 
 // Msg_Callback
 
-// string a_type = 1;
+// required string a_type = 1;
+inline bool Msg_Callback::_internal_has_a_type() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_Callback::has_a_type() const {
+  return _internal_has_a_type();
+}
 inline void Msg_Callback::clear_a_type() {
   _impl_.a_type_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_Callback::a_type() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PTCPSocket.Msg_Callback.a_type)
@@ -1775,7 +1949,7 @@ inline const std::string& Msg_Callback::a_type() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Callback::set_a_type(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_type_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTCPSocket.Msg_Callback.a_type)
 }
@@ -1788,22 +1962,32 @@ inline const std::string& Msg_Callback::_internal_a_type() const {
   return _impl_.a_type_.Get();
 }
 inline void Msg_Callback::_internal_set_a_type(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_type_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_Callback::_internal_mutable_a_type() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_type_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_Callback::release_a_type() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PTCPSocket.Msg_Callback.a_type)
-  return _impl_.a_type_.Release();
+  if (!_internal_has_a_type()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_type_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_type_.IsDefault()) {
+    _impl_.a_type_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_Callback::set_allocated_a_type(std::string* a_type) {
   if (a_type != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_type_.SetAllocated(a_type, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1814,9 +1998,11 @@ inline void Msg_Callback::set_allocated_a_type(std::string* a_type) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PTCPSocket.Msg_Callback.a_type)
 }
 
-// .protobuf.CallbackData a_data = 2;
+// required .protobuf.CallbackData a_data = 2;
 inline bool Msg_Callback::_internal_has_a_data() const {
-  return this != internal_default_instance() && _impl_.a_data_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_data_ != nullptr);
+  return value;
 }
 inline bool Msg_Callback::has_a_data() const {
   return _internal_has_a_data();
@@ -1837,14 +2023,14 @@ inline void Msg_Callback::unsafe_arena_set_allocated_a_data(
   }
   _impl_.a_data_ = a_data;
   if (a_data) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PTCPSocket.Msg_Callback.a_data)
 }
 inline ::protobuf::CallbackData* Msg_Callback::release_a_data() {
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::CallbackData* temp = _impl_.a_data_;
   _impl_.a_data_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1860,13 +2046,13 @@ inline ::protobuf::CallbackData* Msg_Callback::release_a_data() {
 }
 inline ::protobuf::CallbackData* Msg_Callback::unsafe_arena_release_a_data() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PTCPSocket.Msg_Callback.a_data)
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::CallbackData* temp = _impl_.a_data_;
   _impl_.a_data_ = nullptr;
   return temp;
 }
 inline ::protobuf::CallbackData* Msg_Callback::_internal_mutable_a_data() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   if (_impl_.a_data_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::CallbackData>(GetArenaForAllocation());
     _impl_.a_data_ = p;
@@ -1891,17 +2077,25 @@ inline void Msg_Callback::set_allocated_a_data(::protobuf::CallbackData* a_data)
       a_data = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_data, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_data_ = a_data;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PTCPSocket.Msg_Callback.a_data)
 }
 
-// uint32 a_readyState = 3;
+// required uint32 a_readyState = 3;
+inline bool Msg_Callback::_internal_has_a_readystate() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_Callback::has_a_readystate() const {
+  return _internal_has_a_readystate();
+}
 inline void Msg_Callback::clear_a_readystate() {
   _impl_.a_readystate_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_Callback::_internal_a_readystate() const {
   return _impl_.a_readystate_;
@@ -1911,7 +2105,7 @@ inline uint32_t Msg_Callback::a_readystate() const {
   return _internal_a_readystate();
 }
 inline void Msg_Callback::_internal_set_a_readystate(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_readystate_ = value;
 }
 inline void Msg_Callback::set_a_readystate(uint32_t value) {
@@ -1923,9 +2117,17 @@ inline void Msg_Callback::set_a_readystate(uint32_t value) {
 
 // Msg_UpdateBufferedAmount
 
-// uint32 a_bufferedAmount = 1;
+// required uint32 a_bufferedAmount = 1;
+inline bool Msg_UpdateBufferedAmount::_internal_has_a_bufferedamount() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_UpdateBufferedAmount::has_a_bufferedamount() const {
+  return _internal_has_a_bufferedamount();
+}
 inline void Msg_UpdateBufferedAmount::clear_a_bufferedamount() {
   _impl_.a_bufferedamount_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Msg_UpdateBufferedAmount::_internal_a_bufferedamount() const {
   return _impl_.a_bufferedamount_;
@@ -1935,7 +2137,7 @@ inline uint32_t Msg_UpdateBufferedAmount::a_bufferedamount() const {
   return _internal_a_bufferedamount();
 }
 inline void Msg_UpdateBufferedAmount::_internal_set_a_bufferedamount(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_bufferedamount_ = value;
 }
 inline void Msg_UpdateBufferedAmount::set_a_bufferedamount(uint32_t value) {
@@ -1943,9 +2145,17 @@ inline void Msg_UpdateBufferedAmount::set_a_bufferedamount(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTCPSocket.Msg_UpdateBufferedAmount.a_bufferedAmount)
 }
 
-// uint32 a_trackingNumber = 2;
+// required uint32 a_trackingNumber = 2;
+inline bool Msg_UpdateBufferedAmount::_internal_has_a_trackingnumber() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_UpdateBufferedAmount::has_a_trackingnumber() const {
+  return _internal_has_a_trackingnumber();
+}
 inline void Msg_UpdateBufferedAmount::clear_a_trackingnumber() {
   _impl_.a_trackingnumber_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_UpdateBufferedAmount::_internal_a_trackingnumber() const {
   return _impl_.a_trackingnumber_;
@@ -1955,7 +2165,7 @@ inline uint32_t Msg_UpdateBufferedAmount::a_trackingnumber() const {
   return _internal_a_trackingnumber();
 }
 inline void Msg_UpdateBufferedAmount::_internal_set_a_trackingnumber(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_trackingnumber_ = value;
 }
 inline void Msg_UpdateBufferedAmount::set_a_trackingnumber(uint32_t value) {

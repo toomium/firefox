@@ -90,6 +90,13 @@ class ProtocolFdMapping final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const ProtocolFdMapping& default_instance() {
     return *internal_default_instance();
   }
@@ -165,7 +172,11 @@ class ProtocolFdMapping final :
     kAFdFieldNumber = 2,
     kAProtocolIdFieldNumber = 1,
   };
-  // bytes a_fd = 2;
+  // required bytes a_fd = 2;
+  bool has_a_fd() const;
+  private:
+  bool _internal_has_a_fd() const;
+  public:
   void clear_a_fd();
   const std::string& a_fd() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -179,7 +190,11 @@ class ProtocolFdMapping final :
   std::string* _internal_mutable_a_fd();
   public:
 
-  // uint32 a_protocolId = 1;
+  // required uint32 a_protocolId = 1;
+  bool has_a_protocolid() const;
+  private:
+  bool _internal_has_a_protocolid() const;
+  public:
   void clear_a_protocolid();
   uint32_t a_protocolid() const;
   void set_a_protocolid(uint32_t value);
@@ -192,13 +207,17 @@ class ProtocolFdMapping final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_fd_;
     uint32_t a_protocolid_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_ProtocolTypes_5fprotobuf_2emozilla_2eipc_2eh_2eproto;
@@ -214,9 +233,17 @@ class ProtocolFdMapping final :
 #endif  // __GNUC__
 // ProtocolFdMapping
 
-// uint32 a_protocolId = 1;
+// required uint32 a_protocolId = 1;
+inline bool ProtocolFdMapping::_internal_has_a_protocolid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool ProtocolFdMapping::has_a_protocolid() const {
+  return _internal_has_a_protocolid();
+}
 inline void ProtocolFdMapping::clear_a_protocolid() {
   _impl_.a_protocolid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t ProtocolFdMapping::_internal_a_protocolid() const {
   return _impl_.a_protocolid_;
@@ -226,7 +253,7 @@ inline uint32_t ProtocolFdMapping::a_protocolid() const {
   return _internal_a_protocolid();
 }
 inline void ProtocolFdMapping::_internal_set_a_protocolid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_protocolid_ = value;
 }
 inline void ProtocolFdMapping::set_a_protocolid(uint32_t value) {
@@ -234,9 +261,17 @@ inline void ProtocolFdMapping::set_a_protocolid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.ProtocolFdMapping.a_protocolId)
 }
 
-// bytes a_fd = 2;
+// required bytes a_fd = 2;
+inline bool ProtocolFdMapping::_internal_has_a_fd() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ProtocolFdMapping::has_a_fd() const {
+  return _internal_has_a_fd();
+}
 inline void ProtocolFdMapping::clear_a_fd() {
   _impl_.a_fd_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& ProtocolFdMapping::a_fd() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.ProtocolFdMapping.a_fd)
@@ -245,7 +280,7 @@ inline const std::string& ProtocolFdMapping::a_fd() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ProtocolFdMapping::set_a_fd(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_fd_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.ProtocolFdMapping.a_fd)
 }
@@ -258,22 +293,32 @@ inline const std::string& ProtocolFdMapping::_internal_a_fd() const {
   return _impl_.a_fd_.Get();
 }
 inline void ProtocolFdMapping::_internal_set_a_fd(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_fd_.Set(value, GetArenaForAllocation());
 }
 inline std::string* ProtocolFdMapping::_internal_mutable_a_fd() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_fd_.Mutable(GetArenaForAllocation());
 }
 inline std::string* ProtocolFdMapping::release_a_fd() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.ProtocolFdMapping.a_fd)
-  return _impl_.a_fd_.Release();
+  if (!_internal_has_a_fd()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_fd_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_fd_.IsDefault()) {
+    _impl_.a_fd_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void ProtocolFdMapping::set_allocated_a_fd(std::string* a_fd) {
   if (a_fd != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_fd_.SetAllocated(a_fd, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

@@ -90,6 +90,13 @@ class CacheData final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const CacheData& default_instance() {
     return *internal_default_instance();
   }
@@ -183,7 +190,11 @@ class CacheData final :
   std::string* _internal_mutable_a_fields();
   public:
 
-  // uint64 a_ID = 1;
+  // required uint64 a_ID = 1;
+  bool has_a_id() const;
+  private:
+  bool _internal_has_a_id() const;
+  public:
   void clear_a_id();
   uint64_t a_id() const;
   void set_a_id(uint64_t value);
@@ -219,9 +230,17 @@ class CacheData final :
 #endif  // __GNUC__
 // CacheData
 
-// uint64 a_ID = 1;
+// required uint64 a_ID = 1;
+inline bool CacheData::_internal_has_a_id() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool CacheData::has_a_id() const {
+  return _internal_has_a_id();
+}
 inline void CacheData::clear_a_id() {
   _impl_.a_id_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t CacheData::_internal_a_id() const {
   return _impl_.a_id_;
@@ -231,7 +250,7 @@ inline uint64_t CacheData::a_id() const {
   return _internal_a_id();
 }
 inline void CacheData::_internal_set_a_id(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_id_ = value;
 }
 inline void CacheData::set_a_id(uint64_t value) {

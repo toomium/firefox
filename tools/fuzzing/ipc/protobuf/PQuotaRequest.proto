@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/quota/PQuotaRequest.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.quota.PQuotaRequest;
@@ -17,7 +17,7 @@ import public "PQuotaRequest_protobuf.mozilla.dom.quota.h.proto";
 
 // Message declarations
 message Msg___delete__ {
-  protobuf.mozilla.dom.quota.RequestResponse a_response = 1;
+  required protobuf.mozilla.dom.quota.RequestResponse a_response = 1;
 }
 
 message Reply___delete__ {

@@ -105,6 +105,13 @@ class Msg_Hang final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Hang& default_instance() {
     return *internal_default_instance();
   }
@@ -180,7 +187,11 @@ class Msg_Hang final :
     kATimeoutFieldNumber = 2,
     kAHangModeFieldNumber = 1,
   };
-  // bytes a_timeout = 2;
+  // required bytes a_timeout = 2;
+  bool has_a_timeout() const;
+  private:
+  bool _internal_has_a_timeout() const;
+  public:
   void clear_a_timeout();
   const std::string& a_timeout() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -194,7 +205,11 @@ class Msg_Hang final :
   std::string* _internal_mutable_a_timeout();
   public:
 
-  // uint32 a_hangMode = 1;
+  // required uint32 a_hangMode = 1;
+  bool has_a_hangmode() const;
+  private:
+  bool _internal_has_a_hangmode() const;
+  public:
   void clear_a_hangmode();
   uint32_t a_hangmode() const;
   void set_a_hangmode(uint32_t value);
@@ -207,13 +222,17 @@ class Msg_Hang final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_timeout_;
     uint32_t a_hangmode_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestHangs_2eproto;
@@ -249,6 +268,13 @@ class Reply_Hang final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_Hang& default_instance() {
@@ -368,6 +394,13 @@ class Msg_Start final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Start& default_instance() {
     return *internal_default_instance();
   }
@@ -442,7 +475,11 @@ class Msg_Start final :
   enum : int {
     kAHangModeFieldNumber = 1,
   };
-  // uint32 a_hangMode = 1;
+  // required uint32 a_hangMode = 1;
+  bool has_a_hangmode() const;
+  private:
+  bool _internal_has_a_hangmode() const;
+  public:
   void clear_a_hangmode();
   uint32_t a_hangmode() const;
   void set_a_hangmode(uint32_t value);
@@ -459,8 +496,9 @@ class Msg_Start final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint32_t a_hangmode_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint32_t a_hangmode_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestHangs_2eproto;
@@ -496,6 +534,13 @@ class Reply_Start final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_Start& default_instance() {
@@ -572,7 +617,11 @@ class Reply_Start final :
   enum : int {
     kADetectedHangFieldNumber = 1,
   };
-  // bool a_detectedHang = 1;
+  // required bool a_detectedHang = 1;
+  bool has_a_detectedhang() const;
+  private:
+  bool _internal_has_a_detectedhang() const;
+  public:
   void clear_a_detectedhang();
   bool a_detectedhang() const;
   void set_a_detectedhang(bool value);
@@ -589,8 +638,9 @@ class Reply_Start final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_detectedhang_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_detectedhang_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestHangs_2eproto;
@@ -606,9 +656,17 @@ class Reply_Start final :
 #endif  // __GNUC__
 // Msg_Hang
 
-// uint32 a_hangMode = 1;
+// required uint32 a_hangMode = 1;
+inline bool Msg_Hang::_internal_has_a_hangmode() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_Hang::has_a_hangmode() const {
+  return _internal_has_a_hangmode();
+}
 inline void Msg_Hang::clear_a_hangmode() {
   _impl_.a_hangmode_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_Hang::_internal_a_hangmode() const {
   return _impl_.a_hangmode_;
@@ -618,7 +676,7 @@ inline uint32_t Msg_Hang::a_hangmode() const {
   return _internal_a_hangmode();
 }
 inline void Msg_Hang::_internal_set_a_hangmode(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_hangmode_ = value;
 }
 inline void Msg_Hang::set_a_hangmode(uint32_t value) {
@@ -626,9 +684,17 @@ inline void Msg_Hang::set_a_hangmode(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestHangs.Msg_Hang.a_hangMode)
 }
 
-// bytes a_timeout = 2;
+// required bytes a_timeout = 2;
+inline bool Msg_Hang::_internal_has_a_timeout() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_Hang::has_a_timeout() const {
+  return _internal_has_a_timeout();
+}
 inline void Msg_Hang::clear_a_timeout() {
   _impl_.a_timeout_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_Hang::a_timeout() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestHangs.Msg_Hang.a_timeout)
@@ -637,7 +703,7 @@ inline const std::string& Msg_Hang::a_timeout() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Hang::set_a_timeout(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_timeout_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestHangs.Msg_Hang.a_timeout)
 }
@@ -650,22 +716,32 @@ inline const std::string& Msg_Hang::_internal_a_timeout() const {
   return _impl_.a_timeout_.Get();
 }
 inline void Msg_Hang::_internal_set_a_timeout(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_timeout_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_Hang::_internal_mutable_a_timeout() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_timeout_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_Hang::release_a_timeout() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.PTestHangs.Msg_Hang.a_timeout)
-  return _impl_.a_timeout_.Release();
+  if (!_internal_has_a_timeout()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_timeout_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_timeout_.IsDefault()) {
+    _impl_.a_timeout_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_Hang::set_allocated_a_timeout(std::string* a_timeout) {
   if (a_timeout != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_timeout_.SetAllocated(a_timeout, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -684,9 +760,17 @@ inline void Msg_Hang::set_allocated_a_timeout(std::string* a_timeout) {
 
 // Msg_Start
 
-// uint32 a_hangMode = 1;
+// required uint32 a_hangMode = 1;
+inline bool Msg_Start::_internal_has_a_hangmode() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_Start::has_a_hangmode() const {
+  return _internal_has_a_hangmode();
+}
 inline void Msg_Start::clear_a_hangmode() {
   _impl_.a_hangmode_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Msg_Start::_internal_a_hangmode() const {
   return _impl_.a_hangmode_;
@@ -696,7 +780,7 @@ inline uint32_t Msg_Start::a_hangmode() const {
   return _internal_a_hangmode();
 }
 inline void Msg_Start::_internal_set_a_hangmode(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_hangmode_ = value;
 }
 inline void Msg_Start::set_a_hangmode(uint32_t value) {
@@ -708,9 +792,17 @@ inline void Msg_Start::set_a_hangmode(uint32_t value) {
 
 // Reply_Start
 
-// bool a_detectedHang = 1;
+// required bool a_detectedHang = 1;
+inline bool Reply_Start::_internal_has_a_detectedhang() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_Start::has_a_detectedhang() const {
+  return _internal_has_a_detectedhang();
+}
 inline void Reply_Start::clear_a_detectedhang() {
   _impl_.a_detectedhang_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Reply_Start::_internal_a_detectedhang() const {
   return _impl_.a_detectedhang_;
@@ -720,7 +812,7 @@ inline bool Reply_Start::a_detectedhang() const {
   return _internal_a_detectedhang();
 }
 inline void Reply_Start::_internal_set_a_detectedhang(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_detectedhang_ = value;
 }
 inline void Reply_Start::set_a_detectedhang(bool value) {

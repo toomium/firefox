@@ -36,8 +36,9 @@ struct Msg_QueryDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_QueryDefaultTypeInternal _Msg_Query_default_instance_;
 PROTOBUF_CONSTEXPR Reply_Query::Reply_Query(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_snapshot_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_snapshot_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Reply_QueryDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_QueryDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -49,9 +50,10 @@ struct Reply_QueryDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_QueryDefaultTypeInternal _Reply_Query_default_instance_;
 PROTOBUF_CONSTEXPR Msg_PLockRequestConstructor::Msg_PLockRequestConstructor(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_arequest_)*/nullptr
-  , /*decltype(_impl_.a_actorid_)*/int64_t{0}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_arequest_)*/nullptr
+  , /*decltype(_impl_.a_actorid_)*/int64_t{0}} {}
 struct Msg_PLockRequestConstructorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_PLockRequestConstructorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -260,6 +262,13 @@ std::string Msg_Query::GetTypeName() const {
 
 class Reply_Query::_Internal {
  public:
+  using HasBits = decltype(std::declval<Reply_Query>()._impl_._has_bits_);
+  static void set_has_a_snapshot(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Reply_Query::Reply_Query(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -272,15 +281,16 @@ Reply_Query::Reply_Query(const Reply_Query& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_Query* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_snapshot_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_snapshot_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_snapshot_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_snapshot_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_snapshot().empty()) {
+  if (from._internal_has_a_snapshot()) {
     _this->_impl_.a_snapshot_.Set(from._internal_a_snapshot(), 
       _this->GetArenaForAllocation());
   }
@@ -292,8 +302,9 @@ inline void Reply_Query::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_snapshot_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_snapshot_){}
   };
   _impl_.a_snapshot_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -325,17 +336,22 @@ void Reply_Query::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_snapshot_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_snapshot_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Reply_Query::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_snapshot = 1;
+      // required bytes a_snapshot = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_snapshot();
@@ -360,6 +376,7 @@ const char* Reply_Query::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -373,8 +390,9 @@ uint8_t* Reply_Query::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_snapshot = 1;
-  if (!this->_internal_a_snapshot().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_snapshot = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_snapshot(), target);
   }
@@ -391,16 +409,15 @@ size_t Reply_Query::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.locks.PLockManager.Reply_Query)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_snapshot = 1;
-  if (!this->_internal_a_snapshot().empty()) {
+  // required bytes a_snapshot = 1;
+  if (_internal_has_a_snapshot()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_snapshot());
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -423,7 +440,7 @@ void Reply_Query::MergeFrom(const Reply_Query& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_snapshot().empty()) {
+  if (from._internal_has_a_snapshot()) {
     _this->_internal_set_a_snapshot(from._internal_a_snapshot());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -437,6 +454,7 @@ void Reply_Query::CopyFrom(const Reply_Query& from) {
 }
 
 bool Reply_Query::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -445,6 +463,7 @@ void Reply_Query::InternalSwap(Reply_Query* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_snapshot_, lhs_arena,
       &other->_impl_.a_snapshot_, rhs_arena
@@ -460,7 +479,17 @@ std::string Reply_Query::GetTypeName() const {
 
 class Msg_PLockRequestConstructor::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_PLockRequestConstructor>()._impl_._has_bits_);
+  static void set_has_a_actorid(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
   static const ::protobuf::mozilla::dom::locks::IPCLockRequest& a_arequest(const Msg_PLockRequestConstructor* msg);
+  static void set_has_a_arequest(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 const ::protobuf::mozilla::dom::locks::IPCLockRequest&
@@ -468,10 +497,8 @@ Msg_PLockRequestConstructor::_Internal::a_arequest(const Msg_PLockRequestConstru
   return *msg->_impl_.a_arequest_;
 }
 void Msg_PLockRequestConstructor::clear_a_arequest() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_arequest_ != nullptr) {
-    delete _impl_.a_arequest_;
-  }
-  _impl_.a_arequest_ = nullptr;
+  if (_impl_.a_arequest_ != nullptr) _impl_.a_arequest_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Msg_PLockRequestConstructor::Msg_PLockRequestConstructor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -483,9 +510,10 @@ Msg_PLockRequestConstructor::Msg_PLockRequestConstructor(const Msg_PLockRequestC
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_PLockRequestConstructor* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_arequest_){nullptr}
-    , decltype(_impl_.a_actorid_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_arequest_){nullptr}
+    , decltype(_impl_.a_actorid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_arequest()) {
@@ -500,9 +528,10 @@ inline void Msg_PLockRequestConstructor::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_arequest_){nullptr}
-    , decltype(_impl_.a_actorid_){int64_t{0}}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_arequest_){nullptr}
+    , decltype(_impl_.a_actorid_){int64_t{0}}
   };
 }
 
@@ -530,29 +559,33 @@ void Msg_PLockRequestConstructor::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && _impl_.a_arequest_ != nullptr) {
-    delete _impl_.a_arequest_;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(_impl_.a_arequest_ != nullptr);
+    _impl_.a_arequest_->Clear();
   }
-  _impl_.a_arequest_ = nullptr;
   _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_PLockRequestConstructor::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // sint64 a_actorid = 1;
+      // required sint64 a_actorid = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_actorid(&has_bits);
           _impl_.a_actorid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.dom.locks.IPCLockRequest a_aRequest = 2;
+      // required .protobuf.mozilla.dom.locks.IPCLockRequest a_aRequest = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_arequest(), ptr);
@@ -576,6 +609,7 @@ const char* Msg_PLockRequestConstructor::_InternalParse(const char* ptr, ::_pbi:
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -589,14 +623,15 @@ uint8_t* Msg_PLockRequestConstructor::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // sint64 a_actorid = 1;
-  if (this->_internal_a_actorid() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required sint64 a_actorid = 1;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_actorid(), target);
   }
 
-  // .protobuf.mozilla.dom.locks.IPCLockRequest a_aRequest = 2;
-  if (this->_internal_has_a_arequest()) {
+  // required .protobuf.mozilla.dom.locks.IPCLockRequest a_aRequest = 2;
+  if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::a_arequest(this),
         _Internal::a_arequest(this).GetCachedSize(), target, stream);
@@ -610,25 +645,43 @@ uint8_t* Msg_PLockRequestConstructor::_InternalSerialize(
   return target;
 }
 
-size_t Msg_PLockRequestConstructor::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.locks.PLockManager.Msg_PLockRequestConstructor)
+size_t Msg_PLockRequestConstructor::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.locks.PLockManager.Msg_PLockRequestConstructor)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .protobuf.mozilla.dom.locks.IPCLockRequest a_aRequest = 2;
-  if (this->_internal_has_a_arequest()) {
+  if (_internal_has_a_arequest()) {
+    // required .protobuf.mozilla.dom.locks.IPCLockRequest a_aRequest = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_arequest_);
   }
 
-  // sint64 a_actorid = 1;
-  if (this->_internal_a_actorid() != 0) {
+  if (_internal_has_a_actorid()) {
+    // required sint64 a_actorid = 1;
     total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
   }
+
+  return total_size;
+}
+size_t Msg_PLockRequestConstructor::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.locks.PLockManager.Msg_PLockRequestConstructor)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required .protobuf.mozilla.dom.locks.IPCLockRequest a_aRequest = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_arequest_);
+
+    // required sint64 a_actorid = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -651,12 +704,16 @@ void Msg_PLockRequestConstructor::MergeFrom(const Msg_PLockRequestConstructor& f
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_arequest()) {
-    _this->_internal_mutable_a_arequest()->::protobuf::mozilla::dom::locks::IPCLockRequest::MergeFrom(
-        from._internal_a_arequest());
-  }
-  if (from._internal_a_actorid() != 0) {
-    _this->_internal_set_a_actorid(from._internal_a_actorid());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_mutable_a_arequest()->::protobuf::mozilla::dom::locks::IPCLockRequest::MergeFrom(
+          from._internal_a_arequest());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_actorid_ = from._impl_.a_actorid_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -669,12 +726,17 @@ void Msg_PLockRequestConstructor::CopyFrom(const Msg_PLockRequestConstructor& fr
 }
 
 bool Msg_PLockRequestConstructor::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (_internal_has_a_arequest()) {
+    if (!_impl_.a_arequest_->IsInitialized()) return false;
+  }
   return true;
 }
 
 void Msg_PLockRequestConstructor::InternalSwap(Msg_PLockRequestConstructor* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(Msg_PLockRequestConstructor, _impl_.a_actorid_)
       + sizeof(Msg_PLockRequestConstructor::_impl_.a_actorid_)

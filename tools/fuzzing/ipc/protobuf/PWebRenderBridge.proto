@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/gfx/layers/ipc/PWebRenderBridge.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.layers.PWebRenderBridge;
@@ -22,18 +22,18 @@ message Msg_EnsureConnected {
 }
 
 message Reply_EnsureConnected {
-  bytes a_textureFactoryIdentifier = 1;
-  bytes a_maybeIdNamespace = 2;
-  string a_error = 3;
+  required bytes a_textureFactoryIdentifier = 1;
+  required bytes a_maybeIdNamespace = 2;
+  required string a_error = 3;
 }
 
 message Msg_NewCompositable {
-  bytes a_handle = 1;
-  bytes a_info = 2;
+  required bytes a_handle = 1;
+  required bytes a_info = 2;
 }
 
 message Msg_ReleaseCompositable {
-  bytes a_compositable = 1;
+  required bytes a_compositable = 1;
 }
 
 message Msg_DeleteCompositorAnimations {
@@ -41,58 +41,58 @@ message Msg_DeleteCompositorAnimations {
 }
 
 message Msg_SetDisplayList {
-  bytes a_displayList = 1;
+  required bytes a_displayList = 1;
   repeated protobuf.mozilla.layers.OpDestroy a_toDestroy = 2;
-  uint64 a_fwdTransactionId = 3;
-  bytes a_transactionId = 4;
-  bool a_containsSVGGroup = 5;
-  bytes a_vsyncId = 6;
-  bytes a_vsyncStartTime = 7;
-  bytes a_refreshStartTime = 8;
-  bytes a_txnStartTime = 9;
-  string a_txnURL = 10;
-  bytes a_fwdTime = 11;
+  required uint64 a_fwdTransactionId = 3;
+  required bytes a_transactionId = 4;
+  required bool a_containsSVGGroup = 5;
+  required bytes a_vsyncId = 6;
+  required bytes a_vsyncStartTime = 7;
+  required bytes a_refreshStartTime = 8;
+  required bytes a_txnStartTime = 9;
+  required string a_txnURL = 10;
+  required bytes a_fwdTime = 11;
   repeated bytes a_payloads = 12;
-  bool a_renderOffscreen = 13;
+  required bool a_renderOffscreen = 13;
 }
 
 message Msg_EmptyTransaction {
-  bytes a_focusTarget = 1;
-  bytes a_transationData = 2;
+  required bytes a_focusTarget = 1;
+  required bytes a_transationData = 2;
   repeated protobuf.mozilla.layers.OpDestroy a_toDestroy = 3;
-  uint64 a_fwdTransactionId = 4;
-  bytes a_transactionId = 5;
-  bytes a_vsyncId = 6;
-  bytes a_vsyncStartTime = 7;
-  bytes a_refreshStartTime = 8;
-  bytes a_txnStartTime = 9;
-  string a_txnURL = 10;
-  bytes a_fwdTime = 11;
+  required uint64 a_fwdTransactionId = 4;
+  required bytes a_transactionId = 5;
+  required bytes a_vsyncId = 6;
+  required bytes a_vsyncStartTime = 7;
+  required bytes a_refreshStartTime = 8;
+  required bytes a_txnStartTime = 9;
+  required string a_txnURL = 10;
+  required bytes a_fwdTime = 11;
   repeated bytes a_payloads = 12;
 }
 
 message Msg_SetFocusTarget {
-  bytes a_focusTarget = 1;
+  required bytes a_focusTarget = 1;
 }
 
 message Msg_UpdateResources {
-  bytes a_aIdNamespace = 1;
+  required bytes a_aIdNamespace = 1;
   repeated protobuf.mozilla.layers.OpUpdateResource a_aResourceUpdates = 2;
   repeated protobuf.mozilla.layers.RefCountedShmem a_aSmallShmems = 3;
   repeated bytes a_aLargeShmems = 4;
 }
 
 message Msg_ParentCommands {
-  bytes a_aIdNamespace = 1;
+  required bytes a_aIdNamespace = 1;
   repeated protobuf.mozilla.layers.WebRenderParentCommand a_commands = 2;
 }
 
 message Msg_GetSnapshot {
-  bytes a_texture = 1;
+  required bytes a_texture = 1;
 }
 
 message Reply_GetSnapshot {
-  bool a_aNeedsYFlip = 1;
+  required bool a_aNeedsYFlip = 1;
 }
 
 message Msg_ClearCachedResources {
@@ -102,22 +102,22 @@ message Msg_ClearAnimationResources {
 }
 
 message Msg_SetDefaultClearColor {
-  uint32 a_aColor = 1;
+  required uint32 a_aColor = 1;
 }
 
 message Msg_InvalidateRenderedFrame {
 }
 
 message Msg_ScheduleComposite {
-  bytes a_aReasons = 1;
+  required bytes a_aReasons = 1;
 }
 
 message Msg_Capture {
 }
 
 message Msg_StartCaptureSequence {
-  string a_aPath = 1;
-  uint32 a_aFlags = 2;
+  required string a_aPath = 1;
+  required uint32 a_aFlags = 2;
 }
 
 message Msg_StopCaptureSequence {
@@ -130,12 +130,12 @@ message Reply_SyncWithCompositor {
 }
 
 message Msg_SetConfirmedTargetAPZC {
-  uint64 a_aInputBlockId = 1;
+  required uint64 a_aInputBlockId = 1;
   repeated bytes a_aTargets = 2;
 }
 
 message Msg_SetTestSampleTime {
-  bytes a_sampleTime = 1;
+  required bytes a_sampleTime = 1;
 }
 
 message Reply_SetTestSampleTime {
@@ -148,25 +148,25 @@ message Reply_LeaveTestMode {
 }
 
 message Msg_GetAnimationValue {
-  uint64 a_aCompositorAnimationsId = 1;
+  required uint64 a_aCompositorAnimationsId = 1;
 }
 
 message Reply_GetAnimationValue {
-  protobuf.mozilla.layers.OMTAValue a_value = 1;
+  required protobuf.mozilla.layers.OMTAValue a_value = 1;
 }
 
 message Msg_SetAsyncScrollOffset {
-  bytes a_scrollId = 1;
-  float a_x = 2;
-  float a_y = 3;
+  required bytes a_scrollId = 1;
+  required float a_x = 2;
+  required float a_y = 3;
 }
 
 message Reply_SetAsyncScrollOffset {
 }
 
 message Msg_SetAsyncZoom {
-  bytes a_scrollId = 1;
-  float a_zoom = 2;
+  required bytes a_scrollId = 1;
+  required float a_zoom = 2;
 }
 
 message Reply_SetAsyncZoom {
@@ -179,21 +179,21 @@ message Msg_GetAPZTestData {
 }
 
 message Reply_GetAPZTestData {
-  bytes a_data = 1;
+  required bytes a_data = 1;
 }
 
 message Msg_GetFrameUniformity {
 }
 
 message Reply_GetFrameUniformity {
-  bytes a_data = 1;
+  required bytes a_data = 1;
 }
 
 message Msg_EndWheelTransaction {
 }
 
 message Reply_EndWheelTransaction {
-  bool a_unused = 1;
+  required bool a_unused = 1;
 }
 
 message Msg_Shutdown {
@@ -206,8 +206,8 @@ message Reply_ShutdownSync {
 }
 
 message Msg_WrUpdated {
-  bytes a_aNewIdNamespace = 1;
-  bytes a_textureFactoryIdentifier = 2;
+  required bytes a_aNewIdNamespace = 1;
+  required bytes a_textureFactoryIdentifier = 2;
 }
 
 message Msg_WrReleasedImages {

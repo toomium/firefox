@@ -22,8 +22,9 @@ namespace mozilla {
 namespace dom {
 PROTOBUF_CONSTEXPR FileCreationSuccessResult::FileCreationSuccessResult(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_blob_)*/nullptr
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_blob_)*/nullptr} {}
 struct FileCreationSuccessResultDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FileCreationSuccessResultDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -35,8 +36,9 @@ struct FileCreationSuccessResultDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 FileCreationSuccessResultDefaultTypeInternal _FileCreationSuccessResult_default_instance_;
 PROTOBUF_CONSTEXPR FileCreationErrorResult::FileCreationErrorResult(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_errorcode_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_errorcode_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct FileCreationErrorResultDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FileCreationErrorResultDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -71,7 +73,14 @@ namespace dom {
 
 class FileCreationSuccessResult::_Internal {
  public:
+  using HasBits = decltype(std::declval<FileCreationSuccessResult>()._impl_._has_bits_);
   static const ::protobuf::mozilla::dom::IPCBlob& a_blob(const FileCreationSuccessResult* msg);
+  static void set_has_a_blob(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 const ::protobuf::mozilla::dom::IPCBlob&
@@ -79,10 +88,8 @@ FileCreationSuccessResult::_Internal::a_blob(const FileCreationSuccessResult* ms
   return *msg->_impl_.a_blob_;
 }
 void FileCreationSuccessResult::clear_a_blob() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_blob_ != nullptr) {
-    delete _impl_.a_blob_;
-  }
-  _impl_.a_blob_ = nullptr;
+  if (_impl_.a_blob_ != nullptr) _impl_.a_blob_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 FileCreationSuccessResult::FileCreationSuccessResult(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -94,8 +101,9 @@ FileCreationSuccessResult::FileCreationSuccessResult(const FileCreationSuccessRe
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   FileCreationSuccessResult* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_blob_){nullptr}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_blob_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_blob()) {
@@ -109,8 +117,9 @@ inline void FileCreationSuccessResult::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_blob_){nullptr}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_blob_){nullptr}
   };
 }
 
@@ -138,20 +147,23 @@ void FileCreationSuccessResult::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && _impl_.a_blob_ != nullptr) {
-    delete _impl_.a_blob_;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(_impl_.a_blob_ != nullptr);
+    _impl_.a_blob_->Clear();
   }
-  _impl_.a_blob_ = nullptr;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* FileCreationSuccessResult::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.dom.IPCBlob a_blob = 1;
+      // required .protobuf.mozilla.dom.IPCBlob a_blob = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_blob(), ptr);
@@ -175,6 +187,7 @@ const char* FileCreationSuccessResult::_InternalParse(const char* ptr, ::_pbi::P
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -188,8 +201,9 @@ uint8_t* FileCreationSuccessResult::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.mozilla.dom.IPCBlob a_blob = 1;
-  if (this->_internal_has_a_blob()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required .protobuf.mozilla.dom.IPCBlob a_blob = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_blob(this),
         _Internal::a_blob(this).GetCachedSize(), target, stream);
@@ -207,16 +221,15 @@ size_t FileCreationSuccessResult::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.FileCreationSuccessResult)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .protobuf.mozilla.dom.IPCBlob a_blob = 1;
-  if (this->_internal_has_a_blob()) {
+  // required .protobuf.mozilla.dom.IPCBlob a_blob = 1;
+  if (_internal_has_a_blob()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_blob_);
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -254,12 +267,17 @@ void FileCreationSuccessResult::CopyFrom(const FileCreationSuccessResult& from) 
 }
 
 bool FileCreationSuccessResult::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (_internal_has_a_blob()) {
+    if (!_impl_.a_blob_->IsInitialized()) return false;
+  }
   return true;
 }
 
 void FileCreationSuccessResult::InternalSwap(FileCreationSuccessResult* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_blob_, other->_impl_.a_blob_);
 }
 
@@ -272,6 +290,13 @@ std::string FileCreationSuccessResult::GetTypeName() const {
 
 class FileCreationErrorResult::_Internal {
  public:
+  using HasBits = decltype(std::declval<FileCreationErrorResult>()._impl_._has_bits_);
+  static void set_has_a_errorcode(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 FileCreationErrorResult::FileCreationErrorResult(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -284,15 +309,16 @@ FileCreationErrorResult::FileCreationErrorResult(const FileCreationErrorResult& 
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   FileCreationErrorResult* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_errorcode_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_errorcode_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_errorcode_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_errorcode_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_errorcode().empty()) {
+  if (from._internal_has_a_errorcode()) {
     _this->_impl_.a_errorcode_.Set(from._internal_a_errorcode(), 
       _this->GetArenaForAllocation());
   }
@@ -304,8 +330,9 @@ inline void FileCreationErrorResult::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_errorcode_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_errorcode_){}
   };
   _impl_.a_errorcode_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -337,17 +364,22 @@ void FileCreationErrorResult::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_errorcode_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_errorcode_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* FileCreationErrorResult::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_errorCode = 1;
+      // required bytes a_errorCode = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_errorcode();
@@ -372,6 +404,7 @@ const char* FileCreationErrorResult::_InternalParse(const char* ptr, ::_pbi::Par
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -385,8 +418,9 @@ uint8_t* FileCreationErrorResult::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_errorCode = 1;
-  if (!this->_internal_a_errorcode().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_errorCode = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_errorcode(), target);
   }
@@ -403,16 +437,15 @@ size_t FileCreationErrorResult::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.FileCreationErrorResult)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_errorCode = 1;
-  if (!this->_internal_a_errorcode().empty()) {
+  // required bytes a_errorCode = 1;
+  if (_internal_has_a_errorcode()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_errorcode());
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -435,7 +468,7 @@ void FileCreationErrorResult::MergeFrom(const FileCreationErrorResult& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_errorcode().empty()) {
+  if (from._internal_has_a_errorcode()) {
     _this->_internal_set_a_errorcode(from._internal_a_errorcode());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -449,6 +482,7 @@ void FileCreationErrorResult::CopyFrom(const FileCreationErrorResult& from) {
 }
 
 bool FileCreationErrorResult::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -457,6 +491,7 @@ void FileCreationErrorResult::InternalSwap(FileCreationErrorResult* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_errorcode_, lhs_arena,
       &other->_impl_.a_errorcode_, rhs_arena
@@ -664,20 +699,21 @@ uint8_t* FileCreationResult::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.mozilla.dom.FileCreationSuccessResult a_mVFileCreationSuccessResult = 1;
-  if (_internal_has_a_mvfilecreationsuccessresult()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::a_mvfilecreationsuccessresult(this),
-        _Internal::a_mvfilecreationsuccessresult(this).GetCachedSize(), target, stream);
+  switch (content_case()) {
+    case kAMVFileCreationSuccessResult: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(1, _Internal::a_mvfilecreationsuccessresult(this),
+          _Internal::a_mvfilecreationsuccessresult(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVFileCreationErrorResult: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(2, _Internal::a_mvfilecreationerrorresult(this),
+          _Internal::a_mvfilecreationerrorresult(this).GetCachedSize(), target, stream);
+      break;
+    }
+    default: ;
   }
-
-  // .protobuf.mozilla.dom.FileCreationErrorResult a_mVFileCreationErrorResult = 2;
-  if (_internal_has_a_mvfilecreationerrorresult()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::a_mvfilecreationerrorresult(this),
-        _Internal::a_mvfilecreationerrorresult(this).GetCachedSize(), target, stream);
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
@@ -760,6 +796,23 @@ void FileCreationResult::CopyFrom(const FileCreationResult& from) {
 }
 
 bool FileCreationResult::IsInitialized() const {
+  switch (content_case()) {
+    case kAMVFileCreationSuccessResult: {
+      if (_internal_has_a_mvfilecreationsuccessresult()) {
+        if (!_impl_.content_.a_mvfilecreationsuccessresult_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case kAMVFileCreationErrorResult: {
+      if (_internal_has_a_mvfilecreationerrorresult()) {
+        if (!_impl_.content_.a_mvfilecreationerrorresult_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case CONTENT_NOT_SET: {
+      break;
+    }
+  }
   return true;
 }
 

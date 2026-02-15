@@ -113,6 +113,13 @@ class Msg_Response final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Response& default_instance() {
     return *internal_default_instance();
   }
@@ -188,7 +195,11 @@ class Msg_Response final :
     kAAIdFieldNumber = 1,
     kAASuccessFieldNumber = 2,
   };
-  // uint32 a_aId = 1;
+  // required uint32 a_aId = 1;
+  bool has_a_aid() const;
+  private:
+  bool _internal_has_a_aid() const;
+  public:
   void clear_a_aid();
   uint32_t a_aid() const;
   void set_a_aid(uint32_t value);
@@ -197,7 +208,11 @@ class Msg_Response final :
   void _internal_set_a_aid(uint32_t value);
   public:
 
-  // bool a_aSuccess = 2;
+  // required bool a_aSuccess = 2;
+  bool has_a_asuccess() const;
+  private:
+  bool _internal_has_a_asuccess() const;
+  public:
   void clear_a_asuccess();
   bool a_asuccess() const;
   void set_a_asuccess(bool value);
@@ -210,13 +225,17 @@ class Msg_Response final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t a_aid_;
     bool a_asuccess_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMediaSystemResourceManager_2eproto;
@@ -252,6 +271,13 @@ class Msg___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg___delete__& default_instance() {
@@ -371,6 +397,13 @@ class Reply___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -488,6 +521,13 @@ class Msg_Acquire final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Acquire& default_instance() {
     return *internal_default_instance();
   }
@@ -564,7 +604,11 @@ class Msg_Acquire final :
     kAAIdFieldNumber = 1,
     kAAWillWaitFieldNumber = 3,
   };
-  // bytes a_aResourceType = 2;
+  // required bytes a_aResourceType = 2;
+  bool has_a_aresourcetype() const;
+  private:
+  bool _internal_has_a_aresourcetype() const;
+  public:
   void clear_a_aresourcetype();
   const std::string& a_aresourcetype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -578,7 +622,11 @@ class Msg_Acquire final :
   std::string* _internal_mutable_a_aresourcetype();
   public:
 
-  // uint32 a_aId = 1;
+  // required uint32 a_aId = 1;
+  bool has_a_aid() const;
+  private:
+  bool _internal_has_a_aid() const;
+  public:
   void clear_a_aid();
   uint32_t a_aid() const;
   void set_a_aid(uint32_t value);
@@ -587,7 +635,11 @@ class Msg_Acquire final :
   void _internal_set_a_aid(uint32_t value);
   public:
 
-  // bool a_aWillWait = 3;
+  // required bool a_aWillWait = 3;
+  bool has_a_awillwait() const;
+  private:
+  bool _internal_has_a_awillwait() const;
+  public:
   void clear_a_awillwait();
   bool a_awillwait() const;
   void set_a_awillwait(bool value);
@@ -600,14 +652,18 @@ class Msg_Acquire final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aresourcetype_;
     uint32_t a_aid_;
     bool a_awillwait_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMediaSystemResourceManager_2eproto;
@@ -643,6 +699,13 @@ class Msg_Release final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Release& default_instance() {
@@ -719,7 +782,11 @@ class Msg_Release final :
   enum : int {
     kAAIdFieldNumber = 1,
   };
-  // uint32 a_aId = 1;
+  // required uint32 a_aId = 1;
+  bool has_a_aid() const;
+  private:
+  bool _internal_has_a_aid() const;
+  public:
   void clear_a_aid();
   uint32_t a_aid() const;
   void set_a_aid(uint32_t value);
@@ -736,8 +803,9 @@ class Msg_Release final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint32_t a_aid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint32_t a_aid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMediaSystemResourceManager_2eproto;
@@ -773,6 +841,13 @@ class Msg_RemoveResourceManager final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_RemoveResourceManager& default_instance() {
@@ -870,9 +945,17 @@ class Msg_RemoveResourceManager final :
 #endif  // __GNUC__
 // Msg_Response
 
-// uint32 a_aId = 1;
+// required uint32 a_aId = 1;
+inline bool Msg_Response::_internal_has_a_aid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_Response::has_a_aid() const {
+  return _internal_has_a_aid();
+}
 inline void Msg_Response::clear_a_aid() {
   _impl_.a_aid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Msg_Response::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -882,7 +965,7 @@ inline uint32_t Msg_Response::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_Response::_internal_set_a_aid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aid_ = value;
 }
 inline void Msg_Response::set_a_aid(uint32_t value) {
@@ -890,9 +973,17 @@ inline void Msg_Response::set_a_aid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Response.a_aId)
 }
 
-// bool a_aSuccess = 2;
+// required bool a_aSuccess = 2;
+inline bool Msg_Response::_internal_has_a_asuccess() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_Response::has_a_asuccess() const {
+  return _internal_has_a_asuccess();
+}
 inline void Msg_Response::clear_a_asuccess() {
   _impl_.a_asuccess_ = false;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool Msg_Response::_internal_a_asuccess() const {
   return _impl_.a_asuccess_;
@@ -902,7 +993,7 @@ inline bool Msg_Response::a_asuccess() const {
   return _internal_a_asuccess();
 }
 inline void Msg_Response::_internal_set_a_asuccess(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_asuccess_ = value;
 }
 inline void Msg_Response::set_a_asuccess(bool value) {
@@ -922,9 +1013,17 @@ inline void Msg_Response::set_a_asuccess(bool value) {
 
 // Msg_Acquire
 
-// uint32 a_aId = 1;
+// required uint32 a_aId = 1;
+inline bool Msg_Acquire::_internal_has_a_aid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_Acquire::has_a_aid() const {
+  return _internal_has_a_aid();
+}
 inline void Msg_Acquire::clear_a_aid() {
   _impl_.a_aid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_Acquire::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -934,7 +1033,7 @@ inline uint32_t Msg_Acquire::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_Acquire::_internal_set_a_aid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aid_ = value;
 }
 inline void Msg_Acquire::set_a_aid(uint32_t value) {
@@ -942,9 +1041,17 @@ inline void Msg_Acquire::set_a_aid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Acquire.a_aId)
 }
 
-// bytes a_aResourceType = 2;
+// required bytes a_aResourceType = 2;
+inline bool Msg_Acquire::_internal_has_a_aresourcetype() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_Acquire::has_a_aresourcetype() const {
+  return _internal_has_a_aresourcetype();
+}
 inline void Msg_Acquire::clear_a_aresourcetype() {
   _impl_.a_aresourcetype_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_Acquire::a_aresourcetype() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Acquire.a_aResourceType)
@@ -953,7 +1060,7 @@ inline const std::string& Msg_Acquire::a_aresourcetype() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Acquire::set_a_aresourcetype(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aresourcetype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Acquire.a_aResourceType)
 }
@@ -966,22 +1073,32 @@ inline const std::string& Msg_Acquire::_internal_a_aresourcetype() const {
   return _impl_.a_aresourcetype_.Get();
 }
 inline void Msg_Acquire::_internal_set_a_aresourcetype(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aresourcetype_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_Acquire::_internal_mutable_a_aresourcetype() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aresourcetype_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_Acquire::release_a_aresourcetype() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Acquire.a_aResourceType)
-  return _impl_.a_aresourcetype_.Release();
+  if (!_internal_has_a_aresourcetype()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aresourcetype_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aresourcetype_.IsDefault()) {
+    _impl_.a_aresourcetype_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_Acquire::set_allocated_a_aresourcetype(std::string* a_aresourcetype) {
   if (a_aresourcetype != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aresourcetype_.SetAllocated(a_aresourcetype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -992,9 +1109,17 @@ inline void Msg_Acquire::set_allocated_a_aresourcetype(std::string* a_aresourcet
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Acquire.a_aResourceType)
 }
 
-// bool a_aWillWait = 3;
+// required bool a_aWillWait = 3;
+inline bool Msg_Acquire::_internal_has_a_awillwait() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_Acquire::has_a_awillwait() const {
+  return _internal_has_a_awillwait();
+}
 inline void Msg_Acquire::clear_a_awillwait() {
   _impl_.a_awillwait_ = false;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline bool Msg_Acquire::_internal_a_awillwait() const {
   return _impl_.a_awillwait_;
@@ -1004,7 +1129,7 @@ inline bool Msg_Acquire::a_awillwait() const {
   return _internal_a_awillwait();
 }
 inline void Msg_Acquire::_internal_set_a_awillwait(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_awillwait_ = value;
 }
 inline void Msg_Acquire::set_a_awillwait(bool value) {
@@ -1016,9 +1141,17 @@ inline void Msg_Acquire::set_a_awillwait(bool value) {
 
 // Msg_Release
 
-// uint32 a_aId = 1;
+// required uint32 a_aId = 1;
+inline bool Msg_Release::_internal_has_a_aid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_Release::has_a_aid() const {
+  return _internal_has_a_aid();
+}
 inline void Msg_Release::clear_a_aid() {
   _impl_.a_aid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Msg_Release::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -1028,7 +1161,7 @@ inline uint32_t Msg_Release::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_Release::_internal_set_a_aid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aid_ = value;
 }
 inline void Msg_Release::set_a_aid(uint32_t value) {

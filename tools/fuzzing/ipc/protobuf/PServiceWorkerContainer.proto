@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/serviceworkers/PServiceWorkerContainer.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.PServiceWorkerContainer;
@@ -18,39 +18,39 @@ import "IPCServiceWorkerRegistrationDescriptor.proto";
 
 // Message declarations
 message Msg_Register {
-  protobuf.mozilla.dom.IPCClientInfo a_aClientInfo = 1;
-  string a_aScopeURL = 2;
-  string a_aScriptURL = 3;
-  bytes a_aUpdateViaCache = 4;
+  required protobuf.mozilla.dom.IPCClientInfo a_aClientInfo = 1;
+  required string a_aScopeURL = 2;
+  required string a_aScriptURL = 3;
+  required bytes a_aUpdateViaCache = 4;
 }
 
 message Reply_Register {
-  protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult a_aResult = 1;
+  required protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult a_aResult = 1;
 }
 
 message Msg_GetRegistration {
-  protobuf.mozilla.dom.IPCClientInfo a_aClientInfo = 1;
-  string a_aURL = 2;
+  required protobuf.mozilla.dom.IPCClientInfo a_aClientInfo = 1;
+  required string a_aURL = 2;
 }
 
 message Reply_GetRegistration {
-  protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult a_aResult = 1;
+  required protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult a_aResult = 1;
 }
 
 message Msg_GetRegistrations {
-  protobuf.mozilla.dom.IPCClientInfo a_aClientInfo = 1;
+  required protobuf.mozilla.dom.IPCClientInfo a_aClientInfo = 1;
 }
 
 message Reply_GetRegistrations {
-  protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult a_aResult = 1;
+  required protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult a_aResult = 1;
 }
 
 message Msg_GetReady {
-  protobuf.mozilla.dom.IPCClientInfo a_aClientInfo = 1;
+  required protobuf.mozilla.dom.IPCClientInfo a_aClientInfo = 1;
 }
 
 message Reply_GetReady {
-  protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult a_aResult = 1;
+  required protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult a_aResult = 1;
 }
 
 message Msg___delete__ {

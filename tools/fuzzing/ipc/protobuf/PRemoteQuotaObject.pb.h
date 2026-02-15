@@ -100,6 +100,13 @@ class Msg_MaybeUpdateSize final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_MaybeUpdateSize& default_instance() {
     return *internal_default_instance();
   }
@@ -175,7 +182,11 @@ class Msg_MaybeUpdateSize final :
     kASizeFieldNumber = 1,
     kATruncateFieldNumber = 2,
   };
-  // sint64 a_size = 1;
+  // required sint64 a_size = 1;
+  bool has_a_size() const;
+  private:
+  bool _internal_has_a_size() const;
+  public:
   void clear_a_size();
   int64_t a_size() const;
   void set_a_size(int64_t value);
@@ -184,7 +195,11 @@ class Msg_MaybeUpdateSize final :
   void _internal_set_a_size(int64_t value);
   public:
 
-  // bool a_truncate = 2;
+  // required bool a_truncate = 2;
+  bool has_a_truncate() const;
+  private:
+  bool _internal_has_a_truncate() const;
+  public:
   void clear_a_truncate();
   bool a_truncate() const;
   void set_a_truncate(bool value);
@@ -197,13 +212,17 @@ class Msg_MaybeUpdateSize final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     int64_t a_size_;
     bool a_truncate_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteQuotaObject_2eproto;
@@ -239,6 +258,13 @@ class Reply_MaybeUpdateSize final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_MaybeUpdateSize& default_instance() {
@@ -315,7 +341,11 @@ class Reply_MaybeUpdateSize final :
   enum : int {
     kAResultFieldNumber = 1,
   };
-  // bool a_result = 1;
+  // required bool a_result = 1;
+  bool has_a_result() const;
+  private:
+  bool _internal_has_a_result() const;
+  public:
   void clear_a_result();
   bool a_result() const;
   void set_a_result(bool value);
@@ -332,8 +362,9 @@ class Reply_MaybeUpdateSize final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_result_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteQuotaObject_2eproto;
@@ -349,9 +380,17 @@ class Reply_MaybeUpdateSize final :
 #endif  // __GNUC__
 // Msg_MaybeUpdateSize
 
-// sint64 a_size = 1;
+// required sint64 a_size = 1;
+inline bool Msg_MaybeUpdateSize::_internal_has_a_size() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_MaybeUpdateSize::has_a_size() const {
+  return _internal_has_a_size();
+}
 inline void Msg_MaybeUpdateSize::clear_a_size() {
   _impl_.a_size_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline int64_t Msg_MaybeUpdateSize::_internal_a_size() const {
   return _impl_.a_size_;
@@ -361,7 +400,7 @@ inline int64_t Msg_MaybeUpdateSize::a_size() const {
   return _internal_a_size();
 }
 inline void Msg_MaybeUpdateSize::_internal_set_a_size(int64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_size_ = value;
 }
 inline void Msg_MaybeUpdateSize::set_a_size(int64_t value) {
@@ -369,9 +408,17 @@ inline void Msg_MaybeUpdateSize::set_a_size(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.PRemoteQuotaObject.Msg_MaybeUpdateSize.a_size)
 }
 
-// bool a_truncate = 2;
+// required bool a_truncate = 2;
+inline bool Msg_MaybeUpdateSize::_internal_has_a_truncate() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_MaybeUpdateSize::has_a_truncate() const {
+  return _internal_has_a_truncate();
+}
 inline void Msg_MaybeUpdateSize::clear_a_truncate() {
   _impl_.a_truncate_ = false;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool Msg_MaybeUpdateSize::_internal_a_truncate() const {
   return _impl_.a_truncate_;
@@ -381,7 +428,7 @@ inline bool Msg_MaybeUpdateSize::a_truncate() const {
   return _internal_a_truncate();
 }
 inline void Msg_MaybeUpdateSize::_internal_set_a_truncate(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_truncate_ = value;
 }
 inline void Msg_MaybeUpdateSize::set_a_truncate(bool value) {
@@ -393,9 +440,17 @@ inline void Msg_MaybeUpdateSize::set_a_truncate(bool value) {
 
 // Reply_MaybeUpdateSize
 
-// bool a_result = 1;
+// required bool a_result = 1;
+inline bool Reply_MaybeUpdateSize::_internal_has_a_result() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_MaybeUpdateSize::has_a_result() const {
+  return _internal_has_a_result();
+}
 inline void Reply_MaybeUpdateSize::clear_a_result() {
   _impl_.a_result_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Reply_MaybeUpdateSize::_internal_a_result() const {
   return _impl_.a_result_;
@@ -405,7 +460,7 @@ inline bool Reply_MaybeUpdateSize::a_result() const {
   return _internal_a_result();
 }
 inline void Reply_MaybeUpdateSize::_internal_set_a_result(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_result_ = value;
 }
 inline void Reply_MaybeUpdateSize::set_a_result(bool value) {

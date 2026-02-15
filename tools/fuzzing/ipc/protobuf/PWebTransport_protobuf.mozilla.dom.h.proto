@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/webtransport/shared/PWebTransport.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom;
@@ -14,7 +14,7 @@ import "PBackgroundSharedTypes.proto";
 
 // Structs and unions declarations
 message UnidirectionalStream {
-  uint64 a_streamId = 1;
+  required uint64 a_streamId = 1;
   optional bytes a_outStream = 2;
 }
 
@@ -26,7 +26,7 @@ message UnidirectionalStreamResponse {
 }
 
 message BidirectionalStream {
-  uint64 a_streamId = 1;
+  required uint64 a_streamId = 1;
   optional bytes a_inStream = 2;
   optional bytes a_outStream = 3;
 }
@@ -39,11 +39,11 @@ message BidirectionalStreamResponse {
 }
 
 message ResetError {
-  bytes a_error = 1;
+  required bytes a_error = 1;
 }
 
 message StopSendingError {
-  bytes a_error = 1;
+  required bytes a_error = 1;
 }
 
 message StreamResetOrStopSendingError {

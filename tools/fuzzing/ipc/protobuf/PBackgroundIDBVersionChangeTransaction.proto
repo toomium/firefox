@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/indexedDB/PBackgroundIDBVersionChangeTransaction.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.indexedDB.PBackgroundIDBVersionChangeTransaction;
@@ -24,51 +24,51 @@ message Msg_Commit {
 }
 
 message Msg_Abort {
-  bytes a_resultCode = 1;
+  required bytes a_resultCode = 1;
 }
 
 message Msg_CreateObjectStore {
-  protobuf.mozilla.dom.indexedDB.ObjectStoreMetadata a_metadata = 1;
+  required protobuf.mozilla.dom.indexedDB.ObjectStoreMetadata a_metadata = 1;
 }
 
 message Msg_DeleteObjectStore {
-  sint64 a_objectStoreId = 1;
+  required sint64 a_objectStoreId = 1;
 }
 
 message Msg_RenameObjectStore {
-  sint64 a_objectStoreId = 1;
-  string a_name = 2;
+  required sint64 a_objectStoreId = 1;
+  required string a_name = 2;
 }
 
 message Msg_CreateIndex {
-  sint64 a_objectStoreId = 1;
-  protobuf.mozilla.dom.indexedDB.IndexMetadata a_metadata = 2;
+  required sint64 a_objectStoreId = 1;
+  required protobuf.mozilla.dom.indexedDB.IndexMetadata a_metadata = 2;
 }
 
 message Msg_DeleteIndex {
-  sint64 a_objectStoreId = 1;
-  sint64 a_indexId = 2;
+  required sint64 a_objectStoreId = 1;
+  required sint64 a_indexId = 2;
 }
 
 message Msg_RenameIndex {
-  sint64 a_objectStoreId = 1;
-  sint64 a_indexId = 2;
-  string a_name = 3;
+  required sint64 a_objectStoreId = 1;
+  required sint64 a_indexId = 2;
+  required string a_name = 3;
 }
 
 message Msg_PBackgroundIDBCursorConstructor {
-  sint64 a_actorid = 1;
-  sint64 a_requestId = 2;
-  protobuf.mozilla.dom.indexedDB.OpenCursorParams a_params = 3;
+  required sint64 a_actorid = 1;
+  required sint64 a_requestId = 2;
+  required protobuf.mozilla.dom.indexedDB.OpenCursorParams a_params = 3;
 }
 
 message Reply_PBackgroundIDBCursorConstructor {
 }
 
 message Msg_PBackgroundIDBRequestConstructor {
-  sint64 a_actorid = 1;
-  sint64 a_requestId = 2;
-  protobuf.mozilla.dom.indexedDB.RequestParams a_params = 3;
+  required sint64 a_actorid = 1;
+  required sint64 a_requestId = 2;
+  required protobuf.mozilla.dom.indexedDB.RequestParams a_params = 3;
 }
 
 message Reply_PBackgroundIDBRequestConstructor {
@@ -81,7 +81,7 @@ message Reply___delete__ {
 }
 
 message Msg_Complete {
-  bytes a_result = 1;
+  required bytes a_result = 1;
 }
 
 // Parameter mappings stats:

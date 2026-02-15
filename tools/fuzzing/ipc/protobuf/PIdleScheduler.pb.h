@@ -145,6 +145,13 @@ class Msg_IdleTime final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_IdleTime& default_instance() {
     return *internal_default_instance();
   }
@@ -220,7 +227,11 @@ class Msg_IdleTime final :
     kABudgetFieldNumber = 2,
     kAIdFieldNumber = 1,
   };
-  // bytes a_budget = 2;
+  // required bytes a_budget = 2;
+  bool has_a_budget() const;
+  private:
+  bool _internal_has_a_budget() const;
+  public:
   void clear_a_budget();
   const std::string& a_budget() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -234,7 +245,11 @@ class Msg_IdleTime final :
   std::string* _internal_mutable_a_budget();
   public:
 
-  // uint64 a_id = 1;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
+  private:
+  bool _internal_has_a_id() const;
+  public:
   void clear_a_id();
   uint64_t a_id() const;
   void set_a_id(uint64_t value);
@@ -247,13 +262,17 @@ class Msg_IdleTime final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_budget_;
     uint64_t a_id_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PIdleScheduler_2eproto;
@@ -289,6 +308,13 @@ class Msg_InitForIdleUse final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_InitForIdleUse& default_instance() {
@@ -408,6 +434,13 @@ class Reply_InitForIdleUse final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_InitForIdleUse& default_instance() {
     return *internal_default_instance();
   }
@@ -501,7 +534,11 @@ class Reply_InitForIdleUse final :
   std::string* _internal_mutable_a_state();
   public:
 
-  // uint32 a_childId = 2;
+  // required uint32 a_childId = 2;
+  bool has_a_childid() const;
+  private:
+  bool _internal_has_a_childid() const;
+  public:
   void clear_a_childid();
   uint32_t a_childid() const;
   void set_a_childid(uint32_t value);
@@ -557,6 +594,13 @@ class Msg_RequestIdleTime final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_RequestIdleTime& default_instance() {
@@ -634,7 +678,11 @@ class Msg_RequestIdleTime final :
     kABudgetFieldNumber = 2,
     kAIdFieldNumber = 1,
   };
-  // bytes a_budget = 2;
+  // required bytes a_budget = 2;
+  bool has_a_budget() const;
+  private:
+  bool _internal_has_a_budget() const;
+  public:
   void clear_a_budget();
   const std::string& a_budget() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -648,7 +696,11 @@ class Msg_RequestIdleTime final :
   std::string* _internal_mutable_a_budget();
   public:
 
-  // uint64 a_id = 1;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
+  private:
+  bool _internal_has_a_id() const;
+  public:
   void clear_a_id();
   uint64_t a_id() const;
   void set_a_id(uint64_t value);
@@ -661,13 +713,17 @@ class Msg_RequestIdleTime final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_budget_;
     uint64_t a_id_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PIdleScheduler_2eproto;
@@ -703,6 +759,13 @@ class Msg_IdleTimeUsed final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_IdleTimeUsed& default_instance() {
@@ -779,7 +842,11 @@ class Msg_IdleTimeUsed final :
   enum : int {
     kAIdFieldNumber = 1,
   };
-  // uint64 a_id = 1;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
+  private:
+  bool _internal_has_a_id() const;
+  public:
   void clear_a_id();
   uint64_t a_id() const;
   void set_a_id(uint64_t value);
@@ -796,8 +863,9 @@ class Msg_IdleTimeUsed final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint64_t a_id_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint64_t a_id_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PIdleScheduler_2eproto;
@@ -833,6 +901,13 @@ class Msg_Schedule final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Schedule& default_instance() {
@@ -952,6 +1027,13 @@ class Msg_RunningPrioritizedOperation final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_RunningPrioritizedOperation& default_instance() {
     return *internal_default_instance();
   }
@@ -1067,6 +1149,13 @@ class Msg_PrioritizedOperationDone final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_PrioritizedOperationDone& default_instance() {
@@ -1186,6 +1275,13 @@ class Msg_RequestGC final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_RequestGC& default_instance() {
     return *internal_default_instance();
   }
@@ -1303,6 +1399,13 @@ class Reply_RequestGC final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_RequestGC& default_instance() {
     return *internal_default_instance();
   }
@@ -1377,7 +1480,11 @@ class Reply_RequestGC final :
   enum : int {
     kAMayGcFieldNumber = 1,
   };
-  // bool a_may_gc = 1;
+  // required bool a_may_gc = 1;
+  bool has_a_may_gc() const;
+  private:
+  bool _internal_has_a_may_gc() const;
+  public:
   void clear_a_may_gc();
   bool a_may_gc() const;
   void set_a_may_gc(bool value);
@@ -1394,8 +1501,9 @@ class Reply_RequestGC final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_may_gc_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_may_gc_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PIdleScheduler_2eproto;
@@ -1431,6 +1539,13 @@ class Msg_StartedGC final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_StartedGC& default_instance() {
@@ -1550,6 +1665,13 @@ class Msg_DoneGC final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_DoneGC& default_instance() {
     return *internal_default_instance();
   }
@@ -1665,6 +1787,13 @@ class Msg___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg___delete__& default_instance() {
@@ -1784,6 +1913,13 @@ class Reply___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -1879,9 +2015,17 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_IdleTime
 
-// uint64 a_id = 1;
+// required uint64 a_id = 1;
+inline bool Msg_IdleTime::_internal_has_a_id() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_IdleTime::has_a_id() const {
+  return _internal_has_a_id();
+}
 inline void Msg_IdleTime::clear_a_id() {
   _impl_.a_id_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_IdleTime::_internal_a_id() const {
   return _impl_.a_id_;
@@ -1891,7 +2035,7 @@ inline uint64_t Msg_IdleTime::a_id() const {
   return _internal_a_id();
 }
 inline void Msg_IdleTime::_internal_set_a_id(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_id_ = value;
 }
 inline void Msg_IdleTime::set_a_id(uint64_t value) {
@@ -1899,9 +2043,17 @@ inline void Msg_IdleTime::set_a_id(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PIdleScheduler.Msg_IdleTime.a_id)
 }
 
-// bytes a_budget = 2;
+// required bytes a_budget = 2;
+inline bool Msg_IdleTime::_internal_has_a_budget() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_IdleTime::has_a_budget() const {
+  return _internal_has_a_budget();
+}
 inline void Msg_IdleTime::clear_a_budget() {
   _impl_.a_budget_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_IdleTime::a_budget() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PIdleScheduler.Msg_IdleTime.a_budget)
@@ -1910,7 +2062,7 @@ inline const std::string& Msg_IdleTime::a_budget() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_IdleTime::set_a_budget(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_budget_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PIdleScheduler.Msg_IdleTime.a_budget)
 }
@@ -1923,22 +2075,32 @@ inline const std::string& Msg_IdleTime::_internal_a_budget() const {
   return _impl_.a_budget_.Get();
 }
 inline void Msg_IdleTime::_internal_set_a_budget(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_budget_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_IdleTime::_internal_mutable_a_budget() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_budget_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_IdleTime::release_a_budget() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PIdleScheduler.Msg_IdleTime.a_budget)
-  return _impl_.a_budget_.Release();
+  if (!_internal_has_a_budget()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_budget_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_budget_.IsDefault()) {
+    _impl_.a_budget_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_IdleTime::set_allocated_a_budget(std::string* a_budget) {
   if (a_budget != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_budget_.SetAllocated(a_budget, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2025,9 +2187,17 @@ inline void Reply_InitForIdleUse::set_allocated_a_state(std::string* a_state) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PIdleScheduler.Reply_InitForIdleUse.a_state)
 }
 
-// uint32 a_childId = 2;
+// required uint32 a_childId = 2;
+inline bool Reply_InitForIdleUse::_internal_has_a_childid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Reply_InitForIdleUse::has_a_childid() const {
+  return _internal_has_a_childid();
+}
 inline void Reply_InitForIdleUse::clear_a_childid() {
   _impl_.a_childid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Reply_InitForIdleUse::_internal_a_childid() const {
   return _impl_.a_childid_;
@@ -2037,7 +2207,7 @@ inline uint32_t Reply_InitForIdleUse::a_childid() const {
   return _internal_a_childid();
 }
 inline void Reply_InitForIdleUse::_internal_set_a_childid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_childid_ = value;
 }
 inline void Reply_InitForIdleUse::set_a_childid(uint32_t value) {
@@ -2049,9 +2219,17 @@ inline void Reply_InitForIdleUse::set_a_childid(uint32_t value) {
 
 // Msg_RequestIdleTime
 
-// uint64 a_id = 1;
+// required uint64 a_id = 1;
+inline bool Msg_RequestIdleTime::_internal_has_a_id() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_RequestIdleTime::has_a_id() const {
+  return _internal_has_a_id();
+}
 inline void Msg_RequestIdleTime::clear_a_id() {
   _impl_.a_id_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_RequestIdleTime::_internal_a_id() const {
   return _impl_.a_id_;
@@ -2061,7 +2239,7 @@ inline uint64_t Msg_RequestIdleTime::a_id() const {
   return _internal_a_id();
 }
 inline void Msg_RequestIdleTime::_internal_set_a_id(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_id_ = value;
 }
 inline void Msg_RequestIdleTime::set_a_id(uint64_t value) {
@@ -2069,9 +2247,17 @@ inline void Msg_RequestIdleTime::set_a_id(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PIdleScheduler.Msg_RequestIdleTime.a_id)
 }
 
-// bytes a_budget = 2;
+// required bytes a_budget = 2;
+inline bool Msg_RequestIdleTime::_internal_has_a_budget() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_RequestIdleTime::has_a_budget() const {
+  return _internal_has_a_budget();
+}
 inline void Msg_RequestIdleTime::clear_a_budget() {
   _impl_.a_budget_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_RequestIdleTime::a_budget() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PIdleScheduler.Msg_RequestIdleTime.a_budget)
@@ -2080,7 +2266,7 @@ inline const std::string& Msg_RequestIdleTime::a_budget() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_RequestIdleTime::set_a_budget(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_budget_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PIdleScheduler.Msg_RequestIdleTime.a_budget)
 }
@@ -2093,22 +2279,32 @@ inline const std::string& Msg_RequestIdleTime::_internal_a_budget() const {
   return _impl_.a_budget_.Get();
 }
 inline void Msg_RequestIdleTime::_internal_set_a_budget(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_budget_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_RequestIdleTime::_internal_mutable_a_budget() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_budget_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_RequestIdleTime::release_a_budget() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PIdleScheduler.Msg_RequestIdleTime.a_budget)
-  return _impl_.a_budget_.Release();
+  if (!_internal_has_a_budget()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_budget_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_budget_.IsDefault()) {
+    _impl_.a_budget_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_RequestIdleTime::set_allocated_a_budget(std::string* a_budget) {
   if (a_budget != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_budget_.SetAllocated(a_budget, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2123,9 +2319,17 @@ inline void Msg_RequestIdleTime::set_allocated_a_budget(std::string* a_budget) {
 
 // Msg_IdleTimeUsed
 
-// uint64 a_id = 1;
+// required uint64 a_id = 1;
+inline bool Msg_IdleTimeUsed::_internal_has_a_id() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_IdleTimeUsed::has_a_id() const {
+  return _internal_has_a_id();
+}
 inline void Msg_IdleTimeUsed::clear_a_id() {
   _impl_.a_id_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_IdleTimeUsed::_internal_a_id() const {
   return _impl_.a_id_;
@@ -2135,7 +2339,7 @@ inline uint64_t Msg_IdleTimeUsed::a_id() const {
   return _internal_a_id();
 }
 inline void Msg_IdleTimeUsed::_internal_set_a_id(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_id_ = value;
 }
 inline void Msg_IdleTimeUsed::set_a_id(uint64_t value) {
@@ -2163,9 +2367,17 @@ inline void Msg_IdleTimeUsed::set_a_id(uint64_t value) {
 
 // Reply_RequestGC
 
-// bool a_may_gc = 1;
+// required bool a_may_gc = 1;
+inline bool Reply_RequestGC::_internal_has_a_may_gc() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_RequestGC::has_a_may_gc() const {
+  return _internal_has_a_may_gc();
+}
 inline void Reply_RequestGC::clear_a_may_gc() {
   _impl_.a_may_gc_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Reply_RequestGC::_internal_a_may_gc() const {
   return _impl_.a_may_gc_;
@@ -2175,7 +2387,7 @@ inline bool Reply_RequestGC::a_may_gc() const {
   return _internal_a_may_gc();
 }
 inline void Reply_RequestGC::_internal_set_a_may_gc(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_may_gc_ = value;
 }
 inline void Reply_RequestGC::set_a_may_gc(bool value) {

@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/ipc/ipdl/test/gtest/PTestDataStructuresCommon.ipdlh
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla._foo;
@@ -20,8 +20,8 @@ message IntDouble {
 }
 
 message SIntDouble {
-  sint32 a_i = 1;
-  double a_d = 2;
+  required sint32 a_i = 1;
+  required double a_d = 2;
 }
 
 message IntDoubleArrays {
@@ -39,7 +39,7 @@ message IntDoubleArrays {
 }
 
 message SIntDoubleArrays {
-  sint32 a_i = 1;
+  required sint32 a_i = 1;
   repeated sint32 a_ai = 2;
   repeated double a_ad = 3;
 }
@@ -63,7 +63,7 @@ message Actors {
 }
 
 message SActors {
-  sint32 a_i = 1;
+  required sint32 a_i = 1;
   repeated sint32 a_ai = 2;
   repeated bytes a_ap = 3;
 }
@@ -87,7 +87,7 @@ message Unions {
 }
 
 message Structs {
-  sint32 a_i = 1;
+  required sint32 a_i = 1;
   repeated sint32 a_ai = 2;
   repeated bytes a_ap = 3;
   repeated protobuf.mozilla._foo.SActors a_aa = 4;
@@ -116,7 +116,7 @@ message WithStructs {
 }
 
 message WithUnions {
-  sint32 a_i = 1;
+  required sint32 a_i = 1;
   repeated sint32 a_ai = 2;
   repeated bytes a_ap = 3;
   repeated protobuf.mozilla._foo.Actors a_aa = 4;
@@ -124,15 +124,15 @@ message WithUnions {
 }
 
 message CommonAttrs {
-  bool a_dummy = 1;
+  required bool a_dummy = 1;
 }
 
 message FooAttrs {
-  sint32 a_dummy = 1;
+  required sint32 a_dummy = 1;
 }
 
 message BarAttrs {
-  float a_dummy = 1;
+  required float a_dummy = 1;
 }
 
 message SpecificAttrs {
@@ -143,13 +143,13 @@ message SpecificAttrs {
 }
 
 message Attrs {
-  protobuf.mozilla._foo.CommonAttrs a_common = 1;
-  protobuf.mozilla._foo.SpecificAttrs a_specific = 2;
+  required protobuf.mozilla._foo.CommonAttrs a_common = 1;
+  required protobuf.mozilla._foo.SpecificAttrs a_specific = 2;
 }
 
 message SetAttrs {
-  bytes a_x = 1;
-  protobuf.mozilla._foo.Attrs a_attrs = 2;
+  required bytes a_x = 1;
+  required protobuf.mozilla._foo.Attrs a_attrs = 2;
 }
 
 message Op {
@@ -160,8 +160,8 @@ message Op {
 }
 
 message ShmemStruct {
-  sint32 a_i = 1;
-  bytes a_mem = 2;
+  required sint32 a_i = 1;
+  required bytes a_mem = 2;
 }
 
 message ShmemUnion {

@@ -90,6 +90,13 @@ class IPCNavigationPreloadState final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const IPCNavigationPreloadState& default_instance() {
     return *internal_default_instance();
   }
@@ -165,7 +172,11 @@ class IPCNavigationPreloadState final :
     kAHeaderValueFieldNumber = 2,
     kAEnabledFieldNumber = 1,
   };
-  // string a_headerValue = 2;
+  // required string a_headerValue = 2;
+  bool has_a_headervalue() const;
+  private:
+  bool _internal_has_a_headervalue() const;
+  public:
   void clear_a_headervalue();
   const std::string& a_headervalue() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -179,7 +190,11 @@ class IPCNavigationPreloadState final :
   std::string* _internal_mutable_a_headervalue();
   public:
 
-  // bool a_enabled = 1;
+  // required bool a_enabled = 1;
+  bool has_a_enabled() const;
+  private:
+  bool _internal_has_a_enabled() const;
+  public:
   void clear_a_enabled();
   bool a_enabled() const;
   void set_a_enabled(bool value);
@@ -192,13 +207,17 @@ class IPCNavigationPreloadState final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_headervalue_;
     bool a_enabled_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_IPCNavigationPreloadState_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -214,9 +233,17 @@ class IPCNavigationPreloadState final :
 #endif  // __GNUC__
 // IPCNavigationPreloadState
 
-// bool a_enabled = 1;
+// required bool a_enabled = 1;
+inline bool IPCNavigationPreloadState::_internal_has_a_enabled() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool IPCNavigationPreloadState::has_a_enabled() const {
+  return _internal_has_a_enabled();
+}
 inline void IPCNavigationPreloadState::clear_a_enabled() {
   _impl_.a_enabled_ = false;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool IPCNavigationPreloadState::_internal_a_enabled() const {
   return _impl_.a_enabled_;
@@ -226,7 +253,7 @@ inline bool IPCNavigationPreloadState::a_enabled() const {
   return _internal_a_enabled();
 }
 inline void IPCNavigationPreloadState::_internal_set_a_enabled(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_enabled_ = value;
 }
 inline void IPCNavigationPreloadState::set_a_enabled(bool value) {
@@ -234,9 +261,17 @@ inline void IPCNavigationPreloadState::set_a_enabled(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCNavigationPreloadState.a_enabled)
 }
 
-// string a_headerValue = 2;
+// required string a_headerValue = 2;
+inline bool IPCNavigationPreloadState::_internal_has_a_headervalue() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool IPCNavigationPreloadState::has_a_headervalue() const {
+  return _internal_has_a_headervalue();
+}
 inline void IPCNavigationPreloadState::clear_a_headervalue() {
   _impl_.a_headervalue_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& IPCNavigationPreloadState::a_headervalue() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCNavigationPreloadState.a_headerValue)
@@ -245,7 +280,7 @@ inline const std::string& IPCNavigationPreloadState::a_headervalue() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCNavigationPreloadState::set_a_headervalue(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_headervalue_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCNavigationPreloadState.a_headerValue)
 }
@@ -258,22 +293,32 @@ inline const std::string& IPCNavigationPreloadState::_internal_a_headervalue() c
   return _impl_.a_headervalue_.Get();
 }
 inline void IPCNavigationPreloadState::_internal_set_a_headervalue(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_headervalue_.Set(value, GetArenaForAllocation());
 }
 inline std::string* IPCNavigationPreloadState::_internal_mutable_a_headervalue() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_headervalue_.Mutable(GetArenaForAllocation());
 }
 inline std::string* IPCNavigationPreloadState::release_a_headervalue() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCNavigationPreloadState.a_headerValue)
-  return _impl_.a_headervalue_.Release();
+  if (!_internal_has_a_headervalue()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_headervalue_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_headervalue_.IsDefault()) {
+    _impl_.a_headervalue_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void IPCNavigationPreloadState::set_allocated_a_headervalue(std::string* a_headervalue) {
   if (a_headervalue != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_headervalue_.SetAllocated(a_headervalue, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

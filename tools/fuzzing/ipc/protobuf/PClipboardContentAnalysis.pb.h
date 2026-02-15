@@ -103,6 +103,13 @@ class Msg_GetClipboard final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_GetClipboard& default_instance() {
     return *internal_default_instance();
   }
@@ -203,7 +210,11 @@ class Msg_GetClipboard final :
   std::string* _internal_add_a_atypes();
   public:
 
-  // bytes a_aWhichClipboard = 2;
+  // required bytes a_aWhichClipboard = 2;
+  bool has_a_awhichclipboard() const;
+  private:
+  bool _internal_has_a_awhichclipboard() const;
+  public:
   void clear_a_awhichclipboard();
   const std::string& a_awhichclipboard() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -217,7 +228,11 @@ class Msg_GetClipboard final :
   std::string* _internal_mutable_a_awhichclipboard();
   public:
 
-  // uint64 a_aRequestingWindowContextId = 3;
+  // required uint64 a_aRequestingWindowContextId = 3;
+  bool has_a_arequestingwindowcontextid() const;
+  private:
+  bool _internal_has_a_arequestingwindowcontextid() const;
+  public:
   void clear_a_arequestingwindowcontextid();
   uint64_t a_arequestingwindowcontextid() const;
   void set_a_arequestingwindowcontextid(uint64_t value);
@@ -230,14 +245,18 @@ class Msg_GetClipboard final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_atypes_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_awhichclipboard_;
     uint64_t a_arequestingwindowcontextid_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PClipboardContentAnalysis_2eproto;
@@ -273,6 +292,13 @@ class Reply_GetClipboard final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_GetClipboard& default_instance() {
@@ -349,7 +375,7 @@ class Reply_GetClipboard final :
   enum : int {
     kATransferableDataOrErrorFieldNumber = 1,
   };
-  // .protobuf.mozilla.dom.IPCTransferableDataOrError a_transferableDataOrError = 1;
+  // required .protobuf.mozilla.dom.IPCTransferableDataOrError a_transferableDataOrError = 1;
   bool has_a_transferabledataorerror() const;
   private:
   bool _internal_has_a_transferabledataorerror() const;
@@ -375,8 +401,9 @@ class Reply_GetClipboard final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::protobuf::mozilla::dom::IPCTransferableDataOrError* a_transferabledataorerror_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::protobuf::mozilla::dom::IPCTransferableDataOrError* a_transferabledataorerror_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PClipboardContentAnalysis_2eproto;
@@ -412,6 +439,13 @@ class Msg_GetAllClipboardDataSync final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_GetAllClipboardDataSync& default_instance() {
@@ -514,7 +548,11 @@ class Msg_GetAllClipboardDataSync final :
   std::string* _internal_add_a_atypes();
   public:
 
-  // bytes a_aWhichClipboard = 2;
+  // required bytes a_aWhichClipboard = 2;
+  bool has_a_awhichclipboard() const;
+  private:
+  bool _internal_has_a_awhichclipboard() const;
+  public:
   void clear_a_awhichclipboard();
   const std::string& a_awhichclipboard() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -528,7 +566,11 @@ class Msg_GetAllClipboardDataSync final :
   std::string* _internal_mutable_a_awhichclipboard();
   public:
 
-  // uint64 a_aRequestingWindowContextId = 3;
+  // required uint64 a_aRequestingWindowContextId = 3;
+  bool has_a_arequestingwindowcontextid() const;
+  private:
+  bool _internal_has_a_arequestingwindowcontextid() const;
+  public:
   void clear_a_arequestingwindowcontextid();
   uint64_t a_arequestingwindowcontextid() const;
   void set_a_arequestingwindowcontextid(uint64_t value);
@@ -541,14 +583,18 @@ class Msg_GetAllClipboardDataSync final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_atypes_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_awhichclipboard_;
     uint64_t a_arequestingwindowcontextid_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PClipboardContentAnalysis_2eproto;
@@ -584,6 +630,13 @@ class Reply_GetAllClipboardDataSync final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_GetAllClipboardDataSync& default_instance() {
@@ -660,7 +713,7 @@ class Reply_GetAllClipboardDataSync final :
   enum : int {
     kATransferableDataOrErrorFieldNumber = 1,
   };
-  // .protobuf.mozilla.dom.IPCTransferableDataOrError a_transferableDataOrError = 1;
+  // required .protobuf.mozilla.dom.IPCTransferableDataOrError a_transferableDataOrError = 1;
   bool has_a_transferabledataorerror() const;
   private:
   bool _internal_has_a_transferabledataorerror() const;
@@ -686,8 +739,9 @@ class Reply_GetAllClipboardDataSync final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::protobuf::mozilla::dom::IPCTransferableDataOrError* a_transferabledataorerror_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::protobuf::mozilla::dom::IPCTransferableDataOrError* a_transferabledataorerror_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PClipboardContentAnalysis_2eproto;
@@ -778,9 +832,17 @@ Msg_GetClipboard::mutable_a_atypes() {
   return &_impl_.a_atypes_;
 }
 
-// bytes a_aWhichClipboard = 2;
+// required bytes a_aWhichClipboard = 2;
+inline bool Msg_GetClipboard::_internal_has_a_awhichclipboard() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_GetClipboard::has_a_awhichclipboard() const {
+  return _internal_has_a_awhichclipboard();
+}
 inline void Msg_GetClipboard::clear_a_awhichclipboard() {
   _impl_.a_awhichclipboard_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_GetClipboard::a_awhichclipboard() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.PClipboardContentAnalysis.Msg_GetClipboard.a_aWhichClipboard)
@@ -789,7 +851,7 @@ inline const std::string& Msg_GetClipboard::a_awhichclipboard() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GetClipboard::set_a_awhichclipboard(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_awhichclipboard_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PClipboardContentAnalysis.Msg_GetClipboard.a_aWhichClipboard)
 }
@@ -802,22 +864,32 @@ inline const std::string& Msg_GetClipboard::_internal_a_awhichclipboard() const 
   return _impl_.a_awhichclipboard_.Get();
 }
 inline void Msg_GetClipboard::_internal_set_a_awhichclipboard(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_awhichclipboard_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_GetClipboard::_internal_mutable_a_awhichclipboard() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_awhichclipboard_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_GetClipboard::release_a_awhichclipboard() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.PClipboardContentAnalysis.Msg_GetClipboard.a_aWhichClipboard)
-  return _impl_.a_awhichclipboard_.Release();
+  if (!_internal_has_a_awhichclipboard()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_awhichclipboard_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_awhichclipboard_.IsDefault()) {
+    _impl_.a_awhichclipboard_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_GetClipboard::set_allocated_a_awhichclipboard(std::string* a_awhichclipboard) {
   if (a_awhichclipboard != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_awhichclipboard_.SetAllocated(a_awhichclipboard, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -828,9 +900,17 @@ inline void Msg_GetClipboard::set_allocated_a_awhichclipboard(std::string* a_awh
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PClipboardContentAnalysis.Msg_GetClipboard.a_aWhichClipboard)
 }
 
-// uint64 a_aRequestingWindowContextId = 3;
+// required uint64 a_aRequestingWindowContextId = 3;
+inline bool Msg_GetClipboard::_internal_has_a_arequestingwindowcontextid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_GetClipboard::has_a_arequestingwindowcontextid() const {
+  return _internal_has_a_arequestingwindowcontextid();
+}
 inline void Msg_GetClipboard::clear_a_arequestingwindowcontextid() {
   _impl_.a_arequestingwindowcontextid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_GetClipboard::_internal_a_arequestingwindowcontextid() const {
   return _impl_.a_arequestingwindowcontextid_;
@@ -840,7 +920,7 @@ inline uint64_t Msg_GetClipboard::a_arequestingwindowcontextid() const {
   return _internal_a_arequestingwindowcontextid();
 }
 inline void Msg_GetClipboard::_internal_set_a_arequestingwindowcontextid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_arequestingwindowcontextid_ = value;
 }
 inline void Msg_GetClipboard::set_a_arequestingwindowcontextid(uint64_t value) {
@@ -852,9 +932,11 @@ inline void Msg_GetClipboard::set_a_arequestingwindowcontextid(uint64_t value) {
 
 // Reply_GetClipboard
 
-// .protobuf.mozilla.dom.IPCTransferableDataOrError a_transferableDataOrError = 1;
+// required .protobuf.mozilla.dom.IPCTransferableDataOrError a_transferableDataOrError = 1;
 inline bool Reply_GetClipboard::_internal_has_a_transferabledataorerror() const {
-  return this != internal_default_instance() && _impl_.a_transferabledataorerror_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_transferabledataorerror_ != nullptr);
+  return value;
 }
 inline bool Reply_GetClipboard::has_a_transferabledataorerror() const {
   return _internal_has_a_transferabledataorerror();
@@ -875,14 +957,14 @@ inline void Reply_GetClipboard::unsafe_arena_set_allocated_a_transferabledataore
   }
   _impl_.a_transferabledataorerror_ = a_transferabledataorerror;
   if (a_transferabledataorerror) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PClipboardContentAnalysis.Reply_GetClipboard.a_transferableDataOrError)
 }
 inline ::protobuf::mozilla::dom::IPCTransferableDataOrError* Reply_GetClipboard::release_a_transferabledataorerror() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::IPCTransferableDataOrError* temp = _impl_.a_transferabledataorerror_;
   _impl_.a_transferabledataorerror_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -898,13 +980,13 @@ inline ::protobuf::mozilla::dom::IPCTransferableDataOrError* Reply_GetClipboard:
 }
 inline ::protobuf::mozilla::dom::IPCTransferableDataOrError* Reply_GetClipboard::unsafe_arena_release_a_transferabledataorerror() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.PClipboardContentAnalysis.Reply_GetClipboard.a_transferableDataOrError)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::IPCTransferableDataOrError* temp = _impl_.a_transferabledataorerror_;
   _impl_.a_transferabledataorerror_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::IPCTransferableDataOrError* Reply_GetClipboard::_internal_mutable_a_transferabledataorerror() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_transferabledataorerror_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::IPCTransferableDataOrError>(GetArenaForAllocation());
     _impl_.a_transferabledataorerror_ = p;
@@ -929,9 +1011,9 @@ inline void Reply_GetClipboard::set_allocated_a_transferabledataorerror(::protob
       a_transferabledataorerror = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_transferabledataorerror, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_transferabledataorerror_ = a_transferabledataorerror;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PClipboardContentAnalysis.Reply_GetClipboard.a_transferableDataOrError)
@@ -1016,9 +1098,17 @@ Msg_GetAllClipboardDataSync::mutable_a_atypes() {
   return &_impl_.a_atypes_;
 }
 
-// bytes a_aWhichClipboard = 2;
+// required bytes a_aWhichClipboard = 2;
+inline bool Msg_GetAllClipboardDataSync::_internal_has_a_awhichclipboard() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_GetAllClipboardDataSync::has_a_awhichclipboard() const {
+  return _internal_has_a_awhichclipboard();
+}
 inline void Msg_GetAllClipboardDataSync::clear_a_awhichclipboard() {
   _impl_.a_awhichclipboard_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_GetAllClipboardDataSync::a_awhichclipboard() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.PClipboardContentAnalysis.Msg_GetAllClipboardDataSync.a_aWhichClipboard)
@@ -1027,7 +1117,7 @@ inline const std::string& Msg_GetAllClipboardDataSync::a_awhichclipboard() const
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GetAllClipboardDataSync::set_a_awhichclipboard(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_awhichclipboard_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PClipboardContentAnalysis.Msg_GetAllClipboardDataSync.a_aWhichClipboard)
 }
@@ -1040,22 +1130,32 @@ inline const std::string& Msg_GetAllClipboardDataSync::_internal_a_awhichclipboa
   return _impl_.a_awhichclipboard_.Get();
 }
 inline void Msg_GetAllClipboardDataSync::_internal_set_a_awhichclipboard(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_awhichclipboard_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_GetAllClipboardDataSync::_internal_mutable_a_awhichclipboard() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_awhichclipboard_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_GetAllClipboardDataSync::release_a_awhichclipboard() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.PClipboardContentAnalysis.Msg_GetAllClipboardDataSync.a_aWhichClipboard)
-  return _impl_.a_awhichclipboard_.Release();
+  if (!_internal_has_a_awhichclipboard()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_awhichclipboard_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_awhichclipboard_.IsDefault()) {
+    _impl_.a_awhichclipboard_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_GetAllClipboardDataSync::set_allocated_a_awhichclipboard(std::string* a_awhichclipboard) {
   if (a_awhichclipboard != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_awhichclipboard_.SetAllocated(a_awhichclipboard, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1066,9 +1166,17 @@ inline void Msg_GetAllClipboardDataSync::set_allocated_a_awhichclipboard(std::st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PClipboardContentAnalysis.Msg_GetAllClipboardDataSync.a_aWhichClipboard)
 }
 
-// uint64 a_aRequestingWindowContextId = 3;
+// required uint64 a_aRequestingWindowContextId = 3;
+inline bool Msg_GetAllClipboardDataSync::_internal_has_a_arequestingwindowcontextid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_GetAllClipboardDataSync::has_a_arequestingwindowcontextid() const {
+  return _internal_has_a_arequestingwindowcontextid();
+}
 inline void Msg_GetAllClipboardDataSync::clear_a_arequestingwindowcontextid() {
   _impl_.a_arequestingwindowcontextid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_GetAllClipboardDataSync::_internal_a_arequestingwindowcontextid() const {
   return _impl_.a_arequestingwindowcontextid_;
@@ -1078,7 +1186,7 @@ inline uint64_t Msg_GetAllClipboardDataSync::a_arequestingwindowcontextid() cons
   return _internal_a_arequestingwindowcontextid();
 }
 inline void Msg_GetAllClipboardDataSync::_internal_set_a_arequestingwindowcontextid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_arequestingwindowcontextid_ = value;
 }
 inline void Msg_GetAllClipboardDataSync::set_a_arequestingwindowcontextid(uint64_t value) {
@@ -1090,9 +1198,11 @@ inline void Msg_GetAllClipboardDataSync::set_a_arequestingwindowcontextid(uint64
 
 // Reply_GetAllClipboardDataSync
 
-// .protobuf.mozilla.dom.IPCTransferableDataOrError a_transferableDataOrError = 1;
+// required .protobuf.mozilla.dom.IPCTransferableDataOrError a_transferableDataOrError = 1;
 inline bool Reply_GetAllClipboardDataSync::_internal_has_a_transferabledataorerror() const {
-  return this != internal_default_instance() && _impl_.a_transferabledataorerror_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_transferabledataorerror_ != nullptr);
+  return value;
 }
 inline bool Reply_GetAllClipboardDataSync::has_a_transferabledataorerror() const {
   return _internal_has_a_transferabledataorerror();
@@ -1113,14 +1223,14 @@ inline void Reply_GetAllClipboardDataSync::unsafe_arena_set_allocated_a_transfer
   }
   _impl_.a_transferabledataorerror_ = a_transferabledataorerror;
   if (a_transferabledataorerror) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PClipboardContentAnalysis.Reply_GetAllClipboardDataSync.a_transferableDataOrError)
 }
 inline ::protobuf::mozilla::dom::IPCTransferableDataOrError* Reply_GetAllClipboardDataSync::release_a_transferabledataorerror() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::IPCTransferableDataOrError* temp = _impl_.a_transferabledataorerror_;
   _impl_.a_transferabledataorerror_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1136,13 +1246,13 @@ inline ::protobuf::mozilla::dom::IPCTransferableDataOrError* Reply_GetAllClipboa
 }
 inline ::protobuf::mozilla::dom::IPCTransferableDataOrError* Reply_GetAllClipboardDataSync::unsafe_arena_release_a_transferabledataorerror() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.PClipboardContentAnalysis.Reply_GetAllClipboardDataSync.a_transferableDataOrError)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::IPCTransferableDataOrError* temp = _impl_.a_transferabledataorerror_;
   _impl_.a_transferabledataorerror_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::IPCTransferableDataOrError* Reply_GetAllClipboardDataSync::_internal_mutable_a_transferabledataorerror() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_transferabledataorerror_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::IPCTransferableDataOrError>(GetArenaForAllocation());
     _impl_.a_transferabledataorerror_ = p;
@@ -1167,9 +1277,9 @@ inline void Reply_GetAllClipboardDataSync::set_allocated_a_transferabledataorerr
       a_transferabledataorerror = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_transferabledataorerror, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_transferabledataorerror_ = a_transferabledataorerror;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PClipboardContentAnalysis.Reply_GetAllClipboardDataSync.a_transferableDataOrError)

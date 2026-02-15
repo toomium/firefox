@@ -101,6 +101,13 @@ class Msg___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -175,7 +182,11 @@ class Msg___delete__ final :
   enum : int {
     kAAValidateResultFieldNumber = 1,
   };
-  // bool a_aValidateResult = 1;
+  // required bool a_aValidateResult = 1;
+  bool has_a_avalidateresult() const;
+  private:
+  bool _internal_has_a_avalidateresult() const;
+  public:
   void clear_a_avalidateresult();
   bool a_avalidateresult() const;
   void set_a_avalidateresult(bool value);
@@ -192,8 +203,9 @@ class Msg___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_avalidateresult_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_avalidateresult_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAltSvcTransaction_2eproto;
@@ -229,6 +241,13 @@ class Reply___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply___delete__& default_instance() {
@@ -348,6 +367,13 @@ class Msg_OnTransactionClose final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_OnTransactionClose& default_instance() {
     return *internal_default_instance();
   }
@@ -422,7 +448,11 @@ class Msg_OnTransactionClose final :
   enum : int {
     kAAValidateResultFieldNumber = 1,
   };
-  // bool a_aValidateResult = 1;
+  // required bool a_aValidateResult = 1;
+  bool has_a_avalidateresult() const;
+  private:
+  bool _internal_has_a_avalidateresult() const;
+  public:
   void clear_a_avalidateresult();
   bool a_avalidateresult() const;
   void set_a_avalidateresult(bool value);
@@ -439,8 +469,9 @@ class Msg_OnTransactionClose final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_avalidateresult_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_avalidateresult_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAltSvcTransaction_2eproto;
@@ -456,9 +487,17 @@ class Msg_OnTransactionClose final :
 #endif  // __GNUC__
 // Msg___delete__
 
-// bool a_aValidateResult = 1;
+// required bool a_aValidateResult = 1;
+inline bool Msg___delete__::_internal_has_a_avalidateresult() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg___delete__::has_a_avalidateresult() const {
+  return _internal_has_a_avalidateresult();
+}
 inline void Msg___delete__::clear_a_avalidateresult() {
   _impl_.a_avalidateresult_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Msg___delete__::_internal_a_avalidateresult() const {
   return _impl_.a_avalidateresult_;
@@ -468,7 +507,7 @@ inline bool Msg___delete__::a_avalidateresult() const {
   return _internal_a_avalidateresult();
 }
 inline void Msg___delete__::_internal_set_a_avalidateresult(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_avalidateresult_ = value;
 }
 inline void Msg___delete__::set_a_avalidateresult(bool value) {
@@ -484,9 +523,17 @@ inline void Msg___delete__::set_a_avalidateresult(bool value) {
 
 // Msg_OnTransactionClose
 
-// bool a_aValidateResult = 1;
+// required bool a_aValidateResult = 1;
+inline bool Msg_OnTransactionClose::_internal_has_a_avalidateresult() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_OnTransactionClose::has_a_avalidateresult() const {
+  return _internal_has_a_avalidateresult();
+}
 inline void Msg_OnTransactionClose::clear_a_avalidateresult() {
   _impl_.a_avalidateresult_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Msg_OnTransactionClose::_internal_a_avalidateresult() const {
   return _impl_.a_avalidateresult_;
@@ -496,7 +543,7 @@ inline bool Msg_OnTransactionClose::a_avalidateresult() const {
   return _internal_a_avalidateresult();
 }
 inline void Msg_OnTransactionClose::_internal_set_a_avalidateresult(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_avalidateresult_ = value;
 }
 inline void Msg_OnTransactionClose::set_a_avalidateresult(bool value) {

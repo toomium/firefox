@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/ipc/ipdl/test/gtest/PTestCancel.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla._ipdltest.PTestCancel;
@@ -50,14 +50,14 @@ message Msg_CheckChild {
 }
 
 message Reply_CheckChild {
-  uint32 a_reply = 1;
+  required uint32 a_reply = 1;
 }
 
 message Msg_CheckParent {
 }
 
 message Reply_CheckParent {
-  uint32 a_reply = 1;
+  required uint32 a_reply = 1;
 }
 
 // Parameter mappings stats:

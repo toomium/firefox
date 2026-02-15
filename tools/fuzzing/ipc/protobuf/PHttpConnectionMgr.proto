@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/netwerk/protocol/http/PHttpConnectionMgr.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.net.PHttpConnectionMgr;
@@ -23,50 +23,50 @@ message Reply___delete__ {
 }
 
 message Msg_DoShiftReloadConnectionCleanupWithConnInfo {
-  protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_aArgs = 1;
+  required protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_aArgs = 1;
 }
 
 message Msg_UpdateCurrentBrowserId {
-  uint64 a_aId = 1;
+  required uint64 a_aId = 1;
 }
 
 message Msg_AddTransaction {
-  bytes a_aTrans = 1;
-  sint32 a_aPriority = 2;
+  required bytes a_aTrans = 1;
+  required sint32 a_aPriority = 2;
 }
 
 message Msg_AddTransactionWithStickyConn {
-  bytes a_aTrans = 1;
-  sint32 a_aPriority = 2;
-  bytes a_aTransWithStickyConn = 3;
+  required bytes a_aTrans = 1;
+  required sint32 a_aPriority = 2;
+  required bytes a_aTransWithStickyConn = 3;
 }
 
 message Msg_RescheduleTransaction {
-  bytes a_aTrans = 1;
-  sint32 a_aPriority = 2;
+  required bytes a_aTrans = 1;
+  required sint32 a_aPriority = 2;
 }
 
 message Msg_UpdateClassOfServiceOnTransaction {
-  bytes a_aTrans = 1;
-  bytes a_aClassOfService = 2;
+  required bytes a_aTrans = 1;
+  required bytes a_aClassOfService = 2;
 }
 
 message Msg_CancelTransaction {
-  bytes a_aTrans = 1;
-  bytes a_aReason = 2;
+  required bytes a_aTrans = 1;
+  required bytes a_aReason = 2;
 }
 
 message Msg_SpeculativeConnect {
-  protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_aConnInfo = 1;
+  required protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_aConnInfo = 1;
   optional protobuf.mozilla.net.SpeculativeConnectionOverriderArgs a_aOverriderArgs = 2;
-  uint32 a_aCaps = 3;
+  required uint32 a_aCaps = 3;
   optional bytes a_aTrans = 4;
-  bool a_aFetchHTTPSRR = 5;
+  required bool a_aFetchHTTPSRR = 5;
 }
 
 message Msg_StartWebSocketConnection {
-  bytes a_aTransWithStickyConn = 1;
-  uint32 a_aListenerId = 2;
+  required bytes a_aTransWithStickyConn = 1;
+  required uint32 a_aListenerId = 2;
 }
 
 // Parameter mappings stats:

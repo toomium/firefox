@@ -97,6 +97,13 @@ class Msg_Close final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Close& default_instance() {
     return *internal_default_instance();
   }
@@ -214,6 +221,13 @@ class Reply_Close final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_Close& default_instance() {
     return *internal_default_instance();
   }
@@ -288,7 +302,11 @@ class Reply_Close final :
   enum : int {
     kAOkFieldNumber = 1,
   };
-  // bytes a_ok = 1;
+  // required bytes a_ok = 1;
+  bool has_a_ok() const;
+  private:
+  bool _internal_has_a_ok() const;
+  public:
   void clear_a_ok();
   const std::string& a_ok() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -310,8 +328,9 @@ class Reply_Close final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ok_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ok_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemAccessHandleControl_2eproto;
@@ -331,9 +350,17 @@ class Reply_Close final :
 
 // Reply_Close
 
-// bytes a_ok = 1;
+// required bytes a_ok = 1;
+inline bool Reply_Close::_internal_has_a_ok() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_Close::has_a_ok() const {
+  return _internal_has_a_ok();
+}
 inline void Reply_Close::clear_a_ok() {
   _impl_.a_ok_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_Close::a_ok() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PFileSystemAccessHandleControl.Reply_Close.a_ok)
@@ -342,7 +369,7 @@ inline const std::string& Reply_Close::a_ok() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_Close::set_a_ok(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_ok_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PFileSystemAccessHandleControl.Reply_Close.a_ok)
 }
@@ -355,22 +382,32 @@ inline const std::string& Reply_Close::_internal_a_ok() const {
   return _impl_.a_ok_.Get();
 }
 inline void Reply_Close::_internal_set_a_ok(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_ok_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_Close::_internal_mutable_a_ok() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_ok_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_Close::release_a_ok() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PFileSystemAccessHandleControl.Reply_Close.a_ok)
-  return _impl_.a_ok_.Release();
+  if (!_internal_has_a_ok()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_ok_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_ok_.IsDefault()) {
+    _impl_.a_ok_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_Close::set_allocated_a_ok(std::string* a_ok) {
   if (a_ok != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_ok_.SetAllocated(a_ok, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

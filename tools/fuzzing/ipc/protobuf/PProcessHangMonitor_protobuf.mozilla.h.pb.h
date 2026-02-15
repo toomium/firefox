@@ -87,6 +87,13 @@ class SlowScriptData final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const SlowScriptData& default_instance() {
     return *internal_default_instance();
   }
@@ -164,7 +171,11 @@ class SlowScriptData final :
     kAAddonIdFieldNumber = 3,
     kADurationFieldNumber = 4,
   };
-  // bytes a_tabId = 1;
+  // required bytes a_tabId = 1;
+  bool has_a_tabid() const;
+  private:
+  bool _internal_has_a_tabid() const;
+  public:
   void clear_a_tabid();
   const std::string& a_tabid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -178,7 +189,11 @@ class SlowScriptData final :
   std::string* _internal_mutable_a_tabid();
   public:
 
-  // string a_filename = 2;
+  // required string a_filename = 2;
+  bool has_a_filename() const;
+  private:
+  bool _internal_has_a_filename() const;
+  public:
   void clear_a_filename();
   const std::string& a_filename() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -192,7 +207,11 @@ class SlowScriptData final :
   std::string* _internal_mutable_a_filename();
   public:
 
-  // string a_addonId = 3;
+  // required string a_addonId = 3;
+  bool has_a_addonid() const;
+  private:
+  bool _internal_has_a_addonid() const;
+  public:
   void clear_a_addonid();
   const std::string& a_addonid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -206,7 +225,11 @@ class SlowScriptData final :
   std::string* _internal_mutable_a_addonid();
   public:
 
-  // double a_duration = 4;
+  // required double a_duration = 4;
+  bool has_a_duration() const;
+  private:
+  bool _internal_has_a_duration() const;
+  public:
   void clear_a_duration();
   double a_duration() const;
   void set_a_duration(double value);
@@ -219,15 +242,19 @@ class SlowScriptData final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_tabid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_filename_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_addonid_;
     double a_duration_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PProcessHangMonitor_5fprotobuf_2emozilla_2eh_2eproto;
@@ -243,9 +270,17 @@ class SlowScriptData final :
 #endif  // __GNUC__
 // SlowScriptData
 
-// bytes a_tabId = 1;
+// required bytes a_tabId = 1;
+inline bool SlowScriptData::_internal_has_a_tabid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool SlowScriptData::has_a_tabid() const {
+  return _internal_has_a_tabid();
+}
 inline void SlowScriptData::clear_a_tabid() {
   _impl_.a_tabid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& SlowScriptData::a_tabid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.SlowScriptData.a_tabId)
@@ -254,7 +289,7 @@ inline const std::string& SlowScriptData::a_tabid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void SlowScriptData::set_a_tabid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_tabid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.SlowScriptData.a_tabId)
 }
@@ -267,22 +302,32 @@ inline const std::string& SlowScriptData::_internal_a_tabid() const {
   return _impl_.a_tabid_.Get();
 }
 inline void SlowScriptData::_internal_set_a_tabid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_tabid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* SlowScriptData::_internal_mutable_a_tabid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_tabid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* SlowScriptData::release_a_tabid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.SlowScriptData.a_tabId)
-  return _impl_.a_tabid_.Release();
+  if (!_internal_has_a_tabid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_tabid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_tabid_.IsDefault()) {
+    _impl_.a_tabid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void SlowScriptData::set_allocated_a_tabid(std::string* a_tabid) {
   if (a_tabid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_tabid_.SetAllocated(a_tabid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -293,9 +338,17 @@ inline void SlowScriptData::set_allocated_a_tabid(std::string* a_tabid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.SlowScriptData.a_tabId)
 }
 
-// string a_filename = 2;
+// required string a_filename = 2;
+inline bool SlowScriptData::_internal_has_a_filename() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool SlowScriptData::has_a_filename() const {
+  return _internal_has_a_filename();
+}
 inline void SlowScriptData::clear_a_filename() {
   _impl_.a_filename_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& SlowScriptData::a_filename() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.SlowScriptData.a_filename)
@@ -304,7 +357,7 @@ inline const std::string& SlowScriptData::a_filename() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void SlowScriptData::set_a_filename(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_filename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.SlowScriptData.a_filename)
 }
@@ -317,22 +370,32 @@ inline const std::string& SlowScriptData::_internal_a_filename() const {
   return _impl_.a_filename_.Get();
 }
 inline void SlowScriptData::_internal_set_a_filename(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_filename_.Set(value, GetArenaForAllocation());
 }
 inline std::string* SlowScriptData::_internal_mutable_a_filename() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_filename_.Mutable(GetArenaForAllocation());
 }
 inline std::string* SlowScriptData::release_a_filename() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.SlowScriptData.a_filename)
-  return _impl_.a_filename_.Release();
+  if (!_internal_has_a_filename()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_filename_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_filename_.IsDefault()) {
+    _impl_.a_filename_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void SlowScriptData::set_allocated_a_filename(std::string* a_filename) {
   if (a_filename != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_filename_.SetAllocated(a_filename, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -343,9 +406,17 @@ inline void SlowScriptData::set_allocated_a_filename(std::string* a_filename) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.SlowScriptData.a_filename)
 }
 
-// string a_addonId = 3;
+// required string a_addonId = 3;
+inline bool SlowScriptData::_internal_has_a_addonid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool SlowScriptData::has_a_addonid() const {
+  return _internal_has_a_addonid();
+}
 inline void SlowScriptData::clear_a_addonid() {
   _impl_.a_addonid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& SlowScriptData::a_addonid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.SlowScriptData.a_addonId)
@@ -354,7 +425,7 @@ inline const std::string& SlowScriptData::a_addonid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void SlowScriptData::set_a_addonid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000004u;
  _impl_.a_addonid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.SlowScriptData.a_addonId)
 }
@@ -367,22 +438,32 @@ inline const std::string& SlowScriptData::_internal_a_addonid() const {
   return _impl_.a_addonid_.Get();
 }
 inline void SlowScriptData::_internal_set_a_addonid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_addonid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* SlowScriptData::_internal_mutable_a_addonid() {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   return _impl_.a_addonid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* SlowScriptData::release_a_addonid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.SlowScriptData.a_addonId)
-  return _impl_.a_addonid_.Release();
+  if (!_internal_has_a_addonid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000004u;
+  auto* p = _impl_.a_addonid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_addonid_.IsDefault()) {
+    _impl_.a_addonid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void SlowScriptData::set_allocated_a_addonid(std::string* a_addonid) {
   if (a_addonid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.a_addonid_.SetAllocated(a_addonid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -393,9 +474,17 @@ inline void SlowScriptData::set_allocated_a_addonid(std::string* a_addonid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.SlowScriptData.a_addonId)
 }
 
-// double a_duration = 4;
+// required double a_duration = 4;
+inline bool SlowScriptData::_internal_has_a_duration() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool SlowScriptData::has_a_duration() const {
+  return _internal_has_a_duration();
+}
 inline void SlowScriptData::clear_a_duration() {
   _impl_.a_duration_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline double SlowScriptData::_internal_a_duration() const {
   return _impl_.a_duration_;
@@ -405,7 +494,7 @@ inline double SlowScriptData::a_duration() const {
   return _internal_a_duration();
 }
 inline void SlowScriptData::_internal_set_a_duration(double value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_duration_ = value;
 }
 inline void SlowScriptData::set_a_duration(double value) {

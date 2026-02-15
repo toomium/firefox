@@ -82,8 +82,9 @@ struct SharedWorkerTerminateOpArgsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SharedWorkerTerminateOpArgsDefaultTypeInternal _SharedWorkerTerminateOpArgs_default_instance_;
 PROTOBUF_CONSTEXPR SharedWorkerPortIdentifierOpArgs::SharedWorkerPortIdentifierOpArgs(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_portidentifier_)*/nullptr
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_portidentifier_)*/nullptr} {}
 struct SharedWorkerPortIdentifierOpArgsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SharedWorkerPortIdentifierOpArgsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -95,8 +96,9 @@ struct SharedWorkerPortIdentifierOpArgsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SharedWorkerPortIdentifierOpArgsDefaultTypeInternal _SharedWorkerPortIdentifierOpArgs_default_instance_;
 PROTOBUF_CONSTEXPR SharedWorkerAddWindowIDOpArgs::SharedWorkerAddWindowIDOpArgs(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_windowid_)*/uint64_t{0u}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_windowid_)*/uint64_t{0u}} {}
 struct SharedWorkerAddWindowIDOpArgsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SharedWorkerAddWindowIDOpArgsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -108,8 +110,9 @@ struct SharedWorkerAddWindowIDOpArgsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SharedWorkerAddWindowIDOpArgsDefaultTypeInternal _SharedWorkerAddWindowIDOpArgs_default_instance_;
 PROTOBUF_CONSTEXPR SharedWorkerRemoveWindowIDOpArgs::SharedWorkerRemoveWindowIDOpArgs(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_windowid_)*/uint64_t{0u}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_windowid_)*/uint64_t{0u}} {}
 struct SharedWorkerRemoveWindowIDOpArgsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SharedWorkerRemoveWindowIDOpArgsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -884,7 +887,14 @@ std::string SharedWorkerTerminateOpArgs::GetTypeName() const {
 
 class SharedWorkerPortIdentifierOpArgs::_Internal {
  public:
+  using HasBits = decltype(std::declval<SharedWorkerPortIdentifierOpArgs>()._impl_._has_bits_);
   static const ::protobuf::mozilla::dom::MessagePortIdentifier& a_portidentifier(const SharedWorkerPortIdentifierOpArgs* msg);
+  static void set_has_a_portidentifier(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 const ::protobuf::mozilla::dom::MessagePortIdentifier&
@@ -892,10 +902,8 @@ SharedWorkerPortIdentifierOpArgs::_Internal::a_portidentifier(const SharedWorker
   return *msg->_impl_.a_portidentifier_;
 }
 void SharedWorkerPortIdentifierOpArgs::clear_a_portidentifier() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_portidentifier_ != nullptr) {
-    delete _impl_.a_portidentifier_;
-  }
-  _impl_.a_portidentifier_ = nullptr;
+  if (_impl_.a_portidentifier_ != nullptr) _impl_.a_portidentifier_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 SharedWorkerPortIdentifierOpArgs::SharedWorkerPortIdentifierOpArgs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -907,8 +915,9 @@ SharedWorkerPortIdentifierOpArgs::SharedWorkerPortIdentifierOpArgs(const SharedW
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SharedWorkerPortIdentifierOpArgs* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_portidentifier_){nullptr}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_portidentifier_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_portidentifier()) {
@@ -922,8 +931,9 @@ inline void SharedWorkerPortIdentifierOpArgs::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_portidentifier_){nullptr}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_portidentifier_){nullptr}
   };
 }
 
@@ -951,20 +961,23 @@ void SharedWorkerPortIdentifierOpArgs::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && _impl_.a_portidentifier_ != nullptr) {
-    delete _impl_.a_portidentifier_;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(_impl_.a_portidentifier_ != nullptr);
+    _impl_.a_portidentifier_->Clear();
   }
-  _impl_.a_portidentifier_ = nullptr;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* SharedWorkerPortIdentifierOpArgs::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.dom.MessagePortIdentifier a_portIdentifier = 1;
+      // required .protobuf.mozilla.dom.MessagePortIdentifier a_portIdentifier = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_portidentifier(), ptr);
@@ -988,6 +1001,7 @@ const char* SharedWorkerPortIdentifierOpArgs::_InternalParse(const char* ptr, ::
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1001,8 +1015,9 @@ uint8_t* SharedWorkerPortIdentifierOpArgs::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.mozilla.dom.MessagePortIdentifier a_portIdentifier = 1;
-  if (this->_internal_has_a_portidentifier()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required .protobuf.mozilla.dom.MessagePortIdentifier a_portIdentifier = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_portidentifier(this),
         _Internal::a_portidentifier(this).GetCachedSize(), target, stream);
@@ -1020,16 +1035,15 @@ size_t SharedWorkerPortIdentifierOpArgs::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.SharedWorkerPortIdentifierOpArgs)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .protobuf.mozilla.dom.MessagePortIdentifier a_portIdentifier = 1;
-  if (this->_internal_has_a_portidentifier()) {
+  // required .protobuf.mozilla.dom.MessagePortIdentifier a_portIdentifier = 1;
+  if (_internal_has_a_portidentifier()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_portidentifier_);
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1067,12 +1081,17 @@ void SharedWorkerPortIdentifierOpArgs::CopyFrom(const SharedWorkerPortIdentifier
 }
 
 bool SharedWorkerPortIdentifierOpArgs::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (_internal_has_a_portidentifier()) {
+    if (!_impl_.a_portidentifier_->IsInitialized()) return false;
+  }
   return true;
 }
 
 void SharedWorkerPortIdentifierOpArgs::InternalSwap(SharedWorkerPortIdentifierOpArgs* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_portidentifier_, other->_impl_.a_portidentifier_);
 }
 
@@ -1085,6 +1104,13 @@ std::string SharedWorkerPortIdentifierOpArgs::GetTypeName() const {
 
 class SharedWorkerAddWindowIDOpArgs::_Internal {
  public:
+  using HasBits = decltype(std::declval<SharedWorkerAddWindowIDOpArgs>()._impl_._has_bits_);
+  static void set_has_a_windowid(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 SharedWorkerAddWindowIDOpArgs::SharedWorkerAddWindowIDOpArgs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1097,8 +1123,9 @@ SharedWorkerAddWindowIDOpArgs::SharedWorkerAddWindowIDOpArgs(const SharedWorkerA
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SharedWorkerAddWindowIDOpArgs* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_windowid_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_windowid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_windowid_ = from._impl_.a_windowid_;
@@ -1110,8 +1137,9 @@ inline void SharedWorkerAddWindowIDOpArgs::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_windowid_){uint64_t{0u}}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_windowid_){uint64_t{0u}}
   };
 }
 
@@ -1139,18 +1167,21 @@ void SharedWorkerAddWindowIDOpArgs::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_windowid_ = uint64_t{0u};
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* SharedWorkerAddWindowIDOpArgs::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // uint64 a_windowID = 1;
+      // required uint64 a_windowID = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_windowid(&has_bits);
           _impl_.a_windowid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -1172,6 +1203,7 @@ const char* SharedWorkerAddWindowIDOpArgs::_InternalParse(const char* ptr, ::_pb
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1185,8 +1217,9 @@ uint8_t* SharedWorkerAddWindowIDOpArgs::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint64 a_windowID = 1;
-  if (this->_internal_a_windowid() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required uint64 a_windowID = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_windowid(), target);
   }
@@ -1203,14 +1236,13 @@ size_t SharedWorkerAddWindowIDOpArgs::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.SharedWorkerAddWindowIDOpArgs)
   size_t total_size = 0;
 
+  // required uint64 a_windowID = 1;
+  if (_internal_has_a_windowid()) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_windowid());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // uint64 a_windowID = 1;
-  if (this->_internal_a_windowid() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_windowid());
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1233,7 +1265,7 @@ void SharedWorkerAddWindowIDOpArgs::MergeFrom(const SharedWorkerAddWindowIDOpArg
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_a_windowid() != 0) {
+  if (from._internal_has_a_windowid()) {
     _this->_internal_set_a_windowid(from._internal_a_windowid());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1247,12 +1279,14 @@ void SharedWorkerAddWindowIDOpArgs::CopyFrom(const SharedWorkerAddWindowIDOpArgs
 }
 
 bool SharedWorkerAddWindowIDOpArgs::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void SharedWorkerAddWindowIDOpArgs::InternalSwap(SharedWorkerAddWindowIDOpArgs* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_windowid_, other->_impl_.a_windowid_);
 }
 
@@ -1265,6 +1299,13 @@ std::string SharedWorkerAddWindowIDOpArgs::GetTypeName() const {
 
 class SharedWorkerRemoveWindowIDOpArgs::_Internal {
  public:
+  using HasBits = decltype(std::declval<SharedWorkerRemoveWindowIDOpArgs>()._impl_._has_bits_);
+  static void set_has_a_windowid(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 SharedWorkerRemoveWindowIDOpArgs::SharedWorkerRemoveWindowIDOpArgs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1277,8 +1318,9 @@ SharedWorkerRemoveWindowIDOpArgs::SharedWorkerRemoveWindowIDOpArgs(const SharedW
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SharedWorkerRemoveWindowIDOpArgs* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_windowid_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_windowid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_windowid_ = from._impl_.a_windowid_;
@@ -1290,8 +1332,9 @@ inline void SharedWorkerRemoveWindowIDOpArgs::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_windowid_){uint64_t{0u}}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_windowid_){uint64_t{0u}}
   };
 }
 
@@ -1319,18 +1362,21 @@ void SharedWorkerRemoveWindowIDOpArgs::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_windowid_ = uint64_t{0u};
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* SharedWorkerRemoveWindowIDOpArgs::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // uint64 a_windowID = 1;
+      // required uint64 a_windowID = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_windowid(&has_bits);
           _impl_.a_windowid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -1352,6 +1398,7 @@ const char* SharedWorkerRemoveWindowIDOpArgs::_InternalParse(const char* ptr, ::
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1365,8 +1412,9 @@ uint8_t* SharedWorkerRemoveWindowIDOpArgs::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint64 a_windowID = 1;
-  if (this->_internal_a_windowid() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required uint64 a_windowID = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_windowid(), target);
   }
@@ -1383,14 +1431,13 @@ size_t SharedWorkerRemoveWindowIDOpArgs::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.SharedWorkerRemoveWindowIDOpArgs)
   size_t total_size = 0;
 
+  // required uint64 a_windowID = 1;
+  if (_internal_has_a_windowid()) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_windowid());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // uint64 a_windowID = 1;
-  if (this->_internal_a_windowid() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_windowid());
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1413,7 +1460,7 @@ void SharedWorkerRemoveWindowIDOpArgs::MergeFrom(const SharedWorkerRemoveWindowI
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_a_windowid() != 0) {
+  if (from._internal_has_a_windowid()) {
     _this->_internal_set_a_windowid(from._internal_a_windowid());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1427,12 +1474,14 @@ void SharedWorkerRemoveWindowIDOpArgs::CopyFrom(const SharedWorkerRemoveWindowID
 }
 
 bool SharedWorkerRemoveWindowIDOpArgs::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void SharedWorkerRemoveWindowIDOpArgs::InternalSwap(SharedWorkerRemoveWindowIDOpArgs* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_windowid_, other->_impl_.a_windowid_);
 }
 
@@ -1871,62 +1920,57 @@ uint8_t* SharedWorkerOpArgs::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.mozilla.dom.SharedWorkerSuspendOpArgs a_mVSharedWorkerSuspendOpArgs = 1;
-  if (_internal_has_a_mvsharedworkersuspendopargs()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::a_mvsharedworkersuspendopargs(this),
-        _Internal::a_mvsharedworkersuspendopargs(this).GetCachedSize(), target, stream);
+  switch (content_case()) {
+    case kAMVSharedWorkerSuspendOpArgs: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(1, _Internal::a_mvsharedworkersuspendopargs(this),
+          _Internal::a_mvsharedworkersuspendopargs(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVSharedWorkerResumeOpArgs: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(2, _Internal::a_mvsharedworkerresumeopargs(this),
+          _Internal::a_mvsharedworkerresumeopargs(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVSharedWorkerFreezeOpArgs: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(3, _Internal::a_mvsharedworkerfreezeopargs(this),
+          _Internal::a_mvsharedworkerfreezeopargs(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVSharedWorkerThawOpArgs: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(4, _Internal::a_mvsharedworkerthawopargs(this),
+          _Internal::a_mvsharedworkerthawopargs(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVSharedWorkerTerminateOpArgs: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(5, _Internal::a_mvsharedworkerterminateopargs(this),
+          _Internal::a_mvsharedworkerterminateopargs(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVSharedWorkerPortIdentifierOpArgs: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(6, _Internal::a_mvsharedworkerportidentifieropargs(this),
+          _Internal::a_mvsharedworkerportidentifieropargs(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVSharedWorkerAddWindowIDOpArgs: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(7, _Internal::a_mvsharedworkeraddwindowidopargs(this),
+          _Internal::a_mvsharedworkeraddwindowidopargs(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVSharedWorkerRemoveWindowIDOpArgs: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(8, _Internal::a_mvsharedworkerremovewindowidopargs(this),
+          _Internal::a_mvsharedworkerremovewindowidopargs(this).GetCachedSize(), target, stream);
+      break;
+    }
+    default: ;
   }
-
-  // .protobuf.mozilla.dom.SharedWorkerResumeOpArgs a_mVSharedWorkerResumeOpArgs = 2;
-  if (_internal_has_a_mvsharedworkerresumeopargs()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::a_mvsharedworkerresumeopargs(this),
-        _Internal::a_mvsharedworkerresumeopargs(this).GetCachedSize(), target, stream);
-  }
-
-  // .protobuf.mozilla.dom.SharedWorkerFreezeOpArgs a_mVSharedWorkerFreezeOpArgs = 3;
-  if (_internal_has_a_mvsharedworkerfreezeopargs()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::a_mvsharedworkerfreezeopargs(this),
-        _Internal::a_mvsharedworkerfreezeopargs(this).GetCachedSize(), target, stream);
-  }
-
-  // .protobuf.mozilla.dom.SharedWorkerThawOpArgs a_mVSharedWorkerThawOpArgs = 4;
-  if (_internal_has_a_mvsharedworkerthawopargs()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(4, _Internal::a_mvsharedworkerthawopargs(this),
-        _Internal::a_mvsharedworkerthawopargs(this).GetCachedSize(), target, stream);
-  }
-
-  // .protobuf.mozilla.dom.SharedWorkerTerminateOpArgs a_mVSharedWorkerTerminateOpArgs = 5;
-  if (_internal_has_a_mvsharedworkerterminateopargs()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(5, _Internal::a_mvsharedworkerterminateopargs(this),
-        _Internal::a_mvsharedworkerterminateopargs(this).GetCachedSize(), target, stream);
-  }
-
-  // .protobuf.mozilla.dom.SharedWorkerPortIdentifierOpArgs a_mVSharedWorkerPortIdentifierOpArgs = 6;
-  if (_internal_has_a_mvsharedworkerportidentifieropargs()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(6, _Internal::a_mvsharedworkerportidentifieropargs(this),
-        _Internal::a_mvsharedworkerportidentifieropargs(this).GetCachedSize(), target, stream);
-  }
-
-  // .protobuf.mozilla.dom.SharedWorkerAddWindowIDOpArgs a_mVSharedWorkerAddWindowIDOpArgs = 7;
-  if (_internal_has_a_mvsharedworkeraddwindowidopargs()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(7, _Internal::a_mvsharedworkeraddwindowidopargs(this),
-        _Internal::a_mvsharedworkeraddwindowidopargs(this).GetCachedSize(), target, stream);
-  }
-
-  // .protobuf.mozilla.dom.SharedWorkerRemoveWindowIDOpArgs a_mVSharedWorkerRemoveWindowIDOpArgs = 8;
-  if (_internal_has_a_mvsharedworkerremovewindowidopargs()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(8, _Internal::a_mvsharedworkerremovewindowidopargs(this),
-        _Internal::a_mvsharedworkerremovewindowidopargs(this).GetCachedSize(), target, stream);
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
@@ -2081,6 +2125,44 @@ void SharedWorkerOpArgs::CopyFrom(const SharedWorkerOpArgs& from) {
 }
 
 bool SharedWorkerOpArgs::IsInitialized() const {
+  switch (content_case()) {
+    case kAMVSharedWorkerSuspendOpArgs: {
+      break;
+    }
+    case kAMVSharedWorkerResumeOpArgs: {
+      break;
+    }
+    case kAMVSharedWorkerFreezeOpArgs: {
+      break;
+    }
+    case kAMVSharedWorkerThawOpArgs: {
+      break;
+    }
+    case kAMVSharedWorkerTerminateOpArgs: {
+      break;
+    }
+    case kAMVSharedWorkerPortIdentifierOpArgs: {
+      if (_internal_has_a_mvsharedworkerportidentifieropargs()) {
+        if (!_impl_.content_.a_mvsharedworkerportidentifieropargs_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case kAMVSharedWorkerAddWindowIDOpArgs: {
+      if (_internal_has_a_mvsharedworkeraddwindowidopargs()) {
+        if (!_impl_.content_.a_mvsharedworkeraddwindowidopargs_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case kAMVSharedWorkerRemoveWindowIDOpArgs: {
+      if (_internal_has_a_mvsharedworkerremovewindowidopargs()) {
+        if (!_impl_.content_.a_mvsharedworkerremovewindowidopargs_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case CONTENT_NOT_SET: {
+      break;
+    }
+  }
   return true;
 }
 

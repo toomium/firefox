@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/security/manager/ssl/PSelectTLSClientAuthCert.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.psm.PSelectTLSClientAuthCert;
@@ -17,7 +17,7 @@ import "PSMIPCTypes.proto";
 
 // Message declarations
 message Msg_TLSClientAuthCertSelected {
-  protobuf.mozilla.psm.ByteArray a_aSelectedCertBytes = 1;
+  required protobuf.mozilla.psm.ByteArray a_aSelectedCertBytes = 1;
   repeated protobuf.mozilla.psm.ByteArray a_aSelectedCertChainBytes = 2;
 }
 

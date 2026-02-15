@@ -362,6 +362,13 @@ class Msg_Initialize final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Initialize& default_instance() {
     return *internal_default_instance();
   }
@@ -436,7 +443,11 @@ class Msg_Initialize final :
   enum : int {
     kADescFieldNumber = 1,
   };
-  // bytes a_desc = 1;
+  // required bytes a_desc = 1;
+  bool has_a_desc() const;
+  private:
+  bool _internal_has_a_desc() const;
+  public:
   void clear_a_desc();
   const std::string& a_desc() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -458,8 +469,9 @@ class Msg_Initialize final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_desc_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_desc_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -495,6 +507,13 @@ class Reply_Initialize final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_Initialize& default_instance() {
@@ -571,7 +590,11 @@ class Reply_Initialize final :
   enum : int {
     kAResFieldNumber = 1,
   };
-  // bytes a_res = 1;
+  // required bytes a_res = 1;
+  bool has_a_res() const;
+  private:
+  bool _internal_has_a_res() const;
+  public:
   void clear_a_res();
   const std::string& a_res() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -593,8 +616,9 @@ class Reply_Initialize final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_res_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_res_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -630,6 +654,13 @@ class Msg___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg___delete__& default_instance() {
@@ -749,6 +780,13 @@ class Reply___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -866,6 +904,13 @@ class Msg_WaitForTxn final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_WaitForTxn& default_instance() {
     return *internal_default_instance();
   }
@@ -942,7 +987,11 @@ class Msg_WaitForTxn final :
     kATxnTypeFieldNumber = 2,
     kATxnIdFieldNumber = 3,
   };
-  // bytes a_ownerId = 1;
+  // required bytes a_ownerId = 1;
+  bool has_a_ownerid() const;
+  private:
+  bool _internal_has_a_ownerid() const;
+  public:
   void clear_a_ownerid();
   const std::string& a_ownerid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -956,7 +1005,11 @@ class Msg_WaitForTxn final :
   std::string* _internal_mutable_a_ownerid();
   public:
 
-  // bytes a_txnType = 2;
+  // required bytes a_txnType = 2;
+  bool has_a_txntype() const;
+  private:
+  bool _internal_has_a_txntype() const;
+  public:
   void clear_a_txntype();
   const std::string& a_txntype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -970,7 +1023,11 @@ class Msg_WaitForTxn final :
   std::string* _internal_mutable_a_txntype();
   public:
 
-  // bytes a_txnId = 3;
+  // required bytes a_txnId = 3;
+  bool has_a_txnid() const;
+  private:
+  bool _internal_has_a_txnid() const;
+  public:
   void clear_a_txnid();
   const std::string& a_txnid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -988,14 +1045,18 @@ class Msg_WaitForTxn final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ownerid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_txntype_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_txnid_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -1031,6 +1092,13 @@ class Msg_DispatchCommands final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_DispatchCommands& default_instance() {
@@ -1108,7 +1176,11 @@ class Msg_DispatchCommands final :
     kACommandsFieldNumber = 1,
     kASizeFieldNumber = 2,
   };
-  // bytes a_commands = 1;
+  // required bytes a_commands = 1;
+  bool has_a_commands() const;
+  private:
+  bool _internal_has_a_commands() const;
+  public:
   void clear_a_commands();
   const std::string& a_commands() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1122,7 +1194,11 @@ class Msg_DispatchCommands final :
   std::string* _internal_mutable_a_commands();
   public:
 
-  // uint64 a_size = 2;
+  // required uint64 a_size = 2;
+  bool has_a_size() const;
+  private:
+  bool _internal_has_a_size() const;
+  public:
   void clear_a_size();
   uint64_t a_size() const;
   void set_a_size(uint64_t value);
@@ -1135,13 +1211,17 @@ class Msg_DispatchCommands final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_commands_;
     uint64_t a_size_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -1177,6 +1257,13 @@ class Msg_Ping final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Ping& default_instance() {
@@ -1296,6 +1383,13 @@ class Reply_Ping final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_Ping& default_instance() {
     return *internal_default_instance();
   }
@@ -1370,7 +1464,11 @@ class Reply_Ping final :
   enum : int {
     kAOkFieldNumber = 1,
   };
-  // bytes a_ok = 1;
+  // required bytes a_ok = 1;
+  bool has_a_ok() const;
+  private:
+  bool _internal_has_a_ok() const;
+  public:
   void clear_a_ok();
   const std::string& a_ok() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1392,8 +1490,9 @@ class Reply_Ping final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ok_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ok_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -1429,6 +1528,13 @@ class Msg_SyncPing final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_SyncPing& default_instance() {
@@ -1548,6 +1654,13 @@ class Reply_SyncPing final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_SyncPing& default_instance() {
     return *internal_default_instance();
   }
@@ -1665,6 +1778,13 @@ class Msg_TexImage final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_TexImage& default_instance() {
     return *internal_default_instance();
   }
@@ -1743,7 +1863,11 @@ class Msg_TexImage final :
     kALevelFieldNumber = 1,
     kARespecFormatFieldNumber = 2,
   };
-  // bytes a_offset = 3;
+  // required bytes a_offset = 3;
+  bool has_a_offset() const;
+  private:
+  bool _internal_has_a_offset() const;
+  public:
   void clear_a_offset();
   const std::string& a_offset() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1757,7 +1881,11 @@ class Msg_TexImage final :
   std::string* _internal_mutable_a_offset();
   public:
 
-  // bytes a_pi = 4;
+  // required bytes a_pi = 4;
+  bool has_a_pi() const;
+  private:
+  bool _internal_has_a_pi() const;
+  public:
   void clear_a_pi();
   const std::string& a_pi() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1771,7 +1899,11 @@ class Msg_TexImage final :
   std::string* _internal_mutable_a_pi();
   public:
 
-  // bytes a_src = 5;
+  // required bytes a_src = 5;
+  bool has_a_src() const;
+  private:
+  bool _internal_has_a_src() const;
+  public:
   void clear_a_src();
   const std::string& a_src() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1785,7 +1917,11 @@ class Msg_TexImage final :
   std::string* _internal_mutable_a_src();
   public:
 
-  // uint32 a_level = 1;
+  // required uint32 a_level = 1;
+  bool has_a_level() const;
+  private:
+  bool _internal_has_a_level() const;
+  public:
   void clear_a_level();
   uint32_t a_level() const;
   void set_a_level(uint32_t value);
@@ -1794,7 +1930,11 @@ class Msg_TexImage final :
   void _internal_set_a_level(uint32_t value);
   public:
 
-  // uint32 a_respecFormat = 2;
+  // required uint32 a_respecFormat = 2;
+  bool has_a_respecformat() const;
+  private:
+  bool _internal_has_a_respecformat() const;
+  public:
   void clear_a_respecformat();
   uint32_t a_respecformat() const;
   void set_a_respecformat(uint32_t value);
@@ -1807,16 +1947,20 @@ class Msg_TexImage final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_offset_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_pi_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_src_;
     uint32_t a_level_;
     uint32_t a_respecformat_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -1852,6 +1996,13 @@ class Msg_GetBufferSubData final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_GetBufferSubData& default_instance() {
@@ -1930,7 +2081,11 @@ class Msg_GetBufferSubData final :
     kAByteSizeFieldNumber = 3,
     kATargetFieldNumber = 1,
   };
-  // uint64 a_srcByteOffset = 2;
+  // required uint64 a_srcByteOffset = 2;
+  bool has_a_srcbyteoffset() const;
+  private:
+  bool _internal_has_a_srcbyteoffset() const;
+  public:
   void clear_a_srcbyteoffset();
   uint64_t a_srcbyteoffset() const;
   void set_a_srcbyteoffset(uint64_t value);
@@ -1939,7 +2094,11 @@ class Msg_GetBufferSubData final :
   void _internal_set_a_srcbyteoffset(uint64_t value);
   public:
 
-  // uint64 a_byteSize = 3;
+  // required uint64 a_byteSize = 3;
+  bool has_a_bytesize() const;
+  private:
+  bool _internal_has_a_bytesize() const;
+  public:
   void clear_a_bytesize();
   uint64_t a_bytesize() const;
   void set_a_bytesize(uint64_t value);
@@ -1948,7 +2107,11 @@ class Msg_GetBufferSubData final :
   void _internal_set_a_bytesize(uint64_t value);
   public:
 
-  // uint32 a_target = 1;
+  // required uint32 a_target = 1;
+  bool has_a_target() const;
+  private:
+  bool _internal_has_a_target() const;
+  public:
   void clear_a_target();
   uint32_t a_target() const;
   void set_a_target(uint32_t value);
@@ -1961,14 +2124,18 @@ class Msg_GetBufferSubData final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_srcbyteoffset_;
     uint64_t a_bytesize_;
     uint32_t a_target_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -2004,6 +2171,13 @@ class Reply_GetBufferSubData final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_GetBufferSubData& default_instance() {
@@ -2080,7 +2254,11 @@ class Reply_GetBufferSubData final :
   enum : int {
     kARetFieldNumber = 1,
   };
-  // bytes a_ret = 1;
+  // required bytes a_ret = 1;
+  bool has_a_ret() const;
+  private:
+  bool _internal_has_a_ret() const;
+  public:
   void clear_a_ret();
   const std::string& a_ret() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2102,8 +2280,9 @@ class Reply_GetBufferSubData final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ret_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -2139,6 +2318,13 @@ class Msg_GetFrontBufferSnapshot final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_GetFrontBufferSnapshot& default_instance() {
@@ -2258,6 +2444,13 @@ class Reply_GetFrontBufferSnapshot final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_GetFrontBufferSnapshot& default_instance() {
     return *internal_default_instance();
   }
@@ -2332,7 +2525,11 @@ class Reply_GetFrontBufferSnapshot final :
   enum : int {
     kARetFieldNumber = 1,
   };
-  // bytes a_ret = 1;
+  // required bytes a_ret = 1;
+  bool has_a_ret() const;
+  private:
+  bool _internal_has_a_ret() const;
+  public:
   void clear_a_ret();
   const std::string& a_ret() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2354,8 +2551,9 @@ class Reply_GetFrontBufferSnapshot final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ret_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -2391,6 +2589,13 @@ class Msg_ReadPixels final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_ReadPixels& default_instance() {
@@ -2468,7 +2673,11 @@ class Msg_ReadPixels final :
     kADescFieldNumber = 1,
     kABufferFieldNumber = 2,
   };
-  // bytes a_desc = 1;
+  // required bytes a_desc = 1;
+  bool has_a_desc() const;
+  private:
+  bool _internal_has_a_desc() const;
+  public:
   void clear_a_desc();
   const std::string& a_desc() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2482,7 +2691,7 @@ class Msg_ReadPixels final :
   std::string* _internal_mutable_a_desc();
   public:
 
-  // .protobuf.mozilla.dom.ReadPixelsBuffer a_buffer = 2;
+  // required .protobuf.mozilla.dom.ReadPixelsBuffer a_buffer = 2;
   bool has_a_buffer() const;
   private:
   bool _internal_has_a_buffer() const;
@@ -2504,13 +2713,17 @@ class Msg_ReadPixels final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_desc_;
     ::protobuf::mozilla::dom::ReadPixelsBuffer* a_buffer_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -2546,6 +2759,13 @@ class Reply_ReadPixels final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_ReadPixels& default_instance() {
@@ -2622,7 +2842,11 @@ class Reply_ReadPixels final :
   enum : int {
     kARetFieldNumber = 1,
   };
-  // bytes a_ret = 1;
+  // required bytes a_ret = 1;
+  bool has_a_ret() const;
+  private:
+  bool _internal_has_a_ret() const;
+  public:
   void clear_a_ret();
   const std::string& a_ret() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2644,8 +2868,9 @@ class Reply_ReadPixels final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ret_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -2681,6 +2906,13 @@ class Msg_CheckFramebufferStatus final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_CheckFramebufferStatus& default_instance() {
@@ -2757,7 +2989,11 @@ class Msg_CheckFramebufferStatus final :
   enum : int {
     kATargetFieldNumber = 1,
   };
-  // uint32 a_target = 1;
+  // required uint32 a_target = 1;
+  bool has_a_target() const;
+  private:
+  bool _internal_has_a_target() const;
+  public:
   void clear_a_target();
   uint32_t a_target() const;
   void set_a_target(uint32_t value);
@@ -2774,8 +3010,9 @@ class Msg_CheckFramebufferStatus final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint32_t a_target_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint32_t a_target_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -2811,6 +3048,13 @@ class Reply_CheckFramebufferStatus final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_CheckFramebufferStatus& default_instance() {
@@ -2887,7 +3131,11 @@ class Reply_CheckFramebufferStatus final :
   enum : int {
     kARetFieldNumber = 1,
   };
-  // uint32 a_ret = 1;
+  // required uint32 a_ret = 1;
+  bool has_a_ret() const;
+  private:
+  bool _internal_has_a_ret() const;
+  public:
   void clear_a_ret();
   uint32_t a_ret() const;
   void set_a_ret(uint32_t value);
@@ -2904,8 +3152,9 @@ class Reply_CheckFramebufferStatus final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint32_t a_ret_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint32_t a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -2941,6 +3190,13 @@ class Msg_ClientWaitSync final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_ClientWaitSync& default_instance() {
@@ -3019,7 +3275,11 @@ class Msg_ClientWaitSync final :
     kATimeoutFieldNumber = 3,
     kAFlagsFieldNumber = 2,
   };
-  // uint64 a_id = 1;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
+  private:
+  bool _internal_has_a_id() const;
+  public:
   void clear_a_id();
   uint64_t a_id() const;
   void set_a_id(uint64_t value);
@@ -3028,7 +3288,11 @@ class Msg_ClientWaitSync final :
   void _internal_set_a_id(uint64_t value);
   public:
 
-  // uint64 a_timeout = 3;
+  // required uint64 a_timeout = 3;
+  bool has_a_timeout() const;
+  private:
+  bool _internal_has_a_timeout() const;
+  public:
   void clear_a_timeout();
   uint64_t a_timeout() const;
   void set_a_timeout(uint64_t value);
@@ -3037,7 +3301,11 @@ class Msg_ClientWaitSync final :
   void _internal_set_a_timeout(uint64_t value);
   public:
 
-  // uint32 a_flags = 2;
+  // required uint32 a_flags = 2;
+  bool has_a_flags() const;
+  private:
+  bool _internal_has_a_flags() const;
+  public:
   void clear_a_flags();
   uint32_t a_flags() const;
   void set_a_flags(uint32_t value);
@@ -3050,14 +3318,18 @@ class Msg_ClientWaitSync final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_id_;
     uint64_t a_timeout_;
     uint32_t a_flags_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -3093,6 +3365,13 @@ class Reply_ClientWaitSync final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_ClientWaitSync& default_instance() {
@@ -3169,7 +3448,11 @@ class Reply_ClientWaitSync final :
   enum : int {
     kARetFieldNumber = 1,
   };
-  // uint32 a_ret = 1;
+  // required uint32 a_ret = 1;
+  bool has_a_ret() const;
+  private:
+  bool _internal_has_a_ret() const;
+  public:
   void clear_a_ret();
   uint32_t a_ret() const;
   void set_a_ret(uint32_t value);
@@ -3186,8 +3469,9 @@ class Reply_ClientWaitSync final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint32_t a_ret_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint32_t a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -3223,6 +3507,13 @@ class Msg_CreateOpaqueFramebuffer final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_CreateOpaqueFramebuffer& default_instance() {
@@ -3300,7 +3591,11 @@ class Msg_CreateOpaqueFramebuffer final :
     kAOptionsFieldNumber = 2,
     kAIdFieldNumber = 1,
   };
-  // bytes a_options = 2;
+  // required bytes a_options = 2;
+  bool has_a_options() const;
+  private:
+  bool _internal_has_a_options() const;
+  public:
   void clear_a_options();
   const std::string& a_options() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3314,7 +3609,11 @@ class Msg_CreateOpaqueFramebuffer final :
   std::string* _internal_mutable_a_options();
   public:
 
-  // uint64 a_id = 1;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
+  private:
+  bool _internal_has_a_id() const;
+  public:
   void clear_a_id();
   uint64_t a_id() const;
   void set_a_id(uint64_t value);
@@ -3327,13 +3626,17 @@ class Msg_CreateOpaqueFramebuffer final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_options_;
     uint64_t a_id_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -3369,6 +3672,13 @@ class Reply_CreateOpaqueFramebuffer final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_CreateOpaqueFramebuffer& default_instance() {
@@ -3445,7 +3755,11 @@ class Reply_CreateOpaqueFramebuffer final :
   enum : int {
     kARetFieldNumber = 1,
   };
-  // bool a_ret = 1;
+  // required bool a_ret = 1;
+  bool has_a_ret() const;
+  private:
+  bool _internal_has_a_ret() const;
+  public:
   void clear_a_ret();
   bool a_ret() const;
   void set_a_ret(bool value);
@@ -3462,8 +3776,9 @@ class Reply_CreateOpaqueFramebuffer final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_ret_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -3499,6 +3814,13 @@ class Msg_DrawingBufferSize final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_DrawingBufferSize& default_instance() {
@@ -3618,6 +3940,13 @@ class Reply_DrawingBufferSize final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_DrawingBufferSize& default_instance() {
     return *internal_default_instance();
   }
@@ -3692,7 +4021,11 @@ class Reply_DrawingBufferSize final :
   enum : int {
     kARetFieldNumber = 1,
   };
-  // bytes a_ret = 1;
+  // required bytes a_ret = 1;
+  bool has_a_ret() const;
+  private:
+  bool _internal_has_a_ret() const;
+  public:
   void clear_a_ret();
   const std::string& a_ret() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3714,8 +4047,9 @@ class Reply_DrawingBufferSize final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ret_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -3751,6 +4085,13 @@ class Msg_Finish final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Finish& default_instance() {
@@ -3870,6 +4211,13 @@ class Reply_Finish final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_Finish& default_instance() {
     return *internal_default_instance();
   }
@@ -3987,6 +4335,13 @@ class Msg_GetBufferParameter final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_GetBufferParameter& default_instance() {
     return *internal_default_instance();
   }
@@ -4062,7 +4417,11 @@ class Msg_GetBufferParameter final :
     kATargetFieldNumber = 1,
     kAPnameFieldNumber = 2,
   };
-  // uint32 a_target = 1;
+  // required uint32 a_target = 1;
+  bool has_a_target() const;
+  private:
+  bool _internal_has_a_target() const;
+  public:
   void clear_a_target();
   uint32_t a_target() const;
   void set_a_target(uint32_t value);
@@ -4071,7 +4430,11 @@ class Msg_GetBufferParameter final :
   void _internal_set_a_target(uint32_t value);
   public:
 
-  // uint32 a_pname = 2;
+  // required uint32 a_pname = 2;
+  bool has_a_pname() const;
+  private:
+  bool _internal_has_a_pname() const;
+  public:
   void clear_a_pname();
   uint32_t a_pname() const;
   void set_a_pname(uint32_t value);
@@ -4084,13 +4447,17 @@ class Msg_GetBufferParameter final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t a_target_;
     uint32_t a_pname_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -4126,6 +4493,13 @@ class Reply_GetBufferParameter final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_GetBufferParameter& default_instance() {
@@ -4263,6 +4637,13 @@ class Msg_GetCompileResult final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_GetCompileResult& default_instance() {
     return *internal_default_instance();
   }
@@ -4337,7 +4718,11 @@ class Msg_GetCompileResult final :
   enum : int {
     kAIdFieldNumber = 1,
   };
-  // uint64 a_id = 1;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
+  private:
+  bool _internal_has_a_id() const;
+  public:
   void clear_a_id();
   uint64_t a_id() const;
   void set_a_id(uint64_t value);
@@ -4354,8 +4739,9 @@ class Msg_GetCompileResult final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint64_t a_id_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint64_t a_id_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -4391,6 +4777,13 @@ class Reply_GetCompileResult final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_GetCompileResult& default_instance() {
@@ -4467,7 +4860,11 @@ class Reply_GetCompileResult final :
   enum : int {
     kARetFieldNumber = 1,
   };
-  // bytes a_ret = 1;
+  // required bytes a_ret = 1;
+  bool has_a_ret() const;
+  private:
+  bool _internal_has_a_ret() const;
+  public:
   void clear_a_ret();
   const std::string& a_ret() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4489,8 +4886,9 @@ class Reply_GetCompileResult final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ret_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -4526,6 +4924,13 @@ class Msg_GetError final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_GetError& default_instance() {
@@ -4645,6 +5050,13 @@ class Reply_GetError final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_GetError& default_instance() {
     return *internal_default_instance();
   }
@@ -4719,7 +5131,11 @@ class Reply_GetError final :
   enum : int {
     kARetFieldNumber = 1,
   };
-  // uint32 a_ret = 1;
+  // required uint32 a_ret = 1;
+  bool has_a_ret() const;
+  private:
+  bool _internal_has_a_ret() const;
+  public:
   void clear_a_ret();
   uint32_t a_ret() const;
   void set_a_ret(uint32_t value);
@@ -4736,8 +5152,9 @@ class Reply_GetError final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint32_t a_ret_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint32_t a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -4773,6 +5190,13 @@ class Msg_GetFragDataLocation final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_GetFragDataLocation& default_instance() {
@@ -4850,7 +5274,11 @@ class Msg_GetFragDataLocation final :
     kANameFieldNumber = 2,
     kAIdFieldNumber = 1,
   };
-  // bytes a_name = 2;
+  // required bytes a_name = 2;
+  bool has_a_name() const;
+  private:
+  bool _internal_has_a_name() const;
+  public:
   void clear_a_name();
   const std::string& a_name() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4864,7 +5292,11 @@ class Msg_GetFragDataLocation final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // uint64 a_id = 1;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
+  private:
+  bool _internal_has_a_id() const;
+  public:
   void clear_a_id();
   uint64_t a_id() const;
   void set_a_id(uint64_t value);
@@ -4877,13 +5309,17 @@ class Msg_GetFragDataLocation final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_name_;
     uint64_t a_id_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -4919,6 +5355,13 @@ class Reply_GetFragDataLocation final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_GetFragDataLocation& default_instance() {
@@ -4995,7 +5438,11 @@ class Reply_GetFragDataLocation final :
   enum : int {
     kARetFieldNumber = 1,
   };
-  // sint32 a_ret = 1;
+  // required sint32 a_ret = 1;
+  bool has_a_ret() const;
+  private:
+  bool _internal_has_a_ret() const;
+  public:
   void clear_a_ret();
   int32_t a_ret() const;
   void set_a_ret(int32_t value);
@@ -5012,8 +5459,9 @@ class Reply_GetFragDataLocation final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    int32_t a_ret_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int32_t a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -5049,6 +5497,13 @@ class Msg_GetFramebufferAttachmentParameter final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_GetFramebufferAttachmentParameter& default_instance() {
@@ -5127,7 +5582,11 @@ class Msg_GetFramebufferAttachmentParameter final :
     kAAttachmentFieldNumber = 2,
     kAPnameFieldNumber = 3,
   };
-  // uint64 a_id = 1;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
+  private:
+  bool _internal_has_a_id() const;
+  public:
   void clear_a_id();
   uint64_t a_id() const;
   void set_a_id(uint64_t value);
@@ -5136,7 +5595,11 @@ class Msg_GetFramebufferAttachmentParameter final :
   void _internal_set_a_id(uint64_t value);
   public:
 
-  // uint32 a_attachment = 2;
+  // required uint32 a_attachment = 2;
+  bool has_a_attachment() const;
+  private:
+  bool _internal_has_a_attachment() const;
+  public:
   void clear_a_attachment();
   uint32_t a_attachment() const;
   void set_a_attachment(uint32_t value);
@@ -5145,7 +5608,11 @@ class Msg_GetFramebufferAttachmentParameter final :
   void _internal_set_a_attachment(uint32_t value);
   public:
 
-  // uint32 a_pname = 3;
+  // required uint32 a_pname = 3;
+  bool has_a_pname() const;
+  private:
+  bool _internal_has_a_pname() const;
+  public:
   void clear_a_pname();
   uint32_t a_pname() const;
   void set_a_pname(uint32_t value);
@@ -5158,14 +5625,18 @@ class Msg_GetFramebufferAttachmentParameter final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_id_;
     uint32_t a_attachment_;
     uint32_t a_pname_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -5201,6 +5672,13 @@ class Reply_GetFramebufferAttachmentParameter final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_GetFramebufferAttachmentParameter& default_instance() {
@@ -5338,6 +5816,13 @@ class Msg_GetFrontBuffer final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_GetFrontBuffer& default_instance() {
     return *internal_default_instance();
   }
@@ -5413,7 +5898,11 @@ class Msg_GetFrontBuffer final :
     kAFbFieldNumber = 1,
     kAVrFieldNumber = 2,
   };
-  // uint64 a_fb = 1;
+  // required uint64 a_fb = 1;
+  bool has_a_fb() const;
+  private:
+  bool _internal_has_a_fb() const;
+  public:
   void clear_a_fb();
   uint64_t a_fb() const;
   void set_a_fb(uint64_t value);
@@ -5422,7 +5911,11 @@ class Msg_GetFrontBuffer final :
   void _internal_set_a_fb(uint64_t value);
   public:
 
-  // bool a_vr = 2;
+  // required bool a_vr = 2;
+  bool has_a_vr() const;
+  private:
+  bool _internal_has_a_vr() const;
+  public:
   void clear_a_vr();
   bool a_vr() const;
   void set_a_vr(bool value);
@@ -5435,13 +5928,17 @@ class Msg_GetFrontBuffer final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_fb_;
     bool a_vr_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -5477,6 +5974,13 @@ class Reply_GetFrontBuffer final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_GetFrontBuffer& default_instance() {
@@ -5619,6 +6123,13 @@ class Msg_GetIndexedParameter final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_GetIndexedParameter& default_instance() {
     return *internal_default_instance();
   }
@@ -5694,7 +6205,11 @@ class Msg_GetIndexedParameter final :
     kATargetFieldNumber = 1,
     kAIndexFieldNumber = 2,
   };
-  // uint32 a_target = 1;
+  // required uint32 a_target = 1;
+  bool has_a_target() const;
+  private:
+  bool _internal_has_a_target() const;
+  public:
   void clear_a_target();
   uint32_t a_target() const;
   void set_a_target(uint32_t value);
@@ -5703,7 +6218,11 @@ class Msg_GetIndexedParameter final :
   void _internal_set_a_target(uint32_t value);
   public:
 
-  // uint32 a_index = 2;
+  // required uint32 a_index = 2;
+  bool has_a_index() const;
+  private:
+  bool _internal_has_a_index() const;
+  public:
   void clear_a_index();
   uint32_t a_index() const;
   void set_a_index(uint32_t value);
@@ -5716,13 +6235,17 @@ class Msg_GetIndexedParameter final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t a_target_;
     uint32_t a_index_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -5758,6 +6281,13 @@ class Reply_GetIndexedParameter final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_GetIndexedParameter& default_instance() {
@@ -5895,6 +6425,13 @@ class Msg_GetInternalformatParameter final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_GetInternalformatParameter& default_instance() {
     return *internal_default_instance();
   }
@@ -5971,7 +6508,11 @@ class Msg_GetInternalformatParameter final :
     kAInternalFormatFieldNumber = 2,
     kAPnameFieldNumber = 3,
   };
-  // uint32 a_target = 1;
+  // required uint32 a_target = 1;
+  bool has_a_target() const;
+  private:
+  bool _internal_has_a_target() const;
+  public:
   void clear_a_target();
   uint32_t a_target() const;
   void set_a_target(uint32_t value);
@@ -5980,7 +6521,11 @@ class Msg_GetInternalformatParameter final :
   void _internal_set_a_target(uint32_t value);
   public:
 
-  // uint32 a_internalFormat = 2;
+  // required uint32 a_internalFormat = 2;
+  bool has_a_internalformat() const;
+  private:
+  bool _internal_has_a_internalformat() const;
+  public:
   void clear_a_internalformat();
   uint32_t a_internalformat() const;
   void set_a_internalformat(uint32_t value);
@@ -5989,7 +6534,11 @@ class Msg_GetInternalformatParameter final :
   void _internal_set_a_internalformat(uint32_t value);
   public:
 
-  // uint32 a_pname = 3;
+  // required uint32 a_pname = 3;
+  bool has_a_pname() const;
+  private:
+  bool _internal_has_a_pname() const;
+  public:
   void clear_a_pname();
   uint32_t a_pname() const;
   void set_a_pname(uint32_t value);
@@ -6002,14 +6551,18 @@ class Msg_GetInternalformatParameter final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t a_target_;
     uint32_t a_internalformat_;
     uint32_t a_pname_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -6045,6 +6598,13 @@ class Reply_GetInternalformatParameter final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_GetInternalformatParameter& default_instance() {
@@ -6187,6 +6747,13 @@ class Msg_GetLinkResult final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_GetLinkResult& default_instance() {
     return *internal_default_instance();
   }
@@ -6261,7 +6828,11 @@ class Msg_GetLinkResult final :
   enum : int {
     kAIdFieldNumber = 1,
   };
-  // uint64 a_id = 1;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
+  private:
+  bool _internal_has_a_id() const;
+  public:
   void clear_a_id();
   uint64_t a_id() const;
   void set_a_id(uint64_t value);
@@ -6278,8 +6849,9 @@ class Msg_GetLinkResult final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint64_t a_id_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint64_t a_id_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -6315,6 +6887,13 @@ class Reply_GetLinkResult final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_GetLinkResult& default_instance() {
@@ -6391,7 +6970,11 @@ class Reply_GetLinkResult final :
   enum : int {
     kARetFieldNumber = 1,
   };
-  // bytes a_ret = 1;
+  // required bytes a_ret = 1;
+  bool has_a_ret() const;
+  private:
+  bool _internal_has_a_ret() const;
+  public:
   void clear_a_ret();
   const std::string& a_ret() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -6413,8 +6996,9 @@ class Reply_GetLinkResult final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ret_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -6450,6 +7034,13 @@ class Msg_GetNumber final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_GetNumber& default_instance() {
@@ -6526,7 +7117,11 @@ class Msg_GetNumber final :
   enum : int {
     kAPnameFieldNumber = 1,
   };
-  // uint32 a_pname = 1;
+  // required uint32 a_pname = 1;
+  bool has_a_pname() const;
+  private:
+  bool _internal_has_a_pname() const;
+  public:
   void clear_a_pname();
   uint32_t a_pname() const;
   void set_a_pname(uint32_t value);
@@ -6543,8 +7138,9 @@ class Msg_GetNumber final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint32_t a_pname_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint32_t a_pname_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -6580,6 +7176,13 @@ class Reply_GetNumber final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_GetNumber& default_instance() {
@@ -6717,6 +7320,13 @@ class Msg_GetQueryParameter final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_GetQueryParameter& default_instance() {
     return *internal_default_instance();
   }
@@ -6792,7 +7402,11 @@ class Msg_GetQueryParameter final :
     kAIdFieldNumber = 1,
     kAPnameFieldNumber = 2,
   };
-  // uint64 a_id = 1;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
+  private:
+  bool _internal_has_a_id() const;
+  public:
   void clear_a_id();
   uint64_t a_id() const;
   void set_a_id(uint64_t value);
@@ -6801,7 +7415,11 @@ class Msg_GetQueryParameter final :
   void _internal_set_a_id(uint64_t value);
   public:
 
-  // uint32 a_pname = 2;
+  // required uint32 a_pname = 2;
+  bool has_a_pname() const;
+  private:
+  bool _internal_has_a_pname() const;
+  public:
   void clear_a_pname();
   uint32_t a_pname() const;
   void set_a_pname(uint32_t value);
@@ -6814,13 +7432,17 @@ class Msg_GetQueryParameter final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_id_;
     uint32_t a_pname_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -6856,6 +7478,13 @@ class Reply_GetQueryParameter final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_GetQueryParameter& default_instance() {
@@ -6993,6 +7622,13 @@ class Msg_GetRenderbufferParameter final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_GetRenderbufferParameter& default_instance() {
     return *internal_default_instance();
   }
@@ -7068,7 +7704,11 @@ class Msg_GetRenderbufferParameter final :
     kAIdFieldNumber = 1,
     kAPnameFieldNumber = 2,
   };
-  // uint64 a_id = 1;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
+  private:
+  bool _internal_has_a_id() const;
+  public:
   void clear_a_id();
   uint64_t a_id() const;
   void set_a_id(uint64_t value);
@@ -7077,7 +7717,11 @@ class Msg_GetRenderbufferParameter final :
   void _internal_set_a_id(uint64_t value);
   public:
 
-  // uint32 a_pname = 2;
+  // required uint32 a_pname = 2;
+  bool has_a_pname() const;
+  private:
+  bool _internal_has_a_pname() const;
+  public:
   void clear_a_pname();
   uint32_t a_pname() const;
   void set_a_pname(uint32_t value);
@@ -7090,13 +7734,17 @@ class Msg_GetRenderbufferParameter final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_id_;
     uint32_t a_pname_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -7132,6 +7780,13 @@ class Reply_GetRenderbufferParameter final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_GetRenderbufferParameter& default_instance() {
@@ -7269,6 +7924,13 @@ class Msg_GetSamplerParameter final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_GetSamplerParameter& default_instance() {
     return *internal_default_instance();
   }
@@ -7344,7 +8006,11 @@ class Msg_GetSamplerParameter final :
     kAIdFieldNumber = 1,
     kAPnameFieldNumber = 2,
   };
-  // uint64 a_id = 1;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
+  private:
+  bool _internal_has_a_id() const;
+  public:
   void clear_a_id();
   uint64_t a_id() const;
   void set_a_id(uint64_t value);
@@ -7353,7 +8019,11 @@ class Msg_GetSamplerParameter final :
   void _internal_set_a_id(uint64_t value);
   public:
 
-  // uint32 a_pname = 2;
+  // required uint32 a_pname = 2;
+  bool has_a_pname() const;
+  private:
+  bool _internal_has_a_pname() const;
+  public:
   void clear_a_pname();
   uint32_t a_pname() const;
   void set_a_pname(uint32_t value);
@@ -7366,13 +8036,17 @@ class Msg_GetSamplerParameter final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_id_;
     uint32_t a_pname_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -7408,6 +8082,13 @@ class Reply_GetSamplerParameter final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_GetSamplerParameter& default_instance() {
@@ -7545,6 +8226,13 @@ class Msg_GetString final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_GetString& default_instance() {
     return *internal_default_instance();
   }
@@ -7619,7 +8307,11 @@ class Msg_GetString final :
   enum : int {
     kAPnameFieldNumber = 1,
   };
-  // uint32 a_pname = 1;
+  // required uint32 a_pname = 1;
+  bool has_a_pname() const;
+  private:
+  bool _internal_has_a_pname() const;
+  public:
   void clear_a_pname();
   uint32_t a_pname() const;
   void set_a_pname(uint32_t value);
@@ -7636,8 +8328,9 @@ class Msg_GetString final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint32_t a_pname_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint32_t a_pname_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -7673,6 +8366,13 @@ class Reply_GetString final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_GetString& default_instance() {
@@ -7815,6 +8515,13 @@ class Msg_GetTexParameter final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_GetTexParameter& default_instance() {
     return *internal_default_instance();
   }
@@ -7890,7 +8597,11 @@ class Msg_GetTexParameter final :
     kAIdFieldNumber = 1,
     kAPnameFieldNumber = 2,
   };
-  // uint64 a_id = 1;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
+  private:
+  bool _internal_has_a_id() const;
+  public:
   void clear_a_id();
   uint64_t a_id() const;
   void set_a_id(uint64_t value);
@@ -7899,7 +8610,11 @@ class Msg_GetTexParameter final :
   void _internal_set_a_id(uint64_t value);
   public:
 
-  // uint32 a_pname = 2;
+  // required uint32 a_pname = 2;
+  bool has_a_pname() const;
+  private:
+  bool _internal_has_a_pname() const;
+  public:
   void clear_a_pname();
   uint32_t a_pname() const;
   void set_a_pname(uint32_t value);
@@ -7912,13 +8627,17 @@ class Msg_GetTexParameter final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_id_;
     uint32_t a_pname_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -7954,6 +8673,13 @@ class Reply_GetTexParameter final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_GetTexParameter& default_instance() {
@@ -8091,6 +8817,13 @@ class Msg_GetUniform final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_GetUniform& default_instance() {
     return *internal_default_instance();
   }
@@ -8166,7 +8899,11 @@ class Msg_GetUniform final :
     kAIdFieldNumber = 1,
     kALocFieldNumber = 2,
   };
-  // uint64 a_id = 1;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
+  private:
+  bool _internal_has_a_id() const;
+  public:
   void clear_a_id();
   uint64_t a_id() const;
   void set_a_id(uint64_t value);
@@ -8175,7 +8912,11 @@ class Msg_GetUniform final :
   void _internal_set_a_id(uint64_t value);
   public:
 
-  // uint32 a_loc = 2;
+  // required uint32 a_loc = 2;
+  bool has_a_loc() const;
+  private:
+  bool _internal_has_a_loc() const;
+  public:
   void clear_a_loc();
   uint32_t a_loc() const;
   void set_a_loc(uint32_t value);
@@ -8188,13 +8929,17 @@ class Msg_GetUniform final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_id_;
     uint32_t a_loc_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -8230,6 +8975,13 @@ class Reply_GetUniform final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_GetUniform& default_instance() {
@@ -8306,7 +9058,11 @@ class Reply_GetUniform final :
   enum : int {
     kARetFieldNumber = 1,
   };
-  // bytes a_ret = 1;
+  // required bytes a_ret = 1;
+  bool has_a_ret() const;
+  private:
+  bool _internal_has_a_ret() const;
+  public:
   void clear_a_ret();
   const std::string& a_ret() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -8328,8 +9084,9 @@ class Reply_GetUniform final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ret_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -8365,6 +9122,13 @@ class Msg_GetVertexAttrib final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_GetVertexAttrib& default_instance() {
@@ -8442,7 +9206,11 @@ class Msg_GetVertexAttrib final :
     kAIndexFieldNumber = 1,
     kAPnameFieldNumber = 2,
   };
-  // uint32 a_index = 1;
+  // required uint32 a_index = 1;
+  bool has_a_index() const;
+  private:
+  bool _internal_has_a_index() const;
+  public:
   void clear_a_index();
   uint32_t a_index() const;
   void set_a_index(uint32_t value);
@@ -8451,7 +9219,11 @@ class Msg_GetVertexAttrib final :
   void _internal_set_a_index(uint32_t value);
   public:
 
-  // uint32 a_pname = 2;
+  // required uint32 a_pname = 2;
+  bool has_a_pname() const;
+  private:
+  bool _internal_has_a_pname() const;
+  public:
   void clear_a_pname();
   uint32_t a_pname() const;
   void set_a_pname(uint32_t value);
@@ -8464,13 +9236,17 @@ class Msg_GetVertexAttrib final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t a_index_;
     uint32_t a_pname_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -8506,6 +9282,13 @@ class Reply_GetVertexAttrib final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_GetVertexAttrib& default_instance() {
@@ -8643,6 +9426,13 @@ class Msg_OnMemoryPressure final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_OnMemoryPressure& default_instance() {
     return *internal_default_instance();
   }
@@ -8758,6 +9548,13 @@ class Reply_OnMemoryPressure final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_OnMemoryPressure& default_instance() {
@@ -8877,6 +9674,13 @@ class Msg_ValidateProgram final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_ValidateProgram& default_instance() {
     return *internal_default_instance();
   }
@@ -8951,7 +9755,11 @@ class Msg_ValidateProgram final :
   enum : int {
     kAIdFieldNumber = 1,
   };
-  // uint64 a_id = 1;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
+  private:
+  bool _internal_has_a_id() const;
+  public:
   void clear_a_id();
   uint64_t a_id() const;
   void set_a_id(uint64_t value);
@@ -8968,8 +9776,9 @@ class Msg_ValidateProgram final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint64_t a_id_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint64_t a_id_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -9005,6 +9814,13 @@ class Reply_ValidateProgram final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_ValidateProgram& default_instance() {
@@ -9081,7 +9897,11 @@ class Reply_ValidateProgram final :
   enum : int {
     kARetFieldNumber = 1,
   };
-  // bool a_ret = 1;
+  // required bool a_ret = 1;
+  bool has_a_ret() const;
+  private:
+  bool _internal_has_a_ret() const;
+  public:
   void clear_a_ret();
   bool a_ret() const;
   void set_a_ret(bool value);
@@ -9098,8 +9918,9 @@ class Reply_ValidateProgram final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_ret_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -9135,6 +9956,13 @@ class Msg_JsWarning final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_JsWarning& default_instance() {
@@ -9211,7 +10039,11 @@ class Msg_JsWarning final :
   enum : int {
     kATextFieldNumber = 1,
   };
-  // bytes a_text = 1;
+  // required bytes a_text = 1;
+  bool has_a_text() const;
+  private:
+  bool _internal_has_a_text() const;
+  public:
   void clear_a_text();
   const std::string& a_text() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -9233,8 +10065,9 @@ class Msg_JsWarning final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_text_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_text_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -9270,6 +10103,13 @@ class Msg_OnContextLoss final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_OnContextLoss& default_instance() {
@@ -9346,7 +10186,11 @@ class Msg_OnContextLoss final :
   enum : int {
     kAAReasonFieldNumber = 1,
   };
-  // bytes a_aReason = 1;
+  // required bytes a_aReason = 1;
+  bool has_a_areason() const;
+  private:
+  bool _internal_has_a_areason() const;
+  public:
   void clear_a_areason();
   const std::string& a_areason() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -9368,8 +10212,9 @@ class Msg_OnContextLoss final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_areason_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_areason_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -9405,6 +10250,13 @@ class Msg_OnSyncComplete final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_OnSyncComplete& default_instance() {
@@ -9481,7 +10333,11 @@ class Msg_OnSyncComplete final :
   enum : int {
     kAIdFieldNumber = 1,
   };
-  // uint64 a_id = 1;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
+  private:
+  bool _internal_has_a_id() const;
+  public:
   void clear_a_id();
   uint64_t a_id() const;
   void set_a_id(uint64_t value);
@@ -9498,8 +10354,9 @@ class Msg_OnSyncComplete final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint64_t a_id_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint64_t a_id_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -9515,9 +10372,17 @@ class Msg_OnSyncComplete final :
 #endif  // __GNUC__
 // Msg_Initialize
 
-// bytes a_desc = 1;
+// required bytes a_desc = 1;
+inline bool Msg_Initialize::_internal_has_a_desc() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_Initialize::has_a_desc() const {
+  return _internal_has_a_desc();
+}
 inline void Msg_Initialize::clear_a_desc() {
   _impl_.a_desc_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_Initialize::a_desc() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_Initialize.a_desc)
@@ -9526,7 +10391,7 @@ inline const std::string& Msg_Initialize::a_desc() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Initialize::set_a_desc(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_desc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_Initialize.a_desc)
 }
@@ -9539,22 +10404,32 @@ inline const std::string& Msg_Initialize::_internal_a_desc() const {
   return _impl_.a_desc_.Get();
 }
 inline void Msg_Initialize::_internal_set_a_desc(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_desc_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_Initialize::_internal_mutable_a_desc() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_desc_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_Initialize::release_a_desc() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_Initialize.a_desc)
-  return _impl_.a_desc_.Release();
+  if (!_internal_has_a_desc()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_desc_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_desc_.IsDefault()) {
+    _impl_.a_desc_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_Initialize::set_allocated_a_desc(std::string* a_desc) {
   if (a_desc != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_desc_.SetAllocated(a_desc, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9569,9 +10444,17 @@ inline void Msg_Initialize::set_allocated_a_desc(std::string* a_desc) {
 
 // Reply_Initialize
 
-// bytes a_res = 1;
+// required bytes a_res = 1;
+inline bool Reply_Initialize::_internal_has_a_res() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_Initialize::has_a_res() const {
+  return _internal_has_a_res();
+}
 inline void Reply_Initialize::clear_a_res() {
   _impl_.a_res_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_Initialize::a_res() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_Initialize.a_res)
@@ -9580,7 +10463,7 @@ inline const std::string& Reply_Initialize::a_res() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_Initialize::set_a_res(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_res_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_Initialize.a_res)
 }
@@ -9593,22 +10476,32 @@ inline const std::string& Reply_Initialize::_internal_a_res() const {
   return _impl_.a_res_.Get();
 }
 inline void Reply_Initialize::_internal_set_a_res(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_res_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_Initialize::_internal_mutable_a_res() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_res_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_Initialize::release_a_res() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_Initialize.a_res)
-  return _impl_.a_res_.Release();
+  if (!_internal_has_a_res()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_res_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_res_.IsDefault()) {
+    _impl_.a_res_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_Initialize::set_allocated_a_res(std::string* a_res) {
   if (a_res != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_res_.SetAllocated(a_res, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9631,9 +10524,17 @@ inline void Reply_Initialize::set_allocated_a_res(std::string* a_res) {
 
 // Msg_WaitForTxn
 
-// bytes a_ownerId = 1;
+// required bytes a_ownerId = 1;
+inline bool Msg_WaitForTxn::_internal_has_a_ownerid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_WaitForTxn::has_a_ownerid() const {
+  return _internal_has_a_ownerid();
+}
 inline void Msg_WaitForTxn::clear_a_ownerid() {
   _impl_.a_ownerid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_WaitForTxn::a_ownerid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.a_ownerId)
@@ -9642,7 +10543,7 @@ inline const std::string& Msg_WaitForTxn::a_ownerid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_WaitForTxn::set_a_ownerid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_ownerid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.a_ownerId)
 }
@@ -9655,22 +10556,32 @@ inline const std::string& Msg_WaitForTxn::_internal_a_ownerid() const {
   return _impl_.a_ownerid_.Get();
 }
 inline void Msg_WaitForTxn::_internal_set_a_ownerid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_ownerid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_WaitForTxn::_internal_mutable_a_ownerid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_ownerid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_WaitForTxn::release_a_ownerid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.a_ownerId)
-  return _impl_.a_ownerid_.Release();
+  if (!_internal_has_a_ownerid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_ownerid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_ownerid_.IsDefault()) {
+    _impl_.a_ownerid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_WaitForTxn::set_allocated_a_ownerid(std::string* a_ownerid) {
   if (a_ownerid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_ownerid_.SetAllocated(a_ownerid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9681,9 +10592,17 @@ inline void Msg_WaitForTxn::set_allocated_a_ownerid(std::string* a_ownerid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.a_ownerId)
 }
 
-// bytes a_txnType = 2;
+// required bytes a_txnType = 2;
+inline bool Msg_WaitForTxn::_internal_has_a_txntype() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_WaitForTxn::has_a_txntype() const {
+  return _internal_has_a_txntype();
+}
 inline void Msg_WaitForTxn::clear_a_txntype() {
   _impl_.a_txntype_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_WaitForTxn::a_txntype() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.a_txnType)
@@ -9692,7 +10611,7 @@ inline const std::string& Msg_WaitForTxn::a_txntype() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_WaitForTxn::set_a_txntype(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_txntype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.a_txnType)
 }
@@ -9705,22 +10624,32 @@ inline const std::string& Msg_WaitForTxn::_internal_a_txntype() const {
   return _impl_.a_txntype_.Get();
 }
 inline void Msg_WaitForTxn::_internal_set_a_txntype(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_txntype_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_WaitForTxn::_internal_mutable_a_txntype() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_txntype_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_WaitForTxn::release_a_txntype() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.a_txnType)
-  return _impl_.a_txntype_.Release();
+  if (!_internal_has_a_txntype()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_txntype_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_txntype_.IsDefault()) {
+    _impl_.a_txntype_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_WaitForTxn::set_allocated_a_txntype(std::string* a_txntype) {
   if (a_txntype != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_txntype_.SetAllocated(a_txntype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9731,9 +10660,17 @@ inline void Msg_WaitForTxn::set_allocated_a_txntype(std::string* a_txntype) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.a_txnType)
 }
 
-// bytes a_txnId = 3;
+// required bytes a_txnId = 3;
+inline bool Msg_WaitForTxn::_internal_has_a_txnid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_WaitForTxn::has_a_txnid() const {
+  return _internal_has_a_txnid();
+}
 inline void Msg_WaitForTxn::clear_a_txnid() {
   _impl_.a_txnid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& Msg_WaitForTxn::a_txnid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.a_txnId)
@@ -9742,7 +10679,7 @@ inline const std::string& Msg_WaitForTxn::a_txnid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_WaitForTxn::set_a_txnid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000004u;
  _impl_.a_txnid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.a_txnId)
 }
@@ -9755,22 +10692,32 @@ inline const std::string& Msg_WaitForTxn::_internal_a_txnid() const {
   return _impl_.a_txnid_.Get();
 }
 inline void Msg_WaitForTxn::_internal_set_a_txnid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_txnid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_WaitForTxn::_internal_mutable_a_txnid() {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   return _impl_.a_txnid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_WaitForTxn::release_a_txnid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.a_txnId)
-  return _impl_.a_txnid_.Release();
+  if (!_internal_has_a_txnid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000004u;
+  auto* p = _impl_.a_txnid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_txnid_.IsDefault()) {
+    _impl_.a_txnid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_WaitForTxn::set_allocated_a_txnid(std::string* a_txnid) {
   if (a_txnid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.a_txnid_.SetAllocated(a_txnid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9785,9 +10732,17 @@ inline void Msg_WaitForTxn::set_allocated_a_txnid(std::string* a_txnid) {
 
 // Msg_DispatchCommands
 
-// bytes a_commands = 1;
+// required bytes a_commands = 1;
+inline bool Msg_DispatchCommands::_internal_has_a_commands() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_DispatchCommands::has_a_commands() const {
+  return _internal_has_a_commands();
+}
 inline void Msg_DispatchCommands::clear_a_commands() {
   _impl_.a_commands_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_DispatchCommands::a_commands() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_DispatchCommands.a_commands)
@@ -9796,7 +10751,7 @@ inline const std::string& Msg_DispatchCommands::a_commands() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DispatchCommands::set_a_commands(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_commands_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_DispatchCommands.a_commands)
 }
@@ -9809,22 +10764,32 @@ inline const std::string& Msg_DispatchCommands::_internal_a_commands() const {
   return _impl_.a_commands_.Get();
 }
 inline void Msg_DispatchCommands::_internal_set_a_commands(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_commands_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_DispatchCommands::_internal_mutable_a_commands() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_commands_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_DispatchCommands::release_a_commands() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_DispatchCommands.a_commands)
-  return _impl_.a_commands_.Release();
+  if (!_internal_has_a_commands()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_commands_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_commands_.IsDefault()) {
+    _impl_.a_commands_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_DispatchCommands::set_allocated_a_commands(std::string* a_commands) {
   if (a_commands != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_commands_.SetAllocated(a_commands, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9835,9 +10800,17 @@ inline void Msg_DispatchCommands::set_allocated_a_commands(std::string* a_comman
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_DispatchCommands.a_commands)
 }
 
-// uint64 a_size = 2;
+// required uint64 a_size = 2;
+inline bool Msg_DispatchCommands::_internal_has_a_size() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_DispatchCommands::has_a_size() const {
+  return _internal_has_a_size();
+}
 inline void Msg_DispatchCommands::clear_a_size() {
   _impl_.a_size_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_DispatchCommands::_internal_a_size() const {
   return _impl_.a_size_;
@@ -9847,7 +10820,7 @@ inline uint64_t Msg_DispatchCommands::a_size() const {
   return _internal_a_size();
 }
 inline void Msg_DispatchCommands::_internal_set_a_size(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_size_ = value;
 }
 inline void Msg_DispatchCommands::set_a_size(uint64_t value) {
@@ -9863,9 +10836,17 @@ inline void Msg_DispatchCommands::set_a_size(uint64_t value) {
 
 // Reply_Ping
 
-// bytes a_ok = 1;
+// required bytes a_ok = 1;
+inline bool Reply_Ping::_internal_has_a_ok() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_Ping::has_a_ok() const {
+  return _internal_has_a_ok();
+}
 inline void Reply_Ping::clear_a_ok() {
   _impl_.a_ok_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_Ping::a_ok() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_Ping.a_ok)
@@ -9874,7 +10855,7 @@ inline const std::string& Reply_Ping::a_ok() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_Ping::set_a_ok(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_ok_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_Ping.a_ok)
 }
@@ -9887,22 +10868,32 @@ inline const std::string& Reply_Ping::_internal_a_ok() const {
   return _impl_.a_ok_.Get();
 }
 inline void Reply_Ping::_internal_set_a_ok(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_ok_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_Ping::_internal_mutable_a_ok() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_ok_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_Ping::release_a_ok() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_Ping.a_ok)
-  return _impl_.a_ok_.Release();
+  if (!_internal_has_a_ok()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_ok_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_ok_.IsDefault()) {
+    _impl_.a_ok_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_Ping::set_allocated_a_ok(std::string* a_ok) {
   if (a_ok != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_ok_.SetAllocated(a_ok, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9925,9 +10916,17 @@ inline void Reply_Ping::set_allocated_a_ok(std::string* a_ok) {
 
 // Msg_TexImage
 
-// uint32 a_level = 1;
+// required uint32 a_level = 1;
+inline bool Msg_TexImage::_internal_has_a_level() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool Msg_TexImage::has_a_level() const {
+  return _internal_has_a_level();
+}
 inline void Msg_TexImage::clear_a_level() {
   _impl_.a_level_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline uint32_t Msg_TexImage::_internal_a_level() const {
   return _impl_.a_level_;
@@ -9937,7 +10936,7 @@ inline uint32_t Msg_TexImage::a_level() const {
   return _internal_a_level();
 }
 inline void Msg_TexImage::_internal_set_a_level(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_level_ = value;
 }
 inline void Msg_TexImage::set_a_level(uint32_t value) {
@@ -9945,9 +10944,17 @@ inline void Msg_TexImage::set_a_level(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_level)
 }
 
-// uint32 a_respecFormat = 2;
+// required uint32 a_respecFormat = 2;
+inline bool Msg_TexImage::_internal_has_a_respecformat() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool Msg_TexImage::has_a_respecformat() const {
+  return _internal_has_a_respecformat();
+}
 inline void Msg_TexImage::clear_a_respecformat() {
   _impl_.a_respecformat_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline uint32_t Msg_TexImage::_internal_a_respecformat() const {
   return _impl_.a_respecformat_;
@@ -9957,7 +10964,7 @@ inline uint32_t Msg_TexImage::a_respecformat() const {
   return _internal_a_respecformat();
 }
 inline void Msg_TexImage::_internal_set_a_respecformat(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.a_respecformat_ = value;
 }
 inline void Msg_TexImage::set_a_respecformat(uint32_t value) {
@@ -9965,9 +10972,17 @@ inline void Msg_TexImage::set_a_respecformat(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_respecFormat)
 }
 
-// bytes a_offset = 3;
+// required bytes a_offset = 3;
+inline bool Msg_TexImage::_internal_has_a_offset() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_TexImage::has_a_offset() const {
+  return _internal_has_a_offset();
+}
 inline void Msg_TexImage::clear_a_offset() {
   _impl_.a_offset_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_TexImage::a_offset() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_offset)
@@ -9976,7 +10991,7 @@ inline const std::string& Msg_TexImage::a_offset() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_TexImage::set_a_offset(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_offset_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_offset)
 }
@@ -9989,22 +11004,32 @@ inline const std::string& Msg_TexImage::_internal_a_offset() const {
   return _impl_.a_offset_.Get();
 }
 inline void Msg_TexImage::_internal_set_a_offset(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_offset_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_TexImage::_internal_mutable_a_offset() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_offset_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_TexImage::release_a_offset() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_offset)
-  return _impl_.a_offset_.Release();
+  if (!_internal_has_a_offset()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_offset_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_offset_.IsDefault()) {
+    _impl_.a_offset_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_TexImage::set_allocated_a_offset(std::string* a_offset) {
   if (a_offset != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_offset_.SetAllocated(a_offset, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -10015,9 +11040,17 @@ inline void Msg_TexImage::set_allocated_a_offset(std::string* a_offset) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_offset)
 }
 
-// bytes a_pi = 4;
+// required bytes a_pi = 4;
+inline bool Msg_TexImage::_internal_has_a_pi() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_TexImage::has_a_pi() const {
+  return _internal_has_a_pi();
+}
 inline void Msg_TexImage::clear_a_pi() {
   _impl_.a_pi_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_TexImage::a_pi() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_pi)
@@ -10026,7 +11059,7 @@ inline const std::string& Msg_TexImage::a_pi() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_TexImage::set_a_pi(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_pi_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_pi)
 }
@@ -10039,22 +11072,32 @@ inline const std::string& Msg_TexImage::_internal_a_pi() const {
   return _impl_.a_pi_.Get();
 }
 inline void Msg_TexImage::_internal_set_a_pi(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_pi_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_TexImage::_internal_mutable_a_pi() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_pi_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_TexImage::release_a_pi() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_pi)
-  return _impl_.a_pi_.Release();
+  if (!_internal_has_a_pi()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_pi_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_pi_.IsDefault()) {
+    _impl_.a_pi_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_TexImage::set_allocated_a_pi(std::string* a_pi) {
   if (a_pi != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_pi_.SetAllocated(a_pi, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -10065,9 +11108,17 @@ inline void Msg_TexImage::set_allocated_a_pi(std::string* a_pi) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_pi)
 }
 
-// bytes a_src = 5;
+// required bytes a_src = 5;
+inline bool Msg_TexImage::_internal_has_a_src() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_TexImage::has_a_src() const {
+  return _internal_has_a_src();
+}
 inline void Msg_TexImage::clear_a_src() {
   _impl_.a_src_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& Msg_TexImage::a_src() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_src)
@@ -10076,7 +11127,7 @@ inline const std::string& Msg_TexImage::a_src() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_TexImage::set_a_src(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000004u;
  _impl_.a_src_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_src)
 }
@@ -10089,22 +11140,32 @@ inline const std::string& Msg_TexImage::_internal_a_src() const {
   return _impl_.a_src_.Get();
 }
 inline void Msg_TexImage::_internal_set_a_src(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_src_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_TexImage::_internal_mutable_a_src() {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   return _impl_.a_src_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_TexImage::release_a_src() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_src)
-  return _impl_.a_src_.Release();
+  if (!_internal_has_a_src()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000004u;
+  auto* p = _impl_.a_src_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_src_.IsDefault()) {
+    _impl_.a_src_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_TexImage::set_allocated_a_src(std::string* a_src) {
   if (a_src != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.a_src_.SetAllocated(a_src, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -10119,9 +11180,17 @@ inline void Msg_TexImage::set_allocated_a_src(std::string* a_src) {
 
 // Msg_GetBufferSubData
 
-// uint32 a_target = 1;
+// required uint32 a_target = 1;
+inline bool Msg_GetBufferSubData::_internal_has_a_target() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_GetBufferSubData::has_a_target() const {
+  return _internal_has_a_target();
+}
 inline void Msg_GetBufferSubData::clear_a_target() {
   _impl_.a_target_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_GetBufferSubData::_internal_a_target() const {
   return _impl_.a_target_;
@@ -10131,7 +11200,7 @@ inline uint32_t Msg_GetBufferSubData::a_target() const {
   return _internal_a_target();
 }
 inline void Msg_GetBufferSubData::_internal_set_a_target(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_target_ = value;
 }
 inline void Msg_GetBufferSubData::set_a_target(uint32_t value) {
@@ -10139,9 +11208,17 @@ inline void Msg_GetBufferSubData::set_a_target(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetBufferSubData.a_target)
 }
 
-// uint64 a_srcByteOffset = 2;
+// required uint64 a_srcByteOffset = 2;
+inline bool Msg_GetBufferSubData::_internal_has_a_srcbyteoffset() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_GetBufferSubData::has_a_srcbyteoffset() const {
+  return _internal_has_a_srcbyteoffset();
+}
 inline void Msg_GetBufferSubData::clear_a_srcbyteoffset() {
   _impl_.a_srcbyteoffset_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_GetBufferSubData::_internal_a_srcbyteoffset() const {
   return _impl_.a_srcbyteoffset_;
@@ -10151,7 +11228,7 @@ inline uint64_t Msg_GetBufferSubData::a_srcbyteoffset() const {
   return _internal_a_srcbyteoffset();
 }
 inline void Msg_GetBufferSubData::_internal_set_a_srcbyteoffset(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_srcbyteoffset_ = value;
 }
 inline void Msg_GetBufferSubData::set_a_srcbyteoffset(uint64_t value) {
@@ -10159,9 +11236,17 @@ inline void Msg_GetBufferSubData::set_a_srcbyteoffset(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetBufferSubData.a_srcByteOffset)
 }
 
-// uint64 a_byteSize = 3;
+// required uint64 a_byteSize = 3;
+inline bool Msg_GetBufferSubData::_internal_has_a_bytesize() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_GetBufferSubData::has_a_bytesize() const {
+  return _internal_has_a_bytesize();
+}
 inline void Msg_GetBufferSubData::clear_a_bytesize() {
   _impl_.a_bytesize_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_GetBufferSubData::_internal_a_bytesize() const {
   return _impl_.a_bytesize_;
@@ -10171,7 +11256,7 @@ inline uint64_t Msg_GetBufferSubData::a_bytesize() const {
   return _internal_a_bytesize();
 }
 inline void Msg_GetBufferSubData::_internal_set_a_bytesize(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_bytesize_ = value;
 }
 inline void Msg_GetBufferSubData::set_a_bytesize(uint64_t value) {
@@ -10183,9 +11268,17 @@ inline void Msg_GetBufferSubData::set_a_bytesize(uint64_t value) {
 
 // Reply_GetBufferSubData
 
-// bytes a_ret = 1;
+// required bytes a_ret = 1;
+inline bool Reply_GetBufferSubData::_internal_has_a_ret() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_GetBufferSubData::has_a_ret() const {
+  return _internal_has_a_ret();
+}
 inline void Reply_GetBufferSubData::clear_a_ret() {
   _impl_.a_ret_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_GetBufferSubData::a_ret() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetBufferSubData.a_ret)
@@ -10194,7 +11287,7 @@ inline const std::string& Reply_GetBufferSubData::a_ret() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_GetBufferSubData::set_a_ret(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_ret_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetBufferSubData.a_ret)
 }
@@ -10207,22 +11300,32 @@ inline const std::string& Reply_GetBufferSubData::_internal_a_ret() const {
   return _impl_.a_ret_.Get();
 }
 inline void Reply_GetBufferSubData::_internal_set_a_ret(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_ret_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_GetBufferSubData::_internal_mutable_a_ret() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_ret_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_GetBufferSubData::release_a_ret() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_GetBufferSubData.a_ret)
-  return _impl_.a_ret_.Release();
+  if (!_internal_has_a_ret()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_ret_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_ret_.IsDefault()) {
+    _impl_.a_ret_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_GetBufferSubData::set_allocated_a_ret(std::string* a_ret) {
   if (a_ret != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_ret_.SetAllocated(a_ret, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -10241,9 +11344,17 @@ inline void Reply_GetBufferSubData::set_allocated_a_ret(std::string* a_ret) {
 
 // Reply_GetFrontBufferSnapshot
 
-// bytes a_ret = 1;
+// required bytes a_ret = 1;
+inline bool Reply_GetFrontBufferSnapshot::_internal_has_a_ret() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_GetFrontBufferSnapshot::has_a_ret() const {
+  return _internal_has_a_ret();
+}
 inline void Reply_GetFrontBufferSnapshot::clear_a_ret() {
   _impl_.a_ret_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_GetFrontBufferSnapshot::a_ret() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetFrontBufferSnapshot.a_ret)
@@ -10252,7 +11363,7 @@ inline const std::string& Reply_GetFrontBufferSnapshot::a_ret() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_GetFrontBufferSnapshot::set_a_ret(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_ret_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetFrontBufferSnapshot.a_ret)
 }
@@ -10265,22 +11376,32 @@ inline const std::string& Reply_GetFrontBufferSnapshot::_internal_a_ret() const 
   return _impl_.a_ret_.Get();
 }
 inline void Reply_GetFrontBufferSnapshot::_internal_set_a_ret(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_ret_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_GetFrontBufferSnapshot::_internal_mutable_a_ret() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_ret_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_GetFrontBufferSnapshot::release_a_ret() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_GetFrontBufferSnapshot.a_ret)
-  return _impl_.a_ret_.Release();
+  if (!_internal_has_a_ret()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_ret_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_ret_.IsDefault()) {
+    _impl_.a_ret_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_GetFrontBufferSnapshot::set_allocated_a_ret(std::string* a_ret) {
   if (a_ret != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_ret_.SetAllocated(a_ret, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -10295,9 +11416,17 @@ inline void Reply_GetFrontBufferSnapshot::set_allocated_a_ret(std::string* a_ret
 
 // Msg_ReadPixels
 
-// bytes a_desc = 1;
+// required bytes a_desc = 1;
+inline bool Msg_ReadPixels::_internal_has_a_desc() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_ReadPixels::has_a_desc() const {
+  return _internal_has_a_desc();
+}
 inline void Msg_ReadPixels::clear_a_desc() {
   _impl_.a_desc_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_ReadPixels::a_desc() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_ReadPixels.a_desc)
@@ -10306,7 +11435,7 @@ inline const std::string& Msg_ReadPixels::a_desc() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ReadPixels::set_a_desc(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_desc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_ReadPixels.a_desc)
 }
@@ -10319,22 +11448,32 @@ inline const std::string& Msg_ReadPixels::_internal_a_desc() const {
   return _impl_.a_desc_.Get();
 }
 inline void Msg_ReadPixels::_internal_set_a_desc(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_desc_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_ReadPixels::_internal_mutable_a_desc() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_desc_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_ReadPixels::release_a_desc() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_ReadPixels.a_desc)
-  return _impl_.a_desc_.Release();
+  if (!_internal_has_a_desc()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_desc_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_desc_.IsDefault()) {
+    _impl_.a_desc_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_ReadPixels::set_allocated_a_desc(std::string* a_desc) {
   if (a_desc != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_desc_.SetAllocated(a_desc, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -10345,9 +11484,11 @@ inline void Msg_ReadPixels::set_allocated_a_desc(std::string* a_desc) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_ReadPixels.a_desc)
 }
 
-// .protobuf.mozilla.dom.ReadPixelsBuffer a_buffer = 2;
+// required .protobuf.mozilla.dom.ReadPixelsBuffer a_buffer = 2;
 inline bool Msg_ReadPixels::_internal_has_a_buffer() const {
-  return this != internal_default_instance() && _impl_.a_buffer_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_buffer_ != nullptr);
+  return value;
 }
 inline bool Msg_ReadPixels::has_a_buffer() const {
   return _internal_has_a_buffer();
@@ -10368,14 +11509,14 @@ inline void Msg_ReadPixels::unsafe_arena_set_allocated_a_buffer(
   }
   _impl_.a_buffer_ = a_buffer;
   if (a_buffer) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_ReadPixels.a_buffer)
 }
 inline ::protobuf::mozilla::dom::ReadPixelsBuffer* Msg_ReadPixels::release_a_buffer() {
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::dom::ReadPixelsBuffer* temp = _impl_.a_buffer_;
   _impl_.a_buffer_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -10391,13 +11532,13 @@ inline ::protobuf::mozilla::dom::ReadPixelsBuffer* Msg_ReadPixels::release_a_buf
 }
 inline ::protobuf::mozilla::dom::ReadPixelsBuffer* Msg_ReadPixels::unsafe_arena_release_a_buffer() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_ReadPixels.a_buffer)
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::dom::ReadPixelsBuffer* temp = _impl_.a_buffer_;
   _impl_.a_buffer_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::ReadPixelsBuffer* Msg_ReadPixels::_internal_mutable_a_buffer() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   if (_impl_.a_buffer_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::ReadPixelsBuffer>(GetArenaForAllocation());
     _impl_.a_buffer_ = p;
@@ -10422,9 +11563,9 @@ inline void Msg_ReadPixels::set_allocated_a_buffer(::protobuf::mozilla::dom::Rea
       a_buffer = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_buffer, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_buffer_ = a_buffer;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_ReadPixels.a_buffer)
@@ -10434,9 +11575,17 @@ inline void Msg_ReadPixels::set_allocated_a_buffer(::protobuf::mozilla::dom::Rea
 
 // Reply_ReadPixels
 
-// bytes a_ret = 1;
+// required bytes a_ret = 1;
+inline bool Reply_ReadPixels::_internal_has_a_ret() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_ReadPixels::has_a_ret() const {
+  return _internal_has_a_ret();
+}
 inline void Reply_ReadPixels::clear_a_ret() {
   _impl_.a_ret_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_ReadPixels::a_ret() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_ReadPixels.a_ret)
@@ -10445,7 +11594,7 @@ inline const std::string& Reply_ReadPixels::a_ret() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_ReadPixels::set_a_ret(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_ret_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_ReadPixels.a_ret)
 }
@@ -10458,22 +11607,32 @@ inline const std::string& Reply_ReadPixels::_internal_a_ret() const {
   return _impl_.a_ret_.Get();
 }
 inline void Reply_ReadPixels::_internal_set_a_ret(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_ret_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_ReadPixels::_internal_mutable_a_ret() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_ret_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_ReadPixels::release_a_ret() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_ReadPixels.a_ret)
-  return _impl_.a_ret_.Release();
+  if (!_internal_has_a_ret()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_ret_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_ret_.IsDefault()) {
+    _impl_.a_ret_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_ReadPixels::set_allocated_a_ret(std::string* a_ret) {
   if (a_ret != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_ret_.SetAllocated(a_ret, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -10488,9 +11647,17 @@ inline void Reply_ReadPixels::set_allocated_a_ret(std::string* a_ret) {
 
 // Msg_CheckFramebufferStatus
 
-// uint32 a_target = 1;
+// required uint32 a_target = 1;
+inline bool Msg_CheckFramebufferStatus::_internal_has_a_target() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_CheckFramebufferStatus::has_a_target() const {
+  return _internal_has_a_target();
+}
 inline void Msg_CheckFramebufferStatus::clear_a_target() {
   _impl_.a_target_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Msg_CheckFramebufferStatus::_internal_a_target() const {
   return _impl_.a_target_;
@@ -10500,7 +11667,7 @@ inline uint32_t Msg_CheckFramebufferStatus::a_target() const {
   return _internal_a_target();
 }
 inline void Msg_CheckFramebufferStatus::_internal_set_a_target(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_target_ = value;
 }
 inline void Msg_CheckFramebufferStatus::set_a_target(uint32_t value) {
@@ -10512,9 +11679,17 @@ inline void Msg_CheckFramebufferStatus::set_a_target(uint32_t value) {
 
 // Reply_CheckFramebufferStatus
 
-// uint32 a_ret = 1;
+// required uint32 a_ret = 1;
+inline bool Reply_CheckFramebufferStatus::_internal_has_a_ret() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_CheckFramebufferStatus::has_a_ret() const {
+  return _internal_has_a_ret();
+}
 inline void Reply_CheckFramebufferStatus::clear_a_ret() {
   _impl_.a_ret_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Reply_CheckFramebufferStatus::_internal_a_ret() const {
   return _impl_.a_ret_;
@@ -10524,7 +11699,7 @@ inline uint32_t Reply_CheckFramebufferStatus::a_ret() const {
   return _internal_a_ret();
 }
 inline void Reply_CheckFramebufferStatus::_internal_set_a_ret(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_ret_ = value;
 }
 inline void Reply_CheckFramebufferStatus::set_a_ret(uint32_t value) {
@@ -10536,9 +11711,17 @@ inline void Reply_CheckFramebufferStatus::set_a_ret(uint32_t value) {
 
 // Msg_ClientWaitSync
 
-// uint64 a_id = 1;
+// required uint64 a_id = 1;
+inline bool Msg_ClientWaitSync::_internal_has_a_id() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_ClientWaitSync::has_a_id() const {
+  return _internal_has_a_id();
+}
 inline void Msg_ClientWaitSync::clear_a_id() {
   _impl_.a_id_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_ClientWaitSync::_internal_a_id() const {
   return _impl_.a_id_;
@@ -10548,7 +11731,7 @@ inline uint64_t Msg_ClientWaitSync::a_id() const {
   return _internal_a_id();
 }
 inline void Msg_ClientWaitSync::_internal_set_a_id(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_id_ = value;
 }
 inline void Msg_ClientWaitSync::set_a_id(uint64_t value) {
@@ -10556,9 +11739,17 @@ inline void Msg_ClientWaitSync::set_a_id(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_ClientWaitSync.a_id)
 }
 
-// uint32 a_flags = 2;
+// required uint32 a_flags = 2;
+inline bool Msg_ClientWaitSync::_internal_has_a_flags() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_ClientWaitSync::has_a_flags() const {
+  return _internal_has_a_flags();
+}
 inline void Msg_ClientWaitSync::clear_a_flags() {
   _impl_.a_flags_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_ClientWaitSync::_internal_a_flags() const {
   return _impl_.a_flags_;
@@ -10568,7 +11759,7 @@ inline uint32_t Msg_ClientWaitSync::a_flags() const {
   return _internal_a_flags();
 }
 inline void Msg_ClientWaitSync::_internal_set_a_flags(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_flags_ = value;
 }
 inline void Msg_ClientWaitSync::set_a_flags(uint32_t value) {
@@ -10576,9 +11767,17 @@ inline void Msg_ClientWaitSync::set_a_flags(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_ClientWaitSync.a_flags)
 }
 
-// uint64 a_timeout = 3;
+// required uint64 a_timeout = 3;
+inline bool Msg_ClientWaitSync::_internal_has_a_timeout() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_ClientWaitSync::has_a_timeout() const {
+  return _internal_has_a_timeout();
+}
 inline void Msg_ClientWaitSync::clear_a_timeout() {
   _impl_.a_timeout_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_ClientWaitSync::_internal_a_timeout() const {
   return _impl_.a_timeout_;
@@ -10588,7 +11787,7 @@ inline uint64_t Msg_ClientWaitSync::a_timeout() const {
   return _internal_a_timeout();
 }
 inline void Msg_ClientWaitSync::_internal_set_a_timeout(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_timeout_ = value;
 }
 inline void Msg_ClientWaitSync::set_a_timeout(uint64_t value) {
@@ -10600,9 +11799,17 @@ inline void Msg_ClientWaitSync::set_a_timeout(uint64_t value) {
 
 // Reply_ClientWaitSync
 
-// uint32 a_ret = 1;
+// required uint32 a_ret = 1;
+inline bool Reply_ClientWaitSync::_internal_has_a_ret() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_ClientWaitSync::has_a_ret() const {
+  return _internal_has_a_ret();
+}
 inline void Reply_ClientWaitSync::clear_a_ret() {
   _impl_.a_ret_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Reply_ClientWaitSync::_internal_a_ret() const {
   return _impl_.a_ret_;
@@ -10612,7 +11819,7 @@ inline uint32_t Reply_ClientWaitSync::a_ret() const {
   return _internal_a_ret();
 }
 inline void Reply_ClientWaitSync::_internal_set_a_ret(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_ret_ = value;
 }
 inline void Reply_ClientWaitSync::set_a_ret(uint32_t value) {
@@ -10624,9 +11831,17 @@ inline void Reply_ClientWaitSync::set_a_ret(uint32_t value) {
 
 // Msg_CreateOpaqueFramebuffer
 
-// uint64 a_id = 1;
+// required uint64 a_id = 1;
+inline bool Msg_CreateOpaqueFramebuffer::_internal_has_a_id() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_CreateOpaqueFramebuffer::has_a_id() const {
+  return _internal_has_a_id();
+}
 inline void Msg_CreateOpaqueFramebuffer::clear_a_id() {
   _impl_.a_id_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_CreateOpaqueFramebuffer::_internal_a_id() const {
   return _impl_.a_id_;
@@ -10636,7 +11851,7 @@ inline uint64_t Msg_CreateOpaqueFramebuffer::a_id() const {
   return _internal_a_id();
 }
 inline void Msg_CreateOpaqueFramebuffer::_internal_set_a_id(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_id_ = value;
 }
 inline void Msg_CreateOpaqueFramebuffer::set_a_id(uint64_t value) {
@@ -10644,9 +11859,17 @@ inline void Msg_CreateOpaqueFramebuffer::set_a_id(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_CreateOpaqueFramebuffer.a_id)
 }
 
-// bytes a_options = 2;
+// required bytes a_options = 2;
+inline bool Msg_CreateOpaqueFramebuffer::_internal_has_a_options() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_CreateOpaqueFramebuffer::has_a_options() const {
+  return _internal_has_a_options();
+}
 inline void Msg_CreateOpaqueFramebuffer::clear_a_options() {
   _impl_.a_options_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_CreateOpaqueFramebuffer::a_options() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_CreateOpaqueFramebuffer.a_options)
@@ -10655,7 +11878,7 @@ inline const std::string& Msg_CreateOpaqueFramebuffer::a_options() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CreateOpaqueFramebuffer::set_a_options(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_options_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_CreateOpaqueFramebuffer.a_options)
 }
@@ -10668,22 +11891,32 @@ inline const std::string& Msg_CreateOpaqueFramebuffer::_internal_a_options() con
   return _impl_.a_options_.Get();
 }
 inline void Msg_CreateOpaqueFramebuffer::_internal_set_a_options(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_options_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_CreateOpaqueFramebuffer::_internal_mutable_a_options() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_options_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_CreateOpaqueFramebuffer::release_a_options() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_CreateOpaqueFramebuffer.a_options)
-  return _impl_.a_options_.Release();
+  if (!_internal_has_a_options()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_options_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_options_.IsDefault()) {
+    _impl_.a_options_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_CreateOpaqueFramebuffer::set_allocated_a_options(std::string* a_options) {
   if (a_options != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_options_.SetAllocated(a_options, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -10698,9 +11931,17 @@ inline void Msg_CreateOpaqueFramebuffer::set_allocated_a_options(std::string* a_
 
 // Reply_CreateOpaqueFramebuffer
 
-// bool a_ret = 1;
+// required bool a_ret = 1;
+inline bool Reply_CreateOpaqueFramebuffer::_internal_has_a_ret() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_CreateOpaqueFramebuffer::has_a_ret() const {
+  return _internal_has_a_ret();
+}
 inline void Reply_CreateOpaqueFramebuffer::clear_a_ret() {
   _impl_.a_ret_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Reply_CreateOpaqueFramebuffer::_internal_a_ret() const {
   return _impl_.a_ret_;
@@ -10710,7 +11951,7 @@ inline bool Reply_CreateOpaqueFramebuffer::a_ret() const {
   return _internal_a_ret();
 }
 inline void Reply_CreateOpaqueFramebuffer::_internal_set_a_ret(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_ret_ = value;
 }
 inline void Reply_CreateOpaqueFramebuffer::set_a_ret(bool value) {
@@ -10726,9 +11967,17 @@ inline void Reply_CreateOpaqueFramebuffer::set_a_ret(bool value) {
 
 // Reply_DrawingBufferSize
 
-// bytes a_ret = 1;
+// required bytes a_ret = 1;
+inline bool Reply_DrawingBufferSize::_internal_has_a_ret() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_DrawingBufferSize::has_a_ret() const {
+  return _internal_has_a_ret();
+}
 inline void Reply_DrawingBufferSize::clear_a_ret() {
   _impl_.a_ret_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_DrawingBufferSize::a_ret() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_DrawingBufferSize.a_ret)
@@ -10737,7 +11986,7 @@ inline const std::string& Reply_DrawingBufferSize::a_ret() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_DrawingBufferSize::set_a_ret(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_ret_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_DrawingBufferSize.a_ret)
 }
@@ -10750,22 +11999,32 @@ inline const std::string& Reply_DrawingBufferSize::_internal_a_ret() const {
   return _impl_.a_ret_.Get();
 }
 inline void Reply_DrawingBufferSize::_internal_set_a_ret(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_ret_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_DrawingBufferSize::_internal_mutable_a_ret() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_ret_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_DrawingBufferSize::release_a_ret() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_DrawingBufferSize.a_ret)
-  return _impl_.a_ret_.Release();
+  if (!_internal_has_a_ret()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_ret_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_ret_.IsDefault()) {
+    _impl_.a_ret_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_DrawingBufferSize::set_allocated_a_ret(std::string* a_ret) {
   if (a_ret != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_ret_.SetAllocated(a_ret, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -10788,9 +12047,17 @@ inline void Reply_DrawingBufferSize::set_allocated_a_ret(std::string* a_ret) {
 
 // Msg_GetBufferParameter
 
-// uint32 a_target = 1;
+// required uint32 a_target = 1;
+inline bool Msg_GetBufferParameter::_internal_has_a_target() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_GetBufferParameter::has_a_target() const {
+  return _internal_has_a_target();
+}
 inline void Msg_GetBufferParameter::clear_a_target() {
   _impl_.a_target_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Msg_GetBufferParameter::_internal_a_target() const {
   return _impl_.a_target_;
@@ -10800,7 +12067,7 @@ inline uint32_t Msg_GetBufferParameter::a_target() const {
   return _internal_a_target();
 }
 inline void Msg_GetBufferParameter::_internal_set_a_target(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_target_ = value;
 }
 inline void Msg_GetBufferParameter::set_a_target(uint32_t value) {
@@ -10808,9 +12075,17 @@ inline void Msg_GetBufferParameter::set_a_target(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetBufferParameter.a_target)
 }
 
-// uint32 a_pname = 2;
+// required uint32 a_pname = 2;
+inline bool Msg_GetBufferParameter::_internal_has_a_pname() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_GetBufferParameter::has_a_pname() const {
+  return _internal_has_a_pname();
+}
 inline void Msg_GetBufferParameter::clear_a_pname() {
   _impl_.a_pname_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_GetBufferParameter::_internal_a_pname() const {
   return _impl_.a_pname_;
@@ -10820,7 +12095,7 @@ inline uint32_t Msg_GetBufferParameter::a_pname() const {
   return _internal_a_pname();
 }
 inline void Msg_GetBufferParameter::_internal_set_a_pname(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_pname_ = value;
 }
 inline void Msg_GetBufferParameter::set_a_pname(uint32_t value) {
@@ -10864,9 +12139,17 @@ inline void Reply_GetBufferParameter::set_a_ret(double value) {
 
 // Msg_GetCompileResult
 
-// uint64 a_id = 1;
+// required uint64 a_id = 1;
+inline bool Msg_GetCompileResult::_internal_has_a_id() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_GetCompileResult::has_a_id() const {
+  return _internal_has_a_id();
+}
 inline void Msg_GetCompileResult::clear_a_id() {
   _impl_.a_id_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_GetCompileResult::_internal_a_id() const {
   return _impl_.a_id_;
@@ -10876,7 +12159,7 @@ inline uint64_t Msg_GetCompileResult::a_id() const {
   return _internal_a_id();
 }
 inline void Msg_GetCompileResult::_internal_set_a_id(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_id_ = value;
 }
 inline void Msg_GetCompileResult::set_a_id(uint64_t value) {
@@ -10888,9 +12171,17 @@ inline void Msg_GetCompileResult::set_a_id(uint64_t value) {
 
 // Reply_GetCompileResult
 
-// bytes a_ret = 1;
+// required bytes a_ret = 1;
+inline bool Reply_GetCompileResult::_internal_has_a_ret() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_GetCompileResult::has_a_ret() const {
+  return _internal_has_a_ret();
+}
 inline void Reply_GetCompileResult::clear_a_ret() {
   _impl_.a_ret_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_GetCompileResult::a_ret() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetCompileResult.a_ret)
@@ -10899,7 +12190,7 @@ inline const std::string& Reply_GetCompileResult::a_ret() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_GetCompileResult::set_a_ret(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_ret_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetCompileResult.a_ret)
 }
@@ -10912,22 +12203,32 @@ inline const std::string& Reply_GetCompileResult::_internal_a_ret() const {
   return _impl_.a_ret_.Get();
 }
 inline void Reply_GetCompileResult::_internal_set_a_ret(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_ret_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_GetCompileResult::_internal_mutable_a_ret() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_ret_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_GetCompileResult::release_a_ret() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_GetCompileResult.a_ret)
-  return _impl_.a_ret_.Release();
+  if (!_internal_has_a_ret()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_ret_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_ret_.IsDefault()) {
+    _impl_.a_ret_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_GetCompileResult::set_allocated_a_ret(std::string* a_ret) {
   if (a_ret != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_ret_.SetAllocated(a_ret, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -10946,9 +12247,17 @@ inline void Reply_GetCompileResult::set_allocated_a_ret(std::string* a_ret) {
 
 // Reply_GetError
 
-// uint32 a_ret = 1;
+// required uint32 a_ret = 1;
+inline bool Reply_GetError::_internal_has_a_ret() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_GetError::has_a_ret() const {
+  return _internal_has_a_ret();
+}
 inline void Reply_GetError::clear_a_ret() {
   _impl_.a_ret_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Reply_GetError::_internal_a_ret() const {
   return _impl_.a_ret_;
@@ -10958,7 +12267,7 @@ inline uint32_t Reply_GetError::a_ret() const {
   return _internal_a_ret();
 }
 inline void Reply_GetError::_internal_set_a_ret(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_ret_ = value;
 }
 inline void Reply_GetError::set_a_ret(uint32_t value) {
@@ -10970,9 +12279,17 @@ inline void Reply_GetError::set_a_ret(uint32_t value) {
 
 // Msg_GetFragDataLocation
 
-// uint64 a_id = 1;
+// required uint64 a_id = 1;
+inline bool Msg_GetFragDataLocation::_internal_has_a_id() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_GetFragDataLocation::has_a_id() const {
+  return _internal_has_a_id();
+}
 inline void Msg_GetFragDataLocation::clear_a_id() {
   _impl_.a_id_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_GetFragDataLocation::_internal_a_id() const {
   return _impl_.a_id_;
@@ -10982,7 +12299,7 @@ inline uint64_t Msg_GetFragDataLocation::a_id() const {
   return _internal_a_id();
 }
 inline void Msg_GetFragDataLocation::_internal_set_a_id(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_id_ = value;
 }
 inline void Msg_GetFragDataLocation::set_a_id(uint64_t value) {
@@ -10990,9 +12307,17 @@ inline void Msg_GetFragDataLocation::set_a_id(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetFragDataLocation.a_id)
 }
 
-// bytes a_name = 2;
+// required bytes a_name = 2;
+inline bool Msg_GetFragDataLocation::_internal_has_a_name() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_GetFragDataLocation::has_a_name() const {
+  return _internal_has_a_name();
+}
 inline void Msg_GetFragDataLocation::clear_a_name() {
   _impl_.a_name_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_GetFragDataLocation::a_name() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetFragDataLocation.a_name)
@@ -11001,7 +12326,7 @@ inline const std::string& Msg_GetFragDataLocation::a_name() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GetFragDataLocation::set_a_name(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetFragDataLocation.a_name)
 }
@@ -11014,22 +12339,32 @@ inline const std::string& Msg_GetFragDataLocation::_internal_a_name() const {
   return _impl_.a_name_.Get();
 }
 inline void Msg_GetFragDataLocation::_internal_set_a_name(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_name_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_GetFragDataLocation::_internal_mutable_a_name() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_name_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_GetFragDataLocation::release_a_name() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_GetFragDataLocation.a_name)
-  return _impl_.a_name_.Release();
+  if (!_internal_has_a_name()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_name_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_name_.IsDefault()) {
+    _impl_.a_name_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_GetFragDataLocation::set_allocated_a_name(std::string* a_name) {
   if (a_name != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_name_.SetAllocated(a_name, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -11044,9 +12379,17 @@ inline void Msg_GetFragDataLocation::set_allocated_a_name(std::string* a_name) {
 
 // Reply_GetFragDataLocation
 
-// sint32 a_ret = 1;
+// required sint32 a_ret = 1;
+inline bool Reply_GetFragDataLocation::_internal_has_a_ret() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_GetFragDataLocation::has_a_ret() const {
+  return _internal_has_a_ret();
+}
 inline void Reply_GetFragDataLocation::clear_a_ret() {
   _impl_.a_ret_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline int32_t Reply_GetFragDataLocation::_internal_a_ret() const {
   return _impl_.a_ret_;
@@ -11056,7 +12399,7 @@ inline int32_t Reply_GetFragDataLocation::a_ret() const {
   return _internal_a_ret();
 }
 inline void Reply_GetFragDataLocation::_internal_set_a_ret(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_ret_ = value;
 }
 inline void Reply_GetFragDataLocation::set_a_ret(int32_t value) {
@@ -11068,9 +12411,17 @@ inline void Reply_GetFragDataLocation::set_a_ret(int32_t value) {
 
 // Msg_GetFramebufferAttachmentParameter
 
-// uint64 a_id = 1;
+// required uint64 a_id = 1;
+inline bool Msg_GetFramebufferAttachmentParameter::_internal_has_a_id() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_GetFramebufferAttachmentParameter::has_a_id() const {
+  return _internal_has_a_id();
+}
 inline void Msg_GetFramebufferAttachmentParameter::clear_a_id() {
   _impl_.a_id_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_GetFramebufferAttachmentParameter::_internal_a_id() const {
   return _impl_.a_id_;
@@ -11080,7 +12431,7 @@ inline uint64_t Msg_GetFramebufferAttachmentParameter::a_id() const {
   return _internal_a_id();
 }
 inline void Msg_GetFramebufferAttachmentParameter::_internal_set_a_id(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_id_ = value;
 }
 inline void Msg_GetFramebufferAttachmentParameter::set_a_id(uint64_t value) {
@@ -11088,9 +12439,17 @@ inline void Msg_GetFramebufferAttachmentParameter::set_a_id(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetFramebufferAttachmentParameter.a_id)
 }
 
-// uint32 a_attachment = 2;
+// required uint32 a_attachment = 2;
+inline bool Msg_GetFramebufferAttachmentParameter::_internal_has_a_attachment() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_GetFramebufferAttachmentParameter::has_a_attachment() const {
+  return _internal_has_a_attachment();
+}
 inline void Msg_GetFramebufferAttachmentParameter::clear_a_attachment() {
   _impl_.a_attachment_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_GetFramebufferAttachmentParameter::_internal_a_attachment() const {
   return _impl_.a_attachment_;
@@ -11100,7 +12459,7 @@ inline uint32_t Msg_GetFramebufferAttachmentParameter::a_attachment() const {
   return _internal_a_attachment();
 }
 inline void Msg_GetFramebufferAttachmentParameter::_internal_set_a_attachment(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_attachment_ = value;
 }
 inline void Msg_GetFramebufferAttachmentParameter::set_a_attachment(uint32_t value) {
@@ -11108,9 +12467,17 @@ inline void Msg_GetFramebufferAttachmentParameter::set_a_attachment(uint32_t val
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetFramebufferAttachmentParameter.a_attachment)
 }
 
-// uint32 a_pname = 3;
+// required uint32 a_pname = 3;
+inline bool Msg_GetFramebufferAttachmentParameter::_internal_has_a_pname() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_GetFramebufferAttachmentParameter::has_a_pname() const {
+  return _internal_has_a_pname();
+}
 inline void Msg_GetFramebufferAttachmentParameter::clear_a_pname() {
   _impl_.a_pname_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_GetFramebufferAttachmentParameter::_internal_a_pname() const {
   return _impl_.a_pname_;
@@ -11120,7 +12487,7 @@ inline uint32_t Msg_GetFramebufferAttachmentParameter::a_pname() const {
   return _internal_a_pname();
 }
 inline void Msg_GetFramebufferAttachmentParameter::_internal_set_a_pname(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_pname_ = value;
 }
 inline void Msg_GetFramebufferAttachmentParameter::set_a_pname(uint32_t value) {
@@ -11164,9 +12531,17 @@ inline void Reply_GetFramebufferAttachmentParameter::set_a_ret(double value) {
 
 // Msg_GetFrontBuffer
 
-// uint64 a_fb = 1;
+// required uint64 a_fb = 1;
+inline bool Msg_GetFrontBuffer::_internal_has_a_fb() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_GetFrontBuffer::has_a_fb() const {
+  return _internal_has_a_fb();
+}
 inline void Msg_GetFrontBuffer::clear_a_fb() {
   _impl_.a_fb_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_GetFrontBuffer::_internal_a_fb() const {
   return _impl_.a_fb_;
@@ -11176,7 +12551,7 @@ inline uint64_t Msg_GetFrontBuffer::a_fb() const {
   return _internal_a_fb();
 }
 inline void Msg_GetFrontBuffer::_internal_set_a_fb(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_fb_ = value;
 }
 inline void Msg_GetFrontBuffer::set_a_fb(uint64_t value) {
@@ -11184,9 +12559,17 @@ inline void Msg_GetFrontBuffer::set_a_fb(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetFrontBuffer.a_fb)
 }
 
-// bool a_vr = 2;
+// required bool a_vr = 2;
+inline bool Msg_GetFrontBuffer::_internal_has_a_vr() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_GetFrontBuffer::has_a_vr() const {
+  return _internal_has_a_vr();
+}
 inline void Msg_GetFrontBuffer::clear_a_vr() {
   _impl_.a_vr_ = false;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool Msg_GetFrontBuffer::_internal_a_vr() const {
   return _impl_.a_vr_;
@@ -11196,7 +12579,7 @@ inline bool Msg_GetFrontBuffer::a_vr() const {
   return _internal_a_vr();
 }
 inline void Msg_GetFrontBuffer::_internal_set_a_vr(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_vr_ = value;
 }
 inline void Msg_GetFrontBuffer::set_a_vr(bool value) {
@@ -11280,9 +12663,17 @@ inline void Reply_GetFrontBuffer::set_allocated_a_ret(std::string* a_ret) {
 
 // Msg_GetIndexedParameter
 
-// uint32 a_target = 1;
+// required uint32 a_target = 1;
+inline bool Msg_GetIndexedParameter::_internal_has_a_target() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_GetIndexedParameter::has_a_target() const {
+  return _internal_has_a_target();
+}
 inline void Msg_GetIndexedParameter::clear_a_target() {
   _impl_.a_target_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Msg_GetIndexedParameter::_internal_a_target() const {
   return _impl_.a_target_;
@@ -11292,7 +12683,7 @@ inline uint32_t Msg_GetIndexedParameter::a_target() const {
   return _internal_a_target();
 }
 inline void Msg_GetIndexedParameter::_internal_set_a_target(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_target_ = value;
 }
 inline void Msg_GetIndexedParameter::set_a_target(uint32_t value) {
@@ -11300,9 +12691,17 @@ inline void Msg_GetIndexedParameter::set_a_target(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetIndexedParameter.a_target)
 }
 
-// uint32 a_index = 2;
+// required uint32 a_index = 2;
+inline bool Msg_GetIndexedParameter::_internal_has_a_index() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_GetIndexedParameter::has_a_index() const {
+  return _internal_has_a_index();
+}
 inline void Msg_GetIndexedParameter::clear_a_index() {
   _impl_.a_index_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_GetIndexedParameter::_internal_a_index() const {
   return _impl_.a_index_;
@@ -11312,7 +12711,7 @@ inline uint32_t Msg_GetIndexedParameter::a_index() const {
   return _internal_a_index();
 }
 inline void Msg_GetIndexedParameter::_internal_set_a_index(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_index_ = value;
 }
 inline void Msg_GetIndexedParameter::set_a_index(uint32_t value) {
@@ -11356,9 +12755,17 @@ inline void Reply_GetIndexedParameter::set_a_ret(double value) {
 
 // Msg_GetInternalformatParameter
 
-// uint32 a_target = 1;
+// required uint32 a_target = 1;
+inline bool Msg_GetInternalformatParameter::_internal_has_a_target() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_GetInternalformatParameter::has_a_target() const {
+  return _internal_has_a_target();
+}
 inline void Msg_GetInternalformatParameter::clear_a_target() {
   _impl_.a_target_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Msg_GetInternalformatParameter::_internal_a_target() const {
   return _impl_.a_target_;
@@ -11368,7 +12775,7 @@ inline uint32_t Msg_GetInternalformatParameter::a_target() const {
   return _internal_a_target();
 }
 inline void Msg_GetInternalformatParameter::_internal_set_a_target(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_target_ = value;
 }
 inline void Msg_GetInternalformatParameter::set_a_target(uint32_t value) {
@@ -11376,9 +12783,17 @@ inline void Msg_GetInternalformatParameter::set_a_target(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetInternalformatParameter.a_target)
 }
 
-// uint32 a_internalFormat = 2;
+// required uint32 a_internalFormat = 2;
+inline bool Msg_GetInternalformatParameter::_internal_has_a_internalformat() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_GetInternalformatParameter::has_a_internalformat() const {
+  return _internal_has_a_internalformat();
+}
 inline void Msg_GetInternalformatParameter::clear_a_internalformat() {
   _impl_.a_internalformat_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_GetInternalformatParameter::_internal_a_internalformat() const {
   return _impl_.a_internalformat_;
@@ -11388,7 +12803,7 @@ inline uint32_t Msg_GetInternalformatParameter::a_internalformat() const {
   return _internal_a_internalformat();
 }
 inline void Msg_GetInternalformatParameter::_internal_set_a_internalformat(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_internalformat_ = value;
 }
 inline void Msg_GetInternalformatParameter::set_a_internalformat(uint32_t value) {
@@ -11396,9 +12811,17 @@ inline void Msg_GetInternalformatParameter::set_a_internalformat(uint32_t value)
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetInternalformatParameter.a_internalFormat)
 }
 
-// uint32 a_pname = 3;
+// required uint32 a_pname = 3;
+inline bool Msg_GetInternalformatParameter::_internal_has_a_pname() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_GetInternalformatParameter::has_a_pname() const {
+  return _internal_has_a_pname();
+}
 inline void Msg_GetInternalformatParameter::clear_a_pname() {
   _impl_.a_pname_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_GetInternalformatParameter::_internal_a_pname() const {
   return _impl_.a_pname_;
@@ -11408,7 +12831,7 @@ inline uint32_t Msg_GetInternalformatParameter::a_pname() const {
   return _internal_a_pname();
 }
 inline void Msg_GetInternalformatParameter::_internal_set_a_pname(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_pname_ = value;
 }
 inline void Msg_GetInternalformatParameter::set_a_pname(uint32_t value) {
@@ -11492,9 +12915,17 @@ inline void Reply_GetInternalformatParameter::set_allocated_a_ret(std::string* a
 
 // Msg_GetLinkResult
 
-// uint64 a_id = 1;
+// required uint64 a_id = 1;
+inline bool Msg_GetLinkResult::_internal_has_a_id() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_GetLinkResult::has_a_id() const {
+  return _internal_has_a_id();
+}
 inline void Msg_GetLinkResult::clear_a_id() {
   _impl_.a_id_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_GetLinkResult::_internal_a_id() const {
   return _impl_.a_id_;
@@ -11504,7 +12935,7 @@ inline uint64_t Msg_GetLinkResult::a_id() const {
   return _internal_a_id();
 }
 inline void Msg_GetLinkResult::_internal_set_a_id(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_id_ = value;
 }
 inline void Msg_GetLinkResult::set_a_id(uint64_t value) {
@@ -11516,9 +12947,17 @@ inline void Msg_GetLinkResult::set_a_id(uint64_t value) {
 
 // Reply_GetLinkResult
 
-// bytes a_ret = 1;
+// required bytes a_ret = 1;
+inline bool Reply_GetLinkResult::_internal_has_a_ret() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_GetLinkResult::has_a_ret() const {
+  return _internal_has_a_ret();
+}
 inline void Reply_GetLinkResult::clear_a_ret() {
   _impl_.a_ret_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_GetLinkResult::a_ret() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetLinkResult.a_ret)
@@ -11527,7 +12966,7 @@ inline const std::string& Reply_GetLinkResult::a_ret() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_GetLinkResult::set_a_ret(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_ret_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetLinkResult.a_ret)
 }
@@ -11540,22 +12979,32 @@ inline const std::string& Reply_GetLinkResult::_internal_a_ret() const {
   return _impl_.a_ret_.Get();
 }
 inline void Reply_GetLinkResult::_internal_set_a_ret(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_ret_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_GetLinkResult::_internal_mutable_a_ret() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_ret_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_GetLinkResult::release_a_ret() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_GetLinkResult.a_ret)
-  return _impl_.a_ret_.Release();
+  if (!_internal_has_a_ret()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_ret_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_ret_.IsDefault()) {
+    _impl_.a_ret_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_GetLinkResult::set_allocated_a_ret(std::string* a_ret) {
   if (a_ret != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_ret_.SetAllocated(a_ret, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -11570,9 +13019,17 @@ inline void Reply_GetLinkResult::set_allocated_a_ret(std::string* a_ret) {
 
 // Msg_GetNumber
 
-// uint32 a_pname = 1;
+// required uint32 a_pname = 1;
+inline bool Msg_GetNumber::_internal_has_a_pname() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_GetNumber::has_a_pname() const {
+  return _internal_has_a_pname();
+}
 inline void Msg_GetNumber::clear_a_pname() {
   _impl_.a_pname_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Msg_GetNumber::_internal_a_pname() const {
   return _impl_.a_pname_;
@@ -11582,7 +13039,7 @@ inline uint32_t Msg_GetNumber::a_pname() const {
   return _internal_a_pname();
 }
 inline void Msg_GetNumber::_internal_set_a_pname(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_pname_ = value;
 }
 inline void Msg_GetNumber::set_a_pname(uint32_t value) {
@@ -11626,9 +13083,17 @@ inline void Reply_GetNumber::set_a_ret(double value) {
 
 // Msg_GetQueryParameter
 
-// uint64 a_id = 1;
+// required uint64 a_id = 1;
+inline bool Msg_GetQueryParameter::_internal_has_a_id() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_GetQueryParameter::has_a_id() const {
+  return _internal_has_a_id();
+}
 inline void Msg_GetQueryParameter::clear_a_id() {
   _impl_.a_id_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_GetQueryParameter::_internal_a_id() const {
   return _impl_.a_id_;
@@ -11638,7 +13103,7 @@ inline uint64_t Msg_GetQueryParameter::a_id() const {
   return _internal_a_id();
 }
 inline void Msg_GetQueryParameter::_internal_set_a_id(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_id_ = value;
 }
 inline void Msg_GetQueryParameter::set_a_id(uint64_t value) {
@@ -11646,9 +13111,17 @@ inline void Msg_GetQueryParameter::set_a_id(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetQueryParameter.a_id)
 }
 
-// uint32 a_pname = 2;
+// required uint32 a_pname = 2;
+inline bool Msg_GetQueryParameter::_internal_has_a_pname() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_GetQueryParameter::has_a_pname() const {
+  return _internal_has_a_pname();
+}
 inline void Msg_GetQueryParameter::clear_a_pname() {
   _impl_.a_pname_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_GetQueryParameter::_internal_a_pname() const {
   return _impl_.a_pname_;
@@ -11658,7 +13131,7 @@ inline uint32_t Msg_GetQueryParameter::a_pname() const {
   return _internal_a_pname();
 }
 inline void Msg_GetQueryParameter::_internal_set_a_pname(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_pname_ = value;
 }
 inline void Msg_GetQueryParameter::set_a_pname(uint32_t value) {
@@ -11702,9 +13175,17 @@ inline void Reply_GetQueryParameter::set_a_ret(double value) {
 
 // Msg_GetRenderbufferParameter
 
-// uint64 a_id = 1;
+// required uint64 a_id = 1;
+inline bool Msg_GetRenderbufferParameter::_internal_has_a_id() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_GetRenderbufferParameter::has_a_id() const {
+  return _internal_has_a_id();
+}
 inline void Msg_GetRenderbufferParameter::clear_a_id() {
   _impl_.a_id_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_GetRenderbufferParameter::_internal_a_id() const {
   return _impl_.a_id_;
@@ -11714,7 +13195,7 @@ inline uint64_t Msg_GetRenderbufferParameter::a_id() const {
   return _internal_a_id();
 }
 inline void Msg_GetRenderbufferParameter::_internal_set_a_id(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_id_ = value;
 }
 inline void Msg_GetRenderbufferParameter::set_a_id(uint64_t value) {
@@ -11722,9 +13203,17 @@ inline void Msg_GetRenderbufferParameter::set_a_id(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetRenderbufferParameter.a_id)
 }
 
-// uint32 a_pname = 2;
+// required uint32 a_pname = 2;
+inline bool Msg_GetRenderbufferParameter::_internal_has_a_pname() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_GetRenderbufferParameter::has_a_pname() const {
+  return _internal_has_a_pname();
+}
 inline void Msg_GetRenderbufferParameter::clear_a_pname() {
   _impl_.a_pname_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_GetRenderbufferParameter::_internal_a_pname() const {
   return _impl_.a_pname_;
@@ -11734,7 +13223,7 @@ inline uint32_t Msg_GetRenderbufferParameter::a_pname() const {
   return _internal_a_pname();
 }
 inline void Msg_GetRenderbufferParameter::_internal_set_a_pname(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_pname_ = value;
 }
 inline void Msg_GetRenderbufferParameter::set_a_pname(uint32_t value) {
@@ -11778,9 +13267,17 @@ inline void Reply_GetRenderbufferParameter::set_a_ret(double value) {
 
 // Msg_GetSamplerParameter
 
-// uint64 a_id = 1;
+// required uint64 a_id = 1;
+inline bool Msg_GetSamplerParameter::_internal_has_a_id() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_GetSamplerParameter::has_a_id() const {
+  return _internal_has_a_id();
+}
 inline void Msg_GetSamplerParameter::clear_a_id() {
   _impl_.a_id_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_GetSamplerParameter::_internal_a_id() const {
   return _impl_.a_id_;
@@ -11790,7 +13287,7 @@ inline uint64_t Msg_GetSamplerParameter::a_id() const {
   return _internal_a_id();
 }
 inline void Msg_GetSamplerParameter::_internal_set_a_id(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_id_ = value;
 }
 inline void Msg_GetSamplerParameter::set_a_id(uint64_t value) {
@@ -11798,9 +13295,17 @@ inline void Msg_GetSamplerParameter::set_a_id(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetSamplerParameter.a_id)
 }
 
-// uint32 a_pname = 2;
+// required uint32 a_pname = 2;
+inline bool Msg_GetSamplerParameter::_internal_has_a_pname() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_GetSamplerParameter::has_a_pname() const {
+  return _internal_has_a_pname();
+}
 inline void Msg_GetSamplerParameter::clear_a_pname() {
   _impl_.a_pname_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_GetSamplerParameter::_internal_a_pname() const {
   return _impl_.a_pname_;
@@ -11810,7 +13315,7 @@ inline uint32_t Msg_GetSamplerParameter::a_pname() const {
   return _internal_a_pname();
 }
 inline void Msg_GetSamplerParameter::_internal_set_a_pname(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_pname_ = value;
 }
 inline void Msg_GetSamplerParameter::set_a_pname(uint32_t value) {
@@ -11854,9 +13359,17 @@ inline void Reply_GetSamplerParameter::set_a_ret(double value) {
 
 // Msg_GetString
 
-// uint32 a_pname = 1;
+// required uint32 a_pname = 1;
+inline bool Msg_GetString::_internal_has_a_pname() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_GetString::has_a_pname() const {
+  return _internal_has_a_pname();
+}
 inline void Msg_GetString::clear_a_pname() {
   _impl_.a_pname_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Msg_GetString::_internal_a_pname() const {
   return _impl_.a_pname_;
@@ -11866,7 +13379,7 @@ inline uint32_t Msg_GetString::a_pname() const {
   return _internal_a_pname();
 }
 inline void Msg_GetString::_internal_set_a_pname(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_pname_ = value;
 }
 inline void Msg_GetString::set_a_pname(uint32_t value) {
@@ -11950,9 +13463,17 @@ inline void Reply_GetString::set_allocated_a_ret(std::string* a_ret) {
 
 // Msg_GetTexParameter
 
-// uint64 a_id = 1;
+// required uint64 a_id = 1;
+inline bool Msg_GetTexParameter::_internal_has_a_id() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_GetTexParameter::has_a_id() const {
+  return _internal_has_a_id();
+}
 inline void Msg_GetTexParameter::clear_a_id() {
   _impl_.a_id_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_GetTexParameter::_internal_a_id() const {
   return _impl_.a_id_;
@@ -11962,7 +13483,7 @@ inline uint64_t Msg_GetTexParameter::a_id() const {
   return _internal_a_id();
 }
 inline void Msg_GetTexParameter::_internal_set_a_id(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_id_ = value;
 }
 inline void Msg_GetTexParameter::set_a_id(uint64_t value) {
@@ -11970,9 +13491,17 @@ inline void Msg_GetTexParameter::set_a_id(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetTexParameter.a_id)
 }
 
-// uint32 a_pname = 2;
+// required uint32 a_pname = 2;
+inline bool Msg_GetTexParameter::_internal_has_a_pname() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_GetTexParameter::has_a_pname() const {
+  return _internal_has_a_pname();
+}
 inline void Msg_GetTexParameter::clear_a_pname() {
   _impl_.a_pname_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_GetTexParameter::_internal_a_pname() const {
   return _impl_.a_pname_;
@@ -11982,7 +13511,7 @@ inline uint32_t Msg_GetTexParameter::a_pname() const {
   return _internal_a_pname();
 }
 inline void Msg_GetTexParameter::_internal_set_a_pname(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_pname_ = value;
 }
 inline void Msg_GetTexParameter::set_a_pname(uint32_t value) {
@@ -12026,9 +13555,17 @@ inline void Reply_GetTexParameter::set_a_ret(double value) {
 
 // Msg_GetUniform
 
-// uint64 a_id = 1;
+// required uint64 a_id = 1;
+inline bool Msg_GetUniform::_internal_has_a_id() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_GetUniform::has_a_id() const {
+  return _internal_has_a_id();
+}
 inline void Msg_GetUniform::clear_a_id() {
   _impl_.a_id_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_GetUniform::_internal_a_id() const {
   return _impl_.a_id_;
@@ -12038,7 +13575,7 @@ inline uint64_t Msg_GetUniform::a_id() const {
   return _internal_a_id();
 }
 inline void Msg_GetUniform::_internal_set_a_id(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_id_ = value;
 }
 inline void Msg_GetUniform::set_a_id(uint64_t value) {
@@ -12046,9 +13583,17 @@ inline void Msg_GetUniform::set_a_id(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetUniform.a_id)
 }
 
-// uint32 a_loc = 2;
+// required uint32 a_loc = 2;
+inline bool Msg_GetUniform::_internal_has_a_loc() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_GetUniform::has_a_loc() const {
+  return _internal_has_a_loc();
+}
 inline void Msg_GetUniform::clear_a_loc() {
   _impl_.a_loc_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_GetUniform::_internal_a_loc() const {
   return _impl_.a_loc_;
@@ -12058,7 +13603,7 @@ inline uint32_t Msg_GetUniform::a_loc() const {
   return _internal_a_loc();
 }
 inline void Msg_GetUniform::_internal_set_a_loc(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_loc_ = value;
 }
 inline void Msg_GetUniform::set_a_loc(uint32_t value) {
@@ -12070,9 +13615,17 @@ inline void Msg_GetUniform::set_a_loc(uint32_t value) {
 
 // Reply_GetUniform
 
-// bytes a_ret = 1;
+// required bytes a_ret = 1;
+inline bool Reply_GetUniform::_internal_has_a_ret() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_GetUniform::has_a_ret() const {
+  return _internal_has_a_ret();
+}
 inline void Reply_GetUniform::clear_a_ret() {
   _impl_.a_ret_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_GetUniform::a_ret() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetUniform.a_ret)
@@ -12081,7 +13634,7 @@ inline const std::string& Reply_GetUniform::a_ret() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_GetUniform::set_a_ret(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_ret_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetUniform.a_ret)
 }
@@ -12094,22 +13647,32 @@ inline const std::string& Reply_GetUniform::_internal_a_ret() const {
   return _impl_.a_ret_.Get();
 }
 inline void Reply_GetUniform::_internal_set_a_ret(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_ret_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_GetUniform::_internal_mutable_a_ret() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_ret_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_GetUniform::release_a_ret() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_GetUniform.a_ret)
-  return _impl_.a_ret_.Release();
+  if (!_internal_has_a_ret()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_ret_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_ret_.IsDefault()) {
+    _impl_.a_ret_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_GetUniform::set_allocated_a_ret(std::string* a_ret) {
   if (a_ret != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_ret_.SetAllocated(a_ret, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -12124,9 +13687,17 @@ inline void Reply_GetUniform::set_allocated_a_ret(std::string* a_ret) {
 
 // Msg_GetVertexAttrib
 
-// uint32 a_index = 1;
+// required uint32 a_index = 1;
+inline bool Msg_GetVertexAttrib::_internal_has_a_index() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_GetVertexAttrib::has_a_index() const {
+  return _internal_has_a_index();
+}
 inline void Msg_GetVertexAttrib::clear_a_index() {
   _impl_.a_index_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Msg_GetVertexAttrib::_internal_a_index() const {
   return _impl_.a_index_;
@@ -12136,7 +13707,7 @@ inline uint32_t Msg_GetVertexAttrib::a_index() const {
   return _internal_a_index();
 }
 inline void Msg_GetVertexAttrib::_internal_set_a_index(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_index_ = value;
 }
 inline void Msg_GetVertexAttrib::set_a_index(uint32_t value) {
@@ -12144,9 +13715,17 @@ inline void Msg_GetVertexAttrib::set_a_index(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetVertexAttrib.a_index)
 }
 
-// uint32 a_pname = 2;
+// required uint32 a_pname = 2;
+inline bool Msg_GetVertexAttrib::_internal_has_a_pname() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_GetVertexAttrib::has_a_pname() const {
+  return _internal_has_a_pname();
+}
 inline void Msg_GetVertexAttrib::clear_a_pname() {
   _impl_.a_pname_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_GetVertexAttrib::_internal_a_pname() const {
   return _impl_.a_pname_;
@@ -12156,7 +13735,7 @@ inline uint32_t Msg_GetVertexAttrib::a_pname() const {
   return _internal_a_pname();
 }
 inline void Msg_GetVertexAttrib::_internal_set_a_pname(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_pname_ = value;
 }
 inline void Msg_GetVertexAttrib::set_a_pname(uint32_t value) {
@@ -12208,9 +13787,17 @@ inline void Reply_GetVertexAttrib::set_a_ret(double value) {
 
 // Msg_ValidateProgram
 
-// uint64 a_id = 1;
+// required uint64 a_id = 1;
+inline bool Msg_ValidateProgram::_internal_has_a_id() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_ValidateProgram::has_a_id() const {
+  return _internal_has_a_id();
+}
 inline void Msg_ValidateProgram::clear_a_id() {
   _impl_.a_id_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_ValidateProgram::_internal_a_id() const {
   return _impl_.a_id_;
@@ -12220,7 +13807,7 @@ inline uint64_t Msg_ValidateProgram::a_id() const {
   return _internal_a_id();
 }
 inline void Msg_ValidateProgram::_internal_set_a_id(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_id_ = value;
 }
 inline void Msg_ValidateProgram::set_a_id(uint64_t value) {
@@ -12232,9 +13819,17 @@ inline void Msg_ValidateProgram::set_a_id(uint64_t value) {
 
 // Reply_ValidateProgram
 
-// bool a_ret = 1;
+// required bool a_ret = 1;
+inline bool Reply_ValidateProgram::_internal_has_a_ret() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_ValidateProgram::has_a_ret() const {
+  return _internal_has_a_ret();
+}
 inline void Reply_ValidateProgram::clear_a_ret() {
   _impl_.a_ret_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Reply_ValidateProgram::_internal_a_ret() const {
   return _impl_.a_ret_;
@@ -12244,7 +13839,7 @@ inline bool Reply_ValidateProgram::a_ret() const {
   return _internal_a_ret();
 }
 inline void Reply_ValidateProgram::_internal_set_a_ret(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_ret_ = value;
 }
 inline void Reply_ValidateProgram::set_a_ret(bool value) {
@@ -12256,9 +13851,17 @@ inline void Reply_ValidateProgram::set_a_ret(bool value) {
 
 // Msg_JsWarning
 
-// bytes a_text = 1;
+// required bytes a_text = 1;
+inline bool Msg_JsWarning::_internal_has_a_text() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_JsWarning::has_a_text() const {
+  return _internal_has_a_text();
+}
 inline void Msg_JsWarning::clear_a_text() {
   _impl_.a_text_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_JsWarning::a_text() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_JsWarning.a_text)
@@ -12267,7 +13870,7 @@ inline const std::string& Msg_JsWarning::a_text() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_JsWarning::set_a_text(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_text_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_JsWarning.a_text)
 }
@@ -12280,22 +13883,32 @@ inline const std::string& Msg_JsWarning::_internal_a_text() const {
   return _impl_.a_text_.Get();
 }
 inline void Msg_JsWarning::_internal_set_a_text(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_text_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_JsWarning::_internal_mutable_a_text() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_text_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_JsWarning::release_a_text() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_JsWarning.a_text)
-  return _impl_.a_text_.Release();
+  if (!_internal_has_a_text()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_text_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_text_.IsDefault()) {
+    _impl_.a_text_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_JsWarning::set_allocated_a_text(std::string* a_text) {
   if (a_text != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_text_.SetAllocated(a_text, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -12310,9 +13923,17 @@ inline void Msg_JsWarning::set_allocated_a_text(std::string* a_text) {
 
 // Msg_OnContextLoss
 
-// bytes a_aReason = 1;
+// required bytes a_aReason = 1;
+inline bool Msg_OnContextLoss::_internal_has_a_areason() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_OnContextLoss::has_a_areason() const {
+  return _internal_has_a_areason();
+}
 inline void Msg_OnContextLoss::clear_a_areason() {
   _impl_.a_areason_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_OnContextLoss::a_areason() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_OnContextLoss.a_aReason)
@@ -12321,7 +13942,7 @@ inline const std::string& Msg_OnContextLoss::a_areason() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnContextLoss::set_a_areason(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_areason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_OnContextLoss.a_aReason)
 }
@@ -12334,22 +13955,32 @@ inline const std::string& Msg_OnContextLoss::_internal_a_areason() const {
   return _impl_.a_areason_.Get();
 }
 inline void Msg_OnContextLoss::_internal_set_a_areason(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_areason_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OnContextLoss::_internal_mutable_a_areason() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_areason_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OnContextLoss::release_a_areason() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_OnContextLoss.a_aReason)
-  return _impl_.a_areason_.Release();
+  if (!_internal_has_a_areason()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_areason_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_areason_.IsDefault()) {
+    _impl_.a_areason_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_OnContextLoss::set_allocated_a_areason(std::string* a_areason) {
   if (a_areason != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_areason_.SetAllocated(a_areason, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -12364,9 +13995,17 @@ inline void Msg_OnContextLoss::set_allocated_a_areason(std::string* a_areason) {
 
 // Msg_OnSyncComplete
 
-// uint64 a_id = 1;
+// required uint64 a_id = 1;
+inline bool Msg_OnSyncComplete::_internal_has_a_id() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_OnSyncComplete::has_a_id() const {
+  return _internal_has_a_id();
+}
 inline void Msg_OnSyncComplete::clear_a_id() {
   _impl_.a_id_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_OnSyncComplete::_internal_a_id() const {
   return _impl_.a_id_;
@@ -12376,7 +14015,7 @@ inline uint64_t Msg_OnSyncComplete::a_id() const {
   return _internal_a_id();
 }
 inline void Msg_OnSyncComplete::_internal_set_a_id(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_id_ = value;
 }
 inline void Msg_OnSyncComplete::set_a_id(uint64_t value) {

@@ -5,39 +5,39 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/gfx/ipc/GraphicsMessages.ipdlh
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.gfx;
 
 // Structs and unions declarations
 message D3D11DeviceStatus {
-  bool a_isWARP = 1;
-  bool a_textureSharingWorks = 2;
-  uint32 a_featureLevel = 3;
-  bytes a_adapter = 4;
-  sint32 a_sequenceNumber = 5;
-  bytes a_formatOptions = 6;
+  required bool a_isWARP = 1;
+  required bool a_textureSharingWorks = 2;
+  required uint32 a_featureLevel = 3;
+  required bytes a_adapter = 4;
+  required sint32 a_sequenceNumber = 5;
+  required bytes a_formatOptions = 6;
 }
 
 message DevicePrefs {
-  bytes a_hwCompositing = 1;
-  bytes a_d3d11Compositing = 2;
-  bytes a_oglCompositing = 3;
-  bytes a_useD2D1 = 4;
-  bytes a_d3d11HwAngle = 5;
+  required bytes a_hwCompositing = 1;
+  required bytes a_d3d11Compositing = 2;
+  required bytes a_oglCompositing = 3;
+  required bytes a_useD2D1 = 4;
+  required bytes a_d3d11HwAngle = 5;
 }
 
 message ContentDeviceData {
-  protobuf.mozilla.gfx.DevicePrefs a_prefs = 1;
-  protobuf.mozilla.gfx.D3D11DeviceStatus a_d3d11 = 2;
+  required protobuf.mozilla.gfx.DevicePrefs a_prefs = 1;
+  required protobuf.mozilla.gfx.D3D11DeviceStatus a_d3d11 = 2;
   repeated uint32 a_cmsOutputProfileData = 3;
 }
 
 message FeatureFailure {
-  bytes a_status = 1;
-  string a_message = 2;
-  string a_failureId = 3;
+  required bytes a_status = 1;
+  required string a_message = 2;
+  required string a_failureId = 3;
 }
 
 message GPUDeviceData {
@@ -65,12 +65,12 @@ message GfxVarValue {
 }
 
 message GfxVarUpdate {
-  uint32 a_index = 1;
-  protobuf.mozilla.gfx.GfxVarValue a_value = 2;
+  required uint32 a_index = 1;
+  required protobuf.mozilla.gfx.GfxVarValue a_value = 2;
 }
 
 message GfxInfoFeatureStatus {
-  sint32 a_feature = 1;
-  sint32 a_status = 2;
-  string a_failureId = 3;
+  required sint32 a_feature = 1;
+  required sint32 a_status = 2;
+  required string a_failureId = 3;
 }

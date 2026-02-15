@@ -191,6 +191,13 @@ class FileSystemEntryMetadata final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const FileSystemEntryMetadata& default_instance() {
     return *internal_default_instance();
   }
@@ -267,7 +274,11 @@ class FileSystemEntryMetadata final :
     kAEntryNameFieldNumber = 2,
     kADirectoryFieldNumber = 3,
   };
-  // bytes a_entryId = 1;
+  // required bytes a_entryId = 1;
+  bool has_a_entryid() const;
+  private:
+  bool _internal_has_a_entryid() const;
+  public:
   void clear_a_entryid();
   const std::string& a_entryid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -281,7 +292,11 @@ class FileSystemEntryMetadata final :
   std::string* _internal_mutable_a_entryid();
   public:
 
-  // bytes a_entryName = 2;
+  // required bytes a_entryName = 2;
+  bool has_a_entryname() const;
+  private:
+  bool _internal_has_a_entryname() const;
+  public:
   void clear_a_entryname();
   const std::string& a_entryname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -295,7 +310,11 @@ class FileSystemEntryMetadata final :
   std::string* _internal_mutable_a_entryname();
   public:
 
-  // bool a_directory = 3;
+  // required bool a_directory = 3;
+  bool has_a_directory() const;
+  private:
+  bool _internal_has_a_directory() const;
+  public:
   void clear_a_directory();
   bool a_directory() const;
   void set_a_directory(bool value);
@@ -308,14 +327,18 @@ class FileSystemEntryMetadata final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_entryid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_entryname_;
     bool a_directory_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemManager_5fprotobuf_2emozilla_2edom_2efs_2eh_2eproto;
@@ -351,6 +374,13 @@ class FileSystemChildMetadata final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const FileSystemChildMetadata& default_instance() {
@@ -428,7 +458,11 @@ class FileSystemChildMetadata final :
     kAParentIdFieldNumber = 1,
     kAChildNameFieldNumber = 2,
   };
-  // bytes a_parentId = 1;
+  // required bytes a_parentId = 1;
+  bool has_a_parentid() const;
+  private:
+  bool _internal_has_a_parentid() const;
+  public:
   void clear_a_parentid();
   const std::string& a_parentid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -442,7 +476,11 @@ class FileSystemChildMetadata final :
   std::string* _internal_mutable_a_parentid();
   public:
 
-  // bytes a_childName = 2;
+  // required bytes a_childName = 2;
+  bool has_a_childname() const;
+  private:
+  bool _internal_has_a_childname() const;
+  public:
   void clear_a_childname();
   const std::string& a_childname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -460,13 +498,17 @@ class FileSystemChildMetadata final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_parentid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_childname_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemManager_5fprotobuf_2emozilla_2edom_2efs_2eh_2eproto;
@@ -502,6 +544,13 @@ class FileSystemGetHandleRequest final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const FileSystemGetHandleRequest& default_instance() {
@@ -579,7 +628,7 @@ class FileSystemGetHandleRequest final :
     kAHandleFieldNumber = 1,
     kACreateFieldNumber = 2,
   };
-  // .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_handle = 1;
+  // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_handle = 1;
   bool has_a_handle() const;
   private:
   bool _internal_has_a_handle() const;
@@ -597,7 +646,11 @@ class FileSystemGetHandleRequest final :
       ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* a_handle);
   ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* unsafe_arena_release_a_handle();
 
-  // bool a_create = 2;
+  // required bool a_create = 2;
+  bool has_a_create() const;
+  private:
+  bool _internal_has_a_create() const;
+  public:
   void clear_a_create();
   bool a_create() const;
   void set_a_create(bool value);
@@ -610,13 +663,17 @@ class FileSystemGetHandleRequest final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* a_handle_;
     bool a_create_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemManager_5fprotobuf_2emozilla_2edom_2efs_2eh_2eproto;
@@ -652,6 +709,13 @@ class FileSystemGetHandleResponse final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const FileSystemGetHandleResponse& default_instance() {
@@ -832,6 +896,13 @@ class FileSystemGetEntriesRequest final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const FileSystemGetEntriesRequest& default_instance() {
     return *internal_default_instance();
   }
@@ -907,7 +978,11 @@ class FileSystemGetEntriesRequest final :
     kAParentIdFieldNumber = 1,
     kAPageFieldNumber = 2,
   };
-  // bytes a_parentId = 1;
+  // required bytes a_parentId = 1;
+  bool has_a_parentid() const;
+  private:
+  bool _internal_has_a_parentid() const;
+  public:
   void clear_a_parentid();
   const std::string& a_parentid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -921,7 +996,11 @@ class FileSystemGetEntriesRequest final :
   std::string* _internal_mutable_a_parentid();
   public:
 
-  // bytes a_page = 2;
+  // required bytes a_page = 2;
+  bool has_a_page() const;
+  private:
+  bool _internal_has_a_page() const;
+  public:
   void clear_a_page();
   const std::string& a_page() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -939,13 +1018,17 @@ class FileSystemGetEntriesRequest final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_parentid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_page_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemManager_5fprotobuf_2emozilla_2edom_2efs_2eh_2eproto;
@@ -981,6 +1064,13 @@ class FileSystemDirectoryListing final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const FileSystemDirectoryListing& default_instance() {
@@ -1140,6 +1230,13 @@ class FileSystemGetEntriesResponse final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const FileSystemGetEntriesResponse& default_instance() {
@@ -1320,6 +1417,13 @@ class FileSystemGetFileRequest final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const FileSystemGetFileRequest& default_instance() {
     return *internal_default_instance();
   }
@@ -1394,7 +1498,11 @@ class FileSystemGetFileRequest final :
   enum : int {
     kAEntryIdFieldNumber = 1,
   };
-  // bytes a_entryId = 1;
+  // required bytes a_entryId = 1;
+  bool has_a_entryid() const;
+  private:
+  bool _internal_has_a_entryid() const;
+  public:
   void clear_a_entryid();
   const std::string& a_entryid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1416,8 +1524,9 @@ class FileSystemGetFileRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_entryid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_entryid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemManager_5fprotobuf_2emozilla_2edom_2efs_2eh_2eproto;
@@ -1453,6 +1562,13 @@ class FileSystemFileProperties final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const FileSystemFileProperties& default_instance() {
@@ -1556,7 +1672,11 @@ class FileSystemFileProperties final :
   std::string* _internal_add_a_path();
   public:
 
-  // bytes a_last_modified_ms = 1;
+  // required bytes a_last_modified_ms = 1;
+  bool has_a_last_modified_ms() const;
+  private:
+  bool _internal_has_a_last_modified_ms() const;
+  public:
   void clear_a_last_modified_ms();
   const std::string& a_last_modified_ms() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1570,7 +1690,11 @@ class FileSystemFileProperties final :
   std::string* _internal_mutable_a_last_modified_ms();
   public:
 
-  // bytes a_type = 3;
+  // required bytes a_type = 3;
+  bool has_a_type() const;
+  private:
+  bool _internal_has_a_type() const;
+  public:
   void clear_a_type();
   const std::string& a_type() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1584,7 +1708,7 @@ class FileSystemFileProperties final :
   std::string* _internal_mutable_a_type();
   public:
 
-  // .protobuf.mozilla.dom.IPCBlob a_file = 2;
+  // required .protobuf.mozilla.dom.IPCBlob a_file = 2;
   bool has_a_file() const;
   private:
   bool _internal_has_a_file() const;
@@ -1606,15 +1730,19 @@ class FileSystemFileProperties final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_path_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_last_modified_ms_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_type_;
     ::protobuf::mozilla::dom::IPCBlob* a_file_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemManager_5fprotobuf_2emozilla_2edom_2efs_2eh_2eproto;
@@ -1650,6 +1778,13 @@ class FileSystemGetFileResponse final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const FileSystemGetFileResponse& default_instance() {
@@ -1830,6 +1965,13 @@ class FileSystemGetAccessHandleRequest final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const FileSystemGetAccessHandleRequest& default_instance() {
     return *internal_default_instance();
   }
@@ -1904,7 +2046,11 @@ class FileSystemGetAccessHandleRequest final :
   enum : int {
     kAEntryIdFieldNumber = 1,
   };
-  // bytes a_entryId = 1;
+  // required bytes a_entryId = 1;
+  bool has_a_entryid() const;
+  private:
+  bool _internal_has_a_entryid() const;
+  public:
   void clear_a_entryid();
   const std::string& a_entryid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1926,8 +2072,9 @@ class FileSystemGetAccessHandleRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_entryid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_entryid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemManager_5fprotobuf_2emozilla_2edom_2efs_2eh_2eproto;
@@ -1963,6 +2110,13 @@ class FileSystemAccessHandleProperties final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const FileSystemAccessHandleProperties& default_instance() {
@@ -2041,7 +2195,11 @@ class FileSystemAccessHandleProperties final :
     kAAccessHandleControlChildEndpointFieldNumber = 3,
     kAStreamParamsFieldNumber = 1,
   };
-  // bytes a_accessHandleChildEndpoint = 2;
+  // required bytes a_accessHandleChildEndpoint = 2;
+  bool has_a_accesshandlechildendpoint() const;
+  private:
+  bool _internal_has_a_accesshandlechildendpoint() const;
+  public:
   void clear_a_accesshandlechildendpoint();
   const std::string& a_accesshandlechildendpoint() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2055,7 +2213,11 @@ class FileSystemAccessHandleProperties final :
   std::string* _internal_mutable_a_accesshandlechildendpoint();
   public:
 
-  // bytes a_accessHandleControlChildEndpoint = 3;
+  // required bytes a_accessHandleControlChildEndpoint = 3;
+  bool has_a_accesshandlecontrolchildendpoint() const;
+  private:
+  bool _internal_has_a_accesshandlecontrolchildendpoint() const;
+  public:
   void clear_a_accesshandlecontrolchildendpoint();
   const std::string& a_accesshandlecontrolchildendpoint() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2069,7 +2231,7 @@ class FileSystemAccessHandleProperties final :
   std::string* _internal_mutable_a_accesshandlecontrolchildendpoint();
   public:
 
-  // .protobuf.mozilla.ipc.RandomAccessStreamParams a_streamParams = 1;
+  // required .protobuf.mozilla.ipc.RandomAccessStreamParams a_streamParams = 1;
   bool has_a_streamparams() const;
   private:
   bool _internal_has_a_streamparams() const;
@@ -2091,14 +2253,18 @@ class FileSystemAccessHandleProperties final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_accesshandlechildendpoint_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_accesshandlecontrolchildendpoint_;
     ::protobuf::mozilla::ipc::RandomAccessStreamParams* a_streamparams_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemManager_5fprotobuf_2emozilla_2edom_2efs_2eh_2eproto;
@@ -2134,6 +2300,13 @@ class FileSystemGetAccessHandleResponse final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const FileSystemGetAccessHandleResponse& default_instance() {
@@ -2314,6 +2487,13 @@ class FileSystemGetWritableRequest final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const FileSystemGetWritableRequest& default_instance() {
     return *internal_default_instance();
   }
@@ -2389,7 +2569,11 @@ class FileSystemGetWritableRequest final :
     kAEntryIdFieldNumber = 1,
     kAKeepDataFieldNumber = 2,
   };
-  // bytes a_entryId = 1;
+  // required bytes a_entryId = 1;
+  bool has_a_entryid() const;
+  private:
+  bool _internal_has_a_entryid() const;
+  public:
   void clear_a_entryid();
   const std::string& a_entryid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2403,7 +2587,11 @@ class FileSystemGetWritableRequest final :
   std::string* _internal_mutable_a_entryid();
   public:
 
-  // bool a_keepData = 2;
+  // required bool a_keepData = 2;
+  bool has_a_keepdata() const;
+  private:
+  bool _internal_has_a_keepdata() const;
+  public:
   void clear_a_keepdata();
   bool a_keepdata() const;
   void set_a_keepdata(bool value);
@@ -2416,13 +2604,17 @@ class FileSystemGetWritableRequest final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_entryid_;
     bool a_keepdata_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemManager_5fprotobuf_2emozilla_2edom_2efs_2eh_2eproto;
@@ -2458,6 +2650,13 @@ class FileSystemWritableFileStreamProperties final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const FileSystemWritableFileStreamProperties& default_instance() {
@@ -2535,7 +2734,11 @@ class FileSystemWritableFileStreamProperties final :
     kAWritableFileStreamFieldNumber = 2,
     kAStreamParamsFieldNumber = 1,
   };
-  // bytes a_writableFileStream = 2;
+  // required bytes a_writableFileStream = 2;
+  bool has_a_writablefilestream() const;
+  private:
+  bool _internal_has_a_writablefilestream() const;
+  public:
   void clear_a_writablefilestream();
   const std::string& a_writablefilestream() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2549,7 +2752,7 @@ class FileSystemWritableFileStreamProperties final :
   std::string* _internal_mutable_a_writablefilestream();
   public:
 
-  // .protobuf.mozilla.ipc.RandomAccessStreamParams a_streamParams = 1;
+  // required .protobuf.mozilla.ipc.RandomAccessStreamParams a_streamParams = 1;
   bool has_a_streamparams() const;
   private:
   bool _internal_has_a_streamparams() const;
@@ -2571,13 +2774,17 @@ class FileSystemWritableFileStreamProperties final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_writablefilestream_;
     ::protobuf::mozilla::ipc::RandomAccessStreamParams* a_streamparams_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemManager_5fprotobuf_2emozilla_2edom_2efs_2eh_2eproto;
@@ -2613,6 +2820,13 @@ class FileSystemGetWritableFileStreamResponse final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const FileSystemGetWritableFileStreamResponse& default_instance() {
@@ -2793,6 +3007,13 @@ class FileSystemEntryPair final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const FileSystemEntryPair& default_instance() {
     return *internal_default_instance();
   }
@@ -2868,7 +3089,11 @@ class FileSystemEntryPair final :
     kAParentIdFieldNumber = 1,
     kAChildIdFieldNumber = 2,
   };
-  // bytes a_parentId = 1;
+  // required bytes a_parentId = 1;
+  bool has_a_parentid() const;
+  private:
+  bool _internal_has_a_parentid() const;
+  public:
   void clear_a_parentid();
   const std::string& a_parentid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2882,7 +3107,11 @@ class FileSystemEntryPair final :
   std::string* _internal_mutable_a_parentid();
   public:
 
-  // bytes a_childId = 2;
+  // required bytes a_childId = 2;
+  bool has_a_childid() const;
+  private:
+  bool _internal_has_a_childid() const;
+  public:
   void clear_a_childid();
   const std::string& a_childid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2900,13 +3129,17 @@ class FileSystemEntryPair final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_parentid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_childid_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemManager_5fprotobuf_2emozilla_2edom_2efs_2eh_2eproto;
@@ -2942,6 +3175,13 @@ class FileSystemResolveRequest final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const FileSystemResolveRequest& default_instance() {
@@ -3018,7 +3258,7 @@ class FileSystemResolveRequest final :
   enum : int {
     kAEndpointsFieldNumber = 1,
   };
-  // .protobuf.mozilla.dom.fs.FileSystemEntryPair a_endpoints = 1;
+  // required .protobuf.mozilla.dom.fs.FileSystemEntryPair a_endpoints = 1;
   bool has_a_endpoints() const;
   private:
   bool _internal_has_a_endpoints() const;
@@ -3044,8 +3284,9 @@ class FileSystemResolveRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::protobuf::mozilla::dom::fs::FileSystemEntryPair* a_endpoints_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::protobuf::mozilla::dom::fs::FileSystemEntryPair* a_endpoints_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemManager_5fprotobuf_2emozilla_2edom_2efs_2eh_2eproto;
@@ -3081,6 +3322,13 @@ class FileSystemPath final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const FileSystemPath& default_instance() {
@@ -3226,6 +3474,13 @@ class FileSystemResolveResponse final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const FileSystemResolveResponse& default_instance() {
@@ -3406,6 +3661,13 @@ class FileSystemRemoveEntryRequest final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const FileSystemRemoveEntryRequest& default_instance() {
     return *internal_default_instance();
   }
@@ -3481,7 +3743,7 @@ class FileSystemRemoveEntryRequest final :
     kAHandleFieldNumber = 1,
     kARecursiveFieldNumber = 2,
   };
-  // .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_handle = 1;
+  // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_handle = 1;
   bool has_a_handle() const;
   private:
   bool _internal_has_a_handle() const;
@@ -3499,7 +3761,11 @@ class FileSystemRemoveEntryRequest final :
       ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* a_handle);
   ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* unsafe_arena_release_a_handle();
 
-  // bool a_recursive = 2;
+  // required bool a_recursive = 2;
+  bool has_a_recursive() const;
+  private:
+  bool _internal_has_a_recursive() const;
+  public:
   void clear_a_recursive();
   bool a_recursive() const;
   void set_a_recursive(bool value);
@@ -3512,13 +3778,17 @@ class FileSystemRemoveEntryRequest final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* a_handle_;
     bool a_recursive_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemManager_5fprotobuf_2emozilla_2edom_2efs_2eh_2eproto;
@@ -3554,6 +3824,13 @@ class FileSystemRemoveEntryResponse final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const FileSystemRemoveEntryResponse& default_instance() {
@@ -3734,6 +4011,13 @@ class FileSystemMoveEntryRequest final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const FileSystemMoveEntryRequest& default_instance() {
     return *internal_default_instance();
   }
@@ -3809,7 +4093,7 @@ class FileSystemMoveEntryRequest final :
     kAHandleFieldNumber = 1,
     kADestHandleFieldNumber = 2,
   };
-  // .protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_handle = 1;
+  // required .protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_handle = 1;
   bool has_a_handle() const;
   private:
   bool _internal_has_a_handle() const;
@@ -3827,7 +4111,7 @@ class FileSystemMoveEntryRequest final :
       ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* a_handle);
   ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* unsafe_arena_release_a_handle();
 
-  // .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_destHandle = 2;
+  // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_destHandle = 2;
   bool has_a_desthandle() const;
   private:
   bool _internal_has_a_desthandle() const;
@@ -3849,13 +4133,17 @@ class FileSystemMoveEntryRequest final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* a_handle_;
     ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* a_desthandle_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemManager_5fprotobuf_2emozilla_2edom_2efs_2eh_2eproto;
@@ -3891,6 +4179,13 @@ class FileSystemRenameEntryRequest final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const FileSystemRenameEntryRequest& default_instance() {
@@ -3968,7 +4263,11 @@ class FileSystemRenameEntryRequest final :
     kANameFieldNumber = 2,
     kAHandleFieldNumber = 1,
   };
-  // bytes a_name = 2;
+  // required bytes a_name = 2;
+  bool has_a_name() const;
+  private:
+  bool _internal_has_a_name() const;
+  public:
   void clear_a_name();
   const std::string& a_name() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3982,7 +4281,7 @@ class FileSystemRenameEntryRequest final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // .protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_handle = 1;
+  // required .protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_handle = 1;
   bool has_a_handle() const;
   private:
   bool _internal_has_a_handle() const;
@@ -4004,13 +4303,17 @@ class FileSystemRenameEntryRequest final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_name_;
     ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* a_handle_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemManager_5fprotobuf_2emozilla_2edom_2efs_2eh_2eproto;
@@ -4046,6 +4349,13 @@ class FileSystemMoveEntryResponse final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const FileSystemMoveEntryResponse& default_instance() {
@@ -4204,9 +4514,17 @@ class FileSystemMoveEntryResponse final :
 #endif  // __GNUC__
 // FileSystemEntryMetadata
 
-// bytes a_entryId = 1;
+// required bytes a_entryId = 1;
+inline bool FileSystemEntryMetadata::_internal_has_a_entryid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool FileSystemEntryMetadata::has_a_entryid() const {
+  return _internal_has_a_entryid();
+}
 inline void FileSystemEntryMetadata::clear_a_entryid() {
   _impl_.a_entryid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& FileSystemEntryMetadata::a_entryid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.a_entryId)
@@ -4215,7 +4533,7 @@ inline const std::string& FileSystemEntryMetadata::a_entryid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileSystemEntryMetadata::set_a_entryid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_entryid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.a_entryId)
 }
@@ -4228,22 +4546,32 @@ inline const std::string& FileSystemEntryMetadata::_internal_a_entryid() const {
   return _impl_.a_entryid_.Get();
 }
 inline void FileSystemEntryMetadata::_internal_set_a_entryid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_entryid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* FileSystemEntryMetadata::_internal_mutable_a_entryid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_entryid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FileSystemEntryMetadata::release_a_entryid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.a_entryId)
-  return _impl_.a_entryid_.Release();
+  if (!_internal_has_a_entryid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_entryid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_entryid_.IsDefault()) {
+    _impl_.a_entryid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void FileSystemEntryMetadata::set_allocated_a_entryid(std::string* a_entryid) {
   if (a_entryid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_entryid_.SetAllocated(a_entryid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4254,9 +4582,17 @@ inline void FileSystemEntryMetadata::set_allocated_a_entryid(std::string* a_entr
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.a_entryId)
 }
 
-// bytes a_entryName = 2;
+// required bytes a_entryName = 2;
+inline bool FileSystemEntryMetadata::_internal_has_a_entryname() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool FileSystemEntryMetadata::has_a_entryname() const {
+  return _internal_has_a_entryname();
+}
 inline void FileSystemEntryMetadata::clear_a_entryname() {
   _impl_.a_entryname_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& FileSystemEntryMetadata::a_entryname() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.a_entryName)
@@ -4265,7 +4601,7 @@ inline const std::string& FileSystemEntryMetadata::a_entryname() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileSystemEntryMetadata::set_a_entryname(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_entryname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.a_entryName)
 }
@@ -4278,22 +4614,32 @@ inline const std::string& FileSystemEntryMetadata::_internal_a_entryname() const
   return _impl_.a_entryname_.Get();
 }
 inline void FileSystemEntryMetadata::_internal_set_a_entryname(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_entryname_.Set(value, GetArenaForAllocation());
 }
 inline std::string* FileSystemEntryMetadata::_internal_mutable_a_entryname() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_entryname_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FileSystemEntryMetadata::release_a_entryname() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.a_entryName)
-  return _impl_.a_entryname_.Release();
+  if (!_internal_has_a_entryname()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_entryname_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_entryname_.IsDefault()) {
+    _impl_.a_entryname_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void FileSystemEntryMetadata::set_allocated_a_entryname(std::string* a_entryname) {
   if (a_entryname != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_entryname_.SetAllocated(a_entryname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4304,9 +4650,17 @@ inline void FileSystemEntryMetadata::set_allocated_a_entryname(std::string* a_en
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.a_entryName)
 }
 
-// bool a_directory = 3;
+// required bool a_directory = 3;
+inline bool FileSystemEntryMetadata::_internal_has_a_directory() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool FileSystemEntryMetadata::has_a_directory() const {
+  return _internal_has_a_directory();
+}
 inline void FileSystemEntryMetadata::clear_a_directory() {
   _impl_.a_directory_ = false;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline bool FileSystemEntryMetadata::_internal_a_directory() const {
   return _impl_.a_directory_;
@@ -4316,7 +4670,7 @@ inline bool FileSystemEntryMetadata::a_directory() const {
   return _internal_a_directory();
 }
 inline void FileSystemEntryMetadata::_internal_set_a_directory(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_directory_ = value;
 }
 inline void FileSystemEntryMetadata::set_a_directory(bool value) {
@@ -4328,9 +4682,17 @@ inline void FileSystemEntryMetadata::set_a_directory(bool value) {
 
 // FileSystemChildMetadata
 
-// bytes a_parentId = 1;
+// required bytes a_parentId = 1;
+inline bool FileSystemChildMetadata::_internal_has_a_parentid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool FileSystemChildMetadata::has_a_parentid() const {
+  return _internal_has_a_parentid();
+}
 inline void FileSystemChildMetadata::clear_a_parentid() {
   _impl_.a_parentid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& FileSystemChildMetadata::a_parentid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemChildMetadata.a_parentId)
@@ -4339,7 +4701,7 @@ inline const std::string& FileSystemChildMetadata::a_parentid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileSystemChildMetadata::set_a_parentid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_parentid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemChildMetadata.a_parentId)
 }
@@ -4352,22 +4714,32 @@ inline const std::string& FileSystemChildMetadata::_internal_a_parentid() const 
   return _impl_.a_parentid_.Get();
 }
 inline void FileSystemChildMetadata::_internal_set_a_parentid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_parentid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* FileSystemChildMetadata::_internal_mutable_a_parentid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_parentid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FileSystemChildMetadata::release_a_parentid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemChildMetadata.a_parentId)
-  return _impl_.a_parentid_.Release();
+  if (!_internal_has_a_parentid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_parentid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_parentid_.IsDefault()) {
+    _impl_.a_parentid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void FileSystemChildMetadata::set_allocated_a_parentid(std::string* a_parentid) {
   if (a_parentid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_parentid_.SetAllocated(a_parentid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4378,9 +4750,17 @@ inline void FileSystemChildMetadata::set_allocated_a_parentid(std::string* a_par
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemChildMetadata.a_parentId)
 }
 
-// bytes a_childName = 2;
+// required bytes a_childName = 2;
+inline bool FileSystemChildMetadata::_internal_has_a_childname() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool FileSystemChildMetadata::has_a_childname() const {
+  return _internal_has_a_childname();
+}
 inline void FileSystemChildMetadata::clear_a_childname() {
   _impl_.a_childname_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& FileSystemChildMetadata::a_childname() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemChildMetadata.a_childName)
@@ -4389,7 +4769,7 @@ inline const std::string& FileSystemChildMetadata::a_childname() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileSystemChildMetadata::set_a_childname(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_childname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemChildMetadata.a_childName)
 }
@@ -4402,22 +4782,32 @@ inline const std::string& FileSystemChildMetadata::_internal_a_childname() const
   return _impl_.a_childname_.Get();
 }
 inline void FileSystemChildMetadata::_internal_set_a_childname(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_childname_.Set(value, GetArenaForAllocation());
 }
 inline std::string* FileSystemChildMetadata::_internal_mutable_a_childname() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_childname_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FileSystemChildMetadata::release_a_childname() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemChildMetadata.a_childName)
-  return _impl_.a_childname_.Release();
+  if (!_internal_has_a_childname()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_childname_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_childname_.IsDefault()) {
+    _impl_.a_childname_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void FileSystemChildMetadata::set_allocated_a_childname(std::string* a_childname) {
   if (a_childname != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_childname_.SetAllocated(a_childname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4432,18 +4822,18 @@ inline void FileSystemChildMetadata::set_allocated_a_childname(std::string* a_ch
 
 // FileSystemGetHandleRequest
 
-// .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_handle = 1;
+// required .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_handle = 1;
 inline bool FileSystemGetHandleRequest::_internal_has_a_handle() const {
-  return this != internal_default_instance() && _impl_.a_handle_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_handle_ != nullptr);
+  return value;
 }
 inline bool FileSystemGetHandleRequest::has_a_handle() const {
   return _internal_has_a_handle();
 }
 inline void FileSystemGetHandleRequest::clear_a_handle() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_handle_ != nullptr) {
-    delete _impl_.a_handle_;
-  }
-  _impl_.a_handle_ = nullptr;
+  if (_impl_.a_handle_ != nullptr) _impl_.a_handle_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& FileSystemGetHandleRequest::_internal_a_handle() const {
   const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* p = _impl_.a_handle_;
@@ -4461,14 +4851,14 @@ inline void FileSystemGetHandleRequest::unsafe_arena_set_allocated_a_handle(
   }
   _impl_.a_handle_ = a_handle;
   if (a_handle) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetHandleRequest.a_handle)
 }
 inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemGetHandleRequest::release_a_handle() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* temp = _impl_.a_handle_;
   _impl_.a_handle_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -4484,13 +4874,13 @@ inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemGetHandl
 }
 inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemGetHandleRequest::unsafe_arena_release_a_handle() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetHandleRequest.a_handle)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* temp = _impl_.a_handle_;
   _impl_.a_handle_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemGetHandleRequest::_internal_mutable_a_handle() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_handle_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::fs::FileSystemChildMetadata>(GetArenaForAllocation());
     _impl_.a_handle_ = p;
@@ -4514,17 +4904,25 @@ inline void FileSystemGetHandleRequest::set_allocated_a_handle(::protobuf::mozil
       a_handle = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_handle, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_handle_ = a_handle;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetHandleRequest.a_handle)
 }
 
-// bool a_create = 2;
+// required bool a_create = 2;
+inline bool FileSystemGetHandleRequest::_internal_has_a_create() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool FileSystemGetHandleRequest::has_a_create() const {
+  return _internal_has_a_create();
+}
 inline void FileSystemGetHandleRequest::clear_a_create() {
   _impl_.a_create_ = false;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool FileSystemGetHandleRequest::_internal_a_create() const {
   return _impl_.a_create_;
@@ -4534,7 +4932,7 @@ inline bool FileSystemGetHandleRequest::a_create() const {
   return _internal_a_create();
 }
 inline void FileSystemGetHandleRequest::_internal_set_a_create(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_create_ = value;
 }
 inline void FileSystemGetHandleRequest::set_a_create(bool value) {
@@ -4713,9 +5111,17 @@ inline FileSystemGetHandleResponse::ContentCase FileSystemGetHandleResponse::con
 
 // FileSystemGetEntriesRequest
 
-// bytes a_parentId = 1;
+// required bytes a_parentId = 1;
+inline bool FileSystemGetEntriesRequest::_internal_has_a_parentid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool FileSystemGetEntriesRequest::has_a_parentid() const {
+  return _internal_has_a_parentid();
+}
 inline void FileSystemGetEntriesRequest::clear_a_parentid() {
   _impl_.a_parentid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& FileSystemGetEntriesRequest::a_parentid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetEntriesRequest.a_parentId)
@@ -4724,7 +5130,7 @@ inline const std::string& FileSystemGetEntriesRequest::a_parentid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileSystemGetEntriesRequest::set_a_parentid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_parentid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemGetEntriesRequest.a_parentId)
 }
@@ -4737,22 +5143,32 @@ inline const std::string& FileSystemGetEntriesRequest::_internal_a_parentid() co
   return _impl_.a_parentid_.Get();
 }
 inline void FileSystemGetEntriesRequest::_internal_set_a_parentid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_parentid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* FileSystemGetEntriesRequest::_internal_mutable_a_parentid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_parentid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FileSystemGetEntriesRequest::release_a_parentid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetEntriesRequest.a_parentId)
-  return _impl_.a_parentid_.Release();
+  if (!_internal_has_a_parentid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_parentid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_parentid_.IsDefault()) {
+    _impl_.a_parentid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void FileSystemGetEntriesRequest::set_allocated_a_parentid(std::string* a_parentid) {
   if (a_parentid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_parentid_.SetAllocated(a_parentid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4763,9 +5179,17 @@ inline void FileSystemGetEntriesRequest::set_allocated_a_parentid(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetEntriesRequest.a_parentId)
 }
 
-// bytes a_page = 2;
+// required bytes a_page = 2;
+inline bool FileSystemGetEntriesRequest::_internal_has_a_page() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool FileSystemGetEntriesRequest::has_a_page() const {
+  return _internal_has_a_page();
+}
 inline void FileSystemGetEntriesRequest::clear_a_page() {
   _impl_.a_page_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& FileSystemGetEntriesRequest::a_page() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetEntriesRequest.a_page)
@@ -4774,7 +5198,7 @@ inline const std::string& FileSystemGetEntriesRequest::a_page() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileSystemGetEntriesRequest::set_a_page(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_page_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemGetEntriesRequest.a_page)
 }
@@ -4787,22 +5211,32 @@ inline const std::string& FileSystemGetEntriesRequest::_internal_a_page() const 
   return _impl_.a_page_.Get();
 }
 inline void FileSystemGetEntriesRequest::_internal_set_a_page(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_page_.Set(value, GetArenaForAllocation());
 }
 inline std::string* FileSystemGetEntriesRequest::_internal_mutable_a_page() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_page_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FileSystemGetEntriesRequest::release_a_page() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetEntriesRequest.a_page)
-  return _impl_.a_page_.Release();
+  if (!_internal_has_a_page()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_page_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_page_.IsDefault()) {
+    _impl_.a_page_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void FileSystemGetEntriesRequest::set_allocated_a_page(std::string* a_page) {
   if (a_page != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_page_.SetAllocated(a_page, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -5065,9 +5499,17 @@ inline FileSystemGetEntriesResponse::ContentCase FileSystemGetEntriesResponse::c
 
 // FileSystemGetFileRequest
 
-// bytes a_entryId = 1;
+// required bytes a_entryId = 1;
+inline bool FileSystemGetFileRequest::_internal_has_a_entryid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool FileSystemGetFileRequest::has_a_entryid() const {
+  return _internal_has_a_entryid();
+}
 inline void FileSystemGetFileRequest::clear_a_entryid() {
   _impl_.a_entryid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& FileSystemGetFileRequest::a_entryid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetFileRequest.a_entryId)
@@ -5076,7 +5518,7 @@ inline const std::string& FileSystemGetFileRequest::a_entryid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileSystemGetFileRequest::set_a_entryid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_entryid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemGetFileRequest.a_entryId)
 }
@@ -5089,22 +5531,32 @@ inline const std::string& FileSystemGetFileRequest::_internal_a_entryid() const 
   return _impl_.a_entryid_.Get();
 }
 inline void FileSystemGetFileRequest::_internal_set_a_entryid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_entryid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* FileSystemGetFileRequest::_internal_mutable_a_entryid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_entryid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FileSystemGetFileRequest::release_a_entryid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetFileRequest.a_entryId)
-  return _impl_.a_entryid_.Release();
+  if (!_internal_has_a_entryid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_entryid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_entryid_.IsDefault()) {
+    _impl_.a_entryid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void FileSystemGetFileRequest::set_allocated_a_entryid(std::string* a_entryid) {
   if (a_entryid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_entryid_.SetAllocated(a_entryid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -5119,9 +5571,17 @@ inline void FileSystemGetFileRequest::set_allocated_a_entryid(std::string* a_ent
 
 // FileSystemFileProperties
 
-// bytes a_last_modified_ms = 1;
+// required bytes a_last_modified_ms = 1;
+inline bool FileSystemFileProperties::_internal_has_a_last_modified_ms() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool FileSystemFileProperties::has_a_last_modified_ms() const {
+  return _internal_has_a_last_modified_ms();
+}
 inline void FileSystemFileProperties::clear_a_last_modified_ms() {
   _impl_.a_last_modified_ms_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& FileSystemFileProperties::a_last_modified_ms() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_last_modified_ms)
@@ -5130,7 +5590,7 @@ inline const std::string& FileSystemFileProperties::a_last_modified_ms() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileSystemFileProperties::set_a_last_modified_ms(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_last_modified_ms_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_last_modified_ms)
 }
@@ -5143,22 +5603,32 @@ inline const std::string& FileSystemFileProperties::_internal_a_last_modified_ms
   return _impl_.a_last_modified_ms_.Get();
 }
 inline void FileSystemFileProperties::_internal_set_a_last_modified_ms(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_last_modified_ms_.Set(value, GetArenaForAllocation());
 }
 inline std::string* FileSystemFileProperties::_internal_mutable_a_last_modified_ms() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_last_modified_ms_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FileSystemFileProperties::release_a_last_modified_ms() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_last_modified_ms)
-  return _impl_.a_last_modified_ms_.Release();
+  if (!_internal_has_a_last_modified_ms()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_last_modified_ms_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_last_modified_ms_.IsDefault()) {
+    _impl_.a_last_modified_ms_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void FileSystemFileProperties::set_allocated_a_last_modified_ms(std::string* a_last_modified_ms) {
   if (a_last_modified_ms != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_last_modified_ms_.SetAllocated(a_last_modified_ms, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -5169,9 +5639,11 @@ inline void FileSystemFileProperties::set_allocated_a_last_modified_ms(std::stri
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_last_modified_ms)
 }
 
-// .protobuf.mozilla.dom.IPCBlob a_file = 2;
+// required .protobuf.mozilla.dom.IPCBlob a_file = 2;
 inline bool FileSystemFileProperties::_internal_has_a_file() const {
-  return this != internal_default_instance() && _impl_.a_file_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_file_ != nullptr);
+  return value;
 }
 inline bool FileSystemFileProperties::has_a_file() const {
   return _internal_has_a_file();
@@ -5192,14 +5664,14 @@ inline void FileSystemFileProperties::unsafe_arena_set_allocated_a_file(
   }
   _impl_.a_file_ = a_file;
   if (a_file) {
-    
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_file)
 }
 inline ::protobuf::mozilla::dom::IPCBlob* FileSystemFileProperties::release_a_file() {
-  
+  _impl_._has_bits_[0] &= ~0x00000004u;
   ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.a_file_;
   _impl_.a_file_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -5215,13 +5687,13 @@ inline ::protobuf::mozilla::dom::IPCBlob* FileSystemFileProperties::release_a_fi
 }
 inline ::protobuf::mozilla::dom::IPCBlob* FileSystemFileProperties::unsafe_arena_release_a_file() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_file)
-  
+  _impl_._has_bits_[0] &= ~0x00000004u;
   ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.a_file_;
   _impl_.a_file_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::IPCBlob* FileSystemFileProperties::_internal_mutable_a_file() {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   if (_impl_.a_file_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::IPCBlob>(GetArenaForAllocation());
     _impl_.a_file_ = p;
@@ -5246,17 +5718,25 @@ inline void FileSystemFileProperties::set_allocated_a_file(::protobuf::mozilla::
       a_file = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_file, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.a_file_ = a_file;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_file)
 }
 
-// bytes a_type = 3;
+// required bytes a_type = 3;
+inline bool FileSystemFileProperties::_internal_has_a_type() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool FileSystemFileProperties::has_a_type() const {
+  return _internal_has_a_type();
+}
 inline void FileSystemFileProperties::clear_a_type() {
   _impl_.a_type_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& FileSystemFileProperties::a_type() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_type)
@@ -5265,7 +5745,7 @@ inline const std::string& FileSystemFileProperties::a_type() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileSystemFileProperties::set_a_type(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_type_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_type)
 }
@@ -5278,22 +5758,32 @@ inline const std::string& FileSystemFileProperties::_internal_a_type() const {
   return _impl_.a_type_.Get();
 }
 inline void FileSystemFileProperties::_internal_set_a_type(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_type_.Set(value, GetArenaForAllocation());
 }
 inline std::string* FileSystemFileProperties::_internal_mutable_a_type() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_type_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FileSystemFileProperties::release_a_type() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_type)
-  return _impl_.a_type_.Release();
+  if (!_internal_has_a_type()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_type_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_type_.IsDefault()) {
+    _impl_.a_type_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void FileSystemFileProperties::set_allocated_a_type(std::string* a_type) {
   if (a_type != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_type_.SetAllocated(a_type, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -5547,9 +6037,17 @@ inline FileSystemGetFileResponse::ContentCase FileSystemGetFileResponse::content
 
 // FileSystemGetAccessHandleRequest
 
-// bytes a_entryId = 1;
+// required bytes a_entryId = 1;
+inline bool FileSystemGetAccessHandleRequest::_internal_has_a_entryid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool FileSystemGetAccessHandleRequest::has_a_entryid() const {
+  return _internal_has_a_entryid();
+}
 inline void FileSystemGetAccessHandleRequest::clear_a_entryid() {
   _impl_.a_entryid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& FileSystemGetAccessHandleRequest::a_entryid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleRequest.a_entryId)
@@ -5558,7 +6056,7 @@ inline const std::string& FileSystemGetAccessHandleRequest::a_entryid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileSystemGetAccessHandleRequest::set_a_entryid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_entryid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleRequest.a_entryId)
 }
@@ -5571,22 +6069,32 @@ inline const std::string& FileSystemGetAccessHandleRequest::_internal_a_entryid(
   return _impl_.a_entryid_.Get();
 }
 inline void FileSystemGetAccessHandleRequest::_internal_set_a_entryid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_entryid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* FileSystemGetAccessHandleRequest::_internal_mutable_a_entryid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_entryid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FileSystemGetAccessHandleRequest::release_a_entryid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleRequest.a_entryId)
-  return _impl_.a_entryid_.Release();
+  if (!_internal_has_a_entryid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_entryid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_entryid_.IsDefault()) {
+    _impl_.a_entryid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void FileSystemGetAccessHandleRequest::set_allocated_a_entryid(std::string* a_entryid) {
   if (a_entryid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_entryid_.SetAllocated(a_entryid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -5601,9 +6109,11 @@ inline void FileSystemGetAccessHandleRequest::set_allocated_a_entryid(std::strin
 
 // FileSystemAccessHandleProperties
 
-// .protobuf.mozilla.ipc.RandomAccessStreamParams a_streamParams = 1;
+// required .protobuf.mozilla.ipc.RandomAccessStreamParams a_streamParams = 1;
 inline bool FileSystemAccessHandleProperties::_internal_has_a_streamparams() const {
-  return this != internal_default_instance() && _impl_.a_streamparams_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_streamparams_ != nullptr);
+  return value;
 }
 inline bool FileSystemAccessHandleProperties::has_a_streamparams() const {
   return _internal_has_a_streamparams();
@@ -5624,14 +6134,14 @@ inline void FileSystemAccessHandleProperties::unsafe_arena_set_allocated_a_strea
   }
   _impl_.a_streamparams_ = a_streamparams;
   if (a_streamparams) {
-    
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.a_streamParams)
 }
 inline ::protobuf::mozilla::ipc::RandomAccessStreamParams* FileSystemAccessHandleProperties::release_a_streamparams() {
-  
+  _impl_._has_bits_[0] &= ~0x00000004u;
   ::protobuf::mozilla::ipc::RandomAccessStreamParams* temp = _impl_.a_streamparams_;
   _impl_.a_streamparams_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -5647,13 +6157,13 @@ inline ::protobuf::mozilla::ipc::RandomAccessStreamParams* FileSystemAccessHandl
 }
 inline ::protobuf::mozilla::ipc::RandomAccessStreamParams* FileSystemAccessHandleProperties::unsafe_arena_release_a_streamparams() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.a_streamParams)
-  
+  _impl_._has_bits_[0] &= ~0x00000004u;
   ::protobuf::mozilla::ipc::RandomAccessStreamParams* temp = _impl_.a_streamparams_;
   _impl_.a_streamparams_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::ipc::RandomAccessStreamParams* FileSystemAccessHandleProperties::_internal_mutable_a_streamparams() {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   if (_impl_.a_streamparams_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ipc::RandomAccessStreamParams>(GetArenaForAllocation());
     _impl_.a_streamparams_ = p;
@@ -5678,17 +6188,25 @@ inline void FileSystemAccessHandleProperties::set_allocated_a_streamparams(::pro
       a_streamparams = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_streamparams, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.a_streamparams_ = a_streamparams;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.a_streamParams)
 }
 
-// bytes a_accessHandleChildEndpoint = 2;
+// required bytes a_accessHandleChildEndpoint = 2;
+inline bool FileSystemAccessHandleProperties::_internal_has_a_accesshandlechildendpoint() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool FileSystemAccessHandleProperties::has_a_accesshandlechildendpoint() const {
+  return _internal_has_a_accesshandlechildendpoint();
+}
 inline void FileSystemAccessHandleProperties::clear_a_accesshandlechildendpoint() {
   _impl_.a_accesshandlechildendpoint_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& FileSystemAccessHandleProperties::a_accesshandlechildendpoint() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.a_accessHandleChildEndpoint)
@@ -5697,7 +6215,7 @@ inline const std::string& FileSystemAccessHandleProperties::a_accesshandlechilde
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileSystemAccessHandleProperties::set_a_accesshandlechildendpoint(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_accesshandlechildendpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.a_accessHandleChildEndpoint)
 }
@@ -5710,22 +6228,32 @@ inline const std::string& FileSystemAccessHandleProperties::_internal_a_accessha
   return _impl_.a_accesshandlechildendpoint_.Get();
 }
 inline void FileSystemAccessHandleProperties::_internal_set_a_accesshandlechildendpoint(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_accesshandlechildendpoint_.Set(value, GetArenaForAllocation());
 }
 inline std::string* FileSystemAccessHandleProperties::_internal_mutable_a_accesshandlechildendpoint() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_accesshandlechildendpoint_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FileSystemAccessHandleProperties::release_a_accesshandlechildendpoint() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.a_accessHandleChildEndpoint)
-  return _impl_.a_accesshandlechildendpoint_.Release();
+  if (!_internal_has_a_accesshandlechildendpoint()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_accesshandlechildendpoint_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_accesshandlechildendpoint_.IsDefault()) {
+    _impl_.a_accesshandlechildendpoint_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void FileSystemAccessHandleProperties::set_allocated_a_accesshandlechildendpoint(std::string* a_accesshandlechildendpoint) {
   if (a_accesshandlechildendpoint != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_accesshandlechildendpoint_.SetAllocated(a_accesshandlechildendpoint, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -5736,9 +6264,17 @@ inline void FileSystemAccessHandleProperties::set_allocated_a_accesshandlechilde
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.a_accessHandleChildEndpoint)
 }
 
-// bytes a_accessHandleControlChildEndpoint = 3;
+// required bytes a_accessHandleControlChildEndpoint = 3;
+inline bool FileSystemAccessHandleProperties::_internal_has_a_accesshandlecontrolchildendpoint() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool FileSystemAccessHandleProperties::has_a_accesshandlecontrolchildendpoint() const {
+  return _internal_has_a_accesshandlecontrolchildendpoint();
+}
 inline void FileSystemAccessHandleProperties::clear_a_accesshandlecontrolchildendpoint() {
   _impl_.a_accesshandlecontrolchildendpoint_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& FileSystemAccessHandleProperties::a_accesshandlecontrolchildendpoint() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.a_accessHandleControlChildEndpoint)
@@ -5747,7 +6283,7 @@ inline const std::string& FileSystemAccessHandleProperties::a_accesshandlecontro
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileSystemAccessHandleProperties::set_a_accesshandlecontrolchildendpoint(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_accesshandlecontrolchildendpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.a_accessHandleControlChildEndpoint)
 }
@@ -5760,22 +6296,32 @@ inline const std::string& FileSystemAccessHandleProperties::_internal_a_accessha
   return _impl_.a_accesshandlecontrolchildendpoint_.Get();
 }
 inline void FileSystemAccessHandleProperties::_internal_set_a_accesshandlecontrolchildendpoint(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_accesshandlecontrolchildendpoint_.Set(value, GetArenaForAllocation());
 }
 inline std::string* FileSystemAccessHandleProperties::_internal_mutable_a_accesshandlecontrolchildendpoint() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_accesshandlecontrolchildendpoint_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FileSystemAccessHandleProperties::release_a_accesshandlecontrolchildendpoint() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.a_accessHandleControlChildEndpoint)
-  return _impl_.a_accesshandlecontrolchildendpoint_.Release();
+  if (!_internal_has_a_accesshandlecontrolchildendpoint()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_accesshandlecontrolchildendpoint_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_accesshandlecontrolchildendpoint_.IsDefault()) {
+    _impl_.a_accesshandlecontrolchildendpoint_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void FileSystemAccessHandleProperties::set_allocated_a_accesshandlecontrolchildendpoint(std::string* a_accesshandlecontrolchildendpoint) {
   if (a_accesshandlecontrolchildendpoint != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_accesshandlecontrolchildendpoint_.SetAllocated(a_accesshandlecontrolchildendpoint, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -5954,9 +6500,17 @@ inline FileSystemGetAccessHandleResponse::ContentCase FileSystemGetAccessHandleR
 
 // FileSystemGetWritableRequest
 
-// bytes a_entryId = 1;
+// required bytes a_entryId = 1;
+inline bool FileSystemGetWritableRequest::_internal_has_a_entryid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool FileSystemGetWritableRequest::has_a_entryid() const {
+  return _internal_has_a_entryid();
+}
 inline void FileSystemGetWritableRequest::clear_a_entryid() {
   _impl_.a_entryid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& FileSystemGetWritableRequest::a_entryid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetWritableRequest.a_entryId)
@@ -5965,7 +6519,7 @@ inline const std::string& FileSystemGetWritableRequest::a_entryid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileSystemGetWritableRequest::set_a_entryid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_entryid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemGetWritableRequest.a_entryId)
 }
@@ -5978,22 +6532,32 @@ inline const std::string& FileSystemGetWritableRequest::_internal_a_entryid() co
   return _impl_.a_entryid_.Get();
 }
 inline void FileSystemGetWritableRequest::_internal_set_a_entryid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_entryid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* FileSystemGetWritableRequest::_internal_mutable_a_entryid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_entryid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FileSystemGetWritableRequest::release_a_entryid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetWritableRequest.a_entryId)
-  return _impl_.a_entryid_.Release();
+  if (!_internal_has_a_entryid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_entryid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_entryid_.IsDefault()) {
+    _impl_.a_entryid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void FileSystemGetWritableRequest::set_allocated_a_entryid(std::string* a_entryid) {
   if (a_entryid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_entryid_.SetAllocated(a_entryid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6004,9 +6568,17 @@ inline void FileSystemGetWritableRequest::set_allocated_a_entryid(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetWritableRequest.a_entryId)
 }
 
-// bool a_keepData = 2;
+// required bool a_keepData = 2;
+inline bool FileSystemGetWritableRequest::_internal_has_a_keepdata() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool FileSystemGetWritableRequest::has_a_keepdata() const {
+  return _internal_has_a_keepdata();
+}
 inline void FileSystemGetWritableRequest::clear_a_keepdata() {
   _impl_.a_keepdata_ = false;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool FileSystemGetWritableRequest::_internal_a_keepdata() const {
   return _impl_.a_keepdata_;
@@ -6016,7 +6588,7 @@ inline bool FileSystemGetWritableRequest::a_keepdata() const {
   return _internal_a_keepdata();
 }
 inline void FileSystemGetWritableRequest::_internal_set_a_keepdata(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_keepdata_ = value;
 }
 inline void FileSystemGetWritableRequest::set_a_keepdata(bool value) {
@@ -6028,9 +6600,11 @@ inline void FileSystemGetWritableRequest::set_a_keepdata(bool value) {
 
 // FileSystemWritableFileStreamProperties
 
-// .protobuf.mozilla.ipc.RandomAccessStreamParams a_streamParams = 1;
+// required .protobuf.mozilla.ipc.RandomAccessStreamParams a_streamParams = 1;
 inline bool FileSystemWritableFileStreamProperties::_internal_has_a_streamparams() const {
-  return this != internal_default_instance() && _impl_.a_streamparams_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_streamparams_ != nullptr);
+  return value;
 }
 inline bool FileSystemWritableFileStreamProperties::has_a_streamparams() const {
   return _internal_has_a_streamparams();
@@ -6051,14 +6625,14 @@ inline void FileSystemWritableFileStreamProperties::unsafe_arena_set_allocated_a
   }
   _impl_.a_streamparams_ = a_streamparams;
   if (a_streamparams) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties.a_streamParams)
 }
 inline ::protobuf::mozilla::ipc::RandomAccessStreamParams* FileSystemWritableFileStreamProperties::release_a_streamparams() {
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::ipc::RandomAccessStreamParams* temp = _impl_.a_streamparams_;
   _impl_.a_streamparams_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -6074,13 +6648,13 @@ inline ::protobuf::mozilla::ipc::RandomAccessStreamParams* FileSystemWritableFil
 }
 inline ::protobuf::mozilla::ipc::RandomAccessStreamParams* FileSystemWritableFileStreamProperties::unsafe_arena_release_a_streamparams() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties.a_streamParams)
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::ipc::RandomAccessStreamParams* temp = _impl_.a_streamparams_;
   _impl_.a_streamparams_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::ipc::RandomAccessStreamParams* FileSystemWritableFileStreamProperties::_internal_mutable_a_streamparams() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   if (_impl_.a_streamparams_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ipc::RandomAccessStreamParams>(GetArenaForAllocation());
     _impl_.a_streamparams_ = p;
@@ -6105,17 +6679,25 @@ inline void FileSystemWritableFileStreamProperties::set_allocated_a_streamparams
       a_streamparams = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_streamparams, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_streamparams_ = a_streamparams;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties.a_streamParams)
 }
 
-// bytes a_writableFileStream = 2;
+// required bytes a_writableFileStream = 2;
+inline bool FileSystemWritableFileStreamProperties::_internal_has_a_writablefilestream() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool FileSystemWritableFileStreamProperties::has_a_writablefilestream() const {
+  return _internal_has_a_writablefilestream();
+}
 inline void FileSystemWritableFileStreamProperties::clear_a_writablefilestream() {
   _impl_.a_writablefilestream_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& FileSystemWritableFileStreamProperties::a_writablefilestream() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties.a_writableFileStream)
@@ -6124,7 +6706,7 @@ inline const std::string& FileSystemWritableFileStreamProperties::a_writablefile
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileSystemWritableFileStreamProperties::set_a_writablefilestream(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_writablefilestream_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties.a_writableFileStream)
 }
@@ -6137,22 +6719,32 @@ inline const std::string& FileSystemWritableFileStreamProperties::_internal_a_wr
   return _impl_.a_writablefilestream_.Get();
 }
 inline void FileSystemWritableFileStreamProperties::_internal_set_a_writablefilestream(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_writablefilestream_.Set(value, GetArenaForAllocation());
 }
 inline std::string* FileSystemWritableFileStreamProperties::_internal_mutable_a_writablefilestream() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_writablefilestream_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FileSystemWritableFileStreamProperties::release_a_writablefilestream() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties.a_writableFileStream)
-  return _impl_.a_writablefilestream_.Release();
+  if (!_internal_has_a_writablefilestream()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_writablefilestream_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_writablefilestream_.IsDefault()) {
+    _impl_.a_writablefilestream_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void FileSystemWritableFileStreamProperties::set_allocated_a_writablefilestream(std::string* a_writablefilestream) {
   if (a_writablefilestream != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_writablefilestream_.SetAllocated(a_writablefilestream, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6331,9 +6923,17 @@ inline FileSystemGetWritableFileStreamResponse::ContentCase FileSystemGetWritabl
 
 // FileSystemEntryPair
 
-// bytes a_parentId = 1;
+// required bytes a_parentId = 1;
+inline bool FileSystemEntryPair::_internal_has_a_parentid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool FileSystemEntryPair::has_a_parentid() const {
+  return _internal_has_a_parentid();
+}
 inline void FileSystemEntryPair::clear_a_parentid() {
   _impl_.a_parentid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& FileSystemEntryPair::a_parentid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemEntryPair.a_parentId)
@@ -6342,7 +6942,7 @@ inline const std::string& FileSystemEntryPair::a_parentid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileSystemEntryPair::set_a_parentid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_parentid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemEntryPair.a_parentId)
 }
@@ -6355,22 +6955,32 @@ inline const std::string& FileSystemEntryPair::_internal_a_parentid() const {
   return _impl_.a_parentid_.Get();
 }
 inline void FileSystemEntryPair::_internal_set_a_parentid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_parentid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* FileSystemEntryPair::_internal_mutable_a_parentid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_parentid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FileSystemEntryPair::release_a_parentid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemEntryPair.a_parentId)
-  return _impl_.a_parentid_.Release();
+  if (!_internal_has_a_parentid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_parentid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_parentid_.IsDefault()) {
+    _impl_.a_parentid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void FileSystemEntryPair::set_allocated_a_parentid(std::string* a_parentid) {
   if (a_parentid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_parentid_.SetAllocated(a_parentid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6381,9 +6991,17 @@ inline void FileSystemEntryPair::set_allocated_a_parentid(std::string* a_parenti
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemEntryPair.a_parentId)
 }
 
-// bytes a_childId = 2;
+// required bytes a_childId = 2;
+inline bool FileSystemEntryPair::_internal_has_a_childid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool FileSystemEntryPair::has_a_childid() const {
+  return _internal_has_a_childid();
+}
 inline void FileSystemEntryPair::clear_a_childid() {
   _impl_.a_childid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& FileSystemEntryPair::a_childid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemEntryPair.a_childId)
@@ -6392,7 +7010,7 @@ inline const std::string& FileSystemEntryPair::a_childid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileSystemEntryPair::set_a_childid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_childid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemEntryPair.a_childId)
 }
@@ -6405,22 +7023,32 @@ inline const std::string& FileSystemEntryPair::_internal_a_childid() const {
   return _impl_.a_childid_.Get();
 }
 inline void FileSystemEntryPair::_internal_set_a_childid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_childid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* FileSystemEntryPair::_internal_mutable_a_childid() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_childid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FileSystemEntryPair::release_a_childid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemEntryPair.a_childId)
-  return _impl_.a_childid_.Release();
+  if (!_internal_has_a_childid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_childid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_childid_.IsDefault()) {
+    _impl_.a_childid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void FileSystemEntryPair::set_allocated_a_childid(std::string* a_childid) {
   if (a_childid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_childid_.SetAllocated(a_childid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6435,18 +7063,18 @@ inline void FileSystemEntryPair::set_allocated_a_childid(std::string* a_childid)
 
 // FileSystemResolveRequest
 
-// .protobuf.mozilla.dom.fs.FileSystemEntryPair a_endpoints = 1;
+// required .protobuf.mozilla.dom.fs.FileSystemEntryPair a_endpoints = 1;
 inline bool FileSystemResolveRequest::_internal_has_a_endpoints() const {
-  return this != internal_default_instance() && _impl_.a_endpoints_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_endpoints_ != nullptr);
+  return value;
 }
 inline bool FileSystemResolveRequest::has_a_endpoints() const {
   return _internal_has_a_endpoints();
 }
 inline void FileSystemResolveRequest::clear_a_endpoints() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_endpoints_ != nullptr) {
-    delete _impl_.a_endpoints_;
-  }
-  _impl_.a_endpoints_ = nullptr;
+  if (_impl_.a_endpoints_ != nullptr) _impl_.a_endpoints_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const ::protobuf::mozilla::dom::fs::FileSystemEntryPair& FileSystemResolveRequest::_internal_a_endpoints() const {
   const ::protobuf::mozilla::dom::fs::FileSystemEntryPair* p = _impl_.a_endpoints_;
@@ -6464,14 +7092,14 @@ inline void FileSystemResolveRequest::unsafe_arena_set_allocated_a_endpoints(
   }
   _impl_.a_endpoints_ = a_endpoints;
   if (a_endpoints) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemResolveRequest.a_endpoints)
 }
 inline ::protobuf::mozilla::dom::fs::FileSystemEntryPair* FileSystemResolveRequest::release_a_endpoints() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::fs::FileSystemEntryPair* temp = _impl_.a_endpoints_;
   _impl_.a_endpoints_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -6487,13 +7115,13 @@ inline ::protobuf::mozilla::dom::fs::FileSystemEntryPair* FileSystemResolveReque
 }
 inline ::protobuf::mozilla::dom::fs::FileSystemEntryPair* FileSystemResolveRequest::unsafe_arena_release_a_endpoints() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemResolveRequest.a_endpoints)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::fs::FileSystemEntryPair* temp = _impl_.a_endpoints_;
   _impl_.a_endpoints_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::fs::FileSystemEntryPair* FileSystemResolveRequest::_internal_mutable_a_endpoints() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_endpoints_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::fs::FileSystemEntryPair>(GetArenaForAllocation());
     _impl_.a_endpoints_ = p;
@@ -6517,9 +7145,9 @@ inline void FileSystemResolveRequest::set_allocated_a_endpoints(::protobuf::mozi
       a_endpoints = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_endpoints, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_endpoints_ = a_endpoints;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemResolveRequest.a_endpoints)
@@ -6772,18 +7400,18 @@ inline FileSystemResolveResponse::ContentCase FileSystemResolveResponse::content
 
 // FileSystemRemoveEntryRequest
 
-// .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_handle = 1;
+// required .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_handle = 1;
 inline bool FileSystemRemoveEntryRequest::_internal_has_a_handle() const {
-  return this != internal_default_instance() && _impl_.a_handle_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_handle_ != nullptr);
+  return value;
 }
 inline bool FileSystemRemoveEntryRequest::has_a_handle() const {
   return _internal_has_a_handle();
 }
 inline void FileSystemRemoveEntryRequest::clear_a_handle() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_handle_ != nullptr) {
-    delete _impl_.a_handle_;
-  }
-  _impl_.a_handle_ = nullptr;
+  if (_impl_.a_handle_ != nullptr) _impl_.a_handle_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& FileSystemRemoveEntryRequest::_internal_a_handle() const {
   const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* p = _impl_.a_handle_;
@@ -6801,14 +7429,14 @@ inline void FileSystemRemoveEntryRequest::unsafe_arena_set_allocated_a_handle(
   }
   _impl_.a_handle_ = a_handle;
   if (a_handle) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemRemoveEntryRequest.a_handle)
 }
 inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemRemoveEntryRequest::release_a_handle() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* temp = _impl_.a_handle_;
   _impl_.a_handle_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -6824,13 +7452,13 @@ inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemRemoveEn
 }
 inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemRemoveEntryRequest::unsafe_arena_release_a_handle() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemRemoveEntryRequest.a_handle)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* temp = _impl_.a_handle_;
   _impl_.a_handle_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemRemoveEntryRequest::_internal_mutable_a_handle() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_handle_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::fs::FileSystemChildMetadata>(GetArenaForAllocation());
     _impl_.a_handle_ = p;
@@ -6854,17 +7482,25 @@ inline void FileSystemRemoveEntryRequest::set_allocated_a_handle(::protobuf::moz
       a_handle = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_handle, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_handle_ = a_handle;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemRemoveEntryRequest.a_handle)
 }
 
-// bool a_recursive = 2;
+// required bool a_recursive = 2;
+inline bool FileSystemRemoveEntryRequest::_internal_has_a_recursive() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool FileSystemRemoveEntryRequest::has_a_recursive() const {
+  return _internal_has_a_recursive();
+}
 inline void FileSystemRemoveEntryRequest::clear_a_recursive() {
   _impl_.a_recursive_ = false;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool FileSystemRemoveEntryRequest::_internal_a_recursive() const {
   return _impl_.a_recursive_;
@@ -6874,7 +7510,7 @@ inline bool FileSystemRemoveEntryRequest::a_recursive() const {
   return _internal_a_recursive();
 }
 inline void FileSystemRemoveEntryRequest::_internal_set_a_recursive(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_recursive_ = value;
 }
 inline void FileSystemRemoveEntryRequest::set_a_recursive(bool value) {
@@ -7053,18 +7689,18 @@ inline FileSystemRemoveEntryResponse::ContentCase FileSystemRemoveEntryResponse:
 
 // FileSystemMoveEntryRequest
 
-// .protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_handle = 1;
+// required .protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_handle = 1;
 inline bool FileSystemMoveEntryRequest::_internal_has_a_handle() const {
-  return this != internal_default_instance() && _impl_.a_handle_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_handle_ != nullptr);
+  return value;
 }
 inline bool FileSystemMoveEntryRequest::has_a_handle() const {
   return _internal_has_a_handle();
 }
 inline void FileSystemMoveEntryRequest::clear_a_handle() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_handle_ != nullptr) {
-    delete _impl_.a_handle_;
-  }
-  _impl_.a_handle_ = nullptr;
+  if (_impl_.a_handle_ != nullptr) _impl_.a_handle_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& FileSystemMoveEntryRequest::_internal_a_handle() const {
   const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* p = _impl_.a_handle_;
@@ -7082,14 +7718,14 @@ inline void FileSystemMoveEntryRequest::unsafe_arena_set_allocated_a_handle(
   }
   _impl_.a_handle_ = a_handle;
   if (a_handle) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemMoveEntryRequest.a_handle)
 }
 inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemMoveEntryRequest::release_a_handle() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* temp = _impl_.a_handle_;
   _impl_.a_handle_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -7105,13 +7741,13 @@ inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemMoveEntr
 }
 inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemMoveEntryRequest::unsafe_arena_release_a_handle() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemMoveEntryRequest.a_handle)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* temp = _impl_.a_handle_;
   _impl_.a_handle_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemMoveEntryRequest::_internal_mutable_a_handle() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_handle_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::fs::FileSystemEntryMetadata>(GetArenaForAllocation());
     _impl_.a_handle_ = p;
@@ -7135,26 +7771,26 @@ inline void FileSystemMoveEntryRequest::set_allocated_a_handle(::protobuf::mozil
       a_handle = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_handle, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_handle_ = a_handle;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemMoveEntryRequest.a_handle)
 }
 
-// .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_destHandle = 2;
+// required .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_destHandle = 2;
 inline bool FileSystemMoveEntryRequest::_internal_has_a_desthandle() const {
-  return this != internal_default_instance() && _impl_.a_desthandle_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_desthandle_ != nullptr);
+  return value;
 }
 inline bool FileSystemMoveEntryRequest::has_a_desthandle() const {
   return _internal_has_a_desthandle();
 }
 inline void FileSystemMoveEntryRequest::clear_a_desthandle() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_desthandle_ != nullptr) {
-    delete _impl_.a_desthandle_;
-  }
-  _impl_.a_desthandle_ = nullptr;
+  if (_impl_.a_desthandle_ != nullptr) _impl_.a_desthandle_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& FileSystemMoveEntryRequest::_internal_a_desthandle() const {
   const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* p = _impl_.a_desthandle_;
@@ -7172,14 +7808,14 @@ inline void FileSystemMoveEntryRequest::unsafe_arena_set_allocated_a_desthandle(
   }
   _impl_.a_desthandle_ = a_desthandle;
   if (a_desthandle) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemMoveEntryRequest.a_destHandle)
 }
 inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemMoveEntryRequest::release_a_desthandle() {
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* temp = _impl_.a_desthandle_;
   _impl_.a_desthandle_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -7195,13 +7831,13 @@ inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemMoveEntr
 }
 inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemMoveEntryRequest::unsafe_arena_release_a_desthandle() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemMoveEntryRequest.a_destHandle)
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* temp = _impl_.a_desthandle_;
   _impl_.a_desthandle_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemMoveEntryRequest::_internal_mutable_a_desthandle() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   if (_impl_.a_desthandle_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::fs::FileSystemChildMetadata>(GetArenaForAllocation());
     _impl_.a_desthandle_ = p;
@@ -7225,9 +7861,9 @@ inline void FileSystemMoveEntryRequest::set_allocated_a_desthandle(::protobuf::m
       a_desthandle = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_desthandle, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_desthandle_ = a_desthandle;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemMoveEntryRequest.a_destHandle)
@@ -7237,18 +7873,18 @@ inline void FileSystemMoveEntryRequest::set_allocated_a_desthandle(::protobuf::m
 
 // FileSystemRenameEntryRequest
 
-// .protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_handle = 1;
+// required .protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_handle = 1;
 inline bool FileSystemRenameEntryRequest::_internal_has_a_handle() const {
-  return this != internal_default_instance() && _impl_.a_handle_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_handle_ != nullptr);
+  return value;
 }
 inline bool FileSystemRenameEntryRequest::has_a_handle() const {
   return _internal_has_a_handle();
 }
 inline void FileSystemRenameEntryRequest::clear_a_handle() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_handle_ != nullptr) {
-    delete _impl_.a_handle_;
-  }
-  _impl_.a_handle_ = nullptr;
+  if (_impl_.a_handle_ != nullptr) _impl_.a_handle_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& FileSystemRenameEntryRequest::_internal_a_handle() const {
   const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* p = _impl_.a_handle_;
@@ -7266,14 +7902,14 @@ inline void FileSystemRenameEntryRequest::unsafe_arena_set_allocated_a_handle(
   }
   _impl_.a_handle_ = a_handle;
   if (a_handle) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemRenameEntryRequest.a_handle)
 }
 inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemRenameEntryRequest::release_a_handle() {
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* temp = _impl_.a_handle_;
   _impl_.a_handle_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -7289,13 +7925,13 @@ inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemRenameEn
 }
 inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemRenameEntryRequest::unsafe_arena_release_a_handle() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemRenameEntryRequest.a_handle)
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* temp = _impl_.a_handle_;
   _impl_.a_handle_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemRenameEntryRequest::_internal_mutable_a_handle() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   if (_impl_.a_handle_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::fs::FileSystemEntryMetadata>(GetArenaForAllocation());
     _impl_.a_handle_ = p;
@@ -7319,17 +7955,25 @@ inline void FileSystemRenameEntryRequest::set_allocated_a_handle(::protobuf::moz
       a_handle = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_handle, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_handle_ = a_handle;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemRenameEntryRequest.a_handle)
 }
 
-// bytes a_name = 2;
+// required bytes a_name = 2;
+inline bool FileSystemRenameEntryRequest::_internal_has_a_name() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool FileSystemRenameEntryRequest::has_a_name() const {
+  return _internal_has_a_name();
+}
 inline void FileSystemRenameEntryRequest::clear_a_name() {
   _impl_.a_name_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& FileSystemRenameEntryRequest::a_name() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemRenameEntryRequest.a_name)
@@ -7338,7 +7982,7 @@ inline const std::string& FileSystemRenameEntryRequest::a_name() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileSystemRenameEntryRequest::set_a_name(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemRenameEntryRequest.a_name)
 }
@@ -7351,22 +7995,32 @@ inline const std::string& FileSystemRenameEntryRequest::_internal_a_name() const
   return _impl_.a_name_.Get();
 }
 inline void FileSystemRenameEntryRequest::_internal_set_a_name(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_name_.Set(value, GetArenaForAllocation());
 }
 inline std::string* FileSystemRenameEntryRequest::_internal_mutable_a_name() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_name_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FileSystemRenameEntryRequest::release_a_name() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemRenameEntryRequest.a_name)
-  return _impl_.a_name_.Release();
+  if (!_internal_has_a_name()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_name_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_name_.IsDefault()) {
+    _impl_.a_name_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void FileSystemRenameEntryRequest::set_allocated_a_name(std::string* a_name) {
   if (a_name != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_name_.SetAllocated(a_name, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

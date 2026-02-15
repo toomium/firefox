@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/uriloader/exthandler/PHandlerService.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom;
@@ -13,17 +13,17 @@ package protobuf.mozilla.dom;
 
 // Structs and unions declarations
 message HandlerApp {
-  string a_name = 1;
-  string a_detailedDescription = 2;
+  required string a_name = 1;
+  required string a_detailedDescription = 2;
 }
 
 message HandlerInfo {
-  string a_type = 1;
-  bool a_isMIMEInfo = 2;
-  string a_description = 3;
-  bool a_alwaysAskBeforeHandling = 4;
+  required string a_type = 1;
+  required bool a_isMIMEInfo = 2;
+  required string a_description = 3;
+  required bool a_alwaysAskBeforeHandling = 4;
   repeated string a_extensions = 5;
-  protobuf.mozilla.dom.HandlerApp a_preferredApplicationHandler = 6;
+  required protobuf.mozilla.dom.HandlerApp a_preferredApplicationHandler = 6;
   repeated protobuf.mozilla.dom.HandlerApp a_possibleApplicationHandlers = 7;
-  sint32 a_preferredAction = 8;
+  required sint32 a_preferredAction = 8;
 }

@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/indexedDB/PBackgroundIDBFactoryRequest.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactoryRequest;
@@ -18,14 +18,14 @@ import "PBackgroundSharedTypes.proto";
 
 // Message declarations
 message Msg___delete__ {
-  protobuf.mozilla.dom.indexedDB.FactoryRequestResponse a_response = 1;
+  required protobuf.mozilla.dom.indexedDB.FactoryRequestResponse a_response = 1;
 }
 
 message Reply___delete__ {
 }
 
 message Msg_Blocked {
-  uint64 a_currentVersion = 1;
+  required uint64 a_currentVersion = 1;
 }
 
 // Parameter mappings stats:

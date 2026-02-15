@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/ipc/PWindowGlobal.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom;
@@ -17,14 +17,14 @@ import "SessionStoreTypes.proto";
 
 // Structs and unions declarations
 message JSActorMessageMeta {
-  string a_actorName = 1;
-  string a_messageName = 2;
-  uint64 a_queryId = 3;
-  bytes a_kind = 4;
+  required string a_actorName = 1;
+  required string a_messageName = 2;
+  required uint64 a_queryId = 3;
+  required bytes a_kind = 4;
 }
 
 message IPCWebShareData {
-  string a_title = 1;
-  string a_text = 2;
+  required string a_title = 1;
+  required string a_text = 2;
   optional bytes a_url = 3;
 }

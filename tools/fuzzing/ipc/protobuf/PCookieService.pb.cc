@@ -185,8 +185,23 @@ namespace PCookieService {
 class Msg_SetCookies::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_SetCookies>()._impl_._has_bits_);
-  static void set_has_a_host(HasBits* has_bits) {
+  static void set_has_a_basedomain(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_attrs(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_host(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_a_fromhttp(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_a_isthirdparty(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x0000001b) ^ 0x0000001b) != 0;
   }
 };
 
@@ -217,7 +232,7 @@ Msg_SetCookies::Msg_SetCookies(const Msg_SetCookies& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_basedomain_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_basedomain().empty()) {
+  if (from._internal_has_a_basedomain()) {
     _this->_impl_.a_basedomain_.Set(from._internal_a_basedomain(), 
       _this->GetArenaForAllocation());
   }
@@ -225,7 +240,7 @@ Msg_SetCookies::Msg_SetCookies(const Msg_SetCookies& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_attrs_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_attrs().empty()) {
+  if (from._internal_has_a_attrs()) {
     _this->_impl_.a_attrs_.Set(from._internal_a_attrs(), 
       _this->GetArenaForAllocation());
   }
@@ -299,11 +314,17 @@ void Msg_SetCookies::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_cookies_.Clear();
-  _impl_.a_basedomain_.ClearToEmpty();
-  _impl_.a_attrs_.ClearToEmpty();
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_host_.ClearNonDefaultToEmpty();
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_basedomain_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_attrs_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _impl_.a_host_.ClearNonDefaultToEmpty();
+    }
   }
   ::memset(&_impl_.a_fromhttp_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.a_isthirdparty_) -
@@ -319,17 +340,16 @@ const char* Msg_SetCookies::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string a_baseDomain = 1;
+      // required string a_baseDomain = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_basedomain();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // bytes a_attrs = 2;
+      // required bytes a_attrs = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_attrs();
@@ -347,17 +367,19 @@ const char* Msg_SetCookies::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // bool a_fromHttp = 4;
+      // required bool a_fromHttp = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _Internal::set_has_a_fromhttp(&has_bits);
           _impl_.a_fromhttp_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bool a_isThirdParty = 5;
+      // required bool a_isThirdParty = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          _Internal::set_has_a_isthirdparty(&has_bits);
           _impl_.a_isthirdparty_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -406,36 +428,33 @@ uint8_t* Msg_SetCookies::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string a_baseDomain = 1;
-  if (!this->_internal_a_basedomain().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_basedomain().data(), static_cast<int>(this->_internal_a_basedomain().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.net.PCookieService.Msg_SetCookies.a_baseDomain");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_baseDomain = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_basedomain(), target);
   }
 
-  // bytes a_attrs = 2;
-  if (!this->_internal_a_attrs().empty()) {
+  // required bytes a_attrs = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_a_attrs(), target);
   }
 
   // optional bytes a_host = 3;
-  if (_internal_has_a_host()) {
+  if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
         3, this->_internal_a_host(), target);
   }
 
-  // bool a_fromHttp = 4;
-  if (this->_internal_a_fromhttp() != 0) {
+  // required bool a_fromHttp = 4;
+  if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_a_fromhttp(), target);
   }
 
-  // bool a_isThirdParty = 5;
-  if (this->_internal_a_isthirdparty() != 0) {
+  // required bool a_isThirdParty = 5;
+  if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_a_isthirdparty(), target);
   }
@@ -456,10 +475,60 @@ uint8_t* Msg_SetCookies::_InternalSerialize(
   return target;
 }
 
+size_t Msg_SetCookies::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.PCookieService.Msg_SetCookies)
+  size_t total_size = 0;
+
+  if (_internal_has_a_basedomain()) {
+    // required string a_baseDomain = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_basedomain());
+  }
+
+  if (_internal_has_a_attrs()) {
+    // required bytes a_attrs = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_attrs());
+  }
+
+  if (_internal_has_a_fromhttp()) {
+    // required bool a_fromHttp = 4;
+    total_size += 1 + 1;
+  }
+
+  if (_internal_has_a_isthirdparty()) {
+    // required bool a_isThirdParty = 5;
+    total_size += 1 + 1;
+  }
+
+  return total_size;
+}
 size_t Msg_SetCookies::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PCookieService.Msg_SetCookies)
   size_t total_size = 0;
 
+  if (((_impl_._has_bits_[0] & 0x0000001b) ^ 0x0000001b) == 0) {  // All required fields are present.
+    // required string a_baseDomain = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_basedomain());
+
+    // required bytes a_attrs = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_attrs());
+
+    // required bool a_fromHttp = 4;
+    total_size += 1 + 1;
+
+    // required bool a_isThirdParty = 5;
+    total_size += 1 + 1;
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -471,36 +540,12 @@ size_t Msg_SetCookies::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // string a_baseDomain = 1;
-  if (!this->_internal_a_basedomain().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_basedomain());
-  }
-
-  // bytes a_attrs = 2;
-  if (!this->_internal_a_attrs().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_attrs());
-  }
-
   // optional bytes a_host = 3;
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
+  if (cached_has_bits & 0x00000004u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_host());
-  }
-
-  // bool a_fromHttp = 4;
-  if (this->_internal_a_fromhttp() != 0) {
-    total_size += 1 + 1;
-  }
-
-  // bool a_isThirdParty = 5;
-  if (this->_internal_a_isthirdparty() != 0) {
-    total_size += 1 + 1;
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -525,20 +570,24 @@ void Msg_SetCookies::MergeFrom(const Msg_SetCookies& from) {
   (void) cached_has_bits;
 
   _this->_impl_.a_cookies_.MergeFrom(from._impl_.a_cookies_);
-  if (!from._internal_a_basedomain().empty()) {
-    _this->_internal_set_a_basedomain(from._internal_a_basedomain());
-  }
-  if (!from._internal_a_attrs().empty()) {
-    _this->_internal_set_a_attrs(from._internal_a_attrs());
-  }
-  if (from._internal_has_a_host()) {
-    _this->_internal_set_a_host(from._internal_a_host());
-  }
-  if (from._internal_a_fromhttp() != 0) {
-    _this->_internal_set_a_fromhttp(from._internal_a_fromhttp());
-  }
-  if (from._internal_a_isthirdparty() != 0) {
-    _this->_internal_set_a_isthirdparty(from._internal_a_isthirdparty());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000001fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_basedomain(from._internal_a_basedomain());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_attrs(from._internal_a_attrs());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_internal_set_a_host(from._internal_a_host());
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.a_fromhttp_ = from._impl_.a_fromhttp_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_impl_.a_isthirdparty_ = from._impl_.a_isthirdparty_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -551,6 +600,9 @@ void Msg_SetCookies::CopyFrom(const Msg_SetCookies& from) {
 }
 
 bool Msg_SetCookies::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_cookies_))
+    return false;
   return true;
 }
 
@@ -593,6 +645,33 @@ class Msg_GetCookieList::_Internal {
   using HasBits = decltype(std::declval<Msg_GetCookieList>()._impl_._has_bits_);
   static void set_has_a_host(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_isforeign(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_isthirdpartytrackingresource(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_a_isthirdpartysocialtrackingresource(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_a_firstpartystorageaccesspermissiongranted(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static void set_has_a_rejectedreason(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
+  }
+  static void set_has_a_issafetoplevelnav(HasBits* has_bits) {
+    (*has_bits)[0] |= 64u;
+  }
+  static void set_has_a_issamesiteforeign(HasBits* has_bits) {
+    (*has_bits)[0] |= 128u;
+  }
+  static void set_has_a_hadcrosssiteredirects(HasBits* has_bits) {
+    (*has_bits)[0] |= 256u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x000001fe) ^ 0x000001fe) != 0;
   }
 };
 
@@ -688,9 +767,12 @@ void Msg_GetCookieList::Clear() {
   if (cached_has_bits & 0x00000001u) {
     _impl_.a_host_.ClearNonDefaultToEmpty();
   }
-  ::memset(&_impl_.a_isforeign_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.a_hadcrosssiteredirects_) -
-      reinterpret_cast<char*>(&_impl_.a_isforeign_)) + sizeof(_impl_.a_hadcrosssiteredirects_));
+  if (cached_has_bits & 0x000000feu) {
+    ::memset(&_impl_.a_isforeign_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_issamesiteforeign_) -
+        reinterpret_cast<char*>(&_impl_.a_isforeign_)) + sizeof(_impl_.a_issamesiteforeign_));
+  }
+  _impl_.a_hadcrosssiteredirects_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -711,65 +793,73 @@ const char* Msg_GetCookieList::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // bool a_isForeign = 2;
+      // required bool a_isForeign = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_a_isforeign(&has_bits);
           _impl_.a_isforeign_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bool a_isThirdPartyTrackingResource = 3;
+      // required bool a_isThirdPartyTrackingResource = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_a_isthirdpartytrackingresource(&has_bits);
           _impl_.a_isthirdpartytrackingresource_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bool a_isThirdPartySocialTrackingResource = 4;
+      // required bool a_isThirdPartySocialTrackingResource = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _Internal::set_has_a_isthirdpartysocialtrackingresource(&has_bits);
           _impl_.a_isthirdpartysocialtrackingresource_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bool a_firstPartyStorageAccessPermissionGranted = 5;
+      // required bool a_firstPartyStorageAccessPermissionGranted = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          _Internal::set_has_a_firstpartystorageaccesspermissiongranted(&has_bits);
           _impl_.a_firstpartystorageaccesspermissiongranted_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // uint32 a_rejectedReason = 6;
+      // required uint32 a_rejectedReason = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
+          _Internal::set_has_a_rejectedreason(&has_bits);
           _impl_.a_rejectedreason_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bool a_isSafeTopLevelNav = 7;
+      // required bool a_isSafeTopLevelNav = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
+          _Internal::set_has_a_issafetoplevelnav(&has_bits);
           _impl_.a_issafetoplevelnav_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bool a_isSameSiteForeign = 8;
+      // required bool a_isSameSiteForeign = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
+          _Internal::set_has_a_issamesiteforeign(&has_bits);
           _impl_.a_issamesiteforeign_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bool a_hadCrossSiteRedirects = 9;
+      // required bool a_hadCrossSiteRedirects = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 72)) {
+          _Internal::set_has_a_hadcrosssiteredirects(&has_bits);
           _impl_.a_hadcrosssiteredirects_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -819,56 +909,57 @@ uint8_t* Msg_GetCookieList::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
   // optional bytes a_host = 1;
-  if (_internal_has_a_host()) {
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_host(), target);
   }
 
-  // bool a_isForeign = 2;
-  if (this->_internal_a_isforeign() != 0) {
+  // required bool a_isForeign = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_isforeign(), target);
   }
 
-  // bool a_isThirdPartyTrackingResource = 3;
-  if (this->_internal_a_isthirdpartytrackingresource() != 0) {
+  // required bool a_isThirdPartyTrackingResource = 3;
+  if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_isthirdpartytrackingresource(), target);
   }
 
-  // bool a_isThirdPartySocialTrackingResource = 4;
-  if (this->_internal_a_isthirdpartysocialtrackingresource() != 0) {
+  // required bool a_isThirdPartySocialTrackingResource = 4;
+  if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_a_isthirdpartysocialtrackingresource(), target);
   }
 
-  // bool a_firstPartyStorageAccessPermissionGranted = 5;
-  if (this->_internal_a_firstpartystorageaccesspermissiongranted() != 0) {
+  // required bool a_firstPartyStorageAccessPermissionGranted = 5;
+  if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_a_firstpartystorageaccesspermissiongranted(), target);
   }
 
-  // uint32 a_rejectedReason = 6;
-  if (this->_internal_a_rejectedreason() != 0) {
+  // required uint32 a_rejectedReason = 6;
+  if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(6, this->_internal_a_rejectedreason(), target);
   }
 
-  // bool a_isSafeTopLevelNav = 7;
-  if (this->_internal_a_issafetoplevelnav() != 0) {
+  // required bool a_isSafeTopLevelNav = 7;
+  if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(7, this->_internal_a_issafetoplevelnav(), target);
   }
 
-  // bool a_isSameSiteForeign = 8;
-  if (this->_internal_a_issamesiteforeign() != 0) {
+  // required bool a_isSameSiteForeign = 8;
+  if (cached_has_bits & 0x00000080u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(8, this->_internal_a_issamesiteforeign(), target);
   }
 
-  // bool a_hadCrossSiteRedirects = 9;
-  if (this->_internal_a_hadcrosssiteredirects() != 0) {
+  // required bool a_hadCrossSiteRedirects = 9;
+  if (cached_has_bits & 0x00000100u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(9, this->_internal_a_hadcrosssiteredirects(), target);
   }
@@ -887,10 +978,84 @@ uint8_t* Msg_GetCookieList::_InternalSerialize(
   return target;
 }
 
+size_t Msg_GetCookieList::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.PCookieService.Msg_GetCookieList)
+  size_t total_size = 0;
+
+  if (_internal_has_a_isforeign()) {
+    // required bool a_isForeign = 2;
+    total_size += 1 + 1;
+  }
+
+  if (_internal_has_a_isthirdpartytrackingresource()) {
+    // required bool a_isThirdPartyTrackingResource = 3;
+    total_size += 1 + 1;
+  }
+
+  if (_internal_has_a_isthirdpartysocialtrackingresource()) {
+    // required bool a_isThirdPartySocialTrackingResource = 4;
+    total_size += 1 + 1;
+  }
+
+  if (_internal_has_a_firstpartystorageaccesspermissiongranted()) {
+    // required bool a_firstPartyStorageAccessPermissionGranted = 5;
+    total_size += 1 + 1;
+  }
+
+  if (_internal_has_a_rejectedreason()) {
+    // required uint32 a_rejectedReason = 6;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_rejectedreason());
+  }
+
+  if (_internal_has_a_issafetoplevelnav()) {
+    // required bool a_isSafeTopLevelNav = 7;
+    total_size += 1 + 1;
+  }
+
+  if (_internal_has_a_issamesiteforeign()) {
+    // required bool a_isSameSiteForeign = 8;
+    total_size += 1 + 1;
+  }
+
+  if (_internal_has_a_hadcrosssiteredirects()) {
+    // required bool a_hadCrossSiteRedirects = 9;
+    total_size += 1 + 1;
+  }
+
+  return total_size;
+}
 size_t Msg_GetCookieList::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PCookieService.Msg_GetCookieList)
   size_t total_size = 0;
 
+  if (((_impl_._has_bits_[0] & 0x000001fe) ^ 0x000001fe) == 0) {  // All required fields are present.
+    // required bool a_isForeign = 2;
+    total_size += 1 + 1;
+
+    // required bool a_isThirdPartyTrackingResource = 3;
+    total_size += 1 + 1;
+
+    // required bool a_isThirdPartySocialTrackingResource = 4;
+    total_size += 1 + 1;
+
+    // required bool a_firstPartyStorageAccessPermissionGranted = 5;
+    total_size += 1 + 1;
+
+    // required uint32 a_rejectedReason = 6;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_rejectedreason());
+
+    // required bool a_isSafeTopLevelNav = 7;
+    total_size += 1 + 1;
+
+    // required bool a_isSameSiteForeign = 8;
+    total_size += 1 + 1;
+
+    // required bool a_hadCrossSiteRedirects = 9;
+    total_size += 1 + 1;
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -909,46 +1074,6 @@ size_t Msg_GetCookieList::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_host());
-  }
-
-  // bool a_isForeign = 2;
-  if (this->_internal_a_isforeign() != 0) {
-    total_size += 1 + 1;
-  }
-
-  // bool a_isThirdPartyTrackingResource = 3;
-  if (this->_internal_a_isthirdpartytrackingresource() != 0) {
-    total_size += 1 + 1;
-  }
-
-  // bool a_isThirdPartySocialTrackingResource = 4;
-  if (this->_internal_a_isthirdpartysocialtrackingresource() != 0) {
-    total_size += 1 + 1;
-  }
-
-  // bool a_firstPartyStorageAccessPermissionGranted = 5;
-  if (this->_internal_a_firstpartystorageaccesspermissiongranted() != 0) {
-    total_size += 1 + 1;
-  }
-
-  // uint32 a_rejectedReason = 6;
-  if (this->_internal_a_rejectedreason() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_rejectedreason());
-  }
-
-  // bool a_isSafeTopLevelNav = 7;
-  if (this->_internal_a_issafetoplevelnav() != 0) {
-    total_size += 1 + 1;
-  }
-
-  // bool a_isSameSiteForeign = 8;
-  if (this->_internal_a_issamesiteforeign() != 0) {
-    total_size += 1 + 1;
-  }
-
-  // bool a_hadCrossSiteRedirects = 9;
-  if (this->_internal_a_hadcrosssiteredirects() != 0) {
-    total_size += 1 + 1;
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -973,31 +1098,35 @@ void Msg_GetCookieList::MergeFrom(const Msg_GetCookieList& from) {
   (void) cached_has_bits;
 
   _this->_impl_.a_attrslist_.MergeFrom(from._impl_.a_attrslist_);
-  if (from._internal_has_a_host()) {
-    _this->_internal_set_a_host(from._internal_a_host());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x000000ffu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_host(from._internal_a_host());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_isforeign_ = from._impl_.a_isforeign_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.a_isthirdpartytrackingresource_ = from._impl_.a_isthirdpartytrackingresource_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.a_isthirdpartysocialtrackingresource_ = from._impl_.a_isthirdpartysocialtrackingresource_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_impl_.a_firstpartystorageaccesspermissiongranted_ = from._impl_.a_firstpartystorageaccesspermissiongranted_;
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _this->_impl_.a_rejectedreason_ = from._impl_.a_rejectedreason_;
+    }
+    if (cached_has_bits & 0x00000040u) {
+      _this->_impl_.a_issafetoplevelnav_ = from._impl_.a_issafetoplevelnav_;
+    }
+    if (cached_has_bits & 0x00000080u) {
+      _this->_impl_.a_issamesiteforeign_ = from._impl_.a_issamesiteforeign_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
-  if (from._internal_a_isforeign() != 0) {
-    _this->_internal_set_a_isforeign(from._internal_a_isforeign());
-  }
-  if (from._internal_a_isthirdpartytrackingresource() != 0) {
-    _this->_internal_set_a_isthirdpartytrackingresource(from._internal_a_isthirdpartytrackingresource());
-  }
-  if (from._internal_a_isthirdpartysocialtrackingresource() != 0) {
-    _this->_internal_set_a_isthirdpartysocialtrackingresource(from._internal_a_isthirdpartysocialtrackingresource());
-  }
-  if (from._internal_a_firstpartystorageaccesspermissiongranted() != 0) {
-    _this->_internal_set_a_firstpartystorageaccesspermissiongranted(from._internal_a_firstpartystorageaccesspermissiongranted());
-  }
-  if (from._internal_a_rejectedreason() != 0) {
-    _this->_internal_set_a_rejectedreason(from._internal_a_rejectedreason());
-  }
-  if (from._internal_a_issafetoplevelnav() != 0) {
-    _this->_internal_set_a_issafetoplevelnav(from._internal_a_issafetoplevelnav());
-  }
-  if (from._internal_a_issamesiteforeign() != 0) {
-    _this->_internal_set_a_issamesiteforeign(from._internal_a_issamesiteforeign());
-  }
-  if (from._internal_a_hadcrosssiteredirects() != 0) {
+  if (cached_has_bits & 0x00000100u) {
     _this->_internal_set_a_hadcrosssiteredirects(from._internal_a_hadcrosssiteredirects());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1011,6 +1140,7 @@ void Msg_GetCookieList::CopyFrom(const Msg_GetCookieList& from) {
 }
 
 bool Msg_GetCookieList::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1214,6 +1344,8 @@ void Reply_GetCookieList::CopyFrom(const Reply_GetCookieList& from) {
 }
 
 bool Reply_GetCookieList::IsInitialized() const {
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_cookies_))
+    return false;
   return true;
 }
 
@@ -1700,6 +1832,8 @@ void Msg_TrackCookiesLoad::CopyFrom(const Msg_TrackCookiesLoad& from) {
 }
 
 bool Msg_TrackCookiesLoad::IsInitialized() const {
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_cookieslisttable_))
+    return false;
   return true;
 }
 
@@ -1720,8 +1854,17 @@ class Msg_RemoveCookie::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_RemoveCookie>()._impl_._has_bits_);
   static const ::protobuf::mozilla::net::CookieStruct& a_cookie(const Msg_RemoveCookie* msg);
-  static void set_has_a_operationid(HasBits* has_bits) {
+  static void set_has_a_cookie(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_a_attrs(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_operationid(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000005) ^ 0x00000005) != 0;
   }
 };
 
@@ -1730,10 +1873,8 @@ Msg_RemoveCookie::_Internal::a_cookie(const Msg_RemoveCookie* msg) {
   return *msg->_impl_.a_cookie_;
 }
 void Msg_RemoveCookie::clear_a_cookie() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_cookie_ != nullptr) {
-    delete _impl_.a_cookie_;
-  }
-  _impl_.a_cookie_ = nullptr;
+  if (_impl_.a_cookie_ != nullptr) _impl_.a_cookie_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 Msg_RemoveCookie::Msg_RemoveCookie(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -1756,7 +1897,7 @@ Msg_RemoveCookie::Msg_RemoveCookie(const Msg_RemoveCookie& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_attrs_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_attrs().empty()) {
+  if (from._internal_has_a_attrs()) {
     _this->_impl_.a_attrs_.Set(from._internal_a_attrs(), 
       _this->GetArenaForAllocation());
   }
@@ -1821,15 +1962,19 @@ void Msg_RemoveCookie::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_attrs_.ClearToEmpty();
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_operationid_.ClearNonDefaultToEmpty();
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_attrs_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_operationid_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      GOOGLE_DCHECK(_impl_.a_cookie_ != nullptr);
+      _impl_.a_cookie_->Clear();
+    }
   }
-  if (GetArenaForAllocation() == nullptr && _impl_.a_cookie_ != nullptr) {
-    delete _impl_.a_cookie_;
-  }
-  _impl_.a_cookie_ = nullptr;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -1841,7 +1986,7 @@ const char* Msg_RemoveCookie::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.net.CookieStruct a_cookie = 1;
+      // required .protobuf.mozilla.net.CookieStruct a_cookie = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_cookie(), ptr);
@@ -1849,7 +1994,7 @@ const char* Msg_RemoveCookie::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // bytes a_attrs = 2;
+      // required bytes a_attrs = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_attrs();
@@ -1897,21 +2042,22 @@ uint8_t* Msg_RemoveCookie::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.mozilla.net.CookieStruct a_cookie = 1;
-  if (this->_internal_has_a_cookie()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required .protobuf.mozilla.net.CookieStruct a_cookie = 1;
+  if (cached_has_bits & 0x00000004u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_cookie(this),
         _Internal::a_cookie(this).GetCachedSize(), target, stream);
   }
 
-  // bytes a_attrs = 2;
-  if (!this->_internal_a_attrs().empty()) {
+  // required bytes a_attrs = 2;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_a_attrs(), target);
   }
 
   // optional bytes a_operationId = 3;
-  if (_internal_has_a_operationid()) {
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
         3, this->_internal_a_operationid(), target);
   }
@@ -1924,34 +2070,54 @@ uint8_t* Msg_RemoveCookie::_InternalSerialize(
   return target;
 }
 
-size_t Msg_RemoveCookie::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie)
+size_t Msg_RemoveCookie::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_attrs = 2;
-  if (!this->_internal_a_attrs().empty()) {
+  if (_internal_has_a_attrs()) {
+    // required bytes a_attrs = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_attrs());
   }
 
-  // optional bytes a_operationId = 3;
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_operationid());
-  }
-
-  // .protobuf.mozilla.net.CookieStruct a_cookie = 1;
-  if (this->_internal_has_a_cookie()) {
+  if (_internal_has_a_cookie()) {
+    // required .protobuf.mozilla.net.CookieStruct a_cookie = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_cookie_);
+  }
+
+  return total_size;
+}
+size_t Msg_RemoveCookie::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000005) ^ 0x00000005) == 0) {  // All required fields are present.
+    // required bytes a_attrs = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_attrs());
+
+    // required .protobuf.mozilla.net.CookieStruct a_cookie = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_cookie_);
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional bytes a_operationId = 3;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000002u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_operationid());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1975,15 +2141,18 @@ void Msg_RemoveCookie::MergeFrom(const Msg_RemoveCookie& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_attrs().empty()) {
-    _this->_internal_set_a_attrs(from._internal_a_attrs());
-  }
-  if (from._internal_has_a_operationid()) {
-    _this->_internal_set_a_operationid(from._internal_a_operationid());
-  }
-  if (from._internal_has_a_cookie()) {
-    _this->_internal_mutable_a_cookie()->::protobuf::mozilla::net::CookieStruct::MergeFrom(
-        from._internal_a_cookie());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_attrs(from._internal_a_attrs());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_operationid(from._internal_a_operationid());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_internal_mutable_a_cookie()->::protobuf::mozilla::net::CookieStruct::MergeFrom(
+          from._internal_a_cookie());
+    }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1996,6 +2165,10 @@ void Msg_RemoveCookie::CopyFrom(const Msg_RemoveCookie& from) {
 }
 
 bool Msg_RemoveCookie::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (_internal_has_a_cookie()) {
+    if (!_impl_.a_cookie_->IsInitialized()) return false;
+  }
   return true;
 }
 
@@ -2230,6 +2403,8 @@ void Msg_RemoveBatchDeletedCookies::CopyFrom(const Msg_RemoveBatchDeletedCookies
 }
 
 bool Msg_RemoveBatchDeletedCookies::IsInitialized() const {
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_cookieslist_))
+    return false;
   return true;
 }
 
@@ -2399,8 +2574,17 @@ class Msg_AddCookie::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_AddCookie>()._impl_._has_bits_);
   static const ::protobuf::mozilla::net::CookieStruct& a_cookie(const Msg_AddCookie* msg);
-  static void set_has_a_operationid(HasBits* has_bits) {
+  static void set_has_a_cookie(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_a_attrs(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_operationid(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000005) ^ 0x00000005) != 0;
   }
 };
 
@@ -2409,10 +2593,8 @@ Msg_AddCookie::_Internal::a_cookie(const Msg_AddCookie* msg) {
   return *msg->_impl_.a_cookie_;
 }
 void Msg_AddCookie::clear_a_cookie() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_cookie_ != nullptr) {
-    delete _impl_.a_cookie_;
-  }
-  _impl_.a_cookie_ = nullptr;
+  if (_impl_.a_cookie_ != nullptr) _impl_.a_cookie_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 Msg_AddCookie::Msg_AddCookie(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -2435,7 +2617,7 @@ Msg_AddCookie::Msg_AddCookie(const Msg_AddCookie& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_attrs_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_attrs().empty()) {
+  if (from._internal_has_a_attrs()) {
     _this->_impl_.a_attrs_.Set(from._internal_a_attrs(), 
       _this->GetArenaForAllocation());
   }
@@ -2500,15 +2682,19 @@ void Msg_AddCookie::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_attrs_.ClearToEmpty();
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_operationid_.ClearNonDefaultToEmpty();
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_attrs_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_operationid_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      GOOGLE_DCHECK(_impl_.a_cookie_ != nullptr);
+      _impl_.a_cookie_->Clear();
+    }
   }
-  if (GetArenaForAllocation() == nullptr && _impl_.a_cookie_ != nullptr) {
-    delete _impl_.a_cookie_;
-  }
-  _impl_.a_cookie_ = nullptr;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -2520,7 +2706,7 @@ const char* Msg_AddCookie::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.net.CookieStruct a_cookie = 1;
+      // required .protobuf.mozilla.net.CookieStruct a_cookie = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_cookie(), ptr);
@@ -2528,7 +2714,7 @@ const char* Msg_AddCookie::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // bytes a_attrs = 2;
+      // required bytes a_attrs = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_attrs();
@@ -2576,21 +2762,22 @@ uint8_t* Msg_AddCookie::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.mozilla.net.CookieStruct a_cookie = 1;
-  if (this->_internal_has_a_cookie()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required .protobuf.mozilla.net.CookieStruct a_cookie = 1;
+  if (cached_has_bits & 0x00000004u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_cookie(this),
         _Internal::a_cookie(this).GetCachedSize(), target, stream);
   }
 
-  // bytes a_attrs = 2;
-  if (!this->_internal_a_attrs().empty()) {
+  // required bytes a_attrs = 2;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_a_attrs(), target);
   }
 
   // optional bytes a_operationId = 3;
-  if (_internal_has_a_operationid()) {
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
         3, this->_internal_a_operationid(), target);
   }
@@ -2603,34 +2790,54 @@ uint8_t* Msg_AddCookie::_InternalSerialize(
   return target;
 }
 
-size_t Msg_AddCookie::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PCookieService.Msg_AddCookie)
+size_t Msg_AddCookie::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.PCookieService.Msg_AddCookie)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_attrs = 2;
-  if (!this->_internal_a_attrs().empty()) {
+  if (_internal_has_a_attrs()) {
+    // required bytes a_attrs = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_attrs());
   }
 
-  // optional bytes a_operationId = 3;
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_operationid());
-  }
-
-  // .protobuf.mozilla.net.CookieStruct a_cookie = 1;
-  if (this->_internal_has_a_cookie()) {
+  if (_internal_has_a_cookie()) {
+    // required .protobuf.mozilla.net.CookieStruct a_cookie = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_cookie_);
+  }
+
+  return total_size;
+}
+size_t Msg_AddCookie::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PCookieService.Msg_AddCookie)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000005) ^ 0x00000005) == 0) {  // All required fields are present.
+    // required bytes a_attrs = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_attrs());
+
+    // required .protobuf.mozilla.net.CookieStruct a_cookie = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_cookie_);
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional bytes a_operationId = 3;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000002u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_operationid());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2654,15 +2861,18 @@ void Msg_AddCookie::MergeFrom(const Msg_AddCookie& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_attrs().empty()) {
-    _this->_internal_set_a_attrs(from._internal_a_attrs());
-  }
-  if (from._internal_has_a_operationid()) {
-    _this->_internal_set_a_operationid(from._internal_a_operationid());
-  }
-  if (from._internal_has_a_cookie()) {
-    _this->_internal_mutable_a_cookie()->::protobuf::mozilla::net::CookieStruct::MergeFrom(
-        from._internal_a_cookie());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_attrs(from._internal_a_attrs());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_operationid(from._internal_a_operationid());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_internal_mutable_a_cookie()->::protobuf::mozilla::net::CookieStruct::MergeFrom(
+          from._internal_a_cookie());
+    }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -2675,6 +2885,10 @@ void Msg_AddCookie::CopyFrom(const Msg_AddCookie& from) {
 }
 
 bool Msg_AddCookie::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (_internal_has_a_cookie()) {
+    if (!_impl_.a_cookie_->IsInitialized()) return false;
+  }
   return true;
 }
 

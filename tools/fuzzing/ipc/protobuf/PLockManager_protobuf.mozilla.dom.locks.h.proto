@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/locks/PLockManager.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.locks;
@@ -13,8 +13,8 @@ package protobuf.mozilla.dom.locks;
 
 // Structs and unions declarations
 message IPCLockRequest {
-  string a_name = 1;
-  bytes a_lockMode = 2;
-  bool a_ifAvailable = 3;
-  bool a_steal = 4;
+  required string a_name = 1;
+  required bytes a_lockMode = 2;
+  required bool a_ifAvailable = 3;
+  required bool a_steal = 4;
 }

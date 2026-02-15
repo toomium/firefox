@@ -113,6 +113,13 @@ class Msg_PTestDescendantSubConstructor final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_PTestDescendantSubConstructor& default_instance() {
     return *internal_default_instance();
   }
@@ -206,7 +213,11 @@ class Msg_PTestDescendantSubConstructor final :
   std::string* _internal_mutable_a_dummy();
   public:
 
-  // sint64 a_actorid = 1;
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
   void clear_a_actorid();
   int64_t a_actorid() const;
   void set_a_actorid(int64_t value);
@@ -262,6 +273,13 @@ class Reply_PTestDescendantSubConstructor final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_PTestDescendantSubConstructor& default_instance() {
@@ -381,6 +399,13 @@ class Msg_Test final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Test& default_instance() {
     return *internal_default_instance();
   }
@@ -455,7 +480,11 @@ class Msg_Test final :
   enum : int {
     kAAFieldNumber = 1,
   };
-  // bytes a_a = 1;
+  // required bytes a_a = 1;
+  bool has_a_a() const;
+  private:
+  bool _internal_has_a_a() const;
+  public:
   void clear_a_a();
   const std::string& a_a() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -477,8 +506,9 @@ class Msg_Test final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_a_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_a_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestDescendant_2eproto;
@@ -514,6 +544,13 @@ class Msg___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg___delete__& default_instance() {
@@ -633,6 +670,13 @@ class Reply___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -750,6 +794,13 @@ class Msg_Ok final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Ok& default_instance() {
     return *internal_default_instance();
   }
@@ -824,7 +875,11 @@ class Msg_Ok final :
   enum : int {
     kAAFieldNumber = 1,
   };
-  // bytes a_a = 1;
+  // required bytes a_a = 1;
+  bool has_a_a() const;
+  private:
+  bool _internal_has_a_a() const;
+  public:
   void clear_a_a();
   const std::string& a_a() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -846,8 +901,9 @@ class Msg_Ok final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_a_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_a_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestDescendant_2eproto;
@@ -863,9 +919,17 @@ class Msg_Ok final :
 #endif  // __GNUC__
 // Msg_PTestDescendantSubConstructor
 
-// sint64 a_actorid = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PTestDescendantSubConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PTestDescendantSubConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
 inline void Msg_PTestDescendantSubConstructor::clear_a_actorid() {
   _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline int64_t Msg_PTestDescendantSubConstructor::_internal_a_actorid() const {
   return _impl_.a_actorid_;
@@ -875,7 +939,7 @@ inline int64_t Msg_PTestDescendantSubConstructor::a_actorid() const {
   return _internal_a_actorid();
 }
 inline void Msg_PTestDescendantSubConstructor::_internal_set_a_actorid(int64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_actorid_ = value;
 }
 inline void Msg_PTestDescendantSubConstructor::set_a_actorid(int64_t value) {
@@ -959,9 +1023,17 @@ inline void Msg_PTestDescendantSubConstructor::set_allocated_a_dummy(std::string
 
 // Msg_Test
 
-// bytes a_a = 1;
+// required bytes a_a = 1;
+inline bool Msg_Test::_internal_has_a_a() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_Test::has_a_a() const {
+  return _internal_has_a_a();
+}
 inline void Msg_Test::clear_a_a() {
   _impl_.a_a_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_Test::a_a() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestDescendant.Msg_Test.a_a)
@@ -970,7 +1042,7 @@ inline const std::string& Msg_Test::a_a() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Test::set_a_a(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_a_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestDescendant.Msg_Test.a_a)
 }
@@ -983,22 +1055,32 @@ inline const std::string& Msg_Test::_internal_a_a() const {
   return _impl_.a_a_.Get();
 }
 inline void Msg_Test::_internal_set_a_a(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_a_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_Test::_internal_mutable_a_a() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_a_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_Test::release_a_a() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.PTestDescendant.Msg_Test.a_a)
-  return _impl_.a_a_.Release();
+  if (!_internal_has_a_a()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_a_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_a_.IsDefault()) {
+    _impl_.a_a_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_Test::set_allocated_a_a(std::string* a_a) {
   if (a_a != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_a_.SetAllocated(a_a, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1021,9 +1103,17 @@ inline void Msg_Test::set_allocated_a_a(std::string* a_a) {
 
 // Msg_Ok
 
-// bytes a_a = 1;
+// required bytes a_a = 1;
+inline bool Msg_Ok::_internal_has_a_a() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_Ok::has_a_a() const {
+  return _internal_has_a_a();
+}
 inline void Msg_Ok::clear_a_a() {
   _impl_.a_a_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_Ok::a_a() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestDescendant.Msg_Ok.a_a)
@@ -1032,7 +1122,7 @@ inline const std::string& Msg_Ok::a_a() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Ok::set_a_a(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_a_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestDescendant.Msg_Ok.a_a)
 }
@@ -1045,22 +1135,32 @@ inline const std::string& Msg_Ok::_internal_a_a() const {
   return _impl_.a_a_.Get();
 }
 inline void Msg_Ok::_internal_set_a_a(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_a_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_Ok::_internal_mutable_a_a() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_a_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_Ok::release_a_a() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.PTestDescendant.Msg_Ok.a_a)
-  return _impl_.a_a_.Release();
+  if (!_internal_has_a_a()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_a_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_a_.IsDefault()) {
+    _impl_.a_a_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_Ok::set_allocated_a_a(std::string* a_a) {
   if (a_a != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_a_.SetAllocated(a_a, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

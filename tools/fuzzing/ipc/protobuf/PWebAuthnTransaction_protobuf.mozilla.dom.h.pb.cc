@@ -38,10 +38,10 @@ struct WebAuthnAuthenticatorSelectionDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WebAuthnAuthenticatorSelectionDefaultTypeInternal _WebAuthnAuthenticatorSelection_default_instance_;
 PROTOBUF_CONSTEXPR WebAuthnScopedCredential::WebAuthnScopedCredential(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_id_)*/{}
-  , /*decltype(_impl_._a_id_cached_byte_size_)*/{0}
-  , /*decltype(_impl_.a_transports_)*/0u
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_id_)*/{}
+  , /*decltype(_impl_.a_transports_)*/0u} {}
 struct WebAuthnScopedCredentialDefaultTypeInternal {
   PROTOBUF_CONSTEXPR WebAuthnScopedCredentialDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -53,9 +53,10 @@ struct WebAuthnScopedCredentialDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WebAuthnScopedCredentialDefaultTypeInternal _WebAuthnScopedCredential_default_instance_;
 PROTOBUF_CONSTEXPR WebAuthnExtensionCredProtect::WebAuthnExtensionCredProtect(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_policy_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_required_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_policy_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_required_)*/false} {}
 struct WebAuthnExtensionCredProtectDefaultTypeInternal {
   PROTOBUF_CONSTEXPR WebAuthnExtensionCredProtectDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -67,8 +68,9 @@ struct WebAuthnExtensionCredProtectDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WebAuthnExtensionCredProtectDefaultTypeInternal _WebAuthnExtensionCredProtect_default_instance_;
 PROTOBUF_CONSTEXPR WebAuthnExtensionCredProps::WebAuthnExtensionCredProps(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_credprops_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_credprops_)*/false} {}
 struct WebAuthnExtensionCredPropsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR WebAuthnExtensionCredPropsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -80,8 +82,9 @@ struct WebAuthnExtensionCredPropsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WebAuthnExtensionCredPropsDefaultTypeInternal _WebAuthnExtensionCredProps_default_instance_;
 PROTOBUF_CONSTEXPR WebAuthnExtensionHmacSecret::WebAuthnExtensionHmacSecret(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_hmaccreatesecret_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_hmaccreatesecret_)*/false} {}
 struct WebAuthnExtensionHmacSecretDefaultTypeInternal {
   PROTOBUF_CONSTEXPR WebAuthnExtensionHmacSecretDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -96,7 +99,6 @@ PROTOBUF_CONSTEXPR WebAuthnExtensionLargeBlob::WebAuthnExtensionLargeBlob(
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
   , /*decltype(_impl_.a_write_)*/{}
-  , /*decltype(_impl_._a_write_cached_byte_size_)*/{0}
   , /*decltype(_impl_.a_flag_)*/false} {}
 struct WebAuthnExtensionLargeBlobDefaultTypeInternal {
   PROTOBUF_CONSTEXPR WebAuthnExtensionLargeBlobDefaultTypeInternal()
@@ -109,8 +111,9 @@ struct WebAuthnExtensionLargeBlobDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WebAuthnExtensionLargeBlobDefaultTypeInternal _WebAuthnExtensionLargeBlob_default_instance_;
 PROTOBUF_CONSTEXPR WebAuthnExtensionMinPinLength::WebAuthnExtensionMinPinLength(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_minpinlength_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_minpinlength_)*/false} {}
 struct WebAuthnExtensionMinPinLengthDefaultTypeInternal {
   PROTOBUF_CONSTEXPR WebAuthnExtensionMinPinLengthDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -138,12 +141,11 @@ struct WebAuthnExtensionPrfDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WebAuthnExtensionPrfDefaultTypeInternal _WebAuthnExtensionPrf_default_instance_;
 PROTOBUF_CONSTEXPR WebAuthnExtensionPrfValues::WebAuthnExtensionPrfValues(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_first_)*/{}
-  , /*decltype(_impl_._a_first_cached_byte_size_)*/{0}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_first_)*/{}
   , /*decltype(_impl_.a_second_)*/{}
-  , /*decltype(_impl_._a_second_cached_byte_size_)*/{0}
-  , /*decltype(_impl_.a_secondmaybe_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_secondmaybe_)*/false} {}
 struct WebAuthnExtensionPrfValuesDefaultTypeInternal {
   PROTOBUF_CONSTEXPR WebAuthnExtensionPrfValuesDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -155,10 +157,10 @@ struct WebAuthnExtensionPrfValuesDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WebAuthnExtensionPrfValuesDefaultTypeInternal _WebAuthnExtensionPrfValues_default_instance_;
 PROTOBUF_CONSTEXPR WebAuthnExtensionPrfEvalByCredentialEntry::WebAuthnExtensionPrfEvalByCredentialEntry(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_credentialid_)*/{}
-  , /*decltype(_impl_._a_credentialid_cached_byte_size_)*/{0}
-  , /*decltype(_impl_.a_eval_)*/nullptr
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_credentialid_)*/{}
+  , /*decltype(_impl_.a_eval_)*/nullptr} {}
 struct WebAuthnExtensionPrfEvalByCredentialEntryDefaultTypeInternal {
   PROTOBUF_CONSTEXPR WebAuthnExtensionPrfEvalByCredentialEntryDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -184,8 +186,9 @@ struct WebAuthnExtensionDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WebAuthnExtensionDefaultTypeInternal _WebAuthnExtension_default_instance_;
 PROTOBUF_CONSTEXPR WebAuthnExtensionResultAppId::WebAuthnExtensionResultAppId(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_appid_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_appid_)*/false} {}
 struct WebAuthnExtensionResultAppIdDefaultTypeInternal {
   PROTOBUF_CONSTEXPR WebAuthnExtensionResultAppIdDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -197,8 +200,9 @@ struct WebAuthnExtensionResultAppIdDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WebAuthnExtensionResultAppIdDefaultTypeInternal _WebAuthnExtensionResultAppId_default_instance_;
 PROTOBUF_CONSTEXPR WebAuthnExtensionResultCredProps::WebAuthnExtensionResultCredProps(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_rk_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_rk_)*/false} {}
 struct WebAuthnExtensionResultCredPropsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR WebAuthnExtensionResultCredPropsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -210,8 +214,9 @@ struct WebAuthnExtensionResultCredPropsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WebAuthnExtensionResultCredPropsDefaultTypeInternal _WebAuthnExtensionResultCredProps_default_instance_;
 PROTOBUF_CONSTEXPR WebAuthnExtensionResultHmacSecret::WebAuthnExtensionResultHmacSecret(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_hmaccreatesecret_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_hmaccreatesecret_)*/false} {}
 struct WebAuthnExtensionResultHmacSecretDefaultTypeInternal {
   PROTOBUF_CONSTEXPR WebAuthnExtensionResultHmacSecretDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -223,11 +228,11 @@ struct WebAuthnExtensionResultHmacSecretDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WebAuthnExtensionResultHmacSecretDefaultTypeInternal _WebAuthnExtensionResultHmacSecret_default_instance_;
 PROTOBUF_CONSTEXPR WebAuthnExtensionResultLargeBlob::WebAuthnExtensionResultLargeBlob(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_blob_)*/{}
-  , /*decltype(_impl_._a_blob_cached_byte_size_)*/{0}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_blob_)*/{}
   , /*decltype(_impl_.a_flag_)*/false
-  , /*decltype(_impl_.a_written_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_written_)*/false} {}
 struct WebAuthnExtensionResultLargeBlobDefaultTypeInternal {
   PROTOBUF_CONSTEXPR WebAuthnExtensionResultLargeBlobDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -268,8 +273,9 @@ struct WebAuthnExtensionResultDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WebAuthnExtensionResultDefaultTypeInternal _WebAuthnExtensionResult_default_instance_;
 PROTOBUF_CONSTEXPR WebAuthnMakeCredentialRpInfo::WebAuthnMakeCredentialRpInfo(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct WebAuthnMakeCredentialRpInfoDefaultTypeInternal {
   PROTOBUF_CONSTEXPR WebAuthnMakeCredentialRpInfoDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -281,11 +287,11 @@ struct WebAuthnMakeCredentialRpInfoDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WebAuthnMakeCredentialRpInfoDefaultTypeInternal _WebAuthnMakeCredentialRpInfo_default_instance_;
 PROTOBUF_CONSTEXPR WebAuthnMakeCredentialUserInfo::WebAuthnMakeCredentialUserInfo(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_id_)*/{}
-  , /*decltype(_impl_._a_id_cached_byte_size_)*/{0}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_id_)*/{}
   , /*decltype(_impl_.a_name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_displayname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_displayname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct WebAuthnMakeCredentialUserInfoDefaultTypeInternal {
   PROTOBUF_CONSTEXPR WebAuthnMakeCredentialUserInfoDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -297,8 +303,9 @@ struct WebAuthnMakeCredentialUserInfoDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WebAuthnMakeCredentialUserInfoDefaultTypeInternal _WebAuthnMakeCredentialUserInfo_default_instance_;
 PROTOBUF_CONSTEXPR CoseAlg::CoseAlg(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_alg_)*/int64_t{0}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_alg_)*/int64_t{0}} {}
 struct CoseAlgDefaultTypeInternal {
   PROTOBUF_CONSTEXPR CoseAlgDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -310,8 +317,9 @@ struct CoseAlgDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CoseAlgDefaultTypeInternal _CoseAlg_default_instance_;
 PROTOBUF_CONSTEXPR WebAuthnMakeCredentialInfo::WebAuthnMakeCredentialInfo(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_challenge_)*/{}
-  , /*decltype(_impl_._a_challenge_cached_byte_size_)*/{0}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_challenge_)*/{}
   , /*decltype(_impl_.a_excludelist_)*/{}
   , /*decltype(_impl_.a_cosealgs_)*/{}
   , /*decltype(_impl_.a_extensions_)*/{}
@@ -320,8 +328,7 @@ PROTOBUF_CONSTEXPR WebAuthnMakeCredentialInfo::WebAuthnMakeCredentialInfo(
   , /*decltype(_impl_.a_rp_)*/nullptr
   , /*decltype(_impl_.a_user_)*/nullptr
   , /*decltype(_impl_.a_authenticatorselection_)*/nullptr
-  , /*decltype(_impl_.a_timeoutms_)*/0u
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_timeoutms_)*/0u} {}
 struct WebAuthnMakeCredentialInfoDefaultTypeInternal {
   PROTOBUF_CONSTEXPR WebAuthnMakeCredentialInfoDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -336,9 +343,7 @@ PROTOBUF_CONSTEXPR WebAuthnMakeCredentialResult::WebAuthnMakeCredentialResult(
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
   , /*decltype(_impl_.a_attestationobject_)*/{}
-  , /*decltype(_impl_._a_attestationobject_cached_byte_size_)*/{0}
   , /*decltype(_impl_.a_keyhandle_)*/{}
-  , /*decltype(_impl_._a_keyhandle_cached_byte_size_)*/{0}
   , /*decltype(_impl_.a_transports_)*/{}
   , /*decltype(_impl_.a_extensions_)*/{}
   , /*decltype(_impl_.a_clientdatajson_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
@@ -371,7 +376,6 @@ PROTOBUF_CONSTEXPR WebAuthnGetAssertionInfo::WebAuthnGetAssertionInfo(
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
   , /*decltype(_impl_.a_challenge_)*/{}
-  , /*decltype(_impl_._a_challenge_cached_byte_size_)*/{0}
   , /*decltype(_impl_.a_allowlist_)*/{}
   , /*decltype(_impl_.a_extensions_)*/{}
   , /*decltype(_impl_.a_rpid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
@@ -393,14 +397,10 @@ PROTOBUF_CONSTEXPR WebAuthnGetAssertionResult::WebAuthnGetAssertionResult(
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
   , /*decltype(_impl_.a_keyhandle_)*/{}
-  , /*decltype(_impl_._a_keyhandle_cached_byte_size_)*/{0}
   , /*decltype(_impl_.a_signature_)*/{}
-  , /*decltype(_impl_._a_signature_cached_byte_size_)*/{0}
   , /*decltype(_impl_.a_authenticatordata_)*/{}
-  , /*decltype(_impl_._a_authenticatordata_cached_byte_size_)*/{0}
   , /*decltype(_impl_.a_extensions_)*/{}
   , /*decltype(_impl_.a_userhandle_)*/{}
-  , /*decltype(_impl_._a_userhandle_cached_byte_size_)*/{0}
   , /*decltype(_impl_.a_clientdatajson_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_authenticatorattachment_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct WebAuthnGetAssertionResultDefaultTypeInternal {
@@ -438,8 +438,17 @@ namespace dom {
 class WebAuthnAuthenticatorSelection::_Internal {
  public:
   using HasBits = decltype(std::declval<WebAuthnAuthenticatorSelection>()._impl_._has_bits_);
-  static void set_has_a_authenticatorattachment(HasBits* has_bits) {
+  static void set_has_a_residentkey(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_userverificationrequirement(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_authenticatorattachment(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
   }
 };
 
@@ -464,7 +473,7 @@ WebAuthnAuthenticatorSelection::WebAuthnAuthenticatorSelection(const WebAuthnAut
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_residentkey_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_residentkey().empty()) {
+  if (from._internal_has_a_residentkey()) {
     _this->_impl_.a_residentkey_.Set(from._internal_a_residentkey(), 
       _this->GetArenaForAllocation());
   }
@@ -472,7 +481,7 @@ WebAuthnAuthenticatorSelection::WebAuthnAuthenticatorSelection(const WebAuthnAut
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_userverificationrequirement_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_userverificationrequirement().empty()) {
+  if (from._internal_has_a_userverificationrequirement()) {
     _this->_impl_.a_userverificationrequirement_.Set(from._internal_a_userverificationrequirement(), 
       _this->GetArenaForAllocation());
   }
@@ -538,11 +547,17 @@ void WebAuthnAuthenticatorSelection::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_residentkey_.ClearToEmpty();
-  _impl_.a_userverificationrequirement_.ClearToEmpty();
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_authenticatorattachment_.ClearNonDefaultToEmpty();
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_residentkey_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_userverificationrequirement_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _impl_.a_authenticatorattachment_.ClearNonDefaultToEmpty();
+    }
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -555,23 +570,21 @@ const char* WebAuthnAuthenticatorSelection::_InternalParse(const char* ptr, ::_p
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string a_residentKey = 1;
+      // required string a_residentKey = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_residentkey();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // string a_userVerificationRequirement = 2;
+      // required string a_userVerificationRequirement = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_userverificationrequirement();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -581,7 +594,6 @@ const char* WebAuthnAuthenticatorSelection::_InternalParse(const char* ptr, ::_p
           auto str = _internal_mutable_a_authenticatorattachment();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -615,32 +627,21 @@ uint8_t* WebAuthnAuthenticatorSelection::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string a_residentKey = 1;
-  if (!this->_internal_a_residentkey().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_residentkey().data(), static_cast<int>(this->_internal_a_residentkey().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.WebAuthnAuthenticatorSelection.a_residentKey");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_residentKey = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_residentkey(), target);
   }
 
-  // string a_userVerificationRequirement = 2;
-  if (!this->_internal_a_userverificationrequirement().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_userverificationrequirement().data(), static_cast<int>(this->_internal_a_userverificationrequirement().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.WebAuthnAuthenticatorSelection.a_userVerificationRequirement");
+  // required string a_userVerificationRequirement = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_userverificationrequirement(), target);
   }
 
   // optional string a_authenticatorAttachment = 3;
-  if (_internal_has_a_authenticatorattachment()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_authenticatorattachment().data(), static_cast<int>(this->_internal_a_authenticatorattachment().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.WebAuthnAuthenticatorSelection.a_authenticatorAttachment");
+  if (cached_has_bits & 0x00000004u) {
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_authenticatorattachment(), target);
   }
@@ -653,31 +654,51 @@ uint8_t* WebAuthnAuthenticatorSelection::_InternalSerialize(
   return target;
 }
 
-size_t WebAuthnAuthenticatorSelection::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.WebAuthnAuthenticatorSelection)
+size_t WebAuthnAuthenticatorSelection::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.WebAuthnAuthenticatorSelection)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string a_residentKey = 1;
-  if (!this->_internal_a_residentkey().empty()) {
+  if (_internal_has_a_residentkey()) {
+    // required string a_residentKey = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_residentkey());
   }
 
-  // string a_userVerificationRequirement = 2;
-  if (!this->_internal_a_userverificationrequirement().empty()) {
+  if (_internal_has_a_userverificationrequirement()) {
+    // required string a_userVerificationRequirement = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_userverificationrequirement());
   }
 
+  return total_size;
+}
+size_t WebAuthnAuthenticatorSelection::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.WebAuthnAuthenticatorSelection)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required string a_residentKey = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_residentkey());
+
+    // required string a_userVerificationRequirement = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_userverificationrequirement());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // optional string a_authenticatorAttachment = 3;
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
+  if (cached_has_bits & 0x00000004u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_authenticatorattachment());
@@ -704,14 +725,17 @@ void WebAuthnAuthenticatorSelection::MergeFrom(const WebAuthnAuthenticatorSelect
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_residentkey().empty()) {
-    _this->_internal_set_a_residentkey(from._internal_a_residentkey());
-  }
-  if (!from._internal_a_userverificationrequirement().empty()) {
-    _this->_internal_set_a_userverificationrequirement(from._internal_a_userverificationrequirement());
-  }
-  if (from._internal_has_a_authenticatorattachment()) {
-    _this->_internal_set_a_authenticatorattachment(from._internal_a_authenticatorattachment());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_residentkey(from._internal_a_residentkey());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_userverificationrequirement(from._internal_a_userverificationrequirement());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_internal_set_a_authenticatorattachment(from._internal_a_authenticatorattachment());
+    }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -724,6 +748,7 @@ void WebAuthnAuthenticatorSelection::CopyFrom(const WebAuthnAuthenticatorSelecti
 }
 
 bool WebAuthnAuthenticatorSelection::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -756,6 +781,13 @@ std::string WebAuthnAuthenticatorSelection::GetTypeName() const {
 
 class WebAuthnScopedCredential::_Internal {
  public:
+  using HasBits = decltype(std::declval<WebAuthnScopedCredential>()._impl_._has_bits_);
+  static void set_has_a_transports(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 WebAuthnScopedCredential::WebAuthnScopedCredential(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -768,10 +800,10 @@ WebAuthnScopedCredential::WebAuthnScopedCredential(const WebAuthnScopedCredentia
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnScopedCredential* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_id_){from._impl_.a_id_}
-    , /*decltype(_impl_._a_id_cached_byte_size_)*/{0}
-    , decltype(_impl_.a_transports_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_id_){from._impl_.a_id_}
+    , decltype(_impl_.a_transports_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_transports_ = from._impl_.a_transports_;
@@ -783,10 +815,10 @@ inline void WebAuthnScopedCredential::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_id_){arena}
-    , /*decltype(_impl_._a_id_cached_byte_size_)*/{0}
-    , decltype(_impl_.a_transports_){0u}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_id_){arena}
+    , decltype(_impl_.a_transports_){0u}
   };
 }
 
@@ -816,29 +848,37 @@ void WebAuthnScopedCredential::Clear() {
 
   _impl_.a_id_.Clear();
   _impl_.a_transports_ = 0u;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnScopedCredential::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // repeated uint32 a_id = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            _internal_add_a_id(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 10) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_id(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 8) {
-          _internal_add_a_id(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // uint32 a_transports = 2;
+      // required uint32 a_transports = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_a_transports(&has_bits);
           _impl_.a_transports_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
@@ -860,6 +900,7 @@ const char* WebAuthnScopedCredential::_InternalParse(const char* ptr, ::_pbi::Pa
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -874,16 +915,14 @@ uint8_t* WebAuthnScopedCredential::_InternalSerialize(
   (void) cached_has_bits;
 
   // repeated uint32 a_id = 1;
-  {
-    int byte_size = _impl_._a_id_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteUInt32Packed(
-          1, _internal_a_id(), byte_size, target);
-    }
+  for (int i = 0, n = this->_internal_a_id_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_id(i), target);
   }
 
-  // uint32 a_transports = 2;
-  if (this->_internal_a_transports() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required uint32 a_transports = 2;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_transports(), target);
   }
@@ -900,6 +939,10 @@ size_t WebAuthnScopedCredential::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.WebAuthnScopedCredential)
   size_t total_size = 0;
 
+  // required uint32 a_transports = 2;
+  if (_internal_has_a_transports()) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_transports());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -908,19 +951,9 @@ size_t WebAuthnScopedCredential::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_id_);
-    if (data_size > 0) {
-      total_size += 1 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
-    int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._a_id_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
+    total_size += 1 *
+                  ::_pbi::FromIntSize(this->_internal_a_id_size());
     total_size += data_size;
-  }
-
-  // uint32 a_transports = 2;
-  if (this->_internal_a_transports() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_transports());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -945,7 +978,7 @@ void WebAuthnScopedCredential::MergeFrom(const WebAuthnScopedCredential& from) {
   (void) cached_has_bits;
 
   _this->_impl_.a_id_.MergeFrom(from._impl_.a_id_);
-  if (from._internal_a_transports() != 0) {
+  if (from._internal_has_a_transports()) {
     _this->_internal_set_a_transports(from._internal_a_transports());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -959,12 +992,14 @@ void WebAuthnScopedCredential::CopyFrom(const WebAuthnScopedCredential& from) {
 }
 
 bool WebAuthnScopedCredential::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void WebAuthnScopedCredential::InternalSwap(WebAuthnScopedCredential* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_id_.InternalSwap(&other->_impl_.a_id_);
   swap(_impl_.a_transports_, other->_impl_.a_transports_);
 }
@@ -978,6 +1013,16 @@ std::string WebAuthnScopedCredential::GetTypeName() const {
 
 class WebAuthnExtensionCredProtect::_Internal {
  public:
+  using HasBits = decltype(std::declval<WebAuthnExtensionCredProtect>()._impl_._has_bits_);
+  static void set_has_a_policy(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_required(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 WebAuthnExtensionCredProtect::WebAuthnExtensionCredProtect(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -990,16 +1035,17 @@ WebAuthnExtensionCredProtect::WebAuthnExtensionCredProtect(const WebAuthnExtensi
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnExtensionCredProtect* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_policy_){}
-    , decltype(_impl_.a_required_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_policy_){}
+    , decltype(_impl_.a_required_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_policy_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_policy_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_policy().empty()) {
+  if (from._internal_has_a_policy()) {
     _this->_impl_.a_policy_.Set(from._internal_a_policy(), 
       _this->GetArenaForAllocation());
   }
@@ -1012,9 +1058,10 @@ inline void WebAuthnExtensionCredProtect::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_policy_){}
-    , decltype(_impl_.a_required_){false}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_policy_){}
+    , decltype(_impl_.a_required_){false}
   };
   _impl_.a_policy_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1046,18 +1093,23 @@ void WebAuthnExtensionCredProtect::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_policy_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_policy_.ClearNonDefaultToEmpty();
+  }
   _impl_.a_required_ = false;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnExtensionCredProtect::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_policy = 1;
+      // required bytes a_policy = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_policy();
@@ -1066,9 +1118,10 @@ const char* WebAuthnExtensionCredProtect::_InternalParse(const char* ptr, ::_pbi
         } else
           goto handle_unusual;
         continue;
-      // bool a_required = 2;
+      // required bool a_required = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_a_required(&has_bits);
           _impl_.a_required_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -1090,6 +1143,7 @@ const char* WebAuthnExtensionCredProtect::_InternalParse(const char* ptr, ::_pbi
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1103,14 +1157,15 @@ uint8_t* WebAuthnExtensionCredProtect::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_policy = 1;
-  if (!this->_internal_a_policy().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_policy = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_policy(), target);
   }
 
-  // bool a_required = 2;
-  if (this->_internal_a_required() != 0) {
+  // required bool a_required = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_required(), target);
   }
@@ -1123,25 +1178,43 @@ uint8_t* WebAuthnExtensionCredProtect::_InternalSerialize(
   return target;
 }
 
-size_t WebAuthnExtensionCredProtect::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.WebAuthnExtensionCredProtect)
+size_t WebAuthnExtensionCredProtect::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.WebAuthnExtensionCredProtect)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_policy = 1;
-  if (!this->_internal_a_policy().empty()) {
+  if (_internal_has_a_policy()) {
+    // required bytes a_policy = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_policy());
   }
 
-  // bool a_required = 2;
-  if (this->_internal_a_required() != 0) {
+  if (_internal_has_a_required()) {
+    // required bool a_required = 2;
     total_size += 1 + 1;
   }
+
+  return total_size;
+}
+size_t WebAuthnExtensionCredProtect::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.WebAuthnExtensionCredProtect)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required bytes a_policy = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_policy());
+
+    // required bool a_required = 2;
+    total_size += 1 + 1;
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1164,11 +1237,15 @@ void WebAuthnExtensionCredProtect::MergeFrom(const WebAuthnExtensionCredProtect&
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_policy().empty()) {
-    _this->_internal_set_a_policy(from._internal_a_policy());
-  }
-  if (from._internal_a_required() != 0) {
-    _this->_internal_set_a_required(from._internal_a_required());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_policy(from._internal_a_policy());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_required_ = from._impl_.a_required_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1181,6 +1258,7 @@ void WebAuthnExtensionCredProtect::CopyFrom(const WebAuthnExtensionCredProtect& 
 }
 
 bool WebAuthnExtensionCredProtect::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1189,6 +1267,7 @@ void WebAuthnExtensionCredProtect::InternalSwap(WebAuthnExtensionCredProtect* ot
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_policy_, lhs_arena,
       &other->_impl_.a_policy_, rhs_arena
@@ -1205,6 +1284,13 @@ std::string WebAuthnExtensionCredProtect::GetTypeName() const {
 
 class WebAuthnExtensionCredProps::_Internal {
  public:
+  using HasBits = decltype(std::declval<WebAuthnExtensionCredProps>()._impl_._has_bits_);
+  static void set_has_a_credprops(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 WebAuthnExtensionCredProps::WebAuthnExtensionCredProps(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1217,8 +1303,9 @@ WebAuthnExtensionCredProps::WebAuthnExtensionCredProps(const WebAuthnExtensionCr
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnExtensionCredProps* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_credprops_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_credprops_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_credprops_ = from._impl_.a_credprops_;
@@ -1230,8 +1317,9 @@ inline void WebAuthnExtensionCredProps::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_credprops_){false}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_credprops_){false}
   };
 }
 
@@ -1259,18 +1347,21 @@ void WebAuthnExtensionCredProps::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_credprops_ = false;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnExtensionCredProps::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool a_credProps = 1;
+      // required bool a_credProps = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_credprops(&has_bits);
           _impl_.a_credprops_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -1292,6 +1383,7 @@ const char* WebAuthnExtensionCredProps::_InternalParse(const char* ptr, ::_pbi::
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1305,8 +1397,9 @@ uint8_t* WebAuthnExtensionCredProps::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool a_credProps = 1;
-  if (this->_internal_a_credprops() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bool a_credProps = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_credprops(), target);
   }
@@ -1323,14 +1416,13 @@ size_t WebAuthnExtensionCredProps::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.WebAuthnExtensionCredProps)
   size_t total_size = 0;
 
+  // required bool a_credProps = 1;
+  if (_internal_has_a_credprops()) {
+    total_size += 1 + 1;
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // bool a_credProps = 1;
-  if (this->_internal_a_credprops() != 0) {
-    total_size += 1 + 1;
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1353,7 +1445,7 @@ void WebAuthnExtensionCredProps::MergeFrom(const WebAuthnExtensionCredProps& fro
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_a_credprops() != 0) {
+  if (from._internal_has_a_credprops()) {
     _this->_internal_set_a_credprops(from._internal_a_credprops());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1367,12 +1459,14 @@ void WebAuthnExtensionCredProps::CopyFrom(const WebAuthnExtensionCredProps& from
 }
 
 bool WebAuthnExtensionCredProps::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void WebAuthnExtensionCredProps::InternalSwap(WebAuthnExtensionCredProps* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_credprops_, other->_impl_.a_credprops_);
 }
 
@@ -1385,6 +1479,13 @@ std::string WebAuthnExtensionCredProps::GetTypeName() const {
 
 class WebAuthnExtensionHmacSecret::_Internal {
  public:
+  using HasBits = decltype(std::declval<WebAuthnExtensionHmacSecret>()._impl_._has_bits_);
+  static void set_has_a_hmaccreatesecret(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 WebAuthnExtensionHmacSecret::WebAuthnExtensionHmacSecret(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1397,8 +1498,9 @@ WebAuthnExtensionHmacSecret::WebAuthnExtensionHmacSecret(const WebAuthnExtension
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnExtensionHmacSecret* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_hmaccreatesecret_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_hmaccreatesecret_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_hmaccreatesecret_ = from._impl_.a_hmaccreatesecret_;
@@ -1410,8 +1512,9 @@ inline void WebAuthnExtensionHmacSecret::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_hmaccreatesecret_){false}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_hmaccreatesecret_){false}
   };
 }
 
@@ -1439,18 +1542,21 @@ void WebAuthnExtensionHmacSecret::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_hmaccreatesecret_ = false;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnExtensionHmacSecret::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool a_hmacCreateSecret = 1;
+      // required bool a_hmacCreateSecret = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_hmaccreatesecret(&has_bits);
           _impl_.a_hmaccreatesecret_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -1472,6 +1578,7 @@ const char* WebAuthnExtensionHmacSecret::_InternalParse(const char* ptr, ::_pbi:
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1485,8 +1592,9 @@ uint8_t* WebAuthnExtensionHmacSecret::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool a_hmacCreateSecret = 1;
-  if (this->_internal_a_hmaccreatesecret() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bool a_hmacCreateSecret = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_hmaccreatesecret(), target);
   }
@@ -1503,14 +1611,13 @@ size_t WebAuthnExtensionHmacSecret::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.WebAuthnExtensionHmacSecret)
   size_t total_size = 0;
 
+  // required bool a_hmacCreateSecret = 1;
+  if (_internal_has_a_hmaccreatesecret()) {
+    total_size += 1 + 1;
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // bool a_hmacCreateSecret = 1;
-  if (this->_internal_a_hmaccreatesecret() != 0) {
-    total_size += 1 + 1;
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1533,7 +1640,7 @@ void WebAuthnExtensionHmacSecret::MergeFrom(const WebAuthnExtensionHmacSecret& f
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_a_hmaccreatesecret() != 0) {
+  if (from._internal_has_a_hmaccreatesecret()) {
     _this->_internal_set_a_hmaccreatesecret(from._internal_a_hmaccreatesecret());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1547,12 +1654,14 @@ void WebAuthnExtensionHmacSecret::CopyFrom(const WebAuthnExtensionHmacSecret& fr
 }
 
 bool WebAuthnExtensionHmacSecret::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void WebAuthnExtensionHmacSecret::InternalSwap(WebAuthnExtensionHmacSecret* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_hmaccreatesecret_, other->_impl_.a_hmaccreatesecret_);
 }
 
@@ -1584,7 +1693,6 @@ WebAuthnExtensionLargeBlob::WebAuthnExtensionLargeBlob(const WebAuthnExtensionLa
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.a_write_){from._impl_.a_write_}
-    , /*decltype(_impl_._a_write_cached_byte_size_)*/{0}
     , decltype(_impl_.a_flag_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1600,7 +1708,6 @@ inline void WebAuthnExtensionLargeBlob::SharedCtor(
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.a_write_){arena}
-    , /*decltype(_impl_._a_write_cached_byte_size_)*/{0}
     , decltype(_impl_.a_flag_){false}
   };
 }
@@ -1653,11 +1760,16 @@ const char* WebAuthnExtensionLargeBlob::_InternalParse(const char* ptr, ::_pbi::
         continue;
       // repeated uint32 a_write = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            _internal_add_a_write(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 18) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_write(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 16) {
-          _internal_add_a_write(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1692,19 +1804,17 @@ uint8_t* WebAuthnExtensionLargeBlob::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
   // optional bool a_flag = 1;
-  if (_internal_has_a_flag()) {
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_flag(), target);
   }
 
   // repeated uint32 a_write = 2;
-  {
-    int byte_size = _impl_._a_write_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteUInt32Packed(
-          2, _internal_a_write(), byte_size, target);
-    }
+  for (int i = 0, n = this->_internal_a_write_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_write(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1727,13 +1837,8 @@ size_t WebAuthnExtensionLargeBlob::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_write_);
-    if (data_size > 0) {
-      total_size += 1 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
-    int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._a_write_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
+    total_size += 1 *
+                  ::_pbi::FromIntSize(this->_internal_a_write_size());
     total_size += data_size;
   }
 
@@ -1799,6 +1904,13 @@ std::string WebAuthnExtensionLargeBlob::GetTypeName() const {
 
 class WebAuthnExtensionMinPinLength::_Internal {
  public:
+  using HasBits = decltype(std::declval<WebAuthnExtensionMinPinLength>()._impl_._has_bits_);
+  static void set_has_a_minpinlength(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 WebAuthnExtensionMinPinLength::WebAuthnExtensionMinPinLength(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1811,8 +1923,9 @@ WebAuthnExtensionMinPinLength::WebAuthnExtensionMinPinLength(const WebAuthnExten
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnExtensionMinPinLength* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_minpinlength_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_minpinlength_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_minpinlength_ = from._impl_.a_minpinlength_;
@@ -1824,8 +1937,9 @@ inline void WebAuthnExtensionMinPinLength::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_minpinlength_){false}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_minpinlength_){false}
   };
 }
 
@@ -1853,18 +1967,21 @@ void WebAuthnExtensionMinPinLength::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_minpinlength_ = false;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnExtensionMinPinLength::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool a_minPinLength = 1;
+      // required bool a_minPinLength = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_minpinlength(&has_bits);
           _impl_.a_minpinlength_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -1886,6 +2003,7 @@ const char* WebAuthnExtensionMinPinLength::_InternalParse(const char* ptr, ::_pb
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1899,8 +2017,9 @@ uint8_t* WebAuthnExtensionMinPinLength::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool a_minPinLength = 1;
-  if (this->_internal_a_minpinlength() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bool a_minPinLength = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_minpinlength(), target);
   }
@@ -1917,14 +2036,13 @@ size_t WebAuthnExtensionMinPinLength::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.WebAuthnExtensionMinPinLength)
   size_t total_size = 0;
 
+  // required bool a_minPinLength = 1;
+  if (_internal_has_a_minpinlength()) {
+    total_size += 1 + 1;
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // bool a_minPinLength = 1;
-  if (this->_internal_a_minpinlength() != 0) {
-    total_size += 1 + 1;
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1947,7 +2065,7 @@ void WebAuthnExtensionMinPinLength::MergeFrom(const WebAuthnExtensionMinPinLengt
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_a_minpinlength() != 0) {
+  if (from._internal_has_a_minpinlength()) {
     _this->_internal_set_a_minpinlength(from._internal_a_minpinlength());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1961,12 +2079,14 @@ void WebAuthnExtensionMinPinLength::CopyFrom(const WebAuthnExtensionMinPinLength
 }
 
 bool WebAuthnExtensionMinPinLength::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void WebAuthnExtensionMinPinLength::InternalSwap(WebAuthnExtensionMinPinLength* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_minpinlength_, other->_impl_.a_minpinlength_);
 }
 
@@ -1983,6 +2103,12 @@ class WebAuthnExtensionPrf::_Internal {
   static const ::protobuf::mozilla::dom::WebAuthnExtensionPrfValues& a_eval(const WebAuthnExtensionPrf* msg);
   static void set_has_a_eval(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_evalbycredentialmaybe(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000002) ^ 0x00000002) != 0;
   }
 };
 
@@ -2078,9 +2204,10 @@ const char* WebAuthnExtensionPrf::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // bool a_evalByCredentialMaybe = 2;
+      // required bool a_evalByCredentialMaybe = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_a_evalbycredentialmaybe(&has_bits);
           _impl_.a_evalbycredentialmaybe_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -2129,15 +2256,16 @@ uint8_t* WebAuthnExtensionPrf::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
   // optional .protobuf.mozilla.dom.WebAuthnExtensionPrfValues a_eval = 1;
-  if (_internal_has_a_eval()) {
+  if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_eval(this),
         _Internal::a_eval(this).GetCachedSize(), target, stream);
   }
 
-  // bool a_evalByCredentialMaybe = 2;
-  if (this->_internal_a_evalbycredentialmaybe() != 0) {
+  // required bool a_evalByCredentialMaybe = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_evalbycredentialmaybe(), target);
   }
@@ -2162,6 +2290,10 @@ size_t WebAuthnExtensionPrf::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.WebAuthnExtensionPrf)
   size_t total_size = 0;
 
+  // required bool a_evalByCredentialMaybe = 2;
+  if (_internal_has_a_evalbycredentialmaybe()) {
+    total_size += 1 + 1;
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2179,11 +2311,6 @@ size_t WebAuthnExtensionPrf::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_eval_);
-  }
-
-  // bool a_evalByCredentialMaybe = 2;
-  if (this->_internal_a_evalbycredentialmaybe() != 0) {
-    total_size += 1 + 1;
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2208,12 +2335,16 @@ void WebAuthnExtensionPrf::MergeFrom(const WebAuthnExtensionPrf& from) {
   (void) cached_has_bits;
 
   _this->_impl_.a_evalbycredential_.MergeFrom(from._impl_.a_evalbycredential_);
-  if (from._internal_has_a_eval()) {
-    _this->_internal_mutable_a_eval()->::protobuf::mozilla::dom::WebAuthnExtensionPrfValues::MergeFrom(
-        from._internal_a_eval());
-  }
-  if (from._internal_a_evalbycredentialmaybe() != 0) {
-    _this->_internal_set_a_evalbycredentialmaybe(from._internal_a_evalbycredentialmaybe());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_mutable_a_eval()->::protobuf::mozilla::dom::WebAuthnExtensionPrfValues::MergeFrom(
+          from._internal_a_eval());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_evalbycredentialmaybe_ = from._impl_.a_evalbycredentialmaybe_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -2226,6 +2357,12 @@ void WebAuthnExtensionPrf::CopyFrom(const WebAuthnExtensionPrf& from) {
 }
 
 bool WebAuthnExtensionPrf::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_evalbycredential_))
+    return false;
+  if (_internal_has_a_eval()) {
+    if (!_impl_.a_eval_->IsInitialized()) return false;
+  }
   return true;
 }
 
@@ -2251,6 +2388,13 @@ std::string WebAuthnExtensionPrf::GetTypeName() const {
 
 class WebAuthnExtensionPrfValues::_Internal {
  public:
+  using HasBits = decltype(std::declval<WebAuthnExtensionPrfValues>()._impl_._has_bits_);
+  static void set_has_a_secondmaybe(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 WebAuthnExtensionPrfValues::WebAuthnExtensionPrfValues(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2263,12 +2407,11 @@ WebAuthnExtensionPrfValues::WebAuthnExtensionPrfValues(const WebAuthnExtensionPr
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnExtensionPrfValues* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_first_){from._impl_.a_first_}
-    , /*decltype(_impl_._a_first_cached_byte_size_)*/{0}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_first_){from._impl_.a_first_}
     , decltype(_impl_.a_second_){from._impl_.a_second_}
-    , /*decltype(_impl_._a_second_cached_byte_size_)*/{0}
-    , decltype(_impl_.a_secondmaybe_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_secondmaybe_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_secondmaybe_ = from._impl_.a_secondmaybe_;
@@ -2280,12 +2423,11 @@ inline void WebAuthnExtensionPrfValues::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_first_){arena}
-    , /*decltype(_impl_._a_first_cached_byte_size_)*/{0}
-    , decltype(_impl_.a_second_){arena}
-    , /*decltype(_impl_._a_second_cached_byte_size_)*/{0}
-    , decltype(_impl_.a_secondmaybe_){false}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_first_){arena}
+    , decltype(_impl_.a_second_){arena}
+    , decltype(_impl_.a_secondmaybe_){false}
   };
 }
 
@@ -2317,29 +2459,37 @@ void WebAuthnExtensionPrfValues::Clear() {
   _impl_.a_first_.Clear();
   _impl_.a_second_.Clear();
   _impl_.a_secondmaybe_ = false;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnExtensionPrfValues::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // repeated uint32 a_first = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            _internal_add_a_first(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 10) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_first(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 8) {
-          _internal_add_a_first(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bool a_secondMaybe = 2;
+      // required bool a_secondMaybe = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_a_secondmaybe(&has_bits);
           _impl_.a_secondmaybe_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -2347,11 +2497,16 @@ const char* WebAuthnExtensionPrfValues::_InternalParse(const char* ptr, ::_pbi::
         continue;
       // repeated uint32 a_second = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            _internal_add_a_second(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<24>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 26) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_second(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 24) {
-          _internal_add_a_second(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2372,6 +2527,7 @@ const char* WebAuthnExtensionPrfValues::_InternalParse(const char* ptr, ::_pbi::
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -2386,27 +2542,22 @@ uint8_t* WebAuthnExtensionPrfValues::_InternalSerialize(
   (void) cached_has_bits;
 
   // repeated uint32 a_first = 1;
-  {
-    int byte_size = _impl_._a_first_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteUInt32Packed(
-          1, _internal_a_first(), byte_size, target);
-    }
+  for (int i = 0, n = this->_internal_a_first_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_first(i), target);
   }
 
-  // bool a_secondMaybe = 2;
-  if (this->_internal_a_secondmaybe() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bool a_secondMaybe = 2;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_secondmaybe(), target);
   }
 
   // repeated uint32 a_second = 3;
-  {
-    int byte_size = _impl_._a_second_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteUInt32Packed(
-          3, _internal_a_second(), byte_size, target);
-    }
+  for (int i = 0, n = this->_internal_a_second_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_second(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2421,6 +2572,10 @@ size_t WebAuthnExtensionPrfValues::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.WebAuthnExtensionPrfValues)
   size_t total_size = 0;
 
+  // required bool a_secondMaybe = 2;
+  if (_internal_has_a_secondmaybe()) {
+    total_size += 1 + 1;
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2429,13 +2584,8 @@ size_t WebAuthnExtensionPrfValues::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_first_);
-    if (data_size > 0) {
-      total_size += 1 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
-    int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._a_first_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
+    total_size += 1 *
+                  ::_pbi::FromIntSize(this->_internal_a_first_size());
     total_size += data_size;
   }
 
@@ -2443,19 +2593,9 @@ size_t WebAuthnExtensionPrfValues::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_second_);
-    if (data_size > 0) {
-      total_size += 1 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
-    int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._a_second_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
+    total_size += 1 *
+                  ::_pbi::FromIntSize(this->_internal_a_second_size());
     total_size += data_size;
-  }
-
-  // bool a_secondMaybe = 2;
-  if (this->_internal_a_secondmaybe() != 0) {
-    total_size += 1 + 1;
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2481,7 +2621,7 @@ void WebAuthnExtensionPrfValues::MergeFrom(const WebAuthnExtensionPrfValues& fro
 
   _this->_impl_.a_first_.MergeFrom(from._impl_.a_first_);
   _this->_impl_.a_second_.MergeFrom(from._impl_.a_second_);
-  if (from._internal_a_secondmaybe() != 0) {
+  if (from._internal_has_a_secondmaybe()) {
     _this->_internal_set_a_secondmaybe(from._internal_a_secondmaybe());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -2495,12 +2635,14 @@ void WebAuthnExtensionPrfValues::CopyFrom(const WebAuthnExtensionPrfValues& from
 }
 
 bool WebAuthnExtensionPrfValues::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void WebAuthnExtensionPrfValues::InternalSwap(WebAuthnExtensionPrfValues* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_first_.InternalSwap(&other->_impl_.a_first_);
   _impl_.a_second_.InternalSwap(&other->_impl_.a_second_);
   swap(_impl_.a_secondmaybe_, other->_impl_.a_secondmaybe_);
@@ -2515,7 +2657,14 @@ std::string WebAuthnExtensionPrfValues::GetTypeName() const {
 
 class WebAuthnExtensionPrfEvalByCredentialEntry::_Internal {
  public:
+  using HasBits = decltype(std::declval<WebAuthnExtensionPrfEvalByCredentialEntry>()._impl_._has_bits_);
   static const ::protobuf::mozilla::dom::WebAuthnExtensionPrfValues& a_eval(const WebAuthnExtensionPrfEvalByCredentialEntry* msg);
+  static void set_has_a_eval(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 const ::protobuf::mozilla::dom::WebAuthnExtensionPrfValues&
@@ -2532,10 +2681,10 @@ WebAuthnExtensionPrfEvalByCredentialEntry::WebAuthnExtensionPrfEvalByCredentialE
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnExtensionPrfEvalByCredentialEntry* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_credentialid_){from._impl_.a_credentialid_}
-    , /*decltype(_impl_._a_credentialid_cached_byte_size_)*/{0}
-    , decltype(_impl_.a_eval_){nullptr}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_credentialid_){from._impl_.a_credentialid_}
+    , decltype(_impl_.a_eval_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_eval()) {
@@ -2549,10 +2698,10 @@ inline void WebAuthnExtensionPrfEvalByCredentialEntry::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_credentialid_){arena}
-    , /*decltype(_impl_._a_credentialid_cached_byte_size_)*/{0}
-    , decltype(_impl_.a_eval_){nullptr}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_credentialid_){arena}
+    , decltype(_impl_.a_eval_){nullptr}
   };
 }
 
@@ -2582,31 +2731,39 @@ void WebAuthnExtensionPrfEvalByCredentialEntry::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_credentialid_.Clear();
-  if (GetArenaForAllocation() == nullptr && _impl_.a_eval_ != nullptr) {
-    delete _impl_.a_eval_;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(_impl_.a_eval_ != nullptr);
+    _impl_.a_eval_->Clear();
   }
-  _impl_.a_eval_ = nullptr;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnExtensionPrfEvalByCredentialEntry::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // repeated uint32 a_credentialId = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            _internal_add_a_credentialid(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 10) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_credentialid(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 8) {
-          _internal_add_a_credentialid(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.dom.WebAuthnExtensionPrfValues a_eval = 2;
+      // required .protobuf.mozilla.dom.WebAuthnExtensionPrfValues a_eval = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_eval(), ptr);
@@ -2630,6 +2787,7 @@ const char* WebAuthnExtensionPrfEvalByCredentialEntry::_InternalParse(const char
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -2644,16 +2802,14 @@ uint8_t* WebAuthnExtensionPrfEvalByCredentialEntry::_InternalSerialize(
   (void) cached_has_bits;
 
   // repeated uint32 a_credentialId = 1;
-  {
-    int byte_size = _impl_._a_credentialid_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteUInt32Packed(
-          1, _internal_a_credentialid(), byte_size, target);
-    }
+  for (int i = 0, n = this->_internal_a_credentialid_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_credentialid(i), target);
   }
 
-  // .protobuf.mozilla.dom.WebAuthnExtensionPrfValues a_eval = 2;
-  if (this->_internal_has_a_eval()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required .protobuf.mozilla.dom.WebAuthnExtensionPrfValues a_eval = 2;
+  if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::a_eval(this),
         _Internal::a_eval(this).GetCachedSize(), target, stream);
@@ -2671,6 +2827,12 @@ size_t WebAuthnExtensionPrfEvalByCredentialEntry::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.WebAuthnExtensionPrfEvalByCredentialEntry)
   size_t total_size = 0;
 
+  // required .protobuf.mozilla.dom.WebAuthnExtensionPrfValues a_eval = 2;
+  if (_internal_has_a_eval()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_eval_);
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2679,21 +2841,9 @@ size_t WebAuthnExtensionPrfEvalByCredentialEntry::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_credentialid_);
-    if (data_size > 0) {
-      total_size += 1 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
-    int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._a_credentialid_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
+    total_size += 1 *
+                  ::_pbi::FromIntSize(this->_internal_a_credentialid_size());
     total_size += data_size;
-  }
-
-  // .protobuf.mozilla.dom.WebAuthnExtensionPrfValues a_eval = 2;
-  if (this->_internal_has_a_eval()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_eval_);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2733,12 +2883,17 @@ void WebAuthnExtensionPrfEvalByCredentialEntry::CopyFrom(const WebAuthnExtension
 }
 
 bool WebAuthnExtensionPrfEvalByCredentialEntry::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (_internal_has_a_eval()) {
+    if (!_impl_.a_eval_->IsInitialized()) return false;
+  }
   return true;
 }
 
 void WebAuthnExtensionPrfEvalByCredentialEntry::InternalSwap(WebAuthnExtensionPrfEvalByCredentialEntry* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_credentialid_.InternalSwap(&other->_impl_.a_credentialid_);
   swap(_impl_.a_eval_, other->_impl_.a_eval_);
 }
@@ -3100,48 +3255,45 @@ uint8_t* WebAuthnExtension::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.mozilla.dom.WebAuthnExtensionCredProtect a_mVWebAuthnExtensionCredProtect = 1;
-  if (_internal_has_a_mvwebauthnextensioncredprotect()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::a_mvwebauthnextensioncredprotect(this),
-        _Internal::a_mvwebauthnextensioncredprotect(this).GetCachedSize(), target, stream);
+  switch (content_case()) {
+    case kAMVWebAuthnExtensionCredProtect: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(1, _Internal::a_mvwebauthnextensioncredprotect(this),
+          _Internal::a_mvwebauthnextensioncredprotect(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVWebAuthnExtensionCredProps: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(2, _Internal::a_mvwebauthnextensioncredprops(this),
+          _Internal::a_mvwebauthnextensioncredprops(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVWebAuthnExtensionHmacSecret: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(3, _Internal::a_mvwebauthnextensionhmacsecret(this),
+          _Internal::a_mvwebauthnextensionhmacsecret(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVWebAuthnExtensionLargeBlob: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(4, _Internal::a_mvwebauthnextensionlargeblob(this),
+          _Internal::a_mvwebauthnextensionlargeblob(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVWebAuthnExtensionMinPinLength: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(5, _Internal::a_mvwebauthnextensionminpinlength(this),
+          _Internal::a_mvwebauthnextensionminpinlength(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVWebAuthnExtensionPrf: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(6, _Internal::a_mvwebauthnextensionprf(this),
+          _Internal::a_mvwebauthnextensionprf(this).GetCachedSize(), target, stream);
+      break;
+    }
+    default: ;
   }
-
-  // .protobuf.mozilla.dom.WebAuthnExtensionCredProps a_mVWebAuthnExtensionCredProps = 2;
-  if (_internal_has_a_mvwebauthnextensioncredprops()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::a_mvwebauthnextensioncredprops(this),
-        _Internal::a_mvwebauthnextensioncredprops(this).GetCachedSize(), target, stream);
-  }
-
-  // .protobuf.mozilla.dom.WebAuthnExtensionHmacSecret a_mVWebAuthnExtensionHmacSecret = 3;
-  if (_internal_has_a_mvwebauthnextensionhmacsecret()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::a_mvwebauthnextensionhmacsecret(this),
-        _Internal::a_mvwebauthnextensionhmacsecret(this).GetCachedSize(), target, stream);
-  }
-
-  // .protobuf.mozilla.dom.WebAuthnExtensionLargeBlob a_mVWebAuthnExtensionLargeBlob = 4;
-  if (_internal_has_a_mvwebauthnextensionlargeblob()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(4, _Internal::a_mvwebauthnextensionlargeblob(this),
-        _Internal::a_mvwebauthnextensionlargeblob(this).GetCachedSize(), target, stream);
-  }
-
-  // .protobuf.mozilla.dom.WebAuthnExtensionMinPinLength a_mVWebAuthnExtensionMinPinLength = 5;
-  if (_internal_has_a_mvwebauthnextensionminpinlength()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(5, _Internal::a_mvwebauthnextensionminpinlength(this),
-        _Internal::a_mvwebauthnextensionminpinlength(this).GetCachedSize(), target, stream);
-  }
-
-  // .protobuf.mozilla.dom.WebAuthnExtensionPrf a_mVWebAuthnExtensionPrf = 6;
-  if (_internal_has_a_mvwebauthnextensionprf()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(6, _Internal::a_mvwebauthnextensionprf(this),
-        _Internal::a_mvwebauthnextensionprf(this).GetCachedSize(), target, stream);
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
@@ -3272,6 +3424,44 @@ void WebAuthnExtension::CopyFrom(const WebAuthnExtension& from) {
 }
 
 bool WebAuthnExtension::IsInitialized() const {
+  switch (content_case()) {
+    case kAMVWebAuthnExtensionCredProtect: {
+      if (_internal_has_a_mvwebauthnextensioncredprotect()) {
+        if (!_impl_.content_.a_mvwebauthnextensioncredprotect_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case kAMVWebAuthnExtensionCredProps: {
+      if (_internal_has_a_mvwebauthnextensioncredprops()) {
+        if (!_impl_.content_.a_mvwebauthnextensioncredprops_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case kAMVWebAuthnExtensionHmacSecret: {
+      if (_internal_has_a_mvwebauthnextensionhmacsecret()) {
+        if (!_impl_.content_.a_mvwebauthnextensionhmacsecret_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case kAMVWebAuthnExtensionLargeBlob: {
+      break;
+    }
+    case kAMVWebAuthnExtensionMinPinLength: {
+      if (_internal_has_a_mvwebauthnextensionminpinlength()) {
+        if (!_impl_.content_.a_mvwebauthnextensionminpinlength_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case kAMVWebAuthnExtensionPrf: {
+      if (_internal_has_a_mvwebauthnextensionprf()) {
+        if (!_impl_.content_.a_mvwebauthnextensionprf_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case CONTENT_NOT_SET: {
+      break;
+    }
+  }
   return true;
 }
 
@@ -3291,6 +3481,13 @@ std::string WebAuthnExtension::GetTypeName() const {
 
 class WebAuthnExtensionResultAppId::_Internal {
  public:
+  using HasBits = decltype(std::declval<WebAuthnExtensionResultAppId>()._impl_._has_bits_);
+  static void set_has_a_appid(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 WebAuthnExtensionResultAppId::WebAuthnExtensionResultAppId(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -3303,8 +3500,9 @@ WebAuthnExtensionResultAppId::WebAuthnExtensionResultAppId(const WebAuthnExtensi
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnExtensionResultAppId* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_appid_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_appid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_appid_ = from._impl_.a_appid_;
@@ -3316,8 +3514,9 @@ inline void WebAuthnExtensionResultAppId::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_appid_){false}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_appid_){false}
   };
 }
 
@@ -3345,18 +3544,21 @@ void WebAuthnExtensionResultAppId::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_appid_ = false;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnExtensionResultAppId::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool a_AppId = 1;
+      // required bool a_AppId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_appid(&has_bits);
           _impl_.a_appid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -3378,6 +3580,7 @@ const char* WebAuthnExtensionResultAppId::_InternalParse(const char* ptr, ::_pbi
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -3391,8 +3594,9 @@ uint8_t* WebAuthnExtensionResultAppId::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool a_AppId = 1;
-  if (this->_internal_a_appid() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bool a_AppId = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_appid(), target);
   }
@@ -3409,14 +3613,13 @@ size_t WebAuthnExtensionResultAppId::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.WebAuthnExtensionResultAppId)
   size_t total_size = 0;
 
+  // required bool a_AppId = 1;
+  if (_internal_has_a_appid()) {
+    total_size += 1 + 1;
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // bool a_AppId = 1;
-  if (this->_internal_a_appid() != 0) {
-    total_size += 1 + 1;
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -3439,7 +3642,7 @@ void WebAuthnExtensionResultAppId::MergeFrom(const WebAuthnExtensionResultAppId&
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_a_appid() != 0) {
+  if (from._internal_has_a_appid()) {
     _this->_internal_set_a_appid(from._internal_a_appid());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -3453,12 +3656,14 @@ void WebAuthnExtensionResultAppId::CopyFrom(const WebAuthnExtensionResultAppId& 
 }
 
 bool WebAuthnExtensionResultAppId::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void WebAuthnExtensionResultAppId::InternalSwap(WebAuthnExtensionResultAppId* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_appid_, other->_impl_.a_appid_);
 }
 
@@ -3471,6 +3676,13 @@ std::string WebAuthnExtensionResultAppId::GetTypeName() const {
 
 class WebAuthnExtensionResultCredProps::_Internal {
  public:
+  using HasBits = decltype(std::declval<WebAuthnExtensionResultCredProps>()._impl_._has_bits_);
+  static void set_has_a_rk(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 WebAuthnExtensionResultCredProps::WebAuthnExtensionResultCredProps(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -3483,8 +3695,9 @@ WebAuthnExtensionResultCredProps::WebAuthnExtensionResultCredProps(const WebAuth
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnExtensionResultCredProps* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_rk_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_rk_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_rk_ = from._impl_.a_rk_;
@@ -3496,8 +3709,9 @@ inline void WebAuthnExtensionResultCredProps::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_rk_){false}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_rk_){false}
   };
 }
 
@@ -3525,18 +3739,21 @@ void WebAuthnExtensionResultCredProps::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_rk_ = false;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnExtensionResultCredProps::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool a_rk = 1;
+      // required bool a_rk = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_rk(&has_bits);
           _impl_.a_rk_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -3558,6 +3775,7 @@ const char* WebAuthnExtensionResultCredProps::_InternalParse(const char* ptr, ::
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -3571,8 +3789,9 @@ uint8_t* WebAuthnExtensionResultCredProps::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool a_rk = 1;
-  if (this->_internal_a_rk() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bool a_rk = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_rk(), target);
   }
@@ -3589,14 +3808,13 @@ size_t WebAuthnExtensionResultCredProps::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.WebAuthnExtensionResultCredProps)
   size_t total_size = 0;
 
+  // required bool a_rk = 1;
+  if (_internal_has_a_rk()) {
+    total_size += 1 + 1;
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // bool a_rk = 1;
-  if (this->_internal_a_rk() != 0) {
-    total_size += 1 + 1;
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -3619,7 +3837,7 @@ void WebAuthnExtensionResultCredProps::MergeFrom(const WebAuthnExtensionResultCr
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_a_rk() != 0) {
+  if (from._internal_has_a_rk()) {
     _this->_internal_set_a_rk(from._internal_a_rk());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -3633,12 +3851,14 @@ void WebAuthnExtensionResultCredProps::CopyFrom(const WebAuthnExtensionResultCre
 }
 
 bool WebAuthnExtensionResultCredProps::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void WebAuthnExtensionResultCredProps::InternalSwap(WebAuthnExtensionResultCredProps* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_rk_, other->_impl_.a_rk_);
 }
 
@@ -3651,6 +3871,13 @@ std::string WebAuthnExtensionResultCredProps::GetTypeName() const {
 
 class WebAuthnExtensionResultHmacSecret::_Internal {
  public:
+  using HasBits = decltype(std::declval<WebAuthnExtensionResultHmacSecret>()._impl_._has_bits_);
+  static void set_has_a_hmaccreatesecret(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 WebAuthnExtensionResultHmacSecret::WebAuthnExtensionResultHmacSecret(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -3663,8 +3890,9 @@ WebAuthnExtensionResultHmacSecret::WebAuthnExtensionResultHmacSecret(const WebAu
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnExtensionResultHmacSecret* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_hmaccreatesecret_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_hmaccreatesecret_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_hmaccreatesecret_ = from._impl_.a_hmaccreatesecret_;
@@ -3676,8 +3904,9 @@ inline void WebAuthnExtensionResultHmacSecret::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_hmaccreatesecret_){false}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_hmaccreatesecret_){false}
   };
 }
 
@@ -3705,18 +3934,21 @@ void WebAuthnExtensionResultHmacSecret::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_hmaccreatesecret_ = false;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnExtensionResultHmacSecret::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool a_hmacCreateSecret = 1;
+      // required bool a_hmacCreateSecret = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_hmaccreatesecret(&has_bits);
           _impl_.a_hmaccreatesecret_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -3738,6 +3970,7 @@ const char* WebAuthnExtensionResultHmacSecret::_InternalParse(const char* ptr, :
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -3751,8 +3984,9 @@ uint8_t* WebAuthnExtensionResultHmacSecret::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool a_hmacCreateSecret = 1;
-  if (this->_internal_a_hmaccreatesecret() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bool a_hmacCreateSecret = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_hmaccreatesecret(), target);
   }
@@ -3769,14 +4003,13 @@ size_t WebAuthnExtensionResultHmacSecret::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.WebAuthnExtensionResultHmacSecret)
   size_t total_size = 0;
 
+  // required bool a_hmacCreateSecret = 1;
+  if (_internal_has_a_hmaccreatesecret()) {
+    total_size += 1 + 1;
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // bool a_hmacCreateSecret = 1;
-  if (this->_internal_a_hmaccreatesecret() != 0) {
-    total_size += 1 + 1;
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -3799,7 +4032,7 @@ void WebAuthnExtensionResultHmacSecret::MergeFrom(const WebAuthnExtensionResultH
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_a_hmaccreatesecret() != 0) {
+  if (from._internal_has_a_hmaccreatesecret()) {
     _this->_internal_set_a_hmaccreatesecret(from._internal_a_hmaccreatesecret());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -3813,12 +4046,14 @@ void WebAuthnExtensionResultHmacSecret::CopyFrom(const WebAuthnExtensionResultHm
 }
 
 bool WebAuthnExtensionResultHmacSecret::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void WebAuthnExtensionResultHmacSecret::InternalSwap(WebAuthnExtensionResultHmacSecret* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_hmaccreatesecret_, other->_impl_.a_hmaccreatesecret_);
 }
 
@@ -3831,6 +4066,16 @@ std::string WebAuthnExtensionResultHmacSecret::GetTypeName() const {
 
 class WebAuthnExtensionResultLargeBlob::_Internal {
  public:
+  using HasBits = decltype(std::declval<WebAuthnExtensionResultLargeBlob>()._impl_._has_bits_);
+  static void set_has_a_flag(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_written(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 WebAuthnExtensionResultLargeBlob::WebAuthnExtensionResultLargeBlob(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -3843,11 +4088,11 @@ WebAuthnExtensionResultLargeBlob::WebAuthnExtensionResultLargeBlob(const WebAuth
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnExtensionResultLargeBlob* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_blob_){from._impl_.a_blob_}
-    , /*decltype(_impl_._a_blob_cached_byte_size_)*/{0}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_blob_){from._impl_.a_blob_}
     , decltype(_impl_.a_flag_){}
-    , decltype(_impl_.a_written_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_written_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   ::memcpy(&_impl_.a_flag_, &from._impl_.a_flag_,
@@ -3861,11 +4106,11 @@ inline void WebAuthnExtensionResultLargeBlob::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_blob_){arena}
-    , /*decltype(_impl_._a_blob_cached_byte_size_)*/{0}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_blob_){arena}
     , decltype(_impl_.a_flag_){false}
     , decltype(_impl_.a_written_){false}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
 
@@ -3897,18 +4142,21 @@ void WebAuthnExtensionResultLargeBlob::Clear() {
   ::memset(&_impl_.a_flag_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.a_written_) -
       reinterpret_cast<char*>(&_impl_.a_flag_)) + sizeof(_impl_.a_written_));
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnExtensionResultLargeBlob::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool a_flag = 1;
+      // required bool a_flag = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_flag(&has_bits);
           _impl_.a_flag_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -3916,18 +4164,24 @@ const char* WebAuthnExtensionResultLargeBlob::_InternalParse(const char* ptr, ::
         continue;
       // repeated uint32 a_blob = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            _internal_add_a_blob(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 18) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_blob(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 16) {
-          _internal_add_a_blob(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bool a_written = 3;
+      // required bool a_written = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_a_written(&has_bits);
           _impl_.a_written_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -3949,6 +4203,7 @@ const char* WebAuthnExtensionResultLargeBlob::_InternalParse(const char* ptr, ::
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -3962,23 +4217,21 @@ uint8_t* WebAuthnExtensionResultLargeBlob::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool a_flag = 1;
-  if (this->_internal_a_flag() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bool a_flag = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_flag(), target);
   }
 
   // repeated uint32 a_blob = 2;
-  {
-    int byte_size = _impl_._a_blob_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteUInt32Packed(
-          2, _internal_a_blob(), byte_size, target);
-    }
+  for (int i = 0, n = this->_internal_a_blob_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_blob(i), target);
   }
 
-  // bool a_written = 3;
-  if (this->_internal_a_written() != 0) {
+  // required bool a_written = 3;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_written(), target);
   }
@@ -3991,10 +4244,36 @@ uint8_t* WebAuthnExtensionResultLargeBlob::_InternalSerialize(
   return target;
 }
 
+size_t WebAuthnExtensionResultLargeBlob::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.WebAuthnExtensionResultLargeBlob)
+  size_t total_size = 0;
+
+  if (_internal_has_a_flag()) {
+    // required bool a_flag = 1;
+    total_size += 1 + 1;
+  }
+
+  if (_internal_has_a_written()) {
+    // required bool a_written = 3;
+    total_size += 1 + 1;
+  }
+
+  return total_size;
+}
 size_t WebAuthnExtensionResultLargeBlob::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.WebAuthnExtensionResultLargeBlob)
   size_t total_size = 0;
 
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required bool a_flag = 1;
+    total_size += 1 + 1;
+
+    // required bool a_written = 3;
+    total_size += 1 + 1;
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -4003,24 +4282,9 @@ size_t WebAuthnExtensionResultLargeBlob::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_blob_);
-    if (data_size > 0) {
-      total_size += 1 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
-    int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._a_blob_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
+    total_size += 1 *
+                  ::_pbi::FromIntSize(this->_internal_a_blob_size());
     total_size += data_size;
-  }
-
-  // bool a_flag = 1;
-  if (this->_internal_a_flag() != 0) {
-    total_size += 1 + 1;
-  }
-
-  // bool a_written = 3;
-  if (this->_internal_a_written() != 0) {
-    total_size += 1 + 1;
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4045,11 +4309,15 @@ void WebAuthnExtensionResultLargeBlob::MergeFrom(const WebAuthnExtensionResultLa
   (void) cached_has_bits;
 
   _this->_impl_.a_blob_.MergeFrom(from._impl_.a_blob_);
-  if (from._internal_a_flag() != 0) {
-    _this->_internal_set_a_flag(from._internal_a_flag());
-  }
-  if (from._internal_a_written() != 0) {
-    _this->_internal_set_a_written(from._internal_a_written());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_impl_.a_flag_ = from._impl_.a_flag_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_written_ = from._impl_.a_written_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -4062,12 +4330,14 @@ void WebAuthnExtensionResultLargeBlob::CopyFrom(const WebAuthnExtensionResultLar
 }
 
 bool WebAuthnExtensionResultLargeBlob::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void WebAuthnExtensionResultLargeBlob::InternalSwap(WebAuthnExtensionResultLargeBlob* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_blob_.InternalSwap(&other->_impl_.a_blob_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(WebAuthnExtensionResultLargeBlob, _impl_.a_written_)
@@ -4223,14 +4493,15 @@ uint8_t* WebAuthnExtensionResultPrf::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
   // optional bool a_enabled = 1;
-  if (_internal_has_a_enabled()) {
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_enabled(), target);
   }
 
   // optional .protobuf.mozilla.dom.WebAuthnExtensionPrfValues a_results = 2;
-  if (_internal_has_a_results()) {
+  if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::a_results(this),
         _Internal::a_results(this).GetCachedSize(), target, stream);
@@ -4310,6 +4581,9 @@ void WebAuthnExtensionResultPrf::CopyFrom(const WebAuthnExtensionResultPrf& from
 }
 
 bool WebAuthnExtensionResultPrf::IsInitialized() const {
+  if (_internal_has_a_results()) {
+    if (!_impl_.a_results_->IsInitialized()) return false;
+  }
   return true;
 }
 
@@ -4643,41 +4917,39 @@ uint8_t* WebAuthnExtensionResult::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.mozilla.dom.WebAuthnExtensionResultAppId a_mVWebAuthnExtensionResultAppId = 1;
-  if (_internal_has_a_mvwebauthnextensionresultappid()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::a_mvwebauthnextensionresultappid(this),
-        _Internal::a_mvwebauthnextensionresultappid(this).GetCachedSize(), target, stream);
+  switch (content_case()) {
+    case kAMVWebAuthnExtensionResultAppId: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(1, _Internal::a_mvwebauthnextensionresultappid(this),
+          _Internal::a_mvwebauthnextensionresultappid(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVWebAuthnExtensionResultCredProps: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(2, _Internal::a_mvwebauthnextensionresultcredprops(this),
+          _Internal::a_mvwebauthnextensionresultcredprops(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVWebAuthnExtensionResultHmacSecret: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(3, _Internal::a_mvwebauthnextensionresulthmacsecret(this),
+          _Internal::a_mvwebauthnextensionresulthmacsecret(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVWebAuthnExtensionResultLargeBlob: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(4, _Internal::a_mvwebauthnextensionresultlargeblob(this),
+          _Internal::a_mvwebauthnextensionresultlargeblob(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVWebAuthnExtensionResultPrf: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(5, _Internal::a_mvwebauthnextensionresultprf(this),
+          _Internal::a_mvwebauthnextensionresultprf(this).GetCachedSize(), target, stream);
+      break;
+    }
+    default: ;
   }
-
-  // .protobuf.mozilla.dom.WebAuthnExtensionResultCredProps a_mVWebAuthnExtensionResultCredProps = 2;
-  if (_internal_has_a_mvwebauthnextensionresultcredprops()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::a_mvwebauthnextensionresultcredprops(this),
-        _Internal::a_mvwebauthnextensionresultcredprops(this).GetCachedSize(), target, stream);
-  }
-
-  // .protobuf.mozilla.dom.WebAuthnExtensionResultHmacSecret a_mVWebAuthnExtensionResultHmacSecret = 3;
-  if (_internal_has_a_mvwebauthnextensionresulthmacsecret()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::a_mvwebauthnextensionresulthmacsecret(this),
-        _Internal::a_mvwebauthnextensionresulthmacsecret(this).GetCachedSize(), target, stream);
-  }
-
-  // .protobuf.mozilla.dom.WebAuthnExtensionResultLargeBlob a_mVWebAuthnExtensionResultLargeBlob = 4;
-  if (_internal_has_a_mvwebauthnextensionresultlargeblob()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(4, _Internal::a_mvwebauthnextensionresultlargeblob(this),
-        _Internal::a_mvwebauthnextensionresultlargeblob(this).GetCachedSize(), target, stream);
-  }
-
-  // .protobuf.mozilla.dom.WebAuthnExtensionResultPrf a_mVWebAuthnExtensionResultPrf = 5;
-  if (_internal_has_a_mvwebauthnextensionresultprf()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(5, _Internal::a_mvwebauthnextensionresultprf(this),
-        _Internal::a_mvwebauthnextensionresultprf(this).GetCachedSize(), target, stream);
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
@@ -4796,6 +5068,41 @@ void WebAuthnExtensionResult::CopyFrom(const WebAuthnExtensionResult& from) {
 }
 
 bool WebAuthnExtensionResult::IsInitialized() const {
+  switch (content_case()) {
+    case kAMVWebAuthnExtensionResultAppId: {
+      if (_internal_has_a_mvwebauthnextensionresultappid()) {
+        if (!_impl_.content_.a_mvwebauthnextensionresultappid_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case kAMVWebAuthnExtensionResultCredProps: {
+      if (_internal_has_a_mvwebauthnextensionresultcredprops()) {
+        if (!_impl_.content_.a_mvwebauthnextensionresultcredprops_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case kAMVWebAuthnExtensionResultHmacSecret: {
+      if (_internal_has_a_mvwebauthnextensionresulthmacsecret()) {
+        if (!_impl_.content_.a_mvwebauthnextensionresulthmacsecret_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case kAMVWebAuthnExtensionResultLargeBlob: {
+      if (_internal_has_a_mvwebauthnextensionresultlargeblob()) {
+        if (!_impl_.content_.a_mvwebauthnextensionresultlargeblob_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case kAMVWebAuthnExtensionResultPrf: {
+      if (_internal_has_a_mvwebauthnextensionresultprf()) {
+        if (!_impl_.content_.a_mvwebauthnextensionresultprf_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case CONTENT_NOT_SET: {
+      break;
+    }
+  }
   return true;
 }
 
@@ -4815,6 +5122,13 @@ std::string WebAuthnExtensionResult::GetTypeName() const {
 
 class WebAuthnMakeCredentialRpInfo::_Internal {
  public:
+  using HasBits = decltype(std::declval<WebAuthnMakeCredentialRpInfo>()._impl_._has_bits_);
+  static void set_has_a_name(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 WebAuthnMakeCredentialRpInfo::WebAuthnMakeCredentialRpInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -4827,15 +5141,16 @@ WebAuthnMakeCredentialRpInfo::WebAuthnMakeCredentialRpInfo(const WebAuthnMakeCre
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnMakeCredentialRpInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_name_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_name_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_name_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_name().empty()) {
+  if (from._internal_has_a_name()) {
     _this->_impl_.a_name_.Set(from._internal_a_name(), 
       _this->GetArenaForAllocation());
   }
@@ -4847,8 +5162,9 @@ inline void WebAuthnMakeCredentialRpInfo::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_name_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_name_){}
   };
   _impl_.a_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4880,23 +5196,27 @@ void WebAuthnMakeCredentialRpInfo::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_name_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_name_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnMakeCredentialRpInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string a_Name = 1;
+      // required string a_Name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -4916,6 +5236,7 @@ const char* WebAuthnMakeCredentialRpInfo::_InternalParse(const char* ptr, ::_pbi
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -4929,12 +5250,9 @@ uint8_t* WebAuthnMakeCredentialRpInfo::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string a_Name = 1;
-  if (!this->_internal_a_name().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_name().data(), static_cast<int>(this->_internal_a_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.WebAuthnMakeCredentialRpInfo.a_Name");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_Name = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_name(), target);
   }
@@ -4951,16 +5269,15 @@ size_t WebAuthnMakeCredentialRpInfo::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.WebAuthnMakeCredentialRpInfo)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string a_Name = 1;
-  if (!this->_internal_a_name().empty()) {
+  // required string a_Name = 1;
+  if (_internal_has_a_name()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_name());
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -4983,7 +5300,7 @@ void WebAuthnMakeCredentialRpInfo::MergeFrom(const WebAuthnMakeCredentialRpInfo&
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_name().empty()) {
+  if (from._internal_has_a_name()) {
     _this->_internal_set_a_name(from._internal_a_name());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -4997,6 +5314,7 @@ void WebAuthnMakeCredentialRpInfo::CopyFrom(const WebAuthnMakeCredentialRpInfo& 
 }
 
 bool WebAuthnMakeCredentialRpInfo::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -5005,6 +5323,7 @@ void WebAuthnMakeCredentialRpInfo::InternalSwap(WebAuthnMakeCredentialRpInfo* ot
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_name_, lhs_arena,
       &other->_impl_.a_name_, rhs_arena
@@ -5020,6 +5339,16 @@ std::string WebAuthnMakeCredentialRpInfo::GetTypeName() const {
 
 class WebAuthnMakeCredentialUserInfo::_Internal {
  public:
+  using HasBits = decltype(std::declval<WebAuthnMakeCredentialUserInfo>()._impl_._has_bits_);
+  static void set_has_a_name(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_displayname(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 WebAuthnMakeCredentialUserInfo::WebAuthnMakeCredentialUserInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -5032,18 +5361,18 @@ WebAuthnMakeCredentialUserInfo::WebAuthnMakeCredentialUserInfo(const WebAuthnMak
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnMakeCredentialUserInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_id_){from._impl_.a_id_}
-    , /*decltype(_impl_._a_id_cached_byte_size_)*/{0}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_id_){from._impl_.a_id_}
     , decltype(_impl_.a_name_){}
-    , decltype(_impl_.a_displayname_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_displayname_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_name_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_name().empty()) {
+  if (from._internal_has_a_name()) {
     _this->_impl_.a_name_.Set(from._internal_a_name(), 
       _this->GetArenaForAllocation());
   }
@@ -5051,7 +5380,7 @@ WebAuthnMakeCredentialUserInfo::WebAuthnMakeCredentialUserInfo(const WebAuthnMak
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_displayname_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_displayname().empty()) {
+  if (from._internal_has_a_displayname()) {
     _this->_impl_.a_displayname_.Set(from._internal_a_displayname(), 
       _this->GetArenaForAllocation());
   }
@@ -5063,11 +5392,11 @@ inline void WebAuthnMakeCredentialUserInfo::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_id_){arena}
-    , /*decltype(_impl_._a_id_cached_byte_size_)*/{0}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_id_){arena}
     , decltype(_impl_.a_name_){}
     , decltype(_impl_.a_displayname_){}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -5106,45 +5435,57 @@ void WebAuthnMakeCredentialUserInfo::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_id_.Clear();
-  _impl_.a_name_.ClearToEmpty();
-  _impl_.a_displayname_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_name_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_displayname_.ClearNonDefaultToEmpty();
+    }
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnMakeCredentialUserInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // repeated uint32 a_Id = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            _internal_add_a_id(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 10) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_id(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 8) {
-          _internal_add_a_id(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string a_Name = 2;
+      // required string a_Name = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // string a_DisplayName = 3;
+      // required string a_DisplayName = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_displayname();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -5164,6 +5505,7 @@ const char* WebAuthnMakeCredentialUserInfo::_InternalParse(const char* ptr, ::_p
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -5178,30 +5520,20 @@ uint8_t* WebAuthnMakeCredentialUserInfo::_InternalSerialize(
   (void) cached_has_bits;
 
   // repeated uint32 a_Id = 1;
-  {
-    int byte_size = _impl_._a_id_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteUInt32Packed(
-          1, _internal_a_id(), byte_size, target);
-    }
+  for (int i = 0, n = this->_internal_a_id_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_id(i), target);
   }
 
-  // string a_Name = 2;
-  if (!this->_internal_a_name().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_name().data(), static_cast<int>(this->_internal_a_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo.a_Name");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_Name = 2;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_name(), target);
   }
 
-  // string a_DisplayName = 3;
-  if (!this->_internal_a_displayname().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_displayname().data(), static_cast<int>(this->_internal_a_displayname().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo.a_DisplayName");
+  // required string a_DisplayName = 3;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_displayname(), target);
   }
@@ -5214,10 +5546,44 @@ uint8_t* WebAuthnMakeCredentialUserInfo::_InternalSerialize(
   return target;
 }
 
+size_t WebAuthnMakeCredentialUserInfo::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo)
+  size_t total_size = 0;
+
+  if (_internal_has_a_name()) {
+    // required string a_Name = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_name());
+  }
+
+  if (_internal_has_a_displayname()) {
+    // required string a_DisplayName = 3;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_displayname());
+  }
+
+  return total_size;
+}
 size_t WebAuthnMakeCredentialUserInfo::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo)
   size_t total_size = 0;
 
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required string a_Name = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_name());
+
+    // required string a_DisplayName = 3;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_displayname());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -5226,28 +5592,9 @@ size_t WebAuthnMakeCredentialUserInfo::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_id_);
-    if (data_size > 0) {
-      total_size += 1 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
-    int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._a_id_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
+    total_size += 1 *
+                  ::_pbi::FromIntSize(this->_internal_a_id_size());
     total_size += data_size;
-  }
-
-  // string a_Name = 2;
-  if (!this->_internal_a_name().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_name());
-  }
-
-  // string a_DisplayName = 3;
-  if (!this->_internal_a_displayname().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_displayname());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -5272,11 +5619,14 @@ void WebAuthnMakeCredentialUserInfo::MergeFrom(const WebAuthnMakeCredentialUserI
   (void) cached_has_bits;
 
   _this->_impl_.a_id_.MergeFrom(from._impl_.a_id_);
-  if (!from._internal_a_name().empty()) {
-    _this->_internal_set_a_name(from._internal_a_name());
-  }
-  if (!from._internal_a_displayname().empty()) {
-    _this->_internal_set_a_displayname(from._internal_a_displayname());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_name(from._internal_a_name());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_displayname(from._internal_a_displayname());
+    }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -5289,6 +5639,7 @@ void WebAuthnMakeCredentialUserInfo::CopyFrom(const WebAuthnMakeCredentialUserIn
 }
 
 bool WebAuthnMakeCredentialUserInfo::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -5297,6 +5648,7 @@ void WebAuthnMakeCredentialUserInfo::InternalSwap(WebAuthnMakeCredentialUserInfo
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_id_.InternalSwap(&other->_impl_.a_id_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_name_, lhs_arena,
@@ -5317,6 +5669,13 @@ std::string WebAuthnMakeCredentialUserInfo::GetTypeName() const {
 
 class CoseAlg::_Internal {
  public:
+  using HasBits = decltype(std::declval<CoseAlg>()._impl_._has_bits_);
+  static void set_has_a_alg(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 CoseAlg::CoseAlg(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -5329,8 +5688,9 @@ CoseAlg::CoseAlg(const CoseAlg& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   CoseAlg* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_alg_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_alg_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_alg_ = from._impl_.a_alg_;
@@ -5342,8 +5702,9 @@ inline void CoseAlg::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_alg_){int64_t{0}}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_alg_){int64_t{0}}
   };
 }
 
@@ -5371,18 +5732,21 @@ void CoseAlg::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_alg_ = int64_t{0};
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* CoseAlg::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // sint64 a_alg = 1;
+      // required sint64 a_alg = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_alg(&has_bits);
           _impl_.a_alg_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
@@ -5404,6 +5768,7 @@ const char* CoseAlg::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) 
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -5417,8 +5782,9 @@ uint8_t* CoseAlg::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // sint64 a_alg = 1;
-  if (this->_internal_a_alg() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required sint64 a_alg = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_alg(), target);
   }
@@ -5435,14 +5801,13 @@ size_t CoseAlg::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.CoseAlg)
   size_t total_size = 0;
 
+  // required sint64 a_alg = 1;
+  if (_internal_has_a_alg()) {
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_alg());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // sint64 a_alg = 1;
-  if (this->_internal_a_alg() != 0) {
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_alg());
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -5465,7 +5830,7 @@ void CoseAlg::MergeFrom(const CoseAlg& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_a_alg() != 0) {
+  if (from._internal_has_a_alg()) {
     _this->_internal_set_a_alg(from._internal_a_alg());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -5479,12 +5844,14 @@ void CoseAlg::CopyFrom(const CoseAlg& from) {
 }
 
 bool CoseAlg::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void CoseAlg::InternalSwap(CoseAlg* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_alg_, other->_impl_.a_alg_);
 }
 
@@ -5497,9 +5864,31 @@ std::string CoseAlg::GetTypeName() const {
 
 class WebAuthnMakeCredentialInfo::_Internal {
  public:
+  using HasBits = decltype(std::declval<WebAuthnMakeCredentialInfo>()._impl_._has_bits_);
+  static void set_has_a_rpid(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_timeoutms(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
+  }
   static const ::protobuf::mozilla::dom::WebAuthnMakeCredentialRpInfo& a_rp(const WebAuthnMakeCredentialInfo* msg);
+  static void set_has_a_rp(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
   static const ::protobuf::mozilla::dom::WebAuthnMakeCredentialUserInfo& a_user(const WebAuthnMakeCredentialInfo* msg);
+  static void set_has_a_user(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
   static const ::protobuf::mozilla::dom::WebAuthnAuthenticatorSelection& a_authenticatorselection(const WebAuthnMakeCredentialInfo* msg);
+  static void set_has_a_authenticatorselection(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static void set_has_a_attestationconveyancepreference(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x0000003f) ^ 0x0000003f) != 0;
+  }
 };
 
 const ::protobuf::mozilla::dom::WebAuthnMakeCredentialRpInfo&
@@ -5524,8 +5913,9 @@ WebAuthnMakeCredentialInfo::WebAuthnMakeCredentialInfo(const WebAuthnMakeCredent
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnMakeCredentialInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_challenge_){from._impl_.a_challenge_}
-    , /*decltype(_impl_._a_challenge_cached_byte_size_)*/{0}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_challenge_){from._impl_.a_challenge_}
     , decltype(_impl_.a_excludelist_){from._impl_.a_excludelist_}
     , decltype(_impl_.a_cosealgs_){from._impl_.a_cosealgs_}
     , decltype(_impl_.a_extensions_){from._impl_.a_extensions_}
@@ -5534,15 +5924,14 @@ WebAuthnMakeCredentialInfo::WebAuthnMakeCredentialInfo(const WebAuthnMakeCredent
     , decltype(_impl_.a_rp_){nullptr}
     , decltype(_impl_.a_user_){nullptr}
     , decltype(_impl_.a_authenticatorselection_){nullptr}
-    , decltype(_impl_.a_timeoutms_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_timeoutms_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_rpid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_rpid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_rpid().empty()) {
+  if (from._internal_has_a_rpid()) {
     _this->_impl_.a_rpid_.Set(from._internal_a_rpid(), 
       _this->GetArenaForAllocation());
   }
@@ -5550,7 +5939,7 @@ WebAuthnMakeCredentialInfo::WebAuthnMakeCredentialInfo(const WebAuthnMakeCredent
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_attestationconveyancepreference_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_attestationconveyancepreference().empty()) {
+  if (from._internal_has_a_attestationconveyancepreference()) {
     _this->_impl_.a_attestationconveyancepreference_.Set(from._internal_a_attestationconveyancepreference(), 
       _this->GetArenaForAllocation());
   }
@@ -5572,8 +5961,9 @@ inline void WebAuthnMakeCredentialInfo::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_challenge_){arena}
-    , /*decltype(_impl_._a_challenge_cached_byte_size_)*/{0}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_challenge_){arena}
     , decltype(_impl_.a_excludelist_){arena}
     , decltype(_impl_.a_cosealgs_){arena}
     , decltype(_impl_.a_extensions_){arena}
@@ -5583,7 +5973,6 @@ inline void WebAuthnMakeCredentialInfo::SharedCtor(
     , decltype(_impl_.a_user_){nullptr}
     , decltype(_impl_.a_authenticatorselection_){nullptr}
     , decltype(_impl_.a_timeoutms_){0u}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_rpid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -5631,54 +6020,68 @@ void WebAuthnMakeCredentialInfo::Clear() {
   _impl_.a_excludelist_.Clear();
   _impl_.a_cosealgs_.Clear();
   _impl_.a_extensions_.Clear();
-  _impl_.a_rpid_.ClearToEmpty();
-  _impl_.a_attestationconveyancepreference_.ClearToEmpty();
-  if (GetArenaForAllocation() == nullptr && _impl_.a_rp_ != nullptr) {
-    delete _impl_.a_rp_;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000001fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_rpid_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_attestationconveyancepreference_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      GOOGLE_DCHECK(_impl_.a_rp_ != nullptr);
+      _impl_.a_rp_->Clear();
+    }
+    if (cached_has_bits & 0x00000008u) {
+      GOOGLE_DCHECK(_impl_.a_user_ != nullptr);
+      _impl_.a_user_->Clear();
+    }
+    if (cached_has_bits & 0x00000010u) {
+      GOOGLE_DCHECK(_impl_.a_authenticatorselection_ != nullptr);
+      _impl_.a_authenticatorselection_->Clear();
+    }
   }
-  _impl_.a_rp_ = nullptr;
-  if (GetArenaForAllocation() == nullptr && _impl_.a_user_ != nullptr) {
-    delete _impl_.a_user_;
-  }
-  _impl_.a_user_ = nullptr;
-  if (GetArenaForAllocation() == nullptr && _impl_.a_authenticatorselection_ != nullptr) {
-    delete _impl_.a_authenticatorselection_;
-  }
-  _impl_.a_authenticatorselection_ = nullptr;
   _impl_.a_timeoutms_ = 0u;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnMakeCredentialInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string a_RpId = 1;
+      // required string a_RpId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_rpid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
       // repeated uint32 a_Challenge = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            _internal_add_a_challenge(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 18) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_challenge(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 16) {
-          _internal_add_a_challenge(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // uint32 a_TimeoutMS = 3;
+      // required uint32 a_TimeoutMS = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_a_timeoutms(&has_bits);
           _impl_.a_timeoutms_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
@@ -5697,7 +6100,7 @@ const char* WebAuthnMakeCredentialInfo::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.dom.WebAuthnMakeCredentialRpInfo a_Rp = 5;
+      // required .protobuf.mozilla.dom.WebAuthnMakeCredentialRpInfo a_Rp = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_rp(), ptr);
@@ -5705,7 +6108,7 @@ const char* WebAuthnMakeCredentialInfo::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo a_User = 6;
+      // required .protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo a_User = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_user(), ptr);
@@ -5739,7 +6142,7 @@ const char* WebAuthnMakeCredentialInfo::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.dom.WebAuthnAuthenticatorSelection a_AuthenticatorSelection = 9;
+      // required .protobuf.mozilla.dom.WebAuthnAuthenticatorSelection a_AuthenticatorSelection = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_authenticatorselection(), ptr);
@@ -5747,13 +6150,12 @@ const char* WebAuthnMakeCredentialInfo::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // string a_attestationConveyancePreference = 10;
+      // required string a_attestationConveyancePreference = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 82)) {
           auto str = _internal_mutable_a_attestationconveyancepreference();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -5773,6 +6175,7 @@ const char* WebAuthnMakeCredentialInfo::_InternalParse(const char* ptr, ::_pbi::
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -5786,27 +6189,21 @@ uint8_t* WebAuthnMakeCredentialInfo::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string a_RpId = 1;
-  if (!this->_internal_a_rpid().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_rpid().data(), static_cast<int>(this->_internal_a_rpid().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.WebAuthnMakeCredentialInfo.a_RpId");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_RpId = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_rpid(), target);
   }
 
   // repeated uint32 a_Challenge = 2;
-  {
-    int byte_size = _impl_._a_challenge_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteUInt32Packed(
-          2, _internal_a_challenge(), byte_size, target);
-    }
+  for (int i = 0, n = this->_internal_a_challenge_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_challenge(i), target);
   }
 
-  // uint32 a_TimeoutMS = 3;
-  if (this->_internal_a_timeoutms() != 0) {
+  // required uint32 a_TimeoutMS = 3;
+  if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_timeoutms(), target);
   }
@@ -5819,15 +6216,15 @@ uint8_t* WebAuthnMakeCredentialInfo::_InternalSerialize(
         InternalWriteMessage(4, repfield, repfield.GetCachedSize(), target, stream);
   }
 
-  // .protobuf.mozilla.dom.WebAuthnMakeCredentialRpInfo a_Rp = 5;
-  if (this->_internal_has_a_rp()) {
+  // required .protobuf.mozilla.dom.WebAuthnMakeCredentialRpInfo a_Rp = 5;
+  if (cached_has_bits & 0x00000004u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(5, _Internal::a_rp(this),
         _Internal::a_rp(this).GetCachedSize(), target, stream);
   }
 
-  // .protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo a_User = 6;
-  if (this->_internal_has_a_user()) {
+  // required .protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo a_User = 6;
+  if (cached_has_bits & 0x00000008u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(6, _Internal::a_user(this),
         _Internal::a_user(this).GetCachedSize(), target, stream);
@@ -5849,19 +6246,15 @@ uint8_t* WebAuthnMakeCredentialInfo::_InternalSerialize(
         InternalWriteMessage(8, repfield, repfield.GetCachedSize(), target, stream);
   }
 
-  // .protobuf.mozilla.dom.WebAuthnAuthenticatorSelection a_AuthenticatorSelection = 9;
-  if (this->_internal_has_a_authenticatorselection()) {
+  // required .protobuf.mozilla.dom.WebAuthnAuthenticatorSelection a_AuthenticatorSelection = 9;
+  if (cached_has_bits & 0x00000010u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(9, _Internal::a_authenticatorselection(this),
         _Internal::a_authenticatorselection(this).GetCachedSize(), target, stream);
   }
 
-  // string a_attestationConveyancePreference = 10;
-  if (!this->_internal_a_attestationconveyancepreference().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_attestationconveyancepreference().data(), static_cast<int>(this->_internal_a_attestationconveyancepreference().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.WebAuthnMakeCredentialInfo.a_attestationConveyancePreference");
+  // required string a_attestationConveyancePreference = 10;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         10, this->_internal_a_attestationconveyancepreference(), target);
   }
@@ -5874,10 +6267,88 @@ uint8_t* WebAuthnMakeCredentialInfo::_InternalSerialize(
   return target;
 }
 
+size_t WebAuthnMakeCredentialInfo::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.WebAuthnMakeCredentialInfo)
+  size_t total_size = 0;
+
+  if (_internal_has_a_rpid()) {
+    // required string a_RpId = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_rpid());
+  }
+
+  if (_internal_has_a_attestationconveyancepreference()) {
+    // required string a_attestationConveyancePreference = 10;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_attestationconveyancepreference());
+  }
+
+  if (_internal_has_a_rp()) {
+    // required .protobuf.mozilla.dom.WebAuthnMakeCredentialRpInfo a_Rp = 5;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_rp_);
+  }
+
+  if (_internal_has_a_user()) {
+    // required .protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo a_User = 6;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_user_);
+  }
+
+  if (_internal_has_a_authenticatorselection()) {
+    // required .protobuf.mozilla.dom.WebAuthnAuthenticatorSelection a_AuthenticatorSelection = 9;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_authenticatorselection_);
+  }
+
+  if (_internal_has_a_timeoutms()) {
+    // required uint32 a_TimeoutMS = 3;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_timeoutms());
+  }
+
+  return total_size;
+}
 size_t WebAuthnMakeCredentialInfo::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.WebAuthnMakeCredentialInfo)
   size_t total_size = 0;
 
+  if (((_impl_._has_bits_[0] & 0x0000003f) ^ 0x0000003f) == 0) {  // All required fields are present.
+    // required string a_RpId = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_rpid());
+
+    // required string a_attestationConveyancePreference = 10;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_attestationconveyancepreference());
+
+    // required .protobuf.mozilla.dom.WebAuthnMakeCredentialRpInfo a_Rp = 5;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_rp_);
+
+    // required .protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo a_User = 6;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_user_);
+
+    // required .protobuf.mozilla.dom.WebAuthnAuthenticatorSelection a_AuthenticatorSelection = 9;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_authenticatorselection_);
+
+    // required uint32 a_TimeoutMS = 3;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_timeoutms());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -5886,13 +6357,8 @@ size_t WebAuthnMakeCredentialInfo::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_challenge_);
-    if (data_size > 0) {
-      total_size += 1 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
-    int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._a_challenge_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
+    total_size += 1 *
+                  ::_pbi::FromIntSize(this->_internal_a_challenge_size());
     total_size += data_size;
   }
 
@@ -5915,46 +6381,6 @@ size_t WebAuthnMakeCredentialInfo::ByteSizeLong() const {
   for (const auto& msg : this->_impl_.a_extensions_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
-  }
-
-  // string a_RpId = 1;
-  if (!this->_internal_a_rpid().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_rpid());
-  }
-
-  // string a_attestationConveyancePreference = 10;
-  if (!this->_internal_a_attestationconveyancepreference().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_attestationconveyancepreference());
-  }
-
-  // .protobuf.mozilla.dom.WebAuthnMakeCredentialRpInfo a_Rp = 5;
-  if (this->_internal_has_a_rp()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_rp_);
-  }
-
-  // .protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo a_User = 6;
-  if (this->_internal_has_a_user()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_user_);
-  }
-
-  // .protobuf.mozilla.dom.WebAuthnAuthenticatorSelection a_AuthenticatorSelection = 9;
-  if (this->_internal_has_a_authenticatorselection()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_authenticatorselection_);
-  }
-
-  // uint32 a_TimeoutMS = 3;
-  if (this->_internal_a_timeoutms() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_timeoutms());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -5982,26 +6408,30 @@ void WebAuthnMakeCredentialInfo::MergeFrom(const WebAuthnMakeCredentialInfo& fro
   _this->_impl_.a_excludelist_.MergeFrom(from._impl_.a_excludelist_);
   _this->_impl_.a_cosealgs_.MergeFrom(from._impl_.a_cosealgs_);
   _this->_impl_.a_extensions_.MergeFrom(from._impl_.a_extensions_);
-  if (!from._internal_a_rpid().empty()) {
-    _this->_internal_set_a_rpid(from._internal_a_rpid());
-  }
-  if (!from._internal_a_attestationconveyancepreference().empty()) {
-    _this->_internal_set_a_attestationconveyancepreference(from._internal_a_attestationconveyancepreference());
-  }
-  if (from._internal_has_a_rp()) {
-    _this->_internal_mutable_a_rp()->::protobuf::mozilla::dom::WebAuthnMakeCredentialRpInfo::MergeFrom(
-        from._internal_a_rp());
-  }
-  if (from._internal_has_a_user()) {
-    _this->_internal_mutable_a_user()->::protobuf::mozilla::dom::WebAuthnMakeCredentialUserInfo::MergeFrom(
-        from._internal_a_user());
-  }
-  if (from._internal_has_a_authenticatorselection()) {
-    _this->_internal_mutable_a_authenticatorselection()->::protobuf::mozilla::dom::WebAuthnAuthenticatorSelection::MergeFrom(
-        from._internal_a_authenticatorselection());
-  }
-  if (from._internal_a_timeoutms() != 0) {
-    _this->_internal_set_a_timeoutms(from._internal_a_timeoutms());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000003fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_rpid(from._internal_a_rpid());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_attestationconveyancepreference(from._internal_a_attestationconveyancepreference());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_internal_mutable_a_rp()->::protobuf::mozilla::dom::WebAuthnMakeCredentialRpInfo::MergeFrom(
+          from._internal_a_rp());
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_internal_mutable_a_user()->::protobuf::mozilla::dom::WebAuthnMakeCredentialUserInfo::MergeFrom(
+          from._internal_a_user());
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_internal_mutable_a_authenticatorselection()->::protobuf::mozilla::dom::WebAuthnAuthenticatorSelection::MergeFrom(
+          from._internal_a_authenticatorselection());
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _this->_impl_.a_timeoutms_ = from._impl_.a_timeoutms_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -6014,6 +6444,22 @@ void WebAuthnMakeCredentialInfo::CopyFrom(const WebAuthnMakeCredentialInfo& from
 }
 
 bool WebAuthnMakeCredentialInfo::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_excludelist_))
+    return false;
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_cosealgs_))
+    return false;
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_extensions_))
+    return false;
+  if (_internal_has_a_rp()) {
+    if (!_impl_.a_rp_->IsInitialized()) return false;
+  }
+  if (_internal_has_a_user()) {
+    if (!_impl_.a_user_->IsInitialized()) return false;
+  }
+  if (_internal_has_a_authenticatorselection()) {
+    if (!_impl_.a_authenticatorselection_->IsInitialized()) return false;
+  }
   return true;
 }
 
@@ -6022,6 +6468,7 @@ void WebAuthnMakeCredentialInfo::InternalSwap(WebAuthnMakeCredentialInfo* other)
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_challenge_.InternalSwap(&other->_impl_.a_challenge_);
   _impl_.a_excludelist_.InternalSwap(&other->_impl_.a_excludelist_);
   _impl_.a_cosealgs_.InternalSwap(&other->_impl_.a_cosealgs_);
@@ -6052,8 +6499,14 @@ std::string WebAuthnMakeCredentialInfo::GetTypeName() const {
 class WebAuthnMakeCredentialResult::_Internal {
  public:
   using HasBits = decltype(std::declval<WebAuthnMakeCredentialResult>()._impl_._has_bits_);
-  static void set_has_a_authenticatorattachment(HasBits* has_bits) {
+  static void set_has_a_clientdatajson(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_authenticatorattachment(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -6070,9 +6523,7 @@ WebAuthnMakeCredentialResult::WebAuthnMakeCredentialResult(const WebAuthnMakeCre
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.a_attestationobject_){from._impl_.a_attestationobject_}
-    , /*decltype(_impl_._a_attestationobject_cached_byte_size_)*/{0}
     , decltype(_impl_.a_keyhandle_){from._impl_.a_keyhandle_}
-    , /*decltype(_impl_._a_keyhandle_cached_byte_size_)*/{0}
     , decltype(_impl_.a_transports_){from._impl_.a_transports_}
     , decltype(_impl_.a_extensions_){from._impl_.a_extensions_}
     , decltype(_impl_.a_clientdatajson_){}
@@ -6083,7 +6534,7 @@ WebAuthnMakeCredentialResult::WebAuthnMakeCredentialResult(const WebAuthnMakeCre
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_clientdatajson_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_clientdatajson().empty()) {
+  if (from._internal_has_a_clientdatajson()) {
     _this->_impl_.a_clientdatajson_.Set(from._internal_a_clientdatajson(), 
       _this->GetArenaForAllocation());
   }
@@ -6106,9 +6557,7 @@ inline void WebAuthnMakeCredentialResult::SharedCtor(
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.a_attestationobject_){arena}
-    , /*decltype(_impl_._a_attestationobject_cached_byte_size_)*/{0}
     , decltype(_impl_.a_keyhandle_){arena}
-    , /*decltype(_impl_._a_keyhandle_cached_byte_size_)*/{0}
     , decltype(_impl_.a_transports_){arena}
     , decltype(_impl_.a_extensions_){arena}
     , decltype(_impl_.a_clientdatajson_){}
@@ -6157,10 +6606,14 @@ void WebAuthnMakeCredentialResult::Clear() {
   _impl_.a_keyhandle_.Clear();
   _impl_.a_transports_.Clear();
   _impl_.a_extensions_.Clear();
-  _impl_.a_clientdatajson_.ClearToEmpty();
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_authenticatorattachment_.ClearNonDefaultToEmpty();
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_clientdatajson_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_authenticatorattachment_.ClearNonDefaultToEmpty();
+    }
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -6173,34 +6626,43 @@ const char* WebAuthnMakeCredentialResult::_InternalParse(const char* ptr, ::_pbi
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string a_ClientDataJSON = 1;
+      // required string a_ClientDataJSON = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_clientdatajson();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
       // repeated uint32 a_AttestationObject = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            _internal_add_a_attestationobject(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 18) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_attestationobject(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 16) {
-          _internal_add_a_attestationobject(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
       // repeated uint32 a_KeyHandle = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            _internal_add_a_keyhandle(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<24>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 26) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_keyhandle(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 24) {
-          _internal_add_a_keyhandle(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -6214,7 +6676,6 @@ const char* WebAuthnMakeCredentialResult::_InternalParse(const char* ptr, ::_pbi
             auto str = _internal_add_a_transports();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            CHK_(::_pbi::VerifyUTF8(str, nullptr));
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<34>(ptr));
         } else
@@ -6239,7 +6700,6 @@ const char* WebAuthnMakeCredentialResult::_InternalParse(const char* ptr, ::_pbi
           auto str = _internal_mutable_a_authenticatorattachment();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -6273,41 +6733,28 @@ uint8_t* WebAuthnMakeCredentialResult::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string a_ClientDataJSON = 1;
-  if (!this->_internal_a_clientdatajson().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_clientdatajson().data(), static_cast<int>(this->_internal_a_clientdatajson().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.WebAuthnMakeCredentialResult.a_ClientDataJSON");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_ClientDataJSON = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_clientdatajson(), target);
   }
 
   // repeated uint32 a_AttestationObject = 2;
-  {
-    int byte_size = _impl_._a_attestationobject_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteUInt32Packed(
-          2, _internal_a_attestationobject(), byte_size, target);
-    }
+  for (int i = 0, n = this->_internal_a_attestationobject_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_attestationobject(i), target);
   }
 
   // repeated uint32 a_KeyHandle = 3;
-  {
-    int byte_size = _impl_._a_keyhandle_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteUInt32Packed(
-          3, _internal_a_keyhandle(), byte_size, target);
-    }
+  for (int i = 0, n = this->_internal_a_keyhandle_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_keyhandle(i), target);
   }
 
   // repeated string a_Transports = 4;
   for (int i = 0, n = this->_internal_a_transports_size(); i < n; i++) {
     const auto& s = this->_internal_a_transports(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.WebAuthnMakeCredentialResult.a_Transports");
     target = stream->WriteString(4, s, target);
   }
 
@@ -6320,11 +6767,7 @@ uint8_t* WebAuthnMakeCredentialResult::_InternalSerialize(
   }
 
   // optional string a_AuthenticatorAttachment = 6;
-  if (_internal_has_a_authenticatorattachment()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_authenticatorattachment().data(), static_cast<int>(this->_internal_a_authenticatorattachment().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.WebAuthnMakeCredentialResult.a_AuthenticatorAttachment");
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         6, this->_internal_a_authenticatorattachment(), target);
   }
@@ -6341,6 +6784,12 @@ size_t WebAuthnMakeCredentialResult::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.WebAuthnMakeCredentialResult)
   size_t total_size = 0;
 
+  // required string a_ClientDataJSON = 1;
+  if (_internal_has_a_clientdatajson()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_clientdatajson());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -6349,13 +6798,8 @@ size_t WebAuthnMakeCredentialResult::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_attestationobject_);
-    if (data_size > 0) {
-      total_size += 1 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
-    int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._a_attestationobject_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
+    total_size += 1 *
+                  ::_pbi::FromIntSize(this->_internal_a_attestationobject_size());
     total_size += data_size;
   }
 
@@ -6363,13 +6807,8 @@ size_t WebAuthnMakeCredentialResult::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_keyhandle_);
-    if (data_size > 0) {
-      total_size += 1 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
-    int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._a_keyhandle_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
+    total_size += 1 *
+                  ::_pbi::FromIntSize(this->_internal_a_keyhandle_size());
     total_size += data_size;
   }
 
@@ -6388,16 +6827,9 @@ size_t WebAuthnMakeCredentialResult::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // string a_ClientDataJSON = 1;
-  if (!this->_internal_a_clientdatajson().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_clientdatajson());
-  }
-
   // optional string a_AuthenticatorAttachment = 6;
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
+  if (cached_has_bits & 0x00000002u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_authenticatorattachment());
@@ -6428,11 +6860,14 @@ void WebAuthnMakeCredentialResult::MergeFrom(const WebAuthnMakeCredentialResult&
   _this->_impl_.a_keyhandle_.MergeFrom(from._impl_.a_keyhandle_);
   _this->_impl_.a_transports_.MergeFrom(from._impl_.a_transports_);
   _this->_impl_.a_extensions_.MergeFrom(from._impl_.a_extensions_);
-  if (!from._internal_a_clientdatajson().empty()) {
-    _this->_internal_set_a_clientdatajson(from._internal_a_clientdatajson());
-  }
-  if (from._internal_has_a_authenticatorattachment()) {
-    _this->_internal_set_a_authenticatorattachment(from._internal_a_authenticatorattachment());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_clientdatajson(from._internal_a_clientdatajson());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_authenticatorattachment(from._internal_a_authenticatorattachment());
+    }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -6445,6 +6880,9 @@ void WebAuthnMakeCredentialResult::CopyFrom(const WebAuthnMakeCredentialResult& 
 }
 
 bool WebAuthnMakeCredentialResult::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_extensions_))
+    return false;
   return true;
 }
 
@@ -6647,19 +7085,20 @@ uint8_t* WebAuthnMakeCredentialResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_mVnsresult = 1;
-  if (_internal_has_a_mvnsresult()) {
-    target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_a_mvnsresult(), target);
+  switch (content_case()) {
+    case kAMVnsresult: {
+      target = stream->WriteBytesMaybeAliased(
+          1, this->_internal_a_mvnsresult(), target);
+      break;
+    }
+    case kAMVWebAuthnMakeCredentialResult: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(2, _Internal::a_mvwebauthnmakecredentialresult(this),
+          _Internal::a_mvwebauthnmakecredentialresult(this).GetCachedSize(), target, stream);
+      break;
+    }
+    default: ;
   }
-
-  // .protobuf.mozilla.dom.WebAuthnMakeCredentialResult a_mVWebAuthnMakeCredentialResult = 2;
-  if (_internal_has_a_mvwebauthnmakecredentialresult()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::a_mvwebauthnmakecredentialresult(this),
-        _Internal::a_mvwebauthnmakecredentialresult(this).GetCachedSize(), target, stream);
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
@@ -6741,6 +7180,20 @@ void WebAuthnMakeCredentialResponse::CopyFrom(const WebAuthnMakeCredentialRespon
 }
 
 bool WebAuthnMakeCredentialResponse::IsInitialized() const {
+  switch (content_case()) {
+    case kAMVnsresult: {
+      break;
+    }
+    case kAMVWebAuthnMakeCredentialResult: {
+      if (_internal_has_a_mvwebauthnmakecredentialresult()) {
+        if (!_impl_.content_.a_mvwebauthnmakecredentialresult_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case CONTENT_NOT_SET: {
+      break;
+    }
+  }
   return true;
 }
 
@@ -6761,8 +7214,23 @@ std::string WebAuthnMakeCredentialResponse::GetTypeName() const {
 class WebAuthnGetAssertionInfo::_Internal {
  public:
   using HasBits = decltype(std::declval<WebAuthnGetAssertionInfo>()._impl_._has_bits_);
-  static void set_has_a_appid(HasBits* has_bits) {
+  static void set_has_a_rpid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_appid(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_timeoutms(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_a_userverificationrequirement(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_a_conditionallymediated(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x0000001d) ^ 0x0000001d) != 0;
   }
 };
 
@@ -6779,7 +7247,6 @@ WebAuthnGetAssertionInfo::WebAuthnGetAssertionInfo(const WebAuthnGetAssertionInf
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.a_challenge_){from._impl_.a_challenge_}
-    , /*decltype(_impl_._a_challenge_cached_byte_size_)*/{0}
     , decltype(_impl_.a_allowlist_){from._impl_.a_allowlist_}
     , decltype(_impl_.a_extensions_){from._impl_.a_extensions_}
     , decltype(_impl_.a_rpid_){}
@@ -6793,7 +7260,7 @@ WebAuthnGetAssertionInfo::WebAuthnGetAssertionInfo(const WebAuthnGetAssertionInf
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_rpid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_rpid().empty()) {
+  if (from._internal_has_a_rpid()) {
     _this->_impl_.a_rpid_.Set(from._internal_a_rpid(), 
       _this->GetArenaForAllocation());
   }
@@ -6809,7 +7276,7 @@ WebAuthnGetAssertionInfo::WebAuthnGetAssertionInfo(const WebAuthnGetAssertionInf
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_userverificationrequirement_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_userverificationrequirement().empty()) {
+  if (from._internal_has_a_userverificationrequirement()) {
     _this->_impl_.a_userverificationrequirement_.Set(from._internal_a_userverificationrequirement(), 
       _this->GetArenaForAllocation());
   }
@@ -6827,7 +7294,6 @@ inline void WebAuthnGetAssertionInfo::SharedCtor(
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.a_challenge_){arena}
-    , /*decltype(_impl_._a_challenge_cached_byte_size_)*/{0}
     , decltype(_impl_.a_allowlist_){arena}
     , decltype(_impl_.a_extensions_){arena}
     , decltype(_impl_.a_rpid_){}
@@ -6882,15 +7348,23 @@ void WebAuthnGetAssertionInfo::Clear() {
   _impl_.a_challenge_.Clear();
   _impl_.a_allowlist_.Clear();
   _impl_.a_extensions_.Clear();
-  _impl_.a_rpid_.ClearToEmpty();
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_appid_.ClearNonDefaultToEmpty();
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_rpid_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_appid_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _impl_.a_userverificationrequirement_.ClearNonDefaultToEmpty();
+    }
   }
-  _impl_.a_userverificationrequirement_.ClearToEmpty();
-  ::memset(&_impl_.a_timeoutms_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.a_conditionallymediated_) -
-      reinterpret_cast<char*>(&_impl_.a_timeoutms_)) + sizeof(_impl_.a_conditionallymediated_));
+  if (cached_has_bits & 0x00000018u) {
+    ::memset(&_impl_.a_timeoutms_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_conditionallymediated_) -
+        reinterpret_cast<char*>(&_impl_.a_timeoutms_)) + sizeof(_impl_.a_conditionallymediated_));
+  }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -6902,13 +7376,12 @@ const char* WebAuthnGetAssertionInfo::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string a_RpId = 1;
+      // required string a_RpId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_rpid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -6918,24 +7391,29 @@ const char* WebAuthnGetAssertionInfo::_InternalParse(const char* ptr, ::_pbi::Pa
           auto str = _internal_mutable_a_appid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
       // repeated uint32 a_Challenge = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            _internal_add_a_challenge(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<24>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 26) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_challenge(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 24) {
-          _internal_add_a_challenge(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // uint32 a_TimeoutMS = 4;
+      // required uint32 a_TimeoutMS = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _Internal::set_has_a_timeoutms(&has_bits);
           _impl_.a_timeoutms_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
@@ -6967,19 +7445,19 @@ const char* WebAuthnGetAssertionInfo::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // string a_userVerificationRequirement = 7;
+      // required string a_userVerificationRequirement = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           auto str = _internal_mutable_a_userverificationrequirement();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // bool a_ConditionallyMediated = 8;
+      // required bool a_ConditionallyMediated = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
+          _Internal::set_has_a_conditionallymediated(&has_bits);
           _impl_.a_conditionallymediated_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -7015,37 +7493,27 @@ uint8_t* WebAuthnGetAssertionInfo::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string a_RpId = 1;
-  if (!this->_internal_a_rpid().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_rpid().data(), static_cast<int>(this->_internal_a_rpid().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.WebAuthnGetAssertionInfo.a_RpId");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_RpId = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_rpid(), target);
   }
 
   // optional string a_AppId = 2;
-  if (_internal_has_a_appid()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_appid().data(), static_cast<int>(this->_internal_a_appid().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.WebAuthnGetAssertionInfo.a_AppId");
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_appid(), target);
   }
 
   // repeated uint32 a_Challenge = 3;
-  {
-    int byte_size = _impl_._a_challenge_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteUInt32Packed(
-          3, _internal_a_challenge(), byte_size, target);
-    }
+  for (int i = 0, n = this->_internal_a_challenge_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_challenge(i), target);
   }
 
-  // uint32 a_TimeoutMS = 4;
-  if (this->_internal_a_timeoutms() != 0) {
+  // required uint32 a_TimeoutMS = 4;
+  if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(4, this->_internal_a_timeoutms(), target);
   }
@@ -7066,18 +7534,14 @@ uint8_t* WebAuthnGetAssertionInfo::_InternalSerialize(
         InternalWriteMessage(6, repfield, repfield.GetCachedSize(), target, stream);
   }
 
-  // string a_userVerificationRequirement = 7;
-  if (!this->_internal_a_userverificationrequirement().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_userverificationrequirement().data(), static_cast<int>(this->_internal_a_userverificationrequirement().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.WebAuthnGetAssertionInfo.a_userVerificationRequirement");
+  // required string a_userVerificationRequirement = 7;
+  if (cached_has_bits & 0x00000004u) {
     target = stream->WriteStringMaybeAliased(
         7, this->_internal_a_userverificationrequirement(), target);
   }
 
-  // bool a_ConditionallyMediated = 8;
-  if (this->_internal_a_conditionallymediated() != 0) {
+  // required bool a_ConditionallyMediated = 8;
+  if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(8, this->_internal_a_conditionallymediated(), target);
   }
@@ -7090,10 +7554,60 @@ uint8_t* WebAuthnGetAssertionInfo::_InternalSerialize(
   return target;
 }
 
+size_t WebAuthnGetAssertionInfo::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.WebAuthnGetAssertionInfo)
+  size_t total_size = 0;
+
+  if (_internal_has_a_rpid()) {
+    // required string a_RpId = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_rpid());
+  }
+
+  if (_internal_has_a_userverificationrequirement()) {
+    // required string a_userVerificationRequirement = 7;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_userverificationrequirement());
+  }
+
+  if (_internal_has_a_timeoutms()) {
+    // required uint32 a_TimeoutMS = 4;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_timeoutms());
+  }
+
+  if (_internal_has_a_conditionallymediated()) {
+    // required bool a_ConditionallyMediated = 8;
+    total_size += 1 + 1;
+  }
+
+  return total_size;
+}
 size_t WebAuthnGetAssertionInfo::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.WebAuthnGetAssertionInfo)
   size_t total_size = 0;
 
+  if (((_impl_._has_bits_[0] & 0x0000001d) ^ 0x0000001d) == 0) {  // All required fields are present.
+    // required string a_RpId = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_rpid());
+
+    // required string a_userVerificationRequirement = 7;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_userverificationrequirement());
+
+    // required uint32 a_TimeoutMS = 4;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_timeoutms());
+
+    // required bool a_ConditionallyMediated = 8;
+    total_size += 1 + 1;
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -7102,13 +7616,8 @@ size_t WebAuthnGetAssertionInfo::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_challenge_);
-    if (data_size > 0) {
-      total_size += 1 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
-    int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._a_challenge_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
+    total_size += 1 *
+                  ::_pbi::FromIntSize(this->_internal_a_challenge_size());
     total_size += data_size;
   }
 
@@ -7126,36 +7635,12 @@ size_t WebAuthnGetAssertionInfo::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // string a_RpId = 1;
-  if (!this->_internal_a_rpid().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_rpid());
-  }
-
   // optional string a_AppId = 2;
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
+  if (cached_has_bits & 0x00000002u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_appid());
-  }
-
-  // string a_userVerificationRequirement = 7;
-  if (!this->_internal_a_userverificationrequirement().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_userverificationrequirement());
-  }
-
-  // uint32 a_TimeoutMS = 4;
-  if (this->_internal_a_timeoutms() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_timeoutms());
-  }
-
-  // bool a_ConditionallyMediated = 8;
-  if (this->_internal_a_conditionallymediated() != 0) {
-    total_size += 1 + 1;
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -7182,20 +7667,24 @@ void WebAuthnGetAssertionInfo::MergeFrom(const WebAuthnGetAssertionInfo& from) {
   _this->_impl_.a_challenge_.MergeFrom(from._impl_.a_challenge_);
   _this->_impl_.a_allowlist_.MergeFrom(from._impl_.a_allowlist_);
   _this->_impl_.a_extensions_.MergeFrom(from._impl_.a_extensions_);
-  if (!from._internal_a_rpid().empty()) {
-    _this->_internal_set_a_rpid(from._internal_a_rpid());
-  }
-  if (from._internal_has_a_appid()) {
-    _this->_internal_set_a_appid(from._internal_a_appid());
-  }
-  if (!from._internal_a_userverificationrequirement().empty()) {
-    _this->_internal_set_a_userverificationrequirement(from._internal_a_userverificationrequirement());
-  }
-  if (from._internal_a_timeoutms() != 0) {
-    _this->_internal_set_a_timeoutms(from._internal_a_timeoutms());
-  }
-  if (from._internal_a_conditionallymediated() != 0) {
-    _this->_internal_set_a_conditionallymediated(from._internal_a_conditionallymediated());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000001fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_rpid(from._internal_a_rpid());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_appid(from._internal_a_appid());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_internal_set_a_userverificationrequirement(from._internal_a_userverificationrequirement());
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.a_timeoutms_ = from._impl_.a_timeoutms_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_impl_.a_conditionallymediated_ = from._impl_.a_conditionallymediated_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -7208,6 +7697,11 @@ void WebAuthnGetAssertionInfo::CopyFrom(const WebAuthnGetAssertionInfo& from) {
 }
 
 bool WebAuthnGetAssertionInfo::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_allowlist_))
+    return false;
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_extensions_))
+    return false;
   return true;
 }
 
@@ -7250,8 +7744,14 @@ std::string WebAuthnGetAssertionInfo::GetTypeName() const {
 class WebAuthnGetAssertionResult::_Internal {
  public:
   using HasBits = decltype(std::declval<WebAuthnGetAssertionResult>()._impl_._has_bits_);
-  static void set_has_a_authenticatorattachment(HasBits* has_bits) {
+  static void set_has_a_clientdatajson(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_authenticatorattachment(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -7268,14 +7768,10 @@ WebAuthnGetAssertionResult::WebAuthnGetAssertionResult(const WebAuthnGetAssertio
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.a_keyhandle_){from._impl_.a_keyhandle_}
-    , /*decltype(_impl_._a_keyhandle_cached_byte_size_)*/{0}
     , decltype(_impl_.a_signature_){from._impl_.a_signature_}
-    , /*decltype(_impl_._a_signature_cached_byte_size_)*/{0}
     , decltype(_impl_.a_authenticatordata_){from._impl_.a_authenticatordata_}
-    , /*decltype(_impl_._a_authenticatordata_cached_byte_size_)*/{0}
     , decltype(_impl_.a_extensions_){from._impl_.a_extensions_}
     , decltype(_impl_.a_userhandle_){from._impl_.a_userhandle_}
-    , /*decltype(_impl_._a_userhandle_cached_byte_size_)*/{0}
     , decltype(_impl_.a_clientdatajson_){}
     , decltype(_impl_.a_authenticatorattachment_){}};
 
@@ -7284,7 +7780,7 @@ WebAuthnGetAssertionResult::WebAuthnGetAssertionResult(const WebAuthnGetAssertio
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_clientdatajson_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_clientdatajson().empty()) {
+  if (from._internal_has_a_clientdatajson()) {
     _this->_impl_.a_clientdatajson_.Set(from._internal_a_clientdatajson(), 
       _this->GetArenaForAllocation());
   }
@@ -7307,14 +7803,10 @@ inline void WebAuthnGetAssertionResult::SharedCtor(
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.a_keyhandle_){arena}
-    , /*decltype(_impl_._a_keyhandle_cached_byte_size_)*/{0}
     , decltype(_impl_.a_signature_){arena}
-    , /*decltype(_impl_._a_signature_cached_byte_size_)*/{0}
     , decltype(_impl_.a_authenticatordata_){arena}
-    , /*decltype(_impl_._a_authenticatordata_cached_byte_size_)*/{0}
     , decltype(_impl_.a_extensions_){arena}
     , decltype(_impl_.a_userhandle_){arena}
-    , /*decltype(_impl_._a_userhandle_cached_byte_size_)*/{0}
     , decltype(_impl_.a_clientdatajson_){}
     , decltype(_impl_.a_authenticatorattachment_){}
   };
@@ -7363,10 +7855,14 @@ void WebAuthnGetAssertionResult::Clear() {
   _impl_.a_authenticatordata_.Clear();
   _impl_.a_extensions_.Clear();
   _impl_.a_userhandle_.Clear();
-  _impl_.a_clientdatajson_.ClearToEmpty();
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_authenticatorattachment_.ClearNonDefaultToEmpty();
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_clientdatajson_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_authenticatorattachment_.ClearNonDefaultToEmpty();
+    }
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -7379,45 +7875,59 @@ const char* WebAuthnGetAssertionResult::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string a_ClientDataJSON = 1;
+      // required string a_ClientDataJSON = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_clientdatajson();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
       // repeated uint32 a_KeyHandle = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            _internal_add_a_keyhandle(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 18) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_keyhandle(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 16) {
-          _internal_add_a_keyhandle(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
       // repeated uint32 a_Signature = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            _internal_add_a_signature(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<24>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 26) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_signature(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 24) {
-          _internal_add_a_signature(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
       // repeated uint32 a_AuthenticatorData = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            _internal_add_a_authenticatordata(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<32>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 34) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_authenticatordata(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 32) {
-          _internal_add_a_authenticatordata(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -7437,11 +7947,16 @@ const char* WebAuthnGetAssertionResult::_InternalParse(const char* ptr, ::_pbi::
         continue;
       // repeated uint32 a_UserHandle = 6;
       case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            _internal_add_a_userhandle(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<48>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 50) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_userhandle(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 48) {
-          _internal_add_a_userhandle(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -7452,7 +7967,6 @@ const char* WebAuthnGetAssertionResult::_InternalParse(const char* ptr, ::_pbi::
           auto str = _internal_mutable_a_authenticatorattachment();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -7486,41 +8000,29 @@ uint8_t* WebAuthnGetAssertionResult::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string a_ClientDataJSON = 1;
-  if (!this->_internal_a_clientdatajson().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_clientdatajson().data(), static_cast<int>(this->_internal_a_clientdatajson().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.WebAuthnGetAssertionResult.a_ClientDataJSON");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_ClientDataJSON = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_clientdatajson(), target);
   }
 
   // repeated uint32 a_KeyHandle = 2;
-  {
-    int byte_size = _impl_._a_keyhandle_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteUInt32Packed(
-          2, _internal_a_keyhandle(), byte_size, target);
-    }
+  for (int i = 0, n = this->_internal_a_keyhandle_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_keyhandle(i), target);
   }
 
   // repeated uint32 a_Signature = 3;
-  {
-    int byte_size = _impl_._a_signature_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteUInt32Packed(
-          3, _internal_a_signature(), byte_size, target);
-    }
+  for (int i = 0, n = this->_internal_a_signature_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_signature(i), target);
   }
 
   // repeated uint32 a_AuthenticatorData = 4;
-  {
-    int byte_size = _impl_._a_authenticatordata_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteUInt32Packed(
-          4, _internal_a_authenticatordata(), byte_size, target);
-    }
+  for (int i = 0, n = this->_internal_a_authenticatordata_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(4, this->_internal_a_authenticatordata(i), target);
   }
 
   // repeated .protobuf.mozilla.dom.WebAuthnExtensionResult a_Extensions = 5;
@@ -7532,20 +8034,13 @@ uint8_t* WebAuthnGetAssertionResult::_InternalSerialize(
   }
 
   // repeated uint32 a_UserHandle = 6;
-  {
-    int byte_size = _impl_._a_userhandle_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteUInt32Packed(
-          6, _internal_a_userhandle(), byte_size, target);
-    }
+  for (int i = 0, n = this->_internal_a_userhandle_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(6, this->_internal_a_userhandle(i), target);
   }
 
   // optional string a_AuthenticatorAttachment = 7;
-  if (_internal_has_a_authenticatorattachment()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_authenticatorattachment().data(), static_cast<int>(this->_internal_a_authenticatorattachment().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.WebAuthnGetAssertionResult.a_AuthenticatorAttachment");
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         7, this->_internal_a_authenticatorattachment(), target);
   }
@@ -7562,6 +8057,12 @@ size_t WebAuthnGetAssertionResult::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.WebAuthnGetAssertionResult)
   size_t total_size = 0;
 
+  // required string a_ClientDataJSON = 1;
+  if (_internal_has_a_clientdatajson()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_clientdatajson());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -7570,13 +8071,8 @@ size_t WebAuthnGetAssertionResult::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_keyhandle_);
-    if (data_size > 0) {
-      total_size += 1 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
-    int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._a_keyhandle_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
+    total_size += 1 *
+                  ::_pbi::FromIntSize(this->_internal_a_keyhandle_size());
     total_size += data_size;
   }
 
@@ -7584,13 +8080,8 @@ size_t WebAuthnGetAssertionResult::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_signature_);
-    if (data_size > 0) {
-      total_size += 1 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
-    int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._a_signature_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
+    total_size += 1 *
+                  ::_pbi::FromIntSize(this->_internal_a_signature_size());
     total_size += data_size;
   }
 
@@ -7598,13 +8089,8 @@ size_t WebAuthnGetAssertionResult::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_authenticatordata_);
-    if (data_size > 0) {
-      total_size += 1 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
-    int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._a_authenticatordata_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
+    total_size += 1 *
+                  ::_pbi::FromIntSize(this->_internal_a_authenticatordata_size());
     total_size += data_size;
   }
 
@@ -7619,26 +8105,14 @@ size_t WebAuthnGetAssertionResult::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_userhandle_);
-    if (data_size > 0) {
-      total_size += 1 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
-    int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._a_userhandle_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
+    total_size += 1 *
+                  ::_pbi::FromIntSize(this->_internal_a_userhandle_size());
     total_size += data_size;
-  }
-
-  // string a_ClientDataJSON = 1;
-  if (!this->_internal_a_clientdatajson().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_clientdatajson());
   }
 
   // optional string a_AuthenticatorAttachment = 7;
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
+  if (cached_has_bits & 0x00000002u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_authenticatorattachment());
@@ -7670,11 +8144,14 @@ void WebAuthnGetAssertionResult::MergeFrom(const WebAuthnGetAssertionResult& fro
   _this->_impl_.a_authenticatordata_.MergeFrom(from._impl_.a_authenticatordata_);
   _this->_impl_.a_extensions_.MergeFrom(from._impl_.a_extensions_);
   _this->_impl_.a_userhandle_.MergeFrom(from._impl_.a_userhandle_);
-  if (!from._internal_a_clientdatajson().empty()) {
-    _this->_internal_set_a_clientdatajson(from._internal_a_clientdatajson());
-  }
-  if (from._internal_has_a_authenticatorattachment()) {
-    _this->_internal_set_a_authenticatorattachment(from._internal_a_authenticatorattachment());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_clientdatajson(from._internal_a_clientdatajson());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_authenticatorattachment(from._internal_a_authenticatorattachment());
+    }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -7687,6 +8164,9 @@ void WebAuthnGetAssertionResult::CopyFrom(const WebAuthnGetAssertionResult& from
 }
 
 bool WebAuthnGetAssertionResult::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_extensions_))
+    return false;
   return true;
 }
 
@@ -7890,19 +8370,20 @@ uint8_t* WebAuthnGetAssertionResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_mVnsresult = 1;
-  if (_internal_has_a_mvnsresult()) {
-    target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_a_mvnsresult(), target);
+  switch (content_case()) {
+    case kAMVnsresult: {
+      target = stream->WriteBytesMaybeAliased(
+          1, this->_internal_a_mvnsresult(), target);
+      break;
+    }
+    case kAMVWebAuthnGetAssertionResult: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(2, _Internal::a_mvwebauthngetassertionresult(this),
+          _Internal::a_mvwebauthngetassertionresult(this).GetCachedSize(), target, stream);
+      break;
+    }
+    default: ;
   }
-
-  // .protobuf.mozilla.dom.WebAuthnGetAssertionResult a_mVWebAuthnGetAssertionResult = 2;
-  if (_internal_has_a_mvwebauthngetassertionresult()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::a_mvwebauthngetassertionresult(this),
-        _Internal::a_mvwebauthngetassertionresult(this).GetCachedSize(), target, stream);
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
@@ -7984,6 +8465,20 @@ void WebAuthnGetAssertionResponse::CopyFrom(const WebAuthnGetAssertionResponse& 
 }
 
 bool WebAuthnGetAssertionResponse::IsInitialized() const {
+  switch (content_case()) {
+    case kAMVnsresult: {
+      break;
+    }
+    case kAMVWebAuthnGetAssertionResult: {
+      if (_internal_has_a_mvwebauthngetassertionresult()) {
+        if (!_impl_.content_.a_mvwebauthngetassertionresult_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case CONTENT_NOT_SET: {
+      break;
+    }
+  }
   return true;
 }
 

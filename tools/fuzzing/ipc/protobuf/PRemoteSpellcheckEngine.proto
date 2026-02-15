@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/extensions/spellcheck/ipc/PRemoteSpellcheckEngine.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.PRemoteSpellcheckEngine;
@@ -30,11 +30,11 @@ message Reply_CheckAsync {
 }
 
 message Msg_SetDictionary {
-  string a_aDictionary = 1;
+  required string a_aDictionary = 1;
 }
 
 message Reply_SetDictionary {
-  bool a_success = 1;
+  required bool a_success = 1;
 }
 
 message Msg_SetDictionaries {
@@ -42,12 +42,12 @@ message Msg_SetDictionaries {
 }
 
 message Reply_SetDictionaries {
-  bool a_success = 1;
+  required bool a_success = 1;
 }
 
 message Msg_Suggest {
-  string a_aWord = 1;
-  uint32 a_aCount = 2;
+  required string a_aWord = 1;
+  required uint32 a_aCount = 2;
 }
 
 message Reply_Suggest {
@@ -59,8 +59,8 @@ message Msg_SetDictionaryFromList {
 }
 
 message Reply_SetDictionaryFromList {
-  bool a_aSuccess = 1;
-  string a_aDictionary = 2;
+  required bool a_aSuccess = 1;
+  required string a_aDictionary = 2;
 }
 
 // Parameter mappings stats:

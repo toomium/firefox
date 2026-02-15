@@ -135,6 +135,13 @@ class Msg_NotifyNetworkConnectivityServiceObservers final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_NotifyNetworkConnectivityServiceObservers& default_instance() {
     return *internal_default_instance();
   }
@@ -209,7 +216,11 @@ class Msg_NotifyNetworkConnectivityServiceObservers final :
   enum : int {
     kAATopicFieldNumber = 1,
   };
-  // string a_aTopic = 1;
+  // required string a_aTopic = 1;
+  bool has_a_atopic() const;
+  private:
+  bool _internal_has_a_atopic() const;
+  public:
   void clear_a_atopic();
   const std::string& a_atopic() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -231,8 +242,9 @@ class Msg_NotifyNetworkConnectivityServiceObservers final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atopic_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atopic_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTRRService_2eproto;
@@ -268,6 +280,13 @@ class Msg_InitTRRConnectionInfo final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_InitTRRConnectionInfo& default_instance() {
@@ -387,6 +406,13 @@ class Msg_SetConfirmationState final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_SetConfirmationState& default_instance() {
     return *internal_default_instance();
   }
@@ -461,7 +487,11 @@ class Msg_SetConfirmationState final :
   enum : int {
     kAANewStateFieldNumber = 1,
   };
-  // uint32 a_aNewState = 1;
+  // required uint32 a_aNewState = 1;
+  bool has_a_anewstate() const;
+  private:
+  bool _internal_has_a_anewstate() const;
+  public:
   void clear_a_anewstate();
   uint32_t a_anewstate() const;
   void set_a_anewstate(uint32_t value);
@@ -478,8 +508,9 @@ class Msg_SetConfirmationState final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint32_t a_anewstate_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint32_t a_anewstate_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTRRService_2eproto;
@@ -515,6 +546,13 @@ class Msg___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg___delete__& default_instance() {
@@ -634,6 +672,13 @@ class Reply___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -749,6 +794,13 @@ class Msg_UpdatePlatformDNSInformation final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_UpdatePlatformDNSInformation& default_instance() {
@@ -896,6 +948,13 @@ class Msg_UpdateParentalControlEnabled final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_UpdateParentalControlEnabled& default_instance() {
     return *internal_default_instance();
   }
@@ -970,7 +1029,11 @@ class Msg_UpdateParentalControlEnabled final :
   enum : int {
     kAAEnabledFieldNumber = 1,
   };
-  // bool a_aEnabled = 1;
+  // required bool a_aEnabled = 1;
+  bool has_a_aenabled() const;
+  private:
+  bool _internal_has_a_aenabled() const;
+  public:
   void clear_a_aenabled();
   bool a_aenabled() const;
   void set_a_aenabled(bool value);
@@ -987,8 +1050,9 @@ class Msg_UpdateParentalControlEnabled final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_aenabled_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_aenabled_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTRRService_2eproto;
@@ -1024,6 +1088,13 @@ class Msg_ClearDNSCache final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_ClearDNSCache& default_instance() {
@@ -1100,7 +1171,11 @@ class Msg_ClearDNSCache final :
   enum : int {
     kAATrrTooFieldNumber = 1,
   };
-  // bool a_aTrrToo = 1;
+  // required bool a_aTrrToo = 1;
+  bool has_a_atrrtoo() const;
+  private:
+  bool _internal_has_a_atrrtoo() const;
+  public:
   void clear_a_atrrtoo();
   bool a_atrrtoo() const;
   void set_a_atrrtoo(bool value);
@@ -1117,8 +1192,9 @@ class Msg_ClearDNSCache final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_atrrtoo_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_atrrtoo_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTRRService_2eproto;
@@ -1154,6 +1230,13 @@ class Msg_SetDetectedTrrURI final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_SetDetectedTrrURI& default_instance() {
@@ -1230,7 +1313,11 @@ class Msg_SetDetectedTrrURI final :
   enum : int {
     kAAURIFieldNumber = 1,
   };
-  // string a_aURI = 1;
+  // required string a_aURI = 1;
+  bool has_a_auri() const;
+  private:
+  bool _internal_has_a_auri() const;
+  public:
   void clear_a_auri();
   const std::string& a_auri() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1252,8 +1339,9 @@ class Msg_SetDetectedTrrURI final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_auri_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_auri_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTRRService_2eproto;
@@ -1289,6 +1377,13 @@ class Msg_SetDefaultTRRConnectionInfo final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_SetDefaultTRRConnectionInfo& default_instance() {
@@ -1431,6 +1526,13 @@ class Msg_UpdateEtcHosts final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_UpdateEtcHosts& default_instance() {
     return *internal_default_instance();
   }
@@ -1554,9 +1656,17 @@ class Msg_UpdateEtcHosts final :
 #endif  // __GNUC__
 // Msg_NotifyNetworkConnectivityServiceObservers
 
-// string a_aTopic = 1;
+// required string a_aTopic = 1;
+inline bool Msg_NotifyNetworkConnectivityServiceObservers::_internal_has_a_atopic() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_NotifyNetworkConnectivityServiceObservers::has_a_atopic() const {
+  return _internal_has_a_atopic();
+}
 inline void Msg_NotifyNetworkConnectivityServiceObservers::clear_a_atopic() {
   _impl_.a_atopic_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_NotifyNetworkConnectivityServiceObservers::a_atopic() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PTRRService.Msg_NotifyNetworkConnectivityServiceObservers.a_aTopic)
@@ -1565,7 +1675,7 @@ inline const std::string& Msg_NotifyNetworkConnectivityServiceObservers::a_atopi
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyNetworkConnectivityServiceObservers::set_a_atopic(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_atopic_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTRRService.Msg_NotifyNetworkConnectivityServiceObservers.a_aTopic)
 }
@@ -1578,22 +1688,32 @@ inline const std::string& Msg_NotifyNetworkConnectivityServiceObservers::_intern
   return _impl_.a_atopic_.Get();
 }
 inline void Msg_NotifyNetworkConnectivityServiceObservers::_internal_set_a_atopic(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_atopic_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyNetworkConnectivityServiceObservers::_internal_mutable_a_atopic() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_atopic_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyNetworkConnectivityServiceObservers::release_a_atopic() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PTRRService.Msg_NotifyNetworkConnectivityServiceObservers.a_aTopic)
-  return _impl_.a_atopic_.Release();
+  if (!_internal_has_a_atopic()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_atopic_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_atopic_.IsDefault()) {
+    _impl_.a_atopic_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_NotifyNetworkConnectivityServiceObservers::set_allocated_a_atopic(std::string* a_atopic) {
   if (a_atopic != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_atopic_.SetAllocated(a_atopic, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1612,9 +1732,17 @@ inline void Msg_NotifyNetworkConnectivityServiceObservers::set_allocated_a_atopi
 
 // Msg_SetConfirmationState
 
-// uint32 a_aNewState = 1;
+// required uint32 a_aNewState = 1;
+inline bool Msg_SetConfirmationState::_internal_has_a_anewstate() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_SetConfirmationState::has_a_anewstate() const {
+  return _internal_has_a_anewstate();
+}
 inline void Msg_SetConfirmationState::clear_a_anewstate() {
   _impl_.a_anewstate_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Msg_SetConfirmationState::_internal_a_anewstate() const {
   return _impl_.a_anewstate_;
@@ -1624,7 +1752,7 @@ inline uint32_t Msg_SetConfirmationState::a_anewstate() const {
   return _internal_a_anewstate();
 }
 inline void Msg_SetConfirmationState::_internal_set_a_anewstate(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_anewstate_ = value;
 }
 inline void Msg_SetConfirmationState::set_a_anewstate(uint32_t value) {
@@ -1723,9 +1851,17 @@ Msg_UpdatePlatformDNSInformation::mutable_a_asuffixlist() {
 
 // Msg_UpdateParentalControlEnabled
 
-// bool a_aEnabled = 1;
+// required bool a_aEnabled = 1;
+inline bool Msg_UpdateParentalControlEnabled::_internal_has_a_aenabled() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_UpdateParentalControlEnabled::has_a_aenabled() const {
+  return _internal_has_a_aenabled();
+}
 inline void Msg_UpdateParentalControlEnabled::clear_a_aenabled() {
   _impl_.a_aenabled_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Msg_UpdateParentalControlEnabled::_internal_a_aenabled() const {
   return _impl_.a_aenabled_;
@@ -1735,7 +1871,7 @@ inline bool Msg_UpdateParentalControlEnabled::a_aenabled() const {
   return _internal_a_aenabled();
 }
 inline void Msg_UpdateParentalControlEnabled::_internal_set_a_aenabled(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aenabled_ = value;
 }
 inline void Msg_UpdateParentalControlEnabled::set_a_aenabled(bool value) {
@@ -1747,9 +1883,17 @@ inline void Msg_UpdateParentalControlEnabled::set_a_aenabled(bool value) {
 
 // Msg_ClearDNSCache
 
-// bool a_aTrrToo = 1;
+// required bool a_aTrrToo = 1;
+inline bool Msg_ClearDNSCache::_internal_has_a_atrrtoo() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_ClearDNSCache::has_a_atrrtoo() const {
+  return _internal_has_a_atrrtoo();
+}
 inline void Msg_ClearDNSCache::clear_a_atrrtoo() {
   _impl_.a_atrrtoo_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Msg_ClearDNSCache::_internal_a_atrrtoo() const {
   return _impl_.a_atrrtoo_;
@@ -1759,7 +1903,7 @@ inline bool Msg_ClearDNSCache::a_atrrtoo() const {
   return _internal_a_atrrtoo();
 }
 inline void Msg_ClearDNSCache::_internal_set_a_atrrtoo(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_atrrtoo_ = value;
 }
 inline void Msg_ClearDNSCache::set_a_atrrtoo(bool value) {
@@ -1771,9 +1915,17 @@ inline void Msg_ClearDNSCache::set_a_atrrtoo(bool value) {
 
 // Msg_SetDetectedTrrURI
 
-// string a_aURI = 1;
+// required string a_aURI = 1;
+inline bool Msg_SetDetectedTrrURI::_internal_has_a_auri() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_SetDetectedTrrURI::has_a_auri() const {
+  return _internal_has_a_auri();
+}
 inline void Msg_SetDetectedTrrURI::clear_a_auri() {
   _impl_.a_auri_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_SetDetectedTrrURI::a_auri() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PTRRService.Msg_SetDetectedTrrURI.a_aURI)
@@ -1782,7 +1934,7 @@ inline const std::string& Msg_SetDetectedTrrURI::a_auri() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SetDetectedTrrURI::set_a_auri(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_auri_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTRRService.Msg_SetDetectedTrrURI.a_aURI)
 }
@@ -1795,22 +1947,32 @@ inline const std::string& Msg_SetDetectedTrrURI::_internal_a_auri() const {
   return _impl_.a_auri_.Get();
 }
 inline void Msg_SetDetectedTrrURI::_internal_set_a_auri(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_auri_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_SetDetectedTrrURI::_internal_mutable_a_auri() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_auri_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_SetDetectedTrrURI::release_a_auri() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PTRRService.Msg_SetDetectedTrrURI.a_aURI)
-  return _impl_.a_auri_.Release();
+  if (!_internal_has_a_auri()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_auri_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_auri_.IsDefault()) {
+    _impl_.a_auri_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_SetDetectedTrrURI::set_allocated_a_auri(std::string* a_auri) {
   if (a_auri != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_auri_.SetAllocated(a_auri, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

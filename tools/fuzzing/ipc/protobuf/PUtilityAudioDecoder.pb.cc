@@ -23,9 +23,10 @@ namespace ipc {
 namespace PUtilityAudioDecoder {
 PROTOBUF_CONSTEXPR Msg_NewContentRemoteMediaManager::Msg_NewContentRemoteMediaManager(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_endpoint_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_parentid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_endpoint_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_parentid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_NewContentRemoteMediaManagerDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_NewContentRemoteMediaManagerDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -37,9 +38,10 @@ struct Msg_NewContentRemoteMediaManagerDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_NewContentRemoteMediaManagerDefaultTypeInternal _Msg_NewContentRemoteMediaManager_default_instance_;
 PROTOBUF_CONSTEXPR Msg_UpdateMediaCodecsSupported::Msg_UpdateMediaCodecsSupported(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_alocation_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_asupported_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_alocation_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_asupported_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_UpdateMediaCodecsSupportedDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_UpdateMediaCodecsSupportedDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -62,6 +64,16 @@ namespace PUtilityAudioDecoder {
 
 class Msg_NewContentRemoteMediaManager::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_NewContentRemoteMediaManager>()._impl_._has_bits_);
+  static void set_has_a_endpoint(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_parentid(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 Msg_NewContentRemoteMediaManager::Msg_NewContentRemoteMediaManager(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -74,16 +86,17 @@ Msg_NewContentRemoteMediaManager::Msg_NewContentRemoteMediaManager(const Msg_New
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_NewContentRemoteMediaManager* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_endpoint_){}
-    , decltype(_impl_.a_parentid_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_endpoint_){}
+    , decltype(_impl_.a_parentid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_endpoint_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_endpoint_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_endpoint().empty()) {
+  if (from._internal_has_a_endpoint()) {
     _this->_impl_.a_endpoint_.Set(from._internal_a_endpoint(), 
       _this->GetArenaForAllocation());
   }
@@ -91,7 +104,7 @@ Msg_NewContentRemoteMediaManager::Msg_NewContentRemoteMediaManager(const Msg_New
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_parentid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_parentid().empty()) {
+  if (from._internal_has_a_parentid()) {
     _this->_impl_.a_parentid_.Set(from._internal_a_parentid(), 
       _this->GetArenaForAllocation());
   }
@@ -103,9 +116,10 @@ inline void Msg_NewContentRemoteMediaManager::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_endpoint_){}
-    , decltype(_impl_.a_parentid_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_endpoint_){}
+    , decltype(_impl_.a_parentid_){}
   };
   _impl_.a_endpoint_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -142,18 +156,27 @@ void Msg_NewContentRemoteMediaManager::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_endpoint_.ClearToEmpty();
-  _impl_.a_parentid_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_endpoint_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_parentid_.ClearNonDefaultToEmpty();
+    }
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_NewContentRemoteMediaManager::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_endpoint = 1;
+      // required bytes a_endpoint = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_endpoint();
@@ -162,7 +185,7 @@ const char* Msg_NewContentRemoteMediaManager::_InternalParse(const char* ptr, ::
         } else
           goto handle_unusual;
         continue;
-      // bytes a_parentId = 2;
+      // required bytes a_parentId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_parentid();
@@ -187,6 +210,7 @@ const char* Msg_NewContentRemoteMediaManager::_InternalParse(const char* ptr, ::
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -200,14 +224,15 @@ uint8_t* Msg_NewContentRemoteMediaManager::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_endpoint = 1;
-  if (!this->_internal_a_endpoint().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_endpoint = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_endpoint(), target);
   }
 
-  // bytes a_parentId = 2;
-  if (!this->_internal_a_parentid().empty()) {
+  // required bytes a_parentId = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_a_parentid(), target);
   }
@@ -220,27 +245,47 @@ uint8_t* Msg_NewContentRemoteMediaManager::_InternalSerialize(
   return target;
 }
 
-size_t Msg_NewContentRemoteMediaManager::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.ipc.PUtilityAudioDecoder.Msg_NewContentRemoteMediaManager)
+size_t Msg_NewContentRemoteMediaManager::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.ipc.PUtilityAudioDecoder.Msg_NewContentRemoteMediaManager)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_endpoint = 1;
-  if (!this->_internal_a_endpoint().empty()) {
+  if (_internal_has_a_endpoint()) {
+    // required bytes a_endpoint = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_endpoint());
   }
 
-  // bytes a_parentId = 2;
-  if (!this->_internal_a_parentid().empty()) {
+  if (_internal_has_a_parentid()) {
+    // required bytes a_parentId = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_parentid());
   }
+
+  return total_size;
+}
+size_t Msg_NewContentRemoteMediaManager::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.ipc.PUtilityAudioDecoder.Msg_NewContentRemoteMediaManager)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required bytes a_endpoint = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_endpoint());
+
+    // required bytes a_parentId = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_parentid());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -263,11 +308,14 @@ void Msg_NewContentRemoteMediaManager::MergeFrom(const Msg_NewContentRemoteMedia
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_endpoint().empty()) {
-    _this->_internal_set_a_endpoint(from._internal_a_endpoint());
-  }
-  if (!from._internal_a_parentid().empty()) {
-    _this->_internal_set_a_parentid(from._internal_a_parentid());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_endpoint(from._internal_a_endpoint());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_parentid(from._internal_a_parentid());
+    }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -280,6 +328,7 @@ void Msg_NewContentRemoteMediaManager::CopyFrom(const Msg_NewContentRemoteMediaM
 }
 
 bool Msg_NewContentRemoteMediaManager::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -288,6 +337,7 @@ void Msg_NewContentRemoteMediaManager::InternalSwap(Msg_NewContentRemoteMediaMan
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_endpoint_, lhs_arena,
       &other->_impl_.a_endpoint_, rhs_arena
@@ -307,6 +357,16 @@ std::string Msg_NewContentRemoteMediaManager::GetTypeName() const {
 
 class Msg_UpdateMediaCodecsSupported::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_UpdateMediaCodecsSupported>()._impl_._has_bits_);
+  static void set_has_a_alocation(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_asupported(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 Msg_UpdateMediaCodecsSupported::Msg_UpdateMediaCodecsSupported(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -319,16 +379,17 @@ Msg_UpdateMediaCodecsSupported::Msg_UpdateMediaCodecsSupported(const Msg_UpdateM
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_UpdateMediaCodecsSupported* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_alocation_){}
-    , decltype(_impl_.a_asupported_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_alocation_){}
+    , decltype(_impl_.a_asupported_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_alocation_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_alocation_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_alocation().empty()) {
+  if (from._internal_has_a_alocation()) {
     _this->_impl_.a_alocation_.Set(from._internal_a_alocation(), 
       _this->GetArenaForAllocation());
   }
@@ -336,7 +397,7 @@ Msg_UpdateMediaCodecsSupported::Msg_UpdateMediaCodecsSupported(const Msg_UpdateM
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_asupported_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_asupported().empty()) {
+  if (from._internal_has_a_asupported()) {
     _this->_impl_.a_asupported_.Set(from._internal_a_asupported(), 
       _this->GetArenaForAllocation());
   }
@@ -348,9 +409,10 @@ inline void Msg_UpdateMediaCodecsSupported::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_alocation_){}
-    , decltype(_impl_.a_asupported_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_alocation_){}
+    , decltype(_impl_.a_asupported_){}
   };
   _impl_.a_alocation_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -387,18 +449,27 @@ void Msg_UpdateMediaCodecsSupported::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_alocation_.ClearToEmpty();
-  _impl_.a_asupported_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_alocation_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_asupported_.ClearNonDefaultToEmpty();
+    }
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_UpdateMediaCodecsSupported::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_aLocation = 1;
+      // required bytes a_aLocation = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_alocation();
@@ -407,7 +478,7 @@ const char* Msg_UpdateMediaCodecsSupported::_InternalParse(const char* ptr, ::_p
         } else
           goto handle_unusual;
         continue;
-      // bytes a_aSupported = 2;
+      // required bytes a_aSupported = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_asupported();
@@ -432,6 +503,7 @@ const char* Msg_UpdateMediaCodecsSupported::_InternalParse(const char* ptr, ::_p
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -445,14 +517,15 @@ uint8_t* Msg_UpdateMediaCodecsSupported::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_aLocation = 1;
-  if (!this->_internal_a_alocation().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_aLocation = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_alocation(), target);
   }
 
-  // bytes a_aSupported = 2;
-  if (!this->_internal_a_asupported().empty()) {
+  // required bytes a_aSupported = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_a_asupported(), target);
   }
@@ -465,27 +538,47 @@ uint8_t* Msg_UpdateMediaCodecsSupported::_InternalSerialize(
   return target;
 }
 
-size_t Msg_UpdateMediaCodecsSupported::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.ipc.PUtilityAudioDecoder.Msg_UpdateMediaCodecsSupported)
+size_t Msg_UpdateMediaCodecsSupported::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.ipc.PUtilityAudioDecoder.Msg_UpdateMediaCodecsSupported)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_aLocation = 1;
-  if (!this->_internal_a_alocation().empty()) {
+  if (_internal_has_a_alocation()) {
+    // required bytes a_aLocation = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_alocation());
   }
 
-  // bytes a_aSupported = 2;
-  if (!this->_internal_a_asupported().empty()) {
+  if (_internal_has_a_asupported()) {
+    // required bytes a_aSupported = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_asupported());
   }
+
+  return total_size;
+}
+size_t Msg_UpdateMediaCodecsSupported::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.ipc.PUtilityAudioDecoder.Msg_UpdateMediaCodecsSupported)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required bytes a_aLocation = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_alocation());
+
+    // required bytes a_aSupported = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_asupported());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -508,11 +601,14 @@ void Msg_UpdateMediaCodecsSupported::MergeFrom(const Msg_UpdateMediaCodecsSuppor
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_alocation().empty()) {
-    _this->_internal_set_a_alocation(from._internal_a_alocation());
-  }
-  if (!from._internal_a_asupported().empty()) {
-    _this->_internal_set_a_asupported(from._internal_a_asupported());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_alocation(from._internal_a_alocation());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_asupported(from._internal_a_asupported());
+    }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -525,6 +621,7 @@ void Msg_UpdateMediaCodecsSupported::CopyFrom(const Msg_UpdateMediaCodecsSupport
 }
 
 bool Msg_UpdateMediaCodecsSupported::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -533,6 +630,7 @@ void Msg_UpdateMediaCodecsSupported::InternalSwap(Msg_UpdateMediaCodecsSupported
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_alocation_, lhs_arena,
       &other->_impl_.a_alocation_, rhs_arena

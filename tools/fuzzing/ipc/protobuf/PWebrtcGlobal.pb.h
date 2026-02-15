@@ -137,6 +137,13 @@ class Msg___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -252,6 +259,13 @@ class Reply___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply___delete__& default_instance() {
@@ -371,6 +385,13 @@ class Msg_PeerConnectionCreated final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_PeerConnectionCreated& default_instance() {
     return *internal_default_instance();
   }
@@ -446,7 +467,11 @@ class Msg_PeerConnectionCreated final :
     kAAPcIdFieldNumber = 1,
     kAAIsLongTermStatsDisabledFieldNumber = 2,
   };
-  // string a_aPcId = 1;
+  // required string a_aPcId = 1;
+  bool has_a_apcid() const;
+  private:
+  bool _internal_has_a_apcid() const;
+  public:
   void clear_a_apcid();
   const std::string& a_apcid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -460,7 +485,11 @@ class Msg_PeerConnectionCreated final :
   std::string* _internal_mutable_a_apcid();
   public:
 
-  // bool a_aIsLongTermStatsDisabled = 2;
+  // required bool a_aIsLongTermStatsDisabled = 2;
+  bool has_a_aislongtermstatsdisabled() const;
+  private:
+  bool _internal_has_a_aislongtermstatsdisabled() const;
+  public:
   void clear_a_aislongtermstatsdisabled();
   bool a_aislongtermstatsdisabled() const;
   void set_a_aislongtermstatsdisabled(bool value);
@@ -473,13 +502,17 @@ class Msg_PeerConnectionCreated final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_apcid_;
     bool a_aislongtermstatsdisabled_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebrtcGlobal_2eproto;
@@ -515,6 +548,13 @@ class Msg_PeerConnectionDestroyed final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_PeerConnectionDestroyed& default_instance() {
@@ -591,7 +631,11 @@ class Msg_PeerConnectionDestroyed final :
   enum : int {
     kAAPcIdFieldNumber = 1,
   };
-  // string a_aPcId = 1;
+  // required string a_aPcId = 1;
+  bool has_a_apcid() const;
+  private:
+  bool _internal_has_a_apcid() const;
+  public:
   void clear_a_apcid();
   const std::string& a_apcid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -613,8 +657,9 @@ class Msg_PeerConnectionDestroyed final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_apcid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_apcid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebrtcGlobal_2eproto;
@@ -650,6 +695,13 @@ class Msg_PeerConnectionFinalStats final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_PeerConnectionFinalStats& default_instance() {
@@ -726,7 +778,11 @@ class Msg_PeerConnectionFinalStats final :
   enum : int {
     kAAFinalStatsFieldNumber = 1,
   };
-  // bytes a_aFinalStats = 1;
+  // required bytes a_aFinalStats = 1;
+  bool has_a_afinalstats() const;
+  private:
+  bool _internal_has_a_afinalstats() const;
+  public:
   void clear_a_afinalstats();
   const std::string& a_afinalstats() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -748,8 +804,9 @@ class Msg_PeerConnectionFinalStats final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_afinalstats_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_afinalstats_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebrtcGlobal_2eproto;
@@ -785,6 +842,13 @@ class Msg_GetStats final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_GetStats& default_instance() {
@@ -861,7 +925,11 @@ class Msg_GetStats final :
   enum : int {
     kAAPcIdFilterFieldNumber = 1,
   };
-  // string a_aPcIdFilter = 1;
+  // required string a_aPcIdFilter = 1;
+  bool has_a_apcidfilter() const;
+  private:
+  bool _internal_has_a_apcidfilter() const;
+  public:
   void clear_a_apcidfilter();
   const std::string& a_apcidfilter() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -883,8 +951,9 @@ class Msg_GetStats final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_apcidfilter_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_apcidfilter_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebrtcGlobal_2eproto;
@@ -920,6 +989,13 @@ class Reply_GetStats final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_GetStats& default_instance() {
@@ -1067,6 +1143,13 @@ class Msg_ClearStats final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_ClearStats& default_instance() {
     return *internal_default_instance();
   }
@@ -1182,6 +1265,13 @@ class Msg_GetLog final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_GetLog& default_instance() {
@@ -1301,6 +1391,13 @@ class Reply_GetLog final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_GetLog& default_instance() {
     return *internal_default_instance();
   }
@@ -1375,7 +1472,11 @@ class Reply_GetLog final :
   enum : int {
     kALogsFieldNumber = 1,
   };
-  // bytes a_logs = 1;
+  // required bytes a_logs = 1;
+  bool has_a_logs() const;
+  private:
+  bool _internal_has_a_logs() const;
+  public:
   void clear_a_logs();
   const std::string& a_logs() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1397,8 +1498,9 @@ class Reply_GetLog final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_logs_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_logs_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebrtcGlobal_2eproto;
@@ -1434,6 +1536,13 @@ class Msg_ClearLog final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_ClearLog& default_instance() {
@@ -1553,6 +1662,13 @@ class Msg_SetAecLogging final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_SetAecLogging& default_instance() {
     return *internal_default_instance();
   }
@@ -1627,7 +1743,11 @@ class Msg_SetAecLogging final :
   enum : int {
     kAAEnableFieldNumber = 1,
   };
-  // bool a_aEnable = 1;
+  // required bool a_aEnable = 1;
+  bool has_a_aenable() const;
+  private:
+  bool _internal_has_a_aenable() const;
+  public:
   void clear_a_aenable();
   bool a_aenable() const;
   void set_a_aenable(bool value);
@@ -1644,8 +1764,9 @@ class Msg_SetAecLogging final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_aenable_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_aenable_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebrtcGlobal_2eproto;
@@ -1669,9 +1790,17 @@ class Msg_SetAecLogging final :
 
 // Msg_PeerConnectionCreated
 
-// string a_aPcId = 1;
+// required string a_aPcId = 1;
+inline bool Msg_PeerConnectionCreated::_internal_has_a_apcid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PeerConnectionCreated::has_a_apcid() const {
+  return _internal_has_a_apcid();
+}
 inline void Msg_PeerConnectionCreated::clear_a_apcid() {
   _impl_.a_apcid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_PeerConnectionCreated::a_apcid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionCreated.a_aPcId)
@@ -1680,7 +1809,7 @@ inline const std::string& Msg_PeerConnectionCreated::a_apcid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PeerConnectionCreated::set_a_apcid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_apcid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionCreated.a_aPcId)
 }
@@ -1693,22 +1822,32 @@ inline const std::string& Msg_PeerConnectionCreated::_internal_a_apcid() const {
   return _impl_.a_apcid_.Get();
 }
 inline void Msg_PeerConnectionCreated::_internal_set_a_apcid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_apcid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_PeerConnectionCreated::_internal_mutable_a_apcid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_apcid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_PeerConnectionCreated::release_a_apcid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionCreated.a_aPcId)
-  return _impl_.a_apcid_.Release();
+  if (!_internal_has_a_apcid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_apcid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_apcid_.IsDefault()) {
+    _impl_.a_apcid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_PeerConnectionCreated::set_allocated_a_apcid(std::string* a_apcid) {
   if (a_apcid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_apcid_.SetAllocated(a_apcid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1719,9 +1858,17 @@ inline void Msg_PeerConnectionCreated::set_allocated_a_apcid(std::string* a_apci
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionCreated.a_aPcId)
 }
 
-// bool a_aIsLongTermStatsDisabled = 2;
+// required bool a_aIsLongTermStatsDisabled = 2;
+inline bool Msg_PeerConnectionCreated::_internal_has_a_aislongtermstatsdisabled() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PeerConnectionCreated::has_a_aislongtermstatsdisabled() const {
+  return _internal_has_a_aislongtermstatsdisabled();
+}
 inline void Msg_PeerConnectionCreated::clear_a_aislongtermstatsdisabled() {
   _impl_.a_aislongtermstatsdisabled_ = false;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool Msg_PeerConnectionCreated::_internal_a_aislongtermstatsdisabled() const {
   return _impl_.a_aislongtermstatsdisabled_;
@@ -1731,7 +1878,7 @@ inline bool Msg_PeerConnectionCreated::a_aislongtermstatsdisabled() const {
   return _internal_a_aislongtermstatsdisabled();
 }
 inline void Msg_PeerConnectionCreated::_internal_set_a_aislongtermstatsdisabled(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aislongtermstatsdisabled_ = value;
 }
 inline void Msg_PeerConnectionCreated::set_a_aislongtermstatsdisabled(bool value) {
@@ -1743,9 +1890,17 @@ inline void Msg_PeerConnectionCreated::set_a_aislongtermstatsdisabled(bool value
 
 // Msg_PeerConnectionDestroyed
 
-// string a_aPcId = 1;
+// required string a_aPcId = 1;
+inline bool Msg_PeerConnectionDestroyed::_internal_has_a_apcid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PeerConnectionDestroyed::has_a_apcid() const {
+  return _internal_has_a_apcid();
+}
 inline void Msg_PeerConnectionDestroyed::clear_a_apcid() {
   _impl_.a_apcid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_PeerConnectionDestroyed::a_apcid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionDestroyed.a_aPcId)
@@ -1754,7 +1909,7 @@ inline const std::string& Msg_PeerConnectionDestroyed::a_apcid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PeerConnectionDestroyed::set_a_apcid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_apcid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionDestroyed.a_aPcId)
 }
@@ -1767,22 +1922,32 @@ inline const std::string& Msg_PeerConnectionDestroyed::_internal_a_apcid() const
   return _impl_.a_apcid_.Get();
 }
 inline void Msg_PeerConnectionDestroyed::_internal_set_a_apcid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_apcid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_PeerConnectionDestroyed::_internal_mutable_a_apcid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_apcid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_PeerConnectionDestroyed::release_a_apcid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionDestroyed.a_aPcId)
-  return _impl_.a_apcid_.Release();
+  if (!_internal_has_a_apcid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_apcid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_apcid_.IsDefault()) {
+    _impl_.a_apcid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_PeerConnectionDestroyed::set_allocated_a_apcid(std::string* a_apcid) {
   if (a_apcid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_apcid_.SetAllocated(a_apcid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1797,9 +1962,17 @@ inline void Msg_PeerConnectionDestroyed::set_allocated_a_apcid(std::string* a_ap
 
 // Msg_PeerConnectionFinalStats
 
-// bytes a_aFinalStats = 1;
+// required bytes a_aFinalStats = 1;
+inline bool Msg_PeerConnectionFinalStats::_internal_has_a_afinalstats() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PeerConnectionFinalStats::has_a_afinalstats() const {
+  return _internal_has_a_afinalstats();
+}
 inline void Msg_PeerConnectionFinalStats::clear_a_afinalstats() {
   _impl_.a_afinalstats_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_PeerConnectionFinalStats::a_afinalstats() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionFinalStats.a_aFinalStats)
@@ -1808,7 +1981,7 @@ inline const std::string& Msg_PeerConnectionFinalStats::a_afinalstats() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PeerConnectionFinalStats::set_a_afinalstats(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_afinalstats_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionFinalStats.a_aFinalStats)
 }
@@ -1821,22 +1994,32 @@ inline const std::string& Msg_PeerConnectionFinalStats::_internal_a_afinalstats(
   return _impl_.a_afinalstats_.Get();
 }
 inline void Msg_PeerConnectionFinalStats::_internal_set_a_afinalstats(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_afinalstats_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_PeerConnectionFinalStats::_internal_mutable_a_afinalstats() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_afinalstats_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_PeerConnectionFinalStats::release_a_afinalstats() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionFinalStats.a_aFinalStats)
-  return _impl_.a_afinalstats_.Release();
+  if (!_internal_has_a_afinalstats()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_afinalstats_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_afinalstats_.IsDefault()) {
+    _impl_.a_afinalstats_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_PeerConnectionFinalStats::set_allocated_a_afinalstats(std::string* a_afinalstats) {
   if (a_afinalstats != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_afinalstats_.SetAllocated(a_afinalstats, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1851,9 +2034,17 @@ inline void Msg_PeerConnectionFinalStats::set_allocated_a_afinalstats(std::strin
 
 // Msg_GetStats
 
-// string a_aPcIdFilter = 1;
+// required string a_aPcIdFilter = 1;
+inline bool Msg_GetStats::_internal_has_a_apcidfilter() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_GetStats::has_a_apcidfilter() const {
+  return _internal_has_a_apcidfilter();
+}
 inline void Msg_GetStats::clear_a_apcidfilter() {
   _impl_.a_apcidfilter_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_GetStats::a_apcidfilter() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebrtcGlobal.Msg_GetStats.a_aPcIdFilter)
@@ -1862,7 +2053,7 @@ inline const std::string& Msg_GetStats::a_apcidfilter() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GetStats::set_a_apcidfilter(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_apcidfilter_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebrtcGlobal.Msg_GetStats.a_aPcIdFilter)
 }
@@ -1875,22 +2066,32 @@ inline const std::string& Msg_GetStats::_internal_a_apcidfilter() const {
   return _impl_.a_apcidfilter_.Get();
 }
 inline void Msg_GetStats::_internal_set_a_apcidfilter(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_apcidfilter_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_GetStats::_internal_mutable_a_apcidfilter() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_apcidfilter_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_GetStats::release_a_apcidfilter() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebrtcGlobal.Msg_GetStats.a_aPcIdFilter)
-  return _impl_.a_apcidfilter_.Release();
+  if (!_internal_has_a_apcidfilter()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_apcidfilter_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_apcidfilter_.IsDefault()) {
+    _impl_.a_apcidfilter_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_GetStats::set_allocated_a_apcidfilter(std::string* a_apcidfilter) {
   if (a_apcidfilter != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_apcidfilter_.SetAllocated(a_apcidfilter, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1992,9 +2193,17 @@ Reply_GetStats::mutable_a_stats() {
 
 // Reply_GetLog
 
-// bytes a_logs = 1;
+// required bytes a_logs = 1;
+inline bool Reply_GetLog::_internal_has_a_logs() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_GetLog::has_a_logs() const {
+  return _internal_has_a_logs();
+}
 inline void Reply_GetLog::clear_a_logs() {
   _impl_.a_logs_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_GetLog::a_logs() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetLog.a_logs)
@@ -2003,7 +2212,7 @@ inline const std::string& Reply_GetLog::a_logs() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_GetLog::set_a_logs(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_logs_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetLog.a_logs)
 }
@@ -2016,22 +2225,32 @@ inline const std::string& Reply_GetLog::_internal_a_logs() const {
   return _impl_.a_logs_.Get();
 }
 inline void Reply_GetLog::_internal_set_a_logs(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_logs_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_GetLog::_internal_mutable_a_logs() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_logs_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_GetLog::release_a_logs() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetLog.a_logs)
-  return _impl_.a_logs_.Release();
+  if (!_internal_has_a_logs()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_logs_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_logs_.IsDefault()) {
+    _impl_.a_logs_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_GetLog::set_allocated_a_logs(std::string* a_logs) {
   if (a_logs != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_logs_.SetAllocated(a_logs, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2050,9 +2269,17 @@ inline void Reply_GetLog::set_allocated_a_logs(std::string* a_logs) {
 
 // Msg_SetAecLogging
 
-// bool a_aEnable = 1;
+// required bool a_aEnable = 1;
+inline bool Msg_SetAecLogging::_internal_has_a_aenable() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_SetAecLogging::has_a_aenable() const {
+  return _internal_has_a_aenable();
+}
 inline void Msg_SetAecLogging::clear_a_aenable() {
   _impl_.a_aenable_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Msg_SetAecLogging::_internal_a_aenable() const {
   return _impl_.a_aenable_;
@@ -2062,7 +2289,7 @@ inline bool Msg_SetAecLogging::a_aenable() const {
   return _internal_a_aenable();
 }
 inline void Msg_SetAecLogging::_internal_set_a_aenable(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aenable_ = value;
 }
 inline void Msg_SetAecLogging::set_a_aenable(bool value) {

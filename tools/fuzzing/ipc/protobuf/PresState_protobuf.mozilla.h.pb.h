@@ -112,6 +112,13 @@ class SelectContentData final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const SelectContentData& default_instance() {
     return *internal_default_instance();
   }
@@ -242,7 +249,6 @@ class SelectContentData final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_indices_;
-    mutable std::atomic<int> _a_indices_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_values_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -280,6 +286,13 @@ class CheckedContentData final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const CheckedContentData& default_instance() {
@@ -356,7 +369,11 @@ class CheckedContentData final :
   enum : int {
     kACheckedFieldNumber = 1,
   };
-  // bool a_checked = 1;
+  // required bool a_checked = 1;
+  bool has_a_checked() const;
+  private:
+  bool _internal_has_a_checked() const;
+  public:
   void clear_a_checked();
   bool a_checked() const;
   void set_a_checked(bool value);
@@ -373,8 +390,9 @@ class CheckedContentData final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_checked_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_checked_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PresState_5fprotobuf_2emozilla_2eh_2eproto;
@@ -410,6 +428,13 @@ class FileContentData final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const FileContentData& default_instance() {
@@ -590,6 +615,13 @@ class TextContentData final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const TextContentData& default_instance() {
     return *internal_default_instance();
   }
@@ -665,7 +697,11 @@ class TextContentData final :
     kAValueFieldNumber = 1,
     kALastValueChangeWasInteractiveFieldNumber = 2,
   };
-  // string a_value = 1;
+  // required string a_value = 1;
+  bool has_a_value() const;
+  private:
+  bool _internal_has_a_value() const;
+  public:
   void clear_a_value();
   const std::string& a_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -679,7 +715,11 @@ class TextContentData final :
   std::string* _internal_mutable_a_value();
   public:
 
-  // bool a_lastValueChangeWasInteractive = 2;
+  // required bool a_lastValueChangeWasInteractive = 2;
+  bool has_a_lastvaluechangewasinteractive() const;
+  private:
+  bool _internal_has_a_lastvaluechangewasinteractive() const;
+  public:
   void clear_a_lastvaluechangewasinteractive();
   bool a_lastvaluechangewasinteractive() const;
   void set_a_lastvaluechangewasinteractive(bool value);
@@ -692,13 +732,17 @@ class TextContentData final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_value_;
     bool a_lastvaluechangewasinteractive_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PresState_5fprotobuf_2emozilla_2eh_2eproto;
@@ -734,6 +778,13 @@ class PresContentData_a_type_mVArrayOfFileContentData final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const PresContentData_a_type_mVArrayOfFileContentData& default_instance() {
@@ -873,6 +924,13 @@ class PresContentData final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const PresContentData& default_instance() {
@@ -1143,6 +1201,13 @@ class PresState final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const PresState& default_instance() {
     return *internal_default_instance();
   }
@@ -1223,7 +1288,11 @@ class PresState final :
     kADisabledFieldNumber = 6,
     kADroppedDownFieldNumber = 7,
   };
-  // bytes a_scrollState = 2;
+  // required bytes a_scrollState = 2;
+  bool has_a_scrollstate() const;
+  private:
+  bool _internal_has_a_scrollstate() const;
+  public:
   void clear_a_scrollstate();
   const std::string& a_scrollstate() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1237,7 +1306,7 @@ class PresState final :
   std::string* _internal_mutable_a_scrollstate();
   public:
 
-  // .protobuf.mozilla.PresContentData a_contentData = 1;
+  // required .protobuf.mozilla.PresContentData a_contentData = 1;
   bool has_a_contentdata() const;
   private:
   bool _internal_has_a_contentdata() const;
@@ -1255,7 +1324,11 @@ class PresState final :
       ::protobuf::mozilla::PresContentData* a_contentdata);
   ::protobuf::mozilla::PresContentData* unsafe_arena_release_a_contentdata();
 
-  // float a_resolution = 4;
+  // required float a_resolution = 4;
+  bool has_a_resolution() const;
+  private:
+  bool _internal_has_a_resolution() const;
+  public:
   void clear_a_resolution();
   float a_resolution() const;
   void set_a_resolution(float value);
@@ -1264,7 +1337,11 @@ class PresState final :
   void _internal_set_a_resolution(float value);
   public:
 
-  // bool a_allowScrollOriginDowngrade = 3;
+  // required bool a_allowScrollOriginDowngrade = 3;
+  bool has_a_allowscrollorigindowngrade() const;
+  private:
+  bool _internal_has_a_allowscrollorigindowngrade() const;
+  public:
   void clear_a_allowscrollorigindowngrade();
   bool a_allowscrollorigindowngrade() const;
   void set_a_allowscrollorigindowngrade(bool value);
@@ -1273,7 +1350,11 @@ class PresState final :
   void _internal_set_a_allowscrollorigindowngrade(bool value);
   public:
 
-  // bool a_disabledSet = 5;
+  // required bool a_disabledSet = 5;
+  bool has_a_disabledset() const;
+  private:
+  bool _internal_has_a_disabledset() const;
+  public:
   void clear_a_disabledset();
   bool a_disabledset() const;
   void set_a_disabledset(bool value);
@@ -1282,7 +1363,11 @@ class PresState final :
   void _internal_set_a_disabledset(bool value);
   public:
 
-  // bool a_disabled = 6;
+  // required bool a_disabled = 6;
+  bool has_a_disabled() const;
+  private:
+  bool _internal_has_a_disabled() const;
+  public:
   void clear_a_disabled();
   bool a_disabled() const;
   void set_a_disabled(bool value);
@@ -1291,7 +1376,11 @@ class PresState final :
   void _internal_set_a_disabled(bool value);
   public:
 
-  // bool a_droppedDown = 7;
+  // required bool a_droppedDown = 7;
+  bool has_a_droppeddown() const;
+  private:
+  bool _internal_has_a_droppeddown() const;
+  public:
   void clear_a_droppeddown();
   bool a_droppeddown() const;
   void set_a_droppeddown(bool value);
@@ -1304,10 +1393,15 @@ class PresState final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_scrollstate_;
     ::protobuf::mozilla::PresContentData* a_contentdata_;
     float a_resolution_;
@@ -1315,7 +1409,6 @@ class PresState final :
     bool a_disabledset_;
     bool a_disabled_;
     bool a_droppeddown_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PresState_5fprotobuf_2emozilla_2eh_2eproto;
@@ -1457,9 +1550,17 @@ SelectContentData::mutable_a_values() {
 
 // CheckedContentData
 
-// bool a_checked = 1;
+// required bool a_checked = 1;
+inline bool CheckedContentData::_internal_has_a_checked() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool CheckedContentData::has_a_checked() const {
+  return _internal_has_a_checked();
+}
 inline void CheckedContentData::clear_a_checked() {
   _impl_.a_checked_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool CheckedContentData::_internal_a_checked() const {
   return _impl_.a_checked_;
@@ -1469,7 +1570,7 @@ inline bool CheckedContentData::a_checked() const {
   return _internal_a_checked();
 }
 inline void CheckedContentData::_internal_set_a_checked(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_checked_ = value;
 }
 inline void CheckedContentData::set_a_checked(bool value) {
@@ -1648,9 +1749,17 @@ inline FileContentData::ContentCase FileContentData::content_case() const {
 
 // TextContentData
 
-// string a_value = 1;
+// required string a_value = 1;
+inline bool TextContentData::_internal_has_a_value() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool TextContentData::has_a_value() const {
+  return _internal_has_a_value();
+}
 inline void TextContentData::clear_a_value() {
   _impl_.a_value_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& TextContentData::a_value() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.TextContentData.a_value)
@@ -1659,7 +1768,7 @@ inline const std::string& TextContentData::a_value() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void TextContentData::set_a_value(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_value_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.TextContentData.a_value)
 }
@@ -1672,22 +1781,32 @@ inline const std::string& TextContentData::_internal_a_value() const {
   return _impl_.a_value_.Get();
 }
 inline void TextContentData::_internal_set_a_value(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_value_.Set(value, GetArenaForAllocation());
 }
 inline std::string* TextContentData::_internal_mutable_a_value() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_value_.Mutable(GetArenaForAllocation());
 }
 inline std::string* TextContentData::release_a_value() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.TextContentData.a_value)
-  return _impl_.a_value_.Release();
+  if (!_internal_has_a_value()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_value_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_value_.IsDefault()) {
+    _impl_.a_value_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void TextContentData::set_allocated_a_value(std::string* a_value) {
   if (a_value != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_value_.SetAllocated(a_value, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1698,9 +1817,17 @@ inline void TextContentData::set_allocated_a_value(std::string* a_value) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.TextContentData.a_value)
 }
 
-// bool a_lastValueChangeWasInteractive = 2;
+// required bool a_lastValueChangeWasInteractive = 2;
+inline bool TextContentData::_internal_has_a_lastvaluechangewasinteractive() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool TextContentData::has_a_lastvaluechangewasinteractive() const {
+  return _internal_has_a_lastvaluechangewasinteractive();
+}
 inline void TextContentData::clear_a_lastvaluechangewasinteractive() {
   _impl_.a_lastvaluechangewasinteractive_ = false;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool TextContentData::_internal_a_lastvaluechangewasinteractive() const {
   return _impl_.a_lastvaluechangewasinteractive_;
@@ -1710,7 +1837,7 @@ inline bool TextContentData::a_lastvaluechangewasinteractive() const {
   return _internal_a_lastvaluechangewasinteractive();
 }
 inline void TextContentData::_internal_set_a_lastvaluechangewasinteractive(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_lastvaluechangewasinteractive_ = value;
 }
 inline void TextContentData::set_a_lastvaluechangewasinteractive(bool value) {
@@ -2218,18 +2345,18 @@ inline PresContentData::ContentCase PresContentData::content_case() const {
 
 // PresState
 
-// .protobuf.mozilla.PresContentData a_contentData = 1;
+// required .protobuf.mozilla.PresContentData a_contentData = 1;
 inline bool PresState::_internal_has_a_contentdata() const {
-  return this != internal_default_instance() && _impl_.a_contentdata_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_contentdata_ != nullptr);
+  return value;
 }
 inline bool PresState::has_a_contentdata() const {
   return _internal_has_a_contentdata();
 }
 inline void PresState::clear_a_contentdata() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_contentdata_ != nullptr) {
-    delete _impl_.a_contentdata_;
-  }
-  _impl_.a_contentdata_ = nullptr;
+  if (_impl_.a_contentdata_ != nullptr) _impl_.a_contentdata_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const ::protobuf::mozilla::PresContentData& PresState::_internal_a_contentdata() const {
   const ::protobuf::mozilla::PresContentData* p = _impl_.a_contentdata_;
@@ -2247,14 +2374,14 @@ inline void PresState::unsafe_arena_set_allocated_a_contentdata(
   }
   _impl_.a_contentdata_ = a_contentdata;
   if (a_contentdata) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PresState.a_contentData)
 }
 inline ::protobuf::mozilla::PresContentData* PresState::release_a_contentdata() {
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::PresContentData* temp = _impl_.a_contentdata_;
   _impl_.a_contentdata_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -2270,13 +2397,13 @@ inline ::protobuf::mozilla::PresContentData* PresState::release_a_contentdata() 
 }
 inline ::protobuf::mozilla::PresContentData* PresState::unsafe_arena_release_a_contentdata() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.PresState.a_contentData)
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::PresContentData* temp = _impl_.a_contentdata_;
   _impl_.a_contentdata_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::PresContentData* PresState::_internal_mutable_a_contentdata() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   if (_impl_.a_contentdata_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::PresContentData>(GetArenaForAllocation());
     _impl_.a_contentdata_ = p;
@@ -2300,17 +2427,25 @@ inline void PresState::set_allocated_a_contentdata(::protobuf::mozilla::PresCont
       a_contentdata = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_contentdata, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_contentdata_ = a_contentdata;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PresState.a_contentData)
 }
 
-// bytes a_scrollState = 2;
+// required bytes a_scrollState = 2;
+inline bool PresState::_internal_has_a_scrollstate() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool PresState::has_a_scrollstate() const {
+  return _internal_has_a_scrollstate();
+}
 inline void PresState::clear_a_scrollstate() {
   _impl_.a_scrollstate_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& PresState::a_scrollstate() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.PresState.a_scrollState)
@@ -2319,7 +2454,7 @@ inline const std::string& PresState::a_scrollstate() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void PresState::set_a_scrollstate(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_scrollstate_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PresState.a_scrollState)
 }
@@ -2332,22 +2467,32 @@ inline const std::string& PresState::_internal_a_scrollstate() const {
   return _impl_.a_scrollstate_.Get();
 }
 inline void PresState::_internal_set_a_scrollstate(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_scrollstate_.Set(value, GetArenaForAllocation());
 }
 inline std::string* PresState::_internal_mutable_a_scrollstate() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_scrollstate_.Mutable(GetArenaForAllocation());
 }
 inline std::string* PresState::release_a_scrollstate() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.PresState.a_scrollState)
-  return _impl_.a_scrollstate_.Release();
+  if (!_internal_has_a_scrollstate()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_scrollstate_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_scrollstate_.IsDefault()) {
+    _impl_.a_scrollstate_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void PresState::set_allocated_a_scrollstate(std::string* a_scrollstate) {
   if (a_scrollstate != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_scrollstate_.SetAllocated(a_scrollstate, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2358,9 +2503,17 @@ inline void PresState::set_allocated_a_scrollstate(std::string* a_scrollstate) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PresState.a_scrollState)
 }
 
-// bool a_allowScrollOriginDowngrade = 3;
+// required bool a_allowScrollOriginDowngrade = 3;
+inline bool PresState::_internal_has_a_allowscrollorigindowngrade() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool PresState::has_a_allowscrollorigindowngrade() const {
+  return _internal_has_a_allowscrollorigindowngrade();
+}
 inline void PresState::clear_a_allowscrollorigindowngrade() {
   _impl_.a_allowscrollorigindowngrade_ = false;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline bool PresState::_internal_a_allowscrollorigindowngrade() const {
   return _impl_.a_allowscrollorigindowngrade_;
@@ -2370,7 +2523,7 @@ inline bool PresState::a_allowscrollorigindowngrade() const {
   return _internal_a_allowscrollorigindowngrade();
 }
 inline void PresState::_internal_set_a_allowscrollorigindowngrade(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_allowscrollorigindowngrade_ = value;
 }
 inline void PresState::set_a_allowscrollorigindowngrade(bool value) {
@@ -2378,9 +2531,17 @@ inline void PresState::set_a_allowscrollorigindowngrade(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PresState.a_allowScrollOriginDowngrade)
 }
 
-// float a_resolution = 4;
+// required float a_resolution = 4;
+inline bool PresState::_internal_has_a_resolution() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool PresState::has_a_resolution() const {
+  return _internal_has_a_resolution();
+}
 inline void PresState::clear_a_resolution() {
   _impl_.a_resolution_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline float PresState::_internal_a_resolution() const {
   return _impl_.a_resolution_;
@@ -2390,7 +2551,7 @@ inline float PresState::a_resolution() const {
   return _internal_a_resolution();
 }
 inline void PresState::_internal_set_a_resolution(float value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_resolution_ = value;
 }
 inline void PresState::set_a_resolution(float value) {
@@ -2398,9 +2559,17 @@ inline void PresState::set_a_resolution(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PresState.a_resolution)
 }
 
-// bool a_disabledSet = 5;
+// required bool a_disabledSet = 5;
+inline bool PresState::_internal_has_a_disabledset() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool PresState::has_a_disabledset() const {
+  return _internal_has_a_disabledset();
+}
 inline void PresState::clear_a_disabledset() {
   _impl_.a_disabledset_ = false;
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline bool PresState::_internal_a_disabledset() const {
   return _impl_.a_disabledset_;
@@ -2410,7 +2579,7 @@ inline bool PresState::a_disabledset() const {
   return _internal_a_disabledset();
 }
 inline void PresState::_internal_set_a_disabledset(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.a_disabledset_ = value;
 }
 inline void PresState::set_a_disabledset(bool value) {
@@ -2418,9 +2587,17 @@ inline void PresState::set_a_disabledset(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PresState.a_disabledSet)
 }
 
-// bool a_disabled = 6;
+// required bool a_disabled = 6;
+inline bool PresState::_internal_has_a_disabled() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool PresState::has_a_disabled() const {
+  return _internal_has_a_disabled();
+}
 inline void PresState::clear_a_disabled() {
   _impl_.a_disabled_ = false;
+  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline bool PresState::_internal_a_disabled() const {
   return _impl_.a_disabled_;
@@ -2430,7 +2607,7 @@ inline bool PresState::a_disabled() const {
   return _internal_a_disabled();
 }
 inline void PresState::_internal_set_a_disabled(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000020u;
   _impl_.a_disabled_ = value;
 }
 inline void PresState::set_a_disabled(bool value) {
@@ -2438,9 +2615,17 @@ inline void PresState::set_a_disabled(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PresState.a_disabled)
 }
 
-// bool a_droppedDown = 7;
+// required bool a_droppedDown = 7;
+inline bool PresState::_internal_has_a_droppeddown() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool PresState::has_a_droppeddown() const {
+  return _internal_has_a_droppeddown();
+}
 inline void PresState::clear_a_droppeddown() {
   _impl_.a_droppeddown_ = false;
+  _impl_._has_bits_[0] &= ~0x00000040u;
 }
 inline bool PresState::_internal_a_droppeddown() const {
   return _impl_.a_droppeddown_;
@@ -2450,7 +2635,7 @@ inline bool PresState::a_droppeddown() const {
   return _internal_a_droppeddown();
 }
 inline void PresState::_internal_set_a_droppeddown(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000040u;
   _impl_.a_droppeddown_ = value;
 }
 inline void PresState::set_a_droppeddown(bool value) {

@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/storage/PSessionStorageObserver.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.PSessionStorageObserver;
@@ -25,9 +25,9 @@ message Reply___delete__ {
 }
 
 message Msg_Observe {
-  string a_topic = 1;
-  string a_originAttributesPattern = 2;
-  string a_originScope = 3;
+  required string a_topic = 1;
+  required string a_originAttributesPattern = 2;
+  required string a_originScope = 3;
 }
 
 // Parameter mappings stats:

@@ -190,6 +190,13 @@ class WebAuthnAuthenticatorSelection final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const WebAuthnAuthenticatorSelection& default_instance() {
     return *internal_default_instance();
   }
@@ -266,7 +273,11 @@ class WebAuthnAuthenticatorSelection final :
     kAUserVerificationRequirementFieldNumber = 2,
     kAAuthenticatorAttachmentFieldNumber = 3,
   };
-  // string a_residentKey = 1;
+  // required string a_residentKey = 1;
+  bool has_a_residentkey() const;
+  private:
+  bool _internal_has_a_residentkey() const;
+  public:
   void clear_a_residentkey();
   const std::string& a_residentkey() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -280,7 +291,11 @@ class WebAuthnAuthenticatorSelection final :
   std::string* _internal_mutable_a_residentkey();
   public:
 
-  // string a_userVerificationRequirement = 2;
+  // required string a_userVerificationRequirement = 2;
+  bool has_a_userverificationrequirement() const;
+  private:
+  bool _internal_has_a_userverificationrequirement() const;
+  public:
   void clear_a_userverificationrequirement();
   const std::string& a_userverificationrequirement() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -315,6 +330,9 @@ class WebAuthnAuthenticatorSelection final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.WebAuthnAuthenticatorSelection)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -360,6 +378,13 @@ class WebAuthnScopedCredential final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const WebAuthnScopedCredential& default_instance() {
@@ -459,7 +484,11 @@ class WebAuthnScopedCredential final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_id();
 
-  // uint32 a_transports = 2;
+  // required uint32 a_transports = 2;
+  bool has_a_transports() const;
+  private:
+  bool _internal_has_a_transports() const;
+  public:
   void clear_a_transports();
   uint32_t a_transports() const;
   void set_a_transports(uint32_t value);
@@ -476,10 +505,10 @@ class WebAuthnScopedCredential final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_id_;
-    mutable std::atomic<int> _a_id_cached_byte_size_;
-    uint32_t a_transports_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_id_;
+    uint32_t a_transports_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -515,6 +544,13 @@ class WebAuthnExtensionCredProtect final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const WebAuthnExtensionCredProtect& default_instance() {
@@ -592,7 +628,11 @@ class WebAuthnExtensionCredProtect final :
     kAPolicyFieldNumber = 1,
     kARequiredFieldNumber = 2,
   };
-  // bytes a_policy = 1;
+  // required bytes a_policy = 1;
+  bool has_a_policy() const;
+  private:
+  bool _internal_has_a_policy() const;
+  public:
   void clear_a_policy();
   const std::string& a_policy() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -606,7 +646,11 @@ class WebAuthnExtensionCredProtect final :
   std::string* _internal_mutable_a_policy();
   public:
 
-  // bool a_required = 2;
+  // required bool a_required = 2;
+  bool has_a_required() const;
+  private:
+  bool _internal_has_a_required() const;
+  public:
   void clear_a_required();
   bool a_required() const;
   void set_a_required(bool value);
@@ -619,13 +663,17 @@ class WebAuthnExtensionCredProtect final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_policy_;
     bool a_required_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -661,6 +709,13 @@ class WebAuthnExtensionCredProps final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const WebAuthnExtensionCredProps& default_instance() {
@@ -737,7 +792,11 @@ class WebAuthnExtensionCredProps final :
   enum : int {
     kACredPropsFieldNumber = 1,
   };
-  // bool a_credProps = 1;
+  // required bool a_credProps = 1;
+  bool has_a_credprops() const;
+  private:
+  bool _internal_has_a_credprops() const;
+  public:
   void clear_a_credprops();
   bool a_credprops() const;
   void set_a_credprops(bool value);
@@ -754,8 +813,9 @@ class WebAuthnExtensionCredProps final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_credprops_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_credprops_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -791,6 +851,13 @@ class WebAuthnExtensionHmacSecret final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const WebAuthnExtensionHmacSecret& default_instance() {
@@ -867,7 +934,11 @@ class WebAuthnExtensionHmacSecret final :
   enum : int {
     kAHmacCreateSecretFieldNumber = 1,
   };
-  // bool a_hmacCreateSecret = 1;
+  // required bool a_hmacCreateSecret = 1;
+  bool has_a_hmaccreatesecret() const;
+  private:
+  bool _internal_has_a_hmaccreatesecret() const;
+  public:
   void clear_a_hmaccreatesecret();
   bool a_hmaccreatesecret() const;
   void set_a_hmaccreatesecret(bool value);
@@ -884,8 +955,9 @@ class WebAuthnExtensionHmacSecret final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_hmaccreatesecret_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_hmaccreatesecret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -921,6 +993,13 @@ class WebAuthnExtensionLargeBlob final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const WebAuthnExtensionLargeBlob& default_instance() {
@@ -1044,7 +1123,6 @@ class WebAuthnExtensionLargeBlob final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_write_;
-    mutable std::atomic<int> _a_write_cached_byte_size_;
     bool a_flag_;
   };
   union { Impl_ _impl_; };
@@ -1081,6 +1159,13 @@ class WebAuthnExtensionMinPinLength final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const WebAuthnExtensionMinPinLength& default_instance() {
@@ -1157,7 +1242,11 @@ class WebAuthnExtensionMinPinLength final :
   enum : int {
     kAMinPinLengthFieldNumber = 1,
   };
-  // bool a_minPinLength = 1;
+  // required bool a_minPinLength = 1;
+  bool has_a_minpinlength() const;
+  private:
+  bool _internal_has_a_minpinlength() const;
+  public:
   void clear_a_minpinlength();
   bool a_minpinlength() const;
   void set_a_minpinlength(bool value);
@@ -1174,8 +1263,9 @@ class WebAuthnExtensionMinPinLength final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_minpinlength_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_minpinlength_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -1211,6 +1301,13 @@ class WebAuthnExtensionPrf final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const WebAuthnExtensionPrf& default_instance() {
@@ -1325,7 +1422,11 @@ class WebAuthnExtensionPrf final :
       ::protobuf::mozilla::dom::WebAuthnExtensionPrfValues* a_eval);
   ::protobuf::mozilla::dom::WebAuthnExtensionPrfValues* unsafe_arena_release_a_eval();
 
-  // bool a_evalByCredentialMaybe = 2;
+  // required bool a_evalByCredentialMaybe = 2;
+  bool has_a_evalbycredentialmaybe() const;
+  private:
+  bool _internal_has_a_evalbycredentialmaybe() const;
+  public:
   void clear_a_evalbycredentialmaybe();
   bool a_evalbycredentialmaybe() const;
   void set_a_evalbycredentialmaybe(bool value);
@@ -1382,6 +1483,13 @@ class WebAuthnExtensionPrfValues final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const WebAuthnExtensionPrfValues& default_instance() {
@@ -1504,7 +1612,11 @@ class WebAuthnExtensionPrfValues final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_second();
 
-  // bool a_secondMaybe = 2;
+  // required bool a_secondMaybe = 2;
+  bool has_a_secondmaybe() const;
+  private:
+  bool _internal_has_a_secondmaybe() const;
+  public:
   void clear_a_secondmaybe();
   bool a_secondmaybe() const;
   void set_a_secondmaybe(bool value);
@@ -1521,12 +1633,11 @@ class WebAuthnExtensionPrfValues final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_first_;
-    mutable std::atomic<int> _a_first_cached_byte_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_second_;
-    mutable std::atomic<int> _a_second_cached_byte_size_;
-    bool a_secondmaybe_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_first_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_second_;
+    bool a_secondmaybe_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -1562,6 +1673,13 @@ class WebAuthnExtensionPrfEvalByCredentialEntry final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const WebAuthnExtensionPrfEvalByCredentialEntry& default_instance() {
@@ -1661,7 +1779,7 @@ class WebAuthnExtensionPrfEvalByCredentialEntry final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_credentialid();
 
-  // .protobuf.mozilla.dom.WebAuthnExtensionPrfValues a_eval = 2;
+  // required .protobuf.mozilla.dom.WebAuthnExtensionPrfValues a_eval = 2;
   bool has_a_eval() const;
   private:
   bool _internal_has_a_eval() const;
@@ -1687,10 +1805,10 @@ class WebAuthnExtensionPrfEvalByCredentialEntry final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_credentialid_;
-    mutable std::atomic<int> _a_credentialid_cached_byte_size_;
-    ::protobuf::mozilla::dom::WebAuthnExtensionPrfValues* a_eval_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_credentialid_;
+    ::protobuf::mozilla::dom::WebAuthnExtensionPrfValues* a_eval_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -1726,6 +1844,13 @@ class WebAuthnExtension final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const WebAuthnExtension& default_instance() {
@@ -1994,6 +2119,13 @@ class WebAuthnExtensionResultAppId final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const WebAuthnExtensionResultAppId& default_instance() {
     return *internal_default_instance();
   }
@@ -2068,7 +2200,11 @@ class WebAuthnExtensionResultAppId final :
   enum : int {
     kAAppIdFieldNumber = 1,
   };
-  // bool a_AppId = 1;
+  // required bool a_AppId = 1;
+  bool has_a_appid() const;
+  private:
+  bool _internal_has_a_appid() const;
+  public:
   void clear_a_appid();
   bool a_appid() const;
   void set_a_appid(bool value);
@@ -2085,8 +2221,9 @@ class WebAuthnExtensionResultAppId final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_appid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_appid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -2122,6 +2259,13 @@ class WebAuthnExtensionResultCredProps final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const WebAuthnExtensionResultCredProps& default_instance() {
@@ -2198,7 +2342,11 @@ class WebAuthnExtensionResultCredProps final :
   enum : int {
     kARkFieldNumber = 1,
   };
-  // bool a_rk = 1;
+  // required bool a_rk = 1;
+  bool has_a_rk() const;
+  private:
+  bool _internal_has_a_rk() const;
+  public:
   void clear_a_rk();
   bool a_rk() const;
   void set_a_rk(bool value);
@@ -2215,8 +2363,9 @@ class WebAuthnExtensionResultCredProps final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_rk_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_rk_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -2252,6 +2401,13 @@ class WebAuthnExtensionResultHmacSecret final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const WebAuthnExtensionResultHmacSecret& default_instance() {
@@ -2328,7 +2484,11 @@ class WebAuthnExtensionResultHmacSecret final :
   enum : int {
     kAHmacCreateSecretFieldNumber = 1,
   };
-  // bool a_hmacCreateSecret = 1;
+  // required bool a_hmacCreateSecret = 1;
+  bool has_a_hmaccreatesecret() const;
+  private:
+  bool _internal_has_a_hmaccreatesecret() const;
+  public:
   void clear_a_hmaccreatesecret();
   bool a_hmaccreatesecret() const;
   void set_a_hmaccreatesecret(bool value);
@@ -2345,8 +2505,9 @@ class WebAuthnExtensionResultHmacSecret final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_hmaccreatesecret_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_hmaccreatesecret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -2382,6 +2543,13 @@ class WebAuthnExtensionResultLargeBlob final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const WebAuthnExtensionResultLargeBlob& default_instance() {
@@ -2482,7 +2650,11 @@ class WebAuthnExtensionResultLargeBlob final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_blob();
 
-  // bool a_flag = 1;
+  // required bool a_flag = 1;
+  bool has_a_flag() const;
+  private:
+  bool _internal_has_a_flag() const;
+  public:
   void clear_a_flag();
   bool a_flag() const;
   void set_a_flag(bool value);
@@ -2491,7 +2663,11 @@ class WebAuthnExtensionResultLargeBlob final :
   void _internal_set_a_flag(bool value);
   public:
 
-  // bool a_written = 3;
+  // required bool a_written = 3;
+  bool has_a_written() const;
+  private:
+  bool _internal_has_a_written() const;
+  public:
   void clear_a_written();
   bool a_written() const;
   void set_a_written(bool value);
@@ -2504,15 +2680,18 @@ class WebAuthnExtensionResultLargeBlob final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_blob_;
-    mutable std::atomic<int> _a_blob_cached_byte_size_;
     bool a_flag_;
     bool a_written_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -2548,6 +2727,13 @@ class WebAuthnExtensionResultPrf final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const WebAuthnExtensionResultPrf& default_instance() {
@@ -2703,6 +2889,13 @@ class WebAuthnExtensionResult final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const WebAuthnExtensionResult& default_instance() {
@@ -2949,6 +3142,13 @@ class WebAuthnMakeCredentialRpInfo final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const WebAuthnMakeCredentialRpInfo& default_instance() {
     return *internal_default_instance();
   }
@@ -3023,7 +3223,11 @@ class WebAuthnMakeCredentialRpInfo final :
   enum : int {
     kANameFieldNumber = 1,
   };
-  // string a_Name = 1;
+  // required string a_Name = 1;
+  bool has_a_name() const;
+  private:
+  bool _internal_has_a_name() const;
+  public:
   void clear_a_name();
   const std::string& a_name() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3045,8 +3249,9 @@ class WebAuthnMakeCredentialRpInfo final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_name_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_name_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -3082,6 +3287,13 @@ class WebAuthnMakeCredentialUserInfo final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const WebAuthnMakeCredentialUserInfo& default_instance() {
@@ -3182,7 +3394,11 @@ class WebAuthnMakeCredentialUserInfo final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_id();
 
-  // string a_Name = 2;
+  // required string a_Name = 2;
+  bool has_a_name() const;
+  private:
+  bool _internal_has_a_name() const;
+  public:
   void clear_a_name();
   const std::string& a_name() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3196,7 +3412,11 @@ class WebAuthnMakeCredentialUserInfo final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // string a_DisplayName = 3;
+  // required string a_DisplayName = 3;
+  bool has_a_displayname() const;
+  private:
+  bool _internal_has_a_displayname() const;
+  public:
   void clear_a_displayname();
   const std::string& a_displayname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3214,15 +3434,18 @@ class WebAuthnMakeCredentialUserInfo final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_id_;
-    mutable std::atomic<int> _a_id_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_name_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_displayname_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -3258,6 +3481,13 @@ class CoseAlg final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const CoseAlg& default_instance() {
@@ -3334,7 +3564,11 @@ class CoseAlg final :
   enum : int {
     kAAlgFieldNumber = 1,
   };
-  // sint64 a_alg = 1;
+  // required sint64 a_alg = 1;
+  bool has_a_alg() const;
+  private:
+  bool _internal_has_a_alg() const;
+  public:
   void clear_a_alg();
   int64_t a_alg() const;
   void set_a_alg(int64_t value);
@@ -3351,8 +3585,9 @@ class CoseAlg final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    int64_t a_alg_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_alg_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -3388,6 +3623,13 @@ class WebAuthnMakeCredentialInfo final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const WebAuthnMakeCredentialInfo& default_instance() {
@@ -3549,7 +3791,11 @@ class WebAuthnMakeCredentialInfo final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::WebAuthnExtension >&
       a_extensions() const;
 
-  // string a_RpId = 1;
+  // required string a_RpId = 1;
+  bool has_a_rpid() const;
+  private:
+  bool _internal_has_a_rpid() const;
+  public:
   void clear_a_rpid();
   const std::string& a_rpid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3563,7 +3809,11 @@ class WebAuthnMakeCredentialInfo final :
   std::string* _internal_mutable_a_rpid();
   public:
 
-  // string a_attestationConveyancePreference = 10;
+  // required string a_attestationConveyancePreference = 10;
+  bool has_a_attestationconveyancepreference() const;
+  private:
+  bool _internal_has_a_attestationconveyancepreference() const;
+  public:
   void clear_a_attestationconveyancepreference();
   const std::string& a_attestationconveyancepreference() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3577,7 +3827,7 @@ class WebAuthnMakeCredentialInfo final :
   std::string* _internal_mutable_a_attestationconveyancepreference();
   public:
 
-  // .protobuf.mozilla.dom.WebAuthnMakeCredentialRpInfo a_Rp = 5;
+  // required .protobuf.mozilla.dom.WebAuthnMakeCredentialRpInfo a_Rp = 5;
   bool has_a_rp() const;
   private:
   bool _internal_has_a_rp() const;
@@ -3595,7 +3845,7 @@ class WebAuthnMakeCredentialInfo final :
       ::protobuf::mozilla::dom::WebAuthnMakeCredentialRpInfo* a_rp);
   ::protobuf::mozilla::dom::WebAuthnMakeCredentialRpInfo* unsafe_arena_release_a_rp();
 
-  // .protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo a_User = 6;
+  // required .protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo a_User = 6;
   bool has_a_user() const;
   private:
   bool _internal_has_a_user() const;
@@ -3613,7 +3863,7 @@ class WebAuthnMakeCredentialInfo final :
       ::protobuf::mozilla::dom::WebAuthnMakeCredentialUserInfo* a_user);
   ::protobuf::mozilla::dom::WebAuthnMakeCredentialUserInfo* unsafe_arena_release_a_user();
 
-  // .protobuf.mozilla.dom.WebAuthnAuthenticatorSelection a_AuthenticatorSelection = 9;
+  // required .protobuf.mozilla.dom.WebAuthnAuthenticatorSelection a_AuthenticatorSelection = 9;
   bool has_a_authenticatorselection() const;
   private:
   bool _internal_has_a_authenticatorselection() const;
@@ -3631,7 +3881,11 @@ class WebAuthnMakeCredentialInfo final :
       ::protobuf::mozilla::dom::WebAuthnAuthenticatorSelection* a_authenticatorselection);
   ::protobuf::mozilla::dom::WebAuthnAuthenticatorSelection* unsafe_arena_release_a_authenticatorselection();
 
-  // uint32 a_TimeoutMS = 3;
+  // required uint32 a_TimeoutMS = 3;
+  bool has_a_timeoutms() const;
+  private:
+  bool _internal_has_a_timeoutms() const;
+  public:
   void clear_a_timeoutms();
   uint32_t a_timeoutms() const;
   void set_a_timeoutms(uint32_t value);
@@ -3644,12 +3898,16 @@ class WebAuthnMakeCredentialInfo final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_challenge_;
-    mutable std::atomic<int> _a_challenge_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::WebAuthnScopedCredential > a_excludelist_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::CoseAlg > a_cosealgs_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::WebAuthnExtension > a_extensions_;
@@ -3659,7 +3917,6 @@ class WebAuthnMakeCredentialInfo final :
     ::protobuf::mozilla::dom::WebAuthnMakeCredentialUserInfo* a_user_;
     ::protobuf::mozilla::dom::WebAuthnAuthenticatorSelection* a_authenticatorselection_;
     uint32_t a_timeoutms_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -3695,6 +3952,13 @@ class WebAuthnMakeCredentialResult final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const WebAuthnMakeCredentialResult& default_instance() {
@@ -3862,7 +4126,11 @@ class WebAuthnMakeCredentialResult final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::WebAuthnExtensionResult >&
       a_extensions() const;
 
-  // string a_ClientDataJSON = 1;
+  // required string a_ClientDataJSON = 1;
+  bool has_a_clientdatajson() const;
+  private:
+  bool _internal_has_a_clientdatajson() const;
+  public:
   void clear_a_clientdatajson();
   const std::string& a_clientdatajson() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3905,9 +4173,7 @@ class WebAuthnMakeCredentialResult final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_attestationobject_;
-    mutable std::atomic<int> _a_attestationobject_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_keyhandle_;
-    mutable std::atomic<int> _a_keyhandle_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_transports_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::WebAuthnExtensionResult > a_extensions_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_clientdatajson_;
@@ -3947,6 +4213,13 @@ class WebAuthnMakeCredentialResponse final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const WebAuthnMakeCredentialResponse& default_instance() {
@@ -4127,6 +4400,13 @@ class WebAuthnGetAssertionInfo final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const WebAuthnGetAssertionInfo& default_instance() {
     return *internal_default_instance();
   }
@@ -4266,7 +4546,11 @@ class WebAuthnGetAssertionInfo final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::WebAuthnExtension >&
       a_extensions() const;
 
-  // string a_RpId = 1;
+  // required string a_RpId = 1;
+  bool has_a_rpid() const;
+  private:
+  bool _internal_has_a_rpid() const;
+  public:
   void clear_a_rpid();
   const std::string& a_rpid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4298,7 +4582,11 @@ class WebAuthnGetAssertionInfo final :
   std::string* _internal_mutable_a_appid();
   public:
 
-  // string a_userVerificationRequirement = 7;
+  // required string a_userVerificationRequirement = 7;
+  bool has_a_userverificationrequirement() const;
+  private:
+  bool _internal_has_a_userverificationrequirement() const;
+  public:
   void clear_a_userverificationrequirement();
   const std::string& a_userverificationrequirement() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4312,7 +4600,11 @@ class WebAuthnGetAssertionInfo final :
   std::string* _internal_mutable_a_userverificationrequirement();
   public:
 
-  // uint32 a_TimeoutMS = 4;
+  // required uint32 a_TimeoutMS = 4;
+  bool has_a_timeoutms() const;
+  private:
+  bool _internal_has_a_timeoutms() const;
+  public:
   void clear_a_timeoutms();
   uint32_t a_timeoutms() const;
   void set_a_timeoutms(uint32_t value);
@@ -4321,7 +4613,11 @@ class WebAuthnGetAssertionInfo final :
   void _internal_set_a_timeoutms(uint32_t value);
   public:
 
-  // bool a_ConditionallyMediated = 8;
+  // required bool a_ConditionallyMediated = 8;
+  bool has_a_conditionallymediated() const;
+  private:
+  bool _internal_has_a_conditionallymediated() const;
+  public:
   void clear_a_conditionallymediated();
   bool a_conditionallymediated() const;
   void set_a_conditionallymediated(bool value);
@@ -4334,6 +4630,9 @@ class WebAuthnGetAssertionInfo final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
@@ -4341,7 +4640,6 @@ class WebAuthnGetAssertionInfo final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_challenge_;
-    mutable std::atomic<int> _a_challenge_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::WebAuthnScopedCredential > a_allowlist_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::WebAuthnExtension > a_extensions_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_rpid_;
@@ -4384,6 +4682,13 @@ class WebAuthnGetAssertionResult final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const WebAuthnGetAssertionResult& default_instance() {
@@ -4572,7 +4877,11 @@ class WebAuthnGetAssertionResult final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_userhandle();
 
-  // string a_ClientDataJSON = 1;
+  // required string a_ClientDataJSON = 1;
+  bool has_a_clientdatajson() const;
+  private:
+  bool _internal_has_a_clientdatajson() const;
+  public:
   void clear_a_clientdatajson();
   const std::string& a_clientdatajson() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4615,14 +4924,10 @@ class WebAuthnGetAssertionResult final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_keyhandle_;
-    mutable std::atomic<int> _a_keyhandle_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_signature_;
-    mutable std::atomic<int> _a_signature_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_authenticatordata_;
-    mutable std::atomic<int> _a_authenticatordata_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::WebAuthnExtensionResult > a_extensions_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_userhandle_;
-    mutable std::atomic<int> _a_userhandle_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_clientdatajson_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_authenticatorattachment_;
   };
@@ -4660,6 +4965,13 @@ class WebAuthnGetAssertionResponse final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const WebAuthnGetAssertionResponse& default_instance() {
@@ -4818,9 +5130,17 @@ class WebAuthnGetAssertionResponse final :
 #endif  // __GNUC__
 // WebAuthnAuthenticatorSelection
 
-// string a_residentKey = 1;
+// required string a_residentKey = 1;
+inline bool WebAuthnAuthenticatorSelection::_internal_has_a_residentkey() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool WebAuthnAuthenticatorSelection::has_a_residentkey() const {
+  return _internal_has_a_residentkey();
+}
 inline void WebAuthnAuthenticatorSelection::clear_a_residentkey() {
   _impl_.a_residentkey_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& WebAuthnAuthenticatorSelection::a_residentkey() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.WebAuthnAuthenticatorSelection.a_residentKey)
@@ -4829,7 +5149,7 @@ inline const std::string& WebAuthnAuthenticatorSelection::a_residentkey() const 
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebAuthnAuthenticatorSelection::set_a_residentkey(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_residentkey_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebAuthnAuthenticatorSelection.a_residentKey)
 }
@@ -4842,22 +5162,32 @@ inline const std::string& WebAuthnAuthenticatorSelection::_internal_a_residentke
   return _impl_.a_residentkey_.Get();
 }
 inline void WebAuthnAuthenticatorSelection::_internal_set_a_residentkey(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_residentkey_.Set(value, GetArenaForAllocation());
 }
 inline std::string* WebAuthnAuthenticatorSelection::_internal_mutable_a_residentkey() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_residentkey_.Mutable(GetArenaForAllocation());
 }
 inline std::string* WebAuthnAuthenticatorSelection::release_a_residentkey() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.WebAuthnAuthenticatorSelection.a_residentKey)
-  return _impl_.a_residentkey_.Release();
+  if (!_internal_has_a_residentkey()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_residentkey_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_residentkey_.IsDefault()) {
+    _impl_.a_residentkey_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void WebAuthnAuthenticatorSelection::set_allocated_a_residentkey(std::string* a_residentkey) {
   if (a_residentkey != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_residentkey_.SetAllocated(a_residentkey, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4868,9 +5198,17 @@ inline void WebAuthnAuthenticatorSelection::set_allocated_a_residentkey(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebAuthnAuthenticatorSelection.a_residentKey)
 }
 
-// string a_userVerificationRequirement = 2;
+// required string a_userVerificationRequirement = 2;
+inline bool WebAuthnAuthenticatorSelection::_internal_has_a_userverificationrequirement() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool WebAuthnAuthenticatorSelection::has_a_userverificationrequirement() const {
+  return _internal_has_a_userverificationrequirement();
+}
 inline void WebAuthnAuthenticatorSelection::clear_a_userverificationrequirement() {
   _impl_.a_userverificationrequirement_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& WebAuthnAuthenticatorSelection::a_userverificationrequirement() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.WebAuthnAuthenticatorSelection.a_userVerificationRequirement)
@@ -4879,7 +5217,7 @@ inline const std::string& WebAuthnAuthenticatorSelection::a_userverificationrequ
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebAuthnAuthenticatorSelection::set_a_userverificationrequirement(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_userverificationrequirement_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebAuthnAuthenticatorSelection.a_userVerificationRequirement)
 }
@@ -4892,22 +5230,32 @@ inline const std::string& WebAuthnAuthenticatorSelection::_internal_a_userverifi
   return _impl_.a_userverificationrequirement_.Get();
 }
 inline void WebAuthnAuthenticatorSelection::_internal_set_a_userverificationrequirement(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_userverificationrequirement_.Set(value, GetArenaForAllocation());
 }
 inline std::string* WebAuthnAuthenticatorSelection::_internal_mutable_a_userverificationrequirement() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_userverificationrequirement_.Mutable(GetArenaForAllocation());
 }
 inline std::string* WebAuthnAuthenticatorSelection::release_a_userverificationrequirement() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.WebAuthnAuthenticatorSelection.a_userVerificationRequirement)
-  return _impl_.a_userverificationrequirement_.Release();
+  if (!_internal_has_a_userverificationrequirement()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_userverificationrequirement_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_userverificationrequirement_.IsDefault()) {
+    _impl_.a_userverificationrequirement_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void WebAuthnAuthenticatorSelection::set_allocated_a_userverificationrequirement(std::string* a_userverificationrequirement) {
   if (a_userverificationrequirement != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_userverificationrequirement_.SetAllocated(a_userverificationrequirement, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4920,7 +5268,7 @@ inline void WebAuthnAuthenticatorSelection::set_allocated_a_userverificationrequ
 
 // optional string a_authenticatorAttachment = 3;
 inline bool WebAuthnAuthenticatorSelection::_internal_has_a_authenticatorattachment() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
 inline bool WebAuthnAuthenticatorSelection::has_a_authenticatorattachment() const {
@@ -4928,7 +5276,7 @@ inline bool WebAuthnAuthenticatorSelection::has_a_authenticatorattachment() cons
 }
 inline void WebAuthnAuthenticatorSelection::clear_a_authenticatorattachment() {
   _impl_.a_authenticatorattachment_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& WebAuthnAuthenticatorSelection::a_authenticatorattachment() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.WebAuthnAuthenticatorSelection.a_authenticatorAttachment)
@@ -4937,7 +5285,7 @@ inline const std::string& WebAuthnAuthenticatorSelection::a_authenticatorattachm
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebAuthnAuthenticatorSelection::set_a_authenticatorattachment(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ _impl_._has_bits_[0] |= 0x00000004u;
  _impl_.a_authenticatorattachment_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebAuthnAuthenticatorSelection.a_authenticatorAttachment)
 }
@@ -4950,11 +5298,11 @@ inline const std::string& WebAuthnAuthenticatorSelection::_internal_a_authentica
   return _impl_.a_authenticatorattachment_.Get();
 }
 inline void WebAuthnAuthenticatorSelection::_internal_set_a_authenticatorattachment(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_authenticatorattachment_.Set(value, GetArenaForAllocation());
 }
 inline std::string* WebAuthnAuthenticatorSelection::_internal_mutable_a_authenticatorattachment() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_._has_bits_[0] |= 0x00000004u;
   return _impl_.a_authenticatorattachment_.Mutable(GetArenaForAllocation());
 }
 inline std::string* WebAuthnAuthenticatorSelection::release_a_authenticatorattachment() {
@@ -4962,7 +5310,7 @@ inline std::string* WebAuthnAuthenticatorSelection::release_a_authenticatorattac
   if (!_internal_has_a_authenticatorattachment()) {
     return nullptr;
   }
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
   auto* p = _impl_.a_authenticatorattachment_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (_impl_.a_authenticatorattachment_.IsDefault()) {
@@ -4973,9 +5321,9 @@ inline std::string* WebAuthnAuthenticatorSelection::release_a_authenticatorattac
 }
 inline void WebAuthnAuthenticatorSelection::set_allocated_a_authenticatorattachment(std::string* a_authenticatorattachment) {
   if (a_authenticatorattachment != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.a_authenticatorattachment_.SetAllocated(a_authenticatorattachment, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -5037,9 +5385,17 @@ WebAuthnScopedCredential::mutable_a_id() {
   return _internal_mutable_a_id();
 }
 
-// uint32 a_transports = 2;
+// required uint32 a_transports = 2;
+inline bool WebAuthnScopedCredential::_internal_has_a_transports() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool WebAuthnScopedCredential::has_a_transports() const {
+  return _internal_has_a_transports();
+}
 inline void WebAuthnScopedCredential::clear_a_transports() {
   _impl_.a_transports_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t WebAuthnScopedCredential::_internal_a_transports() const {
   return _impl_.a_transports_;
@@ -5049,7 +5405,7 @@ inline uint32_t WebAuthnScopedCredential::a_transports() const {
   return _internal_a_transports();
 }
 inline void WebAuthnScopedCredential::_internal_set_a_transports(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_transports_ = value;
 }
 inline void WebAuthnScopedCredential::set_a_transports(uint32_t value) {
@@ -5061,9 +5417,17 @@ inline void WebAuthnScopedCredential::set_a_transports(uint32_t value) {
 
 // WebAuthnExtensionCredProtect
 
-// bytes a_policy = 1;
+// required bytes a_policy = 1;
+inline bool WebAuthnExtensionCredProtect::_internal_has_a_policy() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool WebAuthnExtensionCredProtect::has_a_policy() const {
+  return _internal_has_a_policy();
+}
 inline void WebAuthnExtensionCredProtect::clear_a_policy() {
   _impl_.a_policy_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& WebAuthnExtensionCredProtect::a_policy() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.WebAuthnExtensionCredProtect.a_policy)
@@ -5072,7 +5436,7 @@ inline const std::string& WebAuthnExtensionCredProtect::a_policy() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebAuthnExtensionCredProtect::set_a_policy(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_policy_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebAuthnExtensionCredProtect.a_policy)
 }
@@ -5085,22 +5449,32 @@ inline const std::string& WebAuthnExtensionCredProtect::_internal_a_policy() con
   return _impl_.a_policy_.Get();
 }
 inline void WebAuthnExtensionCredProtect::_internal_set_a_policy(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_policy_.Set(value, GetArenaForAllocation());
 }
 inline std::string* WebAuthnExtensionCredProtect::_internal_mutable_a_policy() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_policy_.Mutable(GetArenaForAllocation());
 }
 inline std::string* WebAuthnExtensionCredProtect::release_a_policy() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.WebAuthnExtensionCredProtect.a_policy)
-  return _impl_.a_policy_.Release();
+  if (!_internal_has_a_policy()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_policy_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_policy_.IsDefault()) {
+    _impl_.a_policy_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void WebAuthnExtensionCredProtect::set_allocated_a_policy(std::string* a_policy) {
   if (a_policy != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_policy_.SetAllocated(a_policy, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -5111,9 +5485,17 @@ inline void WebAuthnExtensionCredProtect::set_allocated_a_policy(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebAuthnExtensionCredProtect.a_policy)
 }
 
-// bool a_required = 2;
+// required bool a_required = 2;
+inline bool WebAuthnExtensionCredProtect::_internal_has_a_required() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool WebAuthnExtensionCredProtect::has_a_required() const {
+  return _internal_has_a_required();
+}
 inline void WebAuthnExtensionCredProtect::clear_a_required() {
   _impl_.a_required_ = false;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool WebAuthnExtensionCredProtect::_internal_a_required() const {
   return _impl_.a_required_;
@@ -5123,7 +5505,7 @@ inline bool WebAuthnExtensionCredProtect::a_required() const {
   return _internal_a_required();
 }
 inline void WebAuthnExtensionCredProtect::_internal_set_a_required(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_required_ = value;
 }
 inline void WebAuthnExtensionCredProtect::set_a_required(bool value) {
@@ -5135,9 +5517,17 @@ inline void WebAuthnExtensionCredProtect::set_a_required(bool value) {
 
 // WebAuthnExtensionCredProps
 
-// bool a_credProps = 1;
+// required bool a_credProps = 1;
+inline bool WebAuthnExtensionCredProps::_internal_has_a_credprops() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool WebAuthnExtensionCredProps::has_a_credprops() const {
+  return _internal_has_a_credprops();
+}
 inline void WebAuthnExtensionCredProps::clear_a_credprops() {
   _impl_.a_credprops_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool WebAuthnExtensionCredProps::_internal_a_credprops() const {
   return _impl_.a_credprops_;
@@ -5147,7 +5537,7 @@ inline bool WebAuthnExtensionCredProps::a_credprops() const {
   return _internal_a_credprops();
 }
 inline void WebAuthnExtensionCredProps::_internal_set_a_credprops(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_credprops_ = value;
 }
 inline void WebAuthnExtensionCredProps::set_a_credprops(bool value) {
@@ -5159,9 +5549,17 @@ inline void WebAuthnExtensionCredProps::set_a_credprops(bool value) {
 
 // WebAuthnExtensionHmacSecret
 
-// bool a_hmacCreateSecret = 1;
+// required bool a_hmacCreateSecret = 1;
+inline bool WebAuthnExtensionHmacSecret::_internal_has_a_hmaccreatesecret() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool WebAuthnExtensionHmacSecret::has_a_hmaccreatesecret() const {
+  return _internal_has_a_hmaccreatesecret();
+}
 inline void WebAuthnExtensionHmacSecret::clear_a_hmaccreatesecret() {
   _impl_.a_hmaccreatesecret_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool WebAuthnExtensionHmacSecret::_internal_a_hmaccreatesecret() const {
   return _impl_.a_hmaccreatesecret_;
@@ -5171,7 +5569,7 @@ inline bool WebAuthnExtensionHmacSecret::a_hmaccreatesecret() const {
   return _internal_a_hmaccreatesecret();
 }
 inline void WebAuthnExtensionHmacSecret::_internal_set_a_hmaccreatesecret(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_hmaccreatesecret_ = value;
 }
 inline void WebAuthnExtensionHmacSecret::set_a_hmaccreatesecret(bool value) {
@@ -5262,9 +5660,17 @@ WebAuthnExtensionLargeBlob::mutable_a_write() {
 
 // WebAuthnExtensionMinPinLength
 
-// bool a_minPinLength = 1;
+// required bool a_minPinLength = 1;
+inline bool WebAuthnExtensionMinPinLength::_internal_has_a_minpinlength() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool WebAuthnExtensionMinPinLength::has_a_minpinlength() const {
+  return _internal_has_a_minpinlength();
+}
 inline void WebAuthnExtensionMinPinLength::clear_a_minpinlength() {
   _impl_.a_minpinlength_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool WebAuthnExtensionMinPinLength::_internal_a_minpinlength() const {
   return _impl_.a_minpinlength_;
@@ -5274,7 +5680,7 @@ inline bool WebAuthnExtensionMinPinLength::a_minpinlength() const {
   return _internal_a_minpinlength();
 }
 inline void WebAuthnExtensionMinPinLength::_internal_set_a_minpinlength(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_minpinlength_ = value;
 }
 inline void WebAuthnExtensionMinPinLength::set_a_minpinlength(bool value) {
@@ -5376,9 +5782,17 @@ inline void WebAuthnExtensionPrf::set_allocated_a_eval(::protobuf::mozilla::dom:
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebAuthnExtensionPrf.a_eval)
 }
 
-// bool a_evalByCredentialMaybe = 2;
+// required bool a_evalByCredentialMaybe = 2;
+inline bool WebAuthnExtensionPrf::_internal_has_a_evalbycredentialmaybe() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool WebAuthnExtensionPrf::has_a_evalbycredentialmaybe() const {
+  return _internal_has_a_evalbycredentialmaybe();
+}
 inline void WebAuthnExtensionPrf::clear_a_evalbycredentialmaybe() {
   _impl_.a_evalbycredentialmaybe_ = false;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool WebAuthnExtensionPrf::_internal_a_evalbycredentialmaybe() const {
   return _impl_.a_evalbycredentialmaybe_;
@@ -5388,7 +5802,7 @@ inline bool WebAuthnExtensionPrf::a_evalbycredentialmaybe() const {
   return _internal_a_evalbycredentialmaybe();
 }
 inline void WebAuthnExtensionPrf::_internal_set_a_evalbycredentialmaybe(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_evalbycredentialmaybe_ = value;
 }
 inline void WebAuthnExtensionPrf::set_a_evalbycredentialmaybe(bool value) {
@@ -5487,9 +5901,17 @@ WebAuthnExtensionPrfValues::mutable_a_first() {
   return _internal_mutable_a_first();
 }
 
-// bool a_secondMaybe = 2;
+// required bool a_secondMaybe = 2;
+inline bool WebAuthnExtensionPrfValues::_internal_has_a_secondmaybe() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool WebAuthnExtensionPrfValues::has_a_secondmaybe() const {
+  return _internal_has_a_secondmaybe();
+}
 inline void WebAuthnExtensionPrfValues::clear_a_secondmaybe() {
   _impl_.a_secondmaybe_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool WebAuthnExtensionPrfValues::_internal_a_secondmaybe() const {
   return _impl_.a_secondmaybe_;
@@ -5499,7 +5921,7 @@ inline bool WebAuthnExtensionPrfValues::a_secondmaybe() const {
   return _internal_a_secondmaybe();
 }
 inline void WebAuthnExtensionPrfValues::_internal_set_a_secondmaybe(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_secondmaybe_ = value;
 }
 inline void WebAuthnExtensionPrfValues::set_a_secondmaybe(bool value) {
@@ -5605,18 +6027,18 @@ WebAuthnExtensionPrfEvalByCredentialEntry::mutable_a_credentialid() {
   return _internal_mutable_a_credentialid();
 }
 
-// .protobuf.mozilla.dom.WebAuthnExtensionPrfValues a_eval = 2;
+// required .protobuf.mozilla.dom.WebAuthnExtensionPrfValues a_eval = 2;
 inline bool WebAuthnExtensionPrfEvalByCredentialEntry::_internal_has_a_eval() const {
-  return this != internal_default_instance() && _impl_.a_eval_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_eval_ != nullptr);
+  return value;
 }
 inline bool WebAuthnExtensionPrfEvalByCredentialEntry::has_a_eval() const {
   return _internal_has_a_eval();
 }
 inline void WebAuthnExtensionPrfEvalByCredentialEntry::clear_a_eval() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_eval_ != nullptr) {
-    delete _impl_.a_eval_;
-  }
-  _impl_.a_eval_ = nullptr;
+  if (_impl_.a_eval_ != nullptr) _impl_.a_eval_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const ::protobuf::mozilla::dom::WebAuthnExtensionPrfValues& WebAuthnExtensionPrfEvalByCredentialEntry::_internal_a_eval() const {
   const ::protobuf::mozilla::dom::WebAuthnExtensionPrfValues* p = _impl_.a_eval_;
@@ -5634,14 +6056,14 @@ inline void WebAuthnExtensionPrfEvalByCredentialEntry::unsafe_arena_set_allocate
   }
   _impl_.a_eval_ = a_eval;
   if (a_eval) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.WebAuthnExtensionPrfEvalByCredentialEntry.a_eval)
 }
 inline ::protobuf::mozilla::dom::WebAuthnExtensionPrfValues* WebAuthnExtensionPrfEvalByCredentialEntry::release_a_eval() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::WebAuthnExtensionPrfValues* temp = _impl_.a_eval_;
   _impl_.a_eval_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -5657,13 +6079,13 @@ inline ::protobuf::mozilla::dom::WebAuthnExtensionPrfValues* WebAuthnExtensionPr
 }
 inline ::protobuf::mozilla::dom::WebAuthnExtensionPrfValues* WebAuthnExtensionPrfEvalByCredentialEntry::unsafe_arena_release_a_eval() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.WebAuthnExtensionPrfEvalByCredentialEntry.a_eval)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::WebAuthnExtensionPrfValues* temp = _impl_.a_eval_;
   _impl_.a_eval_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::WebAuthnExtensionPrfValues* WebAuthnExtensionPrfEvalByCredentialEntry::_internal_mutable_a_eval() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_eval_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::WebAuthnExtensionPrfValues>(GetArenaForAllocation());
     _impl_.a_eval_ = p;
@@ -5687,9 +6109,9 @@ inline void WebAuthnExtensionPrfEvalByCredentialEntry::set_allocated_a_eval(::pr
       a_eval = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_eval, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_eval_ = a_eval;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebAuthnExtensionPrfEvalByCredentialEntry.a_eval)
@@ -6156,9 +6578,17 @@ inline WebAuthnExtension::ContentCase WebAuthnExtension::content_case() const {
 
 // WebAuthnExtensionResultAppId
 
-// bool a_AppId = 1;
+// required bool a_AppId = 1;
+inline bool WebAuthnExtensionResultAppId::_internal_has_a_appid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool WebAuthnExtensionResultAppId::has_a_appid() const {
+  return _internal_has_a_appid();
+}
 inline void WebAuthnExtensionResultAppId::clear_a_appid() {
   _impl_.a_appid_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool WebAuthnExtensionResultAppId::_internal_a_appid() const {
   return _impl_.a_appid_;
@@ -6168,7 +6598,7 @@ inline bool WebAuthnExtensionResultAppId::a_appid() const {
   return _internal_a_appid();
 }
 inline void WebAuthnExtensionResultAppId::_internal_set_a_appid(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_appid_ = value;
 }
 inline void WebAuthnExtensionResultAppId::set_a_appid(bool value) {
@@ -6180,9 +6610,17 @@ inline void WebAuthnExtensionResultAppId::set_a_appid(bool value) {
 
 // WebAuthnExtensionResultCredProps
 
-// bool a_rk = 1;
+// required bool a_rk = 1;
+inline bool WebAuthnExtensionResultCredProps::_internal_has_a_rk() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool WebAuthnExtensionResultCredProps::has_a_rk() const {
+  return _internal_has_a_rk();
+}
 inline void WebAuthnExtensionResultCredProps::clear_a_rk() {
   _impl_.a_rk_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool WebAuthnExtensionResultCredProps::_internal_a_rk() const {
   return _impl_.a_rk_;
@@ -6192,7 +6630,7 @@ inline bool WebAuthnExtensionResultCredProps::a_rk() const {
   return _internal_a_rk();
 }
 inline void WebAuthnExtensionResultCredProps::_internal_set_a_rk(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_rk_ = value;
 }
 inline void WebAuthnExtensionResultCredProps::set_a_rk(bool value) {
@@ -6204,9 +6642,17 @@ inline void WebAuthnExtensionResultCredProps::set_a_rk(bool value) {
 
 // WebAuthnExtensionResultHmacSecret
 
-// bool a_hmacCreateSecret = 1;
+// required bool a_hmacCreateSecret = 1;
+inline bool WebAuthnExtensionResultHmacSecret::_internal_has_a_hmaccreatesecret() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool WebAuthnExtensionResultHmacSecret::has_a_hmaccreatesecret() const {
+  return _internal_has_a_hmaccreatesecret();
+}
 inline void WebAuthnExtensionResultHmacSecret::clear_a_hmaccreatesecret() {
   _impl_.a_hmaccreatesecret_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool WebAuthnExtensionResultHmacSecret::_internal_a_hmaccreatesecret() const {
   return _impl_.a_hmaccreatesecret_;
@@ -6216,7 +6662,7 @@ inline bool WebAuthnExtensionResultHmacSecret::a_hmaccreatesecret() const {
   return _internal_a_hmaccreatesecret();
 }
 inline void WebAuthnExtensionResultHmacSecret::_internal_set_a_hmaccreatesecret(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_hmaccreatesecret_ = value;
 }
 inline void WebAuthnExtensionResultHmacSecret::set_a_hmaccreatesecret(bool value) {
@@ -6228,9 +6674,17 @@ inline void WebAuthnExtensionResultHmacSecret::set_a_hmaccreatesecret(bool value
 
 // WebAuthnExtensionResultLargeBlob
 
-// bool a_flag = 1;
+// required bool a_flag = 1;
+inline bool WebAuthnExtensionResultLargeBlob::_internal_has_a_flag() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool WebAuthnExtensionResultLargeBlob::has_a_flag() const {
+  return _internal_has_a_flag();
+}
 inline void WebAuthnExtensionResultLargeBlob::clear_a_flag() {
   _impl_.a_flag_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool WebAuthnExtensionResultLargeBlob::_internal_a_flag() const {
   return _impl_.a_flag_;
@@ -6240,7 +6694,7 @@ inline bool WebAuthnExtensionResultLargeBlob::a_flag() const {
   return _internal_a_flag();
 }
 inline void WebAuthnExtensionResultLargeBlob::_internal_set_a_flag(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_flag_ = value;
 }
 inline void WebAuthnExtensionResultLargeBlob::set_a_flag(bool value) {
@@ -6295,9 +6749,17 @@ WebAuthnExtensionResultLargeBlob::mutable_a_blob() {
   return _internal_mutable_a_blob();
 }
 
-// bool a_written = 3;
+// required bool a_written = 3;
+inline bool WebAuthnExtensionResultLargeBlob::_internal_has_a_written() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool WebAuthnExtensionResultLargeBlob::has_a_written() const {
+  return _internal_has_a_written();
+}
 inline void WebAuthnExtensionResultLargeBlob::clear_a_written() {
   _impl_.a_written_ = false;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool WebAuthnExtensionResultLargeBlob::_internal_a_written() const {
   return _impl_.a_written_;
@@ -6307,7 +6769,7 @@ inline bool WebAuthnExtensionResultLargeBlob::a_written() const {
   return _internal_a_written();
 }
 inline void WebAuthnExtensionResultLargeBlob::_internal_set_a_written(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_written_ = value;
 }
 inline void WebAuthnExtensionResultLargeBlob::set_a_written(bool value) {
@@ -6824,9 +7286,17 @@ inline WebAuthnExtensionResult::ContentCase WebAuthnExtensionResult::content_cas
 
 // WebAuthnMakeCredentialRpInfo
 
-// string a_Name = 1;
+// required string a_Name = 1;
+inline bool WebAuthnMakeCredentialRpInfo::_internal_has_a_name() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool WebAuthnMakeCredentialRpInfo::has_a_name() const {
+  return _internal_has_a_name();
+}
 inline void WebAuthnMakeCredentialRpInfo::clear_a_name() {
   _impl_.a_name_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& WebAuthnMakeCredentialRpInfo::a_name() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.WebAuthnMakeCredentialRpInfo.a_Name)
@@ -6835,7 +7305,7 @@ inline const std::string& WebAuthnMakeCredentialRpInfo::a_name() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebAuthnMakeCredentialRpInfo::set_a_name(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebAuthnMakeCredentialRpInfo.a_Name)
 }
@@ -6848,22 +7318,32 @@ inline const std::string& WebAuthnMakeCredentialRpInfo::_internal_a_name() const
   return _impl_.a_name_.Get();
 }
 inline void WebAuthnMakeCredentialRpInfo::_internal_set_a_name(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_name_.Set(value, GetArenaForAllocation());
 }
 inline std::string* WebAuthnMakeCredentialRpInfo::_internal_mutable_a_name() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_name_.Mutable(GetArenaForAllocation());
 }
 inline std::string* WebAuthnMakeCredentialRpInfo::release_a_name() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.WebAuthnMakeCredentialRpInfo.a_Name)
-  return _impl_.a_name_.Release();
+  if (!_internal_has_a_name()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_name_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_name_.IsDefault()) {
+    _impl_.a_name_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void WebAuthnMakeCredentialRpInfo::set_allocated_a_name(std::string* a_name) {
   if (a_name != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_name_.SetAllocated(a_name, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6925,9 +7405,17 @@ WebAuthnMakeCredentialUserInfo::mutable_a_id() {
   return _internal_mutable_a_id();
 }
 
-// string a_Name = 2;
+// required string a_Name = 2;
+inline bool WebAuthnMakeCredentialUserInfo::_internal_has_a_name() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool WebAuthnMakeCredentialUserInfo::has_a_name() const {
+  return _internal_has_a_name();
+}
 inline void WebAuthnMakeCredentialUserInfo::clear_a_name() {
   _impl_.a_name_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& WebAuthnMakeCredentialUserInfo::a_name() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo.a_Name)
@@ -6936,7 +7424,7 @@ inline const std::string& WebAuthnMakeCredentialUserInfo::a_name() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebAuthnMakeCredentialUserInfo::set_a_name(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo.a_Name)
 }
@@ -6949,22 +7437,32 @@ inline const std::string& WebAuthnMakeCredentialUserInfo::_internal_a_name() con
   return _impl_.a_name_.Get();
 }
 inline void WebAuthnMakeCredentialUserInfo::_internal_set_a_name(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_name_.Set(value, GetArenaForAllocation());
 }
 inline std::string* WebAuthnMakeCredentialUserInfo::_internal_mutable_a_name() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_name_.Mutable(GetArenaForAllocation());
 }
 inline std::string* WebAuthnMakeCredentialUserInfo::release_a_name() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo.a_Name)
-  return _impl_.a_name_.Release();
+  if (!_internal_has_a_name()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_name_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_name_.IsDefault()) {
+    _impl_.a_name_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void WebAuthnMakeCredentialUserInfo::set_allocated_a_name(std::string* a_name) {
   if (a_name != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_name_.SetAllocated(a_name, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6975,9 +7473,17 @@ inline void WebAuthnMakeCredentialUserInfo::set_allocated_a_name(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo.a_Name)
 }
 
-// string a_DisplayName = 3;
+// required string a_DisplayName = 3;
+inline bool WebAuthnMakeCredentialUserInfo::_internal_has_a_displayname() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool WebAuthnMakeCredentialUserInfo::has_a_displayname() const {
+  return _internal_has_a_displayname();
+}
 inline void WebAuthnMakeCredentialUserInfo::clear_a_displayname() {
   _impl_.a_displayname_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& WebAuthnMakeCredentialUserInfo::a_displayname() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo.a_DisplayName)
@@ -6986,7 +7492,7 @@ inline const std::string& WebAuthnMakeCredentialUserInfo::a_displayname() const 
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebAuthnMakeCredentialUserInfo::set_a_displayname(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_displayname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo.a_DisplayName)
 }
@@ -6999,22 +7505,32 @@ inline const std::string& WebAuthnMakeCredentialUserInfo::_internal_a_displaynam
   return _impl_.a_displayname_.Get();
 }
 inline void WebAuthnMakeCredentialUserInfo::_internal_set_a_displayname(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_displayname_.Set(value, GetArenaForAllocation());
 }
 inline std::string* WebAuthnMakeCredentialUserInfo::_internal_mutable_a_displayname() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_displayname_.Mutable(GetArenaForAllocation());
 }
 inline std::string* WebAuthnMakeCredentialUserInfo::release_a_displayname() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo.a_DisplayName)
-  return _impl_.a_displayname_.Release();
+  if (!_internal_has_a_displayname()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_displayname_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_displayname_.IsDefault()) {
+    _impl_.a_displayname_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void WebAuthnMakeCredentialUserInfo::set_allocated_a_displayname(std::string* a_displayname) {
   if (a_displayname != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_displayname_.SetAllocated(a_displayname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -7029,9 +7545,17 @@ inline void WebAuthnMakeCredentialUserInfo::set_allocated_a_displayname(std::str
 
 // CoseAlg
 
-// sint64 a_alg = 1;
+// required sint64 a_alg = 1;
+inline bool CoseAlg::_internal_has_a_alg() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool CoseAlg::has_a_alg() const {
+  return _internal_has_a_alg();
+}
 inline void CoseAlg::clear_a_alg() {
   _impl_.a_alg_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline int64_t CoseAlg::_internal_a_alg() const {
   return _impl_.a_alg_;
@@ -7041,7 +7565,7 @@ inline int64_t CoseAlg::a_alg() const {
   return _internal_a_alg();
 }
 inline void CoseAlg::_internal_set_a_alg(int64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_alg_ = value;
 }
 inline void CoseAlg::set_a_alg(int64_t value) {
@@ -7053,9 +7577,17 @@ inline void CoseAlg::set_a_alg(int64_t value) {
 
 // WebAuthnMakeCredentialInfo
 
-// string a_RpId = 1;
+// required string a_RpId = 1;
+inline bool WebAuthnMakeCredentialInfo::_internal_has_a_rpid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool WebAuthnMakeCredentialInfo::has_a_rpid() const {
+  return _internal_has_a_rpid();
+}
 inline void WebAuthnMakeCredentialInfo::clear_a_rpid() {
   _impl_.a_rpid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& WebAuthnMakeCredentialInfo::a_rpid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.WebAuthnMakeCredentialInfo.a_RpId)
@@ -7064,7 +7596,7 @@ inline const std::string& WebAuthnMakeCredentialInfo::a_rpid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebAuthnMakeCredentialInfo::set_a_rpid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_rpid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebAuthnMakeCredentialInfo.a_RpId)
 }
@@ -7077,22 +7609,32 @@ inline const std::string& WebAuthnMakeCredentialInfo::_internal_a_rpid() const {
   return _impl_.a_rpid_.Get();
 }
 inline void WebAuthnMakeCredentialInfo::_internal_set_a_rpid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_rpid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* WebAuthnMakeCredentialInfo::_internal_mutable_a_rpid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_rpid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* WebAuthnMakeCredentialInfo::release_a_rpid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.WebAuthnMakeCredentialInfo.a_RpId)
-  return _impl_.a_rpid_.Release();
+  if (!_internal_has_a_rpid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_rpid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_rpid_.IsDefault()) {
+    _impl_.a_rpid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void WebAuthnMakeCredentialInfo::set_allocated_a_rpid(std::string* a_rpid) {
   if (a_rpid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_rpid_.SetAllocated(a_rpid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -7150,9 +7692,17 @@ WebAuthnMakeCredentialInfo::mutable_a_challenge() {
   return _internal_mutable_a_challenge();
 }
 
-// uint32 a_TimeoutMS = 3;
+// required uint32 a_TimeoutMS = 3;
+inline bool WebAuthnMakeCredentialInfo::_internal_has_a_timeoutms() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool WebAuthnMakeCredentialInfo::has_a_timeoutms() const {
+  return _internal_has_a_timeoutms();
+}
 inline void WebAuthnMakeCredentialInfo::clear_a_timeoutms() {
   _impl_.a_timeoutms_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline uint32_t WebAuthnMakeCredentialInfo::_internal_a_timeoutms() const {
   return _impl_.a_timeoutms_;
@@ -7162,7 +7712,7 @@ inline uint32_t WebAuthnMakeCredentialInfo::a_timeoutms() const {
   return _internal_a_timeoutms();
 }
 inline void WebAuthnMakeCredentialInfo::_internal_set_a_timeoutms(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000020u;
   _impl_.a_timeoutms_ = value;
 }
 inline void WebAuthnMakeCredentialInfo::set_a_timeoutms(uint32_t value) {
@@ -7210,18 +7760,18 @@ WebAuthnMakeCredentialInfo::a_excludelist() const {
   return _impl_.a_excludelist_;
 }
 
-// .protobuf.mozilla.dom.WebAuthnMakeCredentialRpInfo a_Rp = 5;
+// required .protobuf.mozilla.dom.WebAuthnMakeCredentialRpInfo a_Rp = 5;
 inline bool WebAuthnMakeCredentialInfo::_internal_has_a_rp() const {
-  return this != internal_default_instance() && _impl_.a_rp_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_rp_ != nullptr);
+  return value;
 }
 inline bool WebAuthnMakeCredentialInfo::has_a_rp() const {
   return _internal_has_a_rp();
 }
 inline void WebAuthnMakeCredentialInfo::clear_a_rp() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_rp_ != nullptr) {
-    delete _impl_.a_rp_;
-  }
-  _impl_.a_rp_ = nullptr;
+  if (_impl_.a_rp_ != nullptr) _impl_.a_rp_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const ::protobuf::mozilla::dom::WebAuthnMakeCredentialRpInfo& WebAuthnMakeCredentialInfo::_internal_a_rp() const {
   const ::protobuf::mozilla::dom::WebAuthnMakeCredentialRpInfo* p = _impl_.a_rp_;
@@ -7239,14 +7789,14 @@ inline void WebAuthnMakeCredentialInfo::unsafe_arena_set_allocated_a_rp(
   }
   _impl_.a_rp_ = a_rp;
   if (a_rp) {
-    
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.WebAuthnMakeCredentialInfo.a_Rp)
 }
 inline ::protobuf::mozilla::dom::WebAuthnMakeCredentialRpInfo* WebAuthnMakeCredentialInfo::release_a_rp() {
-  
+  _impl_._has_bits_[0] &= ~0x00000004u;
   ::protobuf::mozilla::dom::WebAuthnMakeCredentialRpInfo* temp = _impl_.a_rp_;
   _impl_.a_rp_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -7262,13 +7812,13 @@ inline ::protobuf::mozilla::dom::WebAuthnMakeCredentialRpInfo* WebAuthnMakeCrede
 }
 inline ::protobuf::mozilla::dom::WebAuthnMakeCredentialRpInfo* WebAuthnMakeCredentialInfo::unsafe_arena_release_a_rp() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.WebAuthnMakeCredentialInfo.a_Rp)
-  
+  _impl_._has_bits_[0] &= ~0x00000004u;
   ::protobuf::mozilla::dom::WebAuthnMakeCredentialRpInfo* temp = _impl_.a_rp_;
   _impl_.a_rp_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::WebAuthnMakeCredentialRpInfo* WebAuthnMakeCredentialInfo::_internal_mutable_a_rp() {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   if (_impl_.a_rp_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::WebAuthnMakeCredentialRpInfo>(GetArenaForAllocation());
     _impl_.a_rp_ = p;
@@ -7292,26 +7842,26 @@ inline void WebAuthnMakeCredentialInfo::set_allocated_a_rp(::protobuf::mozilla::
       a_rp = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_rp, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.a_rp_ = a_rp;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebAuthnMakeCredentialInfo.a_Rp)
 }
 
-// .protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo a_User = 6;
+// required .protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo a_User = 6;
 inline bool WebAuthnMakeCredentialInfo::_internal_has_a_user() const {
-  return this != internal_default_instance() && _impl_.a_user_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_user_ != nullptr);
+  return value;
 }
 inline bool WebAuthnMakeCredentialInfo::has_a_user() const {
   return _internal_has_a_user();
 }
 inline void WebAuthnMakeCredentialInfo::clear_a_user() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_user_ != nullptr) {
-    delete _impl_.a_user_;
-  }
-  _impl_.a_user_ = nullptr;
+  if (_impl_.a_user_ != nullptr) _impl_.a_user_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline const ::protobuf::mozilla::dom::WebAuthnMakeCredentialUserInfo& WebAuthnMakeCredentialInfo::_internal_a_user() const {
   const ::protobuf::mozilla::dom::WebAuthnMakeCredentialUserInfo* p = _impl_.a_user_;
@@ -7329,14 +7879,14 @@ inline void WebAuthnMakeCredentialInfo::unsafe_arena_set_allocated_a_user(
   }
   _impl_.a_user_ = a_user;
   if (a_user) {
-    
+    _impl_._has_bits_[0] |= 0x00000008u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000008u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.WebAuthnMakeCredentialInfo.a_User)
 }
 inline ::protobuf::mozilla::dom::WebAuthnMakeCredentialUserInfo* WebAuthnMakeCredentialInfo::release_a_user() {
-  
+  _impl_._has_bits_[0] &= ~0x00000008u;
   ::protobuf::mozilla::dom::WebAuthnMakeCredentialUserInfo* temp = _impl_.a_user_;
   _impl_.a_user_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -7352,13 +7902,13 @@ inline ::protobuf::mozilla::dom::WebAuthnMakeCredentialUserInfo* WebAuthnMakeCre
 }
 inline ::protobuf::mozilla::dom::WebAuthnMakeCredentialUserInfo* WebAuthnMakeCredentialInfo::unsafe_arena_release_a_user() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.WebAuthnMakeCredentialInfo.a_User)
-  
+  _impl_._has_bits_[0] &= ~0x00000008u;
   ::protobuf::mozilla::dom::WebAuthnMakeCredentialUserInfo* temp = _impl_.a_user_;
   _impl_.a_user_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::WebAuthnMakeCredentialUserInfo* WebAuthnMakeCredentialInfo::_internal_mutable_a_user() {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   if (_impl_.a_user_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::WebAuthnMakeCredentialUserInfo>(GetArenaForAllocation());
     _impl_.a_user_ = p;
@@ -7382,9 +7932,9 @@ inline void WebAuthnMakeCredentialInfo::set_allocated_a_user(::protobuf::mozilla
       a_user = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_user, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000008u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000008u;
   }
   _impl_.a_user_ = a_user;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebAuthnMakeCredentialInfo.a_User)
@@ -7470,18 +8020,18 @@ WebAuthnMakeCredentialInfo::a_extensions() const {
   return _impl_.a_extensions_;
 }
 
-// .protobuf.mozilla.dom.WebAuthnAuthenticatorSelection a_AuthenticatorSelection = 9;
+// required .protobuf.mozilla.dom.WebAuthnAuthenticatorSelection a_AuthenticatorSelection = 9;
 inline bool WebAuthnMakeCredentialInfo::_internal_has_a_authenticatorselection() const {
-  return this != internal_default_instance() && _impl_.a_authenticatorselection_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_authenticatorselection_ != nullptr);
+  return value;
 }
 inline bool WebAuthnMakeCredentialInfo::has_a_authenticatorselection() const {
   return _internal_has_a_authenticatorselection();
 }
 inline void WebAuthnMakeCredentialInfo::clear_a_authenticatorselection() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_authenticatorselection_ != nullptr) {
-    delete _impl_.a_authenticatorselection_;
-  }
-  _impl_.a_authenticatorselection_ = nullptr;
+  if (_impl_.a_authenticatorselection_ != nullptr) _impl_.a_authenticatorselection_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline const ::protobuf::mozilla::dom::WebAuthnAuthenticatorSelection& WebAuthnMakeCredentialInfo::_internal_a_authenticatorselection() const {
   const ::protobuf::mozilla::dom::WebAuthnAuthenticatorSelection* p = _impl_.a_authenticatorselection_;
@@ -7499,14 +8049,14 @@ inline void WebAuthnMakeCredentialInfo::unsafe_arena_set_allocated_a_authenticat
   }
   _impl_.a_authenticatorselection_ = a_authenticatorselection;
   if (a_authenticatorselection) {
-    
+    _impl_._has_bits_[0] |= 0x00000010u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000010u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.WebAuthnMakeCredentialInfo.a_AuthenticatorSelection)
 }
 inline ::protobuf::mozilla::dom::WebAuthnAuthenticatorSelection* WebAuthnMakeCredentialInfo::release_a_authenticatorselection() {
-  
+  _impl_._has_bits_[0] &= ~0x00000010u;
   ::protobuf::mozilla::dom::WebAuthnAuthenticatorSelection* temp = _impl_.a_authenticatorselection_;
   _impl_.a_authenticatorselection_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -7522,13 +8072,13 @@ inline ::protobuf::mozilla::dom::WebAuthnAuthenticatorSelection* WebAuthnMakeCre
 }
 inline ::protobuf::mozilla::dom::WebAuthnAuthenticatorSelection* WebAuthnMakeCredentialInfo::unsafe_arena_release_a_authenticatorselection() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.WebAuthnMakeCredentialInfo.a_AuthenticatorSelection)
-  
+  _impl_._has_bits_[0] &= ~0x00000010u;
   ::protobuf::mozilla::dom::WebAuthnAuthenticatorSelection* temp = _impl_.a_authenticatorselection_;
   _impl_.a_authenticatorselection_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::WebAuthnAuthenticatorSelection* WebAuthnMakeCredentialInfo::_internal_mutable_a_authenticatorselection() {
-  
+  _impl_._has_bits_[0] |= 0x00000010u;
   if (_impl_.a_authenticatorselection_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::WebAuthnAuthenticatorSelection>(GetArenaForAllocation());
     _impl_.a_authenticatorselection_ = p;
@@ -7552,17 +8102,25 @@ inline void WebAuthnMakeCredentialInfo::set_allocated_a_authenticatorselection(:
       a_authenticatorselection = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_authenticatorselection, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000010u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000010u;
   }
   _impl_.a_authenticatorselection_ = a_authenticatorselection;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebAuthnMakeCredentialInfo.a_AuthenticatorSelection)
 }
 
-// string a_attestationConveyancePreference = 10;
+// required string a_attestationConveyancePreference = 10;
+inline bool WebAuthnMakeCredentialInfo::_internal_has_a_attestationconveyancepreference() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool WebAuthnMakeCredentialInfo::has_a_attestationconveyancepreference() const {
+  return _internal_has_a_attestationconveyancepreference();
+}
 inline void WebAuthnMakeCredentialInfo::clear_a_attestationconveyancepreference() {
   _impl_.a_attestationconveyancepreference_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& WebAuthnMakeCredentialInfo::a_attestationconveyancepreference() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.WebAuthnMakeCredentialInfo.a_attestationConveyancePreference)
@@ -7571,7 +8129,7 @@ inline const std::string& WebAuthnMakeCredentialInfo::a_attestationconveyancepre
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebAuthnMakeCredentialInfo::set_a_attestationconveyancepreference(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_attestationconveyancepreference_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebAuthnMakeCredentialInfo.a_attestationConveyancePreference)
 }
@@ -7584,22 +8142,32 @@ inline const std::string& WebAuthnMakeCredentialInfo::_internal_a_attestationcon
   return _impl_.a_attestationconveyancepreference_.Get();
 }
 inline void WebAuthnMakeCredentialInfo::_internal_set_a_attestationconveyancepreference(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_attestationconveyancepreference_.Set(value, GetArenaForAllocation());
 }
 inline std::string* WebAuthnMakeCredentialInfo::_internal_mutable_a_attestationconveyancepreference() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_attestationconveyancepreference_.Mutable(GetArenaForAllocation());
 }
 inline std::string* WebAuthnMakeCredentialInfo::release_a_attestationconveyancepreference() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.WebAuthnMakeCredentialInfo.a_attestationConveyancePreference)
-  return _impl_.a_attestationconveyancepreference_.Release();
+  if (!_internal_has_a_attestationconveyancepreference()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_attestationconveyancepreference_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_attestationconveyancepreference_.IsDefault()) {
+    _impl_.a_attestationconveyancepreference_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void WebAuthnMakeCredentialInfo::set_allocated_a_attestationconveyancepreference(std::string* a_attestationconveyancepreference) {
   if (a_attestationconveyancepreference != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_attestationconveyancepreference_.SetAllocated(a_attestationconveyancepreference, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -7614,9 +8182,17 @@ inline void WebAuthnMakeCredentialInfo::set_allocated_a_attestationconveyancepre
 
 // WebAuthnMakeCredentialResult
 
-// string a_ClientDataJSON = 1;
+// required string a_ClientDataJSON = 1;
+inline bool WebAuthnMakeCredentialResult::_internal_has_a_clientdatajson() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool WebAuthnMakeCredentialResult::has_a_clientdatajson() const {
+  return _internal_has_a_clientdatajson();
+}
 inline void WebAuthnMakeCredentialResult::clear_a_clientdatajson() {
   _impl_.a_clientdatajson_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& WebAuthnMakeCredentialResult::a_clientdatajson() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.WebAuthnMakeCredentialResult.a_ClientDataJSON)
@@ -7625,7 +8201,7 @@ inline const std::string& WebAuthnMakeCredentialResult::a_clientdatajson() const
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebAuthnMakeCredentialResult::set_a_clientdatajson(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_clientdatajson_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebAuthnMakeCredentialResult.a_ClientDataJSON)
 }
@@ -7638,22 +8214,32 @@ inline const std::string& WebAuthnMakeCredentialResult::_internal_a_clientdatajs
   return _impl_.a_clientdatajson_.Get();
 }
 inline void WebAuthnMakeCredentialResult::_internal_set_a_clientdatajson(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_clientdatajson_.Set(value, GetArenaForAllocation());
 }
 inline std::string* WebAuthnMakeCredentialResult::_internal_mutable_a_clientdatajson() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_clientdatajson_.Mutable(GetArenaForAllocation());
 }
 inline std::string* WebAuthnMakeCredentialResult::release_a_clientdatajson() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.WebAuthnMakeCredentialResult.a_ClientDataJSON)
-  return _impl_.a_clientdatajson_.Release();
+  if (!_internal_has_a_clientdatajson()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_clientdatajson_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_clientdatajson_.IsDefault()) {
+    _impl_.a_clientdatajson_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void WebAuthnMakeCredentialResult::set_allocated_a_clientdatajson(std::string* a_clientdatajson) {
   if (a_clientdatajson != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_clientdatajson_.SetAllocated(a_clientdatajson, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -7875,7 +8461,7 @@ WebAuthnMakeCredentialResult::a_extensions() const {
 
 // optional string a_AuthenticatorAttachment = 6;
 inline bool WebAuthnMakeCredentialResult::_internal_has_a_authenticatorattachment() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
 inline bool WebAuthnMakeCredentialResult::has_a_authenticatorattachment() const {
@@ -7883,7 +8469,7 @@ inline bool WebAuthnMakeCredentialResult::has_a_authenticatorattachment() const 
 }
 inline void WebAuthnMakeCredentialResult::clear_a_authenticatorattachment() {
   _impl_.a_authenticatorattachment_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& WebAuthnMakeCredentialResult::a_authenticatorattachment() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.WebAuthnMakeCredentialResult.a_AuthenticatorAttachment)
@@ -7892,7 +8478,7 @@ inline const std::string& WebAuthnMakeCredentialResult::a_authenticatorattachmen
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebAuthnMakeCredentialResult::set_a_authenticatorattachment(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_authenticatorattachment_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebAuthnMakeCredentialResult.a_AuthenticatorAttachment)
 }
@@ -7905,11 +8491,11 @@ inline const std::string& WebAuthnMakeCredentialResult::_internal_a_authenticato
   return _impl_.a_authenticatorattachment_.Get();
 }
 inline void WebAuthnMakeCredentialResult::_internal_set_a_authenticatorattachment(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_authenticatorattachment_.Set(value, GetArenaForAllocation());
 }
 inline std::string* WebAuthnMakeCredentialResult::_internal_mutable_a_authenticatorattachment() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_authenticatorattachment_.Mutable(GetArenaForAllocation());
 }
 inline std::string* WebAuthnMakeCredentialResult::release_a_authenticatorattachment() {
@@ -7917,7 +8503,7 @@ inline std::string* WebAuthnMakeCredentialResult::release_a_authenticatorattachm
   if (!_internal_has_a_authenticatorattachment()) {
     return nullptr;
   }
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
   auto* p = _impl_.a_authenticatorattachment_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (_impl_.a_authenticatorattachment_.IsDefault()) {
@@ -7928,9 +8514,9 @@ inline std::string* WebAuthnMakeCredentialResult::release_a_authenticatorattachm
 }
 inline void WebAuthnMakeCredentialResult::set_allocated_a_authenticatorattachment(std::string* a_authenticatorattachment) {
   if (a_authenticatorattachment != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_authenticatorattachment_.SetAllocated(a_authenticatorattachment, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -8109,9 +8695,17 @@ inline WebAuthnMakeCredentialResponse::ContentCase WebAuthnMakeCredentialRespons
 
 // WebAuthnGetAssertionInfo
 
-// string a_RpId = 1;
+// required string a_RpId = 1;
+inline bool WebAuthnGetAssertionInfo::_internal_has_a_rpid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool WebAuthnGetAssertionInfo::has_a_rpid() const {
+  return _internal_has_a_rpid();
+}
 inline void WebAuthnGetAssertionInfo::clear_a_rpid() {
   _impl_.a_rpid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& WebAuthnGetAssertionInfo::a_rpid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.WebAuthnGetAssertionInfo.a_RpId)
@@ -8120,7 +8714,7 @@ inline const std::string& WebAuthnGetAssertionInfo::a_rpid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebAuthnGetAssertionInfo::set_a_rpid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_rpid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebAuthnGetAssertionInfo.a_RpId)
 }
@@ -8133,22 +8727,32 @@ inline const std::string& WebAuthnGetAssertionInfo::_internal_a_rpid() const {
   return _impl_.a_rpid_.Get();
 }
 inline void WebAuthnGetAssertionInfo::_internal_set_a_rpid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_rpid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* WebAuthnGetAssertionInfo::_internal_mutable_a_rpid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_rpid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* WebAuthnGetAssertionInfo::release_a_rpid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.WebAuthnGetAssertionInfo.a_RpId)
-  return _impl_.a_rpid_.Release();
+  if (!_internal_has_a_rpid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_rpid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_rpid_.IsDefault()) {
+    _impl_.a_rpid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void WebAuthnGetAssertionInfo::set_allocated_a_rpid(std::string* a_rpid) {
   if (a_rpid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_rpid_.SetAllocated(a_rpid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -8161,7 +8765,7 @@ inline void WebAuthnGetAssertionInfo::set_allocated_a_rpid(std::string* a_rpid) 
 
 // optional string a_AppId = 2;
 inline bool WebAuthnGetAssertionInfo::_internal_has_a_appid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
 inline bool WebAuthnGetAssertionInfo::has_a_appid() const {
@@ -8169,7 +8773,7 @@ inline bool WebAuthnGetAssertionInfo::has_a_appid() const {
 }
 inline void WebAuthnGetAssertionInfo::clear_a_appid() {
   _impl_.a_appid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& WebAuthnGetAssertionInfo::a_appid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.WebAuthnGetAssertionInfo.a_AppId)
@@ -8178,7 +8782,7 @@ inline const std::string& WebAuthnGetAssertionInfo::a_appid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebAuthnGetAssertionInfo::set_a_appid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_appid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebAuthnGetAssertionInfo.a_AppId)
 }
@@ -8191,11 +8795,11 @@ inline const std::string& WebAuthnGetAssertionInfo::_internal_a_appid() const {
   return _impl_.a_appid_.Get();
 }
 inline void WebAuthnGetAssertionInfo::_internal_set_a_appid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_appid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* WebAuthnGetAssertionInfo::_internal_mutable_a_appid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_appid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* WebAuthnGetAssertionInfo::release_a_appid() {
@@ -8203,7 +8807,7 @@ inline std::string* WebAuthnGetAssertionInfo::release_a_appid() {
   if (!_internal_has_a_appid()) {
     return nullptr;
   }
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
   auto* p = _impl_.a_appid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (_impl_.a_appid_.IsDefault()) {
@@ -8214,9 +8818,9 @@ inline std::string* WebAuthnGetAssertionInfo::release_a_appid() {
 }
 inline void WebAuthnGetAssertionInfo::set_allocated_a_appid(std::string* a_appid) {
   if (a_appid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_appid_.SetAllocated(a_appid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -8274,9 +8878,17 @@ WebAuthnGetAssertionInfo::mutable_a_challenge() {
   return _internal_mutable_a_challenge();
 }
 
-// uint32 a_TimeoutMS = 4;
+// required uint32 a_TimeoutMS = 4;
+inline bool WebAuthnGetAssertionInfo::_internal_has_a_timeoutms() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool WebAuthnGetAssertionInfo::has_a_timeoutms() const {
+  return _internal_has_a_timeoutms();
+}
 inline void WebAuthnGetAssertionInfo::clear_a_timeoutms() {
   _impl_.a_timeoutms_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline uint32_t WebAuthnGetAssertionInfo::_internal_a_timeoutms() const {
   return _impl_.a_timeoutms_;
@@ -8286,7 +8898,7 @@ inline uint32_t WebAuthnGetAssertionInfo::a_timeoutms() const {
   return _internal_a_timeoutms();
 }
 inline void WebAuthnGetAssertionInfo::_internal_set_a_timeoutms(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_timeoutms_ = value;
 }
 inline void WebAuthnGetAssertionInfo::set_a_timeoutms(uint32_t value) {
@@ -8374,9 +8986,17 @@ WebAuthnGetAssertionInfo::a_extensions() const {
   return _impl_.a_extensions_;
 }
 
-// string a_userVerificationRequirement = 7;
+// required string a_userVerificationRequirement = 7;
+inline bool WebAuthnGetAssertionInfo::_internal_has_a_userverificationrequirement() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool WebAuthnGetAssertionInfo::has_a_userverificationrequirement() const {
+  return _internal_has_a_userverificationrequirement();
+}
 inline void WebAuthnGetAssertionInfo::clear_a_userverificationrequirement() {
   _impl_.a_userverificationrequirement_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& WebAuthnGetAssertionInfo::a_userverificationrequirement() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.WebAuthnGetAssertionInfo.a_userVerificationRequirement)
@@ -8385,7 +9005,7 @@ inline const std::string& WebAuthnGetAssertionInfo::a_userverificationrequiremen
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebAuthnGetAssertionInfo::set_a_userverificationrequirement(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000004u;
  _impl_.a_userverificationrequirement_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebAuthnGetAssertionInfo.a_userVerificationRequirement)
 }
@@ -8398,22 +9018,32 @@ inline const std::string& WebAuthnGetAssertionInfo::_internal_a_userverification
   return _impl_.a_userverificationrequirement_.Get();
 }
 inline void WebAuthnGetAssertionInfo::_internal_set_a_userverificationrequirement(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_userverificationrequirement_.Set(value, GetArenaForAllocation());
 }
 inline std::string* WebAuthnGetAssertionInfo::_internal_mutable_a_userverificationrequirement() {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   return _impl_.a_userverificationrequirement_.Mutable(GetArenaForAllocation());
 }
 inline std::string* WebAuthnGetAssertionInfo::release_a_userverificationrequirement() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.WebAuthnGetAssertionInfo.a_userVerificationRequirement)
-  return _impl_.a_userverificationrequirement_.Release();
+  if (!_internal_has_a_userverificationrequirement()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000004u;
+  auto* p = _impl_.a_userverificationrequirement_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_userverificationrequirement_.IsDefault()) {
+    _impl_.a_userverificationrequirement_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void WebAuthnGetAssertionInfo::set_allocated_a_userverificationrequirement(std::string* a_userverificationrequirement) {
   if (a_userverificationrequirement != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.a_userverificationrequirement_.SetAllocated(a_userverificationrequirement, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -8424,9 +9054,17 @@ inline void WebAuthnGetAssertionInfo::set_allocated_a_userverificationrequiremen
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebAuthnGetAssertionInfo.a_userVerificationRequirement)
 }
 
-// bool a_ConditionallyMediated = 8;
+// required bool a_ConditionallyMediated = 8;
+inline bool WebAuthnGetAssertionInfo::_internal_has_a_conditionallymediated() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool WebAuthnGetAssertionInfo::has_a_conditionallymediated() const {
+  return _internal_has_a_conditionallymediated();
+}
 inline void WebAuthnGetAssertionInfo::clear_a_conditionallymediated() {
   _impl_.a_conditionallymediated_ = false;
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline bool WebAuthnGetAssertionInfo::_internal_a_conditionallymediated() const {
   return _impl_.a_conditionallymediated_;
@@ -8436,7 +9074,7 @@ inline bool WebAuthnGetAssertionInfo::a_conditionallymediated() const {
   return _internal_a_conditionallymediated();
 }
 inline void WebAuthnGetAssertionInfo::_internal_set_a_conditionallymediated(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.a_conditionallymediated_ = value;
 }
 inline void WebAuthnGetAssertionInfo::set_a_conditionallymediated(bool value) {
@@ -8448,9 +9086,17 @@ inline void WebAuthnGetAssertionInfo::set_a_conditionallymediated(bool value) {
 
 // WebAuthnGetAssertionResult
 
-// string a_ClientDataJSON = 1;
+// required string a_ClientDataJSON = 1;
+inline bool WebAuthnGetAssertionResult::_internal_has_a_clientdatajson() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool WebAuthnGetAssertionResult::has_a_clientdatajson() const {
+  return _internal_has_a_clientdatajson();
+}
 inline void WebAuthnGetAssertionResult::clear_a_clientdatajson() {
   _impl_.a_clientdatajson_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& WebAuthnGetAssertionResult::a_clientdatajson() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.WebAuthnGetAssertionResult.a_ClientDataJSON)
@@ -8459,7 +9105,7 @@ inline const std::string& WebAuthnGetAssertionResult::a_clientdatajson() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebAuthnGetAssertionResult::set_a_clientdatajson(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_clientdatajson_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebAuthnGetAssertionResult.a_ClientDataJSON)
 }
@@ -8472,22 +9118,32 @@ inline const std::string& WebAuthnGetAssertionResult::_internal_a_clientdatajson
   return _impl_.a_clientdatajson_.Get();
 }
 inline void WebAuthnGetAssertionResult::_internal_set_a_clientdatajson(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_clientdatajson_.Set(value, GetArenaForAllocation());
 }
 inline std::string* WebAuthnGetAssertionResult::_internal_mutable_a_clientdatajson() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_clientdatajson_.Mutable(GetArenaForAllocation());
 }
 inline std::string* WebAuthnGetAssertionResult::release_a_clientdatajson() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.WebAuthnGetAssertionResult.a_ClientDataJSON)
-  return _impl_.a_clientdatajson_.Release();
+  if (!_internal_has_a_clientdatajson()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_clientdatajson_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_clientdatajson_.IsDefault()) {
+    _impl_.a_clientdatajson_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void WebAuthnGetAssertionResult::set_allocated_a_clientdatajson(std::string* a_clientdatajson) {
   if (a_clientdatajson != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_clientdatajson_.SetAllocated(a_clientdatajson, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -8728,7 +9384,7 @@ WebAuthnGetAssertionResult::mutable_a_userhandle() {
 
 // optional string a_AuthenticatorAttachment = 7;
 inline bool WebAuthnGetAssertionResult::_internal_has_a_authenticatorattachment() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
 inline bool WebAuthnGetAssertionResult::has_a_authenticatorattachment() const {
@@ -8736,7 +9392,7 @@ inline bool WebAuthnGetAssertionResult::has_a_authenticatorattachment() const {
 }
 inline void WebAuthnGetAssertionResult::clear_a_authenticatorattachment() {
   _impl_.a_authenticatorattachment_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& WebAuthnGetAssertionResult::a_authenticatorattachment() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.WebAuthnGetAssertionResult.a_AuthenticatorAttachment)
@@ -8745,7 +9401,7 @@ inline const std::string& WebAuthnGetAssertionResult::a_authenticatorattachment(
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebAuthnGetAssertionResult::set_a_authenticatorattachment(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_authenticatorattachment_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebAuthnGetAssertionResult.a_AuthenticatorAttachment)
 }
@@ -8758,11 +9414,11 @@ inline const std::string& WebAuthnGetAssertionResult::_internal_a_authenticatora
   return _impl_.a_authenticatorattachment_.Get();
 }
 inline void WebAuthnGetAssertionResult::_internal_set_a_authenticatorattachment(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_authenticatorattachment_.Set(value, GetArenaForAllocation());
 }
 inline std::string* WebAuthnGetAssertionResult::_internal_mutable_a_authenticatorattachment() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_authenticatorattachment_.Mutable(GetArenaForAllocation());
 }
 inline std::string* WebAuthnGetAssertionResult::release_a_authenticatorattachment() {
@@ -8770,7 +9426,7 @@ inline std::string* WebAuthnGetAssertionResult::release_a_authenticatorattachmen
   if (!_internal_has_a_authenticatorattachment()) {
     return nullptr;
   }
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
   auto* p = _impl_.a_authenticatorattachment_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (_impl_.a_authenticatorattachment_.IsDefault()) {
@@ -8781,9 +9437,9 @@ inline std::string* WebAuthnGetAssertionResult::release_a_authenticatorattachmen
 }
 inline void WebAuthnGetAssertionResult::set_allocated_a_authenticatorattachment(std::string* a_authenticatorattachment) {
   if (a_authenticatorattachment != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_authenticatorattachment_.SetAllocated(a_authenticatorattachment, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

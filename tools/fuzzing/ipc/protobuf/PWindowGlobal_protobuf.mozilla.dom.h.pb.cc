@@ -22,11 +22,12 @@ namespace mozilla {
 namespace dom {
 PROTOBUF_CONSTEXPR JSActorMessageMeta::JSActorMessageMeta(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_actorname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_actorname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_messagename_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_kind_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_queryid_)*/uint64_t{0u}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_queryid_)*/uint64_t{0u}} {}
 struct JSActorMessageMetaDefaultTypeInternal {
   PROTOBUF_CONSTEXPR JSActorMessageMetaDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -63,6 +64,22 @@ namespace dom {
 
 class JSActorMessageMeta::_Internal {
  public:
+  using HasBits = decltype(std::declval<JSActorMessageMeta>()._impl_._has_bits_);
+  static void set_has_a_actorname(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_messagename(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_queryid(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_a_kind(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x0000000f) ^ 0x0000000f) != 0;
+  }
 };
 
 JSActorMessageMeta::JSActorMessageMeta(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -75,18 +92,19 @@ JSActorMessageMeta::JSActorMessageMeta(const JSActorMessageMeta& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   JSActorMessageMeta* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_actorname_){}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_actorname_){}
     , decltype(_impl_.a_messagename_){}
     , decltype(_impl_.a_kind_){}
-    , decltype(_impl_.a_queryid_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_queryid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_actorname_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_actorname_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_actorname().empty()) {
+  if (from._internal_has_a_actorname()) {
     _this->_impl_.a_actorname_.Set(from._internal_a_actorname(), 
       _this->GetArenaForAllocation());
   }
@@ -94,7 +112,7 @@ JSActorMessageMeta::JSActorMessageMeta(const JSActorMessageMeta& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_messagename_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_messagename().empty()) {
+  if (from._internal_has_a_messagename()) {
     _this->_impl_.a_messagename_.Set(from._internal_a_messagename(), 
       _this->GetArenaForAllocation());
   }
@@ -102,7 +120,7 @@ JSActorMessageMeta::JSActorMessageMeta(const JSActorMessageMeta& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_kind_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_kind().empty()) {
+  if (from._internal_has_a_kind()) {
     _this->_impl_.a_kind_.Set(from._internal_a_kind(), 
       _this->GetArenaForAllocation());
   }
@@ -115,11 +133,12 @@ inline void JSActorMessageMeta::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_actorname_){}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_actorname_){}
     , decltype(_impl_.a_messagename_){}
     , decltype(_impl_.a_kind_){}
     , decltype(_impl_.a_queryid_){uint64_t{0u}}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_actorname_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -161,48 +180,58 @@ void JSActorMessageMeta::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_actorname_.ClearToEmpty();
-  _impl_.a_messagename_.ClearToEmpty();
-  _impl_.a_kind_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_actorname_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_messagename_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _impl_.a_kind_.ClearNonDefaultToEmpty();
+    }
+  }
   _impl_.a_queryid_ = uint64_t{0u};
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* JSActorMessageMeta::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string a_actorName = 1;
+      // required string a_actorName = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_actorname();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // string a_messageName = 2;
+      // required string a_messageName = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_messagename();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // uint64 a_queryId = 3;
+      // required uint64 a_queryId = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_a_queryid(&has_bits);
           _impl_.a_queryid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bytes a_kind = 4;
+      // required bytes a_kind = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_kind();
@@ -227,6 +256,7 @@ const char* JSActorMessageMeta::_InternalParse(const char* ptr, ::_pbi::ParseCon
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -240,34 +270,27 @@ uint8_t* JSActorMessageMeta::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string a_actorName = 1;
-  if (!this->_internal_a_actorname().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_actorname().data(), static_cast<int>(this->_internal_a_actorname().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.JSActorMessageMeta.a_actorName");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_actorName = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_actorname(), target);
   }
 
-  // string a_messageName = 2;
-  if (!this->_internal_a_messagename().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_messagename().data(), static_cast<int>(this->_internal_a_messagename().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.JSActorMessageMeta.a_messageName");
+  // required string a_messageName = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_messagename(), target);
   }
 
-  // uint64 a_queryId = 3;
-  if (this->_internal_a_queryid() != 0) {
+  // required uint64 a_queryId = 3;
+  if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(3, this->_internal_a_queryid(), target);
   }
 
-  // bytes a_kind = 4;
-  if (!this->_internal_a_kind().empty()) {
+  // required bytes a_kind = 4;
+  if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
         4, this->_internal_a_kind(), target);
   }
@@ -280,39 +303,67 @@ uint8_t* JSActorMessageMeta::_InternalSerialize(
   return target;
 }
 
-size_t JSActorMessageMeta::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.JSActorMessageMeta)
+size_t JSActorMessageMeta::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.JSActorMessageMeta)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string a_actorName = 1;
-  if (!this->_internal_a_actorname().empty()) {
+  if (_internal_has_a_actorname()) {
+    // required string a_actorName = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_actorname());
   }
 
-  // string a_messageName = 2;
-  if (!this->_internal_a_messagename().empty()) {
+  if (_internal_has_a_messagename()) {
+    // required string a_messageName = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_messagename());
   }
 
-  // bytes a_kind = 4;
-  if (!this->_internal_a_kind().empty()) {
+  if (_internal_has_a_kind()) {
+    // required bytes a_kind = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_kind());
   }
 
-  // uint64 a_queryId = 3;
-  if (this->_internal_a_queryid() != 0) {
+  if (_internal_has_a_queryid()) {
+    // required uint64 a_queryId = 3;
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_queryid());
   }
+
+  return total_size;
+}
+size_t JSActorMessageMeta::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.JSActorMessageMeta)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
+    // required string a_actorName = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_actorname());
+
+    // required string a_messageName = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_messagename());
+
+    // required bytes a_kind = 4;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_kind());
+
+    // required uint64 a_queryId = 3;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_queryid());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -335,17 +386,21 @@ void JSActorMessageMeta::MergeFrom(const JSActorMessageMeta& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_actorname().empty()) {
-    _this->_internal_set_a_actorname(from._internal_a_actorname());
-  }
-  if (!from._internal_a_messagename().empty()) {
-    _this->_internal_set_a_messagename(from._internal_a_messagename());
-  }
-  if (!from._internal_a_kind().empty()) {
-    _this->_internal_set_a_kind(from._internal_a_kind());
-  }
-  if (from._internal_a_queryid() != 0) {
-    _this->_internal_set_a_queryid(from._internal_a_queryid());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000000fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_actorname(from._internal_a_actorname());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_messagename(from._internal_a_messagename());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_internal_set_a_kind(from._internal_a_kind());
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.a_queryid_ = from._impl_.a_queryid_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -358,6 +413,7 @@ void JSActorMessageMeta::CopyFrom(const JSActorMessageMeta& from) {
 }
 
 bool JSActorMessageMeta::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -366,6 +422,7 @@ void JSActorMessageMeta::InternalSwap(JSActorMessageMeta* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_actorname_, lhs_arena,
       &other->_impl_.a_actorname_, rhs_arena
@@ -391,8 +448,17 @@ std::string JSActorMessageMeta::GetTypeName() const {
 class IPCWebShareData::_Internal {
  public:
   using HasBits = decltype(std::declval<IPCWebShareData>()._impl_._has_bits_);
-  static void set_has_a_url(HasBits* has_bits) {
+  static void set_has_a_title(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_text(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_url(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
   }
 };
 
@@ -417,7 +483,7 @@ IPCWebShareData::IPCWebShareData(const IPCWebShareData& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_title_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_title().empty()) {
+  if (from._internal_has_a_title()) {
     _this->_impl_.a_title_.Set(from._internal_a_title(), 
       _this->GetArenaForAllocation());
   }
@@ -425,7 +491,7 @@ IPCWebShareData::IPCWebShareData(const IPCWebShareData& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_text_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_text().empty()) {
+  if (from._internal_has_a_text()) {
     _this->_impl_.a_text_.Set(from._internal_a_text(), 
       _this->GetArenaForAllocation());
   }
@@ -491,11 +557,17 @@ void IPCWebShareData::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_title_.ClearToEmpty();
-  _impl_.a_text_.ClearToEmpty();
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_url_.ClearNonDefaultToEmpty();
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_title_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_text_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _impl_.a_url_.ClearNonDefaultToEmpty();
+    }
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -508,23 +580,21 @@ const char* IPCWebShareData::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string a_title = 1;
+      // required string a_title = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_title();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // string a_text = 2;
+      // required string a_text = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_text();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -567,28 +637,21 @@ uint8_t* IPCWebShareData::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string a_title = 1;
-  if (!this->_internal_a_title().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_title().data(), static_cast<int>(this->_internal_a_title().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.IPCWebShareData.a_title");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_title = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_title(), target);
   }
 
-  // string a_text = 2;
-  if (!this->_internal_a_text().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_text().data(), static_cast<int>(this->_internal_a_text().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.IPCWebShareData.a_text");
+  // required string a_text = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_text(), target);
   }
 
   // optional bytes a_url = 3;
-  if (_internal_has_a_url()) {
+  if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
         3, this->_internal_a_url(), target);
   }
@@ -601,31 +664,51 @@ uint8_t* IPCWebShareData::_InternalSerialize(
   return target;
 }
 
-size_t IPCWebShareData::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCWebShareData)
+size_t IPCWebShareData::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.IPCWebShareData)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string a_title = 1;
-  if (!this->_internal_a_title().empty()) {
+  if (_internal_has_a_title()) {
+    // required string a_title = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_title());
   }
 
-  // string a_text = 2;
-  if (!this->_internal_a_text().empty()) {
+  if (_internal_has_a_text()) {
+    // required string a_text = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_text());
   }
 
+  return total_size;
+}
+size_t IPCWebShareData::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCWebShareData)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required string a_title = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_title());
+
+    // required string a_text = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_text());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // optional bytes a_url = 3;
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
+  if (cached_has_bits & 0x00000004u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_url());
@@ -652,14 +735,17 @@ void IPCWebShareData::MergeFrom(const IPCWebShareData& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_title().empty()) {
-    _this->_internal_set_a_title(from._internal_a_title());
-  }
-  if (!from._internal_a_text().empty()) {
-    _this->_internal_set_a_text(from._internal_a_text());
-  }
-  if (from._internal_has_a_url()) {
-    _this->_internal_set_a_url(from._internal_a_url());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_title(from._internal_a_title());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_text(from._internal_a_text());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_internal_set_a_url(from._internal_a_url());
+    }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -672,6 +758,7 @@ void IPCWebShareData::CopyFrom(const IPCWebShareData& from) {
 }
 
 bool IPCWebShareData::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 

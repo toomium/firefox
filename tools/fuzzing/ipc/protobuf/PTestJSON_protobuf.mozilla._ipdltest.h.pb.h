@@ -102,6 +102,13 @@ class KeyValue final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const KeyValue& default_instance() {
     return *internal_default_instance();
   }
@@ -177,7 +184,11 @@ class KeyValue final :
     kAKeyFieldNumber = 1,
     kAValueFieldNumber = 2,
   };
-  // string a_key = 1;
+  // required string a_key = 1;
+  bool has_a_key() const;
+  private:
+  bool _internal_has_a_key() const;
+  public:
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -191,7 +202,7 @@ class KeyValue final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // .protobuf.mozilla._ipdltest.JSONVariant a_value = 2;
+  // required .protobuf.mozilla._ipdltest.JSONVariant a_value = 2;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -213,13 +224,17 @@ class KeyValue final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
     ::protobuf::mozilla::_ipdltest::JSONVariant* a_value_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto;
@@ -255,6 +270,13 @@ class JSONVariant_a_type_mVArrayOfKeyValue final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const JSONVariant_a_type_mVArrayOfKeyValue& default_instance() {
@@ -396,6 +418,13 @@ class JSONVariant_a_type_mVArrayOfJSONVariant final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const JSONVariant_a_type_mVArrayOfJSONVariant& default_instance() {
     return *internal_default_instance();
   }
@@ -533,6 +562,13 @@ class JSONVariant final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const JSONVariant& default_instance() {
@@ -833,9 +869,17 @@ class JSONVariant final :
 #endif  // __GNUC__
 // KeyValue
 
-// string a_key = 1;
+// required string a_key = 1;
+inline bool KeyValue::_internal_has_a_key() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool KeyValue::has_a_key() const {
+  return _internal_has_a_key();
+}
 inline void KeyValue::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& KeyValue::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.KeyValue.a_key)
@@ -844,7 +888,7 @@ inline const std::string& KeyValue::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void KeyValue::set_a_key(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.KeyValue.a_key)
 }
@@ -857,22 +901,32 @@ inline const std::string& KeyValue::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void KeyValue::_internal_set_a_key(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* KeyValue::_internal_mutable_a_key() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* KeyValue::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.KeyValue.a_key)
-  return _impl_.a_key_.Release();
+  if (!_internal_has_a_key()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_key_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void KeyValue::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -883,18 +937,18 @@ inline void KeyValue::set_allocated_a_key(std::string* a_key) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.KeyValue.a_key)
 }
 
-// .protobuf.mozilla._ipdltest.JSONVariant a_value = 2;
+// required .protobuf.mozilla._ipdltest.JSONVariant a_value = 2;
 inline bool KeyValue::_internal_has_a_value() const {
-  return this != internal_default_instance() && _impl_.a_value_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_value_ != nullptr);
+  return value;
 }
 inline bool KeyValue::has_a_value() const {
   return _internal_has_a_value();
 }
 inline void KeyValue::clear_a_value() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_value_ != nullptr) {
-    delete _impl_.a_value_;
-  }
-  _impl_.a_value_ = nullptr;
+  if (_impl_.a_value_ != nullptr) _impl_.a_value_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const ::protobuf::mozilla::_ipdltest::JSONVariant& KeyValue::_internal_a_value() const {
   const ::protobuf::mozilla::_ipdltest::JSONVariant* p = _impl_.a_value_;
@@ -912,14 +966,14 @@ inline void KeyValue::unsafe_arena_set_allocated_a_value(
   }
   _impl_.a_value_ = a_value;
   if (a_value) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla._ipdltest.KeyValue.a_value)
 }
 inline ::protobuf::mozilla::_ipdltest::JSONVariant* KeyValue::release_a_value() {
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::_ipdltest::JSONVariant* temp = _impl_.a_value_;
   _impl_.a_value_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -935,13 +989,13 @@ inline ::protobuf::mozilla::_ipdltest::JSONVariant* KeyValue::release_a_value() 
 }
 inline ::protobuf::mozilla::_ipdltest::JSONVariant* KeyValue::unsafe_arena_release_a_value() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.KeyValue.a_value)
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::_ipdltest::JSONVariant* temp = _impl_.a_value_;
   _impl_.a_value_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::_ipdltest::JSONVariant* KeyValue::_internal_mutable_a_value() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   if (_impl_.a_value_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::_ipdltest::JSONVariant>(GetArenaForAllocation());
     _impl_.a_value_ = p;
@@ -965,9 +1019,9 @@ inline void KeyValue::set_allocated_a_value(::protobuf::mozilla::_ipdltest::JSON
       a_value = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_value, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_value_ = a_value;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.KeyValue.a_value)

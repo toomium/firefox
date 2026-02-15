@@ -149,6 +149,13 @@ class Msg_Write final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Write& default_instance() {
     return *internal_default_instance();
   }
@@ -254,7 +261,6 @@ class Msg_Write final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_data_;
-    mutable std::atomic<int> _a_data_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -291,6 +297,13 @@ class Msg_FlushedData final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_FlushedData& default_instance() {
@@ -410,6 +423,13 @@ class Msg_Suspend final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Suspend& default_instance() {
     return *internal_default_instance();
   }
@@ -525,6 +545,13 @@ class Msg_Resume final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Resume& default_instance() {
@@ -644,6 +671,13 @@ class Msg_Close final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Close& default_instance() {
     return *internal_default_instance();
   }
@@ -759,6 +793,13 @@ class Msg_Disconnect final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Disconnect& default_instance() {
@@ -878,6 +919,13 @@ class Msg_Destroy final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Destroy& default_instance() {
     return *internal_default_instance();
   }
@@ -993,6 +1041,13 @@ class Msg_Resumed final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Resumed& default_instance() {
@@ -1112,6 +1167,13 @@ class Msg_Suspended final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Suspended& default_instance() {
     return *internal_default_instance();
   }
@@ -1227,6 +1289,13 @@ class Msg_Closed final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Closed& default_instance() {
@@ -1346,6 +1415,13 @@ class Msg_Error final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Error& default_instance() {
     return *internal_default_instance();
   }
@@ -1420,7 +1496,11 @@ class Msg_Error final :
   enum : int {
     kAErrorFieldNumber = 1,
   };
-  // string a_error = 1;
+  // required string a_error = 1;
+  bool has_a_error() const;
+  private:
+  bool _internal_has_a_error() const;
+  public:
   void clear_a_error();
   const std::string& a_error() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1442,8 +1522,9 @@ class Msg_Error final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_error_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_error_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PStreamFilter_2eproto;
@@ -1479,6 +1560,13 @@ class Msg_FlushData final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_FlushData& default_instance() {
@@ -1598,6 +1686,13 @@ class Msg_StartRequest final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_StartRequest& default_instance() {
     return *internal_default_instance();
   }
@@ -1715,6 +1810,13 @@ class Msg_Data final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Data& default_instance() {
     return *internal_default_instance();
   }
@@ -1820,7 +1922,6 @@ class Msg_Data final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_data_;
-    mutable std::atomic<int> _a_data_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1857,6 +1958,13 @@ class Msg_StopRequest final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_StopRequest& default_instance() {
@@ -1933,7 +2041,11 @@ class Msg_StopRequest final :
   enum : int {
     kAAStatusFieldNumber = 1,
   };
-  // bytes a_aStatus = 1;
+  // required bytes a_aStatus = 1;
+  bool has_a_astatus() const;
+  private:
+  bool _internal_has_a_astatus() const;
+  public:
   void clear_a_astatus();
   const std::string& a_astatus() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1955,8 +2067,9 @@ class Msg_StopRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_astatus_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_astatus_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PStreamFilter_2eproto;
@@ -2059,9 +2172,17 @@ Msg_Write::mutable_a_data() {
 
 // Msg_Error
 
-// string a_error = 1;
+// required string a_error = 1;
+inline bool Msg_Error::_internal_has_a_error() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_Error::has_a_error() const {
+  return _internal_has_a_error();
+}
 inline void Msg_Error::clear_a_error() {
   _impl_.a_error_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_Error::a_error() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PStreamFilter.Msg_Error.a_error)
@@ -2070,7 +2191,7 @@ inline const std::string& Msg_Error::a_error() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Error::set_a_error(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_error_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PStreamFilter.Msg_Error.a_error)
 }
@@ -2083,22 +2204,32 @@ inline const std::string& Msg_Error::_internal_a_error() const {
   return _impl_.a_error_.Get();
 }
 inline void Msg_Error::_internal_set_a_error(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_error_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_Error::_internal_mutable_a_error() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_error_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_Error::release_a_error() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.extensions.PStreamFilter.Msg_Error.a_error)
-  return _impl_.a_error_.Release();
+  if (!_internal_has_a_error()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_error_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_error_.IsDefault()) {
+    _impl_.a_error_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_Error::set_allocated_a_error(std::string* a_error) {
   if (a_error != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_error_.SetAllocated(a_error, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2172,9 +2303,17 @@ Msg_Data::mutable_a_data() {
 
 // Msg_StopRequest
 
-// bytes a_aStatus = 1;
+// required bytes a_aStatus = 1;
+inline bool Msg_StopRequest::_internal_has_a_astatus() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_StopRequest::has_a_astatus() const {
+  return _internal_has_a_astatus();
+}
 inline void Msg_StopRequest::clear_a_astatus() {
   _impl_.a_astatus_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_StopRequest::a_astatus() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PStreamFilter.Msg_StopRequest.a_aStatus)
@@ -2183,7 +2322,7 @@ inline const std::string& Msg_StopRequest::a_astatus() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_StopRequest::set_a_astatus(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_astatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PStreamFilter.Msg_StopRequest.a_aStatus)
 }
@@ -2196,22 +2335,32 @@ inline const std::string& Msg_StopRequest::_internal_a_astatus() const {
   return _impl_.a_astatus_.Get();
 }
 inline void Msg_StopRequest::_internal_set_a_astatus(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_astatus_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_StopRequest::_internal_mutable_a_astatus() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_astatus_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_StopRequest::release_a_astatus() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.extensions.PStreamFilter.Msg_StopRequest.a_aStatus)
-  return _impl_.a_astatus_.Release();
+  if (!_internal_has_a_astatus()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_astatus_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_astatus_.IsDefault()) {
+    _impl_.a_astatus_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_StopRequest::set_allocated_a_astatus(std::string* a_astatus) {
   if (a_astatus != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_astatus_.SetAllocated(a_astatus, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

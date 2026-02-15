@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/webtransport/shared/PWebTransport.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.PWebTransport;
@@ -18,8 +18,8 @@ import "PBackgroundSharedTypes.proto";
 
 // Message declarations
 message Msg_Close {
-  uint32 a_code = 1;
-  string a_reason = 2;
+  required uint32 a_code = 1;
+  required string a_reason = 2;
 }
 
 message Msg_CreateUnidirectionalStream {
@@ -27,7 +27,7 @@ message Msg_CreateUnidirectionalStream {
 }
 
 message Reply_CreateUnidirectionalStream {
-  protobuf.mozilla.dom.UnidirectionalStreamResponse a_response = 1;
+  required protobuf.mozilla.dom.UnidirectionalStreamResponse a_response = 1;
 }
 
 message Msg_CreateBidirectionalStream {
@@ -35,62 +35,62 @@ message Msg_CreateBidirectionalStream {
 }
 
 message Reply_CreateBidirectionalStream {
-  protobuf.mozilla.dom.BidirectionalStreamResponse a_response = 1;
+  required protobuf.mozilla.dom.BidirectionalStreamResponse a_response = 1;
 }
 
 message Msg_OutgoingDatagram {
   repeated uint32 a_data = 1;
-  bytes a_expirationTime = 2;
+  required bytes a_expirationTime = 2;
 }
 
 message Reply_OutgoingDatagram {
-  bytes a_response = 1;
+  required bytes a_response = 1;
 }
 
 message Msg_GetMaxDatagramSize {
 }
 
 message Reply_GetMaxDatagramSize {
-  uint64 a_maxDatagramSize = 1;
+  required uint64 a_maxDatagramSize = 1;
 }
 
 message Msg_SetSendOrder {
-  uint64 a_streamId = 1;
+  required uint64 a_streamId = 1;
   optional sint64 a_sendOrder = 2;
 }
 
 message Msg_IncomingUnidirectionalStream {
-  uint64 a_streamId = 1;
+  required uint64 a_streamId = 1;
   optional bytes a_receive = 2;
 }
 
 message Msg_IncomingBidirectionalStream {
-  uint64 a_streamId = 1;
+  required uint64 a_streamId = 1;
   optional bytes a_receive = 2;
   optional bytes a_send = 3;
 }
 
 message Msg_IncomingDatagram {
   repeated uint32 a_data = 1;
-  bytes a_receivedTime = 2;
+  required bytes a_receivedTime = 2;
 }
 
 message Msg_RemoteClosed {
-  bool a_cleanly = 1;
-  uint32 a_code = 2;
-  string a_reason = 3;
+  required bool a_cleanly = 1;
+  required uint32 a_code = 2;
+  required string a_reason = 3;
 }
 
 message Msg_OnStreamResetOrStopSending {
-  uint64 a_streamId = 1;
-  protobuf.mozilla.dom.StreamResetOrStopSendingError a_error = 2;
+  required uint64 a_streamId = 1;
+  required protobuf.mozilla.dom.StreamResetOrStopSendingError a_error = 2;
 }
 
 message Msg_CloseAll {
 }
 
 message Reply_CloseAll {
-  bytes a_rv = 1;
+  required bytes a_rv = 1;
 }
 
 // Parameter mappings stats:

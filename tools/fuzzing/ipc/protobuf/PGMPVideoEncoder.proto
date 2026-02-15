@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/media/gmp/PGMPVideoEncoder.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.gmp.PGMPVideoEncoder;
@@ -17,35 +17,35 @@ import "GMPTypes.proto";
 
 // Message declarations
 message Msg_InitEncode {
-  bytes a_aCodecSettings = 1;
+  required bytes a_aCodecSettings = 1;
   repeated uint32 a_aCodecSpecific = 2;
-  sint32 a_aNumberOfCores = 3;
-  uint32 a_aMaxPayloadSize = 4;
+  required sint32 a_aNumberOfCores = 3;
+  required uint32 a_aMaxPayloadSize = 4;
 }
 
 message Msg_GiveShmem {
-  bytes a_aOutputShmem = 1;
+  required bytes a_aOutputShmem = 1;
 }
 
 message Msg_Encode {
-  protobuf.mozilla.gmp.GMPVideoi420FrameData a_aInputFrame = 1;
-  bytes a_aInputShmem = 2;
+  required protobuf.mozilla.gmp.GMPVideoi420FrameData a_aInputFrame = 1;
+  required bytes a_aInputShmem = 2;
   repeated uint32 a_aCodecSpecificInfo = 3;
   repeated bytes a_aFrameTypes = 4;
 }
 
 message Msg_SetChannelParameters {
-  uint32 a_aPacketLoss = 1;
-  uint32 a_aRTT = 2;
+  required uint32 a_aPacketLoss = 1;
+  required uint32 a_aRTT = 2;
 }
 
 message Msg_SetRates {
-  uint32 a_aNewBitRate = 1;
-  uint32 a_aFrameRate = 2;
+  required uint32 a_aNewBitRate = 1;
+  required uint32 a_aFrameRate = 2;
 }
 
 message Msg_SetPeriodicKeyFrames {
-  bool a_aEnable = 1;
+  required bool a_aEnable = 1;
 }
 
 message Msg___delete__ {
@@ -55,23 +55,23 @@ message Reply___delete__ {
 }
 
 message Msg_ReturnShmem {
-  bytes a_aInputShmem = 1;
+  required bytes a_aInputShmem = 1;
 }
 
 message Msg_EncodedShmem {
-  protobuf.mozilla.gmp.GMPVideoEncodedFrameData a_aEncodedFrame = 1;
-  bytes a_aEncodedShmem = 2;
+  required protobuf.mozilla.gmp.GMPVideoEncodedFrameData a_aEncodedFrame = 1;
+  required bytes a_aEncodedShmem = 2;
   repeated uint32 a_aCodecSpecificInfo = 3;
 }
 
 message Msg_EncodedData {
-  protobuf.mozilla.gmp.GMPVideoEncodedFrameData a_aEncodedFrame = 1;
+  required protobuf.mozilla.gmp.GMPVideoEncodedFrameData a_aEncodedFrame = 1;
   repeated uint32 a_aEncodedData = 2;
   repeated uint32 a_aCodecSpecificInfo = 3;
 }
 
 message Msg_Error {
-  bytes a_aErr = 1;
+  required bytes a_aErr = 1;
 }
 
 message Msg_Shutdown {

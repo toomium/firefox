@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/serviceworkers/PServiceWorkerRegistration.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.PServiceWorkerRegistration;
@@ -23,40 +23,40 @@ message Msg_Unregister {
 }
 
 message Reply_Unregister {
-  bool a_aSuccess = 1;
-  bytes a_aRv = 2;
+  required bool a_aSuccess = 1;
+  required bytes a_aRv = 2;
 }
 
 message Msg_Update {
-  string a_aNewestWorkerScriptUrl = 1;
+  required string a_aNewestWorkerScriptUrl = 1;
 }
 
 message Reply_Update {
-  protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult a_aResult = 1;
+  required protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult a_aResult = 1;
 }
 
 message Msg_GetNotifications {
-  string a_aTag = 1;
+  required string a_aTag = 1;
 }
 
 message Reply_GetNotifications {
-  protobuf.mozilla.dom.IPCNotificationsOrError a_aResult = 1;
+  required protobuf.mozilla.dom.IPCNotificationsOrError a_aResult = 1;
 }
 
 message Msg_SetNavigationPreloadEnabled {
-  bool a_aEnabled = 1;
+  required bool a_aEnabled = 1;
 }
 
 message Reply_SetNavigationPreloadEnabled {
-  bool a_aSuccess = 1;
+  required bool a_aSuccess = 1;
 }
 
 message Msg_SetNavigationPreloadHeader {
-  string a_aHeader = 1;
+  required string a_aHeader = 1;
 }
 
 message Reply_SetNavigationPreloadHeader {
-  bool a_aSuccess = 1;
+  required bool a_aSuccess = 1;
 }
 
 message Msg_GetNavigationPreloadState {
@@ -67,7 +67,7 @@ message Reply_GetNavigationPreloadState {
 }
 
 message Msg_UpdateState {
-  protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor a_aDescriptor = 1;
+  required protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor a_aDescriptor = 1;
 }
 
 message Msg_FireUpdateFound {

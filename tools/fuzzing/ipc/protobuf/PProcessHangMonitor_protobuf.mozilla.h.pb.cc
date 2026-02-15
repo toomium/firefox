@@ -21,11 +21,12 @@ namespace protobuf {
 namespace mozilla {
 PROTOBUF_CONSTEXPR SlowScriptData::SlowScriptData(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_tabid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_tabid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_filename_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_addonid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_duration_)*/0
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_duration_)*/0} {}
 struct SlowScriptDataDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SlowScriptDataDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -44,6 +45,22 @@ namespace mozilla {
 
 class SlowScriptData::_Internal {
  public:
+  using HasBits = decltype(std::declval<SlowScriptData>()._impl_._has_bits_);
+  static void set_has_a_tabid(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_filename(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_addonid(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_a_duration(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x0000000f) ^ 0x0000000f) != 0;
+  }
 };
 
 SlowScriptData::SlowScriptData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -56,18 +73,19 @@ SlowScriptData::SlowScriptData(const SlowScriptData& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SlowScriptData* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_tabid_){}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_tabid_){}
     , decltype(_impl_.a_filename_){}
     , decltype(_impl_.a_addonid_){}
-    , decltype(_impl_.a_duration_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_duration_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_tabid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_tabid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_tabid().empty()) {
+  if (from._internal_has_a_tabid()) {
     _this->_impl_.a_tabid_.Set(from._internal_a_tabid(), 
       _this->GetArenaForAllocation());
   }
@@ -75,7 +93,7 @@ SlowScriptData::SlowScriptData(const SlowScriptData& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_filename_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_filename().empty()) {
+  if (from._internal_has_a_filename()) {
     _this->_impl_.a_filename_.Set(from._internal_a_filename(), 
       _this->GetArenaForAllocation());
   }
@@ -83,7 +101,7 @@ SlowScriptData::SlowScriptData(const SlowScriptData& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_addonid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_addonid().empty()) {
+  if (from._internal_has_a_addonid()) {
     _this->_impl_.a_addonid_.Set(from._internal_a_addonid(), 
       _this->GetArenaForAllocation());
   }
@@ -96,11 +114,12 @@ inline void SlowScriptData::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_tabid_){}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_tabid_){}
     , decltype(_impl_.a_filename_){}
     , decltype(_impl_.a_addonid_){}
     , decltype(_impl_.a_duration_){0}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_tabid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -142,20 +161,31 @@ void SlowScriptData::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_tabid_.ClearToEmpty();
-  _impl_.a_filename_.ClearToEmpty();
-  _impl_.a_addonid_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_tabid_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_filename_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _impl_.a_addonid_.ClearNonDefaultToEmpty();
+    }
+  }
   _impl_.a_duration_ = 0;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* SlowScriptData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_tabId = 1;
+      // required bytes a_tabId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_tabid();
@@ -164,29 +194,28 @@ const char* SlowScriptData::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // string a_filename = 2;
+      // required string a_filename = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_filename();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // string a_addonId = 3;
+      // required string a_addonId = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_addonid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // double a_duration = 4;
+      // required double a_duration = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 33)) {
+          _Internal::set_has_a_duration(&has_bits);
           _impl_.a_duration_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
@@ -208,6 +237,7 @@ const char* SlowScriptData::_InternalParse(const char* ptr, ::_pbi::ParseContext
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -221,38 +251,27 @@ uint8_t* SlowScriptData::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_tabId = 1;
-  if (!this->_internal_a_tabid().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_tabId = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_tabid(), target);
   }
 
-  // string a_filename = 2;
-  if (!this->_internal_a_filename().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_filename().data(), static_cast<int>(this->_internal_a_filename().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.SlowScriptData.a_filename");
+  // required string a_filename = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_filename(), target);
   }
 
-  // string a_addonId = 3;
-  if (!this->_internal_a_addonid().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_addonid().data(), static_cast<int>(this->_internal_a_addonid().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.SlowScriptData.a_addonId");
+  // required string a_addonId = 3;
+  if (cached_has_bits & 0x00000004u) {
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_addonid(), target);
   }
 
-  // double a_duration = 4;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_duration = this->_internal_a_duration();
-  uint64_t raw_a_duration;
-  memcpy(&raw_a_duration, &tmp_a_duration, sizeof(tmp_a_duration));
-  if (raw_a_duration != 0) {
+  // required double a_duration = 4;
+  if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(4, this->_internal_a_duration(), target);
   }
@@ -265,43 +284,67 @@ uint8_t* SlowScriptData::_InternalSerialize(
   return target;
 }
 
-size_t SlowScriptData::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.SlowScriptData)
+size_t SlowScriptData::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.SlowScriptData)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_tabId = 1;
-  if (!this->_internal_a_tabid().empty()) {
+  if (_internal_has_a_tabid()) {
+    // required bytes a_tabId = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_tabid());
   }
 
-  // string a_filename = 2;
-  if (!this->_internal_a_filename().empty()) {
+  if (_internal_has_a_filename()) {
+    // required string a_filename = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_filename());
   }
 
-  // string a_addonId = 3;
-  if (!this->_internal_a_addonid().empty()) {
+  if (_internal_has_a_addonid()) {
+    // required string a_addonId = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_addonid());
   }
 
-  // double a_duration = 4;
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_duration = this->_internal_a_duration();
-  uint64_t raw_a_duration;
-  memcpy(&raw_a_duration, &tmp_a_duration, sizeof(tmp_a_duration));
-  if (raw_a_duration != 0) {
+  if (_internal_has_a_duration()) {
+    // required double a_duration = 4;
     total_size += 1 + 8;
   }
+
+  return total_size;
+}
+size_t SlowScriptData::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.SlowScriptData)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
+    // required bytes a_tabId = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_tabid());
+
+    // required string a_filename = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_filename());
+
+    // required string a_addonId = 3;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_addonid());
+
+    // required double a_duration = 4;
+    total_size += 1 + 8;
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -324,21 +367,21 @@ void SlowScriptData::MergeFrom(const SlowScriptData& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_tabid().empty()) {
-    _this->_internal_set_a_tabid(from._internal_a_tabid());
-  }
-  if (!from._internal_a_filename().empty()) {
-    _this->_internal_set_a_filename(from._internal_a_filename());
-  }
-  if (!from._internal_a_addonid().empty()) {
-    _this->_internal_set_a_addonid(from._internal_a_addonid());
-  }
-  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
-  double tmp_a_duration = from._internal_a_duration();
-  uint64_t raw_a_duration;
-  memcpy(&raw_a_duration, &tmp_a_duration, sizeof(tmp_a_duration));
-  if (raw_a_duration != 0) {
-    _this->_internal_set_a_duration(from._internal_a_duration());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000000fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_tabid(from._internal_a_tabid());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_filename(from._internal_a_filename());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_internal_set_a_addonid(from._internal_a_addonid());
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.a_duration_ = from._impl_.a_duration_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -351,6 +394,7 @@ void SlowScriptData::CopyFrom(const SlowScriptData& from) {
 }
 
 bool SlowScriptData::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -359,6 +403,7 @@ void SlowScriptData::InternalSwap(SlowScriptData* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_tabid_, lhs_arena,
       &other->_impl_.a_tabid_, rhs_arena

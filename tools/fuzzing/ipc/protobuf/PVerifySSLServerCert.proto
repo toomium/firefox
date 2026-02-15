@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/security/manager/ssl/PVerifySSLServerCert.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.psm.PVerifySSLServerCert;
@@ -18,13 +18,13 @@ import "PSMIPCTypes.proto";
 // Message declarations
 message Msg_OnVerifySSLServerCertFinished {
   repeated protobuf.mozilla.psm.ByteArray a_aBuiltCertChain = 1;
-  uint32 a_aCertTransparencyStatus = 2;
-  bytes a_aEVStatus = 3;
-  bool a_aSucceeded = 4;
-  sint32 a_aFinalError = 5;
-  bytes a_aOverridableErrorCategory = 6;
-  bool a_aIsBuiltCertChainRootBuiltInRoot = 7;
-  bool a_aMadeOCSPRequests = 8;
+  required uint32 a_aCertTransparencyStatus = 2;
+  required bytes a_aEVStatus = 3;
+  required bool a_aSucceeded = 4;
+  required sint32 a_aFinalError = 5;
+  required bytes a_aOverridableErrorCategory = 6;
+  required bool a_aIsBuiltCertChainRootBuiltInRoot = 7;
+  required bool a_aMadeOCSPRequests = 8;
 }
 
 message Msg___delete__ {

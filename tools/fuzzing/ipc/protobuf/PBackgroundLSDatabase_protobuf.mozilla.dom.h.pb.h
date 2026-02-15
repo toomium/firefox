@@ -91,6 +91,13 @@ class LSSnapshotInitInfo final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const LSSnapshotInitInfo& default_instance() {
     return *internal_default_instance();
   }
@@ -190,7 +197,11 @@ class LSSnapshotInitInfo final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSItemInfo >&
       a_iteminfos() const;
 
-  // bytes a_loadState = 6;
+  // required bytes a_loadState = 6;
+  bool has_a_loadstate() const;
+  private:
+  bool _internal_has_a_loadstate() const;
+  public:
   void clear_a_loadstate();
   const std::string& a_loadstate() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -204,7 +215,11 @@ class LSSnapshotInitInfo final :
   std::string* _internal_mutable_a_loadstate();
   public:
 
-  // sint64 a_usage = 4;
+  // required sint64 a_usage = 4;
+  bool has_a_usage() const;
+  private:
+  bool _internal_has_a_usage() const;
+  public:
   void clear_a_usage();
   int64_t a_usage() const;
   void set_a_usage(int64_t value);
@@ -213,7 +228,11 @@ class LSSnapshotInitInfo final :
   void _internal_set_a_usage(int64_t value);
   public:
 
-  // uint32 a_totalLength = 3;
+  // required uint32 a_totalLength = 3;
+  bool has_a_totallength() const;
+  private:
+  bool _internal_has_a_totallength() const;
+  public:
   void clear_a_totallength();
   uint32_t a_totallength() const;
   void set_a_totallength(uint32_t value);
@@ -222,7 +241,11 @@ class LSSnapshotInitInfo final :
   void _internal_set_a_totallength(uint32_t value);
   public:
 
-  // bool a_addKeyToUnknownItems = 1;
+  // required bool a_addKeyToUnknownItems = 1;
+  bool has_a_addkeytounknownitems() const;
+  private:
+  bool _internal_has_a_addkeytounknownitems() const;
+  public:
   void clear_a_addkeytounknownitems();
   bool a_addkeytounknownitems() const;
   void set_a_addkeytounknownitems(bool value);
@@ -231,7 +254,11 @@ class LSSnapshotInitInfo final :
   void _internal_set_a_addkeytounknownitems(bool value);
   public:
 
-  // bool a_hasOtherProcessDatabases = 7;
+  // required bool a_hasOtherProcessDatabases = 7;
+  bool has_a_hasotherprocessdatabases() const;
+  private:
+  bool _internal_has_a_hasotherprocessdatabases() const;
+  public:
   void clear_a_hasotherprocessdatabases();
   bool a_hasotherprocessdatabases() const;
   void set_a_hasotherprocessdatabases(bool value);
@@ -240,7 +267,11 @@ class LSSnapshotInitInfo final :
   void _internal_set_a_hasotherprocessdatabases(bool value);
   public:
 
-  // bool a_hasOtherProcessObservers = 8;
+  // required bool a_hasOtherProcessObservers = 8;
+  bool has_a_hasotherprocessobservers() const;
+  private:
+  bool _internal_has_a_hasotherprocessobservers() const;
+  public:
   void clear_a_hasotherprocessobservers();
   bool a_hasotherprocessobservers() const;
   void set_a_hasotherprocessobservers(bool value);
@@ -249,7 +280,11 @@ class LSSnapshotInitInfo final :
   void _internal_set_a_hasotherprocessobservers(bool value);
   public:
 
-  // sint64 a_peakUsage = 5;
+  // required sint64 a_peakUsage = 5;
+  bool has_a_peakusage() const;
+  private:
+  bool _internal_has_a_peakusage() const;
+  public:
   void clear_a_peakusage();
   int64_t a_peakusage() const;
   void set_a_peakusage(int64_t value);
@@ -262,10 +297,15 @@ class LSSnapshotInitInfo final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSItemInfo > a_iteminfos_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_loadstate_;
     int64_t a_usage_;
@@ -274,7 +314,6 @@ class LSSnapshotInitInfo final :
     bool a_hasotherprocessdatabases_;
     bool a_hasotherprocessobservers_;
     int64_t a_peakusage_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSDatabase_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -290,9 +329,17 @@ class LSSnapshotInitInfo final :
 #endif  // __GNUC__
 // LSSnapshotInitInfo
 
-// bool a_addKeyToUnknownItems = 1;
+// required bool a_addKeyToUnknownItems = 1;
+inline bool LSSnapshotInitInfo::_internal_has_a_addkeytounknownitems() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool LSSnapshotInitInfo::has_a_addkeytounknownitems() const {
+  return _internal_has_a_addkeytounknownitems();
+}
 inline void LSSnapshotInitInfo::clear_a_addkeytounknownitems() {
   _impl_.a_addkeytounknownitems_ = false;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline bool LSSnapshotInitInfo::_internal_a_addkeytounknownitems() const {
   return _impl_.a_addkeytounknownitems_;
@@ -302,7 +349,7 @@ inline bool LSSnapshotInitInfo::a_addkeytounknownitems() const {
   return _internal_a_addkeytounknownitems();
 }
 inline void LSSnapshotInitInfo::_internal_set_a_addkeytounknownitems(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_addkeytounknownitems_ = value;
 }
 inline void LSSnapshotInitInfo::set_a_addkeytounknownitems(bool value) {
@@ -347,9 +394,17 @@ LSSnapshotInitInfo::a_iteminfos() const {
   return _impl_.a_iteminfos_;
 }
 
-// uint32 a_totalLength = 3;
+// required uint32 a_totalLength = 3;
+inline bool LSSnapshotInitInfo::_internal_has_a_totallength() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool LSSnapshotInitInfo::has_a_totallength() const {
+  return _internal_has_a_totallength();
+}
 inline void LSSnapshotInitInfo::clear_a_totallength() {
   _impl_.a_totallength_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t LSSnapshotInitInfo::_internal_a_totallength() const {
   return _impl_.a_totallength_;
@@ -359,7 +414,7 @@ inline uint32_t LSSnapshotInitInfo::a_totallength() const {
   return _internal_a_totallength();
 }
 inline void LSSnapshotInitInfo::_internal_set_a_totallength(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_totallength_ = value;
 }
 inline void LSSnapshotInitInfo::set_a_totallength(uint32_t value) {
@@ -367,9 +422,17 @@ inline void LSSnapshotInitInfo::set_a_totallength(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSnapshotInitInfo.a_totalLength)
 }
 
-// sint64 a_usage = 4;
+// required sint64 a_usage = 4;
+inline bool LSSnapshotInitInfo::_internal_has_a_usage() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool LSSnapshotInitInfo::has_a_usage() const {
+  return _internal_has_a_usage();
+}
 inline void LSSnapshotInitInfo::clear_a_usage() {
   _impl_.a_usage_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline int64_t LSSnapshotInitInfo::_internal_a_usage() const {
   return _impl_.a_usage_;
@@ -379,7 +442,7 @@ inline int64_t LSSnapshotInitInfo::a_usage() const {
   return _internal_a_usage();
 }
 inline void LSSnapshotInitInfo::_internal_set_a_usage(int64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_usage_ = value;
 }
 inline void LSSnapshotInitInfo::set_a_usage(int64_t value) {
@@ -387,9 +450,17 @@ inline void LSSnapshotInitInfo::set_a_usage(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSnapshotInitInfo.a_usage)
 }
 
-// sint64 a_peakUsage = 5;
+// required sint64 a_peakUsage = 5;
+inline bool LSSnapshotInitInfo::_internal_has_a_peakusage() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool LSSnapshotInitInfo::has_a_peakusage() const {
+  return _internal_has_a_peakusage();
+}
 inline void LSSnapshotInitInfo::clear_a_peakusage() {
   _impl_.a_peakusage_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000040u;
 }
 inline int64_t LSSnapshotInitInfo::_internal_a_peakusage() const {
   return _impl_.a_peakusage_;
@@ -399,7 +470,7 @@ inline int64_t LSSnapshotInitInfo::a_peakusage() const {
   return _internal_a_peakusage();
 }
 inline void LSSnapshotInitInfo::_internal_set_a_peakusage(int64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000040u;
   _impl_.a_peakusage_ = value;
 }
 inline void LSSnapshotInitInfo::set_a_peakusage(int64_t value) {
@@ -407,9 +478,17 @@ inline void LSSnapshotInitInfo::set_a_peakusage(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSnapshotInitInfo.a_peakUsage)
 }
 
-// bytes a_loadState = 6;
+// required bytes a_loadState = 6;
+inline bool LSSnapshotInitInfo::_internal_has_a_loadstate() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool LSSnapshotInitInfo::has_a_loadstate() const {
+  return _internal_has_a_loadstate();
+}
 inline void LSSnapshotInitInfo::clear_a_loadstate() {
   _impl_.a_loadstate_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& LSSnapshotInitInfo::a_loadstate() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSnapshotInitInfo.a_loadState)
@@ -418,7 +497,7 @@ inline const std::string& LSSnapshotInitInfo::a_loadstate() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LSSnapshotInitInfo::set_a_loadstate(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_loadstate_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSnapshotInitInfo.a_loadState)
 }
@@ -431,22 +510,32 @@ inline const std::string& LSSnapshotInitInfo::_internal_a_loadstate() const {
   return _impl_.a_loadstate_.Get();
 }
 inline void LSSnapshotInitInfo::_internal_set_a_loadstate(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_loadstate_.Set(value, GetArenaForAllocation());
 }
 inline std::string* LSSnapshotInitInfo::_internal_mutable_a_loadstate() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_loadstate_.Mutable(GetArenaForAllocation());
 }
 inline std::string* LSSnapshotInitInfo::release_a_loadstate() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSSnapshotInitInfo.a_loadState)
-  return _impl_.a_loadstate_.Release();
+  if (!_internal_has_a_loadstate()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_loadstate_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_loadstate_.IsDefault()) {
+    _impl_.a_loadstate_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void LSSnapshotInitInfo::set_allocated_a_loadstate(std::string* a_loadstate) {
   if (a_loadstate != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_loadstate_.SetAllocated(a_loadstate, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -457,9 +546,17 @@ inline void LSSnapshotInitInfo::set_allocated_a_loadstate(std::string* a_loadsta
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSSnapshotInitInfo.a_loadState)
 }
 
-// bool a_hasOtherProcessDatabases = 7;
+// required bool a_hasOtherProcessDatabases = 7;
+inline bool LSSnapshotInitInfo::_internal_has_a_hasotherprocessdatabases() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool LSSnapshotInitInfo::has_a_hasotherprocessdatabases() const {
+  return _internal_has_a_hasotherprocessdatabases();
+}
 inline void LSSnapshotInitInfo::clear_a_hasotherprocessdatabases() {
   _impl_.a_hasotherprocessdatabases_ = false;
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline bool LSSnapshotInitInfo::_internal_a_hasotherprocessdatabases() const {
   return _impl_.a_hasotherprocessdatabases_;
@@ -469,7 +566,7 @@ inline bool LSSnapshotInitInfo::a_hasotherprocessdatabases() const {
   return _internal_a_hasotherprocessdatabases();
 }
 inline void LSSnapshotInitInfo::_internal_set_a_hasotherprocessdatabases(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.a_hasotherprocessdatabases_ = value;
 }
 inline void LSSnapshotInitInfo::set_a_hasotherprocessdatabases(bool value) {
@@ -477,9 +574,17 @@ inline void LSSnapshotInitInfo::set_a_hasotherprocessdatabases(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSnapshotInitInfo.a_hasOtherProcessDatabases)
 }
 
-// bool a_hasOtherProcessObservers = 8;
+// required bool a_hasOtherProcessObservers = 8;
+inline bool LSSnapshotInitInfo::_internal_has_a_hasotherprocessobservers() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool LSSnapshotInitInfo::has_a_hasotherprocessobservers() const {
+  return _internal_has_a_hasotherprocessobservers();
+}
 inline void LSSnapshotInitInfo::clear_a_hasotherprocessobservers() {
   _impl_.a_hasotherprocessobservers_ = false;
+  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline bool LSSnapshotInitInfo::_internal_a_hasotherprocessobservers() const {
   return _impl_.a_hasotherprocessobservers_;
@@ -489,7 +594,7 @@ inline bool LSSnapshotInitInfo::a_hasotherprocessobservers() const {
   return _internal_a_hasotherprocessobservers();
 }
 inline void LSSnapshotInitInfo::_internal_set_a_hasotherprocessobservers(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000020u;
   _impl_.a_hasotherprocessobservers_ = value;
 }
 inline void LSSnapshotInitInfo::set_a_hasotherprocessobservers(bool value) {

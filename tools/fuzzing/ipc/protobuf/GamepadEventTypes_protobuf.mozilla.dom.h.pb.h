@@ -126,6 +126,13 @@ class GamepadAdded final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const GamepadAdded& default_instance() {
     return *internal_default_instance();
   }
@@ -208,7 +215,11 @@ class GamepadAdded final :
     kANumLightsFieldNumber = 8,
     kANumTouchesFieldNumber = 9,
   };
-  // string a_id = 1;
+  // required string a_id = 1;
+  bool has_a_id() const;
+  private:
+  bool _internal_has_a_id() const;
+  public:
   void clear_a_id();
   const std::string& a_id() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -222,7 +233,11 @@ class GamepadAdded final :
   std::string* _internal_mutable_a_id();
   public:
 
-  // bytes a_mapping = 2;
+  // required bytes a_mapping = 2;
+  bool has_a_mapping() const;
+  private:
+  bool _internal_has_a_mapping() const;
+  public:
   void clear_a_mapping();
   const std::string& a_mapping() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -236,7 +251,11 @@ class GamepadAdded final :
   std::string* _internal_mutable_a_mapping();
   public:
 
-  // bytes a_hand = 3;
+  // required bytes a_hand = 3;
+  bool has_a_hand() const;
+  private:
+  bool _internal_has_a_hand() const;
+  public:
   void clear_a_hand();
   const std::string& a_hand() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -250,7 +269,11 @@ class GamepadAdded final :
   std::string* _internal_mutable_a_hand();
   public:
 
-  // uint32 a_display_id = 4;
+  // required uint32 a_display_id = 4;
+  bool has_a_display_id() const;
+  private:
+  bool _internal_has_a_display_id() const;
+  public:
   void clear_a_display_id();
   uint32_t a_display_id() const;
   void set_a_display_id(uint32_t value);
@@ -259,7 +282,11 @@ class GamepadAdded final :
   void _internal_set_a_display_id(uint32_t value);
   public:
 
-  // uint32 a_num_buttons = 5;
+  // required uint32 a_num_buttons = 5;
+  bool has_a_num_buttons() const;
+  private:
+  bool _internal_has_a_num_buttons() const;
+  public:
   void clear_a_num_buttons();
   uint32_t a_num_buttons() const;
   void set_a_num_buttons(uint32_t value);
@@ -268,7 +295,11 @@ class GamepadAdded final :
   void _internal_set_a_num_buttons(uint32_t value);
   public:
 
-  // uint32 a_num_axes = 6;
+  // required uint32 a_num_axes = 6;
+  bool has_a_num_axes() const;
+  private:
+  bool _internal_has_a_num_axes() const;
+  public:
   void clear_a_num_axes();
   uint32_t a_num_axes() const;
   void set_a_num_axes(uint32_t value);
@@ -277,7 +308,11 @@ class GamepadAdded final :
   void _internal_set_a_num_axes(uint32_t value);
   public:
 
-  // uint32 a_num_haptics = 7;
+  // required uint32 a_num_haptics = 7;
+  bool has_a_num_haptics() const;
+  private:
+  bool _internal_has_a_num_haptics() const;
+  public:
   void clear_a_num_haptics();
   uint32_t a_num_haptics() const;
   void set_a_num_haptics(uint32_t value);
@@ -286,7 +321,11 @@ class GamepadAdded final :
   void _internal_set_a_num_haptics(uint32_t value);
   public:
 
-  // uint32 a_num_lights = 8;
+  // required uint32 a_num_lights = 8;
+  bool has_a_num_lights() const;
+  private:
+  bool _internal_has_a_num_lights() const;
+  public:
   void clear_a_num_lights();
   uint32_t a_num_lights() const;
   void set_a_num_lights(uint32_t value);
@@ -295,7 +334,11 @@ class GamepadAdded final :
   void _internal_set_a_num_lights(uint32_t value);
   public:
 
-  // uint32 a_num_touches = 9;
+  // required uint32 a_num_touches = 9;
+  bool has_a_num_touches() const;
+  private:
+  bool _internal_has_a_num_touches() const;
+  public:
   void clear_a_num_touches();
   uint32_t a_num_touches() const;
   void set_a_num_touches(uint32_t value);
@@ -308,10 +351,15 @@ class GamepadAdded final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_id_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mapping_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_hand_;
@@ -321,7 +369,6 @@ class GamepadAdded final :
     uint32_t a_num_haptics_;
     uint32_t a_num_lights_;
     uint32_t a_num_touches_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -357,6 +404,13 @@ class GamepadRemoved final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const GamepadRemoved& default_instance() {
@@ -476,6 +530,13 @@ class GamepadAxisInformation final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const GamepadAxisInformation& default_instance() {
     return *internal_default_instance();
   }
@@ -551,7 +612,11 @@ class GamepadAxisInformation final :
     kAValueFieldNumber = 2,
     kAAxisFieldNumber = 1,
   };
-  // double a_value = 2;
+  // required double a_value = 2;
+  bool has_a_value() const;
+  private:
+  bool _internal_has_a_value() const;
+  public:
   void clear_a_value();
   double a_value() const;
   void set_a_value(double value);
@@ -560,7 +625,11 @@ class GamepadAxisInformation final :
   void _internal_set_a_value(double value);
   public:
 
-  // uint32 a_axis = 1;
+  // required uint32 a_axis = 1;
+  bool has_a_axis() const;
+  private:
+  bool _internal_has_a_axis() const;
+  public:
   void clear_a_axis();
   uint32_t a_axis() const;
   void set_a_axis(uint32_t value);
@@ -573,13 +642,17 @@ class GamepadAxisInformation final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     double a_value_;
     uint32_t a_axis_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -615,6 +688,13 @@ class GamepadButtonInformation final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const GamepadButtonInformation& default_instance() {
@@ -694,7 +774,11 @@ class GamepadButtonInformation final :
     kAPressedFieldNumber = 3,
     kATouchedFieldNumber = 4,
   };
-  // double a_value = 2;
+  // required double a_value = 2;
+  bool has_a_value() const;
+  private:
+  bool _internal_has_a_value() const;
+  public:
   void clear_a_value();
   double a_value() const;
   void set_a_value(double value);
@@ -703,7 +787,11 @@ class GamepadButtonInformation final :
   void _internal_set_a_value(double value);
   public:
 
-  // uint32 a_button = 1;
+  // required uint32 a_button = 1;
+  bool has_a_button() const;
+  private:
+  bool _internal_has_a_button() const;
+  public:
   void clear_a_button();
   uint32_t a_button() const;
   void set_a_button(uint32_t value);
@@ -712,7 +800,11 @@ class GamepadButtonInformation final :
   void _internal_set_a_button(uint32_t value);
   public:
 
-  // bool a_pressed = 3;
+  // required bool a_pressed = 3;
+  bool has_a_pressed() const;
+  private:
+  bool _internal_has_a_pressed() const;
+  public:
   void clear_a_pressed();
   bool a_pressed() const;
   void set_a_pressed(bool value);
@@ -721,7 +813,11 @@ class GamepadButtonInformation final :
   void _internal_set_a_pressed(bool value);
   public:
 
-  // bool a_touched = 4;
+  // required bool a_touched = 4;
+  bool has_a_touched() const;
+  private:
+  bool _internal_has_a_touched() const;
+  public:
   void clear_a_touched();
   bool a_touched() const;
   void set_a_touched(bool value);
@@ -734,15 +830,19 @@ class GamepadButtonInformation final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     double a_value_;
     uint32_t a_button_;
     bool a_pressed_;
     bool a_touched_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -778,6 +878,13 @@ class GamepadPoseInformation final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const GamepadPoseInformation& default_instance() {
@@ -854,7 +961,11 @@ class GamepadPoseInformation final :
   enum : int {
     kAPoseStateFieldNumber = 1,
   };
-  // bytes a_pose_state = 1;
+  // required bytes a_pose_state = 1;
+  bool has_a_pose_state() const;
+  private:
+  bool _internal_has_a_pose_state() const;
+  public:
   void clear_a_pose_state();
   const std::string& a_pose_state() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -876,8 +987,9 @@ class GamepadPoseInformation final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_pose_state_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_pose_state_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -913,6 +1025,13 @@ class GamepadLightIndicatorTypeInformation final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const GamepadLightIndicatorTypeInformation& default_instance() {
@@ -990,7 +1109,11 @@ class GamepadLightIndicatorTypeInformation final :
     kATypeFieldNumber = 2,
     kALightFieldNumber = 1,
   };
-  // bytes a_type = 2;
+  // required bytes a_type = 2;
+  bool has_a_type() const;
+  private:
+  bool _internal_has_a_type() const;
+  public:
   void clear_a_type();
   const std::string& a_type() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1004,7 +1127,11 @@ class GamepadLightIndicatorTypeInformation final :
   std::string* _internal_mutable_a_type();
   public:
 
-  // uint32 a_light = 1;
+  // required uint32 a_light = 1;
+  bool has_a_light() const;
+  private:
+  bool _internal_has_a_light() const;
+  public:
   void clear_a_light();
   uint32_t a_light() const;
   void set_a_light(uint32_t value);
@@ -1017,13 +1144,17 @@ class GamepadLightIndicatorTypeInformation final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_type_;
     uint32_t a_light_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -1059,6 +1190,13 @@ class GamepadHandInformation final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const GamepadHandInformation& default_instance() {
@@ -1135,7 +1273,11 @@ class GamepadHandInformation final :
   enum : int {
     kAHandFieldNumber = 1,
   };
-  // bytes a_hand = 1;
+  // required bytes a_hand = 1;
+  bool has_a_hand() const;
+  private:
+  bool _internal_has_a_hand() const;
+  public:
   void clear_a_hand();
   const std::string& a_hand() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1157,8 +1299,9 @@ class GamepadHandInformation final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_hand_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_hand_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -1194,6 +1337,13 @@ class GamepadTouchInformation final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const GamepadTouchInformation& default_instance() {
@@ -1271,7 +1421,11 @@ class GamepadTouchInformation final :
     kATouchStateFieldNumber = 2,
     kAIndexFieldNumber = 1,
   };
-  // bytes a_touch_state = 2;
+  // required bytes a_touch_state = 2;
+  bool has_a_touch_state() const;
+  private:
+  bool _internal_has_a_touch_state() const;
+  public:
   void clear_a_touch_state();
   const std::string& a_touch_state() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1285,7 +1439,11 @@ class GamepadTouchInformation final :
   std::string* _internal_mutable_a_touch_state();
   public:
 
-  // uint32 a_index = 1;
+  // required uint32 a_index = 1;
+  bool has_a_index() const;
+  private:
+  bool _internal_has_a_index() const;
+  public:
   void clear_a_index();
   uint32_t a_index() const;
   void set_a_index(uint32_t value);
@@ -1298,13 +1456,17 @@ class GamepadTouchInformation final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_touch_state_;
     uint32_t a_index_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -1340,6 +1502,13 @@ class GamepadChangeEventBody final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const GamepadChangeEventBody& default_instance() {
@@ -1652,6 +1821,13 @@ class GamepadChangeEvent final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const GamepadChangeEvent& default_instance() {
     return *internal_default_instance();
   }
@@ -1727,7 +1903,11 @@ class GamepadChangeEvent final :
     kAHandleFieldNumber = 1,
     kABodyFieldNumber = 2,
   };
-  // bytes a_handle = 1;
+  // required bytes a_handle = 1;
+  bool has_a_handle() const;
+  private:
+  bool _internal_has_a_handle() const;
+  public:
   void clear_a_handle();
   const std::string& a_handle() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1741,7 +1921,7 @@ class GamepadChangeEvent final :
   std::string* _internal_mutable_a_handle();
   public:
 
-  // .protobuf.mozilla.dom.GamepadChangeEventBody a_body = 2;
+  // required .protobuf.mozilla.dom.GamepadChangeEventBody a_body = 2;
   bool has_a_body() const;
   private:
   bool _internal_has_a_body() const;
@@ -1763,13 +1943,17 @@ class GamepadChangeEvent final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_handle_;
     ::protobuf::mozilla::dom::GamepadChangeEventBody* a_body_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -1785,9 +1969,17 @@ class GamepadChangeEvent final :
 #endif  // __GNUC__
 // GamepadAdded
 
-// string a_id = 1;
+// required string a_id = 1;
+inline bool GamepadAdded::_internal_has_a_id() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool GamepadAdded::has_a_id() const {
+  return _internal_has_a_id();
+}
 inline void GamepadAdded::clear_a_id() {
   _impl_.a_id_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& GamepadAdded::a_id() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.GamepadAdded.a_id)
@@ -1796,7 +1988,7 @@ inline const std::string& GamepadAdded::a_id() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GamepadAdded::set_a_id(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.GamepadAdded.a_id)
 }
@@ -1809,22 +2001,32 @@ inline const std::string& GamepadAdded::_internal_a_id() const {
   return _impl_.a_id_.Get();
 }
 inline void GamepadAdded::_internal_set_a_id(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_id_.Set(value, GetArenaForAllocation());
 }
 inline std::string* GamepadAdded::_internal_mutable_a_id() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_id_.Mutable(GetArenaForAllocation());
 }
 inline std::string* GamepadAdded::release_a_id() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.GamepadAdded.a_id)
-  return _impl_.a_id_.Release();
+  if (!_internal_has_a_id()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_id_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_id_.IsDefault()) {
+    _impl_.a_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void GamepadAdded::set_allocated_a_id(std::string* a_id) {
   if (a_id != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_id_.SetAllocated(a_id, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1835,9 +2037,17 @@ inline void GamepadAdded::set_allocated_a_id(std::string* a_id) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.GamepadAdded.a_id)
 }
 
-// bytes a_mapping = 2;
+// required bytes a_mapping = 2;
+inline bool GamepadAdded::_internal_has_a_mapping() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool GamepadAdded::has_a_mapping() const {
+  return _internal_has_a_mapping();
+}
 inline void GamepadAdded::clear_a_mapping() {
   _impl_.a_mapping_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& GamepadAdded::a_mapping() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.GamepadAdded.a_mapping)
@@ -1846,7 +2056,7 @@ inline const std::string& GamepadAdded::a_mapping() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GamepadAdded::set_a_mapping(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_mapping_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.GamepadAdded.a_mapping)
 }
@@ -1859,22 +2069,32 @@ inline const std::string& GamepadAdded::_internal_a_mapping() const {
   return _impl_.a_mapping_.Get();
 }
 inline void GamepadAdded::_internal_set_a_mapping(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_mapping_.Set(value, GetArenaForAllocation());
 }
 inline std::string* GamepadAdded::_internal_mutable_a_mapping() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_mapping_.Mutable(GetArenaForAllocation());
 }
 inline std::string* GamepadAdded::release_a_mapping() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.GamepadAdded.a_mapping)
-  return _impl_.a_mapping_.Release();
+  if (!_internal_has_a_mapping()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_mapping_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_mapping_.IsDefault()) {
+    _impl_.a_mapping_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void GamepadAdded::set_allocated_a_mapping(std::string* a_mapping) {
   if (a_mapping != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_mapping_.SetAllocated(a_mapping, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1885,9 +2105,17 @@ inline void GamepadAdded::set_allocated_a_mapping(std::string* a_mapping) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.GamepadAdded.a_mapping)
 }
 
-// bytes a_hand = 3;
+// required bytes a_hand = 3;
+inline bool GamepadAdded::_internal_has_a_hand() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool GamepadAdded::has_a_hand() const {
+  return _internal_has_a_hand();
+}
 inline void GamepadAdded::clear_a_hand() {
   _impl_.a_hand_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& GamepadAdded::a_hand() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.GamepadAdded.a_hand)
@@ -1896,7 +2124,7 @@ inline const std::string& GamepadAdded::a_hand() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GamepadAdded::set_a_hand(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000004u;
  _impl_.a_hand_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.GamepadAdded.a_hand)
 }
@@ -1909,22 +2137,32 @@ inline const std::string& GamepadAdded::_internal_a_hand() const {
   return _impl_.a_hand_.Get();
 }
 inline void GamepadAdded::_internal_set_a_hand(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_hand_.Set(value, GetArenaForAllocation());
 }
 inline std::string* GamepadAdded::_internal_mutable_a_hand() {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   return _impl_.a_hand_.Mutable(GetArenaForAllocation());
 }
 inline std::string* GamepadAdded::release_a_hand() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.GamepadAdded.a_hand)
-  return _impl_.a_hand_.Release();
+  if (!_internal_has_a_hand()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000004u;
+  auto* p = _impl_.a_hand_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_hand_.IsDefault()) {
+    _impl_.a_hand_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void GamepadAdded::set_allocated_a_hand(std::string* a_hand) {
   if (a_hand != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.a_hand_.SetAllocated(a_hand, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1935,9 +2173,17 @@ inline void GamepadAdded::set_allocated_a_hand(std::string* a_hand) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.GamepadAdded.a_hand)
 }
 
-// uint32 a_display_id = 4;
+// required uint32 a_display_id = 4;
+inline bool GamepadAdded::_internal_has_a_display_id() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool GamepadAdded::has_a_display_id() const {
+  return _internal_has_a_display_id();
+}
 inline void GamepadAdded::clear_a_display_id() {
   _impl_.a_display_id_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline uint32_t GamepadAdded::_internal_a_display_id() const {
   return _impl_.a_display_id_;
@@ -1947,7 +2193,7 @@ inline uint32_t GamepadAdded::a_display_id() const {
   return _internal_a_display_id();
 }
 inline void GamepadAdded::_internal_set_a_display_id(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_display_id_ = value;
 }
 inline void GamepadAdded::set_a_display_id(uint32_t value) {
@@ -1955,9 +2201,17 @@ inline void GamepadAdded::set_a_display_id(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.GamepadAdded.a_display_id)
 }
 
-// uint32 a_num_buttons = 5;
+// required uint32 a_num_buttons = 5;
+inline bool GamepadAdded::_internal_has_a_num_buttons() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool GamepadAdded::has_a_num_buttons() const {
+  return _internal_has_a_num_buttons();
+}
 inline void GamepadAdded::clear_a_num_buttons() {
   _impl_.a_num_buttons_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline uint32_t GamepadAdded::_internal_a_num_buttons() const {
   return _impl_.a_num_buttons_;
@@ -1967,7 +2221,7 @@ inline uint32_t GamepadAdded::a_num_buttons() const {
   return _internal_a_num_buttons();
 }
 inline void GamepadAdded::_internal_set_a_num_buttons(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.a_num_buttons_ = value;
 }
 inline void GamepadAdded::set_a_num_buttons(uint32_t value) {
@@ -1975,9 +2229,17 @@ inline void GamepadAdded::set_a_num_buttons(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.GamepadAdded.a_num_buttons)
 }
 
-// uint32 a_num_axes = 6;
+// required uint32 a_num_axes = 6;
+inline bool GamepadAdded::_internal_has_a_num_axes() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool GamepadAdded::has_a_num_axes() const {
+  return _internal_has_a_num_axes();
+}
 inline void GamepadAdded::clear_a_num_axes() {
   _impl_.a_num_axes_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline uint32_t GamepadAdded::_internal_a_num_axes() const {
   return _impl_.a_num_axes_;
@@ -1987,7 +2249,7 @@ inline uint32_t GamepadAdded::a_num_axes() const {
   return _internal_a_num_axes();
 }
 inline void GamepadAdded::_internal_set_a_num_axes(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000020u;
   _impl_.a_num_axes_ = value;
 }
 inline void GamepadAdded::set_a_num_axes(uint32_t value) {
@@ -1995,9 +2257,17 @@ inline void GamepadAdded::set_a_num_axes(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.GamepadAdded.a_num_axes)
 }
 
-// uint32 a_num_haptics = 7;
+// required uint32 a_num_haptics = 7;
+inline bool GamepadAdded::_internal_has_a_num_haptics() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool GamepadAdded::has_a_num_haptics() const {
+  return _internal_has_a_num_haptics();
+}
 inline void GamepadAdded::clear_a_num_haptics() {
   _impl_.a_num_haptics_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000040u;
 }
 inline uint32_t GamepadAdded::_internal_a_num_haptics() const {
   return _impl_.a_num_haptics_;
@@ -2007,7 +2277,7 @@ inline uint32_t GamepadAdded::a_num_haptics() const {
   return _internal_a_num_haptics();
 }
 inline void GamepadAdded::_internal_set_a_num_haptics(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000040u;
   _impl_.a_num_haptics_ = value;
 }
 inline void GamepadAdded::set_a_num_haptics(uint32_t value) {
@@ -2015,9 +2285,17 @@ inline void GamepadAdded::set_a_num_haptics(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.GamepadAdded.a_num_haptics)
 }
 
-// uint32 a_num_lights = 8;
+// required uint32 a_num_lights = 8;
+inline bool GamepadAdded::_internal_has_a_num_lights() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
+  return value;
+}
+inline bool GamepadAdded::has_a_num_lights() const {
+  return _internal_has_a_num_lights();
+}
 inline void GamepadAdded::clear_a_num_lights() {
   _impl_.a_num_lights_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000080u;
 }
 inline uint32_t GamepadAdded::_internal_a_num_lights() const {
   return _impl_.a_num_lights_;
@@ -2027,7 +2305,7 @@ inline uint32_t GamepadAdded::a_num_lights() const {
   return _internal_a_num_lights();
 }
 inline void GamepadAdded::_internal_set_a_num_lights(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000080u;
   _impl_.a_num_lights_ = value;
 }
 inline void GamepadAdded::set_a_num_lights(uint32_t value) {
@@ -2035,9 +2313,17 @@ inline void GamepadAdded::set_a_num_lights(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.GamepadAdded.a_num_lights)
 }
 
-// uint32 a_num_touches = 9;
+// required uint32 a_num_touches = 9;
+inline bool GamepadAdded::_internal_has_a_num_touches() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
+  return value;
+}
+inline bool GamepadAdded::has_a_num_touches() const {
+  return _internal_has_a_num_touches();
+}
 inline void GamepadAdded::clear_a_num_touches() {
   _impl_.a_num_touches_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000100u;
 }
 inline uint32_t GamepadAdded::_internal_a_num_touches() const {
   return _impl_.a_num_touches_;
@@ -2047,7 +2333,7 @@ inline uint32_t GamepadAdded::a_num_touches() const {
   return _internal_a_num_touches();
 }
 inline void GamepadAdded::_internal_set_a_num_touches(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000100u;
   _impl_.a_num_touches_ = value;
 }
 inline void GamepadAdded::set_a_num_touches(uint32_t value) {
@@ -2063,9 +2349,17 @@ inline void GamepadAdded::set_a_num_touches(uint32_t value) {
 
 // GamepadAxisInformation
 
-// uint32 a_axis = 1;
+// required uint32 a_axis = 1;
+inline bool GamepadAxisInformation::_internal_has_a_axis() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool GamepadAxisInformation::has_a_axis() const {
+  return _internal_has_a_axis();
+}
 inline void GamepadAxisInformation::clear_a_axis() {
   _impl_.a_axis_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t GamepadAxisInformation::_internal_a_axis() const {
   return _impl_.a_axis_;
@@ -2075,7 +2369,7 @@ inline uint32_t GamepadAxisInformation::a_axis() const {
   return _internal_a_axis();
 }
 inline void GamepadAxisInformation::_internal_set_a_axis(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_axis_ = value;
 }
 inline void GamepadAxisInformation::set_a_axis(uint32_t value) {
@@ -2083,9 +2377,17 @@ inline void GamepadAxisInformation::set_a_axis(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.GamepadAxisInformation.a_axis)
 }
 
-// double a_value = 2;
+// required double a_value = 2;
+inline bool GamepadAxisInformation::_internal_has_a_value() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool GamepadAxisInformation::has_a_value() const {
+  return _internal_has_a_value();
+}
 inline void GamepadAxisInformation::clear_a_value() {
   _impl_.a_value_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline double GamepadAxisInformation::_internal_a_value() const {
   return _impl_.a_value_;
@@ -2095,7 +2397,7 @@ inline double GamepadAxisInformation::a_value() const {
   return _internal_a_value();
 }
 inline void GamepadAxisInformation::_internal_set_a_value(double value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_value_ = value;
 }
 inline void GamepadAxisInformation::set_a_value(double value) {
@@ -2107,9 +2409,17 @@ inline void GamepadAxisInformation::set_a_value(double value) {
 
 // GamepadButtonInformation
 
-// uint32 a_button = 1;
+// required uint32 a_button = 1;
+inline bool GamepadButtonInformation::_internal_has_a_button() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool GamepadButtonInformation::has_a_button() const {
+  return _internal_has_a_button();
+}
 inline void GamepadButtonInformation::clear_a_button() {
   _impl_.a_button_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t GamepadButtonInformation::_internal_a_button() const {
   return _impl_.a_button_;
@@ -2119,7 +2429,7 @@ inline uint32_t GamepadButtonInformation::a_button() const {
   return _internal_a_button();
 }
 inline void GamepadButtonInformation::_internal_set_a_button(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_button_ = value;
 }
 inline void GamepadButtonInformation::set_a_button(uint32_t value) {
@@ -2127,9 +2437,17 @@ inline void GamepadButtonInformation::set_a_button(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.GamepadButtonInformation.a_button)
 }
 
-// double a_value = 2;
+// required double a_value = 2;
+inline bool GamepadButtonInformation::_internal_has_a_value() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool GamepadButtonInformation::has_a_value() const {
+  return _internal_has_a_value();
+}
 inline void GamepadButtonInformation::clear_a_value() {
   _impl_.a_value_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline double GamepadButtonInformation::_internal_a_value() const {
   return _impl_.a_value_;
@@ -2139,7 +2457,7 @@ inline double GamepadButtonInformation::a_value() const {
   return _internal_a_value();
 }
 inline void GamepadButtonInformation::_internal_set_a_value(double value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_value_ = value;
 }
 inline void GamepadButtonInformation::set_a_value(double value) {
@@ -2147,9 +2465,17 @@ inline void GamepadButtonInformation::set_a_value(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.GamepadButtonInformation.a_value)
 }
 
-// bool a_pressed = 3;
+// required bool a_pressed = 3;
+inline bool GamepadButtonInformation::_internal_has_a_pressed() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool GamepadButtonInformation::has_a_pressed() const {
+  return _internal_has_a_pressed();
+}
 inline void GamepadButtonInformation::clear_a_pressed() {
   _impl_.a_pressed_ = false;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline bool GamepadButtonInformation::_internal_a_pressed() const {
   return _impl_.a_pressed_;
@@ -2159,7 +2485,7 @@ inline bool GamepadButtonInformation::a_pressed() const {
   return _internal_a_pressed();
 }
 inline void GamepadButtonInformation::_internal_set_a_pressed(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_pressed_ = value;
 }
 inline void GamepadButtonInformation::set_a_pressed(bool value) {
@@ -2167,9 +2493,17 @@ inline void GamepadButtonInformation::set_a_pressed(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.GamepadButtonInformation.a_pressed)
 }
 
-// bool a_touched = 4;
+// required bool a_touched = 4;
+inline bool GamepadButtonInformation::_internal_has_a_touched() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool GamepadButtonInformation::has_a_touched() const {
+  return _internal_has_a_touched();
+}
 inline void GamepadButtonInformation::clear_a_touched() {
   _impl_.a_touched_ = false;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline bool GamepadButtonInformation::_internal_a_touched() const {
   return _impl_.a_touched_;
@@ -2179,7 +2513,7 @@ inline bool GamepadButtonInformation::a_touched() const {
   return _internal_a_touched();
 }
 inline void GamepadButtonInformation::_internal_set_a_touched(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_touched_ = value;
 }
 inline void GamepadButtonInformation::set_a_touched(bool value) {
@@ -2191,9 +2525,17 @@ inline void GamepadButtonInformation::set_a_touched(bool value) {
 
 // GamepadPoseInformation
 
-// bytes a_pose_state = 1;
+// required bytes a_pose_state = 1;
+inline bool GamepadPoseInformation::_internal_has_a_pose_state() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool GamepadPoseInformation::has_a_pose_state() const {
+  return _internal_has_a_pose_state();
+}
 inline void GamepadPoseInformation::clear_a_pose_state() {
   _impl_.a_pose_state_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& GamepadPoseInformation::a_pose_state() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.GamepadPoseInformation.a_pose_state)
@@ -2202,7 +2544,7 @@ inline const std::string& GamepadPoseInformation::a_pose_state() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GamepadPoseInformation::set_a_pose_state(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_pose_state_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.GamepadPoseInformation.a_pose_state)
 }
@@ -2215,22 +2557,32 @@ inline const std::string& GamepadPoseInformation::_internal_a_pose_state() const
   return _impl_.a_pose_state_.Get();
 }
 inline void GamepadPoseInformation::_internal_set_a_pose_state(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_pose_state_.Set(value, GetArenaForAllocation());
 }
 inline std::string* GamepadPoseInformation::_internal_mutable_a_pose_state() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_pose_state_.Mutable(GetArenaForAllocation());
 }
 inline std::string* GamepadPoseInformation::release_a_pose_state() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.GamepadPoseInformation.a_pose_state)
-  return _impl_.a_pose_state_.Release();
+  if (!_internal_has_a_pose_state()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_pose_state_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_pose_state_.IsDefault()) {
+    _impl_.a_pose_state_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void GamepadPoseInformation::set_allocated_a_pose_state(std::string* a_pose_state) {
   if (a_pose_state != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_pose_state_.SetAllocated(a_pose_state, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2245,9 +2597,17 @@ inline void GamepadPoseInformation::set_allocated_a_pose_state(std::string* a_po
 
 // GamepadLightIndicatorTypeInformation
 
-// uint32 a_light = 1;
+// required uint32 a_light = 1;
+inline bool GamepadLightIndicatorTypeInformation::_internal_has_a_light() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool GamepadLightIndicatorTypeInformation::has_a_light() const {
+  return _internal_has_a_light();
+}
 inline void GamepadLightIndicatorTypeInformation::clear_a_light() {
   _impl_.a_light_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t GamepadLightIndicatorTypeInformation::_internal_a_light() const {
   return _impl_.a_light_;
@@ -2257,7 +2617,7 @@ inline uint32_t GamepadLightIndicatorTypeInformation::a_light() const {
   return _internal_a_light();
 }
 inline void GamepadLightIndicatorTypeInformation::_internal_set_a_light(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_light_ = value;
 }
 inline void GamepadLightIndicatorTypeInformation::set_a_light(uint32_t value) {
@@ -2265,9 +2625,17 @@ inline void GamepadLightIndicatorTypeInformation::set_a_light(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.GamepadLightIndicatorTypeInformation.a_light)
 }
 
-// bytes a_type = 2;
+// required bytes a_type = 2;
+inline bool GamepadLightIndicatorTypeInformation::_internal_has_a_type() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool GamepadLightIndicatorTypeInformation::has_a_type() const {
+  return _internal_has_a_type();
+}
 inline void GamepadLightIndicatorTypeInformation::clear_a_type() {
   _impl_.a_type_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& GamepadLightIndicatorTypeInformation::a_type() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.GamepadLightIndicatorTypeInformation.a_type)
@@ -2276,7 +2644,7 @@ inline const std::string& GamepadLightIndicatorTypeInformation::a_type() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GamepadLightIndicatorTypeInformation::set_a_type(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_type_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.GamepadLightIndicatorTypeInformation.a_type)
 }
@@ -2289,22 +2657,32 @@ inline const std::string& GamepadLightIndicatorTypeInformation::_internal_a_type
   return _impl_.a_type_.Get();
 }
 inline void GamepadLightIndicatorTypeInformation::_internal_set_a_type(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_type_.Set(value, GetArenaForAllocation());
 }
 inline std::string* GamepadLightIndicatorTypeInformation::_internal_mutable_a_type() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_type_.Mutable(GetArenaForAllocation());
 }
 inline std::string* GamepadLightIndicatorTypeInformation::release_a_type() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.GamepadLightIndicatorTypeInformation.a_type)
-  return _impl_.a_type_.Release();
+  if (!_internal_has_a_type()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_type_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_type_.IsDefault()) {
+    _impl_.a_type_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void GamepadLightIndicatorTypeInformation::set_allocated_a_type(std::string* a_type) {
   if (a_type != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_type_.SetAllocated(a_type, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2319,9 +2697,17 @@ inline void GamepadLightIndicatorTypeInformation::set_allocated_a_type(std::stri
 
 // GamepadHandInformation
 
-// bytes a_hand = 1;
+// required bytes a_hand = 1;
+inline bool GamepadHandInformation::_internal_has_a_hand() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool GamepadHandInformation::has_a_hand() const {
+  return _internal_has_a_hand();
+}
 inline void GamepadHandInformation::clear_a_hand() {
   _impl_.a_hand_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& GamepadHandInformation::a_hand() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.GamepadHandInformation.a_hand)
@@ -2330,7 +2716,7 @@ inline const std::string& GamepadHandInformation::a_hand() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GamepadHandInformation::set_a_hand(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_hand_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.GamepadHandInformation.a_hand)
 }
@@ -2343,22 +2729,32 @@ inline const std::string& GamepadHandInformation::_internal_a_hand() const {
   return _impl_.a_hand_.Get();
 }
 inline void GamepadHandInformation::_internal_set_a_hand(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_hand_.Set(value, GetArenaForAllocation());
 }
 inline std::string* GamepadHandInformation::_internal_mutable_a_hand() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_hand_.Mutable(GetArenaForAllocation());
 }
 inline std::string* GamepadHandInformation::release_a_hand() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.GamepadHandInformation.a_hand)
-  return _impl_.a_hand_.Release();
+  if (!_internal_has_a_hand()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_hand_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_hand_.IsDefault()) {
+    _impl_.a_hand_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void GamepadHandInformation::set_allocated_a_hand(std::string* a_hand) {
   if (a_hand != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_hand_.SetAllocated(a_hand, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2373,9 +2769,17 @@ inline void GamepadHandInformation::set_allocated_a_hand(std::string* a_hand) {
 
 // GamepadTouchInformation
 
-// uint32 a_index = 1;
+// required uint32 a_index = 1;
+inline bool GamepadTouchInformation::_internal_has_a_index() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool GamepadTouchInformation::has_a_index() const {
+  return _internal_has_a_index();
+}
 inline void GamepadTouchInformation::clear_a_index() {
   _impl_.a_index_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t GamepadTouchInformation::_internal_a_index() const {
   return _impl_.a_index_;
@@ -2385,7 +2789,7 @@ inline uint32_t GamepadTouchInformation::a_index() const {
   return _internal_a_index();
 }
 inline void GamepadTouchInformation::_internal_set_a_index(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_index_ = value;
 }
 inline void GamepadTouchInformation::set_a_index(uint32_t value) {
@@ -2393,9 +2797,17 @@ inline void GamepadTouchInformation::set_a_index(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.GamepadTouchInformation.a_index)
 }
 
-// bytes a_touch_state = 2;
+// required bytes a_touch_state = 2;
+inline bool GamepadTouchInformation::_internal_has_a_touch_state() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool GamepadTouchInformation::has_a_touch_state() const {
+  return _internal_has_a_touch_state();
+}
 inline void GamepadTouchInformation::clear_a_touch_state() {
   _impl_.a_touch_state_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& GamepadTouchInformation::a_touch_state() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.GamepadTouchInformation.a_touch_state)
@@ -2404,7 +2816,7 @@ inline const std::string& GamepadTouchInformation::a_touch_state() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GamepadTouchInformation::set_a_touch_state(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_touch_state_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.GamepadTouchInformation.a_touch_state)
 }
@@ -2417,22 +2829,32 @@ inline const std::string& GamepadTouchInformation::_internal_a_touch_state() con
   return _impl_.a_touch_state_.Get();
 }
 inline void GamepadTouchInformation::_internal_set_a_touch_state(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_touch_state_.Set(value, GetArenaForAllocation());
 }
 inline std::string* GamepadTouchInformation::_internal_mutable_a_touch_state() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_touch_state_.Mutable(GetArenaForAllocation());
 }
 inline std::string* GamepadTouchInformation::release_a_touch_state() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.GamepadTouchInformation.a_touch_state)
-  return _impl_.a_touch_state_.Release();
+  if (!_internal_has_a_touch_state()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_touch_state_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_touch_state_.IsDefault()) {
+    _impl_.a_touch_state_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void GamepadTouchInformation::set_allocated_a_touch_state(std::string* a_touch_state) {
   if (a_touch_state != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_touch_state_.SetAllocated(a_touch_state, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3052,9 +3474,17 @@ inline GamepadChangeEventBody::ContentCase GamepadChangeEventBody::content_case(
 
 // GamepadChangeEvent
 
-// bytes a_handle = 1;
+// required bytes a_handle = 1;
+inline bool GamepadChangeEvent::_internal_has_a_handle() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool GamepadChangeEvent::has_a_handle() const {
+  return _internal_has_a_handle();
+}
 inline void GamepadChangeEvent::clear_a_handle() {
   _impl_.a_handle_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& GamepadChangeEvent::a_handle() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.GamepadChangeEvent.a_handle)
@@ -3063,7 +3493,7 @@ inline const std::string& GamepadChangeEvent::a_handle() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GamepadChangeEvent::set_a_handle(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_handle_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.GamepadChangeEvent.a_handle)
 }
@@ -3076,22 +3506,32 @@ inline const std::string& GamepadChangeEvent::_internal_a_handle() const {
   return _impl_.a_handle_.Get();
 }
 inline void GamepadChangeEvent::_internal_set_a_handle(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_handle_.Set(value, GetArenaForAllocation());
 }
 inline std::string* GamepadChangeEvent::_internal_mutable_a_handle() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_handle_.Mutable(GetArenaForAllocation());
 }
 inline std::string* GamepadChangeEvent::release_a_handle() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.GamepadChangeEvent.a_handle)
-  return _impl_.a_handle_.Release();
+  if (!_internal_has_a_handle()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_handle_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_handle_.IsDefault()) {
+    _impl_.a_handle_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void GamepadChangeEvent::set_allocated_a_handle(std::string* a_handle) {
   if (a_handle != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_handle_.SetAllocated(a_handle, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3102,18 +3542,18 @@ inline void GamepadChangeEvent::set_allocated_a_handle(std::string* a_handle) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.GamepadChangeEvent.a_handle)
 }
 
-// .protobuf.mozilla.dom.GamepadChangeEventBody a_body = 2;
+// required .protobuf.mozilla.dom.GamepadChangeEventBody a_body = 2;
 inline bool GamepadChangeEvent::_internal_has_a_body() const {
-  return this != internal_default_instance() && _impl_.a_body_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_body_ != nullptr);
+  return value;
 }
 inline bool GamepadChangeEvent::has_a_body() const {
   return _internal_has_a_body();
 }
 inline void GamepadChangeEvent::clear_a_body() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_body_ != nullptr) {
-    delete _impl_.a_body_;
-  }
-  _impl_.a_body_ = nullptr;
+  if (_impl_.a_body_ != nullptr) _impl_.a_body_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const ::protobuf::mozilla::dom::GamepadChangeEventBody& GamepadChangeEvent::_internal_a_body() const {
   const ::protobuf::mozilla::dom::GamepadChangeEventBody* p = _impl_.a_body_;
@@ -3131,14 +3571,14 @@ inline void GamepadChangeEvent::unsafe_arena_set_allocated_a_body(
   }
   _impl_.a_body_ = a_body;
   if (a_body) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.GamepadChangeEvent.a_body)
 }
 inline ::protobuf::mozilla::dom::GamepadChangeEventBody* GamepadChangeEvent::release_a_body() {
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::dom::GamepadChangeEventBody* temp = _impl_.a_body_;
   _impl_.a_body_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -3154,13 +3594,13 @@ inline ::protobuf::mozilla::dom::GamepadChangeEventBody* GamepadChangeEvent::rel
 }
 inline ::protobuf::mozilla::dom::GamepadChangeEventBody* GamepadChangeEvent::unsafe_arena_release_a_body() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.GamepadChangeEvent.a_body)
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::dom::GamepadChangeEventBody* temp = _impl_.a_body_;
   _impl_.a_body_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::GamepadChangeEventBody* GamepadChangeEvent::_internal_mutable_a_body() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   if (_impl_.a_body_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::GamepadChangeEventBody>(GetArenaForAllocation());
     _impl_.a_body_ = p;
@@ -3184,9 +3624,9 @@ inline void GamepadChangeEvent::set_allocated_a_body(::protobuf::mozilla::dom::G
       a_body = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_body, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_body_ = a_body;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.GamepadChangeEvent.a_body)

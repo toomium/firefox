@@ -95,6 +95,13 @@ class GtkCompositorWidgetInitData final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const GtkCompositorWidgetInitData& default_instance() {
     return *internal_default_instance();
   }
@@ -172,7 +179,11 @@ class GtkCompositorWidgetInitData final :
     kAInitialClientSizeFieldNumber = 4,
     kAIsX11DisplayFieldNumber = 3,
   };
-  // bytes a_XWindow = 1;
+  // required bytes a_XWindow = 1;
+  bool has_a_xwindow() const;
+  private:
+  bool _internal_has_a_xwindow() const;
+  public:
   void clear_a_xwindow();
   const std::string& a_xwindow() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -186,7 +197,11 @@ class GtkCompositorWidgetInitData final :
   std::string* _internal_mutable_a_xwindow();
   public:
 
-  // string a_XDisplayString = 2;
+  // required string a_XDisplayString = 2;
+  bool has_a_xdisplaystring() const;
+  private:
+  bool _internal_has_a_xdisplaystring() const;
+  public:
   void clear_a_xdisplaystring();
   const std::string& a_xdisplaystring() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -200,7 +215,11 @@ class GtkCompositorWidgetInitData final :
   std::string* _internal_mutable_a_xdisplaystring();
   public:
 
-  // bytes a_InitialClientSize = 4;
+  // required bytes a_InitialClientSize = 4;
+  bool has_a_initialclientsize() const;
+  private:
+  bool _internal_has_a_initialclientsize() const;
+  public:
   void clear_a_initialclientsize();
   const std::string& a_initialclientsize() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -214,7 +233,11 @@ class GtkCompositorWidgetInitData final :
   std::string* _internal_mutable_a_initialclientsize();
   public:
 
-  // bool a_IsX11Display = 3;
+  // required bool a_IsX11Display = 3;
+  bool has_a_isx11display() const;
+  private:
+  bool _internal_has_a_isx11display() const;
+  public:
   void clear_a_isx11display();
   bool a_isx11display() const;
   void set_a_isx11display(bool value);
@@ -227,15 +250,19 @@ class GtkCompositorWidgetInitData final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_xwindow_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_xdisplaystring_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_initialclientsize_;
     bool a_isx11display_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PlatformWidgetTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto;
@@ -271,6 +298,13 @@ class CompositorWidgetInitData final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const CompositorWidgetInitData& default_instance() {
@@ -429,9 +463,17 @@ class CompositorWidgetInitData final :
 #endif  // __GNUC__
 // GtkCompositorWidgetInitData
 
-// bytes a_XWindow = 1;
+// required bytes a_XWindow = 1;
+inline bool GtkCompositorWidgetInitData::_internal_has_a_xwindow() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool GtkCompositorWidgetInitData::has_a_xwindow() const {
+  return _internal_has_a_xwindow();
+}
 inline void GtkCompositorWidgetInitData::clear_a_xwindow() {
   _impl_.a_xwindow_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& GtkCompositorWidgetInitData::a_xwindow() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.widget.GtkCompositorWidgetInitData.a_XWindow)
@@ -440,7 +482,7 @@ inline const std::string& GtkCompositorWidgetInitData::a_xwindow() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GtkCompositorWidgetInitData::set_a_xwindow(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_xwindow_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.widget.GtkCompositorWidgetInitData.a_XWindow)
 }
@@ -453,22 +495,32 @@ inline const std::string& GtkCompositorWidgetInitData::_internal_a_xwindow() con
   return _impl_.a_xwindow_.Get();
 }
 inline void GtkCompositorWidgetInitData::_internal_set_a_xwindow(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_xwindow_.Set(value, GetArenaForAllocation());
 }
 inline std::string* GtkCompositorWidgetInitData::_internal_mutable_a_xwindow() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_xwindow_.Mutable(GetArenaForAllocation());
 }
 inline std::string* GtkCompositorWidgetInitData::release_a_xwindow() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.widget.GtkCompositorWidgetInitData.a_XWindow)
-  return _impl_.a_xwindow_.Release();
+  if (!_internal_has_a_xwindow()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_xwindow_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_xwindow_.IsDefault()) {
+    _impl_.a_xwindow_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void GtkCompositorWidgetInitData::set_allocated_a_xwindow(std::string* a_xwindow) {
   if (a_xwindow != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_xwindow_.SetAllocated(a_xwindow, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -479,9 +531,17 @@ inline void GtkCompositorWidgetInitData::set_allocated_a_xwindow(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.widget.GtkCompositorWidgetInitData.a_XWindow)
 }
 
-// string a_XDisplayString = 2;
+// required string a_XDisplayString = 2;
+inline bool GtkCompositorWidgetInitData::_internal_has_a_xdisplaystring() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool GtkCompositorWidgetInitData::has_a_xdisplaystring() const {
+  return _internal_has_a_xdisplaystring();
+}
 inline void GtkCompositorWidgetInitData::clear_a_xdisplaystring() {
   _impl_.a_xdisplaystring_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& GtkCompositorWidgetInitData::a_xdisplaystring() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.widget.GtkCompositorWidgetInitData.a_XDisplayString)
@@ -490,7 +550,7 @@ inline const std::string& GtkCompositorWidgetInitData::a_xdisplaystring() const 
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GtkCompositorWidgetInitData::set_a_xdisplaystring(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_xdisplaystring_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.widget.GtkCompositorWidgetInitData.a_XDisplayString)
 }
@@ -503,22 +563,32 @@ inline const std::string& GtkCompositorWidgetInitData::_internal_a_xdisplaystrin
   return _impl_.a_xdisplaystring_.Get();
 }
 inline void GtkCompositorWidgetInitData::_internal_set_a_xdisplaystring(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_xdisplaystring_.Set(value, GetArenaForAllocation());
 }
 inline std::string* GtkCompositorWidgetInitData::_internal_mutable_a_xdisplaystring() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_xdisplaystring_.Mutable(GetArenaForAllocation());
 }
 inline std::string* GtkCompositorWidgetInitData::release_a_xdisplaystring() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.widget.GtkCompositorWidgetInitData.a_XDisplayString)
-  return _impl_.a_xdisplaystring_.Release();
+  if (!_internal_has_a_xdisplaystring()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_xdisplaystring_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_xdisplaystring_.IsDefault()) {
+    _impl_.a_xdisplaystring_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void GtkCompositorWidgetInitData::set_allocated_a_xdisplaystring(std::string* a_xdisplaystring) {
   if (a_xdisplaystring != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_xdisplaystring_.SetAllocated(a_xdisplaystring, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -529,9 +599,17 @@ inline void GtkCompositorWidgetInitData::set_allocated_a_xdisplaystring(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.widget.GtkCompositorWidgetInitData.a_XDisplayString)
 }
 
-// bool a_IsX11Display = 3;
+// required bool a_IsX11Display = 3;
+inline bool GtkCompositorWidgetInitData::_internal_has_a_isx11display() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool GtkCompositorWidgetInitData::has_a_isx11display() const {
+  return _internal_has_a_isx11display();
+}
 inline void GtkCompositorWidgetInitData::clear_a_isx11display() {
   _impl_.a_isx11display_ = false;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline bool GtkCompositorWidgetInitData::_internal_a_isx11display() const {
   return _impl_.a_isx11display_;
@@ -541,7 +619,7 @@ inline bool GtkCompositorWidgetInitData::a_isx11display() const {
   return _internal_a_isx11display();
 }
 inline void GtkCompositorWidgetInitData::_internal_set_a_isx11display(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_isx11display_ = value;
 }
 inline void GtkCompositorWidgetInitData::set_a_isx11display(bool value) {
@@ -549,9 +627,17 @@ inline void GtkCompositorWidgetInitData::set_a_isx11display(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.widget.GtkCompositorWidgetInitData.a_IsX11Display)
 }
 
-// bytes a_InitialClientSize = 4;
+// required bytes a_InitialClientSize = 4;
+inline bool GtkCompositorWidgetInitData::_internal_has_a_initialclientsize() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool GtkCompositorWidgetInitData::has_a_initialclientsize() const {
+  return _internal_has_a_initialclientsize();
+}
 inline void GtkCompositorWidgetInitData::clear_a_initialclientsize() {
   _impl_.a_initialclientsize_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& GtkCompositorWidgetInitData::a_initialclientsize() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.widget.GtkCompositorWidgetInitData.a_InitialClientSize)
@@ -560,7 +646,7 @@ inline const std::string& GtkCompositorWidgetInitData::a_initialclientsize() con
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GtkCompositorWidgetInitData::set_a_initialclientsize(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000004u;
  _impl_.a_initialclientsize_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.widget.GtkCompositorWidgetInitData.a_InitialClientSize)
 }
@@ -573,22 +659,32 @@ inline const std::string& GtkCompositorWidgetInitData::_internal_a_initialclient
   return _impl_.a_initialclientsize_.Get();
 }
 inline void GtkCompositorWidgetInitData::_internal_set_a_initialclientsize(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_initialclientsize_.Set(value, GetArenaForAllocation());
 }
 inline std::string* GtkCompositorWidgetInitData::_internal_mutable_a_initialclientsize() {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   return _impl_.a_initialclientsize_.Mutable(GetArenaForAllocation());
 }
 inline std::string* GtkCompositorWidgetInitData::release_a_initialclientsize() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.widget.GtkCompositorWidgetInitData.a_InitialClientSize)
-  return _impl_.a_initialclientsize_.Release();
+  if (!_internal_has_a_initialclientsize()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000004u;
+  auto* p = _impl_.a_initialclientsize_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_initialclientsize_.IsDefault()) {
+    _impl_.a_initialclientsize_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void GtkCompositorWidgetInitData::set_allocated_a_initialclientsize(std::string* a_initialclientsize) {
   if (a_initialclientsize != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.a_initialclientsize_.SetAllocated(a_initialclientsize, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

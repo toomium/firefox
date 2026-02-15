@@ -23,9 +23,10 @@ namespace net {
 namespace PProxyConfigLookup {
 PROTOBUF_CONSTEXPR Msg___delete__::Msg___delete__(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_aproxyinfo_)*/{}
-  , /*decltype(_impl_.a_aresult_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_aproxyinfo_)*/{}
+  , /*decltype(_impl_.a_aresult_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg___delete__DefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg___delete__DefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -60,6 +61,13 @@ namespace PProxyConfigLookup {
 
 class Msg___delete__::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg___delete__>()._impl_._has_bits_);
+  static void set_has_a_aresult(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 void Msg___delete__::clear_a_aproxyinfo() {
@@ -75,16 +83,17 @@ Msg___delete__::Msg___delete__(const Msg___delete__& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg___delete__* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_aproxyinfo_){from._impl_.a_aproxyinfo_}
-    , decltype(_impl_.a_aresult_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_aproxyinfo_){from._impl_.a_aproxyinfo_}
+    , decltype(_impl_.a_aresult_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_aresult_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_aresult_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_aresult().empty()) {
+  if (from._internal_has_a_aresult()) {
     _this->_impl_.a_aresult_.Set(from._internal_a_aresult(), 
       _this->GetArenaForAllocation());
   }
@@ -96,9 +105,10 @@ inline void Msg___delete__::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_aproxyinfo_){arena}
-    , decltype(_impl_.a_aresult_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_aproxyinfo_){arena}
+    , decltype(_impl_.a_aresult_){}
   };
   _impl_.a_aresult_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -132,12 +142,17 @@ void Msg___delete__::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_aproxyinfo_.Clear();
-  _impl_.a_aresult_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_aresult_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg___delete__::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
@@ -155,7 +170,7 @@ const char* Msg___delete__::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // bytes a_aResult = 2;
+      // required bytes a_aResult = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_aresult();
@@ -180,6 +195,7 @@ const char* Msg___delete__::_InternalParse(const char* ptr, ::_pbi::ParseContext
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -201,8 +217,9 @@ uint8_t* Msg___delete__::_InternalSerialize(
         InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
 
-  // bytes a_aResult = 2;
-  if (!this->_internal_a_aresult().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_aResult = 2;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_a_aresult(), target);
   }
@@ -219,6 +236,12 @@ size_t Msg___delete__::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PProxyConfigLookup.Msg___delete__)
   size_t total_size = 0;
 
+  // required bytes a_aResult = 2;
+  if (_internal_has_a_aresult()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_aresult());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -228,13 +251,6 @@ size_t Msg___delete__::ByteSizeLong() const {
   for (const auto& msg : this->_impl_.a_aproxyinfo_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
-  }
-
-  // bytes a_aResult = 2;
-  if (!this->_internal_a_aresult().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_aresult());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -259,7 +275,7 @@ void Msg___delete__::MergeFrom(const Msg___delete__& from) {
   (void) cached_has_bits;
 
   _this->_impl_.a_aproxyinfo_.MergeFrom(from._impl_.a_aproxyinfo_);
-  if (!from._internal_a_aresult().empty()) {
+  if (from._internal_has_a_aresult()) {
     _this->_internal_set_a_aresult(from._internal_a_aresult());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -273,6 +289,9 @@ void Msg___delete__::CopyFrom(const Msg___delete__& from) {
 }
 
 bool Msg___delete__::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_aproxyinfo_))
+    return false;
   return true;
 }
 
@@ -281,6 +300,7 @@ void Msg___delete__::InternalSwap(Msg___delete__* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_aproxyinfo_.InternalSwap(&other->_impl_.a_aproxyinfo_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_aresult_, lhs_arena,

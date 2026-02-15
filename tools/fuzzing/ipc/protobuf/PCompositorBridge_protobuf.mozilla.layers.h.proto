@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/gfx/layers/ipc/PCompositorBridge.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.layers;
@@ -17,17 +17,17 @@ import "PCompositorBridgeTypes.proto";
 
 // Structs and unions declarations
 message FrameStats {
-  bytes a_id = 1;
-  bytes a_compositeStart = 2;
-  bytes a_renderStart = 3;
-  bytes a_compositeEnd = 4;
-  sint32 a_contentFrameTime = 5;
-  double a_resourceUploadTime = 6;
-  double a_gpuCacheUploadTime = 7;
-  bytes a_transactionStart = 8;
-  bytes a_refreshStart = 9;
-  bytes a_fwdTime = 10;
-  bytes a_sceneBuiltTime = 11;
-  uint32 a_skippedComposites = 12;
-  string a_url = 13;
+  required bytes a_id = 1;
+  required bytes a_compositeStart = 2;
+  required bytes a_renderStart = 3;
+  required bytes a_compositeEnd = 4;
+  required sint32 a_contentFrameTime = 5;
+  required double a_resourceUploadTime = 6;
+  required double a_gpuCacheUploadTime = 7;
+  required bytes a_transactionStart = 8;
+  required bytes a_refreshStart = 9;
+  required bytes a_fwdTime = 10;
+  required bytes a_sceneBuiltTime = 11;
+  required uint32 a_skippedComposites = 12;
+  required string a_url = 13;
 }

@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/gfx/layers/ipc/PAPZ.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.layers.PAPZ;
@@ -26,35 +26,35 @@ message Msg_LayerTransforms {
 }
 
 message Msg_RequestContentRepaint {
-  bytes a_request = 1;
+  required bytes a_request = 1;
 }
 
 message Msg_UpdateOverscrollVelocity {
-  bytes a_aGuid = 1;
-  float a_aX = 2;
-  float a_aY = 3;
-  bool a_aIsRootContent = 4;
+  required bytes a_aGuid = 1;
+  required float a_aX = 2;
+  required float a_aY = 3;
+  required bool a_aIsRootContent = 4;
 }
 
 message Msg_UpdateOverscrollOffset {
-  bytes a_aGuid = 1;
-  float a_aX = 2;
-  float a_aY = 3;
-  bool a_aIsRootContent = 4;
+  required bytes a_aGuid = 1;
+  required float a_aX = 2;
+  required float a_aY = 3;
+  required bool a_aIsRootContent = 4;
 }
 
 message Msg_HideDynamicToolbar {
 }
 
 message Msg_NotifyMozMouseScrollEvent {
-  bytes a_aScrollId = 1;
-  string a_aEvent = 2;
+  required bytes a_aScrollId = 1;
+  required string a_aEvent = 2;
 }
 
 message Msg_NotifyAPZStateChange {
-  bytes a_aGuid = 1;
-  bytes a_aChange = 2;
-  sint32 a_aArg = 3;
+  required bytes a_aGuid = 1;
+  required bytes a_aChange = 2;
+  required sint32 a_aArg = 3;
   optional uint64 a_aInputBlockId = 4;
 }
 
@@ -62,17 +62,17 @@ message Msg_NotifyFlushComplete {
 }
 
 message Msg_NotifyAsyncScrollbarDragInitiated {
-  uint64 a_aDragBlockId = 1;
-  bytes a_aScrollId = 2;
-  bytes a_aDirection = 3;
+  required uint64 a_aDragBlockId = 1;
+  required bytes a_aScrollId = 2;
+  required bytes a_aDirection = 3;
 }
 
 message Msg_NotifyAsyncScrollbarDragRejected {
-  bytes a_aScrollId = 1;
+  required bytes a_aScrollId = 1;
 }
 
 message Msg_NotifyAsyncAutoscrollRejected {
-  bytes a_aScrollId = 1;
+  required bytes a_aScrollId = 1;
 }
 
 message Msg_Destroy {

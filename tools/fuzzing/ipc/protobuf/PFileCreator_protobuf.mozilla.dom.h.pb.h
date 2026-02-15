@@ -99,6 +99,13 @@ class FileCreationSuccessResult final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const FileCreationSuccessResult& default_instance() {
     return *internal_default_instance();
   }
@@ -173,7 +180,7 @@ class FileCreationSuccessResult final :
   enum : int {
     kABlobFieldNumber = 1,
   };
-  // .protobuf.mozilla.dom.IPCBlob a_blob = 1;
+  // required .protobuf.mozilla.dom.IPCBlob a_blob = 1;
   bool has_a_blob() const;
   private:
   bool _internal_has_a_blob() const;
@@ -199,8 +206,9 @@ class FileCreationSuccessResult final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::protobuf::mozilla::dom::IPCBlob* a_blob_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::protobuf::mozilla::dom::IPCBlob* a_blob_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileCreator_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -236,6 +244,13 @@ class FileCreationErrorResult final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const FileCreationErrorResult& default_instance() {
@@ -312,7 +327,11 @@ class FileCreationErrorResult final :
   enum : int {
     kAErrorCodeFieldNumber = 1,
   };
-  // bytes a_errorCode = 1;
+  // required bytes a_errorCode = 1;
+  bool has_a_errorcode() const;
+  private:
+  bool _internal_has_a_errorcode() const;
+  public:
   void clear_a_errorcode();
   const std::string& a_errorcode() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -334,8 +353,9 @@ class FileCreationErrorResult final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_errorcode_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_errorcode_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileCreator_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -371,6 +391,13 @@ class FileCreationResult final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const FileCreationResult& default_instance() {
@@ -529,9 +556,11 @@ class FileCreationResult final :
 #endif  // __GNUC__
 // FileCreationSuccessResult
 
-// .protobuf.mozilla.dom.IPCBlob a_blob = 1;
+// required .protobuf.mozilla.dom.IPCBlob a_blob = 1;
 inline bool FileCreationSuccessResult::_internal_has_a_blob() const {
-  return this != internal_default_instance() && _impl_.a_blob_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_blob_ != nullptr);
+  return value;
 }
 inline bool FileCreationSuccessResult::has_a_blob() const {
   return _internal_has_a_blob();
@@ -552,14 +581,14 @@ inline void FileCreationSuccessResult::unsafe_arena_set_allocated_a_blob(
   }
   _impl_.a_blob_ = a_blob;
   if (a_blob) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileCreationSuccessResult.a_blob)
 }
 inline ::protobuf::mozilla::dom::IPCBlob* FileCreationSuccessResult::release_a_blob() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.a_blob_;
   _impl_.a_blob_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -575,13 +604,13 @@ inline ::protobuf::mozilla::dom::IPCBlob* FileCreationSuccessResult::release_a_b
 }
 inline ::protobuf::mozilla::dom::IPCBlob* FileCreationSuccessResult::unsafe_arena_release_a_blob() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileCreationSuccessResult.a_blob)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.a_blob_;
   _impl_.a_blob_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::IPCBlob* FileCreationSuccessResult::_internal_mutable_a_blob() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_blob_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::IPCBlob>(GetArenaForAllocation());
     _impl_.a_blob_ = p;
@@ -606,9 +635,9 @@ inline void FileCreationSuccessResult::set_allocated_a_blob(::protobuf::mozilla:
       a_blob = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_blob, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_blob_ = a_blob;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileCreationSuccessResult.a_blob)
@@ -618,9 +647,17 @@ inline void FileCreationSuccessResult::set_allocated_a_blob(::protobuf::mozilla:
 
 // FileCreationErrorResult
 
-// bytes a_errorCode = 1;
+// required bytes a_errorCode = 1;
+inline bool FileCreationErrorResult::_internal_has_a_errorcode() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool FileCreationErrorResult::has_a_errorcode() const {
+  return _internal_has_a_errorcode();
+}
 inline void FileCreationErrorResult::clear_a_errorcode() {
   _impl_.a_errorcode_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& FileCreationErrorResult::a_errorcode() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileCreationErrorResult.a_errorCode)
@@ -629,7 +666,7 @@ inline const std::string& FileCreationErrorResult::a_errorcode() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileCreationErrorResult::set_a_errorcode(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_errorcode_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileCreationErrorResult.a_errorCode)
 }
@@ -642,22 +679,32 @@ inline const std::string& FileCreationErrorResult::_internal_a_errorcode() const
   return _impl_.a_errorcode_.Get();
 }
 inline void FileCreationErrorResult::_internal_set_a_errorcode(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_errorcode_.Set(value, GetArenaForAllocation());
 }
 inline std::string* FileCreationErrorResult::_internal_mutable_a_errorcode() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_errorcode_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FileCreationErrorResult::release_a_errorcode() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileCreationErrorResult.a_errorCode)
-  return _impl_.a_errorcode_.Release();
+  if (!_internal_has_a_errorcode()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_errorcode_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_errorcode_.IsDefault()) {
+    _impl_.a_errorcode_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void FileCreationErrorResult::set_allocated_a_errorcode(std::string* a_errorcode) {
   if (a_errorcode != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_errorcode_.SetAllocated(a_errorcode, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

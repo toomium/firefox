@@ -239,19 +239,20 @@ uint8_t* MaybeCookieStruct::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.mozilla.net.CookieStruct a_mVCookieStruct = 1;
-  if (_internal_has_a_mvcookiestruct()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::a_mvcookiestruct(this),
-        _Internal::a_mvcookiestruct(this).GetCachedSize(), target, stream);
+  switch (content_case()) {
+    case kAMVCookieStruct: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(1, _Internal::a_mvcookiestruct(this),
+          _Internal::a_mvcookiestruct(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVvoidT: {
+      target = stream->WriteBytesMaybeAliased(
+          2, this->_internal_a_mvvoid_t(), target);
+      break;
+    }
+    default: ;
   }
-
-  // bytes a_mVvoid_t = 2;
-  if (_internal_has_a_mvvoid_t()) {
-    target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_a_mvvoid_t(), target);
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
@@ -333,6 +334,20 @@ void MaybeCookieStruct::CopyFrom(const MaybeCookieStruct& from) {
 }
 
 bool MaybeCookieStruct::IsInitialized() const {
+  switch (content_case()) {
+    case kAMVCookieStruct: {
+      if (_internal_has_a_mvcookiestruct()) {
+        if (!_impl_.content_.a_mvcookiestruct_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case kAMVvoidT: {
+      break;
+    }
+    case CONTENT_NOT_SET: {
+      break;
+    }
+  }
   return true;
 }
 
@@ -355,6 +370,12 @@ class CookieSubscription::_Internal {
   using HasBits = decltype(std::declval<CookieSubscription>()._impl_._has_bits_);
   static void set_has_a_name(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_url(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000002) ^ 0x00000002) != 0;
   }
 };
 
@@ -386,7 +407,7 @@ CookieSubscription::CookieSubscription(const CookieSubscription& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_url_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_url().empty()) {
+  if (from._internal_has_a_url()) {
     _this->_impl_.a_url_.Set(from._internal_a_url(), 
       _this->GetArenaForAllocation());
   }
@@ -439,10 +460,14 @@ void CookieSubscription::Clear() {
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_name_.ClearNonDefaultToEmpty();
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_name_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_url_.ClearNonDefaultToEmpty();
+    }
   }
-  _impl_.a_url_.ClearToEmpty();
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -460,17 +485,15 @@ const char* CookieSubscription::_InternalParse(const char* ptr, ::_pbi::ParseCon
           auto str = _internal_mutable_a_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // string a_url = 2;
+      // required string a_url = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_url();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -504,22 +527,15 @@ uint8_t* CookieSubscription::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
   // optional string a_name = 1;
-  if (_internal_has_a_name()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_name().data(), static_cast<int>(this->_internal_a_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.CookieSubscription.a_name");
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_name(), target);
   }
 
-  // string a_url = 2;
-  if (!this->_internal_a_url().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_url().data(), static_cast<int>(this->_internal_a_url().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.CookieSubscription.a_url");
+  // required string a_url = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_url(), target);
   }
@@ -536,6 +552,12 @@ size_t CookieSubscription::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.CookieSubscription)
   size_t total_size = 0;
 
+  // required string a_url = 2;
+  if (_internal_has_a_url()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_url());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -546,13 +568,6 @@ size_t CookieSubscription::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_name());
-  }
-
-  // string a_url = 2;
-  if (!this->_internal_a_url().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_url());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -576,11 +591,14 @@ void CookieSubscription::MergeFrom(const CookieSubscription& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_name()) {
-    _this->_internal_set_a_name(from._internal_a_name());
-  }
-  if (!from._internal_a_url().empty()) {
-    _this->_internal_set_a_url(from._internal_a_url());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_name(from._internal_a_name());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_url(from._internal_a_url());
+    }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -593,6 +611,7 @@ void CookieSubscription::CopyFrom(const CookieSubscription& from) {
 }
 
 bool CookieSubscription::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 

@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/ipc/glue/PIdleScheduler.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.ipc.PIdleScheduler;
@@ -16,8 +16,8 @@ package protobuf.mozilla.ipc.PIdleScheduler;
 
 // Message declarations
 message Msg_IdleTime {
-  uint64 a_id = 1;
-  bytes a_budget = 2;
+  required uint64 a_id = 1;
+  required bytes a_budget = 2;
 }
 
 message Msg_InitForIdleUse {
@@ -25,16 +25,16 @@ message Msg_InitForIdleUse {
 
 message Reply_InitForIdleUse {
   optional bytes a_state = 1;
-  uint32 a_childId = 2;
+  required uint32 a_childId = 2;
 }
 
 message Msg_RequestIdleTime {
-  uint64 a_id = 1;
-  bytes a_budget = 2;
+  required uint64 a_id = 1;
+  required bytes a_budget = 2;
 }
 
 message Msg_IdleTimeUsed {
-  uint64 a_id = 1;
+  required uint64 a_id = 1;
 }
 
 message Msg_Schedule {
@@ -50,7 +50,7 @@ message Msg_RequestGC {
 }
 
 message Reply_RequestGC {
-  bool a_may_gc = 1;
+  required bool a_may_gc = 1;
 }
 
 message Msg_StartedGC {

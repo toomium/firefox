@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/filesystem/PFileSystemRequest.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom;
@@ -14,19 +14,19 @@ import "IPCBlob.proto";
 
 // Structs and unions declarations
 message FileSystemFileResponse {
-  protobuf.mozilla.dom.IPCBlob a_blob = 1;
+  required protobuf.mozilla.dom.IPCBlob a_blob = 1;
 }
 
 message FileSystemDirectoryResponse {
-  string a_realPath = 1;
+  required string a_realPath = 1;
 }
 
 message FileSystemDirectoryListingResponseFile {
-  protobuf.mozilla.dom.IPCBlob a_blob = 1;
+  required protobuf.mozilla.dom.IPCBlob a_blob = 1;
 }
 
 message FileSystemDirectoryListingResponseDirectory {
-  string a_directoryRealPath = 1;
+  required string a_directoryRealPath = 1;
 }
 
 message FileSystemDirectoryListingResponseData {
@@ -45,7 +45,7 @@ message FileSystemFilesResponse {
 }
 
 message FileSystemErrorResponse {
-  bytes a_error = 1;
+  required bytes a_error = 1;
 }
 
 message FileSystemResponseValue {

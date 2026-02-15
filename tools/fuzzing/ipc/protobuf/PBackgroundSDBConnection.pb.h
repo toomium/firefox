@@ -118,6 +118,13 @@ class Msg_DeleteMe final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_DeleteMe& default_instance() {
     return *internal_default_instance();
   }
@@ -235,6 +242,13 @@ class Msg_PBackgroundSDBRequestConstructor final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_PBackgroundSDBRequestConstructor& default_instance() {
     return *internal_default_instance();
   }
@@ -310,7 +324,7 @@ class Msg_PBackgroundSDBRequestConstructor final :
     kAParamsFieldNumber = 2,
     kAActoridFieldNumber = 1,
   };
-  // .protobuf.mozilla.dom.SDBRequestParams a_params = 2;
+  // required .protobuf.mozilla.dom.SDBRequestParams a_params = 2;
   bool has_a_params() const;
   private:
   bool _internal_has_a_params() const;
@@ -328,7 +342,11 @@ class Msg_PBackgroundSDBRequestConstructor final :
       ::protobuf::mozilla::dom::SDBRequestParams* a_params);
   ::protobuf::mozilla::dom::SDBRequestParams* unsafe_arena_release_a_params();
 
-  // sint64 a_actorid = 1;
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
   void clear_a_actorid();
   int64_t a_actorid() const;
   void set_a_actorid(int64_t value);
@@ -341,13 +359,17 @@ class Msg_PBackgroundSDBRequestConstructor final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::dom::SDBRequestParams* a_params_;
     int64_t a_actorid_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundSDBConnection_2eproto;
@@ -383,6 +405,13 @@ class Reply_PBackgroundSDBRequestConstructor final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_PBackgroundSDBRequestConstructor& default_instance() {
@@ -502,6 +531,13 @@ class Msg___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -617,6 +653,13 @@ class Reply___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply___delete__& default_instance() {
@@ -736,6 +779,13 @@ class Msg_AllowToClose final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_AllowToClose& default_instance() {
     return *internal_default_instance();
   }
@@ -853,6 +903,13 @@ class Msg_Closed final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Closed& default_instance() {
     return *internal_default_instance();
   }
@@ -952,9 +1009,17 @@ class Msg_Closed final :
 
 // Msg_PBackgroundSDBRequestConstructor
 
-// sint64 a_actorid = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PBackgroundSDBRequestConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PBackgroundSDBRequestConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
 inline void Msg_PBackgroundSDBRequestConstructor::clear_a_actorid() {
   _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline int64_t Msg_PBackgroundSDBRequestConstructor::_internal_a_actorid() const {
   return _impl_.a_actorid_;
@@ -964,7 +1029,7 @@ inline int64_t Msg_PBackgroundSDBRequestConstructor::a_actorid() const {
   return _internal_a_actorid();
 }
 inline void Msg_PBackgroundSDBRequestConstructor::_internal_set_a_actorid(int64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_actorid_ = value;
 }
 inline void Msg_PBackgroundSDBRequestConstructor::set_a_actorid(int64_t value) {
@@ -972,9 +1037,11 @@ inline void Msg_PBackgroundSDBRequestConstructor::set_a_actorid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundSDBConnection.Msg_PBackgroundSDBRequestConstructor.a_actorid)
 }
 
-// .protobuf.mozilla.dom.SDBRequestParams a_params = 2;
+// required .protobuf.mozilla.dom.SDBRequestParams a_params = 2;
 inline bool Msg_PBackgroundSDBRequestConstructor::_internal_has_a_params() const {
-  return this != internal_default_instance() && _impl_.a_params_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_params_ != nullptr);
+  return value;
 }
 inline bool Msg_PBackgroundSDBRequestConstructor::has_a_params() const {
   return _internal_has_a_params();
@@ -995,14 +1062,14 @@ inline void Msg_PBackgroundSDBRequestConstructor::unsafe_arena_set_allocated_a_p
   }
   _impl_.a_params_ = a_params;
   if (a_params) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PBackgroundSDBConnection.Msg_PBackgroundSDBRequestConstructor.a_params)
 }
 inline ::protobuf::mozilla::dom::SDBRequestParams* Msg_PBackgroundSDBRequestConstructor::release_a_params() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::SDBRequestParams* temp = _impl_.a_params_;
   _impl_.a_params_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1018,13 +1085,13 @@ inline ::protobuf::mozilla::dom::SDBRequestParams* Msg_PBackgroundSDBRequestCons
 }
 inline ::protobuf::mozilla::dom::SDBRequestParams* Msg_PBackgroundSDBRequestConstructor::unsafe_arena_release_a_params() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBackgroundSDBConnection.Msg_PBackgroundSDBRequestConstructor.a_params)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::SDBRequestParams* temp = _impl_.a_params_;
   _impl_.a_params_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::SDBRequestParams* Msg_PBackgroundSDBRequestConstructor::_internal_mutable_a_params() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_params_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::SDBRequestParams>(GetArenaForAllocation());
     _impl_.a_params_ = p;
@@ -1049,9 +1116,9 @@ inline void Msg_PBackgroundSDBRequestConstructor::set_allocated_a_params(::proto
       a_params = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_params, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_params_ = a_params;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundSDBConnection.Msg_PBackgroundSDBRequestConstructor.a_params)

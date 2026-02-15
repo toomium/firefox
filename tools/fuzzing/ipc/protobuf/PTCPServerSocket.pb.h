@@ -109,6 +109,13 @@ class Msg_Close final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Close& default_instance() {
     return *internal_default_instance();
   }
@@ -224,6 +231,13 @@ class Msg_RequestDelete final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_RequestDelete& default_instance() {
@@ -343,6 +357,13 @@ class Msg_CallbackAccept final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_CallbackAccept& default_instance() {
     return *internal_default_instance();
   }
@@ -417,7 +438,11 @@ class Msg_CallbackAccept final :
   enum : int {
     kASocketFieldNumber = 1,
   };
-  // bytes a_socket = 1;
+  // required bytes a_socket = 1;
+  bool has_a_socket() const;
+  private:
+  bool _internal_has_a_socket() const;
+  public:
   void clear_a_socket();
   const std::string& a_socket() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -439,8 +464,9 @@ class Msg_CallbackAccept final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_socket_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_socket_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTCPServerSocket_2eproto;
@@ -476,6 +502,13 @@ class Msg___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg___delete__& default_instance() {
@@ -595,6 +628,13 @@ class Reply___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -698,9 +738,17 @@ class Reply___delete__ final :
 
 // Msg_CallbackAccept
 
-// bytes a_socket = 1;
+// required bytes a_socket = 1;
+inline bool Msg_CallbackAccept::_internal_has_a_socket() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_CallbackAccept::has_a_socket() const {
+  return _internal_has_a_socket();
+}
 inline void Msg_CallbackAccept::clear_a_socket() {
   _impl_.a_socket_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_CallbackAccept::a_socket() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PTCPServerSocket.Msg_CallbackAccept.a_socket)
@@ -709,7 +757,7 @@ inline const std::string& Msg_CallbackAccept::a_socket() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CallbackAccept::set_a_socket(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_socket_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTCPServerSocket.Msg_CallbackAccept.a_socket)
 }
@@ -722,22 +770,32 @@ inline const std::string& Msg_CallbackAccept::_internal_a_socket() const {
   return _impl_.a_socket_.Get();
 }
 inline void Msg_CallbackAccept::_internal_set_a_socket(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_socket_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_CallbackAccept::_internal_mutable_a_socket() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_socket_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_CallbackAccept::release_a_socket() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PTCPServerSocket.Msg_CallbackAccept.a_socket)
-  return _impl_.a_socket_.Release();
+  if (!_internal_has_a_socket()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_socket_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_socket_.IsDefault()) {
+    _impl_.a_socket_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_CallbackAccept::set_allocated_a_socket(std::string* a_socket) {
   if (a_socket != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_socket_.SetAllocated(a_socket, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

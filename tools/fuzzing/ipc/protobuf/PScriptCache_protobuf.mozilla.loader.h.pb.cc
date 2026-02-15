@@ -22,12 +22,12 @@ namespace mozilla {
 namespace loader {
 PROTOBUF_CONSTEXPR ScriptData::ScriptData(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_xdrdata_)*/{}
-  , /*decltype(_impl_._a_xdrdata_cached_byte_size_)*/{0}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_xdrdata_)*/{}
   , /*decltype(_impl_.a_url_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_cachepath_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_loadtime_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_loadtime_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct ScriptDataDefaultTypeInternal {
   PROTOBUF_CONSTEXPR ScriptDataDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -48,6 +48,19 @@ namespace loader {
 
 class ScriptData::_Internal {
  public:
+  using HasBits = decltype(std::declval<ScriptData>()._impl_._has_bits_);
+  static void set_has_a_url(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_cachepath(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_loadtime(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
+  }
 };
 
 ScriptData::ScriptData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -60,19 +73,19 @@ ScriptData::ScriptData(const ScriptData& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   ScriptData* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_xdrdata_){from._impl_.a_xdrdata_}
-    , /*decltype(_impl_._a_xdrdata_cached_byte_size_)*/{0}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_xdrdata_){from._impl_.a_xdrdata_}
     , decltype(_impl_.a_url_){}
     , decltype(_impl_.a_cachepath_){}
-    , decltype(_impl_.a_loadtime_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_loadtime_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_url_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_url_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_url().empty()) {
+  if (from._internal_has_a_url()) {
     _this->_impl_.a_url_.Set(from._internal_a_url(), 
       _this->GetArenaForAllocation());
   }
@@ -80,7 +93,7 @@ ScriptData::ScriptData(const ScriptData& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_cachepath_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_cachepath().empty()) {
+  if (from._internal_has_a_cachepath()) {
     _this->_impl_.a_cachepath_.Set(from._internal_a_cachepath(), 
       _this->GetArenaForAllocation());
   }
@@ -88,7 +101,7 @@ ScriptData::ScriptData(const ScriptData& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_loadtime_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_loadtime().empty()) {
+  if (from._internal_has_a_loadtime()) {
     _this->_impl_.a_loadtime_.Set(from._internal_a_loadtime(), 
       _this->GetArenaForAllocation());
   }
@@ -100,12 +113,12 @@ inline void ScriptData::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_xdrdata_){arena}
-    , /*decltype(_impl_._a_xdrdata_cached_byte_size_)*/{0}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_xdrdata_){arena}
     , decltype(_impl_.a_url_){}
     , decltype(_impl_.a_cachepath_){}
     , decltype(_impl_.a_loadtime_){}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_url_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -149,39 +162,48 @@ void ScriptData::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_xdrdata_.Clear();
-  _impl_.a_url_.ClearToEmpty();
-  _impl_.a_cachepath_.ClearToEmpty();
-  _impl_.a_loadtime_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_url_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_cachepath_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _impl_.a_loadtime_.ClearNonDefaultToEmpty();
+    }
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* ScriptData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string a_url = 1;
+      // required string a_url = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_url();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // string a_cachePath = 2;
+      // required string a_cachePath = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_cachepath();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // bytes a_loadTime = 3;
+      // required bytes a_loadTime = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_loadtime();
@@ -192,11 +214,16 @@ const char* ScriptData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         continue;
       // repeated uint32 a_xdrData = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            _internal_add_a_xdrdata(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<32>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 34) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_xdrdata(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 32) {
-          _internal_add_a_xdrdata(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -217,6 +244,7 @@ const char* ScriptData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -230,39 +258,29 @@ uint8_t* ScriptData::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string a_url = 1;
-  if (!this->_internal_a_url().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_url().data(), static_cast<int>(this->_internal_a_url().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.loader.ScriptData.a_url");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_url = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_url(), target);
   }
 
-  // string a_cachePath = 2;
-  if (!this->_internal_a_cachepath().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_cachepath().data(), static_cast<int>(this->_internal_a_cachepath().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.loader.ScriptData.a_cachePath");
+  // required string a_cachePath = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_cachepath(), target);
   }
 
-  // bytes a_loadTime = 3;
-  if (!this->_internal_a_loadtime().empty()) {
+  // required bytes a_loadTime = 3;
+  if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
         3, this->_internal_a_loadtime(), target);
   }
 
   // repeated uint32 a_xdrData = 4;
-  {
-    int byte_size = _impl_._a_xdrdata_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteUInt32Packed(
-          4, _internal_a_xdrdata(), byte_size, target);
-    }
+  for (int i = 0, n = this->_internal_a_xdrdata_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(4, this->_internal_a_xdrdata(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -273,10 +291,56 @@ uint8_t* ScriptData::_InternalSerialize(
   return target;
 }
 
+size_t ScriptData::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.loader.ScriptData)
+  size_t total_size = 0;
+
+  if (_internal_has_a_url()) {
+    // required string a_url = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_url());
+  }
+
+  if (_internal_has_a_cachepath()) {
+    // required string a_cachePath = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_cachepath());
+  }
+
+  if (_internal_has_a_loadtime()) {
+    // required bytes a_loadTime = 3;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_loadtime());
+  }
+
+  return total_size;
+}
 size_t ScriptData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.loader.ScriptData)
   size_t total_size = 0;
 
+  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
+    // required string a_url = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_url());
+
+    // required string a_cachePath = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_cachepath());
+
+    // required bytes a_loadTime = 3;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_loadtime());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -285,35 +349,9 @@ size_t ScriptData::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_xdrdata_);
-    if (data_size > 0) {
-      total_size += 1 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
-    int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._a_xdrdata_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
+    total_size += 1 *
+                  ::_pbi::FromIntSize(this->_internal_a_xdrdata_size());
     total_size += data_size;
-  }
-
-  // string a_url = 1;
-  if (!this->_internal_a_url().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_url());
-  }
-
-  // string a_cachePath = 2;
-  if (!this->_internal_a_cachepath().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_cachepath());
-  }
-
-  // bytes a_loadTime = 3;
-  if (!this->_internal_a_loadtime().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_loadtime());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -338,14 +376,17 @@ void ScriptData::MergeFrom(const ScriptData& from) {
   (void) cached_has_bits;
 
   _this->_impl_.a_xdrdata_.MergeFrom(from._impl_.a_xdrdata_);
-  if (!from._internal_a_url().empty()) {
-    _this->_internal_set_a_url(from._internal_a_url());
-  }
-  if (!from._internal_a_cachepath().empty()) {
-    _this->_internal_set_a_cachepath(from._internal_a_cachepath());
-  }
-  if (!from._internal_a_loadtime().empty()) {
-    _this->_internal_set_a_loadtime(from._internal_a_loadtime());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_url(from._internal_a_url());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_cachepath(from._internal_a_cachepath());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_internal_set_a_loadtime(from._internal_a_loadtime());
+    }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -358,6 +399,7 @@ void ScriptData::CopyFrom(const ScriptData& from) {
 }
 
 bool ScriptData::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -366,6 +408,7 @@ void ScriptData::InternalSwap(ScriptData* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_xdrdata_.InternalSwap(&other->_impl_.a_xdrdata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_url_, lhs_arena,

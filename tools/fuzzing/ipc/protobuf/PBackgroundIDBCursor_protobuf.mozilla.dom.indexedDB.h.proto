@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/indexedDB/PBackgroundIDBCursor.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.indexedDB;
@@ -14,16 +14,16 @@ import "PBackgroundIDBSharedTypes.proto";
 
 // Structs and unions declarations
 message ContinueParams {
-  bytes a_key = 1;
+  required bytes a_key = 1;
 }
 
 message ContinuePrimaryKeyParams {
-  bytes a_key = 1;
-  bytes a_primaryKey = 2;
+  required bytes a_key = 1;
+  required bytes a_primaryKey = 2;
 }
 
 message AdvanceParams {
-  uint32 a_count = 1;
+  required uint32 a_count = 1;
 }
 
 message CursorRequestParams {
@@ -35,25 +35,25 @@ message CursorRequestParams {
 }
 
 message ObjectStoreCursorResponse {
-  bytes a_key = 1;
-  protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo a_cloneInfo = 2;
+  required bytes a_key = 1;
+  required protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo a_cloneInfo = 2;
 }
 
 message ObjectStoreKeyCursorResponse {
-  bytes a_key = 1;
+  required bytes a_key = 1;
 }
 
 message IndexCursorResponse {
-  bytes a_key = 1;
-  bytes a_sortKey = 2;
-  bytes a_objectKey = 3;
-  protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo a_cloneInfo = 4;
+  required bytes a_key = 1;
+  required bytes a_sortKey = 2;
+  required bytes a_objectKey = 3;
+  required protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo a_cloneInfo = 4;
 }
 
 message IndexKeyCursorResponse {
-  bytes a_key = 1;
-  bytes a_sortKey = 2;
-  bytes a_objectKey = 3;
+  required bytes a_key = 1;
+  required bytes a_sortKey = 2;
+  required bytes a_objectKey = 3;
 }
 
 message CursorResponse {

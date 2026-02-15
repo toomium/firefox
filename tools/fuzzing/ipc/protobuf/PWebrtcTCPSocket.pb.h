@@ -122,6 +122,13 @@ class Msg_AsyncOpen final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_AsyncOpen& default_instance() {
     return *internal_default_instance();
   }
@@ -201,7 +208,11 @@ class Msg_AsyncOpen final :
     kAALocalPortFieldNumber = 4,
     kAAUseTlsFieldNumber = 5,
   };
-  // string a_aHost = 1;
+  // required string a_aHost = 1;
+  bool has_a_ahost() const;
+  private:
+  bool _internal_has_a_ahost() const;
+  public:
   void clear_a_ahost();
   const std::string& a_ahost() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -215,7 +226,11 @@ class Msg_AsyncOpen final :
   std::string* _internal_mutable_a_ahost();
   public:
 
-  // string a_aLocalAddress = 3;
+  // required string a_aLocalAddress = 3;
+  bool has_a_alocaladdress() const;
+  private:
+  bool _internal_has_a_alocaladdress() const;
+  public:
   void clear_a_alocaladdress();
   const std::string& a_alocaladdress() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -247,7 +262,11 @@ class Msg_AsyncOpen final :
       ::protobuf::mozilla::net::WebrtcProxyConfig* a_aproxyconfig);
   ::protobuf::mozilla::net::WebrtcProxyConfig* unsafe_arena_release_a_aproxyconfig();
 
-  // sint32 a_aPort = 2;
+  // required sint32 a_aPort = 2;
+  bool has_a_aport() const;
+  private:
+  bool _internal_has_a_aport() const;
+  public:
   void clear_a_aport();
   int32_t a_aport() const;
   void set_a_aport(int32_t value);
@@ -256,7 +275,11 @@ class Msg_AsyncOpen final :
   void _internal_set_a_aport(int32_t value);
   public:
 
-  // sint32 a_aLocalPort = 4;
+  // required sint32 a_aLocalPort = 4;
+  bool has_a_alocalport() const;
+  private:
+  bool _internal_has_a_alocalport() const;
+  public:
   void clear_a_alocalport();
   int32_t a_alocalport() const;
   void set_a_alocalport(int32_t value);
@@ -265,7 +288,11 @@ class Msg_AsyncOpen final :
   void _internal_set_a_alocalport(int32_t value);
   public:
 
-  // bool a_aUseTls = 5;
+  // required bool a_aUseTls = 5;
+  bool has_a_ausetls() const;
+  private:
+  bool _internal_has_a_ausetls() const;
+  public:
   void clear_a_ausetls();
   bool a_ausetls() const;
   void set_a_ausetls(bool value);
@@ -277,6 +304,9 @@ class Msg_AsyncOpen final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -325,6 +355,13 @@ class Msg_Write final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Write& default_instance() {
@@ -432,7 +469,6 @@ class Msg_Write final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_awritedata_;
-    mutable std::atomic<int> _a_awritedata_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -469,6 +505,13 @@ class Msg_Close final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Close& default_instance() {
@@ -588,6 +631,13 @@ class Msg_OnClose final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_OnClose& default_instance() {
     return *internal_default_instance();
   }
@@ -662,7 +712,11 @@ class Msg_OnClose final :
   enum : int {
     kAAReasonFieldNumber = 1,
   };
-  // bytes a_aReason = 1;
+  // required bytes a_aReason = 1;
+  bool has_a_areason() const;
+  private:
+  bool _internal_has_a_areason() const;
+  public:
   void clear_a_areason();
   const std::string& a_areason() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -684,8 +738,9 @@ class Msg_OnClose final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_areason_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_areason_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebrtcTCPSocket_2eproto;
@@ -721,6 +776,13 @@ class Msg_OnConnected final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_OnConnected& default_instance() {
@@ -797,7 +859,11 @@ class Msg_OnConnected final :
   enum : int {
     kAAProxyTypeFieldNumber = 1,
   };
-  // string a_aProxyType = 1;
+  // required string a_aProxyType = 1;
+  bool has_a_aproxytype() const;
+  private:
+  bool _internal_has_a_aproxytype() const;
+  public:
   void clear_a_aproxytype();
   const std::string& a_aproxytype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -819,8 +885,9 @@ class Msg_OnConnected final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aproxytype_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aproxytype_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebrtcTCPSocket_2eproto;
@@ -856,6 +923,13 @@ class Msg_OnRead final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_OnRead& default_instance() {
@@ -963,7 +1037,6 @@ class Msg_OnRead final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_areaddata_;
-    mutable std::atomic<int> _a_areaddata_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1000,6 +1073,13 @@ class Msg___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg___delete__& default_instance() {
@@ -1119,6 +1199,13 @@ class Reply___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -1214,9 +1301,17 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_AsyncOpen
 
-// string a_aHost = 1;
+// required string a_aHost = 1;
+inline bool Msg_AsyncOpen::_internal_has_a_ahost() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_AsyncOpen::has_a_ahost() const {
+  return _internal_has_a_ahost();
+}
 inline void Msg_AsyncOpen::clear_a_ahost() {
   _impl_.a_ahost_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_AsyncOpen::a_ahost() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aHost)
@@ -1225,7 +1320,7 @@ inline const std::string& Msg_AsyncOpen::a_ahost() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AsyncOpen::set_a_ahost(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_ahost_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aHost)
 }
@@ -1238,22 +1333,32 @@ inline const std::string& Msg_AsyncOpen::_internal_a_ahost() const {
   return _impl_.a_ahost_.Get();
 }
 inline void Msg_AsyncOpen::_internal_set_a_ahost(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_ahost_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_AsyncOpen::_internal_mutable_a_ahost() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_ahost_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_AsyncOpen::release_a_ahost() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aHost)
-  return _impl_.a_ahost_.Release();
+  if (!_internal_has_a_ahost()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_ahost_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_ahost_.IsDefault()) {
+    _impl_.a_ahost_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_AsyncOpen::set_allocated_a_ahost(std::string* a_ahost) {
   if (a_ahost != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_ahost_.SetAllocated(a_ahost, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1264,9 +1369,17 @@ inline void Msg_AsyncOpen::set_allocated_a_ahost(std::string* a_ahost) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aHost)
 }
 
-// sint32 a_aPort = 2;
+// required sint32 a_aPort = 2;
+inline bool Msg_AsyncOpen::_internal_has_a_aport() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool Msg_AsyncOpen::has_a_aport() const {
+  return _internal_has_a_aport();
+}
 inline void Msg_AsyncOpen::clear_a_aport() {
   _impl_.a_aport_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline int32_t Msg_AsyncOpen::_internal_a_aport() const {
   return _impl_.a_aport_;
@@ -1276,7 +1389,7 @@ inline int32_t Msg_AsyncOpen::a_aport() const {
   return _internal_a_aport();
 }
 inline void Msg_AsyncOpen::_internal_set_a_aport(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_aport_ = value;
 }
 inline void Msg_AsyncOpen::set_a_aport(int32_t value) {
@@ -1284,9 +1397,17 @@ inline void Msg_AsyncOpen::set_a_aport(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aPort)
 }
 
-// string a_aLocalAddress = 3;
+// required string a_aLocalAddress = 3;
+inline bool Msg_AsyncOpen::_internal_has_a_alocaladdress() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_AsyncOpen::has_a_alocaladdress() const {
+  return _internal_has_a_alocaladdress();
+}
 inline void Msg_AsyncOpen::clear_a_alocaladdress() {
   _impl_.a_alocaladdress_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_AsyncOpen::a_alocaladdress() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aLocalAddress)
@@ -1295,7 +1416,7 @@ inline const std::string& Msg_AsyncOpen::a_alocaladdress() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AsyncOpen::set_a_alocaladdress(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_alocaladdress_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aLocalAddress)
 }
@@ -1308,22 +1429,32 @@ inline const std::string& Msg_AsyncOpen::_internal_a_alocaladdress() const {
   return _impl_.a_alocaladdress_.Get();
 }
 inline void Msg_AsyncOpen::_internal_set_a_alocaladdress(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_alocaladdress_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_AsyncOpen::_internal_mutable_a_alocaladdress() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_alocaladdress_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_AsyncOpen::release_a_alocaladdress() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aLocalAddress)
-  return _impl_.a_alocaladdress_.Release();
+  if (!_internal_has_a_alocaladdress()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_alocaladdress_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_alocaladdress_.IsDefault()) {
+    _impl_.a_alocaladdress_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_AsyncOpen::set_allocated_a_alocaladdress(std::string* a_alocaladdress) {
   if (a_alocaladdress != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_alocaladdress_.SetAllocated(a_alocaladdress, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1334,9 +1465,17 @@ inline void Msg_AsyncOpen::set_allocated_a_alocaladdress(std::string* a_alocalad
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aLocalAddress)
 }
 
-// sint32 a_aLocalPort = 4;
+// required sint32 a_aLocalPort = 4;
+inline bool Msg_AsyncOpen::_internal_has_a_alocalport() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool Msg_AsyncOpen::has_a_alocalport() const {
+  return _internal_has_a_alocalport();
+}
 inline void Msg_AsyncOpen::clear_a_alocalport() {
   _impl_.a_alocalport_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline int32_t Msg_AsyncOpen::_internal_a_alocalport() const {
   return _impl_.a_alocalport_;
@@ -1346,7 +1485,7 @@ inline int32_t Msg_AsyncOpen::a_alocalport() const {
   return _internal_a_alocalport();
 }
 inline void Msg_AsyncOpen::_internal_set_a_alocalport(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.a_alocalport_ = value;
 }
 inline void Msg_AsyncOpen::set_a_alocalport(int32_t value) {
@@ -1354,9 +1493,17 @@ inline void Msg_AsyncOpen::set_a_alocalport(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aLocalPort)
 }
 
-// bool a_aUseTls = 5;
+// required bool a_aUseTls = 5;
+inline bool Msg_AsyncOpen::_internal_has_a_ausetls() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool Msg_AsyncOpen::has_a_ausetls() const {
+  return _internal_has_a_ausetls();
+}
 inline void Msg_AsyncOpen::clear_a_ausetls() {
   _impl_.a_ausetls_ = false;
+  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline bool Msg_AsyncOpen::_internal_a_ausetls() const {
   return _impl_.a_ausetls_;
@@ -1366,7 +1513,7 @@ inline bool Msg_AsyncOpen::a_ausetls() const {
   return _internal_a_ausetls();
 }
 inline void Msg_AsyncOpen::_internal_set_a_ausetls(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000020u;
   _impl_.a_ausetls_ = value;
 }
 inline void Msg_AsyncOpen::set_a_ausetls(bool value) {
@@ -1376,7 +1523,7 @@ inline void Msg_AsyncOpen::set_a_ausetls(bool value) {
 
 // optional .protobuf.mozilla.net.WebrtcProxyConfig a_aProxyConfig = 6;
 inline bool Msg_AsyncOpen::_internal_has_a_aproxyconfig() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_aproxyconfig_ != nullptr);
   return value;
 }
@@ -1399,14 +1546,14 @@ inline void Msg_AsyncOpen::unsafe_arena_set_allocated_a_aproxyconfig(
   }
   _impl_.a_aproxyconfig_ = a_aproxyconfig;
   if (a_aproxyconfig) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aProxyConfig)
 }
 inline ::protobuf::mozilla::net::WebrtcProxyConfig* Msg_AsyncOpen::release_a_aproxyconfig() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
   ::protobuf::mozilla::net::WebrtcProxyConfig* temp = _impl_.a_aproxyconfig_;
   _impl_.a_aproxyconfig_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1422,13 +1569,13 @@ inline ::protobuf::mozilla::net::WebrtcProxyConfig* Msg_AsyncOpen::release_a_apr
 }
 inline ::protobuf::mozilla::net::WebrtcProxyConfig* Msg_AsyncOpen::unsafe_arena_release_a_aproxyconfig() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aProxyConfig)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
   ::protobuf::mozilla::net::WebrtcProxyConfig* temp = _impl_.a_aproxyconfig_;
   _impl_.a_aproxyconfig_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::net::WebrtcProxyConfig* Msg_AsyncOpen::_internal_mutable_a_aproxyconfig() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_._has_bits_[0] |= 0x00000004u;
   if (_impl_.a_aproxyconfig_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::net::WebrtcProxyConfig>(GetArenaForAllocation());
     _impl_.a_aproxyconfig_ = p;
@@ -1453,9 +1600,9 @@ inline void Msg_AsyncOpen::set_allocated_a_aproxyconfig(::protobuf::mozilla::net
       a_aproxyconfig = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_aproxyconfig, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.a_aproxyconfig_ = a_aproxyconfig;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aProxyConfig)
@@ -1520,9 +1667,17 @@ Msg_Write::mutable_a_awritedata() {
 
 // Msg_OnClose
 
-// bytes a_aReason = 1;
+// required bytes a_aReason = 1;
+inline bool Msg_OnClose::_internal_has_a_areason() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_OnClose::has_a_areason() const {
+  return _internal_has_a_areason();
+}
 inline void Msg_OnClose::clear_a_areason() {
   _impl_.a_areason_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_OnClose::a_areason() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnClose.a_aReason)
@@ -1531,7 +1686,7 @@ inline const std::string& Msg_OnClose::a_areason() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnClose::set_a_areason(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_areason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnClose.a_aReason)
 }
@@ -1544,22 +1699,32 @@ inline const std::string& Msg_OnClose::_internal_a_areason() const {
   return _impl_.a_areason_.Get();
 }
 inline void Msg_OnClose::_internal_set_a_areason(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_areason_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OnClose::_internal_mutable_a_areason() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_areason_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OnClose::release_a_areason() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnClose.a_aReason)
-  return _impl_.a_areason_.Release();
+  if (!_internal_has_a_areason()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_areason_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_areason_.IsDefault()) {
+    _impl_.a_areason_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_OnClose::set_allocated_a_areason(std::string* a_areason) {
   if (a_areason != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_areason_.SetAllocated(a_areason, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1574,9 +1739,17 @@ inline void Msg_OnClose::set_allocated_a_areason(std::string* a_areason) {
 
 // Msg_OnConnected
 
-// string a_aProxyType = 1;
+// required string a_aProxyType = 1;
+inline bool Msg_OnConnected::_internal_has_a_aproxytype() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_OnConnected::has_a_aproxytype() const {
+  return _internal_has_a_aproxytype();
+}
 inline void Msg_OnConnected::clear_a_aproxytype() {
   _impl_.a_aproxytype_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_OnConnected::a_aproxytype() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnConnected.a_aProxyType)
@@ -1585,7 +1758,7 @@ inline const std::string& Msg_OnConnected::a_aproxytype() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnConnected::set_a_aproxytype(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aproxytype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnConnected.a_aProxyType)
 }
@@ -1598,22 +1771,32 @@ inline const std::string& Msg_OnConnected::_internal_a_aproxytype() const {
   return _impl_.a_aproxytype_.Get();
 }
 inline void Msg_OnConnected::_internal_set_a_aproxytype(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aproxytype_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OnConnected::_internal_mutable_a_aproxytype() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aproxytype_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OnConnected::release_a_aproxytype() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnConnected.a_aProxyType)
-  return _impl_.a_aproxytype_.Release();
+  if (!_internal_has_a_aproxytype()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aproxytype_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aproxytype_.IsDefault()) {
+    _impl_.a_aproxytype_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_OnConnected::set_allocated_a_aproxytype(std::string* a_aproxytype) {
   if (a_aproxytype != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aproxytype_.SetAllocated(a_aproxytype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

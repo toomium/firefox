@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/devtools/shared/heapsnapshot/PHeapSnapshotTempFileHelper.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.devtools;
@@ -13,9 +13,9 @@ package protobuf.mozilla.devtools;
 
 // Structs and unions declarations
 message OpenedFile {
-  string a_path = 1;
-  string a_snapshotId = 2;
-  bytes a_descriptor = 3;
+  required string a_path = 1;
+  required string a_snapshotId = 2;
+  required bytes a_descriptor = 3;
 }
 
 message OpenHeapSnapshotTempFileResponse {

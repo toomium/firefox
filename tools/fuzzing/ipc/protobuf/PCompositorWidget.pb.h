@@ -117,6 +117,13 @@ class Msg___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -232,6 +239,13 @@ class Reply___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply___delete__& default_instance() {
@@ -351,6 +365,13 @@ class Msg_NotifyClientSizeChanged final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_NotifyClientSizeChanged& default_instance() {
     return *internal_default_instance();
   }
@@ -425,7 +446,11 @@ class Msg_NotifyClientSizeChanged final :
   enum : int {
     kAAClientSizeFieldNumber = 1,
   };
-  // bytes a_aClientSize = 1;
+  // required bytes a_aClientSize = 1;
+  bool has_a_aclientsize() const;
+  private:
+  bool _internal_has_a_aclientsize() const;
+  public:
   void clear_a_aclientsize();
   const std::string& a_aclientsize() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -447,8 +472,9 @@ class Msg_NotifyClientSizeChanged final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aclientsize_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aclientsize_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCompositorWidget_2eproto;
@@ -484,6 +510,13 @@ class Msg_CleanupResources final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_CleanupResources& default_instance() {
@@ -603,6 +636,13 @@ class Msg_SetRenderingSurface final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_SetRenderingSurface& default_instance() {
     return *internal_default_instance();
   }
@@ -677,7 +717,11 @@ class Msg_SetRenderingSurface final :
   enum : int {
     kAAXWindowFieldNumber = 1,
   };
-  // bytes a_aXWindow = 1;
+  // required bytes a_aXWindow = 1;
+  bool has_a_axwindow() const;
+  private:
+  bool _internal_has_a_axwindow() const;
+  public:
   void clear_a_axwindow();
   const std::string& a_axwindow() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -699,8 +743,9 @@ class Msg_SetRenderingSurface final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_axwindow_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_axwindow_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCompositorWidget_2eproto;
@@ -736,6 +781,13 @@ class Msg_ObserveVsync final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_ObserveVsync& default_instance() {
@@ -855,6 +907,13 @@ class Msg_UnobserveVsync final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_UnobserveVsync& default_instance() {
     return *internal_default_instance();
   }
@@ -958,9 +1017,17 @@ class Msg_UnobserveVsync final :
 
 // Msg_NotifyClientSizeChanged
 
-// bytes a_aClientSize = 1;
+// required bytes a_aClientSize = 1;
+inline bool Msg_NotifyClientSizeChanged::_internal_has_a_aclientsize() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_NotifyClientSizeChanged::has_a_aclientsize() const {
+  return _internal_has_a_aclientsize();
+}
 inline void Msg_NotifyClientSizeChanged::clear_a_aclientsize() {
   _impl_.a_aclientsize_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_NotifyClientSizeChanged::a_aclientsize() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.widget.PCompositorWidget.Msg_NotifyClientSizeChanged.a_aClientSize)
@@ -969,7 +1036,7 @@ inline const std::string& Msg_NotifyClientSizeChanged::a_aclientsize() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyClientSizeChanged::set_a_aclientsize(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aclientsize_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.widget.PCompositorWidget.Msg_NotifyClientSizeChanged.a_aClientSize)
 }
@@ -982,22 +1049,32 @@ inline const std::string& Msg_NotifyClientSizeChanged::_internal_a_aclientsize()
   return _impl_.a_aclientsize_.Get();
 }
 inline void Msg_NotifyClientSizeChanged::_internal_set_a_aclientsize(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aclientsize_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyClientSizeChanged::_internal_mutable_a_aclientsize() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aclientsize_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyClientSizeChanged::release_a_aclientsize() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.widget.PCompositorWidget.Msg_NotifyClientSizeChanged.a_aClientSize)
-  return _impl_.a_aclientsize_.Release();
+  if (!_internal_has_a_aclientsize()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aclientsize_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aclientsize_.IsDefault()) {
+    _impl_.a_aclientsize_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_NotifyClientSizeChanged::set_allocated_a_aclientsize(std::string* a_aclientsize) {
   if (a_aclientsize != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aclientsize_.SetAllocated(a_aclientsize, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1016,9 +1093,17 @@ inline void Msg_NotifyClientSizeChanged::set_allocated_a_aclientsize(std::string
 
 // Msg_SetRenderingSurface
 
-// bytes a_aXWindow = 1;
+// required bytes a_aXWindow = 1;
+inline bool Msg_SetRenderingSurface::_internal_has_a_axwindow() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_SetRenderingSurface::has_a_axwindow() const {
+  return _internal_has_a_axwindow();
+}
 inline void Msg_SetRenderingSurface::clear_a_axwindow() {
   _impl_.a_axwindow_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_SetRenderingSurface::a_axwindow() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.widget.PCompositorWidget.Msg_SetRenderingSurface.a_aXWindow)
@@ -1027,7 +1112,7 @@ inline const std::string& Msg_SetRenderingSurface::a_axwindow() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SetRenderingSurface::set_a_axwindow(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_axwindow_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.widget.PCompositorWidget.Msg_SetRenderingSurface.a_aXWindow)
 }
@@ -1040,22 +1125,32 @@ inline const std::string& Msg_SetRenderingSurface::_internal_a_axwindow() const 
   return _impl_.a_axwindow_.Get();
 }
 inline void Msg_SetRenderingSurface::_internal_set_a_axwindow(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_axwindow_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_SetRenderingSurface::_internal_mutable_a_axwindow() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_axwindow_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_SetRenderingSurface::release_a_axwindow() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.widget.PCompositorWidget.Msg_SetRenderingSurface.a_aXWindow)
-  return _impl_.a_axwindow_.Release();
+  if (!_internal_has_a_axwindow()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_axwindow_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_axwindow_.IsDefault()) {
+    _impl_.a_axwindow_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_SetRenderingSurface::set_allocated_a_axwindow(std::string* a_axwindow) {
   if (a_axwindow != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_axwindow_.SetAllocated(a_axwindow, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

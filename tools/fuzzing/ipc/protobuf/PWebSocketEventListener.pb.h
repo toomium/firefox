@@ -125,6 +125,13 @@ class Msg_WebSocketCreated final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_WebSocketCreated& default_instance() {
     return *internal_default_instance();
   }
@@ -201,7 +208,11 @@ class Msg_WebSocketCreated final :
     kAAProtocolsFieldNumber = 3,
     kAAwebSocketSerialIDFieldNumber = 1,
   };
-  // string a_aURI = 2;
+  // required string a_aURI = 2;
+  bool has_a_auri() const;
+  private:
+  bool _internal_has_a_auri() const;
+  public:
   void clear_a_auri();
   const std::string& a_auri() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -215,7 +226,11 @@ class Msg_WebSocketCreated final :
   std::string* _internal_mutable_a_auri();
   public:
 
-  // string a_aProtocols = 3;
+  // required string a_aProtocols = 3;
+  bool has_a_aprotocols() const;
+  private:
+  bool _internal_has_a_aprotocols() const;
+  public:
   void clear_a_aprotocols();
   const std::string& a_aprotocols() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -229,7 +244,11 @@ class Msg_WebSocketCreated final :
   std::string* _internal_mutable_a_aprotocols();
   public:
 
-  // uint32 a_awebSocketSerialID = 1;
+  // required uint32 a_awebSocketSerialID = 1;
+  bool has_a_awebsocketserialid() const;
+  private:
+  bool _internal_has_a_awebsocketserialid() const;
+  public:
   void clear_a_awebsocketserialid();
   uint32_t a_awebsocketserialid() const;
   void set_a_awebsocketserialid(uint32_t value);
@@ -242,14 +261,18 @@ class Msg_WebSocketCreated final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_auri_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aprotocols_;
     uint32_t a_awebsocketserialid_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebSocketEventListener_2eproto;
@@ -285,6 +308,13 @@ class Msg_WebSocketOpened final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_WebSocketOpened& default_instance() {
@@ -365,7 +395,11 @@ class Msg_WebSocketOpened final :
     kAAHttpChannelIdFieldNumber = 5,
     kAAwebSocketSerialIDFieldNumber = 1,
   };
-  // string a_aEffectiveURI = 2;
+  // required string a_aEffectiveURI = 2;
+  bool has_a_aeffectiveuri() const;
+  private:
+  bool _internal_has_a_aeffectiveuri() const;
+  public:
   void clear_a_aeffectiveuri();
   const std::string& a_aeffectiveuri() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -379,7 +413,11 @@ class Msg_WebSocketOpened final :
   std::string* _internal_mutable_a_aeffectiveuri();
   public:
 
-  // string a_aProtocols = 3;
+  // required string a_aProtocols = 3;
+  bool has_a_aprotocols() const;
+  private:
+  bool _internal_has_a_aprotocols() const;
+  public:
   void clear_a_aprotocols();
   const std::string& a_aprotocols() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -393,7 +431,11 @@ class Msg_WebSocketOpened final :
   std::string* _internal_mutable_a_aprotocols();
   public:
 
-  // string a_aExtensions = 4;
+  // required string a_aExtensions = 4;
+  bool has_a_aextensions() const;
+  private:
+  bool _internal_has_a_aextensions() const;
+  public:
   void clear_a_aextensions();
   const std::string& a_aextensions() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -407,7 +449,11 @@ class Msg_WebSocketOpened final :
   std::string* _internal_mutable_a_aextensions();
   public:
 
-  // uint64 a_aHttpChannelId = 5;
+  // required uint64 a_aHttpChannelId = 5;
+  bool has_a_ahttpchannelid() const;
+  private:
+  bool _internal_has_a_ahttpchannelid() const;
+  public:
   void clear_a_ahttpchannelid();
   uint64_t a_ahttpchannelid() const;
   void set_a_ahttpchannelid(uint64_t value);
@@ -416,7 +462,11 @@ class Msg_WebSocketOpened final :
   void _internal_set_a_ahttpchannelid(uint64_t value);
   public:
 
-  // uint32 a_awebSocketSerialID = 1;
+  // required uint32 a_awebSocketSerialID = 1;
+  bool has_a_awebsocketserialid() const;
+  private:
+  bool _internal_has_a_awebsocketserialid() const;
+  public:
   void clear_a_awebsocketserialid();
   uint32_t a_awebsocketserialid() const;
   void set_a_awebsocketserialid(uint32_t value);
@@ -429,16 +479,20 @@ class Msg_WebSocketOpened final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aeffectiveuri_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aprotocols_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aextensions_;
     uint64_t a_ahttpchannelid_;
     uint32_t a_awebsocketserialid_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebSocketEventListener_2eproto;
@@ -474,6 +528,13 @@ class Msg_WebSocketMessageAvailable final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_WebSocketMessageAvailable& default_instance() {
@@ -552,7 +613,11 @@ class Msg_WebSocketMessageAvailable final :
     kAAwebSocketSerialIDFieldNumber = 1,
     kAAMessageTypeFieldNumber = 3,
   };
-  // string a_aData = 2;
+  // required string a_aData = 2;
+  bool has_a_adata() const;
+  private:
+  bool _internal_has_a_adata() const;
+  public:
   void clear_a_adata();
   const std::string& a_adata() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -566,7 +631,11 @@ class Msg_WebSocketMessageAvailable final :
   std::string* _internal_mutable_a_adata();
   public:
 
-  // uint32 a_awebSocketSerialID = 1;
+  // required uint32 a_awebSocketSerialID = 1;
+  bool has_a_awebsocketserialid() const;
+  private:
+  bool _internal_has_a_awebsocketserialid() const;
+  public:
   void clear_a_awebsocketserialid();
   uint32_t a_awebsocketserialid() const;
   void set_a_awebsocketserialid(uint32_t value);
@@ -575,7 +644,11 @@ class Msg_WebSocketMessageAvailable final :
   void _internal_set_a_awebsocketserialid(uint32_t value);
   public:
 
-  // uint32 a_aMessageType = 3;
+  // required uint32 a_aMessageType = 3;
+  bool has_a_amessagetype() const;
+  private:
+  bool _internal_has_a_amessagetype() const;
+  public:
   void clear_a_amessagetype();
   uint32_t a_amessagetype() const;
   void set_a_amessagetype(uint32_t value);
@@ -588,14 +661,18 @@ class Msg_WebSocketMessageAvailable final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_adata_;
     uint32_t a_awebsocketserialid_;
     uint32_t a_amessagetype_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebSocketEventListener_2eproto;
@@ -631,6 +708,13 @@ class Msg_WebSocketClosed final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_WebSocketClosed& default_instance() {
@@ -710,7 +794,11 @@ class Msg_WebSocketClosed final :
     kAAWasCleanFieldNumber = 2,
     kAACodeFieldNumber = 3,
   };
-  // string a_aReason = 4;
+  // required string a_aReason = 4;
+  bool has_a_areason() const;
+  private:
+  bool _internal_has_a_areason() const;
+  public:
   void clear_a_areason();
   const std::string& a_areason() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -724,7 +812,11 @@ class Msg_WebSocketClosed final :
   std::string* _internal_mutable_a_areason();
   public:
 
-  // uint32 a_awebSocketSerialID = 1;
+  // required uint32 a_awebSocketSerialID = 1;
+  bool has_a_awebsocketserialid() const;
+  private:
+  bool _internal_has_a_awebsocketserialid() const;
+  public:
   void clear_a_awebsocketserialid();
   uint32_t a_awebsocketserialid() const;
   void set_a_awebsocketserialid(uint32_t value);
@@ -733,7 +825,11 @@ class Msg_WebSocketClosed final :
   void _internal_set_a_awebsocketserialid(uint32_t value);
   public:
 
-  // bool a_aWasClean = 2;
+  // required bool a_aWasClean = 2;
+  bool has_a_awasclean() const;
+  private:
+  bool _internal_has_a_awasclean() const;
+  public:
   void clear_a_awasclean();
   bool a_awasclean() const;
   void set_a_awasclean(bool value);
@@ -742,7 +838,11 @@ class Msg_WebSocketClosed final :
   void _internal_set_a_awasclean(bool value);
   public:
 
-  // uint32 a_aCode = 3;
+  // required uint32 a_aCode = 3;
+  bool has_a_acode() const;
+  private:
+  bool _internal_has_a_acode() const;
+  public:
   void clear_a_acode();
   uint32_t a_acode() const;
   void set_a_acode(uint32_t value);
@@ -755,15 +855,19 @@ class Msg_WebSocketClosed final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_areason_;
     uint32_t a_awebsocketserialid_;
     bool a_awasclean_;
     uint32_t a_acode_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebSocketEventListener_2eproto;
@@ -799,6 +903,13 @@ class Msg_FrameReceived final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_FrameReceived& default_instance() {
@@ -876,7 +987,11 @@ class Msg_FrameReceived final :
     kAAFrameDataFieldNumber = 2,
     kAAWebSocketSerialIDFieldNumber = 1,
   };
-  // bytes a_aFrameData = 2;
+  // required bytes a_aFrameData = 2;
+  bool has_a_aframedata() const;
+  private:
+  bool _internal_has_a_aframedata() const;
+  public:
   void clear_a_aframedata();
   const std::string& a_aframedata() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -890,7 +1005,11 @@ class Msg_FrameReceived final :
   std::string* _internal_mutable_a_aframedata();
   public:
 
-  // uint32 a_aWebSocketSerialID = 1;
+  // required uint32 a_aWebSocketSerialID = 1;
+  bool has_a_awebsocketserialid() const;
+  private:
+  bool _internal_has_a_awebsocketserialid() const;
+  public:
   void clear_a_awebsocketserialid();
   uint32_t a_awebsocketserialid() const;
   void set_a_awebsocketserialid(uint32_t value);
@@ -903,13 +1022,17 @@ class Msg_FrameReceived final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aframedata_;
     uint32_t a_awebsocketserialid_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebSocketEventListener_2eproto;
@@ -945,6 +1068,13 @@ class Msg_FrameSent final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_FrameSent& default_instance() {
@@ -1022,7 +1152,11 @@ class Msg_FrameSent final :
     kAAFrameDataFieldNumber = 2,
     kAAWebSocketSerialIDFieldNumber = 1,
   };
-  // bytes a_aFrameData = 2;
+  // required bytes a_aFrameData = 2;
+  bool has_a_aframedata() const;
+  private:
+  bool _internal_has_a_aframedata() const;
+  public:
   void clear_a_aframedata();
   const std::string& a_aframedata() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1036,7 +1170,11 @@ class Msg_FrameSent final :
   std::string* _internal_mutable_a_aframedata();
   public:
 
-  // uint32 a_aWebSocketSerialID = 1;
+  // required uint32 a_aWebSocketSerialID = 1;
+  bool has_a_awebsocketserialid() const;
+  private:
+  bool _internal_has_a_awebsocketserialid() const;
+  public:
   void clear_a_awebsocketserialid();
   uint32_t a_awebsocketserialid() const;
   void set_a_awebsocketserialid(uint32_t value);
@@ -1049,13 +1187,17 @@ class Msg_FrameSent final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aframedata_;
     uint32_t a_awebsocketserialid_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebSocketEventListener_2eproto;
@@ -1091,6 +1233,13 @@ class Msg___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg___delete__& default_instance() {
@@ -1210,6 +1359,13 @@ class Reply___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -1327,6 +1483,13 @@ class Msg_Close final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Close& default_instance() {
     return *internal_default_instance();
   }
@@ -1422,9 +1585,17 @@ class Msg_Close final :
 #endif  // __GNUC__
 // Msg_WebSocketCreated
 
-// uint32 a_awebSocketSerialID = 1;
+// required uint32 a_awebSocketSerialID = 1;
+inline bool Msg_WebSocketCreated::_internal_has_a_awebsocketserialid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_WebSocketCreated::has_a_awebsocketserialid() const {
+  return _internal_has_a_awebsocketserialid();
+}
 inline void Msg_WebSocketCreated::clear_a_awebsocketserialid() {
   _impl_.a_awebsocketserialid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_WebSocketCreated::_internal_a_awebsocketserialid() const {
   return _impl_.a_awebsocketserialid_;
@@ -1434,7 +1605,7 @@ inline uint32_t Msg_WebSocketCreated::a_awebsocketserialid() const {
   return _internal_a_awebsocketserialid();
 }
 inline void Msg_WebSocketCreated::_internal_set_a_awebsocketserialid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_awebsocketserialid_ = value;
 }
 inline void Msg_WebSocketCreated::set_a_awebsocketserialid(uint32_t value) {
@@ -1442,9 +1613,17 @@ inline void Msg_WebSocketCreated::set_a_awebsocketserialid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketCreated.a_awebSocketSerialID)
 }
 
-// string a_aURI = 2;
+// required string a_aURI = 2;
+inline bool Msg_WebSocketCreated::_internal_has_a_auri() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_WebSocketCreated::has_a_auri() const {
+  return _internal_has_a_auri();
+}
 inline void Msg_WebSocketCreated::clear_a_auri() {
   _impl_.a_auri_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_WebSocketCreated::a_auri() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketCreated.a_aURI)
@@ -1453,7 +1632,7 @@ inline const std::string& Msg_WebSocketCreated::a_auri() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_WebSocketCreated::set_a_auri(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_auri_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketCreated.a_aURI)
 }
@@ -1466,22 +1645,32 @@ inline const std::string& Msg_WebSocketCreated::_internal_a_auri() const {
   return _impl_.a_auri_.Get();
 }
 inline void Msg_WebSocketCreated::_internal_set_a_auri(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_auri_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_WebSocketCreated::_internal_mutable_a_auri() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_auri_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_WebSocketCreated::release_a_auri() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketCreated.a_aURI)
-  return _impl_.a_auri_.Release();
+  if (!_internal_has_a_auri()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_auri_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_auri_.IsDefault()) {
+    _impl_.a_auri_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_WebSocketCreated::set_allocated_a_auri(std::string* a_auri) {
   if (a_auri != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_auri_.SetAllocated(a_auri, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1492,9 +1681,17 @@ inline void Msg_WebSocketCreated::set_allocated_a_auri(std::string* a_auri) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketCreated.a_aURI)
 }
 
-// string a_aProtocols = 3;
+// required string a_aProtocols = 3;
+inline bool Msg_WebSocketCreated::_internal_has_a_aprotocols() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_WebSocketCreated::has_a_aprotocols() const {
+  return _internal_has_a_aprotocols();
+}
 inline void Msg_WebSocketCreated::clear_a_aprotocols() {
   _impl_.a_aprotocols_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_WebSocketCreated::a_aprotocols() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketCreated.a_aProtocols)
@@ -1503,7 +1700,7 @@ inline const std::string& Msg_WebSocketCreated::a_aprotocols() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_WebSocketCreated::set_a_aprotocols(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_aprotocols_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketCreated.a_aProtocols)
 }
@@ -1516,22 +1713,32 @@ inline const std::string& Msg_WebSocketCreated::_internal_a_aprotocols() const {
   return _impl_.a_aprotocols_.Get();
 }
 inline void Msg_WebSocketCreated::_internal_set_a_aprotocols(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aprotocols_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_WebSocketCreated::_internal_mutable_a_aprotocols() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_aprotocols_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_WebSocketCreated::release_a_aprotocols() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketCreated.a_aProtocols)
-  return _impl_.a_aprotocols_.Release();
+  if (!_internal_has_a_aprotocols()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_aprotocols_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aprotocols_.IsDefault()) {
+    _impl_.a_aprotocols_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_WebSocketCreated::set_allocated_a_aprotocols(std::string* a_aprotocols) {
   if (a_aprotocols != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_aprotocols_.SetAllocated(a_aprotocols, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1546,9 +1753,17 @@ inline void Msg_WebSocketCreated::set_allocated_a_aprotocols(std::string* a_apro
 
 // Msg_WebSocketOpened
 
-// uint32 a_awebSocketSerialID = 1;
+// required uint32 a_awebSocketSerialID = 1;
+inline bool Msg_WebSocketOpened::_internal_has_a_awebsocketserialid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool Msg_WebSocketOpened::has_a_awebsocketserialid() const {
+  return _internal_has_a_awebsocketserialid();
+}
 inline void Msg_WebSocketOpened::clear_a_awebsocketserialid() {
   _impl_.a_awebsocketserialid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline uint32_t Msg_WebSocketOpened::_internal_a_awebsocketserialid() const {
   return _impl_.a_awebsocketserialid_;
@@ -1558,7 +1773,7 @@ inline uint32_t Msg_WebSocketOpened::a_awebsocketserialid() const {
   return _internal_a_awebsocketserialid();
 }
 inline void Msg_WebSocketOpened::_internal_set_a_awebsocketserialid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.a_awebsocketserialid_ = value;
 }
 inline void Msg_WebSocketOpened::set_a_awebsocketserialid(uint32_t value) {
@@ -1566,9 +1781,17 @@ inline void Msg_WebSocketOpened::set_a_awebsocketserialid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketOpened.a_awebSocketSerialID)
 }
 
-// string a_aEffectiveURI = 2;
+// required string a_aEffectiveURI = 2;
+inline bool Msg_WebSocketOpened::_internal_has_a_aeffectiveuri() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_WebSocketOpened::has_a_aeffectiveuri() const {
+  return _internal_has_a_aeffectiveuri();
+}
 inline void Msg_WebSocketOpened::clear_a_aeffectiveuri() {
   _impl_.a_aeffectiveuri_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_WebSocketOpened::a_aeffectiveuri() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketOpened.a_aEffectiveURI)
@@ -1577,7 +1800,7 @@ inline const std::string& Msg_WebSocketOpened::a_aeffectiveuri() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_WebSocketOpened::set_a_aeffectiveuri(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aeffectiveuri_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketOpened.a_aEffectiveURI)
 }
@@ -1590,22 +1813,32 @@ inline const std::string& Msg_WebSocketOpened::_internal_a_aeffectiveuri() const
   return _impl_.a_aeffectiveuri_.Get();
 }
 inline void Msg_WebSocketOpened::_internal_set_a_aeffectiveuri(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aeffectiveuri_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_WebSocketOpened::_internal_mutable_a_aeffectiveuri() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aeffectiveuri_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_WebSocketOpened::release_a_aeffectiveuri() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketOpened.a_aEffectiveURI)
-  return _impl_.a_aeffectiveuri_.Release();
+  if (!_internal_has_a_aeffectiveuri()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aeffectiveuri_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aeffectiveuri_.IsDefault()) {
+    _impl_.a_aeffectiveuri_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_WebSocketOpened::set_allocated_a_aeffectiveuri(std::string* a_aeffectiveuri) {
   if (a_aeffectiveuri != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aeffectiveuri_.SetAllocated(a_aeffectiveuri, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1616,9 +1849,17 @@ inline void Msg_WebSocketOpened::set_allocated_a_aeffectiveuri(std::string* a_ae
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketOpened.a_aEffectiveURI)
 }
 
-// string a_aProtocols = 3;
+// required string a_aProtocols = 3;
+inline bool Msg_WebSocketOpened::_internal_has_a_aprotocols() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_WebSocketOpened::has_a_aprotocols() const {
+  return _internal_has_a_aprotocols();
+}
 inline void Msg_WebSocketOpened::clear_a_aprotocols() {
   _impl_.a_aprotocols_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_WebSocketOpened::a_aprotocols() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketOpened.a_aProtocols)
@@ -1627,7 +1868,7 @@ inline const std::string& Msg_WebSocketOpened::a_aprotocols() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_WebSocketOpened::set_a_aprotocols(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_aprotocols_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketOpened.a_aProtocols)
 }
@@ -1640,22 +1881,32 @@ inline const std::string& Msg_WebSocketOpened::_internal_a_aprotocols() const {
   return _impl_.a_aprotocols_.Get();
 }
 inline void Msg_WebSocketOpened::_internal_set_a_aprotocols(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aprotocols_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_WebSocketOpened::_internal_mutable_a_aprotocols() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_aprotocols_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_WebSocketOpened::release_a_aprotocols() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketOpened.a_aProtocols)
-  return _impl_.a_aprotocols_.Release();
+  if (!_internal_has_a_aprotocols()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_aprotocols_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aprotocols_.IsDefault()) {
+    _impl_.a_aprotocols_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_WebSocketOpened::set_allocated_a_aprotocols(std::string* a_aprotocols) {
   if (a_aprotocols != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_aprotocols_.SetAllocated(a_aprotocols, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1666,9 +1917,17 @@ inline void Msg_WebSocketOpened::set_allocated_a_aprotocols(std::string* a_aprot
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketOpened.a_aProtocols)
 }
 
-// string a_aExtensions = 4;
+// required string a_aExtensions = 4;
+inline bool Msg_WebSocketOpened::_internal_has_a_aextensions() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_WebSocketOpened::has_a_aextensions() const {
+  return _internal_has_a_aextensions();
+}
 inline void Msg_WebSocketOpened::clear_a_aextensions() {
   _impl_.a_aextensions_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& Msg_WebSocketOpened::a_aextensions() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketOpened.a_aExtensions)
@@ -1677,7 +1936,7 @@ inline const std::string& Msg_WebSocketOpened::a_aextensions() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_WebSocketOpened::set_a_aextensions(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000004u;
  _impl_.a_aextensions_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketOpened.a_aExtensions)
 }
@@ -1690,22 +1949,32 @@ inline const std::string& Msg_WebSocketOpened::_internal_a_aextensions() const {
   return _impl_.a_aextensions_.Get();
 }
 inline void Msg_WebSocketOpened::_internal_set_a_aextensions(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_aextensions_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_WebSocketOpened::_internal_mutable_a_aextensions() {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   return _impl_.a_aextensions_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_WebSocketOpened::release_a_aextensions() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketOpened.a_aExtensions)
-  return _impl_.a_aextensions_.Release();
+  if (!_internal_has_a_aextensions()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000004u;
+  auto* p = _impl_.a_aextensions_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aextensions_.IsDefault()) {
+    _impl_.a_aextensions_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_WebSocketOpened::set_allocated_a_aextensions(std::string* a_aextensions) {
   if (a_aextensions != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.a_aextensions_.SetAllocated(a_aextensions, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1716,9 +1985,17 @@ inline void Msg_WebSocketOpened::set_allocated_a_aextensions(std::string* a_aext
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketOpened.a_aExtensions)
 }
 
-// uint64 a_aHttpChannelId = 5;
+// required uint64 a_aHttpChannelId = 5;
+inline bool Msg_WebSocketOpened::_internal_has_a_ahttpchannelid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool Msg_WebSocketOpened::has_a_ahttpchannelid() const {
+  return _internal_has_a_ahttpchannelid();
+}
 inline void Msg_WebSocketOpened::clear_a_ahttpchannelid() {
   _impl_.a_ahttpchannelid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline uint64_t Msg_WebSocketOpened::_internal_a_ahttpchannelid() const {
   return _impl_.a_ahttpchannelid_;
@@ -1728,7 +2005,7 @@ inline uint64_t Msg_WebSocketOpened::a_ahttpchannelid() const {
   return _internal_a_ahttpchannelid();
 }
 inline void Msg_WebSocketOpened::_internal_set_a_ahttpchannelid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_ahttpchannelid_ = value;
 }
 inline void Msg_WebSocketOpened::set_a_ahttpchannelid(uint64_t value) {
@@ -1740,9 +2017,17 @@ inline void Msg_WebSocketOpened::set_a_ahttpchannelid(uint64_t value) {
 
 // Msg_WebSocketMessageAvailable
 
-// uint32 a_awebSocketSerialID = 1;
+// required uint32 a_awebSocketSerialID = 1;
+inline bool Msg_WebSocketMessageAvailable::_internal_has_a_awebsocketserialid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_WebSocketMessageAvailable::has_a_awebsocketserialid() const {
+  return _internal_has_a_awebsocketserialid();
+}
 inline void Msg_WebSocketMessageAvailable::clear_a_awebsocketserialid() {
   _impl_.a_awebsocketserialid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_WebSocketMessageAvailable::_internal_a_awebsocketserialid() const {
   return _impl_.a_awebsocketserialid_;
@@ -1752,7 +2037,7 @@ inline uint32_t Msg_WebSocketMessageAvailable::a_awebsocketserialid() const {
   return _internal_a_awebsocketserialid();
 }
 inline void Msg_WebSocketMessageAvailable::_internal_set_a_awebsocketserialid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_awebsocketserialid_ = value;
 }
 inline void Msg_WebSocketMessageAvailable::set_a_awebsocketserialid(uint32_t value) {
@@ -1760,9 +2045,17 @@ inline void Msg_WebSocketMessageAvailable::set_a_awebsocketserialid(uint32_t val
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketMessageAvailable.a_awebSocketSerialID)
 }
 
-// string a_aData = 2;
+// required string a_aData = 2;
+inline bool Msg_WebSocketMessageAvailable::_internal_has_a_adata() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_WebSocketMessageAvailable::has_a_adata() const {
+  return _internal_has_a_adata();
+}
 inline void Msg_WebSocketMessageAvailable::clear_a_adata() {
   _impl_.a_adata_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_WebSocketMessageAvailable::a_adata() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketMessageAvailable.a_aData)
@@ -1771,7 +2064,7 @@ inline const std::string& Msg_WebSocketMessageAvailable::a_adata() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_WebSocketMessageAvailable::set_a_adata(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_adata_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketMessageAvailable.a_aData)
 }
@@ -1784,22 +2077,32 @@ inline const std::string& Msg_WebSocketMessageAvailable::_internal_a_adata() con
   return _impl_.a_adata_.Get();
 }
 inline void Msg_WebSocketMessageAvailable::_internal_set_a_adata(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_adata_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_WebSocketMessageAvailable::_internal_mutable_a_adata() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_adata_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_WebSocketMessageAvailable::release_a_adata() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketMessageAvailable.a_aData)
-  return _impl_.a_adata_.Release();
+  if (!_internal_has_a_adata()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_adata_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_adata_.IsDefault()) {
+    _impl_.a_adata_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_WebSocketMessageAvailable::set_allocated_a_adata(std::string* a_adata) {
   if (a_adata != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_adata_.SetAllocated(a_adata, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1810,9 +2113,17 @@ inline void Msg_WebSocketMessageAvailable::set_allocated_a_adata(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketMessageAvailable.a_aData)
 }
 
-// uint32 a_aMessageType = 3;
+// required uint32 a_aMessageType = 3;
+inline bool Msg_WebSocketMessageAvailable::_internal_has_a_amessagetype() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_WebSocketMessageAvailable::has_a_amessagetype() const {
+  return _internal_has_a_amessagetype();
+}
 inline void Msg_WebSocketMessageAvailable::clear_a_amessagetype() {
   _impl_.a_amessagetype_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_WebSocketMessageAvailable::_internal_a_amessagetype() const {
   return _impl_.a_amessagetype_;
@@ -1822,7 +2133,7 @@ inline uint32_t Msg_WebSocketMessageAvailable::a_amessagetype() const {
   return _internal_a_amessagetype();
 }
 inline void Msg_WebSocketMessageAvailable::_internal_set_a_amessagetype(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_amessagetype_ = value;
 }
 inline void Msg_WebSocketMessageAvailable::set_a_amessagetype(uint32_t value) {
@@ -1834,9 +2145,17 @@ inline void Msg_WebSocketMessageAvailable::set_a_amessagetype(uint32_t value) {
 
 // Msg_WebSocketClosed
 
-// uint32 a_awebSocketSerialID = 1;
+// required uint32 a_awebSocketSerialID = 1;
+inline bool Msg_WebSocketClosed::_internal_has_a_awebsocketserialid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_WebSocketClosed::has_a_awebsocketserialid() const {
+  return _internal_has_a_awebsocketserialid();
+}
 inline void Msg_WebSocketClosed::clear_a_awebsocketserialid() {
   _impl_.a_awebsocketserialid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_WebSocketClosed::_internal_a_awebsocketserialid() const {
   return _impl_.a_awebsocketserialid_;
@@ -1846,7 +2165,7 @@ inline uint32_t Msg_WebSocketClosed::a_awebsocketserialid() const {
   return _internal_a_awebsocketserialid();
 }
 inline void Msg_WebSocketClosed::_internal_set_a_awebsocketserialid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_awebsocketserialid_ = value;
 }
 inline void Msg_WebSocketClosed::set_a_awebsocketserialid(uint32_t value) {
@@ -1854,9 +2173,17 @@ inline void Msg_WebSocketClosed::set_a_awebsocketserialid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketClosed.a_awebSocketSerialID)
 }
 
-// bool a_aWasClean = 2;
+// required bool a_aWasClean = 2;
+inline bool Msg_WebSocketClosed::_internal_has_a_awasclean() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_WebSocketClosed::has_a_awasclean() const {
+  return _internal_has_a_awasclean();
+}
 inline void Msg_WebSocketClosed::clear_a_awasclean() {
   _impl_.a_awasclean_ = false;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline bool Msg_WebSocketClosed::_internal_a_awasclean() const {
   return _impl_.a_awasclean_;
@@ -1866,7 +2193,7 @@ inline bool Msg_WebSocketClosed::a_awasclean() const {
   return _internal_a_awasclean();
 }
 inline void Msg_WebSocketClosed::_internal_set_a_awasclean(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_awasclean_ = value;
 }
 inline void Msg_WebSocketClosed::set_a_awasclean(bool value) {
@@ -1874,9 +2201,17 @@ inline void Msg_WebSocketClosed::set_a_awasclean(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketClosed.a_aWasClean)
 }
 
-// uint32 a_aCode = 3;
+// required uint32 a_aCode = 3;
+inline bool Msg_WebSocketClosed::_internal_has_a_acode() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool Msg_WebSocketClosed::has_a_acode() const {
+  return _internal_has_a_acode();
+}
 inline void Msg_WebSocketClosed::clear_a_acode() {
   _impl_.a_acode_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline uint32_t Msg_WebSocketClosed::_internal_a_acode() const {
   return _impl_.a_acode_;
@@ -1886,7 +2221,7 @@ inline uint32_t Msg_WebSocketClosed::a_acode() const {
   return _internal_a_acode();
 }
 inline void Msg_WebSocketClosed::_internal_set_a_acode(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_acode_ = value;
 }
 inline void Msg_WebSocketClosed::set_a_acode(uint32_t value) {
@@ -1894,9 +2229,17 @@ inline void Msg_WebSocketClosed::set_a_acode(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketClosed.a_aCode)
 }
 
-// string a_aReason = 4;
+// required string a_aReason = 4;
+inline bool Msg_WebSocketClosed::_internal_has_a_areason() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_WebSocketClosed::has_a_areason() const {
+  return _internal_has_a_areason();
+}
 inline void Msg_WebSocketClosed::clear_a_areason() {
   _impl_.a_areason_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_WebSocketClosed::a_areason() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketClosed.a_aReason)
@@ -1905,7 +2248,7 @@ inline const std::string& Msg_WebSocketClosed::a_areason() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_WebSocketClosed::set_a_areason(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_areason_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketClosed.a_aReason)
 }
@@ -1918,22 +2261,32 @@ inline const std::string& Msg_WebSocketClosed::_internal_a_areason() const {
   return _impl_.a_areason_.Get();
 }
 inline void Msg_WebSocketClosed::_internal_set_a_areason(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_areason_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_WebSocketClosed::_internal_mutable_a_areason() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_areason_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_WebSocketClosed::release_a_areason() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketClosed.a_aReason)
-  return _impl_.a_areason_.Release();
+  if (!_internal_has_a_areason()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_areason_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_areason_.IsDefault()) {
+    _impl_.a_areason_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_WebSocketClosed::set_allocated_a_areason(std::string* a_areason) {
   if (a_areason != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_areason_.SetAllocated(a_areason, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1948,9 +2301,17 @@ inline void Msg_WebSocketClosed::set_allocated_a_areason(std::string* a_areason)
 
 // Msg_FrameReceived
 
-// uint32 a_aWebSocketSerialID = 1;
+// required uint32 a_aWebSocketSerialID = 1;
+inline bool Msg_FrameReceived::_internal_has_a_awebsocketserialid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_FrameReceived::has_a_awebsocketserialid() const {
+  return _internal_has_a_awebsocketserialid();
+}
 inline void Msg_FrameReceived::clear_a_awebsocketserialid() {
   _impl_.a_awebsocketserialid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_FrameReceived::_internal_a_awebsocketserialid() const {
   return _impl_.a_awebsocketserialid_;
@@ -1960,7 +2321,7 @@ inline uint32_t Msg_FrameReceived::a_awebsocketserialid() const {
   return _internal_a_awebsocketserialid();
 }
 inline void Msg_FrameReceived::_internal_set_a_awebsocketserialid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_awebsocketserialid_ = value;
 }
 inline void Msg_FrameReceived::set_a_awebsocketserialid(uint32_t value) {
@@ -1968,9 +2329,17 @@ inline void Msg_FrameReceived::set_a_awebsocketserialid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketEventListener.Msg_FrameReceived.a_aWebSocketSerialID)
 }
 
-// bytes a_aFrameData = 2;
+// required bytes a_aFrameData = 2;
+inline bool Msg_FrameReceived::_internal_has_a_aframedata() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_FrameReceived::has_a_aframedata() const {
+  return _internal_has_a_aframedata();
+}
 inline void Msg_FrameReceived::clear_a_aframedata() {
   _impl_.a_aframedata_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_FrameReceived::a_aframedata() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebSocketEventListener.Msg_FrameReceived.a_aFrameData)
@@ -1979,7 +2348,7 @@ inline const std::string& Msg_FrameReceived::a_aframedata() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_FrameReceived::set_a_aframedata(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aframedata_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketEventListener.Msg_FrameReceived.a_aFrameData)
 }
@@ -1992,22 +2361,32 @@ inline const std::string& Msg_FrameReceived::_internal_a_aframedata() const {
   return _impl_.a_aframedata_.Get();
 }
 inline void Msg_FrameReceived::_internal_set_a_aframedata(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aframedata_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_FrameReceived::_internal_mutable_a_aframedata() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aframedata_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_FrameReceived::release_a_aframedata() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PWebSocketEventListener.Msg_FrameReceived.a_aFrameData)
-  return _impl_.a_aframedata_.Release();
+  if (!_internal_has_a_aframedata()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aframedata_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aframedata_.IsDefault()) {
+    _impl_.a_aframedata_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_FrameReceived::set_allocated_a_aframedata(std::string* a_aframedata) {
   if (a_aframedata != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aframedata_.SetAllocated(a_aframedata, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2022,9 +2401,17 @@ inline void Msg_FrameReceived::set_allocated_a_aframedata(std::string* a_aframed
 
 // Msg_FrameSent
 
-// uint32 a_aWebSocketSerialID = 1;
+// required uint32 a_aWebSocketSerialID = 1;
+inline bool Msg_FrameSent::_internal_has_a_awebsocketserialid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_FrameSent::has_a_awebsocketserialid() const {
+  return _internal_has_a_awebsocketserialid();
+}
 inline void Msg_FrameSent::clear_a_awebsocketserialid() {
   _impl_.a_awebsocketserialid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_FrameSent::_internal_a_awebsocketserialid() const {
   return _impl_.a_awebsocketserialid_;
@@ -2034,7 +2421,7 @@ inline uint32_t Msg_FrameSent::a_awebsocketserialid() const {
   return _internal_a_awebsocketserialid();
 }
 inline void Msg_FrameSent::_internal_set_a_awebsocketserialid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_awebsocketserialid_ = value;
 }
 inline void Msg_FrameSent::set_a_awebsocketserialid(uint32_t value) {
@@ -2042,9 +2429,17 @@ inline void Msg_FrameSent::set_a_awebsocketserialid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketEventListener.Msg_FrameSent.a_aWebSocketSerialID)
 }
 
-// bytes a_aFrameData = 2;
+// required bytes a_aFrameData = 2;
+inline bool Msg_FrameSent::_internal_has_a_aframedata() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_FrameSent::has_a_aframedata() const {
+  return _internal_has_a_aframedata();
+}
 inline void Msg_FrameSent::clear_a_aframedata() {
   _impl_.a_aframedata_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_FrameSent::a_aframedata() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebSocketEventListener.Msg_FrameSent.a_aFrameData)
@@ -2053,7 +2448,7 @@ inline const std::string& Msg_FrameSent::a_aframedata() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_FrameSent::set_a_aframedata(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aframedata_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketEventListener.Msg_FrameSent.a_aFrameData)
 }
@@ -2066,22 +2461,32 @@ inline const std::string& Msg_FrameSent::_internal_a_aframedata() const {
   return _impl_.a_aframedata_.Get();
 }
 inline void Msg_FrameSent::_internal_set_a_aframedata(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aframedata_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_FrameSent::_internal_mutable_a_aframedata() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aframedata_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_FrameSent::release_a_aframedata() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PWebSocketEventListener.Msg_FrameSent.a_aFrameData)
-  return _impl_.a_aframedata_.Release();
+  if (!_internal_has_a_aframedata()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aframedata_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aframedata_.IsDefault()) {
+    _impl_.a_aframedata_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_FrameSent::set_allocated_a_aframedata(std::string* a_aframedata) {
   if (a_aframedata != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aframedata_.SetAllocated(a_aframedata, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

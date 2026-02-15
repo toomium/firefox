@@ -124,6 +124,13 @@ class Msg_Try_Success_CustomErr_QmIpcFail final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Try_Success_CustomErr_QmIpcFail& default_instance() {
     return *internal_default_instance();
   }
@@ -241,6 +248,13 @@ class Reply_Try_Success_CustomErr_QmIpcFail final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_Try_Success_CustomErr_QmIpcFail& default_instance() {
     return *internal_default_instance();
   }
@@ -315,7 +329,11 @@ class Reply_Try_Success_CustomErr_QmIpcFail final :
   enum : int {
     kATryDidNotReturnFieldNumber = 1,
   };
-  // bool a_tryDidNotReturn = 1;
+  // required bool a_tryDidNotReturn = 1;
+  bool has_a_trydidnotreturn() const;
+  private:
+  bool _internal_has_a_trydidnotreturn() const;
+  public:
   void clear_a_trydidnotreturn();
   bool a_trydidnotreturn() const;
   void set_a_trydidnotreturn(bool value);
@@ -332,8 +350,9 @@ class Reply_Try_Success_CustomErr_QmIpcFail final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_trydidnotreturn_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_trydidnotreturn_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PQuotaTest_2eproto;
@@ -369,6 +388,13 @@ class Msg_Try_Success_CustomErr_IpcFail final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Try_Success_CustomErr_IpcFail& default_instance() {
@@ -488,6 +514,13 @@ class Reply_Try_Success_CustomErr_IpcFail final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_Try_Success_CustomErr_IpcFail& default_instance() {
     return *internal_default_instance();
   }
@@ -562,7 +595,11 @@ class Reply_Try_Success_CustomErr_IpcFail final :
   enum : int {
     kATryDidNotReturnFieldNumber = 1,
   };
-  // bool a_tryDidNotReturn = 1;
+  // required bool a_tryDidNotReturn = 1;
+  bool has_a_trydidnotreturn() const;
+  private:
+  bool _internal_has_a_trydidnotreturn() const;
+  public:
   void clear_a_trydidnotreturn();
   bool a_trydidnotreturn() const;
   void set_a_trydidnotreturn(bool value);
@@ -579,8 +616,9 @@ class Reply_Try_Success_CustomErr_IpcFail final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_trydidnotreturn_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_trydidnotreturn_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PQuotaTest_2eproto;
@@ -616,6 +654,13 @@ class Msg_TryInspect_Success_CustomErr_QmIpcFail final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_TryInspect_Success_CustomErr_QmIpcFail& default_instance() {
@@ -735,6 +780,13 @@ class Reply_TryInspect_Success_CustomErr_QmIpcFail final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_TryInspect_Success_CustomErr_QmIpcFail& default_instance() {
     return *internal_default_instance();
   }
@@ -809,7 +861,11 @@ class Reply_TryInspect_Success_CustomErr_QmIpcFail final :
   enum : int {
     kATryDidNotReturnFieldNumber = 1,
   };
-  // bool a_tryDidNotReturn = 1;
+  // required bool a_tryDidNotReturn = 1;
+  bool has_a_trydidnotreturn() const;
+  private:
+  bool _internal_has_a_trydidnotreturn() const;
+  public:
   void clear_a_trydidnotreturn();
   bool a_trydidnotreturn() const;
   void set_a_trydidnotreturn(bool value);
@@ -826,8 +882,9 @@ class Reply_TryInspect_Success_CustomErr_QmIpcFail final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_trydidnotreturn_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_trydidnotreturn_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PQuotaTest_2eproto;
@@ -863,6 +920,13 @@ class Msg_TryInspect_Success_CustomErr_IpcFail final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_TryInspect_Success_CustomErr_IpcFail& default_instance() {
@@ -982,6 +1046,13 @@ class Reply_TryInspect_Success_CustomErr_IpcFail final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_TryInspect_Success_CustomErr_IpcFail& default_instance() {
     return *internal_default_instance();
   }
@@ -1056,7 +1127,11 @@ class Reply_TryInspect_Success_CustomErr_IpcFail final :
   enum : int {
     kATryDidNotReturnFieldNumber = 1,
   };
-  // bool a_tryDidNotReturn = 1;
+  // required bool a_tryDidNotReturn = 1;
+  bool has_a_trydidnotreturn() const;
+  private:
+  bool _internal_has_a_trydidnotreturn() const;
+  public:
   void clear_a_trydidnotreturn();
   bool a_trydidnotreturn() const;
   void set_a_trydidnotreturn(bool value);
@@ -1073,8 +1148,9 @@ class Reply_TryInspect_Success_CustomErr_IpcFail final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_trydidnotreturn_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_trydidnotreturn_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PQuotaTest_2eproto;
@@ -1094,9 +1170,17 @@ class Reply_TryInspect_Success_CustomErr_IpcFail final :
 
 // Reply_Try_Success_CustomErr_QmIpcFail
 
-// bool a_tryDidNotReturn = 1;
+// required bool a_tryDidNotReturn = 1;
+inline bool Reply_Try_Success_CustomErr_QmIpcFail::_internal_has_a_trydidnotreturn() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_Try_Success_CustomErr_QmIpcFail::has_a_trydidnotreturn() const {
+  return _internal_has_a_trydidnotreturn();
+}
 inline void Reply_Try_Success_CustomErr_QmIpcFail::clear_a_trydidnotreturn() {
   _impl_.a_trydidnotreturn_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Reply_Try_Success_CustomErr_QmIpcFail::_internal_a_trydidnotreturn() const {
   return _impl_.a_trydidnotreturn_;
@@ -1106,7 +1190,7 @@ inline bool Reply_Try_Success_CustomErr_QmIpcFail::a_trydidnotreturn() const {
   return _internal_a_trydidnotreturn();
 }
 inline void Reply_Try_Success_CustomErr_QmIpcFail::_internal_set_a_trydidnotreturn(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_trydidnotreturn_ = value;
 }
 inline void Reply_Try_Success_CustomErr_QmIpcFail::set_a_trydidnotreturn(bool value) {
@@ -1122,9 +1206,17 @@ inline void Reply_Try_Success_CustomErr_QmIpcFail::set_a_trydidnotreturn(bool va
 
 // Reply_Try_Success_CustomErr_IpcFail
 
-// bool a_tryDidNotReturn = 1;
+// required bool a_tryDidNotReturn = 1;
+inline bool Reply_Try_Success_CustomErr_IpcFail::_internal_has_a_trydidnotreturn() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_Try_Success_CustomErr_IpcFail::has_a_trydidnotreturn() const {
+  return _internal_has_a_trydidnotreturn();
+}
 inline void Reply_Try_Success_CustomErr_IpcFail::clear_a_trydidnotreturn() {
   _impl_.a_trydidnotreturn_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Reply_Try_Success_CustomErr_IpcFail::_internal_a_trydidnotreturn() const {
   return _impl_.a_trydidnotreturn_;
@@ -1134,7 +1226,7 @@ inline bool Reply_Try_Success_CustomErr_IpcFail::a_trydidnotreturn() const {
   return _internal_a_trydidnotreturn();
 }
 inline void Reply_Try_Success_CustomErr_IpcFail::_internal_set_a_trydidnotreturn(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_trydidnotreturn_ = value;
 }
 inline void Reply_Try_Success_CustomErr_IpcFail::set_a_trydidnotreturn(bool value) {
@@ -1150,9 +1242,17 @@ inline void Reply_Try_Success_CustomErr_IpcFail::set_a_trydidnotreturn(bool valu
 
 // Reply_TryInspect_Success_CustomErr_QmIpcFail
 
-// bool a_tryDidNotReturn = 1;
+// required bool a_tryDidNotReturn = 1;
+inline bool Reply_TryInspect_Success_CustomErr_QmIpcFail::_internal_has_a_trydidnotreturn() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_TryInspect_Success_CustomErr_QmIpcFail::has_a_trydidnotreturn() const {
+  return _internal_has_a_trydidnotreturn();
+}
 inline void Reply_TryInspect_Success_CustomErr_QmIpcFail::clear_a_trydidnotreturn() {
   _impl_.a_trydidnotreturn_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Reply_TryInspect_Success_CustomErr_QmIpcFail::_internal_a_trydidnotreturn() const {
   return _impl_.a_trydidnotreturn_;
@@ -1162,7 +1262,7 @@ inline bool Reply_TryInspect_Success_CustomErr_QmIpcFail::a_trydidnotreturn() co
   return _internal_a_trydidnotreturn();
 }
 inline void Reply_TryInspect_Success_CustomErr_QmIpcFail::_internal_set_a_trydidnotreturn(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_trydidnotreturn_ = value;
 }
 inline void Reply_TryInspect_Success_CustomErr_QmIpcFail::set_a_trydidnotreturn(bool value) {
@@ -1178,9 +1278,17 @@ inline void Reply_TryInspect_Success_CustomErr_QmIpcFail::set_a_trydidnotreturn(
 
 // Reply_TryInspect_Success_CustomErr_IpcFail
 
-// bool a_tryDidNotReturn = 1;
+// required bool a_tryDidNotReturn = 1;
+inline bool Reply_TryInspect_Success_CustomErr_IpcFail::_internal_has_a_trydidnotreturn() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_TryInspect_Success_CustomErr_IpcFail::has_a_trydidnotreturn() const {
+  return _internal_has_a_trydidnotreturn();
+}
 inline void Reply_TryInspect_Success_CustomErr_IpcFail::clear_a_trydidnotreturn() {
   _impl_.a_trydidnotreturn_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Reply_TryInspect_Success_CustomErr_IpcFail::_internal_a_trydidnotreturn() const {
   return _impl_.a_trydidnotreturn_;
@@ -1190,7 +1298,7 @@ inline bool Reply_TryInspect_Success_CustomErr_IpcFail::a_trydidnotreturn() cons
   return _internal_a_trydidnotreturn();
 }
 inline void Reply_TryInspect_Success_CustomErr_IpcFail::_internal_set_a_trydidnotreturn(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_trydidnotreturn_ = value;
 }
 inline void Reply_TryInspect_Success_CustomErr_IpcFail::set_a_trydidnotreturn(bool value) {

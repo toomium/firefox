@@ -106,6 +106,13 @@ class Msg_OpenHeapSnapshotTempFile final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_OpenHeapSnapshotTempFile& default_instance() {
     return *internal_default_instance();
   }
@@ -223,6 +230,13 @@ class Reply_OpenHeapSnapshotTempFile final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_OpenHeapSnapshotTempFile& default_instance() {
     return *internal_default_instance();
   }
@@ -297,7 +311,7 @@ class Reply_OpenHeapSnapshotTempFile final :
   enum : int {
     kAResponseFieldNumber = 1,
   };
-  // .protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse a_response = 1;
+  // required .protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse a_response = 1;
   bool has_a_response() const;
   private:
   bool _internal_has_a_response() const;
@@ -323,8 +337,9 @@ class Reply_OpenHeapSnapshotTempFile final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* a_response_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* a_response_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHeapSnapshotTempFileHelper_2eproto;
@@ -360,6 +375,13 @@ class Msg___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg___delete__& default_instance() {
@@ -479,6 +501,13 @@ class Reply___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -578,9 +607,11 @@ class Reply___delete__ final :
 
 // Reply_OpenHeapSnapshotTempFile
 
-// .protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse a_response = 1;
+// required .protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse a_response = 1;
 inline bool Reply_OpenHeapSnapshotTempFile::_internal_has_a_response() const {
-  return this != internal_default_instance() && _impl_.a_response_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_response_ != nullptr);
+  return value;
 }
 inline bool Reply_OpenHeapSnapshotTempFile::has_a_response() const {
   return _internal_has_a_response();
@@ -601,14 +632,14 @@ inline void Reply_OpenHeapSnapshotTempFile::unsafe_arena_set_allocated_a_respons
   }
   _impl_.a_response_ = a_response;
   if (a_response) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.devtools.PHeapSnapshotTempFileHelper.Reply_OpenHeapSnapshotTempFile.a_response)
 }
 inline ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* Reply_OpenHeapSnapshotTempFile::release_a_response() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* temp = _impl_.a_response_;
   _impl_.a_response_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -624,13 +655,13 @@ inline ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* Reply_Op
 }
 inline ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* Reply_OpenHeapSnapshotTempFile::unsafe_arena_release_a_response() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.devtools.PHeapSnapshotTempFileHelper.Reply_OpenHeapSnapshotTempFile.a_response)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* temp = _impl_.a_response_;
   _impl_.a_response_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* Reply_OpenHeapSnapshotTempFile::_internal_mutable_a_response() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_response_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse>(GetArenaForAllocation());
     _impl_.a_response_ = p;
@@ -655,9 +686,9 @@ inline void Reply_OpenHeapSnapshotTempFile::set_allocated_a_response(::protobuf:
       a_response = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_response, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_response_ = a_response;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.devtools.PHeapSnapshotTempFileHelper.Reply_OpenHeapSnapshotTempFile.a_response)

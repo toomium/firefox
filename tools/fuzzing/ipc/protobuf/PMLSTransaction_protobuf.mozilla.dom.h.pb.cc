@@ -23,7 +23,6 @@ namespace dom {
 PROTOBUF_CONSTEXPR RawBytes::RawBytes(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.a_data_)*/{}
-  , /*decltype(_impl_._a_data_cached_byte_size_)*/{0}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct RawBytesDefaultTypeInternal {
   PROTOBUF_CONSTEXPR RawBytesDefaultTypeInternal()
@@ -58,7 +57,6 @@ RawBytes::RawBytes(const RawBytes& from)
   RawBytes* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_data_){from._impl_.a_data_}
-    , /*decltype(_impl_._a_data_cached_byte_size_)*/{0}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -71,7 +69,6 @@ inline void RawBytes::SharedCtor(
   (void)is_message_owned;
   new (&_impl_) Impl_{
       decltype(_impl_.a_data_){arena}
-    , /*decltype(_impl_._a_data_cached_byte_size_)*/{0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -112,11 +109,16 @@ const char* RawBytes::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
     switch (tag >> 3) {
       // repeated uint32 a_data = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            _internal_add_a_data(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 10) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_data(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 8) {
-          _internal_add_a_data(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -151,12 +153,9 @@ uint8_t* RawBytes::_InternalSerialize(
   (void) cached_has_bits;
 
   // repeated uint32 a_data = 1;
-  {
-    int byte_size = _impl_._a_data_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteUInt32Packed(
-          1, _internal_a_data(), byte_size, target);
-    }
+  for (int i = 0, n = this->_internal_a_data_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_data(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -179,13 +178,8 @@ size_t RawBytes::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_data_);
-    if (data_size > 0) {
-      total_size += 1 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
-    int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._a_data_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
+    total_size += 1 *
+                  ::_pbi::FromIntSize(this->_internal_a_data_size());
     total_size += data_size;
   }
 

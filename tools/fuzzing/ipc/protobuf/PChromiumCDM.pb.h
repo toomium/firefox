@@ -254,6 +254,13 @@ class Msg_Init final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Init& default_instance() {
     return *internal_default_instance();
   }
@@ -329,7 +336,11 @@ class Msg_Init final :
     kAAAllowDistinctiveIdentifierFieldNumber = 1,
     kAAAllowPersistentStateFieldNumber = 2,
   };
-  // bool a_aAllowDistinctiveIdentifier = 1;
+  // required bool a_aAllowDistinctiveIdentifier = 1;
+  bool has_a_aallowdistinctiveidentifier() const;
+  private:
+  bool _internal_has_a_aallowdistinctiveidentifier() const;
+  public:
   void clear_a_aallowdistinctiveidentifier();
   bool a_aallowdistinctiveidentifier() const;
   void set_a_aallowdistinctiveidentifier(bool value);
@@ -338,7 +349,11 @@ class Msg_Init final :
   void _internal_set_a_aallowdistinctiveidentifier(bool value);
   public:
 
-  // bool a_aAllowPersistentState = 2;
+  // required bool a_aAllowPersistentState = 2;
+  bool has_a_aallowpersistentstate() const;
+  private:
+  bool _internal_has_a_aallowpersistentstate() const;
+  public:
   void clear_a_aallowpersistentstate();
   bool a_aallowpersistentstate() const;
   void set_a_aallowpersistentstate(bool value);
@@ -351,13 +366,17 @@ class Msg_Init final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     bool a_aallowdistinctiveidentifier_;
     bool a_aallowpersistentstate_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PChromiumCDM_2eproto;
@@ -393,6 +412,13 @@ class Reply_Init final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_Init& default_instance() {
@@ -469,7 +495,11 @@ class Reply_Init final :
   enum : int {
     kAASuccessFieldNumber = 1,
   };
-  // bool a_aSuccess = 1;
+  // required bool a_aSuccess = 1;
+  bool has_a_asuccess() const;
+  private:
+  bool _internal_has_a_asuccess() const;
+  public:
   void clear_a_asuccess();
   bool a_asuccess() const;
   void set_a_asuccess(bool value);
@@ -486,8 +516,9 @@ class Reply_Init final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_asuccess_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_asuccess_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PChromiumCDM_2eproto;
@@ -523,6 +554,13 @@ class Msg_GetStatusForPolicy final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_GetStatusForPolicy& default_instance() {
@@ -600,7 +638,11 @@ class Msg_GetStatusForPolicy final :
     kAAMinHdcpVersionFieldNumber = 2,
     kAAPromiseIdFieldNumber = 1,
   };
-  // bytes a_aMinHdcpVersion = 2;
+  // required bytes a_aMinHdcpVersion = 2;
+  bool has_a_aminhdcpversion() const;
+  private:
+  bool _internal_has_a_aminhdcpversion() const;
+  public:
   void clear_a_aminhdcpversion();
   const std::string& a_aminhdcpversion() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -614,7 +656,11 @@ class Msg_GetStatusForPolicy final :
   std::string* _internal_mutable_a_aminhdcpversion();
   public:
 
-  // uint32 a_aPromiseId = 1;
+  // required uint32 a_aPromiseId = 1;
+  bool has_a_apromiseid() const;
+  private:
+  bool _internal_has_a_apromiseid() const;
+  public:
   void clear_a_apromiseid();
   uint32_t a_apromiseid() const;
   void set_a_apromiseid(uint32_t value);
@@ -627,13 +673,17 @@ class Msg_GetStatusForPolicy final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aminhdcpversion_;
     uint32_t a_apromiseid_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PChromiumCDM_2eproto;
@@ -669,6 +719,13 @@ class Msg_SetServerCertificate final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_SetServerCertificate& default_instance() {
@@ -768,7 +825,11 @@ class Msg_SetServerCertificate final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_aservercert();
 
-  // uint32 a_aPromiseId = 1;
+  // required uint32 a_aPromiseId = 1;
+  bool has_a_apromiseid() const;
+  private:
+  bool _internal_has_a_apromiseid() const;
+  public:
   void clear_a_apromiseid();
   uint32_t a_apromiseid() const;
   void set_a_apromiseid(uint32_t value);
@@ -785,10 +846,10 @@ class Msg_SetServerCertificate final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_aservercert_;
-    mutable std::atomic<int> _a_aservercert_cached_byte_size_;
-    uint32_t a_apromiseid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_aservercert_;
+    uint32_t a_apromiseid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PChromiumCDM_2eproto;
@@ -824,6 +885,13 @@ class Msg_CreateSessionAndGenerateRequest final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_CreateSessionAndGenerateRequest& default_instance() {
@@ -925,7 +993,11 @@ class Msg_CreateSessionAndGenerateRequest final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_ainitdata();
 
-  // uint32 a_aPromiseId = 1;
+  // required uint32 a_aPromiseId = 1;
+  bool has_a_apromiseid() const;
+  private:
+  bool _internal_has_a_apromiseid() const;
+  public:
   void clear_a_apromiseid();
   uint32_t a_apromiseid() const;
   void set_a_apromiseid(uint32_t value);
@@ -934,7 +1006,11 @@ class Msg_CreateSessionAndGenerateRequest final :
   void _internal_set_a_apromiseid(uint32_t value);
   public:
 
-  // uint32 a_aSessionType = 2;
+  // required uint32 a_aSessionType = 2;
+  bool has_a_asessiontype() const;
+  private:
+  bool _internal_has_a_asessiontype() const;
+  public:
   void clear_a_asessiontype();
   uint32_t a_asessiontype() const;
   void set_a_asessiontype(uint32_t value);
@@ -943,7 +1019,11 @@ class Msg_CreateSessionAndGenerateRequest final :
   void _internal_set_a_asessiontype(uint32_t value);
   public:
 
-  // uint32 a_aInitDataType = 3;
+  // required uint32 a_aInitDataType = 3;
+  bool has_a_ainitdatatype() const;
+  private:
+  bool _internal_has_a_ainitdatatype() const;
+  public:
   void clear_a_ainitdatatype();
   uint32_t a_ainitdatatype() const;
   void set_a_ainitdatatype(uint32_t value);
@@ -956,16 +1036,19 @@ class Msg_CreateSessionAndGenerateRequest final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_ainitdata_;
-    mutable std::atomic<int> _a_ainitdata_cached_byte_size_;
     uint32_t a_apromiseid_;
     uint32_t a_asessiontype_;
     uint32_t a_ainitdatatype_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PChromiumCDM_2eproto;
@@ -1001,6 +1084,13 @@ class Msg_LoadSession final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_LoadSession& default_instance() {
@@ -1079,7 +1169,11 @@ class Msg_LoadSession final :
     kAAPromiseIdFieldNumber = 1,
     kAASessionTypeFieldNumber = 2,
   };
-  // string a_aSessionId = 3;
+  // required string a_aSessionId = 3;
+  bool has_a_asessionid() const;
+  private:
+  bool _internal_has_a_asessionid() const;
+  public:
   void clear_a_asessionid();
   const std::string& a_asessionid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1093,7 +1187,11 @@ class Msg_LoadSession final :
   std::string* _internal_mutable_a_asessionid();
   public:
 
-  // uint32 a_aPromiseId = 1;
+  // required uint32 a_aPromiseId = 1;
+  bool has_a_apromiseid() const;
+  private:
+  bool _internal_has_a_apromiseid() const;
+  public:
   void clear_a_apromiseid();
   uint32_t a_apromiseid() const;
   void set_a_apromiseid(uint32_t value);
@@ -1102,7 +1200,11 @@ class Msg_LoadSession final :
   void _internal_set_a_apromiseid(uint32_t value);
   public:
 
-  // uint32 a_aSessionType = 2;
+  // required uint32 a_aSessionType = 2;
+  bool has_a_asessiontype() const;
+  private:
+  bool _internal_has_a_asessiontype() const;
+  public:
   void clear_a_asessiontype();
   uint32_t a_asessiontype() const;
   void set_a_asessiontype(uint32_t value);
@@ -1115,14 +1217,18 @@ class Msg_LoadSession final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_asessionid_;
     uint32_t a_apromiseid_;
     uint32_t a_asessiontype_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PChromiumCDM_2eproto;
@@ -1158,6 +1264,13 @@ class Msg_UpdateSession final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_UpdateSession& default_instance() {
@@ -1258,7 +1371,11 @@ class Msg_UpdateSession final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_aresponse();
 
-  // string a_aSessionId = 2;
+  // required string a_aSessionId = 2;
+  bool has_a_asessionid() const;
+  private:
+  bool _internal_has_a_asessionid() const;
+  public:
   void clear_a_asessionid();
   const std::string& a_asessionid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1272,7 +1389,11 @@ class Msg_UpdateSession final :
   std::string* _internal_mutable_a_asessionid();
   public:
 
-  // uint32 a_aPromiseId = 1;
+  // required uint32 a_aPromiseId = 1;
+  bool has_a_apromiseid() const;
+  private:
+  bool _internal_has_a_apromiseid() const;
+  public:
   void clear_a_apromiseid();
   uint32_t a_apromiseid() const;
   void set_a_apromiseid(uint32_t value);
@@ -1285,15 +1406,18 @@ class Msg_UpdateSession final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_aresponse_;
-    mutable std::atomic<int> _a_aresponse_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_asessionid_;
     uint32_t a_apromiseid_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PChromiumCDM_2eproto;
@@ -1329,6 +1453,13 @@ class Msg_CloseSession final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_CloseSession& default_instance() {
@@ -1406,7 +1537,11 @@ class Msg_CloseSession final :
     kAASessionIdFieldNumber = 2,
     kAAPromiseIdFieldNumber = 1,
   };
-  // string a_aSessionId = 2;
+  // required string a_aSessionId = 2;
+  bool has_a_asessionid() const;
+  private:
+  bool _internal_has_a_asessionid() const;
+  public:
   void clear_a_asessionid();
   const std::string& a_asessionid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1420,7 +1555,11 @@ class Msg_CloseSession final :
   std::string* _internal_mutable_a_asessionid();
   public:
 
-  // uint32 a_aPromiseId = 1;
+  // required uint32 a_aPromiseId = 1;
+  bool has_a_apromiseid() const;
+  private:
+  bool _internal_has_a_apromiseid() const;
+  public:
   void clear_a_apromiseid();
   uint32_t a_apromiseid() const;
   void set_a_apromiseid(uint32_t value);
@@ -1433,13 +1572,17 @@ class Msg_CloseSession final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_asessionid_;
     uint32_t a_apromiseid_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PChromiumCDM_2eproto;
@@ -1475,6 +1618,13 @@ class Msg_RemoveSession final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_RemoveSession& default_instance() {
@@ -1552,7 +1702,11 @@ class Msg_RemoveSession final :
     kAASessionIdFieldNumber = 2,
     kAAPromiseIdFieldNumber = 1,
   };
-  // string a_aSessionId = 2;
+  // required string a_aSessionId = 2;
+  bool has_a_asessionid() const;
+  private:
+  bool _internal_has_a_asessionid() const;
+  public:
   void clear_a_asessionid();
   const std::string& a_asessionid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1566,7 +1720,11 @@ class Msg_RemoveSession final :
   std::string* _internal_mutable_a_asessionid();
   public:
 
-  // uint32 a_aPromiseId = 1;
+  // required uint32 a_aPromiseId = 1;
+  bool has_a_apromiseid() const;
+  private:
+  bool _internal_has_a_apromiseid() const;
+  public:
   void clear_a_apromiseid();
   uint32_t a_apromiseid() const;
   void set_a_apromiseid(uint32_t value);
@@ -1579,13 +1737,17 @@ class Msg_RemoveSession final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_asessionid_;
     uint32_t a_apromiseid_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PChromiumCDM_2eproto;
@@ -1621,6 +1783,13 @@ class Msg_CompleteQueryOutputProtectionStatus final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_CompleteQueryOutputProtectionStatus& default_instance() {
@@ -1699,7 +1868,11 @@ class Msg_CompleteQueryOutputProtectionStatus final :
     kAALinkMaskFieldNumber = 2,
     kAAProtectionMaskFieldNumber = 3,
   };
-  // bool a_aSuccess = 1;
+  // required bool a_aSuccess = 1;
+  bool has_a_asuccess() const;
+  private:
+  bool _internal_has_a_asuccess() const;
+  public:
   void clear_a_asuccess();
   bool a_asuccess() const;
   void set_a_asuccess(bool value);
@@ -1708,7 +1881,11 @@ class Msg_CompleteQueryOutputProtectionStatus final :
   void _internal_set_a_asuccess(bool value);
   public:
 
-  // uint32 a_aLinkMask = 2;
+  // required uint32 a_aLinkMask = 2;
+  bool has_a_alinkmask() const;
+  private:
+  bool _internal_has_a_alinkmask() const;
+  public:
   void clear_a_alinkmask();
   uint32_t a_alinkmask() const;
   void set_a_alinkmask(uint32_t value);
@@ -1717,7 +1894,11 @@ class Msg_CompleteQueryOutputProtectionStatus final :
   void _internal_set_a_alinkmask(uint32_t value);
   public:
 
-  // uint32 a_aProtectionMask = 3;
+  // required uint32 a_aProtectionMask = 3;
+  bool has_a_aprotectionmask() const;
+  private:
+  bool _internal_has_a_aprotectionmask() const;
+  public:
   void clear_a_aprotectionmask();
   uint32_t a_aprotectionmask() const;
   void set_a_aprotectionmask(uint32_t value);
@@ -1730,14 +1911,18 @@ class Msg_CompleteQueryOutputProtectionStatus final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     bool a_asuccess_;
     uint32_t a_alinkmask_;
     uint32_t a_aprotectionmask_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PChromiumCDM_2eproto;
@@ -1773,6 +1958,13 @@ class Msg_Decrypt final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Decrypt& default_instance() {
@@ -1850,7 +2042,7 @@ class Msg_Decrypt final :
     kAABufferFieldNumber = 2,
     kAAIdFieldNumber = 1,
   };
-  // .protobuf.mozilla.gmp.CDMInputBuffer a_aBuffer = 2;
+  // required .protobuf.mozilla.gmp.CDMInputBuffer a_aBuffer = 2;
   bool has_a_abuffer() const;
   private:
   bool _internal_has_a_abuffer() const;
@@ -1868,7 +2060,11 @@ class Msg_Decrypt final :
       ::protobuf::mozilla::gmp::CDMInputBuffer* a_abuffer);
   ::protobuf::mozilla::gmp::CDMInputBuffer* unsafe_arena_release_a_abuffer();
 
-  // uint32 a_aId = 1;
+  // required uint32 a_aId = 1;
+  bool has_a_aid() const;
+  private:
+  bool _internal_has_a_aid() const;
+  public:
   void clear_a_aid();
   uint32_t a_aid() const;
   void set_a_aid(uint32_t value);
@@ -1881,13 +2077,17 @@ class Msg_Decrypt final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::gmp::CDMInputBuffer* a_abuffer_;
     uint32_t a_aid_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PChromiumCDM_2eproto;
@@ -1923,6 +2123,13 @@ class Msg_InitializeVideoDecoder final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_InitializeVideoDecoder& default_instance() {
@@ -1999,7 +2206,7 @@ class Msg_InitializeVideoDecoder final :
   enum : int {
     kAAConfigFieldNumber = 1,
   };
-  // .protobuf.mozilla.gmp.CDMVideoDecoderConfig a_aConfig = 1;
+  // required .protobuf.mozilla.gmp.CDMVideoDecoderConfig a_aConfig = 1;
   bool has_a_aconfig() const;
   private:
   bool _internal_has_a_aconfig() const;
@@ -2025,8 +2232,9 @@ class Msg_InitializeVideoDecoder final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::protobuf::mozilla::gmp::CDMVideoDecoderConfig* a_aconfig_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::protobuf::mozilla::gmp::CDMVideoDecoderConfig* a_aconfig_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PChromiumCDM_2eproto;
@@ -2062,6 +2270,13 @@ class Msg_DeinitializeVideoDecoder final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_DeinitializeVideoDecoder& default_instance() {
@@ -2181,6 +2396,13 @@ class Msg_ResetVideoDecoder final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_ResetVideoDecoder& default_instance() {
     return *internal_default_instance();
   }
@@ -2298,6 +2520,13 @@ class Msg_DecryptAndDecodeFrame final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_DecryptAndDecodeFrame& default_instance() {
     return *internal_default_instance();
   }
@@ -2372,7 +2601,7 @@ class Msg_DecryptAndDecodeFrame final :
   enum : int {
     kAABufferFieldNumber = 1,
   };
-  // .protobuf.mozilla.gmp.CDMInputBuffer a_aBuffer = 1;
+  // required .protobuf.mozilla.gmp.CDMInputBuffer a_aBuffer = 1;
   bool has_a_abuffer() const;
   private:
   bool _internal_has_a_abuffer() const;
@@ -2398,8 +2627,9 @@ class Msg_DecryptAndDecodeFrame final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::protobuf::mozilla::gmp::CDMInputBuffer* a_abuffer_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::protobuf::mozilla::gmp::CDMInputBuffer* a_abuffer_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PChromiumCDM_2eproto;
@@ -2435,6 +2665,13 @@ class Msg_Drain final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Drain& default_instance() {
@@ -2554,6 +2791,13 @@ class Msg_Destroy final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Destroy& default_instance() {
     return *internal_default_instance();
   }
@@ -2671,6 +2915,13 @@ class Msg_GiveBuffer final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_GiveBuffer& default_instance() {
     return *internal_default_instance();
   }
@@ -2745,7 +2996,11 @@ class Msg_GiveBuffer final :
   enum : int {
     kAAShmemFieldNumber = 1,
   };
-  // bytes a_aShmem = 1;
+  // required bytes a_aShmem = 1;
+  bool has_a_ashmem() const;
+  private:
+  bool _internal_has_a_ashmem() const;
+  public:
   void clear_a_ashmem();
   const std::string& a_ashmem() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2767,8 +3022,9 @@ class Msg_GiveBuffer final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ashmem_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ashmem_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PChromiumCDM_2eproto;
@@ -2804,6 +3060,13 @@ class Msg_PurgeShmems final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_PurgeShmems& default_instance() {
@@ -2923,6 +3186,13 @@ class Msg___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -3038,6 +3308,13 @@ class Reply___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply___delete__& default_instance() {
@@ -3157,6 +3434,13 @@ class Msg_OnResolvePromiseWithKeyStatus final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_OnResolvePromiseWithKeyStatus& default_instance() {
     return *internal_default_instance();
   }
@@ -3232,7 +3516,11 @@ class Msg_OnResolvePromiseWithKeyStatus final :
     kAAPromiseIdFieldNumber = 1,
     kAAKeyStatusFieldNumber = 2,
   };
-  // uint32 a_aPromiseId = 1;
+  // required uint32 a_aPromiseId = 1;
+  bool has_a_apromiseid() const;
+  private:
+  bool _internal_has_a_apromiseid() const;
+  public:
   void clear_a_apromiseid();
   uint32_t a_apromiseid() const;
   void set_a_apromiseid(uint32_t value);
@@ -3241,7 +3529,11 @@ class Msg_OnResolvePromiseWithKeyStatus final :
   void _internal_set_a_apromiseid(uint32_t value);
   public:
 
-  // uint32 a_aKeyStatus = 2;
+  // required uint32 a_aKeyStatus = 2;
+  bool has_a_akeystatus() const;
+  private:
+  bool _internal_has_a_akeystatus() const;
+  public:
   void clear_a_akeystatus();
   uint32_t a_akeystatus() const;
   void set_a_akeystatus(uint32_t value);
@@ -3254,13 +3546,17 @@ class Msg_OnResolvePromiseWithKeyStatus final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t a_apromiseid_;
     uint32_t a_akeystatus_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PChromiumCDM_2eproto;
@@ -3296,6 +3592,13 @@ class Msg_OnResolveNewSessionPromise final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_OnResolveNewSessionPromise& default_instance() {
@@ -3373,7 +3676,11 @@ class Msg_OnResolveNewSessionPromise final :
     kAASessionIdFieldNumber = 2,
     kAAPromiseIdFieldNumber = 1,
   };
-  // string a_aSessionId = 2;
+  // required string a_aSessionId = 2;
+  bool has_a_asessionid() const;
+  private:
+  bool _internal_has_a_asessionid() const;
+  public:
   void clear_a_asessionid();
   const std::string& a_asessionid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3387,7 +3694,11 @@ class Msg_OnResolveNewSessionPromise final :
   std::string* _internal_mutable_a_asessionid();
   public:
 
-  // uint32 a_aPromiseId = 1;
+  // required uint32 a_aPromiseId = 1;
+  bool has_a_apromiseid() const;
+  private:
+  bool _internal_has_a_apromiseid() const;
+  public:
   void clear_a_apromiseid();
   uint32_t a_apromiseid() const;
   void set_a_apromiseid(uint32_t value);
@@ -3400,13 +3711,17 @@ class Msg_OnResolveNewSessionPromise final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_asessionid_;
     uint32_t a_apromiseid_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PChromiumCDM_2eproto;
@@ -3442,6 +3757,13 @@ class Msg_OnResolvePromise final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_OnResolvePromise& default_instance() {
@@ -3518,7 +3840,11 @@ class Msg_OnResolvePromise final :
   enum : int {
     kAAPromiseIdFieldNumber = 1,
   };
-  // uint32 a_aPromiseId = 1;
+  // required uint32 a_aPromiseId = 1;
+  bool has_a_apromiseid() const;
+  private:
+  bool _internal_has_a_apromiseid() const;
+  public:
   void clear_a_apromiseid();
   uint32_t a_apromiseid() const;
   void set_a_apromiseid(uint32_t value);
@@ -3535,8 +3861,9 @@ class Msg_OnResolvePromise final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint32_t a_apromiseid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint32_t a_apromiseid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PChromiumCDM_2eproto;
@@ -3572,6 +3899,13 @@ class Msg_OnRejectPromise final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_OnRejectPromise& default_instance() {
@@ -3651,7 +3985,11 @@ class Msg_OnRejectPromise final :
     kAAExceptionFieldNumber = 2,
     kAASystemCodeFieldNumber = 3,
   };
-  // string a_aErrorMessage = 4;
+  // required string a_aErrorMessage = 4;
+  bool has_a_aerrormessage() const;
+  private:
+  bool _internal_has_a_aerrormessage() const;
+  public:
   void clear_a_aerrormessage();
   const std::string& a_aerrormessage() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3665,7 +4003,11 @@ class Msg_OnRejectPromise final :
   std::string* _internal_mutable_a_aerrormessage();
   public:
 
-  // uint32 a_aPromiseId = 1;
+  // required uint32 a_aPromiseId = 1;
+  bool has_a_apromiseid() const;
+  private:
+  bool _internal_has_a_apromiseid() const;
+  public:
   void clear_a_apromiseid();
   uint32_t a_apromiseid() const;
   void set_a_apromiseid(uint32_t value);
@@ -3674,7 +4016,11 @@ class Msg_OnRejectPromise final :
   void _internal_set_a_apromiseid(uint32_t value);
   public:
 
-  // uint32 a_aException = 2;
+  // required uint32 a_aException = 2;
+  bool has_a_aexception() const;
+  private:
+  bool _internal_has_a_aexception() const;
+  public:
   void clear_a_aexception();
   uint32_t a_aexception() const;
   void set_a_aexception(uint32_t value);
@@ -3683,7 +4029,11 @@ class Msg_OnRejectPromise final :
   void _internal_set_a_aexception(uint32_t value);
   public:
 
-  // uint32 a_aSystemCode = 3;
+  // required uint32 a_aSystemCode = 3;
+  bool has_a_asystemcode() const;
+  private:
+  bool _internal_has_a_asystemcode() const;
+  public:
   void clear_a_asystemcode();
   uint32_t a_asystemcode() const;
   void set_a_asystemcode(uint32_t value);
@@ -3696,15 +4046,19 @@ class Msg_OnRejectPromise final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aerrormessage_;
     uint32_t a_apromiseid_;
     uint32_t a_aexception_;
     uint32_t a_asystemcode_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PChromiumCDM_2eproto;
@@ -3740,6 +4094,13 @@ class Msg_OnSessionMessage final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_OnSessionMessage& default_instance() {
@@ -3840,7 +4201,11 @@ class Msg_OnSessionMessage final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_amessage();
 
-  // string a_aSessionId = 1;
+  // required string a_aSessionId = 1;
+  bool has_a_asessionid() const;
+  private:
+  bool _internal_has_a_asessionid() const;
+  public:
   void clear_a_asessionid();
   const std::string& a_asessionid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3854,7 +4219,11 @@ class Msg_OnSessionMessage final :
   std::string* _internal_mutable_a_asessionid();
   public:
 
-  // uint32 a_aMessageType = 2;
+  // required uint32 a_aMessageType = 2;
+  bool has_a_amessagetype() const;
+  private:
+  bool _internal_has_a_amessagetype() const;
+  public:
   void clear_a_amessagetype();
   uint32_t a_amessagetype() const;
   void set_a_amessagetype(uint32_t value);
@@ -3867,15 +4236,18 @@ class Msg_OnSessionMessage final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_amessage_;
-    mutable std::atomic<int> _a_amessage_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_asessionid_;
     uint32_t a_amessagetype_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PChromiumCDM_2eproto;
@@ -3911,6 +4283,13 @@ class Msg_OnSessionKeysChange final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_OnSessionKeysChange& default_instance() {
@@ -4006,7 +4385,11 @@ class Msg_OnSessionKeysChange final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::gmp::CDMKeyInformation >&
       a_akeysinfo() const;
 
-  // string a_aSessionId = 1;
+  // required string a_aSessionId = 1;
+  bool has_a_asessionid() const;
+  private:
+  bool _internal_has_a_asessionid() const;
+  public:
   void clear_a_asessionid();
   const std::string& a_asessionid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4028,9 +4411,10 @@ class Msg_OnSessionKeysChange final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::gmp::CDMKeyInformation > a_akeysinfo_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_asessionid_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PChromiumCDM_2eproto;
@@ -4066,6 +4450,13 @@ class Msg_OnExpirationChange final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_OnExpirationChange& default_instance() {
@@ -4143,7 +4534,11 @@ class Msg_OnExpirationChange final :
     kAASessionIdFieldNumber = 1,
     kAASecondsSinceEpochFieldNumber = 2,
   };
-  // string a_aSessionId = 1;
+  // required string a_aSessionId = 1;
+  bool has_a_asessionid() const;
+  private:
+  bool _internal_has_a_asessionid() const;
+  public:
   void clear_a_asessionid();
   const std::string& a_asessionid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4157,7 +4552,11 @@ class Msg_OnExpirationChange final :
   std::string* _internal_mutable_a_asessionid();
   public:
 
-  // double a_aSecondsSinceEpoch = 2;
+  // required double a_aSecondsSinceEpoch = 2;
+  bool has_a_asecondssinceepoch() const;
+  private:
+  bool _internal_has_a_asecondssinceepoch() const;
+  public:
   void clear_a_asecondssinceepoch();
   double a_asecondssinceepoch() const;
   void set_a_asecondssinceepoch(double value);
@@ -4170,13 +4569,17 @@ class Msg_OnExpirationChange final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_asessionid_;
     double a_asecondssinceepoch_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PChromiumCDM_2eproto;
@@ -4212,6 +4615,13 @@ class Msg_OnSessionClosed final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_OnSessionClosed& default_instance() {
@@ -4288,7 +4698,11 @@ class Msg_OnSessionClosed final :
   enum : int {
     kAASessionIdFieldNumber = 1,
   };
-  // string a_aSessionId = 1;
+  // required string a_aSessionId = 1;
+  bool has_a_asessionid() const;
+  private:
+  bool _internal_has_a_asessionid() const;
+  public:
   void clear_a_asessionid();
   const std::string& a_asessionid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4310,8 +4724,9 @@ class Msg_OnSessionClosed final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_asessionid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_asessionid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PChromiumCDM_2eproto;
@@ -4347,6 +4762,13 @@ class Msg_OnQueryOutputProtectionStatus final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_OnQueryOutputProtectionStatus& default_instance() {
@@ -4466,6 +4888,13 @@ class Msg_ResolveLoadSessionPromise final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_ResolveLoadSessionPromise& default_instance() {
     return *internal_default_instance();
   }
@@ -4541,7 +4970,11 @@ class Msg_ResolveLoadSessionPromise final :
     kAAPromiseIdFieldNumber = 1,
     kAASuccessfulFieldNumber = 2,
   };
-  // uint32 a_aPromiseId = 1;
+  // required uint32 a_aPromiseId = 1;
+  bool has_a_apromiseid() const;
+  private:
+  bool _internal_has_a_apromiseid() const;
+  public:
   void clear_a_apromiseid();
   uint32_t a_apromiseid() const;
   void set_a_apromiseid(uint32_t value);
@@ -4550,7 +4983,11 @@ class Msg_ResolveLoadSessionPromise final :
   void _internal_set_a_apromiseid(uint32_t value);
   public:
 
-  // bool a_aSuccessful = 2;
+  // required bool a_aSuccessful = 2;
+  bool has_a_asuccessful() const;
+  private:
+  bool _internal_has_a_asuccessful() const;
+  public:
   void clear_a_asuccessful();
   bool a_asuccessful() const;
   void set_a_asuccessful(bool value);
@@ -4563,13 +5000,17 @@ class Msg_ResolveLoadSessionPromise final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t a_apromiseid_;
     bool a_asuccessful_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PChromiumCDM_2eproto;
@@ -4605,6 +5046,13 @@ class Msg_Decrypted final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Decrypted& default_instance() {
@@ -4683,7 +5131,11 @@ class Msg_Decrypted final :
     kAAIdFieldNumber = 1,
     kAAStatusFieldNumber = 2,
   };
-  // bytes a_aDecryptedData = 3;
+  // required bytes a_aDecryptedData = 3;
+  bool has_a_adecrypteddata() const;
+  private:
+  bool _internal_has_a_adecrypteddata() const;
+  public:
   void clear_a_adecrypteddata();
   const std::string& a_adecrypteddata() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4697,7 +5149,11 @@ class Msg_Decrypted final :
   std::string* _internal_mutable_a_adecrypteddata();
   public:
 
-  // uint32 a_aId = 1;
+  // required uint32 a_aId = 1;
+  bool has_a_aid() const;
+  private:
+  bool _internal_has_a_aid() const;
+  public:
   void clear_a_aid();
   uint32_t a_aid() const;
   void set_a_aid(uint32_t value);
@@ -4706,7 +5162,11 @@ class Msg_Decrypted final :
   void _internal_set_a_aid(uint32_t value);
   public:
 
-  // uint32 a_aStatus = 2;
+  // required uint32 a_aStatus = 2;
+  bool has_a_astatus() const;
+  private:
+  bool _internal_has_a_astatus() const;
+  public:
   void clear_a_astatus();
   uint32_t a_astatus() const;
   void set_a_astatus(uint32_t value);
@@ -4719,14 +5179,18 @@ class Msg_Decrypted final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_adecrypteddata_;
     uint32_t a_aid_;
     uint32_t a_astatus_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PChromiumCDM_2eproto;
@@ -4762,6 +5226,13 @@ class Msg_DecryptFailed final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_DecryptFailed& default_instance() {
@@ -4839,7 +5310,11 @@ class Msg_DecryptFailed final :
     kAAIdFieldNumber = 1,
     kAAStatusFieldNumber = 2,
   };
-  // uint32 a_aId = 1;
+  // required uint32 a_aId = 1;
+  bool has_a_aid() const;
+  private:
+  bool _internal_has_a_aid() const;
+  public:
   void clear_a_aid();
   uint32_t a_aid() const;
   void set_a_aid(uint32_t value);
@@ -4848,7 +5323,11 @@ class Msg_DecryptFailed final :
   void _internal_set_a_aid(uint32_t value);
   public:
 
-  // uint32 a_aStatus = 2;
+  // required uint32 a_aStatus = 2;
+  bool has_a_astatus() const;
+  private:
+  bool _internal_has_a_astatus() const;
+  public:
   void clear_a_astatus();
   uint32_t a_astatus() const;
   void set_a_astatus(uint32_t value);
@@ -4861,13 +5340,17 @@ class Msg_DecryptFailed final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t a_aid_;
     uint32_t a_astatus_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PChromiumCDM_2eproto;
@@ -4903,6 +5386,13 @@ class Msg_OnDecoderInitDone final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_OnDecoderInitDone& default_instance() {
@@ -4979,7 +5469,11 @@ class Msg_OnDecoderInitDone final :
   enum : int {
     kAAStatusFieldNumber = 1,
   };
-  // uint32 a_aStatus = 1;
+  // required uint32 a_aStatus = 1;
+  bool has_a_astatus() const;
+  private:
+  bool _internal_has_a_astatus() const;
+  public:
   void clear_a_astatus();
   uint32_t a_astatus() const;
   void set_a_astatus(uint32_t value);
@@ -4996,8 +5490,9 @@ class Msg_OnDecoderInitDone final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint32_t a_astatus_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint32_t a_astatus_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PChromiumCDM_2eproto;
@@ -5033,6 +5528,13 @@ class Msg_DecodedShmem final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_DecodedShmem& default_instance() {
@@ -5110,7 +5612,11 @@ class Msg_DecodedShmem final :
     kAADataFieldNumber = 2,
     kAAFrameFieldNumber = 1,
   };
-  // bytes a_aData = 2;
+  // required bytes a_aData = 2;
+  bool has_a_adata() const;
+  private:
+  bool _internal_has_a_adata() const;
+  public:
   void clear_a_adata();
   const std::string& a_adata() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -5124,7 +5630,7 @@ class Msg_DecodedShmem final :
   std::string* _internal_mutable_a_adata();
   public:
 
-  // .protobuf.mozilla.gmp.CDMVideoFrame a_aFrame = 1;
+  // required .protobuf.mozilla.gmp.CDMVideoFrame a_aFrame = 1;
   bool has_a_aframe() const;
   private:
   bool _internal_has_a_aframe() const;
@@ -5146,13 +5652,17 @@ class Msg_DecodedShmem final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_adata_;
     ::protobuf::mozilla::gmp::CDMVideoFrame* a_aframe_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PChromiumCDM_2eproto;
@@ -5188,6 +5698,13 @@ class Msg_DecodedData final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_DecodedData& default_instance() {
@@ -5287,7 +5804,7 @@ class Msg_DecodedData final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_adata();
 
-  // .protobuf.mozilla.gmp.CDMVideoFrame a_aFrame = 1;
+  // required .protobuf.mozilla.gmp.CDMVideoFrame a_aFrame = 1;
   bool has_a_aframe() const;
   private:
   bool _internal_has_a_aframe() const;
@@ -5313,10 +5830,10 @@ class Msg_DecodedData final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_adata_;
-    mutable std::atomic<int> _a_adata_cached_byte_size_;
-    ::protobuf::mozilla::gmp::CDMVideoFrame* a_aframe_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_adata_;
+    ::protobuf::mozilla::gmp::CDMVideoFrame* a_aframe_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PChromiumCDM_2eproto;
@@ -5352,6 +5869,13 @@ class Msg_DecodeFailed final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_DecodeFailed& default_instance() {
@@ -5428,7 +5952,11 @@ class Msg_DecodeFailed final :
   enum : int {
     kAAStatusFieldNumber = 1,
   };
-  // uint32 a_aStatus = 1;
+  // required uint32 a_aStatus = 1;
+  bool has_a_astatus() const;
+  private:
+  bool _internal_has_a_astatus() const;
+  public:
   void clear_a_astatus();
   uint32_t a_astatus() const;
   void set_a_astatus(uint32_t value);
@@ -5445,8 +5973,9 @@ class Msg_DecodeFailed final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint32_t a_astatus_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint32_t a_astatus_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PChromiumCDM_2eproto;
@@ -5482,6 +6011,13 @@ class Msg_ResetVideoDecoderComplete final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_ResetVideoDecoderComplete& default_instance() {
@@ -5601,6 +6137,13 @@ class Msg_DrainComplete final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_DrainComplete& default_instance() {
     return *internal_default_instance();
   }
@@ -5716,6 +6259,13 @@ class Msg_Shutdown final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Shutdown& default_instance() {
@@ -5835,6 +6385,13 @@ class Msg_IncreaseShmemPoolSize final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_IncreaseShmemPoolSize& default_instance() {
     return *internal_default_instance();
   }
@@ -5930,9 +6487,17 @@ class Msg_IncreaseShmemPoolSize final :
 #endif  // __GNUC__
 // Msg_Init
 
-// bool a_aAllowDistinctiveIdentifier = 1;
+// required bool a_aAllowDistinctiveIdentifier = 1;
+inline bool Msg_Init::_internal_has_a_aallowdistinctiveidentifier() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_Init::has_a_aallowdistinctiveidentifier() const {
+  return _internal_has_a_aallowdistinctiveidentifier();
+}
 inline void Msg_Init::clear_a_aallowdistinctiveidentifier() {
   _impl_.a_aallowdistinctiveidentifier_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Msg_Init::_internal_a_aallowdistinctiveidentifier() const {
   return _impl_.a_aallowdistinctiveidentifier_;
@@ -5942,7 +6507,7 @@ inline bool Msg_Init::a_aallowdistinctiveidentifier() const {
   return _internal_a_aallowdistinctiveidentifier();
 }
 inline void Msg_Init::_internal_set_a_aallowdistinctiveidentifier(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aallowdistinctiveidentifier_ = value;
 }
 inline void Msg_Init::set_a_aallowdistinctiveidentifier(bool value) {
@@ -5950,9 +6515,17 @@ inline void Msg_Init::set_a_aallowdistinctiveidentifier(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_Init.a_aAllowDistinctiveIdentifier)
 }
 
-// bool a_aAllowPersistentState = 2;
+// required bool a_aAllowPersistentState = 2;
+inline bool Msg_Init::_internal_has_a_aallowpersistentstate() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_Init::has_a_aallowpersistentstate() const {
+  return _internal_has_a_aallowpersistentstate();
+}
 inline void Msg_Init::clear_a_aallowpersistentstate() {
   _impl_.a_aallowpersistentstate_ = false;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool Msg_Init::_internal_a_aallowpersistentstate() const {
   return _impl_.a_aallowpersistentstate_;
@@ -5962,7 +6535,7 @@ inline bool Msg_Init::a_aallowpersistentstate() const {
   return _internal_a_aallowpersistentstate();
 }
 inline void Msg_Init::_internal_set_a_aallowpersistentstate(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aallowpersistentstate_ = value;
 }
 inline void Msg_Init::set_a_aallowpersistentstate(bool value) {
@@ -5974,9 +6547,17 @@ inline void Msg_Init::set_a_aallowpersistentstate(bool value) {
 
 // Reply_Init
 
-// bool a_aSuccess = 1;
+// required bool a_aSuccess = 1;
+inline bool Reply_Init::_internal_has_a_asuccess() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_Init::has_a_asuccess() const {
+  return _internal_has_a_asuccess();
+}
 inline void Reply_Init::clear_a_asuccess() {
   _impl_.a_asuccess_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Reply_Init::_internal_a_asuccess() const {
   return _impl_.a_asuccess_;
@@ -5986,7 +6567,7 @@ inline bool Reply_Init::a_asuccess() const {
   return _internal_a_asuccess();
 }
 inline void Reply_Init::_internal_set_a_asuccess(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_asuccess_ = value;
 }
 inline void Reply_Init::set_a_asuccess(bool value) {
@@ -5998,9 +6579,17 @@ inline void Reply_Init::set_a_asuccess(bool value) {
 
 // Msg_GetStatusForPolicy
 
-// uint32 a_aPromiseId = 1;
+// required uint32 a_aPromiseId = 1;
+inline bool Msg_GetStatusForPolicy::_internal_has_a_apromiseid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_GetStatusForPolicy::has_a_apromiseid() const {
+  return _internal_has_a_apromiseid();
+}
 inline void Msg_GetStatusForPolicy::clear_a_apromiseid() {
   _impl_.a_apromiseid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_GetStatusForPolicy::_internal_a_apromiseid() const {
   return _impl_.a_apromiseid_;
@@ -6010,7 +6599,7 @@ inline uint32_t Msg_GetStatusForPolicy::a_apromiseid() const {
   return _internal_a_apromiseid();
 }
 inline void Msg_GetStatusForPolicy::_internal_set_a_apromiseid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_apromiseid_ = value;
 }
 inline void Msg_GetStatusForPolicy::set_a_apromiseid(uint32_t value) {
@@ -6018,9 +6607,17 @@ inline void Msg_GetStatusForPolicy::set_a_apromiseid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_GetStatusForPolicy.a_aPromiseId)
 }
 
-// bytes a_aMinHdcpVersion = 2;
+// required bytes a_aMinHdcpVersion = 2;
+inline bool Msg_GetStatusForPolicy::_internal_has_a_aminhdcpversion() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_GetStatusForPolicy::has_a_aminhdcpversion() const {
+  return _internal_has_a_aminhdcpversion();
+}
 inline void Msg_GetStatusForPolicy::clear_a_aminhdcpversion() {
   _impl_.a_aminhdcpversion_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_GetStatusForPolicy::a_aminhdcpversion() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PChromiumCDM.Msg_GetStatusForPolicy.a_aMinHdcpVersion)
@@ -6029,7 +6626,7 @@ inline const std::string& Msg_GetStatusForPolicy::a_aminhdcpversion() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GetStatusForPolicy::set_a_aminhdcpversion(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aminhdcpversion_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_GetStatusForPolicy.a_aMinHdcpVersion)
 }
@@ -6042,22 +6639,32 @@ inline const std::string& Msg_GetStatusForPolicy::_internal_a_aminhdcpversion() 
   return _impl_.a_aminhdcpversion_.Get();
 }
 inline void Msg_GetStatusForPolicy::_internal_set_a_aminhdcpversion(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aminhdcpversion_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_GetStatusForPolicy::_internal_mutable_a_aminhdcpversion() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aminhdcpversion_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_GetStatusForPolicy::release_a_aminhdcpversion() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PChromiumCDM.Msg_GetStatusForPolicy.a_aMinHdcpVersion)
-  return _impl_.a_aminhdcpversion_.Release();
+  if (!_internal_has_a_aminhdcpversion()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aminhdcpversion_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aminhdcpversion_.IsDefault()) {
+    _impl_.a_aminhdcpversion_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_GetStatusForPolicy::set_allocated_a_aminhdcpversion(std::string* a_aminhdcpversion) {
   if (a_aminhdcpversion != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aminhdcpversion_.SetAllocated(a_aminhdcpversion, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6072,9 +6679,17 @@ inline void Msg_GetStatusForPolicy::set_allocated_a_aminhdcpversion(std::string*
 
 // Msg_SetServerCertificate
 
-// uint32 a_aPromiseId = 1;
+// required uint32 a_aPromiseId = 1;
+inline bool Msg_SetServerCertificate::_internal_has_a_apromiseid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_SetServerCertificate::has_a_apromiseid() const {
+  return _internal_has_a_apromiseid();
+}
 inline void Msg_SetServerCertificate::clear_a_apromiseid() {
   _impl_.a_apromiseid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Msg_SetServerCertificate::_internal_a_apromiseid() const {
   return _impl_.a_apromiseid_;
@@ -6084,7 +6699,7 @@ inline uint32_t Msg_SetServerCertificate::a_apromiseid() const {
   return _internal_a_apromiseid();
 }
 inline void Msg_SetServerCertificate::_internal_set_a_apromiseid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_apromiseid_ = value;
 }
 inline void Msg_SetServerCertificate::set_a_apromiseid(uint32_t value) {
@@ -6143,9 +6758,17 @@ Msg_SetServerCertificate::mutable_a_aservercert() {
 
 // Msg_CreateSessionAndGenerateRequest
 
-// uint32 a_aPromiseId = 1;
+// required uint32 a_aPromiseId = 1;
+inline bool Msg_CreateSessionAndGenerateRequest::_internal_has_a_apromiseid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_CreateSessionAndGenerateRequest::has_a_apromiseid() const {
+  return _internal_has_a_apromiseid();
+}
 inline void Msg_CreateSessionAndGenerateRequest::clear_a_apromiseid() {
   _impl_.a_apromiseid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Msg_CreateSessionAndGenerateRequest::_internal_a_apromiseid() const {
   return _impl_.a_apromiseid_;
@@ -6155,7 +6778,7 @@ inline uint32_t Msg_CreateSessionAndGenerateRequest::a_apromiseid() const {
   return _internal_a_apromiseid();
 }
 inline void Msg_CreateSessionAndGenerateRequest::_internal_set_a_apromiseid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_apromiseid_ = value;
 }
 inline void Msg_CreateSessionAndGenerateRequest::set_a_apromiseid(uint32_t value) {
@@ -6163,9 +6786,17 @@ inline void Msg_CreateSessionAndGenerateRequest::set_a_apromiseid(uint32_t value
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_CreateSessionAndGenerateRequest.a_aPromiseId)
 }
 
-// uint32 a_aSessionType = 2;
+// required uint32 a_aSessionType = 2;
+inline bool Msg_CreateSessionAndGenerateRequest::_internal_has_a_asessiontype() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_CreateSessionAndGenerateRequest::has_a_asessiontype() const {
+  return _internal_has_a_asessiontype();
+}
 inline void Msg_CreateSessionAndGenerateRequest::clear_a_asessiontype() {
   _impl_.a_asessiontype_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_CreateSessionAndGenerateRequest::_internal_a_asessiontype() const {
   return _impl_.a_asessiontype_;
@@ -6175,7 +6806,7 @@ inline uint32_t Msg_CreateSessionAndGenerateRequest::a_asessiontype() const {
   return _internal_a_asessiontype();
 }
 inline void Msg_CreateSessionAndGenerateRequest::_internal_set_a_asessiontype(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_asessiontype_ = value;
 }
 inline void Msg_CreateSessionAndGenerateRequest::set_a_asessiontype(uint32_t value) {
@@ -6183,9 +6814,17 @@ inline void Msg_CreateSessionAndGenerateRequest::set_a_asessiontype(uint32_t val
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_CreateSessionAndGenerateRequest.a_aSessionType)
 }
 
-// uint32 a_aInitDataType = 3;
+// required uint32 a_aInitDataType = 3;
+inline bool Msg_CreateSessionAndGenerateRequest::_internal_has_a_ainitdatatype() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_CreateSessionAndGenerateRequest::has_a_ainitdatatype() const {
+  return _internal_has_a_ainitdatatype();
+}
 inline void Msg_CreateSessionAndGenerateRequest::clear_a_ainitdatatype() {
   _impl_.a_ainitdatatype_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_CreateSessionAndGenerateRequest::_internal_a_ainitdatatype() const {
   return _impl_.a_ainitdatatype_;
@@ -6195,7 +6834,7 @@ inline uint32_t Msg_CreateSessionAndGenerateRequest::a_ainitdatatype() const {
   return _internal_a_ainitdatatype();
 }
 inline void Msg_CreateSessionAndGenerateRequest::_internal_set_a_ainitdatatype(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_ainitdatatype_ = value;
 }
 inline void Msg_CreateSessionAndGenerateRequest::set_a_ainitdatatype(uint32_t value) {
@@ -6254,9 +6893,17 @@ Msg_CreateSessionAndGenerateRequest::mutable_a_ainitdata() {
 
 // Msg_LoadSession
 
-// uint32 a_aPromiseId = 1;
+// required uint32 a_aPromiseId = 1;
+inline bool Msg_LoadSession::_internal_has_a_apromiseid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_LoadSession::has_a_apromiseid() const {
+  return _internal_has_a_apromiseid();
+}
 inline void Msg_LoadSession::clear_a_apromiseid() {
   _impl_.a_apromiseid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_LoadSession::_internal_a_apromiseid() const {
   return _impl_.a_apromiseid_;
@@ -6266,7 +6913,7 @@ inline uint32_t Msg_LoadSession::a_apromiseid() const {
   return _internal_a_apromiseid();
 }
 inline void Msg_LoadSession::_internal_set_a_apromiseid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_apromiseid_ = value;
 }
 inline void Msg_LoadSession::set_a_apromiseid(uint32_t value) {
@@ -6274,9 +6921,17 @@ inline void Msg_LoadSession::set_a_apromiseid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_LoadSession.a_aPromiseId)
 }
 
-// uint32 a_aSessionType = 2;
+// required uint32 a_aSessionType = 2;
+inline bool Msg_LoadSession::_internal_has_a_asessiontype() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_LoadSession::has_a_asessiontype() const {
+  return _internal_has_a_asessiontype();
+}
 inline void Msg_LoadSession::clear_a_asessiontype() {
   _impl_.a_asessiontype_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_LoadSession::_internal_a_asessiontype() const {
   return _impl_.a_asessiontype_;
@@ -6286,7 +6941,7 @@ inline uint32_t Msg_LoadSession::a_asessiontype() const {
   return _internal_a_asessiontype();
 }
 inline void Msg_LoadSession::_internal_set_a_asessiontype(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_asessiontype_ = value;
 }
 inline void Msg_LoadSession::set_a_asessiontype(uint32_t value) {
@@ -6294,9 +6949,17 @@ inline void Msg_LoadSession::set_a_asessiontype(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_LoadSession.a_aSessionType)
 }
 
-// string a_aSessionId = 3;
+// required string a_aSessionId = 3;
+inline bool Msg_LoadSession::_internal_has_a_asessionid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_LoadSession::has_a_asessionid() const {
+  return _internal_has_a_asessionid();
+}
 inline void Msg_LoadSession::clear_a_asessionid() {
   _impl_.a_asessionid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_LoadSession::a_asessionid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PChromiumCDM.Msg_LoadSession.a_aSessionId)
@@ -6305,7 +6968,7 @@ inline const std::string& Msg_LoadSession::a_asessionid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_LoadSession::set_a_asessionid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_asessionid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_LoadSession.a_aSessionId)
 }
@@ -6318,22 +6981,32 @@ inline const std::string& Msg_LoadSession::_internal_a_asessionid() const {
   return _impl_.a_asessionid_.Get();
 }
 inline void Msg_LoadSession::_internal_set_a_asessionid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_asessionid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_LoadSession::_internal_mutable_a_asessionid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_asessionid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_LoadSession::release_a_asessionid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PChromiumCDM.Msg_LoadSession.a_aSessionId)
-  return _impl_.a_asessionid_.Release();
+  if (!_internal_has_a_asessionid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_asessionid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_asessionid_.IsDefault()) {
+    _impl_.a_asessionid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_LoadSession::set_allocated_a_asessionid(std::string* a_asessionid) {
   if (a_asessionid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_asessionid_.SetAllocated(a_asessionid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6348,9 +7021,17 @@ inline void Msg_LoadSession::set_allocated_a_asessionid(std::string* a_asessioni
 
 // Msg_UpdateSession
 
-// uint32 a_aPromiseId = 1;
+// required uint32 a_aPromiseId = 1;
+inline bool Msg_UpdateSession::_internal_has_a_apromiseid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_UpdateSession::has_a_apromiseid() const {
+  return _internal_has_a_apromiseid();
+}
 inline void Msg_UpdateSession::clear_a_apromiseid() {
   _impl_.a_apromiseid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_UpdateSession::_internal_a_apromiseid() const {
   return _impl_.a_apromiseid_;
@@ -6360,7 +7041,7 @@ inline uint32_t Msg_UpdateSession::a_apromiseid() const {
   return _internal_a_apromiseid();
 }
 inline void Msg_UpdateSession::_internal_set_a_apromiseid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_apromiseid_ = value;
 }
 inline void Msg_UpdateSession::set_a_apromiseid(uint32_t value) {
@@ -6368,9 +7049,17 @@ inline void Msg_UpdateSession::set_a_apromiseid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_UpdateSession.a_aPromiseId)
 }
 
-// string a_aSessionId = 2;
+// required string a_aSessionId = 2;
+inline bool Msg_UpdateSession::_internal_has_a_asessionid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_UpdateSession::has_a_asessionid() const {
+  return _internal_has_a_asessionid();
+}
 inline void Msg_UpdateSession::clear_a_asessionid() {
   _impl_.a_asessionid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_UpdateSession::a_asessionid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PChromiumCDM.Msg_UpdateSession.a_aSessionId)
@@ -6379,7 +7068,7 @@ inline const std::string& Msg_UpdateSession::a_asessionid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_UpdateSession::set_a_asessionid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_asessionid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_UpdateSession.a_aSessionId)
 }
@@ -6392,22 +7081,32 @@ inline const std::string& Msg_UpdateSession::_internal_a_asessionid() const {
   return _impl_.a_asessionid_.Get();
 }
 inline void Msg_UpdateSession::_internal_set_a_asessionid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_asessionid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_UpdateSession::_internal_mutable_a_asessionid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_asessionid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_UpdateSession::release_a_asessionid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PChromiumCDM.Msg_UpdateSession.a_aSessionId)
-  return _impl_.a_asessionid_.Release();
+  if (!_internal_has_a_asessionid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_asessionid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_asessionid_.IsDefault()) {
+    _impl_.a_asessionid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_UpdateSession::set_allocated_a_asessionid(std::string* a_asessionid) {
   if (a_asessionid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_asessionid_.SetAllocated(a_asessionid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6469,9 +7168,17 @@ Msg_UpdateSession::mutable_a_aresponse() {
 
 // Msg_CloseSession
 
-// uint32 a_aPromiseId = 1;
+// required uint32 a_aPromiseId = 1;
+inline bool Msg_CloseSession::_internal_has_a_apromiseid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_CloseSession::has_a_apromiseid() const {
+  return _internal_has_a_apromiseid();
+}
 inline void Msg_CloseSession::clear_a_apromiseid() {
   _impl_.a_apromiseid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_CloseSession::_internal_a_apromiseid() const {
   return _impl_.a_apromiseid_;
@@ -6481,7 +7188,7 @@ inline uint32_t Msg_CloseSession::a_apromiseid() const {
   return _internal_a_apromiseid();
 }
 inline void Msg_CloseSession::_internal_set_a_apromiseid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_apromiseid_ = value;
 }
 inline void Msg_CloseSession::set_a_apromiseid(uint32_t value) {
@@ -6489,9 +7196,17 @@ inline void Msg_CloseSession::set_a_apromiseid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_CloseSession.a_aPromiseId)
 }
 
-// string a_aSessionId = 2;
+// required string a_aSessionId = 2;
+inline bool Msg_CloseSession::_internal_has_a_asessionid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_CloseSession::has_a_asessionid() const {
+  return _internal_has_a_asessionid();
+}
 inline void Msg_CloseSession::clear_a_asessionid() {
   _impl_.a_asessionid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_CloseSession::a_asessionid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PChromiumCDM.Msg_CloseSession.a_aSessionId)
@@ -6500,7 +7215,7 @@ inline const std::string& Msg_CloseSession::a_asessionid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CloseSession::set_a_asessionid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_asessionid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_CloseSession.a_aSessionId)
 }
@@ -6513,22 +7228,32 @@ inline const std::string& Msg_CloseSession::_internal_a_asessionid() const {
   return _impl_.a_asessionid_.Get();
 }
 inline void Msg_CloseSession::_internal_set_a_asessionid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_asessionid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_CloseSession::_internal_mutable_a_asessionid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_asessionid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_CloseSession::release_a_asessionid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PChromiumCDM.Msg_CloseSession.a_aSessionId)
-  return _impl_.a_asessionid_.Release();
+  if (!_internal_has_a_asessionid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_asessionid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_asessionid_.IsDefault()) {
+    _impl_.a_asessionid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_CloseSession::set_allocated_a_asessionid(std::string* a_asessionid) {
   if (a_asessionid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_asessionid_.SetAllocated(a_asessionid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6543,9 +7268,17 @@ inline void Msg_CloseSession::set_allocated_a_asessionid(std::string* a_asession
 
 // Msg_RemoveSession
 
-// uint32 a_aPromiseId = 1;
+// required uint32 a_aPromiseId = 1;
+inline bool Msg_RemoveSession::_internal_has_a_apromiseid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_RemoveSession::has_a_apromiseid() const {
+  return _internal_has_a_apromiseid();
+}
 inline void Msg_RemoveSession::clear_a_apromiseid() {
   _impl_.a_apromiseid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_RemoveSession::_internal_a_apromiseid() const {
   return _impl_.a_apromiseid_;
@@ -6555,7 +7288,7 @@ inline uint32_t Msg_RemoveSession::a_apromiseid() const {
   return _internal_a_apromiseid();
 }
 inline void Msg_RemoveSession::_internal_set_a_apromiseid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_apromiseid_ = value;
 }
 inline void Msg_RemoveSession::set_a_apromiseid(uint32_t value) {
@@ -6563,9 +7296,17 @@ inline void Msg_RemoveSession::set_a_apromiseid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_RemoveSession.a_aPromiseId)
 }
 
-// string a_aSessionId = 2;
+// required string a_aSessionId = 2;
+inline bool Msg_RemoveSession::_internal_has_a_asessionid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_RemoveSession::has_a_asessionid() const {
+  return _internal_has_a_asessionid();
+}
 inline void Msg_RemoveSession::clear_a_asessionid() {
   _impl_.a_asessionid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_RemoveSession::a_asessionid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PChromiumCDM.Msg_RemoveSession.a_aSessionId)
@@ -6574,7 +7315,7 @@ inline const std::string& Msg_RemoveSession::a_asessionid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_RemoveSession::set_a_asessionid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_asessionid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_RemoveSession.a_aSessionId)
 }
@@ -6587,22 +7328,32 @@ inline const std::string& Msg_RemoveSession::_internal_a_asessionid() const {
   return _impl_.a_asessionid_.Get();
 }
 inline void Msg_RemoveSession::_internal_set_a_asessionid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_asessionid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_RemoveSession::_internal_mutable_a_asessionid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_asessionid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_RemoveSession::release_a_asessionid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PChromiumCDM.Msg_RemoveSession.a_aSessionId)
-  return _impl_.a_asessionid_.Release();
+  if (!_internal_has_a_asessionid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_asessionid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_asessionid_.IsDefault()) {
+    _impl_.a_asessionid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_RemoveSession::set_allocated_a_asessionid(std::string* a_asessionid) {
   if (a_asessionid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_asessionid_.SetAllocated(a_asessionid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6617,9 +7368,17 @@ inline void Msg_RemoveSession::set_allocated_a_asessionid(std::string* a_asessio
 
 // Msg_CompleteQueryOutputProtectionStatus
 
-// bool a_aSuccess = 1;
+// required bool a_aSuccess = 1;
+inline bool Msg_CompleteQueryOutputProtectionStatus::_internal_has_a_asuccess() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_CompleteQueryOutputProtectionStatus::has_a_asuccess() const {
+  return _internal_has_a_asuccess();
+}
 inline void Msg_CompleteQueryOutputProtectionStatus::clear_a_asuccess() {
   _impl_.a_asuccess_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Msg_CompleteQueryOutputProtectionStatus::_internal_a_asuccess() const {
   return _impl_.a_asuccess_;
@@ -6629,7 +7388,7 @@ inline bool Msg_CompleteQueryOutputProtectionStatus::a_asuccess() const {
   return _internal_a_asuccess();
 }
 inline void Msg_CompleteQueryOutputProtectionStatus::_internal_set_a_asuccess(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_asuccess_ = value;
 }
 inline void Msg_CompleteQueryOutputProtectionStatus::set_a_asuccess(bool value) {
@@ -6637,9 +7396,17 @@ inline void Msg_CompleteQueryOutputProtectionStatus::set_a_asuccess(bool value) 
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_CompleteQueryOutputProtectionStatus.a_aSuccess)
 }
 
-// uint32 a_aLinkMask = 2;
+// required uint32 a_aLinkMask = 2;
+inline bool Msg_CompleteQueryOutputProtectionStatus::_internal_has_a_alinkmask() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_CompleteQueryOutputProtectionStatus::has_a_alinkmask() const {
+  return _internal_has_a_alinkmask();
+}
 inline void Msg_CompleteQueryOutputProtectionStatus::clear_a_alinkmask() {
   _impl_.a_alinkmask_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_CompleteQueryOutputProtectionStatus::_internal_a_alinkmask() const {
   return _impl_.a_alinkmask_;
@@ -6649,7 +7416,7 @@ inline uint32_t Msg_CompleteQueryOutputProtectionStatus::a_alinkmask() const {
   return _internal_a_alinkmask();
 }
 inline void Msg_CompleteQueryOutputProtectionStatus::_internal_set_a_alinkmask(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_alinkmask_ = value;
 }
 inline void Msg_CompleteQueryOutputProtectionStatus::set_a_alinkmask(uint32_t value) {
@@ -6657,9 +7424,17 @@ inline void Msg_CompleteQueryOutputProtectionStatus::set_a_alinkmask(uint32_t va
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_CompleteQueryOutputProtectionStatus.a_aLinkMask)
 }
 
-// uint32 a_aProtectionMask = 3;
+// required uint32 a_aProtectionMask = 3;
+inline bool Msg_CompleteQueryOutputProtectionStatus::_internal_has_a_aprotectionmask() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_CompleteQueryOutputProtectionStatus::has_a_aprotectionmask() const {
+  return _internal_has_a_aprotectionmask();
+}
 inline void Msg_CompleteQueryOutputProtectionStatus::clear_a_aprotectionmask() {
   _impl_.a_aprotectionmask_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_CompleteQueryOutputProtectionStatus::_internal_a_aprotectionmask() const {
   return _impl_.a_aprotectionmask_;
@@ -6669,7 +7444,7 @@ inline uint32_t Msg_CompleteQueryOutputProtectionStatus::a_aprotectionmask() con
   return _internal_a_aprotectionmask();
 }
 inline void Msg_CompleteQueryOutputProtectionStatus::_internal_set_a_aprotectionmask(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_aprotectionmask_ = value;
 }
 inline void Msg_CompleteQueryOutputProtectionStatus::set_a_aprotectionmask(uint32_t value) {
@@ -6681,9 +7456,17 @@ inline void Msg_CompleteQueryOutputProtectionStatus::set_a_aprotectionmask(uint3
 
 // Msg_Decrypt
 
-// uint32 a_aId = 1;
+// required uint32 a_aId = 1;
+inline bool Msg_Decrypt::_internal_has_a_aid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_Decrypt::has_a_aid() const {
+  return _internal_has_a_aid();
+}
 inline void Msg_Decrypt::clear_a_aid() {
   _impl_.a_aid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_Decrypt::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -6693,7 +7476,7 @@ inline uint32_t Msg_Decrypt::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_Decrypt::_internal_set_a_aid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aid_ = value;
 }
 inline void Msg_Decrypt::set_a_aid(uint32_t value) {
@@ -6701,9 +7484,11 @@ inline void Msg_Decrypt::set_a_aid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_Decrypt.a_aId)
 }
 
-// .protobuf.mozilla.gmp.CDMInputBuffer a_aBuffer = 2;
+// required .protobuf.mozilla.gmp.CDMInputBuffer a_aBuffer = 2;
 inline bool Msg_Decrypt::_internal_has_a_abuffer() const {
-  return this != internal_default_instance() && _impl_.a_abuffer_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_abuffer_ != nullptr);
+  return value;
 }
 inline bool Msg_Decrypt::has_a_abuffer() const {
   return _internal_has_a_abuffer();
@@ -6724,14 +7509,14 @@ inline void Msg_Decrypt::unsafe_arena_set_allocated_a_abuffer(
   }
   _impl_.a_abuffer_ = a_abuffer;
   if (a_abuffer) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gmp.PChromiumCDM.Msg_Decrypt.a_aBuffer)
 }
 inline ::protobuf::mozilla::gmp::CDMInputBuffer* Msg_Decrypt::release_a_abuffer() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::gmp::CDMInputBuffer* temp = _impl_.a_abuffer_;
   _impl_.a_abuffer_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -6747,13 +7532,13 @@ inline ::protobuf::mozilla::gmp::CDMInputBuffer* Msg_Decrypt::release_a_abuffer(
 }
 inline ::protobuf::mozilla::gmp::CDMInputBuffer* Msg_Decrypt::unsafe_arena_release_a_abuffer() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PChromiumCDM.Msg_Decrypt.a_aBuffer)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::gmp::CDMInputBuffer* temp = _impl_.a_abuffer_;
   _impl_.a_abuffer_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::gmp::CDMInputBuffer* Msg_Decrypt::_internal_mutable_a_abuffer() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_abuffer_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::gmp::CDMInputBuffer>(GetArenaForAllocation());
     _impl_.a_abuffer_ = p;
@@ -6778,9 +7563,9 @@ inline void Msg_Decrypt::set_allocated_a_abuffer(::protobuf::mozilla::gmp::CDMIn
       a_abuffer = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_abuffer, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_abuffer_ = a_abuffer;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PChromiumCDM.Msg_Decrypt.a_aBuffer)
@@ -6790,9 +7575,11 @@ inline void Msg_Decrypt::set_allocated_a_abuffer(::protobuf::mozilla::gmp::CDMIn
 
 // Msg_InitializeVideoDecoder
 
-// .protobuf.mozilla.gmp.CDMVideoDecoderConfig a_aConfig = 1;
+// required .protobuf.mozilla.gmp.CDMVideoDecoderConfig a_aConfig = 1;
 inline bool Msg_InitializeVideoDecoder::_internal_has_a_aconfig() const {
-  return this != internal_default_instance() && _impl_.a_aconfig_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_aconfig_ != nullptr);
+  return value;
 }
 inline bool Msg_InitializeVideoDecoder::has_a_aconfig() const {
   return _internal_has_a_aconfig();
@@ -6813,14 +7600,14 @@ inline void Msg_InitializeVideoDecoder::unsafe_arena_set_allocated_a_aconfig(
   }
   _impl_.a_aconfig_ = a_aconfig;
   if (a_aconfig) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gmp.PChromiumCDM.Msg_InitializeVideoDecoder.a_aConfig)
 }
 inline ::protobuf::mozilla::gmp::CDMVideoDecoderConfig* Msg_InitializeVideoDecoder::release_a_aconfig() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::gmp::CDMVideoDecoderConfig* temp = _impl_.a_aconfig_;
   _impl_.a_aconfig_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -6836,13 +7623,13 @@ inline ::protobuf::mozilla::gmp::CDMVideoDecoderConfig* Msg_InitializeVideoDecod
 }
 inline ::protobuf::mozilla::gmp::CDMVideoDecoderConfig* Msg_InitializeVideoDecoder::unsafe_arena_release_a_aconfig() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PChromiumCDM.Msg_InitializeVideoDecoder.a_aConfig)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::gmp::CDMVideoDecoderConfig* temp = _impl_.a_aconfig_;
   _impl_.a_aconfig_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::gmp::CDMVideoDecoderConfig* Msg_InitializeVideoDecoder::_internal_mutable_a_aconfig() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_aconfig_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::gmp::CDMVideoDecoderConfig>(GetArenaForAllocation());
     _impl_.a_aconfig_ = p;
@@ -6867,9 +7654,9 @@ inline void Msg_InitializeVideoDecoder::set_allocated_a_aconfig(::protobuf::mozi
       a_aconfig = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_aconfig, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aconfig_ = a_aconfig;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PChromiumCDM.Msg_InitializeVideoDecoder.a_aConfig)
@@ -6887,9 +7674,11 @@ inline void Msg_InitializeVideoDecoder::set_allocated_a_aconfig(::protobuf::mozi
 
 // Msg_DecryptAndDecodeFrame
 
-// .protobuf.mozilla.gmp.CDMInputBuffer a_aBuffer = 1;
+// required .protobuf.mozilla.gmp.CDMInputBuffer a_aBuffer = 1;
 inline bool Msg_DecryptAndDecodeFrame::_internal_has_a_abuffer() const {
-  return this != internal_default_instance() && _impl_.a_abuffer_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_abuffer_ != nullptr);
+  return value;
 }
 inline bool Msg_DecryptAndDecodeFrame::has_a_abuffer() const {
   return _internal_has_a_abuffer();
@@ -6910,14 +7699,14 @@ inline void Msg_DecryptAndDecodeFrame::unsafe_arena_set_allocated_a_abuffer(
   }
   _impl_.a_abuffer_ = a_abuffer;
   if (a_abuffer) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gmp.PChromiumCDM.Msg_DecryptAndDecodeFrame.a_aBuffer)
 }
 inline ::protobuf::mozilla::gmp::CDMInputBuffer* Msg_DecryptAndDecodeFrame::release_a_abuffer() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::gmp::CDMInputBuffer* temp = _impl_.a_abuffer_;
   _impl_.a_abuffer_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -6933,13 +7722,13 @@ inline ::protobuf::mozilla::gmp::CDMInputBuffer* Msg_DecryptAndDecodeFrame::rele
 }
 inline ::protobuf::mozilla::gmp::CDMInputBuffer* Msg_DecryptAndDecodeFrame::unsafe_arena_release_a_abuffer() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PChromiumCDM.Msg_DecryptAndDecodeFrame.a_aBuffer)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::gmp::CDMInputBuffer* temp = _impl_.a_abuffer_;
   _impl_.a_abuffer_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::gmp::CDMInputBuffer* Msg_DecryptAndDecodeFrame::_internal_mutable_a_abuffer() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_abuffer_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::gmp::CDMInputBuffer>(GetArenaForAllocation());
     _impl_.a_abuffer_ = p;
@@ -6964,9 +7753,9 @@ inline void Msg_DecryptAndDecodeFrame::set_allocated_a_abuffer(::protobuf::mozil
       a_abuffer = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_abuffer, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_abuffer_ = a_abuffer;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PChromiumCDM.Msg_DecryptAndDecodeFrame.a_aBuffer)
@@ -6984,9 +7773,17 @@ inline void Msg_DecryptAndDecodeFrame::set_allocated_a_abuffer(::protobuf::mozil
 
 // Msg_GiveBuffer
 
-// bytes a_aShmem = 1;
+// required bytes a_aShmem = 1;
+inline bool Msg_GiveBuffer::_internal_has_a_ashmem() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_GiveBuffer::has_a_ashmem() const {
+  return _internal_has_a_ashmem();
+}
 inline void Msg_GiveBuffer::clear_a_ashmem() {
   _impl_.a_ashmem_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_GiveBuffer::a_ashmem() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PChromiumCDM.Msg_GiveBuffer.a_aShmem)
@@ -6995,7 +7792,7 @@ inline const std::string& Msg_GiveBuffer::a_ashmem() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GiveBuffer::set_a_ashmem(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_ashmem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_GiveBuffer.a_aShmem)
 }
@@ -7008,22 +7805,32 @@ inline const std::string& Msg_GiveBuffer::_internal_a_ashmem() const {
   return _impl_.a_ashmem_.Get();
 }
 inline void Msg_GiveBuffer::_internal_set_a_ashmem(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_ashmem_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_GiveBuffer::_internal_mutable_a_ashmem() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_ashmem_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_GiveBuffer::release_a_ashmem() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PChromiumCDM.Msg_GiveBuffer.a_aShmem)
-  return _impl_.a_ashmem_.Release();
+  if (!_internal_has_a_ashmem()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_ashmem_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_ashmem_.IsDefault()) {
+    _impl_.a_ashmem_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_GiveBuffer::set_allocated_a_ashmem(std::string* a_ashmem) {
   if (a_ashmem != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_ashmem_.SetAllocated(a_ashmem, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -7050,9 +7857,17 @@ inline void Msg_GiveBuffer::set_allocated_a_ashmem(std::string* a_ashmem) {
 
 // Msg_OnResolvePromiseWithKeyStatus
 
-// uint32 a_aPromiseId = 1;
+// required uint32 a_aPromiseId = 1;
+inline bool Msg_OnResolvePromiseWithKeyStatus::_internal_has_a_apromiseid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_OnResolvePromiseWithKeyStatus::has_a_apromiseid() const {
+  return _internal_has_a_apromiseid();
+}
 inline void Msg_OnResolvePromiseWithKeyStatus::clear_a_apromiseid() {
   _impl_.a_apromiseid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Msg_OnResolvePromiseWithKeyStatus::_internal_a_apromiseid() const {
   return _impl_.a_apromiseid_;
@@ -7062,7 +7877,7 @@ inline uint32_t Msg_OnResolvePromiseWithKeyStatus::a_apromiseid() const {
   return _internal_a_apromiseid();
 }
 inline void Msg_OnResolvePromiseWithKeyStatus::_internal_set_a_apromiseid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_apromiseid_ = value;
 }
 inline void Msg_OnResolvePromiseWithKeyStatus::set_a_apromiseid(uint32_t value) {
@@ -7070,9 +7885,17 @@ inline void Msg_OnResolvePromiseWithKeyStatus::set_a_apromiseid(uint32_t value) 
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnResolvePromiseWithKeyStatus.a_aPromiseId)
 }
 
-// uint32 a_aKeyStatus = 2;
+// required uint32 a_aKeyStatus = 2;
+inline bool Msg_OnResolvePromiseWithKeyStatus::_internal_has_a_akeystatus() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_OnResolvePromiseWithKeyStatus::has_a_akeystatus() const {
+  return _internal_has_a_akeystatus();
+}
 inline void Msg_OnResolvePromiseWithKeyStatus::clear_a_akeystatus() {
   _impl_.a_akeystatus_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_OnResolvePromiseWithKeyStatus::_internal_a_akeystatus() const {
   return _impl_.a_akeystatus_;
@@ -7082,7 +7905,7 @@ inline uint32_t Msg_OnResolvePromiseWithKeyStatus::a_akeystatus() const {
   return _internal_a_akeystatus();
 }
 inline void Msg_OnResolvePromiseWithKeyStatus::_internal_set_a_akeystatus(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_akeystatus_ = value;
 }
 inline void Msg_OnResolvePromiseWithKeyStatus::set_a_akeystatus(uint32_t value) {
@@ -7094,9 +7917,17 @@ inline void Msg_OnResolvePromiseWithKeyStatus::set_a_akeystatus(uint32_t value) 
 
 // Msg_OnResolveNewSessionPromise
 
-// uint32 a_aPromiseId = 1;
+// required uint32 a_aPromiseId = 1;
+inline bool Msg_OnResolveNewSessionPromise::_internal_has_a_apromiseid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_OnResolveNewSessionPromise::has_a_apromiseid() const {
+  return _internal_has_a_apromiseid();
+}
 inline void Msg_OnResolveNewSessionPromise::clear_a_apromiseid() {
   _impl_.a_apromiseid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_OnResolveNewSessionPromise::_internal_a_apromiseid() const {
   return _impl_.a_apromiseid_;
@@ -7106,7 +7937,7 @@ inline uint32_t Msg_OnResolveNewSessionPromise::a_apromiseid() const {
   return _internal_a_apromiseid();
 }
 inline void Msg_OnResolveNewSessionPromise::_internal_set_a_apromiseid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_apromiseid_ = value;
 }
 inline void Msg_OnResolveNewSessionPromise::set_a_apromiseid(uint32_t value) {
@@ -7114,9 +7945,17 @@ inline void Msg_OnResolveNewSessionPromise::set_a_apromiseid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnResolveNewSessionPromise.a_aPromiseId)
 }
 
-// string a_aSessionId = 2;
+// required string a_aSessionId = 2;
+inline bool Msg_OnResolveNewSessionPromise::_internal_has_a_asessionid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_OnResolveNewSessionPromise::has_a_asessionid() const {
+  return _internal_has_a_asessionid();
+}
 inline void Msg_OnResolveNewSessionPromise::clear_a_asessionid() {
   _impl_.a_asessionid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_OnResolveNewSessionPromise::a_asessionid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnResolveNewSessionPromise.a_aSessionId)
@@ -7125,7 +7964,7 @@ inline const std::string& Msg_OnResolveNewSessionPromise::a_asessionid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnResolveNewSessionPromise::set_a_asessionid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_asessionid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnResolveNewSessionPromise.a_aSessionId)
 }
@@ -7138,22 +7977,32 @@ inline const std::string& Msg_OnResolveNewSessionPromise::_internal_a_asessionid
   return _impl_.a_asessionid_.Get();
 }
 inline void Msg_OnResolveNewSessionPromise::_internal_set_a_asessionid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_asessionid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OnResolveNewSessionPromise::_internal_mutable_a_asessionid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_asessionid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OnResolveNewSessionPromise::release_a_asessionid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnResolveNewSessionPromise.a_aSessionId)
-  return _impl_.a_asessionid_.Release();
+  if (!_internal_has_a_asessionid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_asessionid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_asessionid_.IsDefault()) {
+    _impl_.a_asessionid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_OnResolveNewSessionPromise::set_allocated_a_asessionid(std::string* a_asessionid) {
   if (a_asessionid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_asessionid_.SetAllocated(a_asessionid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -7168,9 +8017,17 @@ inline void Msg_OnResolveNewSessionPromise::set_allocated_a_asessionid(std::stri
 
 // Msg_OnResolvePromise
 
-// uint32 a_aPromiseId = 1;
+// required uint32 a_aPromiseId = 1;
+inline bool Msg_OnResolvePromise::_internal_has_a_apromiseid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_OnResolvePromise::has_a_apromiseid() const {
+  return _internal_has_a_apromiseid();
+}
 inline void Msg_OnResolvePromise::clear_a_apromiseid() {
   _impl_.a_apromiseid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Msg_OnResolvePromise::_internal_a_apromiseid() const {
   return _impl_.a_apromiseid_;
@@ -7180,7 +8037,7 @@ inline uint32_t Msg_OnResolvePromise::a_apromiseid() const {
   return _internal_a_apromiseid();
 }
 inline void Msg_OnResolvePromise::_internal_set_a_apromiseid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_apromiseid_ = value;
 }
 inline void Msg_OnResolvePromise::set_a_apromiseid(uint32_t value) {
@@ -7192,9 +8049,17 @@ inline void Msg_OnResolvePromise::set_a_apromiseid(uint32_t value) {
 
 // Msg_OnRejectPromise
 
-// uint32 a_aPromiseId = 1;
+// required uint32 a_aPromiseId = 1;
+inline bool Msg_OnRejectPromise::_internal_has_a_apromiseid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_OnRejectPromise::has_a_apromiseid() const {
+  return _internal_has_a_apromiseid();
+}
 inline void Msg_OnRejectPromise::clear_a_apromiseid() {
   _impl_.a_apromiseid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_OnRejectPromise::_internal_a_apromiseid() const {
   return _impl_.a_apromiseid_;
@@ -7204,7 +8069,7 @@ inline uint32_t Msg_OnRejectPromise::a_apromiseid() const {
   return _internal_a_apromiseid();
 }
 inline void Msg_OnRejectPromise::_internal_set_a_apromiseid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_apromiseid_ = value;
 }
 inline void Msg_OnRejectPromise::set_a_apromiseid(uint32_t value) {
@@ -7212,9 +8077,17 @@ inline void Msg_OnRejectPromise::set_a_apromiseid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnRejectPromise.a_aPromiseId)
 }
 
-// uint32 a_aException = 2;
+// required uint32 a_aException = 2;
+inline bool Msg_OnRejectPromise::_internal_has_a_aexception() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_OnRejectPromise::has_a_aexception() const {
+  return _internal_has_a_aexception();
+}
 inline void Msg_OnRejectPromise::clear_a_aexception() {
   _impl_.a_aexception_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_OnRejectPromise::_internal_a_aexception() const {
   return _impl_.a_aexception_;
@@ -7224,7 +8097,7 @@ inline uint32_t Msg_OnRejectPromise::a_aexception() const {
   return _internal_a_aexception();
 }
 inline void Msg_OnRejectPromise::_internal_set_a_aexception(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_aexception_ = value;
 }
 inline void Msg_OnRejectPromise::set_a_aexception(uint32_t value) {
@@ -7232,9 +8105,17 @@ inline void Msg_OnRejectPromise::set_a_aexception(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnRejectPromise.a_aException)
 }
 
-// uint32 a_aSystemCode = 3;
+// required uint32 a_aSystemCode = 3;
+inline bool Msg_OnRejectPromise::_internal_has_a_asystemcode() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool Msg_OnRejectPromise::has_a_asystemcode() const {
+  return _internal_has_a_asystemcode();
+}
 inline void Msg_OnRejectPromise::clear_a_asystemcode() {
   _impl_.a_asystemcode_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline uint32_t Msg_OnRejectPromise::_internal_a_asystemcode() const {
   return _impl_.a_asystemcode_;
@@ -7244,7 +8125,7 @@ inline uint32_t Msg_OnRejectPromise::a_asystemcode() const {
   return _internal_a_asystemcode();
 }
 inline void Msg_OnRejectPromise::_internal_set_a_asystemcode(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_asystemcode_ = value;
 }
 inline void Msg_OnRejectPromise::set_a_asystemcode(uint32_t value) {
@@ -7252,9 +8133,17 @@ inline void Msg_OnRejectPromise::set_a_asystemcode(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnRejectPromise.a_aSystemCode)
 }
 
-// string a_aErrorMessage = 4;
+// required string a_aErrorMessage = 4;
+inline bool Msg_OnRejectPromise::_internal_has_a_aerrormessage() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_OnRejectPromise::has_a_aerrormessage() const {
+  return _internal_has_a_aerrormessage();
+}
 inline void Msg_OnRejectPromise::clear_a_aerrormessage() {
   _impl_.a_aerrormessage_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_OnRejectPromise::a_aerrormessage() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnRejectPromise.a_aErrorMessage)
@@ -7263,7 +8152,7 @@ inline const std::string& Msg_OnRejectPromise::a_aerrormessage() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnRejectPromise::set_a_aerrormessage(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aerrormessage_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnRejectPromise.a_aErrorMessage)
 }
@@ -7276,22 +8165,32 @@ inline const std::string& Msg_OnRejectPromise::_internal_a_aerrormessage() const
   return _impl_.a_aerrormessage_.Get();
 }
 inline void Msg_OnRejectPromise::_internal_set_a_aerrormessage(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aerrormessage_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OnRejectPromise::_internal_mutable_a_aerrormessage() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aerrormessage_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OnRejectPromise::release_a_aerrormessage() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnRejectPromise.a_aErrorMessage)
-  return _impl_.a_aerrormessage_.Release();
+  if (!_internal_has_a_aerrormessage()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aerrormessage_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aerrormessage_.IsDefault()) {
+    _impl_.a_aerrormessage_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_OnRejectPromise::set_allocated_a_aerrormessage(std::string* a_aerrormessage) {
   if (a_aerrormessage != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aerrormessage_.SetAllocated(a_aerrormessage, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -7306,9 +8205,17 @@ inline void Msg_OnRejectPromise::set_allocated_a_aerrormessage(std::string* a_ae
 
 // Msg_OnSessionMessage
 
-// string a_aSessionId = 1;
+// required string a_aSessionId = 1;
+inline bool Msg_OnSessionMessage::_internal_has_a_asessionid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_OnSessionMessage::has_a_asessionid() const {
+  return _internal_has_a_asessionid();
+}
 inline void Msg_OnSessionMessage::clear_a_asessionid() {
   _impl_.a_asessionid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_OnSessionMessage::a_asessionid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnSessionMessage.a_aSessionId)
@@ -7317,7 +8224,7 @@ inline const std::string& Msg_OnSessionMessage::a_asessionid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnSessionMessage::set_a_asessionid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_asessionid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnSessionMessage.a_aSessionId)
 }
@@ -7330,22 +8237,32 @@ inline const std::string& Msg_OnSessionMessage::_internal_a_asessionid() const {
   return _impl_.a_asessionid_.Get();
 }
 inline void Msg_OnSessionMessage::_internal_set_a_asessionid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_asessionid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OnSessionMessage::_internal_mutable_a_asessionid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_asessionid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OnSessionMessage::release_a_asessionid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnSessionMessage.a_aSessionId)
-  return _impl_.a_asessionid_.Release();
+  if (!_internal_has_a_asessionid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_asessionid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_asessionid_.IsDefault()) {
+    _impl_.a_asessionid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_OnSessionMessage::set_allocated_a_asessionid(std::string* a_asessionid) {
   if (a_asessionid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_asessionid_.SetAllocated(a_asessionid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -7356,9 +8273,17 @@ inline void Msg_OnSessionMessage::set_allocated_a_asessionid(std::string* a_ases
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnSessionMessage.a_aSessionId)
 }
 
-// uint32 a_aMessageType = 2;
+// required uint32 a_aMessageType = 2;
+inline bool Msg_OnSessionMessage::_internal_has_a_amessagetype() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_OnSessionMessage::has_a_amessagetype() const {
+  return _internal_has_a_amessagetype();
+}
 inline void Msg_OnSessionMessage::clear_a_amessagetype() {
   _impl_.a_amessagetype_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_OnSessionMessage::_internal_a_amessagetype() const {
   return _impl_.a_amessagetype_;
@@ -7368,7 +8293,7 @@ inline uint32_t Msg_OnSessionMessage::a_amessagetype() const {
   return _internal_a_amessagetype();
 }
 inline void Msg_OnSessionMessage::_internal_set_a_amessagetype(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_amessagetype_ = value;
 }
 inline void Msg_OnSessionMessage::set_a_amessagetype(uint32_t value) {
@@ -7427,9 +8352,17 @@ Msg_OnSessionMessage::mutable_a_amessage() {
 
 // Msg_OnSessionKeysChange
 
-// string a_aSessionId = 1;
+// required string a_aSessionId = 1;
+inline bool Msg_OnSessionKeysChange::_internal_has_a_asessionid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_OnSessionKeysChange::has_a_asessionid() const {
+  return _internal_has_a_asessionid();
+}
 inline void Msg_OnSessionKeysChange::clear_a_asessionid() {
   _impl_.a_asessionid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_OnSessionKeysChange::a_asessionid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnSessionKeysChange.a_aSessionId)
@@ -7438,7 +8371,7 @@ inline const std::string& Msg_OnSessionKeysChange::a_asessionid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnSessionKeysChange::set_a_asessionid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_asessionid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnSessionKeysChange.a_aSessionId)
 }
@@ -7451,22 +8384,32 @@ inline const std::string& Msg_OnSessionKeysChange::_internal_a_asessionid() cons
   return _impl_.a_asessionid_.Get();
 }
 inline void Msg_OnSessionKeysChange::_internal_set_a_asessionid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_asessionid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OnSessionKeysChange::_internal_mutable_a_asessionid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_asessionid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OnSessionKeysChange::release_a_asessionid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnSessionKeysChange.a_aSessionId)
-  return _impl_.a_asessionid_.Release();
+  if (!_internal_has_a_asessionid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_asessionid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_asessionid_.IsDefault()) {
+    _impl_.a_asessionid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_OnSessionKeysChange::set_allocated_a_asessionid(std::string* a_asessionid) {
   if (a_asessionid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_asessionid_.SetAllocated(a_asessionid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -7518,9 +8461,17 @@ Msg_OnSessionKeysChange::a_akeysinfo() const {
 
 // Msg_OnExpirationChange
 
-// string a_aSessionId = 1;
+// required string a_aSessionId = 1;
+inline bool Msg_OnExpirationChange::_internal_has_a_asessionid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_OnExpirationChange::has_a_asessionid() const {
+  return _internal_has_a_asessionid();
+}
 inline void Msg_OnExpirationChange::clear_a_asessionid() {
   _impl_.a_asessionid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_OnExpirationChange::a_asessionid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnExpirationChange.a_aSessionId)
@@ -7529,7 +8480,7 @@ inline const std::string& Msg_OnExpirationChange::a_asessionid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnExpirationChange::set_a_asessionid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_asessionid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnExpirationChange.a_aSessionId)
 }
@@ -7542,22 +8493,32 @@ inline const std::string& Msg_OnExpirationChange::_internal_a_asessionid() const
   return _impl_.a_asessionid_.Get();
 }
 inline void Msg_OnExpirationChange::_internal_set_a_asessionid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_asessionid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OnExpirationChange::_internal_mutable_a_asessionid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_asessionid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OnExpirationChange::release_a_asessionid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnExpirationChange.a_aSessionId)
-  return _impl_.a_asessionid_.Release();
+  if (!_internal_has_a_asessionid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_asessionid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_asessionid_.IsDefault()) {
+    _impl_.a_asessionid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_OnExpirationChange::set_allocated_a_asessionid(std::string* a_asessionid) {
   if (a_asessionid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_asessionid_.SetAllocated(a_asessionid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -7568,9 +8529,17 @@ inline void Msg_OnExpirationChange::set_allocated_a_asessionid(std::string* a_as
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnExpirationChange.a_aSessionId)
 }
 
-// double a_aSecondsSinceEpoch = 2;
+// required double a_aSecondsSinceEpoch = 2;
+inline bool Msg_OnExpirationChange::_internal_has_a_asecondssinceepoch() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_OnExpirationChange::has_a_asecondssinceepoch() const {
+  return _internal_has_a_asecondssinceepoch();
+}
 inline void Msg_OnExpirationChange::clear_a_asecondssinceepoch() {
   _impl_.a_asecondssinceepoch_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline double Msg_OnExpirationChange::_internal_a_asecondssinceepoch() const {
   return _impl_.a_asecondssinceepoch_;
@@ -7580,7 +8549,7 @@ inline double Msg_OnExpirationChange::a_asecondssinceepoch() const {
   return _internal_a_asecondssinceepoch();
 }
 inline void Msg_OnExpirationChange::_internal_set_a_asecondssinceepoch(double value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_asecondssinceepoch_ = value;
 }
 inline void Msg_OnExpirationChange::set_a_asecondssinceepoch(double value) {
@@ -7592,9 +8561,17 @@ inline void Msg_OnExpirationChange::set_a_asecondssinceepoch(double value) {
 
 // Msg_OnSessionClosed
 
-// string a_aSessionId = 1;
+// required string a_aSessionId = 1;
+inline bool Msg_OnSessionClosed::_internal_has_a_asessionid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_OnSessionClosed::has_a_asessionid() const {
+  return _internal_has_a_asessionid();
+}
 inline void Msg_OnSessionClosed::clear_a_asessionid() {
   _impl_.a_asessionid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_OnSessionClosed::a_asessionid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnSessionClosed.a_aSessionId)
@@ -7603,7 +8580,7 @@ inline const std::string& Msg_OnSessionClosed::a_asessionid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnSessionClosed::set_a_asessionid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_asessionid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnSessionClosed.a_aSessionId)
 }
@@ -7616,22 +8593,32 @@ inline const std::string& Msg_OnSessionClosed::_internal_a_asessionid() const {
   return _impl_.a_asessionid_.Get();
 }
 inline void Msg_OnSessionClosed::_internal_set_a_asessionid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_asessionid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OnSessionClosed::_internal_mutable_a_asessionid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_asessionid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OnSessionClosed::release_a_asessionid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnSessionClosed.a_aSessionId)
-  return _impl_.a_asessionid_.Release();
+  if (!_internal_has_a_asessionid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_asessionid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_asessionid_.IsDefault()) {
+    _impl_.a_asessionid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_OnSessionClosed::set_allocated_a_asessionid(std::string* a_asessionid) {
   if (a_asessionid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_asessionid_.SetAllocated(a_asessionid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -7650,9 +8637,17 @@ inline void Msg_OnSessionClosed::set_allocated_a_asessionid(std::string* a_asess
 
 // Msg_ResolveLoadSessionPromise
 
-// uint32 a_aPromiseId = 1;
+// required uint32 a_aPromiseId = 1;
+inline bool Msg_ResolveLoadSessionPromise::_internal_has_a_apromiseid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_ResolveLoadSessionPromise::has_a_apromiseid() const {
+  return _internal_has_a_apromiseid();
+}
 inline void Msg_ResolveLoadSessionPromise::clear_a_apromiseid() {
   _impl_.a_apromiseid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Msg_ResolveLoadSessionPromise::_internal_a_apromiseid() const {
   return _impl_.a_apromiseid_;
@@ -7662,7 +8657,7 @@ inline uint32_t Msg_ResolveLoadSessionPromise::a_apromiseid() const {
   return _internal_a_apromiseid();
 }
 inline void Msg_ResolveLoadSessionPromise::_internal_set_a_apromiseid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_apromiseid_ = value;
 }
 inline void Msg_ResolveLoadSessionPromise::set_a_apromiseid(uint32_t value) {
@@ -7670,9 +8665,17 @@ inline void Msg_ResolveLoadSessionPromise::set_a_apromiseid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_ResolveLoadSessionPromise.a_aPromiseId)
 }
 
-// bool a_aSuccessful = 2;
+// required bool a_aSuccessful = 2;
+inline bool Msg_ResolveLoadSessionPromise::_internal_has_a_asuccessful() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_ResolveLoadSessionPromise::has_a_asuccessful() const {
+  return _internal_has_a_asuccessful();
+}
 inline void Msg_ResolveLoadSessionPromise::clear_a_asuccessful() {
   _impl_.a_asuccessful_ = false;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool Msg_ResolveLoadSessionPromise::_internal_a_asuccessful() const {
   return _impl_.a_asuccessful_;
@@ -7682,7 +8685,7 @@ inline bool Msg_ResolveLoadSessionPromise::a_asuccessful() const {
   return _internal_a_asuccessful();
 }
 inline void Msg_ResolveLoadSessionPromise::_internal_set_a_asuccessful(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_asuccessful_ = value;
 }
 inline void Msg_ResolveLoadSessionPromise::set_a_asuccessful(bool value) {
@@ -7694,9 +8697,17 @@ inline void Msg_ResolveLoadSessionPromise::set_a_asuccessful(bool value) {
 
 // Msg_Decrypted
 
-// uint32 a_aId = 1;
+// required uint32 a_aId = 1;
+inline bool Msg_Decrypted::_internal_has_a_aid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_Decrypted::has_a_aid() const {
+  return _internal_has_a_aid();
+}
 inline void Msg_Decrypted::clear_a_aid() {
   _impl_.a_aid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_Decrypted::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -7706,7 +8717,7 @@ inline uint32_t Msg_Decrypted::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_Decrypted::_internal_set_a_aid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aid_ = value;
 }
 inline void Msg_Decrypted::set_a_aid(uint32_t value) {
@@ -7714,9 +8725,17 @@ inline void Msg_Decrypted::set_a_aid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_Decrypted.a_aId)
 }
 
-// uint32 a_aStatus = 2;
+// required uint32 a_aStatus = 2;
+inline bool Msg_Decrypted::_internal_has_a_astatus() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_Decrypted::has_a_astatus() const {
+  return _internal_has_a_astatus();
+}
 inline void Msg_Decrypted::clear_a_astatus() {
   _impl_.a_astatus_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_Decrypted::_internal_a_astatus() const {
   return _impl_.a_astatus_;
@@ -7726,7 +8745,7 @@ inline uint32_t Msg_Decrypted::a_astatus() const {
   return _internal_a_astatus();
 }
 inline void Msg_Decrypted::_internal_set_a_astatus(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_astatus_ = value;
 }
 inline void Msg_Decrypted::set_a_astatus(uint32_t value) {
@@ -7734,9 +8753,17 @@ inline void Msg_Decrypted::set_a_astatus(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_Decrypted.a_aStatus)
 }
 
-// bytes a_aDecryptedData = 3;
+// required bytes a_aDecryptedData = 3;
+inline bool Msg_Decrypted::_internal_has_a_adecrypteddata() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_Decrypted::has_a_adecrypteddata() const {
+  return _internal_has_a_adecrypteddata();
+}
 inline void Msg_Decrypted::clear_a_adecrypteddata() {
   _impl_.a_adecrypteddata_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_Decrypted::a_adecrypteddata() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PChromiumCDM.Msg_Decrypted.a_aDecryptedData)
@@ -7745,7 +8772,7 @@ inline const std::string& Msg_Decrypted::a_adecrypteddata() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Decrypted::set_a_adecrypteddata(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_adecrypteddata_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_Decrypted.a_aDecryptedData)
 }
@@ -7758,22 +8785,32 @@ inline const std::string& Msg_Decrypted::_internal_a_adecrypteddata() const {
   return _impl_.a_adecrypteddata_.Get();
 }
 inline void Msg_Decrypted::_internal_set_a_adecrypteddata(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_adecrypteddata_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_Decrypted::_internal_mutable_a_adecrypteddata() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_adecrypteddata_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_Decrypted::release_a_adecrypteddata() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PChromiumCDM.Msg_Decrypted.a_aDecryptedData)
-  return _impl_.a_adecrypteddata_.Release();
+  if (!_internal_has_a_adecrypteddata()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_adecrypteddata_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_adecrypteddata_.IsDefault()) {
+    _impl_.a_adecrypteddata_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_Decrypted::set_allocated_a_adecrypteddata(std::string* a_adecrypteddata) {
   if (a_adecrypteddata != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_adecrypteddata_.SetAllocated(a_adecrypteddata, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -7788,9 +8825,17 @@ inline void Msg_Decrypted::set_allocated_a_adecrypteddata(std::string* a_adecryp
 
 // Msg_DecryptFailed
 
-// uint32 a_aId = 1;
+// required uint32 a_aId = 1;
+inline bool Msg_DecryptFailed::_internal_has_a_aid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_DecryptFailed::has_a_aid() const {
+  return _internal_has_a_aid();
+}
 inline void Msg_DecryptFailed::clear_a_aid() {
   _impl_.a_aid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Msg_DecryptFailed::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -7800,7 +8845,7 @@ inline uint32_t Msg_DecryptFailed::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_DecryptFailed::_internal_set_a_aid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aid_ = value;
 }
 inline void Msg_DecryptFailed::set_a_aid(uint32_t value) {
@@ -7808,9 +8853,17 @@ inline void Msg_DecryptFailed::set_a_aid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_DecryptFailed.a_aId)
 }
 
-// uint32 a_aStatus = 2;
+// required uint32 a_aStatus = 2;
+inline bool Msg_DecryptFailed::_internal_has_a_astatus() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_DecryptFailed::has_a_astatus() const {
+  return _internal_has_a_astatus();
+}
 inline void Msg_DecryptFailed::clear_a_astatus() {
   _impl_.a_astatus_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_DecryptFailed::_internal_a_astatus() const {
   return _impl_.a_astatus_;
@@ -7820,7 +8873,7 @@ inline uint32_t Msg_DecryptFailed::a_astatus() const {
   return _internal_a_astatus();
 }
 inline void Msg_DecryptFailed::_internal_set_a_astatus(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_astatus_ = value;
 }
 inline void Msg_DecryptFailed::set_a_astatus(uint32_t value) {
@@ -7832,9 +8885,17 @@ inline void Msg_DecryptFailed::set_a_astatus(uint32_t value) {
 
 // Msg_OnDecoderInitDone
 
-// uint32 a_aStatus = 1;
+// required uint32 a_aStatus = 1;
+inline bool Msg_OnDecoderInitDone::_internal_has_a_astatus() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_OnDecoderInitDone::has_a_astatus() const {
+  return _internal_has_a_astatus();
+}
 inline void Msg_OnDecoderInitDone::clear_a_astatus() {
   _impl_.a_astatus_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Msg_OnDecoderInitDone::_internal_a_astatus() const {
   return _impl_.a_astatus_;
@@ -7844,7 +8905,7 @@ inline uint32_t Msg_OnDecoderInitDone::a_astatus() const {
   return _internal_a_astatus();
 }
 inline void Msg_OnDecoderInitDone::_internal_set_a_astatus(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_astatus_ = value;
 }
 inline void Msg_OnDecoderInitDone::set_a_astatus(uint32_t value) {
@@ -7856,9 +8917,11 @@ inline void Msg_OnDecoderInitDone::set_a_astatus(uint32_t value) {
 
 // Msg_DecodedShmem
 
-// .protobuf.mozilla.gmp.CDMVideoFrame a_aFrame = 1;
+// required .protobuf.mozilla.gmp.CDMVideoFrame a_aFrame = 1;
 inline bool Msg_DecodedShmem::_internal_has_a_aframe() const {
-  return this != internal_default_instance() && _impl_.a_aframe_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_aframe_ != nullptr);
+  return value;
 }
 inline bool Msg_DecodedShmem::has_a_aframe() const {
   return _internal_has_a_aframe();
@@ -7879,14 +8942,14 @@ inline void Msg_DecodedShmem::unsafe_arena_set_allocated_a_aframe(
   }
   _impl_.a_aframe_ = a_aframe;
   if (a_aframe) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gmp.PChromiumCDM.Msg_DecodedShmem.a_aFrame)
 }
 inline ::protobuf::mozilla::gmp::CDMVideoFrame* Msg_DecodedShmem::release_a_aframe() {
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::gmp::CDMVideoFrame* temp = _impl_.a_aframe_;
   _impl_.a_aframe_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -7902,13 +8965,13 @@ inline ::protobuf::mozilla::gmp::CDMVideoFrame* Msg_DecodedShmem::release_a_afra
 }
 inline ::protobuf::mozilla::gmp::CDMVideoFrame* Msg_DecodedShmem::unsafe_arena_release_a_aframe() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PChromiumCDM.Msg_DecodedShmem.a_aFrame)
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::gmp::CDMVideoFrame* temp = _impl_.a_aframe_;
   _impl_.a_aframe_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::gmp::CDMVideoFrame* Msg_DecodedShmem::_internal_mutable_a_aframe() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   if (_impl_.a_aframe_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::gmp::CDMVideoFrame>(GetArenaForAllocation());
     _impl_.a_aframe_ = p;
@@ -7933,17 +8996,25 @@ inline void Msg_DecodedShmem::set_allocated_a_aframe(::protobuf::mozilla::gmp::C
       a_aframe = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_aframe, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_aframe_ = a_aframe;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PChromiumCDM.Msg_DecodedShmem.a_aFrame)
 }
 
-// bytes a_aData = 2;
+// required bytes a_aData = 2;
+inline bool Msg_DecodedShmem::_internal_has_a_adata() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_DecodedShmem::has_a_adata() const {
+  return _internal_has_a_adata();
+}
 inline void Msg_DecodedShmem::clear_a_adata() {
   _impl_.a_adata_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_DecodedShmem::a_adata() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PChromiumCDM.Msg_DecodedShmem.a_aData)
@@ -7952,7 +9023,7 @@ inline const std::string& Msg_DecodedShmem::a_adata() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DecodedShmem::set_a_adata(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_adata_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_DecodedShmem.a_aData)
 }
@@ -7965,22 +9036,32 @@ inline const std::string& Msg_DecodedShmem::_internal_a_adata() const {
   return _impl_.a_adata_.Get();
 }
 inline void Msg_DecodedShmem::_internal_set_a_adata(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_adata_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_DecodedShmem::_internal_mutable_a_adata() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_adata_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_DecodedShmem::release_a_adata() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PChromiumCDM.Msg_DecodedShmem.a_aData)
-  return _impl_.a_adata_.Release();
+  if (!_internal_has_a_adata()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_adata_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_adata_.IsDefault()) {
+    _impl_.a_adata_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_DecodedShmem::set_allocated_a_adata(std::string* a_adata) {
   if (a_adata != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_adata_.SetAllocated(a_adata, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -7995,9 +9076,11 @@ inline void Msg_DecodedShmem::set_allocated_a_adata(std::string* a_adata) {
 
 // Msg_DecodedData
 
-// .protobuf.mozilla.gmp.CDMVideoFrame a_aFrame = 1;
+// required .protobuf.mozilla.gmp.CDMVideoFrame a_aFrame = 1;
 inline bool Msg_DecodedData::_internal_has_a_aframe() const {
-  return this != internal_default_instance() && _impl_.a_aframe_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_aframe_ != nullptr);
+  return value;
 }
 inline bool Msg_DecodedData::has_a_aframe() const {
   return _internal_has_a_aframe();
@@ -8018,14 +9101,14 @@ inline void Msg_DecodedData::unsafe_arena_set_allocated_a_aframe(
   }
   _impl_.a_aframe_ = a_aframe;
   if (a_aframe) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gmp.PChromiumCDM.Msg_DecodedData.a_aFrame)
 }
 inline ::protobuf::mozilla::gmp::CDMVideoFrame* Msg_DecodedData::release_a_aframe() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::gmp::CDMVideoFrame* temp = _impl_.a_aframe_;
   _impl_.a_aframe_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -8041,13 +9124,13 @@ inline ::protobuf::mozilla::gmp::CDMVideoFrame* Msg_DecodedData::release_a_afram
 }
 inline ::protobuf::mozilla::gmp::CDMVideoFrame* Msg_DecodedData::unsafe_arena_release_a_aframe() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PChromiumCDM.Msg_DecodedData.a_aFrame)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::gmp::CDMVideoFrame* temp = _impl_.a_aframe_;
   _impl_.a_aframe_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::gmp::CDMVideoFrame* Msg_DecodedData::_internal_mutable_a_aframe() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_aframe_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::gmp::CDMVideoFrame>(GetArenaForAllocation());
     _impl_.a_aframe_ = p;
@@ -8072,9 +9155,9 @@ inline void Msg_DecodedData::set_allocated_a_aframe(::protobuf::mozilla::gmp::CD
       a_aframe = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_aframe, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aframe_ = a_aframe;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PChromiumCDM.Msg_DecodedData.a_aFrame)
@@ -8131,9 +9214,17 @@ Msg_DecodedData::mutable_a_adata() {
 
 // Msg_DecodeFailed
 
-// uint32 a_aStatus = 1;
+// required uint32 a_aStatus = 1;
+inline bool Msg_DecodeFailed::_internal_has_a_astatus() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_DecodeFailed::has_a_astatus() const {
+  return _internal_has_a_astatus();
+}
 inline void Msg_DecodeFailed::clear_a_astatus() {
   _impl_.a_astatus_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Msg_DecodeFailed::_internal_a_astatus() const {
   return _impl_.a_astatus_;
@@ -8143,7 +9234,7 @@ inline uint32_t Msg_DecodeFailed::a_astatus() const {
   return _internal_a_astatus();
 }
 inline void Msg_DecodeFailed::_internal_set_a_astatus(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_astatus_ = value;
 }
 inline void Msg_DecodeFailed::set_a_astatus(uint32_t value) {

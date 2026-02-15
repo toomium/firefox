@@ -145,6 +145,13 @@ class Msg_NewGPUVRManager final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_NewGPUVRManager& default_instance() {
     return *internal_default_instance();
   }
@@ -219,7 +226,11 @@ class Msg_NewGPUVRManager final :
   enum : int {
     kAEndpointFieldNumber = 1,
   };
-  // bytes a_endpoint = 1;
+  // required bytes a_endpoint = 1;
+  bool has_a_endpoint() const;
+  private:
+  bool _internal_has_a_endpoint() const;
+  public:
   void clear_a_endpoint();
   const std::string& a_endpoint() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -241,8 +252,9 @@ class Msg_NewGPUVRManager final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_endpoint_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_endpoint_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVR_2eproto;
@@ -278,6 +290,13 @@ class Msg_Init final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Init& default_instance() {
@@ -373,7 +392,7 @@ class Msg_Init final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::gfx::GfxVarUpdate >&
       a_vars() const;
 
-  // .protobuf.mozilla.gfx.DevicePrefs a_devicePrefs = 2;
+  // required .protobuf.mozilla.gfx.DevicePrefs a_devicePrefs = 2;
   bool has_a_deviceprefs() const;
   private:
   bool _internal_has_a_deviceprefs() const;
@@ -399,9 +418,10 @@ class Msg_Init final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::gfx::GfxVarUpdate > a_vars_;
     ::protobuf::mozilla::gfx::DevicePrefs* a_deviceprefs_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVR_2eproto;
@@ -437,6 +457,13 @@ class Msg_UpdateVar final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_UpdateVar& default_instance() {
@@ -513,7 +540,7 @@ class Msg_UpdateVar final :
   enum : int {
     kAVarFieldNumber = 1,
   };
-  // .protobuf.mozilla.gfx.GfxVarUpdate a_var = 1;
+  // required .protobuf.mozilla.gfx.GfxVarUpdate a_var = 1;
   bool has_a_var() const;
   private:
   bool _internal_has_a_var() const;
@@ -539,8 +566,9 @@ class Msg_UpdateVar final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::protobuf::mozilla::gfx::GfxVarUpdate* a_var_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::protobuf::mozilla::gfx::GfxVarUpdate* a_var_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVR_2eproto;
@@ -576,6 +604,13 @@ class Msg_PreferenceUpdate final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_PreferenceUpdate& default_instance() {
@@ -652,7 +687,7 @@ class Msg_PreferenceUpdate final :
   enum : int {
     kAPrefFieldNumber = 1,
   };
-  // .protobuf.mozilla.dom.Pref a_pref = 1;
+  // required .protobuf.mozilla.dom.Pref a_pref = 1;
   bool has_a_pref() const;
   private:
   bool _internal_has_a_pref() const;
@@ -678,8 +713,9 @@ class Msg_PreferenceUpdate final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::protobuf::mozilla::dom::Pref* a_pref_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::protobuf::mozilla::dom::Pref* a_pref_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVR_2eproto;
@@ -715,6 +751,13 @@ class Msg_OpenVRControllerActionPathToVR final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_OpenVRControllerActionPathToVR& default_instance() {
@@ -791,7 +834,11 @@ class Msg_OpenVRControllerActionPathToVR final :
   enum : int {
     kAAPathFieldNumber = 1,
   };
-  // string a_aPath = 1;
+  // required string a_aPath = 1;
+  bool has_a_apath() const;
+  private:
+  bool _internal_has_a_apath() const;
+  public:
   void clear_a_apath();
   const std::string& a_apath() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -813,8 +860,9 @@ class Msg_OpenVRControllerActionPathToVR final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_apath_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_apath_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVR_2eproto;
@@ -850,6 +898,13 @@ class Msg_OpenVRControllerManifestPathToVR final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_OpenVRControllerManifestPathToVR& default_instance() {
@@ -927,7 +982,11 @@ class Msg_OpenVRControllerManifestPathToVR final :
     kAATypeFieldNumber = 1,
     kAAPathFieldNumber = 2,
   };
-  // bytes a_aType = 1;
+  // required bytes a_aType = 1;
+  bool has_a_atype() const;
+  private:
+  bool _internal_has_a_atype() const;
+  public:
   void clear_a_atype();
   const std::string& a_atype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -941,7 +1000,11 @@ class Msg_OpenVRControllerManifestPathToVR final :
   std::string* _internal_mutable_a_atype();
   public:
 
-  // string a_aPath = 2;
+  // required string a_aPath = 2;
+  bool has_a_apath() const;
+  private:
+  bool _internal_has_a_apath() const;
+  public:
   void clear_a_apath();
   const std::string& a_apath() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -959,13 +1022,17 @@ class Msg_OpenVRControllerManifestPathToVR final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atype_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_apath_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVR_2eproto;
@@ -1001,6 +1068,13 @@ class Msg_RequestMemoryReport final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_RequestMemoryReport& default_instance() {
@@ -1098,7 +1172,11 @@ class Msg_RequestMemoryReport final :
   std::string* _internal_mutable_a_dmdfile();
   public:
 
-  // uint32 a_generation = 1;
+  // required uint32 a_generation = 1;
+  bool has_a_generation() const;
+  private:
+  bool _internal_has_a_generation() const;
+  public:
   void clear_a_generation();
   uint32_t a_generation() const;
   void set_a_generation(uint32_t value);
@@ -1107,7 +1185,11 @@ class Msg_RequestMemoryReport final :
   void _internal_set_a_generation(uint32_t value);
   public:
 
-  // bool a_anonymize = 2;
+  // required bool a_anonymize = 2;
+  bool has_a_anonymize() const;
+  private:
+  bool _internal_has_a_anonymize() const;
+  public:
   void clear_a_anonymize();
   bool a_anonymize() const;
   void set_a_anonymize(bool value);
@@ -1116,7 +1198,11 @@ class Msg_RequestMemoryReport final :
   void _internal_set_a_anonymize(bool value);
   public:
 
-  // bool a_minimizeMemoryUsage = 3;
+  // required bool a_minimizeMemoryUsage = 3;
+  bool has_a_minimizememoryusage() const;
+  private:
+  bool _internal_has_a_minimizememoryusage() const;
+  public:
   void clear_a_minimizememoryusage();
   bool a_minimizememoryusage() const;
   void set_a_minimizememoryusage(bool value);
@@ -1128,6 +1214,9 @@ class Msg_RequestMemoryReport final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PVR.Msg_RequestMemoryReport)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1174,6 +1263,13 @@ class Reply_RequestMemoryReport final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_RequestMemoryReport& default_instance() {
@@ -1250,7 +1346,11 @@ class Reply_RequestMemoryReport final :
   enum : int {
     kAAGenerationFieldNumber = 1,
   };
-  // uint32 a_aGeneration = 1;
+  // required uint32 a_aGeneration = 1;
+  bool has_a_ageneration() const;
+  private:
+  bool _internal_has_a_ageneration() const;
+  public:
   void clear_a_ageneration();
   uint32_t a_ageneration() const;
   void set_a_ageneration(uint32_t value);
@@ -1267,8 +1367,9 @@ class Reply_RequestMemoryReport final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint32_t a_ageneration_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint32_t a_ageneration_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVR_2eproto;
@@ -1304,6 +1405,13 @@ class Msg_InitComplete final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_InitComplete& default_instance() {
@@ -1423,6 +1531,13 @@ class Msg_OpenVRControllerActionPathToParent final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_OpenVRControllerActionPathToParent& default_instance() {
     return *internal_default_instance();
   }
@@ -1497,7 +1612,11 @@ class Msg_OpenVRControllerActionPathToParent final :
   enum : int {
     kAAPathFieldNumber = 1,
   };
-  // string a_aPath = 1;
+  // required string a_aPath = 1;
+  bool has_a_apath() const;
+  private:
+  bool _internal_has_a_apath() const;
+  public:
   void clear_a_apath();
   const std::string& a_apath() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1519,8 +1638,9 @@ class Msg_OpenVRControllerActionPathToParent final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_apath_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_apath_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVR_2eproto;
@@ -1556,6 +1676,13 @@ class Msg_OpenVRControllerManifestPathToParent final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_OpenVRControllerManifestPathToParent& default_instance() {
@@ -1633,7 +1760,11 @@ class Msg_OpenVRControllerManifestPathToParent final :
     kAATypeFieldNumber = 1,
     kAAPathFieldNumber = 2,
   };
-  // bytes a_aType = 1;
+  // required bytes a_aType = 1;
+  bool has_a_atype() const;
+  private:
+  bool _internal_has_a_atype() const;
+  public:
   void clear_a_atype();
   const std::string& a_atype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1647,7 +1778,11 @@ class Msg_OpenVRControllerManifestPathToParent final :
   std::string* _internal_mutable_a_atype();
   public:
 
-  // string a_aPath = 2;
+  // required string a_aPath = 2;
+  bool has_a_apath() const;
+  private:
+  bool _internal_has_a_apath() const;
+  public:
   void clear_a_apath();
   const std::string& a_apath() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1665,13 +1800,17 @@ class Msg_OpenVRControllerManifestPathToParent final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atype_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_apath_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVR_2eproto;
@@ -1707,6 +1846,13 @@ class Msg_InitCrashReporter final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_InitCrashReporter& default_instance() {
@@ -1783,7 +1929,7 @@ class Msg_InitCrashReporter final :
   enum : int {
     kAAInitArgsFieldNumber = 1,
   };
-  // .protobuf.CrashReporter.CrashReporterInitArgs a_aInitArgs = 1;
+  // required .protobuf.CrashReporter.CrashReporterInitArgs a_aInitArgs = 1;
   bool has_a_ainitargs() const;
   private:
   bool _internal_has_a_ainitargs() const;
@@ -1809,8 +1955,9 @@ class Msg_InitCrashReporter final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::protobuf::CrashReporter::CrashReporterInitArgs* a_ainitargs_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::protobuf::CrashReporter::CrashReporterInitArgs* a_ainitargs_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVR_2eproto;
@@ -1846,6 +1993,13 @@ class Msg_AddMemoryReport final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_AddMemoryReport& default_instance() {
@@ -1922,7 +2076,7 @@ class Msg_AddMemoryReport final :
   enum : int {
     kAAReportFieldNumber = 1,
   };
-  // .protobuf.mozilla.dom.MemoryReport a_aReport = 1;
+  // required .protobuf.mozilla.dom.MemoryReport a_aReport = 1;
   bool has_a_areport() const;
   private:
   bool _internal_has_a_areport() const;
@@ -1948,8 +2102,9 @@ class Msg_AddMemoryReport final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::protobuf::mozilla::dom::MemoryReport* a_areport_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::protobuf::mozilla::dom::MemoryReport* a_areport_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVR_2eproto;
@@ -1965,9 +2120,17 @@ class Msg_AddMemoryReport final :
 #endif  // __GNUC__
 // Msg_NewGPUVRManager
 
-// bytes a_endpoint = 1;
+// required bytes a_endpoint = 1;
+inline bool Msg_NewGPUVRManager::_internal_has_a_endpoint() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_NewGPUVRManager::has_a_endpoint() const {
+  return _internal_has_a_endpoint();
+}
 inline void Msg_NewGPUVRManager::clear_a_endpoint() {
   _impl_.a_endpoint_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_NewGPUVRManager::a_endpoint() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVR.Msg_NewGPUVRManager.a_endpoint)
@@ -1976,7 +2139,7 @@ inline const std::string& Msg_NewGPUVRManager::a_endpoint() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NewGPUVRManager::set_a_endpoint(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_endpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVR.Msg_NewGPUVRManager.a_endpoint)
 }
@@ -1989,22 +2152,32 @@ inline const std::string& Msg_NewGPUVRManager::_internal_a_endpoint() const {
   return _impl_.a_endpoint_.Get();
 }
 inline void Msg_NewGPUVRManager::_internal_set_a_endpoint(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_endpoint_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_NewGPUVRManager::_internal_mutable_a_endpoint() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_endpoint_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_NewGPUVRManager::release_a_endpoint() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PVR.Msg_NewGPUVRManager.a_endpoint)
-  return _impl_.a_endpoint_.Release();
+  if (!_internal_has_a_endpoint()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_endpoint_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_endpoint_.IsDefault()) {
+    _impl_.a_endpoint_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_NewGPUVRManager::set_allocated_a_endpoint(std::string* a_endpoint) {
   if (a_endpoint != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_endpoint_.SetAllocated(a_endpoint, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2056,9 +2229,11 @@ Msg_Init::a_vars() const {
   return _impl_.a_vars_;
 }
 
-// .protobuf.mozilla.gfx.DevicePrefs a_devicePrefs = 2;
+// required .protobuf.mozilla.gfx.DevicePrefs a_devicePrefs = 2;
 inline bool Msg_Init::_internal_has_a_deviceprefs() const {
-  return this != internal_default_instance() && _impl_.a_deviceprefs_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_deviceprefs_ != nullptr);
+  return value;
 }
 inline bool Msg_Init::has_a_deviceprefs() const {
   return _internal_has_a_deviceprefs();
@@ -2079,14 +2254,14 @@ inline void Msg_Init::unsafe_arena_set_allocated_a_deviceprefs(
   }
   _impl_.a_deviceprefs_ = a_deviceprefs;
   if (a_deviceprefs) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gfx.PVR.Msg_Init.a_devicePrefs)
 }
 inline ::protobuf::mozilla::gfx::DevicePrefs* Msg_Init::release_a_deviceprefs() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::gfx::DevicePrefs* temp = _impl_.a_deviceprefs_;
   _impl_.a_deviceprefs_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -2102,13 +2277,13 @@ inline ::protobuf::mozilla::gfx::DevicePrefs* Msg_Init::release_a_deviceprefs() 
 }
 inline ::protobuf::mozilla::gfx::DevicePrefs* Msg_Init::unsafe_arena_release_a_deviceprefs() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PVR.Msg_Init.a_devicePrefs)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::gfx::DevicePrefs* temp = _impl_.a_deviceprefs_;
   _impl_.a_deviceprefs_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::gfx::DevicePrefs* Msg_Init::_internal_mutable_a_deviceprefs() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_deviceprefs_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::gfx::DevicePrefs>(GetArenaForAllocation());
     _impl_.a_deviceprefs_ = p;
@@ -2133,9 +2308,9 @@ inline void Msg_Init::set_allocated_a_deviceprefs(::protobuf::mozilla::gfx::Devi
       a_deviceprefs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_deviceprefs, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_deviceprefs_ = a_deviceprefs;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PVR.Msg_Init.a_devicePrefs)
@@ -2145,9 +2320,11 @@ inline void Msg_Init::set_allocated_a_deviceprefs(::protobuf::mozilla::gfx::Devi
 
 // Msg_UpdateVar
 
-// .protobuf.mozilla.gfx.GfxVarUpdate a_var = 1;
+// required .protobuf.mozilla.gfx.GfxVarUpdate a_var = 1;
 inline bool Msg_UpdateVar::_internal_has_a_var() const {
-  return this != internal_default_instance() && _impl_.a_var_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_var_ != nullptr);
+  return value;
 }
 inline bool Msg_UpdateVar::has_a_var() const {
   return _internal_has_a_var();
@@ -2168,14 +2345,14 @@ inline void Msg_UpdateVar::unsafe_arena_set_allocated_a_var(
   }
   _impl_.a_var_ = a_var;
   if (a_var) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gfx.PVR.Msg_UpdateVar.a_var)
 }
 inline ::protobuf::mozilla::gfx::GfxVarUpdate* Msg_UpdateVar::release_a_var() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::gfx::GfxVarUpdate* temp = _impl_.a_var_;
   _impl_.a_var_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -2191,13 +2368,13 @@ inline ::protobuf::mozilla::gfx::GfxVarUpdate* Msg_UpdateVar::release_a_var() {
 }
 inline ::protobuf::mozilla::gfx::GfxVarUpdate* Msg_UpdateVar::unsafe_arena_release_a_var() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PVR.Msg_UpdateVar.a_var)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::gfx::GfxVarUpdate* temp = _impl_.a_var_;
   _impl_.a_var_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::gfx::GfxVarUpdate* Msg_UpdateVar::_internal_mutable_a_var() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_var_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::gfx::GfxVarUpdate>(GetArenaForAllocation());
     _impl_.a_var_ = p;
@@ -2222,9 +2399,9 @@ inline void Msg_UpdateVar::set_allocated_a_var(::protobuf::mozilla::gfx::GfxVarU
       a_var = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_var, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_var_ = a_var;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PVR.Msg_UpdateVar.a_var)
@@ -2234,9 +2411,11 @@ inline void Msg_UpdateVar::set_allocated_a_var(::protobuf::mozilla::gfx::GfxVarU
 
 // Msg_PreferenceUpdate
 
-// .protobuf.mozilla.dom.Pref a_pref = 1;
+// required .protobuf.mozilla.dom.Pref a_pref = 1;
 inline bool Msg_PreferenceUpdate::_internal_has_a_pref() const {
-  return this != internal_default_instance() && _impl_.a_pref_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_pref_ != nullptr);
+  return value;
 }
 inline bool Msg_PreferenceUpdate::has_a_pref() const {
   return _internal_has_a_pref();
@@ -2257,14 +2436,14 @@ inline void Msg_PreferenceUpdate::unsafe_arena_set_allocated_a_pref(
   }
   _impl_.a_pref_ = a_pref;
   if (a_pref) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gfx.PVR.Msg_PreferenceUpdate.a_pref)
 }
 inline ::protobuf::mozilla::dom::Pref* Msg_PreferenceUpdate::release_a_pref() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::Pref* temp = _impl_.a_pref_;
   _impl_.a_pref_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -2280,13 +2459,13 @@ inline ::protobuf::mozilla::dom::Pref* Msg_PreferenceUpdate::release_a_pref() {
 }
 inline ::protobuf::mozilla::dom::Pref* Msg_PreferenceUpdate::unsafe_arena_release_a_pref() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PVR.Msg_PreferenceUpdate.a_pref)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::Pref* temp = _impl_.a_pref_;
   _impl_.a_pref_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::Pref* Msg_PreferenceUpdate::_internal_mutable_a_pref() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_pref_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::Pref>(GetArenaForAllocation());
     _impl_.a_pref_ = p;
@@ -2311,9 +2490,9 @@ inline void Msg_PreferenceUpdate::set_allocated_a_pref(::protobuf::mozilla::dom:
       a_pref = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_pref, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_pref_ = a_pref;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PVR.Msg_PreferenceUpdate.a_pref)
@@ -2323,9 +2502,17 @@ inline void Msg_PreferenceUpdate::set_allocated_a_pref(::protobuf::mozilla::dom:
 
 // Msg_OpenVRControllerActionPathToVR
 
-// string a_aPath = 1;
+// required string a_aPath = 1;
+inline bool Msg_OpenVRControllerActionPathToVR::_internal_has_a_apath() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_OpenVRControllerActionPathToVR::has_a_apath() const {
+  return _internal_has_a_apath();
+}
 inline void Msg_OpenVRControllerActionPathToVR::clear_a_apath() {
   _impl_.a_apath_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_OpenVRControllerActionPathToVR::a_apath() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerActionPathToVR.a_aPath)
@@ -2334,7 +2521,7 @@ inline const std::string& Msg_OpenVRControllerActionPathToVR::a_apath() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OpenVRControllerActionPathToVR::set_a_apath(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_apath_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerActionPathToVR.a_aPath)
 }
@@ -2347,22 +2534,32 @@ inline const std::string& Msg_OpenVRControllerActionPathToVR::_internal_a_apath(
   return _impl_.a_apath_.Get();
 }
 inline void Msg_OpenVRControllerActionPathToVR::_internal_set_a_apath(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_apath_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OpenVRControllerActionPathToVR::_internal_mutable_a_apath() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_apath_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OpenVRControllerActionPathToVR::release_a_apath() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerActionPathToVR.a_aPath)
-  return _impl_.a_apath_.Release();
+  if (!_internal_has_a_apath()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_apath_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_apath_.IsDefault()) {
+    _impl_.a_apath_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_OpenVRControllerActionPathToVR::set_allocated_a_apath(std::string* a_apath) {
   if (a_apath != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_apath_.SetAllocated(a_apath, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2377,9 +2574,17 @@ inline void Msg_OpenVRControllerActionPathToVR::set_allocated_a_apath(std::strin
 
 // Msg_OpenVRControllerManifestPathToVR
 
-// bytes a_aType = 1;
+// required bytes a_aType = 1;
+inline bool Msg_OpenVRControllerManifestPathToVR::_internal_has_a_atype() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_OpenVRControllerManifestPathToVR::has_a_atype() const {
+  return _internal_has_a_atype();
+}
 inline void Msg_OpenVRControllerManifestPathToVR::clear_a_atype() {
   _impl_.a_atype_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_OpenVRControllerManifestPathToVR::a_atype() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerManifestPathToVR.a_aType)
@@ -2388,7 +2593,7 @@ inline const std::string& Msg_OpenVRControllerManifestPathToVR::a_atype() const 
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OpenVRControllerManifestPathToVR::set_a_atype(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_atype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerManifestPathToVR.a_aType)
 }
@@ -2401,22 +2606,32 @@ inline const std::string& Msg_OpenVRControllerManifestPathToVR::_internal_a_atyp
   return _impl_.a_atype_.Get();
 }
 inline void Msg_OpenVRControllerManifestPathToVR::_internal_set_a_atype(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_atype_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OpenVRControllerManifestPathToVR::_internal_mutable_a_atype() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_atype_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OpenVRControllerManifestPathToVR::release_a_atype() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerManifestPathToVR.a_aType)
-  return _impl_.a_atype_.Release();
+  if (!_internal_has_a_atype()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_atype_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_atype_.IsDefault()) {
+    _impl_.a_atype_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_OpenVRControllerManifestPathToVR::set_allocated_a_atype(std::string* a_atype) {
   if (a_atype != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_atype_.SetAllocated(a_atype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2427,9 +2642,17 @@ inline void Msg_OpenVRControllerManifestPathToVR::set_allocated_a_atype(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerManifestPathToVR.a_aType)
 }
 
-// string a_aPath = 2;
+// required string a_aPath = 2;
+inline bool Msg_OpenVRControllerManifestPathToVR::_internal_has_a_apath() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_OpenVRControllerManifestPathToVR::has_a_apath() const {
+  return _internal_has_a_apath();
+}
 inline void Msg_OpenVRControllerManifestPathToVR::clear_a_apath() {
   _impl_.a_apath_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_OpenVRControllerManifestPathToVR::a_apath() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerManifestPathToVR.a_aPath)
@@ -2438,7 +2661,7 @@ inline const std::string& Msg_OpenVRControllerManifestPathToVR::a_apath() const 
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OpenVRControllerManifestPathToVR::set_a_apath(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_apath_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerManifestPathToVR.a_aPath)
 }
@@ -2451,22 +2674,32 @@ inline const std::string& Msg_OpenVRControllerManifestPathToVR::_internal_a_apat
   return _impl_.a_apath_.Get();
 }
 inline void Msg_OpenVRControllerManifestPathToVR::_internal_set_a_apath(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_apath_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OpenVRControllerManifestPathToVR::_internal_mutable_a_apath() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_apath_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OpenVRControllerManifestPathToVR::release_a_apath() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerManifestPathToVR.a_aPath)
-  return _impl_.a_apath_.Release();
+  if (!_internal_has_a_apath()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_apath_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_apath_.IsDefault()) {
+    _impl_.a_apath_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_OpenVRControllerManifestPathToVR::set_allocated_a_apath(std::string* a_apath) {
   if (a_apath != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_apath_.SetAllocated(a_apath, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2481,9 +2714,17 @@ inline void Msg_OpenVRControllerManifestPathToVR::set_allocated_a_apath(std::str
 
 // Msg_RequestMemoryReport
 
-// uint32 a_generation = 1;
+// required uint32 a_generation = 1;
+inline bool Msg_RequestMemoryReport::_internal_has_a_generation() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_RequestMemoryReport::has_a_generation() const {
+  return _internal_has_a_generation();
+}
 inline void Msg_RequestMemoryReport::clear_a_generation() {
   _impl_.a_generation_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_RequestMemoryReport::_internal_a_generation() const {
   return _impl_.a_generation_;
@@ -2493,7 +2734,7 @@ inline uint32_t Msg_RequestMemoryReport::a_generation() const {
   return _internal_a_generation();
 }
 inline void Msg_RequestMemoryReport::_internal_set_a_generation(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_generation_ = value;
 }
 inline void Msg_RequestMemoryReport::set_a_generation(uint32_t value) {
@@ -2501,9 +2742,17 @@ inline void Msg_RequestMemoryReport::set_a_generation(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVR.Msg_RequestMemoryReport.a_generation)
 }
 
-// bool a_anonymize = 2;
+// required bool a_anonymize = 2;
+inline bool Msg_RequestMemoryReport::_internal_has_a_anonymize() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_RequestMemoryReport::has_a_anonymize() const {
+  return _internal_has_a_anonymize();
+}
 inline void Msg_RequestMemoryReport::clear_a_anonymize() {
   _impl_.a_anonymize_ = false;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline bool Msg_RequestMemoryReport::_internal_a_anonymize() const {
   return _impl_.a_anonymize_;
@@ -2513,7 +2762,7 @@ inline bool Msg_RequestMemoryReport::a_anonymize() const {
   return _internal_a_anonymize();
 }
 inline void Msg_RequestMemoryReport::_internal_set_a_anonymize(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_anonymize_ = value;
 }
 inline void Msg_RequestMemoryReport::set_a_anonymize(bool value) {
@@ -2521,9 +2770,17 @@ inline void Msg_RequestMemoryReport::set_a_anonymize(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVR.Msg_RequestMemoryReport.a_anonymize)
 }
 
-// bool a_minimizeMemoryUsage = 3;
+// required bool a_minimizeMemoryUsage = 3;
+inline bool Msg_RequestMemoryReport::_internal_has_a_minimizememoryusage() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool Msg_RequestMemoryReport::has_a_minimizememoryusage() const {
+  return _internal_has_a_minimizememoryusage();
+}
 inline void Msg_RequestMemoryReport::clear_a_minimizememoryusage() {
   _impl_.a_minimizememoryusage_ = false;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline bool Msg_RequestMemoryReport::_internal_a_minimizememoryusage() const {
   return _impl_.a_minimizememoryusage_;
@@ -2533,7 +2790,7 @@ inline bool Msg_RequestMemoryReport::a_minimizememoryusage() const {
   return _internal_a_minimizememoryusage();
 }
 inline void Msg_RequestMemoryReport::_internal_set_a_minimizememoryusage(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_minimizememoryusage_ = value;
 }
 inline void Msg_RequestMemoryReport::set_a_minimizememoryusage(bool value) {
@@ -2613,9 +2870,17 @@ inline void Msg_RequestMemoryReport::set_allocated_a_dmdfile(std::string* a_dmdf
 
 // Reply_RequestMemoryReport
 
-// uint32 a_aGeneration = 1;
+// required uint32 a_aGeneration = 1;
+inline bool Reply_RequestMemoryReport::_internal_has_a_ageneration() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_RequestMemoryReport::has_a_ageneration() const {
+  return _internal_has_a_ageneration();
+}
 inline void Reply_RequestMemoryReport::clear_a_ageneration() {
   _impl_.a_ageneration_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Reply_RequestMemoryReport::_internal_a_ageneration() const {
   return _impl_.a_ageneration_;
@@ -2625,7 +2890,7 @@ inline uint32_t Reply_RequestMemoryReport::a_ageneration() const {
   return _internal_a_ageneration();
 }
 inline void Reply_RequestMemoryReport::_internal_set_a_ageneration(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_ageneration_ = value;
 }
 inline void Reply_RequestMemoryReport::set_a_ageneration(uint32_t value) {
@@ -2641,9 +2906,17 @@ inline void Reply_RequestMemoryReport::set_a_ageneration(uint32_t value) {
 
 // Msg_OpenVRControllerActionPathToParent
 
-// string a_aPath = 1;
+// required string a_aPath = 1;
+inline bool Msg_OpenVRControllerActionPathToParent::_internal_has_a_apath() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_OpenVRControllerActionPathToParent::has_a_apath() const {
+  return _internal_has_a_apath();
+}
 inline void Msg_OpenVRControllerActionPathToParent::clear_a_apath() {
   _impl_.a_apath_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_OpenVRControllerActionPathToParent::a_apath() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerActionPathToParent.a_aPath)
@@ -2652,7 +2925,7 @@ inline const std::string& Msg_OpenVRControllerActionPathToParent::a_apath() cons
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OpenVRControllerActionPathToParent::set_a_apath(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_apath_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerActionPathToParent.a_aPath)
 }
@@ -2665,22 +2938,32 @@ inline const std::string& Msg_OpenVRControllerActionPathToParent::_internal_a_ap
   return _impl_.a_apath_.Get();
 }
 inline void Msg_OpenVRControllerActionPathToParent::_internal_set_a_apath(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_apath_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OpenVRControllerActionPathToParent::_internal_mutable_a_apath() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_apath_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OpenVRControllerActionPathToParent::release_a_apath() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerActionPathToParent.a_aPath)
-  return _impl_.a_apath_.Release();
+  if (!_internal_has_a_apath()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_apath_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_apath_.IsDefault()) {
+    _impl_.a_apath_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_OpenVRControllerActionPathToParent::set_allocated_a_apath(std::string* a_apath) {
   if (a_apath != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_apath_.SetAllocated(a_apath, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2695,9 +2978,17 @@ inline void Msg_OpenVRControllerActionPathToParent::set_allocated_a_apath(std::s
 
 // Msg_OpenVRControllerManifestPathToParent
 
-// bytes a_aType = 1;
+// required bytes a_aType = 1;
+inline bool Msg_OpenVRControllerManifestPathToParent::_internal_has_a_atype() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_OpenVRControllerManifestPathToParent::has_a_atype() const {
+  return _internal_has_a_atype();
+}
 inline void Msg_OpenVRControllerManifestPathToParent::clear_a_atype() {
   _impl_.a_atype_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_OpenVRControllerManifestPathToParent::a_atype() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerManifestPathToParent.a_aType)
@@ -2706,7 +2997,7 @@ inline const std::string& Msg_OpenVRControllerManifestPathToParent::a_atype() co
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OpenVRControllerManifestPathToParent::set_a_atype(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_atype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerManifestPathToParent.a_aType)
 }
@@ -2719,22 +3010,32 @@ inline const std::string& Msg_OpenVRControllerManifestPathToParent::_internal_a_
   return _impl_.a_atype_.Get();
 }
 inline void Msg_OpenVRControllerManifestPathToParent::_internal_set_a_atype(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_atype_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OpenVRControllerManifestPathToParent::_internal_mutable_a_atype() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_atype_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OpenVRControllerManifestPathToParent::release_a_atype() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerManifestPathToParent.a_aType)
-  return _impl_.a_atype_.Release();
+  if (!_internal_has_a_atype()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_atype_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_atype_.IsDefault()) {
+    _impl_.a_atype_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_OpenVRControllerManifestPathToParent::set_allocated_a_atype(std::string* a_atype) {
   if (a_atype != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_atype_.SetAllocated(a_atype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2745,9 +3046,17 @@ inline void Msg_OpenVRControllerManifestPathToParent::set_allocated_a_atype(std:
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerManifestPathToParent.a_aType)
 }
 
-// string a_aPath = 2;
+// required string a_aPath = 2;
+inline bool Msg_OpenVRControllerManifestPathToParent::_internal_has_a_apath() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_OpenVRControllerManifestPathToParent::has_a_apath() const {
+  return _internal_has_a_apath();
+}
 inline void Msg_OpenVRControllerManifestPathToParent::clear_a_apath() {
   _impl_.a_apath_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_OpenVRControllerManifestPathToParent::a_apath() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerManifestPathToParent.a_aPath)
@@ -2756,7 +3065,7 @@ inline const std::string& Msg_OpenVRControllerManifestPathToParent::a_apath() co
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OpenVRControllerManifestPathToParent::set_a_apath(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_apath_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerManifestPathToParent.a_aPath)
 }
@@ -2769,22 +3078,32 @@ inline const std::string& Msg_OpenVRControllerManifestPathToParent::_internal_a_
   return _impl_.a_apath_.Get();
 }
 inline void Msg_OpenVRControllerManifestPathToParent::_internal_set_a_apath(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_apath_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OpenVRControllerManifestPathToParent::_internal_mutable_a_apath() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_apath_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OpenVRControllerManifestPathToParent::release_a_apath() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerManifestPathToParent.a_aPath)
-  return _impl_.a_apath_.Release();
+  if (!_internal_has_a_apath()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_apath_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_apath_.IsDefault()) {
+    _impl_.a_apath_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_OpenVRControllerManifestPathToParent::set_allocated_a_apath(std::string* a_apath) {
   if (a_apath != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_apath_.SetAllocated(a_apath, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2799,9 +3118,11 @@ inline void Msg_OpenVRControllerManifestPathToParent::set_allocated_a_apath(std:
 
 // Msg_InitCrashReporter
 
-// .protobuf.CrashReporter.CrashReporterInitArgs a_aInitArgs = 1;
+// required .protobuf.CrashReporter.CrashReporterInitArgs a_aInitArgs = 1;
 inline bool Msg_InitCrashReporter::_internal_has_a_ainitargs() const {
-  return this != internal_default_instance() && _impl_.a_ainitargs_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_ainitargs_ != nullptr);
+  return value;
 }
 inline bool Msg_InitCrashReporter::has_a_ainitargs() const {
   return _internal_has_a_ainitargs();
@@ -2822,14 +3143,14 @@ inline void Msg_InitCrashReporter::unsafe_arena_set_allocated_a_ainitargs(
   }
   _impl_.a_ainitargs_ = a_ainitargs;
   if (a_ainitargs) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gfx.PVR.Msg_InitCrashReporter.a_aInitArgs)
 }
 inline ::protobuf::CrashReporter::CrashReporterInitArgs* Msg_InitCrashReporter::release_a_ainitargs() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::CrashReporter::CrashReporterInitArgs* temp = _impl_.a_ainitargs_;
   _impl_.a_ainitargs_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -2845,13 +3166,13 @@ inline ::protobuf::CrashReporter::CrashReporterInitArgs* Msg_InitCrashReporter::
 }
 inline ::protobuf::CrashReporter::CrashReporterInitArgs* Msg_InitCrashReporter::unsafe_arena_release_a_ainitargs() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PVR.Msg_InitCrashReporter.a_aInitArgs)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::CrashReporter::CrashReporterInitArgs* temp = _impl_.a_ainitargs_;
   _impl_.a_ainitargs_ = nullptr;
   return temp;
 }
 inline ::protobuf::CrashReporter::CrashReporterInitArgs* Msg_InitCrashReporter::_internal_mutable_a_ainitargs() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_ainitargs_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::CrashReporter::CrashReporterInitArgs>(GetArenaForAllocation());
     _impl_.a_ainitargs_ = p;
@@ -2876,9 +3197,9 @@ inline void Msg_InitCrashReporter::set_allocated_a_ainitargs(::protobuf::CrashRe
       a_ainitargs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_ainitargs, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_ainitargs_ = a_ainitargs;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PVR.Msg_InitCrashReporter.a_aInitArgs)
@@ -2888,9 +3209,11 @@ inline void Msg_InitCrashReporter::set_allocated_a_ainitargs(::protobuf::CrashRe
 
 // Msg_AddMemoryReport
 
-// .protobuf.mozilla.dom.MemoryReport a_aReport = 1;
+// required .protobuf.mozilla.dom.MemoryReport a_aReport = 1;
 inline bool Msg_AddMemoryReport::_internal_has_a_areport() const {
-  return this != internal_default_instance() && _impl_.a_areport_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_areport_ != nullptr);
+  return value;
 }
 inline bool Msg_AddMemoryReport::has_a_areport() const {
   return _internal_has_a_areport();
@@ -2911,14 +3234,14 @@ inline void Msg_AddMemoryReport::unsafe_arena_set_allocated_a_areport(
   }
   _impl_.a_areport_ = a_areport;
   if (a_areport) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gfx.PVR.Msg_AddMemoryReport.a_aReport)
 }
 inline ::protobuf::mozilla::dom::MemoryReport* Msg_AddMemoryReport::release_a_areport() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::MemoryReport* temp = _impl_.a_areport_;
   _impl_.a_areport_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -2934,13 +3257,13 @@ inline ::protobuf::mozilla::dom::MemoryReport* Msg_AddMemoryReport::release_a_ar
 }
 inline ::protobuf::mozilla::dom::MemoryReport* Msg_AddMemoryReport::unsafe_arena_release_a_areport() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PVR.Msg_AddMemoryReport.a_aReport)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::MemoryReport* temp = _impl_.a_areport_;
   _impl_.a_areport_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::MemoryReport* Msg_AddMemoryReport::_internal_mutable_a_areport() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_areport_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::MemoryReport>(GetArenaForAllocation());
     _impl_.a_areport_ = p;
@@ -2965,9 +3288,9 @@ inline void Msg_AddMemoryReport::set_allocated_a_areport(::protobuf::mozilla::do
       a_areport = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_areport, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_areport_ = a_areport;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PVR.Msg_AddMemoryReport.a_aReport)

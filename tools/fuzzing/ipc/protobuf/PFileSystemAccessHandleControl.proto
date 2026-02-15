@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/fs/shared/PFileSystemAccessHandleControl.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.PFileSystemAccessHandleControl;
@@ -17,7 +17,7 @@ message Msg_Close {
 }
 
 message Reply_Close {
-  bytes a_ok = 1;
+  required bytes a_ok = 1;
 }
 
 // Parameter mappings stats:

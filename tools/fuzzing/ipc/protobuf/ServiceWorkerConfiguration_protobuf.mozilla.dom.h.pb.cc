@@ -216,6 +216,8 @@ void ServiceWorkerConfiguration::CopyFrom(const ServiceWorkerConfiguration& from
 }
 
 bool ServiceWorkerConfiguration::IsInitialized() const {
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_serviceworkerregistrations_))
+    return false;
   return true;
 }
 

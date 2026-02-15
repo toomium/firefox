@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/netwerk/ipc/PProxyAutoConfig.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.net.PProxyAutoConfig;
@@ -14,20 +14,20 @@ package protobuf.mozilla.net.PProxyAutoConfig;
 
 // Message declarations
 message Msg_ConfigurePAC {
-  string a_aPACURI = 1;
-  string a_aPACScriptData = 2;
-  bool a_aIncludePath = 3;
-  uint32 a_aExtraHeapSize = 4;
+  required string a_aPACURI = 1;
+  required string a_aPACScriptData = 2;
+  required bool a_aIncludePath = 3;
+  required uint32 a_aExtraHeapSize = 4;
 }
 
 message Msg_GetProxyForURI {
-  string a_aTestURI = 1;
-  string a_aTestHost = 2;
+  required string a_aTestURI = 1;
+  required string a_aTestHost = 2;
 }
 
 message Reply_GetProxyForURI {
-  bytes a_aStatus = 1;
-  string a_aResult = 2;
+  required bytes a_aStatus = 1;
+  required string a_aResult = 2;
 }
 
 // Parameter mappings stats:

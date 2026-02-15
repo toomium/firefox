@@ -21,9 +21,10 @@ namespace protobuf {
 namespace mozilla {
 PROTOBUF_CONSTEXPR VideoDecoderInfoIPDL::VideoDecoderInfoIPDL(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_videoinfo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_framerate_)*/0
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_videoinfo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_framerate_)*/0} {}
 struct VideoDecoderInfoIPDLDefaultTypeInternal {
   PROTOBUF_CONSTEXPR VideoDecoderInfoIPDLDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -56,6 +57,16 @@ namespace mozilla {
 
 class VideoDecoderInfoIPDL::_Internal {
  public:
+  using HasBits = decltype(std::declval<VideoDecoderInfoIPDL>()._impl_._has_bits_);
+  static void set_has_a_videoinfo(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_framerate(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 VideoDecoderInfoIPDL::VideoDecoderInfoIPDL(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -68,16 +79,17 @@ VideoDecoderInfoIPDL::VideoDecoderInfoIPDL(const VideoDecoderInfoIPDL& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   VideoDecoderInfoIPDL* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_videoinfo_){}
-    , decltype(_impl_.a_framerate_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_videoinfo_){}
+    , decltype(_impl_.a_framerate_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_videoinfo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_videoinfo_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_videoinfo().empty()) {
+  if (from._internal_has_a_videoinfo()) {
     _this->_impl_.a_videoinfo_.Set(from._internal_a_videoinfo(), 
       _this->GetArenaForAllocation());
   }
@@ -90,9 +102,10 @@ inline void VideoDecoderInfoIPDL::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_videoinfo_){}
-    , decltype(_impl_.a_framerate_){0}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_videoinfo_){}
+    , decltype(_impl_.a_framerate_){0}
   };
   _impl_.a_videoinfo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -124,18 +137,23 @@ void VideoDecoderInfoIPDL::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_videoinfo_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_videoinfo_.ClearNonDefaultToEmpty();
+  }
   _impl_.a_framerate_ = 0;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* VideoDecoderInfoIPDL::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_videoInfo = 1;
+      // required bytes a_videoInfo = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_videoinfo();
@@ -144,9 +162,10 @@ const char* VideoDecoderInfoIPDL::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // float a_framerate = 2;
+      // required float a_framerate = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 21)) {
+          _Internal::set_has_a_framerate(&has_bits);
           _impl_.a_framerate_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
           ptr += sizeof(float);
         } else
@@ -168,6 +187,7 @@ const char* VideoDecoderInfoIPDL::_InternalParse(const char* ptr, ::_pbi::ParseC
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -181,18 +201,15 @@ uint8_t* VideoDecoderInfoIPDL::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_videoInfo = 1;
-  if (!this->_internal_a_videoinfo().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_videoInfo = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_videoinfo(), target);
   }
 
-  // float a_framerate = 2;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_a_framerate = this->_internal_a_framerate();
-  uint32_t raw_a_framerate;
-  memcpy(&raw_a_framerate, &tmp_a_framerate, sizeof(tmp_a_framerate));
-  if (raw_a_framerate != 0) {
+  // required float a_framerate = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(2, this->_internal_a_framerate(), target);
   }
@@ -205,29 +222,43 @@ uint8_t* VideoDecoderInfoIPDL::_InternalSerialize(
   return target;
 }
 
-size_t VideoDecoderInfoIPDL::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.VideoDecoderInfoIPDL)
+size_t VideoDecoderInfoIPDL::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.VideoDecoderInfoIPDL)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_videoInfo = 1;
-  if (!this->_internal_a_videoinfo().empty()) {
+  if (_internal_has_a_videoinfo()) {
+    // required bytes a_videoInfo = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_videoinfo());
   }
 
-  // float a_framerate = 2;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_a_framerate = this->_internal_a_framerate();
-  uint32_t raw_a_framerate;
-  memcpy(&raw_a_framerate, &tmp_a_framerate, sizeof(tmp_a_framerate));
-  if (raw_a_framerate != 0) {
+  if (_internal_has_a_framerate()) {
+    // required float a_framerate = 2;
     total_size += 1 + 4;
   }
+
+  return total_size;
+}
+size_t VideoDecoderInfoIPDL::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.VideoDecoderInfoIPDL)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required bytes a_videoInfo = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_videoinfo());
+
+    // required float a_framerate = 2;
+    total_size += 1 + 4;
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -250,15 +281,15 @@ void VideoDecoderInfoIPDL::MergeFrom(const VideoDecoderInfoIPDL& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_videoinfo().empty()) {
-    _this->_internal_set_a_videoinfo(from._internal_a_videoinfo());
-  }
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_a_framerate = from._internal_a_framerate();
-  uint32_t raw_a_framerate;
-  memcpy(&raw_a_framerate, &tmp_a_framerate, sizeof(tmp_a_framerate));
-  if (raw_a_framerate != 0) {
-    _this->_internal_set_a_framerate(from._internal_a_framerate());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_videoinfo(from._internal_a_videoinfo());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_framerate_ = from._impl_.a_framerate_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -271,6 +302,7 @@ void VideoDecoderInfoIPDL::CopyFrom(const VideoDecoderInfoIPDL& from) {
 }
 
 bool VideoDecoderInfoIPDL::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -279,6 +311,7 @@ void VideoDecoderInfoIPDL::InternalSwap(VideoDecoderInfoIPDL* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_videoinfo_, lhs_arena,
       &other->_impl_.a_videoinfo_, rhs_arena
@@ -465,19 +498,20 @@ uint8_t* RemoteDecoderInfoIPDL::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_mVAudioInfo = 1;
-  if (_internal_has_a_mvaudioinfo()) {
-    target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_a_mvaudioinfo(), target);
+  switch (content_case()) {
+    case kAMVAudioInfo: {
+      target = stream->WriteBytesMaybeAliased(
+          1, this->_internal_a_mvaudioinfo(), target);
+      break;
+    }
+    case kAMVVideoDecoderInfoIPDL: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(2, _Internal::a_mvvideodecoderinfoipdl(this),
+          _Internal::a_mvvideodecoderinfoipdl(this).GetCachedSize(), target, stream);
+      break;
+    }
+    default: ;
   }
-
-  // .protobuf.mozilla.VideoDecoderInfoIPDL a_mVVideoDecoderInfoIPDL = 2;
-  if (_internal_has_a_mvvideodecoderinfoipdl()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::a_mvvideodecoderinfoipdl(this),
-        _Internal::a_mvvideodecoderinfoipdl(this).GetCachedSize(), target, stream);
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
@@ -559,6 +593,20 @@ void RemoteDecoderInfoIPDL::CopyFrom(const RemoteDecoderInfoIPDL& from) {
 }
 
 bool RemoteDecoderInfoIPDL::IsInitialized() const {
+  switch (content_case()) {
+    case kAMVAudioInfo: {
+      break;
+    }
+    case kAMVVideoDecoderInfoIPDL: {
+      if (_internal_has_a_mvvideodecoderinfoipdl()) {
+        if (!_impl_.content_.a_mvvideodecoderinfoipdl_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case CONTENT_NOT_SET: {
+      break;
+    }
+  }
   return true;
 }
 

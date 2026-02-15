@@ -35,8 +35,9 @@ struct Msg_Test1DefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_Test1DefaultTypeInternal _Msg_Test1_default_instance_;
 PROTOBUF_CONSTEXPR Reply_Test1::Reply_Test1(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_result_)*/0u
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_result_)*/0u} {}
 struct Reply_Test1DefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_Test1DefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -72,8 +73,9 @@ struct Msg_Test3DefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_Test3DefaultTypeInternal _Msg_Test3_default_instance_;
 PROTOBUF_CONSTEXPR Reply_Test3::Reply_Test3(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_result_)*/0u
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_result_)*/0u} {}
 struct Reply_Test3DefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_Test3DefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -133,8 +135,9 @@ struct Msg_Reply1DefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_Reply1DefaultTypeInternal _Msg_Reply1_default_instance_;
 PROTOBUF_CONSTEXPR Reply_Reply1::Reply_Reply1(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_result_)*/0u
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_result_)*/0u} {}
 struct Reply_Reply1DefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_Reply1DefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -158,8 +161,9 @@ struct Msg_Reply2DefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_Reply2DefaultTypeInternal _Msg_Reply2_default_instance_;
 PROTOBUF_CONSTEXPR Reply_Reply2::Reply_Reply2(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_result_)*/0u
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_result_)*/0u} {}
 struct Reply_Reply2DefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_Reply2DefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -330,6 +334,13 @@ std::string Msg_Test1::GetTypeName() const {
 
 class Reply_Test1::_Internal {
  public:
+  using HasBits = decltype(std::declval<Reply_Test1>()._impl_._has_bits_);
+  static void set_has_a_result(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Reply_Test1::Reply_Test1(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -342,8 +353,9 @@ Reply_Test1::Reply_Test1(const Reply_Test1& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_Test1* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_result_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_result_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_result_ = from._impl_.a_result_;
@@ -355,8 +367,9 @@ inline void Reply_Test1::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_result_){0u}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_result_){0u}
   };
 }
 
@@ -384,18 +397,21 @@ void Reply_Test1::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_result_ = 0u;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Reply_Test1::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // uint32 a_result = 1;
+      // required uint32 a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_result(&has_bits);
           _impl_.a_result_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
@@ -417,6 +433,7 @@ const char* Reply_Test1::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -430,8 +447,9 @@ uint8_t* Reply_Test1::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 a_result = 1;
-  if (this->_internal_a_result() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required uint32 a_result = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_result(), target);
   }
@@ -448,14 +466,13 @@ size_t Reply_Test1::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestUrgency.Reply_Test1)
   size_t total_size = 0;
 
+  // required uint32 a_result = 1;
+  if (_internal_has_a_result()) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_result());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // uint32 a_result = 1;
-  if (this->_internal_a_result() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_result());
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -478,7 +495,7 @@ void Reply_Test1::MergeFrom(const Reply_Test1& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_a_result() != 0) {
+  if (from._internal_has_a_result()) {
     _this->_internal_set_a_result(from._internal_a_result());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -492,12 +509,14 @@ void Reply_Test1::CopyFrom(const Reply_Test1& from) {
 }
 
 bool Reply_Test1::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void Reply_Test1::InternalSwap(Reply_Test1* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_result_, other->_impl_.a_result_);
 }
 
@@ -806,6 +825,13 @@ std::string Msg_Test3::GetTypeName() const {
 
 class Reply_Test3::_Internal {
  public:
+  using HasBits = decltype(std::declval<Reply_Test3>()._impl_._has_bits_);
+  static void set_has_a_result(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Reply_Test3::Reply_Test3(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -818,8 +844,9 @@ Reply_Test3::Reply_Test3(const Reply_Test3& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_Test3* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_result_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_result_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_result_ = from._impl_.a_result_;
@@ -831,8 +858,9 @@ inline void Reply_Test3::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_result_){0u}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_result_){0u}
   };
 }
 
@@ -860,18 +888,21 @@ void Reply_Test3::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_result_ = 0u;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Reply_Test3::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // uint32 a_result = 1;
+      // required uint32 a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_result(&has_bits);
           _impl_.a_result_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
@@ -893,6 +924,7 @@ const char* Reply_Test3::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -906,8 +938,9 @@ uint8_t* Reply_Test3::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 a_result = 1;
-  if (this->_internal_a_result() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required uint32 a_result = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_result(), target);
   }
@@ -924,14 +957,13 @@ size_t Reply_Test3::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestUrgency.Reply_Test3)
   size_t total_size = 0;
 
+  // required uint32 a_result = 1;
+  if (_internal_has_a_result()) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_result());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // uint32 a_result = 1;
-  if (this->_internal_a_result() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_result());
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -954,7 +986,7 @@ void Reply_Test3::MergeFrom(const Reply_Test3& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_a_result() != 0) {
+  if (from._internal_has_a_result()) {
     _this->_internal_set_a_result(from._internal_a_result());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -968,12 +1000,14 @@ void Reply_Test3::CopyFrom(const Reply_Test3& from) {
 }
 
 bool Reply_Test3::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void Reply_Test3::InternalSwap(Reply_Test3* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_result_, other->_impl_.a_result_);
 }
 
@@ -1578,6 +1612,13 @@ std::string Msg_Reply1::GetTypeName() const {
 
 class Reply_Reply1::_Internal {
  public:
+  using HasBits = decltype(std::declval<Reply_Reply1>()._impl_._has_bits_);
+  static void set_has_a_result(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Reply_Reply1::Reply_Reply1(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1590,8 +1631,9 @@ Reply_Reply1::Reply_Reply1(const Reply_Reply1& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_Reply1* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_result_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_result_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_result_ = from._impl_.a_result_;
@@ -1603,8 +1645,9 @@ inline void Reply_Reply1::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_result_){0u}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_result_){0u}
   };
 }
 
@@ -1632,18 +1675,21 @@ void Reply_Reply1::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_result_ = 0u;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Reply_Reply1::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // uint32 a_result = 1;
+      // required uint32 a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_result(&has_bits);
           _impl_.a_result_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
@@ -1665,6 +1711,7 @@ const char* Reply_Reply1::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1678,8 +1725,9 @@ uint8_t* Reply_Reply1::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 a_result = 1;
-  if (this->_internal_a_result() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required uint32 a_result = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_result(), target);
   }
@@ -1696,14 +1744,13 @@ size_t Reply_Reply1::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestUrgency.Reply_Reply1)
   size_t total_size = 0;
 
+  // required uint32 a_result = 1;
+  if (_internal_has_a_result()) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_result());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // uint32 a_result = 1;
-  if (this->_internal_a_result() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_result());
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1726,7 +1773,7 @@ void Reply_Reply1::MergeFrom(const Reply_Reply1& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_a_result() != 0) {
+  if (from._internal_has_a_result()) {
     _this->_internal_set_a_result(from._internal_a_result());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1740,12 +1787,14 @@ void Reply_Reply1::CopyFrom(const Reply_Reply1& from) {
 }
 
 bool Reply_Reply1::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void Reply_Reply1::InternalSwap(Reply_Reply1* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_result_, other->_impl_.a_result_);
 }
 
@@ -1906,6 +1955,13 @@ std::string Msg_Reply2::GetTypeName() const {
 
 class Reply_Reply2::_Internal {
  public:
+  using HasBits = decltype(std::declval<Reply_Reply2>()._impl_._has_bits_);
+  static void set_has_a_result(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Reply_Reply2::Reply_Reply2(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1918,8 +1974,9 @@ Reply_Reply2::Reply_Reply2(const Reply_Reply2& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_Reply2* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_result_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_result_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_result_ = from._impl_.a_result_;
@@ -1931,8 +1988,9 @@ inline void Reply_Reply2::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_result_){0u}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_result_){0u}
   };
 }
 
@@ -1960,18 +2018,21 @@ void Reply_Reply2::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_result_ = 0u;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Reply_Reply2::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // uint32 a_result = 1;
+      // required uint32 a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_result(&has_bits);
           _impl_.a_result_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
@@ -1993,6 +2054,7 @@ const char* Reply_Reply2::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -2006,8 +2068,9 @@ uint8_t* Reply_Reply2::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 a_result = 1;
-  if (this->_internal_a_result() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required uint32 a_result = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_result(), target);
   }
@@ -2024,14 +2087,13 @@ size_t Reply_Reply2::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestUrgency.Reply_Reply2)
   size_t total_size = 0;
 
+  // required uint32 a_result = 1;
+  if (_internal_has_a_result()) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_result());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // uint32 a_result = 1;
-  if (this->_internal_a_result() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_result());
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -2054,7 +2116,7 @@ void Reply_Reply2::MergeFrom(const Reply_Reply2& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_a_result() != 0) {
+  if (from._internal_has_a_result()) {
     _this->_internal_set_a_result(from._internal_a_result());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -2068,12 +2130,14 @@ void Reply_Reply2::CopyFrom(const Reply_Reply2& from) {
 }
 
 bool Reply_Reply2::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void Reply_Reply2::InternalSwap(Reply_Reply2* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_result_, other->_impl_.a_result_);
 }
 

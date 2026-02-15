@@ -105,6 +105,13 @@ class Msg_TimerExpired final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_TimerExpired& default_instance() {
     return *internal_default_instance();
   }
@@ -179,7 +186,11 @@ class Msg_TimerExpired final :
   enum : int {
     kAATimerIdFieldNumber = 1,
   };
-  // uint32 a_aTimerId = 1;
+  // required uint32 a_aTimerId = 1;
+  bool has_a_atimerid() const;
+  private:
+  bool _internal_has_a_atimerid() const;
+  public:
   void clear_a_atimerid();
   uint32_t a_atimerid() const;
   void set_a_atimerid(uint32_t value);
@@ -196,8 +207,9 @@ class Msg_TimerExpired final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint32_t a_atimerid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint32_t a_atimerid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPTimer_2eproto;
@@ -233,6 +245,13 @@ class Msg_SetTimer final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_SetTimer& default_instance() {
@@ -310,7 +329,11 @@ class Msg_SetTimer final :
     kAATimerIdFieldNumber = 1,
     kAATimeoutMsFieldNumber = 2,
   };
-  // uint32 a_aTimerId = 1;
+  // required uint32 a_aTimerId = 1;
+  bool has_a_atimerid() const;
+  private:
+  bool _internal_has_a_atimerid() const;
+  public:
   void clear_a_atimerid();
   uint32_t a_atimerid() const;
   void set_a_atimerid(uint32_t value);
@@ -319,7 +342,11 @@ class Msg_SetTimer final :
   void _internal_set_a_atimerid(uint32_t value);
   public:
 
-  // uint32 a_aTimeoutMs = 2;
+  // required uint32 a_aTimeoutMs = 2;
+  bool has_a_atimeoutms() const;
+  private:
+  bool _internal_has_a_atimeoutms() const;
+  public:
   void clear_a_atimeoutms();
   uint32_t a_atimeoutms() const;
   void set_a_atimeoutms(uint32_t value);
@@ -332,13 +359,17 @@ class Msg_SetTimer final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t a_atimerid_;
     uint32_t a_atimeoutms_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPTimer_2eproto;
@@ -374,6 +405,13 @@ class Msg___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg___delete__& default_instance() {
@@ -493,6 +531,13 @@ class Reply___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -588,9 +633,17 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_TimerExpired
 
-// uint32 a_aTimerId = 1;
+// required uint32 a_aTimerId = 1;
+inline bool Msg_TimerExpired::_internal_has_a_atimerid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_TimerExpired::has_a_atimerid() const {
+  return _internal_has_a_atimerid();
+}
 inline void Msg_TimerExpired::clear_a_atimerid() {
   _impl_.a_atimerid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Msg_TimerExpired::_internal_a_atimerid() const {
   return _impl_.a_atimerid_;
@@ -600,7 +653,7 @@ inline uint32_t Msg_TimerExpired::a_atimerid() const {
   return _internal_a_atimerid();
 }
 inline void Msg_TimerExpired::_internal_set_a_atimerid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_atimerid_ = value;
 }
 inline void Msg_TimerExpired::set_a_atimerid(uint32_t value) {
@@ -612,9 +665,17 @@ inline void Msg_TimerExpired::set_a_atimerid(uint32_t value) {
 
 // Msg_SetTimer
 
-// uint32 a_aTimerId = 1;
+// required uint32 a_aTimerId = 1;
+inline bool Msg_SetTimer::_internal_has_a_atimerid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_SetTimer::has_a_atimerid() const {
+  return _internal_has_a_atimerid();
+}
 inline void Msg_SetTimer::clear_a_atimerid() {
   _impl_.a_atimerid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Msg_SetTimer::_internal_a_atimerid() const {
   return _impl_.a_atimerid_;
@@ -624,7 +685,7 @@ inline uint32_t Msg_SetTimer::a_atimerid() const {
   return _internal_a_atimerid();
 }
 inline void Msg_SetTimer::_internal_set_a_atimerid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_atimerid_ = value;
 }
 inline void Msg_SetTimer::set_a_atimerid(uint32_t value) {
@@ -632,9 +693,17 @@ inline void Msg_SetTimer::set_a_atimerid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPTimer.Msg_SetTimer.a_aTimerId)
 }
 
-// uint32 a_aTimeoutMs = 2;
+// required uint32 a_aTimeoutMs = 2;
+inline bool Msg_SetTimer::_internal_has_a_atimeoutms() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_SetTimer::has_a_atimeoutms() const {
+  return _internal_has_a_atimeoutms();
+}
 inline void Msg_SetTimer::clear_a_atimeoutms() {
   _impl_.a_atimeoutms_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_SetTimer::_internal_a_atimeoutms() const {
   return _impl_.a_atimeoutms_;
@@ -644,7 +713,7 @@ inline uint32_t Msg_SetTimer::a_atimeoutms() const {
   return _internal_a_atimeoutms();
 }
 inline void Msg_SetTimer::_internal_set_a_atimeoutms(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_atimeoutms_ = value;
 }
 inline void Msg_SetTimer::set_a_atimeoutms(uint32_t value) {

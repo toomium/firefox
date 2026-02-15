@@ -5,17 +5,17 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/ipc/ipdl/test/gtest/PIPDLUnitTest.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla._ipdltest;
 
 // Structs and unions declarations
 message TestPartResult {
-  bool a_failed = 1;
-  bool a_fatal = 2;
-  string a_filename = 3;
-  sint32 a_lineNumber = 4;
-  string a_summary = 5;
-  string a_message = 6;
+  required bool a_failed = 1;
+  required bool a_fatal = 2;
+  required string a_filename = 3;
+  required sint32 a_lineNumber = 4;
+  required string a_summary = 5;
+  required string a_message = 6;
 }

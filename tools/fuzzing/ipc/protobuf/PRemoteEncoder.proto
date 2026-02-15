@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/media/ipc/PRemoteEncoder.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.PRemoteEncoder;
@@ -20,22 +20,22 @@ message Msg_Construct {
 }
 
 message Reply_Construct {
-  bytes a_result = 1;
+  required bytes a_result = 1;
 }
 
 message Msg_Init {
 }
 
 message Reply_Init {
-  protobuf.mozilla.EncodeInitResultIPDL a_result = 1;
+  required protobuf.mozilla.EncodeInitResultIPDL a_result = 1;
 }
 
 message Msg_Encode {
-  protobuf.mozilla.EncodedInputIPDL a_data = 1;
+  required protobuf.mozilla.EncodedInputIPDL a_data = 1;
 }
 
 message Reply_Encode {
-  protobuf.mozilla.EncodeResultIPDL a_result = 1;
+  required protobuf.mozilla.EncodeResultIPDL a_result = 1;
 }
 
 message Msg_Reconfigure {
@@ -43,33 +43,33 @@ message Msg_Reconfigure {
 }
 
 message Reply_Reconfigure {
-  bytes a_error = 1;
+  required bytes a_error = 1;
 }
 
 message Msg_Drain {
 }
 
 message Reply_Drain {
-  protobuf.mozilla.EncodeResultIPDL a_result = 1;
+  required protobuf.mozilla.EncodeResultIPDL a_result = 1;
 }
 
 message Msg_ReleaseTicket {
-  uint32 a_ticketId = 1;
+  required uint32 a_ticketId = 1;
 }
 
 message Msg_Shutdown {
 }
 
 message Reply_Shutdown {
-  bool a_unused = 1;
+  required bool a_unused = 1;
 }
 
 message Msg_SetBitrate {
-  uint32 a_aBitsPerSec = 1;
+  required uint32 a_aBitsPerSec = 1;
 }
 
 message Reply_SetBitrate {
-  bytes a_rv = 1;
+  required bytes a_rv = 1;
 }
 
 message Msg___delete__ {

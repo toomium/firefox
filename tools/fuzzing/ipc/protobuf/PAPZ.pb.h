@@ -145,6 +145,13 @@ class Msg___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -262,6 +269,13 @@ class Reply___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -377,6 +391,13 @@ class Msg_LayerTransforms final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_LayerTransforms& default_instance() {
@@ -524,6 +545,13 @@ class Msg_RequestContentRepaint final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_RequestContentRepaint& default_instance() {
     return *internal_default_instance();
   }
@@ -598,7 +626,11 @@ class Msg_RequestContentRepaint final :
   enum : int {
     kARequestFieldNumber = 1,
   };
-  // bytes a_request = 1;
+  // required bytes a_request = 1;
+  bool has_a_request() const;
+  private:
+  bool _internal_has_a_request() const;
+  public:
   void clear_a_request();
   const std::string& a_request() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -620,8 +652,9 @@ class Msg_RequestContentRepaint final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_request_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_request_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZ_2eproto;
@@ -657,6 +690,13 @@ class Msg_UpdateOverscrollVelocity final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_UpdateOverscrollVelocity& default_instance() {
@@ -736,7 +776,11 @@ class Msg_UpdateOverscrollVelocity final :
     kAAYFieldNumber = 3,
     kAAIsRootContentFieldNumber = 4,
   };
-  // bytes a_aGuid = 1;
+  // required bytes a_aGuid = 1;
+  bool has_a_aguid() const;
+  private:
+  bool _internal_has_a_aguid() const;
+  public:
   void clear_a_aguid();
   const std::string& a_aguid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -750,7 +794,11 @@ class Msg_UpdateOverscrollVelocity final :
   std::string* _internal_mutable_a_aguid();
   public:
 
-  // float a_aX = 2;
+  // required float a_aX = 2;
+  bool has_a_ax() const;
+  private:
+  bool _internal_has_a_ax() const;
+  public:
   void clear_a_ax();
   float a_ax() const;
   void set_a_ax(float value);
@@ -759,7 +807,11 @@ class Msg_UpdateOverscrollVelocity final :
   void _internal_set_a_ax(float value);
   public:
 
-  // float a_aY = 3;
+  // required float a_aY = 3;
+  bool has_a_ay() const;
+  private:
+  bool _internal_has_a_ay() const;
+  public:
   void clear_a_ay();
   float a_ay() const;
   void set_a_ay(float value);
@@ -768,7 +820,11 @@ class Msg_UpdateOverscrollVelocity final :
   void _internal_set_a_ay(float value);
   public:
 
-  // bool a_aIsRootContent = 4;
+  // required bool a_aIsRootContent = 4;
+  bool has_a_aisrootcontent() const;
+  private:
+  bool _internal_has_a_aisrootcontent() const;
+  public:
   void clear_a_aisrootcontent();
   bool a_aisrootcontent() const;
   void set_a_aisrootcontent(bool value);
@@ -781,15 +837,19 @@ class Msg_UpdateOverscrollVelocity final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aguid_;
     float a_ax_;
     float a_ay_;
     bool a_aisrootcontent_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZ_2eproto;
@@ -825,6 +885,13 @@ class Msg_UpdateOverscrollOffset final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_UpdateOverscrollOffset& default_instance() {
@@ -904,7 +971,11 @@ class Msg_UpdateOverscrollOffset final :
     kAAYFieldNumber = 3,
     kAAIsRootContentFieldNumber = 4,
   };
-  // bytes a_aGuid = 1;
+  // required bytes a_aGuid = 1;
+  bool has_a_aguid() const;
+  private:
+  bool _internal_has_a_aguid() const;
+  public:
   void clear_a_aguid();
   const std::string& a_aguid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -918,7 +989,11 @@ class Msg_UpdateOverscrollOffset final :
   std::string* _internal_mutable_a_aguid();
   public:
 
-  // float a_aX = 2;
+  // required float a_aX = 2;
+  bool has_a_ax() const;
+  private:
+  bool _internal_has_a_ax() const;
+  public:
   void clear_a_ax();
   float a_ax() const;
   void set_a_ax(float value);
@@ -927,7 +1002,11 @@ class Msg_UpdateOverscrollOffset final :
   void _internal_set_a_ax(float value);
   public:
 
-  // float a_aY = 3;
+  // required float a_aY = 3;
+  bool has_a_ay() const;
+  private:
+  bool _internal_has_a_ay() const;
+  public:
   void clear_a_ay();
   float a_ay() const;
   void set_a_ay(float value);
@@ -936,7 +1015,11 @@ class Msg_UpdateOverscrollOffset final :
   void _internal_set_a_ay(float value);
   public:
 
-  // bool a_aIsRootContent = 4;
+  // required bool a_aIsRootContent = 4;
+  bool has_a_aisrootcontent() const;
+  private:
+  bool _internal_has_a_aisrootcontent() const;
+  public:
   void clear_a_aisrootcontent();
   bool a_aisrootcontent() const;
   void set_a_aisrootcontent(bool value);
@@ -949,15 +1032,19 @@ class Msg_UpdateOverscrollOffset final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aguid_;
     float a_ax_;
     float a_ay_;
     bool a_aisrootcontent_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZ_2eproto;
@@ -993,6 +1080,13 @@ class Msg_HideDynamicToolbar final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_HideDynamicToolbar& default_instance() {
@@ -1112,6 +1206,13 @@ class Msg_NotifyMozMouseScrollEvent final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_NotifyMozMouseScrollEvent& default_instance() {
     return *internal_default_instance();
   }
@@ -1187,7 +1288,11 @@ class Msg_NotifyMozMouseScrollEvent final :
     kAAScrollIdFieldNumber = 1,
     kAAEventFieldNumber = 2,
   };
-  // bytes a_aScrollId = 1;
+  // required bytes a_aScrollId = 1;
+  bool has_a_ascrollid() const;
+  private:
+  bool _internal_has_a_ascrollid() const;
+  public:
   void clear_a_ascrollid();
   const std::string& a_ascrollid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1201,7 +1306,11 @@ class Msg_NotifyMozMouseScrollEvent final :
   std::string* _internal_mutable_a_ascrollid();
   public:
 
-  // string a_aEvent = 2;
+  // required string a_aEvent = 2;
+  bool has_a_aevent() const;
+  private:
+  bool _internal_has_a_aevent() const;
+  public:
   void clear_a_aevent();
   const std::string& a_aevent() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1219,13 +1328,17 @@ class Msg_NotifyMozMouseScrollEvent final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ascrollid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aevent_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZ_2eproto;
@@ -1261,6 +1374,13 @@ class Msg_NotifyAPZStateChange final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_NotifyAPZStateChange& default_instance() {
@@ -1340,7 +1460,11 @@ class Msg_NotifyAPZStateChange final :
     kAAInputBlockIdFieldNumber = 4,
     kAAArgFieldNumber = 3,
   };
-  // bytes a_aGuid = 1;
+  // required bytes a_aGuid = 1;
+  bool has_a_aguid() const;
+  private:
+  bool _internal_has_a_aguid() const;
+  public:
   void clear_a_aguid();
   const std::string& a_aguid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1354,7 +1478,11 @@ class Msg_NotifyAPZStateChange final :
   std::string* _internal_mutable_a_aguid();
   public:
 
-  // bytes a_aChange = 2;
+  // required bytes a_aChange = 2;
+  bool has_a_achange() const;
+  private:
+  bool _internal_has_a_achange() const;
+  public:
   void clear_a_achange();
   const std::string& a_achange() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1381,7 +1509,11 @@ class Msg_NotifyAPZStateChange final :
   void _internal_set_a_ainputblockid(uint64_t value);
   public:
 
-  // sint32 a_aArg = 3;
+  // required sint32 a_aArg = 3;
+  bool has_a_aarg() const;
+  private:
+  bool _internal_has_a_aarg() const;
+  public:
   void clear_a_aarg();
   int32_t a_aarg() const;
   void set_a_aarg(int32_t value);
@@ -1393,6 +1525,9 @@ class Msg_NotifyAPZStateChange final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PAPZ.Msg_NotifyAPZStateChange)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1439,6 +1574,13 @@ class Msg_NotifyFlushComplete final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_NotifyFlushComplete& default_instance() {
@@ -1558,6 +1700,13 @@ class Msg_NotifyAsyncScrollbarDragInitiated final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_NotifyAsyncScrollbarDragInitiated& default_instance() {
     return *internal_default_instance();
   }
@@ -1634,7 +1783,11 @@ class Msg_NotifyAsyncScrollbarDragInitiated final :
     kAADirectionFieldNumber = 3,
     kAADragBlockIdFieldNumber = 1,
   };
-  // bytes a_aScrollId = 2;
+  // required bytes a_aScrollId = 2;
+  bool has_a_ascrollid() const;
+  private:
+  bool _internal_has_a_ascrollid() const;
+  public:
   void clear_a_ascrollid();
   const std::string& a_ascrollid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1648,7 +1801,11 @@ class Msg_NotifyAsyncScrollbarDragInitiated final :
   std::string* _internal_mutable_a_ascrollid();
   public:
 
-  // bytes a_aDirection = 3;
+  // required bytes a_aDirection = 3;
+  bool has_a_adirection() const;
+  private:
+  bool _internal_has_a_adirection() const;
+  public:
   void clear_a_adirection();
   const std::string& a_adirection() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1662,7 +1819,11 @@ class Msg_NotifyAsyncScrollbarDragInitiated final :
   std::string* _internal_mutable_a_adirection();
   public:
 
-  // uint64 a_aDragBlockId = 1;
+  // required uint64 a_aDragBlockId = 1;
+  bool has_a_adragblockid() const;
+  private:
+  bool _internal_has_a_adragblockid() const;
+  public:
   void clear_a_adragblockid();
   uint64_t a_adragblockid() const;
   void set_a_adragblockid(uint64_t value);
@@ -1675,14 +1836,18 @@ class Msg_NotifyAsyncScrollbarDragInitiated final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ascrollid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_adirection_;
     uint64_t a_adragblockid_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZ_2eproto;
@@ -1718,6 +1883,13 @@ class Msg_NotifyAsyncScrollbarDragRejected final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_NotifyAsyncScrollbarDragRejected& default_instance() {
@@ -1794,7 +1966,11 @@ class Msg_NotifyAsyncScrollbarDragRejected final :
   enum : int {
     kAAScrollIdFieldNumber = 1,
   };
-  // bytes a_aScrollId = 1;
+  // required bytes a_aScrollId = 1;
+  bool has_a_ascrollid() const;
+  private:
+  bool _internal_has_a_ascrollid() const;
+  public:
   void clear_a_ascrollid();
   const std::string& a_ascrollid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1816,8 +1992,9 @@ class Msg_NotifyAsyncScrollbarDragRejected final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ascrollid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ascrollid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZ_2eproto;
@@ -1853,6 +2030,13 @@ class Msg_NotifyAsyncAutoscrollRejected final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_NotifyAsyncAutoscrollRejected& default_instance() {
@@ -1929,7 +2113,11 @@ class Msg_NotifyAsyncAutoscrollRejected final :
   enum : int {
     kAAScrollIdFieldNumber = 1,
   };
-  // bytes a_aScrollId = 1;
+  // required bytes a_aScrollId = 1;
+  bool has_a_ascrollid() const;
+  private:
+  bool _internal_has_a_ascrollid() const;
+  public:
   void clear_a_ascrollid();
   const std::string& a_ascrollid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1951,8 +2139,9 @@ class Msg_NotifyAsyncAutoscrollRejected final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ascrollid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ascrollid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZ_2eproto;
@@ -1988,6 +2177,13 @@ class Msg_Destroy final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Destroy& default_instance() {
@@ -2172,9 +2368,17 @@ Msg_LayerTransforms::mutable_a_atransforms() {
 
 // Msg_RequestContentRepaint
 
-// bytes a_request = 1;
+// required bytes a_request = 1;
+inline bool Msg_RequestContentRepaint::_internal_has_a_request() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_RequestContentRepaint::has_a_request() const {
+  return _internal_has_a_request();
+}
 inline void Msg_RequestContentRepaint::clear_a_request() {
   _impl_.a_request_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_RequestContentRepaint::a_request() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZ.Msg_RequestContentRepaint.a_request)
@@ -2183,7 +2387,7 @@ inline const std::string& Msg_RequestContentRepaint::a_request() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_RequestContentRepaint::set_a_request(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_request_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZ.Msg_RequestContentRepaint.a_request)
 }
@@ -2196,22 +2400,32 @@ inline const std::string& Msg_RequestContentRepaint::_internal_a_request() const
   return _impl_.a_request_.Get();
 }
 inline void Msg_RequestContentRepaint::_internal_set_a_request(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_request_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_RequestContentRepaint::_internal_mutable_a_request() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_request_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_RequestContentRepaint::release_a_request() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZ.Msg_RequestContentRepaint.a_request)
-  return _impl_.a_request_.Release();
+  if (!_internal_has_a_request()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_request_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_request_.IsDefault()) {
+    _impl_.a_request_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_RequestContentRepaint::set_allocated_a_request(std::string* a_request) {
   if (a_request != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_request_.SetAllocated(a_request, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2226,9 +2440,17 @@ inline void Msg_RequestContentRepaint::set_allocated_a_request(std::string* a_re
 
 // Msg_UpdateOverscrollVelocity
 
-// bytes a_aGuid = 1;
+// required bytes a_aGuid = 1;
+inline bool Msg_UpdateOverscrollVelocity::_internal_has_a_aguid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_UpdateOverscrollVelocity::has_a_aguid() const {
+  return _internal_has_a_aguid();
+}
 inline void Msg_UpdateOverscrollVelocity::clear_a_aguid() {
   _impl_.a_aguid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_UpdateOverscrollVelocity::a_aguid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZ.Msg_UpdateOverscrollVelocity.a_aGuid)
@@ -2237,7 +2459,7 @@ inline const std::string& Msg_UpdateOverscrollVelocity::a_aguid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_UpdateOverscrollVelocity::set_a_aguid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aguid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZ.Msg_UpdateOverscrollVelocity.a_aGuid)
 }
@@ -2250,22 +2472,32 @@ inline const std::string& Msg_UpdateOverscrollVelocity::_internal_a_aguid() cons
   return _impl_.a_aguid_.Get();
 }
 inline void Msg_UpdateOverscrollVelocity::_internal_set_a_aguid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aguid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_UpdateOverscrollVelocity::_internal_mutable_a_aguid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aguid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_UpdateOverscrollVelocity::release_a_aguid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZ.Msg_UpdateOverscrollVelocity.a_aGuid)
-  return _impl_.a_aguid_.Release();
+  if (!_internal_has_a_aguid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aguid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aguid_.IsDefault()) {
+    _impl_.a_aguid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_UpdateOverscrollVelocity::set_allocated_a_aguid(std::string* a_aguid) {
   if (a_aguid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aguid_.SetAllocated(a_aguid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2276,9 +2508,17 @@ inline void Msg_UpdateOverscrollVelocity::set_allocated_a_aguid(std::string* a_a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZ.Msg_UpdateOverscrollVelocity.a_aGuid)
 }
 
-// float a_aX = 2;
+// required float a_aX = 2;
+inline bool Msg_UpdateOverscrollVelocity::_internal_has_a_ax() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_UpdateOverscrollVelocity::has_a_ax() const {
+  return _internal_has_a_ax();
+}
 inline void Msg_UpdateOverscrollVelocity::clear_a_ax() {
   _impl_.a_ax_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline float Msg_UpdateOverscrollVelocity::_internal_a_ax() const {
   return _impl_.a_ax_;
@@ -2288,7 +2528,7 @@ inline float Msg_UpdateOverscrollVelocity::a_ax() const {
   return _internal_a_ax();
 }
 inline void Msg_UpdateOverscrollVelocity::_internal_set_a_ax(float value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_ax_ = value;
 }
 inline void Msg_UpdateOverscrollVelocity::set_a_ax(float value) {
@@ -2296,9 +2536,17 @@ inline void Msg_UpdateOverscrollVelocity::set_a_ax(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZ.Msg_UpdateOverscrollVelocity.a_aX)
 }
 
-// float a_aY = 3;
+// required float a_aY = 3;
+inline bool Msg_UpdateOverscrollVelocity::_internal_has_a_ay() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_UpdateOverscrollVelocity::has_a_ay() const {
+  return _internal_has_a_ay();
+}
 inline void Msg_UpdateOverscrollVelocity::clear_a_ay() {
   _impl_.a_ay_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline float Msg_UpdateOverscrollVelocity::_internal_a_ay() const {
   return _impl_.a_ay_;
@@ -2308,7 +2556,7 @@ inline float Msg_UpdateOverscrollVelocity::a_ay() const {
   return _internal_a_ay();
 }
 inline void Msg_UpdateOverscrollVelocity::_internal_set_a_ay(float value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_ay_ = value;
 }
 inline void Msg_UpdateOverscrollVelocity::set_a_ay(float value) {
@@ -2316,9 +2564,17 @@ inline void Msg_UpdateOverscrollVelocity::set_a_ay(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZ.Msg_UpdateOverscrollVelocity.a_aY)
 }
 
-// bool a_aIsRootContent = 4;
+// required bool a_aIsRootContent = 4;
+inline bool Msg_UpdateOverscrollVelocity::_internal_has_a_aisrootcontent() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool Msg_UpdateOverscrollVelocity::has_a_aisrootcontent() const {
+  return _internal_has_a_aisrootcontent();
+}
 inline void Msg_UpdateOverscrollVelocity::clear_a_aisrootcontent() {
   _impl_.a_aisrootcontent_ = false;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline bool Msg_UpdateOverscrollVelocity::_internal_a_aisrootcontent() const {
   return _impl_.a_aisrootcontent_;
@@ -2328,7 +2584,7 @@ inline bool Msg_UpdateOverscrollVelocity::a_aisrootcontent() const {
   return _internal_a_aisrootcontent();
 }
 inline void Msg_UpdateOverscrollVelocity::_internal_set_a_aisrootcontent(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_aisrootcontent_ = value;
 }
 inline void Msg_UpdateOverscrollVelocity::set_a_aisrootcontent(bool value) {
@@ -2340,9 +2596,17 @@ inline void Msg_UpdateOverscrollVelocity::set_a_aisrootcontent(bool value) {
 
 // Msg_UpdateOverscrollOffset
 
-// bytes a_aGuid = 1;
+// required bytes a_aGuid = 1;
+inline bool Msg_UpdateOverscrollOffset::_internal_has_a_aguid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_UpdateOverscrollOffset::has_a_aguid() const {
+  return _internal_has_a_aguid();
+}
 inline void Msg_UpdateOverscrollOffset::clear_a_aguid() {
   _impl_.a_aguid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_UpdateOverscrollOffset::a_aguid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZ.Msg_UpdateOverscrollOffset.a_aGuid)
@@ -2351,7 +2615,7 @@ inline const std::string& Msg_UpdateOverscrollOffset::a_aguid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_UpdateOverscrollOffset::set_a_aguid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aguid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZ.Msg_UpdateOverscrollOffset.a_aGuid)
 }
@@ -2364,22 +2628,32 @@ inline const std::string& Msg_UpdateOverscrollOffset::_internal_a_aguid() const 
   return _impl_.a_aguid_.Get();
 }
 inline void Msg_UpdateOverscrollOffset::_internal_set_a_aguid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aguid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_UpdateOverscrollOffset::_internal_mutable_a_aguid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aguid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_UpdateOverscrollOffset::release_a_aguid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZ.Msg_UpdateOverscrollOffset.a_aGuid)
-  return _impl_.a_aguid_.Release();
+  if (!_internal_has_a_aguid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aguid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aguid_.IsDefault()) {
+    _impl_.a_aguid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_UpdateOverscrollOffset::set_allocated_a_aguid(std::string* a_aguid) {
   if (a_aguid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aguid_.SetAllocated(a_aguid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2390,9 +2664,17 @@ inline void Msg_UpdateOverscrollOffset::set_allocated_a_aguid(std::string* a_agu
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZ.Msg_UpdateOverscrollOffset.a_aGuid)
 }
 
-// float a_aX = 2;
+// required float a_aX = 2;
+inline bool Msg_UpdateOverscrollOffset::_internal_has_a_ax() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_UpdateOverscrollOffset::has_a_ax() const {
+  return _internal_has_a_ax();
+}
 inline void Msg_UpdateOverscrollOffset::clear_a_ax() {
   _impl_.a_ax_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline float Msg_UpdateOverscrollOffset::_internal_a_ax() const {
   return _impl_.a_ax_;
@@ -2402,7 +2684,7 @@ inline float Msg_UpdateOverscrollOffset::a_ax() const {
   return _internal_a_ax();
 }
 inline void Msg_UpdateOverscrollOffset::_internal_set_a_ax(float value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_ax_ = value;
 }
 inline void Msg_UpdateOverscrollOffset::set_a_ax(float value) {
@@ -2410,9 +2692,17 @@ inline void Msg_UpdateOverscrollOffset::set_a_ax(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZ.Msg_UpdateOverscrollOffset.a_aX)
 }
 
-// float a_aY = 3;
+// required float a_aY = 3;
+inline bool Msg_UpdateOverscrollOffset::_internal_has_a_ay() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_UpdateOverscrollOffset::has_a_ay() const {
+  return _internal_has_a_ay();
+}
 inline void Msg_UpdateOverscrollOffset::clear_a_ay() {
   _impl_.a_ay_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline float Msg_UpdateOverscrollOffset::_internal_a_ay() const {
   return _impl_.a_ay_;
@@ -2422,7 +2712,7 @@ inline float Msg_UpdateOverscrollOffset::a_ay() const {
   return _internal_a_ay();
 }
 inline void Msg_UpdateOverscrollOffset::_internal_set_a_ay(float value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_ay_ = value;
 }
 inline void Msg_UpdateOverscrollOffset::set_a_ay(float value) {
@@ -2430,9 +2720,17 @@ inline void Msg_UpdateOverscrollOffset::set_a_ay(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZ.Msg_UpdateOverscrollOffset.a_aY)
 }
 
-// bool a_aIsRootContent = 4;
+// required bool a_aIsRootContent = 4;
+inline bool Msg_UpdateOverscrollOffset::_internal_has_a_aisrootcontent() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool Msg_UpdateOverscrollOffset::has_a_aisrootcontent() const {
+  return _internal_has_a_aisrootcontent();
+}
 inline void Msg_UpdateOverscrollOffset::clear_a_aisrootcontent() {
   _impl_.a_aisrootcontent_ = false;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline bool Msg_UpdateOverscrollOffset::_internal_a_aisrootcontent() const {
   return _impl_.a_aisrootcontent_;
@@ -2442,7 +2740,7 @@ inline bool Msg_UpdateOverscrollOffset::a_aisrootcontent() const {
   return _internal_a_aisrootcontent();
 }
 inline void Msg_UpdateOverscrollOffset::_internal_set_a_aisrootcontent(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_aisrootcontent_ = value;
 }
 inline void Msg_UpdateOverscrollOffset::set_a_aisrootcontent(bool value) {
@@ -2458,9 +2756,17 @@ inline void Msg_UpdateOverscrollOffset::set_a_aisrootcontent(bool value) {
 
 // Msg_NotifyMozMouseScrollEvent
 
-// bytes a_aScrollId = 1;
+// required bytes a_aScrollId = 1;
+inline bool Msg_NotifyMozMouseScrollEvent::_internal_has_a_ascrollid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_NotifyMozMouseScrollEvent::has_a_ascrollid() const {
+  return _internal_has_a_ascrollid();
+}
 inline void Msg_NotifyMozMouseScrollEvent::clear_a_ascrollid() {
   _impl_.a_ascrollid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_NotifyMozMouseScrollEvent::a_ascrollid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZ.Msg_NotifyMozMouseScrollEvent.a_aScrollId)
@@ -2469,7 +2775,7 @@ inline const std::string& Msg_NotifyMozMouseScrollEvent::a_ascrollid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyMozMouseScrollEvent::set_a_ascrollid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_ascrollid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZ.Msg_NotifyMozMouseScrollEvent.a_aScrollId)
 }
@@ -2482,22 +2788,32 @@ inline const std::string& Msg_NotifyMozMouseScrollEvent::_internal_a_ascrollid()
   return _impl_.a_ascrollid_.Get();
 }
 inline void Msg_NotifyMozMouseScrollEvent::_internal_set_a_ascrollid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_ascrollid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyMozMouseScrollEvent::_internal_mutable_a_ascrollid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_ascrollid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyMozMouseScrollEvent::release_a_ascrollid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZ.Msg_NotifyMozMouseScrollEvent.a_aScrollId)
-  return _impl_.a_ascrollid_.Release();
+  if (!_internal_has_a_ascrollid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_ascrollid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_ascrollid_.IsDefault()) {
+    _impl_.a_ascrollid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_NotifyMozMouseScrollEvent::set_allocated_a_ascrollid(std::string* a_ascrollid) {
   if (a_ascrollid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_ascrollid_.SetAllocated(a_ascrollid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2508,9 +2824,17 @@ inline void Msg_NotifyMozMouseScrollEvent::set_allocated_a_ascrollid(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZ.Msg_NotifyMozMouseScrollEvent.a_aScrollId)
 }
 
-// string a_aEvent = 2;
+// required string a_aEvent = 2;
+inline bool Msg_NotifyMozMouseScrollEvent::_internal_has_a_aevent() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_NotifyMozMouseScrollEvent::has_a_aevent() const {
+  return _internal_has_a_aevent();
+}
 inline void Msg_NotifyMozMouseScrollEvent::clear_a_aevent() {
   _impl_.a_aevent_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_NotifyMozMouseScrollEvent::a_aevent() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZ.Msg_NotifyMozMouseScrollEvent.a_aEvent)
@@ -2519,7 +2843,7 @@ inline const std::string& Msg_NotifyMozMouseScrollEvent::a_aevent() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyMozMouseScrollEvent::set_a_aevent(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_aevent_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZ.Msg_NotifyMozMouseScrollEvent.a_aEvent)
 }
@@ -2532,22 +2856,32 @@ inline const std::string& Msg_NotifyMozMouseScrollEvent::_internal_a_aevent() co
   return _impl_.a_aevent_.Get();
 }
 inline void Msg_NotifyMozMouseScrollEvent::_internal_set_a_aevent(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aevent_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyMozMouseScrollEvent::_internal_mutable_a_aevent() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_aevent_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyMozMouseScrollEvent::release_a_aevent() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZ.Msg_NotifyMozMouseScrollEvent.a_aEvent)
-  return _impl_.a_aevent_.Release();
+  if (!_internal_has_a_aevent()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_aevent_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aevent_.IsDefault()) {
+    _impl_.a_aevent_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_NotifyMozMouseScrollEvent::set_allocated_a_aevent(std::string* a_aevent) {
   if (a_aevent != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_aevent_.SetAllocated(a_aevent, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2562,9 +2896,17 @@ inline void Msg_NotifyMozMouseScrollEvent::set_allocated_a_aevent(std::string* a
 
 // Msg_NotifyAPZStateChange
 
-// bytes a_aGuid = 1;
+// required bytes a_aGuid = 1;
+inline bool Msg_NotifyAPZStateChange::_internal_has_a_aguid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_NotifyAPZStateChange::has_a_aguid() const {
+  return _internal_has_a_aguid();
+}
 inline void Msg_NotifyAPZStateChange::clear_a_aguid() {
   _impl_.a_aguid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_NotifyAPZStateChange::a_aguid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZ.Msg_NotifyAPZStateChange.a_aGuid)
@@ -2573,7 +2915,7 @@ inline const std::string& Msg_NotifyAPZStateChange::a_aguid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyAPZStateChange::set_a_aguid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aguid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZ.Msg_NotifyAPZStateChange.a_aGuid)
 }
@@ -2586,22 +2928,32 @@ inline const std::string& Msg_NotifyAPZStateChange::_internal_a_aguid() const {
   return _impl_.a_aguid_.Get();
 }
 inline void Msg_NotifyAPZStateChange::_internal_set_a_aguid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aguid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyAPZStateChange::_internal_mutable_a_aguid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aguid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyAPZStateChange::release_a_aguid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZ.Msg_NotifyAPZStateChange.a_aGuid)
-  return _impl_.a_aguid_.Release();
+  if (!_internal_has_a_aguid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aguid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aguid_.IsDefault()) {
+    _impl_.a_aguid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_NotifyAPZStateChange::set_allocated_a_aguid(std::string* a_aguid) {
   if (a_aguid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aguid_.SetAllocated(a_aguid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2612,9 +2964,17 @@ inline void Msg_NotifyAPZStateChange::set_allocated_a_aguid(std::string* a_aguid
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZ.Msg_NotifyAPZStateChange.a_aGuid)
 }
 
-// bytes a_aChange = 2;
+// required bytes a_aChange = 2;
+inline bool Msg_NotifyAPZStateChange::_internal_has_a_achange() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_NotifyAPZStateChange::has_a_achange() const {
+  return _internal_has_a_achange();
+}
 inline void Msg_NotifyAPZStateChange::clear_a_achange() {
   _impl_.a_achange_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_NotifyAPZStateChange::a_achange() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZ.Msg_NotifyAPZStateChange.a_aChange)
@@ -2623,7 +2983,7 @@ inline const std::string& Msg_NotifyAPZStateChange::a_achange() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyAPZStateChange::set_a_achange(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_achange_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZ.Msg_NotifyAPZStateChange.a_aChange)
 }
@@ -2636,22 +2996,32 @@ inline const std::string& Msg_NotifyAPZStateChange::_internal_a_achange() const 
   return _impl_.a_achange_.Get();
 }
 inline void Msg_NotifyAPZStateChange::_internal_set_a_achange(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_achange_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyAPZStateChange::_internal_mutable_a_achange() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_achange_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyAPZStateChange::release_a_achange() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZ.Msg_NotifyAPZStateChange.a_aChange)
-  return _impl_.a_achange_.Release();
+  if (!_internal_has_a_achange()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_achange_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_achange_.IsDefault()) {
+    _impl_.a_achange_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_NotifyAPZStateChange::set_allocated_a_achange(std::string* a_achange) {
   if (a_achange != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_achange_.SetAllocated(a_achange, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2662,9 +3032,17 @@ inline void Msg_NotifyAPZStateChange::set_allocated_a_achange(std::string* a_ach
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZ.Msg_NotifyAPZStateChange.a_aChange)
 }
 
-// sint32 a_aArg = 3;
+// required sint32 a_aArg = 3;
+inline bool Msg_NotifyAPZStateChange::_internal_has_a_aarg() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool Msg_NotifyAPZStateChange::has_a_aarg() const {
+  return _internal_has_a_aarg();
+}
 inline void Msg_NotifyAPZStateChange::clear_a_aarg() {
   _impl_.a_aarg_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline int32_t Msg_NotifyAPZStateChange::_internal_a_aarg() const {
   return _impl_.a_aarg_;
@@ -2674,7 +3052,7 @@ inline int32_t Msg_NotifyAPZStateChange::a_aarg() const {
   return _internal_a_aarg();
 }
 inline void Msg_NotifyAPZStateChange::_internal_set_a_aarg(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_aarg_ = value;
 }
 inline void Msg_NotifyAPZStateChange::set_a_aarg(int32_t value) {
@@ -2684,7 +3062,7 @@ inline void Msg_NotifyAPZStateChange::set_a_aarg(int32_t value) {
 
 // optional uint64 a_aInputBlockId = 4;
 inline bool Msg_NotifyAPZStateChange::_internal_has_a_ainputblockid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
 inline bool Msg_NotifyAPZStateChange::has_a_ainputblockid() const {
@@ -2692,7 +3070,7 @@ inline bool Msg_NotifyAPZStateChange::has_a_ainputblockid() const {
 }
 inline void Msg_NotifyAPZStateChange::clear_a_ainputblockid() {
   _impl_.a_ainputblockid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint64_t Msg_NotifyAPZStateChange::_internal_a_ainputblockid() const {
   return _impl_.a_ainputblockid_;
@@ -2702,7 +3080,7 @@ inline uint64_t Msg_NotifyAPZStateChange::a_ainputblockid() const {
   return _internal_a_ainputblockid();
 }
 inline void Msg_NotifyAPZStateChange::_internal_set_a_ainputblockid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_ainputblockid_ = value;
 }
 inline void Msg_NotifyAPZStateChange::set_a_ainputblockid(uint64_t value) {
@@ -2718,9 +3096,17 @@ inline void Msg_NotifyAPZStateChange::set_a_ainputblockid(uint64_t value) {
 
 // Msg_NotifyAsyncScrollbarDragInitiated
 
-// uint64 a_aDragBlockId = 1;
+// required uint64 a_aDragBlockId = 1;
+inline bool Msg_NotifyAsyncScrollbarDragInitiated::_internal_has_a_adragblockid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_NotifyAsyncScrollbarDragInitiated::has_a_adragblockid() const {
+  return _internal_has_a_adragblockid();
+}
 inline void Msg_NotifyAsyncScrollbarDragInitiated::clear_a_adragblockid() {
   _impl_.a_adragblockid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint64_t Msg_NotifyAsyncScrollbarDragInitiated::_internal_a_adragblockid() const {
   return _impl_.a_adragblockid_;
@@ -2730,7 +3116,7 @@ inline uint64_t Msg_NotifyAsyncScrollbarDragInitiated::a_adragblockid() const {
   return _internal_a_adragblockid();
 }
 inline void Msg_NotifyAsyncScrollbarDragInitiated::_internal_set_a_adragblockid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_adragblockid_ = value;
 }
 inline void Msg_NotifyAsyncScrollbarDragInitiated::set_a_adragblockid(uint64_t value) {
@@ -2738,9 +3124,17 @@ inline void Msg_NotifyAsyncScrollbarDragInitiated::set_a_adragblockid(uint64_t v
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZ.Msg_NotifyAsyncScrollbarDragInitiated.a_aDragBlockId)
 }
 
-// bytes a_aScrollId = 2;
+// required bytes a_aScrollId = 2;
+inline bool Msg_NotifyAsyncScrollbarDragInitiated::_internal_has_a_ascrollid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_NotifyAsyncScrollbarDragInitiated::has_a_ascrollid() const {
+  return _internal_has_a_ascrollid();
+}
 inline void Msg_NotifyAsyncScrollbarDragInitiated::clear_a_ascrollid() {
   _impl_.a_ascrollid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_NotifyAsyncScrollbarDragInitiated::a_ascrollid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZ.Msg_NotifyAsyncScrollbarDragInitiated.a_aScrollId)
@@ -2749,7 +3143,7 @@ inline const std::string& Msg_NotifyAsyncScrollbarDragInitiated::a_ascrollid() c
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyAsyncScrollbarDragInitiated::set_a_ascrollid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_ascrollid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZ.Msg_NotifyAsyncScrollbarDragInitiated.a_aScrollId)
 }
@@ -2762,22 +3156,32 @@ inline const std::string& Msg_NotifyAsyncScrollbarDragInitiated::_internal_a_asc
   return _impl_.a_ascrollid_.Get();
 }
 inline void Msg_NotifyAsyncScrollbarDragInitiated::_internal_set_a_ascrollid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_ascrollid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyAsyncScrollbarDragInitiated::_internal_mutable_a_ascrollid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_ascrollid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyAsyncScrollbarDragInitiated::release_a_ascrollid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZ.Msg_NotifyAsyncScrollbarDragInitiated.a_aScrollId)
-  return _impl_.a_ascrollid_.Release();
+  if (!_internal_has_a_ascrollid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_ascrollid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_ascrollid_.IsDefault()) {
+    _impl_.a_ascrollid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_NotifyAsyncScrollbarDragInitiated::set_allocated_a_ascrollid(std::string* a_ascrollid) {
   if (a_ascrollid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_ascrollid_.SetAllocated(a_ascrollid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2788,9 +3192,17 @@ inline void Msg_NotifyAsyncScrollbarDragInitiated::set_allocated_a_ascrollid(std
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZ.Msg_NotifyAsyncScrollbarDragInitiated.a_aScrollId)
 }
 
-// bytes a_aDirection = 3;
+// required bytes a_aDirection = 3;
+inline bool Msg_NotifyAsyncScrollbarDragInitiated::_internal_has_a_adirection() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_NotifyAsyncScrollbarDragInitiated::has_a_adirection() const {
+  return _internal_has_a_adirection();
+}
 inline void Msg_NotifyAsyncScrollbarDragInitiated::clear_a_adirection() {
   _impl_.a_adirection_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_NotifyAsyncScrollbarDragInitiated::a_adirection() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZ.Msg_NotifyAsyncScrollbarDragInitiated.a_aDirection)
@@ -2799,7 +3211,7 @@ inline const std::string& Msg_NotifyAsyncScrollbarDragInitiated::a_adirection() 
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyAsyncScrollbarDragInitiated::set_a_adirection(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_adirection_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZ.Msg_NotifyAsyncScrollbarDragInitiated.a_aDirection)
 }
@@ -2812,22 +3224,32 @@ inline const std::string& Msg_NotifyAsyncScrollbarDragInitiated::_internal_a_adi
   return _impl_.a_adirection_.Get();
 }
 inline void Msg_NotifyAsyncScrollbarDragInitiated::_internal_set_a_adirection(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_adirection_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyAsyncScrollbarDragInitiated::_internal_mutable_a_adirection() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_adirection_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyAsyncScrollbarDragInitiated::release_a_adirection() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZ.Msg_NotifyAsyncScrollbarDragInitiated.a_aDirection)
-  return _impl_.a_adirection_.Release();
+  if (!_internal_has_a_adirection()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_adirection_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_adirection_.IsDefault()) {
+    _impl_.a_adirection_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_NotifyAsyncScrollbarDragInitiated::set_allocated_a_adirection(std::string* a_adirection) {
   if (a_adirection != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_adirection_.SetAllocated(a_adirection, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2842,9 +3264,17 @@ inline void Msg_NotifyAsyncScrollbarDragInitiated::set_allocated_a_adirection(st
 
 // Msg_NotifyAsyncScrollbarDragRejected
 
-// bytes a_aScrollId = 1;
+// required bytes a_aScrollId = 1;
+inline bool Msg_NotifyAsyncScrollbarDragRejected::_internal_has_a_ascrollid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_NotifyAsyncScrollbarDragRejected::has_a_ascrollid() const {
+  return _internal_has_a_ascrollid();
+}
 inline void Msg_NotifyAsyncScrollbarDragRejected::clear_a_ascrollid() {
   _impl_.a_ascrollid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_NotifyAsyncScrollbarDragRejected::a_ascrollid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZ.Msg_NotifyAsyncScrollbarDragRejected.a_aScrollId)
@@ -2853,7 +3283,7 @@ inline const std::string& Msg_NotifyAsyncScrollbarDragRejected::a_ascrollid() co
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyAsyncScrollbarDragRejected::set_a_ascrollid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_ascrollid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZ.Msg_NotifyAsyncScrollbarDragRejected.a_aScrollId)
 }
@@ -2866,22 +3296,32 @@ inline const std::string& Msg_NotifyAsyncScrollbarDragRejected::_internal_a_ascr
   return _impl_.a_ascrollid_.Get();
 }
 inline void Msg_NotifyAsyncScrollbarDragRejected::_internal_set_a_ascrollid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_ascrollid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyAsyncScrollbarDragRejected::_internal_mutable_a_ascrollid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_ascrollid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyAsyncScrollbarDragRejected::release_a_ascrollid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZ.Msg_NotifyAsyncScrollbarDragRejected.a_aScrollId)
-  return _impl_.a_ascrollid_.Release();
+  if (!_internal_has_a_ascrollid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_ascrollid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_ascrollid_.IsDefault()) {
+    _impl_.a_ascrollid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_NotifyAsyncScrollbarDragRejected::set_allocated_a_ascrollid(std::string* a_ascrollid) {
   if (a_ascrollid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_ascrollid_.SetAllocated(a_ascrollid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2896,9 +3336,17 @@ inline void Msg_NotifyAsyncScrollbarDragRejected::set_allocated_a_ascrollid(std:
 
 // Msg_NotifyAsyncAutoscrollRejected
 
-// bytes a_aScrollId = 1;
+// required bytes a_aScrollId = 1;
+inline bool Msg_NotifyAsyncAutoscrollRejected::_internal_has_a_ascrollid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_NotifyAsyncAutoscrollRejected::has_a_ascrollid() const {
+  return _internal_has_a_ascrollid();
+}
 inline void Msg_NotifyAsyncAutoscrollRejected::clear_a_ascrollid() {
   _impl_.a_ascrollid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_NotifyAsyncAutoscrollRejected::a_ascrollid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZ.Msg_NotifyAsyncAutoscrollRejected.a_aScrollId)
@@ -2907,7 +3355,7 @@ inline const std::string& Msg_NotifyAsyncAutoscrollRejected::a_ascrollid() const
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyAsyncAutoscrollRejected::set_a_ascrollid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_ascrollid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZ.Msg_NotifyAsyncAutoscrollRejected.a_aScrollId)
 }
@@ -2920,22 +3368,32 @@ inline const std::string& Msg_NotifyAsyncAutoscrollRejected::_internal_a_ascroll
   return _impl_.a_ascrollid_.Get();
 }
 inline void Msg_NotifyAsyncAutoscrollRejected::_internal_set_a_ascrollid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_ascrollid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyAsyncAutoscrollRejected::_internal_mutable_a_ascrollid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_ascrollid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyAsyncAutoscrollRejected::release_a_ascrollid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZ.Msg_NotifyAsyncAutoscrollRejected.a_aScrollId)
-  return _impl_.a_ascrollid_.Release();
+  if (!_internal_has_a_ascrollid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_ascrollid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_ascrollid_.IsDefault()) {
+    _impl_.a_ascrollid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_NotifyAsyncAutoscrollRejected::set_allocated_a_ascrollid(std::string* a_ascrollid) {
   if (a_ascrollid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_ascrollid_.SetAllocated(a_ascrollid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

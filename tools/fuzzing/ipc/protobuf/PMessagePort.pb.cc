@@ -318,6 +318,8 @@ void Msg_PostMessages::CopyFrom(const Msg_PostMessages& from) {
 }
 
 bool Msg_PostMessages::IsInitialized() const {
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_messages_))
+    return false;
   return true;
 }
 
@@ -508,6 +510,8 @@ void Msg_Disentangle::CopyFrom(const Msg_Disentangle& from) {
 }
 
 bool Msg_Disentangle::IsInitialized() const {
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_messages_))
+    return false;
   return true;
 }
 
@@ -994,6 +998,8 @@ void Msg_Entangled::CopyFrom(const Msg_Entangled& from) {
 }
 
 bool Msg_Entangled::IsInitialized() const {
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_messages_))
+    return false;
   return true;
 }
 
@@ -1184,6 +1190,8 @@ void Msg_ReceiveData::CopyFrom(const Msg_ReceiveData& from) {
 }
 
 bool Msg_ReceiveData::IsInitialized() const {
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_messages_))
+    return false;
   return true;
 }
 

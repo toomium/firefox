@@ -134,6 +134,13 @@ class Msg_RequestCancel final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_RequestCancel& default_instance() {
     return *internal_default_instance();
   }
@@ -251,6 +258,13 @@ class Msg_GetIdentityCredential final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_GetIdentityCredential& default_instance() {
     return *internal_default_instance();
   }
@@ -327,7 +341,11 @@ class Msg_GetIdentityCredential final :
     kAAMediationRequirementFieldNumber = 2,
     kAAHasUserActivationFieldNumber = 3,
   };
-  // bytes a_aOptions = 1;
+  // required bytes a_aOptions = 1;
+  bool has_a_aoptions() const;
+  private:
+  bool _internal_has_a_aoptions() const;
+  public:
   void clear_a_aoptions();
   const std::string& a_aoptions() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -341,7 +359,11 @@ class Msg_GetIdentityCredential final :
   std::string* _internal_mutable_a_aoptions();
   public:
 
-  // bytes a_aMediationRequirement = 2;
+  // required bytes a_aMediationRequirement = 2;
+  bool has_a_amediationrequirement() const;
+  private:
+  bool _internal_has_a_amediationrequirement() const;
+  public:
   void clear_a_amediationrequirement();
   const std::string& a_amediationrequirement() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -355,7 +377,11 @@ class Msg_GetIdentityCredential final :
   std::string* _internal_mutable_a_amediationrequirement();
   public:
 
-  // bool a_aHasUserActivation = 3;
+  // required bool a_aHasUserActivation = 3;
+  bool has_a_ahasuseractivation() const;
+  private:
+  bool _internal_has_a_ahasuseractivation() const;
+  public:
   void clear_a_ahasuseractivation();
   bool a_ahasuseractivation() const;
   void set_a_ahasuseractivation(bool value);
@@ -368,14 +394,18 @@ class Msg_GetIdentityCredential final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aoptions_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_amediationrequirement_;
     bool a_ahasuseractivation_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebIdentity_2eproto;
@@ -411,6 +441,13 @@ class Reply_GetIdentityCredential final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_GetIdentityCredential& default_instance() {
@@ -487,7 +524,7 @@ class Reply_GetIdentityCredential final :
   enum : int {
     kAResponseFieldNumber = 1,
   };
-  // .protobuf.mozilla.dom.WebIdentityGetCredentialResponse a_response = 1;
+  // required .protobuf.mozilla.dom.WebIdentityGetCredentialResponse a_response = 1;
   bool has_a_response() const;
   private:
   bool _internal_has_a_response() const;
@@ -513,8 +550,9 @@ class Reply_GetIdentityCredential final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::protobuf::mozilla::dom::WebIdentityGetCredentialResponse* a_response_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::protobuf::mozilla::dom::WebIdentityGetCredentialResponse* a_response_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebIdentity_2eproto;
@@ -550,6 +588,13 @@ class Msg_DisconnectIdentityCredential final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_DisconnectIdentityCredential& default_instance() {
@@ -626,7 +671,11 @@ class Msg_DisconnectIdentityCredential final :
   enum : int {
     kAAOptionsFieldNumber = 1,
   };
-  // bytes a_aOptions = 1;
+  // required bytes a_aOptions = 1;
+  bool has_a_aoptions() const;
+  private:
+  bool _internal_has_a_aoptions() const;
+  public:
   void clear_a_aoptions();
   const std::string& a_aoptions() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -648,8 +697,9 @@ class Msg_DisconnectIdentityCredential final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aoptions_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aoptions_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebIdentity_2eproto;
@@ -685,6 +735,13 @@ class Reply_DisconnectIdentityCredential final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_DisconnectIdentityCredential& default_instance() {
@@ -761,7 +818,11 @@ class Reply_DisconnectIdentityCredential final :
   enum : int {
     kARvFieldNumber = 1,
   };
-  // bytes a_rv = 1;
+  // required bytes a_rv = 1;
+  bool has_a_rv() const;
+  private:
+  bool _internal_has_a_rv() const;
+  public:
   void clear_a_rv();
   const std::string& a_rv() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -783,8 +844,9 @@ class Reply_DisconnectIdentityCredential final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_rv_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_rv_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebIdentity_2eproto;
@@ -820,6 +882,13 @@ class Msg_PreventSilentAccess final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_PreventSilentAccess& default_instance() {
@@ -939,6 +1008,13 @@ class Reply_PreventSilentAccess final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_PreventSilentAccess& default_instance() {
     return *internal_default_instance();
   }
@@ -1013,7 +1089,11 @@ class Reply_PreventSilentAccess final :
   enum : int {
     kARvFieldNumber = 1,
   };
-  // bytes a_rv = 1;
+  // required bytes a_rv = 1;
+  bool has_a_rv() const;
+  private:
+  bool _internal_has_a_rv() const;
+  public:
   void clear_a_rv();
   const std::string& a_rv() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1035,8 +1115,9 @@ class Reply_PreventSilentAccess final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_rv_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_rv_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebIdentity_2eproto;
@@ -1072,6 +1153,13 @@ class Msg_SetLoginStatus final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_SetLoginStatus& default_instance() {
@@ -1148,7 +1236,11 @@ class Msg_SetLoginStatus final :
   enum : int {
     kAFooFieldNumber = 1,
   };
-  // bytes a_foo = 1;
+  // required bytes a_foo = 1;
+  bool has_a_foo() const;
+  private:
+  bool _internal_has_a_foo() const;
+  public:
   void clear_a_foo();
   const std::string& a_foo() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1170,8 +1262,9 @@ class Msg_SetLoginStatus final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_foo_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_foo_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebIdentity_2eproto;
@@ -1207,6 +1300,13 @@ class Reply_SetLoginStatus final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_SetLoginStatus& default_instance() {
@@ -1283,7 +1383,11 @@ class Reply_SetLoginStatus final :
   enum : int {
     kARvFieldNumber = 1,
   };
-  // bytes a_rv = 1;
+  // required bytes a_rv = 1;
+  bool has_a_rv() const;
+  private:
+  bool _internal_has_a_rv() const;
+  public:
   void clear_a_rv();
   const std::string& a_rv() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1305,8 +1409,9 @@ class Reply_SetLoginStatus final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_rv_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_rv_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebIdentity_2eproto;
@@ -1342,6 +1447,13 @@ class Msg___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg___delete__& default_instance() {
@@ -1461,6 +1573,13 @@ class Reply___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -1560,9 +1679,17 @@ class Reply___delete__ final :
 
 // Msg_GetIdentityCredential
 
-// bytes a_aOptions = 1;
+// required bytes a_aOptions = 1;
+inline bool Msg_GetIdentityCredential::_internal_has_a_aoptions() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_GetIdentityCredential::has_a_aoptions() const {
+  return _internal_has_a_aoptions();
+}
 inline void Msg_GetIdentityCredential::clear_a_aoptions() {
   _impl_.a_aoptions_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_GetIdentityCredential::a_aoptions() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebIdentity.Msg_GetIdentityCredential.a_aOptions)
@@ -1571,7 +1698,7 @@ inline const std::string& Msg_GetIdentityCredential::a_aoptions() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GetIdentityCredential::set_a_aoptions(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aoptions_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebIdentity.Msg_GetIdentityCredential.a_aOptions)
 }
@@ -1584,22 +1711,32 @@ inline const std::string& Msg_GetIdentityCredential::_internal_a_aoptions() cons
   return _impl_.a_aoptions_.Get();
 }
 inline void Msg_GetIdentityCredential::_internal_set_a_aoptions(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aoptions_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_GetIdentityCredential::_internal_mutable_a_aoptions() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aoptions_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_GetIdentityCredential::release_a_aoptions() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebIdentity.Msg_GetIdentityCredential.a_aOptions)
-  return _impl_.a_aoptions_.Release();
+  if (!_internal_has_a_aoptions()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aoptions_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aoptions_.IsDefault()) {
+    _impl_.a_aoptions_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_GetIdentityCredential::set_allocated_a_aoptions(std::string* a_aoptions) {
   if (a_aoptions != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aoptions_.SetAllocated(a_aoptions, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1610,9 +1747,17 @@ inline void Msg_GetIdentityCredential::set_allocated_a_aoptions(std::string* a_a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebIdentity.Msg_GetIdentityCredential.a_aOptions)
 }
 
-// bytes a_aMediationRequirement = 2;
+// required bytes a_aMediationRequirement = 2;
+inline bool Msg_GetIdentityCredential::_internal_has_a_amediationrequirement() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_GetIdentityCredential::has_a_amediationrequirement() const {
+  return _internal_has_a_amediationrequirement();
+}
 inline void Msg_GetIdentityCredential::clear_a_amediationrequirement() {
   _impl_.a_amediationrequirement_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_GetIdentityCredential::a_amediationrequirement() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebIdentity.Msg_GetIdentityCredential.a_aMediationRequirement)
@@ -1621,7 +1766,7 @@ inline const std::string& Msg_GetIdentityCredential::a_amediationrequirement() c
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GetIdentityCredential::set_a_amediationrequirement(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_amediationrequirement_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebIdentity.Msg_GetIdentityCredential.a_aMediationRequirement)
 }
@@ -1634,22 +1779,32 @@ inline const std::string& Msg_GetIdentityCredential::_internal_a_amediationrequi
   return _impl_.a_amediationrequirement_.Get();
 }
 inline void Msg_GetIdentityCredential::_internal_set_a_amediationrequirement(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_amediationrequirement_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_GetIdentityCredential::_internal_mutable_a_amediationrequirement() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_amediationrequirement_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_GetIdentityCredential::release_a_amediationrequirement() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebIdentity.Msg_GetIdentityCredential.a_aMediationRequirement)
-  return _impl_.a_amediationrequirement_.Release();
+  if (!_internal_has_a_amediationrequirement()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_amediationrequirement_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_amediationrequirement_.IsDefault()) {
+    _impl_.a_amediationrequirement_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_GetIdentityCredential::set_allocated_a_amediationrequirement(std::string* a_amediationrequirement) {
   if (a_amediationrequirement != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_amediationrequirement_.SetAllocated(a_amediationrequirement, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1660,9 +1815,17 @@ inline void Msg_GetIdentityCredential::set_allocated_a_amediationrequirement(std
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebIdentity.Msg_GetIdentityCredential.a_aMediationRequirement)
 }
 
-// bool a_aHasUserActivation = 3;
+// required bool a_aHasUserActivation = 3;
+inline bool Msg_GetIdentityCredential::_internal_has_a_ahasuseractivation() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_GetIdentityCredential::has_a_ahasuseractivation() const {
+  return _internal_has_a_ahasuseractivation();
+}
 inline void Msg_GetIdentityCredential::clear_a_ahasuseractivation() {
   _impl_.a_ahasuseractivation_ = false;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline bool Msg_GetIdentityCredential::_internal_a_ahasuseractivation() const {
   return _impl_.a_ahasuseractivation_;
@@ -1672,7 +1835,7 @@ inline bool Msg_GetIdentityCredential::a_ahasuseractivation() const {
   return _internal_a_ahasuseractivation();
 }
 inline void Msg_GetIdentityCredential::_internal_set_a_ahasuseractivation(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_ahasuseractivation_ = value;
 }
 inline void Msg_GetIdentityCredential::set_a_ahasuseractivation(bool value) {
@@ -1684,9 +1847,11 @@ inline void Msg_GetIdentityCredential::set_a_ahasuseractivation(bool value) {
 
 // Reply_GetIdentityCredential
 
-// .protobuf.mozilla.dom.WebIdentityGetCredentialResponse a_response = 1;
+// required .protobuf.mozilla.dom.WebIdentityGetCredentialResponse a_response = 1;
 inline bool Reply_GetIdentityCredential::_internal_has_a_response() const {
-  return this != internal_default_instance() && _impl_.a_response_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_response_ != nullptr);
+  return value;
 }
 inline bool Reply_GetIdentityCredential::has_a_response() const {
   return _internal_has_a_response();
@@ -1707,14 +1872,14 @@ inline void Reply_GetIdentityCredential::unsafe_arena_set_allocated_a_response(
   }
   _impl_.a_response_ = a_response;
   if (a_response) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PWebIdentity.Reply_GetIdentityCredential.a_response)
 }
 inline ::protobuf::mozilla::dom::WebIdentityGetCredentialResponse* Reply_GetIdentityCredential::release_a_response() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::WebIdentityGetCredentialResponse* temp = _impl_.a_response_;
   _impl_.a_response_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1730,13 +1895,13 @@ inline ::protobuf::mozilla::dom::WebIdentityGetCredentialResponse* Reply_GetIden
 }
 inline ::protobuf::mozilla::dom::WebIdentityGetCredentialResponse* Reply_GetIdentityCredential::unsafe_arena_release_a_response() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebIdentity.Reply_GetIdentityCredential.a_response)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::WebIdentityGetCredentialResponse* temp = _impl_.a_response_;
   _impl_.a_response_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::WebIdentityGetCredentialResponse* Reply_GetIdentityCredential::_internal_mutable_a_response() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_response_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::WebIdentityGetCredentialResponse>(GetArenaForAllocation());
     _impl_.a_response_ = p;
@@ -1761,9 +1926,9 @@ inline void Reply_GetIdentityCredential::set_allocated_a_response(::protobuf::mo
       a_response = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_response, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_response_ = a_response;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebIdentity.Reply_GetIdentityCredential.a_response)
@@ -1773,9 +1938,17 @@ inline void Reply_GetIdentityCredential::set_allocated_a_response(::protobuf::mo
 
 // Msg_DisconnectIdentityCredential
 
-// bytes a_aOptions = 1;
+// required bytes a_aOptions = 1;
+inline bool Msg_DisconnectIdentityCredential::_internal_has_a_aoptions() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_DisconnectIdentityCredential::has_a_aoptions() const {
+  return _internal_has_a_aoptions();
+}
 inline void Msg_DisconnectIdentityCredential::clear_a_aoptions() {
   _impl_.a_aoptions_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_DisconnectIdentityCredential::a_aoptions() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebIdentity.Msg_DisconnectIdentityCredential.a_aOptions)
@@ -1784,7 +1957,7 @@ inline const std::string& Msg_DisconnectIdentityCredential::a_aoptions() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DisconnectIdentityCredential::set_a_aoptions(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aoptions_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebIdentity.Msg_DisconnectIdentityCredential.a_aOptions)
 }
@@ -1797,22 +1970,32 @@ inline const std::string& Msg_DisconnectIdentityCredential::_internal_a_aoptions
   return _impl_.a_aoptions_.Get();
 }
 inline void Msg_DisconnectIdentityCredential::_internal_set_a_aoptions(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aoptions_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_DisconnectIdentityCredential::_internal_mutable_a_aoptions() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aoptions_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_DisconnectIdentityCredential::release_a_aoptions() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebIdentity.Msg_DisconnectIdentityCredential.a_aOptions)
-  return _impl_.a_aoptions_.Release();
+  if (!_internal_has_a_aoptions()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aoptions_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aoptions_.IsDefault()) {
+    _impl_.a_aoptions_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_DisconnectIdentityCredential::set_allocated_a_aoptions(std::string* a_aoptions) {
   if (a_aoptions != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aoptions_.SetAllocated(a_aoptions, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1827,9 +2010,17 @@ inline void Msg_DisconnectIdentityCredential::set_allocated_a_aoptions(std::stri
 
 // Reply_DisconnectIdentityCredential
 
-// bytes a_rv = 1;
+// required bytes a_rv = 1;
+inline bool Reply_DisconnectIdentityCredential::_internal_has_a_rv() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_DisconnectIdentityCredential::has_a_rv() const {
+  return _internal_has_a_rv();
+}
 inline void Reply_DisconnectIdentityCredential::clear_a_rv() {
   _impl_.a_rv_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_DisconnectIdentityCredential::a_rv() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebIdentity.Reply_DisconnectIdentityCredential.a_rv)
@@ -1838,7 +2029,7 @@ inline const std::string& Reply_DisconnectIdentityCredential::a_rv() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_DisconnectIdentityCredential::set_a_rv(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_rv_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebIdentity.Reply_DisconnectIdentityCredential.a_rv)
 }
@@ -1851,22 +2042,32 @@ inline const std::string& Reply_DisconnectIdentityCredential::_internal_a_rv() c
   return _impl_.a_rv_.Get();
 }
 inline void Reply_DisconnectIdentityCredential::_internal_set_a_rv(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_rv_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_DisconnectIdentityCredential::_internal_mutable_a_rv() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_rv_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_DisconnectIdentityCredential::release_a_rv() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebIdentity.Reply_DisconnectIdentityCredential.a_rv)
-  return _impl_.a_rv_.Release();
+  if (!_internal_has_a_rv()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_rv_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_rv_.IsDefault()) {
+    _impl_.a_rv_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_DisconnectIdentityCredential::set_allocated_a_rv(std::string* a_rv) {
   if (a_rv != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_rv_.SetAllocated(a_rv, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1885,9 +2086,17 @@ inline void Reply_DisconnectIdentityCredential::set_allocated_a_rv(std::string* 
 
 // Reply_PreventSilentAccess
 
-// bytes a_rv = 1;
+// required bytes a_rv = 1;
+inline bool Reply_PreventSilentAccess::_internal_has_a_rv() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_PreventSilentAccess::has_a_rv() const {
+  return _internal_has_a_rv();
+}
 inline void Reply_PreventSilentAccess::clear_a_rv() {
   _impl_.a_rv_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_PreventSilentAccess::a_rv() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebIdentity.Reply_PreventSilentAccess.a_rv)
@@ -1896,7 +2105,7 @@ inline const std::string& Reply_PreventSilentAccess::a_rv() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_PreventSilentAccess::set_a_rv(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_rv_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebIdentity.Reply_PreventSilentAccess.a_rv)
 }
@@ -1909,22 +2118,32 @@ inline const std::string& Reply_PreventSilentAccess::_internal_a_rv() const {
   return _impl_.a_rv_.Get();
 }
 inline void Reply_PreventSilentAccess::_internal_set_a_rv(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_rv_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_PreventSilentAccess::_internal_mutable_a_rv() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_rv_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_PreventSilentAccess::release_a_rv() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebIdentity.Reply_PreventSilentAccess.a_rv)
-  return _impl_.a_rv_.Release();
+  if (!_internal_has_a_rv()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_rv_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_rv_.IsDefault()) {
+    _impl_.a_rv_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_PreventSilentAccess::set_allocated_a_rv(std::string* a_rv) {
   if (a_rv != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_rv_.SetAllocated(a_rv, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1939,9 +2158,17 @@ inline void Reply_PreventSilentAccess::set_allocated_a_rv(std::string* a_rv) {
 
 // Msg_SetLoginStatus
 
-// bytes a_foo = 1;
+// required bytes a_foo = 1;
+inline bool Msg_SetLoginStatus::_internal_has_a_foo() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_SetLoginStatus::has_a_foo() const {
+  return _internal_has_a_foo();
+}
 inline void Msg_SetLoginStatus::clear_a_foo() {
   _impl_.a_foo_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_SetLoginStatus::a_foo() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebIdentity.Msg_SetLoginStatus.a_foo)
@@ -1950,7 +2177,7 @@ inline const std::string& Msg_SetLoginStatus::a_foo() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SetLoginStatus::set_a_foo(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_foo_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebIdentity.Msg_SetLoginStatus.a_foo)
 }
@@ -1963,22 +2190,32 @@ inline const std::string& Msg_SetLoginStatus::_internal_a_foo() const {
   return _impl_.a_foo_.Get();
 }
 inline void Msg_SetLoginStatus::_internal_set_a_foo(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_foo_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_SetLoginStatus::_internal_mutable_a_foo() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_foo_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_SetLoginStatus::release_a_foo() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebIdentity.Msg_SetLoginStatus.a_foo)
-  return _impl_.a_foo_.Release();
+  if (!_internal_has_a_foo()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_foo_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_foo_.IsDefault()) {
+    _impl_.a_foo_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_SetLoginStatus::set_allocated_a_foo(std::string* a_foo) {
   if (a_foo != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_foo_.SetAllocated(a_foo, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1993,9 +2230,17 @@ inline void Msg_SetLoginStatus::set_allocated_a_foo(std::string* a_foo) {
 
 // Reply_SetLoginStatus
 
-// bytes a_rv = 1;
+// required bytes a_rv = 1;
+inline bool Reply_SetLoginStatus::_internal_has_a_rv() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_SetLoginStatus::has_a_rv() const {
+  return _internal_has_a_rv();
+}
 inline void Reply_SetLoginStatus::clear_a_rv() {
   _impl_.a_rv_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_SetLoginStatus::a_rv() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebIdentity.Reply_SetLoginStatus.a_rv)
@@ -2004,7 +2249,7 @@ inline const std::string& Reply_SetLoginStatus::a_rv() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_SetLoginStatus::set_a_rv(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_rv_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebIdentity.Reply_SetLoginStatus.a_rv)
 }
@@ -2017,22 +2262,32 @@ inline const std::string& Reply_SetLoginStatus::_internal_a_rv() const {
   return _impl_.a_rv_.Get();
 }
 inline void Reply_SetLoginStatus::_internal_set_a_rv(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_rv_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_SetLoginStatus::_internal_mutable_a_rv() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_rv_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_SetLoginStatus::release_a_rv() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebIdentity.Reply_SetLoginStatus.a_rv)
-  return _impl_.a_rv_.Release();
+  if (!_internal_has_a_rv()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_rv_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_rv_.IsDefault()) {
+    _impl_.a_rv_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_SetLoginStatus::set_allocated_a_rv(std::string* a_rv) {
   if (a_rv != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_rv_.SetAllocated(a_rv, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

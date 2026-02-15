@@ -22,15 +22,16 @@ namespace mozilla {
 namespace dom {
 PROTOBUF_CONSTEXPR LSSnapshotInitInfo::LSSnapshotInitInfo(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_iteminfos_)*/{}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_iteminfos_)*/{}
   , /*decltype(_impl_.a_loadstate_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_usage_)*/int64_t{0}
   , /*decltype(_impl_.a_totallength_)*/0u
   , /*decltype(_impl_.a_addkeytounknownitems_)*/false
   , /*decltype(_impl_.a_hasotherprocessdatabases_)*/false
   , /*decltype(_impl_.a_hasotherprocessobservers_)*/false
-  , /*decltype(_impl_.a_peakusage_)*/int64_t{0}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_peakusage_)*/int64_t{0}} {}
 struct LSSnapshotInitInfoDefaultTypeInternal {
   PROTOBUF_CONSTEXPR LSSnapshotInitInfoDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -51,6 +52,31 @@ namespace dom {
 
 class LSSnapshotInitInfo::_Internal {
  public:
+  using HasBits = decltype(std::declval<LSSnapshotInitInfo>()._impl_._has_bits_);
+  static void set_has_a_addkeytounknownitems(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_a_totallength(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_a_usage(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_peakusage(HasBits* has_bits) {
+    (*has_bits)[0] |= 64u;
+  }
+  static void set_has_a_loadstate(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_hasotherprocessdatabases(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static void set_has_a_hasotherprocessobservers(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x0000007f) ^ 0x0000007f) != 0;
+  }
 };
 
 void LSSnapshotInitInfo::clear_a_iteminfos() {
@@ -66,22 +92,23 @@ LSSnapshotInitInfo::LSSnapshotInitInfo(const LSSnapshotInitInfo& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   LSSnapshotInitInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_iteminfos_){from._impl_.a_iteminfos_}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_iteminfos_){from._impl_.a_iteminfos_}
     , decltype(_impl_.a_loadstate_){}
     , decltype(_impl_.a_usage_){}
     , decltype(_impl_.a_totallength_){}
     , decltype(_impl_.a_addkeytounknownitems_){}
     , decltype(_impl_.a_hasotherprocessdatabases_){}
     , decltype(_impl_.a_hasotherprocessobservers_){}
-    , decltype(_impl_.a_peakusage_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_peakusage_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_loadstate_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_loadstate_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_loadstate().empty()) {
+  if (from._internal_has_a_loadstate()) {
     _this->_impl_.a_loadstate_.Set(from._internal_a_loadstate(), 
       _this->GetArenaForAllocation());
   }
@@ -96,7 +123,9 @@ inline void LSSnapshotInitInfo::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_iteminfos_){arena}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_iteminfos_){arena}
     , decltype(_impl_.a_loadstate_){}
     , decltype(_impl_.a_usage_){int64_t{0}}
     , decltype(_impl_.a_totallength_){0u}
@@ -104,7 +133,6 @@ inline void LSSnapshotInitInfo::SharedCtor(
     , decltype(_impl_.a_hasotherprocessdatabases_){false}
     , decltype(_impl_.a_hasotherprocessobservers_){false}
     , decltype(_impl_.a_peakusage_){int64_t{0}}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_loadstate_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -138,22 +166,30 @@ void LSSnapshotInitInfo::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_iteminfos_.Clear();
-  _impl_.a_loadstate_.ClearToEmpty();
-  ::memset(&_impl_.a_usage_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.a_peakusage_) -
-      reinterpret_cast<char*>(&_impl_.a_usage_)) + sizeof(_impl_.a_peakusage_));
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_loadstate_.ClearNonDefaultToEmpty();
+  }
+  if (cached_has_bits & 0x0000007eu) {
+    ::memset(&_impl_.a_usage_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_peakusage_) -
+        reinterpret_cast<char*>(&_impl_.a_usage_)) + sizeof(_impl_.a_peakusage_));
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* LSSnapshotInitInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool a_addKeyToUnknownItems = 1;
+      // required bool a_addKeyToUnknownItems = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_addkeytounknownitems(&has_bits);
           _impl_.a_addkeytounknownitems_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -172,31 +208,34 @@ const char* LSSnapshotInitInfo::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // uint32 a_totalLength = 3;
+      // required uint32 a_totalLength = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_a_totallength(&has_bits);
           _impl_.a_totallength_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // sint64 a_usage = 4;
+      // required sint64 a_usage = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _Internal::set_has_a_usage(&has_bits);
           _impl_.a_usage_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // sint64 a_peakUsage = 5;
+      // required sint64 a_peakUsage = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          _Internal::set_has_a_peakusage(&has_bits);
           _impl_.a_peakusage_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bytes a_loadState = 6;
+      // required bytes a_loadState = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           auto str = _internal_mutable_a_loadstate();
@@ -205,17 +244,19 @@ const char* LSSnapshotInitInfo::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // bool a_hasOtherProcessDatabases = 7;
+      // required bool a_hasOtherProcessDatabases = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
+          _Internal::set_has_a_hasotherprocessdatabases(&has_bits);
           _impl_.a_hasotherprocessdatabases_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bool a_hasOtherProcessObservers = 8;
+      // required bool a_hasOtherProcessObservers = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
+          _Internal::set_has_a_hasotherprocessobservers(&has_bits);
           _impl_.a_hasotherprocessobservers_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -237,6 +278,7 @@ const char* LSSnapshotInitInfo::_InternalParse(const char* ptr, ::_pbi::ParseCon
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -250,8 +292,9 @@ uint8_t* LSSnapshotInitInfo::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool a_addKeyToUnknownItems = 1;
-  if (this->_internal_a_addkeytounknownitems() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bool a_addKeyToUnknownItems = 1;
+  if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_addkeytounknownitems(), target);
   }
@@ -264,38 +307,38 @@ uint8_t* LSSnapshotInitInfo::_InternalSerialize(
         InternalWriteMessage(2, repfield, repfield.GetCachedSize(), target, stream);
   }
 
-  // uint32 a_totalLength = 3;
-  if (this->_internal_a_totallength() != 0) {
+  // required uint32 a_totalLength = 3;
+  if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_totallength(), target);
   }
 
-  // sint64 a_usage = 4;
-  if (this->_internal_a_usage() != 0) {
+  // required sint64 a_usage = 4;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(4, this->_internal_a_usage(), target);
   }
 
-  // sint64 a_peakUsage = 5;
-  if (this->_internal_a_peakusage() != 0) {
+  // required sint64 a_peakUsage = 5;
+  if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(5, this->_internal_a_peakusage(), target);
   }
 
-  // bytes a_loadState = 6;
-  if (!this->_internal_a_loadstate().empty()) {
+  // required bytes a_loadState = 6;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         6, this->_internal_a_loadstate(), target);
   }
 
-  // bool a_hasOtherProcessDatabases = 7;
-  if (this->_internal_a_hasotherprocessdatabases() != 0) {
+  // required bool a_hasOtherProcessDatabases = 7;
+  if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(7, this->_internal_a_hasotherprocessdatabases(), target);
   }
 
-  // bool a_hasOtherProcessObservers = 8;
-  if (this->_internal_a_hasotherprocessobservers() != 0) {
+  // required bool a_hasOtherProcessObservers = 8;
+  if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(8, this->_internal_a_hasotherprocessobservers(), target);
   }
@@ -308,10 +351,80 @@ uint8_t* LSSnapshotInitInfo::_InternalSerialize(
   return target;
 }
 
+size_t LSSnapshotInitInfo::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.LSSnapshotInitInfo)
+  size_t total_size = 0;
+
+  if (_internal_has_a_loadstate()) {
+    // required bytes a_loadState = 6;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_loadstate());
+  }
+
+  if (_internal_has_a_usage()) {
+    // required sint64 a_usage = 4;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_usage());
+  }
+
+  if (_internal_has_a_totallength()) {
+    // required uint32 a_totalLength = 3;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_totallength());
+  }
+
+  if (_internal_has_a_addkeytounknownitems()) {
+    // required bool a_addKeyToUnknownItems = 1;
+    total_size += 1 + 1;
+  }
+
+  if (_internal_has_a_hasotherprocessdatabases()) {
+    // required bool a_hasOtherProcessDatabases = 7;
+    total_size += 1 + 1;
+  }
+
+  if (_internal_has_a_hasotherprocessobservers()) {
+    // required bool a_hasOtherProcessObservers = 8;
+    total_size += 1 + 1;
+  }
+
+  if (_internal_has_a_peakusage()) {
+    // required sint64 a_peakUsage = 5;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_peakusage());
+  }
+
+  return total_size;
+}
 size_t LSSnapshotInitInfo::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.LSSnapshotInitInfo)
   size_t total_size = 0;
 
+  if (((_impl_._has_bits_[0] & 0x0000007f) ^ 0x0000007f) == 0) {  // All required fields are present.
+    // required bytes a_loadState = 6;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_loadstate());
+
+    // required sint64 a_usage = 4;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_usage());
+
+    // required uint32 a_totalLength = 3;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_totallength());
+
+    // required bool a_addKeyToUnknownItems = 1;
+    total_size += 1 + 1;
+
+    // required bool a_hasOtherProcessDatabases = 7;
+    total_size += 1 + 1;
+
+    // required bool a_hasOtherProcessObservers = 8;
+    total_size += 1 + 1;
+
+    // required sint64 a_peakUsage = 5;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_peakusage());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -321,43 +434,6 @@ size_t LSSnapshotInitInfo::ByteSizeLong() const {
   for (const auto& msg : this->_impl_.a_iteminfos_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
-  }
-
-  // bytes a_loadState = 6;
-  if (!this->_internal_a_loadstate().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_loadstate());
-  }
-
-  // sint64 a_usage = 4;
-  if (this->_internal_a_usage() != 0) {
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_usage());
-  }
-
-  // uint32 a_totalLength = 3;
-  if (this->_internal_a_totallength() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_totallength());
-  }
-
-  // bool a_addKeyToUnknownItems = 1;
-  if (this->_internal_a_addkeytounknownitems() != 0) {
-    total_size += 1 + 1;
-  }
-
-  // bool a_hasOtherProcessDatabases = 7;
-  if (this->_internal_a_hasotherprocessdatabases() != 0) {
-    total_size += 1 + 1;
-  }
-
-  // bool a_hasOtherProcessObservers = 8;
-  if (this->_internal_a_hasotherprocessobservers() != 0) {
-    total_size += 1 + 1;
-  }
-
-  // sint64 a_peakUsage = 5;
-  if (this->_internal_a_peakusage() != 0) {
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_peakusage());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -382,26 +458,30 @@ void LSSnapshotInitInfo::MergeFrom(const LSSnapshotInitInfo& from) {
   (void) cached_has_bits;
 
   _this->_impl_.a_iteminfos_.MergeFrom(from._impl_.a_iteminfos_);
-  if (!from._internal_a_loadstate().empty()) {
-    _this->_internal_set_a_loadstate(from._internal_a_loadstate());
-  }
-  if (from._internal_a_usage() != 0) {
-    _this->_internal_set_a_usage(from._internal_a_usage());
-  }
-  if (from._internal_a_totallength() != 0) {
-    _this->_internal_set_a_totallength(from._internal_a_totallength());
-  }
-  if (from._internal_a_addkeytounknownitems() != 0) {
-    _this->_internal_set_a_addkeytounknownitems(from._internal_a_addkeytounknownitems());
-  }
-  if (from._internal_a_hasotherprocessdatabases() != 0) {
-    _this->_internal_set_a_hasotherprocessdatabases(from._internal_a_hasotherprocessdatabases());
-  }
-  if (from._internal_a_hasotherprocessobservers() != 0) {
-    _this->_internal_set_a_hasotherprocessobservers(from._internal_a_hasotherprocessobservers());
-  }
-  if (from._internal_a_peakusage() != 0) {
-    _this->_internal_set_a_peakusage(from._internal_a_peakusage());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000007fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_loadstate(from._internal_a_loadstate());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_usage_ = from._impl_.a_usage_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.a_totallength_ = from._impl_.a_totallength_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.a_addkeytounknownitems_ = from._impl_.a_addkeytounknownitems_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_impl_.a_hasotherprocessdatabases_ = from._impl_.a_hasotherprocessdatabases_;
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _this->_impl_.a_hasotherprocessobservers_ = from._impl_.a_hasotherprocessobservers_;
+    }
+    if (cached_has_bits & 0x00000040u) {
+      _this->_impl_.a_peakusage_ = from._impl_.a_peakusage_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -414,6 +494,9 @@ void LSSnapshotInitInfo::CopyFrom(const LSSnapshotInitInfo& from) {
 }
 
 bool LSSnapshotInitInfo::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_iteminfos_))
+    return false;
   return true;
 }
 
@@ -422,6 +505,7 @@ void LSSnapshotInitInfo::InternalSwap(LSSnapshotInitInfo* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_iteminfos_.InternalSwap(&other->_impl_.a_iteminfos_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_loadstate_, lhs_arena,

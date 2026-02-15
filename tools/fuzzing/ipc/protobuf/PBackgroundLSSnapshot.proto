@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/localstorage/PBackgroundLSSnapshot.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.PBackgroundLSSnapshot;
@@ -55,11 +55,11 @@ message Msg_Loaded {
 }
 
 message Msg_LoadValueAndMoreItems {
-  string a_key = 1;
+  required string a_key = 1;
 }
 
 message Reply_LoadValueAndMoreItems {
-  bytes a_value = 1;
+  required bytes a_value = 1;
   repeated protobuf.mozilla.dom.LSItemInfo a_itemInfos = 2;
 }
 
@@ -71,11 +71,11 @@ message Reply_LoadKeys {
 }
 
 message Msg_IncreasePeakUsage {
-  sint64 a_minSize = 1;
+  required sint64 a_minSize = 1;
 }
 
 message Reply_IncreasePeakUsage {
-  sint64 a_size = 1;
+  required sint64 a_size = 1;
 }
 
 message Msg_MarkDirty {

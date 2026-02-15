@@ -99,6 +99,13 @@ class LSSimpleRequestPreloadedResponse final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const LSSimpleRequestPreloadedResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -173,7 +180,11 @@ class LSSimpleRequestPreloadedResponse final :
   enum : int {
     kAPreloadedFieldNumber = 1,
   };
-  // bool a_preloaded = 1;
+  // required bool a_preloaded = 1;
+  bool has_a_preloaded() const;
+  private:
+  bool _internal_has_a_preloaded() const;
+  public:
   void clear_a_preloaded();
   bool a_preloaded() const;
   void set_a_preloaded(bool value);
@@ -190,8 +201,9 @@ class LSSimpleRequestPreloadedResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_preloaded_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_preloaded_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSSimpleRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -227,6 +239,13 @@ class LSSimpleRequestGetStateResponse final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const LSSimpleRequestGetStateResponse& default_instance() {
@@ -366,6 +385,13 @@ class LSSimpleRequestResponse final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const LSSimpleRequestResponse& default_instance() {
@@ -546,9 +572,17 @@ class LSSimpleRequestResponse final :
 #endif  // __GNUC__
 // LSSimpleRequestPreloadedResponse
 
-// bool a_preloaded = 1;
+// required bool a_preloaded = 1;
+inline bool LSSimpleRequestPreloadedResponse::_internal_has_a_preloaded() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool LSSimpleRequestPreloadedResponse::has_a_preloaded() const {
+  return _internal_has_a_preloaded();
+}
 inline void LSSimpleRequestPreloadedResponse::clear_a_preloaded() {
   _impl_.a_preloaded_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool LSSimpleRequestPreloadedResponse::_internal_a_preloaded() const {
   return _impl_.a_preloaded_;
@@ -558,7 +592,7 @@ inline bool LSSimpleRequestPreloadedResponse::a_preloaded() const {
   return _internal_a_preloaded();
 }
 inline void LSSimpleRequestPreloadedResponse::_internal_set_a_preloaded(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_preloaded_ = value;
 }
 inline void LSSimpleRequestPreloadedResponse::set_a_preloaded(bool value) {

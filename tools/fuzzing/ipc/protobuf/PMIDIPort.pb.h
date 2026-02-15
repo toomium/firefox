@@ -118,6 +118,13 @@ class Msg_Shutdown final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Shutdown& default_instance() {
     return *internal_default_instance();
   }
@@ -233,6 +240,13 @@ class Msg_Send final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Send& default_instance() {
@@ -374,6 +388,13 @@ class Msg_Open final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Open& default_instance() {
     return *internal_default_instance();
   }
@@ -489,6 +510,13 @@ class Msg_Close final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Close& default_instance() {
@@ -608,6 +636,13 @@ class Msg_Clear final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Clear& default_instance() {
     return *internal_default_instance();
   }
@@ -723,6 +758,13 @@ class Msg_Receive final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Receive& default_instance() {
@@ -864,6 +906,13 @@ class Msg_UpdateStatus final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_UpdateStatus& default_instance() {
     return *internal_default_instance();
   }
@@ -939,7 +988,11 @@ class Msg_UpdateStatus final :
     kADeviceStateFieldNumber = 1,
     kAConnectionStateFieldNumber = 2,
   };
-  // uint32 a_deviceState = 1;
+  // required uint32 a_deviceState = 1;
+  bool has_a_devicestate() const;
+  private:
+  bool _internal_has_a_devicestate() const;
+  public:
   void clear_a_devicestate();
   uint32_t a_devicestate() const;
   void set_a_devicestate(uint32_t value);
@@ -948,7 +1001,11 @@ class Msg_UpdateStatus final :
   void _internal_set_a_devicestate(uint32_t value);
   public:
 
-  // uint32 a_connectionState = 2;
+  // required uint32 a_connectionState = 2;
+  bool has_a_connectionstate() const;
+  private:
+  bool _internal_has_a_connectionstate() const;
+  public:
   void clear_a_connectionstate();
   uint32_t a_connectionstate() const;
   void set_a_connectionstate(uint32_t value);
@@ -961,13 +1018,17 @@ class Msg_UpdateStatus final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t a_devicestate_;
     uint32_t a_connectionstate_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMIDIPort_2eproto;
@@ -1081,9 +1142,17 @@ Msg_Receive::a_msg() const {
 
 // Msg_UpdateStatus
 
-// uint32 a_deviceState = 1;
+// required uint32 a_deviceState = 1;
+inline bool Msg_UpdateStatus::_internal_has_a_devicestate() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_UpdateStatus::has_a_devicestate() const {
+  return _internal_has_a_devicestate();
+}
 inline void Msg_UpdateStatus::clear_a_devicestate() {
   _impl_.a_devicestate_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Msg_UpdateStatus::_internal_a_devicestate() const {
   return _impl_.a_devicestate_;
@@ -1093,7 +1162,7 @@ inline uint32_t Msg_UpdateStatus::a_devicestate() const {
   return _internal_a_devicestate();
 }
 inline void Msg_UpdateStatus::_internal_set_a_devicestate(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_devicestate_ = value;
 }
 inline void Msg_UpdateStatus::set_a_devicestate(uint32_t value) {
@@ -1101,9 +1170,17 @@ inline void Msg_UpdateStatus::set_a_devicestate(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMIDIPort.Msg_UpdateStatus.a_deviceState)
 }
 
-// uint32 a_connectionState = 2;
+// required uint32 a_connectionState = 2;
+inline bool Msg_UpdateStatus::_internal_has_a_connectionstate() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_UpdateStatus::has_a_connectionstate() const {
+  return _internal_has_a_connectionstate();
+}
 inline void Msg_UpdateStatus::clear_a_connectionstate() {
   _impl_.a_connectionstate_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_UpdateStatus::_internal_a_connectionstate() const {
   return _impl_.a_connectionstate_;
@@ -1113,7 +1190,7 @@ inline uint32_t Msg_UpdateStatus::a_connectionstate() const {
   return _internal_a_connectionstate();
 }
 inline void Msg_UpdateStatus::_internal_set_a_connectionstate(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_connectionstate_ = value;
 }
 inline void Msg_UpdateStatus::set_a_connectionstate(uint32_t value) {

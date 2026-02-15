@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/indexedDB/PBackgroundIDBRequest.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.indexedDB;
@@ -14,19 +14,19 @@ import "PBackgroundIDBSharedTypes.proto";
 
 // Structs and unions declarations
 message ObjectStoreAddResponse {
-  bytes a_key = 1;
+  required bytes a_key = 1;
 }
 
 message ObjectStorePutResponse {
-  bytes a_key = 1;
+  required bytes a_key = 1;
 }
 
 message ObjectStoreGetResponse {
-  protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo a_cloneInfo = 1;
+  required protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo a_cloneInfo = 1;
 }
 
 message ObjectStoreGetKeyResponse {
-  bytes a_key = 1;
+  required bytes a_key = 1;
 }
 
 message ObjectStoreGetAllResponse {
@@ -44,15 +44,15 @@ message ObjectStoreClearResponse {
 }
 
 message ObjectStoreCountResponse {
-  uint64 a_count = 1;
+  required uint64 a_count = 1;
 }
 
 message IndexGetResponse {
-  protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo a_cloneInfo = 1;
+  required protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo a_cloneInfo = 1;
 }
 
 message IndexGetKeyResponse {
-  bytes a_key = 1;
+  required bytes a_key = 1;
 }
 
 message IndexGetAllResponse {
@@ -64,7 +64,7 @@ message IndexGetAllKeysResponse {
 }
 
 message IndexCountResponse {
-  uint64 a_count = 1;
+  required uint64 a_count = 1;
 }
 
 message RequestResponse {
@@ -92,7 +92,7 @@ message PreprocessInfo {
 }
 
 message ObjectStoreGetPreprocessParams {
-  protobuf.mozilla.dom.indexedDB.PreprocessInfo a_preprocessInfo = 1;
+  required protobuf.mozilla.dom.indexedDB.PreprocessInfo a_preprocessInfo = 1;
 }
 
 message ObjectStoreGetAllPreprocessParams {

@@ -47,8 +47,9 @@ struct Msg_RequestDeleteDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_RequestDeleteDefaultTypeInternal _Msg_RequestDelete_default_instance_;
 PROTOBUF_CONSTEXPR Msg_CallbackAccept::Msg_CallbackAccept(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_socket_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_socket_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_CallbackAcceptDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_CallbackAcceptDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -391,6 +392,13 @@ std::string Msg_RequestDelete::GetTypeName() const {
 
 class Msg_CallbackAccept::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_CallbackAccept>()._impl_._has_bits_);
+  static void set_has_a_socket(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Msg_CallbackAccept::Msg_CallbackAccept(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -403,15 +411,16 @@ Msg_CallbackAccept::Msg_CallbackAccept(const Msg_CallbackAccept& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_CallbackAccept* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_socket_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_socket_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_socket_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_socket_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_socket().empty()) {
+  if (from._internal_has_a_socket()) {
     _this->_impl_.a_socket_.Set(from._internal_a_socket(), 
       _this->GetArenaForAllocation());
   }
@@ -423,8 +432,9 @@ inline void Msg_CallbackAccept::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_socket_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_socket_){}
   };
   _impl_.a_socket_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -456,17 +466,22 @@ void Msg_CallbackAccept::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_socket_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_socket_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_CallbackAccept::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_socket = 1;
+      // required bytes a_socket = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_socket();
@@ -491,6 +506,7 @@ const char* Msg_CallbackAccept::_InternalParse(const char* ptr, ::_pbi::ParseCon
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -504,8 +520,9 @@ uint8_t* Msg_CallbackAccept::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_socket = 1;
-  if (!this->_internal_a_socket().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_socket = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_socket(), target);
   }
@@ -522,16 +539,15 @@ size_t Msg_CallbackAccept::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PTCPServerSocket.Msg_CallbackAccept)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_socket = 1;
-  if (!this->_internal_a_socket().empty()) {
+  // required bytes a_socket = 1;
+  if (_internal_has_a_socket()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_socket());
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -554,7 +570,7 @@ void Msg_CallbackAccept::MergeFrom(const Msg_CallbackAccept& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_socket().empty()) {
+  if (from._internal_has_a_socket()) {
     _this->_internal_set_a_socket(from._internal_a_socket());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -568,6 +584,7 @@ void Msg_CallbackAccept::CopyFrom(const Msg_CallbackAccept& from) {
 }
 
 bool Msg_CallbackAccept::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -576,6 +593,7 @@ void Msg_CallbackAccept::InternalSwap(Msg_CallbackAccept* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_socket_, lhs_arena,
       &other->_impl_.a_socket_, rhs_arena

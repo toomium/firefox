@@ -101,6 +101,13 @@ class Msg___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -216,6 +223,13 @@ class Reply___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply___delete__& default_instance() {
@@ -335,6 +349,13 @@ class Msg_ClearStoragesForOrigin final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_ClearStoragesForOrigin& default_instance() {
     return *internal_default_instance();
   }
@@ -410,7 +431,11 @@ class Msg_ClearStoragesForOrigin final :
     kAOriginAttrsFieldNumber = 1,
     kAOriginKeyFieldNumber = 2,
   };
-  // string a_originAttrs = 1;
+  // required string a_originAttrs = 1;
+  bool has_a_originattrs() const;
+  private:
+  bool _internal_has_a_originattrs() const;
+  public:
   void clear_a_originattrs();
   const std::string& a_originattrs() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -424,7 +449,11 @@ class Msg_ClearStoragesForOrigin final :
   std::string* _internal_mutable_a_originattrs();
   public:
 
-  // string a_originKey = 2;
+  // required string a_originKey = 2;
+  bool has_a_originkey() const;
+  private:
+  bool _internal_has_a_originkey() const;
+  public:
   void clear_a_originkey();
   const std::string& a_originkey() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -442,13 +471,17 @@ class Msg_ClearStoragesForOrigin final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_originattrs_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_originkey_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundSessionStorageService_2eproto;
@@ -472,9 +505,17 @@ class Msg_ClearStoragesForOrigin final :
 
 // Msg_ClearStoragesForOrigin
 
-// string a_originAttrs = 1;
+// required string a_originAttrs = 1;
+inline bool Msg_ClearStoragesForOrigin::_internal_has_a_originattrs() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_ClearStoragesForOrigin::has_a_originattrs() const {
+  return _internal_has_a_originattrs();
+}
 inline void Msg_ClearStoragesForOrigin::clear_a_originattrs() {
   _impl_.a_originattrs_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_ClearStoragesForOrigin::a_originattrs() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundSessionStorageService.Msg_ClearStoragesForOrigin.a_originAttrs)
@@ -483,7 +524,7 @@ inline const std::string& Msg_ClearStoragesForOrigin::a_originattrs() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ClearStoragesForOrigin::set_a_originattrs(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_originattrs_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundSessionStorageService.Msg_ClearStoragesForOrigin.a_originAttrs)
 }
@@ -496,22 +537,32 @@ inline const std::string& Msg_ClearStoragesForOrigin::_internal_a_originattrs() 
   return _impl_.a_originattrs_.Get();
 }
 inline void Msg_ClearStoragesForOrigin::_internal_set_a_originattrs(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_originattrs_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_ClearStoragesForOrigin::_internal_mutable_a_originattrs() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_originattrs_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_ClearStoragesForOrigin::release_a_originattrs() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBackgroundSessionStorageService.Msg_ClearStoragesForOrigin.a_originAttrs)
-  return _impl_.a_originattrs_.Release();
+  if (!_internal_has_a_originattrs()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_originattrs_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_originattrs_.IsDefault()) {
+    _impl_.a_originattrs_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_ClearStoragesForOrigin::set_allocated_a_originattrs(std::string* a_originattrs) {
   if (a_originattrs != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_originattrs_.SetAllocated(a_originattrs, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -522,9 +573,17 @@ inline void Msg_ClearStoragesForOrigin::set_allocated_a_originattrs(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundSessionStorageService.Msg_ClearStoragesForOrigin.a_originAttrs)
 }
 
-// string a_originKey = 2;
+// required string a_originKey = 2;
+inline bool Msg_ClearStoragesForOrigin::_internal_has_a_originkey() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_ClearStoragesForOrigin::has_a_originkey() const {
+  return _internal_has_a_originkey();
+}
 inline void Msg_ClearStoragesForOrigin::clear_a_originkey() {
   _impl_.a_originkey_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_ClearStoragesForOrigin::a_originkey() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundSessionStorageService.Msg_ClearStoragesForOrigin.a_originKey)
@@ -533,7 +592,7 @@ inline const std::string& Msg_ClearStoragesForOrigin::a_originkey() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ClearStoragesForOrigin::set_a_originkey(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_originkey_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundSessionStorageService.Msg_ClearStoragesForOrigin.a_originKey)
 }
@@ -546,22 +605,32 @@ inline const std::string& Msg_ClearStoragesForOrigin::_internal_a_originkey() co
   return _impl_.a_originkey_.Get();
 }
 inline void Msg_ClearStoragesForOrigin::_internal_set_a_originkey(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_originkey_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_ClearStoragesForOrigin::_internal_mutable_a_originkey() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_originkey_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_ClearStoragesForOrigin::release_a_originkey() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBackgroundSessionStorageService.Msg_ClearStoragesForOrigin.a_originKey)
-  return _impl_.a_originkey_.Release();
+  if (!_internal_has_a_originkey()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_originkey_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_originkey_.IsDefault()) {
+    _impl_.a_originkey_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_ClearStoragesForOrigin::set_allocated_a_originkey(std::string* a_originkey) {
   if (a_originkey != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_originkey_.SetAllocated(a_originkey, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

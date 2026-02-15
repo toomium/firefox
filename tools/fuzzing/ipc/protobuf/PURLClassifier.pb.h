@@ -98,6 +98,13 @@ class Msg___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -173,7 +180,11 @@ class Msg___delete__ final :
     kAErrorCodeFieldNumber = 2,
     kAInfoFieldNumber = 1,
   };
-  // bytes a_errorCode = 2;
+  // required bytes a_errorCode = 2;
+  bool has_a_errorcode() const;
+  private:
+  bool _internal_has_a_errorcode() const;
+  public:
   void clear_a_errorcode();
   const std::string& a_errorcode() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -252,6 +263,13 @@ class Reply___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply___delete__& default_instance() {
@@ -351,7 +369,7 @@ class Reply___delete__ final :
 
 // optional .protobuf.mozilla.dom.ClassifierInfo a_info = 1;
 inline bool Msg___delete__::_internal_has_a_info() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_info_ != nullptr);
   return value;
 }
@@ -374,14 +392,14 @@ inline void Msg___delete__::unsafe_arena_set_allocated_a_info(
   }
   _impl_.a_info_ = a_info;
   if (a_info) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PURLClassifier.Msg___delete__.a_info)
 }
 inline ::protobuf::mozilla::dom::ClassifierInfo* Msg___delete__::release_a_info() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::dom::ClassifierInfo* temp = _impl_.a_info_;
   _impl_.a_info_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -397,13 +415,13 @@ inline ::protobuf::mozilla::dom::ClassifierInfo* Msg___delete__::release_a_info(
 }
 inline ::protobuf::mozilla::dom::ClassifierInfo* Msg___delete__::unsafe_arena_release_a_info() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PURLClassifier.Msg___delete__.a_info)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::dom::ClassifierInfo* temp = _impl_.a_info_;
   _impl_.a_info_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::ClassifierInfo* Msg___delete__::_internal_mutable_a_info() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_._has_bits_[0] |= 0x00000002u;
   if (_impl_.a_info_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::ClassifierInfo>(GetArenaForAllocation());
     _impl_.a_info_ = p;
@@ -428,17 +446,25 @@ inline void Msg___delete__::set_allocated_a_info(::protobuf::mozilla::dom::Class
       a_info = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_info, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_info_ = a_info;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PURLClassifier.Msg___delete__.a_info)
 }
 
-// bytes a_errorCode = 2;
+// required bytes a_errorCode = 2;
+inline bool Msg___delete__::_internal_has_a_errorcode() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg___delete__::has_a_errorcode() const {
+  return _internal_has_a_errorcode();
+}
 inline void Msg___delete__::clear_a_errorcode() {
   _impl_.a_errorcode_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg___delete__::a_errorcode() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PURLClassifier.Msg___delete__.a_errorCode)
@@ -447,7 +473,7 @@ inline const std::string& Msg___delete__::a_errorcode() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg___delete__::set_a_errorcode(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_errorcode_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PURLClassifier.Msg___delete__.a_errorCode)
 }
@@ -460,22 +486,32 @@ inline const std::string& Msg___delete__::_internal_a_errorcode() const {
   return _impl_.a_errorcode_.Get();
 }
 inline void Msg___delete__::_internal_set_a_errorcode(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_errorcode_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg___delete__::_internal_mutable_a_errorcode() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_errorcode_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg___delete__::release_a_errorcode() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PURLClassifier.Msg___delete__.a_errorCode)
-  return _impl_.a_errorcode_.Release();
+  if (!_internal_has_a_errorcode()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_errorcode_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_errorcode_.IsDefault()) {
+    _impl_.a_errorcode_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg___delete__::set_allocated_a_errorcode(std::string* a_errorcode) {
   if (a_errorcode != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_errorcode_.SetAllocated(a_errorcode, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

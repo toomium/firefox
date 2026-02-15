@@ -214,6 +214,13 @@ class IntDouble final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const IntDouble& default_instance() {
     return *internal_default_instance();
   }
@@ -382,6 +389,13 @@ class SIntDouble final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const SIntDouble& default_instance() {
     return *internal_default_instance();
   }
@@ -457,7 +471,11 @@ class SIntDouble final :
     kADFieldNumber = 2,
     kAIFieldNumber = 1,
   };
-  // double a_d = 2;
+  // required double a_d = 2;
+  bool has_a_d() const;
+  private:
+  bool _internal_has_a_d() const;
+  public:
   void clear_a_d();
   double a_d() const;
   void set_a_d(double value);
@@ -466,7 +484,11 @@ class SIntDouble final :
   void _internal_set_a_d(double value);
   public:
 
-  // sint32 a_i = 1;
+  // required sint32 a_i = 1;
+  bool has_a_i() const;
+  private:
+  bool _internal_has_a_i() const;
+  public:
   void clear_a_i();
   int32_t a_i() const;
   void set_a_i(int32_t value);
@@ -479,13 +501,17 @@ class SIntDouble final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     double a_d_;
     int32_t a_i_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestDataStructuresCommon_5fprotobuf_2emozilla_2e_5ffoo_2eh_2eproto;
@@ -521,6 +547,13 @@ class IntDoubleArrays_a_type_mVArrayOfint final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const IntDoubleArrays_a_type_mVArrayOfint& default_instance() {
@@ -628,7 +661,6 @@ class IntDoubleArrays_a_type_mVArrayOfint final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t > a_mvarrayofint_;
-    mutable std::atomic<int> _a_mvarrayofint_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -665,6 +697,13 @@ class IntDoubleArrays_a_type_mVArrayOfdouble final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const IntDoubleArrays_a_type_mVArrayOfdouble& default_instance() {
@@ -808,6 +847,13 @@ class IntDoubleArrays final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const IntDoubleArrays& default_instance() {
@@ -1008,6 +1054,13 @@ class SIntDoubleArrays final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const SIntDoubleArrays& default_instance() {
     return *internal_default_instance();
   }
@@ -1128,7 +1181,11 @@ class SIntDoubleArrays final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >*
       mutable_a_ad();
 
-  // sint32 a_i = 1;
+  // required sint32 a_i = 1;
+  bool has_a_i() const;
+  private:
+  bool _internal_has_a_i() const;
+  public:
   void clear_a_i();
   int32_t a_i() const;
   void set_a_i(int32_t value);
@@ -1145,11 +1202,11 @@ class SIntDoubleArrays final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t > a_ai_;
-    mutable std::atomic<int> _a_ai_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< double > a_ad_;
     int32_t a_i_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestDataStructuresCommon_5fprotobuf_2emozilla_2e_5ffoo_2eh_2eproto;
@@ -1185,6 +1242,13 @@ class ActorWrapper final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const ActorWrapper& default_instance() {
@@ -1327,6 +1391,13 @@ class Actors_a_type_mVArrayOfint final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Actors_a_type_mVArrayOfint& default_instance() {
     return *internal_default_instance();
   }
@@ -1432,7 +1503,6 @@ class Actors_a_type_mVArrayOfint final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t > a_mvarrayofint_;
-    mutable std::atomic<int> _a_mvarrayofint_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1469,6 +1539,13 @@ class Actors_a_type_mVArrayOfPTestDataStructuresSub final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Actors_a_type_mVArrayOfPTestDataStructuresSub& default_instance() {
@@ -1614,6 +1691,13 @@ class Actors final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Actors& default_instance() {
@@ -1814,6 +1898,13 @@ class SActors final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const SActors& default_instance() {
     return *internal_default_instance();
   }
@@ -1936,7 +2027,11 @@ class SActors final :
   std::string* _internal_add_a_ap();
   public:
 
-  // sint32 a_i = 1;
+  // required sint32 a_i = 1;
+  bool has_a_i() const;
+  private:
+  bool _internal_has_a_i() const;
+  public:
   void clear_a_i();
   int32_t a_i() const;
   void set_a_i(int32_t value);
@@ -1953,11 +2048,11 @@ class SActors final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t > a_ai_;
-    mutable std::atomic<int> _a_ai_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_ap_;
     int32_t a_i_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestDataStructuresCommon_5fprotobuf_2emozilla_2e_5ffoo_2eh_2eproto;
@@ -1993,6 +2088,13 @@ class Unions_a_type_mVArrayOfint final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Unions_a_type_mVArrayOfint& default_instance() {
@@ -2100,7 +2202,6 @@ class Unions_a_type_mVArrayOfint final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t > a_mvarrayofint_;
-    mutable std::atomic<int> _a_mvarrayofint_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2137,6 +2238,13 @@ class Unions_a_type_mVArrayOfPTestDataStructuresSub final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Unions_a_type_mVArrayOfPTestDataStructuresSub& default_instance() {
@@ -2284,6 +2392,13 @@ class Unions_a_type_mVArrayOfActors final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Unions_a_type_mVArrayOfActors& default_instance() {
     return *internal_default_instance();
   }
@@ -2421,6 +2536,13 @@ class Unions final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Unions& default_instance() {
@@ -2644,6 +2766,13 @@ class Structs final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Structs& default_instance() {
     return *internal_default_instance();
   }
@@ -2785,7 +2914,11 @@ class Structs final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::SActors >&
       a_aa() const;
 
-  // sint32 a_i = 1;
+  // required sint32 a_i = 1;
+  bool has_a_i() const;
+  private:
+  bool _internal_has_a_i() const;
+  public:
   void clear_a_i();
   int32_t a_i() const;
   void set_a_i(int32_t value);
@@ -2802,12 +2935,12 @@ class Structs final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t > a_ai_;
-    mutable std::atomic<int> _a_ai_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_ap_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::SActors > a_aa_;
     int32_t a_i_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestDataStructuresCommon_5fprotobuf_2emozilla_2e_5ffoo_2eh_2eproto;
@@ -2843,6 +2976,13 @@ class WithStructs_a_type_mVArrayOfint final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const WithStructs_a_type_mVArrayOfint& default_instance() {
@@ -2950,7 +3090,6 @@ class WithStructs_a_type_mVArrayOfint final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t > a_mvarrayofint_;
-    mutable std::atomic<int> _a_mvarrayofint_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2987,6 +3126,13 @@ class WithStructs_a_type_mVArrayOfPTestDataStructuresSub final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const WithStructs_a_type_mVArrayOfPTestDataStructuresSub& default_instance() {
@@ -3134,6 +3280,13 @@ class WithStructs_a_type_mVArrayOfSActors final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const WithStructs_a_type_mVArrayOfSActors& default_instance() {
     return *internal_default_instance();
   }
@@ -3273,6 +3426,13 @@ class WithStructs_a_type_mVArrayOfStructs final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const WithStructs_a_type_mVArrayOfStructs& default_instance() {
     return *internal_default_instance();
   }
@@ -3410,6 +3570,13 @@ class WithStructs final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const WithStructs& default_instance() {
@@ -3656,6 +3823,13 @@ class WithUnions final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const WithUnions& default_instance() {
     return *internal_default_instance();
   }
@@ -3816,7 +3990,11 @@ class WithUnions final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::Unions >&
       a_au() const;
 
-  // sint32 a_i = 1;
+  // required sint32 a_i = 1;
+  bool has_a_i() const;
+  private:
+  bool _internal_has_a_i() const;
+  public:
   void clear_a_i();
   int32_t a_i() const;
   void set_a_i(int32_t value);
@@ -3833,13 +4011,13 @@ class WithUnions final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t > a_ai_;
-    mutable std::atomic<int> _a_ai_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_ap_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::Actors > a_aa_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::Unions > a_au_;
     int32_t a_i_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestDataStructuresCommon_5fprotobuf_2emozilla_2e_5ffoo_2eh_2eproto;
@@ -3875,6 +4053,13 @@ class CommonAttrs final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const CommonAttrs& default_instance() {
@@ -3951,7 +4136,11 @@ class CommonAttrs final :
   enum : int {
     kADummyFieldNumber = 1,
   };
-  // bool a_dummy = 1;
+  // required bool a_dummy = 1;
+  bool has_a_dummy() const;
+  private:
+  bool _internal_has_a_dummy() const;
+  public:
   void clear_a_dummy();
   bool a_dummy() const;
   void set_a_dummy(bool value);
@@ -3968,8 +4157,9 @@ class CommonAttrs final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_dummy_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_dummy_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestDataStructuresCommon_5fprotobuf_2emozilla_2e_5ffoo_2eh_2eproto;
@@ -4005,6 +4195,13 @@ class FooAttrs final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const FooAttrs& default_instance() {
@@ -4081,7 +4278,11 @@ class FooAttrs final :
   enum : int {
     kADummyFieldNumber = 1,
   };
-  // sint32 a_dummy = 1;
+  // required sint32 a_dummy = 1;
+  bool has_a_dummy() const;
+  private:
+  bool _internal_has_a_dummy() const;
+  public:
   void clear_a_dummy();
   int32_t a_dummy() const;
   void set_a_dummy(int32_t value);
@@ -4098,8 +4299,9 @@ class FooAttrs final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    int32_t a_dummy_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int32_t a_dummy_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestDataStructuresCommon_5fprotobuf_2emozilla_2e_5ffoo_2eh_2eproto;
@@ -4135,6 +4337,13 @@ class BarAttrs final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const BarAttrs& default_instance() {
@@ -4211,7 +4420,11 @@ class BarAttrs final :
   enum : int {
     kADummyFieldNumber = 1,
   };
-  // float a_dummy = 1;
+  // required float a_dummy = 1;
+  bool has_a_dummy() const;
+  private:
+  bool _internal_has_a_dummy() const;
+  public:
   void clear_a_dummy();
   float a_dummy() const;
   void set_a_dummy(float value);
@@ -4228,8 +4441,9 @@ class BarAttrs final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    float a_dummy_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    float a_dummy_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestDataStructuresCommon_5fprotobuf_2emozilla_2e_5ffoo_2eh_2eproto;
@@ -4265,6 +4479,13 @@ class SpecificAttrs final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const SpecificAttrs& default_instance() {
@@ -4445,6 +4666,13 @@ class Attrs final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Attrs& default_instance() {
     return *internal_default_instance();
   }
@@ -4520,7 +4748,7 @@ class Attrs final :
     kACommonFieldNumber = 1,
     kASpecificFieldNumber = 2,
   };
-  // .protobuf.mozilla._foo.CommonAttrs a_common = 1;
+  // required .protobuf.mozilla._foo.CommonAttrs a_common = 1;
   bool has_a_common() const;
   private:
   bool _internal_has_a_common() const;
@@ -4538,7 +4766,7 @@ class Attrs final :
       ::protobuf::mozilla::_foo::CommonAttrs* a_common);
   ::protobuf::mozilla::_foo::CommonAttrs* unsafe_arena_release_a_common();
 
-  // .protobuf.mozilla._foo.SpecificAttrs a_specific = 2;
+  // required .protobuf.mozilla._foo.SpecificAttrs a_specific = 2;
   bool has_a_specific() const;
   private:
   bool _internal_has_a_specific() const;
@@ -4560,13 +4788,17 @@ class Attrs final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::_foo::CommonAttrs* a_common_;
     ::protobuf::mozilla::_foo::SpecificAttrs* a_specific_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestDataStructuresCommon_5fprotobuf_2emozilla_2e_5ffoo_2eh_2eproto;
@@ -4602,6 +4834,13 @@ class SetAttrs final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const SetAttrs& default_instance() {
@@ -4679,7 +4918,11 @@ class SetAttrs final :
     kAXFieldNumber = 1,
     kAAttrsFieldNumber = 2,
   };
-  // bytes a_x = 1;
+  // required bytes a_x = 1;
+  bool has_a_x() const;
+  private:
+  bool _internal_has_a_x() const;
+  public:
   void clear_a_x();
   const std::string& a_x() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4693,7 +4936,7 @@ class SetAttrs final :
   std::string* _internal_mutable_a_x();
   public:
 
-  // .protobuf.mozilla._foo.Attrs a_attrs = 2;
+  // required .protobuf.mozilla._foo.Attrs a_attrs = 2;
   bool has_a_attrs() const;
   private:
   bool _internal_has_a_attrs() const;
@@ -4715,13 +4958,17 @@ class SetAttrs final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_x_;
     ::protobuf::mozilla::_foo::Attrs* a_attrs_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestDataStructuresCommon_5fprotobuf_2emozilla_2e_5ffoo_2eh_2eproto;
@@ -4757,6 +5004,13 @@ class Op final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Op& default_instance() {
@@ -4937,6 +5191,13 @@ class ShmemStruct final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const ShmemStruct& default_instance() {
     return *internal_default_instance();
   }
@@ -5012,7 +5273,11 @@ class ShmemStruct final :
     kAMemFieldNumber = 2,
     kAIFieldNumber = 1,
   };
-  // bytes a_mem = 2;
+  // required bytes a_mem = 2;
+  bool has_a_mem() const;
+  private:
+  bool _internal_has_a_mem() const;
+  public:
   void clear_a_mem();
   const std::string& a_mem() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -5026,7 +5291,11 @@ class ShmemStruct final :
   std::string* _internal_mutable_a_mem();
   public:
 
-  // sint32 a_i = 1;
+  // required sint32 a_i = 1;
+  bool has_a_i() const;
+  private:
+  bool _internal_has_a_i() const;
+  public:
   void clear_a_i();
   int32_t a_i() const;
   void set_a_i(int32_t value);
@@ -5039,13 +5308,17 @@ class ShmemStruct final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mem_;
     int32_t a_i_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestDataStructuresCommon_5fprotobuf_2emozilla_2e_5ffoo_2eh_2eproto;
@@ -5081,6 +5354,13 @@ class ShmemUnion final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const ShmemUnion& default_instance() {
@@ -5254,6 +5534,13 @@ class Empty final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Empty& default_instance() {
@@ -5440,9 +5727,17 @@ inline IntDouble::ContentCase IntDouble::content_case() const {
 
 // SIntDouble
 
-// sint32 a_i = 1;
+// required sint32 a_i = 1;
+inline bool SIntDouble::_internal_has_a_i() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool SIntDouble::has_a_i() const {
+  return _internal_has_a_i();
+}
 inline void SIntDouble::clear_a_i() {
   _impl_.a_i_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline int32_t SIntDouble::_internal_a_i() const {
   return _impl_.a_i_;
@@ -5452,7 +5747,7 @@ inline int32_t SIntDouble::a_i() const {
   return _internal_a_i();
 }
 inline void SIntDouble::_internal_set_a_i(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_i_ = value;
 }
 inline void SIntDouble::set_a_i(int32_t value) {
@@ -5460,9 +5755,17 @@ inline void SIntDouble::set_a_i(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.SIntDouble.a_i)
 }
 
-// double a_d = 2;
+// required double a_d = 2;
+inline bool SIntDouble::_internal_has_a_d() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool SIntDouble::has_a_d() const {
+  return _internal_has_a_d();
+}
 inline void SIntDouble::clear_a_d() {
   _impl_.a_d_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline double SIntDouble::_internal_a_d() const {
   return _impl_.a_d_;
@@ -5472,7 +5775,7 @@ inline double SIntDouble::a_d() const {
   return _internal_a_d();
 }
 inline void SIntDouble::_internal_set_a_d(double value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_d_ = value;
 }
 inline void SIntDouble::set_a_d(double value) {
@@ -5785,9 +6088,17 @@ inline IntDoubleArrays::ContentCase IntDoubleArrays::content_case() const {
 
 // SIntDoubleArrays
 
-// sint32 a_i = 1;
+// required sint32 a_i = 1;
+inline bool SIntDoubleArrays::_internal_has_a_i() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool SIntDoubleArrays::has_a_i() const {
+  return _internal_has_a_i();
+}
 inline void SIntDoubleArrays::clear_a_i() {
   _impl_.a_i_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline int32_t SIntDoubleArrays::_internal_a_i() const {
   return _impl_.a_i_;
@@ -5797,7 +6108,7 @@ inline int32_t SIntDoubleArrays::a_i() const {
   return _internal_a_i();
 }
 inline void SIntDoubleArrays::_internal_set_a_i(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_i_ = value;
 }
 inline void SIntDoubleArrays::set_a_i(int32_t value) {
@@ -6304,9 +6615,17 @@ inline Actors::ContentCase Actors::content_case() const {
 
 // SActors
 
-// sint32 a_i = 1;
+// required sint32 a_i = 1;
+inline bool SActors::_internal_has_a_i() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool SActors::has_a_i() const {
+  return _internal_has_a_i();
+}
 inline void SActors::clear_a_i() {
   _impl_.a_i_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline int32_t SActors::_internal_a_i() const {
   return _impl_.a_i_;
@@ -6316,7 +6635,7 @@ inline int32_t SActors::a_i() const {
   return _internal_a_i();
 }
 inline void SActors::_internal_set_a_i(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_i_ = value;
 }
 inline void SActors::set_a_i(int32_t value) {
@@ -6897,9 +7216,17 @@ inline Unions::ContentCase Unions::content_case() const {
 
 // Structs
 
-// sint32 a_i = 1;
+// required sint32 a_i = 1;
+inline bool Structs::_internal_has_a_i() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Structs::has_a_i() const {
+  return _internal_has_a_i();
+}
 inline void Structs::clear_a_i() {
   _impl_.a_i_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline int32_t Structs::_internal_a_i() const {
   return _impl_.a_i_;
@@ -6909,7 +7236,7 @@ inline int32_t Structs::a_i() const {
   return _internal_a_i();
 }
 inline void Structs::_internal_set_a_i(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_i_ = value;
 }
 inline void Structs::set_a_i(int32_t value) {
@@ -7648,9 +7975,17 @@ inline WithStructs::ContentCase WithStructs::content_case() const {
 
 // WithUnions
 
-// sint32 a_i = 1;
+// required sint32 a_i = 1;
+inline bool WithUnions::_internal_has_a_i() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool WithUnions::has_a_i() const {
+  return _internal_has_a_i();
+}
 inline void WithUnions::clear_a_i() {
   _impl_.a_i_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline int32_t WithUnions::_internal_a_i() const {
   return _impl_.a_i_;
@@ -7660,7 +7995,7 @@ inline int32_t WithUnions::a_i() const {
   return _internal_a_i();
 }
 inline void WithUnions::_internal_set_a_i(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_i_ = value;
 }
 inline void WithUnions::set_a_i(int32_t value) {
@@ -7874,9 +8209,17 @@ WithUnions::a_au() const {
 
 // CommonAttrs
 
-// bool a_dummy = 1;
+// required bool a_dummy = 1;
+inline bool CommonAttrs::_internal_has_a_dummy() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool CommonAttrs::has_a_dummy() const {
+  return _internal_has_a_dummy();
+}
 inline void CommonAttrs::clear_a_dummy() {
   _impl_.a_dummy_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool CommonAttrs::_internal_a_dummy() const {
   return _impl_.a_dummy_;
@@ -7886,7 +8229,7 @@ inline bool CommonAttrs::a_dummy() const {
   return _internal_a_dummy();
 }
 inline void CommonAttrs::_internal_set_a_dummy(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_dummy_ = value;
 }
 inline void CommonAttrs::set_a_dummy(bool value) {
@@ -7898,9 +8241,17 @@ inline void CommonAttrs::set_a_dummy(bool value) {
 
 // FooAttrs
 
-// sint32 a_dummy = 1;
+// required sint32 a_dummy = 1;
+inline bool FooAttrs::_internal_has_a_dummy() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool FooAttrs::has_a_dummy() const {
+  return _internal_has_a_dummy();
+}
 inline void FooAttrs::clear_a_dummy() {
   _impl_.a_dummy_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline int32_t FooAttrs::_internal_a_dummy() const {
   return _impl_.a_dummy_;
@@ -7910,7 +8261,7 @@ inline int32_t FooAttrs::a_dummy() const {
   return _internal_a_dummy();
 }
 inline void FooAttrs::_internal_set_a_dummy(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_dummy_ = value;
 }
 inline void FooAttrs::set_a_dummy(int32_t value) {
@@ -7922,9 +8273,17 @@ inline void FooAttrs::set_a_dummy(int32_t value) {
 
 // BarAttrs
 
-// float a_dummy = 1;
+// required float a_dummy = 1;
+inline bool BarAttrs::_internal_has_a_dummy() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool BarAttrs::has_a_dummy() const {
+  return _internal_has_a_dummy();
+}
 inline void BarAttrs::clear_a_dummy() {
   _impl_.a_dummy_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline float BarAttrs::_internal_a_dummy() const {
   return _impl_.a_dummy_;
@@ -7934,7 +8293,7 @@ inline float BarAttrs::a_dummy() const {
   return _internal_a_dummy();
 }
 inline void BarAttrs::_internal_set_a_dummy(float value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_dummy_ = value;
 }
 inline void BarAttrs::set_a_dummy(float value) {
@@ -8107,18 +8466,18 @@ inline SpecificAttrs::ContentCase SpecificAttrs::content_case() const {
 
 // Attrs
 
-// .protobuf.mozilla._foo.CommonAttrs a_common = 1;
+// required .protobuf.mozilla._foo.CommonAttrs a_common = 1;
 inline bool Attrs::_internal_has_a_common() const {
-  return this != internal_default_instance() && _impl_.a_common_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_common_ != nullptr);
+  return value;
 }
 inline bool Attrs::has_a_common() const {
   return _internal_has_a_common();
 }
 inline void Attrs::clear_a_common() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_common_ != nullptr) {
-    delete _impl_.a_common_;
-  }
-  _impl_.a_common_ = nullptr;
+  if (_impl_.a_common_ != nullptr) _impl_.a_common_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const ::protobuf::mozilla::_foo::CommonAttrs& Attrs::_internal_a_common() const {
   const ::protobuf::mozilla::_foo::CommonAttrs* p = _impl_.a_common_;
@@ -8136,14 +8495,14 @@ inline void Attrs::unsafe_arena_set_allocated_a_common(
   }
   _impl_.a_common_ = a_common;
   if (a_common) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla._foo.Attrs.a_common)
 }
 inline ::protobuf::mozilla::_foo::CommonAttrs* Attrs::release_a_common() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::_foo::CommonAttrs* temp = _impl_.a_common_;
   _impl_.a_common_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -8159,13 +8518,13 @@ inline ::protobuf::mozilla::_foo::CommonAttrs* Attrs::release_a_common() {
 }
 inline ::protobuf::mozilla::_foo::CommonAttrs* Attrs::unsafe_arena_release_a_common() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla._foo.Attrs.a_common)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::_foo::CommonAttrs* temp = _impl_.a_common_;
   _impl_.a_common_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::_foo::CommonAttrs* Attrs::_internal_mutable_a_common() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_common_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::_foo::CommonAttrs>(GetArenaForAllocation());
     _impl_.a_common_ = p;
@@ -8189,26 +8548,26 @@ inline void Attrs::set_allocated_a_common(::protobuf::mozilla::_foo::CommonAttrs
       a_common = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_common, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_common_ = a_common;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._foo.Attrs.a_common)
 }
 
-// .protobuf.mozilla._foo.SpecificAttrs a_specific = 2;
+// required .protobuf.mozilla._foo.SpecificAttrs a_specific = 2;
 inline bool Attrs::_internal_has_a_specific() const {
-  return this != internal_default_instance() && _impl_.a_specific_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_specific_ != nullptr);
+  return value;
 }
 inline bool Attrs::has_a_specific() const {
   return _internal_has_a_specific();
 }
 inline void Attrs::clear_a_specific() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_specific_ != nullptr) {
-    delete _impl_.a_specific_;
-  }
-  _impl_.a_specific_ = nullptr;
+  if (_impl_.a_specific_ != nullptr) _impl_.a_specific_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const ::protobuf::mozilla::_foo::SpecificAttrs& Attrs::_internal_a_specific() const {
   const ::protobuf::mozilla::_foo::SpecificAttrs* p = _impl_.a_specific_;
@@ -8226,14 +8585,14 @@ inline void Attrs::unsafe_arena_set_allocated_a_specific(
   }
   _impl_.a_specific_ = a_specific;
   if (a_specific) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla._foo.Attrs.a_specific)
 }
 inline ::protobuf::mozilla::_foo::SpecificAttrs* Attrs::release_a_specific() {
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::_foo::SpecificAttrs* temp = _impl_.a_specific_;
   _impl_.a_specific_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -8249,13 +8608,13 @@ inline ::protobuf::mozilla::_foo::SpecificAttrs* Attrs::release_a_specific() {
 }
 inline ::protobuf::mozilla::_foo::SpecificAttrs* Attrs::unsafe_arena_release_a_specific() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla._foo.Attrs.a_specific)
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::_foo::SpecificAttrs* temp = _impl_.a_specific_;
   _impl_.a_specific_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::_foo::SpecificAttrs* Attrs::_internal_mutable_a_specific() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   if (_impl_.a_specific_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::_foo::SpecificAttrs>(GetArenaForAllocation());
     _impl_.a_specific_ = p;
@@ -8279,9 +8638,9 @@ inline void Attrs::set_allocated_a_specific(::protobuf::mozilla::_foo::SpecificA
       a_specific = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_specific, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_specific_ = a_specific;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._foo.Attrs.a_specific)
@@ -8291,9 +8650,17 @@ inline void Attrs::set_allocated_a_specific(::protobuf::mozilla::_foo::SpecificA
 
 // SetAttrs
 
-// bytes a_x = 1;
+// required bytes a_x = 1;
+inline bool SetAttrs::_internal_has_a_x() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool SetAttrs::has_a_x() const {
+  return _internal_has_a_x();
+}
 inline void SetAttrs::clear_a_x() {
   _impl_.a_x_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& SetAttrs::a_x() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.SetAttrs.a_x)
@@ -8302,7 +8669,7 @@ inline const std::string& SetAttrs::a_x() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void SetAttrs::set_a_x(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_x_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.SetAttrs.a_x)
 }
@@ -8315,22 +8682,32 @@ inline const std::string& SetAttrs::_internal_a_x() const {
   return _impl_.a_x_.Get();
 }
 inline void SetAttrs::_internal_set_a_x(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_x_.Set(value, GetArenaForAllocation());
 }
 inline std::string* SetAttrs::_internal_mutable_a_x() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_x_.Mutable(GetArenaForAllocation());
 }
 inline std::string* SetAttrs::release_a_x() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla._foo.SetAttrs.a_x)
-  return _impl_.a_x_.Release();
+  if (!_internal_has_a_x()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_x_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_x_.IsDefault()) {
+    _impl_.a_x_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void SetAttrs::set_allocated_a_x(std::string* a_x) {
   if (a_x != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_x_.SetAllocated(a_x, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -8341,18 +8718,18 @@ inline void SetAttrs::set_allocated_a_x(std::string* a_x) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._foo.SetAttrs.a_x)
 }
 
-// .protobuf.mozilla._foo.Attrs a_attrs = 2;
+// required .protobuf.mozilla._foo.Attrs a_attrs = 2;
 inline bool SetAttrs::_internal_has_a_attrs() const {
-  return this != internal_default_instance() && _impl_.a_attrs_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_attrs_ != nullptr);
+  return value;
 }
 inline bool SetAttrs::has_a_attrs() const {
   return _internal_has_a_attrs();
 }
 inline void SetAttrs::clear_a_attrs() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_attrs_ != nullptr) {
-    delete _impl_.a_attrs_;
-  }
-  _impl_.a_attrs_ = nullptr;
+  if (_impl_.a_attrs_ != nullptr) _impl_.a_attrs_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const ::protobuf::mozilla::_foo::Attrs& SetAttrs::_internal_a_attrs() const {
   const ::protobuf::mozilla::_foo::Attrs* p = _impl_.a_attrs_;
@@ -8370,14 +8747,14 @@ inline void SetAttrs::unsafe_arena_set_allocated_a_attrs(
   }
   _impl_.a_attrs_ = a_attrs;
   if (a_attrs) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla._foo.SetAttrs.a_attrs)
 }
 inline ::protobuf::mozilla::_foo::Attrs* SetAttrs::release_a_attrs() {
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::_foo::Attrs* temp = _impl_.a_attrs_;
   _impl_.a_attrs_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -8393,13 +8770,13 @@ inline ::protobuf::mozilla::_foo::Attrs* SetAttrs::release_a_attrs() {
 }
 inline ::protobuf::mozilla::_foo::Attrs* SetAttrs::unsafe_arena_release_a_attrs() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla._foo.SetAttrs.a_attrs)
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::_foo::Attrs* temp = _impl_.a_attrs_;
   _impl_.a_attrs_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::_foo::Attrs* SetAttrs::_internal_mutable_a_attrs() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   if (_impl_.a_attrs_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::_foo::Attrs>(GetArenaForAllocation());
     _impl_.a_attrs_ = p;
@@ -8423,9 +8800,9 @@ inline void SetAttrs::set_allocated_a_attrs(::protobuf::mozilla::_foo::Attrs* a_
       a_attrs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_attrs, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_attrs_ = a_attrs;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._foo.SetAttrs.a_attrs)
@@ -8599,9 +8976,17 @@ inline Op::ContentCase Op::content_case() const {
 
 // ShmemStruct
 
-// sint32 a_i = 1;
+// required sint32 a_i = 1;
+inline bool ShmemStruct::_internal_has_a_i() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool ShmemStruct::has_a_i() const {
+  return _internal_has_a_i();
+}
 inline void ShmemStruct::clear_a_i() {
   _impl_.a_i_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline int32_t ShmemStruct::_internal_a_i() const {
   return _impl_.a_i_;
@@ -8611,7 +8996,7 @@ inline int32_t ShmemStruct::a_i() const {
   return _internal_a_i();
 }
 inline void ShmemStruct::_internal_set_a_i(int32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_i_ = value;
 }
 inline void ShmemStruct::set_a_i(int32_t value) {
@@ -8619,9 +9004,17 @@ inline void ShmemStruct::set_a_i(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.ShmemStruct.a_i)
 }
 
-// bytes a_mem = 2;
+// required bytes a_mem = 2;
+inline bool ShmemStruct::_internal_has_a_mem() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ShmemStruct::has_a_mem() const {
+  return _internal_has_a_mem();
+}
 inline void ShmemStruct::clear_a_mem() {
   _impl_.a_mem_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& ShmemStruct::a_mem() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.ShmemStruct.a_mem)
@@ -8630,7 +9023,7 @@ inline const std::string& ShmemStruct::a_mem() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ShmemStruct::set_a_mem(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_mem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.ShmemStruct.a_mem)
 }
@@ -8643,22 +9036,32 @@ inline const std::string& ShmemStruct::_internal_a_mem() const {
   return _impl_.a_mem_.Get();
 }
 inline void ShmemStruct::_internal_set_a_mem(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_mem_.Set(value, GetArenaForAllocation());
 }
 inline std::string* ShmemStruct::_internal_mutable_a_mem() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_mem_.Mutable(GetArenaForAllocation());
 }
 inline std::string* ShmemStruct::release_a_mem() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla._foo.ShmemStruct.a_mem)
-  return _impl_.a_mem_.Release();
+  if (!_internal_has_a_mem()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_mem_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_mem_.IsDefault()) {
+    _impl_.a_mem_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void ShmemStruct::set_allocated_a_mem(std::string* a_mem) {
   if (a_mem != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_mem_.SetAllocated(a_mem, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

@@ -137,6 +137,13 @@ class Msg_Test1 final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Test1& default_instance() {
     return *internal_default_instance();
   }
@@ -254,6 +261,13 @@ class Reply_Test1 final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_Test1& default_instance() {
     return *internal_default_instance();
   }
@@ -328,7 +342,11 @@ class Reply_Test1 final :
   enum : int {
     kAResultFieldNumber = 1,
   };
-  // uint32 a_result = 1;
+  // required uint32 a_result = 1;
+  bool has_a_result() const;
+  private:
+  bool _internal_has_a_result() const;
+  public:
   void clear_a_result();
   uint32_t a_result() const;
   void set_a_result(uint32_t value);
@@ -345,8 +363,9 @@ class Reply_Test1 final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint32_t a_result_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint32_t a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestUrgency_2eproto;
@@ -382,6 +401,13 @@ class Msg_Test2 final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Test2& default_instance() {
@@ -501,6 +527,13 @@ class Msg_Test3 final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Test3& default_instance() {
     return *internal_default_instance();
   }
@@ -618,6 +651,13 @@ class Reply_Test3 final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_Test3& default_instance() {
     return *internal_default_instance();
   }
@@ -692,7 +732,11 @@ class Reply_Test3 final :
   enum : int {
     kAResultFieldNumber = 1,
   };
-  // uint32 a_result = 1;
+  // required uint32 a_result = 1;
+  bool has_a_result() const;
+  private:
+  bool _internal_has_a_result() const;
+  public:
   void clear_a_result();
   uint32_t a_result() const;
   void set_a_result(uint32_t value);
@@ -709,8 +753,9 @@ class Reply_Test3 final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint32_t a_result_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint32_t a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestUrgency_2eproto;
@@ -746,6 +791,13 @@ class Msg_FinalTest_Begin final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_FinalTest_Begin& default_instance() {
@@ -865,6 +917,13 @@ class Reply_FinalTest_Begin final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_FinalTest_Begin& default_instance() {
     return *internal_default_instance();
   }
@@ -980,6 +1039,13 @@ class Msg_Start final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Start& default_instance() {
@@ -1099,6 +1165,13 @@ class Msg_Reply1 final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Reply1& default_instance() {
     return *internal_default_instance();
   }
@@ -1216,6 +1289,13 @@ class Reply_Reply1 final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_Reply1& default_instance() {
     return *internal_default_instance();
   }
@@ -1290,7 +1370,11 @@ class Reply_Reply1 final :
   enum : int {
     kAResultFieldNumber = 1,
   };
-  // uint32 a_result = 1;
+  // required uint32 a_result = 1;
+  bool has_a_result() const;
+  private:
+  bool _internal_has_a_result() const;
+  public:
   void clear_a_result();
   uint32_t a_result() const;
   void set_a_result(uint32_t value);
@@ -1307,8 +1391,9 @@ class Reply_Reply1 final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint32_t a_result_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint32_t a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestUrgency_2eproto;
@@ -1344,6 +1429,13 @@ class Msg_Reply2 final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Reply2& default_instance() {
@@ -1463,6 +1555,13 @@ class Reply_Reply2 final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_Reply2& default_instance() {
     return *internal_default_instance();
   }
@@ -1537,7 +1636,11 @@ class Reply_Reply2 final :
   enum : int {
     kAResultFieldNumber = 1,
   };
-  // uint32 a_result = 1;
+  // required uint32 a_result = 1;
+  bool has_a_result() const;
+  private:
+  bool _internal_has_a_result() const;
+  public:
   void clear_a_result();
   uint32_t a_result() const;
   void set_a_result(uint32_t value);
@@ -1554,8 +1657,9 @@ class Reply_Reply2 final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint32_t a_result_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint32_t a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestUrgency_2eproto;
@@ -1575,9 +1679,17 @@ class Reply_Reply2 final :
 
 // Reply_Test1
 
-// uint32 a_result = 1;
+// required uint32 a_result = 1;
+inline bool Reply_Test1::_internal_has_a_result() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_Test1::has_a_result() const {
+  return _internal_has_a_result();
+}
 inline void Reply_Test1::clear_a_result() {
   _impl_.a_result_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Reply_Test1::_internal_a_result() const {
   return _impl_.a_result_;
@@ -1587,7 +1699,7 @@ inline uint32_t Reply_Test1::a_result() const {
   return _internal_a_result();
 }
 inline void Reply_Test1::_internal_set_a_result(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_result_ = value;
 }
 inline void Reply_Test1::set_a_result(uint32_t value) {
@@ -1607,9 +1719,17 @@ inline void Reply_Test1::set_a_result(uint32_t value) {
 
 // Reply_Test3
 
-// uint32 a_result = 1;
+// required uint32 a_result = 1;
+inline bool Reply_Test3::_internal_has_a_result() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_Test3::has_a_result() const {
+  return _internal_has_a_result();
+}
 inline void Reply_Test3::clear_a_result() {
   _impl_.a_result_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Reply_Test3::_internal_a_result() const {
   return _impl_.a_result_;
@@ -1619,7 +1739,7 @@ inline uint32_t Reply_Test3::a_result() const {
   return _internal_a_result();
 }
 inline void Reply_Test3::_internal_set_a_result(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_result_ = value;
 }
 inline void Reply_Test3::set_a_result(uint32_t value) {
@@ -1647,9 +1767,17 @@ inline void Reply_Test3::set_a_result(uint32_t value) {
 
 // Reply_Reply1
 
-// uint32 a_result = 1;
+// required uint32 a_result = 1;
+inline bool Reply_Reply1::_internal_has_a_result() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_Reply1::has_a_result() const {
+  return _internal_has_a_result();
+}
 inline void Reply_Reply1::clear_a_result() {
   _impl_.a_result_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Reply_Reply1::_internal_a_result() const {
   return _impl_.a_result_;
@@ -1659,7 +1787,7 @@ inline uint32_t Reply_Reply1::a_result() const {
   return _internal_a_result();
 }
 inline void Reply_Reply1::_internal_set_a_result(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_result_ = value;
 }
 inline void Reply_Reply1::set_a_result(uint32_t value) {
@@ -1675,9 +1803,17 @@ inline void Reply_Reply1::set_a_result(uint32_t value) {
 
 // Reply_Reply2
 
-// uint32 a_result = 1;
+// required uint32 a_result = 1;
+inline bool Reply_Reply2::_internal_has_a_result() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_Reply2::has_a_result() const {
+  return _internal_has_a_result();
+}
 inline void Reply_Reply2::clear_a_result() {
   _impl_.a_result_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Reply_Reply2::_internal_a_result() const {
   return _impl_.a_result_;
@@ -1687,7 +1823,7 @@ inline uint32_t Reply_Reply2::a_result() const {
   return _internal_a_result();
 }
 inline void Reply_Reply2::_internal_set_a_result(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_result_ = value;
 }
 inline void Reply_Reply2::set_a_result(uint32_t value) {

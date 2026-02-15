@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/credentialmanagement/identity/PWebIdentity.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.PWebIdentity;
@@ -20,36 +20,36 @@ message Msg_RequestCancel {
 }
 
 message Msg_GetIdentityCredential {
-  bytes a_aOptions = 1;
-  bytes a_aMediationRequirement = 2;
-  bool a_aHasUserActivation = 3;
+  required bytes a_aOptions = 1;
+  required bytes a_aMediationRequirement = 2;
+  required bool a_aHasUserActivation = 3;
 }
 
 message Reply_GetIdentityCredential {
-  protobuf.mozilla.dom.WebIdentityGetCredentialResponse a_response = 1;
+  required protobuf.mozilla.dom.WebIdentityGetCredentialResponse a_response = 1;
 }
 
 message Msg_DisconnectIdentityCredential {
-  bytes a_aOptions = 1;
+  required bytes a_aOptions = 1;
 }
 
 message Reply_DisconnectIdentityCredential {
-  bytes a_rv = 1;
+  required bytes a_rv = 1;
 }
 
 message Msg_PreventSilentAccess {
 }
 
 message Reply_PreventSilentAccess {
-  bytes a_rv = 1;
+  required bytes a_rv = 1;
 }
 
 message Msg_SetLoginStatus {
-  bytes a_foo = 1;
+  required bytes a_foo = 1;
 }
 
 message Reply_SetLoginStatus {
-  bytes a_rv = 1;
+  required bytes a_rv = 1;
 }
 
 message Msg___delete__ {

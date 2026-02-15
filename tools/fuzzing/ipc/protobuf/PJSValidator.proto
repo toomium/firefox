@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/ipc/PJSValidator.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.PJSValidator;
@@ -20,18 +20,18 @@ message Msg_IsOpaqueResponseAllowed {
 
 message Reply_IsOpaqueResponseAllowed {
   optional bytes a_aMem = 1;
-  bytes a_aResult = 2;
+  required bytes a_aResult = 2;
 }
 
 message Msg_OnDataAvailable {
-  bytes a_aData = 1;
+  required bytes a_aData = 1;
 }
 
 message Msg_OnStopRequest {
-  bytes a_aReason = 1;
-  string a_aContentCharset = 2;
-  string a_aHintCharset = 3;
-  string a_aDocumentCharset = 4;
+  required bytes a_aReason = 1;
+  required string a_aContentCharset = 2;
+  required string a_aHintCharset = 3;
+  required string a_aDocumentCharset = 4;
 }
 
 message Msg___delete__ {

@@ -138,6 +138,13 @@ class Msg_Unregister final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Unregister& default_instance() {
     return *internal_default_instance();
   }
@@ -255,6 +262,13 @@ class Msg_PostMessageToDebugger final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_PostMessageToDebugger& default_instance() {
     return *internal_default_instance();
   }
@@ -329,7 +343,11 @@ class Msg_PostMessageToDebugger final :
   enum : int {
     kAAMessageFieldNumber = 1,
   };
-  // string a_aMessage = 1;
+  // required string a_aMessage = 1;
+  bool has_a_amessage() const;
+  private:
+  bool _internal_has_a_amessage() const;
+  public:
   void clear_a_amessage();
   const std::string& a_amessage() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -351,8 +369,9 @@ class Msg_PostMessageToDebugger final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_amessage_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_amessage_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteWorkerDebugger_2eproto;
@@ -388,6 +407,13 @@ class Msg_ReportErrorToDebugger final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_ReportErrorToDebugger& default_instance() {
@@ -464,7 +490,7 @@ class Msg_ReportErrorToDebugger final :
   enum : int {
     kAAErrorInfoFieldNumber = 1,
   };
-  // .protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo a_aErrorInfo = 1;
+  // required .protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo a_aErrorInfo = 1;
   bool has_a_aerrorinfo() const;
   private:
   bool _internal_has_a_aerrorinfo() const;
@@ -490,8 +516,9 @@ class Msg_ReportErrorToDebugger final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::protobuf::mozilla::dom::RemoteWorkerDebuggerErrorInfo* a_aerrorinfo_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::protobuf::mozilla::dom::RemoteWorkerDebuggerErrorInfo* a_aerrorinfo_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteWorkerDebugger_2eproto;
@@ -527,6 +554,13 @@ class Msg_SetAsInitialized final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_SetAsInitialized& default_instance() {
@@ -646,6 +680,13 @@ class Msg_SetAsClosed final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_SetAsClosed& default_instance() {
     return *internal_default_instance();
   }
@@ -763,6 +804,13 @@ class Msg_AddWindowID final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_AddWindowID& default_instance() {
     return *internal_default_instance();
   }
@@ -837,7 +885,11 @@ class Msg_AddWindowID final :
   enum : int {
     kAAWindowIDFieldNumber = 1,
   };
-  // uint64 a_aWindowID = 1;
+  // required uint64 a_aWindowID = 1;
+  bool has_a_awindowid() const;
+  private:
+  bool _internal_has_a_awindowid() const;
+  public:
   void clear_a_awindowid();
   uint64_t a_awindowid() const;
   void set_a_awindowid(uint64_t value);
@@ -854,8 +906,9 @@ class Msg_AddWindowID final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint64_t a_awindowid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint64_t a_awindowid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteWorkerDebugger_2eproto;
@@ -891,6 +944,13 @@ class Msg_RemoveWindowID final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_RemoveWindowID& default_instance() {
@@ -967,7 +1027,11 @@ class Msg_RemoveWindowID final :
   enum : int {
     kAAWindowIDFieldNumber = 1,
   };
-  // uint64 a_aWindowID = 1;
+  // required uint64 a_aWindowID = 1;
+  bool has_a_awindowid() const;
+  private:
+  bool _internal_has_a_awindowid() const;
+  public:
   void clear_a_awindowid();
   uint64_t a_awindowid() const;
   void set_a_awindowid(uint64_t value);
@@ -984,8 +1048,9 @@ class Msg_RemoveWindowID final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint64_t a_awindowid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint64_t a_awindowid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteWorkerDebugger_2eproto;
@@ -1021,6 +1086,13 @@ class Msg_RegisterDone final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_RegisterDone& default_instance() {
@@ -1140,6 +1212,13 @@ class Msg_UnregisterDone final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_UnregisterDone& default_instance() {
     return *internal_default_instance();
   }
@@ -1257,6 +1336,13 @@ class Msg_Initialize final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Initialize& default_instance() {
     return *internal_default_instance();
   }
@@ -1331,7 +1417,11 @@ class Msg_Initialize final :
   enum : int {
     kAAURLFieldNumber = 1,
   };
-  // string a_aURL = 1;
+  // required string a_aURL = 1;
+  bool has_a_aurl() const;
+  private:
+  bool _internal_has_a_aurl() const;
+  public:
   void clear_a_aurl();
   const std::string& a_aurl() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1353,8 +1443,9 @@ class Msg_Initialize final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aurl_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aurl_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteWorkerDebugger_2eproto;
@@ -1390,6 +1481,13 @@ class Msg_PostMessage final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_PostMessage& default_instance() {
@@ -1466,7 +1564,11 @@ class Msg_PostMessage final :
   enum : int {
     kAAMessageFieldNumber = 1,
   };
-  // string a_aMessage = 1;
+  // required string a_aMessage = 1;
+  bool has_a_amessage() const;
+  private:
+  bool _internal_has_a_amessage() const;
+  public:
   void clear_a_amessage();
   const std::string& a_amessage() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1488,8 +1590,9 @@ class Msg_PostMessage final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_amessage_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_amessage_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteWorkerDebugger_2eproto;
@@ -1525,6 +1628,13 @@ class Msg_SetDebuggerReady final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_SetDebuggerReady& default_instance() {
@@ -1601,7 +1711,11 @@ class Msg_SetDebuggerReady final :
   enum : int {
     kAAReadyFieldNumber = 1,
   };
-  // bool a_aReady = 1;
+  // required bool a_aReady = 1;
+  bool has_a_aready() const;
+  private:
+  bool _internal_has_a_aready() const;
+  public:
   void clear_a_aready();
   bool a_aready() const;
   void set_a_aready(bool value);
@@ -1618,8 +1732,9 @@ class Msg_SetDebuggerReady final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_aready_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_aready_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteWorkerDebugger_2eproto;
@@ -1639,9 +1754,17 @@ class Msg_SetDebuggerReady final :
 
 // Msg_PostMessageToDebugger
 
-// string a_aMessage = 1;
+// required string a_aMessage = 1;
+inline bool Msg_PostMessageToDebugger::_internal_has_a_amessage() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PostMessageToDebugger::has_a_amessage() const {
+  return _internal_has_a_amessage();
+}
 inline void Msg_PostMessageToDebugger::clear_a_amessage() {
   _impl_.a_amessage_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_PostMessageToDebugger::a_amessage() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PRemoteWorkerDebugger.Msg_PostMessageToDebugger.a_aMessage)
@@ -1650,7 +1773,7 @@ inline const std::string& Msg_PostMessageToDebugger::a_amessage() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PostMessageToDebugger::set_a_amessage(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_amessage_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PRemoteWorkerDebugger.Msg_PostMessageToDebugger.a_aMessage)
 }
@@ -1663,22 +1786,32 @@ inline const std::string& Msg_PostMessageToDebugger::_internal_a_amessage() cons
   return _impl_.a_amessage_.Get();
 }
 inline void Msg_PostMessageToDebugger::_internal_set_a_amessage(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_amessage_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_PostMessageToDebugger::_internal_mutable_a_amessage() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_amessage_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_PostMessageToDebugger::release_a_amessage() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PRemoteWorkerDebugger.Msg_PostMessageToDebugger.a_aMessage)
-  return _impl_.a_amessage_.Release();
+  if (!_internal_has_a_amessage()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_amessage_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_amessage_.IsDefault()) {
+    _impl_.a_amessage_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_PostMessageToDebugger::set_allocated_a_amessage(std::string* a_amessage) {
   if (a_amessage != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_amessage_.SetAllocated(a_amessage, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1693,9 +1826,11 @@ inline void Msg_PostMessageToDebugger::set_allocated_a_amessage(std::string* a_a
 
 // Msg_ReportErrorToDebugger
 
-// .protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo a_aErrorInfo = 1;
+// required .protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo a_aErrorInfo = 1;
 inline bool Msg_ReportErrorToDebugger::_internal_has_a_aerrorinfo() const {
-  return this != internal_default_instance() && _impl_.a_aerrorinfo_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_aerrorinfo_ != nullptr);
+  return value;
 }
 inline bool Msg_ReportErrorToDebugger::has_a_aerrorinfo() const {
   return _internal_has_a_aerrorinfo();
@@ -1716,14 +1851,14 @@ inline void Msg_ReportErrorToDebugger::unsafe_arena_set_allocated_a_aerrorinfo(
   }
   _impl_.a_aerrorinfo_ = a_aerrorinfo;
   if (a_aerrorinfo) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PRemoteWorkerDebugger.Msg_ReportErrorToDebugger.a_aErrorInfo)
 }
 inline ::protobuf::mozilla::dom::RemoteWorkerDebuggerErrorInfo* Msg_ReportErrorToDebugger::release_a_aerrorinfo() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::RemoteWorkerDebuggerErrorInfo* temp = _impl_.a_aerrorinfo_;
   _impl_.a_aerrorinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1739,13 +1874,13 @@ inline ::protobuf::mozilla::dom::RemoteWorkerDebuggerErrorInfo* Msg_ReportErrorT
 }
 inline ::protobuf::mozilla::dom::RemoteWorkerDebuggerErrorInfo* Msg_ReportErrorToDebugger::unsafe_arena_release_a_aerrorinfo() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PRemoteWorkerDebugger.Msg_ReportErrorToDebugger.a_aErrorInfo)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::RemoteWorkerDebuggerErrorInfo* temp = _impl_.a_aerrorinfo_;
   _impl_.a_aerrorinfo_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::RemoteWorkerDebuggerErrorInfo* Msg_ReportErrorToDebugger::_internal_mutable_a_aerrorinfo() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_aerrorinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::RemoteWorkerDebuggerErrorInfo>(GetArenaForAllocation());
     _impl_.a_aerrorinfo_ = p;
@@ -1770,9 +1905,9 @@ inline void Msg_ReportErrorToDebugger::set_allocated_a_aerrorinfo(::protobuf::mo
       a_aerrorinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_aerrorinfo, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aerrorinfo_ = a_aerrorinfo;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PRemoteWorkerDebugger.Msg_ReportErrorToDebugger.a_aErrorInfo)
@@ -1790,9 +1925,17 @@ inline void Msg_ReportErrorToDebugger::set_allocated_a_aerrorinfo(::protobuf::mo
 
 // Msg_AddWindowID
 
-// uint64 a_aWindowID = 1;
+// required uint64 a_aWindowID = 1;
+inline bool Msg_AddWindowID::_internal_has_a_awindowid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_AddWindowID::has_a_awindowid() const {
+  return _internal_has_a_awindowid();
+}
 inline void Msg_AddWindowID::clear_a_awindowid() {
   _impl_.a_awindowid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_AddWindowID::_internal_a_awindowid() const {
   return _impl_.a_awindowid_;
@@ -1802,7 +1945,7 @@ inline uint64_t Msg_AddWindowID::a_awindowid() const {
   return _internal_a_awindowid();
 }
 inline void Msg_AddWindowID::_internal_set_a_awindowid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_awindowid_ = value;
 }
 inline void Msg_AddWindowID::set_a_awindowid(uint64_t value) {
@@ -1814,9 +1957,17 @@ inline void Msg_AddWindowID::set_a_awindowid(uint64_t value) {
 
 // Msg_RemoveWindowID
 
-// uint64 a_aWindowID = 1;
+// required uint64 a_aWindowID = 1;
+inline bool Msg_RemoveWindowID::_internal_has_a_awindowid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_RemoveWindowID::has_a_awindowid() const {
+  return _internal_has_a_awindowid();
+}
 inline void Msg_RemoveWindowID::clear_a_awindowid() {
   _impl_.a_awindowid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_RemoveWindowID::_internal_a_awindowid() const {
   return _impl_.a_awindowid_;
@@ -1826,7 +1977,7 @@ inline uint64_t Msg_RemoveWindowID::a_awindowid() const {
   return _internal_a_awindowid();
 }
 inline void Msg_RemoveWindowID::_internal_set_a_awindowid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_awindowid_ = value;
 }
 inline void Msg_RemoveWindowID::set_a_awindowid(uint64_t value) {
@@ -1846,9 +1997,17 @@ inline void Msg_RemoveWindowID::set_a_awindowid(uint64_t value) {
 
 // Msg_Initialize
 
-// string a_aURL = 1;
+// required string a_aURL = 1;
+inline bool Msg_Initialize::_internal_has_a_aurl() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_Initialize::has_a_aurl() const {
+  return _internal_has_a_aurl();
+}
 inline void Msg_Initialize::clear_a_aurl() {
   _impl_.a_aurl_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_Initialize::a_aurl() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PRemoteWorkerDebugger.Msg_Initialize.a_aURL)
@@ -1857,7 +2016,7 @@ inline const std::string& Msg_Initialize::a_aurl() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Initialize::set_a_aurl(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aurl_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PRemoteWorkerDebugger.Msg_Initialize.a_aURL)
 }
@@ -1870,22 +2029,32 @@ inline const std::string& Msg_Initialize::_internal_a_aurl() const {
   return _impl_.a_aurl_.Get();
 }
 inline void Msg_Initialize::_internal_set_a_aurl(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aurl_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_Initialize::_internal_mutable_a_aurl() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aurl_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_Initialize::release_a_aurl() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PRemoteWorkerDebugger.Msg_Initialize.a_aURL)
-  return _impl_.a_aurl_.Release();
+  if (!_internal_has_a_aurl()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aurl_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aurl_.IsDefault()) {
+    _impl_.a_aurl_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_Initialize::set_allocated_a_aurl(std::string* a_aurl) {
   if (a_aurl != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aurl_.SetAllocated(a_aurl, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1900,9 +2069,17 @@ inline void Msg_Initialize::set_allocated_a_aurl(std::string* a_aurl) {
 
 // Msg_PostMessage
 
-// string a_aMessage = 1;
+// required string a_aMessage = 1;
+inline bool Msg_PostMessage::_internal_has_a_amessage() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PostMessage::has_a_amessage() const {
+  return _internal_has_a_amessage();
+}
 inline void Msg_PostMessage::clear_a_amessage() {
   _impl_.a_amessage_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_PostMessage::a_amessage() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PRemoteWorkerDebugger.Msg_PostMessage.a_aMessage)
@@ -1911,7 +2088,7 @@ inline const std::string& Msg_PostMessage::a_amessage() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PostMessage::set_a_amessage(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_amessage_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PRemoteWorkerDebugger.Msg_PostMessage.a_aMessage)
 }
@@ -1924,22 +2101,32 @@ inline const std::string& Msg_PostMessage::_internal_a_amessage() const {
   return _impl_.a_amessage_.Get();
 }
 inline void Msg_PostMessage::_internal_set_a_amessage(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_amessage_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_PostMessage::_internal_mutable_a_amessage() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_amessage_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_PostMessage::release_a_amessage() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PRemoteWorkerDebugger.Msg_PostMessage.a_aMessage)
-  return _impl_.a_amessage_.Release();
+  if (!_internal_has_a_amessage()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_amessage_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_amessage_.IsDefault()) {
+    _impl_.a_amessage_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_PostMessage::set_allocated_a_amessage(std::string* a_amessage) {
   if (a_amessage != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_amessage_.SetAllocated(a_amessage, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1954,9 +2141,17 @@ inline void Msg_PostMessage::set_allocated_a_amessage(std::string* a_amessage) {
 
 // Msg_SetDebuggerReady
 
-// bool a_aReady = 1;
+// required bool a_aReady = 1;
+inline bool Msg_SetDebuggerReady::_internal_has_a_aready() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_SetDebuggerReady::has_a_aready() const {
+  return _internal_has_a_aready();
+}
 inline void Msg_SetDebuggerReady::clear_a_aready() {
   _impl_.a_aready_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Msg_SetDebuggerReady::_internal_a_aready() const {
   return _impl_.a_aready_;
@@ -1966,7 +2161,7 @@ inline bool Msg_SetDebuggerReady::a_aready() const {
   return _internal_a_aready();
 }
 inline void Msg_SetDebuggerReady::_internal_set_a_aready(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aready_ = value;
 }
 inline void Msg_SetDebuggerReady::set_a_aready(bool value) {

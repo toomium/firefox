@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/webgpu/ipc/PWebGPU.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.webgpu.PWebGPU;
@@ -17,79 +17,79 @@ import "PWebGPUTypes.proto";
 
 // Message declarations
 message Msg_DeviceAction {
-  bytes a_selfId = 1;
-  bytes a_buf = 2;
+  required bytes a_selfId = 1;
+  required bytes a_buf = 2;
 }
 
 message Msg_DeviceActionWithAck {
-  bytes a_selfId = 1;
-  bytes a_buf = 2;
+  required bytes a_selfId = 1;
+  required bytes a_buf = 2;
 }
 
 message Reply_DeviceActionWithAck {
-  bool a_dummy = 1;
+  required bool a_dummy = 1;
 }
 
 message Msg_TextureAction {
-  bytes a_selfId = 1;
-  bytes a_aDeviceId = 2;
-  bytes a_buf = 3;
+  required bytes a_selfId = 1;
+  required bytes a_aDeviceId = 2;
+  required bytes a_buf = 3;
 }
 
 message Msg_CommandEncoderAction {
-  bytes a_selfId = 1;
-  bytes a_aDeviceId = 2;
-  bytes a_buf = 3;
+  required bytes a_selfId = 1;
+  required bytes a_aDeviceId = 2;
+  required bytes a_buf = 3;
 }
 
 message Msg_RenderPass {
-  bytes a_selfId = 1;
-  bytes a_aDeviceId = 2;
-  bytes a_buf = 3;
+  required bytes a_selfId = 1;
+  required bytes a_aDeviceId = 2;
+  required bytes a_buf = 3;
 }
 
 message Msg_ComputePass {
-  bytes a_selfId = 1;
-  bytes a_aDeviceId = 2;
-  bytes a_buf = 3;
+  required bytes a_selfId = 1;
+  required bytes a_aDeviceId = 2;
+  required bytes a_buf = 3;
 }
 
 message Msg_DeviceCreateBuffer {
-  bytes a_deviceId = 1;
-  bytes a_bufferId = 2;
-  bytes a_desc = 3;
-  bytes a_shm = 4;
+  required bytes a_deviceId = 1;
+  required bytes a_bufferId = 2;
+  required bytes a_desc = 3;
+  required bytes a_shm = 4;
 }
 
 message Msg_InstanceRequestAdapter {
-  bytes a_options = 1;
-  bytes a_aAdapterId = 2;
+  required bytes a_options = 1;
+  required bytes a_aAdapterId = 2;
 }
 
 message Reply_InstanceRequestAdapter {
-  bytes a_byteBuf = 1;
+  required bytes a_byteBuf = 1;
 }
 
 message Msg_AdapterRequestDevice {
-  bytes a_adapterId = 1;
-  bytes a_descriptorBuf = 2;
-  bytes a_newDeviceId = 3;
-  bytes a_newQueueId = 4;
+  required bytes a_adapterId = 1;
+  required bytes a_descriptorBuf = 2;
+  required bytes a_newDeviceId = 3;
+  required bytes a_newQueueId = 4;
 }
 
 message Reply_AdapterRequestDevice {
-  bool a_success = 1;
+  required bool a_success = 1;
 }
 
 message Msg_AdapterDrop {
-  bytes a_selfId = 1;
+  required bytes a_selfId = 1;
 }
 
 message Msg_DeviceCreateShaderModule {
-  bytes a_selfId = 1;
-  bytes a_bufferId = 2;
-  string a_label = 3;
-  string a_code = 4;
+  required bytes a_selfId = 1;
+  required bytes a_bufferId = 2;
+  required string a_label = 3;
+  required string a_code = 4;
 }
 
 message Reply_DeviceCreateShaderModule {
@@ -97,175 +97,175 @@ message Reply_DeviceCreateShaderModule {
 }
 
 message Msg_BufferMap {
-  bytes a_deviceId = 1;
-  bytes a_bufferId = 2;
-  uint32 a_aMode = 3;
-  uint64 a_offset = 4;
-  uint64 a_size = 5;
+  required bytes a_deviceId = 1;
+  required bytes a_bufferId = 2;
+  required uint32 a_aMode = 3;
+  required uint64 a_offset = 4;
+  required uint64 a_size = 5;
 }
 
 message Reply_BufferMap {
-  protobuf.mozilla.webgpu.BufferMapResult a_result = 1;
+  required protobuf.mozilla.webgpu.BufferMapResult a_result = 1;
 }
 
 message Msg_BufferUnmap {
-  bytes a_deviceId = 1;
-  bytes a_bufferId = 2;
-  bool a_flush = 3;
+  required bytes a_deviceId = 1;
+  required bytes a_bufferId = 2;
+  required bool a_flush = 3;
 }
 
 message Msg_BufferDestroy {
-  bytes a_selfId = 1;
+  required bytes a_selfId = 1;
 }
 
 message Msg_BufferDrop {
-  bytes a_selfId = 1;
+  required bytes a_selfId = 1;
 }
 
 message Msg_TextureDestroy {
-  bytes a_selfId = 1;
-  bytes a_deviceId = 2;
+  required bytes a_selfId = 1;
+  required bytes a_deviceId = 2;
 }
 
 message Msg_TextureDrop {
-  bytes a_selfId = 1;
+  required bytes a_selfId = 1;
 }
 
 message Msg_TextureViewDrop {
-  bytes a_selfId = 1;
+  required bytes a_selfId = 1;
 }
 
 message Msg_SamplerDrop {
-  bytes a_selfId = 1;
+  required bytes a_selfId = 1;
 }
 
 message Msg_QuerySetDrop {
-  bytes a_selfId = 1;
+  required bytes a_selfId = 1;
 }
 
 message Msg_DeviceDestroy {
-  bytes a_selfId = 1;
+  required bytes a_selfId = 1;
 }
 
 message Msg_DeviceDrop {
-  bytes a_selfId = 1;
+  required bytes a_selfId = 1;
 }
 
 message Msg_CommandEncoderFinish {
-  bytes a_selfId = 1;
-  bytes a_deviceId = 2;
-  bytes a_desc = 3;
+  required bytes a_selfId = 1;
+  required bytes a_deviceId = 2;
+  required bytes a_desc = 3;
 }
 
 message Msg_CommandEncoderDrop {
-  bytes a_selfId = 1;
+  required bytes a_selfId = 1;
 }
 
 message Msg_RenderBundleDrop {
-  bytes a_selfId = 1;
+  required bytes a_selfId = 1;
 }
 
 message Msg_QueueSubmit {
-  bytes a_selfId = 1;
-  bytes a_aDeviceId = 2;
+  required bytes a_selfId = 1;
+  required bytes a_aDeviceId = 2;
   repeated bytes a_commandBuffers = 3;
   repeated bytes a_textureIds = 4;
 }
 
 message Msg_QueueOnSubmittedWorkDone {
-  bytes a_selfId = 1;
+  required bytes a_selfId = 1;
 }
 
 message Reply_QueueOnSubmittedWorkDone {
-  bytes a_ok = 1;
+  required bytes a_ok = 1;
 }
 
 message Msg_QueueWriteAction {
-  bytes a_selfId = 1;
-  bytes a_aDeviceId = 2;
-  bytes a_buf = 3;
-  bytes a_shmem = 4;
+  required bytes a_selfId = 1;
+  required bytes a_aDeviceId = 2;
+  required bytes a_buf = 3;
+  required bytes a_shmem = 4;
 }
 
 message Msg_BindGroupLayoutDrop {
-  bytes a_selfId = 1;
+  required bytes a_selfId = 1;
 }
 
 message Msg_PipelineLayoutDrop {
-  bytes a_selfId = 1;
+  required bytes a_selfId = 1;
 }
 
 message Msg_BindGroupDrop {
-  bytes a_selfId = 1;
+  required bytes a_selfId = 1;
 }
 
 message Msg_ShaderModuleDrop {
-  bytes a_selfId = 1;
+  required bytes a_selfId = 1;
 }
 
 message Msg_ComputePipelineDrop {
-  bytes a_selfId = 1;
+  required bytes a_selfId = 1;
 }
 
 message Msg_RenderPipelineDrop {
-  bytes a_selfId = 1;
+  required bytes a_selfId = 1;
 }
 
 message Msg_ImplicitLayoutDrop {
-  bytes a_implicitPlId = 1;
+  required bytes a_implicitPlId = 1;
   repeated bytes a_implicitBglIds = 2;
 }
 
 message Msg_DeviceCreateSwapChain {
-  bytes a_selfId = 1;
-  bytes a_queueId = 2;
-  bytes a_desc = 3;
+  required bytes a_selfId = 1;
+  required bytes a_queueId = 2;
+  required bytes a_desc = 3;
   repeated bytes a_bufferIds = 4;
-  bytes a_ownerId = 5;
-  bool a_useExternalTextureInSwapChain = 6;
+  required bytes a_ownerId = 5;
+  required bool a_useExternalTextureInSwapChain = 6;
 }
 
 message Msg_SwapChainPresent {
-  bytes a_textureId = 1;
-  bytes a_commandEncoderId = 2;
-  bytes a_remoteTextureId = 3;
-  bytes a_remoteTextureOwnerId = 4;
+  required bytes a_textureId = 1;
+  required bytes a_commandEncoderId = 2;
+  required bytes a_remoteTextureId = 3;
+  required bytes a_remoteTextureOwnerId = 4;
 }
 
 message Msg_SwapChainDrop {
-  bytes a_ownerId = 1;
-  bytes a_txnType = 2;
-  bytes a_txnId = 3;
+  required bytes a_ownerId = 1;
+  required bytes a_txnType = 2;
+  required bytes a_txnId = 3;
 }
 
 message Msg_DevicePushErrorScope {
-  bytes a_selfId = 1;
-  bytes a_aFilter = 2;
+  required bytes a_selfId = 1;
+  required bytes a_aFilter = 2;
 }
 
 message Msg_DevicePopErrorScope {
-  bytes a_selfId = 1;
+  required bytes a_selfId = 1;
 }
 
 message Reply_DevicePopErrorScope {
-  bytes a_result = 1;
+  required bytes a_result = 1;
 }
 
 message Msg_ReportError {
-  bytes a_selfId = 1;
-  bytes a_aType = 2;
-  string a_message = 3;
+  required bytes a_selfId = 1;
+  required bytes a_aType = 2;
+  required string a_message = 3;
 }
 
 message Msg_UncapturedError {
   optional bytes a_aDeviceId = 1;
-  string a_message = 2;
+  required string a_message = 2;
 }
 
 message Msg_DeviceLost {
-  bytes a_aDeviceId = 1;
+  required bytes a_aDeviceId = 1;
   optional uint32 a_reason = 2;
-  string a_message = 3;
+  required string a_message = 3;
 }
 
 message Msg___delete__ {

@@ -134,6 +134,13 @@ class Msg_Close final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Close& default_instance() {
     return *internal_default_instance();
   }
@@ -249,6 +256,13 @@ class Msg_Suspend final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Suspend& default_instance() {
@@ -368,6 +382,13 @@ class Msg_Resume final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Resume& default_instance() {
     return *internal_default_instance();
   }
@@ -483,6 +504,13 @@ class Msg_Freeze final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Freeze& default_instance() {
@@ -602,6 +630,13 @@ class Msg_Thaw final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Thaw& default_instance() {
     return *internal_default_instance();
   }
@@ -719,6 +754,13 @@ class Msg_Error final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Error& default_instance() {
     return *internal_default_instance();
   }
@@ -793,7 +835,7 @@ class Msg_Error final :
   enum : int {
     kAValueFieldNumber = 1,
   };
-  // .protobuf.mozilla.dom.ErrorValue a_value = 1;
+  // required .protobuf.mozilla.dom.ErrorValue a_value = 1;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -819,8 +861,9 @@ class Msg_Error final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::protobuf::mozilla::dom::ErrorValue* a_value_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::protobuf::mozilla::dom::ErrorValue* a_value_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSharedWorker_2eproto;
@@ -856,6 +899,13 @@ class Msg_NotifyLock final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_NotifyLock& default_instance() {
@@ -932,7 +982,11 @@ class Msg_NotifyLock final :
   enum : int {
     kAACreatedFieldNumber = 1,
   };
-  // bool a_aCreated = 1;
+  // required bool a_aCreated = 1;
+  bool has_a_acreated() const;
+  private:
+  bool _internal_has_a_acreated() const;
+  public:
   void clear_a_acreated();
   bool a_acreated() const;
   void set_a_acreated(bool value);
@@ -949,8 +1003,9 @@ class Msg_NotifyLock final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_acreated_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_acreated_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSharedWorker_2eproto;
@@ -986,6 +1041,13 @@ class Msg_NotifyWebTransport final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_NotifyWebTransport& default_instance() {
@@ -1062,7 +1124,11 @@ class Msg_NotifyWebTransport final :
   enum : int {
     kAACreatedFieldNumber = 1,
   };
-  // bool a_aCreated = 1;
+  // required bool a_aCreated = 1;
+  bool has_a_acreated() const;
+  private:
+  bool _internal_has_a_acreated() const;
+  public:
   void clear_a_acreated();
   bool a_acreated() const;
   void set_a_acreated(bool value);
@@ -1079,8 +1145,9 @@ class Msg_NotifyWebTransport final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_acreated_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_acreated_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSharedWorker_2eproto;
@@ -1116,6 +1183,13 @@ class Msg_Terminate final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_Terminate& default_instance() {
@@ -1235,6 +1309,13 @@ class Msg___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -1352,6 +1433,13 @@ class Reply___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -1467,9 +1555,11 @@ class Reply___delete__ final :
 
 // Msg_Error
 
-// .protobuf.mozilla.dom.ErrorValue a_value = 1;
+// required .protobuf.mozilla.dom.ErrorValue a_value = 1;
 inline bool Msg_Error::_internal_has_a_value() const {
-  return this != internal_default_instance() && _impl_.a_value_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_value_ != nullptr);
+  return value;
 }
 inline bool Msg_Error::has_a_value() const {
   return _internal_has_a_value();
@@ -1490,14 +1580,14 @@ inline void Msg_Error::unsafe_arena_set_allocated_a_value(
   }
   _impl_.a_value_ = a_value;
   if (a_value) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PSharedWorker.Msg_Error.a_value)
 }
 inline ::protobuf::mozilla::dom::ErrorValue* Msg_Error::release_a_value() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::ErrorValue* temp = _impl_.a_value_;
   _impl_.a_value_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1513,13 +1603,13 @@ inline ::protobuf::mozilla::dom::ErrorValue* Msg_Error::release_a_value() {
 }
 inline ::protobuf::mozilla::dom::ErrorValue* Msg_Error::unsafe_arena_release_a_value() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PSharedWorker.Msg_Error.a_value)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::ErrorValue* temp = _impl_.a_value_;
   _impl_.a_value_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::ErrorValue* Msg_Error::_internal_mutable_a_value() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_value_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::ErrorValue>(GetArenaForAllocation());
     _impl_.a_value_ = p;
@@ -1544,9 +1634,9 @@ inline void Msg_Error::set_allocated_a_value(::protobuf::mozilla::dom::ErrorValu
       a_value = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_value, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_value_ = a_value;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSharedWorker.Msg_Error.a_value)
@@ -1556,9 +1646,17 @@ inline void Msg_Error::set_allocated_a_value(::protobuf::mozilla::dom::ErrorValu
 
 // Msg_NotifyLock
 
-// bool a_aCreated = 1;
+// required bool a_aCreated = 1;
+inline bool Msg_NotifyLock::_internal_has_a_acreated() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_NotifyLock::has_a_acreated() const {
+  return _internal_has_a_acreated();
+}
 inline void Msg_NotifyLock::clear_a_acreated() {
   _impl_.a_acreated_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Msg_NotifyLock::_internal_a_acreated() const {
   return _impl_.a_acreated_;
@@ -1568,7 +1666,7 @@ inline bool Msg_NotifyLock::a_acreated() const {
   return _internal_a_acreated();
 }
 inline void Msg_NotifyLock::_internal_set_a_acreated(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_acreated_ = value;
 }
 inline void Msg_NotifyLock::set_a_acreated(bool value) {
@@ -1580,9 +1678,17 @@ inline void Msg_NotifyLock::set_a_acreated(bool value) {
 
 // Msg_NotifyWebTransport
 
-// bool a_aCreated = 1;
+// required bool a_aCreated = 1;
+inline bool Msg_NotifyWebTransport::_internal_has_a_acreated() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_NotifyWebTransport::has_a_acreated() const {
+  return _internal_has_a_acreated();
+}
 inline void Msg_NotifyWebTransport::clear_a_acreated() {
   _impl_.a_acreated_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Msg_NotifyWebTransport::_internal_a_acreated() const {
   return _impl_.a_acreated_;
@@ -1592,7 +1698,7 @@ inline bool Msg_NotifyWebTransport::a_acreated() const {
   return _internal_a_acreated();
 }
 inline void Msg_NotifyWebTransport::_internal_set_a_acreated(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_acreated_ = value;
 }
 inline void Msg_NotifyWebTransport::set_a_acreated(bool value) {

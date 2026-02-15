@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/storage/PBackgroundStorage.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.PBackgroundStorage;
@@ -19,50 +19,50 @@ message Msg_DeleteMe {
 }
 
 message Msg_Preload {
-  string a_originSuffix = 1;
-  string a_originNoSuffix = 2;
-  uint32 a_alreadyLoadedCount = 3;
+  required string a_originSuffix = 1;
+  required string a_originNoSuffix = 2;
+  required uint32 a_alreadyLoadedCount = 3;
 }
 
 message Reply_Preload {
   repeated string a_keys = 1;
   repeated string a_values = 2;
-  bytes a_rv = 3;
+  required bytes a_rv = 3;
 }
 
 message Msg_AsyncPreload {
-  string a_originSuffix = 1;
-  string a_originNoSuffix = 2;
-  bool a_priority = 3;
+  required string a_originSuffix = 1;
+  required string a_originNoSuffix = 2;
+  required bool a_priority = 3;
 }
 
 message Msg_AsyncGetUsage {
-  string a_scope = 1;
+  required string a_scope = 1;
 }
 
 message Msg_AsyncAddItem {
-  string a_originSuffix = 1;
-  string a_originNoSuffix = 2;
-  string a_key = 3;
-  string a_value = 4;
+  required string a_originSuffix = 1;
+  required string a_originNoSuffix = 2;
+  required string a_key = 3;
+  required string a_value = 4;
 }
 
 message Msg_AsyncUpdateItem {
-  string a_originSuffix = 1;
-  string a_originNoSuffix = 2;
-  string a_key = 3;
-  string a_value = 4;
+  required string a_originSuffix = 1;
+  required string a_originNoSuffix = 2;
+  required string a_key = 3;
+  required string a_value = 4;
 }
 
 message Msg_AsyncRemoveItem {
-  string a_originSuffix = 1;
-  string a_originNoSuffix = 2;
-  string a_key = 3;
+  required string a_originSuffix = 1;
+  required string a_originNoSuffix = 2;
+  required string a_key = 3;
 }
 
 message Msg_AsyncClear {
-  string a_originSuffix = 1;
-  string a_originNoSuffix = 2;
+  required string a_originSuffix = 1;
+  required string a_originNoSuffix = 2;
 }
 
 message Msg_AsyncFlush {
@@ -75,11 +75,11 @@ message Msg_ClearAll {
 }
 
 message Msg_ClearMatchingOrigin {
-  string a_originNoSuffix = 1;
+  required string a_originNoSuffix = 1;
 }
 
 message Msg_ClearMatchingOriginAttributes {
-  bytes a_pattern = 1;
+  required bytes a_pattern = 1;
 }
 
 message Msg___delete__ {
@@ -89,9 +89,9 @@ message Reply___delete__ {
 }
 
 message Msg_Observe {
-  string a_topic = 1;
-  string a_originAttributesPattern = 2;
-  string a_originScope = 3;
+  required string a_topic = 1;
+  required string a_originAttributesPattern = 2;
+  required string a_originScope = 3;
 }
 
 message Msg_OriginsHavingData {
@@ -99,25 +99,25 @@ message Msg_OriginsHavingData {
 }
 
 message Msg_LoadItem {
-  string a_originSuffix = 1;
-  string a_originNoSuffix = 2;
-  string a_key = 3;
-  string a_value = 4;
+  required string a_originSuffix = 1;
+  required string a_originNoSuffix = 2;
+  required string a_key = 3;
+  required string a_value = 4;
 }
 
 message Msg_LoadDone {
-  string a_originSuffix = 1;
-  string a_originNoSuffix = 2;
-  bytes a_rv = 3;
+  required string a_originSuffix = 1;
+  required string a_originNoSuffix = 2;
+  required bytes a_rv = 3;
 }
 
 message Msg_LoadUsage {
-  string a_scope = 1;
-  sint64 a_usage = 2;
+  required string a_scope = 1;
+  required sint64 a_usage = 2;
 }
 
 message Msg_Error {
-  bytes a_rv = 1;
+  required bytes a_rv = 1;
 }
 
 // Parameter mappings stats:

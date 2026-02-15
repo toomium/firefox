@@ -221,19 +221,20 @@ uint8_t* RemoteLazyStream::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_mVRemoteLazyInputStream = 1;
-  if (_internal_has_a_mvremotelazyinputstream()) {
-    target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_a_mvremotelazyinputstream(), target);
+  switch (content_case()) {
+    case kAMVRemoteLazyInputStream: {
+      target = stream->WriteBytesMaybeAliased(
+          1, this->_internal_a_mvremotelazyinputstream(), target);
+      break;
+    }
+    case kAMVIPCStream: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(2, _Internal::a_mvipcstream(this),
+          _Internal::a_mvipcstream(this).GetCachedSize(), target, stream);
+      break;
+    }
+    default: ;
   }
-
-  // .protobuf.mozilla.ipc.IPCStream a_mVIPCStream = 2;
-  if (_internal_has_a_mvipcstream()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::a_mvipcstream(this),
-        _Internal::a_mvipcstream(this).GetCachedSize(), target, stream);
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
@@ -315,6 +316,20 @@ void RemoteLazyStream::CopyFrom(const RemoteLazyStream& from) {
 }
 
 bool RemoteLazyStream::IsInitialized() const {
+  switch (content_case()) {
+    case kAMVRemoteLazyInputStream: {
+      break;
+    }
+    case kAMVIPCStream: {
+      if (_internal_has_a_mvipcstream()) {
+        if (!_impl_.content_.a_mvipcstream_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case CONTENT_NOT_SET: {
+      break;
+    }
+  }
   return true;
 }
 

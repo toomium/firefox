@@ -106,6 +106,13 @@ class Msg___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -221,6 +228,13 @@ class Reply___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply___delete__& default_instance() {
@@ -340,6 +354,13 @@ class Msg_NotifyListeners final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_NotifyListeners& default_instance() {
     return *internal_default_instance();
   }
@@ -414,7 +435,7 @@ class Msg_NotifyListeners final :
   enum : int {
     kAAFileChannelInfoFieldNumber = 1,
   };
-  // .protobuf.mozilla.net.FileChannelInfo a_aFileChannelInfo = 1;
+  // required .protobuf.mozilla.net.FileChannelInfo a_aFileChannelInfo = 1;
   bool has_a_afilechannelinfo() const;
   private:
   bool _internal_has_a_afilechannelinfo() const;
@@ -440,8 +461,9 @@ class Msg_NotifyListeners final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::protobuf::mozilla::net::FileChannelInfo* a_afilechannelinfo_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::protobuf::mozilla::net::FileChannelInfo* a_afilechannelinfo_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileChannel_2eproto;
@@ -477,6 +499,13 @@ class Msg_SetChannelIdForRedirect final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_SetChannelIdForRedirect& default_instance() {
@@ -553,7 +582,11 @@ class Msg_SetChannelIdForRedirect final :
   enum : int {
     kAAChannelIdFieldNumber = 1,
   };
-  // uint64 a_aChannelId = 1;
+  // required uint64 a_aChannelId = 1;
+  bool has_a_achannelid() const;
+  private:
+  bool _internal_has_a_achannelid() const;
+  public:
   void clear_a_achannelid();
   uint64_t a_achannelid() const;
   void set_a_achannelid(uint64_t value);
@@ -570,8 +603,9 @@ class Msg_SetChannelIdForRedirect final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint64_t a_achannelid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint64_t a_achannelid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileChannel_2eproto;
@@ -595,9 +629,11 @@ class Msg_SetChannelIdForRedirect final :
 
 // Msg_NotifyListeners
 
-// .protobuf.mozilla.net.FileChannelInfo a_aFileChannelInfo = 1;
+// required .protobuf.mozilla.net.FileChannelInfo a_aFileChannelInfo = 1;
 inline bool Msg_NotifyListeners::_internal_has_a_afilechannelinfo() const {
-  return this != internal_default_instance() && _impl_.a_afilechannelinfo_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_afilechannelinfo_ != nullptr);
+  return value;
 }
 inline bool Msg_NotifyListeners::has_a_afilechannelinfo() const {
   return _internal_has_a_afilechannelinfo();
@@ -618,14 +654,14 @@ inline void Msg_NotifyListeners::unsafe_arena_set_allocated_a_afilechannelinfo(
   }
   _impl_.a_afilechannelinfo_ = a_afilechannelinfo;
   if (a_afilechannelinfo) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PFileChannel.Msg_NotifyListeners.a_aFileChannelInfo)
 }
 inline ::protobuf::mozilla::net::FileChannelInfo* Msg_NotifyListeners::release_a_afilechannelinfo() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::net::FileChannelInfo* temp = _impl_.a_afilechannelinfo_;
   _impl_.a_afilechannelinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -641,13 +677,13 @@ inline ::protobuf::mozilla::net::FileChannelInfo* Msg_NotifyListeners::release_a
 }
 inline ::protobuf::mozilla::net::FileChannelInfo* Msg_NotifyListeners::unsafe_arena_release_a_afilechannelinfo() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PFileChannel.Msg_NotifyListeners.a_aFileChannelInfo)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::net::FileChannelInfo* temp = _impl_.a_afilechannelinfo_;
   _impl_.a_afilechannelinfo_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::net::FileChannelInfo* Msg_NotifyListeners::_internal_mutable_a_afilechannelinfo() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_afilechannelinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::net::FileChannelInfo>(GetArenaForAllocation());
     _impl_.a_afilechannelinfo_ = p;
@@ -672,9 +708,9 @@ inline void Msg_NotifyListeners::set_allocated_a_afilechannelinfo(::protobuf::mo
       a_afilechannelinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_afilechannelinfo, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_afilechannelinfo_ = a_afilechannelinfo;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PFileChannel.Msg_NotifyListeners.a_aFileChannelInfo)
@@ -684,9 +720,17 @@ inline void Msg_NotifyListeners::set_allocated_a_afilechannelinfo(::protobuf::mo
 
 // Msg_SetChannelIdForRedirect
 
-// uint64 a_aChannelId = 1;
+// required uint64 a_aChannelId = 1;
+inline bool Msg_SetChannelIdForRedirect::_internal_has_a_achannelid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_SetChannelIdForRedirect::has_a_achannelid() const {
+  return _internal_has_a_achannelid();
+}
 inline void Msg_SetChannelIdForRedirect::clear_a_achannelid() {
   _impl_.a_achannelid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_SetChannelIdForRedirect::_internal_a_achannelid() const {
   return _impl_.a_achannelid_;
@@ -696,7 +740,7 @@ inline uint64_t Msg_SetChannelIdForRedirect::a_achannelid() const {
   return _internal_a_achannelid();
 }
 inline void Msg_SetChannelIdForRedirect::_internal_set_a_achannelid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_achannelid_ = value;
 }
 inline void Msg_SetChannelIdForRedirect::set_a_achannelid(uint64_t value) {

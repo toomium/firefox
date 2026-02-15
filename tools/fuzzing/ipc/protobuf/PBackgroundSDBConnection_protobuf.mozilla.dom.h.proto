@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/simpledb/PBackgroundSDBConnection.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom;
@@ -13,19 +13,19 @@ package protobuf.mozilla.dom;
 
 // Structs and unions declarations
 message SDBRequestOpenParams {
-  string a_name = 1;
+  required string a_name = 1;
 }
 
 message SDBRequestSeekParams {
-  uint64 a_offset = 1;
+  required uint64 a_offset = 1;
 }
 
 message SDBRequestReadParams {
-  uint64 a_size = 1;
+  required uint64 a_size = 1;
 }
 
 message SDBRequestWriteParams {
-  string a_data = 1;
+  required string a_data = 1;
 }
 
 message SDBRequestCloseParams {

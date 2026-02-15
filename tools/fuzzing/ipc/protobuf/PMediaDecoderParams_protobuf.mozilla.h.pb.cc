@@ -21,12 +21,13 @@ namespace protobuf {
 namespace mozilla {
 PROTOBUF_CONSTEXPR MediaDataIPDL::MediaDataIPDL(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_time_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_time_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_timecode_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_duration_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_offset_)*/int64_t{0}
-  , /*decltype(_impl_.a_keyframe_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_keyframe_)*/false} {}
 struct MediaDataIPDLDefaultTypeInternal {
   PROTOBUF_CONSTEXPR MediaDataIPDLDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -38,16 +39,13 @@ struct MediaDataIPDLDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 MediaDataIPDLDefaultTypeInternal _MediaDataIPDL_default_instance_;
 PROTOBUF_CONSTEXPR CryptoInfo::CryptoInfo(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_miv_)*/{}
-  , /*decltype(_impl_._a_miv_cached_byte_size_)*/{0}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_miv_)*/{}
   , /*decltype(_impl_.a_mkeyid_)*/{}
-  , /*decltype(_impl_._a_mkeyid_cached_byte_size_)*/{0}
   , /*decltype(_impl_.a_mclearbytes_)*/{}
-  , /*decltype(_impl_._a_mclearbytes_cached_byte_size_)*/{0}
   , /*decltype(_impl_.a_mcipherbytes_)*/{}
-  , /*decltype(_impl_._a_mcipherbytes_cached_byte_size_)*/{0}
-  , /*decltype(_impl_.a_mencryptionscheme_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_mencryptionscheme_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct CryptoInfoDefaultTypeInternal {
   PROTOBUF_CONSTEXPR CryptoInfoDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -66,6 +64,25 @@ namespace mozilla {
 
 class MediaDataIPDL::_Internal {
  public:
+  using HasBits = decltype(std::declval<MediaDataIPDL>()._impl_._has_bits_);
+  static void set_has_a_offset(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_a_time(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_timecode(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_duration(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_a_keyframe(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x0000001f) ^ 0x0000001f) != 0;
+  }
 };
 
 MediaDataIPDL::MediaDataIPDL(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -78,19 +95,20 @@ MediaDataIPDL::MediaDataIPDL(const MediaDataIPDL& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   MediaDataIPDL* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_time_){}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_time_){}
     , decltype(_impl_.a_timecode_){}
     , decltype(_impl_.a_duration_){}
     , decltype(_impl_.a_offset_){}
-    , decltype(_impl_.a_keyframe_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_keyframe_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_time_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_time_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_time().empty()) {
+  if (from._internal_has_a_time()) {
     _this->_impl_.a_time_.Set(from._internal_a_time(), 
       _this->GetArenaForAllocation());
   }
@@ -98,7 +116,7 @@ MediaDataIPDL::MediaDataIPDL(const MediaDataIPDL& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_timecode_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_timecode().empty()) {
+  if (from._internal_has_a_timecode()) {
     _this->_impl_.a_timecode_.Set(from._internal_a_timecode(), 
       _this->GetArenaForAllocation());
   }
@@ -106,7 +124,7 @@ MediaDataIPDL::MediaDataIPDL(const MediaDataIPDL& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_duration_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_duration().empty()) {
+  if (from._internal_has_a_duration()) {
     _this->_impl_.a_duration_.Set(from._internal_a_duration(), 
       _this->GetArenaForAllocation());
   }
@@ -121,12 +139,13 @@ inline void MediaDataIPDL::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_time_){}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_time_){}
     , decltype(_impl_.a_timecode_){}
     , decltype(_impl_.a_duration_){}
     , decltype(_impl_.a_offset_){int64_t{0}}
     , decltype(_impl_.a_keyframe_){false}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_time_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -168,30 +187,44 @@ void MediaDataIPDL::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_time_.ClearToEmpty();
-  _impl_.a_timecode_.ClearToEmpty();
-  _impl_.a_duration_.ClearToEmpty();
-  ::memset(&_impl_.a_offset_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.a_keyframe_) -
-      reinterpret_cast<char*>(&_impl_.a_offset_)) + sizeof(_impl_.a_keyframe_));
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_time_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_timecode_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _impl_.a_duration_.ClearNonDefaultToEmpty();
+    }
+  }
+  if (cached_has_bits & 0x00000018u) {
+    ::memset(&_impl_.a_offset_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_keyframe_) -
+        reinterpret_cast<char*>(&_impl_.a_offset_)) + sizeof(_impl_.a_keyframe_));
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* MediaDataIPDL::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // sint64 a_offset = 1;
+      // required sint64 a_offset = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_offset(&has_bits);
           _impl_.a_offset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bytes a_time = 2;
+      // required bytes a_time = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_time();
@@ -200,7 +233,7 @@ const char* MediaDataIPDL::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // bytes a_timecode = 3;
+      // required bytes a_timecode = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_timecode();
@@ -209,7 +242,7 @@ const char* MediaDataIPDL::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // bytes a_duration = 4;
+      // required bytes a_duration = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_duration();
@@ -218,9 +251,10 @@ const char* MediaDataIPDL::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // bool a_keyframe = 5;
+      // required bool a_keyframe = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          _Internal::set_has_a_keyframe(&has_bits);
           _impl_.a_keyframe_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -242,6 +276,7 @@ const char* MediaDataIPDL::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -255,32 +290,33 @@ uint8_t* MediaDataIPDL::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // sint64 a_offset = 1;
-  if (this->_internal_a_offset() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required sint64 a_offset = 1;
+  if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_offset(), target);
   }
 
-  // bytes a_time = 2;
-  if (!this->_internal_a_time().empty()) {
+  // required bytes a_time = 2;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_a_time(), target);
   }
 
-  // bytes a_timecode = 3;
-  if (!this->_internal_a_timecode().empty()) {
+  // required bytes a_timecode = 3;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
         3, this->_internal_a_timecode(), target);
   }
 
-  // bytes a_duration = 4;
-  if (!this->_internal_a_duration().empty()) {
+  // required bytes a_duration = 4;
+  if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
         4, this->_internal_a_duration(), target);
   }
 
-  // bool a_keyframe = 5;
-  if (this->_internal_a_keyframe() != 0) {
+  // required bool a_keyframe = 5;
+  if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_a_keyframe(), target);
   }
@@ -293,44 +329,75 @@ uint8_t* MediaDataIPDL::_InternalSerialize(
   return target;
 }
 
-size_t MediaDataIPDL::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.MediaDataIPDL)
+size_t MediaDataIPDL::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.MediaDataIPDL)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_time = 2;
-  if (!this->_internal_a_time().empty()) {
+  if (_internal_has_a_time()) {
+    // required bytes a_time = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_time());
   }
 
-  // bytes a_timecode = 3;
-  if (!this->_internal_a_timecode().empty()) {
+  if (_internal_has_a_timecode()) {
+    // required bytes a_timecode = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_timecode());
   }
 
-  // bytes a_duration = 4;
-  if (!this->_internal_a_duration().empty()) {
+  if (_internal_has_a_duration()) {
+    // required bytes a_duration = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_duration());
   }
 
-  // sint64 a_offset = 1;
-  if (this->_internal_a_offset() != 0) {
+  if (_internal_has_a_offset()) {
+    // required sint64 a_offset = 1;
     total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_offset());
   }
 
-  // bool a_keyframe = 5;
-  if (this->_internal_a_keyframe() != 0) {
+  if (_internal_has_a_keyframe()) {
+    // required bool a_keyframe = 5;
     total_size += 1 + 1;
   }
+
+  return total_size;
+}
+size_t MediaDataIPDL::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.MediaDataIPDL)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
+    // required bytes a_time = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_time());
+
+    // required bytes a_timecode = 3;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_timecode());
+
+    // required bytes a_duration = 4;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_duration());
+
+    // required sint64 a_offset = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_offset());
+
+    // required bool a_keyframe = 5;
+    total_size += 1 + 1;
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -353,20 +420,24 @@ void MediaDataIPDL::MergeFrom(const MediaDataIPDL& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_time().empty()) {
-    _this->_internal_set_a_time(from._internal_a_time());
-  }
-  if (!from._internal_a_timecode().empty()) {
-    _this->_internal_set_a_timecode(from._internal_a_timecode());
-  }
-  if (!from._internal_a_duration().empty()) {
-    _this->_internal_set_a_duration(from._internal_a_duration());
-  }
-  if (from._internal_a_offset() != 0) {
-    _this->_internal_set_a_offset(from._internal_a_offset());
-  }
-  if (from._internal_a_keyframe() != 0) {
-    _this->_internal_set_a_keyframe(from._internal_a_keyframe());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000001fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_time(from._internal_a_time());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_timecode(from._internal_a_timecode());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_internal_set_a_duration(from._internal_a_duration());
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.a_offset_ = from._impl_.a_offset_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_impl_.a_keyframe_ = from._impl_.a_keyframe_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -379,6 +450,7 @@ void MediaDataIPDL::CopyFrom(const MediaDataIPDL& from) {
 }
 
 bool MediaDataIPDL::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -387,6 +459,7 @@ void MediaDataIPDL::InternalSwap(MediaDataIPDL* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_time_, lhs_arena,
       &other->_impl_.a_time_, rhs_arena
@@ -416,6 +489,13 @@ std::string MediaDataIPDL::GetTypeName() const {
 
 class CryptoInfo::_Internal {
  public:
+  using HasBits = decltype(std::declval<CryptoInfo>()._impl_._has_bits_);
+  static void set_has_a_mencryptionscheme(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 CryptoInfo::CryptoInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -428,23 +508,20 @@ CryptoInfo::CryptoInfo(const CryptoInfo& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   CryptoInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_miv_){from._impl_.a_miv_}
-    , /*decltype(_impl_._a_miv_cached_byte_size_)*/{0}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_miv_){from._impl_.a_miv_}
     , decltype(_impl_.a_mkeyid_){from._impl_.a_mkeyid_}
-    , /*decltype(_impl_._a_mkeyid_cached_byte_size_)*/{0}
     , decltype(_impl_.a_mclearbytes_){from._impl_.a_mclearbytes_}
-    , /*decltype(_impl_._a_mclearbytes_cached_byte_size_)*/{0}
     , decltype(_impl_.a_mcipherbytes_){from._impl_.a_mcipherbytes_}
-    , /*decltype(_impl_._a_mcipherbytes_cached_byte_size_)*/{0}
-    , decltype(_impl_.a_mencryptionscheme_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_mencryptionscheme_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_mencryptionscheme_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_mencryptionscheme_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_mencryptionscheme().empty()) {
+  if (from._internal_has_a_mencryptionscheme()) {
     _this->_impl_.a_mencryptionscheme_.Set(from._internal_a_mencryptionscheme(), 
       _this->GetArenaForAllocation());
   }
@@ -456,16 +533,13 @@ inline void CryptoInfo::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_miv_){arena}
-    , /*decltype(_impl_._a_miv_cached_byte_size_)*/{0}
-    , decltype(_impl_.a_mkeyid_){arena}
-    , /*decltype(_impl_._a_mkeyid_cached_byte_size_)*/{0}
-    , decltype(_impl_.a_mclearbytes_){arena}
-    , /*decltype(_impl_._a_mclearbytes_cached_byte_size_)*/{0}
-    , decltype(_impl_.a_mcipherbytes_){arena}
-    , /*decltype(_impl_._a_mcipherbytes_cached_byte_size_)*/{0}
-    , decltype(_impl_.a_mencryptionscheme_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_miv_){arena}
+    , decltype(_impl_.a_mkeyid_){arena}
+    , decltype(_impl_.a_mclearbytes_){arena}
+    , decltype(_impl_.a_mcipherbytes_){arena}
+    , decltype(_impl_.a_mencryptionscheme_){}
   };
   _impl_.a_mencryptionscheme_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -505,17 +579,22 @@ void CryptoInfo::Clear() {
   _impl_.a_mkeyid_.Clear();
   _impl_.a_mclearbytes_.Clear();
   _impl_.a_mcipherbytes_.Clear();
-  _impl_.a_mencryptionscheme_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_mencryptionscheme_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* CryptoInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_mEncryptionScheme = 1;
+      // required bytes a_mEncryptionScheme = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_mencryptionscheme();
@@ -526,44 +605,64 @@ const char* CryptoInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         continue;
       // repeated uint32 a_mIV = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            _internal_add_a_miv(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 18) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_miv(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 16) {
-          _internal_add_a_miv(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
       // repeated uint32 a_mKeyId = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            _internal_add_a_mkeyid(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<24>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 26) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_mkeyid(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 24) {
-          _internal_add_a_mkeyid(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
       // repeated uint32 a_mClearBytes = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            _internal_add_a_mclearbytes(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<32>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 34) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_mclearbytes(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 32) {
-          _internal_add_a_mclearbytes(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
       // repeated uint32 a_mCipherBytes = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            _internal_add_a_mcipherbytes(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<40>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 42) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_mcipherbytes(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 40) {
-          _internal_add_a_mcipherbytes(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -584,6 +683,7 @@ const char* CryptoInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -597,46 +697,35 @@ uint8_t* CryptoInfo::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_mEncryptionScheme = 1;
-  if (!this->_internal_a_mencryptionscheme().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_mEncryptionScheme = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_mencryptionscheme(), target);
   }
 
   // repeated uint32 a_mIV = 2;
-  {
-    int byte_size = _impl_._a_miv_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteUInt32Packed(
-          2, _internal_a_miv(), byte_size, target);
-    }
+  for (int i = 0, n = this->_internal_a_miv_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_miv(i), target);
   }
 
   // repeated uint32 a_mKeyId = 3;
-  {
-    int byte_size = _impl_._a_mkeyid_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteUInt32Packed(
-          3, _internal_a_mkeyid(), byte_size, target);
-    }
+  for (int i = 0, n = this->_internal_a_mkeyid_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_mkeyid(i), target);
   }
 
   // repeated uint32 a_mClearBytes = 4;
-  {
-    int byte_size = _impl_._a_mclearbytes_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteUInt32Packed(
-          4, _internal_a_mclearbytes(), byte_size, target);
-    }
+  for (int i = 0, n = this->_internal_a_mclearbytes_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(4, this->_internal_a_mclearbytes(i), target);
   }
 
   // repeated uint32 a_mCipherBytes = 5;
-  {
-    int byte_size = _impl_._a_mcipherbytes_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteUInt32Packed(
-          5, _internal_a_mcipherbytes(), byte_size, target);
-    }
+  for (int i = 0, n = this->_internal_a_mcipherbytes_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(5, this->_internal_a_mcipherbytes(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -651,6 +740,12 @@ size_t CryptoInfo::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.CryptoInfo)
   size_t total_size = 0;
 
+  // required bytes a_mEncryptionScheme = 1;
+  if (_internal_has_a_mencryptionscheme()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_mencryptionscheme());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -659,13 +754,8 @@ size_t CryptoInfo::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_miv_);
-    if (data_size > 0) {
-      total_size += 1 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
-    int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._a_miv_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
+    total_size += 1 *
+                  ::_pbi::FromIntSize(this->_internal_a_miv_size());
     total_size += data_size;
   }
 
@@ -673,13 +763,8 @@ size_t CryptoInfo::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_mkeyid_);
-    if (data_size > 0) {
-      total_size += 1 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
-    int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._a_mkeyid_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
+    total_size += 1 *
+                  ::_pbi::FromIntSize(this->_internal_a_mkeyid_size());
     total_size += data_size;
   }
 
@@ -687,13 +772,8 @@ size_t CryptoInfo::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_mclearbytes_);
-    if (data_size > 0) {
-      total_size += 1 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
-    int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._a_mclearbytes_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
+    total_size += 1 *
+                  ::_pbi::FromIntSize(this->_internal_a_mclearbytes_size());
     total_size += data_size;
   }
 
@@ -701,21 +781,9 @@ size_t CryptoInfo::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_mcipherbytes_);
-    if (data_size > 0) {
-      total_size += 1 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
-    int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._a_mcipherbytes_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
+    total_size += 1 *
+                  ::_pbi::FromIntSize(this->_internal_a_mcipherbytes_size());
     total_size += data_size;
-  }
-
-  // bytes a_mEncryptionScheme = 1;
-  if (!this->_internal_a_mencryptionscheme().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_mencryptionscheme());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -743,7 +811,7 @@ void CryptoInfo::MergeFrom(const CryptoInfo& from) {
   _this->_impl_.a_mkeyid_.MergeFrom(from._impl_.a_mkeyid_);
   _this->_impl_.a_mclearbytes_.MergeFrom(from._impl_.a_mclearbytes_);
   _this->_impl_.a_mcipherbytes_.MergeFrom(from._impl_.a_mcipherbytes_);
-  if (!from._internal_a_mencryptionscheme().empty()) {
+  if (from._internal_has_a_mencryptionscheme()) {
     _this->_internal_set_a_mencryptionscheme(from._internal_a_mencryptionscheme());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -757,6 +825,7 @@ void CryptoInfo::CopyFrom(const CryptoInfo& from) {
 }
 
 bool CryptoInfo::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -765,6 +834,7 @@ void CryptoInfo::InternalSwap(CryptoInfo* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_miv_.InternalSwap(&other->_impl_.a_miv_);
   _impl_.a_mkeyid_.InternalSwap(&other->_impl_.a_mkeyid_);
   _impl_.a_mclearbytes_.InternalSwap(&other->_impl_.a_mclearbytes_);

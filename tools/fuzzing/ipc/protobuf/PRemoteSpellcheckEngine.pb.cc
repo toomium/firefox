@@ -72,8 +72,9 @@ struct Reply_CheckAsyncDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_CheckAsyncDefaultTypeInternal _Reply_CheckAsync_default_instance_;
 PROTOBUF_CONSTEXPR Msg_SetDictionary::Msg_SetDictionary(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_adictionary_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_adictionary_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_SetDictionaryDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_SetDictionaryDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -85,8 +86,9 @@ struct Msg_SetDictionaryDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_SetDictionaryDefaultTypeInternal _Msg_SetDictionary_default_instance_;
 PROTOBUF_CONSTEXPR Reply_SetDictionary::Reply_SetDictionary(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_success_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_success_)*/false} {}
 struct Reply_SetDictionaryDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_SetDictionaryDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -111,8 +113,9 @@ struct Msg_SetDictionariesDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_SetDictionariesDefaultTypeInternal _Msg_SetDictionaries_default_instance_;
 PROTOBUF_CONSTEXPR Reply_SetDictionaries::Reply_SetDictionaries(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_success_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_success_)*/false} {}
 struct Reply_SetDictionariesDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_SetDictionariesDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -124,9 +127,10 @@ struct Reply_SetDictionariesDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_SetDictionariesDefaultTypeInternal _Reply_SetDictionaries_default_instance_;
 PROTOBUF_CONSTEXPR Msg_Suggest::Msg_Suggest(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_aword_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_acount_)*/0u
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_aword_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_acount_)*/0u} {}
 struct Msg_SuggestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_SuggestDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -164,9 +168,10 @@ struct Msg_SetDictionaryFromListDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_SetDictionaryFromListDefaultTypeInternal _Msg_SetDictionaryFromList_default_instance_;
 PROTOBUF_CONSTEXPR Reply_SetDictionaryFromList::Reply_SetDictionaryFromList(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_adictionary_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_asuccess_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_adictionary_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_asuccess_)*/false} {}
 struct Reply_SetDictionaryFromListDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_SetDictionaryFromListDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -555,7 +560,6 @@ const char* Msg_CheckAsync::_InternalParse(const char* ptr, ::_pbi::ParseContext
             auto str = _internal_add_a_aword();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            CHK_(::_pbi::VerifyUTF8(str, nullptr));
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
         } else
@@ -593,10 +597,6 @@ uint8_t* Msg_CheckAsync::_InternalSerialize(
   // repeated string a_aWord = 1;
   for (int i = 0, n = this->_internal_a_aword_size(); i < n; i++) {
     const auto& s = this->_internal_a_aword(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.PRemoteSpellcheckEngine.Msg_CheckAsync.a_aWord");
     target = stream->WriteString(1, s, target);
   }
 
@@ -740,11 +740,16 @@ const char* Reply_CheckAsync::_InternalParse(const char* ptr, ::_pbi::ParseConte
     switch (tag >> 3) {
       // repeated bool a_aIsMisspelled = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            _internal_add_a_aismisspelled(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 10) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedBoolParser(_internal_mutable_a_aismisspelled(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 8) {
-          _internal_add_a_aismisspelled(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -779,8 +784,9 @@ uint8_t* Reply_CheckAsync::_InternalSerialize(
   (void) cached_has_bits;
 
   // repeated bool a_aIsMisspelled = 1;
-  if (this->_internal_a_aismisspelled_size() > 0) {
-    target = stream->WriteFixedPacked(1, _internal_a_aismisspelled(), target);
+  for (int i = 0, n = this->_internal_a_aismisspelled_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_aismisspelled(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -803,10 +809,8 @@ size_t Reply_CheckAsync::ByteSizeLong() const {
   {
     unsigned int count = static_cast<unsigned int>(this->_internal_a_aismisspelled_size());
     size_t data_size = 1UL * count;
-    if (data_size > 0) {
-      total_size += 1 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
+    total_size += 1 *
+                  ::_pbi::FromIntSize(this->_internal_a_aismisspelled_size());
     total_size += data_size;
   }
 
@@ -861,6 +865,13 @@ std::string Reply_CheckAsync::GetTypeName() const {
 
 class Msg_SetDictionary::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_SetDictionary>()._impl_._has_bits_);
+  static void set_has_a_adictionary(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Msg_SetDictionary::Msg_SetDictionary(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -873,15 +884,16 @@ Msg_SetDictionary::Msg_SetDictionary(const Msg_SetDictionary& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_SetDictionary* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_adictionary_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_adictionary_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_adictionary_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_adictionary_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_adictionary().empty()) {
+  if (from._internal_has_a_adictionary()) {
     _this->_impl_.a_adictionary_.Set(from._internal_a_adictionary(), 
       _this->GetArenaForAllocation());
   }
@@ -893,8 +905,9 @@ inline void Msg_SetDictionary::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_adictionary_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_adictionary_){}
   };
   _impl_.a_adictionary_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -926,23 +939,27 @@ void Msg_SetDictionary::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_adictionary_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_adictionary_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_SetDictionary::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string a_aDictionary = 1;
+      // required string a_aDictionary = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_adictionary();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -962,6 +979,7 @@ const char* Msg_SetDictionary::_InternalParse(const char* ptr, ::_pbi::ParseCont
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -975,12 +993,9 @@ uint8_t* Msg_SetDictionary::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string a_aDictionary = 1;
-  if (!this->_internal_a_adictionary().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_adictionary().data(), static_cast<int>(this->_internal_a_adictionary().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionary.a_aDictionary");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_aDictionary = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_adictionary(), target);
   }
@@ -997,16 +1012,15 @@ size_t Msg_SetDictionary::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionary)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string a_aDictionary = 1;
-  if (!this->_internal_a_adictionary().empty()) {
+  // required string a_aDictionary = 1;
+  if (_internal_has_a_adictionary()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_adictionary());
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1029,7 +1043,7 @@ void Msg_SetDictionary::MergeFrom(const Msg_SetDictionary& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_adictionary().empty()) {
+  if (from._internal_has_a_adictionary()) {
     _this->_internal_set_a_adictionary(from._internal_a_adictionary());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1043,6 +1057,7 @@ void Msg_SetDictionary::CopyFrom(const Msg_SetDictionary& from) {
 }
 
 bool Msg_SetDictionary::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1051,6 +1066,7 @@ void Msg_SetDictionary::InternalSwap(Msg_SetDictionary* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_adictionary_, lhs_arena,
       &other->_impl_.a_adictionary_, rhs_arena
@@ -1066,6 +1082,13 @@ std::string Msg_SetDictionary::GetTypeName() const {
 
 class Reply_SetDictionary::_Internal {
  public:
+  using HasBits = decltype(std::declval<Reply_SetDictionary>()._impl_._has_bits_);
+  static void set_has_a_success(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Reply_SetDictionary::Reply_SetDictionary(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1078,8 +1101,9 @@ Reply_SetDictionary::Reply_SetDictionary(const Reply_SetDictionary& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_SetDictionary* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_success_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_success_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_success_ = from._impl_.a_success_;
@@ -1091,8 +1115,9 @@ inline void Reply_SetDictionary::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_success_){false}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_success_){false}
   };
 }
 
@@ -1120,18 +1145,21 @@ void Reply_SetDictionary::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_success_ = false;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Reply_SetDictionary::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool a_success = 1;
+      // required bool a_success = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_success(&has_bits);
           _impl_.a_success_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -1153,6 +1181,7 @@ const char* Reply_SetDictionary::_InternalParse(const char* ptr, ::_pbi::ParseCo
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1166,8 +1195,9 @@ uint8_t* Reply_SetDictionary::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool a_success = 1;
-  if (this->_internal_a_success() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bool a_success = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_success(), target);
   }
@@ -1184,14 +1214,13 @@ size_t Reply_SetDictionary::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionary)
   size_t total_size = 0;
 
+  // required bool a_success = 1;
+  if (_internal_has_a_success()) {
+    total_size += 1 + 1;
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // bool a_success = 1;
-  if (this->_internal_a_success() != 0) {
-    total_size += 1 + 1;
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1214,7 +1243,7 @@ void Reply_SetDictionary::MergeFrom(const Reply_SetDictionary& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_a_success() != 0) {
+  if (from._internal_has_a_success()) {
     _this->_internal_set_a_success(from._internal_a_success());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1228,12 +1257,14 @@ void Reply_SetDictionary::CopyFrom(const Reply_SetDictionary& from) {
 }
 
 bool Reply_SetDictionary::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void Reply_SetDictionary::InternalSwap(Reply_SetDictionary* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_success_, other->_impl_.a_success_);
 }
 
@@ -1318,7 +1349,6 @@ const char* Msg_SetDictionaries::_InternalParse(const char* ptr, ::_pbi::ParseCo
             auto str = _internal_add_a_adictionaries();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            CHK_(::_pbi::VerifyUTF8(str, nullptr));
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
         } else
@@ -1356,10 +1386,6 @@ uint8_t* Msg_SetDictionaries::_InternalSerialize(
   // repeated string a_aDictionaries = 1;
   for (int i = 0, n = this->_internal_a_adictionaries_size(); i < n; i++) {
     const auto& s = this->_internal_a_adictionaries(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionaries.a_aDictionaries");
     target = stream->WriteString(1, s, target);
   }
 
@@ -1438,6 +1464,13 @@ std::string Msg_SetDictionaries::GetTypeName() const {
 
 class Reply_SetDictionaries::_Internal {
  public:
+  using HasBits = decltype(std::declval<Reply_SetDictionaries>()._impl_._has_bits_);
+  static void set_has_a_success(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Reply_SetDictionaries::Reply_SetDictionaries(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1450,8 +1483,9 @@ Reply_SetDictionaries::Reply_SetDictionaries(const Reply_SetDictionaries& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_SetDictionaries* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_success_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_success_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_success_ = from._impl_.a_success_;
@@ -1463,8 +1497,9 @@ inline void Reply_SetDictionaries::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_success_){false}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_success_){false}
   };
 }
 
@@ -1492,18 +1527,21 @@ void Reply_SetDictionaries::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_success_ = false;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Reply_SetDictionaries::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool a_success = 1;
+      // required bool a_success = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_success(&has_bits);
           _impl_.a_success_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -1525,6 +1563,7 @@ const char* Reply_SetDictionaries::_InternalParse(const char* ptr, ::_pbi::Parse
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1538,8 +1577,9 @@ uint8_t* Reply_SetDictionaries::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool a_success = 1;
-  if (this->_internal_a_success() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bool a_success = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_success(), target);
   }
@@ -1556,14 +1596,13 @@ size_t Reply_SetDictionaries::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaries)
   size_t total_size = 0;
 
+  // required bool a_success = 1;
+  if (_internal_has_a_success()) {
+    total_size += 1 + 1;
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // bool a_success = 1;
-  if (this->_internal_a_success() != 0) {
-    total_size += 1 + 1;
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1586,7 +1625,7 @@ void Reply_SetDictionaries::MergeFrom(const Reply_SetDictionaries& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_a_success() != 0) {
+  if (from._internal_has_a_success()) {
     _this->_internal_set_a_success(from._internal_a_success());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1600,12 +1639,14 @@ void Reply_SetDictionaries::CopyFrom(const Reply_SetDictionaries& from) {
 }
 
 bool Reply_SetDictionaries::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void Reply_SetDictionaries::InternalSwap(Reply_SetDictionaries* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_success_, other->_impl_.a_success_);
 }
 
@@ -1618,6 +1659,16 @@ std::string Reply_SetDictionaries::GetTypeName() const {
 
 class Msg_Suggest::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_Suggest>()._impl_._has_bits_);
+  static void set_has_a_aword(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_acount(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 Msg_Suggest::Msg_Suggest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1630,16 +1681,17 @@ Msg_Suggest::Msg_Suggest(const Msg_Suggest& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_Suggest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_aword_){}
-    , decltype(_impl_.a_acount_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_aword_){}
+    , decltype(_impl_.a_acount_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_aword_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_aword_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_aword().empty()) {
+  if (from._internal_has_a_aword()) {
     _this->_impl_.a_aword_.Set(from._internal_a_aword(), 
       _this->GetArenaForAllocation());
   }
@@ -1652,9 +1704,10 @@ inline void Msg_Suggest::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_aword_){}
-    , decltype(_impl_.a_acount_){0u}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_aword_){}
+    , decltype(_impl_.a_acount_){0u}
   };
   _impl_.a_aword_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1686,30 +1739,35 @@ void Msg_Suggest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_aword_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_aword_.ClearNonDefaultToEmpty();
+  }
   _impl_.a_acount_ = 0u;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_Suggest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string a_aWord = 1;
+      // required string a_aWord = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_aword();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // uint32 a_aCount = 2;
+      // required uint32 a_aCount = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_a_acount(&has_bits);
           _impl_.a_acount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
@@ -1731,6 +1789,7 @@ const char* Msg_Suggest::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1744,18 +1803,15 @@ uint8_t* Msg_Suggest::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string a_aWord = 1;
-  if (!this->_internal_a_aword().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_aword().data(), static_cast<int>(this->_internal_a_aword().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.PRemoteSpellcheckEngine.Msg_Suggest.a_aWord");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_aWord = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_aword(), target);
   }
 
-  // uint32 a_aCount = 2;
-  if (this->_internal_a_acount() != 0) {
+  // required uint32 a_aCount = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_acount(), target);
   }
@@ -1768,25 +1824,43 @@ uint8_t* Msg_Suggest::_InternalSerialize(
   return target;
 }
 
-size_t Msg_Suggest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_Suggest)
+size_t Msg_Suggest::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_Suggest)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string a_aWord = 1;
-  if (!this->_internal_a_aword().empty()) {
+  if (_internal_has_a_aword()) {
+    // required string a_aWord = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_aword());
   }
 
-  // uint32 a_aCount = 2;
-  if (this->_internal_a_acount() != 0) {
+  if (_internal_has_a_acount()) {
+    // required uint32 a_aCount = 2;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acount());
   }
+
+  return total_size;
+}
+size_t Msg_Suggest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_Suggest)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required string a_aWord = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_aword());
+
+    // required uint32 a_aCount = 2;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acount());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1809,11 +1883,15 @@ void Msg_Suggest::MergeFrom(const Msg_Suggest& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_aword().empty()) {
-    _this->_internal_set_a_aword(from._internal_a_aword());
-  }
-  if (from._internal_a_acount() != 0) {
-    _this->_internal_set_a_acount(from._internal_a_acount());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_aword(from._internal_a_aword());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_acount_ = from._impl_.a_acount_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1826,6 +1904,7 @@ void Msg_Suggest::CopyFrom(const Msg_Suggest& from) {
 }
 
 bool Msg_Suggest::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1834,6 +1913,7 @@ void Msg_Suggest::InternalSwap(Msg_Suggest* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_aword_, lhs_arena,
       &other->_impl_.a_aword_, rhs_arena
@@ -1922,7 +2002,6 @@ const char* Reply_Suggest::_InternalParse(const char* ptr, ::_pbi::ParseContext*
             auto str = _internal_add_a_asuggestions();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            CHK_(::_pbi::VerifyUTF8(str, nullptr));
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
         } else
@@ -1960,10 +2039,6 @@ uint8_t* Reply_Suggest::_InternalSerialize(
   // repeated string a_aSuggestions = 1;
   for (int i = 0, n = this->_internal_a_asuggestions_size(); i < n; i++) {
     const auto& s = this->_internal_a_asuggestions(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.PRemoteSpellcheckEngine.Reply_Suggest.a_aSuggestions");
     target = stream->WriteString(1, s, target);
   }
 
@@ -2114,7 +2189,6 @@ const char* Msg_SetDictionaryFromList::_InternalParse(const char* ptr, ::_pbi::P
             auto str = _internal_add_a_alist();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            CHK_(::_pbi::VerifyUTF8(str, nullptr));
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
         } else
@@ -2152,10 +2226,6 @@ uint8_t* Msg_SetDictionaryFromList::_InternalSerialize(
   // repeated string a_aList = 1;
   for (int i = 0, n = this->_internal_a_alist_size(); i < n; i++) {
     const auto& s = this->_internal_a_alist(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionaryFromList.a_aList");
     target = stream->WriteString(1, s, target);
   }
 
@@ -2234,6 +2304,16 @@ std::string Msg_SetDictionaryFromList::GetTypeName() const {
 
 class Reply_SetDictionaryFromList::_Internal {
  public:
+  using HasBits = decltype(std::declval<Reply_SetDictionaryFromList>()._impl_._has_bits_);
+  static void set_has_a_asuccess(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_adictionary(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 Reply_SetDictionaryFromList::Reply_SetDictionaryFromList(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2246,16 +2326,17 @@ Reply_SetDictionaryFromList::Reply_SetDictionaryFromList(const Reply_SetDictiona
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_SetDictionaryFromList* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_adictionary_){}
-    , decltype(_impl_.a_asuccess_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_adictionary_){}
+    , decltype(_impl_.a_asuccess_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_adictionary_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_adictionary_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_adictionary().empty()) {
+  if (from._internal_has_a_adictionary()) {
     _this->_impl_.a_adictionary_.Set(from._internal_a_adictionary(), 
       _this->GetArenaForAllocation());
   }
@@ -2268,9 +2349,10 @@ inline void Reply_SetDictionaryFromList::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_adictionary_){}
-    , decltype(_impl_.a_asuccess_){false}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_adictionary_){}
+    , decltype(_impl_.a_asuccess_){false}
   };
   _impl_.a_adictionary_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2302,32 +2384,37 @@ void Reply_SetDictionaryFromList::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_adictionary_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_adictionary_.ClearNonDefaultToEmpty();
+  }
   _impl_.a_asuccess_ = false;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Reply_SetDictionaryFromList::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool a_aSuccess = 1;
+      // required bool a_aSuccess = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_asuccess(&has_bits);
           _impl_.a_asuccess_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // string a_aDictionary = 2;
+      // required string a_aDictionary = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_adictionary();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -2347,6 +2434,7 @@ const char* Reply_SetDictionaryFromList::_InternalParse(const char* ptr, ::_pbi:
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -2360,18 +2448,15 @@ uint8_t* Reply_SetDictionaryFromList::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool a_aSuccess = 1;
-  if (this->_internal_a_asuccess() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bool a_aSuccess = 1;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_asuccess(), target);
   }
 
-  // string a_aDictionary = 2;
-  if (!this->_internal_a_adictionary().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_adictionary().data(), static_cast<int>(this->_internal_a_adictionary().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaryFromList.a_aDictionary");
+  // required string a_aDictionary = 2;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_adictionary(), target);
   }
@@ -2384,25 +2469,43 @@ uint8_t* Reply_SetDictionaryFromList::_InternalSerialize(
   return target;
 }
 
-size_t Reply_SetDictionaryFromList::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaryFromList)
+size_t Reply_SetDictionaryFromList::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaryFromList)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string a_aDictionary = 2;
-  if (!this->_internal_a_adictionary().empty()) {
+  if (_internal_has_a_adictionary()) {
+    // required string a_aDictionary = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_adictionary());
   }
 
-  // bool a_aSuccess = 1;
-  if (this->_internal_a_asuccess() != 0) {
+  if (_internal_has_a_asuccess()) {
+    // required bool a_aSuccess = 1;
     total_size += 1 + 1;
   }
+
+  return total_size;
+}
+size_t Reply_SetDictionaryFromList::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaryFromList)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required string a_aDictionary = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_adictionary());
+
+    // required bool a_aSuccess = 1;
+    total_size += 1 + 1;
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -2425,11 +2528,15 @@ void Reply_SetDictionaryFromList::MergeFrom(const Reply_SetDictionaryFromList& f
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_adictionary().empty()) {
-    _this->_internal_set_a_adictionary(from._internal_a_adictionary());
-  }
-  if (from._internal_a_asuccess() != 0) {
-    _this->_internal_set_a_asuccess(from._internal_a_asuccess());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_adictionary(from._internal_a_adictionary());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_asuccess_ = from._impl_.a_asuccess_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -2442,6 +2549,7 @@ void Reply_SetDictionaryFromList::CopyFrom(const Reply_SetDictionaryFromList& fr
 }
 
 bool Reply_SetDictionaryFromList::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -2450,6 +2558,7 @@ void Reply_SetDictionaryFromList::InternalSwap(Reply_SetDictionaryFromList* othe
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_adictionary_, lhs_arena,
       &other->_impl_.a_adictionary_, rhs_arena

@@ -96,6 +96,13 @@ class MaybeCookieStruct final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const MaybeCookieStruct& default_instance() {
     return *internal_default_instance();
   }
@@ -274,6 +281,13 @@ class CookieSubscription final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const CookieSubscription& default_instance() {
     return *internal_default_instance();
   }
@@ -367,7 +381,11 @@ class CookieSubscription final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // string a_url = 2;
+  // required string a_url = 2;
+  bool has_a_url() const;
+  private:
+  bool _internal_has_a_url() const;
+  public:
   void clear_a_url();
   const std::string& a_url() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -632,9 +650,17 @@ inline void CookieSubscription::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.CookieSubscription.a_name)
 }
 
-// string a_url = 2;
+// required string a_url = 2;
+inline bool CookieSubscription::_internal_has_a_url() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool CookieSubscription::has_a_url() const {
+  return _internal_has_a_url();
+}
 inline void CookieSubscription::clear_a_url() {
   _impl_.a_url_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& CookieSubscription::a_url() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.CookieSubscription.a_url)
@@ -643,7 +669,7 @@ inline const std::string& CookieSubscription::a_url() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CookieSubscription::set_a_url(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_url_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.CookieSubscription.a_url)
 }
@@ -656,22 +682,32 @@ inline const std::string& CookieSubscription::_internal_a_url() const {
   return _impl_.a_url_.Get();
 }
 inline void CookieSubscription::_internal_set_a_url(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_url_.Set(value, GetArenaForAllocation());
 }
 inline std::string* CookieSubscription::_internal_mutable_a_url() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_url_.Mutable(GetArenaForAllocation());
 }
 inline std::string* CookieSubscription::release_a_url() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.CookieSubscription.a_url)
-  return _impl_.a_url_.Release();
+  if (!_internal_has_a_url()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_url_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_url_.IsDefault()) {
+    _impl_.a_url_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void CookieSubscription::set_allocated_a_url(std::string* a_url) {
   if (a_url != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_url_.SetAllocated(a_url, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

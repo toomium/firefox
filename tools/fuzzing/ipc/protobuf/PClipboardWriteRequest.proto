@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/widget/PClipboardWriteRequest.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.PClipboardWriteRequest;
@@ -19,11 +19,11 @@ import "NeckoChannelParams.proto";
 
 // Message declarations
 message Msg_SetData {
-  protobuf.mozilla.dom.IPCTransferable a_aTransferable = 1;
+  required protobuf.mozilla.dom.IPCTransferable a_aTransferable = 1;
 }
 
 message Msg___delete__ {
-  bytes a_aResult = 1;
+  required bytes a_aResult = 1;
 }
 
 message Reply___delete__ {

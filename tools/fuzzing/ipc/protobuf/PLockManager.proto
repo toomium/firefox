@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/locks/PLockManager.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.locks.PLockManager;
@@ -20,12 +20,12 @@ message Msg_Query {
 }
 
 message Reply_Query {
-  bytes a_snapshot = 1;
+  required bytes a_snapshot = 1;
 }
 
 message Msg_PLockRequestConstructor {
-  sint64 a_actorid = 1;
-  protobuf.mozilla.dom.locks.IPCLockRequest a_aRequest = 2;
+  required sint64 a_actorid = 1;
+  required protobuf.mozilla.dom.locks.IPCLockRequest a_aRequest = 2;
 }
 
 message Reply_PLockRequestConstructor {

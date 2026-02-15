@@ -97,6 +97,13 @@ class Msg___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -171,7 +178,11 @@ class Msg___delete__ final :
   enum : int {
     kAAResponseFieldNumber = 1,
   };
-  // string a_aResponse = 1;
+  // required string a_aResponse = 1;
+  bool has_a_aresponse() const;
+  private:
+  bool _internal_has_a_aresponse() const;
+  public:
   void clear_a_aresponse();
   const std::string& a_aresponse() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -193,8 +204,9 @@ class Msg___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aresponse_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aresponse_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestShellCommand_2eproto;
@@ -230,6 +242,13 @@ class Reply___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply___delete__& default_instance() {
@@ -327,9 +346,17 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg___delete__
 
-// string a_aResponse = 1;
+// required string a_aResponse = 1;
+inline bool Msg___delete__::_internal_has_a_aresponse() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg___delete__::has_a_aresponse() const {
+  return _internal_has_a_aresponse();
+}
 inline void Msg___delete__::clear_a_aresponse() {
   _impl_.a_aresponse_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg___delete__::a_aresponse() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PTestShellCommand.Msg___delete__.a_aResponse)
@@ -338,7 +365,7 @@ inline const std::string& Msg___delete__::a_aresponse() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg___delete__::set_a_aresponse(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aresponse_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PTestShellCommand.Msg___delete__.a_aResponse)
 }
@@ -351,22 +378,32 @@ inline const std::string& Msg___delete__::_internal_a_aresponse() const {
   return _impl_.a_aresponse_.Get();
 }
 inline void Msg___delete__::_internal_set_a_aresponse(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aresponse_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg___delete__::_internal_mutable_a_aresponse() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aresponse_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg___delete__::release_a_aresponse() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PTestShellCommand.Msg___delete__.a_aResponse)
-  return _impl_.a_aresponse_.Release();
+  if (!_internal_has_a_aresponse()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aresponse_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aresponse_.IsDefault()) {
+    _impl_.a_aresponse_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg___delete__::set_allocated_a_aresponse(std::string* a_aresponse) {
   if (a_aresponse != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aresponse_.SetAllocated(a_aresponse, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

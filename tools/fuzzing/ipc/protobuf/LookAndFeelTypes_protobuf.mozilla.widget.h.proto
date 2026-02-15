@@ -5,18 +5,18 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/widget/LookAndFeelTypes.ipdlh
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.widget;
 
 // Structs and unions declarations
 message LookAndFeelFont {
-  bool a_haveFont = 1;
-  string a_name = 2;
-  float a_size = 3;
-  float a_weight = 4;
-  bool a_italic = 5;
+  required bool a_haveFont = 1;
+  required string a_name = 2;
+  required float a_size = 3;
+  required float a_weight = 4;
+  required bool a_italic = 5;
 }
 
 message LookAndFeelTables {
@@ -30,10 +30,10 @@ message LookAndFeelTables {
   repeated uint32 a_fontMap = 8;
   repeated uint32 a_lightColorMap = 9;
   repeated uint32 a_darkColorMap = 10;
-  uint32 a_passwordChar = 11;
-  bool a_passwordEcho = 12;
+  required uint32 a_passwordChar = 11;
+  required bool a_passwordEcho = 12;
 }
 
 message FullLookAndFeel {
-  protobuf.mozilla.widget.LookAndFeelTables a_tables = 1;
+  required protobuf.mozilla.widget.LookAndFeelTables a_tables = 1;
 }

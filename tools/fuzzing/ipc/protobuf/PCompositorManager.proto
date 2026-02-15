@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/gfx/layers/ipc/PCompositorManager.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.layers.PCompositorManager;
@@ -18,27 +18,27 @@ import "LayersSurfaces.proto";
 
 // Message declarations
 message Msg_PCompositorBridgeConstructor {
-  sint64 a_actorid = 1;
-  protobuf.mozilla.layers.CompositorBridgeOptions a_options = 2;
+  required sint64 a_actorid = 1;
+  required protobuf.mozilla.layers.CompositorBridgeOptions a_options = 2;
 }
 
 message Reply_PCompositorBridgeConstructor {
 }
 
 message Msg_AddSharedSurface {
-  bytes a_aId = 1;
-  protobuf.mozilla.layers.SurfaceDescriptorShared a_aDesc = 2;
+  required bytes a_aId = 1;
+  required protobuf.mozilla.layers.SurfaceDescriptorShared a_aDesc = 2;
 }
 
 message Msg_RemoveSharedSurface {
-  bytes a_aId = 1;
+  required bytes a_aId = 1;
 }
 
 message Msg_ReportSharedSurfacesMemory {
 }
 
 message Reply_ReportSharedSurfacesMemory {
-  bytes a_aReport = 1;
+  required bytes a_aReport = 1;
 }
 
 message Msg_NotifyMemoryPressure {
@@ -48,15 +48,15 @@ message Msg_ReportMemory {
 }
 
 message Reply_ReportMemory {
-  bytes a_aReport = 1;
+  required bytes a_aReport = 1;
 }
 
 message Msg_InitCanvasManager {
-  bytes a_endpoint = 1;
+  required bytes a_endpoint = 1;
 }
 
 message Msg_NotifyWebRenderError {
-  bytes a_error = 1;
+  required bytes a_error = 1;
 }
 
 // Parameter mappings stats:

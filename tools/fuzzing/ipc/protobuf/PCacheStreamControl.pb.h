@@ -117,6 +117,13 @@ class Msg_OpenStream final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_OpenStream& default_instance() {
     return *internal_default_instance();
   }
@@ -191,7 +198,11 @@ class Msg_OpenStream final :
   enum : int {
     kAAStreamIdFieldNumber = 1,
   };
-  // bytes a_aStreamId = 1;
+  // required bytes a_aStreamId = 1;
+  bool has_a_astreamid() const;
+  private:
+  bool _internal_has_a_astreamid() const;
+  public:
   void clear_a_astreamid();
   const std::string& a_astreamid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -213,8 +224,9 @@ class Msg_OpenStream final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_astreamid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_astreamid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCacheStreamControl_2eproto;
@@ -250,6 +262,13 @@ class Reply_OpenStream final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_OpenStream& default_instance() {
@@ -392,6 +411,13 @@ class Msg_NoteClosed final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_NoteClosed& default_instance() {
     return *internal_default_instance();
   }
@@ -466,7 +492,11 @@ class Msg_NoteClosed final :
   enum : int {
     kAAStreamIdFieldNumber = 1,
   };
-  // bytes a_aStreamId = 1;
+  // required bytes a_aStreamId = 1;
+  bool has_a_astreamid() const;
+  private:
+  bool _internal_has_a_astreamid() const;
+  public:
   void clear_a_astreamid();
   const std::string& a_astreamid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -488,8 +518,9 @@ class Msg_NoteClosed final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_astreamid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_astreamid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCacheStreamControl_2eproto;
@@ -525,6 +556,13 @@ class Msg_CloseAll final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_CloseAll& default_instance() {
@@ -644,6 +682,13 @@ class Msg___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -761,6 +806,13 @@ class Reply___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -856,9 +908,17 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_OpenStream
 
-// bytes a_aStreamId = 1;
+// required bytes a_aStreamId = 1;
+inline bool Msg_OpenStream::_internal_has_a_astreamid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_OpenStream::has_a_astreamid() const {
+  return _internal_has_a_astreamid();
+}
 inline void Msg_OpenStream::clear_a_astreamid() {
   _impl_.a_astreamid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_OpenStream::a_astreamid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.cache.PCacheStreamControl.Msg_OpenStream.a_aStreamId)
@@ -867,7 +927,7 @@ inline const std::string& Msg_OpenStream::a_astreamid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OpenStream::set_a_astreamid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_astreamid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.cache.PCacheStreamControl.Msg_OpenStream.a_aStreamId)
 }
@@ -880,22 +940,32 @@ inline const std::string& Msg_OpenStream::_internal_a_astreamid() const {
   return _impl_.a_astreamid_.Get();
 }
 inline void Msg_OpenStream::_internal_set_a_astreamid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_astreamid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OpenStream::_internal_mutable_a_astreamid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_astreamid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OpenStream::release_a_astreamid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.cache.PCacheStreamControl.Msg_OpenStream.a_aStreamId)
-  return _impl_.a_astreamid_.Release();
+  if (!_internal_has_a_astreamid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_astreamid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_astreamid_.IsDefault()) {
+    _impl_.a_astreamid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_OpenStream::set_allocated_a_astreamid(std::string* a_astreamid) {
   if (a_astreamid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_astreamid_.SetAllocated(a_astreamid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1001,9 +1071,17 @@ inline void Reply_OpenStream::set_allocated_a_astream(::protobuf::mozilla::ipc::
 
 // Msg_NoteClosed
 
-// bytes a_aStreamId = 1;
+// required bytes a_aStreamId = 1;
+inline bool Msg_NoteClosed::_internal_has_a_astreamid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_NoteClosed::has_a_astreamid() const {
+  return _internal_has_a_astreamid();
+}
 inline void Msg_NoteClosed::clear_a_astreamid() {
   _impl_.a_astreamid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_NoteClosed::a_astreamid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.cache.PCacheStreamControl.Msg_NoteClosed.a_aStreamId)
@@ -1012,7 +1090,7 @@ inline const std::string& Msg_NoteClosed::a_astreamid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NoteClosed::set_a_astreamid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_astreamid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.cache.PCacheStreamControl.Msg_NoteClosed.a_aStreamId)
 }
@@ -1025,22 +1103,32 @@ inline const std::string& Msg_NoteClosed::_internal_a_astreamid() const {
   return _impl_.a_astreamid_.Get();
 }
 inline void Msg_NoteClosed::_internal_set_a_astreamid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_astreamid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_NoteClosed::_internal_mutable_a_astreamid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_astreamid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_NoteClosed::release_a_astreamid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.cache.PCacheStreamControl.Msg_NoteClosed.a_aStreamId)
-  return _impl_.a_astreamid_.Release();
+  if (!_internal_has_a_astreamid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_astreamid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_astreamid_.IsDefault()) {
+    _impl_.a_astreamid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_NoteClosed::set_allocated_a_astreamid(std::string* a_astreamid) {
   if (a_astreamid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_astreamid_.SetAllocated(a_astreamid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

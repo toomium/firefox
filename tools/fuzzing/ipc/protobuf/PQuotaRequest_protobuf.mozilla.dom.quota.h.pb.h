@@ -113,6 +113,13 @@ class StorageNameResponse final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const StorageNameResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -187,7 +194,11 @@ class StorageNameResponse final :
   enum : int {
     kANameFieldNumber = 1,
   };
-  // string a_name = 1;
+  // required string a_name = 1;
+  bool has_a_name() const;
+  private:
+  bool _internal_has_a_name() const;
+  public:
   void clear_a_name();
   const std::string& a_name() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -209,8 +220,9 @@ class StorageNameResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_name_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_name_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PQuotaRequest_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto;
@@ -246,6 +258,13 @@ class GetFullOriginMetadataResponse final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const GetFullOriginMetadataResponse& default_instance() {
@@ -388,6 +407,13 @@ class PersistedResponse final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const PersistedResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -462,7 +488,11 @@ class PersistedResponse final :
   enum : int {
     kAPersistedFieldNumber = 1,
   };
-  // bool a_persisted = 1;
+  // required bool a_persisted = 1;
+  bool has_a_persisted() const;
+  private:
+  bool _internal_has_a_persisted() const;
+  public:
   void clear_a_persisted();
   bool a_persisted() const;
   void set_a_persisted(bool value);
@@ -479,8 +509,9 @@ class PersistedResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_persisted_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_persisted_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PQuotaRequest_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto;
@@ -516,6 +547,13 @@ class PersistResponse final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const PersistResponse& default_instance() {
@@ -635,6 +673,13 @@ class EstimateResponse final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const EstimateResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -710,7 +755,11 @@ class EstimateResponse final :
     kAUsageFieldNumber = 1,
     kALimitFieldNumber = 2,
   };
-  // uint64 a_usage = 1;
+  // required uint64 a_usage = 1;
+  bool has_a_usage() const;
+  private:
+  bool _internal_has_a_usage() const;
+  public:
   void clear_a_usage();
   uint64_t a_usage() const;
   void set_a_usage(uint64_t value);
@@ -719,7 +768,11 @@ class EstimateResponse final :
   void _internal_set_a_usage(uint64_t value);
   public:
 
-  // uint64 a_limit = 2;
+  // required uint64 a_limit = 2;
+  bool has_a_limit() const;
+  private:
+  bool _internal_has_a_limit() const;
+  public:
   void clear_a_limit();
   uint64_t a_limit() const;
   void set_a_limit(uint64_t value);
@@ -732,13 +785,17 @@ class EstimateResponse final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_usage_;
     uint64_t a_limit_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PQuotaRequest_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto;
@@ -774,6 +831,13 @@ class RequestResponse final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const RequestResponse& default_instance() {
@@ -1020,9 +1084,17 @@ class RequestResponse final :
 #endif  // __GNUC__
 // StorageNameResponse
 
-// string a_name = 1;
+// required string a_name = 1;
+inline bool StorageNameResponse::_internal_has_a_name() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool StorageNameResponse::has_a_name() const {
+  return _internal_has_a_name();
+}
 inline void StorageNameResponse::clear_a_name() {
   _impl_.a_name_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& StorageNameResponse::a_name() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.StorageNameResponse.a_name)
@@ -1031,7 +1103,7 @@ inline const std::string& StorageNameResponse::a_name() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void StorageNameResponse::set_a_name(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.StorageNameResponse.a_name)
 }
@@ -1044,22 +1116,32 @@ inline const std::string& StorageNameResponse::_internal_a_name() const {
   return _impl_.a_name_.Get();
 }
 inline void StorageNameResponse::_internal_set_a_name(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_name_.Set(value, GetArenaForAllocation());
 }
 inline std::string* StorageNameResponse::_internal_mutable_a_name() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_name_.Mutable(GetArenaForAllocation());
 }
 inline std::string* StorageNameResponse::release_a_name() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.quota.StorageNameResponse.a_name)
-  return _impl_.a_name_.Release();
+  if (!_internal_has_a_name()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_name_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_name_.IsDefault()) {
+    _impl_.a_name_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void StorageNameResponse::set_allocated_a_name(std::string* a_name) {
   if (a_name != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_name_.SetAllocated(a_name, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1146,9 +1228,17 @@ inline void GetFullOriginMetadataResponse::set_allocated_a_maybefulloriginmetada
 
 // PersistedResponse
 
-// bool a_persisted = 1;
+// required bool a_persisted = 1;
+inline bool PersistedResponse::_internal_has_a_persisted() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool PersistedResponse::has_a_persisted() const {
+  return _internal_has_a_persisted();
+}
 inline void PersistedResponse::clear_a_persisted() {
   _impl_.a_persisted_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool PersistedResponse::_internal_a_persisted() const {
   return _impl_.a_persisted_;
@@ -1158,7 +1248,7 @@ inline bool PersistedResponse::a_persisted() const {
   return _internal_a_persisted();
 }
 inline void PersistedResponse::_internal_set_a_persisted(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_persisted_ = value;
 }
 inline void PersistedResponse::set_a_persisted(bool value) {
@@ -1174,9 +1264,17 @@ inline void PersistedResponse::set_a_persisted(bool value) {
 
 // EstimateResponse
 
-// uint64 a_usage = 1;
+// required uint64 a_usage = 1;
+inline bool EstimateResponse::_internal_has_a_usage() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool EstimateResponse::has_a_usage() const {
+  return _internal_has_a_usage();
+}
 inline void EstimateResponse::clear_a_usage() {
   _impl_.a_usage_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t EstimateResponse::_internal_a_usage() const {
   return _impl_.a_usage_;
@@ -1186,7 +1284,7 @@ inline uint64_t EstimateResponse::a_usage() const {
   return _internal_a_usage();
 }
 inline void EstimateResponse::_internal_set_a_usage(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_usage_ = value;
 }
 inline void EstimateResponse::set_a_usage(uint64_t value) {
@@ -1194,9 +1292,17 @@ inline void EstimateResponse::set_a_usage(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.EstimateResponse.a_usage)
 }
 
-// uint64 a_limit = 2;
+// required uint64 a_limit = 2;
+inline bool EstimateResponse::_internal_has_a_limit() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool EstimateResponse::has_a_limit() const {
+  return _internal_has_a_limit();
+}
 inline void EstimateResponse::clear_a_limit() {
   _impl_.a_limit_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t EstimateResponse::_internal_a_limit() const {
   return _impl_.a_limit_;
@@ -1206,7 +1312,7 @@ inline uint64_t EstimateResponse::a_limit() const {
   return _internal_a_limit();
 }
 inline void EstimateResponse::_internal_set_a_limit(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_limit_ = value;
 }
 inline void EstimateResponse::set_a_limit(uint64_t value) {

@@ -48,7 +48,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 PROTOBUF_CONSTEXPR Msg_PuppetSubmit::Msg_PuppetSubmit(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.a_abuffer_)*/{}
-  , /*decltype(_impl_._a_abuffer_cached_byte_size_)*/{0}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_PuppetSubmitDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_PuppetSubmitDefaultTypeInternal()
@@ -417,7 +416,6 @@ Msg_PuppetSubmit::Msg_PuppetSubmit(const Msg_PuppetSubmit& from)
   Msg_PuppetSubmit* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_abuffer_){from._impl_.a_abuffer_}
-    , /*decltype(_impl_._a_abuffer_cached_byte_size_)*/{0}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -430,7 +428,6 @@ inline void Msg_PuppetSubmit::SharedCtor(
   (void)is_message_owned;
   new (&_impl_) Impl_{
       decltype(_impl_.a_abuffer_){arena}
-    , /*decltype(_impl_._a_abuffer_cached_byte_size_)*/{0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -471,11 +468,16 @@ const char* Msg_PuppetSubmit::_InternalParse(const char* ptr, ::_pbi::ParseConte
     switch (tag >> 3) {
       // repeated uint64 a_aBuffer = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            _internal_add_a_abuffer(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 10) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt64Parser(_internal_mutable_a_abuffer(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 8) {
-          _internal_add_a_abuffer(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -510,12 +512,9 @@ uint8_t* Msg_PuppetSubmit::_InternalSerialize(
   (void) cached_has_bits;
 
   // repeated uint64 a_aBuffer = 1;
-  {
-    int byte_size = _impl_._a_abuffer_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteUInt64Packed(
-          1, _internal_a_abuffer(), byte_size, target);
-    }
+  for (int i = 0, n = this->_internal_a_abuffer_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_abuffer(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -538,13 +537,8 @@ size_t Msg_PuppetSubmit::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt64Size(this->_impl_.a_abuffer_);
-    if (data_size > 0) {
-      total_size += 1 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
-    int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._a_abuffer_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
+    total_size += 1 *
+                  ::_pbi::FromIntSize(this->_internal_a_abuffer_size());
     total_size += data_size;
   }
 

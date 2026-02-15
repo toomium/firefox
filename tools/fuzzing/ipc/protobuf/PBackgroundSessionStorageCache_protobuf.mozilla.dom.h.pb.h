@@ -107,6 +107,13 @@ class SSSetItemInfo final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const SSSetItemInfo& default_instance() {
     return *internal_default_instance();
   }
@@ -182,7 +189,11 @@ class SSSetItemInfo final :
     kAKeyFieldNumber = 1,
     kAValueFieldNumber = 2,
   };
-  // string a_key = 1;
+  // required string a_key = 1;
+  bool has_a_key() const;
+  private:
+  bool _internal_has_a_key() const;
+  public:
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -196,7 +207,11 @@ class SSSetItemInfo final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // string a_value = 2;
+  // required string a_value = 2;
+  bool has_a_value() const;
+  private:
+  bool _internal_has_a_value() const;
+  public:
   void clear_a_value();
   const std::string& a_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -214,13 +229,17 @@ class SSSetItemInfo final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_value_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundSessionStorageCache_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -256,6 +275,13 @@ class SSRemoveItemInfo final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const SSRemoveItemInfo& default_instance() {
@@ -332,7 +358,11 @@ class SSRemoveItemInfo final :
   enum : int {
     kAKeyFieldNumber = 1,
   };
-  // string a_key = 1;
+  // required string a_key = 1;
+  bool has_a_key() const;
+  private:
+  bool _internal_has_a_key() const;
+  public:
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -354,8 +384,9 @@ class SSRemoveItemInfo final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundSessionStorageCache_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -391,6 +422,13 @@ class SSClearInfo final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const SSClearInfo& default_instance() {
@@ -508,6 +546,13 @@ class SSWriteInfo final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const SSWriteInfo& default_instance() {
@@ -710,6 +755,13 @@ class SSCacheCopy final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const SSCacheCopy& default_instance() {
     return *internal_default_instance();
   }
@@ -804,7 +856,11 @@ class SSCacheCopy final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::SSSetItemInfo >&
       a_data() const;
 
-  // string a_originKey = 1;
+  // required string a_originKey = 1;
+  bool has_a_originkey() const;
+  private:
+  bool _internal_has_a_originkey() const;
+  public:
   void clear_a_originkey();
   const std::string& a_originkey() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -818,7 +874,7 @@ class SSCacheCopy final :
   std::string* _internal_mutable_a_originkey();
   public:
 
-  // .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
+  // required .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
   bool has_a_principalinfo() const;
   private:
   bool _internal_has_a_principalinfo() const;
@@ -840,14 +896,18 @@ class SSCacheCopy final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::SSSetItemInfo > a_data_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_originkey_;
     ::protobuf::mozilla::ipc::PrincipalInfo* a_principalinfo_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundSessionStorageCache_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -863,9 +923,17 @@ class SSCacheCopy final :
 #endif  // __GNUC__
 // SSSetItemInfo
 
-// string a_key = 1;
+// required string a_key = 1;
+inline bool SSSetItemInfo::_internal_has_a_key() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool SSSetItemInfo::has_a_key() const {
+  return _internal_has_a_key();
+}
 inline void SSSetItemInfo::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& SSSetItemInfo::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.SSSetItemInfo.a_key)
@@ -874,7 +942,7 @@ inline const std::string& SSSetItemInfo::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void SSSetItemInfo::set_a_key(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.SSSetItemInfo.a_key)
 }
@@ -887,22 +955,32 @@ inline const std::string& SSSetItemInfo::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void SSSetItemInfo::_internal_set_a_key(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* SSSetItemInfo::_internal_mutable_a_key() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* SSSetItemInfo::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.SSSetItemInfo.a_key)
-  return _impl_.a_key_.Release();
+  if (!_internal_has_a_key()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_key_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void SSSetItemInfo::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -913,9 +991,17 @@ inline void SSSetItemInfo::set_allocated_a_key(std::string* a_key) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.SSSetItemInfo.a_key)
 }
 
-// string a_value = 2;
+// required string a_value = 2;
+inline bool SSSetItemInfo::_internal_has_a_value() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool SSSetItemInfo::has_a_value() const {
+  return _internal_has_a_value();
+}
 inline void SSSetItemInfo::clear_a_value() {
   _impl_.a_value_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& SSSetItemInfo::a_value() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.SSSetItemInfo.a_value)
@@ -924,7 +1010,7 @@ inline const std::string& SSSetItemInfo::a_value() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void SSSetItemInfo::set_a_value(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_value_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.SSSetItemInfo.a_value)
 }
@@ -937,22 +1023,32 @@ inline const std::string& SSSetItemInfo::_internal_a_value() const {
   return _impl_.a_value_.Get();
 }
 inline void SSSetItemInfo::_internal_set_a_value(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_value_.Set(value, GetArenaForAllocation());
 }
 inline std::string* SSSetItemInfo::_internal_mutable_a_value() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_value_.Mutable(GetArenaForAllocation());
 }
 inline std::string* SSSetItemInfo::release_a_value() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.SSSetItemInfo.a_value)
-  return _impl_.a_value_.Release();
+  if (!_internal_has_a_value()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_value_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_value_.IsDefault()) {
+    _impl_.a_value_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void SSSetItemInfo::set_allocated_a_value(std::string* a_value) {
   if (a_value != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_value_.SetAllocated(a_value, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -967,9 +1063,17 @@ inline void SSSetItemInfo::set_allocated_a_value(std::string* a_value) {
 
 // SSRemoveItemInfo
 
-// string a_key = 1;
+// required string a_key = 1;
+inline bool SSRemoveItemInfo::_internal_has_a_key() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool SSRemoveItemInfo::has_a_key() const {
+  return _internal_has_a_key();
+}
 inline void SSRemoveItemInfo::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& SSRemoveItemInfo::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.SSRemoveItemInfo.a_key)
@@ -978,7 +1082,7 @@ inline const std::string& SSRemoveItemInfo::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void SSRemoveItemInfo::set_a_key(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.SSRemoveItemInfo.a_key)
 }
@@ -991,22 +1095,32 @@ inline const std::string& SSRemoveItemInfo::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void SSRemoveItemInfo::_internal_set_a_key(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* SSRemoveItemInfo::_internal_mutable_a_key() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* SSRemoveItemInfo::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.SSRemoveItemInfo.a_key)
-  return _impl_.a_key_.Release();
+  if (!_internal_has_a_key()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_key_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void SSRemoveItemInfo::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1260,9 +1374,17 @@ inline SSWriteInfo::ContentCase SSWriteInfo::content_case() const {
 
 // SSCacheCopy
 
-// string a_originKey = 1;
+// required string a_originKey = 1;
+inline bool SSCacheCopy::_internal_has_a_originkey() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool SSCacheCopy::has_a_originkey() const {
+  return _internal_has_a_originkey();
+}
 inline void SSCacheCopy::clear_a_originkey() {
   _impl_.a_originkey_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& SSCacheCopy::a_originkey() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.SSCacheCopy.a_originKey)
@@ -1271,7 +1393,7 @@ inline const std::string& SSCacheCopy::a_originkey() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void SSCacheCopy::set_a_originkey(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_originkey_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.SSCacheCopy.a_originKey)
 }
@@ -1284,22 +1406,32 @@ inline const std::string& SSCacheCopy::_internal_a_originkey() const {
   return _impl_.a_originkey_.Get();
 }
 inline void SSCacheCopy::_internal_set_a_originkey(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_originkey_.Set(value, GetArenaForAllocation());
 }
 inline std::string* SSCacheCopy::_internal_mutable_a_originkey() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_originkey_.Mutable(GetArenaForAllocation());
 }
 inline std::string* SSCacheCopy::release_a_originkey() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.SSCacheCopy.a_originKey)
-  return _impl_.a_originkey_.Release();
+  if (!_internal_has_a_originkey()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_originkey_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_originkey_.IsDefault()) {
+    _impl_.a_originkey_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void SSCacheCopy::set_allocated_a_originkey(std::string* a_originkey) {
   if (a_originkey != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_originkey_.SetAllocated(a_originkey, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1310,9 +1442,11 @@ inline void SSCacheCopy::set_allocated_a_originkey(std::string* a_originkey) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.SSCacheCopy.a_originKey)
 }
 
-// .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
+// required .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
 inline bool SSCacheCopy::_internal_has_a_principalinfo() const {
-  return this != internal_default_instance() && _impl_.a_principalinfo_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_principalinfo_ != nullptr);
+  return value;
 }
 inline bool SSCacheCopy::has_a_principalinfo() const {
   return _internal_has_a_principalinfo();
@@ -1333,14 +1467,14 @@ inline void SSCacheCopy::unsafe_arena_set_allocated_a_principalinfo(
   }
   _impl_.a_principalinfo_ = a_principalinfo;
   if (a_principalinfo) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.SSCacheCopy.a_principalInfo)
 }
 inline ::protobuf::mozilla::ipc::PrincipalInfo* SSCacheCopy::release_a_principalinfo() {
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::ipc::PrincipalInfo* temp = _impl_.a_principalinfo_;
   _impl_.a_principalinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1356,13 +1490,13 @@ inline ::protobuf::mozilla::ipc::PrincipalInfo* SSCacheCopy::release_a_principal
 }
 inline ::protobuf::mozilla::ipc::PrincipalInfo* SSCacheCopy::unsafe_arena_release_a_principalinfo() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.SSCacheCopy.a_principalInfo)
-  
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::ipc::PrincipalInfo* temp = _impl_.a_principalinfo_;
   _impl_.a_principalinfo_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::ipc::PrincipalInfo* SSCacheCopy::_internal_mutable_a_principalinfo() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   if (_impl_.a_principalinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ipc::PrincipalInfo>(GetArenaForAllocation());
     _impl_.a_principalinfo_ = p;
@@ -1387,9 +1521,9 @@ inline void SSCacheCopy::set_allocated_a_principalinfo(::protobuf::mozilla::ipc:
       a_principalinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_principalinfo, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_principalinfo_ = a_principalinfo;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.SSCacheCopy.a_principalInfo)

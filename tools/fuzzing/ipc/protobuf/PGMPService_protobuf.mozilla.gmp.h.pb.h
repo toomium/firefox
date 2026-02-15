@@ -91,6 +91,13 @@ class GMPLaunchResult final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const GMPLaunchResult& default_instance() {
     return *internal_default_instance();
   }
@@ -171,7 +178,11 @@ class GMPLaunchResult final :
     kAErrorDescriptionFieldNumber = 7,
     kAPluginIdFieldNumber = 1,
   };
-  // bytes a_pluginType = 2;
+  // required bytes a_pluginType = 2;
+  bool has_a_plugintype() const;
+  private:
+  bool _internal_has_a_plugintype() const;
+  public:
   void clear_a_plugintype();
   const std::string& a_plugintype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -185,7 +196,11 @@ class GMPLaunchResult final :
   std::string* _internal_mutable_a_plugintype();
   public:
 
-  // bytes a_pid = 3;
+  // required bytes a_pid = 3;
+  bool has_a_pid() const;
+  private:
+  bool _internal_has_a_pid() const;
+  public:
   void clear_a_pid();
   const std::string& a_pid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -199,7 +214,11 @@ class GMPLaunchResult final :
   std::string* _internal_mutable_a_pid();
   public:
 
-  // string a_displayName = 4;
+  // required string a_displayName = 4;
+  bool has_a_displayname() const;
+  private:
+  bool _internal_has_a_displayname() const;
+  public:
   void clear_a_displayname();
   const std::string& a_displayname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -213,7 +232,11 @@ class GMPLaunchResult final :
   std::string* _internal_mutable_a_displayname();
   public:
 
-  // bytes a_endpoint = 5;
+  // required bytes a_endpoint = 5;
+  bool has_a_endpoint() const;
+  private:
+  bool _internal_has_a_endpoint() const;
+  public:
   void clear_a_endpoint();
   const std::string& a_endpoint() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -227,7 +250,11 @@ class GMPLaunchResult final :
   std::string* _internal_mutable_a_endpoint();
   public:
 
-  // bytes a_result = 6;
+  // required bytes a_result = 6;
+  bool has_a_result() const;
+  private:
+  bool _internal_has_a_result() const;
+  public:
   void clear_a_result();
   const std::string& a_result() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -241,7 +268,11 @@ class GMPLaunchResult final :
   std::string* _internal_mutable_a_result();
   public:
 
-  // string a_errorDescription = 7;
+  // required string a_errorDescription = 7;
+  bool has_a_errordescription() const;
+  private:
+  bool _internal_has_a_errordescription() const;
+  public:
   void clear_a_errordescription();
   const std::string& a_errordescription() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -255,7 +286,11 @@ class GMPLaunchResult final :
   std::string* _internal_mutable_a_errordescription();
   public:
 
-  // uint32 a_pluginId = 1;
+  // required uint32 a_pluginId = 1;
+  bool has_a_pluginid() const;
+  private:
+  bool _internal_has_a_pluginid() const;
+  public:
   void clear_a_pluginid();
   uint32_t a_pluginid() const;
   void set_a_pluginid(uint32_t value);
@@ -268,10 +303,15 @@ class GMPLaunchResult final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_plugintype_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_pid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_displayname_;
@@ -279,7 +319,6 @@ class GMPLaunchResult final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_result_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_errordescription_;
     uint32_t a_pluginid_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPService_5fprotobuf_2emozilla_2egmp_2eh_2eproto;
@@ -295,9 +334,17 @@ class GMPLaunchResult final :
 #endif  // __GNUC__
 // GMPLaunchResult
 
-// uint32 a_pluginId = 1;
+// required uint32 a_pluginId = 1;
+inline bool GMPLaunchResult::_internal_has_a_pluginid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool GMPLaunchResult::has_a_pluginid() const {
+  return _internal_has_a_pluginid();
+}
 inline void GMPLaunchResult::clear_a_pluginid() {
   _impl_.a_pluginid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000040u;
 }
 inline uint32_t GMPLaunchResult::_internal_a_pluginid() const {
   return _impl_.a_pluginid_;
@@ -307,7 +354,7 @@ inline uint32_t GMPLaunchResult::a_pluginid() const {
   return _internal_a_pluginid();
 }
 inline void GMPLaunchResult::_internal_set_a_pluginid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000040u;
   _impl_.a_pluginid_ = value;
 }
 inline void GMPLaunchResult::set_a_pluginid(uint32_t value) {
@@ -315,9 +362,17 @@ inline void GMPLaunchResult::set_a_pluginid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.GMPLaunchResult.a_pluginId)
 }
 
-// bytes a_pluginType = 2;
+// required bytes a_pluginType = 2;
+inline bool GMPLaunchResult::_internal_has_a_plugintype() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool GMPLaunchResult::has_a_plugintype() const {
+  return _internal_has_a_plugintype();
+}
 inline void GMPLaunchResult::clear_a_plugintype() {
   _impl_.a_plugintype_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& GMPLaunchResult::a_plugintype() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.GMPLaunchResult.a_pluginType)
@@ -326,7 +381,7 @@ inline const std::string& GMPLaunchResult::a_plugintype() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GMPLaunchResult::set_a_plugintype(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_plugintype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.GMPLaunchResult.a_pluginType)
 }
@@ -339,22 +394,32 @@ inline const std::string& GMPLaunchResult::_internal_a_plugintype() const {
   return _impl_.a_plugintype_.Get();
 }
 inline void GMPLaunchResult::_internal_set_a_plugintype(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_plugintype_.Set(value, GetArenaForAllocation());
 }
 inline std::string* GMPLaunchResult::_internal_mutable_a_plugintype() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_plugintype_.Mutable(GetArenaForAllocation());
 }
 inline std::string* GMPLaunchResult::release_a_plugintype() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.GMPLaunchResult.a_pluginType)
-  return _impl_.a_plugintype_.Release();
+  if (!_internal_has_a_plugintype()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_plugintype_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_plugintype_.IsDefault()) {
+    _impl_.a_plugintype_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void GMPLaunchResult::set_allocated_a_plugintype(std::string* a_plugintype) {
   if (a_plugintype != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_plugintype_.SetAllocated(a_plugintype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -365,9 +430,17 @@ inline void GMPLaunchResult::set_allocated_a_plugintype(std::string* a_plugintyp
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.GMPLaunchResult.a_pluginType)
 }
 
-// bytes a_pid = 3;
+// required bytes a_pid = 3;
+inline bool GMPLaunchResult::_internal_has_a_pid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool GMPLaunchResult::has_a_pid() const {
+  return _internal_has_a_pid();
+}
 inline void GMPLaunchResult::clear_a_pid() {
   _impl_.a_pid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& GMPLaunchResult::a_pid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.GMPLaunchResult.a_pid)
@@ -376,7 +449,7 @@ inline const std::string& GMPLaunchResult::a_pid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GMPLaunchResult::set_a_pid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_pid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.GMPLaunchResult.a_pid)
 }
@@ -389,22 +462,32 @@ inline const std::string& GMPLaunchResult::_internal_a_pid() const {
   return _impl_.a_pid_.Get();
 }
 inline void GMPLaunchResult::_internal_set_a_pid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_pid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* GMPLaunchResult::_internal_mutable_a_pid() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_pid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* GMPLaunchResult::release_a_pid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.GMPLaunchResult.a_pid)
-  return _impl_.a_pid_.Release();
+  if (!_internal_has_a_pid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_pid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_pid_.IsDefault()) {
+    _impl_.a_pid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void GMPLaunchResult::set_allocated_a_pid(std::string* a_pid) {
   if (a_pid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_pid_.SetAllocated(a_pid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -415,9 +498,17 @@ inline void GMPLaunchResult::set_allocated_a_pid(std::string* a_pid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.GMPLaunchResult.a_pid)
 }
 
-// string a_displayName = 4;
+// required string a_displayName = 4;
+inline bool GMPLaunchResult::_internal_has_a_displayname() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool GMPLaunchResult::has_a_displayname() const {
+  return _internal_has_a_displayname();
+}
 inline void GMPLaunchResult::clear_a_displayname() {
   _impl_.a_displayname_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& GMPLaunchResult::a_displayname() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.GMPLaunchResult.a_displayName)
@@ -426,7 +517,7 @@ inline const std::string& GMPLaunchResult::a_displayname() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GMPLaunchResult::set_a_displayname(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000004u;
  _impl_.a_displayname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.GMPLaunchResult.a_displayName)
 }
@@ -439,22 +530,32 @@ inline const std::string& GMPLaunchResult::_internal_a_displayname() const {
   return _impl_.a_displayname_.Get();
 }
 inline void GMPLaunchResult::_internal_set_a_displayname(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_displayname_.Set(value, GetArenaForAllocation());
 }
 inline std::string* GMPLaunchResult::_internal_mutable_a_displayname() {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   return _impl_.a_displayname_.Mutable(GetArenaForAllocation());
 }
 inline std::string* GMPLaunchResult::release_a_displayname() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.GMPLaunchResult.a_displayName)
-  return _impl_.a_displayname_.Release();
+  if (!_internal_has_a_displayname()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000004u;
+  auto* p = _impl_.a_displayname_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_displayname_.IsDefault()) {
+    _impl_.a_displayname_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void GMPLaunchResult::set_allocated_a_displayname(std::string* a_displayname) {
   if (a_displayname != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.a_displayname_.SetAllocated(a_displayname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -465,9 +566,17 @@ inline void GMPLaunchResult::set_allocated_a_displayname(std::string* a_displayn
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.GMPLaunchResult.a_displayName)
 }
 
-// bytes a_endpoint = 5;
+// required bytes a_endpoint = 5;
+inline bool GMPLaunchResult::_internal_has_a_endpoint() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool GMPLaunchResult::has_a_endpoint() const {
+  return _internal_has_a_endpoint();
+}
 inline void GMPLaunchResult::clear_a_endpoint() {
   _impl_.a_endpoint_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline const std::string& GMPLaunchResult::a_endpoint() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.GMPLaunchResult.a_endpoint)
@@ -476,7 +585,7 @@ inline const std::string& GMPLaunchResult::a_endpoint() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GMPLaunchResult::set_a_endpoint(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000008u;
  _impl_.a_endpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.GMPLaunchResult.a_endpoint)
 }
@@ -489,22 +598,32 @@ inline const std::string& GMPLaunchResult::_internal_a_endpoint() const {
   return _impl_.a_endpoint_.Get();
 }
 inline void GMPLaunchResult::_internal_set_a_endpoint(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_endpoint_.Set(value, GetArenaForAllocation());
 }
 inline std::string* GMPLaunchResult::_internal_mutable_a_endpoint() {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   return _impl_.a_endpoint_.Mutable(GetArenaForAllocation());
 }
 inline std::string* GMPLaunchResult::release_a_endpoint() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.GMPLaunchResult.a_endpoint)
-  return _impl_.a_endpoint_.Release();
+  if (!_internal_has_a_endpoint()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000008u;
+  auto* p = _impl_.a_endpoint_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_endpoint_.IsDefault()) {
+    _impl_.a_endpoint_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void GMPLaunchResult::set_allocated_a_endpoint(std::string* a_endpoint) {
   if (a_endpoint != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000008u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000008u;
   }
   _impl_.a_endpoint_.SetAllocated(a_endpoint, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -515,9 +634,17 @@ inline void GMPLaunchResult::set_allocated_a_endpoint(std::string* a_endpoint) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.GMPLaunchResult.a_endpoint)
 }
 
-// bytes a_result = 6;
+// required bytes a_result = 6;
+inline bool GMPLaunchResult::_internal_has_a_result() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool GMPLaunchResult::has_a_result() const {
+  return _internal_has_a_result();
+}
 inline void GMPLaunchResult::clear_a_result() {
   _impl_.a_result_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline const std::string& GMPLaunchResult::a_result() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.GMPLaunchResult.a_result)
@@ -526,7 +653,7 @@ inline const std::string& GMPLaunchResult::a_result() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GMPLaunchResult::set_a_result(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000010u;
  _impl_.a_result_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.GMPLaunchResult.a_result)
 }
@@ -539,22 +666,32 @@ inline const std::string& GMPLaunchResult::_internal_a_result() const {
   return _impl_.a_result_.Get();
 }
 inline void GMPLaunchResult::_internal_set_a_result(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.a_result_.Set(value, GetArenaForAllocation());
 }
 inline std::string* GMPLaunchResult::_internal_mutable_a_result() {
-  
+  _impl_._has_bits_[0] |= 0x00000010u;
   return _impl_.a_result_.Mutable(GetArenaForAllocation());
 }
 inline std::string* GMPLaunchResult::release_a_result() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.GMPLaunchResult.a_result)
-  return _impl_.a_result_.Release();
+  if (!_internal_has_a_result()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000010u;
+  auto* p = _impl_.a_result_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_result_.IsDefault()) {
+    _impl_.a_result_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void GMPLaunchResult::set_allocated_a_result(std::string* a_result) {
   if (a_result != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000010u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000010u;
   }
   _impl_.a_result_.SetAllocated(a_result, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -565,9 +702,17 @@ inline void GMPLaunchResult::set_allocated_a_result(std::string* a_result) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.GMPLaunchResult.a_result)
 }
 
-// string a_errorDescription = 7;
+// required string a_errorDescription = 7;
+inline bool GMPLaunchResult::_internal_has_a_errordescription() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool GMPLaunchResult::has_a_errordescription() const {
+  return _internal_has_a_errordescription();
+}
 inline void GMPLaunchResult::clear_a_errordescription() {
   _impl_.a_errordescription_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline const std::string& GMPLaunchResult::a_errordescription() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.GMPLaunchResult.a_errorDescription)
@@ -576,7 +721,7 @@ inline const std::string& GMPLaunchResult::a_errordescription() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GMPLaunchResult::set_a_errordescription(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000020u;
  _impl_.a_errordescription_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.GMPLaunchResult.a_errorDescription)
 }
@@ -589,22 +734,32 @@ inline const std::string& GMPLaunchResult::_internal_a_errordescription() const 
   return _impl_.a_errordescription_.Get();
 }
 inline void GMPLaunchResult::_internal_set_a_errordescription(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000020u;
   _impl_.a_errordescription_.Set(value, GetArenaForAllocation());
 }
 inline std::string* GMPLaunchResult::_internal_mutable_a_errordescription() {
-  
+  _impl_._has_bits_[0] |= 0x00000020u;
   return _impl_.a_errordescription_.Mutable(GetArenaForAllocation());
 }
 inline std::string* GMPLaunchResult::release_a_errordescription() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.GMPLaunchResult.a_errorDescription)
-  return _impl_.a_errordescription_.Release();
+  if (!_internal_has_a_errordescription()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000020u;
+  auto* p = _impl_.a_errordescription_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_errordescription_.IsDefault()) {
+    _impl_.a_errordescription_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void GMPLaunchResult::set_allocated_a_errordescription(std::string* a_errordescription) {
   if (a_errordescription != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000020u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000020u;
   }
   _impl_.a_errordescription_.SetAllocated(a_errordescription, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

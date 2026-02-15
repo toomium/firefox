@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/media/webspeech/synth/ipc/PSpeechSynthesis.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.PSpeechSynthesis;
@@ -17,33 +17,33 @@ import public "PSpeechSynthesis_protobuf.mozilla.dom.h.proto";
 
 // Message declarations
 message Msg_VoiceAdded {
-  protobuf.mozilla.dom.RemoteVoice a_aVoice = 1;
+  required protobuf.mozilla.dom.RemoteVoice a_aVoice = 1;
 }
 
 message Msg_VoiceRemoved {
-  string a_aUri = 1;
+  required string a_aUri = 1;
 }
 
 message Msg_SetDefaultVoice {
-  string a_aUri = 1;
-  bool a_aIsDefault = 2;
+  required string a_aUri = 1;
+  required bool a_aIsDefault = 2;
 }
 
 message Msg_IsSpeakingChanged {
-  bool a_aIsSpeaking = 1;
+  required bool a_aIsSpeaking = 1;
 }
 
 message Msg_NotifyVoicesChanged {
 }
 
 message Msg_NotifyVoicesError {
-  string a_aError = 1;
+  required string a_aError = 1;
 }
 
 message Msg_InitialVoicesAndState {
   repeated protobuf.mozilla.dom.RemoteVoice a_aVoices = 1;
   repeated string a_aDefaults = 2;
-  bool a_aIsSpeaking = 3;
+  required bool a_aIsSpeaking = 3;
 }
 
 message Msg___delete__ {
@@ -53,14 +53,14 @@ message Reply___delete__ {
 }
 
 message Msg_PSpeechSynthesisRequestConstructor {
-  sint64 a_actorid = 1;
-  string a_aText = 2;
-  string a_aUri = 3;
-  string a_aLang = 4;
-  float a_aVolume = 5;
-  float a_aRate = 6;
-  float a_aPitch = 7;
-  bool a_aShouldResistFingerprinting = 8;
+  required sint64 a_actorid = 1;
+  required string a_aText = 2;
+  required string a_aUri = 3;
+  required string a_aLang = 4;
+  required float a_aVolume = 5;
+  required float a_aRate = 6;
+  required float a_aPitch = 7;
+  required bool a_aShouldResistFingerprinting = 8;
 }
 
 message Reply_PSpeechSynthesisRequestConstructor {

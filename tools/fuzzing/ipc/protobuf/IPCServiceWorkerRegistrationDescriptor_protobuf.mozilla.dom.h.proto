@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/serviceworkers/IPCServiceWorkerRegistrationDescriptor.ipdlh
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom;
@@ -15,11 +15,11 @@ import "IPCServiceWorkerDescriptor.proto";
 
 // Structs and unions declarations
 message IPCServiceWorkerRegistrationDescriptor {
-  uint64 a_id = 1;
-  uint64 a_version = 2;
-  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 3;
-  string a_scope = 4;
-  bytes a_updateViaCache = 5;
+  required uint64 a_id = 1;
+  required uint64 a_version = 2;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 3;
+  required string a_scope = 4;
+  required bytes a_updateViaCache = 5;
   optional protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_installing = 6;
   optional protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_waiting = 7;
   optional protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_active = 8;

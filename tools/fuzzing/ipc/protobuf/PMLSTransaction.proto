@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/mls/PMLSTransaction.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.PMLSTransaction;
@@ -20,7 +20,7 @@ message Msg_RequestStateDelete {
 }
 
 message Reply_RequestStateDelete {
-  bool a_result = 1;
+  required bool a_result = 1;
 }
 
 message Msg_RequestGroupStateDelete {
@@ -149,7 +149,7 @@ message Msg_RequestReceive {
 }
 
 message Reply_RequestReceive {
-  bytes a_result = 1;
+  required bytes a_result = 1;
 }
 
 message Msg_RequestHasPendingProposals {
@@ -158,7 +158,7 @@ message Msg_RequestHasPendingProposals {
 }
 
 message Reply_RequestHasPendingProposals {
-  bool a_result = 1;
+  required bool a_result = 1;
 }
 
 message Msg_RequestClearPendingProposals {
@@ -167,7 +167,7 @@ message Msg_RequestClearPendingProposals {
 }
 
 message Reply_RequestClearPendingProposals {
-  bool a_result = 1;
+  required bool a_result = 1;
 }
 
 message Msg_RequestHasPendingCommit {
@@ -176,7 +176,7 @@ message Msg_RequestHasPendingCommit {
 }
 
 message Reply_RequestHasPendingCommit {
-  bool a_result = 1;
+  required bool a_result = 1;
 }
 
 message Msg_RequestClearPendingCommit {
@@ -185,7 +185,7 @@ message Msg_RequestClearPendingCommit {
 }
 
 message Reply_RequestClearPendingCommit {
-  bool a_result = 1;
+  required bool a_result = 1;
 }
 
 message Msg_RequestApplyPendingCommit {
@@ -194,7 +194,7 @@ message Msg_RequestApplyPendingCommit {
 }
 
 message Reply_RequestApplyPendingCommit {
-  bytes a_result = 1;
+  required bytes a_result = 1;
 }
 
 message Msg_RequestExportSecret {
@@ -202,7 +202,7 @@ message Msg_RequestExportSecret {
   repeated uint32 a_identifier = 2;
   repeated uint32 a_label = 3;
   repeated uint32 a_content = 4;
-  uint64 a_len = 5;
+  required uint64 a_len = 5;
 }
 
 message Reply_RequestExportSecret {

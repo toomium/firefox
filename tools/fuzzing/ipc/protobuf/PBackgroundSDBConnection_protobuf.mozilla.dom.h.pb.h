@@ -110,6 +110,13 @@ class SDBRequestOpenParams final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const SDBRequestOpenParams& default_instance() {
     return *internal_default_instance();
   }
@@ -184,7 +191,11 @@ class SDBRequestOpenParams final :
   enum : int {
     kANameFieldNumber = 1,
   };
-  // string a_name = 1;
+  // required string a_name = 1;
+  bool has_a_name() const;
+  private:
+  bool _internal_has_a_name() const;
+  public:
   void clear_a_name();
   const std::string& a_name() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -206,8 +217,9 @@ class SDBRequestOpenParams final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_name_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_name_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -243,6 +255,13 @@ class SDBRequestSeekParams final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const SDBRequestSeekParams& default_instance() {
@@ -319,7 +338,11 @@ class SDBRequestSeekParams final :
   enum : int {
     kAOffsetFieldNumber = 1,
   };
-  // uint64 a_offset = 1;
+  // required uint64 a_offset = 1;
+  bool has_a_offset() const;
+  private:
+  bool _internal_has_a_offset() const;
+  public:
   void clear_a_offset();
   uint64_t a_offset() const;
   void set_a_offset(uint64_t value);
@@ -336,8 +359,9 @@ class SDBRequestSeekParams final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint64_t a_offset_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint64_t a_offset_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -373,6 +397,13 @@ class SDBRequestReadParams final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const SDBRequestReadParams& default_instance() {
@@ -449,7 +480,11 @@ class SDBRequestReadParams final :
   enum : int {
     kASizeFieldNumber = 1,
   };
-  // uint64 a_size = 1;
+  // required uint64 a_size = 1;
+  bool has_a_size() const;
+  private:
+  bool _internal_has_a_size() const;
+  public:
   void clear_a_size();
   uint64_t a_size() const;
   void set_a_size(uint64_t value);
@@ -466,8 +501,9 @@ class SDBRequestReadParams final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint64_t a_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint64_t a_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -503,6 +539,13 @@ class SDBRequestWriteParams final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const SDBRequestWriteParams& default_instance() {
@@ -579,7 +622,11 @@ class SDBRequestWriteParams final :
   enum : int {
     kADataFieldNumber = 1,
   };
-  // string a_data = 1;
+  // required string a_data = 1;
+  bool has_a_data() const;
+  private:
+  bool _internal_has_a_data() const;
+  public:
   void clear_a_data();
   const std::string& a_data() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -601,8 +648,9 @@ class SDBRequestWriteParams final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_data_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_data_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -638,6 +686,13 @@ class SDBRequestCloseParams final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const SDBRequestCloseParams& default_instance() {
@@ -755,6 +810,13 @@ class SDBRequestParams final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const SDBRequestParams& default_instance() {
@@ -979,9 +1041,17 @@ class SDBRequestParams final :
 #endif  // __GNUC__
 // SDBRequestOpenParams
 
-// string a_name = 1;
+// required string a_name = 1;
+inline bool SDBRequestOpenParams::_internal_has_a_name() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool SDBRequestOpenParams::has_a_name() const {
+  return _internal_has_a_name();
+}
 inline void SDBRequestOpenParams::clear_a_name() {
   _impl_.a_name_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& SDBRequestOpenParams::a_name() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.SDBRequestOpenParams.a_name)
@@ -990,7 +1060,7 @@ inline const std::string& SDBRequestOpenParams::a_name() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void SDBRequestOpenParams::set_a_name(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.SDBRequestOpenParams.a_name)
 }
@@ -1003,22 +1073,32 @@ inline const std::string& SDBRequestOpenParams::_internal_a_name() const {
   return _impl_.a_name_.Get();
 }
 inline void SDBRequestOpenParams::_internal_set_a_name(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_name_.Set(value, GetArenaForAllocation());
 }
 inline std::string* SDBRequestOpenParams::_internal_mutable_a_name() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_name_.Mutable(GetArenaForAllocation());
 }
 inline std::string* SDBRequestOpenParams::release_a_name() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.SDBRequestOpenParams.a_name)
-  return _impl_.a_name_.Release();
+  if (!_internal_has_a_name()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_name_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_name_.IsDefault()) {
+    _impl_.a_name_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void SDBRequestOpenParams::set_allocated_a_name(std::string* a_name) {
   if (a_name != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_name_.SetAllocated(a_name, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1033,9 +1113,17 @@ inline void SDBRequestOpenParams::set_allocated_a_name(std::string* a_name) {
 
 // SDBRequestSeekParams
 
-// uint64 a_offset = 1;
+// required uint64 a_offset = 1;
+inline bool SDBRequestSeekParams::_internal_has_a_offset() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool SDBRequestSeekParams::has_a_offset() const {
+  return _internal_has_a_offset();
+}
 inline void SDBRequestSeekParams::clear_a_offset() {
   _impl_.a_offset_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t SDBRequestSeekParams::_internal_a_offset() const {
   return _impl_.a_offset_;
@@ -1045,7 +1133,7 @@ inline uint64_t SDBRequestSeekParams::a_offset() const {
   return _internal_a_offset();
 }
 inline void SDBRequestSeekParams::_internal_set_a_offset(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_offset_ = value;
 }
 inline void SDBRequestSeekParams::set_a_offset(uint64_t value) {
@@ -1057,9 +1145,17 @@ inline void SDBRequestSeekParams::set_a_offset(uint64_t value) {
 
 // SDBRequestReadParams
 
-// uint64 a_size = 1;
+// required uint64 a_size = 1;
+inline bool SDBRequestReadParams::_internal_has_a_size() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool SDBRequestReadParams::has_a_size() const {
+  return _internal_has_a_size();
+}
 inline void SDBRequestReadParams::clear_a_size() {
   _impl_.a_size_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t SDBRequestReadParams::_internal_a_size() const {
   return _impl_.a_size_;
@@ -1069,7 +1165,7 @@ inline uint64_t SDBRequestReadParams::a_size() const {
   return _internal_a_size();
 }
 inline void SDBRequestReadParams::_internal_set_a_size(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_size_ = value;
 }
 inline void SDBRequestReadParams::set_a_size(uint64_t value) {
@@ -1081,9 +1177,17 @@ inline void SDBRequestReadParams::set_a_size(uint64_t value) {
 
 // SDBRequestWriteParams
 
-// string a_data = 1;
+// required string a_data = 1;
+inline bool SDBRequestWriteParams::_internal_has_a_data() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool SDBRequestWriteParams::has_a_data() const {
+  return _internal_has_a_data();
+}
 inline void SDBRequestWriteParams::clear_a_data() {
   _impl_.a_data_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& SDBRequestWriteParams::a_data() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.SDBRequestWriteParams.a_data)
@@ -1092,7 +1196,7 @@ inline const std::string& SDBRequestWriteParams::a_data() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void SDBRequestWriteParams::set_a_data(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_data_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.SDBRequestWriteParams.a_data)
 }
@@ -1105,22 +1209,32 @@ inline const std::string& SDBRequestWriteParams::_internal_a_data() const {
   return _impl_.a_data_.Get();
 }
 inline void SDBRequestWriteParams::_internal_set_a_data(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_data_.Set(value, GetArenaForAllocation());
 }
 inline std::string* SDBRequestWriteParams::_internal_mutable_a_data() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_data_.Mutable(GetArenaForAllocation());
 }
 inline std::string* SDBRequestWriteParams::release_a_data() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.SDBRequestWriteParams.a_data)
-  return _impl_.a_data_.Release();
+  if (!_internal_has_a_data()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_data_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_data_.IsDefault()) {
+    _impl_.a_data_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void SDBRequestWriteParams::set_allocated_a_data(std::string* a_data) {
   if (a_data != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_data_.SetAllocated(a_data, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

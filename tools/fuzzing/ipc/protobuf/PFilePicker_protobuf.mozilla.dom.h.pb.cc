@@ -35,9 +35,10 @@ struct InputBlobsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 InputBlobsDefaultTypeInternal _InputBlobs_default_instance_;
 PROTOBUF_CONSTEXPR InputDirectory::InputDirectory(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_blobsinwebkitdirectory_)*/{}
-  , /*decltype(_impl_.a_directorypath_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_blobsinwebkitdirectory_)*/{}
+  , /*decltype(_impl_.a_directorypath_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct InputDirectoryDefaultTypeInternal {
   PROTOBUF_CONSTEXPR InputDirectoryDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -244,6 +245,8 @@ void InputBlobs::CopyFrom(const InputBlobs& from) {
 }
 
 bool InputBlobs::IsInitialized() const {
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_blobs_))
+    return false;
   return true;
 }
 
@@ -262,6 +265,13 @@ std::string InputBlobs::GetTypeName() const {
 
 class InputDirectory::_Internal {
  public:
+  using HasBits = decltype(std::declval<InputDirectory>()._impl_._has_bits_);
+  static void set_has_a_directorypath(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 void InputDirectory::clear_a_blobsinwebkitdirectory() {
@@ -277,16 +287,17 @@ InputDirectory::InputDirectory(const InputDirectory& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   InputDirectory* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_blobsinwebkitdirectory_){from._impl_.a_blobsinwebkitdirectory_}
-    , decltype(_impl_.a_directorypath_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_blobsinwebkitdirectory_){from._impl_.a_blobsinwebkitdirectory_}
+    , decltype(_impl_.a_directorypath_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_directorypath_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_directorypath_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_directorypath().empty()) {
+  if (from._internal_has_a_directorypath()) {
     _this->_impl_.a_directorypath_.Set(from._internal_a_directorypath(), 
       _this->GetArenaForAllocation());
   }
@@ -298,9 +309,10 @@ inline void InputDirectory::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_blobsinwebkitdirectory_){arena}
-    , decltype(_impl_.a_directorypath_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_blobsinwebkitdirectory_){arena}
+    , decltype(_impl_.a_directorypath_){}
   };
   _impl_.a_directorypath_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -334,23 +346,27 @@ void InputDirectory::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_blobsinwebkitdirectory_.Clear();
-  _impl_.a_directorypath_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_directorypath_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* InputDirectory::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string a_directoryPath = 1;
+      // required string a_directoryPath = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_directorypath();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -383,6 +399,7 @@ const char* InputDirectory::_InternalParse(const char* ptr, ::_pbi::ParseContext
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -396,12 +413,9 @@ uint8_t* InputDirectory::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string a_directoryPath = 1;
-  if (!this->_internal_a_directorypath().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_directorypath().data(), static_cast<int>(this->_internal_a_directorypath().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.dom.InputDirectory.a_directoryPath");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_directoryPath = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_directorypath(), target);
   }
@@ -426,6 +440,12 @@ size_t InputDirectory::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.InputDirectory)
   size_t total_size = 0;
 
+  // required string a_directoryPath = 1;
+  if (_internal_has_a_directorypath()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_directorypath());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -435,13 +455,6 @@ size_t InputDirectory::ByteSizeLong() const {
   for (const auto& msg : this->_impl_.a_blobsinwebkitdirectory_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
-  }
-
-  // string a_directoryPath = 1;
-  if (!this->_internal_a_directorypath().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_directorypath());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -466,7 +479,7 @@ void InputDirectory::MergeFrom(const InputDirectory& from) {
   (void) cached_has_bits;
 
   _this->_impl_.a_blobsinwebkitdirectory_.MergeFrom(from._impl_.a_blobsinwebkitdirectory_);
-  if (!from._internal_a_directorypath().empty()) {
+  if (from._internal_has_a_directorypath()) {
     _this->_internal_set_a_directorypath(from._internal_a_directorypath());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -480,6 +493,9 @@ void InputDirectory::CopyFrom(const InputDirectory& from) {
 }
 
 bool InputDirectory::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_blobsinwebkitdirectory_))
+    return false;
   return true;
 }
 
@@ -488,6 +504,7 @@ void InputDirectory::InternalSwap(InputDirectory* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_blobsinwebkitdirectory_.InternalSwap(&other->_impl_.a_blobsinwebkitdirectory_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_directorypath_, lhs_arena,
@@ -713,26 +730,26 @@ uint8_t* MaybeInputData::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.mozilla.dom.InputBlobs a_mVInputBlobs = 1;
-  if (_internal_has_a_mvinputblobs()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::a_mvinputblobs(this),
-        _Internal::a_mvinputblobs(this).GetCachedSize(), target, stream);
+  switch (content_case()) {
+    case kAMVInputBlobs: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(1, _Internal::a_mvinputblobs(this),
+          _Internal::a_mvinputblobs(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVInputDirectory: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(2, _Internal::a_mvinputdirectory(this),
+          _Internal::a_mvinputdirectory(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVvoidT: {
+      target = stream->WriteBytesMaybeAliased(
+          3, this->_internal_a_mvvoid_t(), target);
+      break;
+    }
+    default: ;
   }
-
-  // .protobuf.mozilla.dom.InputDirectory a_mVInputDirectory = 2;
-  if (_internal_has_a_mvinputdirectory()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::a_mvinputdirectory(this),
-        _Internal::a_mvinputdirectory(this).GetCachedSize(), target, stream);
-  }
-
-  // bytes a_mVvoid_t = 3;
-  if (_internal_has_a_mvvoid_t()) {
-    target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_a_mvvoid_t(), target);
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
@@ -826,6 +843,26 @@ void MaybeInputData::CopyFrom(const MaybeInputData& from) {
 }
 
 bool MaybeInputData::IsInitialized() const {
+  switch (content_case()) {
+    case kAMVInputBlobs: {
+      if (_internal_has_a_mvinputblobs()) {
+        if (!_impl_.content_.a_mvinputblobs_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case kAMVInputDirectory: {
+      if (_internal_has_a_mvinputdirectory()) {
+        if (!_impl_.content_.a_mvinputdirectory_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case kAMVvoidT: {
+      break;
+    }
+    case CONTENT_NOT_SET: {
+      break;
+    }
+  }
   return true;
 }
 

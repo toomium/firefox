@@ -97,6 +97,13 @@ class UDPAddressInfo final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const UDPAddressInfo& default_instance() {
     return *internal_default_instance();
   }
@@ -172,7 +179,11 @@ class UDPAddressInfo final :
     kAAddrFieldNumber = 1,
     kAPortFieldNumber = 2,
   };
-  // string a_addr = 1;
+  // required string a_addr = 1;
+  bool has_a_addr() const;
+  private:
+  bool _internal_has_a_addr() const;
+  public:
   void clear_a_addr();
   const std::string& a_addr() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -186,7 +197,11 @@ class UDPAddressInfo final :
   std::string* _internal_mutable_a_addr();
   public:
 
-  // uint32 a_port = 2;
+  // required uint32 a_port = 2;
+  bool has_a_port() const;
+  private:
+  bool _internal_has_a_port() const;
+  public:
   void clear_a_port();
   uint32_t a_port() const;
   void set_a_port(uint32_t value);
@@ -199,13 +214,17 @@ class UDPAddressInfo final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_addr_;
     uint32_t a_port_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUDPSocket_5fprotobuf_2eh_2eproto;
@@ -241,6 +260,13 @@ class UDPSocketAddr final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const UDPSocketAddr& default_instance() {
@@ -421,6 +447,13 @@ class UDPData_a_type_mVArrayOfuint8_t final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const UDPData_a_type_mVArrayOfuint8_t& default_instance() {
     return *internal_default_instance();
   }
@@ -526,7 +559,6 @@ class UDPData_a_type_mVArrayOfuint8_t final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_mvarrayofuint8_t_;
-    mutable std::atomic<int> _a_mvarrayofuint8_t_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -563,6 +595,13 @@ class UDPData final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const UDPData& default_instance() {
@@ -723,9 +762,17 @@ class UDPData final :
 #endif  // __GNUC__
 // UDPAddressInfo
 
-// string a_addr = 1;
+// required string a_addr = 1;
+inline bool UDPAddressInfo::_internal_has_a_addr() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool UDPAddressInfo::has_a_addr() const {
+  return _internal_has_a_addr();
+}
 inline void UDPAddressInfo::clear_a_addr() {
   _impl_.a_addr_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& UDPAddressInfo::a_addr() const {
   // @@protoc_insertion_point(field_get:protobuf.UDPAddressInfo.a_addr)
@@ -734,7 +781,7 @@ inline const std::string& UDPAddressInfo::a_addr() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void UDPAddressInfo::set_a_addr(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_addr_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.UDPAddressInfo.a_addr)
 }
@@ -747,22 +794,32 @@ inline const std::string& UDPAddressInfo::_internal_a_addr() const {
   return _impl_.a_addr_.Get();
 }
 inline void UDPAddressInfo::_internal_set_a_addr(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_addr_.Set(value, GetArenaForAllocation());
 }
 inline std::string* UDPAddressInfo::_internal_mutable_a_addr() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_addr_.Mutable(GetArenaForAllocation());
 }
 inline std::string* UDPAddressInfo::release_a_addr() {
   // @@protoc_insertion_point(field_release:protobuf.UDPAddressInfo.a_addr)
-  return _impl_.a_addr_.Release();
+  if (!_internal_has_a_addr()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_addr_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_addr_.IsDefault()) {
+    _impl_.a_addr_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void UDPAddressInfo::set_allocated_a_addr(std::string* a_addr) {
   if (a_addr != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_addr_.SetAllocated(a_addr, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -773,9 +830,17 @@ inline void UDPAddressInfo::set_allocated_a_addr(std::string* a_addr) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.UDPAddressInfo.a_addr)
 }
 
-// uint32 a_port = 2;
+// required uint32 a_port = 2;
+inline bool UDPAddressInfo::_internal_has_a_port() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool UDPAddressInfo::has_a_port() const {
+  return _internal_has_a_port();
+}
 inline void UDPAddressInfo::clear_a_port() {
   _impl_.a_port_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t UDPAddressInfo::_internal_a_port() const {
   return _impl_.a_port_;
@@ -785,7 +850,7 @@ inline uint32_t UDPAddressInfo::a_port() const {
   return _internal_a_port();
 }
 inline void UDPAddressInfo::_internal_set_a_port(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_port_ = value;
 }
 inline void UDPAddressInfo::set_a_port(uint32_t value) {

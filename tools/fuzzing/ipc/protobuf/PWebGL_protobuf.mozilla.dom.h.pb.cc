@@ -192,18 +192,19 @@ uint8_t* ReadPixelsBuffer::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint64 a_mVuint64_t = 1;
-  if (_internal_has_a_mvuint64_t()) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_mvuint64_t(), target);
+  switch (content_case()) {
+    case kAMVuint64T: {
+      target = stream->EnsureSpace(target);
+      target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_mvuint64_t(), target);
+      break;
+    }
+    case kAMVShmem: {
+      target = stream->WriteBytesMaybeAliased(
+          2, this->_internal_a_mvshmem(), target);
+      break;
+    }
+    default: ;
   }
-
-  // bytes a_mVShmem = 2;
-  if (_internal_has_a_mvshmem()) {
-    target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_a_mvshmem(), target);
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);

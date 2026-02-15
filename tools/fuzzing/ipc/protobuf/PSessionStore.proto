@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/toolkit/components/sessionstore/PSessionStore.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.PSessionStore;
@@ -19,28 +19,28 @@ import "SessionStoreTypes.proto";
 message Msg_SessionStoreUpdate {
   optional string a_aDocShellCaps = 1;
   optional bool a_aPrivateMode = 2;
-  bytes a_aZoom = 3;
-  bool a_aNeedCollectSHistory = 4;
-  uint32 a_aEpoch = 5;
+  required bytes a_aZoom = 3;
+  required bool a_aNeedCollectSHistory = 4;
+  required uint32 a_aEpoch = 5;
 }
 
 message Msg_IncrementalSessionStoreUpdate {
-  bytes a_aBrowsingContext = 1;
+  required bytes a_aBrowsingContext = 1;
   optional protobuf.mozilla.dom.sessionstore.FormData a_aFormData = 2;
   optional bytes a_aScrollPosition = 3;
-  uint32 a_aEpoch = 4;
+  required uint32 a_aEpoch = 4;
 }
 
 message Msg_ResetSessionStore {
-  bytes a_aBrowsingContext = 1;
-  uint32 a_aEpoch = 2;
+  required bytes a_aBrowsingContext = 1;
+  required uint32 a_aEpoch = 2;
 }
 
 message Msg_FlushTabState {
 }
 
 message Reply_FlushTabState {
-  bool a_aHadContext = 1;
+  required bool a_aHadContext = 1;
 }
 
 message Msg___delete__ {

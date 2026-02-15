@@ -101,6 +101,13 @@ class Msg_RecordRead final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_RecordRead& default_instance() {
     return *internal_default_instance();
   }
@@ -175,7 +182,11 @@ class Msg_RecordRead final :
   enum : int {
     kAABytesReadFieldNumber = 1,
   };
-  // uint32 a_aBytesRead = 1;
+  // required uint32 a_aBytesRead = 1;
+  bool has_a_abytesread() const;
+  private:
+  bool _internal_has_a_abytesread() const;
+  public:
   void clear_a_abytesread();
   uint32_t a_abytesread() const;
   void set_a_abytesread(uint32_t value);
@@ -192,8 +203,9 @@ class Msg_RecordRead final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint32_t a_abytesread_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint32_t a_abytesread_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PInputChannelThrottleQueue_2eproto;
@@ -229,6 +241,13 @@ class Msg___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg___delete__& default_instance() {
@@ -348,6 +367,13 @@ class Reply___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -443,9 +469,17 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_RecordRead
 
-// uint32 a_aBytesRead = 1;
+// required uint32 a_aBytesRead = 1;
+inline bool Msg_RecordRead::_internal_has_a_abytesread() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_RecordRead::has_a_abytesread() const {
+  return _internal_has_a_abytesread();
+}
 inline void Msg_RecordRead::clear_a_abytesread() {
   _impl_.a_abytesread_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Msg_RecordRead::_internal_a_abytesread() const {
   return _impl_.a_abytesread_;
@@ -455,7 +489,7 @@ inline uint32_t Msg_RecordRead::a_abytesread() const {
   return _internal_a_abytesread();
 }
 inline void Msg_RecordRead::_internal_set_a_abytesread(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_abytesread_ = value;
 }
 inline void Msg_RecordRead::set_a_abytesread(uint32_t value) {

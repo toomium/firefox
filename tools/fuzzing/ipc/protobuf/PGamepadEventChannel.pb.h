@@ -126,6 +126,13 @@ class Msg___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -241,6 +248,13 @@ class Reply___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply___delete__& default_instance() {
@@ -360,6 +374,13 @@ class Msg_VibrateHaptic final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_VibrateHaptic& default_instance() {
     return *internal_default_instance();
   }
@@ -438,7 +459,11 @@ class Msg_VibrateHaptic final :
     kAAPromiseIDFieldNumber = 5,
     kAADurationFieldNumber = 4,
   };
-  // bytes a_aHandle = 1;
+  // required bytes a_aHandle = 1;
+  bool has_a_ahandle() const;
+  private:
+  bool _internal_has_a_ahandle() const;
+  public:
   void clear_a_ahandle();
   const std::string& a_ahandle() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -452,7 +477,11 @@ class Msg_VibrateHaptic final :
   std::string* _internal_mutable_a_ahandle();
   public:
 
-  // double a_aIntensity = 3;
+  // required double a_aIntensity = 3;
+  bool has_a_aintensity() const;
+  private:
+  bool _internal_has_a_aintensity() const;
+  public:
   void clear_a_aintensity();
   double a_aintensity() const;
   void set_a_aintensity(double value);
@@ -461,7 +490,11 @@ class Msg_VibrateHaptic final :
   void _internal_set_a_aintensity(double value);
   public:
 
-  // uint32 a_aHapticIndex = 2;
+  // required uint32 a_aHapticIndex = 2;
+  bool has_a_ahapticindex() const;
+  private:
+  bool _internal_has_a_ahapticindex() const;
+  public:
   void clear_a_ahapticindex();
   uint32_t a_ahapticindex() const;
   void set_a_ahapticindex(uint32_t value);
@@ -470,7 +503,11 @@ class Msg_VibrateHaptic final :
   void _internal_set_a_ahapticindex(uint32_t value);
   public:
 
-  // uint32 a_aPromiseID = 5;
+  // required uint32 a_aPromiseID = 5;
+  bool has_a_apromiseid() const;
+  private:
+  bool _internal_has_a_apromiseid() const;
+  public:
   void clear_a_apromiseid();
   uint32_t a_apromiseid() const;
   void set_a_apromiseid(uint32_t value);
@@ -479,7 +516,11 @@ class Msg_VibrateHaptic final :
   void _internal_set_a_apromiseid(uint32_t value);
   public:
 
-  // double a_aDuration = 4;
+  // required double a_aDuration = 4;
+  bool has_a_aduration() const;
+  private:
+  bool _internal_has_a_aduration() const;
+  public:
   void clear_a_aduration();
   double a_aduration() const;
   void set_a_aduration(double value);
@@ -492,16 +533,20 @@ class Msg_VibrateHaptic final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ahandle_;
     double a_aintensity_;
     uint32_t a_ahapticindex_;
     uint32_t a_apromiseid_;
     double a_aduration_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGamepadEventChannel_2eproto;
@@ -537,6 +582,13 @@ class Msg_StopVibrateHaptic final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_StopVibrateHaptic& default_instance() {
@@ -613,7 +665,11 @@ class Msg_StopVibrateHaptic final :
   enum : int {
     kAAHandleFieldNumber = 1,
   };
-  // bytes a_aHandle = 1;
+  // required bytes a_aHandle = 1;
+  bool has_a_ahandle() const;
+  private:
+  bool _internal_has_a_ahandle() const;
+  public:
   void clear_a_ahandle();
   const std::string& a_ahandle() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -635,8 +691,9 @@ class Msg_StopVibrateHaptic final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ahandle_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ahandle_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGamepadEventChannel_2eproto;
@@ -672,6 +729,13 @@ class Msg_LightIndicatorColor final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_LightIndicatorColor& default_instance() {
@@ -753,7 +817,11 @@ class Msg_LightIndicatorColor final :
     kAABlueFieldNumber = 5,
     kAAPromiseIDFieldNumber = 6,
   };
-  // bytes a_aHandle = 1;
+  // required bytes a_aHandle = 1;
+  bool has_a_ahandle() const;
+  private:
+  bool _internal_has_a_ahandle() const;
+  public:
   void clear_a_ahandle();
   const std::string& a_ahandle() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -767,7 +835,11 @@ class Msg_LightIndicatorColor final :
   std::string* _internal_mutable_a_ahandle();
   public:
 
-  // uint32 a_aLightColorIndex = 2;
+  // required uint32 a_aLightColorIndex = 2;
+  bool has_a_alightcolorindex() const;
+  private:
+  bool _internal_has_a_alightcolorindex() const;
+  public:
   void clear_a_alightcolorindex();
   uint32_t a_alightcolorindex() const;
   void set_a_alightcolorindex(uint32_t value);
@@ -776,7 +848,11 @@ class Msg_LightIndicatorColor final :
   void _internal_set_a_alightcolorindex(uint32_t value);
   public:
 
-  // uint32 a_aRed = 3;
+  // required uint32 a_aRed = 3;
+  bool has_a_ared() const;
+  private:
+  bool _internal_has_a_ared() const;
+  public:
   void clear_a_ared();
   uint32_t a_ared() const;
   void set_a_ared(uint32_t value);
@@ -785,7 +861,11 @@ class Msg_LightIndicatorColor final :
   void _internal_set_a_ared(uint32_t value);
   public:
 
-  // uint32 a_aGreen = 4;
+  // required uint32 a_aGreen = 4;
+  bool has_a_agreen() const;
+  private:
+  bool _internal_has_a_agreen() const;
+  public:
   void clear_a_agreen();
   uint32_t a_agreen() const;
   void set_a_agreen(uint32_t value);
@@ -794,7 +874,11 @@ class Msg_LightIndicatorColor final :
   void _internal_set_a_agreen(uint32_t value);
   public:
 
-  // uint32 a_aBlue = 5;
+  // required uint32 a_aBlue = 5;
+  bool has_a_ablue() const;
+  private:
+  bool _internal_has_a_ablue() const;
+  public:
   void clear_a_ablue();
   uint32_t a_ablue() const;
   void set_a_ablue(uint32_t value);
@@ -803,7 +887,11 @@ class Msg_LightIndicatorColor final :
   void _internal_set_a_ablue(uint32_t value);
   public:
 
-  // uint32 a_aPromiseID = 6;
+  // required uint32 a_aPromiseID = 6;
+  bool has_a_apromiseid() const;
+  private:
+  bool _internal_has_a_apromiseid() const;
+  public:
   void clear_a_apromiseid();
   uint32_t a_apromiseid() const;
   void set_a_apromiseid(uint32_t value);
@@ -816,17 +904,21 @@ class Msg_LightIndicatorColor final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ahandle_;
     uint32_t a_alightcolorindex_;
     uint32_t a_ared_;
     uint32_t a_agreen_;
     uint32_t a_ablue_;
     uint32_t a_apromiseid_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGamepadEventChannel_2eproto;
@@ -862,6 +954,13 @@ class Msg_RequestAllGamepads final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_RequestAllGamepads& default_instance() {
@@ -979,6 +1078,13 @@ class Reply_RequestAllGamepads final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_RequestAllGamepads& default_instance() {
@@ -1120,6 +1226,13 @@ class Msg_GamepadUpdate final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_GamepadUpdate& default_instance() {
     return *internal_default_instance();
   }
@@ -1194,7 +1307,7 @@ class Msg_GamepadUpdate final :
   enum : int {
     kAAGamepadEventFieldNumber = 1,
   };
-  // .protobuf.mozilla.dom.GamepadChangeEvent a_aGamepadEvent = 1;
+  // required .protobuf.mozilla.dom.GamepadChangeEvent a_aGamepadEvent = 1;
   bool has_a_agamepadevent() const;
   private:
   bool _internal_has_a_agamepadevent() const;
@@ -1220,8 +1333,9 @@ class Msg_GamepadUpdate final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::protobuf::mozilla::dom::GamepadChangeEvent* a_agamepadevent_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::protobuf::mozilla::dom::GamepadChangeEvent* a_agamepadevent_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGamepadEventChannel_2eproto;
@@ -1257,6 +1371,13 @@ class Msg_ReplyGamepadPromise final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_ReplyGamepadPromise& default_instance() {
@@ -1333,7 +1454,11 @@ class Msg_ReplyGamepadPromise final :
   enum : int {
     kAAPromiseIDFieldNumber = 1,
   };
-  // uint32 a_aPromiseID = 1;
+  // required uint32 a_aPromiseID = 1;
+  bool has_a_apromiseid() const;
+  private:
+  bool _internal_has_a_apromiseid() const;
+  public:
   void clear_a_apromiseid();
   uint32_t a_apromiseid() const;
   void set_a_apromiseid(uint32_t value);
@@ -1350,8 +1475,9 @@ class Msg_ReplyGamepadPromise final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint32_t a_apromiseid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint32_t a_apromiseid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGamepadEventChannel_2eproto;
@@ -1375,9 +1501,17 @@ class Msg_ReplyGamepadPromise final :
 
 // Msg_VibrateHaptic
 
-// bytes a_aHandle = 1;
+// required bytes a_aHandle = 1;
+inline bool Msg_VibrateHaptic::_internal_has_a_ahandle() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_VibrateHaptic::has_a_ahandle() const {
+  return _internal_has_a_ahandle();
+}
 inline void Msg_VibrateHaptic::clear_a_ahandle() {
   _impl_.a_ahandle_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_VibrateHaptic::a_ahandle() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PGamepadEventChannel.Msg_VibrateHaptic.a_aHandle)
@@ -1386,7 +1520,7 @@ inline const std::string& Msg_VibrateHaptic::a_ahandle() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_VibrateHaptic::set_a_ahandle(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_ahandle_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PGamepadEventChannel.Msg_VibrateHaptic.a_aHandle)
 }
@@ -1399,22 +1533,32 @@ inline const std::string& Msg_VibrateHaptic::_internal_a_ahandle() const {
   return _impl_.a_ahandle_.Get();
 }
 inline void Msg_VibrateHaptic::_internal_set_a_ahandle(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_ahandle_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_VibrateHaptic::_internal_mutable_a_ahandle() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_ahandle_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_VibrateHaptic::release_a_ahandle() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PGamepadEventChannel.Msg_VibrateHaptic.a_aHandle)
-  return _impl_.a_ahandle_.Release();
+  if (!_internal_has_a_ahandle()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_ahandle_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_ahandle_.IsDefault()) {
+    _impl_.a_ahandle_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_VibrateHaptic::set_allocated_a_ahandle(std::string* a_ahandle) {
   if (a_ahandle != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_ahandle_.SetAllocated(a_ahandle, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1425,9 +1569,17 @@ inline void Msg_VibrateHaptic::set_allocated_a_ahandle(std::string* a_ahandle) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PGamepadEventChannel.Msg_VibrateHaptic.a_aHandle)
 }
 
-// uint32 a_aHapticIndex = 2;
+// required uint32 a_aHapticIndex = 2;
+inline bool Msg_VibrateHaptic::_internal_has_a_ahapticindex() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_VibrateHaptic::has_a_ahapticindex() const {
+  return _internal_has_a_ahapticindex();
+}
 inline void Msg_VibrateHaptic::clear_a_ahapticindex() {
   _impl_.a_ahapticindex_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_VibrateHaptic::_internal_a_ahapticindex() const {
   return _impl_.a_ahapticindex_;
@@ -1437,7 +1589,7 @@ inline uint32_t Msg_VibrateHaptic::a_ahapticindex() const {
   return _internal_a_ahapticindex();
 }
 inline void Msg_VibrateHaptic::_internal_set_a_ahapticindex(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_ahapticindex_ = value;
 }
 inline void Msg_VibrateHaptic::set_a_ahapticindex(uint32_t value) {
@@ -1445,9 +1597,17 @@ inline void Msg_VibrateHaptic::set_a_ahapticindex(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PGamepadEventChannel.Msg_VibrateHaptic.a_aHapticIndex)
 }
 
-// double a_aIntensity = 3;
+// required double a_aIntensity = 3;
+inline bool Msg_VibrateHaptic::_internal_has_a_aintensity() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_VibrateHaptic::has_a_aintensity() const {
+  return _internal_has_a_aintensity();
+}
 inline void Msg_VibrateHaptic::clear_a_aintensity() {
   _impl_.a_aintensity_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline double Msg_VibrateHaptic::_internal_a_aintensity() const {
   return _impl_.a_aintensity_;
@@ -1457,7 +1617,7 @@ inline double Msg_VibrateHaptic::a_aintensity() const {
   return _internal_a_aintensity();
 }
 inline void Msg_VibrateHaptic::_internal_set_a_aintensity(double value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aintensity_ = value;
 }
 inline void Msg_VibrateHaptic::set_a_aintensity(double value) {
@@ -1465,9 +1625,17 @@ inline void Msg_VibrateHaptic::set_a_aintensity(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PGamepadEventChannel.Msg_VibrateHaptic.a_aIntensity)
 }
 
-// double a_aDuration = 4;
+// required double a_aDuration = 4;
+inline bool Msg_VibrateHaptic::_internal_has_a_aduration() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool Msg_VibrateHaptic::has_a_aduration() const {
+  return _internal_has_a_aduration();
+}
 inline void Msg_VibrateHaptic::clear_a_aduration() {
   _impl_.a_aduration_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline double Msg_VibrateHaptic::_internal_a_aduration() const {
   return _impl_.a_aduration_;
@@ -1477,7 +1645,7 @@ inline double Msg_VibrateHaptic::a_aduration() const {
   return _internal_a_aduration();
 }
 inline void Msg_VibrateHaptic::_internal_set_a_aduration(double value) {
-  
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.a_aduration_ = value;
 }
 inline void Msg_VibrateHaptic::set_a_aduration(double value) {
@@ -1485,9 +1653,17 @@ inline void Msg_VibrateHaptic::set_a_aduration(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PGamepadEventChannel.Msg_VibrateHaptic.a_aDuration)
 }
 
-// uint32 a_aPromiseID = 5;
+// required uint32 a_aPromiseID = 5;
+inline bool Msg_VibrateHaptic::_internal_has_a_apromiseid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool Msg_VibrateHaptic::has_a_apromiseid() const {
+  return _internal_has_a_apromiseid();
+}
 inline void Msg_VibrateHaptic::clear_a_apromiseid() {
   _impl_.a_apromiseid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline uint32_t Msg_VibrateHaptic::_internal_a_apromiseid() const {
   return _impl_.a_apromiseid_;
@@ -1497,7 +1673,7 @@ inline uint32_t Msg_VibrateHaptic::a_apromiseid() const {
   return _internal_a_apromiseid();
 }
 inline void Msg_VibrateHaptic::_internal_set_a_apromiseid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_apromiseid_ = value;
 }
 inline void Msg_VibrateHaptic::set_a_apromiseid(uint32_t value) {
@@ -1509,9 +1685,17 @@ inline void Msg_VibrateHaptic::set_a_apromiseid(uint32_t value) {
 
 // Msg_StopVibrateHaptic
 
-// bytes a_aHandle = 1;
+// required bytes a_aHandle = 1;
+inline bool Msg_StopVibrateHaptic::_internal_has_a_ahandle() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_StopVibrateHaptic::has_a_ahandle() const {
+  return _internal_has_a_ahandle();
+}
 inline void Msg_StopVibrateHaptic::clear_a_ahandle() {
   _impl_.a_ahandle_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_StopVibrateHaptic::a_ahandle() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PGamepadEventChannel.Msg_StopVibrateHaptic.a_aHandle)
@@ -1520,7 +1704,7 @@ inline const std::string& Msg_StopVibrateHaptic::a_ahandle() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_StopVibrateHaptic::set_a_ahandle(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_ahandle_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PGamepadEventChannel.Msg_StopVibrateHaptic.a_aHandle)
 }
@@ -1533,22 +1717,32 @@ inline const std::string& Msg_StopVibrateHaptic::_internal_a_ahandle() const {
   return _impl_.a_ahandle_.Get();
 }
 inline void Msg_StopVibrateHaptic::_internal_set_a_ahandle(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_ahandle_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_StopVibrateHaptic::_internal_mutable_a_ahandle() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_ahandle_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_StopVibrateHaptic::release_a_ahandle() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PGamepadEventChannel.Msg_StopVibrateHaptic.a_aHandle)
-  return _impl_.a_ahandle_.Release();
+  if (!_internal_has_a_ahandle()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_ahandle_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_ahandle_.IsDefault()) {
+    _impl_.a_ahandle_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_StopVibrateHaptic::set_allocated_a_ahandle(std::string* a_ahandle) {
   if (a_ahandle != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_ahandle_.SetAllocated(a_ahandle, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1563,9 +1757,17 @@ inline void Msg_StopVibrateHaptic::set_allocated_a_ahandle(std::string* a_ahandl
 
 // Msg_LightIndicatorColor
 
-// bytes a_aHandle = 1;
+// required bytes a_aHandle = 1;
+inline bool Msg_LightIndicatorColor::_internal_has_a_ahandle() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_LightIndicatorColor::has_a_ahandle() const {
+  return _internal_has_a_ahandle();
+}
 inline void Msg_LightIndicatorColor::clear_a_ahandle() {
   _impl_.a_ahandle_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_LightIndicatorColor::a_ahandle() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PGamepadEventChannel.Msg_LightIndicatorColor.a_aHandle)
@@ -1574,7 +1776,7 @@ inline const std::string& Msg_LightIndicatorColor::a_ahandle() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_LightIndicatorColor::set_a_ahandle(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_ahandle_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PGamepadEventChannel.Msg_LightIndicatorColor.a_aHandle)
 }
@@ -1587,22 +1789,32 @@ inline const std::string& Msg_LightIndicatorColor::_internal_a_ahandle() const {
   return _impl_.a_ahandle_.Get();
 }
 inline void Msg_LightIndicatorColor::_internal_set_a_ahandle(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_ahandle_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_LightIndicatorColor::_internal_mutable_a_ahandle() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_ahandle_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_LightIndicatorColor::release_a_ahandle() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PGamepadEventChannel.Msg_LightIndicatorColor.a_aHandle)
-  return _impl_.a_ahandle_.Release();
+  if (!_internal_has_a_ahandle()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_ahandle_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_ahandle_.IsDefault()) {
+    _impl_.a_ahandle_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_LightIndicatorColor::set_allocated_a_ahandle(std::string* a_ahandle) {
   if (a_ahandle != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_ahandle_.SetAllocated(a_ahandle, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1613,9 +1825,17 @@ inline void Msg_LightIndicatorColor::set_allocated_a_ahandle(std::string* a_ahan
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PGamepadEventChannel.Msg_LightIndicatorColor.a_aHandle)
 }
 
-// uint32 a_aLightColorIndex = 2;
+// required uint32 a_aLightColorIndex = 2;
+inline bool Msg_LightIndicatorColor::_internal_has_a_alightcolorindex() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_LightIndicatorColor::has_a_alightcolorindex() const {
+  return _internal_has_a_alightcolorindex();
+}
 inline void Msg_LightIndicatorColor::clear_a_alightcolorindex() {
   _impl_.a_alightcolorindex_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_LightIndicatorColor::_internal_a_alightcolorindex() const {
   return _impl_.a_alightcolorindex_;
@@ -1625,7 +1845,7 @@ inline uint32_t Msg_LightIndicatorColor::a_alightcolorindex() const {
   return _internal_a_alightcolorindex();
 }
 inline void Msg_LightIndicatorColor::_internal_set_a_alightcolorindex(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_alightcolorindex_ = value;
 }
 inline void Msg_LightIndicatorColor::set_a_alightcolorindex(uint32_t value) {
@@ -1633,9 +1853,17 @@ inline void Msg_LightIndicatorColor::set_a_alightcolorindex(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PGamepadEventChannel.Msg_LightIndicatorColor.a_aLightColorIndex)
 }
 
-// uint32 a_aRed = 3;
+// required uint32 a_aRed = 3;
+inline bool Msg_LightIndicatorColor::_internal_has_a_ared() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_LightIndicatorColor::has_a_ared() const {
+  return _internal_has_a_ared();
+}
 inline void Msg_LightIndicatorColor::clear_a_ared() {
   _impl_.a_ared_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_LightIndicatorColor::_internal_a_ared() const {
   return _impl_.a_ared_;
@@ -1645,7 +1873,7 @@ inline uint32_t Msg_LightIndicatorColor::a_ared() const {
   return _internal_a_ared();
 }
 inline void Msg_LightIndicatorColor::_internal_set_a_ared(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_ared_ = value;
 }
 inline void Msg_LightIndicatorColor::set_a_ared(uint32_t value) {
@@ -1653,9 +1881,17 @@ inline void Msg_LightIndicatorColor::set_a_ared(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PGamepadEventChannel.Msg_LightIndicatorColor.a_aRed)
 }
 
-// uint32 a_aGreen = 4;
+// required uint32 a_aGreen = 4;
+inline bool Msg_LightIndicatorColor::_internal_has_a_agreen() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool Msg_LightIndicatorColor::has_a_agreen() const {
+  return _internal_has_a_agreen();
+}
 inline void Msg_LightIndicatorColor::clear_a_agreen() {
   _impl_.a_agreen_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline uint32_t Msg_LightIndicatorColor::_internal_a_agreen() const {
   return _impl_.a_agreen_;
@@ -1665,7 +1901,7 @@ inline uint32_t Msg_LightIndicatorColor::a_agreen() const {
   return _internal_a_agreen();
 }
 inline void Msg_LightIndicatorColor::_internal_set_a_agreen(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_agreen_ = value;
 }
 inline void Msg_LightIndicatorColor::set_a_agreen(uint32_t value) {
@@ -1673,9 +1909,17 @@ inline void Msg_LightIndicatorColor::set_a_agreen(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PGamepadEventChannel.Msg_LightIndicatorColor.a_aGreen)
 }
 
-// uint32 a_aBlue = 5;
+// required uint32 a_aBlue = 5;
+inline bool Msg_LightIndicatorColor::_internal_has_a_ablue() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool Msg_LightIndicatorColor::has_a_ablue() const {
+  return _internal_has_a_ablue();
+}
 inline void Msg_LightIndicatorColor::clear_a_ablue() {
   _impl_.a_ablue_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline uint32_t Msg_LightIndicatorColor::_internal_a_ablue() const {
   return _impl_.a_ablue_;
@@ -1685,7 +1929,7 @@ inline uint32_t Msg_LightIndicatorColor::a_ablue() const {
   return _internal_a_ablue();
 }
 inline void Msg_LightIndicatorColor::_internal_set_a_ablue(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.a_ablue_ = value;
 }
 inline void Msg_LightIndicatorColor::set_a_ablue(uint32_t value) {
@@ -1693,9 +1937,17 @@ inline void Msg_LightIndicatorColor::set_a_ablue(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PGamepadEventChannel.Msg_LightIndicatorColor.a_aBlue)
 }
 
-// uint32 a_aPromiseID = 6;
+// required uint32 a_aPromiseID = 6;
+inline bool Msg_LightIndicatorColor::_internal_has_a_apromiseid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool Msg_LightIndicatorColor::has_a_apromiseid() const {
+  return _internal_has_a_apromiseid();
+}
 inline void Msg_LightIndicatorColor::clear_a_apromiseid() {
   _impl_.a_apromiseid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline uint32_t Msg_LightIndicatorColor::_internal_a_apromiseid() const {
   return _impl_.a_apromiseid_;
@@ -1705,7 +1957,7 @@ inline uint32_t Msg_LightIndicatorColor::a_apromiseid() const {
   return _internal_a_apromiseid();
 }
 inline void Msg_LightIndicatorColor::_internal_set_a_apromiseid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000020u;
   _impl_.a_apromiseid_ = value;
 }
 inline void Msg_LightIndicatorColor::set_a_apromiseid(uint32_t value) {
@@ -1762,9 +2014,11 @@ Reply_RequestAllGamepads::a_gamepads() const {
 
 // Msg_GamepadUpdate
 
-// .protobuf.mozilla.dom.GamepadChangeEvent a_aGamepadEvent = 1;
+// required .protobuf.mozilla.dom.GamepadChangeEvent a_aGamepadEvent = 1;
 inline bool Msg_GamepadUpdate::_internal_has_a_agamepadevent() const {
-  return this != internal_default_instance() && _impl_.a_agamepadevent_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_agamepadevent_ != nullptr);
+  return value;
 }
 inline bool Msg_GamepadUpdate::has_a_agamepadevent() const {
   return _internal_has_a_agamepadevent();
@@ -1785,14 +2039,14 @@ inline void Msg_GamepadUpdate::unsafe_arena_set_allocated_a_agamepadevent(
   }
   _impl_.a_agamepadevent_ = a_agamepadevent;
   if (a_agamepadevent) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PGamepadEventChannel.Msg_GamepadUpdate.a_aGamepadEvent)
 }
 inline ::protobuf::mozilla::dom::GamepadChangeEvent* Msg_GamepadUpdate::release_a_agamepadevent() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::GamepadChangeEvent* temp = _impl_.a_agamepadevent_;
   _impl_.a_agamepadevent_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1808,13 +2062,13 @@ inline ::protobuf::mozilla::dom::GamepadChangeEvent* Msg_GamepadUpdate::release_
 }
 inline ::protobuf::mozilla::dom::GamepadChangeEvent* Msg_GamepadUpdate::unsafe_arena_release_a_agamepadevent() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PGamepadEventChannel.Msg_GamepadUpdate.a_aGamepadEvent)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::GamepadChangeEvent* temp = _impl_.a_agamepadevent_;
   _impl_.a_agamepadevent_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::GamepadChangeEvent* Msg_GamepadUpdate::_internal_mutable_a_agamepadevent() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_agamepadevent_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::GamepadChangeEvent>(GetArenaForAllocation());
     _impl_.a_agamepadevent_ = p;
@@ -1839,9 +2093,9 @@ inline void Msg_GamepadUpdate::set_allocated_a_agamepadevent(::protobuf::mozilla
       a_agamepadevent = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_agamepadevent, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_agamepadevent_ = a_agamepadevent;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PGamepadEventChannel.Msg_GamepadUpdate.a_aGamepadEvent)
@@ -1851,9 +2105,17 @@ inline void Msg_GamepadUpdate::set_allocated_a_agamepadevent(::protobuf::mozilla
 
 // Msg_ReplyGamepadPromise
 
-// uint32 a_aPromiseID = 1;
+// required uint32 a_aPromiseID = 1;
+inline bool Msg_ReplyGamepadPromise::_internal_has_a_apromiseid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_ReplyGamepadPromise::has_a_apromiseid() const {
+  return _internal_has_a_apromiseid();
+}
 inline void Msg_ReplyGamepadPromise::clear_a_apromiseid() {
   _impl_.a_apromiseid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Msg_ReplyGamepadPromise::_internal_a_apromiseid() const {
   return _impl_.a_apromiseid_;
@@ -1863,7 +2125,7 @@ inline uint32_t Msg_ReplyGamepadPromise::a_apromiseid() const {
   return _internal_a_apromiseid();
 }
 inline void Msg_ReplyGamepadPromise::_internal_set_a_apromiseid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_apromiseid_ = value;
 }
 inline void Msg_ReplyGamepadPromise::set_a_apromiseid(uint32_t value) {

@@ -22,9 +22,10 @@ namespace mozilla {
 namespace ipc {
 PROTOBUF_CONSTEXPR HeaderEntry::HeaderEntry(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_value_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_value_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct HeaderEntryDefaultTypeInternal {
   PROTOBUF_CONSTEXPR HeaderEntryDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -36,8 +37,9 @@ struct HeaderEntryDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 HeaderEntryDefaultTypeInternal _HeaderEntry_default_instance_;
 PROTOBUF_CONSTEXPR StringInputStreamParams::StringInputStreamParams(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_data_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_data_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct StringInputStreamParamsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR StringInputStreamParamsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -49,10 +51,11 @@ struct StringInputStreamParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 StringInputStreamParamsDefaultTypeInternal _StringInputStreamParams_default_instance_;
 PROTOBUF_CONSTEXPR FileInputStreamParams::FileInputStreamParams(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_filedescriptor_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_filedescriptor_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_behaviorflags_)*/0
-  , /*decltype(_impl_.a_ioflags_)*/0
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_ioflags_)*/0} {}
 struct FileInputStreamParamsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FileInputStreamParamsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -64,11 +67,12 @@ struct FileInputStreamParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 FileInputStreamParamsDefaultTypeInternal _FileInputStreamParams_default_instance_;
 PROTOBUF_CONSTEXPR MultiplexInputStreamParams::MultiplexInputStreamParams(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_streams_)*/{}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_streams_)*/{}
   , /*decltype(_impl_.a_status_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_currentstream_)*/0u
-  , /*decltype(_impl_.a_startedreadingcurrent_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_startedreadingcurrent_)*/false} {}
 struct MultiplexInputStreamParamsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR MultiplexInputStreamParamsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -80,12 +84,13 @@ struct MultiplexInputStreamParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 MultiplexInputStreamParamsDefaultTypeInternal _MultiplexInputStreamParams_default_instance_;
 PROTOBUF_CONSTEXPR SlicedInputStreamParams::SlicedInputStreamParams(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_stream_)*/nullptr
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_stream_)*/nullptr
   , /*decltype(_impl_.a_start_)*/uint64_t{0u}
   , /*decltype(_impl_.a_length_)*/uint64_t{0u}
   , /*decltype(_impl_.a_curpos_)*/uint64_t{0u}
-  , /*decltype(_impl_.a_closed_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_closed_)*/false} {}
 struct SlicedInputStreamParamsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SlicedInputStreamParamsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -97,8 +102,9 @@ struct SlicedInputStreamParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SlicedInputStreamParamsDefaultTypeInternal _SlicedInputStreamParams_default_instance_;
 PROTOBUF_CONSTEXPR RemoteLazyInputStreamParams::RemoteLazyInputStreamParams(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_stream_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_stream_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct RemoteLazyInputStreamParamsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR RemoteLazyInputStreamParamsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -110,8 +116,9 @@ struct RemoteLazyInputStreamParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RemoteLazyInputStreamParamsDefaultTypeInternal _RemoteLazyInputStreamParams_default_instance_;
 PROTOBUF_CONSTEXPR DataPipeReceiverStreamParams::DataPipeReceiverStreamParams(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_pipe_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_pipe_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct DataPipeReceiverStreamParamsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR DataPipeReceiverStreamParamsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -137,11 +144,11 @@ struct InputStreamParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 InputStreamParamsDefaultTypeInternal _InputStreamParams_default_instance_;
 PROTOBUF_CONSTEXPR EncryptedFileInputStreamParams::EncryptedFileInputStreamParams(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_key_)*/{}
-  , /*decltype(_impl_._a_key_cached_byte_size_)*/{0}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_key_)*/{}
   , /*decltype(_impl_.a_inputstreamparams_)*/nullptr
-  , /*decltype(_impl_.a_blocksize_)*/0u
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_blocksize_)*/0u} {}
 struct EncryptedFileInputStreamParamsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR EncryptedFileInputStreamParamsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -184,10 +191,11 @@ struct MIMEInputStreamParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 MIMEInputStreamParamsDefaultTypeInternal _MIMEInputStreamParams_default_instance_;
 PROTOBUF_CONSTEXPR InputStreamLengthWrapperParams::InputStreamLengthWrapperParams(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_stream_)*/nullptr
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_stream_)*/nullptr
   , /*decltype(_impl_.a_length_)*/int64_t{0}
-  , /*decltype(_impl_.a_consumed_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_consumed_)*/false} {}
 struct InputStreamLengthWrapperParamsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR InputStreamLengthWrapperParamsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -208,6 +216,16 @@ namespace ipc {
 
 class HeaderEntry::_Internal {
  public:
+  using HasBits = decltype(std::declval<HeaderEntry>()._impl_._has_bits_);
+  static void set_has_a_name(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_value(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 HeaderEntry::HeaderEntry(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -220,16 +238,17 @@ HeaderEntry::HeaderEntry(const HeaderEntry& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   HeaderEntry* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_name_){}
-    , decltype(_impl_.a_value_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_name_){}
+    , decltype(_impl_.a_value_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_name_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_name().empty()) {
+  if (from._internal_has_a_name()) {
     _this->_impl_.a_name_.Set(from._internal_a_name(), 
       _this->GetArenaForAllocation());
   }
@@ -237,7 +256,7 @@ HeaderEntry::HeaderEntry(const HeaderEntry& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_value_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_value().empty()) {
+  if (from._internal_has_a_value()) {
     _this->_impl_.a_value_.Set(from._internal_a_value(), 
       _this->GetArenaForAllocation());
   }
@@ -249,9 +268,10 @@ inline void HeaderEntry::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_name_){}
-    , decltype(_impl_.a_value_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_name_){}
+    , decltype(_impl_.a_value_){}
   };
   _impl_.a_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -288,34 +308,41 @@ void HeaderEntry::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_name_.ClearToEmpty();
-  _impl_.a_value_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_name_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_value_.ClearNonDefaultToEmpty();
+    }
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* HeaderEntry::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string a_name = 1;
+      // required string a_name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // string a_value = 2;
+      // required string a_value = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_value();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -335,6 +362,7 @@ const char* HeaderEntry::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -348,22 +376,15 @@ uint8_t* HeaderEntry::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string a_name = 1;
-  if (!this->_internal_a_name().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_name().data(), static_cast<int>(this->_internal_a_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.ipc.HeaderEntry.a_name");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_name = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_name(), target);
   }
 
-  // string a_value = 2;
-  if (!this->_internal_a_value().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_value().data(), static_cast<int>(this->_internal_a_value().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.ipc.HeaderEntry.a_value");
+  // required string a_value = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_value(), target);
   }
@@ -376,27 +397,47 @@ uint8_t* HeaderEntry::_InternalSerialize(
   return target;
 }
 
-size_t HeaderEntry::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.ipc.HeaderEntry)
+size_t HeaderEntry::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.ipc.HeaderEntry)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string a_name = 1;
-  if (!this->_internal_a_name().empty()) {
+  if (_internal_has_a_name()) {
+    // required string a_name = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_name());
   }
 
-  // string a_value = 2;
-  if (!this->_internal_a_value().empty()) {
+  if (_internal_has_a_value()) {
+    // required string a_value = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_value());
   }
+
+  return total_size;
+}
+size_t HeaderEntry::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.ipc.HeaderEntry)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required string a_name = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_name());
+
+    // required string a_value = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_value());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -419,11 +460,14 @@ void HeaderEntry::MergeFrom(const HeaderEntry& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_name().empty()) {
-    _this->_internal_set_a_name(from._internal_a_name());
-  }
-  if (!from._internal_a_value().empty()) {
-    _this->_internal_set_a_value(from._internal_a_value());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_name(from._internal_a_name());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_value(from._internal_a_value());
+    }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -436,6 +480,7 @@ void HeaderEntry::CopyFrom(const HeaderEntry& from) {
 }
 
 bool HeaderEntry::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -444,6 +489,7 @@ void HeaderEntry::InternalSwap(HeaderEntry* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_name_, lhs_arena,
       &other->_impl_.a_name_, rhs_arena
@@ -463,6 +509,13 @@ std::string HeaderEntry::GetTypeName() const {
 
 class StringInputStreamParams::_Internal {
  public:
+  using HasBits = decltype(std::declval<StringInputStreamParams>()._impl_._has_bits_);
+  static void set_has_a_data(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 StringInputStreamParams::StringInputStreamParams(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -475,15 +528,16 @@ StringInputStreamParams::StringInputStreamParams(const StringInputStreamParams& 
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   StringInputStreamParams* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_data_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_data_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_data_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_data_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_data().empty()) {
+  if (from._internal_has_a_data()) {
     _this->_impl_.a_data_.Set(from._internal_a_data(), 
       _this->GetArenaForAllocation());
   }
@@ -495,8 +549,9 @@ inline void StringInputStreamParams::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_data_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_data_){}
   };
   _impl_.a_data_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -528,23 +583,27 @@ void StringInputStreamParams::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_data_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_data_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* StringInputStreamParams::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string a_data = 1;
+      // required string a_data = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_data();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -564,6 +623,7 @@ const char* StringInputStreamParams::_InternalParse(const char* ptr, ::_pbi::Par
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -577,12 +637,9 @@ uint8_t* StringInputStreamParams::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string a_data = 1;
-  if (!this->_internal_a_data().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_data().data(), static_cast<int>(this->_internal_a_data().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.ipc.StringInputStreamParams.a_data");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_data = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_data(), target);
   }
@@ -599,16 +656,15 @@ size_t StringInputStreamParams::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.ipc.StringInputStreamParams)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string a_data = 1;
-  if (!this->_internal_a_data().empty()) {
+  // required string a_data = 1;
+  if (_internal_has_a_data()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_data());
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -631,7 +687,7 @@ void StringInputStreamParams::MergeFrom(const StringInputStreamParams& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_data().empty()) {
+  if (from._internal_has_a_data()) {
     _this->_internal_set_a_data(from._internal_a_data());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -645,6 +701,7 @@ void StringInputStreamParams::CopyFrom(const StringInputStreamParams& from) {
 }
 
 bool StringInputStreamParams::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -653,6 +710,7 @@ void StringInputStreamParams::InternalSwap(StringInputStreamParams* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_data_, lhs_arena,
       &other->_impl_.a_data_, rhs_arena
@@ -668,6 +726,19 @@ std::string StringInputStreamParams::GetTypeName() const {
 
 class FileInputStreamParams::_Internal {
  public:
+  using HasBits = decltype(std::declval<FileInputStreamParams>()._impl_._has_bits_);
+  static void set_has_a_filedescriptor(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_behaviorflags(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_ioflags(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
+  }
 };
 
 FileInputStreamParams::FileInputStreamParams(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -680,17 +751,18 @@ FileInputStreamParams::FileInputStreamParams(const FileInputStreamParams& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   FileInputStreamParams* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_filedescriptor_){}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_filedescriptor_){}
     , decltype(_impl_.a_behaviorflags_){}
-    , decltype(_impl_.a_ioflags_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_ioflags_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_filedescriptor_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_filedescriptor_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_filedescriptor().empty()) {
+  if (from._internal_has_a_filedescriptor()) {
     _this->_impl_.a_filedescriptor_.Set(from._internal_a_filedescriptor(), 
       _this->GetArenaForAllocation());
   }
@@ -705,10 +777,11 @@ inline void FileInputStreamParams::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_filedescriptor_){}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_filedescriptor_){}
     , decltype(_impl_.a_behaviorflags_){0}
     , decltype(_impl_.a_ioflags_){0}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_filedescriptor_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -740,20 +813,27 @@ void FileInputStreamParams::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_filedescriptor_.ClearToEmpty();
-  ::memset(&_impl_.a_behaviorflags_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.a_ioflags_) -
-      reinterpret_cast<char*>(&_impl_.a_behaviorflags_)) + sizeof(_impl_.a_ioflags_));
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_filedescriptor_.ClearNonDefaultToEmpty();
+  }
+  if (cached_has_bits & 0x00000006u) {
+    ::memset(&_impl_.a_behaviorflags_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_ioflags_) -
+        reinterpret_cast<char*>(&_impl_.a_behaviorflags_)) + sizeof(_impl_.a_ioflags_));
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* FileInputStreamParams::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_fileDescriptor = 1;
+      // required bytes a_fileDescriptor = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_filedescriptor();
@@ -762,17 +842,19 @@ const char* FileInputStreamParams::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // sint32 a_behaviorFlags = 2;
+      // required sint32 a_behaviorFlags = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_a_behaviorflags(&has_bits);
           _impl_.a_behaviorflags_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // sint32 a_ioFlags = 3;
+      // required sint32 a_ioFlags = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_a_ioflags(&has_bits);
           _impl_.a_ioflags_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
@@ -794,6 +876,7 @@ const char* FileInputStreamParams::_InternalParse(const char* ptr, ::_pbi::Parse
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -807,20 +890,21 @@ uint8_t* FileInputStreamParams::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_fileDescriptor = 1;
-  if (!this->_internal_a_filedescriptor().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_fileDescriptor = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_filedescriptor(), target);
   }
 
-  // sint32 a_behaviorFlags = 2;
-  if (this->_internal_a_behaviorflags() != 0) {
+  // required sint32 a_behaviorFlags = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_a_behaviorflags(), target);
   }
 
-  // sint32 a_ioFlags = 3;
-  if (this->_internal_a_ioflags() != 0) {
+  // required sint32 a_ioFlags = 3;
+  if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_a_ioflags(), target);
   }
@@ -833,30 +917,51 @@ uint8_t* FileInputStreamParams::_InternalSerialize(
   return target;
 }
 
-size_t FileInputStreamParams::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.ipc.FileInputStreamParams)
+size_t FileInputStreamParams::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.ipc.FileInputStreamParams)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_fileDescriptor = 1;
-  if (!this->_internal_a_filedescriptor().empty()) {
+  if (_internal_has_a_filedescriptor()) {
+    // required bytes a_fileDescriptor = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_filedescriptor());
   }
 
-  // sint32 a_behaviorFlags = 2;
-  if (this->_internal_a_behaviorflags() != 0) {
+  if (_internal_has_a_behaviorflags()) {
+    // required sint32 a_behaviorFlags = 2;
     total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_behaviorflags());
   }
 
-  // sint32 a_ioFlags = 3;
-  if (this->_internal_a_ioflags() != 0) {
+  if (_internal_has_a_ioflags()) {
+    // required sint32 a_ioFlags = 3;
     total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_ioflags());
   }
+
+  return total_size;
+}
+size_t FileInputStreamParams::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.ipc.FileInputStreamParams)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
+    // required bytes a_fileDescriptor = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_filedescriptor());
+
+    // required sint32 a_behaviorFlags = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_behaviorflags());
+
+    // required sint32 a_ioFlags = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_ioflags());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -879,14 +984,18 @@ void FileInputStreamParams::MergeFrom(const FileInputStreamParams& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_filedescriptor().empty()) {
-    _this->_internal_set_a_filedescriptor(from._internal_a_filedescriptor());
-  }
-  if (from._internal_a_behaviorflags() != 0) {
-    _this->_internal_set_a_behaviorflags(from._internal_a_behaviorflags());
-  }
-  if (from._internal_a_ioflags() != 0) {
-    _this->_internal_set_a_ioflags(from._internal_a_ioflags());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_filedescriptor(from._internal_a_filedescriptor());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_behaviorflags_ = from._impl_.a_behaviorflags_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.a_ioflags_ = from._impl_.a_ioflags_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -899,6 +1008,7 @@ void FileInputStreamParams::CopyFrom(const FileInputStreamParams& from) {
 }
 
 bool FileInputStreamParams::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -907,6 +1017,7 @@ void FileInputStreamParams::InternalSwap(FileInputStreamParams* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_filedescriptor_, lhs_arena,
       &other->_impl_.a_filedescriptor_, rhs_arena
@@ -928,6 +1039,19 @@ std::string FileInputStreamParams::GetTypeName() const {
 
 class MultiplexInputStreamParams::_Internal {
  public:
+  using HasBits = decltype(std::declval<MultiplexInputStreamParams>()._impl_._has_bits_);
+  static void set_has_a_currentstream(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_status(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_startedreadingcurrent(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
+  }
 };
 
 MultiplexInputStreamParams::MultiplexInputStreamParams(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -940,18 +1064,19 @@ MultiplexInputStreamParams::MultiplexInputStreamParams(const MultiplexInputStrea
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   MultiplexInputStreamParams* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_streams_){from._impl_.a_streams_}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_streams_){from._impl_.a_streams_}
     , decltype(_impl_.a_status_){}
     , decltype(_impl_.a_currentstream_){}
-    , decltype(_impl_.a_startedreadingcurrent_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_startedreadingcurrent_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_status_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_status_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_status().empty()) {
+  if (from._internal_has_a_status()) {
     _this->_impl_.a_status_.Set(from._internal_a_status(), 
       _this->GetArenaForAllocation());
   }
@@ -966,11 +1091,12 @@ inline void MultiplexInputStreamParams::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_streams_){arena}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_streams_){arena}
     , decltype(_impl_.a_status_){}
     , decltype(_impl_.a_currentstream_){0u}
     , decltype(_impl_.a_startedreadingcurrent_){false}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_status_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1004,15 +1130,22 @@ void MultiplexInputStreamParams::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_streams_.Clear();
-  _impl_.a_status_.ClearToEmpty();
-  ::memset(&_impl_.a_currentstream_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.a_startedreadingcurrent_) -
-      reinterpret_cast<char*>(&_impl_.a_currentstream_)) + sizeof(_impl_.a_startedreadingcurrent_));
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_status_.ClearNonDefaultToEmpty();
+  }
+  if (cached_has_bits & 0x00000006u) {
+    ::memset(&_impl_.a_currentstream_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_startedreadingcurrent_) -
+        reinterpret_cast<char*>(&_impl_.a_currentstream_)) + sizeof(_impl_.a_startedreadingcurrent_));
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* MultiplexInputStreamParams::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
@@ -1030,15 +1163,16 @@ const char* MultiplexInputStreamParams::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // uint32 a_currentStream = 2;
+      // required uint32 a_currentStream = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_a_currentstream(&has_bits);
           _impl_.a_currentstream_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bytes a_status = 3;
+      // required bytes a_status = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_status();
@@ -1047,9 +1181,10 @@ const char* MultiplexInputStreamParams::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // bool a_startedReadingCurrent = 4;
+      // required bool a_startedReadingCurrent = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _Internal::set_has_a_startedreadingcurrent(&has_bits);
           _impl_.a_startedreadingcurrent_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -1071,6 +1206,7 @@ const char* MultiplexInputStreamParams::_InternalParse(const char* ptr, ::_pbi::
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1092,20 +1228,21 @@ uint8_t* MultiplexInputStreamParams::_InternalSerialize(
         InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
 
-  // uint32 a_currentStream = 2;
-  if (this->_internal_a_currentstream() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required uint32 a_currentStream = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_currentstream(), target);
   }
 
-  // bytes a_status = 3;
-  if (!this->_internal_a_status().empty()) {
+  // required bytes a_status = 3;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         3, this->_internal_a_status(), target);
   }
 
-  // bool a_startedReadingCurrent = 4;
-  if (this->_internal_a_startedreadingcurrent() != 0) {
+  // required bool a_startedReadingCurrent = 4;
+  if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_a_startedreadingcurrent(), target);
   }
@@ -1118,10 +1255,48 @@ uint8_t* MultiplexInputStreamParams::_InternalSerialize(
   return target;
 }
 
+size_t MultiplexInputStreamParams::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.ipc.MultiplexInputStreamParams)
+  size_t total_size = 0;
+
+  if (_internal_has_a_status()) {
+    // required bytes a_status = 3;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_status());
+  }
+
+  if (_internal_has_a_currentstream()) {
+    // required uint32 a_currentStream = 2;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_currentstream());
+  }
+
+  if (_internal_has_a_startedreadingcurrent()) {
+    // required bool a_startedReadingCurrent = 4;
+    total_size += 1 + 1;
+  }
+
+  return total_size;
+}
 size_t MultiplexInputStreamParams::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.ipc.MultiplexInputStreamParams)
   size_t total_size = 0;
 
+  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
+    // required bytes a_status = 3;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_status());
+
+    // required uint32 a_currentStream = 2;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_currentstream());
+
+    // required bool a_startedReadingCurrent = 4;
+    total_size += 1 + 1;
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1131,23 +1306,6 @@ size_t MultiplexInputStreamParams::ByteSizeLong() const {
   for (const auto& msg : this->_impl_.a_streams_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
-  }
-
-  // bytes a_status = 3;
-  if (!this->_internal_a_status().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_status());
-  }
-
-  // uint32 a_currentStream = 2;
-  if (this->_internal_a_currentstream() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_currentstream());
-  }
-
-  // bool a_startedReadingCurrent = 4;
-  if (this->_internal_a_startedreadingcurrent() != 0) {
-    total_size += 1 + 1;
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1172,14 +1330,18 @@ void MultiplexInputStreamParams::MergeFrom(const MultiplexInputStreamParams& fro
   (void) cached_has_bits;
 
   _this->_impl_.a_streams_.MergeFrom(from._impl_.a_streams_);
-  if (!from._internal_a_status().empty()) {
-    _this->_internal_set_a_status(from._internal_a_status());
-  }
-  if (from._internal_a_currentstream() != 0) {
-    _this->_internal_set_a_currentstream(from._internal_a_currentstream());
-  }
-  if (from._internal_a_startedreadingcurrent() != 0) {
-    _this->_internal_set_a_startedreadingcurrent(from._internal_a_startedreadingcurrent());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_status(from._internal_a_status());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_currentstream_ = from._impl_.a_currentstream_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.a_startedreadingcurrent_ = from._impl_.a_startedreadingcurrent_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1192,6 +1354,9 @@ void MultiplexInputStreamParams::CopyFrom(const MultiplexInputStreamParams& from
 }
 
 bool MultiplexInputStreamParams::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_streams_))
+    return false;
   return true;
 }
 
@@ -1200,6 +1365,7 @@ void MultiplexInputStreamParams::InternalSwap(MultiplexInputStreamParams* other)
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_streams_.InternalSwap(&other->_impl_.a_streams_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_status_, lhs_arena,
@@ -1222,7 +1388,26 @@ std::string MultiplexInputStreamParams::GetTypeName() const {
 
 class SlicedInputStreamParams::_Internal {
  public:
+  using HasBits = decltype(std::declval<SlicedInputStreamParams>()._impl_._has_bits_);
   static const ::protobuf::mozilla::ipc::InputStreamParams& a_stream(const SlicedInputStreamParams* msg);
+  static void set_has_a_stream(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_start(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_length(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_a_curpos(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_a_closed(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x0000001f) ^ 0x0000001f) != 0;
+  }
 };
 
 const ::protobuf::mozilla::ipc::InputStreamParams&
@@ -1239,12 +1424,13 @@ SlicedInputStreamParams::SlicedInputStreamParams(const SlicedInputStreamParams& 
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SlicedInputStreamParams* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_stream_){nullptr}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_stream_){nullptr}
     , decltype(_impl_.a_start_){}
     , decltype(_impl_.a_length_){}
     , decltype(_impl_.a_curpos_){}
-    , decltype(_impl_.a_closed_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_closed_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_stream()) {
@@ -1261,12 +1447,13 @@ inline void SlicedInputStreamParams::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_stream_){nullptr}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_stream_){nullptr}
     , decltype(_impl_.a_start_){uint64_t{0u}}
     , decltype(_impl_.a_length_){uint64_t{0u}}
     , decltype(_impl_.a_curpos_){uint64_t{0u}}
     , decltype(_impl_.a_closed_){false}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
 
@@ -1294,23 +1481,28 @@ void SlicedInputStreamParams::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && _impl_.a_stream_ != nullptr) {
-    delete _impl_.a_stream_;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(_impl_.a_stream_ != nullptr);
+    _impl_.a_stream_->Clear();
   }
-  _impl_.a_stream_ = nullptr;
-  ::memset(&_impl_.a_start_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.a_closed_) -
-      reinterpret_cast<char*>(&_impl_.a_start_)) + sizeof(_impl_.a_closed_));
+  if (cached_has_bits & 0x0000001eu) {
+    ::memset(&_impl_.a_start_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_closed_) -
+        reinterpret_cast<char*>(&_impl_.a_start_)) + sizeof(_impl_.a_closed_));
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* SlicedInputStreamParams::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
+      // required .protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_stream(), ptr);
@@ -1318,33 +1510,37 @@ const char* SlicedInputStreamParams::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // uint64 a_start = 2;
+      // required uint64 a_start = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_a_start(&has_bits);
           _impl_.a_start_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // uint64 a_length = 3;
+      // required uint64 a_length = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_a_length(&has_bits);
           _impl_.a_length_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // uint64 a_curPos = 4;
+      // required uint64 a_curPos = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _Internal::set_has_a_curpos(&has_bits);
           _impl_.a_curpos_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bool a_closed = 5;
+      // required bool a_closed = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          _Internal::set_has_a_closed(&has_bits);
           _impl_.a_closed_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -1366,6 +1562,7 @@ const char* SlicedInputStreamParams::_InternalParse(const char* ptr, ::_pbi::Par
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1379,33 +1576,34 @@ uint8_t* SlicedInputStreamParams::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
-  if (this->_internal_has_a_stream()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required .protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_stream(this),
         _Internal::a_stream(this).GetCachedSize(), target, stream);
   }
 
-  // uint64 a_start = 2;
-  if (this->_internal_a_start() != 0) {
+  // required uint64 a_start = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(2, this->_internal_a_start(), target);
   }
 
-  // uint64 a_length = 3;
-  if (this->_internal_a_length() != 0) {
+  // required uint64 a_length = 3;
+  if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(3, this->_internal_a_length(), target);
   }
 
-  // uint64 a_curPos = 4;
-  if (this->_internal_a_curpos() != 0) {
+  // required uint64 a_curPos = 4;
+  if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(4, this->_internal_a_curpos(), target);
   }
 
-  // bool a_closed = 5;
-  if (this->_internal_a_closed() != 0) {
+  // required bool a_closed = 5;
+  if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_a_closed(), target);
   }
@@ -1418,40 +1616,67 @@ uint8_t* SlicedInputStreamParams::_InternalSerialize(
   return target;
 }
 
-size_t SlicedInputStreamParams::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.ipc.SlicedInputStreamParams)
+size_t SlicedInputStreamParams::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.ipc.SlicedInputStreamParams)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
-  if (this->_internal_has_a_stream()) {
+  if (_internal_has_a_stream()) {
+    // required .protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_stream_);
   }
 
-  // uint64 a_start = 2;
-  if (this->_internal_a_start() != 0) {
+  if (_internal_has_a_start()) {
+    // required uint64 a_start = 2;
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_start());
   }
 
-  // uint64 a_length = 3;
-  if (this->_internal_a_length() != 0) {
+  if (_internal_has_a_length()) {
+    // required uint64 a_length = 3;
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_length());
   }
 
-  // uint64 a_curPos = 4;
-  if (this->_internal_a_curpos() != 0) {
+  if (_internal_has_a_curpos()) {
+    // required uint64 a_curPos = 4;
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_curpos());
   }
 
-  // bool a_closed = 5;
-  if (this->_internal_a_closed() != 0) {
+  if (_internal_has_a_closed()) {
+    // required bool a_closed = 5;
     total_size += 1 + 1;
   }
+
+  return total_size;
+}
+size_t SlicedInputStreamParams::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.ipc.SlicedInputStreamParams)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
+    // required .protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_stream_);
+
+    // required uint64 a_start = 2;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_start());
+
+    // required uint64 a_length = 3;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_length());
+
+    // required uint64 a_curPos = 4;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_curpos());
+
+    // required bool a_closed = 5;
+    total_size += 1 + 1;
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1474,21 +1699,25 @@ void SlicedInputStreamParams::MergeFrom(const SlicedInputStreamParams& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_stream()) {
-    _this->_internal_mutable_a_stream()->::protobuf::mozilla::ipc::InputStreamParams::MergeFrom(
-        from._internal_a_stream());
-  }
-  if (from._internal_a_start() != 0) {
-    _this->_internal_set_a_start(from._internal_a_start());
-  }
-  if (from._internal_a_length() != 0) {
-    _this->_internal_set_a_length(from._internal_a_length());
-  }
-  if (from._internal_a_curpos() != 0) {
-    _this->_internal_set_a_curpos(from._internal_a_curpos());
-  }
-  if (from._internal_a_closed() != 0) {
-    _this->_internal_set_a_closed(from._internal_a_closed());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000001fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_mutable_a_stream()->::protobuf::mozilla::ipc::InputStreamParams::MergeFrom(
+          from._internal_a_stream());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_start_ = from._impl_.a_start_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.a_length_ = from._impl_.a_length_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.a_curpos_ = from._impl_.a_curpos_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_impl_.a_closed_ = from._impl_.a_closed_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1501,12 +1730,17 @@ void SlicedInputStreamParams::CopyFrom(const SlicedInputStreamParams& from) {
 }
 
 bool SlicedInputStreamParams::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (_internal_has_a_stream()) {
+    if (!_impl_.a_stream_->IsInitialized()) return false;
+  }
   return true;
 }
 
 void SlicedInputStreamParams::InternalSwap(SlicedInputStreamParams* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(SlicedInputStreamParams, _impl_.a_closed_)
       + sizeof(SlicedInputStreamParams::_impl_.a_closed_)
@@ -1524,6 +1758,13 @@ std::string SlicedInputStreamParams::GetTypeName() const {
 
 class RemoteLazyInputStreamParams::_Internal {
  public:
+  using HasBits = decltype(std::declval<RemoteLazyInputStreamParams>()._impl_._has_bits_);
+  static void set_has_a_stream(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 RemoteLazyInputStreamParams::RemoteLazyInputStreamParams(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1536,15 +1777,16 @@ RemoteLazyInputStreamParams::RemoteLazyInputStreamParams(const RemoteLazyInputSt
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   RemoteLazyInputStreamParams* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_stream_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_stream_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_stream_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_stream_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_stream().empty()) {
+  if (from._internal_has_a_stream()) {
     _this->_impl_.a_stream_.Set(from._internal_a_stream(), 
       _this->GetArenaForAllocation());
   }
@@ -1556,8 +1798,9 @@ inline void RemoteLazyInputStreamParams::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_stream_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_stream_){}
   };
   _impl_.a_stream_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1589,17 +1832,22 @@ void RemoteLazyInputStreamParams::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_stream_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_stream_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* RemoteLazyInputStreamParams::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_stream = 1;
+      // required bytes a_stream = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_stream();
@@ -1624,6 +1872,7 @@ const char* RemoteLazyInputStreamParams::_InternalParse(const char* ptr, ::_pbi:
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1637,8 +1886,9 @@ uint8_t* RemoteLazyInputStreamParams::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_stream = 1;
-  if (!this->_internal_a_stream().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_stream = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_stream(), target);
   }
@@ -1655,16 +1905,15 @@ size_t RemoteLazyInputStreamParams::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.ipc.RemoteLazyInputStreamParams)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_stream = 1;
-  if (!this->_internal_a_stream().empty()) {
+  // required bytes a_stream = 1;
+  if (_internal_has_a_stream()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_stream());
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1687,7 +1936,7 @@ void RemoteLazyInputStreamParams::MergeFrom(const RemoteLazyInputStreamParams& f
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_stream().empty()) {
+  if (from._internal_has_a_stream()) {
     _this->_internal_set_a_stream(from._internal_a_stream());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1701,6 +1950,7 @@ void RemoteLazyInputStreamParams::CopyFrom(const RemoteLazyInputStreamParams& fr
 }
 
 bool RemoteLazyInputStreamParams::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1709,6 +1959,7 @@ void RemoteLazyInputStreamParams::InternalSwap(RemoteLazyInputStreamParams* othe
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_stream_, lhs_arena,
       &other->_impl_.a_stream_, rhs_arena
@@ -1724,6 +1975,13 @@ std::string RemoteLazyInputStreamParams::GetTypeName() const {
 
 class DataPipeReceiverStreamParams::_Internal {
  public:
+  using HasBits = decltype(std::declval<DataPipeReceiverStreamParams>()._impl_._has_bits_);
+  static void set_has_a_pipe(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 DataPipeReceiverStreamParams::DataPipeReceiverStreamParams(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1736,15 +1994,16 @@ DataPipeReceiverStreamParams::DataPipeReceiverStreamParams(const DataPipeReceive
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   DataPipeReceiverStreamParams* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_pipe_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_pipe_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_pipe_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_pipe_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_pipe().empty()) {
+  if (from._internal_has_a_pipe()) {
     _this->_impl_.a_pipe_.Set(from._internal_a_pipe(), 
       _this->GetArenaForAllocation());
   }
@@ -1756,8 +2015,9 @@ inline void DataPipeReceiverStreamParams::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_pipe_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_pipe_){}
   };
   _impl_.a_pipe_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1789,17 +2049,22 @@ void DataPipeReceiverStreamParams::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_pipe_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_pipe_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* DataPipeReceiverStreamParams::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_pipe = 1;
+      // required bytes a_pipe = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_pipe();
@@ -1824,6 +2089,7 @@ const char* DataPipeReceiverStreamParams::_InternalParse(const char* ptr, ::_pbi
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1837,8 +2103,9 @@ uint8_t* DataPipeReceiverStreamParams::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_pipe = 1;
-  if (!this->_internal_a_pipe().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_pipe = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_pipe(), target);
   }
@@ -1855,16 +2122,15 @@ size_t DataPipeReceiverStreamParams::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.ipc.DataPipeReceiverStreamParams)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_pipe = 1;
-  if (!this->_internal_a_pipe().empty()) {
+  // required bytes a_pipe = 1;
+  if (_internal_has_a_pipe()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_pipe());
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1887,7 +2153,7 @@ void DataPipeReceiverStreamParams::MergeFrom(const DataPipeReceiverStreamParams&
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_pipe().empty()) {
+  if (from._internal_has_a_pipe()) {
     _this->_internal_set_a_pipe(from._internal_a_pipe());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1901,6 +2167,7 @@ void DataPipeReceiverStreamParams::CopyFrom(const DataPipeReceiverStreamParams& 
 }
 
 bool DataPipeReceiverStreamParams::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1909,6 +2176,7 @@ void DataPipeReceiverStreamParams::InternalSwap(DataPipeReceiverStreamParams* ot
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_pipe_, lhs_arena,
       &other->_impl_.a_pipe_, rhs_arena
@@ -2428,76 +2696,69 @@ uint8_t* InputStreamParams::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.mozilla.ipc.StringInputStreamParams a_mVStringInputStreamParams = 1;
-  if (_internal_has_a_mvstringinputstreamparams()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::a_mvstringinputstreamparams(this),
-        _Internal::a_mvstringinputstreamparams(this).GetCachedSize(), target, stream);
+  switch (content_case()) {
+    case kAMVStringInputStreamParams: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(1, _Internal::a_mvstringinputstreamparams(this),
+          _Internal::a_mvstringinputstreamparams(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVFileInputStreamParams: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(2, _Internal::a_mvfileinputstreamparams(this),
+          _Internal::a_mvfileinputstreamparams(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVBufferedInputStreamParams: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(3, _Internal::a_mvbufferedinputstreamparams(this),
+          _Internal::a_mvbufferedinputstreamparams(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVMIMEInputStreamParams: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(4, _Internal::a_mvmimeinputstreamparams(this),
+          _Internal::a_mvmimeinputstreamparams(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVMultiplexInputStreamParams: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(5, _Internal::a_mvmultiplexinputstreamparams(this),
+          _Internal::a_mvmultiplexinputstreamparams(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVSlicedInputStreamParams: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(6, _Internal::a_mvslicedinputstreamparams(this),
+          _Internal::a_mvslicedinputstreamparams(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVRemoteLazyInputStreamParams: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(7, _Internal::a_mvremotelazyinputstreamparams(this),
+          _Internal::a_mvremotelazyinputstreamparams(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVInputStreamLengthWrapperParams: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(8, _Internal::a_mvinputstreamlengthwrapperparams(this),
+          _Internal::a_mvinputstreamlengthwrapperparams(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVEncryptedFileInputStreamParams: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(9, _Internal::a_mvencryptedfileinputstreamparams(this),
+          _Internal::a_mvencryptedfileinputstreamparams(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVDataPipeReceiverStreamParams: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(10, _Internal::a_mvdatapipereceiverstreamparams(this),
+          _Internal::a_mvdatapipereceiverstreamparams(this).GetCachedSize(), target, stream);
+      break;
+    }
+    default: ;
   }
-
-  // .protobuf.mozilla.ipc.FileInputStreamParams a_mVFileInputStreamParams = 2;
-  if (_internal_has_a_mvfileinputstreamparams()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::a_mvfileinputstreamparams(this),
-        _Internal::a_mvfileinputstreamparams(this).GetCachedSize(), target, stream);
-  }
-
-  // .protobuf.mozilla.ipc.BufferedInputStreamParams a_mVBufferedInputStreamParams = 3;
-  if (_internal_has_a_mvbufferedinputstreamparams()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::a_mvbufferedinputstreamparams(this),
-        _Internal::a_mvbufferedinputstreamparams(this).GetCachedSize(), target, stream);
-  }
-
-  // .protobuf.mozilla.ipc.MIMEInputStreamParams a_mVMIMEInputStreamParams = 4;
-  if (_internal_has_a_mvmimeinputstreamparams()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(4, _Internal::a_mvmimeinputstreamparams(this),
-        _Internal::a_mvmimeinputstreamparams(this).GetCachedSize(), target, stream);
-  }
-
-  // .protobuf.mozilla.ipc.MultiplexInputStreamParams a_mVMultiplexInputStreamParams = 5;
-  if (_internal_has_a_mvmultiplexinputstreamparams()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(5, _Internal::a_mvmultiplexinputstreamparams(this),
-        _Internal::a_mvmultiplexinputstreamparams(this).GetCachedSize(), target, stream);
-  }
-
-  // .protobuf.mozilla.ipc.SlicedInputStreamParams a_mVSlicedInputStreamParams = 6;
-  if (_internal_has_a_mvslicedinputstreamparams()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(6, _Internal::a_mvslicedinputstreamparams(this),
-        _Internal::a_mvslicedinputstreamparams(this).GetCachedSize(), target, stream);
-  }
-
-  // .protobuf.mozilla.ipc.RemoteLazyInputStreamParams a_mVRemoteLazyInputStreamParams = 7;
-  if (_internal_has_a_mvremotelazyinputstreamparams()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(7, _Internal::a_mvremotelazyinputstreamparams(this),
-        _Internal::a_mvremotelazyinputstreamparams(this).GetCachedSize(), target, stream);
-  }
-
-  // .protobuf.mozilla.ipc.InputStreamLengthWrapperParams a_mVInputStreamLengthWrapperParams = 8;
-  if (_internal_has_a_mvinputstreamlengthwrapperparams()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(8, _Internal::a_mvinputstreamlengthwrapperparams(this),
-        _Internal::a_mvinputstreamlengthwrapperparams(this).GetCachedSize(), target, stream);
-  }
-
-  // .protobuf.mozilla.ipc.EncryptedFileInputStreamParams a_mVEncryptedFileInputStreamParams = 9;
-  if (_internal_has_a_mvencryptedfileinputstreamparams()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(9, _Internal::a_mvencryptedfileinputstreamparams(this),
-        _Internal::a_mvencryptedfileinputstreamparams(this).GetCachedSize(), target, stream);
-  }
-
-  // .protobuf.mozilla.ipc.DataPipeReceiverStreamParams a_mVDataPipeReceiverStreamParams = 10;
-  if (_internal_has_a_mvdatapipereceiverstreamparams()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(10, _Internal::a_mvdatapipereceiverstreamparams(this),
-        _Internal::a_mvdatapipereceiverstreamparams(this).GetCachedSize(), target, stream);
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
@@ -2676,6 +2937,71 @@ void InputStreamParams::CopyFrom(const InputStreamParams& from) {
 }
 
 bool InputStreamParams::IsInitialized() const {
+  switch (content_case()) {
+    case kAMVStringInputStreamParams: {
+      if (_internal_has_a_mvstringinputstreamparams()) {
+        if (!_impl_.content_.a_mvstringinputstreamparams_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case kAMVFileInputStreamParams: {
+      if (_internal_has_a_mvfileinputstreamparams()) {
+        if (!_impl_.content_.a_mvfileinputstreamparams_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case kAMVBufferedInputStreamParams: {
+      if (_internal_has_a_mvbufferedinputstreamparams()) {
+        if (!_impl_.content_.a_mvbufferedinputstreamparams_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case kAMVMIMEInputStreamParams: {
+      if (_internal_has_a_mvmimeinputstreamparams()) {
+        if (!_impl_.content_.a_mvmimeinputstreamparams_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case kAMVMultiplexInputStreamParams: {
+      if (_internal_has_a_mvmultiplexinputstreamparams()) {
+        if (!_impl_.content_.a_mvmultiplexinputstreamparams_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case kAMVSlicedInputStreamParams: {
+      if (_internal_has_a_mvslicedinputstreamparams()) {
+        if (!_impl_.content_.a_mvslicedinputstreamparams_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case kAMVRemoteLazyInputStreamParams: {
+      if (_internal_has_a_mvremotelazyinputstreamparams()) {
+        if (!_impl_.content_.a_mvremotelazyinputstreamparams_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case kAMVInputStreamLengthWrapperParams: {
+      if (_internal_has_a_mvinputstreamlengthwrapperparams()) {
+        if (!_impl_.content_.a_mvinputstreamlengthwrapperparams_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case kAMVEncryptedFileInputStreamParams: {
+      if (_internal_has_a_mvencryptedfileinputstreamparams()) {
+        if (!_impl_.content_.a_mvencryptedfileinputstreamparams_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case kAMVDataPipeReceiverStreamParams: {
+      if (_internal_has_a_mvdatapipereceiverstreamparams()) {
+        if (!_impl_.content_.a_mvdatapipereceiverstreamparams_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case CONTENT_NOT_SET: {
+      break;
+    }
+  }
   return true;
 }
 
@@ -2695,7 +3021,17 @@ std::string InputStreamParams::GetTypeName() const {
 
 class EncryptedFileInputStreamParams::_Internal {
  public:
+  using HasBits = decltype(std::declval<EncryptedFileInputStreamParams>()._impl_._has_bits_);
   static const ::protobuf::mozilla::ipc::InputStreamParams& a_inputstreamparams(const EncryptedFileInputStreamParams* msg);
+  static void set_has_a_inputstreamparams(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_blocksize(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 const ::protobuf::mozilla::ipc::InputStreamParams&
@@ -2712,11 +3048,11 @@ EncryptedFileInputStreamParams::EncryptedFileInputStreamParams(const EncryptedFi
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   EncryptedFileInputStreamParams* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_key_){from._impl_.a_key_}
-    , /*decltype(_impl_._a_key_cached_byte_size_)*/{0}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_key_){from._impl_.a_key_}
     , decltype(_impl_.a_inputstreamparams_){nullptr}
-    , decltype(_impl_.a_blocksize_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_blocksize_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_inputstreamparams()) {
@@ -2731,11 +3067,11 @@ inline void EncryptedFileInputStreamParams::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_key_){arena}
-    , /*decltype(_impl_._a_key_cached_byte_size_)*/{0}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_key_){arena}
     , decltype(_impl_.a_inputstreamparams_){nullptr}
     , decltype(_impl_.a_blocksize_){0u}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
 
@@ -2765,21 +3101,24 @@ void EncryptedFileInputStreamParams::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_key_.Clear();
-  if (GetArenaForAllocation() == nullptr && _impl_.a_inputstreamparams_ != nullptr) {
-    delete _impl_.a_inputstreamparams_;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(_impl_.a_inputstreamparams_ != nullptr);
+    _impl_.a_inputstreamparams_->Clear();
   }
-  _impl_.a_inputstreamparams_ = nullptr;
   _impl_.a_blocksize_ = 0u;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* EncryptedFileInputStreamParams::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.ipc.InputStreamParams a_inputStreamParams = 1;
+      // required .protobuf.mozilla.ipc.InputStreamParams a_inputStreamParams = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_inputstreamparams(), ptr);
@@ -2789,18 +3128,24 @@ const char* EncryptedFileInputStreamParams::_InternalParse(const char* ptr, ::_p
         continue;
       // repeated uint32 a_key = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            _internal_add_a_key(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 18) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_key(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 16) {
-          _internal_add_a_key(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // uint32 a_blockSize = 3;
+      // required uint32 a_blockSize = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_a_blocksize(&has_bits);
           _impl_.a_blocksize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
@@ -2822,6 +3167,7 @@ const char* EncryptedFileInputStreamParams::_InternalParse(const char* ptr, ::_p
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -2835,24 +3181,22 @@ uint8_t* EncryptedFileInputStreamParams::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.mozilla.ipc.InputStreamParams a_inputStreamParams = 1;
-  if (this->_internal_has_a_inputstreamparams()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required .protobuf.mozilla.ipc.InputStreamParams a_inputStreamParams = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_inputstreamparams(this),
         _Internal::a_inputstreamparams(this).GetCachedSize(), target, stream);
   }
 
   // repeated uint32 a_key = 2;
-  {
-    int byte_size = _impl_._a_key_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteUInt32Packed(
-          2, _internal_a_key(), byte_size, target);
-    }
+  for (int i = 0, n = this->_internal_a_key_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_key(i), target);
   }
 
-  // uint32 a_blockSize = 3;
-  if (this->_internal_a_blocksize() != 0) {
+  // required uint32 a_blockSize = 3;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_blocksize(), target);
   }
@@ -2865,10 +3209,40 @@ uint8_t* EncryptedFileInputStreamParams::_InternalSerialize(
   return target;
 }
 
+size_t EncryptedFileInputStreamParams::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.ipc.EncryptedFileInputStreamParams)
+  size_t total_size = 0;
+
+  if (_internal_has_a_inputstreamparams()) {
+    // required .protobuf.mozilla.ipc.InputStreamParams a_inputStreamParams = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_inputstreamparams_);
+  }
+
+  if (_internal_has_a_blocksize()) {
+    // required uint32 a_blockSize = 3;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_blocksize());
+  }
+
+  return total_size;
+}
 size_t EncryptedFileInputStreamParams::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.ipc.EncryptedFileInputStreamParams)
   size_t total_size = 0;
 
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required .protobuf.mozilla.ipc.InputStreamParams a_inputStreamParams = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_inputstreamparams_);
+
+    // required uint32 a_blockSize = 3;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_blocksize());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2877,26 +3251,9 @@ size_t EncryptedFileInputStreamParams::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_key_);
-    if (data_size > 0) {
-      total_size += 1 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
-    int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._a_key_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
+    total_size += 1 *
+                  ::_pbi::FromIntSize(this->_internal_a_key_size());
     total_size += data_size;
-  }
-
-  // .protobuf.mozilla.ipc.InputStreamParams a_inputStreamParams = 1;
-  if (this->_internal_has_a_inputstreamparams()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_inputstreamparams_);
-  }
-
-  // uint32 a_blockSize = 3;
-  if (this->_internal_a_blocksize() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_blocksize());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2921,12 +3278,16 @@ void EncryptedFileInputStreamParams::MergeFrom(const EncryptedFileInputStreamPar
   (void) cached_has_bits;
 
   _this->_impl_.a_key_.MergeFrom(from._impl_.a_key_);
-  if (from._internal_has_a_inputstreamparams()) {
-    _this->_internal_mutable_a_inputstreamparams()->::protobuf::mozilla::ipc::InputStreamParams::MergeFrom(
-        from._internal_a_inputstreamparams());
-  }
-  if (from._internal_a_blocksize() != 0) {
-    _this->_internal_set_a_blocksize(from._internal_a_blocksize());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_mutable_a_inputstreamparams()->::protobuf::mozilla::ipc::InputStreamParams::MergeFrom(
+          from._internal_a_inputstreamparams());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_blocksize_ = from._impl_.a_blocksize_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -2939,12 +3300,17 @@ void EncryptedFileInputStreamParams::CopyFrom(const EncryptedFileInputStreamPara
 }
 
 bool EncryptedFileInputStreamParams::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (_internal_has_a_inputstreamparams()) {
+    if (!_impl_.a_inputstreamparams_->IsInitialized()) return false;
+  }
   return true;
 }
 
 void EncryptedFileInputStreamParams::InternalSwap(EncryptedFileInputStreamParams* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_key_.InternalSwap(&other->_impl_.a_key_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(EncryptedFileInputStreamParams, _impl_.a_blocksize_)
@@ -2967,6 +3333,12 @@ class BufferedInputStreamParams::_Internal {
   static const ::protobuf::mozilla::ipc::InputStreamParams& a_optionalstream(const BufferedInputStreamParams* msg);
   static void set_has_a_optionalstream(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_buffersize(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000002) ^ 0x00000002) != 0;
   }
 };
 
@@ -3058,9 +3430,10 @@ const char* BufferedInputStreamParams::_InternalParse(const char* ptr, ::_pbi::P
         } else
           goto handle_unusual;
         continue;
-      // uint32 a_bufferSize = 2;
+      // required uint32 a_bufferSize = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_a_buffersize(&has_bits);
           _impl_.a_buffersize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
@@ -3096,15 +3469,16 @@ uint8_t* BufferedInputStreamParams::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
   // optional .protobuf.mozilla.ipc.InputStreamParams a_optionalStream = 1;
-  if (_internal_has_a_optionalstream()) {
+  if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_optionalstream(this),
         _Internal::a_optionalstream(this).GetCachedSize(), target, stream);
   }
 
-  // uint32 a_bufferSize = 2;
-  if (this->_internal_a_buffersize() != 0) {
+  // required uint32 a_bufferSize = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_buffersize(), target);
   }
@@ -3121,6 +3495,10 @@ size_t BufferedInputStreamParams::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.ipc.BufferedInputStreamParams)
   size_t total_size = 0;
 
+  // required uint32 a_bufferSize = 2;
+  if (_internal_has_a_buffersize()) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_buffersize());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3131,11 +3509,6 @@ size_t BufferedInputStreamParams::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_optionalstream_);
-  }
-
-  // uint32 a_bufferSize = 2;
-  if (this->_internal_a_buffersize() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_buffersize());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3159,12 +3532,16 @@ void BufferedInputStreamParams::MergeFrom(const BufferedInputStreamParams& from)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_optionalstream()) {
-    _this->_internal_mutable_a_optionalstream()->::protobuf::mozilla::ipc::InputStreamParams::MergeFrom(
-        from._internal_a_optionalstream());
-  }
-  if (from._internal_a_buffersize() != 0) {
-    _this->_internal_set_a_buffersize(from._internal_a_buffersize());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_mutable_a_optionalstream()->::protobuf::mozilla::ipc::InputStreamParams::MergeFrom(
+          from._internal_a_optionalstream());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_buffersize_ = from._impl_.a_buffersize_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -3177,6 +3554,10 @@ void BufferedInputStreamParams::CopyFrom(const BufferedInputStreamParams& from) 
 }
 
 bool BufferedInputStreamParams::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (_internal_has_a_optionalstream()) {
+    if (!_impl_.a_optionalstream_->IsInitialized()) return false;
+  }
   return true;
 }
 
@@ -3205,6 +3586,12 @@ class MIMEInputStreamParams::_Internal {
   static const ::protobuf::mozilla::ipc::InputStreamParams& a_optionalstream(const MIMEInputStreamParams* msg);
   static void set_has_a_optionalstream(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_startedreading(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000002) ^ 0x00000002) != 0;
   }
 };
 
@@ -3313,9 +3700,10 @@ const char* MIMEInputStreamParams::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // bool a_startedReading = 3;
+      // required bool a_startedReading = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_a_startedreading(&has_bits);
           _impl_.a_startedreading_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -3351,8 +3739,9 @@ uint8_t* MIMEInputStreamParams::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
   // optional .protobuf.mozilla.ipc.InputStreamParams a_optionalStream = 1;
-  if (_internal_has_a_optionalstream()) {
+  if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_optionalstream(this),
         _Internal::a_optionalstream(this).GetCachedSize(), target, stream);
@@ -3366,8 +3755,8 @@ uint8_t* MIMEInputStreamParams::_InternalSerialize(
         InternalWriteMessage(2, repfield, repfield.GetCachedSize(), target, stream);
   }
 
-  // bool a_startedReading = 3;
-  if (this->_internal_a_startedreading() != 0) {
+  // required bool a_startedReading = 3;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_startedreading(), target);
   }
@@ -3384,6 +3773,10 @@ size_t MIMEInputStreamParams::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.ipc.MIMEInputStreamParams)
   size_t total_size = 0;
 
+  // required bool a_startedReading = 3;
+  if (_internal_has_a_startedreading()) {
+    total_size += 1 + 1;
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3401,11 +3794,6 @@ size_t MIMEInputStreamParams::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_optionalstream_);
-  }
-
-  // bool a_startedReading = 3;
-  if (this->_internal_a_startedreading() != 0) {
-    total_size += 1 + 1;
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3430,12 +3818,16 @@ void MIMEInputStreamParams::MergeFrom(const MIMEInputStreamParams& from) {
   (void) cached_has_bits;
 
   _this->_impl_.a_headers_.MergeFrom(from._impl_.a_headers_);
-  if (from._internal_has_a_optionalstream()) {
-    _this->_internal_mutable_a_optionalstream()->::protobuf::mozilla::ipc::InputStreamParams::MergeFrom(
-        from._internal_a_optionalstream());
-  }
-  if (from._internal_a_startedreading() != 0) {
-    _this->_internal_set_a_startedreading(from._internal_a_startedreading());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_mutable_a_optionalstream()->::protobuf::mozilla::ipc::InputStreamParams::MergeFrom(
+          from._internal_a_optionalstream());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_startedreading_ = from._impl_.a_startedreading_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -3448,6 +3840,12 @@ void MIMEInputStreamParams::CopyFrom(const MIMEInputStreamParams& from) {
 }
 
 bool MIMEInputStreamParams::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_headers_))
+    return false;
+  if (_internal_has_a_optionalstream()) {
+    if (!_impl_.a_optionalstream_->IsInitialized()) return false;
+  }
   return true;
 }
 
@@ -3473,7 +3871,20 @@ std::string MIMEInputStreamParams::GetTypeName() const {
 
 class InputStreamLengthWrapperParams::_Internal {
  public:
+  using HasBits = decltype(std::declval<InputStreamLengthWrapperParams>()._impl_._has_bits_);
   static const ::protobuf::mozilla::ipc::InputStreamParams& a_stream(const InputStreamLengthWrapperParams* msg);
+  static void set_has_a_stream(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_length(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_consumed(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
+  }
 };
 
 const ::protobuf::mozilla::ipc::InputStreamParams&
@@ -3490,10 +3901,11 @@ InputStreamLengthWrapperParams::InputStreamLengthWrapperParams(const InputStream
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   InputStreamLengthWrapperParams* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_stream_){nullptr}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_stream_){nullptr}
     , decltype(_impl_.a_length_){}
-    , decltype(_impl_.a_consumed_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_consumed_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_stream()) {
@@ -3510,10 +3922,11 @@ inline void InputStreamLengthWrapperParams::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_stream_){nullptr}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_stream_){nullptr}
     , decltype(_impl_.a_length_){int64_t{0}}
     , decltype(_impl_.a_consumed_){false}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
 
@@ -3541,23 +3954,28 @@ void InputStreamLengthWrapperParams::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && _impl_.a_stream_ != nullptr) {
-    delete _impl_.a_stream_;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(_impl_.a_stream_ != nullptr);
+    _impl_.a_stream_->Clear();
   }
-  _impl_.a_stream_ = nullptr;
-  ::memset(&_impl_.a_length_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.a_consumed_) -
-      reinterpret_cast<char*>(&_impl_.a_length_)) + sizeof(_impl_.a_consumed_));
+  if (cached_has_bits & 0x00000006u) {
+    ::memset(&_impl_.a_length_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_consumed_) -
+        reinterpret_cast<char*>(&_impl_.a_length_)) + sizeof(_impl_.a_consumed_));
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* InputStreamLengthWrapperParams::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
+      // required .protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_stream(), ptr);
@@ -3565,17 +3983,19 @@ const char* InputStreamLengthWrapperParams::_InternalParse(const char* ptr, ::_p
         } else
           goto handle_unusual;
         continue;
-      // sint64 a_length = 2;
+      // required sint64 a_length = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_a_length(&has_bits);
           _impl_.a_length_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bool a_consumed = 3;
+      // required bool a_consumed = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_a_consumed(&has_bits);
           _impl_.a_consumed_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -3597,6 +4017,7 @@ const char* InputStreamLengthWrapperParams::_InternalParse(const char* ptr, ::_p
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -3610,21 +4031,22 @@ uint8_t* InputStreamLengthWrapperParams::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
-  if (this->_internal_has_a_stream()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required .protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_stream(this),
         _Internal::a_stream(this).GetCachedSize(), target, stream);
   }
 
-  // sint64 a_length = 2;
-  if (this->_internal_a_length() != 0) {
+  // required sint64 a_length = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(2, this->_internal_a_length(), target);
   }
 
-  // bool a_consumed = 3;
-  if (this->_internal_a_consumed() != 0) {
+  // required bool a_consumed = 3;
+  if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_consumed(), target);
   }
@@ -3637,30 +4059,51 @@ uint8_t* InputStreamLengthWrapperParams::_InternalSerialize(
   return target;
 }
 
-size_t InputStreamLengthWrapperParams::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.ipc.InputStreamLengthWrapperParams)
+size_t InputStreamLengthWrapperParams::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.ipc.InputStreamLengthWrapperParams)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
-  if (this->_internal_has_a_stream()) {
+  if (_internal_has_a_stream()) {
+    // required .protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_stream_);
   }
 
-  // sint64 a_length = 2;
-  if (this->_internal_a_length() != 0) {
+  if (_internal_has_a_length()) {
+    // required sint64 a_length = 2;
     total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_length());
   }
 
-  // bool a_consumed = 3;
-  if (this->_internal_a_consumed() != 0) {
+  if (_internal_has_a_consumed()) {
+    // required bool a_consumed = 3;
     total_size += 1 + 1;
   }
+
+  return total_size;
+}
+size_t InputStreamLengthWrapperParams::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.ipc.InputStreamLengthWrapperParams)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
+    // required .protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_stream_);
+
+    // required sint64 a_length = 2;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_length());
+
+    // required bool a_consumed = 3;
+    total_size += 1 + 1;
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -3683,15 +4126,19 @@ void InputStreamLengthWrapperParams::MergeFrom(const InputStreamLengthWrapperPar
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_stream()) {
-    _this->_internal_mutable_a_stream()->::protobuf::mozilla::ipc::InputStreamParams::MergeFrom(
-        from._internal_a_stream());
-  }
-  if (from._internal_a_length() != 0) {
-    _this->_internal_set_a_length(from._internal_a_length());
-  }
-  if (from._internal_a_consumed() != 0) {
-    _this->_internal_set_a_consumed(from._internal_a_consumed());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_mutable_a_stream()->::protobuf::mozilla::ipc::InputStreamParams::MergeFrom(
+          from._internal_a_stream());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_length_ = from._impl_.a_length_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.a_consumed_ = from._impl_.a_consumed_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -3704,12 +4151,17 @@ void InputStreamLengthWrapperParams::CopyFrom(const InputStreamLengthWrapperPara
 }
 
 bool InputStreamLengthWrapperParams::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (_internal_has_a_stream()) {
+    if (!_impl_.a_stream_->IsInitialized()) return false;
+  }
   return true;
 }
 
 void InputStreamLengthWrapperParams::InternalSwap(InputStreamLengthWrapperParams* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(InputStreamLengthWrapperParams, _impl_.a_consumed_)
       + sizeof(InputStreamLengthWrapperParams::_impl_.a_consumed_)

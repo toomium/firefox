@@ -23,9 +23,10 @@ namespace dom {
 namespace PGamepadTestChannel {
 PROTOBUF_CONSTEXPR Msg_GamepadTestEvent::Msg_GamepadTestEvent(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_agamepadevent_)*/nullptr
-  , /*decltype(_impl_.a_aid_)*/0u
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_agamepadevent_)*/nullptr
+  , /*decltype(_impl_.a_aid_)*/0u} {}
 struct Msg_GamepadTestEventDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_GamepadTestEventDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -61,9 +62,10 @@ struct Reply___delete__DefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply___delete__DefaultTypeInternal _Reply___delete___default_instance_;
 PROTOBUF_CONSTEXPR Msg_ReplyGamepadHandle::Msg_ReplyGamepadHandle(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_ahandle_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_aid_)*/0u
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_ahandle_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_aid_)*/0u} {}
 struct Msg_ReplyGamepadHandleDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ReplyGamepadHandleDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -86,7 +88,17 @@ namespace PGamepadTestChannel {
 
 class Msg_GamepadTestEvent::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_GamepadTestEvent>()._impl_._has_bits_);
+  static void set_has_a_aid(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
   static const ::protobuf::mozilla::dom::GamepadChangeEvent& a_agamepadevent(const Msg_GamepadTestEvent* msg);
+  static void set_has_a_agamepadevent(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 const ::protobuf::mozilla::dom::GamepadChangeEvent&
@@ -94,10 +106,8 @@ Msg_GamepadTestEvent::_Internal::a_agamepadevent(const Msg_GamepadTestEvent* msg
   return *msg->_impl_.a_agamepadevent_;
 }
 void Msg_GamepadTestEvent::clear_a_agamepadevent() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_agamepadevent_ != nullptr) {
-    delete _impl_.a_agamepadevent_;
-  }
-  _impl_.a_agamepadevent_ = nullptr;
+  if (_impl_.a_agamepadevent_ != nullptr) _impl_.a_agamepadevent_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Msg_GamepadTestEvent::Msg_GamepadTestEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -109,9 +119,10 @@ Msg_GamepadTestEvent::Msg_GamepadTestEvent(const Msg_GamepadTestEvent& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_GamepadTestEvent* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_agamepadevent_){nullptr}
-    , decltype(_impl_.a_aid_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_agamepadevent_){nullptr}
+    , decltype(_impl_.a_aid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_agamepadevent()) {
@@ -126,9 +137,10 @@ inline void Msg_GamepadTestEvent::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_agamepadevent_){nullptr}
-    , decltype(_impl_.a_aid_){0u}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_agamepadevent_){nullptr}
+    , decltype(_impl_.a_aid_){0u}
   };
 }
 
@@ -156,29 +168,33 @@ void Msg_GamepadTestEvent::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && _impl_.a_agamepadevent_ != nullptr) {
-    delete _impl_.a_agamepadevent_;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(_impl_.a_agamepadevent_ != nullptr);
+    _impl_.a_agamepadevent_->Clear();
   }
-  _impl_.a_agamepadevent_ = nullptr;
   _impl_.a_aid_ = 0u;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_GamepadTestEvent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // uint32 a_aID = 1;
+      // required uint32 a_aID = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_aid(&has_bits);
           _impl_.a_aid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.dom.GamepadChangeEvent a_aGamepadEvent = 2;
+      // required .protobuf.mozilla.dom.GamepadChangeEvent a_aGamepadEvent = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_agamepadevent(), ptr);
@@ -202,6 +218,7 @@ const char* Msg_GamepadTestEvent::_InternalParse(const char* ptr, ::_pbi::ParseC
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -215,14 +232,15 @@ uint8_t* Msg_GamepadTestEvent::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 a_aID = 1;
-  if (this->_internal_a_aid() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required uint32 a_aID = 1;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_aid(), target);
   }
 
-  // .protobuf.mozilla.dom.GamepadChangeEvent a_aGamepadEvent = 2;
-  if (this->_internal_has_a_agamepadevent()) {
+  // required .protobuf.mozilla.dom.GamepadChangeEvent a_aGamepadEvent = 2;
+  if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::a_agamepadevent(this),
         _Internal::a_agamepadevent(this).GetCachedSize(), target, stream);
@@ -236,25 +254,43 @@ uint8_t* Msg_GamepadTestEvent::_InternalSerialize(
   return target;
 }
 
-size_t Msg_GamepadTestEvent::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PGamepadTestChannel.Msg_GamepadTestEvent)
+size_t Msg_GamepadTestEvent::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PGamepadTestChannel.Msg_GamepadTestEvent)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .protobuf.mozilla.dom.GamepadChangeEvent a_aGamepadEvent = 2;
-  if (this->_internal_has_a_agamepadevent()) {
+  if (_internal_has_a_agamepadevent()) {
+    // required .protobuf.mozilla.dom.GamepadChangeEvent a_aGamepadEvent = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_agamepadevent_);
   }
 
-  // uint32 a_aID = 1;
-  if (this->_internal_a_aid() != 0) {
+  if (_internal_has_a_aid()) {
+    // required uint32 a_aID = 1;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_aid());
   }
+
+  return total_size;
+}
+size_t Msg_GamepadTestEvent::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PGamepadTestChannel.Msg_GamepadTestEvent)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required .protobuf.mozilla.dom.GamepadChangeEvent a_aGamepadEvent = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_agamepadevent_);
+
+    // required uint32 a_aID = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_aid());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -277,12 +313,16 @@ void Msg_GamepadTestEvent::MergeFrom(const Msg_GamepadTestEvent& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_agamepadevent()) {
-    _this->_internal_mutable_a_agamepadevent()->::protobuf::mozilla::dom::GamepadChangeEvent::MergeFrom(
-        from._internal_a_agamepadevent());
-  }
-  if (from._internal_a_aid() != 0) {
-    _this->_internal_set_a_aid(from._internal_a_aid());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_mutable_a_agamepadevent()->::protobuf::mozilla::dom::GamepadChangeEvent::MergeFrom(
+          from._internal_a_agamepadevent());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_aid_ = from._impl_.a_aid_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -295,12 +335,17 @@ void Msg_GamepadTestEvent::CopyFrom(const Msg_GamepadTestEvent& from) {
 }
 
 bool Msg_GamepadTestEvent::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (_internal_has_a_agamepadevent()) {
+    if (!_impl_.a_agamepadevent_->IsInitialized()) return false;
+  }
   return true;
 }
 
 void Msg_GamepadTestEvent::InternalSwap(Msg_GamepadTestEvent* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(Msg_GamepadTestEvent, _impl_.a_aid_)
       + sizeof(Msg_GamepadTestEvent::_impl_.a_aid_)
@@ -614,6 +659,16 @@ std::string Reply___delete__::GetTypeName() const {
 
 class Msg_ReplyGamepadHandle::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_ReplyGamepadHandle>()._impl_._has_bits_);
+  static void set_has_a_aid(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_ahandle(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 Msg_ReplyGamepadHandle::Msg_ReplyGamepadHandle(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -626,16 +681,17 @@ Msg_ReplyGamepadHandle::Msg_ReplyGamepadHandle(const Msg_ReplyGamepadHandle& fro
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_ReplyGamepadHandle* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_ahandle_){}
-    , decltype(_impl_.a_aid_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_ahandle_){}
+    , decltype(_impl_.a_aid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_ahandle_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_ahandle_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_ahandle().empty()) {
+  if (from._internal_has_a_ahandle()) {
     _this->_impl_.a_ahandle_.Set(from._internal_a_ahandle(), 
       _this->GetArenaForAllocation());
   }
@@ -648,9 +704,10 @@ inline void Msg_ReplyGamepadHandle::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_ahandle_){}
-    , decltype(_impl_.a_aid_){0u}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_ahandle_){}
+    , decltype(_impl_.a_aid_){0u}
   };
   _impl_.a_ahandle_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -682,26 +739,32 @@ void Msg_ReplyGamepadHandle::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_ahandle_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_ahandle_.ClearNonDefaultToEmpty();
+  }
   _impl_.a_aid_ = 0u;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_ReplyGamepadHandle::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // uint32 a_aID = 1;
+      // required uint32 a_aID = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_aid(&has_bits);
           _impl_.a_aid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bytes a_aHandle = 2;
+      // required bytes a_aHandle = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_ahandle();
@@ -726,6 +789,7 @@ const char* Msg_ReplyGamepadHandle::_InternalParse(const char* ptr, ::_pbi::Pars
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -739,14 +803,15 @@ uint8_t* Msg_ReplyGamepadHandle::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 a_aID = 1;
-  if (this->_internal_a_aid() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required uint32 a_aID = 1;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_aid(), target);
   }
 
-  // bytes a_aHandle = 2;
-  if (!this->_internal_a_ahandle().empty()) {
+  // required bytes a_aHandle = 2;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_a_ahandle(), target);
   }
@@ -759,25 +824,43 @@ uint8_t* Msg_ReplyGamepadHandle::_InternalSerialize(
   return target;
 }
 
-size_t Msg_ReplyGamepadHandle::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PGamepadTestChannel.Msg_ReplyGamepadHandle)
+size_t Msg_ReplyGamepadHandle::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PGamepadTestChannel.Msg_ReplyGamepadHandle)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_aHandle = 2;
-  if (!this->_internal_a_ahandle().empty()) {
+  if (_internal_has_a_ahandle()) {
+    // required bytes a_aHandle = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_ahandle());
   }
 
-  // uint32 a_aID = 1;
-  if (this->_internal_a_aid() != 0) {
+  if (_internal_has_a_aid()) {
+    // required uint32 a_aID = 1;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_aid());
   }
+
+  return total_size;
+}
+size_t Msg_ReplyGamepadHandle::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PGamepadTestChannel.Msg_ReplyGamepadHandle)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required bytes a_aHandle = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_ahandle());
+
+    // required uint32 a_aID = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_aid());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -800,11 +883,15 @@ void Msg_ReplyGamepadHandle::MergeFrom(const Msg_ReplyGamepadHandle& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_ahandle().empty()) {
-    _this->_internal_set_a_ahandle(from._internal_a_ahandle());
-  }
-  if (from._internal_a_aid() != 0) {
-    _this->_internal_set_a_aid(from._internal_a_aid());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_ahandle(from._internal_a_ahandle());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_aid_ = from._impl_.a_aid_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -817,6 +904,7 @@ void Msg_ReplyGamepadHandle::CopyFrom(const Msg_ReplyGamepadHandle& from) {
 }
 
 bool Msg_ReplyGamepadHandle::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -825,6 +913,7 @@ void Msg_ReplyGamepadHandle::InternalSwap(Msg_ReplyGamepadHandle* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_ahandle_, lhs_arena,
       &other->_impl_.a_ahandle_, rhs_arena

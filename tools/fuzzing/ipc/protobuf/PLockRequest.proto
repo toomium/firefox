@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/locks/PLockRequest.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.locks.PLockRequest;
@@ -16,12 +16,12 @@ package protobuf.mozilla.dom.locks.PLockRequest;
 
 // Message declarations
 message Msg_Resolve {
-  bytes a_aMode = 1;
-  bool a_aIsAvailable = 2;
+  required bytes a_aMode = 1;
+  required bool a_aIsAvailable = 2;
 }
 
 message Msg___delete__ {
-  bool a_aAborted = 1;
+  required bool a_aAborted = 1;
 }
 
 message Reply___delete__ {

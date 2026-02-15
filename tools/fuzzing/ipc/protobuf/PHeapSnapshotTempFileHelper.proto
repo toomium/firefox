@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/devtools/shared/heapsnapshot/PHeapSnapshotTempFileHelper.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.devtools.PHeapSnapshotTempFileHelper;
@@ -20,7 +20,7 @@ message Msg_OpenHeapSnapshotTempFile {
 }
 
 message Reply_OpenHeapSnapshotTempFile {
-  protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse a_response = 1;
+  required protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse a_response = 1;
 }
 
 message Msg___delete__ {

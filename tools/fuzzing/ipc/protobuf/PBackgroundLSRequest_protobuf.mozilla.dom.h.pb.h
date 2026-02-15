@@ -102,6 +102,13 @@ class LSRequestPreloadDatastoreResponse final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const LSRequestPreloadDatastoreResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -176,7 +183,11 @@ class LSRequestPreloadDatastoreResponse final :
   enum : int {
     kAInvalidatedFieldNumber = 1,
   };
-  // bool a_invalidated = 1;
+  // required bool a_invalidated = 1;
+  bool has_a_invalidated() const;
+  private:
+  bool _internal_has_a_invalidated() const;
+  public:
   void clear_a_invalidated();
   bool a_invalidated() const;
   void set_a_invalidated(bool value);
@@ -193,8 +204,9 @@ class LSRequestPreloadDatastoreResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_invalidated_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_invalidated_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -230,6 +242,13 @@ class LSRequestPrepareDatastoreResponse final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const LSRequestPrepareDatastoreResponse& default_instance() {
@@ -307,7 +326,11 @@ class LSRequestPrepareDatastoreResponse final :
     kADatabaseChildEndpointFieldNumber = 1,
     kAInvalidatedFieldNumber = 2,
   };
-  // bytes a_databaseChildEndpoint = 1;
+  // required bytes a_databaseChildEndpoint = 1;
+  bool has_a_databasechildendpoint() const;
+  private:
+  bool _internal_has_a_databasechildendpoint() const;
+  public:
   void clear_a_databasechildendpoint();
   const std::string& a_databasechildendpoint() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -321,7 +344,11 @@ class LSRequestPrepareDatastoreResponse final :
   std::string* _internal_mutable_a_databasechildendpoint();
   public:
 
-  // bool a_invalidated = 2;
+  // required bool a_invalidated = 2;
+  bool has_a_invalidated() const;
+  private:
+  bool _internal_has_a_invalidated() const;
+  public:
   void clear_a_invalidated();
   bool a_invalidated() const;
   void set_a_invalidated(bool value);
@@ -334,13 +361,17 @@ class LSRequestPrepareDatastoreResponse final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_databasechildendpoint_;
     bool a_invalidated_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -376,6 +407,13 @@ class LSRequestPrepareObserverResponse final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const LSRequestPrepareObserverResponse& default_instance() {
@@ -452,7 +490,11 @@ class LSRequestPrepareObserverResponse final :
   enum : int {
     kAObserverIdFieldNumber = 1,
   };
-  // uint64 a_observerId = 1;
+  // required uint64 a_observerId = 1;
+  bool has_a_observerid() const;
+  private:
+  bool _internal_has_a_observerid() const;
+  public:
   void clear_a_observerid();
   uint64_t a_observerid() const;
   void set_a_observerid(uint64_t value);
@@ -469,8 +511,9 @@ class LSRequestPrepareObserverResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    uint64_t a_observerid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    uint64_t a_observerid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -506,6 +549,13 @@ class LSRequestResponse final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const LSRequestResponse& default_instance() {
@@ -708,9 +758,17 @@ class LSRequestResponse final :
 #endif  // __GNUC__
 // LSRequestPreloadDatastoreResponse
 
-// bool a_invalidated = 1;
+// required bool a_invalidated = 1;
+inline bool LSRequestPreloadDatastoreResponse::_internal_has_a_invalidated() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool LSRequestPreloadDatastoreResponse::has_a_invalidated() const {
+  return _internal_has_a_invalidated();
+}
 inline void LSRequestPreloadDatastoreResponse::clear_a_invalidated() {
   _impl_.a_invalidated_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool LSRequestPreloadDatastoreResponse::_internal_a_invalidated() const {
   return _impl_.a_invalidated_;
@@ -720,7 +778,7 @@ inline bool LSRequestPreloadDatastoreResponse::a_invalidated() const {
   return _internal_a_invalidated();
 }
 inline void LSRequestPreloadDatastoreResponse::_internal_set_a_invalidated(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_invalidated_ = value;
 }
 inline void LSRequestPreloadDatastoreResponse::set_a_invalidated(bool value) {
@@ -732,9 +790,17 @@ inline void LSRequestPreloadDatastoreResponse::set_a_invalidated(bool value) {
 
 // LSRequestPrepareDatastoreResponse
 
-// bytes a_databaseChildEndpoint = 1;
+// required bytes a_databaseChildEndpoint = 1;
+inline bool LSRequestPrepareDatastoreResponse::_internal_has_a_databasechildendpoint() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool LSRequestPrepareDatastoreResponse::has_a_databasechildendpoint() const {
+  return _internal_has_a_databasechildendpoint();
+}
 inline void LSRequestPrepareDatastoreResponse::clear_a_databasechildendpoint() {
   _impl_.a_databasechildendpoint_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& LSRequestPrepareDatastoreResponse::a_databasechildendpoint() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSRequestPrepareDatastoreResponse.a_databaseChildEndpoint)
@@ -743,7 +809,7 @@ inline const std::string& LSRequestPrepareDatastoreResponse::a_databasechildendp
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LSRequestPrepareDatastoreResponse::set_a_databasechildendpoint(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_databasechildendpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSRequestPrepareDatastoreResponse.a_databaseChildEndpoint)
 }
@@ -756,22 +822,32 @@ inline const std::string& LSRequestPrepareDatastoreResponse::_internal_a_databas
   return _impl_.a_databasechildendpoint_.Get();
 }
 inline void LSRequestPrepareDatastoreResponse::_internal_set_a_databasechildendpoint(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_databasechildendpoint_.Set(value, GetArenaForAllocation());
 }
 inline std::string* LSRequestPrepareDatastoreResponse::_internal_mutable_a_databasechildendpoint() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_databasechildendpoint_.Mutable(GetArenaForAllocation());
 }
 inline std::string* LSRequestPrepareDatastoreResponse::release_a_databasechildendpoint() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSRequestPrepareDatastoreResponse.a_databaseChildEndpoint)
-  return _impl_.a_databasechildendpoint_.Release();
+  if (!_internal_has_a_databasechildendpoint()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_databasechildendpoint_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_databasechildendpoint_.IsDefault()) {
+    _impl_.a_databasechildendpoint_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void LSRequestPrepareDatastoreResponse::set_allocated_a_databasechildendpoint(std::string* a_databasechildendpoint) {
   if (a_databasechildendpoint != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_databasechildendpoint_.SetAllocated(a_databasechildendpoint, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -782,9 +858,17 @@ inline void LSRequestPrepareDatastoreResponse::set_allocated_a_databasechildendp
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSRequestPrepareDatastoreResponse.a_databaseChildEndpoint)
 }
 
-// bool a_invalidated = 2;
+// required bool a_invalidated = 2;
+inline bool LSRequestPrepareDatastoreResponse::_internal_has_a_invalidated() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool LSRequestPrepareDatastoreResponse::has_a_invalidated() const {
+  return _internal_has_a_invalidated();
+}
 inline void LSRequestPrepareDatastoreResponse::clear_a_invalidated() {
   _impl_.a_invalidated_ = false;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool LSRequestPrepareDatastoreResponse::_internal_a_invalidated() const {
   return _impl_.a_invalidated_;
@@ -794,7 +878,7 @@ inline bool LSRequestPrepareDatastoreResponse::a_invalidated() const {
   return _internal_a_invalidated();
 }
 inline void LSRequestPrepareDatastoreResponse::_internal_set_a_invalidated(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_invalidated_ = value;
 }
 inline void LSRequestPrepareDatastoreResponse::set_a_invalidated(bool value) {
@@ -806,9 +890,17 @@ inline void LSRequestPrepareDatastoreResponse::set_a_invalidated(bool value) {
 
 // LSRequestPrepareObserverResponse
 
-// uint64 a_observerId = 1;
+// required uint64 a_observerId = 1;
+inline bool LSRequestPrepareObserverResponse::_internal_has_a_observerid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool LSRequestPrepareObserverResponse::has_a_observerid() const {
+  return _internal_has_a_observerid();
+}
 inline void LSRequestPrepareObserverResponse::clear_a_observerid() {
   _impl_.a_observerid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t LSRequestPrepareObserverResponse::_internal_a_observerid() const {
   return _impl_.a_observerid_;
@@ -818,7 +910,7 @@ inline uint64_t LSRequestPrepareObserverResponse::a_observerid() const {
   return _internal_a_observerid();
 }
 inline void LSRequestPrepareObserverResponse::_internal_set_a_observerid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_observerid_ = value;
 }
 inline void LSRequestPrepareObserverResponse::set_a_observerid(uint64_t value) {

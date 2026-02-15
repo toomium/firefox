@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/fetch/PFetch.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.PFetch;
@@ -23,19 +23,19 @@ import "PerformanceTimingTypes.proto";
 
 // Message declarations
 message Msg_FetchOp {
-  protobuf.mozilla.dom.FetchOpArgs a_aArgs = 1;
+  required protobuf.mozilla.dom.FetchOpArgs a_aArgs = 1;
 }
 
 message Msg_AbortFetchOp {
-  bool a_aForceAbort = 1;
+  required bool a_aForceAbort = 1;
 }
 
 message Msg_OnResponseAvailableInternal {
-  protobuf.mozilla.dom.ParentToChildInternalResponse a_aResponse = 1;
+  required protobuf.mozilla.dom.ParentToChildInternalResponse a_aResponse = 1;
 }
 
 message Msg_OnResponseEnd {
-  protobuf.mozilla.dom.ResponseEndArgs a_aResponseEndArgs = 1;
+  required protobuf.mozilla.dom.ResponseEndArgs a_aResponseEndArgs = 1;
 }
 
 message Msg_OnDataAvailable {
@@ -46,19 +46,19 @@ message Msg_OnFlushConsoleReport {
 }
 
 message Msg_OnCSPViolationEvent {
-  string a_aJSON = 1;
+  required string a_aJSON = 1;
 }
 
 message Msg_OnReportPerformanceTiming {
-  protobuf.mozilla.dom.ResponseTiming a_aTiming = 1;
+  required protobuf.mozilla.dom.ResponseTiming a_aTiming = 1;
 }
 
 message Msg_OnNotifyNetworkMonitorAlternateStack {
-  uint64 a_aChannelID = 1;
+  required uint64 a_aChannelID = 1;
 }
 
 message Msg___delete__ {
-  bytes a_aResult = 1;
+  required bytes a_aResult = 1;
 }
 
 message Reply___delete__ {

@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/indexedDB/PBackgroundIDBRequest.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest;
@@ -18,18 +18,18 @@ import "PBackgroundIDBSharedTypes.proto";
 
 // Message declarations
 message Msg_Continue {
-  protobuf.mozilla.dom.indexedDB.PreprocessResponse a_response = 1;
+  required protobuf.mozilla.dom.indexedDB.PreprocessResponse a_response = 1;
 }
 
 message Msg___delete__ {
-  protobuf.mozilla.dom.indexedDB.RequestResponse a_response = 1;
+  required protobuf.mozilla.dom.indexedDB.RequestResponse a_response = 1;
 }
 
 message Reply___delete__ {
 }
 
 message Msg_Preprocess {
-  protobuf.mozilla.dom.indexedDB.PreprocessParams a_params = 1;
+  required protobuf.mozilla.dom.indexedDB.PreprocessParams a_params = 1;
 }
 
 // Parameter mappings stats:

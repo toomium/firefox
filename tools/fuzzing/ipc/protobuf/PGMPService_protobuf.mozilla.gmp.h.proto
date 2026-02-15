@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/media/gmp/PGMPService.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.gmp;
@@ -14,11 +14,11 @@ import "GMPTypes.proto";
 
 // Structs and unions declarations
 message GMPLaunchResult {
-  uint32 a_pluginId = 1;
-  bytes a_pluginType = 2;
-  bytes a_pid = 3;
-  string a_displayName = 4;
-  bytes a_endpoint = 5;
-  bytes a_result = 6;
-  string a_errorDescription = 7;
+  required uint32 a_pluginId = 1;
+  required bytes a_pluginType = 2;
+  required bytes a_pid = 3;
+  required string a_displayName = 4;
+  required bytes a_endpoint = 5;
+  required bytes a_result = 6;
+  required string a_errorDescription = 7;
 }

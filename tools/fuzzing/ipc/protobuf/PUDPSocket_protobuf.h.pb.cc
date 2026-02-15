@@ -20,9 +20,10 @@ namespace _pbi = _pb::internal;
 namespace protobuf {
 PROTOBUF_CONSTEXPR UDPAddressInfo::UDPAddressInfo(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_addr_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_port_)*/0u
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_addr_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_port_)*/0u} {}
 struct UDPAddressInfoDefaultTypeInternal {
   PROTOBUF_CONSTEXPR UDPAddressInfoDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -49,7 +50,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 PROTOBUF_CONSTEXPR UDPData_a_type_mVArrayOfuint8_t::UDPData_a_type_mVArrayOfuint8_t(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.a_mvarrayofuint8_t_)*/{}
-  , /*decltype(_impl_._a_mvarrayofuint8_t_cached_byte_size_)*/{0}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct UDPData_a_type_mVArrayOfuint8_tDefaultTypeInternal {
   PROTOBUF_CONSTEXPR UDPData_a_type_mVArrayOfuint8_tDefaultTypeInternal()
@@ -81,6 +81,16 @@ namespace protobuf {
 
 class UDPAddressInfo::_Internal {
  public:
+  using HasBits = decltype(std::declval<UDPAddressInfo>()._impl_._has_bits_);
+  static void set_has_a_addr(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_port(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 UDPAddressInfo::UDPAddressInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -93,16 +103,17 @@ UDPAddressInfo::UDPAddressInfo(const UDPAddressInfo& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   UDPAddressInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_addr_){}
-    , decltype(_impl_.a_port_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_addr_){}
+    , decltype(_impl_.a_port_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_addr_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_addr_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_addr().empty()) {
+  if (from._internal_has_a_addr()) {
     _this->_impl_.a_addr_.Set(from._internal_a_addr(), 
       _this->GetArenaForAllocation());
   }
@@ -115,9 +126,10 @@ inline void UDPAddressInfo::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_addr_){}
-    , decltype(_impl_.a_port_){0u}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_addr_){}
+    , decltype(_impl_.a_port_){0u}
   };
   _impl_.a_addr_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -149,30 +161,35 @@ void UDPAddressInfo::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_addr_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_addr_.ClearNonDefaultToEmpty();
+  }
   _impl_.a_port_ = 0u;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* UDPAddressInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string a_addr = 1;
+      // required string a_addr = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_addr();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // uint32 a_port = 2;
+      // required uint32 a_port = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_a_port(&has_bits);
           _impl_.a_port_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
@@ -194,6 +211,7 @@ const char* UDPAddressInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -207,18 +225,15 @@ uint8_t* UDPAddressInfo::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string a_addr = 1;
-  if (!this->_internal_a_addr().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_addr().data(), static_cast<int>(this->_internal_a_addr().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.UDPAddressInfo.a_addr");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_addr = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_addr(), target);
   }
 
-  // uint32 a_port = 2;
-  if (this->_internal_a_port() != 0) {
+  // required uint32 a_port = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_port(), target);
   }
@@ -231,25 +246,43 @@ uint8_t* UDPAddressInfo::_InternalSerialize(
   return target;
 }
 
-size_t UDPAddressInfo::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.UDPAddressInfo)
+size_t UDPAddressInfo::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.UDPAddressInfo)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string a_addr = 1;
-  if (!this->_internal_a_addr().empty()) {
+  if (_internal_has_a_addr()) {
+    // required string a_addr = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_addr());
   }
 
-  // uint32 a_port = 2;
-  if (this->_internal_a_port() != 0) {
+  if (_internal_has_a_port()) {
+    // required uint32 a_port = 2;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_port());
   }
+
+  return total_size;
+}
+size_t UDPAddressInfo::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.UDPAddressInfo)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required string a_addr = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_addr());
+
+    // required uint32 a_port = 2;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_port());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -272,11 +305,15 @@ void UDPAddressInfo::MergeFrom(const UDPAddressInfo& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_addr().empty()) {
-    _this->_internal_set_a_addr(from._internal_a_addr());
-  }
-  if (from._internal_a_port() != 0) {
-    _this->_internal_set_a_port(from._internal_a_port());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_addr(from._internal_a_addr());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_port_ = from._impl_.a_port_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -289,6 +326,7 @@ void UDPAddressInfo::CopyFrom(const UDPAddressInfo& from) {
 }
 
 bool UDPAddressInfo::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -297,6 +335,7 @@ void UDPAddressInfo::InternalSwap(UDPAddressInfo* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_addr_, lhs_arena,
       &other->_impl_.a_addr_, rhs_arena
@@ -483,19 +522,20 @@ uint8_t* UDPSocketAddr::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.UDPAddressInfo a_mVUDPAddressInfo = 1;
-  if (_internal_has_a_mvudpaddressinfo()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::a_mvudpaddressinfo(this),
-        _Internal::a_mvudpaddressinfo(this).GetCachedSize(), target, stream);
+  switch (content_case()) {
+    case kAMVUDPAddressInfo: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(1, _Internal::a_mvudpaddressinfo(this),
+          _Internal::a_mvudpaddressinfo(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVNetAddr: {
+      target = stream->WriteBytesMaybeAliased(
+          2, this->_internal_a_mvnetaddr(), target);
+      break;
+    }
+    default: ;
   }
-
-  // bytes a_mVNetAddr = 2;
-  if (_internal_has_a_mvnetaddr()) {
-    target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_a_mvnetaddr(), target);
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
@@ -577,6 +617,20 @@ void UDPSocketAddr::CopyFrom(const UDPSocketAddr& from) {
 }
 
 bool UDPSocketAddr::IsInitialized() const {
+  switch (content_case()) {
+    case kAMVUDPAddressInfo: {
+      if (_internal_has_a_mvudpaddressinfo()) {
+        if (!_impl_.content_.a_mvudpaddressinfo_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case kAMVNetAddr: {
+      break;
+    }
+    case CONTENT_NOT_SET: {
+      break;
+    }
+  }
   return true;
 }
 
@@ -609,7 +663,6 @@ UDPData_a_type_mVArrayOfuint8_t::UDPData_a_type_mVArrayOfuint8_t(const UDPData_a
   UDPData_a_type_mVArrayOfuint8_t* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_mvarrayofuint8_t_){from._impl_.a_mvarrayofuint8_t_}
-    , /*decltype(_impl_._a_mvarrayofuint8_t_cached_byte_size_)*/{0}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -622,7 +675,6 @@ inline void UDPData_a_type_mVArrayOfuint8_t::SharedCtor(
   (void)is_message_owned;
   new (&_impl_) Impl_{
       decltype(_impl_.a_mvarrayofuint8_t_){arena}
-    , /*decltype(_impl_._a_mvarrayofuint8_t_cached_byte_size_)*/{0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -663,11 +715,16 @@ const char* UDPData_a_type_mVArrayOfuint8_t::_InternalParse(const char* ptr, ::_
     switch (tag >> 3) {
       // repeated uint32 a_mVArrayOfuint8_t = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            _internal_add_a_mvarrayofuint8_t(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 10) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_mvarrayofuint8_t(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 8) {
-          _internal_add_a_mvarrayofuint8_t(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -702,12 +759,9 @@ uint8_t* UDPData_a_type_mVArrayOfuint8_t::_InternalSerialize(
   (void) cached_has_bits;
 
   // repeated uint32 a_mVArrayOfuint8_t = 1;
-  {
-    int byte_size = _impl_._a_mvarrayofuint8_t_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteUInt32Packed(
-          1, _internal_a_mvarrayofuint8_t(), byte_size, target);
-    }
+  for (int i = 0, n = this->_internal_a_mvarrayofuint8_t_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_mvarrayofuint8_t(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -730,13 +784,8 @@ size_t UDPData_a_type_mVArrayOfuint8_t::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_mvarrayofuint8_t_);
-    if (data_size > 0) {
-      total_size += 1 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
-    int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._a_mvarrayofuint8_t_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
+    total_size += 1 *
+                  ::_pbi::FromIntSize(this->_internal_a_mvarrayofuint8_t_size());
     total_size += data_size;
   }
 
@@ -992,20 +1041,21 @@ uint8_t* UDPData::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.UDPData.a_type_mVArrayOfuint8_t a_mVArrayOfuint8_t = 1;
-  if (_internal_has_a_mvarrayofuint8_t()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::a_mvarrayofuint8_t(this),
-        _Internal::a_mvarrayofuint8_t(this).GetCachedSize(), target, stream);
+  switch (content_case()) {
+    case kAMVArrayOfuint8T: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(1, _Internal::a_mvarrayofuint8_t(this),
+          _Internal::a_mvarrayofuint8_t(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVIPCStream: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(2, _Internal::a_mvipcstream(this),
+          _Internal::a_mvipcstream(this).GetCachedSize(), target, stream);
+      break;
+    }
+    default: ;
   }
-
-  // .protobuf.mozilla.ipc.IPCStream a_mVIPCStream = 2;
-  if (_internal_has_a_mvipcstream()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::a_mvipcstream(this),
-        _Internal::a_mvipcstream(this).GetCachedSize(), target, stream);
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
@@ -1088,6 +1138,20 @@ void UDPData::CopyFrom(const UDPData& from) {
 }
 
 bool UDPData::IsInitialized() const {
+  switch (content_case()) {
+    case kAMVArrayOfuint8T: {
+      break;
+    }
+    case kAMVIPCStream: {
+      if (_internal_has_a_mvipcstream()) {
+        if (!_impl_.content_.a_mvipcstream_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case CONTENT_NOT_SET: {
+      break;
+    }
+  }
   return true;
 }
 

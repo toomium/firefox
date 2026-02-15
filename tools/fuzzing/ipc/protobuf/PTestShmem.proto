@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/ipc/ipdl/test/gtest/PTestShmem.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla._ipdltest.PTestShmem;
@@ -14,15 +14,15 @@ package protobuf.mozilla._ipdltest.PTestShmem;
 
 // Message declarations
 message Msg_Give {
-  bytes a_mem = 1;
-  bytes a_unsafe = 2;
-  uint32 a_expectedSize = 3;
+  required bytes a_mem = 1;
+  required bytes a_unsafe = 2;
+  required uint32 a_expectedSize = 3;
 }
 
 message Msg_Take {
-  bytes a_mem = 1;
-  bytes a_unsafe = 2;
-  uint32 a_expectedSize = 3;
+  required bytes a_mem = 1;
+  required bytes a_unsafe = 2;
+  required uint32 a_expectedSize = 3;
 }
 
 message Msg___delete__ {

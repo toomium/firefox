@@ -165,6 +165,13 @@ class Msg_ReceiveMultiTouchInputEvent final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_ReceiveMultiTouchInputEvent& default_instance() {
     return *internal_default_instance();
   }
@@ -240,7 +247,11 @@ class Msg_ReceiveMultiTouchInputEvent final :
     kAAEventFieldNumber = 1,
     kAAWantsCallbackFieldNumber = 2,
   };
-  // bytes a_aEvent = 1;
+  // required bytes a_aEvent = 1;
+  bool has_a_aevent() const;
+  private:
+  bool _internal_has_a_aevent() const;
+  public:
   void clear_a_aevent();
   const std::string& a_aevent() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -254,7 +265,11 @@ class Msg_ReceiveMultiTouchInputEvent final :
   std::string* _internal_mutable_a_aevent();
   public:
 
-  // bool a_aWantsCallback = 2;
+  // required bool a_aWantsCallback = 2;
+  bool has_a_awantscallback() const;
+  private:
+  bool _internal_has_a_awantscallback() const;
+  public:
   void clear_a_awantscallback();
   bool a_awantscallback() const;
   void set_a_awantscallback(bool value);
@@ -267,13 +282,17 @@ class Msg_ReceiveMultiTouchInputEvent final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aevent_;
     bool a_awantscallback_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZInputBridge_2eproto;
@@ -309,6 +328,13 @@ class Reply_ReceiveMultiTouchInputEvent final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_ReceiveMultiTouchInputEvent& default_instance() {
@@ -386,7 +412,11 @@ class Reply_ReceiveMultiTouchInputEvent final :
     kAAOutResultFieldNumber = 1,
     kAAOutEventFieldNumber = 2,
   };
-  // bytes a_aOutResult = 1;
+  // required bytes a_aOutResult = 1;
+  bool has_a_aoutresult() const;
+  private:
+  bool _internal_has_a_aoutresult() const;
+  public:
   void clear_a_aoutresult();
   const std::string& a_aoutresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -400,7 +430,11 @@ class Reply_ReceiveMultiTouchInputEvent final :
   std::string* _internal_mutable_a_aoutresult();
   public:
 
-  // bytes a_aOutEvent = 2;
+  // required bytes a_aOutEvent = 2;
+  bool has_a_aoutevent() const;
+  private:
+  bool _internal_has_a_aoutevent() const;
+  public:
   void clear_a_aoutevent();
   const std::string& a_aoutevent() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -418,13 +452,17 @@ class Reply_ReceiveMultiTouchInputEvent final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aoutresult_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aoutevent_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZInputBridge_2eproto;
@@ -460,6 +498,13 @@ class Msg_ReceiveMouseInputEvent final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_ReceiveMouseInputEvent& default_instance() {
@@ -537,7 +582,11 @@ class Msg_ReceiveMouseInputEvent final :
     kAAEventFieldNumber = 1,
     kAAWantsCallbackFieldNumber = 2,
   };
-  // bytes a_aEvent = 1;
+  // required bytes a_aEvent = 1;
+  bool has_a_aevent() const;
+  private:
+  bool _internal_has_a_aevent() const;
+  public:
   void clear_a_aevent();
   const std::string& a_aevent() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -551,7 +600,11 @@ class Msg_ReceiveMouseInputEvent final :
   std::string* _internal_mutable_a_aevent();
   public:
 
-  // bool a_aWantsCallback = 2;
+  // required bool a_aWantsCallback = 2;
+  bool has_a_awantscallback() const;
+  private:
+  bool _internal_has_a_awantscallback() const;
+  public:
   void clear_a_awantscallback();
   bool a_awantscallback() const;
   void set_a_awantscallback(bool value);
@@ -564,13 +617,17 @@ class Msg_ReceiveMouseInputEvent final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aevent_;
     bool a_awantscallback_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZInputBridge_2eproto;
@@ -606,6 +663,13 @@ class Reply_ReceiveMouseInputEvent final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_ReceiveMouseInputEvent& default_instance() {
@@ -683,7 +747,11 @@ class Reply_ReceiveMouseInputEvent final :
     kAAOutResultFieldNumber = 1,
     kAAOutEventFieldNumber = 2,
   };
-  // bytes a_aOutResult = 1;
+  // required bytes a_aOutResult = 1;
+  bool has_a_aoutresult() const;
+  private:
+  bool _internal_has_a_aoutresult() const;
+  public:
   void clear_a_aoutresult();
   const std::string& a_aoutresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -697,7 +765,11 @@ class Reply_ReceiveMouseInputEvent final :
   std::string* _internal_mutable_a_aoutresult();
   public:
 
-  // bytes a_aOutEvent = 2;
+  // required bytes a_aOutEvent = 2;
+  bool has_a_aoutevent() const;
+  private:
+  bool _internal_has_a_aoutevent() const;
+  public:
   void clear_a_aoutevent();
   const std::string& a_aoutevent() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -715,13 +787,17 @@ class Reply_ReceiveMouseInputEvent final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aoutresult_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aoutevent_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZInputBridge_2eproto;
@@ -757,6 +833,13 @@ class Msg_ReceivePanGestureInputEvent final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_ReceivePanGestureInputEvent& default_instance() {
@@ -834,7 +917,11 @@ class Msg_ReceivePanGestureInputEvent final :
     kAAEventFieldNumber = 1,
     kAAWantsCallbackFieldNumber = 2,
   };
-  // bytes a_aEvent = 1;
+  // required bytes a_aEvent = 1;
+  bool has_a_aevent() const;
+  private:
+  bool _internal_has_a_aevent() const;
+  public:
   void clear_a_aevent();
   const std::string& a_aevent() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -848,7 +935,11 @@ class Msg_ReceivePanGestureInputEvent final :
   std::string* _internal_mutable_a_aevent();
   public:
 
-  // bool a_aWantsCallback = 2;
+  // required bool a_aWantsCallback = 2;
+  bool has_a_awantscallback() const;
+  private:
+  bool _internal_has_a_awantscallback() const;
+  public:
   void clear_a_awantscallback();
   bool a_awantscallback() const;
   void set_a_awantscallback(bool value);
@@ -861,13 +952,17 @@ class Msg_ReceivePanGestureInputEvent final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aevent_;
     bool a_awantscallback_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZInputBridge_2eproto;
@@ -903,6 +998,13 @@ class Reply_ReceivePanGestureInputEvent final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_ReceivePanGestureInputEvent& default_instance() {
@@ -980,7 +1082,11 @@ class Reply_ReceivePanGestureInputEvent final :
     kAAOutResultFieldNumber = 1,
     kAAOutEventFieldNumber = 2,
   };
-  // bytes a_aOutResult = 1;
+  // required bytes a_aOutResult = 1;
+  bool has_a_aoutresult() const;
+  private:
+  bool _internal_has_a_aoutresult() const;
+  public:
   void clear_a_aoutresult();
   const std::string& a_aoutresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -994,7 +1100,11 @@ class Reply_ReceivePanGestureInputEvent final :
   std::string* _internal_mutable_a_aoutresult();
   public:
 
-  // bytes a_aOutEvent = 2;
+  // required bytes a_aOutEvent = 2;
+  bool has_a_aoutevent() const;
+  private:
+  bool _internal_has_a_aoutevent() const;
+  public:
   void clear_a_aoutevent();
   const std::string& a_aoutevent() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1012,13 +1122,17 @@ class Reply_ReceivePanGestureInputEvent final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aoutresult_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aoutevent_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZInputBridge_2eproto;
@@ -1054,6 +1168,13 @@ class Msg_ReceivePinchGestureInputEvent final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_ReceivePinchGestureInputEvent& default_instance() {
@@ -1131,7 +1252,11 @@ class Msg_ReceivePinchGestureInputEvent final :
     kAAEventFieldNumber = 1,
     kAAWantsCallbackFieldNumber = 2,
   };
-  // bytes a_aEvent = 1;
+  // required bytes a_aEvent = 1;
+  bool has_a_aevent() const;
+  private:
+  bool _internal_has_a_aevent() const;
+  public:
   void clear_a_aevent();
   const std::string& a_aevent() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1145,7 +1270,11 @@ class Msg_ReceivePinchGestureInputEvent final :
   std::string* _internal_mutable_a_aevent();
   public:
 
-  // bool a_aWantsCallback = 2;
+  // required bool a_aWantsCallback = 2;
+  bool has_a_awantscallback() const;
+  private:
+  bool _internal_has_a_awantscallback() const;
+  public:
   void clear_a_awantscallback();
   bool a_awantscallback() const;
   void set_a_awantscallback(bool value);
@@ -1158,13 +1287,17 @@ class Msg_ReceivePinchGestureInputEvent final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aevent_;
     bool a_awantscallback_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZInputBridge_2eproto;
@@ -1200,6 +1333,13 @@ class Reply_ReceivePinchGestureInputEvent final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_ReceivePinchGestureInputEvent& default_instance() {
@@ -1277,7 +1417,11 @@ class Reply_ReceivePinchGestureInputEvent final :
     kAAOutResultFieldNumber = 1,
     kAAOutEventFieldNumber = 2,
   };
-  // bytes a_aOutResult = 1;
+  // required bytes a_aOutResult = 1;
+  bool has_a_aoutresult() const;
+  private:
+  bool _internal_has_a_aoutresult() const;
+  public:
   void clear_a_aoutresult();
   const std::string& a_aoutresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1291,7 +1435,11 @@ class Reply_ReceivePinchGestureInputEvent final :
   std::string* _internal_mutable_a_aoutresult();
   public:
 
-  // bytes a_aOutEvent = 2;
+  // required bytes a_aOutEvent = 2;
+  bool has_a_aoutevent() const;
+  private:
+  bool _internal_has_a_aoutevent() const;
+  public:
   void clear_a_aoutevent();
   const std::string& a_aoutevent() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1309,13 +1457,17 @@ class Reply_ReceivePinchGestureInputEvent final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aoutresult_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aoutevent_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZInputBridge_2eproto;
@@ -1351,6 +1503,13 @@ class Msg_ReceiveTapGestureInputEvent final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_ReceiveTapGestureInputEvent& default_instance() {
@@ -1428,7 +1587,11 @@ class Msg_ReceiveTapGestureInputEvent final :
     kAAEventFieldNumber = 1,
     kAAWantsCallbackFieldNumber = 2,
   };
-  // bytes a_aEvent = 1;
+  // required bytes a_aEvent = 1;
+  bool has_a_aevent() const;
+  private:
+  bool _internal_has_a_aevent() const;
+  public:
   void clear_a_aevent();
   const std::string& a_aevent() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1442,7 +1605,11 @@ class Msg_ReceiveTapGestureInputEvent final :
   std::string* _internal_mutable_a_aevent();
   public:
 
-  // bool a_aWantsCallback = 2;
+  // required bool a_aWantsCallback = 2;
+  bool has_a_awantscallback() const;
+  private:
+  bool _internal_has_a_awantscallback() const;
+  public:
   void clear_a_awantscallback();
   bool a_awantscallback() const;
   void set_a_awantscallback(bool value);
@@ -1455,13 +1622,17 @@ class Msg_ReceiveTapGestureInputEvent final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aevent_;
     bool a_awantscallback_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZInputBridge_2eproto;
@@ -1497,6 +1668,13 @@ class Reply_ReceiveTapGestureInputEvent final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_ReceiveTapGestureInputEvent& default_instance() {
@@ -1574,7 +1752,11 @@ class Reply_ReceiveTapGestureInputEvent final :
     kAAOutResultFieldNumber = 1,
     kAAOutEventFieldNumber = 2,
   };
-  // bytes a_aOutResult = 1;
+  // required bytes a_aOutResult = 1;
+  bool has_a_aoutresult() const;
+  private:
+  bool _internal_has_a_aoutresult() const;
+  public:
   void clear_a_aoutresult();
   const std::string& a_aoutresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1588,7 +1770,11 @@ class Reply_ReceiveTapGestureInputEvent final :
   std::string* _internal_mutable_a_aoutresult();
   public:
 
-  // bytes a_aOutEvent = 2;
+  // required bytes a_aOutEvent = 2;
+  bool has_a_aoutevent() const;
+  private:
+  bool _internal_has_a_aoutevent() const;
+  public:
   void clear_a_aoutevent();
   const std::string& a_aoutevent() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1606,13 +1792,17 @@ class Reply_ReceiveTapGestureInputEvent final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aoutresult_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aoutevent_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZInputBridge_2eproto;
@@ -1648,6 +1838,13 @@ class Msg_ReceiveScrollWheelInputEvent final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_ReceiveScrollWheelInputEvent& default_instance() {
@@ -1725,7 +1922,11 @@ class Msg_ReceiveScrollWheelInputEvent final :
     kAAEventFieldNumber = 1,
     kAAWantsCallbackFieldNumber = 2,
   };
-  // bytes a_aEvent = 1;
+  // required bytes a_aEvent = 1;
+  bool has_a_aevent() const;
+  private:
+  bool _internal_has_a_aevent() const;
+  public:
   void clear_a_aevent();
   const std::string& a_aevent() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1739,7 +1940,11 @@ class Msg_ReceiveScrollWheelInputEvent final :
   std::string* _internal_mutable_a_aevent();
   public:
 
-  // bool a_aWantsCallback = 2;
+  // required bool a_aWantsCallback = 2;
+  bool has_a_awantscallback() const;
+  private:
+  bool _internal_has_a_awantscallback() const;
+  public:
   void clear_a_awantscallback();
   bool a_awantscallback() const;
   void set_a_awantscallback(bool value);
@@ -1752,13 +1957,17 @@ class Msg_ReceiveScrollWheelInputEvent final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aevent_;
     bool a_awantscallback_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZInputBridge_2eproto;
@@ -1794,6 +2003,13 @@ class Reply_ReceiveScrollWheelInputEvent final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_ReceiveScrollWheelInputEvent& default_instance() {
@@ -1871,7 +2087,11 @@ class Reply_ReceiveScrollWheelInputEvent final :
     kAAOutResultFieldNumber = 1,
     kAAOutEventFieldNumber = 2,
   };
-  // bytes a_aOutResult = 1;
+  // required bytes a_aOutResult = 1;
+  bool has_a_aoutresult() const;
+  private:
+  bool _internal_has_a_aoutresult() const;
+  public:
   void clear_a_aoutresult();
   const std::string& a_aoutresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1885,7 +2105,11 @@ class Reply_ReceiveScrollWheelInputEvent final :
   std::string* _internal_mutable_a_aoutresult();
   public:
 
-  // bytes a_aOutEvent = 2;
+  // required bytes a_aOutEvent = 2;
+  bool has_a_aoutevent() const;
+  private:
+  bool _internal_has_a_aoutevent() const;
+  public:
   void clear_a_aoutevent();
   const std::string& a_aoutevent() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1903,13 +2127,17 @@ class Reply_ReceiveScrollWheelInputEvent final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aoutresult_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aoutevent_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZInputBridge_2eproto;
@@ -1945,6 +2173,13 @@ class Msg_ReceiveKeyboardInputEvent final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_ReceiveKeyboardInputEvent& default_instance() {
@@ -2022,7 +2257,11 @@ class Msg_ReceiveKeyboardInputEvent final :
     kAAEventFieldNumber = 1,
     kAAWantsCallbackFieldNumber = 2,
   };
-  // bytes a_aEvent = 1;
+  // required bytes a_aEvent = 1;
+  bool has_a_aevent() const;
+  private:
+  bool _internal_has_a_aevent() const;
+  public:
   void clear_a_aevent();
   const std::string& a_aevent() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2036,7 +2275,11 @@ class Msg_ReceiveKeyboardInputEvent final :
   std::string* _internal_mutable_a_aevent();
   public:
 
-  // bool a_aWantsCallback = 2;
+  // required bool a_aWantsCallback = 2;
+  bool has_a_awantscallback() const;
+  private:
+  bool _internal_has_a_awantscallback() const;
+  public:
   void clear_a_awantscallback();
   bool a_awantscallback() const;
   void set_a_awantscallback(bool value);
@@ -2049,13 +2292,17 @@ class Msg_ReceiveKeyboardInputEvent final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aevent_;
     bool a_awantscallback_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZInputBridge_2eproto;
@@ -2091,6 +2338,13 @@ class Reply_ReceiveKeyboardInputEvent final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_ReceiveKeyboardInputEvent& default_instance() {
@@ -2168,7 +2422,11 @@ class Reply_ReceiveKeyboardInputEvent final :
     kAAOutResultFieldNumber = 1,
     kAAOutEventFieldNumber = 2,
   };
-  // bytes a_aOutResult = 1;
+  // required bytes a_aOutResult = 1;
+  bool has_a_aoutresult() const;
+  private:
+  bool _internal_has_a_aoutresult() const;
+  public:
   void clear_a_aoutresult();
   const std::string& a_aoutresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2182,7 +2440,11 @@ class Reply_ReceiveKeyboardInputEvent final :
   std::string* _internal_mutable_a_aoutresult();
   public:
 
-  // bytes a_aOutEvent = 2;
+  // required bytes a_aOutEvent = 2;
+  bool has_a_aoutevent() const;
+  private:
+  bool _internal_has_a_aoutevent() const;
+  public:
   void clear_a_aoutevent();
   const std::string& a_aoutevent() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2200,13 +2462,17 @@ class Reply_ReceiveKeyboardInputEvent final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aoutresult_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aoutevent_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZInputBridge_2eproto;
@@ -2242,6 +2508,13 @@ class Msg_UpdateWheelTransaction final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_UpdateWheelTransaction& default_instance() {
@@ -2320,7 +2593,11 @@ class Msg_UpdateWheelTransaction final :
     kAAEventMessageFieldNumber = 2,
     kAATargetGuidFieldNumber = 3,
   };
-  // bytes a_aRefPoint = 1;
+  // required bytes a_aRefPoint = 1;
+  bool has_a_arefpoint() const;
+  private:
+  bool _internal_has_a_arefpoint() const;
+  public:
   void clear_a_arefpoint();
   const std::string& a_arefpoint() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2334,7 +2611,11 @@ class Msg_UpdateWheelTransaction final :
   std::string* _internal_mutable_a_arefpoint();
   public:
 
-  // bytes a_aEventMessage = 2;
+  // required bytes a_aEventMessage = 2;
+  bool has_a_aeventmessage() const;
+  private:
+  bool _internal_has_a_aeventmessage() const;
+  public:
   void clear_a_aeventmessage();
   const std::string& a_aeventmessage() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2369,6 +2650,9 @@ class Msg_UpdateWheelTransaction final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PAPZInputBridge.Msg_UpdateWheelTransaction)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2414,6 +2698,13 @@ class Msg_ProcessUnhandledEvent final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_ProcessUnhandledEvent& default_instance() {
@@ -2490,7 +2781,11 @@ class Msg_ProcessUnhandledEvent final :
   enum : int {
     kAARefPointFieldNumber = 1,
   };
-  // bytes a_aRefPoint = 1;
+  // required bytes a_aRefPoint = 1;
+  bool has_a_arefpoint() const;
+  private:
+  bool _internal_has_a_arefpoint() const;
+  public:
   void clear_a_arefpoint();
   const std::string& a_arefpoint() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2512,8 +2807,9 @@ class Msg_ProcessUnhandledEvent final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_arefpoint_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_arefpoint_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZInputBridge_2eproto;
@@ -2549,6 +2845,13 @@ class Reply_ProcessUnhandledEvent final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_ProcessUnhandledEvent& default_instance() {
@@ -2628,7 +2931,11 @@ class Reply_ProcessUnhandledEvent final :
     kAAOutLayersIdFieldNumber = 4,
     kAAOutFocusSequenceNumberFieldNumber = 3,
   };
-  // bytes a_aOutRefPoint = 1;
+  // required bytes a_aOutRefPoint = 1;
+  bool has_a_aoutrefpoint() const;
+  private:
+  bool _internal_has_a_aoutrefpoint() const;
+  public:
   void clear_a_aoutrefpoint();
   const std::string& a_aoutrefpoint() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2642,7 +2949,11 @@ class Reply_ProcessUnhandledEvent final :
   std::string* _internal_mutable_a_aoutrefpoint();
   public:
 
-  // bytes a_aOutTargetGuid = 2;
+  // required bytes a_aOutTargetGuid = 2;
+  bool has_a_aouttargetguid() const;
+  private:
+  bool _internal_has_a_aouttargetguid() const;
+  public:
   void clear_a_aouttargetguid();
   const std::string& a_aouttargetguid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2656,7 +2967,11 @@ class Reply_ProcessUnhandledEvent final :
   std::string* _internal_mutable_a_aouttargetguid();
   public:
 
-  // bytes a_aOutLayersId = 4;
+  // required bytes a_aOutLayersId = 4;
+  bool has_a_aoutlayersid() const;
+  private:
+  bool _internal_has_a_aoutlayersid() const;
+  public:
   void clear_a_aoutlayersid();
   const std::string& a_aoutlayersid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2670,7 +2985,11 @@ class Reply_ProcessUnhandledEvent final :
   std::string* _internal_mutable_a_aoutlayersid();
   public:
 
-  // uint64 a_aOutFocusSequenceNumber = 3;
+  // required uint64 a_aOutFocusSequenceNumber = 3;
+  bool has_a_aoutfocussequencenumber() const;
+  private:
+  bool _internal_has_a_aoutfocussequencenumber() const;
+  public:
   void clear_a_aoutfocussequencenumber();
   uint64_t a_aoutfocussequencenumber() const;
   void set_a_aoutfocussequencenumber(uint64_t value);
@@ -2683,15 +3002,19 @@ class Reply_ProcessUnhandledEvent final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aoutrefpoint_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aouttargetguid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aoutlayersid_;
     uint64_t a_aoutfocussequencenumber_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZInputBridge_2eproto;
@@ -2727,6 +3050,13 @@ class Msg_CallInputBlockCallback final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_CallInputBlockCallback& default_instance() {
@@ -2804,7 +3134,11 @@ class Msg_CallInputBlockCallback final :
     kAAHandledResultFieldNumber = 2,
     kAAInputBlockIdFieldNumber = 1,
   };
-  // bytes a_aHandledResult = 2;
+  // required bytes a_aHandledResult = 2;
+  bool has_a_ahandledresult() const;
+  private:
+  bool _internal_has_a_ahandledresult() const;
+  public:
   void clear_a_ahandledresult();
   const std::string& a_ahandledresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2818,7 +3152,11 @@ class Msg_CallInputBlockCallback final :
   std::string* _internal_mutable_a_ahandledresult();
   public:
 
-  // uint64 a_aInputBlockId = 1;
+  // required uint64 a_aInputBlockId = 1;
+  bool has_a_ainputblockid() const;
+  private:
+  bool _internal_has_a_ainputblockid() const;
+  public:
   void clear_a_ainputblockid();
   uint64_t a_ainputblockid() const;
   void set_a_ainputblockid(uint64_t value);
@@ -2831,13 +3169,17 @@ class Msg_CallInputBlockCallback final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ahandledresult_;
     uint64_t a_ainputblockid_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZInputBridge_2eproto;
@@ -2873,6 +3215,13 @@ class Msg_HandleTap final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_HandleTap& default_instance() {
@@ -2954,7 +3303,11 @@ class Msg_HandleTap final :
     kAADoubleTapToZoomMetricsFieldNumber = 6,
     kAAInputBlockIdFieldNumber = 5,
   };
-  // bytes a_aType = 1;
+  // required bytes a_aType = 1;
+  bool has_a_atype() const;
+  private:
+  bool _internal_has_a_atype() const;
+  public:
   void clear_a_atype();
   const std::string& a_atype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2968,7 +3321,11 @@ class Msg_HandleTap final :
   std::string* _internal_mutable_a_atype();
   public:
 
-  // bytes a_point = 2;
+  // required bytes a_point = 2;
+  bool has_a_point() const;
+  private:
+  bool _internal_has_a_point() const;
+  public:
   void clear_a_point();
   const std::string& a_point() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2982,7 +3339,11 @@ class Msg_HandleTap final :
   std::string* _internal_mutable_a_point();
   public:
 
-  // bytes a_aModifiers = 3;
+  // required bytes a_aModifiers = 3;
+  bool has_a_amodifiers() const;
+  private:
+  bool _internal_has_a_amodifiers() const;
+  public:
   void clear_a_amodifiers();
   const std::string& a_amodifiers() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2996,7 +3357,11 @@ class Msg_HandleTap final :
   std::string* _internal_mutable_a_amodifiers();
   public:
 
-  // bytes a_aGuid = 4;
+  // required bytes a_aGuid = 4;
+  bool has_a_aguid() const;
+  private:
+  bool _internal_has_a_aguid() const;
+  public:
   void clear_a_aguid();
   const std::string& a_aguid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3028,7 +3393,11 @@ class Msg_HandleTap final :
   std::string* _internal_mutable_a_adoubletaptozoommetrics();
   public:
 
-  // uint64 a_aInputBlockId = 5;
+  // required uint64 a_aInputBlockId = 5;
+  bool has_a_ainputblockid() const;
+  private:
+  bool _internal_has_a_ainputblockid() const;
+  public:
   void clear_a_ainputblockid();
   uint64_t a_ainputblockid() const;
   void set_a_ainputblockid(uint64_t value);
@@ -3040,6 +3409,9 @@ class Msg_HandleTap final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PAPZInputBridge.Msg_HandleTap)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3068,9 +3440,17 @@ class Msg_HandleTap final :
 #endif  // __GNUC__
 // Msg_ReceiveMultiTouchInputEvent
 
-// bytes a_aEvent = 1;
+// required bytes a_aEvent = 1;
+inline bool Msg_ReceiveMultiTouchInputEvent::_internal_has_a_aevent() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_ReceiveMultiTouchInputEvent::has_a_aevent() const {
+  return _internal_has_a_aevent();
+}
 inline void Msg_ReceiveMultiTouchInputEvent::clear_a_aevent() {
   _impl_.a_aevent_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_ReceiveMultiTouchInputEvent::a_aevent() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveMultiTouchInputEvent.a_aEvent)
@@ -3079,7 +3459,7 @@ inline const std::string& Msg_ReceiveMultiTouchInputEvent::a_aevent() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ReceiveMultiTouchInputEvent::set_a_aevent(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aevent_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveMultiTouchInputEvent.a_aEvent)
 }
@@ -3092,22 +3472,32 @@ inline const std::string& Msg_ReceiveMultiTouchInputEvent::_internal_a_aevent() 
   return _impl_.a_aevent_.Get();
 }
 inline void Msg_ReceiveMultiTouchInputEvent::_internal_set_a_aevent(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aevent_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_ReceiveMultiTouchInputEvent::_internal_mutable_a_aevent() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aevent_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_ReceiveMultiTouchInputEvent::release_a_aevent() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveMultiTouchInputEvent.a_aEvent)
-  return _impl_.a_aevent_.Release();
+  if (!_internal_has_a_aevent()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aevent_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aevent_.IsDefault()) {
+    _impl_.a_aevent_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_ReceiveMultiTouchInputEvent::set_allocated_a_aevent(std::string* a_aevent) {
   if (a_aevent != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aevent_.SetAllocated(a_aevent, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3118,9 +3508,17 @@ inline void Msg_ReceiveMultiTouchInputEvent::set_allocated_a_aevent(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveMultiTouchInputEvent.a_aEvent)
 }
 
-// bool a_aWantsCallback = 2;
+// required bool a_aWantsCallback = 2;
+inline bool Msg_ReceiveMultiTouchInputEvent::_internal_has_a_awantscallback() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_ReceiveMultiTouchInputEvent::has_a_awantscallback() const {
+  return _internal_has_a_awantscallback();
+}
 inline void Msg_ReceiveMultiTouchInputEvent::clear_a_awantscallback() {
   _impl_.a_awantscallback_ = false;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool Msg_ReceiveMultiTouchInputEvent::_internal_a_awantscallback() const {
   return _impl_.a_awantscallback_;
@@ -3130,7 +3528,7 @@ inline bool Msg_ReceiveMultiTouchInputEvent::a_awantscallback() const {
   return _internal_a_awantscallback();
 }
 inline void Msg_ReceiveMultiTouchInputEvent::_internal_set_a_awantscallback(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_awantscallback_ = value;
 }
 inline void Msg_ReceiveMultiTouchInputEvent::set_a_awantscallback(bool value) {
@@ -3142,9 +3540,17 @@ inline void Msg_ReceiveMultiTouchInputEvent::set_a_awantscallback(bool value) {
 
 // Reply_ReceiveMultiTouchInputEvent
 
-// bytes a_aOutResult = 1;
+// required bytes a_aOutResult = 1;
+inline bool Reply_ReceiveMultiTouchInputEvent::_internal_has_a_aoutresult() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_ReceiveMultiTouchInputEvent::has_a_aoutresult() const {
+  return _internal_has_a_aoutresult();
+}
 inline void Reply_ReceiveMultiTouchInputEvent::clear_a_aoutresult() {
   _impl_.a_aoutresult_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_ReceiveMultiTouchInputEvent::a_aoutresult() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveMultiTouchInputEvent.a_aOutResult)
@@ -3153,7 +3559,7 @@ inline const std::string& Reply_ReceiveMultiTouchInputEvent::a_aoutresult() cons
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_ReceiveMultiTouchInputEvent::set_a_aoutresult(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aoutresult_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveMultiTouchInputEvent.a_aOutResult)
 }
@@ -3166,22 +3572,32 @@ inline const std::string& Reply_ReceiveMultiTouchInputEvent::_internal_a_aoutres
   return _impl_.a_aoutresult_.Get();
 }
 inline void Reply_ReceiveMultiTouchInputEvent::_internal_set_a_aoutresult(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aoutresult_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_ReceiveMultiTouchInputEvent::_internal_mutable_a_aoutresult() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aoutresult_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_ReceiveMultiTouchInputEvent::release_a_aoutresult() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveMultiTouchInputEvent.a_aOutResult)
-  return _impl_.a_aoutresult_.Release();
+  if (!_internal_has_a_aoutresult()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aoutresult_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aoutresult_.IsDefault()) {
+    _impl_.a_aoutresult_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_ReceiveMultiTouchInputEvent::set_allocated_a_aoutresult(std::string* a_aoutresult) {
   if (a_aoutresult != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aoutresult_.SetAllocated(a_aoutresult, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3192,9 +3608,17 @@ inline void Reply_ReceiveMultiTouchInputEvent::set_allocated_a_aoutresult(std::s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveMultiTouchInputEvent.a_aOutResult)
 }
 
-// bytes a_aOutEvent = 2;
+// required bytes a_aOutEvent = 2;
+inline bool Reply_ReceiveMultiTouchInputEvent::_internal_has_a_aoutevent() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Reply_ReceiveMultiTouchInputEvent::has_a_aoutevent() const {
+  return _internal_has_a_aoutevent();
+}
 inline void Reply_ReceiveMultiTouchInputEvent::clear_a_aoutevent() {
   _impl_.a_aoutevent_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Reply_ReceiveMultiTouchInputEvent::a_aoutevent() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveMultiTouchInputEvent.a_aOutEvent)
@@ -3203,7 +3627,7 @@ inline const std::string& Reply_ReceiveMultiTouchInputEvent::a_aoutevent() const
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_ReceiveMultiTouchInputEvent::set_a_aoutevent(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_aoutevent_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveMultiTouchInputEvent.a_aOutEvent)
 }
@@ -3216,22 +3640,32 @@ inline const std::string& Reply_ReceiveMultiTouchInputEvent::_internal_a_aouteve
   return _impl_.a_aoutevent_.Get();
 }
 inline void Reply_ReceiveMultiTouchInputEvent::_internal_set_a_aoutevent(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aoutevent_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_ReceiveMultiTouchInputEvent::_internal_mutable_a_aoutevent() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_aoutevent_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_ReceiveMultiTouchInputEvent::release_a_aoutevent() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveMultiTouchInputEvent.a_aOutEvent)
-  return _impl_.a_aoutevent_.Release();
+  if (!_internal_has_a_aoutevent()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_aoutevent_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aoutevent_.IsDefault()) {
+    _impl_.a_aoutevent_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_ReceiveMultiTouchInputEvent::set_allocated_a_aoutevent(std::string* a_aoutevent) {
   if (a_aoutevent != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_aoutevent_.SetAllocated(a_aoutevent, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3246,9 +3680,17 @@ inline void Reply_ReceiveMultiTouchInputEvent::set_allocated_a_aoutevent(std::st
 
 // Msg_ReceiveMouseInputEvent
 
-// bytes a_aEvent = 1;
+// required bytes a_aEvent = 1;
+inline bool Msg_ReceiveMouseInputEvent::_internal_has_a_aevent() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_ReceiveMouseInputEvent::has_a_aevent() const {
+  return _internal_has_a_aevent();
+}
 inline void Msg_ReceiveMouseInputEvent::clear_a_aevent() {
   _impl_.a_aevent_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_ReceiveMouseInputEvent::a_aevent() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveMouseInputEvent.a_aEvent)
@@ -3257,7 +3699,7 @@ inline const std::string& Msg_ReceiveMouseInputEvent::a_aevent() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ReceiveMouseInputEvent::set_a_aevent(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aevent_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveMouseInputEvent.a_aEvent)
 }
@@ -3270,22 +3712,32 @@ inline const std::string& Msg_ReceiveMouseInputEvent::_internal_a_aevent() const
   return _impl_.a_aevent_.Get();
 }
 inline void Msg_ReceiveMouseInputEvent::_internal_set_a_aevent(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aevent_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_ReceiveMouseInputEvent::_internal_mutable_a_aevent() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aevent_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_ReceiveMouseInputEvent::release_a_aevent() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveMouseInputEvent.a_aEvent)
-  return _impl_.a_aevent_.Release();
+  if (!_internal_has_a_aevent()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aevent_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aevent_.IsDefault()) {
+    _impl_.a_aevent_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_ReceiveMouseInputEvent::set_allocated_a_aevent(std::string* a_aevent) {
   if (a_aevent != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aevent_.SetAllocated(a_aevent, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3296,9 +3748,17 @@ inline void Msg_ReceiveMouseInputEvent::set_allocated_a_aevent(std::string* a_ae
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveMouseInputEvent.a_aEvent)
 }
 
-// bool a_aWantsCallback = 2;
+// required bool a_aWantsCallback = 2;
+inline bool Msg_ReceiveMouseInputEvent::_internal_has_a_awantscallback() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_ReceiveMouseInputEvent::has_a_awantscallback() const {
+  return _internal_has_a_awantscallback();
+}
 inline void Msg_ReceiveMouseInputEvent::clear_a_awantscallback() {
   _impl_.a_awantscallback_ = false;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool Msg_ReceiveMouseInputEvent::_internal_a_awantscallback() const {
   return _impl_.a_awantscallback_;
@@ -3308,7 +3768,7 @@ inline bool Msg_ReceiveMouseInputEvent::a_awantscallback() const {
   return _internal_a_awantscallback();
 }
 inline void Msg_ReceiveMouseInputEvent::_internal_set_a_awantscallback(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_awantscallback_ = value;
 }
 inline void Msg_ReceiveMouseInputEvent::set_a_awantscallback(bool value) {
@@ -3320,9 +3780,17 @@ inline void Msg_ReceiveMouseInputEvent::set_a_awantscallback(bool value) {
 
 // Reply_ReceiveMouseInputEvent
 
-// bytes a_aOutResult = 1;
+// required bytes a_aOutResult = 1;
+inline bool Reply_ReceiveMouseInputEvent::_internal_has_a_aoutresult() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_ReceiveMouseInputEvent::has_a_aoutresult() const {
+  return _internal_has_a_aoutresult();
+}
 inline void Reply_ReceiveMouseInputEvent::clear_a_aoutresult() {
   _impl_.a_aoutresult_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_ReceiveMouseInputEvent::a_aoutresult() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveMouseInputEvent.a_aOutResult)
@@ -3331,7 +3799,7 @@ inline const std::string& Reply_ReceiveMouseInputEvent::a_aoutresult() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_ReceiveMouseInputEvent::set_a_aoutresult(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aoutresult_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveMouseInputEvent.a_aOutResult)
 }
@@ -3344,22 +3812,32 @@ inline const std::string& Reply_ReceiveMouseInputEvent::_internal_a_aoutresult()
   return _impl_.a_aoutresult_.Get();
 }
 inline void Reply_ReceiveMouseInputEvent::_internal_set_a_aoutresult(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aoutresult_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_ReceiveMouseInputEvent::_internal_mutable_a_aoutresult() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aoutresult_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_ReceiveMouseInputEvent::release_a_aoutresult() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveMouseInputEvent.a_aOutResult)
-  return _impl_.a_aoutresult_.Release();
+  if (!_internal_has_a_aoutresult()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aoutresult_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aoutresult_.IsDefault()) {
+    _impl_.a_aoutresult_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_ReceiveMouseInputEvent::set_allocated_a_aoutresult(std::string* a_aoutresult) {
   if (a_aoutresult != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aoutresult_.SetAllocated(a_aoutresult, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3370,9 +3848,17 @@ inline void Reply_ReceiveMouseInputEvent::set_allocated_a_aoutresult(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveMouseInputEvent.a_aOutResult)
 }
 
-// bytes a_aOutEvent = 2;
+// required bytes a_aOutEvent = 2;
+inline bool Reply_ReceiveMouseInputEvent::_internal_has_a_aoutevent() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Reply_ReceiveMouseInputEvent::has_a_aoutevent() const {
+  return _internal_has_a_aoutevent();
+}
 inline void Reply_ReceiveMouseInputEvent::clear_a_aoutevent() {
   _impl_.a_aoutevent_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Reply_ReceiveMouseInputEvent::a_aoutevent() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveMouseInputEvent.a_aOutEvent)
@@ -3381,7 +3867,7 @@ inline const std::string& Reply_ReceiveMouseInputEvent::a_aoutevent() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_ReceiveMouseInputEvent::set_a_aoutevent(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_aoutevent_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveMouseInputEvent.a_aOutEvent)
 }
@@ -3394,22 +3880,32 @@ inline const std::string& Reply_ReceiveMouseInputEvent::_internal_a_aoutevent() 
   return _impl_.a_aoutevent_.Get();
 }
 inline void Reply_ReceiveMouseInputEvent::_internal_set_a_aoutevent(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aoutevent_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_ReceiveMouseInputEvent::_internal_mutable_a_aoutevent() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_aoutevent_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_ReceiveMouseInputEvent::release_a_aoutevent() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveMouseInputEvent.a_aOutEvent)
-  return _impl_.a_aoutevent_.Release();
+  if (!_internal_has_a_aoutevent()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_aoutevent_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aoutevent_.IsDefault()) {
+    _impl_.a_aoutevent_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_ReceiveMouseInputEvent::set_allocated_a_aoutevent(std::string* a_aoutevent) {
   if (a_aoutevent != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_aoutevent_.SetAllocated(a_aoutevent, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3424,9 +3920,17 @@ inline void Reply_ReceiveMouseInputEvent::set_allocated_a_aoutevent(std::string*
 
 // Msg_ReceivePanGestureInputEvent
 
-// bytes a_aEvent = 1;
+// required bytes a_aEvent = 1;
+inline bool Msg_ReceivePanGestureInputEvent::_internal_has_a_aevent() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_ReceivePanGestureInputEvent::has_a_aevent() const {
+  return _internal_has_a_aevent();
+}
 inline void Msg_ReceivePanGestureInputEvent::clear_a_aevent() {
   _impl_.a_aevent_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_ReceivePanGestureInputEvent::a_aevent() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceivePanGestureInputEvent.a_aEvent)
@@ -3435,7 +3939,7 @@ inline const std::string& Msg_ReceivePanGestureInputEvent::a_aevent() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ReceivePanGestureInputEvent::set_a_aevent(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aevent_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceivePanGestureInputEvent.a_aEvent)
 }
@@ -3448,22 +3952,32 @@ inline const std::string& Msg_ReceivePanGestureInputEvent::_internal_a_aevent() 
   return _impl_.a_aevent_.Get();
 }
 inline void Msg_ReceivePanGestureInputEvent::_internal_set_a_aevent(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aevent_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_ReceivePanGestureInputEvent::_internal_mutable_a_aevent() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aevent_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_ReceivePanGestureInputEvent::release_a_aevent() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceivePanGestureInputEvent.a_aEvent)
-  return _impl_.a_aevent_.Release();
+  if (!_internal_has_a_aevent()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aevent_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aevent_.IsDefault()) {
+    _impl_.a_aevent_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_ReceivePanGestureInputEvent::set_allocated_a_aevent(std::string* a_aevent) {
   if (a_aevent != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aevent_.SetAllocated(a_aevent, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3474,9 +3988,17 @@ inline void Msg_ReceivePanGestureInputEvent::set_allocated_a_aevent(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceivePanGestureInputEvent.a_aEvent)
 }
 
-// bool a_aWantsCallback = 2;
+// required bool a_aWantsCallback = 2;
+inline bool Msg_ReceivePanGestureInputEvent::_internal_has_a_awantscallback() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_ReceivePanGestureInputEvent::has_a_awantscallback() const {
+  return _internal_has_a_awantscallback();
+}
 inline void Msg_ReceivePanGestureInputEvent::clear_a_awantscallback() {
   _impl_.a_awantscallback_ = false;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool Msg_ReceivePanGestureInputEvent::_internal_a_awantscallback() const {
   return _impl_.a_awantscallback_;
@@ -3486,7 +4008,7 @@ inline bool Msg_ReceivePanGestureInputEvent::a_awantscallback() const {
   return _internal_a_awantscallback();
 }
 inline void Msg_ReceivePanGestureInputEvent::_internal_set_a_awantscallback(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_awantscallback_ = value;
 }
 inline void Msg_ReceivePanGestureInputEvent::set_a_awantscallback(bool value) {
@@ -3498,9 +4020,17 @@ inline void Msg_ReceivePanGestureInputEvent::set_a_awantscallback(bool value) {
 
 // Reply_ReceivePanGestureInputEvent
 
-// bytes a_aOutResult = 1;
+// required bytes a_aOutResult = 1;
+inline bool Reply_ReceivePanGestureInputEvent::_internal_has_a_aoutresult() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_ReceivePanGestureInputEvent::has_a_aoutresult() const {
+  return _internal_has_a_aoutresult();
+}
 inline void Reply_ReceivePanGestureInputEvent::clear_a_aoutresult() {
   _impl_.a_aoutresult_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_ReceivePanGestureInputEvent::a_aoutresult() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceivePanGestureInputEvent.a_aOutResult)
@@ -3509,7 +4039,7 @@ inline const std::string& Reply_ReceivePanGestureInputEvent::a_aoutresult() cons
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_ReceivePanGestureInputEvent::set_a_aoutresult(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aoutresult_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceivePanGestureInputEvent.a_aOutResult)
 }
@@ -3522,22 +4052,32 @@ inline const std::string& Reply_ReceivePanGestureInputEvent::_internal_a_aoutres
   return _impl_.a_aoutresult_.Get();
 }
 inline void Reply_ReceivePanGestureInputEvent::_internal_set_a_aoutresult(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aoutresult_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_ReceivePanGestureInputEvent::_internal_mutable_a_aoutresult() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aoutresult_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_ReceivePanGestureInputEvent::release_a_aoutresult() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceivePanGestureInputEvent.a_aOutResult)
-  return _impl_.a_aoutresult_.Release();
+  if (!_internal_has_a_aoutresult()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aoutresult_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aoutresult_.IsDefault()) {
+    _impl_.a_aoutresult_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_ReceivePanGestureInputEvent::set_allocated_a_aoutresult(std::string* a_aoutresult) {
   if (a_aoutresult != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aoutresult_.SetAllocated(a_aoutresult, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3548,9 +4088,17 @@ inline void Reply_ReceivePanGestureInputEvent::set_allocated_a_aoutresult(std::s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceivePanGestureInputEvent.a_aOutResult)
 }
 
-// bytes a_aOutEvent = 2;
+// required bytes a_aOutEvent = 2;
+inline bool Reply_ReceivePanGestureInputEvent::_internal_has_a_aoutevent() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Reply_ReceivePanGestureInputEvent::has_a_aoutevent() const {
+  return _internal_has_a_aoutevent();
+}
 inline void Reply_ReceivePanGestureInputEvent::clear_a_aoutevent() {
   _impl_.a_aoutevent_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Reply_ReceivePanGestureInputEvent::a_aoutevent() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceivePanGestureInputEvent.a_aOutEvent)
@@ -3559,7 +4107,7 @@ inline const std::string& Reply_ReceivePanGestureInputEvent::a_aoutevent() const
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_ReceivePanGestureInputEvent::set_a_aoutevent(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_aoutevent_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceivePanGestureInputEvent.a_aOutEvent)
 }
@@ -3572,22 +4120,32 @@ inline const std::string& Reply_ReceivePanGestureInputEvent::_internal_a_aouteve
   return _impl_.a_aoutevent_.Get();
 }
 inline void Reply_ReceivePanGestureInputEvent::_internal_set_a_aoutevent(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aoutevent_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_ReceivePanGestureInputEvent::_internal_mutable_a_aoutevent() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_aoutevent_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_ReceivePanGestureInputEvent::release_a_aoutevent() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceivePanGestureInputEvent.a_aOutEvent)
-  return _impl_.a_aoutevent_.Release();
+  if (!_internal_has_a_aoutevent()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_aoutevent_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aoutevent_.IsDefault()) {
+    _impl_.a_aoutevent_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_ReceivePanGestureInputEvent::set_allocated_a_aoutevent(std::string* a_aoutevent) {
   if (a_aoutevent != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_aoutevent_.SetAllocated(a_aoutevent, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3602,9 +4160,17 @@ inline void Reply_ReceivePanGestureInputEvent::set_allocated_a_aoutevent(std::st
 
 // Msg_ReceivePinchGestureInputEvent
 
-// bytes a_aEvent = 1;
+// required bytes a_aEvent = 1;
+inline bool Msg_ReceivePinchGestureInputEvent::_internal_has_a_aevent() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_ReceivePinchGestureInputEvent::has_a_aevent() const {
+  return _internal_has_a_aevent();
+}
 inline void Msg_ReceivePinchGestureInputEvent::clear_a_aevent() {
   _impl_.a_aevent_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_ReceivePinchGestureInputEvent::a_aevent() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceivePinchGestureInputEvent.a_aEvent)
@@ -3613,7 +4179,7 @@ inline const std::string& Msg_ReceivePinchGestureInputEvent::a_aevent() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ReceivePinchGestureInputEvent::set_a_aevent(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aevent_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceivePinchGestureInputEvent.a_aEvent)
 }
@@ -3626,22 +4192,32 @@ inline const std::string& Msg_ReceivePinchGestureInputEvent::_internal_a_aevent(
   return _impl_.a_aevent_.Get();
 }
 inline void Msg_ReceivePinchGestureInputEvent::_internal_set_a_aevent(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aevent_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_ReceivePinchGestureInputEvent::_internal_mutable_a_aevent() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aevent_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_ReceivePinchGestureInputEvent::release_a_aevent() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceivePinchGestureInputEvent.a_aEvent)
-  return _impl_.a_aevent_.Release();
+  if (!_internal_has_a_aevent()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aevent_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aevent_.IsDefault()) {
+    _impl_.a_aevent_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_ReceivePinchGestureInputEvent::set_allocated_a_aevent(std::string* a_aevent) {
   if (a_aevent != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aevent_.SetAllocated(a_aevent, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3652,9 +4228,17 @@ inline void Msg_ReceivePinchGestureInputEvent::set_allocated_a_aevent(std::strin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceivePinchGestureInputEvent.a_aEvent)
 }
 
-// bool a_aWantsCallback = 2;
+// required bool a_aWantsCallback = 2;
+inline bool Msg_ReceivePinchGestureInputEvent::_internal_has_a_awantscallback() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_ReceivePinchGestureInputEvent::has_a_awantscallback() const {
+  return _internal_has_a_awantscallback();
+}
 inline void Msg_ReceivePinchGestureInputEvent::clear_a_awantscallback() {
   _impl_.a_awantscallback_ = false;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool Msg_ReceivePinchGestureInputEvent::_internal_a_awantscallback() const {
   return _impl_.a_awantscallback_;
@@ -3664,7 +4248,7 @@ inline bool Msg_ReceivePinchGestureInputEvent::a_awantscallback() const {
   return _internal_a_awantscallback();
 }
 inline void Msg_ReceivePinchGestureInputEvent::_internal_set_a_awantscallback(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_awantscallback_ = value;
 }
 inline void Msg_ReceivePinchGestureInputEvent::set_a_awantscallback(bool value) {
@@ -3676,9 +4260,17 @@ inline void Msg_ReceivePinchGestureInputEvent::set_a_awantscallback(bool value) 
 
 // Reply_ReceivePinchGestureInputEvent
 
-// bytes a_aOutResult = 1;
+// required bytes a_aOutResult = 1;
+inline bool Reply_ReceivePinchGestureInputEvent::_internal_has_a_aoutresult() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_ReceivePinchGestureInputEvent::has_a_aoutresult() const {
+  return _internal_has_a_aoutresult();
+}
 inline void Reply_ReceivePinchGestureInputEvent::clear_a_aoutresult() {
   _impl_.a_aoutresult_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_ReceivePinchGestureInputEvent::a_aoutresult() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceivePinchGestureInputEvent.a_aOutResult)
@@ -3687,7 +4279,7 @@ inline const std::string& Reply_ReceivePinchGestureInputEvent::a_aoutresult() co
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_ReceivePinchGestureInputEvent::set_a_aoutresult(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aoutresult_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceivePinchGestureInputEvent.a_aOutResult)
 }
@@ -3700,22 +4292,32 @@ inline const std::string& Reply_ReceivePinchGestureInputEvent::_internal_a_aoutr
   return _impl_.a_aoutresult_.Get();
 }
 inline void Reply_ReceivePinchGestureInputEvent::_internal_set_a_aoutresult(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aoutresult_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_ReceivePinchGestureInputEvent::_internal_mutable_a_aoutresult() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aoutresult_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_ReceivePinchGestureInputEvent::release_a_aoutresult() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceivePinchGestureInputEvent.a_aOutResult)
-  return _impl_.a_aoutresult_.Release();
+  if (!_internal_has_a_aoutresult()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aoutresult_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aoutresult_.IsDefault()) {
+    _impl_.a_aoutresult_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_ReceivePinchGestureInputEvent::set_allocated_a_aoutresult(std::string* a_aoutresult) {
   if (a_aoutresult != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aoutresult_.SetAllocated(a_aoutresult, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3726,9 +4328,17 @@ inline void Reply_ReceivePinchGestureInputEvent::set_allocated_a_aoutresult(std:
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceivePinchGestureInputEvent.a_aOutResult)
 }
 
-// bytes a_aOutEvent = 2;
+// required bytes a_aOutEvent = 2;
+inline bool Reply_ReceivePinchGestureInputEvent::_internal_has_a_aoutevent() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Reply_ReceivePinchGestureInputEvent::has_a_aoutevent() const {
+  return _internal_has_a_aoutevent();
+}
 inline void Reply_ReceivePinchGestureInputEvent::clear_a_aoutevent() {
   _impl_.a_aoutevent_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Reply_ReceivePinchGestureInputEvent::a_aoutevent() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceivePinchGestureInputEvent.a_aOutEvent)
@@ -3737,7 +4347,7 @@ inline const std::string& Reply_ReceivePinchGestureInputEvent::a_aoutevent() con
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_ReceivePinchGestureInputEvent::set_a_aoutevent(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_aoutevent_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceivePinchGestureInputEvent.a_aOutEvent)
 }
@@ -3750,22 +4360,32 @@ inline const std::string& Reply_ReceivePinchGestureInputEvent::_internal_a_aoute
   return _impl_.a_aoutevent_.Get();
 }
 inline void Reply_ReceivePinchGestureInputEvent::_internal_set_a_aoutevent(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aoutevent_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_ReceivePinchGestureInputEvent::_internal_mutable_a_aoutevent() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_aoutevent_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_ReceivePinchGestureInputEvent::release_a_aoutevent() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceivePinchGestureInputEvent.a_aOutEvent)
-  return _impl_.a_aoutevent_.Release();
+  if (!_internal_has_a_aoutevent()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_aoutevent_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aoutevent_.IsDefault()) {
+    _impl_.a_aoutevent_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_ReceivePinchGestureInputEvent::set_allocated_a_aoutevent(std::string* a_aoutevent) {
   if (a_aoutevent != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_aoutevent_.SetAllocated(a_aoutevent, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3780,9 +4400,17 @@ inline void Reply_ReceivePinchGestureInputEvent::set_allocated_a_aoutevent(std::
 
 // Msg_ReceiveTapGestureInputEvent
 
-// bytes a_aEvent = 1;
+// required bytes a_aEvent = 1;
+inline bool Msg_ReceiveTapGestureInputEvent::_internal_has_a_aevent() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_ReceiveTapGestureInputEvent::has_a_aevent() const {
+  return _internal_has_a_aevent();
+}
 inline void Msg_ReceiveTapGestureInputEvent::clear_a_aevent() {
   _impl_.a_aevent_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_ReceiveTapGestureInputEvent::a_aevent() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveTapGestureInputEvent.a_aEvent)
@@ -3791,7 +4419,7 @@ inline const std::string& Msg_ReceiveTapGestureInputEvent::a_aevent() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ReceiveTapGestureInputEvent::set_a_aevent(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aevent_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveTapGestureInputEvent.a_aEvent)
 }
@@ -3804,22 +4432,32 @@ inline const std::string& Msg_ReceiveTapGestureInputEvent::_internal_a_aevent() 
   return _impl_.a_aevent_.Get();
 }
 inline void Msg_ReceiveTapGestureInputEvent::_internal_set_a_aevent(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aevent_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_ReceiveTapGestureInputEvent::_internal_mutable_a_aevent() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aevent_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_ReceiveTapGestureInputEvent::release_a_aevent() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveTapGestureInputEvent.a_aEvent)
-  return _impl_.a_aevent_.Release();
+  if (!_internal_has_a_aevent()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aevent_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aevent_.IsDefault()) {
+    _impl_.a_aevent_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_ReceiveTapGestureInputEvent::set_allocated_a_aevent(std::string* a_aevent) {
   if (a_aevent != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aevent_.SetAllocated(a_aevent, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3830,9 +4468,17 @@ inline void Msg_ReceiveTapGestureInputEvent::set_allocated_a_aevent(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveTapGestureInputEvent.a_aEvent)
 }
 
-// bool a_aWantsCallback = 2;
+// required bool a_aWantsCallback = 2;
+inline bool Msg_ReceiveTapGestureInputEvent::_internal_has_a_awantscallback() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_ReceiveTapGestureInputEvent::has_a_awantscallback() const {
+  return _internal_has_a_awantscallback();
+}
 inline void Msg_ReceiveTapGestureInputEvent::clear_a_awantscallback() {
   _impl_.a_awantscallback_ = false;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool Msg_ReceiveTapGestureInputEvent::_internal_a_awantscallback() const {
   return _impl_.a_awantscallback_;
@@ -3842,7 +4488,7 @@ inline bool Msg_ReceiveTapGestureInputEvent::a_awantscallback() const {
   return _internal_a_awantscallback();
 }
 inline void Msg_ReceiveTapGestureInputEvent::_internal_set_a_awantscallback(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_awantscallback_ = value;
 }
 inline void Msg_ReceiveTapGestureInputEvent::set_a_awantscallback(bool value) {
@@ -3854,9 +4500,17 @@ inline void Msg_ReceiveTapGestureInputEvent::set_a_awantscallback(bool value) {
 
 // Reply_ReceiveTapGestureInputEvent
 
-// bytes a_aOutResult = 1;
+// required bytes a_aOutResult = 1;
+inline bool Reply_ReceiveTapGestureInputEvent::_internal_has_a_aoutresult() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_ReceiveTapGestureInputEvent::has_a_aoutresult() const {
+  return _internal_has_a_aoutresult();
+}
 inline void Reply_ReceiveTapGestureInputEvent::clear_a_aoutresult() {
   _impl_.a_aoutresult_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_ReceiveTapGestureInputEvent::a_aoutresult() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveTapGestureInputEvent.a_aOutResult)
@@ -3865,7 +4519,7 @@ inline const std::string& Reply_ReceiveTapGestureInputEvent::a_aoutresult() cons
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_ReceiveTapGestureInputEvent::set_a_aoutresult(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aoutresult_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveTapGestureInputEvent.a_aOutResult)
 }
@@ -3878,22 +4532,32 @@ inline const std::string& Reply_ReceiveTapGestureInputEvent::_internal_a_aoutres
   return _impl_.a_aoutresult_.Get();
 }
 inline void Reply_ReceiveTapGestureInputEvent::_internal_set_a_aoutresult(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aoutresult_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_ReceiveTapGestureInputEvent::_internal_mutable_a_aoutresult() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aoutresult_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_ReceiveTapGestureInputEvent::release_a_aoutresult() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveTapGestureInputEvent.a_aOutResult)
-  return _impl_.a_aoutresult_.Release();
+  if (!_internal_has_a_aoutresult()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aoutresult_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aoutresult_.IsDefault()) {
+    _impl_.a_aoutresult_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_ReceiveTapGestureInputEvent::set_allocated_a_aoutresult(std::string* a_aoutresult) {
   if (a_aoutresult != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aoutresult_.SetAllocated(a_aoutresult, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3904,9 +4568,17 @@ inline void Reply_ReceiveTapGestureInputEvent::set_allocated_a_aoutresult(std::s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveTapGestureInputEvent.a_aOutResult)
 }
 
-// bytes a_aOutEvent = 2;
+// required bytes a_aOutEvent = 2;
+inline bool Reply_ReceiveTapGestureInputEvent::_internal_has_a_aoutevent() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Reply_ReceiveTapGestureInputEvent::has_a_aoutevent() const {
+  return _internal_has_a_aoutevent();
+}
 inline void Reply_ReceiveTapGestureInputEvent::clear_a_aoutevent() {
   _impl_.a_aoutevent_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Reply_ReceiveTapGestureInputEvent::a_aoutevent() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveTapGestureInputEvent.a_aOutEvent)
@@ -3915,7 +4587,7 @@ inline const std::string& Reply_ReceiveTapGestureInputEvent::a_aoutevent() const
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_ReceiveTapGestureInputEvent::set_a_aoutevent(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_aoutevent_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveTapGestureInputEvent.a_aOutEvent)
 }
@@ -3928,22 +4600,32 @@ inline const std::string& Reply_ReceiveTapGestureInputEvent::_internal_a_aouteve
   return _impl_.a_aoutevent_.Get();
 }
 inline void Reply_ReceiveTapGestureInputEvent::_internal_set_a_aoutevent(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aoutevent_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_ReceiveTapGestureInputEvent::_internal_mutable_a_aoutevent() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_aoutevent_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_ReceiveTapGestureInputEvent::release_a_aoutevent() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveTapGestureInputEvent.a_aOutEvent)
-  return _impl_.a_aoutevent_.Release();
+  if (!_internal_has_a_aoutevent()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_aoutevent_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aoutevent_.IsDefault()) {
+    _impl_.a_aoutevent_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_ReceiveTapGestureInputEvent::set_allocated_a_aoutevent(std::string* a_aoutevent) {
   if (a_aoutevent != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_aoutevent_.SetAllocated(a_aoutevent, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3958,9 +4640,17 @@ inline void Reply_ReceiveTapGestureInputEvent::set_allocated_a_aoutevent(std::st
 
 // Msg_ReceiveScrollWheelInputEvent
 
-// bytes a_aEvent = 1;
+// required bytes a_aEvent = 1;
+inline bool Msg_ReceiveScrollWheelInputEvent::_internal_has_a_aevent() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_ReceiveScrollWheelInputEvent::has_a_aevent() const {
+  return _internal_has_a_aevent();
+}
 inline void Msg_ReceiveScrollWheelInputEvent::clear_a_aevent() {
   _impl_.a_aevent_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_ReceiveScrollWheelInputEvent::a_aevent() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveScrollWheelInputEvent.a_aEvent)
@@ -3969,7 +4659,7 @@ inline const std::string& Msg_ReceiveScrollWheelInputEvent::a_aevent() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ReceiveScrollWheelInputEvent::set_a_aevent(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aevent_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveScrollWheelInputEvent.a_aEvent)
 }
@@ -3982,22 +4672,32 @@ inline const std::string& Msg_ReceiveScrollWheelInputEvent::_internal_a_aevent()
   return _impl_.a_aevent_.Get();
 }
 inline void Msg_ReceiveScrollWheelInputEvent::_internal_set_a_aevent(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aevent_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_ReceiveScrollWheelInputEvent::_internal_mutable_a_aevent() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aevent_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_ReceiveScrollWheelInputEvent::release_a_aevent() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveScrollWheelInputEvent.a_aEvent)
-  return _impl_.a_aevent_.Release();
+  if (!_internal_has_a_aevent()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aevent_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aevent_.IsDefault()) {
+    _impl_.a_aevent_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_ReceiveScrollWheelInputEvent::set_allocated_a_aevent(std::string* a_aevent) {
   if (a_aevent != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aevent_.SetAllocated(a_aevent, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4008,9 +4708,17 @@ inline void Msg_ReceiveScrollWheelInputEvent::set_allocated_a_aevent(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveScrollWheelInputEvent.a_aEvent)
 }
 
-// bool a_aWantsCallback = 2;
+// required bool a_aWantsCallback = 2;
+inline bool Msg_ReceiveScrollWheelInputEvent::_internal_has_a_awantscallback() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_ReceiveScrollWheelInputEvent::has_a_awantscallback() const {
+  return _internal_has_a_awantscallback();
+}
 inline void Msg_ReceiveScrollWheelInputEvent::clear_a_awantscallback() {
   _impl_.a_awantscallback_ = false;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool Msg_ReceiveScrollWheelInputEvent::_internal_a_awantscallback() const {
   return _impl_.a_awantscallback_;
@@ -4020,7 +4728,7 @@ inline bool Msg_ReceiveScrollWheelInputEvent::a_awantscallback() const {
   return _internal_a_awantscallback();
 }
 inline void Msg_ReceiveScrollWheelInputEvent::_internal_set_a_awantscallback(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_awantscallback_ = value;
 }
 inline void Msg_ReceiveScrollWheelInputEvent::set_a_awantscallback(bool value) {
@@ -4032,9 +4740,17 @@ inline void Msg_ReceiveScrollWheelInputEvent::set_a_awantscallback(bool value) {
 
 // Reply_ReceiveScrollWheelInputEvent
 
-// bytes a_aOutResult = 1;
+// required bytes a_aOutResult = 1;
+inline bool Reply_ReceiveScrollWheelInputEvent::_internal_has_a_aoutresult() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_ReceiveScrollWheelInputEvent::has_a_aoutresult() const {
+  return _internal_has_a_aoutresult();
+}
 inline void Reply_ReceiveScrollWheelInputEvent::clear_a_aoutresult() {
   _impl_.a_aoutresult_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_ReceiveScrollWheelInputEvent::a_aoutresult() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveScrollWheelInputEvent.a_aOutResult)
@@ -4043,7 +4759,7 @@ inline const std::string& Reply_ReceiveScrollWheelInputEvent::a_aoutresult() con
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_ReceiveScrollWheelInputEvent::set_a_aoutresult(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aoutresult_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveScrollWheelInputEvent.a_aOutResult)
 }
@@ -4056,22 +4772,32 @@ inline const std::string& Reply_ReceiveScrollWheelInputEvent::_internal_a_aoutre
   return _impl_.a_aoutresult_.Get();
 }
 inline void Reply_ReceiveScrollWheelInputEvent::_internal_set_a_aoutresult(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aoutresult_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_ReceiveScrollWheelInputEvent::_internal_mutable_a_aoutresult() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aoutresult_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_ReceiveScrollWheelInputEvent::release_a_aoutresult() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveScrollWheelInputEvent.a_aOutResult)
-  return _impl_.a_aoutresult_.Release();
+  if (!_internal_has_a_aoutresult()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aoutresult_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aoutresult_.IsDefault()) {
+    _impl_.a_aoutresult_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_ReceiveScrollWheelInputEvent::set_allocated_a_aoutresult(std::string* a_aoutresult) {
   if (a_aoutresult != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aoutresult_.SetAllocated(a_aoutresult, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4082,9 +4808,17 @@ inline void Reply_ReceiveScrollWheelInputEvent::set_allocated_a_aoutresult(std::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveScrollWheelInputEvent.a_aOutResult)
 }
 
-// bytes a_aOutEvent = 2;
+// required bytes a_aOutEvent = 2;
+inline bool Reply_ReceiveScrollWheelInputEvent::_internal_has_a_aoutevent() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Reply_ReceiveScrollWheelInputEvent::has_a_aoutevent() const {
+  return _internal_has_a_aoutevent();
+}
 inline void Reply_ReceiveScrollWheelInputEvent::clear_a_aoutevent() {
   _impl_.a_aoutevent_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Reply_ReceiveScrollWheelInputEvent::a_aoutevent() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveScrollWheelInputEvent.a_aOutEvent)
@@ -4093,7 +4827,7 @@ inline const std::string& Reply_ReceiveScrollWheelInputEvent::a_aoutevent() cons
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_ReceiveScrollWheelInputEvent::set_a_aoutevent(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_aoutevent_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveScrollWheelInputEvent.a_aOutEvent)
 }
@@ -4106,22 +4840,32 @@ inline const std::string& Reply_ReceiveScrollWheelInputEvent::_internal_a_aoutev
   return _impl_.a_aoutevent_.Get();
 }
 inline void Reply_ReceiveScrollWheelInputEvent::_internal_set_a_aoutevent(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aoutevent_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_ReceiveScrollWheelInputEvent::_internal_mutable_a_aoutevent() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_aoutevent_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_ReceiveScrollWheelInputEvent::release_a_aoutevent() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveScrollWheelInputEvent.a_aOutEvent)
-  return _impl_.a_aoutevent_.Release();
+  if (!_internal_has_a_aoutevent()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_aoutevent_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aoutevent_.IsDefault()) {
+    _impl_.a_aoutevent_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_ReceiveScrollWheelInputEvent::set_allocated_a_aoutevent(std::string* a_aoutevent) {
   if (a_aoutevent != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_aoutevent_.SetAllocated(a_aoutevent, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4136,9 +4880,17 @@ inline void Reply_ReceiveScrollWheelInputEvent::set_allocated_a_aoutevent(std::s
 
 // Msg_ReceiveKeyboardInputEvent
 
-// bytes a_aEvent = 1;
+// required bytes a_aEvent = 1;
+inline bool Msg_ReceiveKeyboardInputEvent::_internal_has_a_aevent() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_ReceiveKeyboardInputEvent::has_a_aevent() const {
+  return _internal_has_a_aevent();
+}
 inline void Msg_ReceiveKeyboardInputEvent::clear_a_aevent() {
   _impl_.a_aevent_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_ReceiveKeyboardInputEvent::a_aevent() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveKeyboardInputEvent.a_aEvent)
@@ -4147,7 +4899,7 @@ inline const std::string& Msg_ReceiveKeyboardInputEvent::a_aevent() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ReceiveKeyboardInputEvent::set_a_aevent(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aevent_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveKeyboardInputEvent.a_aEvent)
 }
@@ -4160,22 +4912,32 @@ inline const std::string& Msg_ReceiveKeyboardInputEvent::_internal_a_aevent() co
   return _impl_.a_aevent_.Get();
 }
 inline void Msg_ReceiveKeyboardInputEvent::_internal_set_a_aevent(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aevent_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_ReceiveKeyboardInputEvent::_internal_mutable_a_aevent() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aevent_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_ReceiveKeyboardInputEvent::release_a_aevent() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveKeyboardInputEvent.a_aEvent)
-  return _impl_.a_aevent_.Release();
+  if (!_internal_has_a_aevent()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aevent_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aevent_.IsDefault()) {
+    _impl_.a_aevent_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_ReceiveKeyboardInputEvent::set_allocated_a_aevent(std::string* a_aevent) {
   if (a_aevent != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aevent_.SetAllocated(a_aevent, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4186,9 +4948,17 @@ inline void Msg_ReceiveKeyboardInputEvent::set_allocated_a_aevent(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveKeyboardInputEvent.a_aEvent)
 }
 
-// bool a_aWantsCallback = 2;
+// required bool a_aWantsCallback = 2;
+inline bool Msg_ReceiveKeyboardInputEvent::_internal_has_a_awantscallback() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_ReceiveKeyboardInputEvent::has_a_awantscallback() const {
+  return _internal_has_a_awantscallback();
+}
 inline void Msg_ReceiveKeyboardInputEvent::clear_a_awantscallback() {
   _impl_.a_awantscallback_ = false;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool Msg_ReceiveKeyboardInputEvent::_internal_a_awantscallback() const {
   return _impl_.a_awantscallback_;
@@ -4198,7 +4968,7 @@ inline bool Msg_ReceiveKeyboardInputEvent::a_awantscallback() const {
   return _internal_a_awantscallback();
 }
 inline void Msg_ReceiveKeyboardInputEvent::_internal_set_a_awantscallback(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_awantscallback_ = value;
 }
 inline void Msg_ReceiveKeyboardInputEvent::set_a_awantscallback(bool value) {
@@ -4210,9 +4980,17 @@ inline void Msg_ReceiveKeyboardInputEvent::set_a_awantscallback(bool value) {
 
 // Reply_ReceiveKeyboardInputEvent
 
-// bytes a_aOutResult = 1;
+// required bytes a_aOutResult = 1;
+inline bool Reply_ReceiveKeyboardInputEvent::_internal_has_a_aoutresult() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_ReceiveKeyboardInputEvent::has_a_aoutresult() const {
+  return _internal_has_a_aoutresult();
+}
 inline void Reply_ReceiveKeyboardInputEvent::clear_a_aoutresult() {
   _impl_.a_aoutresult_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_ReceiveKeyboardInputEvent::a_aoutresult() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveKeyboardInputEvent.a_aOutResult)
@@ -4221,7 +4999,7 @@ inline const std::string& Reply_ReceiveKeyboardInputEvent::a_aoutresult() const 
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_ReceiveKeyboardInputEvent::set_a_aoutresult(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aoutresult_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveKeyboardInputEvent.a_aOutResult)
 }
@@ -4234,22 +5012,32 @@ inline const std::string& Reply_ReceiveKeyboardInputEvent::_internal_a_aoutresul
   return _impl_.a_aoutresult_.Get();
 }
 inline void Reply_ReceiveKeyboardInputEvent::_internal_set_a_aoutresult(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aoutresult_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_ReceiveKeyboardInputEvent::_internal_mutable_a_aoutresult() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aoutresult_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_ReceiveKeyboardInputEvent::release_a_aoutresult() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveKeyboardInputEvent.a_aOutResult)
-  return _impl_.a_aoutresult_.Release();
+  if (!_internal_has_a_aoutresult()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aoutresult_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aoutresult_.IsDefault()) {
+    _impl_.a_aoutresult_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_ReceiveKeyboardInputEvent::set_allocated_a_aoutresult(std::string* a_aoutresult) {
   if (a_aoutresult != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aoutresult_.SetAllocated(a_aoutresult, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4260,9 +5048,17 @@ inline void Reply_ReceiveKeyboardInputEvent::set_allocated_a_aoutresult(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveKeyboardInputEvent.a_aOutResult)
 }
 
-// bytes a_aOutEvent = 2;
+// required bytes a_aOutEvent = 2;
+inline bool Reply_ReceiveKeyboardInputEvent::_internal_has_a_aoutevent() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Reply_ReceiveKeyboardInputEvent::has_a_aoutevent() const {
+  return _internal_has_a_aoutevent();
+}
 inline void Reply_ReceiveKeyboardInputEvent::clear_a_aoutevent() {
   _impl_.a_aoutevent_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Reply_ReceiveKeyboardInputEvent::a_aoutevent() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveKeyboardInputEvent.a_aOutEvent)
@@ -4271,7 +5067,7 @@ inline const std::string& Reply_ReceiveKeyboardInputEvent::a_aoutevent() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_ReceiveKeyboardInputEvent::set_a_aoutevent(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_aoutevent_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveKeyboardInputEvent.a_aOutEvent)
 }
@@ -4284,22 +5080,32 @@ inline const std::string& Reply_ReceiveKeyboardInputEvent::_internal_a_aoutevent
   return _impl_.a_aoutevent_.Get();
 }
 inline void Reply_ReceiveKeyboardInputEvent::_internal_set_a_aoutevent(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aoutevent_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_ReceiveKeyboardInputEvent::_internal_mutable_a_aoutevent() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_aoutevent_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_ReceiveKeyboardInputEvent::release_a_aoutevent() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveKeyboardInputEvent.a_aOutEvent)
-  return _impl_.a_aoutevent_.Release();
+  if (!_internal_has_a_aoutevent()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_aoutevent_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aoutevent_.IsDefault()) {
+    _impl_.a_aoutevent_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_ReceiveKeyboardInputEvent::set_allocated_a_aoutevent(std::string* a_aoutevent) {
   if (a_aoutevent != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_aoutevent_.SetAllocated(a_aoutevent, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4314,9 +5120,17 @@ inline void Reply_ReceiveKeyboardInputEvent::set_allocated_a_aoutevent(std::stri
 
 // Msg_UpdateWheelTransaction
 
-// bytes a_aRefPoint = 1;
+// required bytes a_aRefPoint = 1;
+inline bool Msg_UpdateWheelTransaction::_internal_has_a_arefpoint() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_UpdateWheelTransaction::has_a_arefpoint() const {
+  return _internal_has_a_arefpoint();
+}
 inline void Msg_UpdateWheelTransaction::clear_a_arefpoint() {
   _impl_.a_arefpoint_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_UpdateWheelTransaction::a_arefpoint() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Msg_UpdateWheelTransaction.a_aRefPoint)
@@ -4325,7 +5139,7 @@ inline const std::string& Msg_UpdateWheelTransaction::a_arefpoint() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_UpdateWheelTransaction::set_a_arefpoint(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_arefpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Msg_UpdateWheelTransaction.a_aRefPoint)
 }
@@ -4338,22 +5152,32 @@ inline const std::string& Msg_UpdateWheelTransaction::_internal_a_arefpoint() co
   return _impl_.a_arefpoint_.Get();
 }
 inline void Msg_UpdateWheelTransaction::_internal_set_a_arefpoint(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_arefpoint_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_UpdateWheelTransaction::_internal_mutable_a_arefpoint() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_arefpoint_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_UpdateWheelTransaction::release_a_arefpoint() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZInputBridge.Msg_UpdateWheelTransaction.a_aRefPoint)
-  return _impl_.a_arefpoint_.Release();
+  if (!_internal_has_a_arefpoint()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_arefpoint_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_arefpoint_.IsDefault()) {
+    _impl_.a_arefpoint_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_UpdateWheelTransaction::set_allocated_a_arefpoint(std::string* a_arefpoint) {
   if (a_arefpoint != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_arefpoint_.SetAllocated(a_arefpoint, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4364,9 +5188,17 @@ inline void Msg_UpdateWheelTransaction::set_allocated_a_arefpoint(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZInputBridge.Msg_UpdateWheelTransaction.a_aRefPoint)
 }
 
-// bytes a_aEventMessage = 2;
+// required bytes a_aEventMessage = 2;
+inline bool Msg_UpdateWheelTransaction::_internal_has_a_aeventmessage() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_UpdateWheelTransaction::has_a_aeventmessage() const {
+  return _internal_has_a_aeventmessage();
+}
 inline void Msg_UpdateWheelTransaction::clear_a_aeventmessage() {
   _impl_.a_aeventmessage_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_UpdateWheelTransaction::a_aeventmessage() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Msg_UpdateWheelTransaction.a_aEventMessage)
@@ -4375,7 +5207,7 @@ inline const std::string& Msg_UpdateWheelTransaction::a_aeventmessage() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_UpdateWheelTransaction::set_a_aeventmessage(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_aeventmessage_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Msg_UpdateWheelTransaction.a_aEventMessage)
 }
@@ -4388,22 +5220,32 @@ inline const std::string& Msg_UpdateWheelTransaction::_internal_a_aeventmessage(
   return _impl_.a_aeventmessage_.Get();
 }
 inline void Msg_UpdateWheelTransaction::_internal_set_a_aeventmessage(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aeventmessage_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_UpdateWheelTransaction::_internal_mutable_a_aeventmessage() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_aeventmessage_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_UpdateWheelTransaction::release_a_aeventmessage() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZInputBridge.Msg_UpdateWheelTransaction.a_aEventMessage)
-  return _impl_.a_aeventmessage_.Release();
+  if (!_internal_has_a_aeventmessage()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_aeventmessage_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aeventmessage_.IsDefault()) {
+    _impl_.a_aeventmessage_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_UpdateWheelTransaction::set_allocated_a_aeventmessage(std::string* a_aeventmessage) {
   if (a_aeventmessage != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_aeventmessage_.SetAllocated(a_aeventmessage, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4416,7 +5258,7 @@ inline void Msg_UpdateWheelTransaction::set_allocated_a_aeventmessage(std::strin
 
 // optional bytes a_aTargetGuid = 3;
 inline bool Msg_UpdateWheelTransaction::_internal_has_a_atargetguid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
 inline bool Msg_UpdateWheelTransaction::has_a_atargetguid() const {
@@ -4424,7 +5266,7 @@ inline bool Msg_UpdateWheelTransaction::has_a_atargetguid() const {
 }
 inline void Msg_UpdateWheelTransaction::clear_a_atargetguid() {
   _impl_.a_atargetguid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& Msg_UpdateWheelTransaction::a_atargetguid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Msg_UpdateWheelTransaction.a_aTargetGuid)
@@ -4433,7 +5275,7 @@ inline const std::string& Msg_UpdateWheelTransaction::a_atargetguid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_UpdateWheelTransaction::set_a_atargetguid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ _impl_._has_bits_[0] |= 0x00000004u;
  _impl_.a_atargetguid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Msg_UpdateWheelTransaction.a_aTargetGuid)
 }
@@ -4446,11 +5288,11 @@ inline const std::string& Msg_UpdateWheelTransaction::_internal_a_atargetguid() 
   return _impl_.a_atargetguid_.Get();
 }
 inline void Msg_UpdateWheelTransaction::_internal_set_a_atargetguid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_atargetguid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_UpdateWheelTransaction::_internal_mutable_a_atargetguid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_._has_bits_[0] |= 0x00000004u;
   return _impl_.a_atargetguid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_UpdateWheelTransaction::release_a_atargetguid() {
@@ -4458,7 +5300,7 @@ inline std::string* Msg_UpdateWheelTransaction::release_a_atargetguid() {
   if (!_internal_has_a_atargetguid()) {
     return nullptr;
   }
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
   auto* p = _impl_.a_atargetguid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (_impl_.a_atargetguid_.IsDefault()) {
@@ -4469,9 +5311,9 @@ inline std::string* Msg_UpdateWheelTransaction::release_a_atargetguid() {
 }
 inline void Msg_UpdateWheelTransaction::set_allocated_a_atargetguid(std::string* a_atargetguid) {
   if (a_atargetguid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.a_atargetguid_.SetAllocated(a_atargetguid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4486,9 +5328,17 @@ inline void Msg_UpdateWheelTransaction::set_allocated_a_atargetguid(std::string*
 
 // Msg_ProcessUnhandledEvent
 
-// bytes a_aRefPoint = 1;
+// required bytes a_aRefPoint = 1;
+inline bool Msg_ProcessUnhandledEvent::_internal_has_a_arefpoint() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_ProcessUnhandledEvent::has_a_arefpoint() const {
+  return _internal_has_a_arefpoint();
+}
 inline void Msg_ProcessUnhandledEvent::clear_a_arefpoint() {
   _impl_.a_arefpoint_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_ProcessUnhandledEvent::a_arefpoint() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Msg_ProcessUnhandledEvent.a_aRefPoint)
@@ -4497,7 +5347,7 @@ inline const std::string& Msg_ProcessUnhandledEvent::a_arefpoint() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ProcessUnhandledEvent::set_a_arefpoint(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_arefpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Msg_ProcessUnhandledEvent.a_aRefPoint)
 }
@@ -4510,22 +5360,32 @@ inline const std::string& Msg_ProcessUnhandledEvent::_internal_a_arefpoint() con
   return _impl_.a_arefpoint_.Get();
 }
 inline void Msg_ProcessUnhandledEvent::_internal_set_a_arefpoint(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_arefpoint_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_ProcessUnhandledEvent::_internal_mutable_a_arefpoint() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_arefpoint_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_ProcessUnhandledEvent::release_a_arefpoint() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZInputBridge.Msg_ProcessUnhandledEvent.a_aRefPoint)
-  return _impl_.a_arefpoint_.Release();
+  if (!_internal_has_a_arefpoint()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_arefpoint_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_arefpoint_.IsDefault()) {
+    _impl_.a_arefpoint_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_ProcessUnhandledEvent::set_allocated_a_arefpoint(std::string* a_arefpoint) {
   if (a_arefpoint != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_arefpoint_.SetAllocated(a_arefpoint, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4540,9 +5400,17 @@ inline void Msg_ProcessUnhandledEvent::set_allocated_a_arefpoint(std::string* a_
 
 // Reply_ProcessUnhandledEvent
 
-// bytes a_aOutRefPoint = 1;
+// required bytes a_aOutRefPoint = 1;
+inline bool Reply_ProcessUnhandledEvent::_internal_has_a_aoutrefpoint() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_ProcessUnhandledEvent::has_a_aoutrefpoint() const {
+  return _internal_has_a_aoutrefpoint();
+}
 inline void Reply_ProcessUnhandledEvent::clear_a_aoutrefpoint() {
   _impl_.a_aoutrefpoint_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_ProcessUnhandledEvent::a_aoutrefpoint() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Reply_ProcessUnhandledEvent.a_aOutRefPoint)
@@ -4551,7 +5419,7 @@ inline const std::string& Reply_ProcessUnhandledEvent::a_aoutrefpoint() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_ProcessUnhandledEvent::set_a_aoutrefpoint(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aoutrefpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Reply_ProcessUnhandledEvent.a_aOutRefPoint)
 }
@@ -4564,22 +5432,32 @@ inline const std::string& Reply_ProcessUnhandledEvent::_internal_a_aoutrefpoint(
   return _impl_.a_aoutrefpoint_.Get();
 }
 inline void Reply_ProcessUnhandledEvent::_internal_set_a_aoutrefpoint(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aoutrefpoint_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_ProcessUnhandledEvent::_internal_mutable_a_aoutrefpoint() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aoutrefpoint_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_ProcessUnhandledEvent::release_a_aoutrefpoint() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZInputBridge.Reply_ProcessUnhandledEvent.a_aOutRefPoint)
-  return _impl_.a_aoutrefpoint_.Release();
+  if (!_internal_has_a_aoutrefpoint()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aoutrefpoint_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aoutrefpoint_.IsDefault()) {
+    _impl_.a_aoutrefpoint_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_ProcessUnhandledEvent::set_allocated_a_aoutrefpoint(std::string* a_aoutrefpoint) {
   if (a_aoutrefpoint != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aoutrefpoint_.SetAllocated(a_aoutrefpoint, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4590,9 +5468,17 @@ inline void Reply_ProcessUnhandledEvent::set_allocated_a_aoutrefpoint(std::strin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZInputBridge.Reply_ProcessUnhandledEvent.a_aOutRefPoint)
 }
 
-// bytes a_aOutTargetGuid = 2;
+// required bytes a_aOutTargetGuid = 2;
+inline bool Reply_ProcessUnhandledEvent::_internal_has_a_aouttargetguid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Reply_ProcessUnhandledEvent::has_a_aouttargetguid() const {
+  return _internal_has_a_aouttargetguid();
+}
 inline void Reply_ProcessUnhandledEvent::clear_a_aouttargetguid() {
   _impl_.a_aouttargetguid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Reply_ProcessUnhandledEvent::a_aouttargetguid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Reply_ProcessUnhandledEvent.a_aOutTargetGuid)
@@ -4601,7 +5487,7 @@ inline const std::string& Reply_ProcessUnhandledEvent::a_aouttargetguid() const 
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_ProcessUnhandledEvent::set_a_aouttargetguid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_aouttargetguid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Reply_ProcessUnhandledEvent.a_aOutTargetGuid)
 }
@@ -4614,22 +5500,32 @@ inline const std::string& Reply_ProcessUnhandledEvent::_internal_a_aouttargetgui
   return _impl_.a_aouttargetguid_.Get();
 }
 inline void Reply_ProcessUnhandledEvent::_internal_set_a_aouttargetguid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_aouttargetguid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_ProcessUnhandledEvent::_internal_mutable_a_aouttargetguid() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_aouttargetguid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_ProcessUnhandledEvent::release_a_aouttargetguid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZInputBridge.Reply_ProcessUnhandledEvent.a_aOutTargetGuid)
-  return _impl_.a_aouttargetguid_.Release();
+  if (!_internal_has_a_aouttargetguid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_aouttargetguid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aouttargetguid_.IsDefault()) {
+    _impl_.a_aouttargetguid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_ProcessUnhandledEvent::set_allocated_a_aouttargetguid(std::string* a_aouttargetguid) {
   if (a_aouttargetguid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_aouttargetguid_.SetAllocated(a_aouttargetguid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4640,9 +5536,17 @@ inline void Reply_ProcessUnhandledEvent::set_allocated_a_aouttargetguid(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZInputBridge.Reply_ProcessUnhandledEvent.a_aOutTargetGuid)
 }
 
-// uint64 a_aOutFocusSequenceNumber = 3;
+// required uint64 a_aOutFocusSequenceNumber = 3;
+inline bool Reply_ProcessUnhandledEvent::_internal_has_a_aoutfocussequencenumber() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool Reply_ProcessUnhandledEvent::has_a_aoutfocussequencenumber() const {
+  return _internal_has_a_aoutfocussequencenumber();
+}
 inline void Reply_ProcessUnhandledEvent::clear_a_aoutfocussequencenumber() {
   _impl_.a_aoutfocussequencenumber_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline uint64_t Reply_ProcessUnhandledEvent::_internal_a_aoutfocussequencenumber() const {
   return _impl_.a_aoutfocussequencenumber_;
@@ -4652,7 +5556,7 @@ inline uint64_t Reply_ProcessUnhandledEvent::a_aoutfocussequencenumber() const {
   return _internal_a_aoutfocussequencenumber();
 }
 inline void Reply_ProcessUnhandledEvent::_internal_set_a_aoutfocussequencenumber(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_aoutfocussequencenumber_ = value;
 }
 inline void Reply_ProcessUnhandledEvent::set_a_aoutfocussequencenumber(uint64_t value) {
@@ -4660,9 +5564,17 @@ inline void Reply_ProcessUnhandledEvent::set_a_aoutfocussequencenumber(uint64_t 
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Reply_ProcessUnhandledEvent.a_aOutFocusSequenceNumber)
 }
 
-// bytes a_aOutLayersId = 4;
+// required bytes a_aOutLayersId = 4;
+inline bool Reply_ProcessUnhandledEvent::_internal_has_a_aoutlayersid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Reply_ProcessUnhandledEvent::has_a_aoutlayersid() const {
+  return _internal_has_a_aoutlayersid();
+}
 inline void Reply_ProcessUnhandledEvent::clear_a_aoutlayersid() {
   _impl_.a_aoutlayersid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& Reply_ProcessUnhandledEvent::a_aoutlayersid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Reply_ProcessUnhandledEvent.a_aOutLayersId)
@@ -4671,7 +5583,7 @@ inline const std::string& Reply_ProcessUnhandledEvent::a_aoutlayersid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_ProcessUnhandledEvent::set_a_aoutlayersid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000004u;
  _impl_.a_aoutlayersid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Reply_ProcessUnhandledEvent.a_aOutLayersId)
 }
@@ -4684,22 +5596,32 @@ inline const std::string& Reply_ProcessUnhandledEvent::_internal_a_aoutlayersid(
   return _impl_.a_aoutlayersid_.Get();
 }
 inline void Reply_ProcessUnhandledEvent::_internal_set_a_aoutlayersid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_aoutlayersid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_ProcessUnhandledEvent::_internal_mutable_a_aoutlayersid() {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   return _impl_.a_aoutlayersid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_ProcessUnhandledEvent::release_a_aoutlayersid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZInputBridge.Reply_ProcessUnhandledEvent.a_aOutLayersId)
-  return _impl_.a_aoutlayersid_.Release();
+  if (!_internal_has_a_aoutlayersid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000004u;
+  auto* p = _impl_.a_aoutlayersid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aoutlayersid_.IsDefault()) {
+    _impl_.a_aoutlayersid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_ProcessUnhandledEvent::set_allocated_a_aoutlayersid(std::string* a_aoutlayersid) {
   if (a_aoutlayersid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.a_aoutlayersid_.SetAllocated(a_aoutlayersid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4714,9 +5636,17 @@ inline void Reply_ProcessUnhandledEvent::set_allocated_a_aoutlayersid(std::strin
 
 // Msg_CallInputBlockCallback
 
-// uint64 a_aInputBlockId = 1;
+// required uint64 a_aInputBlockId = 1;
+inline bool Msg_CallInputBlockCallback::_internal_has_a_ainputblockid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_CallInputBlockCallback::has_a_ainputblockid() const {
+  return _internal_has_a_ainputblockid();
+}
 inline void Msg_CallInputBlockCallback::clear_a_ainputblockid() {
   _impl_.a_ainputblockid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_CallInputBlockCallback::_internal_a_ainputblockid() const {
   return _impl_.a_ainputblockid_;
@@ -4726,7 +5656,7 @@ inline uint64_t Msg_CallInputBlockCallback::a_ainputblockid() const {
   return _internal_a_ainputblockid();
 }
 inline void Msg_CallInputBlockCallback::_internal_set_a_ainputblockid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_ainputblockid_ = value;
 }
 inline void Msg_CallInputBlockCallback::set_a_ainputblockid(uint64_t value) {
@@ -4734,9 +5664,17 @@ inline void Msg_CallInputBlockCallback::set_a_ainputblockid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Msg_CallInputBlockCallback.a_aInputBlockId)
 }
 
-// bytes a_aHandledResult = 2;
+// required bytes a_aHandledResult = 2;
+inline bool Msg_CallInputBlockCallback::_internal_has_a_ahandledresult() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_CallInputBlockCallback::has_a_ahandledresult() const {
+  return _internal_has_a_ahandledresult();
+}
 inline void Msg_CallInputBlockCallback::clear_a_ahandledresult() {
   _impl_.a_ahandledresult_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_CallInputBlockCallback::a_ahandledresult() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Msg_CallInputBlockCallback.a_aHandledResult)
@@ -4745,7 +5683,7 @@ inline const std::string& Msg_CallInputBlockCallback::a_ahandledresult() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CallInputBlockCallback::set_a_ahandledresult(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_ahandledresult_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Msg_CallInputBlockCallback.a_aHandledResult)
 }
@@ -4758,22 +5696,32 @@ inline const std::string& Msg_CallInputBlockCallback::_internal_a_ahandledresult
   return _impl_.a_ahandledresult_.Get();
 }
 inline void Msg_CallInputBlockCallback::_internal_set_a_ahandledresult(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_ahandledresult_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_CallInputBlockCallback::_internal_mutable_a_ahandledresult() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_ahandledresult_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_CallInputBlockCallback::release_a_ahandledresult() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZInputBridge.Msg_CallInputBlockCallback.a_aHandledResult)
-  return _impl_.a_ahandledresult_.Release();
+  if (!_internal_has_a_ahandledresult()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_ahandledresult_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_ahandledresult_.IsDefault()) {
+    _impl_.a_ahandledresult_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_CallInputBlockCallback::set_allocated_a_ahandledresult(std::string* a_ahandledresult) {
   if (a_ahandledresult != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_ahandledresult_.SetAllocated(a_ahandledresult, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4788,9 +5736,17 @@ inline void Msg_CallInputBlockCallback::set_allocated_a_ahandledresult(std::stri
 
 // Msg_HandleTap
 
-// bytes a_aType = 1;
+// required bytes a_aType = 1;
+inline bool Msg_HandleTap::_internal_has_a_atype() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_HandleTap::has_a_atype() const {
+  return _internal_has_a_atype();
+}
 inline void Msg_HandleTap::clear_a_atype() {
   _impl_.a_atype_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_HandleTap::a_atype() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Msg_HandleTap.a_aType)
@@ -4799,7 +5755,7 @@ inline const std::string& Msg_HandleTap::a_atype() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_HandleTap::set_a_atype(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_atype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Msg_HandleTap.a_aType)
 }
@@ -4812,22 +5768,32 @@ inline const std::string& Msg_HandleTap::_internal_a_atype() const {
   return _impl_.a_atype_.Get();
 }
 inline void Msg_HandleTap::_internal_set_a_atype(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_atype_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_HandleTap::_internal_mutable_a_atype() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_atype_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_HandleTap::release_a_atype() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZInputBridge.Msg_HandleTap.a_aType)
-  return _impl_.a_atype_.Release();
+  if (!_internal_has_a_atype()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_atype_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_atype_.IsDefault()) {
+    _impl_.a_atype_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_HandleTap::set_allocated_a_atype(std::string* a_atype) {
   if (a_atype != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_atype_.SetAllocated(a_atype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4838,9 +5804,17 @@ inline void Msg_HandleTap::set_allocated_a_atype(std::string* a_atype) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZInputBridge.Msg_HandleTap.a_aType)
 }
 
-// bytes a_point = 2;
+// required bytes a_point = 2;
+inline bool Msg_HandleTap::_internal_has_a_point() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_HandleTap::has_a_point() const {
+  return _internal_has_a_point();
+}
 inline void Msg_HandleTap::clear_a_point() {
   _impl_.a_point_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_HandleTap::a_point() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Msg_HandleTap.a_point)
@@ -4849,7 +5823,7 @@ inline const std::string& Msg_HandleTap::a_point() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_HandleTap::set_a_point(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_point_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Msg_HandleTap.a_point)
 }
@@ -4862,22 +5836,32 @@ inline const std::string& Msg_HandleTap::_internal_a_point() const {
   return _impl_.a_point_.Get();
 }
 inline void Msg_HandleTap::_internal_set_a_point(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_point_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_HandleTap::_internal_mutable_a_point() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_point_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_HandleTap::release_a_point() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZInputBridge.Msg_HandleTap.a_point)
-  return _impl_.a_point_.Release();
+  if (!_internal_has_a_point()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_point_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_point_.IsDefault()) {
+    _impl_.a_point_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_HandleTap::set_allocated_a_point(std::string* a_point) {
   if (a_point != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_point_.SetAllocated(a_point, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4888,9 +5872,17 @@ inline void Msg_HandleTap::set_allocated_a_point(std::string* a_point) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZInputBridge.Msg_HandleTap.a_point)
 }
 
-// bytes a_aModifiers = 3;
+// required bytes a_aModifiers = 3;
+inline bool Msg_HandleTap::_internal_has_a_amodifiers() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_HandleTap::has_a_amodifiers() const {
+  return _internal_has_a_amodifiers();
+}
 inline void Msg_HandleTap::clear_a_amodifiers() {
   _impl_.a_amodifiers_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& Msg_HandleTap::a_amodifiers() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Msg_HandleTap.a_aModifiers)
@@ -4899,7 +5891,7 @@ inline const std::string& Msg_HandleTap::a_amodifiers() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_HandleTap::set_a_amodifiers(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000004u;
  _impl_.a_amodifiers_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Msg_HandleTap.a_aModifiers)
 }
@@ -4912,22 +5904,32 @@ inline const std::string& Msg_HandleTap::_internal_a_amodifiers() const {
   return _impl_.a_amodifiers_.Get();
 }
 inline void Msg_HandleTap::_internal_set_a_amodifiers(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_amodifiers_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_HandleTap::_internal_mutable_a_amodifiers() {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   return _impl_.a_amodifiers_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_HandleTap::release_a_amodifiers() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZInputBridge.Msg_HandleTap.a_aModifiers)
-  return _impl_.a_amodifiers_.Release();
+  if (!_internal_has_a_amodifiers()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000004u;
+  auto* p = _impl_.a_amodifiers_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_amodifiers_.IsDefault()) {
+    _impl_.a_amodifiers_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_HandleTap::set_allocated_a_amodifiers(std::string* a_amodifiers) {
   if (a_amodifiers != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.a_amodifiers_.SetAllocated(a_amodifiers, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4938,9 +5940,17 @@ inline void Msg_HandleTap::set_allocated_a_amodifiers(std::string* a_amodifiers)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZInputBridge.Msg_HandleTap.a_aModifiers)
 }
 
-// bytes a_aGuid = 4;
+// required bytes a_aGuid = 4;
+inline bool Msg_HandleTap::_internal_has_a_aguid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool Msg_HandleTap::has_a_aguid() const {
+  return _internal_has_a_aguid();
+}
 inline void Msg_HandleTap::clear_a_aguid() {
   _impl_.a_aguid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline const std::string& Msg_HandleTap::a_aguid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Msg_HandleTap.a_aGuid)
@@ -4949,7 +5959,7 @@ inline const std::string& Msg_HandleTap::a_aguid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_HandleTap::set_a_aguid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000008u;
  _impl_.a_aguid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Msg_HandleTap.a_aGuid)
 }
@@ -4962,22 +5972,32 @@ inline const std::string& Msg_HandleTap::_internal_a_aguid() const {
   return _impl_.a_aguid_.Get();
 }
 inline void Msg_HandleTap::_internal_set_a_aguid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_aguid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_HandleTap::_internal_mutable_a_aguid() {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   return _impl_.a_aguid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_HandleTap::release_a_aguid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZInputBridge.Msg_HandleTap.a_aGuid)
-  return _impl_.a_aguid_.Release();
+  if (!_internal_has_a_aguid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000008u;
+  auto* p = _impl_.a_aguid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aguid_.IsDefault()) {
+    _impl_.a_aguid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_HandleTap::set_allocated_a_aguid(std::string* a_aguid) {
   if (a_aguid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000008u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000008u;
   }
   _impl_.a_aguid_.SetAllocated(a_aguid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4988,9 +6008,17 @@ inline void Msg_HandleTap::set_allocated_a_aguid(std::string* a_aguid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZInputBridge.Msg_HandleTap.a_aGuid)
 }
 
-// uint64 a_aInputBlockId = 5;
+// required uint64 a_aInputBlockId = 5;
+inline bool Msg_HandleTap::_internal_has_a_ainputblockid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool Msg_HandleTap::has_a_ainputblockid() const {
+  return _internal_has_a_ainputblockid();
+}
 inline void Msg_HandleTap::clear_a_ainputblockid() {
   _impl_.a_ainputblockid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline uint64_t Msg_HandleTap::_internal_a_ainputblockid() const {
   return _impl_.a_ainputblockid_;
@@ -5000,7 +6028,7 @@ inline uint64_t Msg_HandleTap::a_ainputblockid() const {
   return _internal_a_ainputblockid();
 }
 inline void Msg_HandleTap::_internal_set_a_ainputblockid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000020u;
   _impl_.a_ainputblockid_ = value;
 }
 inline void Msg_HandleTap::set_a_ainputblockid(uint64_t value) {
@@ -5010,7 +6038,7 @@ inline void Msg_HandleTap::set_a_ainputblockid(uint64_t value) {
 
 // optional bytes a_aDoubleTapToZoomMetrics = 6;
 inline bool Msg_HandleTap::_internal_has_a_adoubletaptozoommetrics() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
 inline bool Msg_HandleTap::has_a_adoubletaptozoommetrics() const {
@@ -5018,7 +6046,7 @@ inline bool Msg_HandleTap::has_a_adoubletaptozoommetrics() const {
 }
 inline void Msg_HandleTap::clear_a_adoubletaptozoommetrics() {
   _impl_.a_adoubletaptozoommetrics_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline const std::string& Msg_HandleTap::a_adoubletaptozoommetrics() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZInputBridge.Msg_HandleTap.a_aDoubleTapToZoomMetrics)
@@ -5027,7 +6055,7 @@ inline const std::string& Msg_HandleTap::a_adoubletaptozoommetrics() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_HandleTap::set_a_adoubletaptozoommetrics(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ _impl_._has_bits_[0] |= 0x00000010u;
  _impl_.a_adoubletaptozoommetrics_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZInputBridge.Msg_HandleTap.a_aDoubleTapToZoomMetrics)
 }
@@ -5040,11 +6068,11 @@ inline const std::string& Msg_HandleTap::_internal_a_adoubletaptozoommetrics() c
   return _impl_.a_adoubletaptozoommetrics_.Get();
 }
 inline void Msg_HandleTap::_internal_set_a_adoubletaptozoommetrics(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.a_adoubletaptozoommetrics_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_HandleTap::_internal_mutable_a_adoubletaptozoommetrics() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_._has_bits_[0] |= 0x00000010u;
   return _impl_.a_adoubletaptozoommetrics_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_HandleTap::release_a_adoubletaptozoommetrics() {
@@ -5052,7 +6080,7 @@ inline std::string* Msg_HandleTap::release_a_adoubletaptozoommetrics() {
   if (!_internal_has_a_adoubletaptozoommetrics()) {
     return nullptr;
   }
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000010u;
   auto* p = _impl_.a_adoubletaptozoommetrics_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (_impl_.a_adoubletaptozoommetrics_.IsDefault()) {
@@ -5063,9 +6091,9 @@ inline std::string* Msg_HandleTap::release_a_adoubletaptozoommetrics() {
 }
 inline void Msg_HandleTap::set_allocated_a_adoubletaptozoommetrics(std::string* a_adoubletaptozoommetrics) {
   if (a_adoubletaptozoommetrics != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    _impl_._has_bits_[0] |= 0x00000010u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    _impl_._has_bits_[0] &= ~0x00000010u;
   }
   _impl_.a_adoubletaptozoommetrics_.SetAllocated(a_adoubletaptozoommetrics, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

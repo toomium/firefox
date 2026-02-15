@@ -111,6 +111,13 @@ class Msg_FileDesc final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_FileDesc& default_instance() {
     return *internal_default_instance();
   }
@@ -185,7 +192,11 @@ class Msg_FileDesc final :
   enum : int {
     kAAFDFieldNumber = 1,
   };
-  // bytes a_aFD = 1;
+  // required bytes a_aFD = 1;
+  bool has_a_afd() const;
+  private:
+  bool _internal_has_a_afd() const;
+  public:
   void clear_a_afd();
   const std::string& a_afd() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -207,8 +218,9 @@ class Msg_FileDesc final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_afd_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_afd_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTemporaryIPCBlob_2eproto;
@@ -244,6 +256,13 @@ class Msg___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg___delete__& default_instance() {
@@ -320,7 +339,7 @@ class Msg___delete__ final :
   enum : int {
     kAABlobOrErrorFieldNumber = 1,
   };
-  // .protobuf.mozilla.dom.IPCBlobOrError a_aBlobOrError = 1;
+  // required .protobuf.mozilla.dom.IPCBlobOrError a_aBlobOrError = 1;
   bool has_a_abloborerror() const;
   private:
   bool _internal_has_a_abloborerror() const;
@@ -346,8 +365,9 @@ class Msg___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::protobuf::mozilla::dom::IPCBlobOrError* a_abloborerror_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::protobuf::mozilla::dom::IPCBlobOrError* a_abloborerror_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTemporaryIPCBlob_2eproto;
@@ -383,6 +403,13 @@ class Reply___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply___delete__& default_instance() {
@@ -502,6 +529,13 @@ class Msg_OperationFailed final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_OperationFailed& default_instance() {
     return *internal_default_instance();
   }
@@ -619,6 +653,13 @@ class Msg_OperationDone final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_OperationDone& default_instance() {
     return *internal_default_instance();
   }
@@ -694,7 +735,11 @@ class Msg_OperationDone final :
     kAAContentTypeFieldNumber = 1,
     kAAFDFieldNumber = 2,
   };
-  // string a_aContentType = 1;
+  // required string a_aContentType = 1;
+  bool has_a_acontenttype() const;
+  private:
+  bool _internal_has_a_acontenttype() const;
+  public:
   void clear_a_acontenttype();
   const std::string& a_acontenttype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -708,7 +753,11 @@ class Msg_OperationDone final :
   std::string* _internal_mutable_a_acontenttype();
   public:
 
-  // bytes a_aFD = 2;
+  // required bytes a_aFD = 2;
+  bool has_a_afd() const;
+  private:
+  bool _internal_has_a_afd() const;
+  public:
   void clear_a_afd();
   const std::string& a_afd() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -726,13 +775,17 @@ class Msg_OperationDone final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_acontenttype_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_afd_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTemporaryIPCBlob_2eproto;
@@ -748,9 +801,17 @@ class Msg_OperationDone final :
 #endif  // __GNUC__
 // Msg_FileDesc
 
-// bytes a_aFD = 1;
+// required bytes a_aFD = 1;
+inline bool Msg_FileDesc::_internal_has_a_afd() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_FileDesc::has_a_afd() const {
+  return _internal_has_a_afd();
+}
 inline void Msg_FileDesc::clear_a_afd() {
   _impl_.a_afd_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_FileDesc::a_afd() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PTemporaryIPCBlob.Msg_FileDesc.a_aFD)
@@ -759,7 +820,7 @@ inline const std::string& Msg_FileDesc::a_afd() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_FileDesc::set_a_afd(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_afd_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PTemporaryIPCBlob.Msg_FileDesc.a_aFD)
 }
@@ -772,22 +833,32 @@ inline const std::string& Msg_FileDesc::_internal_a_afd() const {
   return _impl_.a_afd_.Get();
 }
 inline void Msg_FileDesc::_internal_set_a_afd(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_afd_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_FileDesc::_internal_mutable_a_afd() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_afd_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_FileDesc::release_a_afd() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PTemporaryIPCBlob.Msg_FileDesc.a_aFD)
-  return _impl_.a_afd_.Release();
+  if (!_internal_has_a_afd()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_afd_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_afd_.IsDefault()) {
+    _impl_.a_afd_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_FileDesc::set_allocated_a_afd(std::string* a_afd) {
   if (a_afd != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_afd_.SetAllocated(a_afd, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -802,9 +873,11 @@ inline void Msg_FileDesc::set_allocated_a_afd(std::string* a_afd) {
 
 // Msg___delete__
 
-// .protobuf.mozilla.dom.IPCBlobOrError a_aBlobOrError = 1;
+// required .protobuf.mozilla.dom.IPCBlobOrError a_aBlobOrError = 1;
 inline bool Msg___delete__::_internal_has_a_abloborerror() const {
-  return this != internal_default_instance() && _impl_.a_abloborerror_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_abloborerror_ != nullptr);
+  return value;
 }
 inline bool Msg___delete__::has_a_abloborerror() const {
   return _internal_has_a_abloborerror();
@@ -825,14 +898,14 @@ inline void Msg___delete__::unsafe_arena_set_allocated_a_abloborerror(
   }
   _impl_.a_abloborerror_ = a_abloborerror;
   if (a_abloborerror) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PTemporaryIPCBlob.Msg___delete__.a_aBlobOrError)
 }
 inline ::protobuf::mozilla::dom::IPCBlobOrError* Msg___delete__::release_a_abloborerror() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::IPCBlobOrError* temp = _impl_.a_abloborerror_;
   _impl_.a_abloborerror_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -848,13 +921,13 @@ inline ::protobuf::mozilla::dom::IPCBlobOrError* Msg___delete__::release_a_ablob
 }
 inline ::protobuf::mozilla::dom::IPCBlobOrError* Msg___delete__::unsafe_arena_release_a_abloborerror() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PTemporaryIPCBlob.Msg___delete__.a_aBlobOrError)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::IPCBlobOrError* temp = _impl_.a_abloborerror_;
   _impl_.a_abloborerror_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::IPCBlobOrError* Msg___delete__::_internal_mutable_a_abloborerror() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_abloborerror_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::IPCBlobOrError>(GetArenaForAllocation());
     _impl_.a_abloborerror_ = p;
@@ -879,9 +952,9 @@ inline void Msg___delete__::set_allocated_a_abloborerror(::protobuf::mozilla::do
       a_abloborerror = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_abloborerror, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_abloborerror_ = a_abloborerror;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PTemporaryIPCBlob.Msg___delete__.a_aBlobOrError)
@@ -899,9 +972,17 @@ inline void Msg___delete__::set_allocated_a_abloborerror(::protobuf::mozilla::do
 
 // Msg_OperationDone
 
-// string a_aContentType = 1;
+// required string a_aContentType = 1;
+inline bool Msg_OperationDone::_internal_has_a_acontenttype() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_OperationDone::has_a_acontenttype() const {
+  return _internal_has_a_acontenttype();
+}
 inline void Msg_OperationDone::clear_a_acontenttype() {
   _impl_.a_acontenttype_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_OperationDone::a_acontenttype() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PTemporaryIPCBlob.Msg_OperationDone.a_aContentType)
@@ -910,7 +991,7 @@ inline const std::string& Msg_OperationDone::a_acontenttype() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OperationDone::set_a_acontenttype(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_acontenttype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PTemporaryIPCBlob.Msg_OperationDone.a_aContentType)
 }
@@ -923,22 +1004,32 @@ inline const std::string& Msg_OperationDone::_internal_a_acontenttype() const {
   return _impl_.a_acontenttype_.Get();
 }
 inline void Msg_OperationDone::_internal_set_a_acontenttype(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_acontenttype_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OperationDone::_internal_mutable_a_acontenttype() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_acontenttype_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OperationDone::release_a_acontenttype() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PTemporaryIPCBlob.Msg_OperationDone.a_aContentType)
-  return _impl_.a_acontenttype_.Release();
+  if (!_internal_has_a_acontenttype()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_acontenttype_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_acontenttype_.IsDefault()) {
+    _impl_.a_acontenttype_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_OperationDone::set_allocated_a_acontenttype(std::string* a_acontenttype) {
   if (a_acontenttype != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_acontenttype_.SetAllocated(a_acontenttype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -949,9 +1040,17 @@ inline void Msg_OperationDone::set_allocated_a_acontenttype(std::string* a_acont
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PTemporaryIPCBlob.Msg_OperationDone.a_aContentType)
 }
 
-// bytes a_aFD = 2;
+// required bytes a_aFD = 2;
+inline bool Msg_OperationDone::_internal_has_a_afd() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_OperationDone::has_a_afd() const {
+  return _internal_has_a_afd();
+}
 inline void Msg_OperationDone::clear_a_afd() {
   _impl_.a_afd_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_OperationDone::a_afd() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PTemporaryIPCBlob.Msg_OperationDone.a_aFD)
@@ -960,7 +1059,7 @@ inline const std::string& Msg_OperationDone::a_afd() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OperationDone::set_a_afd(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_afd_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PTemporaryIPCBlob.Msg_OperationDone.a_aFD)
 }
@@ -973,22 +1072,32 @@ inline const std::string& Msg_OperationDone::_internal_a_afd() const {
   return _impl_.a_afd_.Get();
 }
 inline void Msg_OperationDone::_internal_set_a_afd(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_afd_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OperationDone::_internal_mutable_a_afd() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_afd_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OperationDone::release_a_afd() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PTemporaryIPCBlob.Msg_OperationDone.a_aFD)
-  return _impl_.a_afd_.Release();
+  if (!_internal_has_a_afd()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_afd_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_afd_.IsDefault()) {
+    _impl_.a_afd_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_OperationDone::set_allocated_a_afd(std::string* a_afd) {
   if (a_afd != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_afd_.SetAllocated(a_afd, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

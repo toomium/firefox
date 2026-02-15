@@ -23,11 +23,12 @@ namespace gfx {
 namespace PVRLayer {
 PROTOBUF_CONSTEXPR Msg_SubmitFrame::Msg_SubmitFrame(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_alefteyerect_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_alefteyerect_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_arighteyerect_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_atexture_)*/nullptr
-  , /*decltype(_impl_.a_aframeid_)*/uint64_t{0u}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_aframeid_)*/uint64_t{0u}} {}
 struct Msg_SubmitFrameDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_SubmitFrameDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -86,7 +87,23 @@ namespace PVRLayer {
 
 class Msg_SubmitFrame::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_SubmitFrame>()._impl_._has_bits_);
   static const ::protobuf::mozilla::layers::SurfaceDescriptor& a_atexture(const Msg_SubmitFrame* msg);
+  static void set_has_a_atexture(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_a_aframeid(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_a_alefteyerect(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_arighteyerect(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x0000000f) ^ 0x0000000f) != 0;
+  }
 };
 
 const ::protobuf::mozilla::layers::SurfaceDescriptor&
@@ -94,10 +111,8 @@ Msg_SubmitFrame::_Internal::a_atexture(const Msg_SubmitFrame* msg) {
   return *msg->_impl_.a_atexture_;
 }
 void Msg_SubmitFrame::clear_a_atexture() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_atexture_ != nullptr) {
-    delete _impl_.a_atexture_;
-  }
-  _impl_.a_atexture_ = nullptr;
+  if (_impl_.a_atexture_ != nullptr) _impl_.a_atexture_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 Msg_SubmitFrame::Msg_SubmitFrame(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -109,18 +124,19 @@ Msg_SubmitFrame::Msg_SubmitFrame(const Msg_SubmitFrame& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_SubmitFrame* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_alefteyerect_){}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_alefteyerect_){}
     , decltype(_impl_.a_arighteyerect_){}
     , decltype(_impl_.a_atexture_){nullptr}
-    , decltype(_impl_.a_aframeid_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_aframeid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_alefteyerect_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_alefteyerect_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_alefteyerect().empty()) {
+  if (from._internal_has_a_alefteyerect()) {
     _this->_impl_.a_alefteyerect_.Set(from._internal_a_alefteyerect(), 
       _this->GetArenaForAllocation());
   }
@@ -128,7 +144,7 @@ Msg_SubmitFrame::Msg_SubmitFrame(const Msg_SubmitFrame& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_arighteyerect_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_arighteyerect().empty()) {
+  if (from._internal_has_a_arighteyerect()) {
     _this->_impl_.a_arighteyerect_.Set(from._internal_a_arighteyerect(), 
       _this->GetArenaForAllocation());
   }
@@ -144,11 +160,12 @@ inline void Msg_SubmitFrame::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_alefteyerect_){}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_alefteyerect_){}
     , decltype(_impl_.a_arighteyerect_){}
     , decltype(_impl_.a_atexture_){nullptr}
     , decltype(_impl_.a_aframeid_){uint64_t{0u}}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_alefteyerect_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -186,23 +203,32 @@ void Msg_SubmitFrame::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_alefteyerect_.ClearToEmpty();
-  _impl_.a_arighteyerect_.ClearToEmpty();
-  if (GetArenaForAllocation() == nullptr && _impl_.a_atexture_ != nullptr) {
-    delete _impl_.a_atexture_;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_alefteyerect_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_arighteyerect_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      GOOGLE_DCHECK(_impl_.a_atexture_ != nullptr);
+      _impl_.a_atexture_->Clear();
+    }
   }
-  _impl_.a_atexture_ = nullptr;
   _impl_.a_aframeid_ = uint64_t{0u};
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_SubmitFrame::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.layers.SurfaceDescriptor a_aTexture = 1;
+      // required .protobuf.mozilla.layers.SurfaceDescriptor a_aTexture = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_atexture(), ptr);
@@ -210,15 +236,16 @@ const char* Msg_SubmitFrame::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // uint64 a_aFrameId = 2;
+      // required uint64 a_aFrameId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_a_aframeid(&has_bits);
           _impl_.a_aframeid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bytes a_aLeftEyeRect = 3;
+      // required bytes a_aLeftEyeRect = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_alefteyerect();
@@ -227,7 +254,7 @@ const char* Msg_SubmitFrame::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // bytes a_aRightEyeRect = 4;
+      // required bytes a_aRightEyeRect = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_arighteyerect();
@@ -252,6 +279,7 @@ const char* Msg_SubmitFrame::_InternalParse(const char* ptr, ::_pbi::ParseContex
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -265,27 +293,28 @@ uint8_t* Msg_SubmitFrame::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.mozilla.layers.SurfaceDescriptor a_aTexture = 1;
-  if (this->_internal_has_a_atexture()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required .protobuf.mozilla.layers.SurfaceDescriptor a_aTexture = 1;
+  if (cached_has_bits & 0x00000004u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_atexture(this),
         _Internal::a_atexture(this).GetCachedSize(), target, stream);
   }
 
-  // uint64 a_aFrameId = 2;
-  if (this->_internal_a_aframeid() != 0) {
+  // required uint64 a_aFrameId = 2;
+  if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(2, this->_internal_a_aframeid(), target);
   }
 
-  // bytes a_aLeftEyeRect = 3;
-  if (!this->_internal_a_alefteyerect().empty()) {
+  // required bytes a_aLeftEyeRect = 3;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         3, this->_internal_a_alefteyerect(), target);
   }
 
-  // bytes a_aRightEyeRect = 4;
-  if (!this->_internal_a_arighteyerect().empty()) {
+  // required bytes a_aRightEyeRect = 4;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
         4, this->_internal_a_arighteyerect(), target);
   }
@@ -298,39 +327,67 @@ uint8_t* Msg_SubmitFrame::_InternalSerialize(
   return target;
 }
 
-size_t Msg_SubmitFrame::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PVRLayer.Msg_SubmitFrame)
+size_t Msg_SubmitFrame::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.gfx.PVRLayer.Msg_SubmitFrame)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_aLeftEyeRect = 3;
-  if (!this->_internal_a_alefteyerect().empty()) {
+  if (_internal_has_a_alefteyerect()) {
+    // required bytes a_aLeftEyeRect = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_alefteyerect());
   }
 
-  // bytes a_aRightEyeRect = 4;
-  if (!this->_internal_a_arighteyerect().empty()) {
+  if (_internal_has_a_arighteyerect()) {
+    // required bytes a_aRightEyeRect = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_arighteyerect());
   }
 
-  // .protobuf.mozilla.layers.SurfaceDescriptor a_aTexture = 1;
-  if (this->_internal_has_a_atexture()) {
+  if (_internal_has_a_atexture()) {
+    // required .protobuf.mozilla.layers.SurfaceDescriptor a_aTexture = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_atexture_);
   }
 
-  // uint64 a_aFrameId = 2;
-  if (this->_internal_a_aframeid() != 0) {
+  if (_internal_has_a_aframeid()) {
+    // required uint64 a_aFrameId = 2;
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_aframeid());
   }
+
+  return total_size;
+}
+size_t Msg_SubmitFrame::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PVRLayer.Msg_SubmitFrame)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
+    // required bytes a_aLeftEyeRect = 3;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_alefteyerect());
+
+    // required bytes a_aRightEyeRect = 4;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_arighteyerect());
+
+    // required .protobuf.mozilla.layers.SurfaceDescriptor a_aTexture = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_atexture_);
+
+    // required uint64 a_aFrameId = 2;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_aframeid());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -353,18 +410,22 @@ void Msg_SubmitFrame::MergeFrom(const Msg_SubmitFrame& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_alefteyerect().empty()) {
-    _this->_internal_set_a_alefteyerect(from._internal_a_alefteyerect());
-  }
-  if (!from._internal_a_arighteyerect().empty()) {
-    _this->_internal_set_a_arighteyerect(from._internal_a_arighteyerect());
-  }
-  if (from._internal_has_a_atexture()) {
-    _this->_internal_mutable_a_atexture()->::protobuf::mozilla::layers::SurfaceDescriptor::MergeFrom(
-        from._internal_a_atexture());
-  }
-  if (from._internal_a_aframeid() != 0) {
-    _this->_internal_set_a_aframeid(from._internal_a_aframeid());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000000fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_alefteyerect(from._internal_a_alefteyerect());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_arighteyerect(from._internal_a_arighteyerect());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_internal_mutable_a_atexture()->::protobuf::mozilla::layers::SurfaceDescriptor::MergeFrom(
+          from._internal_a_atexture());
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.a_aframeid_ = from._impl_.a_aframeid_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -377,6 +438,10 @@ void Msg_SubmitFrame::CopyFrom(const Msg_SubmitFrame& from) {
 }
 
 bool Msg_SubmitFrame::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (_internal_has_a_atexture()) {
+    if (!_impl_.a_atexture_->IsInitialized()) return false;
+  }
   return true;
 }
 
@@ -385,6 +450,7 @@ void Msg_SubmitFrame::InternalSwap(Msg_SubmitFrame* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_alefteyerect_, lhs_arena,
       &other->_impl_.a_alefteyerect_, rhs_arena

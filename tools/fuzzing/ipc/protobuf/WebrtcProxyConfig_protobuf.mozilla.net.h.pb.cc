@@ -22,11 +22,12 @@ namespace mozilla {
 namespace net {
 PROTOBUF_CONSTEXPR WebrtcProxyConfig::WebrtcProxyConfig(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_tabid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_tabid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_alpn_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_loadinfoargs_)*/nullptr
-  , /*decltype(_impl_.a_forceproxy_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_forceproxy_)*/false} {}
 struct WebrtcProxyConfigDefaultTypeInternal {
   PROTOBUF_CONSTEXPR WebrtcProxyConfigDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -47,7 +48,23 @@ namespace net {
 
 class WebrtcProxyConfig::_Internal {
  public:
+  using HasBits = decltype(std::declval<WebrtcProxyConfig>()._impl_._has_bits_);
+  static void set_has_a_tabid(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_alpn(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
   static const ::protobuf::mozilla::net::LoadInfoArgs& a_loadinfoargs(const WebrtcProxyConfig* msg);
+  static void set_has_a_loadinfoargs(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_a_forceproxy(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x0000000f) ^ 0x0000000f) != 0;
+  }
 };
 
 const ::protobuf::mozilla::net::LoadInfoArgs&
@@ -55,10 +72,8 @@ WebrtcProxyConfig::_Internal::a_loadinfoargs(const WebrtcProxyConfig* msg) {
   return *msg->_impl_.a_loadinfoargs_;
 }
 void WebrtcProxyConfig::clear_a_loadinfoargs() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_loadinfoargs_ != nullptr) {
-    delete _impl_.a_loadinfoargs_;
-  }
-  _impl_.a_loadinfoargs_ = nullptr;
+  if (_impl_.a_loadinfoargs_ != nullptr) _impl_.a_loadinfoargs_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 WebrtcProxyConfig::WebrtcProxyConfig(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -70,18 +85,19 @@ WebrtcProxyConfig::WebrtcProxyConfig(const WebrtcProxyConfig& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebrtcProxyConfig* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_tabid_){}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_tabid_){}
     , decltype(_impl_.a_alpn_){}
     , decltype(_impl_.a_loadinfoargs_){nullptr}
-    , decltype(_impl_.a_forceproxy_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_forceproxy_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_tabid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_tabid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_tabid().empty()) {
+  if (from._internal_has_a_tabid()) {
     _this->_impl_.a_tabid_.Set(from._internal_a_tabid(), 
       _this->GetArenaForAllocation());
   }
@@ -89,7 +105,7 @@ WebrtcProxyConfig::WebrtcProxyConfig(const WebrtcProxyConfig& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_alpn_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_alpn().empty()) {
+  if (from._internal_has_a_alpn()) {
     _this->_impl_.a_alpn_.Set(from._internal_a_alpn(), 
       _this->GetArenaForAllocation());
   }
@@ -105,11 +121,12 @@ inline void WebrtcProxyConfig::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_tabid_){}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_tabid_){}
     , decltype(_impl_.a_alpn_){}
     , decltype(_impl_.a_loadinfoargs_){nullptr}
     , decltype(_impl_.a_forceproxy_){false}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_tabid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -147,23 +164,32 @@ void WebrtcProxyConfig::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_tabid_.ClearToEmpty();
-  _impl_.a_alpn_.ClearToEmpty();
-  if (GetArenaForAllocation() == nullptr && _impl_.a_loadinfoargs_ != nullptr) {
-    delete _impl_.a_loadinfoargs_;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_tabid_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_alpn_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      GOOGLE_DCHECK(_impl_.a_loadinfoargs_ != nullptr);
+      _impl_.a_loadinfoargs_->Clear();
+    }
   }
-  _impl_.a_loadinfoargs_ = nullptr;
   _impl_.a_forceproxy_ = false;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebrtcProxyConfig::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_tabId = 1;
+      // required bytes a_tabId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_tabid();
@@ -172,17 +198,16 @@ const char* WebrtcProxyConfig::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // string a_alpn = 2;
+      // required string a_alpn = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_alpn();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.net.LoadInfoArgs a_loadInfoArgs = 3;
+      // required .protobuf.mozilla.net.LoadInfoArgs a_loadInfoArgs = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_loadinfoargs(), ptr);
@@ -190,9 +215,10 @@ const char* WebrtcProxyConfig::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // bool a_forceProxy = 4;
+      // required bool a_forceProxy = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _Internal::set_has_a_forceproxy(&has_bits);
           _impl_.a_forceproxy_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -214,6 +240,7 @@ const char* WebrtcProxyConfig::_InternalParse(const char* ptr, ::_pbi::ParseCont
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -227,31 +254,28 @@ uint8_t* WebrtcProxyConfig::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_tabId = 1;
-  if (!this->_internal_a_tabid().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_tabId = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_tabid(), target);
   }
 
-  // string a_alpn = 2;
-  if (!this->_internal_a_alpn().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_alpn().data(), static_cast<int>(this->_internal_a_alpn().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.net.WebrtcProxyConfig.a_alpn");
+  // required string a_alpn = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_alpn(), target);
   }
 
-  // .protobuf.mozilla.net.LoadInfoArgs a_loadInfoArgs = 3;
-  if (this->_internal_has_a_loadinfoargs()) {
+  // required .protobuf.mozilla.net.LoadInfoArgs a_loadInfoArgs = 3;
+  if (cached_has_bits & 0x00000004u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(3, _Internal::a_loadinfoargs(this),
         _Internal::a_loadinfoargs(this).GetCachedSize(), target, stream);
   }
 
-  // bool a_forceProxy = 4;
-  if (this->_internal_a_forceproxy() != 0) {
+  // required bool a_forceProxy = 4;
+  if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_a_forceproxy(), target);
   }
@@ -264,39 +288,67 @@ uint8_t* WebrtcProxyConfig::_InternalSerialize(
   return target;
 }
 
-size_t WebrtcProxyConfig::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.WebrtcProxyConfig)
+size_t WebrtcProxyConfig::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.WebrtcProxyConfig)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_tabId = 1;
-  if (!this->_internal_a_tabid().empty()) {
+  if (_internal_has_a_tabid()) {
+    // required bytes a_tabId = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_tabid());
   }
 
-  // string a_alpn = 2;
-  if (!this->_internal_a_alpn().empty()) {
+  if (_internal_has_a_alpn()) {
+    // required string a_alpn = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_alpn());
   }
 
-  // .protobuf.mozilla.net.LoadInfoArgs a_loadInfoArgs = 3;
-  if (this->_internal_has_a_loadinfoargs()) {
+  if (_internal_has_a_loadinfoargs()) {
+    // required .protobuf.mozilla.net.LoadInfoArgs a_loadInfoArgs = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_loadinfoargs_);
   }
 
-  // bool a_forceProxy = 4;
-  if (this->_internal_a_forceproxy() != 0) {
+  if (_internal_has_a_forceproxy()) {
+    // required bool a_forceProxy = 4;
     total_size += 1 + 1;
   }
+
+  return total_size;
+}
+size_t WebrtcProxyConfig::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.WebrtcProxyConfig)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
+    // required bytes a_tabId = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_tabid());
+
+    // required string a_alpn = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_alpn());
+
+    // required .protobuf.mozilla.net.LoadInfoArgs a_loadInfoArgs = 3;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_loadinfoargs_);
+
+    // required bool a_forceProxy = 4;
+    total_size += 1 + 1;
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -319,18 +371,22 @@ void WebrtcProxyConfig::MergeFrom(const WebrtcProxyConfig& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_tabid().empty()) {
-    _this->_internal_set_a_tabid(from._internal_a_tabid());
-  }
-  if (!from._internal_a_alpn().empty()) {
-    _this->_internal_set_a_alpn(from._internal_a_alpn());
-  }
-  if (from._internal_has_a_loadinfoargs()) {
-    _this->_internal_mutable_a_loadinfoargs()->::protobuf::mozilla::net::LoadInfoArgs::MergeFrom(
-        from._internal_a_loadinfoargs());
-  }
-  if (from._internal_a_forceproxy() != 0) {
-    _this->_internal_set_a_forceproxy(from._internal_a_forceproxy());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000000fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_tabid(from._internal_a_tabid());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_alpn(from._internal_a_alpn());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_internal_mutable_a_loadinfoargs()->::protobuf::mozilla::net::LoadInfoArgs::MergeFrom(
+          from._internal_a_loadinfoargs());
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.a_forceproxy_ = from._impl_.a_forceproxy_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -343,6 +399,10 @@ void WebrtcProxyConfig::CopyFrom(const WebrtcProxyConfig& from) {
 }
 
 bool WebrtcProxyConfig::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (_internal_has_a_loadinfoargs()) {
+    if (!_impl_.a_loadinfoargs_->IsInitialized()) return false;
+  }
   return true;
 }
 
@@ -351,6 +411,7 @@ void WebrtcProxyConfig::InternalSwap(WebrtcProxyConfig* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_tabid_, lhs_arena,
       &other->_impl_.a_tabid_, rhs_arena

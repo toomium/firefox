@@ -117,6 +117,13 @@ class Msg_Query final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Query& default_instance() {
     return *internal_default_instance();
   }
@@ -234,6 +241,13 @@ class Reply_Query final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_Query& default_instance() {
     return *internal_default_instance();
   }
@@ -308,7 +322,11 @@ class Reply_Query final :
   enum : int {
     kASnapshotFieldNumber = 1,
   };
-  // bytes a_snapshot = 1;
+  // required bytes a_snapshot = 1;
+  bool has_a_snapshot() const;
+  private:
+  bool _internal_has_a_snapshot() const;
+  public:
   void clear_a_snapshot();
   const std::string& a_snapshot() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -330,8 +348,9 @@ class Reply_Query final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_snapshot_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_snapshot_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PLockManager_2eproto;
@@ -367,6 +386,13 @@ class Msg_PLockRequestConstructor final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_PLockRequestConstructor& default_instance() {
@@ -444,7 +470,7 @@ class Msg_PLockRequestConstructor final :
     kAARequestFieldNumber = 2,
     kAActoridFieldNumber = 1,
   };
-  // .protobuf.mozilla.dom.locks.IPCLockRequest a_aRequest = 2;
+  // required .protobuf.mozilla.dom.locks.IPCLockRequest a_aRequest = 2;
   bool has_a_arequest() const;
   private:
   bool _internal_has_a_arequest() const;
@@ -462,7 +488,11 @@ class Msg_PLockRequestConstructor final :
       ::protobuf::mozilla::dom::locks::IPCLockRequest* a_arequest);
   ::protobuf::mozilla::dom::locks::IPCLockRequest* unsafe_arena_release_a_arequest();
 
-  // sint64 a_actorid = 1;
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
   void clear_a_actorid();
   int64_t a_actorid() const;
   void set_a_actorid(int64_t value);
@@ -475,13 +505,17 @@ class Msg_PLockRequestConstructor final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::dom::locks::IPCLockRequest* a_arequest_;
     int64_t a_actorid_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PLockManager_2eproto;
@@ -517,6 +551,13 @@ class Reply_PLockRequestConstructor final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_PLockRequestConstructor& default_instance() {
@@ -636,6 +677,13 @@ class Msg___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -753,6 +801,13 @@ class Reply___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -852,9 +907,17 @@ class Reply___delete__ final :
 
 // Reply_Query
 
-// bytes a_snapshot = 1;
+// required bytes a_snapshot = 1;
+inline bool Reply_Query::_internal_has_a_snapshot() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_Query::has_a_snapshot() const {
+  return _internal_has_a_snapshot();
+}
 inline void Reply_Query::clear_a_snapshot() {
   _impl_.a_snapshot_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_Query::a_snapshot() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.locks.PLockManager.Reply_Query.a_snapshot)
@@ -863,7 +926,7 @@ inline const std::string& Reply_Query::a_snapshot() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_Query::set_a_snapshot(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_snapshot_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.locks.PLockManager.Reply_Query.a_snapshot)
 }
@@ -876,22 +939,32 @@ inline const std::string& Reply_Query::_internal_a_snapshot() const {
   return _impl_.a_snapshot_.Get();
 }
 inline void Reply_Query::_internal_set_a_snapshot(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_snapshot_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_Query::_internal_mutable_a_snapshot() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_snapshot_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_Query::release_a_snapshot() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.locks.PLockManager.Reply_Query.a_snapshot)
-  return _impl_.a_snapshot_.Release();
+  if (!_internal_has_a_snapshot()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_snapshot_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_snapshot_.IsDefault()) {
+    _impl_.a_snapshot_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_Query::set_allocated_a_snapshot(std::string* a_snapshot) {
   if (a_snapshot != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_snapshot_.SetAllocated(a_snapshot, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -906,9 +979,17 @@ inline void Reply_Query::set_allocated_a_snapshot(std::string* a_snapshot) {
 
 // Msg_PLockRequestConstructor
 
-// sint64 a_actorid = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PLockRequestConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PLockRequestConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
 inline void Msg_PLockRequestConstructor::clear_a_actorid() {
   _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline int64_t Msg_PLockRequestConstructor::_internal_a_actorid() const {
   return _impl_.a_actorid_;
@@ -918,7 +999,7 @@ inline int64_t Msg_PLockRequestConstructor::a_actorid() const {
   return _internal_a_actorid();
 }
 inline void Msg_PLockRequestConstructor::_internal_set_a_actorid(int64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_actorid_ = value;
 }
 inline void Msg_PLockRequestConstructor::set_a_actorid(int64_t value) {
@@ -926,9 +1007,11 @@ inline void Msg_PLockRequestConstructor::set_a_actorid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.locks.PLockManager.Msg_PLockRequestConstructor.a_actorid)
 }
 
-// .protobuf.mozilla.dom.locks.IPCLockRequest a_aRequest = 2;
+// required .protobuf.mozilla.dom.locks.IPCLockRequest a_aRequest = 2;
 inline bool Msg_PLockRequestConstructor::_internal_has_a_arequest() const {
-  return this != internal_default_instance() && _impl_.a_arequest_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_arequest_ != nullptr);
+  return value;
 }
 inline bool Msg_PLockRequestConstructor::has_a_arequest() const {
   return _internal_has_a_arequest();
@@ -949,14 +1032,14 @@ inline void Msg_PLockRequestConstructor::unsafe_arena_set_allocated_a_arequest(
   }
   _impl_.a_arequest_ = a_arequest;
   if (a_arequest) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.locks.PLockManager.Msg_PLockRequestConstructor.a_aRequest)
 }
 inline ::protobuf::mozilla::dom::locks::IPCLockRequest* Msg_PLockRequestConstructor::release_a_arequest() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::locks::IPCLockRequest* temp = _impl_.a_arequest_;
   _impl_.a_arequest_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -972,13 +1055,13 @@ inline ::protobuf::mozilla::dom::locks::IPCLockRequest* Msg_PLockRequestConstruc
 }
 inline ::protobuf::mozilla::dom::locks::IPCLockRequest* Msg_PLockRequestConstructor::unsafe_arena_release_a_arequest() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.locks.PLockManager.Msg_PLockRequestConstructor.a_aRequest)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::locks::IPCLockRequest* temp = _impl_.a_arequest_;
   _impl_.a_arequest_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::locks::IPCLockRequest* Msg_PLockRequestConstructor::_internal_mutable_a_arequest() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_arequest_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::locks::IPCLockRequest>(GetArenaForAllocation());
     _impl_.a_arequest_ = p;
@@ -1003,9 +1086,9 @@ inline void Msg_PLockRequestConstructor::set_allocated_a_arequest(::protobuf::mo
       a_arequest = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_arequest, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_arequest_ = a_arequest;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.locks.PLockManager.Msg_PLockRequestConstructor.a_aRequest)

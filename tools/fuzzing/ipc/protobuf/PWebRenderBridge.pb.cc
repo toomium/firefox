@@ -35,10 +35,11 @@ struct Msg_EnsureConnectedDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_EnsureConnectedDefaultTypeInternal _Msg_EnsureConnected_default_instance_;
 PROTOBUF_CONSTEXPR Reply_EnsureConnected::Reply_EnsureConnected(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_texturefactoryidentifier_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_texturefactoryidentifier_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_maybeidnamespace_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_error_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_error_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Reply_EnsureConnectedDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_EnsureConnectedDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -50,9 +51,10 @@ struct Reply_EnsureConnectedDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_EnsureConnectedDefaultTypeInternal _Reply_EnsureConnected_default_instance_;
 PROTOBUF_CONSTEXPR Msg_NewCompositable::Msg_NewCompositable(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_handle_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_info_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_handle_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_info_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_NewCompositableDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_NewCompositableDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -64,8 +66,9 @@ struct Msg_NewCompositableDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_NewCompositableDefaultTypeInternal _Msg_NewCompositable_default_instance_;
 PROTOBUF_CONSTEXPR Msg_ReleaseCompositable::Msg_ReleaseCompositable(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_compositable_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_compositable_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_ReleaseCompositableDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ReleaseCompositableDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -78,7 +81,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 PROTOBUF_CONSTEXPR Msg_DeleteCompositorAnimations::Msg_DeleteCompositorAnimations(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.a_aids_)*/{}
-  , /*decltype(_impl_._a_aids_cached_byte_size_)*/{0}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_DeleteCompositorAnimationsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_DeleteCompositorAnimationsDefaultTypeInternal()
@@ -91,7 +93,9 @@ struct Msg_DeleteCompositorAnimationsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_DeleteCompositorAnimationsDefaultTypeInternal _Msg_DeleteCompositorAnimations_default_instance_;
 PROTOBUF_CONSTEXPR Msg_SetDisplayList::Msg_SetDisplayList(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_todestroy_)*/{}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_todestroy_)*/{}
   , /*decltype(_impl_.a_payloads_)*/{}
   , /*decltype(_impl_.a_displaylist_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_transactionid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
@@ -103,8 +107,7 @@ PROTOBUF_CONSTEXPR Msg_SetDisplayList::Msg_SetDisplayList(
   , /*decltype(_impl_.a_fwdtime_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_fwdtransactionid_)*/uint64_t{0u}
   , /*decltype(_impl_.a_containssvggroup_)*/false
-  , /*decltype(_impl_.a_renderoffscreen_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_renderoffscreen_)*/false} {}
 struct Msg_SetDisplayListDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_SetDisplayListDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -116,7 +119,9 @@ struct Msg_SetDisplayListDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_SetDisplayListDefaultTypeInternal _Msg_SetDisplayList_default_instance_;
 PROTOBUF_CONSTEXPR Msg_EmptyTransaction::Msg_EmptyTransaction(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_todestroy_)*/{}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_todestroy_)*/{}
   , /*decltype(_impl_.a_payloads_)*/{}
   , /*decltype(_impl_.a_focustarget_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_transationdata_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
@@ -127,8 +132,7 @@ PROTOBUF_CONSTEXPR Msg_EmptyTransaction::Msg_EmptyTransaction(
   , /*decltype(_impl_.a_txnstarttime_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_txnurl_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_fwdtime_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_fwdtransactionid_)*/uint64_t{0u}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_fwdtransactionid_)*/uint64_t{0u}} {}
 struct Msg_EmptyTransactionDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_EmptyTransactionDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -140,8 +144,9 @@ struct Msg_EmptyTransactionDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_EmptyTransactionDefaultTypeInternal _Msg_EmptyTransaction_default_instance_;
 PROTOBUF_CONSTEXPR Msg_SetFocusTarget::Msg_SetFocusTarget(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_focustarget_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_focustarget_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_SetFocusTargetDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_SetFocusTargetDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -153,11 +158,12 @@ struct Msg_SetFocusTargetDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_SetFocusTargetDefaultTypeInternal _Msg_SetFocusTarget_default_instance_;
 PROTOBUF_CONSTEXPR Msg_UpdateResources::Msg_UpdateResources(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_aresourceupdates_)*/{}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_aresourceupdates_)*/{}
   , /*decltype(_impl_.a_asmallshmems_)*/{}
   , /*decltype(_impl_.a_alargeshmems_)*/{}
-  , /*decltype(_impl_.a_aidnamespace_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_aidnamespace_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_UpdateResourcesDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_UpdateResourcesDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -169,9 +175,10 @@ struct Msg_UpdateResourcesDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_UpdateResourcesDefaultTypeInternal _Msg_UpdateResources_default_instance_;
 PROTOBUF_CONSTEXPR Msg_ParentCommands::Msg_ParentCommands(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_commands_)*/{}
-  , /*decltype(_impl_.a_aidnamespace_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_commands_)*/{}
+  , /*decltype(_impl_.a_aidnamespace_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_ParentCommandsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ParentCommandsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -183,8 +190,9 @@ struct Msg_ParentCommandsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_ParentCommandsDefaultTypeInternal _Msg_ParentCommands_default_instance_;
 PROTOBUF_CONSTEXPR Msg_GetSnapshot::Msg_GetSnapshot(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_texture_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_texture_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_GetSnapshotDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_GetSnapshotDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -196,8 +204,9 @@ struct Msg_GetSnapshotDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_GetSnapshotDefaultTypeInternal _Msg_GetSnapshot_default_instance_;
 PROTOBUF_CONSTEXPR Reply_GetSnapshot::Reply_GetSnapshot(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_aneedsyflip_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_aneedsyflip_)*/false} {}
 struct Reply_GetSnapshotDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_GetSnapshotDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -233,8 +242,9 @@ struct Msg_ClearAnimationResourcesDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_ClearAnimationResourcesDefaultTypeInternal _Msg_ClearAnimationResources_default_instance_;
 PROTOBUF_CONSTEXPR Msg_SetDefaultClearColor::Msg_SetDefaultClearColor(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_acolor_)*/0u
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_acolor_)*/0u} {}
 struct Msg_SetDefaultClearColorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_SetDefaultClearColorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -258,8 +268,9 @@ struct Msg_InvalidateRenderedFrameDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_InvalidateRenderedFrameDefaultTypeInternal _Msg_InvalidateRenderedFrame_default_instance_;
 PROTOBUF_CONSTEXPR Msg_ScheduleComposite::Msg_ScheduleComposite(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_areasons_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_areasons_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_ScheduleCompositeDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ScheduleCompositeDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -283,9 +294,10 @@ struct Msg_CaptureDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_CaptureDefaultTypeInternal _Msg_Capture_default_instance_;
 PROTOBUF_CONSTEXPR Msg_StartCaptureSequence::Msg_StartCaptureSequence(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_apath_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_aflags_)*/0u
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_apath_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_aflags_)*/0u} {}
 struct Msg_StartCaptureSequenceDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_StartCaptureSequenceDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -333,9 +345,10 @@ struct Reply_SyncWithCompositorDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_SyncWithCompositorDefaultTypeInternal _Reply_SyncWithCompositor_default_instance_;
 PROTOBUF_CONSTEXPR Msg_SetConfirmedTargetAPZC::Msg_SetConfirmedTargetAPZC(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_atargets_)*/{}
-  , /*decltype(_impl_.a_ainputblockid_)*/uint64_t{0u}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_atargets_)*/{}
+  , /*decltype(_impl_.a_ainputblockid_)*/uint64_t{0u}} {}
 struct Msg_SetConfirmedTargetAPZCDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_SetConfirmedTargetAPZCDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -347,8 +360,9 @@ struct Msg_SetConfirmedTargetAPZCDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_SetConfirmedTargetAPZCDefaultTypeInternal _Msg_SetConfirmedTargetAPZC_default_instance_;
 PROTOBUF_CONSTEXPR Msg_SetTestSampleTime::Msg_SetTestSampleTime(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_sampletime_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_sampletime_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_SetTestSampleTimeDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_SetTestSampleTimeDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -396,8 +410,9 @@ struct Reply_LeaveTestModeDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_LeaveTestModeDefaultTypeInternal _Reply_LeaveTestMode_default_instance_;
 PROTOBUF_CONSTEXPR Msg_GetAnimationValue::Msg_GetAnimationValue(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_acompositoranimationsid_)*/uint64_t{0u}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_acompositoranimationsid_)*/uint64_t{0u}} {}
 struct Msg_GetAnimationValueDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_GetAnimationValueDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -409,8 +424,9 @@ struct Msg_GetAnimationValueDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_GetAnimationValueDefaultTypeInternal _Msg_GetAnimationValue_default_instance_;
 PROTOBUF_CONSTEXPR Reply_GetAnimationValue::Reply_GetAnimationValue(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_value_)*/nullptr
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_value_)*/nullptr} {}
 struct Reply_GetAnimationValueDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_GetAnimationValueDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -422,10 +438,11 @@ struct Reply_GetAnimationValueDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_GetAnimationValueDefaultTypeInternal _Reply_GetAnimationValue_default_instance_;
 PROTOBUF_CONSTEXPR Msg_SetAsyncScrollOffset::Msg_SetAsyncScrollOffset(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_scrollid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_scrollid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_x_)*/0
-  , /*decltype(_impl_.a_y_)*/0
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+  , /*decltype(_impl_.a_y_)*/0} {}
 struct Msg_SetAsyncScrollOffsetDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_SetAsyncScrollOffsetDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -449,9 +466,10 @@ struct Reply_SetAsyncScrollOffsetDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_SetAsyncScrollOffsetDefaultTypeInternal _Reply_SetAsyncScrollOffset_default_instance_;
 PROTOBUF_CONSTEXPR Msg_SetAsyncZoom::Msg_SetAsyncZoom(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_scrollid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_zoom_)*/0
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_scrollid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_zoom_)*/0} {}
 struct Msg_SetAsyncZoomDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_SetAsyncZoomDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -499,8 +517,9 @@ struct Msg_GetAPZTestDataDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_GetAPZTestDataDefaultTypeInternal _Msg_GetAPZTestData_default_instance_;
 PROTOBUF_CONSTEXPR Reply_GetAPZTestData::Reply_GetAPZTestData(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_data_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_data_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Reply_GetAPZTestDataDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_GetAPZTestDataDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -524,8 +543,9 @@ struct Msg_GetFrameUniformityDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_GetFrameUniformityDefaultTypeInternal _Msg_GetFrameUniformity_default_instance_;
 PROTOBUF_CONSTEXPR Reply_GetFrameUniformity::Reply_GetFrameUniformity(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_data_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_data_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Reply_GetFrameUniformityDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_GetFrameUniformityDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -549,8 +569,9 @@ struct Msg_EndWheelTransactionDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_EndWheelTransactionDefaultTypeInternal _Msg_EndWheelTransaction_default_instance_;
 PROTOBUF_CONSTEXPR Reply_EndWheelTransaction::Reply_EndWheelTransaction(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_unused_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_unused_)*/false} {}
 struct Reply_EndWheelTransactionDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_EndWheelTransactionDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -598,9 +619,10 @@ struct Reply_ShutdownSyncDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_ShutdownSyncDefaultTypeInternal _Reply_ShutdownSync_default_instance_;
 PROTOBUF_CONSTEXPR Msg_WrUpdated::Msg_WrUpdated(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_anewidnamespace_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_texturefactoryidentifier_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_anewidnamespace_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_texturefactoryidentifier_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_WrUpdatedDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_WrUpdatedDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -808,6 +830,19 @@ std::string Msg_EnsureConnected::GetTypeName() const {
 
 class Reply_EnsureConnected::_Internal {
  public:
+  using HasBits = decltype(std::declval<Reply_EnsureConnected>()._impl_._has_bits_);
+  static void set_has_a_texturefactoryidentifier(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_maybeidnamespace(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_error(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
+  }
 };
 
 Reply_EnsureConnected::Reply_EnsureConnected(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -820,17 +855,18 @@ Reply_EnsureConnected::Reply_EnsureConnected(const Reply_EnsureConnected& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_EnsureConnected* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_texturefactoryidentifier_){}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_texturefactoryidentifier_){}
     , decltype(_impl_.a_maybeidnamespace_){}
-    , decltype(_impl_.a_error_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_error_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_texturefactoryidentifier_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_texturefactoryidentifier_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_texturefactoryidentifier().empty()) {
+  if (from._internal_has_a_texturefactoryidentifier()) {
     _this->_impl_.a_texturefactoryidentifier_.Set(from._internal_a_texturefactoryidentifier(), 
       _this->GetArenaForAllocation());
   }
@@ -838,7 +874,7 @@ Reply_EnsureConnected::Reply_EnsureConnected(const Reply_EnsureConnected& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_maybeidnamespace_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_maybeidnamespace().empty()) {
+  if (from._internal_has_a_maybeidnamespace()) {
     _this->_impl_.a_maybeidnamespace_.Set(from._internal_a_maybeidnamespace(), 
       _this->GetArenaForAllocation());
   }
@@ -846,7 +882,7 @@ Reply_EnsureConnected::Reply_EnsureConnected(const Reply_EnsureConnected& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_error_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_error().empty()) {
+  if (from._internal_has_a_error()) {
     _this->_impl_.a_error_.Set(from._internal_a_error(), 
       _this->GetArenaForAllocation());
   }
@@ -858,10 +894,11 @@ inline void Reply_EnsureConnected::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_texturefactoryidentifier_){}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_texturefactoryidentifier_){}
     , decltype(_impl_.a_maybeidnamespace_){}
     , decltype(_impl_.a_error_){}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_texturefactoryidentifier_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -903,19 +940,30 @@ void Reply_EnsureConnected::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_texturefactoryidentifier_.ClearToEmpty();
-  _impl_.a_maybeidnamespace_.ClearToEmpty();
-  _impl_.a_error_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_texturefactoryidentifier_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_maybeidnamespace_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _impl_.a_error_.ClearNonDefaultToEmpty();
+    }
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Reply_EnsureConnected::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_textureFactoryIdentifier = 1;
+      // required bytes a_textureFactoryIdentifier = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_texturefactoryidentifier();
@@ -924,7 +972,7 @@ const char* Reply_EnsureConnected::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // bytes a_maybeIdNamespace = 2;
+      // required bytes a_maybeIdNamespace = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_maybeidnamespace();
@@ -933,13 +981,12 @@ const char* Reply_EnsureConnected::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // string a_error = 3;
+      // required string a_error = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_error();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -959,6 +1006,7 @@ const char* Reply_EnsureConnected::_InternalParse(const char* ptr, ::_pbi::Parse
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -972,24 +1020,21 @@ uint8_t* Reply_EnsureConnected::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_textureFactoryIdentifier = 1;
-  if (!this->_internal_a_texturefactoryidentifier().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_textureFactoryIdentifier = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_texturefactoryidentifier(), target);
   }
 
-  // bytes a_maybeIdNamespace = 2;
-  if (!this->_internal_a_maybeidnamespace().empty()) {
+  // required bytes a_maybeIdNamespace = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_a_maybeidnamespace(), target);
   }
 
-  // string a_error = 3;
-  if (!this->_internal_a_error().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_error().data(), static_cast<int>(this->_internal_a_error().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.layers.PWebRenderBridge.Reply_EnsureConnected.a_error");
+  // required string a_error = 3;
+  if (cached_has_bits & 0x00000004u) {
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_error(), target);
   }
@@ -1002,34 +1047,59 @@ uint8_t* Reply_EnsureConnected::_InternalSerialize(
   return target;
 }
 
-size_t Reply_EnsureConnected::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PWebRenderBridge.Reply_EnsureConnected)
+size_t Reply_EnsureConnected::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PWebRenderBridge.Reply_EnsureConnected)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_textureFactoryIdentifier = 1;
-  if (!this->_internal_a_texturefactoryidentifier().empty()) {
+  if (_internal_has_a_texturefactoryidentifier()) {
+    // required bytes a_textureFactoryIdentifier = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_texturefactoryidentifier());
   }
 
-  // bytes a_maybeIdNamespace = 2;
-  if (!this->_internal_a_maybeidnamespace().empty()) {
+  if (_internal_has_a_maybeidnamespace()) {
+    // required bytes a_maybeIdNamespace = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_maybeidnamespace());
   }
 
-  // string a_error = 3;
-  if (!this->_internal_a_error().empty()) {
+  if (_internal_has_a_error()) {
+    // required string a_error = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_error());
   }
+
+  return total_size;
+}
+size_t Reply_EnsureConnected::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PWebRenderBridge.Reply_EnsureConnected)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
+    // required bytes a_textureFactoryIdentifier = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_texturefactoryidentifier());
+
+    // required bytes a_maybeIdNamespace = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_maybeidnamespace());
+
+    // required string a_error = 3;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_error());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1052,14 +1122,17 @@ void Reply_EnsureConnected::MergeFrom(const Reply_EnsureConnected& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_texturefactoryidentifier().empty()) {
-    _this->_internal_set_a_texturefactoryidentifier(from._internal_a_texturefactoryidentifier());
-  }
-  if (!from._internal_a_maybeidnamespace().empty()) {
-    _this->_internal_set_a_maybeidnamespace(from._internal_a_maybeidnamespace());
-  }
-  if (!from._internal_a_error().empty()) {
-    _this->_internal_set_a_error(from._internal_a_error());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_texturefactoryidentifier(from._internal_a_texturefactoryidentifier());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_maybeidnamespace(from._internal_a_maybeidnamespace());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_internal_set_a_error(from._internal_a_error());
+    }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1072,6 +1145,7 @@ void Reply_EnsureConnected::CopyFrom(const Reply_EnsureConnected& from) {
 }
 
 bool Reply_EnsureConnected::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1080,6 +1154,7 @@ void Reply_EnsureConnected::InternalSwap(Reply_EnsureConnected* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_texturefactoryidentifier_, lhs_arena,
       &other->_impl_.a_texturefactoryidentifier_, rhs_arena
@@ -1103,6 +1178,16 @@ std::string Reply_EnsureConnected::GetTypeName() const {
 
 class Msg_NewCompositable::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_NewCompositable>()._impl_._has_bits_);
+  static void set_has_a_handle(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_info(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 Msg_NewCompositable::Msg_NewCompositable(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1115,16 +1200,17 @@ Msg_NewCompositable::Msg_NewCompositable(const Msg_NewCompositable& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_NewCompositable* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_handle_){}
-    , decltype(_impl_.a_info_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_handle_){}
+    , decltype(_impl_.a_info_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_handle_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_handle_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_handle().empty()) {
+  if (from._internal_has_a_handle()) {
     _this->_impl_.a_handle_.Set(from._internal_a_handle(), 
       _this->GetArenaForAllocation());
   }
@@ -1132,7 +1218,7 @@ Msg_NewCompositable::Msg_NewCompositable(const Msg_NewCompositable& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_info_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_info().empty()) {
+  if (from._internal_has_a_info()) {
     _this->_impl_.a_info_.Set(from._internal_a_info(), 
       _this->GetArenaForAllocation());
   }
@@ -1144,9 +1230,10 @@ inline void Msg_NewCompositable::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_handle_){}
-    , decltype(_impl_.a_info_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_handle_){}
+    , decltype(_impl_.a_info_){}
   };
   _impl_.a_handle_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1183,18 +1270,27 @@ void Msg_NewCompositable::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_handle_.ClearToEmpty();
-  _impl_.a_info_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_handle_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_info_.ClearNonDefaultToEmpty();
+    }
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_NewCompositable::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_handle = 1;
+      // required bytes a_handle = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_handle();
@@ -1203,7 +1299,7 @@ const char* Msg_NewCompositable::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // bytes a_info = 2;
+      // required bytes a_info = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_info();
@@ -1228,6 +1324,7 @@ const char* Msg_NewCompositable::_InternalParse(const char* ptr, ::_pbi::ParseCo
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1241,14 +1338,15 @@ uint8_t* Msg_NewCompositable::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_handle = 1;
-  if (!this->_internal_a_handle().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_handle = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_handle(), target);
   }
 
-  // bytes a_info = 2;
-  if (!this->_internal_a_info().empty()) {
+  // required bytes a_info = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_a_info(), target);
   }
@@ -1261,27 +1359,47 @@ uint8_t* Msg_NewCompositable::_InternalSerialize(
   return target;
 }
 
-size_t Msg_NewCompositable::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PWebRenderBridge.Msg_NewCompositable)
+size_t Msg_NewCompositable::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PWebRenderBridge.Msg_NewCompositable)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_handle = 1;
-  if (!this->_internal_a_handle().empty()) {
+  if (_internal_has_a_handle()) {
+    // required bytes a_handle = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_handle());
   }
 
-  // bytes a_info = 2;
-  if (!this->_internal_a_info().empty()) {
+  if (_internal_has_a_info()) {
+    // required bytes a_info = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_info());
   }
+
+  return total_size;
+}
+size_t Msg_NewCompositable::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PWebRenderBridge.Msg_NewCompositable)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required bytes a_handle = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_handle());
+
+    // required bytes a_info = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_info());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1304,11 +1422,14 @@ void Msg_NewCompositable::MergeFrom(const Msg_NewCompositable& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_handle().empty()) {
-    _this->_internal_set_a_handle(from._internal_a_handle());
-  }
-  if (!from._internal_a_info().empty()) {
-    _this->_internal_set_a_info(from._internal_a_info());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_handle(from._internal_a_handle());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_info(from._internal_a_info());
+    }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1321,6 +1442,7 @@ void Msg_NewCompositable::CopyFrom(const Msg_NewCompositable& from) {
 }
 
 bool Msg_NewCompositable::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1329,6 +1451,7 @@ void Msg_NewCompositable::InternalSwap(Msg_NewCompositable* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_handle_, lhs_arena,
       &other->_impl_.a_handle_, rhs_arena
@@ -1348,6 +1471,13 @@ std::string Msg_NewCompositable::GetTypeName() const {
 
 class Msg_ReleaseCompositable::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_ReleaseCompositable>()._impl_._has_bits_);
+  static void set_has_a_compositable(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Msg_ReleaseCompositable::Msg_ReleaseCompositable(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1360,15 +1490,16 @@ Msg_ReleaseCompositable::Msg_ReleaseCompositable(const Msg_ReleaseCompositable& 
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_ReleaseCompositable* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_compositable_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_compositable_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_compositable_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_compositable_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_compositable().empty()) {
+  if (from._internal_has_a_compositable()) {
     _this->_impl_.a_compositable_.Set(from._internal_a_compositable(), 
       _this->GetArenaForAllocation());
   }
@@ -1380,8 +1511,9 @@ inline void Msg_ReleaseCompositable::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_compositable_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_compositable_){}
   };
   _impl_.a_compositable_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1413,17 +1545,22 @@ void Msg_ReleaseCompositable::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_compositable_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_compositable_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_ReleaseCompositable::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_compositable = 1;
+      // required bytes a_compositable = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_compositable();
@@ -1448,6 +1585,7 @@ const char* Msg_ReleaseCompositable::_InternalParse(const char* ptr, ::_pbi::Par
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1461,8 +1599,9 @@ uint8_t* Msg_ReleaseCompositable::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_compositable = 1;
-  if (!this->_internal_a_compositable().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_compositable = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_compositable(), target);
   }
@@ -1479,16 +1618,15 @@ size_t Msg_ReleaseCompositable::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PWebRenderBridge.Msg_ReleaseCompositable)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_compositable = 1;
-  if (!this->_internal_a_compositable().empty()) {
+  // required bytes a_compositable = 1;
+  if (_internal_has_a_compositable()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_compositable());
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1511,7 +1649,7 @@ void Msg_ReleaseCompositable::MergeFrom(const Msg_ReleaseCompositable& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_compositable().empty()) {
+  if (from._internal_has_a_compositable()) {
     _this->_internal_set_a_compositable(from._internal_a_compositable());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1525,6 +1663,7 @@ void Msg_ReleaseCompositable::CopyFrom(const Msg_ReleaseCompositable& from) {
 }
 
 bool Msg_ReleaseCompositable::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1533,6 +1672,7 @@ void Msg_ReleaseCompositable::InternalSwap(Msg_ReleaseCompositable* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_compositable_, lhs_arena,
       &other->_impl_.a_compositable_, rhs_arena
@@ -1561,7 +1701,6 @@ Msg_DeleteCompositorAnimations::Msg_DeleteCompositorAnimations(const Msg_DeleteC
   Msg_DeleteCompositorAnimations* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_aids_){from._impl_.a_aids_}
-    , /*decltype(_impl_._a_aids_cached_byte_size_)*/{0}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1574,7 +1713,6 @@ inline void Msg_DeleteCompositorAnimations::SharedCtor(
   (void)is_message_owned;
   new (&_impl_) Impl_{
       decltype(_impl_.a_aids_){arena}
-    , /*decltype(_impl_._a_aids_cached_byte_size_)*/{0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -1615,11 +1753,16 @@ const char* Msg_DeleteCompositorAnimations::_InternalParse(const char* ptr, ::_p
     switch (tag >> 3) {
       // repeated uint64 a_aIds = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            _internal_add_a_aids(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 10) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt64Parser(_internal_mutable_a_aids(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<uint8_t>(tag) == 8) {
-          _internal_add_a_aids(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1654,12 +1797,9 @@ uint8_t* Msg_DeleteCompositorAnimations::_InternalSerialize(
   (void) cached_has_bits;
 
   // repeated uint64 a_aIds = 1;
-  {
-    int byte_size = _impl_._a_aids_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteUInt64Packed(
-          1, _internal_a_aids(), byte_size, target);
-    }
+  for (int i = 0, n = this->_internal_a_aids_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_aids(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1682,13 +1822,8 @@ size_t Msg_DeleteCompositorAnimations::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt64Size(this->_impl_.a_aids_);
-    if (data_size > 0) {
-      total_size += 1 +
-        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
-    }
-    int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._a_aids_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
+    total_size += 1 *
+                  ::_pbi::FromIntSize(this->_internal_a_aids_size());
     total_size += data_size;
   }
 
@@ -1743,6 +1878,43 @@ std::string Msg_DeleteCompositorAnimations::GetTypeName() const {
 
 class Msg_SetDisplayList::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_SetDisplayList>()._impl_._has_bits_);
+  static void set_has_a_displaylist(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_fwdtransactionid(HasBits* has_bits) {
+    (*has_bits)[0] |= 256u;
+  }
+  static void set_has_a_transactionid(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_containssvggroup(HasBits* has_bits) {
+    (*has_bits)[0] |= 512u;
+  }
+  static void set_has_a_vsyncid(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_a_vsyncstarttime(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_a_refreshstarttime(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static void set_has_a_txnstarttime(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
+  }
+  static void set_has_a_txnurl(HasBits* has_bits) {
+    (*has_bits)[0] |= 64u;
+  }
+  static void set_has_a_fwdtime(HasBits* has_bits) {
+    (*has_bits)[0] |= 128u;
+  }
+  static void set_has_a_renderoffscreen(HasBits* has_bits) {
+    (*has_bits)[0] |= 1024u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x000007ff) ^ 0x000007ff) != 0;
+  }
 };
 
 void Msg_SetDisplayList::clear_a_todestroy() {
@@ -1758,7 +1930,9 @@ Msg_SetDisplayList::Msg_SetDisplayList(const Msg_SetDisplayList& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_SetDisplayList* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_todestroy_){from._impl_.a_todestroy_}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_todestroy_){from._impl_.a_todestroy_}
     , decltype(_impl_.a_payloads_){from._impl_.a_payloads_}
     , decltype(_impl_.a_displaylist_){}
     , decltype(_impl_.a_transactionid_){}
@@ -1770,15 +1944,14 @@ Msg_SetDisplayList::Msg_SetDisplayList(const Msg_SetDisplayList& from)
     , decltype(_impl_.a_fwdtime_){}
     , decltype(_impl_.a_fwdtransactionid_){}
     , decltype(_impl_.a_containssvggroup_){}
-    , decltype(_impl_.a_renderoffscreen_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_renderoffscreen_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_displaylist_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_displaylist_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_displaylist().empty()) {
+  if (from._internal_has_a_displaylist()) {
     _this->_impl_.a_displaylist_.Set(from._internal_a_displaylist(), 
       _this->GetArenaForAllocation());
   }
@@ -1786,7 +1959,7 @@ Msg_SetDisplayList::Msg_SetDisplayList(const Msg_SetDisplayList& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_transactionid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_transactionid().empty()) {
+  if (from._internal_has_a_transactionid()) {
     _this->_impl_.a_transactionid_.Set(from._internal_a_transactionid(), 
       _this->GetArenaForAllocation());
   }
@@ -1794,7 +1967,7 @@ Msg_SetDisplayList::Msg_SetDisplayList(const Msg_SetDisplayList& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_vsyncid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_vsyncid().empty()) {
+  if (from._internal_has_a_vsyncid()) {
     _this->_impl_.a_vsyncid_.Set(from._internal_a_vsyncid(), 
       _this->GetArenaForAllocation());
   }
@@ -1802,7 +1975,7 @@ Msg_SetDisplayList::Msg_SetDisplayList(const Msg_SetDisplayList& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_vsyncstarttime_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_vsyncstarttime().empty()) {
+  if (from._internal_has_a_vsyncstarttime()) {
     _this->_impl_.a_vsyncstarttime_.Set(from._internal_a_vsyncstarttime(), 
       _this->GetArenaForAllocation());
   }
@@ -1810,7 +1983,7 @@ Msg_SetDisplayList::Msg_SetDisplayList(const Msg_SetDisplayList& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_refreshstarttime_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_refreshstarttime().empty()) {
+  if (from._internal_has_a_refreshstarttime()) {
     _this->_impl_.a_refreshstarttime_.Set(from._internal_a_refreshstarttime(), 
       _this->GetArenaForAllocation());
   }
@@ -1818,7 +1991,7 @@ Msg_SetDisplayList::Msg_SetDisplayList(const Msg_SetDisplayList& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_txnstarttime_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_txnstarttime().empty()) {
+  if (from._internal_has_a_txnstarttime()) {
     _this->_impl_.a_txnstarttime_.Set(from._internal_a_txnstarttime(), 
       _this->GetArenaForAllocation());
   }
@@ -1826,7 +1999,7 @@ Msg_SetDisplayList::Msg_SetDisplayList(const Msg_SetDisplayList& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_txnurl_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_txnurl().empty()) {
+  if (from._internal_has_a_txnurl()) {
     _this->_impl_.a_txnurl_.Set(from._internal_a_txnurl(), 
       _this->GetArenaForAllocation());
   }
@@ -1834,7 +2007,7 @@ Msg_SetDisplayList::Msg_SetDisplayList(const Msg_SetDisplayList& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_fwdtime_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_fwdtime().empty()) {
+  if (from._internal_has_a_fwdtime()) {
     _this->_impl_.a_fwdtime_.Set(from._internal_a_fwdtime(), 
       _this->GetArenaForAllocation());
   }
@@ -1849,7 +2022,9 @@ inline void Msg_SetDisplayList::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_todestroy_){arena}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_todestroy_){arena}
     , decltype(_impl_.a_payloads_){arena}
     , decltype(_impl_.a_displaylist_){}
     , decltype(_impl_.a_transactionid_){}
@@ -1862,7 +2037,6 @@ inline void Msg_SetDisplayList::SharedCtor(
     , decltype(_impl_.a_fwdtransactionid_){uint64_t{0u}}
     , decltype(_impl_.a_containssvggroup_){false}
     , decltype(_impl_.a_renderoffscreen_){false}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_displaylist_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1933,27 +2107,50 @@ void Msg_SetDisplayList::Clear() {
 
   _impl_.a_todestroy_.Clear();
   _impl_.a_payloads_.Clear();
-  _impl_.a_displaylist_.ClearToEmpty();
-  _impl_.a_transactionid_.ClearToEmpty();
-  _impl_.a_vsyncid_.ClearToEmpty();
-  _impl_.a_vsyncstarttime_.ClearToEmpty();
-  _impl_.a_refreshstarttime_.ClearToEmpty();
-  _impl_.a_txnstarttime_.ClearToEmpty();
-  _impl_.a_txnurl_.ClearToEmpty();
-  _impl_.a_fwdtime_.ClearToEmpty();
-  ::memset(&_impl_.a_fwdtransactionid_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.a_renderoffscreen_) -
-      reinterpret_cast<char*>(&_impl_.a_fwdtransactionid_)) + sizeof(_impl_.a_renderoffscreen_));
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x000000ffu) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_displaylist_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_transactionid_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _impl_.a_vsyncid_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _impl_.a_vsyncstarttime_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _impl_.a_refreshstarttime_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _impl_.a_txnstarttime_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000040u) {
+      _impl_.a_txnurl_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000080u) {
+      _impl_.a_fwdtime_.ClearNonDefaultToEmpty();
+    }
+  }
+  if (cached_has_bits & 0x00000700u) {
+    ::memset(&_impl_.a_fwdtransactionid_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_renderoffscreen_) -
+        reinterpret_cast<char*>(&_impl_.a_fwdtransactionid_)) + sizeof(_impl_.a_renderoffscreen_));
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_SetDisplayList::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_displayList = 1;
+      // required bytes a_displayList = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_displaylist();
@@ -1975,15 +2172,16 @@ const char* Msg_SetDisplayList::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // uint64 a_fwdTransactionId = 3;
+      // required uint64 a_fwdTransactionId = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _Internal::set_has_a_fwdtransactionid(&has_bits);
           _impl_.a_fwdtransactionid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bytes a_transactionId = 4;
+      // required bytes a_transactionId = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_transactionid();
@@ -1992,15 +2190,16 @@ const char* Msg_SetDisplayList::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // bool a_containsSVGGroup = 5;
+      // required bool a_containsSVGGroup = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          _Internal::set_has_a_containssvggroup(&has_bits);
           _impl_.a_containssvggroup_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bytes a_vsyncId = 6;
+      // required bytes a_vsyncId = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           auto str = _internal_mutable_a_vsyncid();
@@ -2009,7 +2208,7 @@ const char* Msg_SetDisplayList::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // bytes a_vsyncStartTime = 7;
+      // required bytes a_vsyncStartTime = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           auto str = _internal_mutable_a_vsyncstarttime();
@@ -2018,7 +2217,7 @@ const char* Msg_SetDisplayList::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // bytes a_refreshStartTime = 8;
+      // required bytes a_refreshStartTime = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
           auto str = _internal_mutable_a_refreshstarttime();
@@ -2027,7 +2226,7 @@ const char* Msg_SetDisplayList::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // bytes a_txnStartTime = 9;
+      // required bytes a_txnStartTime = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
           auto str = _internal_mutable_a_txnstarttime();
@@ -2036,17 +2235,16 @@ const char* Msg_SetDisplayList::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // string a_txnURL = 10;
+      // required string a_txnURL = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 82)) {
           auto str = _internal_mutable_a_txnurl();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // bytes a_fwdTime = 11;
+      // required bytes a_fwdTime = 11;
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 90)) {
           auto str = _internal_mutable_a_fwdtime();
@@ -2069,9 +2267,10 @@ const char* Msg_SetDisplayList::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // bool a_renderOffscreen = 13;
+      // required bool a_renderOffscreen = 13;
       case 13:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 104)) {
+          _Internal::set_has_a_renderoffscreen(&has_bits);
           _impl_.a_renderoffscreen_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -2093,6 +2292,7 @@ const char* Msg_SetDisplayList::_InternalParse(const char* ptr, ::_pbi::ParseCon
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -2106,8 +2306,9 @@ uint8_t* Msg_SetDisplayList::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_displayList = 1;
-  if (!this->_internal_a_displaylist().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_displayList = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_displaylist(), target);
   }
@@ -2120,60 +2321,56 @@ uint8_t* Msg_SetDisplayList::_InternalSerialize(
         InternalWriteMessage(2, repfield, repfield.GetCachedSize(), target, stream);
   }
 
-  // uint64 a_fwdTransactionId = 3;
-  if (this->_internal_a_fwdtransactionid() != 0) {
+  // required uint64 a_fwdTransactionId = 3;
+  if (cached_has_bits & 0x00000100u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(3, this->_internal_a_fwdtransactionid(), target);
   }
 
-  // bytes a_transactionId = 4;
-  if (!this->_internal_a_transactionid().empty()) {
+  // required bytes a_transactionId = 4;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
         4, this->_internal_a_transactionid(), target);
   }
 
-  // bool a_containsSVGGroup = 5;
-  if (this->_internal_a_containssvggroup() != 0) {
+  // required bool a_containsSVGGroup = 5;
+  if (cached_has_bits & 0x00000200u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_a_containssvggroup(), target);
   }
 
-  // bytes a_vsyncId = 6;
-  if (!this->_internal_a_vsyncid().empty()) {
+  // required bytes a_vsyncId = 6;
+  if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
         6, this->_internal_a_vsyncid(), target);
   }
 
-  // bytes a_vsyncStartTime = 7;
-  if (!this->_internal_a_vsyncstarttime().empty()) {
+  // required bytes a_vsyncStartTime = 7;
+  if (cached_has_bits & 0x00000008u) {
     target = stream->WriteBytesMaybeAliased(
         7, this->_internal_a_vsyncstarttime(), target);
   }
 
-  // bytes a_refreshStartTime = 8;
-  if (!this->_internal_a_refreshstarttime().empty()) {
+  // required bytes a_refreshStartTime = 8;
+  if (cached_has_bits & 0x00000010u) {
     target = stream->WriteBytesMaybeAliased(
         8, this->_internal_a_refreshstarttime(), target);
   }
 
-  // bytes a_txnStartTime = 9;
-  if (!this->_internal_a_txnstarttime().empty()) {
+  // required bytes a_txnStartTime = 9;
+  if (cached_has_bits & 0x00000020u) {
     target = stream->WriteBytesMaybeAliased(
         9, this->_internal_a_txnstarttime(), target);
   }
 
-  // string a_txnURL = 10;
-  if (!this->_internal_a_txnurl().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_txnurl().data(), static_cast<int>(this->_internal_a_txnurl().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.layers.PWebRenderBridge.Msg_SetDisplayList.a_txnURL");
+  // required string a_txnURL = 10;
+  if (cached_has_bits & 0x00000040u) {
     target = stream->WriteStringMaybeAliased(
         10, this->_internal_a_txnurl(), target);
   }
 
-  // bytes a_fwdTime = 11;
-  if (!this->_internal_a_fwdtime().empty()) {
+  // required bytes a_fwdTime = 11;
+  if (cached_has_bits & 0x00000080u) {
     target = stream->WriteBytesMaybeAliased(
         11, this->_internal_a_fwdtime(), target);
   }
@@ -2184,8 +2381,8 @@ uint8_t* Msg_SetDisplayList::_InternalSerialize(
     target = stream->WriteBytes(12, s, target);
   }
 
-  // bool a_renderOffscreen = 13;
-  if (this->_internal_a_renderoffscreen() != 0) {
+  // required bool a_renderOffscreen = 13;
+  if (cached_has_bits & 0x00000400u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(13, this->_internal_a_renderoffscreen(), target);
   }
@@ -2198,10 +2395,140 @@ uint8_t* Msg_SetDisplayList::_InternalSerialize(
   return target;
 }
 
+size_t Msg_SetDisplayList::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PWebRenderBridge.Msg_SetDisplayList)
+  size_t total_size = 0;
+
+  if (_internal_has_a_displaylist()) {
+    // required bytes a_displayList = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_displaylist());
+  }
+
+  if (_internal_has_a_transactionid()) {
+    // required bytes a_transactionId = 4;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_transactionid());
+  }
+
+  if (_internal_has_a_vsyncid()) {
+    // required bytes a_vsyncId = 6;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_vsyncid());
+  }
+
+  if (_internal_has_a_vsyncstarttime()) {
+    // required bytes a_vsyncStartTime = 7;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_vsyncstarttime());
+  }
+
+  if (_internal_has_a_refreshstarttime()) {
+    // required bytes a_refreshStartTime = 8;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_refreshstarttime());
+  }
+
+  if (_internal_has_a_txnstarttime()) {
+    // required bytes a_txnStartTime = 9;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_txnstarttime());
+  }
+
+  if (_internal_has_a_txnurl()) {
+    // required string a_txnURL = 10;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_txnurl());
+  }
+
+  if (_internal_has_a_fwdtime()) {
+    // required bytes a_fwdTime = 11;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_fwdtime());
+  }
+
+  if (_internal_has_a_fwdtransactionid()) {
+    // required uint64 a_fwdTransactionId = 3;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_fwdtransactionid());
+  }
+
+  if (_internal_has_a_containssvggroup()) {
+    // required bool a_containsSVGGroup = 5;
+    total_size += 1 + 1;
+  }
+
+  if (_internal_has_a_renderoffscreen()) {
+    // required bool a_renderOffscreen = 13;
+    total_size += 1 + 1;
+  }
+
+  return total_size;
+}
 size_t Msg_SetDisplayList::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PWebRenderBridge.Msg_SetDisplayList)
   size_t total_size = 0;
 
+  if (((_impl_._has_bits_[0] & 0x000007ff) ^ 0x000007ff) == 0) {  // All required fields are present.
+    // required bytes a_displayList = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_displaylist());
+
+    // required bytes a_transactionId = 4;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_transactionid());
+
+    // required bytes a_vsyncId = 6;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_vsyncid());
+
+    // required bytes a_vsyncStartTime = 7;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_vsyncstarttime());
+
+    // required bytes a_refreshStartTime = 8;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_refreshstarttime());
+
+    // required bytes a_txnStartTime = 9;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_txnstarttime());
+
+    // required string a_txnURL = 10;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_txnurl());
+
+    // required bytes a_fwdTime = 11;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_fwdtime());
+
+    // required uint64 a_fwdTransactionId = 3;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_fwdtransactionid());
+
+    // required bool a_containsSVGGroup = 5;
+    total_size += 1 + 1;
+
+    // required bool a_renderOffscreen = 13;
+    total_size += 1 + 1;
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2219,77 +2546,6 @@ size_t Msg_SetDisplayList::ByteSizeLong() const {
   for (int i = 0, n = _impl_.a_payloads_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.a_payloads_.Get(i));
-  }
-
-  // bytes a_displayList = 1;
-  if (!this->_internal_a_displaylist().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_displaylist());
-  }
-
-  // bytes a_transactionId = 4;
-  if (!this->_internal_a_transactionid().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_transactionid());
-  }
-
-  // bytes a_vsyncId = 6;
-  if (!this->_internal_a_vsyncid().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_vsyncid());
-  }
-
-  // bytes a_vsyncStartTime = 7;
-  if (!this->_internal_a_vsyncstarttime().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_vsyncstarttime());
-  }
-
-  // bytes a_refreshStartTime = 8;
-  if (!this->_internal_a_refreshstarttime().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_refreshstarttime());
-  }
-
-  // bytes a_txnStartTime = 9;
-  if (!this->_internal_a_txnstarttime().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_txnstarttime());
-  }
-
-  // string a_txnURL = 10;
-  if (!this->_internal_a_txnurl().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_txnurl());
-  }
-
-  // bytes a_fwdTime = 11;
-  if (!this->_internal_a_fwdtime().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_fwdtime());
-  }
-
-  // uint64 a_fwdTransactionId = 3;
-  if (this->_internal_a_fwdtransactionid() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_fwdtransactionid());
-  }
-
-  // bool a_containsSVGGroup = 5;
-  if (this->_internal_a_containssvggroup() != 0) {
-    total_size += 1 + 1;
-  }
-
-  // bool a_renderOffscreen = 13;
-  if (this->_internal_a_renderoffscreen() != 0) {
-    total_size += 1 + 1;
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2315,38 +2571,44 @@ void Msg_SetDisplayList::MergeFrom(const Msg_SetDisplayList& from) {
 
   _this->_impl_.a_todestroy_.MergeFrom(from._impl_.a_todestroy_);
   _this->_impl_.a_payloads_.MergeFrom(from._impl_.a_payloads_);
-  if (!from._internal_a_displaylist().empty()) {
-    _this->_internal_set_a_displaylist(from._internal_a_displaylist());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x000000ffu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_displaylist(from._internal_a_displaylist());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_transactionid(from._internal_a_transactionid());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_internal_set_a_vsyncid(from._internal_a_vsyncid());
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_internal_set_a_vsyncstarttime(from._internal_a_vsyncstarttime());
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_internal_set_a_refreshstarttime(from._internal_a_refreshstarttime());
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _this->_internal_set_a_txnstarttime(from._internal_a_txnstarttime());
+    }
+    if (cached_has_bits & 0x00000040u) {
+      _this->_internal_set_a_txnurl(from._internal_a_txnurl());
+    }
+    if (cached_has_bits & 0x00000080u) {
+      _this->_internal_set_a_fwdtime(from._internal_a_fwdtime());
+    }
   }
-  if (!from._internal_a_transactionid().empty()) {
-    _this->_internal_set_a_transactionid(from._internal_a_transactionid());
-  }
-  if (!from._internal_a_vsyncid().empty()) {
-    _this->_internal_set_a_vsyncid(from._internal_a_vsyncid());
-  }
-  if (!from._internal_a_vsyncstarttime().empty()) {
-    _this->_internal_set_a_vsyncstarttime(from._internal_a_vsyncstarttime());
-  }
-  if (!from._internal_a_refreshstarttime().empty()) {
-    _this->_internal_set_a_refreshstarttime(from._internal_a_refreshstarttime());
-  }
-  if (!from._internal_a_txnstarttime().empty()) {
-    _this->_internal_set_a_txnstarttime(from._internal_a_txnstarttime());
-  }
-  if (!from._internal_a_txnurl().empty()) {
-    _this->_internal_set_a_txnurl(from._internal_a_txnurl());
-  }
-  if (!from._internal_a_fwdtime().empty()) {
-    _this->_internal_set_a_fwdtime(from._internal_a_fwdtime());
-  }
-  if (from._internal_a_fwdtransactionid() != 0) {
-    _this->_internal_set_a_fwdtransactionid(from._internal_a_fwdtransactionid());
-  }
-  if (from._internal_a_containssvggroup() != 0) {
-    _this->_internal_set_a_containssvggroup(from._internal_a_containssvggroup());
-  }
-  if (from._internal_a_renderoffscreen() != 0) {
-    _this->_internal_set_a_renderoffscreen(from._internal_a_renderoffscreen());
+  if (cached_has_bits & 0x00000700u) {
+    if (cached_has_bits & 0x00000100u) {
+      _this->_impl_.a_fwdtransactionid_ = from._impl_.a_fwdtransactionid_;
+    }
+    if (cached_has_bits & 0x00000200u) {
+      _this->_impl_.a_containssvggroup_ = from._impl_.a_containssvggroup_;
+    }
+    if (cached_has_bits & 0x00000400u) {
+      _this->_impl_.a_renderoffscreen_ = from._impl_.a_renderoffscreen_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -2359,6 +2621,7 @@ void Msg_SetDisplayList::CopyFrom(const Msg_SetDisplayList& from) {
 }
 
 bool Msg_SetDisplayList::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -2367,6 +2630,7 @@ void Msg_SetDisplayList::InternalSwap(Msg_SetDisplayList* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_todestroy_.InternalSwap(&other->_impl_.a_todestroy_);
   _impl_.a_payloads_.InternalSwap(&other->_impl_.a_payloads_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
@@ -2418,6 +2682,40 @@ std::string Msg_SetDisplayList::GetTypeName() const {
 
 class Msg_EmptyTransaction::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_EmptyTransaction>()._impl_._has_bits_);
+  static void set_has_a_focustarget(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_transationdata(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_fwdtransactionid(HasBits* has_bits) {
+    (*has_bits)[0] |= 512u;
+  }
+  static void set_has_a_transactionid(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static void set_has_a_vsyncid(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_a_vsyncstarttime(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
+  static void set_has_a_refreshstarttime(HasBits* has_bits) {
+    (*has_bits)[0] |= 32u;
+  }
+  static void set_has_a_txnstarttime(HasBits* has_bits) {
+    (*has_bits)[0] |= 64u;
+  }
+  static void set_has_a_txnurl(HasBits* has_bits) {
+    (*has_bits)[0] |= 128u;
+  }
+  static void set_has_a_fwdtime(HasBits* has_bits) {
+    (*has_bits)[0] |= 256u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x000003ff) ^ 0x000003ff) != 0;
+  }
 };
 
 void Msg_EmptyTransaction::clear_a_todestroy() {
@@ -2433,7 +2731,9 @@ Msg_EmptyTransaction::Msg_EmptyTransaction(const Msg_EmptyTransaction& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_EmptyTransaction* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_todestroy_){from._impl_.a_todestroy_}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_todestroy_){from._impl_.a_todestroy_}
     , decltype(_impl_.a_payloads_){from._impl_.a_payloads_}
     , decltype(_impl_.a_focustarget_){}
     , decltype(_impl_.a_transationdata_){}
@@ -2444,15 +2744,14 @@ Msg_EmptyTransaction::Msg_EmptyTransaction(const Msg_EmptyTransaction& from)
     , decltype(_impl_.a_txnstarttime_){}
     , decltype(_impl_.a_txnurl_){}
     , decltype(_impl_.a_fwdtime_){}
-    , decltype(_impl_.a_fwdtransactionid_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_fwdtransactionid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_focustarget_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_focustarget_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_focustarget().empty()) {
+  if (from._internal_has_a_focustarget()) {
     _this->_impl_.a_focustarget_.Set(from._internal_a_focustarget(), 
       _this->GetArenaForAllocation());
   }
@@ -2460,7 +2759,7 @@ Msg_EmptyTransaction::Msg_EmptyTransaction(const Msg_EmptyTransaction& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_transationdata_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_transationdata().empty()) {
+  if (from._internal_has_a_transationdata()) {
     _this->_impl_.a_transationdata_.Set(from._internal_a_transationdata(), 
       _this->GetArenaForAllocation());
   }
@@ -2468,7 +2767,7 @@ Msg_EmptyTransaction::Msg_EmptyTransaction(const Msg_EmptyTransaction& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_transactionid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_transactionid().empty()) {
+  if (from._internal_has_a_transactionid()) {
     _this->_impl_.a_transactionid_.Set(from._internal_a_transactionid(), 
       _this->GetArenaForAllocation());
   }
@@ -2476,7 +2775,7 @@ Msg_EmptyTransaction::Msg_EmptyTransaction(const Msg_EmptyTransaction& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_vsyncid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_vsyncid().empty()) {
+  if (from._internal_has_a_vsyncid()) {
     _this->_impl_.a_vsyncid_.Set(from._internal_a_vsyncid(), 
       _this->GetArenaForAllocation());
   }
@@ -2484,7 +2783,7 @@ Msg_EmptyTransaction::Msg_EmptyTransaction(const Msg_EmptyTransaction& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_vsyncstarttime_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_vsyncstarttime().empty()) {
+  if (from._internal_has_a_vsyncstarttime()) {
     _this->_impl_.a_vsyncstarttime_.Set(from._internal_a_vsyncstarttime(), 
       _this->GetArenaForAllocation());
   }
@@ -2492,7 +2791,7 @@ Msg_EmptyTransaction::Msg_EmptyTransaction(const Msg_EmptyTransaction& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_refreshstarttime_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_refreshstarttime().empty()) {
+  if (from._internal_has_a_refreshstarttime()) {
     _this->_impl_.a_refreshstarttime_.Set(from._internal_a_refreshstarttime(), 
       _this->GetArenaForAllocation());
   }
@@ -2500,7 +2799,7 @@ Msg_EmptyTransaction::Msg_EmptyTransaction(const Msg_EmptyTransaction& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_txnstarttime_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_txnstarttime().empty()) {
+  if (from._internal_has_a_txnstarttime()) {
     _this->_impl_.a_txnstarttime_.Set(from._internal_a_txnstarttime(), 
       _this->GetArenaForAllocation());
   }
@@ -2508,7 +2807,7 @@ Msg_EmptyTransaction::Msg_EmptyTransaction(const Msg_EmptyTransaction& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_txnurl_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_txnurl().empty()) {
+  if (from._internal_has_a_txnurl()) {
     _this->_impl_.a_txnurl_.Set(from._internal_a_txnurl(), 
       _this->GetArenaForAllocation());
   }
@@ -2516,7 +2815,7 @@ Msg_EmptyTransaction::Msg_EmptyTransaction(const Msg_EmptyTransaction& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_fwdtime_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_fwdtime().empty()) {
+  if (from._internal_has_a_fwdtime()) {
     _this->_impl_.a_fwdtime_.Set(from._internal_a_fwdtime(), 
       _this->GetArenaForAllocation());
   }
@@ -2529,7 +2828,9 @@ inline void Msg_EmptyTransaction::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_todestroy_){arena}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_todestroy_){arena}
     , decltype(_impl_.a_payloads_){arena}
     , decltype(_impl_.a_focustarget_){}
     , decltype(_impl_.a_transationdata_){}
@@ -2541,7 +2842,6 @@ inline void Msg_EmptyTransaction::SharedCtor(
     , decltype(_impl_.a_txnurl_){}
     , decltype(_impl_.a_fwdtime_){}
     , decltype(_impl_.a_fwdtransactionid_){uint64_t{0u}}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_focustarget_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2617,26 +2917,49 @@ void Msg_EmptyTransaction::Clear() {
 
   _impl_.a_todestroy_.Clear();
   _impl_.a_payloads_.Clear();
-  _impl_.a_focustarget_.ClearToEmpty();
-  _impl_.a_transationdata_.ClearToEmpty();
-  _impl_.a_transactionid_.ClearToEmpty();
-  _impl_.a_vsyncid_.ClearToEmpty();
-  _impl_.a_vsyncstarttime_.ClearToEmpty();
-  _impl_.a_refreshstarttime_.ClearToEmpty();
-  _impl_.a_txnstarttime_.ClearToEmpty();
-  _impl_.a_txnurl_.ClearToEmpty();
-  _impl_.a_fwdtime_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x000000ffu) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_focustarget_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_transationdata_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _impl_.a_transactionid_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _impl_.a_vsyncid_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _impl_.a_vsyncstarttime_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _impl_.a_refreshstarttime_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000040u) {
+      _impl_.a_txnstarttime_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000080u) {
+      _impl_.a_txnurl_.ClearNonDefaultToEmpty();
+    }
+  }
+  if (cached_has_bits & 0x00000100u) {
+    _impl_.a_fwdtime_.ClearNonDefaultToEmpty();
+  }
   _impl_.a_fwdtransactionid_ = uint64_t{0u};
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_EmptyTransaction::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_focusTarget = 1;
+      // required bytes a_focusTarget = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_focustarget();
@@ -2645,7 +2968,7 @@ const char* Msg_EmptyTransaction::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // bytes a_transationData = 2;
+      // required bytes a_transationData = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_transationdata();
@@ -2667,15 +2990,16 @@ const char* Msg_EmptyTransaction::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // uint64 a_fwdTransactionId = 4;
+      // required uint64 a_fwdTransactionId = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _Internal::set_has_a_fwdtransactionid(&has_bits);
           _impl_.a_fwdtransactionid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bytes a_transactionId = 5;
+      // required bytes a_transactionId = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_a_transactionid();
@@ -2684,7 +3008,7 @@ const char* Msg_EmptyTransaction::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // bytes a_vsyncId = 6;
+      // required bytes a_vsyncId = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           auto str = _internal_mutable_a_vsyncid();
@@ -2693,7 +3017,7 @@ const char* Msg_EmptyTransaction::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // bytes a_vsyncStartTime = 7;
+      // required bytes a_vsyncStartTime = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           auto str = _internal_mutable_a_vsyncstarttime();
@@ -2702,7 +3026,7 @@ const char* Msg_EmptyTransaction::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // bytes a_refreshStartTime = 8;
+      // required bytes a_refreshStartTime = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
           auto str = _internal_mutable_a_refreshstarttime();
@@ -2711,7 +3035,7 @@ const char* Msg_EmptyTransaction::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // bytes a_txnStartTime = 9;
+      // required bytes a_txnStartTime = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
           auto str = _internal_mutable_a_txnstarttime();
@@ -2720,17 +3044,16 @@ const char* Msg_EmptyTransaction::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // string a_txnURL = 10;
+      // required string a_txnURL = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 82)) {
           auto str = _internal_mutable_a_txnurl();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // bytes a_fwdTime = 11;
+      // required bytes a_fwdTime = 11;
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 90)) {
           auto str = _internal_mutable_a_fwdtime();
@@ -2769,6 +3092,7 @@ const char* Msg_EmptyTransaction::_InternalParse(const char* ptr, ::_pbi::ParseC
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -2782,14 +3106,15 @@ uint8_t* Msg_EmptyTransaction::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_focusTarget = 1;
-  if (!this->_internal_a_focustarget().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_focusTarget = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_focustarget(), target);
   }
 
-  // bytes a_transationData = 2;
-  if (!this->_internal_a_transationdata().empty()) {
+  // required bytes a_transationData = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_a_transationdata(), target);
   }
@@ -2802,54 +3127,50 @@ uint8_t* Msg_EmptyTransaction::_InternalSerialize(
         InternalWriteMessage(3, repfield, repfield.GetCachedSize(), target, stream);
   }
 
-  // uint64 a_fwdTransactionId = 4;
-  if (this->_internal_a_fwdtransactionid() != 0) {
+  // required uint64 a_fwdTransactionId = 4;
+  if (cached_has_bits & 0x00000200u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(4, this->_internal_a_fwdtransactionid(), target);
   }
 
-  // bytes a_transactionId = 5;
-  if (!this->_internal_a_transactionid().empty()) {
+  // required bytes a_transactionId = 5;
+  if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
         5, this->_internal_a_transactionid(), target);
   }
 
-  // bytes a_vsyncId = 6;
-  if (!this->_internal_a_vsyncid().empty()) {
+  // required bytes a_vsyncId = 6;
+  if (cached_has_bits & 0x00000008u) {
     target = stream->WriteBytesMaybeAliased(
         6, this->_internal_a_vsyncid(), target);
   }
 
-  // bytes a_vsyncStartTime = 7;
-  if (!this->_internal_a_vsyncstarttime().empty()) {
+  // required bytes a_vsyncStartTime = 7;
+  if (cached_has_bits & 0x00000010u) {
     target = stream->WriteBytesMaybeAliased(
         7, this->_internal_a_vsyncstarttime(), target);
   }
 
-  // bytes a_refreshStartTime = 8;
-  if (!this->_internal_a_refreshstarttime().empty()) {
+  // required bytes a_refreshStartTime = 8;
+  if (cached_has_bits & 0x00000020u) {
     target = stream->WriteBytesMaybeAliased(
         8, this->_internal_a_refreshstarttime(), target);
   }
 
-  // bytes a_txnStartTime = 9;
-  if (!this->_internal_a_txnstarttime().empty()) {
+  // required bytes a_txnStartTime = 9;
+  if (cached_has_bits & 0x00000040u) {
     target = stream->WriteBytesMaybeAliased(
         9, this->_internal_a_txnstarttime(), target);
   }
 
-  // string a_txnURL = 10;
-  if (!this->_internal_a_txnurl().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_txnurl().data(), static_cast<int>(this->_internal_a_txnurl().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.layers.PWebRenderBridge.Msg_EmptyTransaction.a_txnURL");
+  // required string a_txnURL = 10;
+  if (cached_has_bits & 0x00000080u) {
     target = stream->WriteStringMaybeAliased(
         10, this->_internal_a_txnurl(), target);
   }
 
-  // bytes a_fwdTime = 11;
-  if (!this->_internal_a_fwdtime().empty()) {
+  // required bytes a_fwdTime = 11;
+  if (cached_has_bits & 0x00000100u) {
     target = stream->WriteBytesMaybeAliased(
         11, this->_internal_a_fwdtime(), target);
   }
@@ -2868,10 +3189,136 @@ uint8_t* Msg_EmptyTransaction::_InternalSerialize(
   return target;
 }
 
+size_t Msg_EmptyTransaction::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PWebRenderBridge.Msg_EmptyTransaction)
+  size_t total_size = 0;
+
+  if (_internal_has_a_focustarget()) {
+    // required bytes a_focusTarget = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_focustarget());
+  }
+
+  if (_internal_has_a_transationdata()) {
+    // required bytes a_transationData = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_transationdata());
+  }
+
+  if (_internal_has_a_transactionid()) {
+    // required bytes a_transactionId = 5;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_transactionid());
+  }
+
+  if (_internal_has_a_vsyncid()) {
+    // required bytes a_vsyncId = 6;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_vsyncid());
+  }
+
+  if (_internal_has_a_vsyncstarttime()) {
+    // required bytes a_vsyncStartTime = 7;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_vsyncstarttime());
+  }
+
+  if (_internal_has_a_refreshstarttime()) {
+    // required bytes a_refreshStartTime = 8;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_refreshstarttime());
+  }
+
+  if (_internal_has_a_txnstarttime()) {
+    // required bytes a_txnStartTime = 9;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_txnstarttime());
+  }
+
+  if (_internal_has_a_txnurl()) {
+    // required string a_txnURL = 10;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_txnurl());
+  }
+
+  if (_internal_has_a_fwdtime()) {
+    // required bytes a_fwdTime = 11;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_fwdtime());
+  }
+
+  if (_internal_has_a_fwdtransactionid()) {
+    // required uint64 a_fwdTransactionId = 4;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_fwdtransactionid());
+  }
+
+  return total_size;
+}
 size_t Msg_EmptyTransaction::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PWebRenderBridge.Msg_EmptyTransaction)
   size_t total_size = 0;
 
+  if (((_impl_._has_bits_[0] & 0x000003ff) ^ 0x000003ff) == 0) {  // All required fields are present.
+    // required bytes a_focusTarget = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_focustarget());
+
+    // required bytes a_transationData = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_transationdata());
+
+    // required bytes a_transactionId = 5;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_transactionid());
+
+    // required bytes a_vsyncId = 6;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_vsyncid());
+
+    // required bytes a_vsyncStartTime = 7;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_vsyncstarttime());
+
+    // required bytes a_refreshStartTime = 8;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_refreshstarttime());
+
+    // required bytes a_txnStartTime = 9;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_txnstarttime());
+
+    // required string a_txnURL = 10;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_txnurl());
+
+    // required bytes a_fwdTime = 11;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_fwdtime());
+
+    // required uint64 a_fwdTransactionId = 4;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_fwdtransactionid());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2889,74 +3336,6 @@ size_t Msg_EmptyTransaction::ByteSizeLong() const {
   for (int i = 0, n = _impl_.a_payloads_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.a_payloads_.Get(i));
-  }
-
-  // bytes a_focusTarget = 1;
-  if (!this->_internal_a_focustarget().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_focustarget());
-  }
-
-  // bytes a_transationData = 2;
-  if (!this->_internal_a_transationdata().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_transationdata());
-  }
-
-  // bytes a_transactionId = 5;
-  if (!this->_internal_a_transactionid().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_transactionid());
-  }
-
-  // bytes a_vsyncId = 6;
-  if (!this->_internal_a_vsyncid().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_vsyncid());
-  }
-
-  // bytes a_vsyncStartTime = 7;
-  if (!this->_internal_a_vsyncstarttime().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_vsyncstarttime());
-  }
-
-  // bytes a_refreshStartTime = 8;
-  if (!this->_internal_a_refreshstarttime().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_refreshstarttime());
-  }
-
-  // bytes a_txnStartTime = 9;
-  if (!this->_internal_a_txnstarttime().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_txnstarttime());
-  }
-
-  // string a_txnURL = 10;
-  if (!this->_internal_a_txnurl().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_txnurl());
-  }
-
-  // bytes a_fwdTime = 11;
-  if (!this->_internal_a_fwdtime().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_fwdtime());
-  }
-
-  // uint64 a_fwdTransactionId = 4;
-  if (this->_internal_a_fwdtransactionid() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_fwdtransactionid());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2982,35 +3361,41 @@ void Msg_EmptyTransaction::MergeFrom(const Msg_EmptyTransaction& from) {
 
   _this->_impl_.a_todestroy_.MergeFrom(from._impl_.a_todestroy_);
   _this->_impl_.a_payloads_.MergeFrom(from._impl_.a_payloads_);
-  if (!from._internal_a_focustarget().empty()) {
-    _this->_internal_set_a_focustarget(from._internal_a_focustarget());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x000000ffu) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_focustarget(from._internal_a_focustarget());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_transationdata(from._internal_a_transationdata());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_internal_set_a_transactionid(from._internal_a_transactionid());
+    }
+    if (cached_has_bits & 0x00000008u) {
+      _this->_internal_set_a_vsyncid(from._internal_a_vsyncid());
+    }
+    if (cached_has_bits & 0x00000010u) {
+      _this->_internal_set_a_vsyncstarttime(from._internal_a_vsyncstarttime());
+    }
+    if (cached_has_bits & 0x00000020u) {
+      _this->_internal_set_a_refreshstarttime(from._internal_a_refreshstarttime());
+    }
+    if (cached_has_bits & 0x00000040u) {
+      _this->_internal_set_a_txnstarttime(from._internal_a_txnstarttime());
+    }
+    if (cached_has_bits & 0x00000080u) {
+      _this->_internal_set_a_txnurl(from._internal_a_txnurl());
+    }
   }
-  if (!from._internal_a_transationdata().empty()) {
-    _this->_internal_set_a_transationdata(from._internal_a_transationdata());
-  }
-  if (!from._internal_a_transactionid().empty()) {
-    _this->_internal_set_a_transactionid(from._internal_a_transactionid());
-  }
-  if (!from._internal_a_vsyncid().empty()) {
-    _this->_internal_set_a_vsyncid(from._internal_a_vsyncid());
-  }
-  if (!from._internal_a_vsyncstarttime().empty()) {
-    _this->_internal_set_a_vsyncstarttime(from._internal_a_vsyncstarttime());
-  }
-  if (!from._internal_a_refreshstarttime().empty()) {
-    _this->_internal_set_a_refreshstarttime(from._internal_a_refreshstarttime());
-  }
-  if (!from._internal_a_txnstarttime().empty()) {
-    _this->_internal_set_a_txnstarttime(from._internal_a_txnstarttime());
-  }
-  if (!from._internal_a_txnurl().empty()) {
-    _this->_internal_set_a_txnurl(from._internal_a_txnurl());
-  }
-  if (!from._internal_a_fwdtime().empty()) {
-    _this->_internal_set_a_fwdtime(from._internal_a_fwdtime());
-  }
-  if (from._internal_a_fwdtransactionid() != 0) {
-    _this->_internal_set_a_fwdtransactionid(from._internal_a_fwdtransactionid());
+  if (cached_has_bits & 0x00000300u) {
+    if (cached_has_bits & 0x00000100u) {
+      _this->_internal_set_a_fwdtime(from._internal_a_fwdtime());
+    }
+    if (cached_has_bits & 0x00000200u) {
+      _this->_impl_.a_fwdtransactionid_ = from._impl_.a_fwdtransactionid_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -3023,6 +3408,7 @@ void Msg_EmptyTransaction::CopyFrom(const Msg_EmptyTransaction& from) {
 }
 
 bool Msg_EmptyTransaction::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -3031,6 +3417,7 @@ void Msg_EmptyTransaction::InternalSwap(Msg_EmptyTransaction* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_todestroy_.InternalSwap(&other->_impl_.a_todestroy_);
   _impl_.a_payloads_.InternalSwap(&other->_impl_.a_payloads_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
@@ -3081,6 +3468,13 @@ std::string Msg_EmptyTransaction::GetTypeName() const {
 
 class Msg_SetFocusTarget::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_SetFocusTarget>()._impl_._has_bits_);
+  static void set_has_a_focustarget(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Msg_SetFocusTarget::Msg_SetFocusTarget(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -3093,15 +3487,16 @@ Msg_SetFocusTarget::Msg_SetFocusTarget(const Msg_SetFocusTarget& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_SetFocusTarget* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_focustarget_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_focustarget_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_focustarget_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_focustarget_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_focustarget().empty()) {
+  if (from._internal_has_a_focustarget()) {
     _this->_impl_.a_focustarget_.Set(from._internal_a_focustarget(), 
       _this->GetArenaForAllocation());
   }
@@ -3113,8 +3508,9 @@ inline void Msg_SetFocusTarget::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_focustarget_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_focustarget_){}
   };
   _impl_.a_focustarget_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3146,17 +3542,22 @@ void Msg_SetFocusTarget::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_focustarget_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_focustarget_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_SetFocusTarget::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_focusTarget = 1;
+      // required bytes a_focusTarget = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_focustarget();
@@ -3181,6 +3582,7 @@ const char* Msg_SetFocusTarget::_InternalParse(const char* ptr, ::_pbi::ParseCon
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -3194,8 +3596,9 @@ uint8_t* Msg_SetFocusTarget::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_focusTarget = 1;
-  if (!this->_internal_a_focustarget().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_focusTarget = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_focustarget(), target);
   }
@@ -3212,16 +3615,15 @@ size_t Msg_SetFocusTarget::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PWebRenderBridge.Msg_SetFocusTarget)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_focusTarget = 1;
-  if (!this->_internal_a_focustarget().empty()) {
+  // required bytes a_focusTarget = 1;
+  if (_internal_has_a_focustarget()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_focustarget());
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -3244,7 +3646,7 @@ void Msg_SetFocusTarget::MergeFrom(const Msg_SetFocusTarget& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_focustarget().empty()) {
+  if (from._internal_has_a_focustarget()) {
     _this->_internal_set_a_focustarget(from._internal_a_focustarget());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -3258,6 +3660,7 @@ void Msg_SetFocusTarget::CopyFrom(const Msg_SetFocusTarget& from) {
 }
 
 bool Msg_SetFocusTarget::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -3266,6 +3669,7 @@ void Msg_SetFocusTarget::InternalSwap(Msg_SetFocusTarget* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_focustarget_, lhs_arena,
       &other->_impl_.a_focustarget_, rhs_arena
@@ -3281,6 +3685,13 @@ std::string Msg_SetFocusTarget::GetTypeName() const {
 
 class Msg_UpdateResources::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_UpdateResources>()._impl_._has_bits_);
+  static void set_has_a_aidnamespace(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 void Msg_UpdateResources::clear_a_aresourceupdates() {
@@ -3299,18 +3710,19 @@ Msg_UpdateResources::Msg_UpdateResources(const Msg_UpdateResources& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_UpdateResources* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_aresourceupdates_){from._impl_.a_aresourceupdates_}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_aresourceupdates_){from._impl_.a_aresourceupdates_}
     , decltype(_impl_.a_asmallshmems_){from._impl_.a_asmallshmems_}
     , decltype(_impl_.a_alargeshmems_){from._impl_.a_alargeshmems_}
-    , decltype(_impl_.a_aidnamespace_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_aidnamespace_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_aidnamespace_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_aidnamespace_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_aidnamespace().empty()) {
+  if (from._internal_has_a_aidnamespace()) {
     _this->_impl_.a_aidnamespace_.Set(from._internal_a_aidnamespace(), 
       _this->GetArenaForAllocation());
   }
@@ -3322,11 +3734,12 @@ inline void Msg_UpdateResources::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_aresourceupdates_){arena}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_aresourceupdates_){arena}
     , decltype(_impl_.a_asmallshmems_){arena}
     , decltype(_impl_.a_alargeshmems_){arena}
     , decltype(_impl_.a_aidnamespace_){}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_aidnamespace_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3364,17 +3777,22 @@ void Msg_UpdateResources::Clear() {
   _impl_.a_aresourceupdates_.Clear();
   _impl_.a_asmallshmems_.Clear();
   _impl_.a_alargeshmems_.Clear();
-  _impl_.a_aidnamespace_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_aidnamespace_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_UpdateResources::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_aIdNamespace = 1;
+      // required bytes a_aIdNamespace = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_aidnamespace();
@@ -3439,6 +3857,7 @@ const char* Msg_UpdateResources::_InternalParse(const char* ptr, ::_pbi::ParseCo
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -3452,8 +3871,9 @@ uint8_t* Msg_UpdateResources::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_aIdNamespace = 1;
-  if (!this->_internal_a_aidnamespace().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_aIdNamespace = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_aidnamespace(), target);
   }
@@ -3492,6 +3912,12 @@ size_t Msg_UpdateResources::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PWebRenderBridge.Msg_UpdateResources)
   size_t total_size = 0;
 
+  // required bytes a_aIdNamespace = 1;
+  if (_internal_has_a_aidnamespace()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_aidnamespace());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3518,13 +3944,6 @@ size_t Msg_UpdateResources::ByteSizeLong() const {
       _impl_.a_alargeshmems_.Get(i));
   }
 
-  // bytes a_aIdNamespace = 1;
-  if (!this->_internal_a_aidnamespace().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_aidnamespace());
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -3549,7 +3968,7 @@ void Msg_UpdateResources::MergeFrom(const Msg_UpdateResources& from) {
   _this->_impl_.a_aresourceupdates_.MergeFrom(from._impl_.a_aresourceupdates_);
   _this->_impl_.a_asmallshmems_.MergeFrom(from._impl_.a_asmallshmems_);
   _this->_impl_.a_alargeshmems_.MergeFrom(from._impl_.a_alargeshmems_);
-  if (!from._internal_a_aidnamespace().empty()) {
+  if (from._internal_has_a_aidnamespace()) {
     _this->_internal_set_a_aidnamespace(from._internal_a_aidnamespace());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -3563,6 +3982,11 @@ void Msg_UpdateResources::CopyFrom(const Msg_UpdateResources& from) {
 }
 
 bool Msg_UpdateResources::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_aresourceupdates_))
+    return false;
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_asmallshmems_))
+    return false;
   return true;
 }
 
@@ -3571,6 +3995,7 @@ void Msg_UpdateResources::InternalSwap(Msg_UpdateResources* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_aresourceupdates_.InternalSwap(&other->_impl_.a_aresourceupdates_);
   _impl_.a_asmallshmems_.InternalSwap(&other->_impl_.a_asmallshmems_);
   _impl_.a_alargeshmems_.InternalSwap(&other->_impl_.a_alargeshmems_);
@@ -3589,6 +4014,13 @@ std::string Msg_UpdateResources::GetTypeName() const {
 
 class Msg_ParentCommands::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_ParentCommands>()._impl_._has_bits_);
+  static void set_has_a_aidnamespace(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 void Msg_ParentCommands::clear_a_commands() {
@@ -3604,16 +4036,17 @@ Msg_ParentCommands::Msg_ParentCommands(const Msg_ParentCommands& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_ParentCommands* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_commands_){from._impl_.a_commands_}
-    , decltype(_impl_.a_aidnamespace_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_commands_){from._impl_.a_commands_}
+    , decltype(_impl_.a_aidnamespace_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_aidnamespace_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_aidnamespace_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_aidnamespace().empty()) {
+  if (from._internal_has_a_aidnamespace()) {
     _this->_impl_.a_aidnamespace_.Set(from._internal_a_aidnamespace(), 
       _this->GetArenaForAllocation());
   }
@@ -3625,9 +4058,10 @@ inline void Msg_ParentCommands::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_commands_){arena}
-    , decltype(_impl_.a_aidnamespace_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_commands_){arena}
+    , decltype(_impl_.a_aidnamespace_){}
   };
   _impl_.a_aidnamespace_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3661,17 +4095,22 @@ void Msg_ParentCommands::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_commands_.Clear();
-  _impl_.a_aidnamespace_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_aidnamespace_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_ParentCommands::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_aIdNamespace = 1;
+      // required bytes a_aIdNamespace = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_aidnamespace();
@@ -3709,6 +4148,7 @@ const char* Msg_ParentCommands::_InternalParse(const char* ptr, ::_pbi::ParseCon
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -3722,8 +4162,9 @@ uint8_t* Msg_ParentCommands::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_aIdNamespace = 1;
-  if (!this->_internal_a_aidnamespace().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_aIdNamespace = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_aidnamespace(), target);
   }
@@ -3748,6 +4189,12 @@ size_t Msg_ParentCommands::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PWebRenderBridge.Msg_ParentCommands)
   size_t total_size = 0;
 
+  // required bytes a_aIdNamespace = 1;
+  if (_internal_has_a_aidnamespace()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_aidnamespace());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3757,13 +4204,6 @@ size_t Msg_ParentCommands::ByteSizeLong() const {
   for (const auto& msg : this->_impl_.a_commands_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
-  }
-
-  // bytes a_aIdNamespace = 1;
-  if (!this->_internal_a_aidnamespace().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_aidnamespace());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3788,7 +4228,7 @@ void Msg_ParentCommands::MergeFrom(const Msg_ParentCommands& from) {
   (void) cached_has_bits;
 
   _this->_impl_.a_commands_.MergeFrom(from._impl_.a_commands_);
-  if (!from._internal_a_aidnamespace().empty()) {
+  if (from._internal_has_a_aidnamespace()) {
     _this->_internal_set_a_aidnamespace(from._internal_a_aidnamespace());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -3802,6 +4242,9 @@ void Msg_ParentCommands::CopyFrom(const Msg_ParentCommands& from) {
 }
 
 bool Msg_ParentCommands::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_commands_))
+    return false;
   return true;
 }
 
@@ -3810,6 +4253,7 @@ void Msg_ParentCommands::InternalSwap(Msg_ParentCommands* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_commands_.InternalSwap(&other->_impl_.a_commands_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_aidnamespace_, lhs_arena,
@@ -3826,6 +4270,13 @@ std::string Msg_ParentCommands::GetTypeName() const {
 
 class Msg_GetSnapshot::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_GetSnapshot>()._impl_._has_bits_);
+  static void set_has_a_texture(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Msg_GetSnapshot::Msg_GetSnapshot(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -3838,15 +4289,16 @@ Msg_GetSnapshot::Msg_GetSnapshot(const Msg_GetSnapshot& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_GetSnapshot* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_texture_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_texture_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_texture_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_texture_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_texture().empty()) {
+  if (from._internal_has_a_texture()) {
     _this->_impl_.a_texture_.Set(from._internal_a_texture(), 
       _this->GetArenaForAllocation());
   }
@@ -3858,8 +4310,9 @@ inline void Msg_GetSnapshot::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_texture_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_texture_){}
   };
   _impl_.a_texture_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3891,17 +4344,22 @@ void Msg_GetSnapshot::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_texture_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_texture_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_GetSnapshot::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_texture = 1;
+      // required bytes a_texture = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_texture();
@@ -3926,6 +4384,7 @@ const char* Msg_GetSnapshot::_InternalParse(const char* ptr, ::_pbi::ParseContex
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -3939,8 +4398,9 @@ uint8_t* Msg_GetSnapshot::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_texture = 1;
-  if (!this->_internal_a_texture().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_texture = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_texture(), target);
   }
@@ -3957,16 +4417,15 @@ size_t Msg_GetSnapshot::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PWebRenderBridge.Msg_GetSnapshot)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_texture = 1;
-  if (!this->_internal_a_texture().empty()) {
+  // required bytes a_texture = 1;
+  if (_internal_has_a_texture()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_texture());
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -3989,7 +4448,7 @@ void Msg_GetSnapshot::MergeFrom(const Msg_GetSnapshot& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_texture().empty()) {
+  if (from._internal_has_a_texture()) {
     _this->_internal_set_a_texture(from._internal_a_texture());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -4003,6 +4462,7 @@ void Msg_GetSnapshot::CopyFrom(const Msg_GetSnapshot& from) {
 }
 
 bool Msg_GetSnapshot::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -4011,6 +4471,7 @@ void Msg_GetSnapshot::InternalSwap(Msg_GetSnapshot* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_texture_, lhs_arena,
       &other->_impl_.a_texture_, rhs_arena
@@ -4026,6 +4487,13 @@ std::string Msg_GetSnapshot::GetTypeName() const {
 
 class Reply_GetSnapshot::_Internal {
  public:
+  using HasBits = decltype(std::declval<Reply_GetSnapshot>()._impl_._has_bits_);
+  static void set_has_a_aneedsyflip(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Reply_GetSnapshot::Reply_GetSnapshot(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -4038,8 +4506,9 @@ Reply_GetSnapshot::Reply_GetSnapshot(const Reply_GetSnapshot& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_GetSnapshot* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_aneedsyflip_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_aneedsyflip_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_aneedsyflip_ = from._impl_.a_aneedsyflip_;
@@ -4051,8 +4520,9 @@ inline void Reply_GetSnapshot::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_aneedsyflip_){false}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_aneedsyflip_){false}
   };
 }
 
@@ -4080,18 +4550,21 @@ void Reply_GetSnapshot::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_aneedsyflip_ = false;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Reply_GetSnapshot::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool a_aNeedsYFlip = 1;
+      // required bool a_aNeedsYFlip = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_aneedsyflip(&has_bits);
           _impl_.a_aneedsyflip_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -4113,6 +4586,7 @@ const char* Reply_GetSnapshot::_InternalParse(const char* ptr, ::_pbi::ParseCont
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -4126,8 +4600,9 @@ uint8_t* Reply_GetSnapshot::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool a_aNeedsYFlip = 1;
-  if (this->_internal_a_aneedsyflip() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bool a_aNeedsYFlip = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_aneedsyflip(), target);
   }
@@ -4144,14 +4619,13 @@ size_t Reply_GetSnapshot::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PWebRenderBridge.Reply_GetSnapshot)
   size_t total_size = 0;
 
+  // required bool a_aNeedsYFlip = 1;
+  if (_internal_has_a_aneedsyflip()) {
+    total_size += 1 + 1;
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // bool a_aNeedsYFlip = 1;
-  if (this->_internal_a_aneedsyflip() != 0) {
-    total_size += 1 + 1;
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -4174,7 +4648,7 @@ void Reply_GetSnapshot::MergeFrom(const Reply_GetSnapshot& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_a_aneedsyflip() != 0) {
+  if (from._internal_has_a_aneedsyflip()) {
     _this->_internal_set_a_aneedsyflip(from._internal_a_aneedsyflip());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -4188,12 +4662,14 @@ void Reply_GetSnapshot::CopyFrom(const Reply_GetSnapshot& from) {
 }
 
 bool Reply_GetSnapshot::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void Reply_GetSnapshot::InternalSwap(Reply_GetSnapshot* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_aneedsyflip_, other->_impl_.a_aneedsyflip_);
 }
 
@@ -4502,6 +4978,13 @@ std::string Msg_ClearAnimationResources::GetTypeName() const {
 
 class Msg_SetDefaultClearColor::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_SetDefaultClearColor>()._impl_._has_bits_);
+  static void set_has_a_acolor(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Msg_SetDefaultClearColor::Msg_SetDefaultClearColor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -4514,8 +4997,9 @@ Msg_SetDefaultClearColor::Msg_SetDefaultClearColor(const Msg_SetDefaultClearColo
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_SetDefaultClearColor* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_acolor_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_acolor_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_acolor_ = from._impl_.a_acolor_;
@@ -4527,8 +5011,9 @@ inline void Msg_SetDefaultClearColor::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_acolor_){0u}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_acolor_){0u}
   };
 }
 
@@ -4556,18 +5041,21 @@ void Msg_SetDefaultClearColor::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_acolor_ = 0u;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_SetDefaultClearColor::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // uint32 a_aColor = 1;
+      // required uint32 a_aColor = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_acolor(&has_bits);
           _impl_.a_acolor_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
@@ -4589,6 +5077,7 @@ const char* Msg_SetDefaultClearColor::_InternalParse(const char* ptr, ::_pbi::Pa
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -4602,8 +5091,9 @@ uint8_t* Msg_SetDefaultClearColor::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 a_aColor = 1;
-  if (this->_internal_a_acolor() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required uint32 a_aColor = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_acolor(), target);
   }
@@ -4620,14 +5110,13 @@ size_t Msg_SetDefaultClearColor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PWebRenderBridge.Msg_SetDefaultClearColor)
   size_t total_size = 0;
 
+  // required uint32 a_aColor = 1;
+  if (_internal_has_a_acolor()) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acolor());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // uint32 a_aColor = 1;
-  if (this->_internal_a_acolor() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acolor());
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -4650,7 +5139,7 @@ void Msg_SetDefaultClearColor::MergeFrom(const Msg_SetDefaultClearColor& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_a_acolor() != 0) {
+  if (from._internal_has_a_acolor()) {
     _this->_internal_set_a_acolor(from._internal_a_acolor());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -4664,12 +5153,14 @@ void Msg_SetDefaultClearColor::CopyFrom(const Msg_SetDefaultClearColor& from) {
 }
 
 bool Msg_SetDefaultClearColor::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void Msg_SetDefaultClearColor::InternalSwap(Msg_SetDefaultClearColor* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_acolor_, other->_impl_.a_acolor_);
 }
 
@@ -4830,6 +5321,13 @@ std::string Msg_InvalidateRenderedFrame::GetTypeName() const {
 
 class Msg_ScheduleComposite::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_ScheduleComposite>()._impl_._has_bits_);
+  static void set_has_a_areasons(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Msg_ScheduleComposite::Msg_ScheduleComposite(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -4842,15 +5340,16 @@ Msg_ScheduleComposite::Msg_ScheduleComposite(const Msg_ScheduleComposite& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_ScheduleComposite* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_areasons_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_areasons_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_areasons_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_areasons_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_areasons().empty()) {
+  if (from._internal_has_a_areasons()) {
     _this->_impl_.a_areasons_.Set(from._internal_a_areasons(), 
       _this->GetArenaForAllocation());
   }
@@ -4862,8 +5361,9 @@ inline void Msg_ScheduleComposite::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_areasons_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_areasons_){}
   };
   _impl_.a_areasons_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4895,17 +5395,22 @@ void Msg_ScheduleComposite::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_areasons_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_areasons_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_ScheduleComposite::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_aReasons = 1;
+      // required bytes a_aReasons = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_areasons();
@@ -4930,6 +5435,7 @@ const char* Msg_ScheduleComposite::_InternalParse(const char* ptr, ::_pbi::Parse
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -4943,8 +5449,9 @@ uint8_t* Msg_ScheduleComposite::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_aReasons = 1;
-  if (!this->_internal_a_areasons().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_aReasons = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_areasons(), target);
   }
@@ -4961,16 +5468,15 @@ size_t Msg_ScheduleComposite::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PWebRenderBridge.Msg_ScheduleComposite)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_aReasons = 1;
-  if (!this->_internal_a_areasons().empty()) {
+  // required bytes a_aReasons = 1;
+  if (_internal_has_a_areasons()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_areasons());
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -4993,7 +5499,7 @@ void Msg_ScheduleComposite::MergeFrom(const Msg_ScheduleComposite& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_areasons().empty()) {
+  if (from._internal_has_a_areasons()) {
     _this->_internal_set_a_areasons(from._internal_a_areasons());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -5007,6 +5513,7 @@ void Msg_ScheduleComposite::CopyFrom(const Msg_ScheduleComposite& from) {
 }
 
 bool Msg_ScheduleComposite::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -5015,6 +5522,7 @@ void Msg_ScheduleComposite::InternalSwap(Msg_ScheduleComposite* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_areasons_, lhs_arena,
       &other->_impl_.a_areasons_, rhs_arena
@@ -5178,6 +5686,16 @@ std::string Msg_Capture::GetTypeName() const {
 
 class Msg_StartCaptureSequence::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_StartCaptureSequence>()._impl_._has_bits_);
+  static void set_has_a_apath(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_aflags(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 Msg_StartCaptureSequence::Msg_StartCaptureSequence(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -5190,16 +5708,17 @@ Msg_StartCaptureSequence::Msg_StartCaptureSequence(const Msg_StartCaptureSequenc
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_StartCaptureSequence* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_apath_){}
-    , decltype(_impl_.a_aflags_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_apath_){}
+    , decltype(_impl_.a_aflags_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_apath_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_apath_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_apath().empty()) {
+  if (from._internal_has_a_apath()) {
     _this->_impl_.a_apath_.Set(from._internal_a_apath(), 
       _this->GetArenaForAllocation());
   }
@@ -5212,9 +5731,10 @@ inline void Msg_StartCaptureSequence::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_apath_){}
-    , decltype(_impl_.a_aflags_){0u}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_apath_){}
+    , decltype(_impl_.a_aflags_){0u}
   };
   _impl_.a_apath_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -5246,30 +5766,35 @@ void Msg_StartCaptureSequence::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_apath_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_apath_.ClearNonDefaultToEmpty();
+  }
   _impl_.a_aflags_ = 0u;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_StartCaptureSequence::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string a_aPath = 1;
+      // required string a_aPath = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_apath();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
-      // uint32 a_aFlags = 2;
+      // required uint32 a_aFlags = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_a_aflags(&has_bits);
           _impl_.a_aflags_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
@@ -5291,6 +5816,7 @@ const char* Msg_StartCaptureSequence::_InternalParse(const char* ptr, ::_pbi::Pa
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -5304,18 +5830,15 @@ uint8_t* Msg_StartCaptureSequence::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string a_aPath = 1;
-  if (!this->_internal_a_apath().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_a_apath().data(), static_cast<int>(this->_internal_a_apath().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "protobuf.mozilla.layers.PWebRenderBridge.Msg_StartCaptureSequence.a_aPath");
+  cached_has_bits = _impl_._has_bits_[0];
+  // required string a_aPath = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_apath(), target);
   }
 
-  // uint32 a_aFlags = 2;
-  if (this->_internal_a_aflags() != 0) {
+  // required uint32 a_aFlags = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_aflags(), target);
   }
@@ -5328,25 +5851,43 @@ uint8_t* Msg_StartCaptureSequence::_InternalSerialize(
   return target;
 }
 
-size_t Msg_StartCaptureSequence::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PWebRenderBridge.Msg_StartCaptureSequence)
+size_t Msg_StartCaptureSequence::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PWebRenderBridge.Msg_StartCaptureSequence)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string a_aPath = 1;
-  if (!this->_internal_a_apath().empty()) {
+  if (_internal_has_a_apath()) {
+    // required string a_aPath = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_apath());
   }
 
-  // uint32 a_aFlags = 2;
-  if (this->_internal_a_aflags() != 0) {
+  if (_internal_has_a_aflags()) {
+    // required uint32 a_aFlags = 2;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_aflags());
   }
+
+  return total_size;
+}
+size_t Msg_StartCaptureSequence::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PWebRenderBridge.Msg_StartCaptureSequence)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required string a_aPath = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_apath());
+
+    // required uint32 a_aFlags = 2;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_aflags());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -5369,11 +5910,15 @@ void Msg_StartCaptureSequence::MergeFrom(const Msg_StartCaptureSequence& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_apath().empty()) {
-    _this->_internal_set_a_apath(from._internal_a_apath());
-  }
-  if (from._internal_a_aflags() != 0) {
-    _this->_internal_set_a_aflags(from._internal_a_aflags());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_apath(from._internal_a_apath());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_aflags_ = from._impl_.a_aflags_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -5386,6 +5931,7 @@ void Msg_StartCaptureSequence::CopyFrom(const Msg_StartCaptureSequence& from) {
 }
 
 bool Msg_StartCaptureSequence::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -5394,6 +5940,7 @@ void Msg_StartCaptureSequence::InternalSwap(Msg_StartCaptureSequence* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_apath_, lhs_arena,
       &other->_impl_.a_apath_, rhs_arena
@@ -5854,6 +6401,13 @@ std::string Reply_SyncWithCompositor::GetTypeName() const {
 
 class Msg_SetConfirmedTargetAPZC::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_SetConfirmedTargetAPZC>()._impl_._has_bits_);
+  static void set_has_a_ainputblockid(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Msg_SetConfirmedTargetAPZC::Msg_SetConfirmedTargetAPZC(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -5866,9 +6420,10 @@ Msg_SetConfirmedTargetAPZC::Msg_SetConfirmedTargetAPZC(const Msg_SetConfirmedTar
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_SetConfirmedTargetAPZC* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_atargets_){from._impl_.a_atargets_}
-    , decltype(_impl_.a_ainputblockid_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_atargets_){from._impl_.a_atargets_}
+    , decltype(_impl_.a_ainputblockid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_ainputblockid_ = from._impl_.a_ainputblockid_;
@@ -5880,9 +6435,10 @@ inline void Msg_SetConfirmedTargetAPZC::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_atargets_){arena}
-    , decltype(_impl_.a_ainputblockid_){uint64_t{0u}}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_atargets_){arena}
+    , decltype(_impl_.a_ainputblockid_){uint64_t{0u}}
   };
 }
 
@@ -5912,18 +6468,21 @@ void Msg_SetConfirmedTargetAPZC::Clear() {
 
   _impl_.a_atargets_.Clear();
   _impl_.a_ainputblockid_ = uint64_t{0u};
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_SetConfirmedTargetAPZC::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // uint64 a_aInputBlockId = 1;
+      // required uint64 a_aInputBlockId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_ainputblockid(&has_bits);
           _impl_.a_ainputblockid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -5959,6 +6518,7 @@ const char* Msg_SetConfirmedTargetAPZC::_InternalParse(const char* ptr, ::_pbi::
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -5972,8 +6532,9 @@ uint8_t* Msg_SetConfirmedTargetAPZC::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint64 a_aInputBlockId = 1;
-  if (this->_internal_a_ainputblockid() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required uint64 a_aInputBlockId = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_ainputblockid(), target);
   }
@@ -5996,6 +6557,10 @@ size_t Msg_SetConfirmedTargetAPZC::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PWebRenderBridge.Msg_SetConfirmedTargetAPZC)
   size_t total_size = 0;
 
+  // required uint64 a_aInputBlockId = 1;
+  if (_internal_has_a_ainputblockid()) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_ainputblockid());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -6006,11 +6571,6 @@ size_t Msg_SetConfirmedTargetAPZC::ByteSizeLong() const {
   for (int i = 0, n = _impl_.a_atargets_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.a_atargets_.Get(i));
-  }
-
-  // uint64 a_aInputBlockId = 1;
-  if (this->_internal_a_ainputblockid() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_ainputblockid());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -6035,7 +6595,7 @@ void Msg_SetConfirmedTargetAPZC::MergeFrom(const Msg_SetConfirmedTargetAPZC& fro
   (void) cached_has_bits;
 
   _this->_impl_.a_atargets_.MergeFrom(from._impl_.a_atargets_);
-  if (from._internal_a_ainputblockid() != 0) {
+  if (from._internal_has_a_ainputblockid()) {
     _this->_internal_set_a_ainputblockid(from._internal_a_ainputblockid());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -6049,12 +6609,14 @@ void Msg_SetConfirmedTargetAPZC::CopyFrom(const Msg_SetConfirmedTargetAPZC& from
 }
 
 bool Msg_SetConfirmedTargetAPZC::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void Msg_SetConfirmedTargetAPZC::InternalSwap(Msg_SetConfirmedTargetAPZC* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_atargets_.InternalSwap(&other->_impl_.a_atargets_);
   swap(_impl_.a_ainputblockid_, other->_impl_.a_ainputblockid_);
 }
@@ -6068,6 +6630,13 @@ std::string Msg_SetConfirmedTargetAPZC::GetTypeName() const {
 
 class Msg_SetTestSampleTime::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_SetTestSampleTime>()._impl_._has_bits_);
+  static void set_has_a_sampletime(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Msg_SetTestSampleTime::Msg_SetTestSampleTime(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -6080,15 +6649,16 @@ Msg_SetTestSampleTime::Msg_SetTestSampleTime(const Msg_SetTestSampleTime& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_SetTestSampleTime* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_sampletime_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_sampletime_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_sampletime_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_sampletime_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_sampletime().empty()) {
+  if (from._internal_has_a_sampletime()) {
     _this->_impl_.a_sampletime_.Set(from._internal_a_sampletime(), 
       _this->GetArenaForAllocation());
   }
@@ -6100,8 +6670,9 @@ inline void Msg_SetTestSampleTime::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_sampletime_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_sampletime_){}
   };
   _impl_.a_sampletime_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6133,17 +6704,22 @@ void Msg_SetTestSampleTime::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_sampletime_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_sampletime_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_SetTestSampleTime::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_sampleTime = 1;
+      // required bytes a_sampleTime = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_sampletime();
@@ -6168,6 +6744,7 @@ const char* Msg_SetTestSampleTime::_InternalParse(const char* ptr, ::_pbi::Parse
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -6181,8 +6758,9 @@ uint8_t* Msg_SetTestSampleTime::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_sampleTime = 1;
-  if (!this->_internal_a_sampletime().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_sampleTime = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_sampletime(), target);
   }
@@ -6199,16 +6777,15 @@ size_t Msg_SetTestSampleTime::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PWebRenderBridge.Msg_SetTestSampleTime)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_sampleTime = 1;
-  if (!this->_internal_a_sampletime().empty()) {
+  // required bytes a_sampleTime = 1;
+  if (_internal_has_a_sampletime()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_sampletime());
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -6231,7 +6808,7 @@ void Msg_SetTestSampleTime::MergeFrom(const Msg_SetTestSampleTime& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_sampletime().empty()) {
+  if (from._internal_has_a_sampletime()) {
     _this->_internal_set_a_sampletime(from._internal_a_sampletime());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -6245,6 +6822,7 @@ void Msg_SetTestSampleTime::CopyFrom(const Msg_SetTestSampleTime& from) {
 }
 
 bool Msg_SetTestSampleTime::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -6253,6 +6831,7 @@ void Msg_SetTestSampleTime::InternalSwap(Msg_SetTestSampleTime* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_sampletime_, lhs_arena,
       &other->_impl_.a_sampletime_, rhs_arena
@@ -6712,6 +7291,13 @@ std::string Reply_LeaveTestMode::GetTypeName() const {
 
 class Msg_GetAnimationValue::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_GetAnimationValue>()._impl_._has_bits_);
+  static void set_has_a_acompositoranimationsid(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Msg_GetAnimationValue::Msg_GetAnimationValue(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -6724,8 +7310,9 @@ Msg_GetAnimationValue::Msg_GetAnimationValue(const Msg_GetAnimationValue& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_GetAnimationValue* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_acompositoranimationsid_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_acompositoranimationsid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_acompositoranimationsid_ = from._impl_.a_acompositoranimationsid_;
@@ -6737,8 +7324,9 @@ inline void Msg_GetAnimationValue::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_acompositoranimationsid_){uint64_t{0u}}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_acompositoranimationsid_){uint64_t{0u}}
   };
 }
 
@@ -6766,18 +7354,21 @@ void Msg_GetAnimationValue::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_acompositoranimationsid_ = uint64_t{0u};
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_GetAnimationValue::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // uint64 a_aCompositorAnimationsId = 1;
+      // required uint64 a_aCompositorAnimationsId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_acompositoranimationsid(&has_bits);
           _impl_.a_acompositoranimationsid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -6799,6 +7390,7 @@ const char* Msg_GetAnimationValue::_InternalParse(const char* ptr, ::_pbi::Parse
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -6812,8 +7404,9 @@ uint8_t* Msg_GetAnimationValue::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint64 a_aCompositorAnimationsId = 1;
-  if (this->_internal_a_acompositoranimationsid() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required uint64 a_aCompositorAnimationsId = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_acompositoranimationsid(), target);
   }
@@ -6830,14 +7423,13 @@ size_t Msg_GetAnimationValue::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PWebRenderBridge.Msg_GetAnimationValue)
   size_t total_size = 0;
 
+  // required uint64 a_aCompositorAnimationsId = 1;
+  if (_internal_has_a_acompositoranimationsid()) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_acompositoranimationsid());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // uint64 a_aCompositorAnimationsId = 1;
-  if (this->_internal_a_acompositoranimationsid() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_acompositoranimationsid());
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -6860,7 +7452,7 @@ void Msg_GetAnimationValue::MergeFrom(const Msg_GetAnimationValue& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_a_acompositoranimationsid() != 0) {
+  if (from._internal_has_a_acompositoranimationsid()) {
     _this->_internal_set_a_acompositoranimationsid(from._internal_a_acompositoranimationsid());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -6874,12 +7466,14 @@ void Msg_GetAnimationValue::CopyFrom(const Msg_GetAnimationValue& from) {
 }
 
 bool Msg_GetAnimationValue::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void Msg_GetAnimationValue::InternalSwap(Msg_GetAnimationValue* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_acompositoranimationsid_, other->_impl_.a_acompositoranimationsid_);
 }
 
@@ -6892,7 +7486,14 @@ std::string Msg_GetAnimationValue::GetTypeName() const {
 
 class Reply_GetAnimationValue::_Internal {
  public:
+  using HasBits = decltype(std::declval<Reply_GetAnimationValue>()._impl_._has_bits_);
   static const ::protobuf::mozilla::layers::OMTAValue& a_value(const Reply_GetAnimationValue* msg);
+  static void set_has_a_value(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 const ::protobuf::mozilla::layers::OMTAValue&
@@ -6900,10 +7501,8 @@ Reply_GetAnimationValue::_Internal::a_value(const Reply_GetAnimationValue* msg) 
   return *msg->_impl_.a_value_;
 }
 void Reply_GetAnimationValue::clear_a_value() {
-  if (GetArenaForAllocation() == nullptr && _impl_.a_value_ != nullptr) {
-    delete _impl_.a_value_;
-  }
-  _impl_.a_value_ = nullptr;
+  if (_impl_.a_value_ != nullptr) _impl_.a_value_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Reply_GetAnimationValue::Reply_GetAnimationValue(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -6915,8 +7514,9 @@ Reply_GetAnimationValue::Reply_GetAnimationValue(const Reply_GetAnimationValue& 
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_GetAnimationValue* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_value_){nullptr}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_value_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_value()) {
@@ -6930,8 +7530,9 @@ inline void Reply_GetAnimationValue::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_value_){nullptr}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_value_){nullptr}
   };
 }
 
@@ -6959,20 +7560,23 @@ void Reply_GetAnimationValue::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && _impl_.a_value_ != nullptr) {
-    delete _impl_.a_value_;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    GOOGLE_DCHECK(_impl_.a_value_ != nullptr);
+    _impl_.a_value_->Clear();
   }
-  _impl_.a_value_ = nullptr;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Reply_GetAnimationValue::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.layers.OMTAValue a_value = 1;
+      // required .protobuf.mozilla.layers.OMTAValue a_value = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_value(), ptr);
@@ -6996,6 +7600,7 @@ const char* Reply_GetAnimationValue::_InternalParse(const char* ptr, ::_pbi::Par
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -7009,8 +7614,9 @@ uint8_t* Reply_GetAnimationValue::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.mozilla.layers.OMTAValue a_value = 1;
-  if (this->_internal_has_a_value()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required .protobuf.mozilla.layers.OMTAValue a_value = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_value(this),
         _Internal::a_value(this).GetCachedSize(), target, stream);
@@ -7028,16 +7634,15 @@ size_t Reply_GetAnimationValue::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PWebRenderBridge.Reply_GetAnimationValue)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .protobuf.mozilla.layers.OMTAValue a_value = 1;
-  if (this->_internal_has_a_value()) {
+  // required .protobuf.mozilla.layers.OMTAValue a_value = 1;
+  if (_internal_has_a_value()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_value_);
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -7075,12 +7680,14 @@ void Reply_GetAnimationValue::CopyFrom(const Reply_GetAnimationValue& from) {
 }
 
 bool Reply_GetAnimationValue::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void Reply_GetAnimationValue::InternalSwap(Reply_GetAnimationValue* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_value_, other->_impl_.a_value_);
 }
 
@@ -7093,6 +7700,19 @@ std::string Reply_GetAnimationValue::GetTypeName() const {
 
 class Msg_SetAsyncScrollOffset::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_SetAsyncScrollOffset>()._impl_._has_bits_);
+  static void set_has_a_scrollid(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_x(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_y(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
+  }
 };
 
 Msg_SetAsyncScrollOffset::Msg_SetAsyncScrollOffset(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -7105,17 +7725,18 @@ Msg_SetAsyncScrollOffset::Msg_SetAsyncScrollOffset(const Msg_SetAsyncScrollOffse
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_SetAsyncScrollOffset* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_scrollid_){}
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_scrollid_){}
     , decltype(_impl_.a_x_){}
-    , decltype(_impl_.a_y_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+    , decltype(_impl_.a_y_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_scrollid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_scrollid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_scrollid().empty()) {
+  if (from._internal_has_a_scrollid()) {
     _this->_impl_.a_scrollid_.Set(from._internal_a_scrollid(), 
       _this->GetArenaForAllocation());
   }
@@ -7130,10 +7751,11 @@ inline void Msg_SetAsyncScrollOffset::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_scrollid_){}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_scrollid_){}
     , decltype(_impl_.a_x_){0}
     , decltype(_impl_.a_y_){0}
-    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_scrollid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -7165,20 +7787,27 @@ void Msg_SetAsyncScrollOffset::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_scrollid_.ClearToEmpty();
-  ::memset(&_impl_.a_x_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.a_y_) -
-      reinterpret_cast<char*>(&_impl_.a_x_)) + sizeof(_impl_.a_y_));
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_scrollid_.ClearNonDefaultToEmpty();
+  }
+  if (cached_has_bits & 0x00000006u) {
+    ::memset(&_impl_.a_x_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_y_) -
+        reinterpret_cast<char*>(&_impl_.a_x_)) + sizeof(_impl_.a_y_));
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_SetAsyncScrollOffset::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_scrollId = 1;
+      // required bytes a_scrollId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_scrollid();
@@ -7187,17 +7816,19 @@ const char* Msg_SetAsyncScrollOffset::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // float a_x = 2;
+      // required float a_x = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 21)) {
+          _Internal::set_has_a_x(&has_bits);
           _impl_.a_x_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
           ptr += sizeof(float);
         } else
           goto handle_unusual;
         continue;
-      // float a_y = 3;
+      // required float a_y = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 29)) {
+          _Internal::set_has_a_y(&has_bits);
           _impl_.a_y_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
           ptr += sizeof(float);
         } else
@@ -7219,6 +7850,7 @@ const char* Msg_SetAsyncScrollOffset::_InternalParse(const char* ptr, ::_pbi::Pa
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -7232,28 +7864,21 @@ uint8_t* Msg_SetAsyncScrollOffset::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_scrollId = 1;
-  if (!this->_internal_a_scrollid().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_scrollId = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_scrollid(), target);
   }
 
-  // float a_x = 2;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_a_x = this->_internal_a_x();
-  uint32_t raw_a_x;
-  memcpy(&raw_a_x, &tmp_a_x, sizeof(tmp_a_x));
-  if (raw_a_x != 0) {
+  // required float a_x = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(2, this->_internal_a_x(), target);
   }
 
-  // float a_y = 3;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_a_y = this->_internal_a_y();
-  uint32_t raw_a_y;
-  memcpy(&raw_a_y, &tmp_a_y, sizeof(tmp_a_y));
-  if (raw_a_y != 0) {
+  // required float a_y = 3;
+  if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(3, this->_internal_a_y(), target);
   }
@@ -7266,38 +7891,51 @@ uint8_t* Msg_SetAsyncScrollOffset::_InternalSerialize(
   return target;
 }
 
-size_t Msg_SetAsyncScrollOffset::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PWebRenderBridge.Msg_SetAsyncScrollOffset)
+size_t Msg_SetAsyncScrollOffset::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PWebRenderBridge.Msg_SetAsyncScrollOffset)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_scrollId = 1;
-  if (!this->_internal_a_scrollid().empty()) {
+  if (_internal_has_a_scrollid()) {
+    // required bytes a_scrollId = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_scrollid());
   }
 
-  // float a_x = 2;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_a_x = this->_internal_a_x();
-  uint32_t raw_a_x;
-  memcpy(&raw_a_x, &tmp_a_x, sizeof(tmp_a_x));
-  if (raw_a_x != 0) {
+  if (_internal_has_a_x()) {
+    // required float a_x = 2;
     total_size += 1 + 4;
   }
 
-  // float a_y = 3;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_a_y = this->_internal_a_y();
-  uint32_t raw_a_y;
-  memcpy(&raw_a_y, &tmp_a_y, sizeof(tmp_a_y));
-  if (raw_a_y != 0) {
+  if (_internal_has_a_y()) {
+    // required float a_y = 3;
     total_size += 1 + 4;
   }
+
+  return total_size;
+}
+size_t Msg_SetAsyncScrollOffset::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PWebRenderBridge.Msg_SetAsyncScrollOffset)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
+    // required bytes a_scrollId = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_scrollid());
+
+    // required float a_x = 2;
+    total_size += 1 + 4;
+
+    // required float a_y = 3;
+    total_size += 1 + 4;
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -7320,22 +7958,18 @@ void Msg_SetAsyncScrollOffset::MergeFrom(const Msg_SetAsyncScrollOffset& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_scrollid().empty()) {
-    _this->_internal_set_a_scrollid(from._internal_a_scrollid());
-  }
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_a_x = from._internal_a_x();
-  uint32_t raw_a_x;
-  memcpy(&raw_a_x, &tmp_a_x, sizeof(tmp_a_x));
-  if (raw_a_x != 0) {
-    _this->_internal_set_a_x(from._internal_a_x());
-  }
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_a_y = from._internal_a_y();
-  uint32_t raw_a_y;
-  memcpy(&raw_a_y, &tmp_a_y, sizeof(tmp_a_y));
-  if (raw_a_y != 0) {
-    _this->_internal_set_a_y(from._internal_a_y());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_scrollid(from._internal_a_scrollid());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_x_ = from._impl_.a_x_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.a_y_ = from._impl_.a_y_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -7348,6 +7982,7 @@ void Msg_SetAsyncScrollOffset::CopyFrom(const Msg_SetAsyncScrollOffset& from) {
 }
 
 bool Msg_SetAsyncScrollOffset::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -7356,6 +7991,7 @@ void Msg_SetAsyncScrollOffset::InternalSwap(Msg_SetAsyncScrollOffset* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_scrollid_, lhs_arena,
       &other->_impl_.a_scrollid_, rhs_arena
@@ -7525,6 +8161,16 @@ std::string Reply_SetAsyncScrollOffset::GetTypeName() const {
 
 class Msg_SetAsyncZoom::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_SetAsyncZoom>()._impl_._has_bits_);
+  static void set_has_a_scrollid(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_zoom(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 Msg_SetAsyncZoom::Msg_SetAsyncZoom(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -7537,16 +8183,17 @@ Msg_SetAsyncZoom::Msg_SetAsyncZoom(const Msg_SetAsyncZoom& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_SetAsyncZoom* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_scrollid_){}
-    , decltype(_impl_.a_zoom_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_scrollid_){}
+    , decltype(_impl_.a_zoom_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_scrollid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_scrollid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_scrollid().empty()) {
+  if (from._internal_has_a_scrollid()) {
     _this->_impl_.a_scrollid_.Set(from._internal_a_scrollid(), 
       _this->GetArenaForAllocation());
   }
@@ -7559,9 +8206,10 @@ inline void Msg_SetAsyncZoom::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_scrollid_){}
-    , decltype(_impl_.a_zoom_){0}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_scrollid_){}
+    , decltype(_impl_.a_zoom_){0}
   };
   _impl_.a_scrollid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -7593,18 +8241,23 @@ void Msg_SetAsyncZoom::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_scrollid_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_scrollid_.ClearNonDefaultToEmpty();
+  }
   _impl_.a_zoom_ = 0;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_SetAsyncZoom::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_scrollId = 1;
+      // required bytes a_scrollId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_scrollid();
@@ -7613,9 +8266,10 @@ const char* Msg_SetAsyncZoom::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // float a_zoom = 2;
+      // required float a_zoom = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 21)) {
+          _Internal::set_has_a_zoom(&has_bits);
           _impl_.a_zoom_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
           ptr += sizeof(float);
         } else
@@ -7637,6 +8291,7 @@ const char* Msg_SetAsyncZoom::_InternalParse(const char* ptr, ::_pbi::ParseConte
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -7650,18 +8305,15 @@ uint8_t* Msg_SetAsyncZoom::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_scrollId = 1;
-  if (!this->_internal_a_scrollid().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_scrollId = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_scrollid(), target);
   }
 
-  // float a_zoom = 2;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_a_zoom = this->_internal_a_zoom();
-  uint32_t raw_a_zoom;
-  memcpy(&raw_a_zoom, &tmp_a_zoom, sizeof(tmp_a_zoom));
-  if (raw_a_zoom != 0) {
+  // required float a_zoom = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(2, this->_internal_a_zoom(), target);
   }
@@ -7674,29 +8326,43 @@ uint8_t* Msg_SetAsyncZoom::_InternalSerialize(
   return target;
 }
 
-size_t Msg_SetAsyncZoom::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PWebRenderBridge.Msg_SetAsyncZoom)
+size_t Msg_SetAsyncZoom::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PWebRenderBridge.Msg_SetAsyncZoom)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_scrollId = 1;
-  if (!this->_internal_a_scrollid().empty()) {
+  if (_internal_has_a_scrollid()) {
+    // required bytes a_scrollId = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_scrollid());
   }
 
-  // float a_zoom = 2;
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_a_zoom = this->_internal_a_zoom();
-  uint32_t raw_a_zoom;
-  memcpy(&raw_a_zoom, &tmp_a_zoom, sizeof(tmp_a_zoom));
-  if (raw_a_zoom != 0) {
+  if (_internal_has_a_zoom()) {
+    // required float a_zoom = 2;
     total_size += 1 + 4;
   }
+
+  return total_size;
+}
+size_t Msg_SetAsyncZoom::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PWebRenderBridge.Msg_SetAsyncZoom)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required bytes a_scrollId = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_scrollid());
+
+    // required float a_zoom = 2;
+    total_size += 1 + 4;
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -7719,15 +8385,15 @@ void Msg_SetAsyncZoom::MergeFrom(const Msg_SetAsyncZoom& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_scrollid().empty()) {
-    _this->_internal_set_a_scrollid(from._internal_a_scrollid());
-  }
-  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
-  float tmp_a_zoom = from._internal_a_zoom();
-  uint32_t raw_a_zoom;
-  memcpy(&raw_a_zoom, &tmp_a_zoom, sizeof(tmp_a_zoom));
-  if (raw_a_zoom != 0) {
-    _this->_internal_set_a_zoom(from._internal_a_zoom());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_scrollid(from._internal_a_scrollid());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_zoom_ = from._impl_.a_zoom_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -7740,6 +8406,7 @@ void Msg_SetAsyncZoom::CopyFrom(const Msg_SetAsyncZoom& from) {
 }
 
 bool Msg_SetAsyncZoom::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -7748,6 +8415,7 @@ void Msg_SetAsyncZoom::InternalSwap(Msg_SetAsyncZoom* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_scrollid_, lhs_arena,
       &other->_impl_.a_scrollid_, rhs_arena
@@ -8208,6 +8876,13 @@ std::string Msg_GetAPZTestData::GetTypeName() const {
 
 class Reply_GetAPZTestData::_Internal {
  public:
+  using HasBits = decltype(std::declval<Reply_GetAPZTestData>()._impl_._has_bits_);
+  static void set_has_a_data(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Reply_GetAPZTestData::Reply_GetAPZTestData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -8220,15 +8895,16 @@ Reply_GetAPZTestData::Reply_GetAPZTestData(const Reply_GetAPZTestData& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_GetAPZTestData* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_data_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_data_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_data_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_data_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_data().empty()) {
+  if (from._internal_has_a_data()) {
     _this->_impl_.a_data_.Set(from._internal_a_data(), 
       _this->GetArenaForAllocation());
   }
@@ -8240,8 +8916,9 @@ inline void Reply_GetAPZTestData::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_data_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_data_){}
   };
   _impl_.a_data_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -8273,17 +8950,22 @@ void Reply_GetAPZTestData::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_data_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_data_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Reply_GetAPZTestData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_data = 1;
+      // required bytes a_data = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_data();
@@ -8308,6 +8990,7 @@ const char* Reply_GetAPZTestData::_InternalParse(const char* ptr, ::_pbi::ParseC
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -8321,8 +9004,9 @@ uint8_t* Reply_GetAPZTestData::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_data = 1;
-  if (!this->_internal_a_data().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_data = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_data(), target);
   }
@@ -8339,16 +9023,15 @@ size_t Reply_GetAPZTestData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PWebRenderBridge.Reply_GetAPZTestData)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_data = 1;
-  if (!this->_internal_a_data().empty()) {
+  // required bytes a_data = 1;
+  if (_internal_has_a_data()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_data());
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -8371,7 +9054,7 @@ void Reply_GetAPZTestData::MergeFrom(const Reply_GetAPZTestData& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_data().empty()) {
+  if (from._internal_has_a_data()) {
     _this->_internal_set_a_data(from._internal_a_data());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -8385,6 +9068,7 @@ void Reply_GetAPZTestData::CopyFrom(const Reply_GetAPZTestData& from) {
 }
 
 bool Reply_GetAPZTestData::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -8393,6 +9077,7 @@ void Reply_GetAPZTestData::InternalSwap(Reply_GetAPZTestData* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_data_, lhs_arena,
       &other->_impl_.a_data_, rhs_arena
@@ -8556,6 +9241,13 @@ std::string Msg_GetFrameUniformity::GetTypeName() const {
 
 class Reply_GetFrameUniformity::_Internal {
  public:
+  using HasBits = decltype(std::declval<Reply_GetFrameUniformity>()._impl_._has_bits_);
+  static void set_has_a_data(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Reply_GetFrameUniformity::Reply_GetFrameUniformity(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -8568,15 +9260,16 @@ Reply_GetFrameUniformity::Reply_GetFrameUniformity(const Reply_GetFrameUniformit
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_GetFrameUniformity* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_data_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_data_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_data_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_data_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_data().empty()) {
+  if (from._internal_has_a_data()) {
     _this->_impl_.a_data_.Set(from._internal_a_data(), 
       _this->GetArenaForAllocation());
   }
@@ -8588,8 +9281,9 @@ inline void Reply_GetFrameUniformity::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_data_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_data_){}
   };
   _impl_.a_data_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -8621,17 +9315,22 @@ void Reply_GetFrameUniformity::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_data_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_data_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Reply_GetFrameUniformity::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_data = 1;
+      // required bytes a_data = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_data();
@@ -8656,6 +9355,7 @@ const char* Reply_GetFrameUniformity::_InternalParse(const char* ptr, ::_pbi::Pa
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -8669,8 +9369,9 @@ uint8_t* Reply_GetFrameUniformity::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_data = 1;
-  if (!this->_internal_a_data().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_data = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_data(), target);
   }
@@ -8687,16 +9388,15 @@ size_t Reply_GetFrameUniformity::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PWebRenderBridge.Reply_GetFrameUniformity)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_data = 1;
-  if (!this->_internal_a_data().empty()) {
+  // required bytes a_data = 1;
+  if (_internal_has_a_data()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_data());
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -8719,7 +9419,7 @@ void Reply_GetFrameUniformity::MergeFrom(const Reply_GetFrameUniformity& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_data().empty()) {
+  if (from._internal_has_a_data()) {
     _this->_internal_set_a_data(from._internal_a_data());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -8733,6 +9433,7 @@ void Reply_GetFrameUniformity::CopyFrom(const Reply_GetFrameUniformity& from) {
 }
 
 bool Reply_GetFrameUniformity::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -8741,6 +9442,7 @@ void Reply_GetFrameUniformity::InternalSwap(Reply_GetFrameUniformity* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_data_, lhs_arena,
       &other->_impl_.a_data_, rhs_arena
@@ -8904,6 +9606,13 @@ std::string Msg_EndWheelTransaction::GetTypeName() const {
 
 class Reply_EndWheelTransaction::_Internal {
  public:
+  using HasBits = decltype(std::declval<Reply_EndWheelTransaction>()._impl_._has_bits_);
+  static void set_has_a_unused(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Reply_EndWheelTransaction::Reply_EndWheelTransaction(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -8916,8 +9625,9 @@ Reply_EndWheelTransaction::Reply_EndWheelTransaction(const Reply_EndWheelTransac
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_EndWheelTransaction* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_unused_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_unused_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_unused_ = from._impl_.a_unused_;
@@ -8929,8 +9639,9 @@ inline void Reply_EndWheelTransaction::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_unused_){false}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_unused_){false}
   };
 }
 
@@ -8958,18 +9669,21 @@ void Reply_EndWheelTransaction::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_unused_ = false;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Reply_EndWheelTransaction::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool a_unused = 1;
+      // required bool a_unused = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_unused(&has_bits);
           _impl_.a_unused_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -8991,6 +9705,7 @@ const char* Reply_EndWheelTransaction::_InternalParse(const char* ptr, ::_pbi::P
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -9004,8 +9719,9 @@ uint8_t* Reply_EndWheelTransaction::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool a_unused = 1;
-  if (this->_internal_a_unused() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bool a_unused = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_unused(), target);
   }
@@ -9022,14 +9738,13 @@ size_t Reply_EndWheelTransaction::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PWebRenderBridge.Reply_EndWheelTransaction)
   size_t total_size = 0;
 
+  // required bool a_unused = 1;
+  if (_internal_has_a_unused()) {
+    total_size += 1 + 1;
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // bool a_unused = 1;
-  if (this->_internal_a_unused() != 0) {
-    total_size += 1 + 1;
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -9052,7 +9767,7 @@ void Reply_EndWheelTransaction::MergeFrom(const Reply_EndWheelTransaction& from)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_a_unused() != 0) {
+  if (from._internal_has_a_unused()) {
     _this->_internal_set_a_unused(from._internal_a_unused());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -9066,12 +9781,14 @@ void Reply_EndWheelTransaction::CopyFrom(const Reply_EndWheelTransaction& from) 
 }
 
 bool Reply_EndWheelTransaction::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void Reply_EndWheelTransaction::InternalSwap(Reply_EndWheelTransaction* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_unused_, other->_impl_.a_unused_);
 }
 
@@ -9528,6 +10245,16 @@ std::string Reply_ShutdownSync::GetTypeName() const {
 
 class Msg_WrUpdated::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_WrUpdated>()._impl_._has_bits_);
+  static void set_has_a_anewidnamespace(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_texturefactoryidentifier(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 Msg_WrUpdated::Msg_WrUpdated(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -9540,16 +10267,17 @@ Msg_WrUpdated::Msg_WrUpdated(const Msg_WrUpdated& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_WrUpdated* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_anewidnamespace_){}
-    , decltype(_impl_.a_texturefactoryidentifier_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_anewidnamespace_){}
+    , decltype(_impl_.a_texturefactoryidentifier_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_anewidnamespace_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_anewidnamespace_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_anewidnamespace().empty()) {
+  if (from._internal_has_a_anewidnamespace()) {
     _this->_impl_.a_anewidnamespace_.Set(from._internal_a_anewidnamespace(), 
       _this->GetArenaForAllocation());
   }
@@ -9557,7 +10285,7 @@ Msg_WrUpdated::Msg_WrUpdated(const Msg_WrUpdated& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_texturefactoryidentifier_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_texturefactoryidentifier().empty()) {
+  if (from._internal_has_a_texturefactoryidentifier()) {
     _this->_impl_.a_texturefactoryidentifier_.Set(from._internal_a_texturefactoryidentifier(), 
       _this->GetArenaForAllocation());
   }
@@ -9569,9 +10297,10 @@ inline void Msg_WrUpdated::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_anewidnamespace_){}
-    , decltype(_impl_.a_texturefactoryidentifier_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_anewidnamespace_){}
+    , decltype(_impl_.a_texturefactoryidentifier_){}
   };
   _impl_.a_anewidnamespace_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9608,18 +10337,27 @@ void Msg_WrUpdated::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_anewidnamespace_.ClearToEmpty();
-  _impl_.a_texturefactoryidentifier_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _impl_.a_anewidnamespace_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _impl_.a_texturefactoryidentifier_.ClearNonDefaultToEmpty();
+    }
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_WrUpdated::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_aNewIdNamespace = 1;
+      // required bytes a_aNewIdNamespace = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_anewidnamespace();
@@ -9628,7 +10366,7 @@ const char* Msg_WrUpdated::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // bytes a_textureFactoryIdentifier = 2;
+      // required bytes a_textureFactoryIdentifier = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_texturefactoryidentifier();
@@ -9653,6 +10391,7 @@ const char* Msg_WrUpdated::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -9666,14 +10405,15 @@ uint8_t* Msg_WrUpdated::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_aNewIdNamespace = 1;
-  if (!this->_internal_a_anewidnamespace().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_aNewIdNamespace = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_anewidnamespace(), target);
   }
 
-  // bytes a_textureFactoryIdentifier = 2;
-  if (!this->_internal_a_texturefactoryidentifier().empty()) {
+  // required bytes a_textureFactoryIdentifier = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_a_texturefactoryidentifier(), target);
   }
@@ -9686,27 +10426,47 @@ uint8_t* Msg_WrUpdated::_InternalSerialize(
   return target;
 }
 
-size_t Msg_WrUpdated::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PWebRenderBridge.Msg_WrUpdated)
+size_t Msg_WrUpdated::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PWebRenderBridge.Msg_WrUpdated)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_aNewIdNamespace = 1;
-  if (!this->_internal_a_anewidnamespace().empty()) {
+  if (_internal_has_a_anewidnamespace()) {
+    // required bytes a_aNewIdNamespace = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_anewidnamespace());
   }
 
-  // bytes a_textureFactoryIdentifier = 2;
-  if (!this->_internal_a_texturefactoryidentifier().empty()) {
+  if (_internal_has_a_texturefactoryidentifier()) {
+    // required bytes a_textureFactoryIdentifier = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_texturefactoryidentifier());
   }
+
+  return total_size;
+}
+size_t Msg_WrUpdated::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PWebRenderBridge.Msg_WrUpdated)
+  size_t total_size = 0;
+
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required bytes a_aNewIdNamespace = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_anewidnamespace());
+
+    // required bytes a_textureFactoryIdentifier = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_texturefactoryidentifier());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -9729,11 +10489,14 @@ void Msg_WrUpdated::MergeFrom(const Msg_WrUpdated& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_anewidnamespace().empty()) {
-    _this->_internal_set_a_anewidnamespace(from._internal_a_anewidnamespace());
-  }
-  if (!from._internal_a_texturefactoryidentifier().empty()) {
-    _this->_internal_set_a_texturefactoryidentifier(from._internal_a_texturefactoryidentifier());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_anewidnamespace(from._internal_a_anewidnamespace());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_internal_set_a_texturefactoryidentifier(from._internal_a_texturefactoryidentifier());
+    }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -9746,6 +10509,7 @@ void Msg_WrUpdated::CopyFrom(const Msg_WrUpdated& from) {
 }
 
 bool Msg_WrUpdated::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -9754,6 +10518,7 @@ void Msg_WrUpdated::InternalSwap(Msg_WrUpdated* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_anewidnamespace_, lhs_arena,
       &other->_impl_.a_anewidnamespace_, rhs_arena

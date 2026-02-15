@@ -171,6 +171,13 @@ class Msg_DeleteMe final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_DeleteMe& default_instance() {
     return *internal_default_instance();
   }
@@ -286,6 +293,13 @@ class Msg_AsyncCheckpoint final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_AsyncCheckpoint& default_instance() {
@@ -427,6 +441,13 @@ class Msg_AsyncCheckpointAndNotify final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_AsyncCheckpointAndNotify& default_instance() {
     return *internal_default_instance();
   }
@@ -564,6 +585,13 @@ class Msg_SyncCheckpoint final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_SyncCheckpoint& default_instance() {
@@ -705,6 +733,13 @@ class Reply_SyncCheckpoint final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_SyncCheckpoint& default_instance() {
     return *internal_default_instance();
   }
@@ -820,6 +855,13 @@ class Msg_SyncCheckpointAndNotify final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_SyncCheckpointAndNotify& default_instance() {
@@ -961,6 +1003,13 @@ class Reply_SyncCheckpointAndNotify final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply_SyncCheckpointAndNotify& default_instance() {
     return *internal_default_instance();
   }
@@ -1076,6 +1125,13 @@ class Msg_AsyncFinish final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_AsyncFinish& default_instance() {
@@ -1195,6 +1251,13 @@ class Msg_SyncFinish final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_SyncFinish& default_instance() {
     return *internal_default_instance();
   }
@@ -1310,6 +1373,13 @@ class Reply_SyncFinish final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_SyncFinish& default_instance() {
@@ -1429,6 +1499,13 @@ class Msg_Loaded final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Loaded& default_instance() {
     return *internal_default_instance();
   }
@@ -1546,6 +1623,13 @@ class Msg_LoadValueAndMoreItems final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_LoadValueAndMoreItems& default_instance() {
     return *internal_default_instance();
   }
@@ -1620,7 +1704,11 @@ class Msg_LoadValueAndMoreItems final :
   enum : int {
     kAKeyFieldNumber = 1,
   };
-  // string a_key = 1;
+  // required string a_key = 1;
+  bool has_a_key() const;
+  private:
+  bool _internal_has_a_key() const;
+  public:
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1642,8 +1730,9 @@ class Msg_LoadValueAndMoreItems final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSSnapshot_2eproto;
@@ -1679,6 +1768,13 @@ class Reply_LoadValueAndMoreItems final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_LoadValueAndMoreItems& default_instance() {
@@ -1774,7 +1870,11 @@ class Reply_LoadValueAndMoreItems final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSItemInfo >&
       a_iteminfos() const;
 
-  // bytes a_value = 1;
+  // required bytes a_value = 1;
+  bool has_a_value() const;
+  private:
+  bool _internal_has_a_value() const;
+  public:
   void clear_a_value();
   const std::string& a_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1796,9 +1896,10 @@ class Reply_LoadValueAndMoreItems final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSItemInfo > a_iteminfos_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_value_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSSnapshot_2eproto;
@@ -1834,6 +1935,13 @@ class Msg_LoadKeys final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_LoadKeys& default_instance() {
@@ -1951,6 +2059,13 @@ class Reply_LoadKeys final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_LoadKeys& default_instance() {
@@ -2098,6 +2213,13 @@ class Msg_IncreasePeakUsage final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_IncreasePeakUsage& default_instance() {
     return *internal_default_instance();
   }
@@ -2172,7 +2294,11 @@ class Msg_IncreasePeakUsage final :
   enum : int {
     kAMinSizeFieldNumber = 1,
   };
-  // sint64 a_minSize = 1;
+  // required sint64 a_minSize = 1;
+  bool has_a_minsize() const;
+  private:
+  bool _internal_has_a_minsize() const;
+  public:
   void clear_a_minsize();
   int64_t a_minsize() const;
   void set_a_minsize(int64_t value);
@@ -2189,8 +2315,9 @@ class Msg_IncreasePeakUsage final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    int64_t a_minsize_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_minsize_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSSnapshot_2eproto;
@@ -2226,6 +2353,13 @@ class Reply_IncreasePeakUsage final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_IncreasePeakUsage& default_instance() {
@@ -2302,7 +2436,11 @@ class Reply_IncreasePeakUsage final :
   enum : int {
     kASizeFieldNumber = 1,
   };
-  // sint64 a_size = 1;
+  // required sint64 a_size = 1;
+  bool has_a_size() const;
+  private:
+  bool _internal_has_a_size() const;
+  public:
   void clear_a_size();
   int64_t a_size() const;
   void set_a_size(int64_t value);
@@ -2319,8 +2457,9 @@ class Reply_IncreasePeakUsage final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    int64_t a_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSSnapshot_2eproto;
@@ -2356,6 +2495,13 @@ class Msg_MarkDirty final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_MarkDirty& default_instance() {
@@ -2475,6 +2621,13 @@ class Msg___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -2590,6 +2743,13 @@ class Reply___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply___delete__& default_instance() {
@@ -2879,9 +3039,17 @@ Msg_SyncCheckpointAndNotify::a_writeandnotifyinfos() const {
 
 // Msg_LoadValueAndMoreItems
 
-// string a_key = 1;
+// required string a_key = 1;
+inline bool Msg_LoadValueAndMoreItems::_internal_has_a_key() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_LoadValueAndMoreItems::has_a_key() const {
+  return _internal_has_a_key();
+}
 inline void Msg_LoadValueAndMoreItems::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_LoadValueAndMoreItems::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_LoadValueAndMoreItems.a_key)
@@ -2890,7 +3058,7 @@ inline const std::string& Msg_LoadValueAndMoreItems::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_LoadValueAndMoreItems::set_a_key(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_LoadValueAndMoreItems.a_key)
 }
@@ -2903,22 +3071,32 @@ inline const std::string& Msg_LoadValueAndMoreItems::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void Msg_LoadValueAndMoreItems::_internal_set_a_key(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_LoadValueAndMoreItems::_internal_mutable_a_key() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_LoadValueAndMoreItems::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_LoadValueAndMoreItems.a_key)
-  return _impl_.a_key_.Release();
+  if (!_internal_has_a_key()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_key_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_LoadValueAndMoreItems::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2933,9 +3111,17 @@ inline void Msg_LoadValueAndMoreItems::set_allocated_a_key(std::string* a_key) {
 
 // Reply_LoadValueAndMoreItems
 
-// bytes a_value = 1;
+// required bytes a_value = 1;
+inline bool Reply_LoadValueAndMoreItems::_internal_has_a_value() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_LoadValueAndMoreItems::has_a_value() const {
+  return _internal_has_a_value();
+}
 inline void Reply_LoadValueAndMoreItems::clear_a_value() {
   _impl_.a_value_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_LoadValueAndMoreItems::a_value() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadValueAndMoreItems.a_value)
@@ -2944,7 +3130,7 @@ inline const std::string& Reply_LoadValueAndMoreItems::a_value() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_LoadValueAndMoreItems::set_a_value(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadValueAndMoreItems.a_value)
 }
@@ -2957,22 +3143,32 @@ inline const std::string& Reply_LoadValueAndMoreItems::_internal_a_value() const
   return _impl_.a_value_.Get();
 }
 inline void Reply_LoadValueAndMoreItems::_internal_set_a_value(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_value_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_LoadValueAndMoreItems::_internal_mutable_a_value() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_value_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_LoadValueAndMoreItems::release_a_value() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadValueAndMoreItems.a_value)
-  return _impl_.a_value_.Release();
+  if (!_internal_has_a_value()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_value_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_value_.IsDefault()) {
+    _impl_.a_value_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Reply_LoadValueAndMoreItems::set_allocated_a_value(std::string* a_value) {
   if (a_value != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_value_.SetAllocated(a_value, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3107,9 +3303,17 @@ Reply_LoadKeys::mutable_a_keys() {
 
 // Msg_IncreasePeakUsage
 
-// sint64 a_minSize = 1;
+// required sint64 a_minSize = 1;
+inline bool Msg_IncreasePeakUsage::_internal_has_a_minsize() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_IncreasePeakUsage::has_a_minsize() const {
+  return _internal_has_a_minsize();
+}
 inline void Msg_IncreasePeakUsage::clear_a_minsize() {
   _impl_.a_minsize_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline int64_t Msg_IncreasePeakUsage::_internal_a_minsize() const {
   return _impl_.a_minsize_;
@@ -3119,7 +3323,7 @@ inline int64_t Msg_IncreasePeakUsage::a_minsize() const {
   return _internal_a_minsize();
 }
 inline void Msg_IncreasePeakUsage::_internal_set_a_minsize(int64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_minsize_ = value;
 }
 inline void Msg_IncreasePeakUsage::set_a_minsize(int64_t value) {
@@ -3131,9 +3335,17 @@ inline void Msg_IncreasePeakUsage::set_a_minsize(int64_t value) {
 
 // Reply_IncreasePeakUsage
 
-// sint64 a_size = 1;
+// required sint64 a_size = 1;
+inline bool Reply_IncreasePeakUsage::_internal_has_a_size() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_IncreasePeakUsage::has_a_size() const {
+  return _internal_has_a_size();
+}
 inline void Reply_IncreasePeakUsage::clear_a_size() {
   _impl_.a_size_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline int64_t Reply_IncreasePeakUsage::_internal_a_size() const {
   return _impl_.a_size_;
@@ -3143,7 +3355,7 @@ inline int64_t Reply_IncreasePeakUsage::a_size() const {
   return _internal_a_size();
 }
 inline void Reply_IncreasePeakUsage::_internal_set_a_size(int64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_size_ = value;
 }
 inline void Reply_IncreasePeakUsage::set_a_size(int64_t value) {

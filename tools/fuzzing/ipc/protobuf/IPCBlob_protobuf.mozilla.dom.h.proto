@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/file/ipc/IPCBlob.ipdlh
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom;
@@ -18,18 +18,18 @@ import "IPCBlob_protobuf.mozilla.h.proto";
 
 // Structs and unions declarations
 message IPCFile {
-  string a_name = 1;
-  sint64 a_lastModified = 2;
-  string a_DOMPath = 3;
-  string a_fullPath = 4;
-  bool a_isDirectory = 5;
+  required string a_name = 1;
+  required sint64 a_lastModified = 2;
+  required string a_DOMPath = 3;
+  required string a_fullPath = 4;
+  required bool a_isDirectory = 5;
 }
 
 message IPCBlob {
-  string a_type = 1;
-  uint64 a_size = 2;
-  string a_blobImplType = 3;
-  protobuf.mozilla.RemoteLazyStream a_inputStream = 4;
+  required string a_type = 1;
+  required uint64 a_size = 2;
+  required string a_blobImplType = 3;
+  required protobuf.mozilla.RemoteLazyStream a_inputStream = 4;
   optional protobuf.mozilla.dom.IPCFile a_file = 5;
-  sint64 a_fileId = 6;
+  required sint64 a_fileId = 6;
 }

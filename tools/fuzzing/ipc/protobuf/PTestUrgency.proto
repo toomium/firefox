@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/ipc/ipdl/test/gtest/PTestUrgency.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla._ipdltest.PTestUrgency;
@@ -17,7 +17,7 @@ message Msg_Test1 {
 }
 
 message Reply_Test1 {
-  uint32 a_result = 1;
+  required uint32 a_result = 1;
 }
 
 message Msg_Test2 {
@@ -27,7 +27,7 @@ message Msg_Test3 {
 }
 
 message Reply_Test3 {
-  uint32 a_result = 1;
+  required uint32 a_result = 1;
 }
 
 message Msg_FinalTest_Begin {
@@ -43,14 +43,14 @@ message Msg_Reply1 {
 }
 
 message Reply_Reply1 {
-  uint32 a_result = 1;
+  required uint32 a_result = 1;
 }
 
 message Msg_Reply2 {
 }
 
 message Reply_Reply2 {
-  uint32 a_result = 1;
+  required uint32 a_result = 1;
 }
 
 // Parameter mappings stats:

@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/notification/PNotification.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom.notification.PNotification;
@@ -19,7 +19,7 @@ message Msg_Show {
 }
 
 message Reply_Show {
-  bytes a_rv = 1;
+  required bytes a_rv = 1;
 }
 
 message Msg_Close {

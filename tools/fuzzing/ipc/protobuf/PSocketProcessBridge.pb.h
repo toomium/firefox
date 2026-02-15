@@ -97,6 +97,13 @@ class Msg_InitBackgroundDataBridge final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_InitBackgroundDataBridge& default_instance() {
     return *internal_default_instance();
   }
@@ -172,7 +179,11 @@ class Msg_InitBackgroundDataBridge final :
     kAAEndpointFieldNumber = 1,
     kAAChannelIDFieldNumber = 2,
   };
-  // bytes a_aEndpoint = 1;
+  // required bytes a_aEndpoint = 1;
+  bool has_a_aendpoint() const;
+  private:
+  bool _internal_has_a_aendpoint() const;
+  public:
   void clear_a_aendpoint();
   const std::string& a_aendpoint() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -186,7 +197,11 @@ class Msg_InitBackgroundDataBridge final :
   std::string* _internal_mutable_a_aendpoint();
   public:
 
-  // uint64 a_aChannelID = 2;
+  // required uint64 a_aChannelID = 2;
+  bool has_a_achannelid() const;
+  private:
+  bool _internal_has_a_achannelid() const;
+  public:
   void clear_a_achannelid();
   uint64_t a_achannelid() const;
   void set_a_achannelid(uint64_t value);
@@ -199,13 +214,17 @@ class Msg_InitBackgroundDataBridge final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aendpoint_;
     uint64_t a_achannelid_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcessBridge_2eproto;
@@ -241,6 +260,13 @@ class Msg_InitMediaTransport final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_InitMediaTransport& default_instance() {
@@ -317,7 +343,11 @@ class Msg_InitMediaTransport final :
   enum : int {
     kAAEndpointFieldNumber = 1,
   };
-  // bytes a_aEndpoint = 1;
+  // required bytes a_aEndpoint = 1;
+  bool has_a_aendpoint() const;
+  private:
+  bool _internal_has_a_aendpoint() const;
+  public:
   void clear_a_aendpoint();
   const std::string& a_aendpoint() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -339,8 +369,9 @@ class Msg_InitMediaTransport final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aendpoint_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aendpoint_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcessBridge_2eproto;
@@ -356,9 +387,17 @@ class Msg_InitMediaTransport final :
 #endif  // __GNUC__
 // Msg_InitBackgroundDataBridge
 
-// bytes a_aEndpoint = 1;
+// required bytes a_aEndpoint = 1;
+inline bool Msg_InitBackgroundDataBridge::_internal_has_a_aendpoint() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_InitBackgroundDataBridge::has_a_aendpoint() const {
+  return _internal_has_a_aendpoint();
+}
 inline void Msg_InitBackgroundDataBridge::clear_a_aendpoint() {
   _impl_.a_aendpoint_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_InitBackgroundDataBridge::a_aendpoint() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcessBridge.Msg_InitBackgroundDataBridge.a_aEndpoint)
@@ -367,7 +406,7 @@ inline const std::string& Msg_InitBackgroundDataBridge::a_aendpoint() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_InitBackgroundDataBridge::set_a_aendpoint(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aendpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcessBridge.Msg_InitBackgroundDataBridge.a_aEndpoint)
 }
@@ -380,22 +419,32 @@ inline const std::string& Msg_InitBackgroundDataBridge::_internal_a_aendpoint() 
   return _impl_.a_aendpoint_.Get();
 }
 inline void Msg_InitBackgroundDataBridge::_internal_set_a_aendpoint(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aendpoint_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_InitBackgroundDataBridge::_internal_mutable_a_aendpoint() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aendpoint_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_InitBackgroundDataBridge::release_a_aendpoint() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcessBridge.Msg_InitBackgroundDataBridge.a_aEndpoint)
-  return _impl_.a_aendpoint_.Release();
+  if (!_internal_has_a_aendpoint()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aendpoint_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aendpoint_.IsDefault()) {
+    _impl_.a_aendpoint_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_InitBackgroundDataBridge::set_allocated_a_aendpoint(std::string* a_aendpoint) {
   if (a_aendpoint != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aendpoint_.SetAllocated(a_aendpoint, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -406,9 +455,17 @@ inline void Msg_InitBackgroundDataBridge::set_allocated_a_aendpoint(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcessBridge.Msg_InitBackgroundDataBridge.a_aEndpoint)
 }
 
-// uint64 a_aChannelID = 2;
+// required uint64 a_aChannelID = 2;
+inline bool Msg_InitBackgroundDataBridge::_internal_has_a_achannelid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_InitBackgroundDataBridge::has_a_achannelid() const {
+  return _internal_has_a_achannelid();
+}
 inline void Msg_InitBackgroundDataBridge::clear_a_achannelid() {
   _impl_.a_achannelid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_InitBackgroundDataBridge::_internal_a_achannelid() const {
   return _impl_.a_achannelid_;
@@ -418,7 +475,7 @@ inline uint64_t Msg_InitBackgroundDataBridge::a_achannelid() const {
   return _internal_a_achannelid();
 }
 inline void Msg_InitBackgroundDataBridge::_internal_set_a_achannelid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_achannelid_ = value;
 }
 inline void Msg_InitBackgroundDataBridge::set_a_achannelid(uint64_t value) {
@@ -430,9 +487,17 @@ inline void Msg_InitBackgroundDataBridge::set_a_achannelid(uint64_t value) {
 
 // Msg_InitMediaTransport
 
-// bytes a_aEndpoint = 1;
+// required bytes a_aEndpoint = 1;
+inline bool Msg_InitMediaTransport::_internal_has_a_aendpoint() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_InitMediaTransport::has_a_aendpoint() const {
+  return _internal_has_a_aendpoint();
+}
 inline void Msg_InitMediaTransport::clear_a_aendpoint() {
   _impl_.a_aendpoint_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_InitMediaTransport::a_aendpoint() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcessBridge.Msg_InitMediaTransport.a_aEndpoint)
@@ -441,7 +506,7 @@ inline const std::string& Msg_InitMediaTransport::a_aendpoint() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_InitMediaTransport::set_a_aendpoint(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aendpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcessBridge.Msg_InitMediaTransport.a_aEndpoint)
 }
@@ -454,22 +519,32 @@ inline const std::string& Msg_InitMediaTransport::_internal_a_aendpoint() const 
   return _impl_.a_aendpoint_.Get();
 }
 inline void Msg_InitMediaTransport::_internal_set_a_aendpoint(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aendpoint_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_InitMediaTransport::_internal_mutable_a_aendpoint() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aendpoint_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_InitMediaTransport::release_a_aendpoint() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcessBridge.Msg_InitMediaTransport.a_aEndpoint)
-  return _impl_.a_aendpoint_.Release();
+  if (!_internal_has_a_aendpoint()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_aendpoint_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aendpoint_.IsDefault()) {
+    _impl_.a_aendpoint_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_InitMediaTransport::set_allocated_a_aendpoint(std::string* a_aendpoint) {
   if (a_aendpoint != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aendpoint_.SetAllocated(a_aendpoint, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

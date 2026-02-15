@@ -157,6 +157,13 @@ class Msg_InitTranslator final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_InitTranslator& default_instance() {
     return *internal_default_instance();
   }
@@ -261,7 +268,11 @@ class Msg_InitTranslator final :
   std::string* _internal_add_a_abufferhandles();
   public:
 
-  // bytes a_aTextureType = 1;
+  // required bytes a_aTextureType = 1;
+  bool has_a_atexturetype() const;
+  private:
+  bool _internal_has_a_atexturetype() const;
+  public:
   void clear_a_atexturetype();
   const std::string& a_atexturetype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -275,7 +286,11 @@ class Msg_InitTranslator final :
   std::string* _internal_mutable_a_atexturetype();
   public:
 
-  // bytes a_aWebglTextureType = 2;
+  // required bytes a_aWebglTextureType = 2;
+  bool has_a_awebgltexturetype() const;
+  private:
+  bool _internal_has_a_awebgltexturetype() const;
+  public:
   void clear_a_awebgltexturetype();
   const std::string& a_awebgltexturetype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -289,7 +304,11 @@ class Msg_InitTranslator final :
   std::string* _internal_mutable_a_awebgltexturetype();
   public:
 
-  // bytes a_aBackendType = 3;
+  // required bytes a_aBackendType = 3;
+  bool has_a_abackendtype() const;
+  private:
+  bool _internal_has_a_abackendtype() const;
+  public:
   void clear_a_abackendtype();
   const std::string& a_abackendtype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -303,7 +322,11 @@ class Msg_InitTranslator final :
   std::string* _internal_mutable_a_abackendtype();
   public:
 
-  // bytes a_aHeaderHandle = 4;
+  // required bytes a_aHeaderHandle = 4;
+  bool has_a_aheaderhandle() const;
+  private:
+  bool _internal_has_a_aheaderhandle() const;
+  public:
   void clear_a_aheaderhandle();
   const std::string& a_aheaderhandle() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -317,7 +340,11 @@ class Msg_InitTranslator final :
   std::string* _internal_mutable_a_aheaderhandle();
   public:
 
-  // bytes a_aReaderSem = 6;
+  // required bytes a_aReaderSem = 6;
+  bool has_a_areadersem() const;
+  private:
+  bool _internal_has_a_areadersem() const;
+  public:
   void clear_a_areadersem();
   const std::string& a_areadersem() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -331,7 +358,11 @@ class Msg_InitTranslator final :
   std::string* _internal_mutable_a_areadersem();
   public:
 
-  // bytes a_aWriterSem = 7;
+  // required bytes a_aWriterSem = 7;
+  bool has_a_awritersem() const;
+  private:
+  bool _internal_has_a_awritersem() const;
+  public:
   void clear_a_awritersem();
   const std::string& a_awritersem() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -349,10 +380,15 @@ class Msg_InitTranslator final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_abufferhandles_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atexturetype_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_awebgltexturetype_;
@@ -360,7 +396,6 @@ class Msg_InitTranslator final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aheaderhandle_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_areadersem_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_awritersem_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCanvas_2eproto;
@@ -396,6 +431,13 @@ class Msg_RestartTranslation final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_RestartTranslation& default_instance() {
@@ -515,6 +557,13 @@ class Msg_AddBuffer final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_AddBuffer& default_instance() {
     return *internal_default_instance();
   }
@@ -589,7 +638,11 @@ class Msg_AddBuffer final :
   enum : int {
     kAABufferHandleFieldNumber = 1,
   };
-  // bytes a_aBufferHandle = 1;
+  // required bytes a_aBufferHandle = 1;
+  bool has_a_abufferhandle() const;
+  private:
+  bool _internal_has_a_abufferhandle() const;
+  public:
   void clear_a_abufferhandle();
   const std::string& a_abufferhandle() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -611,8 +664,9 @@ class Msg_AddBuffer final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_abufferhandle_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_abufferhandle_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCanvas_2eproto;
@@ -648,6 +702,13 @@ class Msg_SetDataSurfaceBuffer final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_SetDataSurfaceBuffer& default_instance() {
@@ -724,7 +785,11 @@ class Msg_SetDataSurfaceBuffer final :
   enum : int {
     kAABufferHandleFieldNumber = 1,
   };
-  // bytes a_aBufferHandle = 1;
+  // required bytes a_aBufferHandle = 1;
+  bool has_a_abufferhandle() const;
+  private:
+  bool _internal_has_a_abufferhandle() const;
+  public:
   void clear_a_abufferhandle();
   const std::string& a_abufferhandle() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -746,8 +811,9 @@ class Msg_SetDataSurfaceBuffer final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_abufferhandle_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_abufferhandle_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCanvas_2eproto;
@@ -783,6 +849,13 @@ class Msg_ClearCachedResources final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_ClearCachedResources& default_instance() {
@@ -902,6 +975,13 @@ class Msg_DropFreeBuffersWhenDormant final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_DropFreeBuffersWhenDormant& default_instance() {
     return *internal_default_instance();
   }
@@ -1019,6 +1099,13 @@ class Msg_SnapshotExternalCanvas final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_SnapshotExternalCanvas& default_instance() {
     return *internal_default_instance();
   }
@@ -1095,7 +1182,11 @@ class Msg_SnapshotExternalCanvas final :
     kAASyncIdFieldNumber = 1,
     kAAManagerIdFieldNumber = 2,
   };
-  // bytes a_aCanvasId = 3;
+  // required bytes a_aCanvasId = 3;
+  bool has_a_acanvasid() const;
+  private:
+  bool _internal_has_a_acanvasid() const;
+  public:
   void clear_a_acanvasid();
   const std::string& a_acanvasid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1109,7 +1200,11 @@ class Msg_SnapshotExternalCanvas final :
   std::string* _internal_mutable_a_acanvasid();
   public:
 
-  // uint64 a_aSyncId = 1;
+  // required uint64 a_aSyncId = 1;
+  bool has_a_asyncid() const;
+  private:
+  bool _internal_has_a_asyncid() const;
+  public:
   void clear_a_asyncid();
   uint64_t a_asyncid() const;
   void set_a_asyncid(uint64_t value);
@@ -1118,7 +1213,11 @@ class Msg_SnapshotExternalCanvas final :
   void _internal_set_a_asyncid(uint64_t value);
   public:
 
-  // uint32 a_aManagerId = 2;
+  // required uint32 a_aManagerId = 2;
+  bool has_a_amanagerid() const;
+  private:
+  bool _internal_has_a_amanagerid() const;
+  public:
   void clear_a_amanagerid();
   uint32_t a_amanagerid() const;
   void set_a_amanagerid(uint32_t value);
@@ -1131,14 +1230,18 @@ class Msg_SnapshotExternalCanvas final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_acanvasid_;
     uint64_t a_asyncid_;
     uint32_t a_amanagerid_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCanvas_2eproto;
@@ -1174,6 +1277,13 @@ class Msg___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg___delete__& default_instance() {
@@ -1293,6 +1403,13 @@ class Reply___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -1410,6 +1527,13 @@ class Msg_NotifyDeviceChanged final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_NotifyDeviceChanged& default_instance() {
     return *internal_default_instance();
   }
@@ -1525,6 +1649,13 @@ class Msg_NotifyDeviceReset final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_NotifyDeviceReset& default_instance() {
@@ -1672,6 +1803,13 @@ class Msg_Deactivate final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_Deactivate& default_instance() {
     return *internal_default_instance();
   }
@@ -1787,6 +1925,13 @@ class Msg_BlockCanvas final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_BlockCanvas& default_instance() {
@@ -1906,6 +2051,13 @@ class Msg_NotifyRequiresRefresh final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_NotifyRequiresRefresh& default_instance() {
     return *internal_default_instance();
   }
@@ -1980,7 +2132,11 @@ class Msg_NotifyRequiresRefresh final :
   enum : int {
     kAATextureOwnerIdFieldNumber = 1,
   };
-  // bytes a_aTextureOwnerId = 1;
+  // required bytes a_aTextureOwnerId = 1;
+  bool has_a_atextureownerid() const;
+  private:
+  bool _internal_has_a_atextureownerid() const;
+  public:
   void clear_a_atextureownerid();
   const std::string& a_atextureownerid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2002,8 +2158,9 @@ class Msg_NotifyRequiresRefresh final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atextureownerid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atextureownerid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCanvas_2eproto;
@@ -2039,6 +2196,13 @@ class Msg_SnapshotShmem final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_SnapshotShmem& default_instance() {
@@ -2116,7 +2280,11 @@ class Msg_SnapshotShmem final :
     kAATextureOwnerIdFieldNumber = 1,
     kAAShmemHandleFieldNumber = 2,
   };
-  // bytes a_aTextureOwnerId = 1;
+  // required bytes a_aTextureOwnerId = 1;
+  bool has_a_atextureownerid() const;
+  private:
+  bool _internal_has_a_atextureownerid() const;
+  public:
   void clear_a_atextureownerid();
   const std::string& a_atextureownerid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2130,7 +2298,11 @@ class Msg_SnapshotShmem final :
   std::string* _internal_mutable_a_atextureownerid();
   public:
 
-  // bytes a_aShmemHandle = 2;
+  // required bytes a_aShmemHandle = 2;
+  bool has_a_ashmemhandle() const;
+  private:
+  bool _internal_has_a_ashmemhandle() const;
+  public:
   void clear_a_ashmemhandle();
   const std::string& a_ashmemhandle() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2148,13 +2320,17 @@ class Msg_SnapshotShmem final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atextureownerid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ashmemhandle_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCanvas_2eproto;
@@ -2190,6 +2366,13 @@ class Reply_SnapshotShmem final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Reply_SnapshotShmem& default_instance() {
@@ -2266,7 +2449,11 @@ class Reply_SnapshotShmem final :
   enum : int {
     kAASuccessFieldNumber = 1,
   };
-  // bool a_aSuccess = 1;
+  // required bool a_aSuccess = 1;
+  bool has_a_asuccess() const;
+  private:
+  bool _internal_has_a_asuccess() const;
+  public:
   void clear_a_asuccess();
   bool a_asuccess() const;
   void set_a_asuccess(bool value);
@@ -2283,8 +2470,9 @@ class Reply_SnapshotShmem final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    bool a_asuccess_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    bool a_asuccess_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCanvas_2eproto;
@@ -2320,6 +2508,13 @@ class Msg_NotifyTextureDestruction final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg_NotifyTextureDestruction& default_instance() {
@@ -2396,7 +2591,11 @@ class Msg_NotifyTextureDestruction final :
   enum : int {
     kAATextureOwnerIdFieldNumber = 1,
   };
-  // bytes a_aTextureOwnerId = 1;
+  // required bytes a_aTextureOwnerId = 1;
+  bool has_a_atextureownerid() const;
+  private:
+  bool _internal_has_a_atextureownerid() const;
+  public:
   void clear_a_atextureownerid();
   const std::string& a_atextureownerid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2418,8 +2617,9 @@ class Msg_NotifyTextureDestruction final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atextureownerid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atextureownerid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCanvas_2eproto;
@@ -2435,9 +2635,17 @@ class Msg_NotifyTextureDestruction final :
 #endif  // __GNUC__
 // Msg_InitTranslator
 
-// bytes a_aTextureType = 1;
+// required bytes a_aTextureType = 1;
+inline bool Msg_InitTranslator::_internal_has_a_atexturetype() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_InitTranslator::has_a_atexturetype() const {
+  return _internal_has_a_atexturetype();
+}
 inline void Msg_InitTranslator::clear_a_atexturetype() {
   _impl_.a_atexturetype_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_InitTranslator::a_atexturetype() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PCanvas.Msg_InitTranslator.a_aTextureType)
@@ -2446,7 +2654,7 @@ inline const std::string& Msg_InitTranslator::a_atexturetype() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_InitTranslator::set_a_atexturetype(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_atexturetype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PCanvas.Msg_InitTranslator.a_aTextureType)
 }
@@ -2459,22 +2667,32 @@ inline const std::string& Msg_InitTranslator::_internal_a_atexturetype() const {
   return _impl_.a_atexturetype_.Get();
 }
 inline void Msg_InitTranslator::_internal_set_a_atexturetype(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_atexturetype_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_InitTranslator::_internal_mutable_a_atexturetype() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_atexturetype_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_InitTranslator::release_a_atexturetype() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PCanvas.Msg_InitTranslator.a_aTextureType)
-  return _impl_.a_atexturetype_.Release();
+  if (!_internal_has_a_atexturetype()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_atexturetype_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_atexturetype_.IsDefault()) {
+    _impl_.a_atexturetype_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_InitTranslator::set_allocated_a_atexturetype(std::string* a_atexturetype) {
   if (a_atexturetype != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_atexturetype_.SetAllocated(a_atexturetype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2485,9 +2703,17 @@ inline void Msg_InitTranslator::set_allocated_a_atexturetype(std::string* a_atex
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PCanvas.Msg_InitTranslator.a_aTextureType)
 }
 
-// bytes a_aWebglTextureType = 2;
+// required bytes a_aWebglTextureType = 2;
+inline bool Msg_InitTranslator::_internal_has_a_awebgltexturetype() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_InitTranslator::has_a_awebgltexturetype() const {
+  return _internal_has_a_awebgltexturetype();
+}
 inline void Msg_InitTranslator::clear_a_awebgltexturetype() {
   _impl_.a_awebgltexturetype_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_InitTranslator::a_awebgltexturetype() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PCanvas.Msg_InitTranslator.a_aWebglTextureType)
@@ -2496,7 +2722,7 @@ inline const std::string& Msg_InitTranslator::a_awebgltexturetype() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_InitTranslator::set_a_awebgltexturetype(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_awebgltexturetype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PCanvas.Msg_InitTranslator.a_aWebglTextureType)
 }
@@ -2509,22 +2735,32 @@ inline const std::string& Msg_InitTranslator::_internal_a_awebgltexturetype() co
   return _impl_.a_awebgltexturetype_.Get();
 }
 inline void Msg_InitTranslator::_internal_set_a_awebgltexturetype(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_awebgltexturetype_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_InitTranslator::_internal_mutable_a_awebgltexturetype() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_awebgltexturetype_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_InitTranslator::release_a_awebgltexturetype() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PCanvas.Msg_InitTranslator.a_aWebglTextureType)
-  return _impl_.a_awebgltexturetype_.Release();
+  if (!_internal_has_a_awebgltexturetype()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_awebgltexturetype_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_awebgltexturetype_.IsDefault()) {
+    _impl_.a_awebgltexturetype_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_InitTranslator::set_allocated_a_awebgltexturetype(std::string* a_awebgltexturetype) {
   if (a_awebgltexturetype != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_awebgltexturetype_.SetAllocated(a_awebgltexturetype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2535,9 +2771,17 @@ inline void Msg_InitTranslator::set_allocated_a_awebgltexturetype(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PCanvas.Msg_InitTranslator.a_aWebglTextureType)
 }
 
-// bytes a_aBackendType = 3;
+// required bytes a_aBackendType = 3;
+inline bool Msg_InitTranslator::_internal_has_a_abackendtype() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_InitTranslator::has_a_abackendtype() const {
+  return _internal_has_a_abackendtype();
+}
 inline void Msg_InitTranslator::clear_a_abackendtype() {
   _impl_.a_abackendtype_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& Msg_InitTranslator::a_abackendtype() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PCanvas.Msg_InitTranslator.a_aBackendType)
@@ -2546,7 +2790,7 @@ inline const std::string& Msg_InitTranslator::a_abackendtype() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_InitTranslator::set_a_abackendtype(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000004u;
  _impl_.a_abackendtype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PCanvas.Msg_InitTranslator.a_aBackendType)
 }
@@ -2559,22 +2803,32 @@ inline const std::string& Msg_InitTranslator::_internal_a_abackendtype() const {
   return _impl_.a_abackendtype_.Get();
 }
 inline void Msg_InitTranslator::_internal_set_a_abackendtype(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_abackendtype_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_InitTranslator::_internal_mutable_a_abackendtype() {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   return _impl_.a_abackendtype_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_InitTranslator::release_a_abackendtype() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PCanvas.Msg_InitTranslator.a_aBackendType)
-  return _impl_.a_abackendtype_.Release();
+  if (!_internal_has_a_abackendtype()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000004u;
+  auto* p = _impl_.a_abackendtype_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_abackendtype_.IsDefault()) {
+    _impl_.a_abackendtype_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_InitTranslator::set_allocated_a_abackendtype(std::string* a_abackendtype) {
   if (a_abackendtype != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.a_abackendtype_.SetAllocated(a_abackendtype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2585,9 +2839,17 @@ inline void Msg_InitTranslator::set_allocated_a_abackendtype(std::string* a_abac
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PCanvas.Msg_InitTranslator.a_aBackendType)
 }
 
-// bytes a_aHeaderHandle = 4;
+// required bytes a_aHeaderHandle = 4;
+inline bool Msg_InitTranslator::_internal_has_a_aheaderhandle() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool Msg_InitTranslator::has_a_aheaderhandle() const {
+  return _internal_has_a_aheaderhandle();
+}
 inline void Msg_InitTranslator::clear_a_aheaderhandle() {
   _impl_.a_aheaderhandle_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline const std::string& Msg_InitTranslator::a_aheaderhandle() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PCanvas.Msg_InitTranslator.a_aHeaderHandle)
@@ -2596,7 +2858,7 @@ inline const std::string& Msg_InitTranslator::a_aheaderhandle() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_InitTranslator::set_a_aheaderhandle(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000008u;
  _impl_.a_aheaderhandle_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PCanvas.Msg_InitTranslator.a_aHeaderHandle)
 }
@@ -2609,22 +2871,32 @@ inline const std::string& Msg_InitTranslator::_internal_a_aheaderhandle() const 
   return _impl_.a_aheaderhandle_.Get();
 }
 inline void Msg_InitTranslator::_internal_set_a_aheaderhandle(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_aheaderhandle_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_InitTranslator::_internal_mutable_a_aheaderhandle() {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   return _impl_.a_aheaderhandle_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_InitTranslator::release_a_aheaderhandle() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PCanvas.Msg_InitTranslator.a_aHeaderHandle)
-  return _impl_.a_aheaderhandle_.Release();
+  if (!_internal_has_a_aheaderhandle()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000008u;
+  auto* p = _impl_.a_aheaderhandle_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_aheaderhandle_.IsDefault()) {
+    _impl_.a_aheaderhandle_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_InitTranslator::set_allocated_a_aheaderhandle(std::string* a_aheaderhandle) {
   if (a_aheaderhandle != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000008u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000008u;
   }
   _impl_.a_aheaderhandle_.SetAllocated(a_aheaderhandle, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2710,9 +2982,17 @@ Msg_InitTranslator::mutable_a_abufferhandles() {
   return &_impl_.a_abufferhandles_;
 }
 
-// bytes a_aReaderSem = 6;
+// required bytes a_aReaderSem = 6;
+inline bool Msg_InitTranslator::_internal_has_a_areadersem() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool Msg_InitTranslator::has_a_areadersem() const {
+  return _internal_has_a_areadersem();
+}
 inline void Msg_InitTranslator::clear_a_areadersem() {
   _impl_.a_areadersem_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline const std::string& Msg_InitTranslator::a_areadersem() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PCanvas.Msg_InitTranslator.a_aReaderSem)
@@ -2721,7 +3001,7 @@ inline const std::string& Msg_InitTranslator::a_areadersem() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_InitTranslator::set_a_areadersem(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000010u;
  _impl_.a_areadersem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PCanvas.Msg_InitTranslator.a_aReaderSem)
 }
@@ -2734,22 +3014,32 @@ inline const std::string& Msg_InitTranslator::_internal_a_areadersem() const {
   return _impl_.a_areadersem_.Get();
 }
 inline void Msg_InitTranslator::_internal_set_a_areadersem(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.a_areadersem_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_InitTranslator::_internal_mutable_a_areadersem() {
-  
+  _impl_._has_bits_[0] |= 0x00000010u;
   return _impl_.a_areadersem_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_InitTranslator::release_a_areadersem() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PCanvas.Msg_InitTranslator.a_aReaderSem)
-  return _impl_.a_areadersem_.Release();
+  if (!_internal_has_a_areadersem()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000010u;
+  auto* p = _impl_.a_areadersem_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_areadersem_.IsDefault()) {
+    _impl_.a_areadersem_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_InitTranslator::set_allocated_a_areadersem(std::string* a_areadersem) {
   if (a_areadersem != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000010u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000010u;
   }
   _impl_.a_areadersem_.SetAllocated(a_areadersem, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2760,9 +3050,17 @@ inline void Msg_InitTranslator::set_allocated_a_areadersem(std::string* a_areade
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PCanvas.Msg_InitTranslator.a_aReaderSem)
 }
 
-// bytes a_aWriterSem = 7;
+// required bytes a_aWriterSem = 7;
+inline bool Msg_InitTranslator::_internal_has_a_awritersem() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool Msg_InitTranslator::has_a_awritersem() const {
+  return _internal_has_a_awritersem();
+}
 inline void Msg_InitTranslator::clear_a_awritersem() {
   _impl_.a_awritersem_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline const std::string& Msg_InitTranslator::a_awritersem() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PCanvas.Msg_InitTranslator.a_aWriterSem)
@@ -2771,7 +3069,7 @@ inline const std::string& Msg_InitTranslator::a_awritersem() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_InitTranslator::set_a_awritersem(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000020u;
  _impl_.a_awritersem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PCanvas.Msg_InitTranslator.a_aWriterSem)
 }
@@ -2784,22 +3082,32 @@ inline const std::string& Msg_InitTranslator::_internal_a_awritersem() const {
   return _impl_.a_awritersem_.Get();
 }
 inline void Msg_InitTranslator::_internal_set_a_awritersem(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000020u;
   _impl_.a_awritersem_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_InitTranslator::_internal_mutable_a_awritersem() {
-  
+  _impl_._has_bits_[0] |= 0x00000020u;
   return _impl_.a_awritersem_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_InitTranslator::release_a_awritersem() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PCanvas.Msg_InitTranslator.a_aWriterSem)
-  return _impl_.a_awritersem_.Release();
+  if (!_internal_has_a_awritersem()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000020u;
+  auto* p = _impl_.a_awritersem_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_awritersem_.IsDefault()) {
+    _impl_.a_awritersem_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_InitTranslator::set_allocated_a_awritersem(std::string* a_awritersem) {
   if (a_awritersem != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000020u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000020u;
   }
   _impl_.a_awritersem_.SetAllocated(a_awritersem, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2818,9 +3126,17 @@ inline void Msg_InitTranslator::set_allocated_a_awritersem(std::string* a_awrite
 
 // Msg_AddBuffer
 
-// bytes a_aBufferHandle = 1;
+// required bytes a_aBufferHandle = 1;
+inline bool Msg_AddBuffer::_internal_has_a_abufferhandle() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_AddBuffer::has_a_abufferhandle() const {
+  return _internal_has_a_abufferhandle();
+}
 inline void Msg_AddBuffer::clear_a_abufferhandle() {
   _impl_.a_abufferhandle_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_AddBuffer::a_abufferhandle() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PCanvas.Msg_AddBuffer.a_aBufferHandle)
@@ -2829,7 +3145,7 @@ inline const std::string& Msg_AddBuffer::a_abufferhandle() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AddBuffer::set_a_abufferhandle(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_abufferhandle_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PCanvas.Msg_AddBuffer.a_aBufferHandle)
 }
@@ -2842,22 +3158,32 @@ inline const std::string& Msg_AddBuffer::_internal_a_abufferhandle() const {
   return _impl_.a_abufferhandle_.Get();
 }
 inline void Msg_AddBuffer::_internal_set_a_abufferhandle(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_abufferhandle_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_AddBuffer::_internal_mutable_a_abufferhandle() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_abufferhandle_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_AddBuffer::release_a_abufferhandle() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PCanvas.Msg_AddBuffer.a_aBufferHandle)
-  return _impl_.a_abufferhandle_.Release();
+  if (!_internal_has_a_abufferhandle()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_abufferhandle_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_abufferhandle_.IsDefault()) {
+    _impl_.a_abufferhandle_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_AddBuffer::set_allocated_a_abufferhandle(std::string* a_abufferhandle) {
   if (a_abufferhandle != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_abufferhandle_.SetAllocated(a_abufferhandle, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2872,9 +3198,17 @@ inline void Msg_AddBuffer::set_allocated_a_abufferhandle(std::string* a_abufferh
 
 // Msg_SetDataSurfaceBuffer
 
-// bytes a_aBufferHandle = 1;
+// required bytes a_aBufferHandle = 1;
+inline bool Msg_SetDataSurfaceBuffer::_internal_has_a_abufferhandle() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_SetDataSurfaceBuffer::has_a_abufferhandle() const {
+  return _internal_has_a_abufferhandle();
+}
 inline void Msg_SetDataSurfaceBuffer::clear_a_abufferhandle() {
   _impl_.a_abufferhandle_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_SetDataSurfaceBuffer::a_abufferhandle() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PCanvas.Msg_SetDataSurfaceBuffer.a_aBufferHandle)
@@ -2883,7 +3217,7 @@ inline const std::string& Msg_SetDataSurfaceBuffer::a_abufferhandle() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SetDataSurfaceBuffer::set_a_abufferhandle(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_abufferhandle_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PCanvas.Msg_SetDataSurfaceBuffer.a_aBufferHandle)
 }
@@ -2896,22 +3230,32 @@ inline const std::string& Msg_SetDataSurfaceBuffer::_internal_a_abufferhandle() 
   return _impl_.a_abufferhandle_.Get();
 }
 inline void Msg_SetDataSurfaceBuffer::_internal_set_a_abufferhandle(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_abufferhandle_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_SetDataSurfaceBuffer::_internal_mutable_a_abufferhandle() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_abufferhandle_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_SetDataSurfaceBuffer::release_a_abufferhandle() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PCanvas.Msg_SetDataSurfaceBuffer.a_aBufferHandle)
-  return _impl_.a_abufferhandle_.Release();
+  if (!_internal_has_a_abufferhandle()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_abufferhandle_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_abufferhandle_.IsDefault()) {
+    _impl_.a_abufferhandle_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_SetDataSurfaceBuffer::set_allocated_a_abufferhandle(std::string* a_abufferhandle) {
   if (a_abufferhandle != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_abufferhandle_.SetAllocated(a_abufferhandle, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2934,9 +3278,17 @@ inline void Msg_SetDataSurfaceBuffer::set_allocated_a_abufferhandle(std::string*
 
 // Msg_SnapshotExternalCanvas
 
-// uint64 a_aSyncId = 1;
+// required uint64 a_aSyncId = 1;
+inline bool Msg_SnapshotExternalCanvas::_internal_has_a_asyncid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_SnapshotExternalCanvas::has_a_asyncid() const {
+  return _internal_has_a_asyncid();
+}
 inline void Msg_SnapshotExternalCanvas::clear_a_asyncid() {
   _impl_.a_asyncid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_SnapshotExternalCanvas::_internal_a_asyncid() const {
   return _impl_.a_asyncid_;
@@ -2946,7 +3298,7 @@ inline uint64_t Msg_SnapshotExternalCanvas::a_asyncid() const {
   return _internal_a_asyncid();
 }
 inline void Msg_SnapshotExternalCanvas::_internal_set_a_asyncid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_asyncid_ = value;
 }
 inline void Msg_SnapshotExternalCanvas::set_a_asyncid(uint64_t value) {
@@ -2954,9 +3306,17 @@ inline void Msg_SnapshotExternalCanvas::set_a_asyncid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PCanvas.Msg_SnapshotExternalCanvas.a_aSyncId)
 }
 
-// uint32 a_aManagerId = 2;
+// required uint32 a_aManagerId = 2;
+inline bool Msg_SnapshotExternalCanvas::_internal_has_a_amanagerid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_SnapshotExternalCanvas::has_a_amanagerid() const {
+  return _internal_has_a_amanagerid();
+}
 inline void Msg_SnapshotExternalCanvas::clear_a_amanagerid() {
   _impl_.a_amanagerid_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_SnapshotExternalCanvas::_internal_a_amanagerid() const {
   return _impl_.a_amanagerid_;
@@ -2966,7 +3326,7 @@ inline uint32_t Msg_SnapshotExternalCanvas::a_amanagerid() const {
   return _internal_a_amanagerid();
 }
 inline void Msg_SnapshotExternalCanvas::_internal_set_a_amanagerid(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_amanagerid_ = value;
 }
 inline void Msg_SnapshotExternalCanvas::set_a_amanagerid(uint32_t value) {
@@ -2974,9 +3334,17 @@ inline void Msg_SnapshotExternalCanvas::set_a_amanagerid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PCanvas.Msg_SnapshotExternalCanvas.a_aManagerId)
 }
 
-// bytes a_aCanvasId = 3;
+// required bytes a_aCanvasId = 3;
+inline bool Msg_SnapshotExternalCanvas::_internal_has_a_acanvasid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_SnapshotExternalCanvas::has_a_acanvasid() const {
+  return _internal_has_a_acanvasid();
+}
 inline void Msg_SnapshotExternalCanvas::clear_a_acanvasid() {
   _impl_.a_acanvasid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_SnapshotExternalCanvas::a_acanvasid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PCanvas.Msg_SnapshotExternalCanvas.a_aCanvasId)
@@ -2985,7 +3353,7 @@ inline const std::string& Msg_SnapshotExternalCanvas::a_acanvasid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SnapshotExternalCanvas::set_a_acanvasid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_acanvasid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PCanvas.Msg_SnapshotExternalCanvas.a_aCanvasId)
 }
@@ -2998,22 +3366,32 @@ inline const std::string& Msg_SnapshotExternalCanvas::_internal_a_acanvasid() co
   return _impl_.a_acanvasid_.Get();
 }
 inline void Msg_SnapshotExternalCanvas::_internal_set_a_acanvasid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_acanvasid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_SnapshotExternalCanvas::_internal_mutable_a_acanvasid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_acanvasid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_SnapshotExternalCanvas::release_a_acanvasid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PCanvas.Msg_SnapshotExternalCanvas.a_aCanvasId)
-  return _impl_.a_acanvasid_.Release();
+  if (!_internal_has_a_acanvasid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_acanvasid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_acanvasid_.IsDefault()) {
+    _impl_.a_acanvasid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_SnapshotExternalCanvas::set_allocated_a_acanvasid(std::string* a_acanvasid) {
   if (a_acanvasid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_acanvasid_.SetAllocated(a_acanvasid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3127,9 +3505,17 @@ Msg_NotifyDeviceReset::mutable_a_aowners() {
 
 // Msg_NotifyRequiresRefresh
 
-// bytes a_aTextureOwnerId = 1;
+// required bytes a_aTextureOwnerId = 1;
+inline bool Msg_NotifyRequiresRefresh::_internal_has_a_atextureownerid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_NotifyRequiresRefresh::has_a_atextureownerid() const {
+  return _internal_has_a_atextureownerid();
+}
 inline void Msg_NotifyRequiresRefresh::clear_a_atextureownerid() {
   _impl_.a_atextureownerid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_NotifyRequiresRefresh::a_atextureownerid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PCanvas.Msg_NotifyRequiresRefresh.a_aTextureOwnerId)
@@ -3138,7 +3524,7 @@ inline const std::string& Msg_NotifyRequiresRefresh::a_atextureownerid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyRequiresRefresh::set_a_atextureownerid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_atextureownerid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PCanvas.Msg_NotifyRequiresRefresh.a_aTextureOwnerId)
 }
@@ -3151,22 +3537,32 @@ inline const std::string& Msg_NotifyRequiresRefresh::_internal_a_atextureownerid
   return _impl_.a_atextureownerid_.Get();
 }
 inline void Msg_NotifyRequiresRefresh::_internal_set_a_atextureownerid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_atextureownerid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyRequiresRefresh::_internal_mutable_a_atextureownerid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_atextureownerid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyRequiresRefresh::release_a_atextureownerid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PCanvas.Msg_NotifyRequiresRefresh.a_aTextureOwnerId)
-  return _impl_.a_atextureownerid_.Release();
+  if (!_internal_has_a_atextureownerid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_atextureownerid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_atextureownerid_.IsDefault()) {
+    _impl_.a_atextureownerid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_NotifyRequiresRefresh::set_allocated_a_atextureownerid(std::string* a_atextureownerid) {
   if (a_atextureownerid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_atextureownerid_.SetAllocated(a_atextureownerid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3181,9 +3577,17 @@ inline void Msg_NotifyRequiresRefresh::set_allocated_a_atextureownerid(std::stri
 
 // Msg_SnapshotShmem
 
-// bytes a_aTextureOwnerId = 1;
+// required bytes a_aTextureOwnerId = 1;
+inline bool Msg_SnapshotShmem::_internal_has_a_atextureownerid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_SnapshotShmem::has_a_atextureownerid() const {
+  return _internal_has_a_atextureownerid();
+}
 inline void Msg_SnapshotShmem::clear_a_atextureownerid() {
   _impl_.a_atextureownerid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_SnapshotShmem::a_atextureownerid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PCanvas.Msg_SnapshotShmem.a_aTextureOwnerId)
@@ -3192,7 +3596,7 @@ inline const std::string& Msg_SnapshotShmem::a_atextureownerid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SnapshotShmem::set_a_atextureownerid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_atextureownerid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PCanvas.Msg_SnapshotShmem.a_aTextureOwnerId)
 }
@@ -3205,22 +3609,32 @@ inline const std::string& Msg_SnapshotShmem::_internal_a_atextureownerid() const
   return _impl_.a_atextureownerid_.Get();
 }
 inline void Msg_SnapshotShmem::_internal_set_a_atextureownerid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_atextureownerid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_SnapshotShmem::_internal_mutable_a_atextureownerid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_atextureownerid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_SnapshotShmem::release_a_atextureownerid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PCanvas.Msg_SnapshotShmem.a_aTextureOwnerId)
-  return _impl_.a_atextureownerid_.Release();
+  if (!_internal_has_a_atextureownerid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_atextureownerid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_atextureownerid_.IsDefault()) {
+    _impl_.a_atextureownerid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_SnapshotShmem::set_allocated_a_atextureownerid(std::string* a_atextureownerid) {
   if (a_atextureownerid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_atextureownerid_.SetAllocated(a_atextureownerid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3231,9 +3645,17 @@ inline void Msg_SnapshotShmem::set_allocated_a_atextureownerid(std::string* a_at
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PCanvas.Msg_SnapshotShmem.a_aTextureOwnerId)
 }
 
-// bytes a_aShmemHandle = 2;
+// required bytes a_aShmemHandle = 2;
+inline bool Msg_SnapshotShmem::_internal_has_a_ashmemhandle() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_SnapshotShmem::has_a_ashmemhandle() const {
+  return _internal_has_a_ashmemhandle();
+}
 inline void Msg_SnapshotShmem::clear_a_ashmemhandle() {
   _impl_.a_ashmemhandle_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_SnapshotShmem::a_ashmemhandle() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PCanvas.Msg_SnapshotShmem.a_aShmemHandle)
@@ -3242,7 +3664,7 @@ inline const std::string& Msg_SnapshotShmem::a_ashmemhandle() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SnapshotShmem::set_a_ashmemhandle(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_ashmemhandle_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PCanvas.Msg_SnapshotShmem.a_aShmemHandle)
 }
@@ -3255,22 +3677,32 @@ inline const std::string& Msg_SnapshotShmem::_internal_a_ashmemhandle() const {
   return _impl_.a_ashmemhandle_.Get();
 }
 inline void Msg_SnapshotShmem::_internal_set_a_ashmemhandle(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_ashmemhandle_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_SnapshotShmem::_internal_mutable_a_ashmemhandle() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_ashmemhandle_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_SnapshotShmem::release_a_ashmemhandle() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PCanvas.Msg_SnapshotShmem.a_aShmemHandle)
-  return _impl_.a_ashmemhandle_.Release();
+  if (!_internal_has_a_ashmemhandle()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_ashmemhandle_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_ashmemhandle_.IsDefault()) {
+    _impl_.a_ashmemhandle_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_SnapshotShmem::set_allocated_a_ashmemhandle(std::string* a_ashmemhandle) {
   if (a_ashmemhandle != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_ashmemhandle_.SetAllocated(a_ashmemhandle, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3285,9 +3717,17 @@ inline void Msg_SnapshotShmem::set_allocated_a_ashmemhandle(std::string* a_ashme
 
 // Reply_SnapshotShmem
 
-// bool a_aSuccess = 1;
+// required bool a_aSuccess = 1;
+inline bool Reply_SnapshotShmem::_internal_has_a_asuccess() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Reply_SnapshotShmem::has_a_asuccess() const {
+  return _internal_has_a_asuccess();
+}
 inline void Reply_SnapshotShmem::clear_a_asuccess() {
   _impl_.a_asuccess_ = false;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Reply_SnapshotShmem::_internal_a_asuccess() const {
   return _impl_.a_asuccess_;
@@ -3297,7 +3737,7 @@ inline bool Reply_SnapshotShmem::a_asuccess() const {
   return _internal_a_asuccess();
 }
 inline void Reply_SnapshotShmem::_internal_set_a_asuccess(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_asuccess_ = value;
 }
 inline void Reply_SnapshotShmem::set_a_asuccess(bool value) {
@@ -3309,9 +3749,17 @@ inline void Reply_SnapshotShmem::set_a_asuccess(bool value) {
 
 // Msg_NotifyTextureDestruction
 
-// bytes a_aTextureOwnerId = 1;
+// required bytes a_aTextureOwnerId = 1;
+inline bool Msg_NotifyTextureDestruction::_internal_has_a_atextureownerid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_NotifyTextureDestruction::has_a_atextureownerid() const {
+  return _internal_has_a_atextureownerid();
+}
 inline void Msg_NotifyTextureDestruction::clear_a_atextureownerid() {
   _impl_.a_atextureownerid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_NotifyTextureDestruction::a_atextureownerid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PCanvas.Msg_NotifyTextureDestruction.a_aTextureOwnerId)
@@ -3320,7 +3768,7 @@ inline const std::string& Msg_NotifyTextureDestruction::a_atextureownerid() cons
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyTextureDestruction::set_a_atextureownerid(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_atextureownerid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PCanvas.Msg_NotifyTextureDestruction.a_aTextureOwnerId)
 }
@@ -3333,22 +3781,32 @@ inline const std::string& Msg_NotifyTextureDestruction::_internal_a_atextureowne
   return _impl_.a_atextureownerid_.Get();
 }
 inline void Msg_NotifyTextureDestruction::_internal_set_a_atextureownerid(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_atextureownerid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyTextureDestruction::_internal_mutable_a_atextureownerid() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_atextureownerid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyTextureDestruction::release_a_atextureownerid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PCanvas.Msg_NotifyTextureDestruction.a_aTextureOwnerId)
-  return _impl_.a_atextureownerid_.Release();
+  if (!_internal_has_a_atextureownerid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_atextureownerid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_atextureownerid_.IsDefault()) {
+    _impl_.a_atextureownerid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void Msg_NotifyTextureDestruction::set_allocated_a_atextureownerid(std::string* a_atextureownerid) {
   if (a_atextureownerid != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_atextureownerid_.SetAllocated(a_atextureownerid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

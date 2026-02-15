@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/file/ipc/PRemoteLazyInputStream.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.PRemoteLazyInputStream;
@@ -17,12 +17,12 @@ import "IPCStream.proto";
 
 // Message declarations
 message Msg_Clone {
-  bytes a_aCloneEndpoint = 1;
+  required bytes a_aCloneEndpoint = 1;
 }
 
 message Msg_StreamNeeded {
-  uint64 a_aStart = 1;
-  uint64 a_aLength = 2;
+  required uint64 a_aStart = 1;
+  required uint64 a_aLength = 2;
 }
 
 message Reply_StreamNeeded {
@@ -33,7 +33,7 @@ message Msg_LengthNeeded {
 }
 
 message Reply_LengthNeeded {
-  sint64 a_length = 1;
+  required sint64 a_length = 1;
 }
 
 message Msg_Goodbye {

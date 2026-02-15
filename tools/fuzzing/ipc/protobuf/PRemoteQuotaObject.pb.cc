@@ -24,9 +24,10 @@ namespace quota {
 namespace PRemoteQuotaObject {
 PROTOBUF_CONSTEXPR Msg_MaybeUpdateSize::Msg_MaybeUpdateSize(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_size_)*/int64_t{0}
-  , /*decltype(_impl_.a_truncate_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_size_)*/int64_t{0}
+  , /*decltype(_impl_.a_truncate_)*/false} {}
 struct Msg_MaybeUpdateSizeDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_MaybeUpdateSizeDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -38,8 +39,9 @@ struct Msg_MaybeUpdateSizeDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_MaybeUpdateSizeDefaultTypeInternal _Msg_MaybeUpdateSize_default_instance_;
 PROTOBUF_CONSTEXPR Reply_MaybeUpdateSize::Reply_MaybeUpdateSize(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_result_)*/false
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_result_)*/false} {}
 struct Reply_MaybeUpdateSizeDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_MaybeUpdateSizeDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -64,6 +66,16 @@ namespace PRemoteQuotaObject {
 
 class Msg_MaybeUpdateSize::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_MaybeUpdateSize>()._impl_._has_bits_);
+  static void set_has_a_size(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_a_truncate(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+  }
 };
 
 Msg_MaybeUpdateSize::Msg_MaybeUpdateSize(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -76,9 +88,10 @@ Msg_MaybeUpdateSize::Msg_MaybeUpdateSize(const Msg_MaybeUpdateSize& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_MaybeUpdateSize* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_size_){}
-    , decltype(_impl_.a_truncate_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_size_){}
+    , decltype(_impl_.a_truncate_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   ::memcpy(&_impl_.a_size_, &from._impl_.a_size_,
@@ -92,9 +105,10 @@ inline void Msg_MaybeUpdateSize::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_size_){int64_t{0}}
-    , decltype(_impl_.a_truncate_){false}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_size_){int64_t{0}}
+    , decltype(_impl_.a_truncate_){false}
   };
 }
 
@@ -121,29 +135,36 @@ void Msg_MaybeUpdateSize::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&_impl_.a_size_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.a_truncate_) -
-      reinterpret_cast<char*>(&_impl_.a_size_)) + sizeof(_impl_.a_truncate_));
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    ::memset(&_impl_.a_size_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_truncate_) -
+        reinterpret_cast<char*>(&_impl_.a_size_)) + sizeof(_impl_.a_truncate_));
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_MaybeUpdateSize::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // sint64 a_size = 1;
+      // required sint64 a_size = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_size(&has_bits);
           _impl_.a_size_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bool a_truncate = 2;
+      // required bool a_truncate = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_a_truncate(&has_bits);
           _impl_.a_truncate_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -165,6 +186,7 @@ const char* Msg_MaybeUpdateSize::_InternalParse(const char* ptr, ::_pbi::ParseCo
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -178,14 +200,15 @@ uint8_t* Msg_MaybeUpdateSize::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // sint64 a_size = 1;
-  if (this->_internal_a_size() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required sint64 a_size = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_size(), target);
   }
 
-  // bool a_truncate = 2;
-  if (this->_internal_a_truncate() != 0) {
+  // required bool a_truncate = 2;
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_truncate(), target);
   }
@@ -198,23 +221,39 @@ uint8_t* Msg_MaybeUpdateSize::_InternalSerialize(
   return target;
 }
 
+size_t Msg_MaybeUpdateSize::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.quota.PRemoteQuotaObject.Msg_MaybeUpdateSize)
+  size_t total_size = 0;
+
+  if (_internal_has_a_size()) {
+    // required sint64 a_size = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_size());
+  }
+
+  if (_internal_has_a_truncate()) {
+    // required bool a_truncate = 2;
+    total_size += 1 + 1;
+  }
+
+  return total_size;
+}
 size_t Msg_MaybeUpdateSize::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.quota.PRemoteQuotaObject.Msg_MaybeUpdateSize)
   size_t total_size = 0;
 
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required sint64 a_size = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_size());
+
+    // required bool a_truncate = 2;
+    total_size += 1 + 1;
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // sint64 a_size = 1;
-  if (this->_internal_a_size() != 0) {
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_size());
-  }
-
-  // bool a_truncate = 2;
-  if (this->_internal_a_truncate() != 0) {
-    total_size += 1 + 1;
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -237,11 +276,15 @@ void Msg_MaybeUpdateSize::MergeFrom(const Msg_MaybeUpdateSize& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_a_size() != 0) {
-    _this->_internal_set_a_size(from._internal_a_size());
-  }
-  if (from._internal_a_truncate() != 0) {
-    _this->_internal_set_a_truncate(from._internal_a_truncate());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_impl_.a_size_ = from._impl_.a_size_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_truncate_ = from._impl_.a_truncate_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -254,12 +297,14 @@ void Msg_MaybeUpdateSize::CopyFrom(const Msg_MaybeUpdateSize& from) {
 }
 
 bool Msg_MaybeUpdateSize::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void Msg_MaybeUpdateSize::InternalSwap(Msg_MaybeUpdateSize* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(Msg_MaybeUpdateSize, _impl_.a_truncate_)
       + sizeof(Msg_MaybeUpdateSize::_impl_.a_truncate_)
@@ -277,6 +322,13 @@ std::string Msg_MaybeUpdateSize::GetTypeName() const {
 
 class Reply_MaybeUpdateSize::_Internal {
  public:
+  using HasBits = decltype(std::declval<Reply_MaybeUpdateSize>()._impl_._has_bits_);
+  static void set_has_a_result(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Reply_MaybeUpdateSize::Reply_MaybeUpdateSize(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -289,8 +341,9 @@ Reply_MaybeUpdateSize::Reply_MaybeUpdateSize(const Reply_MaybeUpdateSize& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_MaybeUpdateSize* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_result_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_result_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_result_ = from._impl_.a_result_;
@@ -302,8 +355,9 @@ inline void Reply_MaybeUpdateSize::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_result_){false}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_result_){false}
   };
 }
 
@@ -331,18 +385,21 @@ void Reply_MaybeUpdateSize::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_result_ = false;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Reply_MaybeUpdateSize::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bool a_result = 1;
+      // required bool a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_result(&has_bits);
           _impl_.a_result_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -364,6 +421,7 @@ const char* Reply_MaybeUpdateSize::_InternalParse(const char* ptr, ::_pbi::Parse
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -377,8 +435,9 @@ uint8_t* Reply_MaybeUpdateSize::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool a_result = 1;
-  if (this->_internal_a_result() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bool a_result = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_result(), target);
   }
@@ -395,14 +454,13 @@ size_t Reply_MaybeUpdateSize::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.quota.PRemoteQuotaObject.Reply_MaybeUpdateSize)
   size_t total_size = 0;
 
+  // required bool a_result = 1;
+  if (_internal_has_a_result()) {
+    total_size += 1 + 1;
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // bool a_result = 1;
-  if (this->_internal_a_result() != 0) {
-    total_size += 1 + 1;
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -425,7 +483,7 @@ void Reply_MaybeUpdateSize::MergeFrom(const Reply_MaybeUpdateSize& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_a_result() != 0) {
+  if (from._internal_has_a_result()) {
     _this->_internal_set_a_result(from._internal_a_result());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -439,12 +497,14 @@ void Reply_MaybeUpdateSize::CopyFrom(const Reply_MaybeUpdateSize& from) {
 }
 
 bool Reply_MaybeUpdateSize::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void Reply_MaybeUpdateSize::InternalSwap(Reply_MaybeUpdateSize* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_result_, other->_impl_.a_result_);
 }
 

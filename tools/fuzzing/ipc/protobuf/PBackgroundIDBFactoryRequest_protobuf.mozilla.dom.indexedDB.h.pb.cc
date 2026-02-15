@@ -23,8 +23,9 @@ namespace dom {
 namespace indexedDB {
 PROTOBUF_CONSTEXPR OpenDatabaseRequestResponse::OpenDatabaseRequestResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_database_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_database_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct OpenDatabaseRequestResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR OpenDatabaseRequestResponseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -36,8 +37,9 @@ struct OpenDatabaseRequestResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 OpenDatabaseRequestResponseDefaultTypeInternal _OpenDatabaseRequestResponse_default_instance_;
 PROTOBUF_CONSTEXPR DeleteDatabaseRequestResponse::DeleteDatabaseRequestResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.a_previousversion_)*/uint64_t{0u}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_previousversion_)*/uint64_t{0u}} {}
 struct DeleteDatabaseRequestResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR DeleteDatabaseRequestResponseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -74,6 +76,13 @@ namespace indexedDB {
 
 class OpenDatabaseRequestResponse::_Internal {
  public:
+  using HasBits = decltype(std::declval<OpenDatabaseRequestResponse>()._impl_._has_bits_);
+  static void set_has_a_database(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 OpenDatabaseRequestResponse::OpenDatabaseRequestResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -86,15 +95,16 @@ OpenDatabaseRequestResponse::OpenDatabaseRequestResponse(const OpenDatabaseReque
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   OpenDatabaseRequestResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_database_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_database_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_database_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_database_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_a_database().empty()) {
+  if (from._internal_has_a_database()) {
     _this->_impl_.a_database_.Set(from._internal_a_database(), 
       _this->GetArenaForAllocation());
   }
@@ -106,8 +116,9 @@ inline void OpenDatabaseRequestResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_database_){}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_database_){}
   };
   _impl_.a_database_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -139,17 +150,22 @@ void OpenDatabaseRequestResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.a_database_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_database_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* OpenDatabaseRequestResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_database = 1;
+      // required bytes a_database = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_database();
@@ -174,6 +190,7 @@ const char* OpenDatabaseRequestResponse::_InternalParse(const char* ptr, ::_pbi:
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -187,8 +204,9 @@ uint8_t* OpenDatabaseRequestResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_database = 1;
-  if (!this->_internal_a_database().empty()) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required bytes a_database = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_database(), target);
   }
@@ -205,16 +223,15 @@ size_t OpenDatabaseRequestResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.indexedDB.OpenDatabaseRequestResponse)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bytes a_database = 1;
-  if (!this->_internal_a_database().empty()) {
+  // required bytes a_database = 1;
+  if (_internal_has_a_database()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_database());
   }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -237,7 +254,7 @@ void OpenDatabaseRequestResponse::MergeFrom(const OpenDatabaseRequestResponse& f
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_a_database().empty()) {
+  if (from._internal_has_a_database()) {
     _this->_internal_set_a_database(from._internal_a_database());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -251,6 +268,7 @@ void OpenDatabaseRequestResponse::CopyFrom(const OpenDatabaseRequestResponse& fr
 }
 
 bool OpenDatabaseRequestResponse::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -259,6 +277,7 @@ void OpenDatabaseRequestResponse::InternalSwap(OpenDatabaseRequestResponse* othe
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_database_, lhs_arena,
       &other->_impl_.a_database_, rhs_arena
@@ -274,6 +293,13 @@ std::string OpenDatabaseRequestResponse::GetTypeName() const {
 
 class DeleteDatabaseRequestResponse::_Internal {
  public:
+  using HasBits = decltype(std::declval<DeleteDatabaseRequestResponse>()._impl_._has_bits_);
+  static void set_has_a_previousversion(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 DeleteDatabaseRequestResponse::DeleteDatabaseRequestResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -286,8 +312,9 @@ DeleteDatabaseRequestResponse::DeleteDatabaseRequestResponse(const DeleteDatabas
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   DeleteDatabaseRequestResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_previousversion_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_previousversion_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_previousversion_ = from._impl_.a_previousversion_;
@@ -299,8 +326,9 @@ inline void DeleteDatabaseRequestResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.a_previousversion_){uint64_t{0u}}
+      decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_previousversion_){uint64_t{0u}}
   };
 }
 
@@ -328,18 +356,21 @@ void DeleteDatabaseRequestResponse::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_previousversion_ = uint64_t{0u};
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* DeleteDatabaseRequestResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // uint64 a_previousVersion = 1;
+      // required uint64 a_previousVersion = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_previousversion(&has_bits);
           _impl_.a_previousversion_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -361,6 +392,7 @@ const char* DeleteDatabaseRequestResponse::_InternalParse(const char* ptr, ::_pb
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -374,8 +406,9 @@ uint8_t* DeleteDatabaseRequestResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint64 a_previousVersion = 1;
-  if (this->_internal_a_previousversion() != 0) {
+  cached_has_bits = _impl_._has_bits_[0];
+  // required uint64 a_previousVersion = 1;
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_previousversion(), target);
   }
@@ -392,14 +425,13 @@ size_t DeleteDatabaseRequestResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.indexedDB.DeleteDatabaseRequestResponse)
   size_t total_size = 0;
 
+  // required uint64 a_previousVersion = 1;
+  if (_internal_has_a_previousversion()) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_previousversion());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // uint64 a_previousVersion = 1;
-  if (this->_internal_a_previousversion() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_previousversion());
-  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -422,7 +454,7 @@ void DeleteDatabaseRequestResponse::MergeFrom(const DeleteDatabaseRequestRespons
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_a_previousversion() != 0) {
+  if (from._internal_has_a_previousversion()) {
     _this->_internal_set_a_previousversion(from._internal_a_previousversion());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -436,12 +468,14 @@ void DeleteDatabaseRequestResponse::CopyFrom(const DeleteDatabaseRequestResponse
 }
 
 bool DeleteDatabaseRequestResponse::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void DeleteDatabaseRequestResponse::InternalSwap(DeleteDatabaseRequestResponse* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_previousversion_, other->_impl_.a_previousversion_);
 }
 
@@ -663,26 +697,26 @@ uint8_t* FactoryRequestResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bytes a_mVnsresult = 1;
-  if (_internal_has_a_mvnsresult()) {
-    target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_a_mvnsresult(), target);
+  switch (content_case()) {
+    case kAMVnsresult: {
+      target = stream->WriteBytesMaybeAliased(
+          1, this->_internal_a_mvnsresult(), target);
+      break;
+    }
+    case kAMVOpenDatabaseRequestResponse: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(2, _Internal::a_mvopendatabaserequestresponse(this),
+          _Internal::a_mvopendatabaserequestresponse(this).GetCachedSize(), target, stream);
+      break;
+    }
+    case kAMVDeleteDatabaseRequestResponse: {
+      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(3, _Internal::a_mvdeletedatabaserequestresponse(this),
+          _Internal::a_mvdeletedatabaserequestresponse(this).GetCachedSize(), target, stream);
+      break;
+    }
+    default: ;
   }
-
-  // .protobuf.mozilla.dom.indexedDB.OpenDatabaseRequestResponse a_mVOpenDatabaseRequestResponse = 2;
-  if (_internal_has_a_mvopendatabaserequestresponse()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::a_mvopendatabaserequestresponse(this),
-        _Internal::a_mvopendatabaserequestresponse(this).GetCachedSize(), target, stream);
-  }
-
-  // .protobuf.mozilla.dom.indexedDB.DeleteDatabaseRequestResponse a_mVDeleteDatabaseRequestResponse = 3;
-  if (_internal_has_a_mvdeletedatabaserequestresponse()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::a_mvdeletedatabaserequestresponse(this),
-        _Internal::a_mvdeletedatabaserequestresponse(this).GetCachedSize(), target, stream);
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
@@ -776,6 +810,26 @@ void FactoryRequestResponse::CopyFrom(const FactoryRequestResponse& from) {
 }
 
 bool FactoryRequestResponse::IsInitialized() const {
+  switch (content_case()) {
+    case kAMVnsresult: {
+      break;
+    }
+    case kAMVOpenDatabaseRequestResponse: {
+      if (_internal_has_a_mvopendatabaserequestresponse()) {
+        if (!_impl_.content_.a_mvopendatabaserequestresponse_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case kAMVDeleteDatabaseRequestResponse: {
+      if (_internal_has_a_mvdeletedatabaserequestresponse()) {
+        if (!_impl_.content_.a_mvdeletedatabaserequestresponse_->IsInitialized()) return false;
+      }
+      break;
+    }
+    case CONTENT_NOT_SET: {
+      break;
+    }
+  }
   return true;
 }
 

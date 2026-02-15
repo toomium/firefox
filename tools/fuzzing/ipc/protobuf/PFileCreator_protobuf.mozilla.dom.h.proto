@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/file/ipc/PFileCreator.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.dom;
@@ -14,11 +14,11 @@ import "IPCBlob.proto";
 
 // Structs and unions declarations
 message FileCreationSuccessResult {
-  protobuf.mozilla.dom.IPCBlob a_blob = 1;
+  required protobuf.mozilla.dom.IPCBlob a_blob = 1;
 }
 
 message FileCreationErrorResult {
-  bytes a_errorCode = 1;
+  required bytes a_errorCode = 1;
 }
 
 message FileCreationResult {

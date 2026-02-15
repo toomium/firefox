@@ -5,22 +5,22 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/media/ipc/PMediaDecoderParams.ipdlh
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla;
 
 // Structs and unions declarations
 message MediaDataIPDL {
-  sint64 a_offset = 1;
-  bytes a_time = 2;
-  bytes a_timecode = 3;
-  bytes a_duration = 4;
-  bool a_keyframe = 5;
+  required sint64 a_offset = 1;
+  required bytes a_time = 2;
+  required bytes a_timecode = 3;
+  required bytes a_duration = 4;
+  required bool a_keyframe = 5;
 }
 
 message CryptoInfo {
-  bytes a_mEncryptionScheme = 1;
+  required bytes a_mEncryptionScheme = 1;
   repeated uint32 a_mIV = 2;
   repeated uint32 a_mKeyId = 3;
   repeated uint32 a_mClearBytes = 4;

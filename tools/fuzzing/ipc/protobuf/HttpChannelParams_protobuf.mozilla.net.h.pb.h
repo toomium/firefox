@@ -97,6 +97,13 @@ class HttpChannelOnStartRequestArgs final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const HttpChannelOnStartRequestArgs& default_instance() {
     return *internal_default_instance();
   }
@@ -263,7 +270,11 @@ class HttpChannelOnStartRequestArgs final :
   std::string* _internal_mutable_a_overridereferrerinfo();
   public:
 
-  // string a_altDataType = 5;
+  // required string a_altDataType = 5;
+  bool has_a_altdatatype() const;
+  private:
+  bool _internal_has_a_altdatatype() const;
+  public:
   void clear_a_altdatatype();
   const std::string& a_altdatatype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -277,7 +288,11 @@ class HttpChannelOnStartRequestArgs final :
   std::string* _internal_mutable_a_altdatatype();
   public:
 
-  // bytes a_selfAddr = 7;
+  // required bytes a_selfAddr = 7;
+  bool has_a_selfaddr() const;
+  private:
+  bool _internal_has_a_selfaddr() const;
+  public:
   void clear_a_selfaddr();
   const std::string& a_selfaddr() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -291,7 +306,11 @@ class HttpChannelOnStartRequestArgs final :
   std::string* _internal_mutable_a_selfaddr();
   public:
 
-  // bytes a_peerAddr = 8;
+  // required bytes a_peerAddr = 8;
+  bool has_a_peeraddr() const;
+  private:
+  bool _internal_has_a_peeraddr() const;
+  public:
   void clear_a_peeraddr();
   const std::string& a_peeraddr() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -305,7 +324,11 @@ class HttpChannelOnStartRequestArgs final :
   std::string* _internal_mutable_a_peeraddr();
   public:
 
-  // bytes a_channelStatus = 11;
+  // required bytes a_channelStatus = 11;
+  bool has_a_channelstatus() const;
+  private:
+  bool _internal_has_a_channelstatus() const;
+  public:
   void clear_a_channelstatus();
   const std::string& a_channelstatus() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -319,7 +342,11 @@ class HttpChannelOnStartRequestArgs final :
   std::string* _internal_mutable_a_channelstatus();
   public:
 
-  // bytes a_effectiveTRRMode = 12;
+  // required bytes a_effectiveTRRMode = 12;
+  bool has_a_effectivetrrmode() const;
+  private:
+  bool _internal_has_a_effectivetrrmode() const;
+  public:
   void clear_a_effectivetrrmode();
   const std::string& a_effectivetrrmode() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -333,7 +360,11 @@ class HttpChannelOnStartRequestArgs final :
   std::string* _internal_mutable_a_effectivetrrmode();
   public:
 
-  // bytes a_trrSkipReason = 13;
+  // required bytes a_trrSkipReason = 13;
+  bool has_a_trrskipreason() const;
+  private:
+  bool _internal_has_a_trrskipreason() const;
+  public:
   void clear_a_trrskipreason();
   const std::string& a_trrskipreason() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -347,7 +378,11 @@ class HttpChannelOnStartRequestArgs final :
   std::string* _internal_mutable_a_trrskipreason();
   public:
 
-  // bytes a_openerPolicy = 27;
+  // required bytes a_openerPolicy = 27;
+  bool has_a_openerpolicy() const;
+  private:
+  bool _internal_has_a_openerpolicy() const;
+  public:
   void clear_a_openerpolicy();
   const std::string& a_openerpolicy() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -361,7 +396,11 @@ class HttpChannelOnStartRequestArgs final :
   std::string* _internal_mutable_a_openerpolicy();
   public:
 
-  // string a_protocolVersion = 33;
+  // required string a_protocolVersion = 33;
+  bool has_a_protocolversion() const;
+  private:
+  bool _internal_has_a_protocolversion() const;
+  public:
   void clear_a_protocolversion();
   const std::string& a_protocolversion() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -375,7 +414,7 @@ class HttpChannelOnStartRequestArgs final :
   std::string* _internal_mutable_a_protocolversion();
   public:
 
-  // .protobuf.mozilla.net.ResourceTimingStructArgs a_timing = 9;
+  // required .protobuf.mozilla.net.ResourceTimingStructArgs a_timing = 9;
   bool has_a_timing() const;
   private:
   bool _internal_has_a_timing() const;
@@ -393,7 +432,7 @@ class HttpChannelOnStartRequestArgs final :
       ::protobuf::mozilla::net::ResourceTimingStructArgs* a_timing);
   ::protobuf::mozilla::net::ResourceTimingStructArgs* unsafe_arena_release_a_timing();
 
-  // .protobuf.mozilla.net.ParentLoadInfoForwarderArgs a_loadInfoForwarder = 10;
+  // required .protobuf.mozilla.net.ParentLoadInfoForwarderArgs a_loadInfoForwarder = 10;
   bool has_a_loadinfoforwarder() const;
   private:
   bool _internal_has_a_loadinfoforwarder() const;
@@ -411,7 +450,11 @@ class HttpChannelOnStartRequestArgs final :
       ::protobuf::mozilla::net::ParentLoadInfoForwarderArgs* a_loadinfoforwarder);
   ::protobuf::mozilla::net::ParentLoadInfoForwarderArgs* unsafe_arena_release_a_loadinfoforwarder();
 
-  // uint64 a_cacheEntryId = 3;
+  // required uint64 a_cacheEntryId = 3;
+  bool has_a_cacheentryid() const;
+  private:
+  bool _internal_has_a_cacheentryid() const;
+  public:
   void clear_a_cacheentryid();
   uint64_t a_cacheentryid() const;
   void set_a_cacheentryid(uint64_t value);
@@ -420,7 +463,11 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_cacheentryid(uint64_t value);
   public:
 
-  // sint64 a_altDataLength = 4;
+  // required sint64 a_altDataLength = 4;
+  bool has_a_altdatalength() const;
+  private:
+  bool _internal_has_a_altdatalength() const;
+  public:
   void clear_a_altdatalength();
   int64_t a_altdatalength() const;
   void set_a_altdatalength(int64_t value);
@@ -429,7 +476,11 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_altdatalength(int64_t value);
   public:
 
-  // uint32 a_cacheFetchCount = 14;
+  // required uint32 a_cacheFetchCount = 14;
+  bool has_a_cachefetchcount() const;
+  private:
+  bool _internal_has_a_cachefetchcount() const;
+  public:
   void clear_a_cachefetchcount();
   uint32_t a_cachefetchcount() const;
   void set_a_cachefetchcount(uint32_t value);
@@ -438,7 +489,11 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_cachefetchcount(uint32_t value);
   public:
 
-  // uint32 a_cacheExpirationTime = 15;
+  // required uint32 a_cacheExpirationTime = 15;
+  bool has_a_cacheexpirationtime() const;
+  private:
+  bool _internal_has_a_cacheexpirationtime() const;
+  public:
   void clear_a_cacheexpirationtime();
   uint32_t a_cacheexpirationtime() const;
   void set_a_cacheexpirationtime(uint32_t value);
@@ -447,7 +502,11 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_cacheexpirationtime(uint32_t value);
   public:
 
-  // uint32 a_cacheKey = 16;
+  // required uint32 a_cacheKey = 16;
+  bool has_a_cachekey() const;
+  private:
+  bool _internal_has_a_cachekey() const;
+  public:
   void clear_a_cachekey();
   uint32_t a_cachekey() const;
   void set_a_cachekey(uint32_t value);
@@ -469,7 +528,11 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_multipartid(uint32_t value);
   public:
 
-  // bool a_isFromCache = 18;
+  // required bool a_isFromCache = 18;
+  bool has_a_isfromcache() const;
+  private:
+  bool _internal_has_a_isfromcache() const;
+  public:
   void clear_a_isfromcache();
   bool a_isfromcache() const;
   void set_a_isfromcache(bool value);
@@ -478,7 +541,11 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_isfromcache(bool value);
   public:
 
-  // bool a_isRacing = 19;
+  // required bool a_isRacing = 19;
+  bool has_a_isracing() const;
+  private:
+  bool _internal_has_a_isracing() const;
+  public:
   void clear_a_isracing();
   bool a_isracing() const;
   void set_a_isracing(bool value);
@@ -487,7 +554,11 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_isracing(bool value);
   public:
 
-  // bool a_cacheEntryAvailable = 20;
+  // required bool a_cacheEntryAvailable = 20;
+  bool has_a_cacheentryavailable() const;
+  private:
+  bool _internal_has_a_cacheentryavailable() const;
+  public:
   void clear_a_cacheentryavailable();
   bool a_cacheentryavailable() const;
   void set_a_cacheentryavailable(bool value);
@@ -496,7 +567,11 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_cacheentryavailable(bool value);
   public:
 
-  // bool a_deliveringAltData = 21;
+  // required bool a_deliveringAltData = 21;
+  bool has_a_deliveringaltdata() const;
+  private:
+  bool _internal_has_a_deliveringaltdata() const;
+  public:
   void clear_a_deliveringaltdata();
   bool a_deliveringaltdata() const;
   void set_a_deliveringaltdata(bool value);
@@ -505,7 +580,11 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_deliveringaltdata(bool value);
   public:
 
-  // bool a_applyConversion = 22;
+  // required bool a_applyConversion = 22;
+  bool has_a_applyconversion() const;
+  private:
+  bool _internal_has_a_applyconversion() const;
+  public:
   void clear_a_applyconversion();
   bool a_applyconversion() const;
   void set_a_applyconversion(bool value);
@@ -514,7 +593,11 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_applyconversion(bool value);
   public:
 
-  // bool a_isResolvedByTRR = 23;
+  // required bool a_isResolvedByTRR = 23;
+  bool has_a_isresolvedbytrr() const;
+  private:
+  bool _internal_has_a_isresolvedbytrr() const;
+  public:
   void clear_a_isresolvedbytrr();
   bool a_isresolvedbytrr() const;
   void set_a_isresolvedbytrr(bool value);
@@ -523,7 +606,11 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_isresolvedbytrr(bool value);
   public:
 
-  // bool a_allRedirectsSameOrigin = 24;
+  // required bool a_allRedirectsSameOrigin = 24;
+  bool has_a_allredirectssameorigin() const;
+  private:
+  bool _internal_has_a_allredirectssameorigin() const;
+  public:
   void clear_a_allredirectssameorigin();
   bool a_allredirectssameorigin() const;
   void set_a_allredirectssameorigin(bool value);
@@ -532,7 +619,11 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_allredirectssameorigin(bool value);
   public:
 
-  // bool a_isFirstPartOfMultiPart = 25;
+  // required bool a_isFirstPartOfMultiPart = 25;
+  bool has_a_isfirstpartofmultipart() const;
+  private:
+  bool _internal_has_a_isfirstpartofmultipart() const;
+  public:
   void clear_a_isfirstpartofmultipart();
   bool a_isfirstpartofmultipart() const;
   void set_a_isfirstpartofmultipart(bool value);
@@ -541,7 +632,11 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_isfirstpartofmultipart(bool value);
   public:
 
-  // bool a_isLastPartOfMultiPart = 26;
+  // required bool a_isLastPartOfMultiPart = 26;
+  bool has_a_islastpartofmultipart() const;
+  private:
+  bool _internal_has_a_islastpartofmultipart() const;
+  public:
   void clear_a_islastpartofmultipart();
   bool a_islastpartofmultipart() const;
   void set_a_islastpartofmultipart(bool value);
@@ -550,7 +645,11 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_islastpartofmultipart(bool value);
   public:
 
-  // bool a_shouldWaitForOnStartRequestSent = 28;
+  // required bool a_shouldWaitForOnStartRequestSent = 28;
+  bool has_a_shouldwaitforonstartrequestsent() const;
+  private:
+  bool _internal_has_a_shouldwaitforonstartrequestsent() const;
+  public:
   void clear_a_shouldwaitforonstartrequestsent();
   bool a_shouldwaitforonstartrequestsent() const;
   void set_a_shouldwaitforonstartrequestsent(bool value);
@@ -559,7 +658,11 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_shouldwaitforonstartrequestsent(bool value);
   public:
 
-  // bool a_dataFromSocketProcess = 29;
+  // required bool a_dataFromSocketProcess = 29;
+  bool has_a_datafromsocketprocess() const;
+  private:
+  bool _internal_has_a_datafromsocketprocess() const;
+  public:
   void clear_a_datafromsocketprocess();
   bool a_datafromsocketprocess() const;
   void set_a_datafromsocketprocess(bool value);
@@ -568,7 +671,11 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_datafromsocketprocess(bool value);
   public:
 
-  // bool a_hasHTTPSRR = 30;
+  // required bool a_hasHTTPSRR = 30;
+  bool has_a_hashttpsrr() const;
+  private:
+  bool _internal_has_a_hashttpsrr() const;
+  public:
   void clear_a_hashttpsrr();
   bool a_hashttpsrr() const;
   void set_a_hashttpsrr(bool value);
@@ -577,7 +684,11 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_hashttpsrr(bool value);
   public:
 
-  // bool a_isProxyUsed = 31;
+  // required bool a_isProxyUsed = 31;
+  bool has_a_isproxyused() const;
+  private:
+  bool _internal_has_a_isproxyused() const;
+  public:
   void clear_a_isproxyused();
   bool a_isproxyused() const;
   void set_a_isproxyused(bool value);
@@ -586,7 +697,11 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_isproxyused(bool value);
   public:
 
-  // uint32 a_redirectCount = 32;
+  // required uint32 a_redirectCount = 32;
+  bool has_a_redirectcount() const;
+  private:
+  bool _internal_has_a_redirectcount() const;
+  public:
   void clear_a_redirectcount();
   uint32_t a_redirectcount() const;
   void set_a_redirectcount(uint32_t value);
@@ -598,6 +713,9 @@ class HttpChannelOnStartRequestArgs final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.HttpChannelOnStartRequestArgs)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -673,6 +791,13 @@ class HttpChannelAltDataStream final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const HttpChannelAltDataStream& default_instance() {
@@ -929,9 +1054,17 @@ inline void HttpChannelOnStartRequestArgs::set_allocated_a_overridereferrerinfo(
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_overrideReferrerInfo)
 }
 
-// uint64 a_cacheEntryId = 3;
+// required uint64 a_cacheEntryId = 3;
+inline bool HttpChannelOnStartRequestArgs::_internal_has_a_cacheentryid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
+  return value;
+}
+inline bool HttpChannelOnStartRequestArgs::has_a_cacheentryid() const {
+  return _internal_has_a_cacheentryid();
+}
 inline void HttpChannelOnStartRequestArgs::clear_a_cacheentryid() {
   _impl_.a_cacheentryid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00001000u;
 }
 inline uint64_t HttpChannelOnStartRequestArgs::_internal_a_cacheentryid() const {
   return _impl_.a_cacheentryid_;
@@ -941,7 +1074,7 @@ inline uint64_t HttpChannelOnStartRequestArgs::a_cacheentryid() const {
   return _internal_a_cacheentryid();
 }
 inline void HttpChannelOnStartRequestArgs::_internal_set_a_cacheentryid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00001000u;
   _impl_.a_cacheentryid_ = value;
 }
 inline void HttpChannelOnStartRequestArgs::set_a_cacheentryid(uint64_t value) {
@@ -949,9 +1082,17 @@ inline void HttpChannelOnStartRequestArgs::set_a_cacheentryid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_cacheEntryId)
 }
 
-// sint64 a_altDataLength = 4;
+// required sint64 a_altDataLength = 4;
+inline bool HttpChannelOnStartRequestArgs::_internal_has_a_altdatalength() const {
+  bool value = (_impl_._has_bits_[0] & 0x00002000u) != 0;
+  return value;
+}
+inline bool HttpChannelOnStartRequestArgs::has_a_altdatalength() const {
+  return _internal_has_a_altdatalength();
+}
 inline void HttpChannelOnStartRequestArgs::clear_a_altdatalength() {
   _impl_.a_altdatalength_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00002000u;
 }
 inline int64_t HttpChannelOnStartRequestArgs::_internal_a_altdatalength() const {
   return _impl_.a_altdatalength_;
@@ -961,7 +1102,7 @@ inline int64_t HttpChannelOnStartRequestArgs::a_altdatalength() const {
   return _internal_a_altdatalength();
 }
 inline void HttpChannelOnStartRequestArgs::_internal_set_a_altdatalength(int64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00002000u;
   _impl_.a_altdatalength_ = value;
 }
 inline void HttpChannelOnStartRequestArgs::set_a_altdatalength(int64_t value) {
@@ -969,9 +1110,17 @@ inline void HttpChannelOnStartRequestArgs::set_a_altdatalength(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_altDataLength)
 }
 
-// string a_altDataType = 5;
+// required string a_altDataType = 5;
+inline bool HttpChannelOnStartRequestArgs::_internal_has_a_altdatatype() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool HttpChannelOnStartRequestArgs::has_a_altdatatype() const {
+  return _internal_has_a_altdatatype();
+}
 inline void HttpChannelOnStartRequestArgs::clear_a_altdatatype() {
   _impl_.a_altdatatype_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& HttpChannelOnStartRequestArgs::a_altdatatype() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_altDataType)
@@ -980,7 +1129,7 @@ inline const std::string& HttpChannelOnStartRequestArgs::a_altdatatype() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpChannelOnStartRequestArgs::set_a_altdatatype(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000004u;
  _impl_.a_altdatatype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_altDataType)
 }
@@ -993,22 +1142,32 @@ inline const std::string& HttpChannelOnStartRequestArgs::_internal_a_altdatatype
   return _impl_.a_altdatatype_.Get();
 }
 inline void HttpChannelOnStartRequestArgs::_internal_set_a_altdatatype(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_altdatatype_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HttpChannelOnStartRequestArgs::_internal_mutable_a_altdatatype() {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   return _impl_.a_altdatatype_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HttpChannelOnStartRequestArgs::release_a_altdatatype() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_altDataType)
-  return _impl_.a_altdatatype_.Release();
+  if (!_internal_has_a_altdatatype()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000004u;
+  auto* p = _impl_.a_altdatatype_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_altdatatype_.IsDefault()) {
+    _impl_.a_altdatatype_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void HttpChannelOnStartRequestArgs::set_allocated_a_altdatatype(std::string* a_altdatatype) {
   if (a_altdatatype != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.a_altdatatype_.SetAllocated(a_altdatatype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1094,9 +1253,17 @@ HttpChannelOnStartRequestArgs::mutable_a_cookieheaders() {
   return &_impl_.a_cookieheaders_;
 }
 
-// bytes a_selfAddr = 7;
+// required bytes a_selfAddr = 7;
+inline bool HttpChannelOnStartRequestArgs::_internal_has_a_selfaddr() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool HttpChannelOnStartRequestArgs::has_a_selfaddr() const {
+  return _internal_has_a_selfaddr();
+}
 inline void HttpChannelOnStartRequestArgs::clear_a_selfaddr() {
   _impl_.a_selfaddr_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline const std::string& HttpChannelOnStartRequestArgs::a_selfaddr() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_selfAddr)
@@ -1105,7 +1272,7 @@ inline const std::string& HttpChannelOnStartRequestArgs::a_selfaddr() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpChannelOnStartRequestArgs::set_a_selfaddr(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000008u;
  _impl_.a_selfaddr_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_selfAddr)
 }
@@ -1118,22 +1285,32 @@ inline const std::string& HttpChannelOnStartRequestArgs::_internal_a_selfaddr() 
   return _impl_.a_selfaddr_.Get();
 }
 inline void HttpChannelOnStartRequestArgs::_internal_set_a_selfaddr(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_selfaddr_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HttpChannelOnStartRequestArgs::_internal_mutable_a_selfaddr() {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   return _impl_.a_selfaddr_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HttpChannelOnStartRequestArgs::release_a_selfaddr() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_selfAddr)
-  return _impl_.a_selfaddr_.Release();
+  if (!_internal_has_a_selfaddr()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000008u;
+  auto* p = _impl_.a_selfaddr_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_selfaddr_.IsDefault()) {
+    _impl_.a_selfaddr_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void HttpChannelOnStartRequestArgs::set_allocated_a_selfaddr(std::string* a_selfaddr) {
   if (a_selfaddr != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000008u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000008u;
   }
   _impl_.a_selfaddr_.SetAllocated(a_selfaddr, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1144,9 +1321,17 @@ inline void HttpChannelOnStartRequestArgs::set_allocated_a_selfaddr(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_selfAddr)
 }
 
-// bytes a_peerAddr = 8;
+// required bytes a_peerAddr = 8;
+inline bool HttpChannelOnStartRequestArgs::_internal_has_a_peeraddr() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool HttpChannelOnStartRequestArgs::has_a_peeraddr() const {
+  return _internal_has_a_peeraddr();
+}
 inline void HttpChannelOnStartRequestArgs::clear_a_peeraddr() {
   _impl_.a_peeraddr_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline const std::string& HttpChannelOnStartRequestArgs::a_peeraddr() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_peerAddr)
@@ -1155,7 +1340,7 @@ inline const std::string& HttpChannelOnStartRequestArgs::a_peeraddr() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpChannelOnStartRequestArgs::set_a_peeraddr(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000010u;
  _impl_.a_peeraddr_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_peerAddr)
 }
@@ -1168,22 +1353,32 @@ inline const std::string& HttpChannelOnStartRequestArgs::_internal_a_peeraddr() 
   return _impl_.a_peeraddr_.Get();
 }
 inline void HttpChannelOnStartRequestArgs::_internal_set_a_peeraddr(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.a_peeraddr_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HttpChannelOnStartRequestArgs::_internal_mutable_a_peeraddr() {
-  
+  _impl_._has_bits_[0] |= 0x00000010u;
   return _impl_.a_peeraddr_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HttpChannelOnStartRequestArgs::release_a_peeraddr() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_peerAddr)
-  return _impl_.a_peeraddr_.Release();
+  if (!_internal_has_a_peeraddr()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000010u;
+  auto* p = _impl_.a_peeraddr_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_peeraddr_.IsDefault()) {
+    _impl_.a_peeraddr_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void HttpChannelOnStartRequestArgs::set_allocated_a_peeraddr(std::string* a_peeraddr) {
   if (a_peeraddr != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000010u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000010u;
   }
   _impl_.a_peeraddr_.SetAllocated(a_peeraddr, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1194,9 +1389,11 @@ inline void HttpChannelOnStartRequestArgs::set_allocated_a_peeraddr(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_peerAddr)
 }
 
-// .protobuf.mozilla.net.ResourceTimingStructArgs a_timing = 9;
+// required .protobuf.mozilla.net.ResourceTimingStructArgs a_timing = 9;
 inline bool HttpChannelOnStartRequestArgs::_internal_has_a_timing() const {
-  return this != internal_default_instance() && _impl_.a_timing_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_timing_ != nullptr);
+  return value;
 }
 inline bool HttpChannelOnStartRequestArgs::has_a_timing() const {
   return _internal_has_a_timing();
@@ -1217,14 +1414,14 @@ inline void HttpChannelOnStartRequestArgs::unsafe_arena_set_allocated_a_timing(
   }
   _impl_.a_timing_ = a_timing;
   if (a_timing) {
-    
+    _impl_._has_bits_[0] |= 0x00000400u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000400u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_timing)
 }
 inline ::protobuf::mozilla::net::ResourceTimingStructArgs* HttpChannelOnStartRequestArgs::release_a_timing() {
-  
+  _impl_._has_bits_[0] &= ~0x00000400u;
   ::protobuf::mozilla::net::ResourceTimingStructArgs* temp = _impl_.a_timing_;
   _impl_.a_timing_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1240,13 +1437,13 @@ inline ::protobuf::mozilla::net::ResourceTimingStructArgs* HttpChannelOnStartReq
 }
 inline ::protobuf::mozilla::net::ResourceTimingStructArgs* HttpChannelOnStartRequestArgs::unsafe_arena_release_a_timing() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_timing)
-  
+  _impl_._has_bits_[0] &= ~0x00000400u;
   ::protobuf::mozilla::net::ResourceTimingStructArgs* temp = _impl_.a_timing_;
   _impl_.a_timing_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::net::ResourceTimingStructArgs* HttpChannelOnStartRequestArgs::_internal_mutable_a_timing() {
-  
+  _impl_._has_bits_[0] |= 0x00000400u;
   if (_impl_.a_timing_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::net::ResourceTimingStructArgs>(GetArenaForAllocation());
     _impl_.a_timing_ = p;
@@ -1271,17 +1468,19 @@ inline void HttpChannelOnStartRequestArgs::set_allocated_a_timing(::protobuf::mo
       a_timing = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_timing, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000400u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000400u;
   }
   _impl_.a_timing_ = a_timing;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_timing)
 }
 
-// .protobuf.mozilla.net.ParentLoadInfoForwarderArgs a_loadInfoForwarder = 10;
+// required .protobuf.mozilla.net.ParentLoadInfoForwarderArgs a_loadInfoForwarder = 10;
 inline bool HttpChannelOnStartRequestArgs::_internal_has_a_loadinfoforwarder() const {
-  return this != internal_default_instance() && _impl_.a_loadinfoforwarder_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_loadinfoforwarder_ != nullptr);
+  return value;
 }
 inline bool HttpChannelOnStartRequestArgs::has_a_loadinfoforwarder() const {
   return _internal_has_a_loadinfoforwarder();
@@ -1302,14 +1501,14 @@ inline void HttpChannelOnStartRequestArgs::unsafe_arena_set_allocated_a_loadinfo
   }
   _impl_.a_loadinfoforwarder_ = a_loadinfoforwarder;
   if (a_loadinfoforwarder) {
-    
+    _impl_._has_bits_[0] |= 0x00000800u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000800u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_loadInfoForwarder)
 }
 inline ::protobuf::mozilla::net::ParentLoadInfoForwarderArgs* HttpChannelOnStartRequestArgs::release_a_loadinfoforwarder() {
-  
+  _impl_._has_bits_[0] &= ~0x00000800u;
   ::protobuf::mozilla::net::ParentLoadInfoForwarderArgs* temp = _impl_.a_loadinfoforwarder_;
   _impl_.a_loadinfoforwarder_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1325,13 +1524,13 @@ inline ::protobuf::mozilla::net::ParentLoadInfoForwarderArgs* HttpChannelOnStart
 }
 inline ::protobuf::mozilla::net::ParentLoadInfoForwarderArgs* HttpChannelOnStartRequestArgs::unsafe_arena_release_a_loadinfoforwarder() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_loadInfoForwarder)
-  
+  _impl_._has_bits_[0] &= ~0x00000800u;
   ::protobuf::mozilla::net::ParentLoadInfoForwarderArgs* temp = _impl_.a_loadinfoforwarder_;
   _impl_.a_loadinfoforwarder_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::net::ParentLoadInfoForwarderArgs* HttpChannelOnStartRequestArgs::_internal_mutable_a_loadinfoforwarder() {
-  
+  _impl_._has_bits_[0] |= 0x00000800u;
   if (_impl_.a_loadinfoforwarder_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::net::ParentLoadInfoForwarderArgs>(GetArenaForAllocation());
     _impl_.a_loadinfoforwarder_ = p;
@@ -1356,17 +1555,25 @@ inline void HttpChannelOnStartRequestArgs::set_allocated_a_loadinfoforwarder(::p
       a_loadinfoforwarder = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_loadinfoforwarder, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000800u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000800u;
   }
   _impl_.a_loadinfoforwarder_ = a_loadinfoforwarder;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_loadInfoForwarder)
 }
 
-// bytes a_channelStatus = 11;
+// required bytes a_channelStatus = 11;
+inline bool HttpChannelOnStartRequestArgs::_internal_has_a_channelstatus() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool HttpChannelOnStartRequestArgs::has_a_channelstatus() const {
+  return _internal_has_a_channelstatus();
+}
 inline void HttpChannelOnStartRequestArgs::clear_a_channelstatus() {
   _impl_.a_channelstatus_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline const std::string& HttpChannelOnStartRequestArgs::a_channelstatus() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_channelStatus)
@@ -1375,7 +1582,7 @@ inline const std::string& HttpChannelOnStartRequestArgs::a_channelstatus() const
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpChannelOnStartRequestArgs::set_a_channelstatus(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000020u;
  _impl_.a_channelstatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_channelStatus)
 }
@@ -1388,22 +1595,32 @@ inline const std::string& HttpChannelOnStartRequestArgs::_internal_a_channelstat
   return _impl_.a_channelstatus_.Get();
 }
 inline void HttpChannelOnStartRequestArgs::_internal_set_a_channelstatus(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000020u;
   _impl_.a_channelstatus_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HttpChannelOnStartRequestArgs::_internal_mutable_a_channelstatus() {
-  
+  _impl_._has_bits_[0] |= 0x00000020u;
   return _impl_.a_channelstatus_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HttpChannelOnStartRequestArgs::release_a_channelstatus() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_channelStatus)
-  return _impl_.a_channelstatus_.Release();
+  if (!_internal_has_a_channelstatus()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000020u;
+  auto* p = _impl_.a_channelstatus_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_channelstatus_.IsDefault()) {
+    _impl_.a_channelstatus_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void HttpChannelOnStartRequestArgs::set_allocated_a_channelstatus(std::string* a_channelstatus) {
   if (a_channelstatus != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000020u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000020u;
   }
   _impl_.a_channelstatus_.SetAllocated(a_channelstatus, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1414,9 +1631,17 @@ inline void HttpChannelOnStartRequestArgs::set_allocated_a_channelstatus(std::st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_channelStatus)
 }
 
-// bytes a_effectiveTRRMode = 12;
+// required bytes a_effectiveTRRMode = 12;
+inline bool HttpChannelOnStartRequestArgs::_internal_has_a_effectivetrrmode() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool HttpChannelOnStartRequestArgs::has_a_effectivetrrmode() const {
+  return _internal_has_a_effectivetrrmode();
+}
 inline void HttpChannelOnStartRequestArgs::clear_a_effectivetrrmode() {
   _impl_.a_effectivetrrmode_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000040u;
 }
 inline const std::string& HttpChannelOnStartRequestArgs::a_effectivetrrmode() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_effectiveTRRMode)
@@ -1425,7 +1650,7 @@ inline const std::string& HttpChannelOnStartRequestArgs::a_effectivetrrmode() co
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpChannelOnStartRequestArgs::set_a_effectivetrrmode(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000040u;
  _impl_.a_effectivetrrmode_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_effectiveTRRMode)
 }
@@ -1438,22 +1663,32 @@ inline const std::string& HttpChannelOnStartRequestArgs::_internal_a_effectivetr
   return _impl_.a_effectivetrrmode_.Get();
 }
 inline void HttpChannelOnStartRequestArgs::_internal_set_a_effectivetrrmode(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000040u;
   _impl_.a_effectivetrrmode_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HttpChannelOnStartRequestArgs::_internal_mutable_a_effectivetrrmode() {
-  
+  _impl_._has_bits_[0] |= 0x00000040u;
   return _impl_.a_effectivetrrmode_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HttpChannelOnStartRequestArgs::release_a_effectivetrrmode() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_effectiveTRRMode)
-  return _impl_.a_effectivetrrmode_.Release();
+  if (!_internal_has_a_effectivetrrmode()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000040u;
+  auto* p = _impl_.a_effectivetrrmode_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_effectivetrrmode_.IsDefault()) {
+    _impl_.a_effectivetrrmode_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void HttpChannelOnStartRequestArgs::set_allocated_a_effectivetrrmode(std::string* a_effectivetrrmode) {
   if (a_effectivetrrmode != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000040u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000040u;
   }
   _impl_.a_effectivetrrmode_.SetAllocated(a_effectivetrrmode, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1464,9 +1699,17 @@ inline void HttpChannelOnStartRequestArgs::set_allocated_a_effectivetrrmode(std:
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_effectiveTRRMode)
 }
 
-// bytes a_trrSkipReason = 13;
+// required bytes a_trrSkipReason = 13;
+inline bool HttpChannelOnStartRequestArgs::_internal_has_a_trrskipreason() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
+  return value;
+}
+inline bool HttpChannelOnStartRequestArgs::has_a_trrskipreason() const {
+  return _internal_has_a_trrskipreason();
+}
 inline void HttpChannelOnStartRequestArgs::clear_a_trrskipreason() {
   _impl_.a_trrskipreason_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000080u;
 }
 inline const std::string& HttpChannelOnStartRequestArgs::a_trrskipreason() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_trrSkipReason)
@@ -1475,7 +1718,7 @@ inline const std::string& HttpChannelOnStartRequestArgs::a_trrskipreason() const
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpChannelOnStartRequestArgs::set_a_trrskipreason(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000080u;
  _impl_.a_trrskipreason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_trrSkipReason)
 }
@@ -1488,22 +1731,32 @@ inline const std::string& HttpChannelOnStartRequestArgs::_internal_a_trrskipreas
   return _impl_.a_trrskipreason_.Get();
 }
 inline void HttpChannelOnStartRequestArgs::_internal_set_a_trrskipreason(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000080u;
   _impl_.a_trrskipreason_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HttpChannelOnStartRequestArgs::_internal_mutable_a_trrskipreason() {
-  
+  _impl_._has_bits_[0] |= 0x00000080u;
   return _impl_.a_trrskipreason_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HttpChannelOnStartRequestArgs::release_a_trrskipreason() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_trrSkipReason)
-  return _impl_.a_trrskipreason_.Release();
+  if (!_internal_has_a_trrskipreason()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000080u;
+  auto* p = _impl_.a_trrskipreason_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_trrskipreason_.IsDefault()) {
+    _impl_.a_trrskipreason_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void HttpChannelOnStartRequestArgs::set_allocated_a_trrskipreason(std::string* a_trrskipreason) {
   if (a_trrskipreason != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000080u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000080u;
   }
   _impl_.a_trrskipreason_.SetAllocated(a_trrskipreason, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1514,9 +1767,17 @@ inline void HttpChannelOnStartRequestArgs::set_allocated_a_trrskipreason(std::st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_trrSkipReason)
 }
 
-// uint32 a_cacheFetchCount = 14;
+// required uint32 a_cacheFetchCount = 14;
+inline bool HttpChannelOnStartRequestArgs::_internal_has_a_cachefetchcount() const {
+  bool value = (_impl_._has_bits_[0] & 0x00004000u) != 0;
+  return value;
+}
+inline bool HttpChannelOnStartRequestArgs::has_a_cachefetchcount() const {
+  return _internal_has_a_cachefetchcount();
+}
 inline void HttpChannelOnStartRequestArgs::clear_a_cachefetchcount() {
   _impl_.a_cachefetchcount_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00004000u;
 }
 inline uint32_t HttpChannelOnStartRequestArgs::_internal_a_cachefetchcount() const {
   return _impl_.a_cachefetchcount_;
@@ -1526,7 +1787,7 @@ inline uint32_t HttpChannelOnStartRequestArgs::a_cachefetchcount() const {
   return _internal_a_cachefetchcount();
 }
 inline void HttpChannelOnStartRequestArgs::_internal_set_a_cachefetchcount(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00004000u;
   _impl_.a_cachefetchcount_ = value;
 }
 inline void HttpChannelOnStartRequestArgs::set_a_cachefetchcount(uint32_t value) {
@@ -1534,9 +1795,17 @@ inline void HttpChannelOnStartRequestArgs::set_a_cachefetchcount(uint32_t value)
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_cacheFetchCount)
 }
 
-// uint32 a_cacheExpirationTime = 15;
+// required uint32 a_cacheExpirationTime = 15;
+inline bool HttpChannelOnStartRequestArgs::_internal_has_a_cacheexpirationtime() const {
+  bool value = (_impl_._has_bits_[0] & 0x00008000u) != 0;
+  return value;
+}
+inline bool HttpChannelOnStartRequestArgs::has_a_cacheexpirationtime() const {
+  return _internal_has_a_cacheexpirationtime();
+}
 inline void HttpChannelOnStartRequestArgs::clear_a_cacheexpirationtime() {
   _impl_.a_cacheexpirationtime_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00008000u;
 }
 inline uint32_t HttpChannelOnStartRequestArgs::_internal_a_cacheexpirationtime() const {
   return _impl_.a_cacheexpirationtime_;
@@ -1546,7 +1815,7 @@ inline uint32_t HttpChannelOnStartRequestArgs::a_cacheexpirationtime() const {
   return _internal_a_cacheexpirationtime();
 }
 inline void HttpChannelOnStartRequestArgs::_internal_set_a_cacheexpirationtime(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00008000u;
   _impl_.a_cacheexpirationtime_ = value;
 }
 inline void HttpChannelOnStartRequestArgs::set_a_cacheexpirationtime(uint32_t value) {
@@ -1554,9 +1823,17 @@ inline void HttpChannelOnStartRequestArgs::set_a_cacheexpirationtime(uint32_t va
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_cacheExpirationTime)
 }
 
-// uint32 a_cacheKey = 16;
+// required uint32 a_cacheKey = 16;
+inline bool HttpChannelOnStartRequestArgs::_internal_has_a_cachekey() const {
+  bool value = (_impl_._has_bits_[0] & 0x00010000u) != 0;
+  return value;
+}
+inline bool HttpChannelOnStartRequestArgs::has_a_cachekey() const {
+  return _internal_has_a_cachekey();
+}
 inline void HttpChannelOnStartRequestArgs::clear_a_cachekey() {
   _impl_.a_cachekey_ = 0u;
+  _impl_._has_bits_[0] &= ~0x00010000u;
 }
 inline uint32_t HttpChannelOnStartRequestArgs::_internal_a_cachekey() const {
   return _impl_.a_cachekey_;
@@ -1566,7 +1843,7 @@ inline uint32_t HttpChannelOnStartRequestArgs::a_cachekey() const {
   return _internal_a_cachekey();
 }
 inline void HttpChannelOnStartRequestArgs::_internal_set_a_cachekey(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00010000u;
   _impl_.a_cachekey_ = value;
 }
 inline void HttpChannelOnStartRequestArgs::set_a_cachekey(uint32_t value) {
@@ -1576,7 +1853,7 @@ inline void HttpChannelOnStartRequestArgs::set_a_cachekey(uint32_t value) {
 
 // optional uint32 a_multiPartID = 17;
 inline bool HttpChannelOnStartRequestArgs::_internal_has_a_multipartid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00020000u) != 0;
   return value;
 }
 inline bool HttpChannelOnStartRequestArgs::has_a_multipartid() const {
@@ -1584,7 +1861,7 @@ inline bool HttpChannelOnStartRequestArgs::has_a_multipartid() const {
 }
 inline void HttpChannelOnStartRequestArgs::clear_a_multipartid() {
   _impl_.a_multipartid_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  _impl_._has_bits_[0] &= ~0x00020000u;
 }
 inline uint32_t HttpChannelOnStartRequestArgs::_internal_a_multipartid() const {
   return _impl_.a_multipartid_;
@@ -1594,7 +1871,7 @@ inline uint32_t HttpChannelOnStartRequestArgs::a_multipartid() const {
   return _internal_a_multipartid();
 }
 inline void HttpChannelOnStartRequestArgs::_internal_set_a_multipartid(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_._has_bits_[0] |= 0x00020000u;
   _impl_.a_multipartid_ = value;
 }
 inline void HttpChannelOnStartRequestArgs::set_a_multipartid(uint32_t value) {
@@ -1602,9 +1879,17 @@ inline void HttpChannelOnStartRequestArgs::set_a_multipartid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_multiPartID)
 }
 
-// bool a_isFromCache = 18;
+// required bool a_isFromCache = 18;
+inline bool HttpChannelOnStartRequestArgs::_internal_has_a_isfromcache() const {
+  bool value = (_impl_._has_bits_[0] & 0x00040000u) != 0;
+  return value;
+}
+inline bool HttpChannelOnStartRequestArgs::has_a_isfromcache() const {
+  return _internal_has_a_isfromcache();
+}
 inline void HttpChannelOnStartRequestArgs::clear_a_isfromcache() {
   _impl_.a_isfromcache_ = false;
+  _impl_._has_bits_[0] &= ~0x00040000u;
 }
 inline bool HttpChannelOnStartRequestArgs::_internal_a_isfromcache() const {
   return _impl_.a_isfromcache_;
@@ -1614,7 +1899,7 @@ inline bool HttpChannelOnStartRequestArgs::a_isfromcache() const {
   return _internal_a_isfromcache();
 }
 inline void HttpChannelOnStartRequestArgs::_internal_set_a_isfromcache(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00040000u;
   _impl_.a_isfromcache_ = value;
 }
 inline void HttpChannelOnStartRequestArgs::set_a_isfromcache(bool value) {
@@ -1622,9 +1907,17 @@ inline void HttpChannelOnStartRequestArgs::set_a_isfromcache(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_isFromCache)
 }
 
-// bool a_isRacing = 19;
+// required bool a_isRacing = 19;
+inline bool HttpChannelOnStartRequestArgs::_internal_has_a_isracing() const {
+  bool value = (_impl_._has_bits_[0] & 0x00080000u) != 0;
+  return value;
+}
+inline bool HttpChannelOnStartRequestArgs::has_a_isracing() const {
+  return _internal_has_a_isracing();
+}
 inline void HttpChannelOnStartRequestArgs::clear_a_isracing() {
   _impl_.a_isracing_ = false;
+  _impl_._has_bits_[0] &= ~0x00080000u;
 }
 inline bool HttpChannelOnStartRequestArgs::_internal_a_isracing() const {
   return _impl_.a_isracing_;
@@ -1634,7 +1927,7 @@ inline bool HttpChannelOnStartRequestArgs::a_isracing() const {
   return _internal_a_isracing();
 }
 inline void HttpChannelOnStartRequestArgs::_internal_set_a_isracing(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00080000u;
   _impl_.a_isracing_ = value;
 }
 inline void HttpChannelOnStartRequestArgs::set_a_isracing(bool value) {
@@ -1642,9 +1935,17 @@ inline void HttpChannelOnStartRequestArgs::set_a_isracing(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_isRacing)
 }
 
-// bool a_cacheEntryAvailable = 20;
+// required bool a_cacheEntryAvailable = 20;
+inline bool HttpChannelOnStartRequestArgs::_internal_has_a_cacheentryavailable() const {
+  bool value = (_impl_._has_bits_[0] & 0x00100000u) != 0;
+  return value;
+}
+inline bool HttpChannelOnStartRequestArgs::has_a_cacheentryavailable() const {
+  return _internal_has_a_cacheentryavailable();
+}
 inline void HttpChannelOnStartRequestArgs::clear_a_cacheentryavailable() {
   _impl_.a_cacheentryavailable_ = false;
+  _impl_._has_bits_[0] &= ~0x00100000u;
 }
 inline bool HttpChannelOnStartRequestArgs::_internal_a_cacheentryavailable() const {
   return _impl_.a_cacheentryavailable_;
@@ -1654,7 +1955,7 @@ inline bool HttpChannelOnStartRequestArgs::a_cacheentryavailable() const {
   return _internal_a_cacheentryavailable();
 }
 inline void HttpChannelOnStartRequestArgs::_internal_set_a_cacheentryavailable(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00100000u;
   _impl_.a_cacheentryavailable_ = value;
 }
 inline void HttpChannelOnStartRequestArgs::set_a_cacheentryavailable(bool value) {
@@ -1662,9 +1963,17 @@ inline void HttpChannelOnStartRequestArgs::set_a_cacheentryavailable(bool value)
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_cacheEntryAvailable)
 }
 
-// bool a_deliveringAltData = 21;
+// required bool a_deliveringAltData = 21;
+inline bool HttpChannelOnStartRequestArgs::_internal_has_a_deliveringaltdata() const {
+  bool value = (_impl_._has_bits_[0] & 0x00200000u) != 0;
+  return value;
+}
+inline bool HttpChannelOnStartRequestArgs::has_a_deliveringaltdata() const {
+  return _internal_has_a_deliveringaltdata();
+}
 inline void HttpChannelOnStartRequestArgs::clear_a_deliveringaltdata() {
   _impl_.a_deliveringaltdata_ = false;
+  _impl_._has_bits_[0] &= ~0x00200000u;
 }
 inline bool HttpChannelOnStartRequestArgs::_internal_a_deliveringaltdata() const {
   return _impl_.a_deliveringaltdata_;
@@ -1674,7 +1983,7 @@ inline bool HttpChannelOnStartRequestArgs::a_deliveringaltdata() const {
   return _internal_a_deliveringaltdata();
 }
 inline void HttpChannelOnStartRequestArgs::_internal_set_a_deliveringaltdata(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00200000u;
   _impl_.a_deliveringaltdata_ = value;
 }
 inline void HttpChannelOnStartRequestArgs::set_a_deliveringaltdata(bool value) {
@@ -1682,9 +1991,17 @@ inline void HttpChannelOnStartRequestArgs::set_a_deliveringaltdata(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_deliveringAltData)
 }
 
-// bool a_applyConversion = 22;
+// required bool a_applyConversion = 22;
+inline bool HttpChannelOnStartRequestArgs::_internal_has_a_applyconversion() const {
+  bool value = (_impl_._has_bits_[0] & 0x00400000u) != 0;
+  return value;
+}
+inline bool HttpChannelOnStartRequestArgs::has_a_applyconversion() const {
+  return _internal_has_a_applyconversion();
+}
 inline void HttpChannelOnStartRequestArgs::clear_a_applyconversion() {
   _impl_.a_applyconversion_ = false;
+  _impl_._has_bits_[0] &= ~0x00400000u;
 }
 inline bool HttpChannelOnStartRequestArgs::_internal_a_applyconversion() const {
   return _impl_.a_applyconversion_;
@@ -1694,7 +2011,7 @@ inline bool HttpChannelOnStartRequestArgs::a_applyconversion() const {
   return _internal_a_applyconversion();
 }
 inline void HttpChannelOnStartRequestArgs::_internal_set_a_applyconversion(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00400000u;
   _impl_.a_applyconversion_ = value;
 }
 inline void HttpChannelOnStartRequestArgs::set_a_applyconversion(bool value) {
@@ -1702,9 +2019,17 @@ inline void HttpChannelOnStartRequestArgs::set_a_applyconversion(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_applyConversion)
 }
 
-// bool a_isResolvedByTRR = 23;
+// required bool a_isResolvedByTRR = 23;
+inline bool HttpChannelOnStartRequestArgs::_internal_has_a_isresolvedbytrr() const {
+  bool value = (_impl_._has_bits_[0] & 0x00800000u) != 0;
+  return value;
+}
+inline bool HttpChannelOnStartRequestArgs::has_a_isresolvedbytrr() const {
+  return _internal_has_a_isresolvedbytrr();
+}
 inline void HttpChannelOnStartRequestArgs::clear_a_isresolvedbytrr() {
   _impl_.a_isresolvedbytrr_ = false;
+  _impl_._has_bits_[0] &= ~0x00800000u;
 }
 inline bool HttpChannelOnStartRequestArgs::_internal_a_isresolvedbytrr() const {
   return _impl_.a_isresolvedbytrr_;
@@ -1714,7 +2039,7 @@ inline bool HttpChannelOnStartRequestArgs::a_isresolvedbytrr() const {
   return _internal_a_isresolvedbytrr();
 }
 inline void HttpChannelOnStartRequestArgs::_internal_set_a_isresolvedbytrr(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00800000u;
   _impl_.a_isresolvedbytrr_ = value;
 }
 inline void HttpChannelOnStartRequestArgs::set_a_isresolvedbytrr(bool value) {
@@ -1722,9 +2047,17 @@ inline void HttpChannelOnStartRequestArgs::set_a_isresolvedbytrr(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_isResolvedByTRR)
 }
 
-// bool a_allRedirectsSameOrigin = 24;
+// required bool a_allRedirectsSameOrigin = 24;
+inline bool HttpChannelOnStartRequestArgs::_internal_has_a_allredirectssameorigin() const {
+  bool value = (_impl_._has_bits_[0] & 0x01000000u) != 0;
+  return value;
+}
+inline bool HttpChannelOnStartRequestArgs::has_a_allredirectssameorigin() const {
+  return _internal_has_a_allredirectssameorigin();
+}
 inline void HttpChannelOnStartRequestArgs::clear_a_allredirectssameorigin() {
   _impl_.a_allredirectssameorigin_ = false;
+  _impl_._has_bits_[0] &= ~0x01000000u;
 }
 inline bool HttpChannelOnStartRequestArgs::_internal_a_allredirectssameorigin() const {
   return _impl_.a_allredirectssameorigin_;
@@ -1734,7 +2067,7 @@ inline bool HttpChannelOnStartRequestArgs::a_allredirectssameorigin() const {
   return _internal_a_allredirectssameorigin();
 }
 inline void HttpChannelOnStartRequestArgs::_internal_set_a_allredirectssameorigin(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x01000000u;
   _impl_.a_allredirectssameorigin_ = value;
 }
 inline void HttpChannelOnStartRequestArgs::set_a_allredirectssameorigin(bool value) {
@@ -1742,9 +2075,17 @@ inline void HttpChannelOnStartRequestArgs::set_a_allredirectssameorigin(bool val
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_allRedirectsSameOrigin)
 }
 
-// bool a_isFirstPartOfMultiPart = 25;
+// required bool a_isFirstPartOfMultiPart = 25;
+inline bool HttpChannelOnStartRequestArgs::_internal_has_a_isfirstpartofmultipart() const {
+  bool value = (_impl_._has_bits_[0] & 0x02000000u) != 0;
+  return value;
+}
+inline bool HttpChannelOnStartRequestArgs::has_a_isfirstpartofmultipart() const {
+  return _internal_has_a_isfirstpartofmultipart();
+}
 inline void HttpChannelOnStartRequestArgs::clear_a_isfirstpartofmultipart() {
   _impl_.a_isfirstpartofmultipart_ = false;
+  _impl_._has_bits_[0] &= ~0x02000000u;
 }
 inline bool HttpChannelOnStartRequestArgs::_internal_a_isfirstpartofmultipart() const {
   return _impl_.a_isfirstpartofmultipart_;
@@ -1754,7 +2095,7 @@ inline bool HttpChannelOnStartRequestArgs::a_isfirstpartofmultipart() const {
   return _internal_a_isfirstpartofmultipart();
 }
 inline void HttpChannelOnStartRequestArgs::_internal_set_a_isfirstpartofmultipart(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x02000000u;
   _impl_.a_isfirstpartofmultipart_ = value;
 }
 inline void HttpChannelOnStartRequestArgs::set_a_isfirstpartofmultipart(bool value) {
@@ -1762,9 +2103,17 @@ inline void HttpChannelOnStartRequestArgs::set_a_isfirstpartofmultipart(bool val
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_isFirstPartOfMultiPart)
 }
 
-// bool a_isLastPartOfMultiPart = 26;
+// required bool a_isLastPartOfMultiPart = 26;
+inline bool HttpChannelOnStartRequestArgs::_internal_has_a_islastpartofmultipart() const {
+  bool value = (_impl_._has_bits_[0] & 0x04000000u) != 0;
+  return value;
+}
+inline bool HttpChannelOnStartRequestArgs::has_a_islastpartofmultipart() const {
+  return _internal_has_a_islastpartofmultipart();
+}
 inline void HttpChannelOnStartRequestArgs::clear_a_islastpartofmultipart() {
   _impl_.a_islastpartofmultipart_ = false;
+  _impl_._has_bits_[0] &= ~0x04000000u;
 }
 inline bool HttpChannelOnStartRequestArgs::_internal_a_islastpartofmultipart() const {
   return _impl_.a_islastpartofmultipart_;
@@ -1774,7 +2123,7 @@ inline bool HttpChannelOnStartRequestArgs::a_islastpartofmultipart() const {
   return _internal_a_islastpartofmultipart();
 }
 inline void HttpChannelOnStartRequestArgs::_internal_set_a_islastpartofmultipart(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x04000000u;
   _impl_.a_islastpartofmultipart_ = value;
 }
 inline void HttpChannelOnStartRequestArgs::set_a_islastpartofmultipart(bool value) {
@@ -1782,9 +2131,17 @@ inline void HttpChannelOnStartRequestArgs::set_a_islastpartofmultipart(bool valu
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_isLastPartOfMultiPart)
 }
 
-// bytes a_openerPolicy = 27;
+// required bytes a_openerPolicy = 27;
+inline bool HttpChannelOnStartRequestArgs::_internal_has_a_openerpolicy() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
+  return value;
+}
+inline bool HttpChannelOnStartRequestArgs::has_a_openerpolicy() const {
+  return _internal_has_a_openerpolicy();
+}
 inline void HttpChannelOnStartRequestArgs::clear_a_openerpolicy() {
   _impl_.a_openerpolicy_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000100u;
 }
 inline const std::string& HttpChannelOnStartRequestArgs::a_openerpolicy() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_openerPolicy)
@@ -1793,7 +2150,7 @@ inline const std::string& HttpChannelOnStartRequestArgs::a_openerpolicy() const 
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpChannelOnStartRequestArgs::set_a_openerpolicy(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000100u;
  _impl_.a_openerpolicy_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_openerPolicy)
 }
@@ -1806,22 +2163,32 @@ inline const std::string& HttpChannelOnStartRequestArgs::_internal_a_openerpolic
   return _impl_.a_openerpolicy_.Get();
 }
 inline void HttpChannelOnStartRequestArgs::_internal_set_a_openerpolicy(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000100u;
   _impl_.a_openerpolicy_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HttpChannelOnStartRequestArgs::_internal_mutable_a_openerpolicy() {
-  
+  _impl_._has_bits_[0] |= 0x00000100u;
   return _impl_.a_openerpolicy_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HttpChannelOnStartRequestArgs::release_a_openerpolicy() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_openerPolicy)
-  return _impl_.a_openerpolicy_.Release();
+  if (!_internal_has_a_openerpolicy()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000100u;
+  auto* p = _impl_.a_openerpolicy_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_openerpolicy_.IsDefault()) {
+    _impl_.a_openerpolicy_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void HttpChannelOnStartRequestArgs::set_allocated_a_openerpolicy(std::string* a_openerpolicy) {
   if (a_openerpolicy != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000100u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000100u;
   }
   _impl_.a_openerpolicy_.SetAllocated(a_openerpolicy, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1832,9 +2199,17 @@ inline void HttpChannelOnStartRequestArgs::set_allocated_a_openerpolicy(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_openerPolicy)
 }
 
-// bool a_shouldWaitForOnStartRequestSent = 28;
+// required bool a_shouldWaitForOnStartRequestSent = 28;
+inline bool HttpChannelOnStartRequestArgs::_internal_has_a_shouldwaitforonstartrequestsent() const {
+  bool value = (_impl_._has_bits_[0] & 0x08000000u) != 0;
+  return value;
+}
+inline bool HttpChannelOnStartRequestArgs::has_a_shouldwaitforonstartrequestsent() const {
+  return _internal_has_a_shouldwaitforonstartrequestsent();
+}
 inline void HttpChannelOnStartRequestArgs::clear_a_shouldwaitforonstartrequestsent() {
   _impl_.a_shouldwaitforonstartrequestsent_ = false;
+  _impl_._has_bits_[0] &= ~0x08000000u;
 }
 inline bool HttpChannelOnStartRequestArgs::_internal_a_shouldwaitforonstartrequestsent() const {
   return _impl_.a_shouldwaitforonstartrequestsent_;
@@ -1844,7 +2219,7 @@ inline bool HttpChannelOnStartRequestArgs::a_shouldwaitforonstartrequestsent() c
   return _internal_a_shouldwaitforonstartrequestsent();
 }
 inline void HttpChannelOnStartRequestArgs::_internal_set_a_shouldwaitforonstartrequestsent(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x08000000u;
   _impl_.a_shouldwaitforonstartrequestsent_ = value;
 }
 inline void HttpChannelOnStartRequestArgs::set_a_shouldwaitforonstartrequestsent(bool value) {
@@ -1852,9 +2227,17 @@ inline void HttpChannelOnStartRequestArgs::set_a_shouldwaitforonstartrequestsent
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_shouldWaitForOnStartRequestSent)
 }
 
-// bool a_dataFromSocketProcess = 29;
+// required bool a_dataFromSocketProcess = 29;
+inline bool HttpChannelOnStartRequestArgs::_internal_has_a_datafromsocketprocess() const {
+  bool value = (_impl_._has_bits_[0] & 0x10000000u) != 0;
+  return value;
+}
+inline bool HttpChannelOnStartRequestArgs::has_a_datafromsocketprocess() const {
+  return _internal_has_a_datafromsocketprocess();
+}
 inline void HttpChannelOnStartRequestArgs::clear_a_datafromsocketprocess() {
   _impl_.a_datafromsocketprocess_ = false;
+  _impl_._has_bits_[0] &= ~0x10000000u;
 }
 inline bool HttpChannelOnStartRequestArgs::_internal_a_datafromsocketprocess() const {
   return _impl_.a_datafromsocketprocess_;
@@ -1864,7 +2247,7 @@ inline bool HttpChannelOnStartRequestArgs::a_datafromsocketprocess() const {
   return _internal_a_datafromsocketprocess();
 }
 inline void HttpChannelOnStartRequestArgs::_internal_set_a_datafromsocketprocess(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x10000000u;
   _impl_.a_datafromsocketprocess_ = value;
 }
 inline void HttpChannelOnStartRequestArgs::set_a_datafromsocketprocess(bool value) {
@@ -1872,9 +2255,17 @@ inline void HttpChannelOnStartRequestArgs::set_a_datafromsocketprocess(bool valu
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_dataFromSocketProcess)
 }
 
-// bool a_hasHTTPSRR = 30;
+// required bool a_hasHTTPSRR = 30;
+inline bool HttpChannelOnStartRequestArgs::_internal_has_a_hashttpsrr() const {
+  bool value = (_impl_._has_bits_[0] & 0x20000000u) != 0;
+  return value;
+}
+inline bool HttpChannelOnStartRequestArgs::has_a_hashttpsrr() const {
+  return _internal_has_a_hashttpsrr();
+}
 inline void HttpChannelOnStartRequestArgs::clear_a_hashttpsrr() {
   _impl_.a_hashttpsrr_ = false;
+  _impl_._has_bits_[0] &= ~0x20000000u;
 }
 inline bool HttpChannelOnStartRequestArgs::_internal_a_hashttpsrr() const {
   return _impl_.a_hashttpsrr_;
@@ -1884,7 +2275,7 @@ inline bool HttpChannelOnStartRequestArgs::a_hashttpsrr() const {
   return _internal_a_hashttpsrr();
 }
 inline void HttpChannelOnStartRequestArgs::_internal_set_a_hashttpsrr(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x20000000u;
   _impl_.a_hashttpsrr_ = value;
 }
 inline void HttpChannelOnStartRequestArgs::set_a_hashttpsrr(bool value) {
@@ -1892,9 +2283,17 @@ inline void HttpChannelOnStartRequestArgs::set_a_hashttpsrr(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_hasHTTPSRR)
 }
 
-// bool a_isProxyUsed = 31;
+// required bool a_isProxyUsed = 31;
+inline bool HttpChannelOnStartRequestArgs::_internal_has_a_isproxyused() const {
+  bool value = (_impl_._has_bits_[0] & 0x40000000u) != 0;
+  return value;
+}
+inline bool HttpChannelOnStartRequestArgs::has_a_isproxyused() const {
+  return _internal_has_a_isproxyused();
+}
 inline void HttpChannelOnStartRequestArgs::clear_a_isproxyused() {
   _impl_.a_isproxyused_ = false;
+  _impl_._has_bits_[0] &= ~0x40000000u;
 }
 inline bool HttpChannelOnStartRequestArgs::_internal_a_isproxyused() const {
   return _impl_.a_isproxyused_;
@@ -1904,7 +2303,7 @@ inline bool HttpChannelOnStartRequestArgs::a_isproxyused() const {
   return _internal_a_isproxyused();
 }
 inline void HttpChannelOnStartRequestArgs::_internal_set_a_isproxyused(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x40000000u;
   _impl_.a_isproxyused_ = value;
 }
 inline void HttpChannelOnStartRequestArgs::set_a_isproxyused(bool value) {
@@ -1912,9 +2311,17 @@ inline void HttpChannelOnStartRequestArgs::set_a_isproxyused(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_isProxyUsed)
 }
 
-// uint32 a_redirectCount = 32;
+// required uint32 a_redirectCount = 32;
+inline bool HttpChannelOnStartRequestArgs::_internal_has_a_redirectcount() const {
+  bool value = (_impl_._has_bits_[0] & 0x80000000u) != 0;
+  return value;
+}
+inline bool HttpChannelOnStartRequestArgs::has_a_redirectcount() const {
+  return _internal_has_a_redirectcount();
+}
 inline void HttpChannelOnStartRequestArgs::clear_a_redirectcount() {
   _impl_.a_redirectcount_ = 0u;
+  _impl_._has_bits_[0] &= ~0x80000000u;
 }
 inline uint32_t HttpChannelOnStartRequestArgs::_internal_a_redirectcount() const {
   return _impl_.a_redirectcount_;
@@ -1924,7 +2331,7 @@ inline uint32_t HttpChannelOnStartRequestArgs::a_redirectcount() const {
   return _internal_a_redirectcount();
 }
 inline void HttpChannelOnStartRequestArgs::_internal_set_a_redirectcount(uint32_t value) {
-  
+  _impl_._has_bits_[0] |= 0x80000000u;
   _impl_.a_redirectcount_ = value;
 }
 inline void HttpChannelOnStartRequestArgs::set_a_redirectcount(uint32_t value) {
@@ -1932,9 +2339,17 @@ inline void HttpChannelOnStartRequestArgs::set_a_redirectcount(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_redirectCount)
 }
 
-// string a_protocolVersion = 33;
+// required string a_protocolVersion = 33;
+inline bool HttpChannelOnStartRequestArgs::_internal_has_a_protocolversion() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
+  return value;
+}
+inline bool HttpChannelOnStartRequestArgs::has_a_protocolversion() const {
+  return _internal_has_a_protocolversion();
+}
 inline void HttpChannelOnStartRequestArgs::clear_a_protocolversion() {
   _impl_.a_protocolversion_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000200u;
 }
 inline const std::string& HttpChannelOnStartRequestArgs::a_protocolversion() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_protocolVersion)
@@ -1943,7 +2358,7 @@ inline const std::string& HttpChannelOnStartRequestArgs::a_protocolversion() con
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpChannelOnStartRequestArgs::set_a_protocolversion(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000200u;
  _impl_.a_protocolversion_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_protocolVersion)
 }
@@ -1956,22 +2371,32 @@ inline const std::string& HttpChannelOnStartRequestArgs::_internal_a_protocolver
   return _impl_.a_protocolversion_.Get();
 }
 inline void HttpChannelOnStartRequestArgs::_internal_set_a_protocolversion(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000200u;
   _impl_.a_protocolversion_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HttpChannelOnStartRequestArgs::_internal_mutable_a_protocolversion() {
-  
+  _impl_._has_bits_[0] |= 0x00000200u;
   return _impl_.a_protocolversion_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HttpChannelOnStartRequestArgs::release_a_protocolversion() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_protocolVersion)
-  return _impl_.a_protocolversion_.Release();
+  if (!_internal_has_a_protocolversion()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000200u;
+  auto* p = _impl_.a_protocolversion_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_protocolversion_.IsDefault()) {
+    _impl_.a_protocolversion_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void HttpChannelOnStartRequestArgs::set_allocated_a_protocolversion(std::string* a_protocolversion) {
   if (a_protocolversion != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000200u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000200u;
   }
   _impl_.a_protocolversion_.SetAllocated(a_protocolversion, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

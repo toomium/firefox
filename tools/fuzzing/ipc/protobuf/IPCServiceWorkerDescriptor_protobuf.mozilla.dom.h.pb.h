@@ -91,6 +91,13 @@ class IPCServiceWorkerDescriptor final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const IPCServiceWorkerDescriptor& default_instance() {
     return *internal_default_instance();
   }
@@ -172,7 +179,11 @@ class IPCServiceWorkerDescriptor final :
     kARegistrationVersionFieldNumber = 3,
     kAHandlesFetchFieldNumber = 8,
   };
-  // string a_scope = 5;
+  // required string a_scope = 5;
+  bool has_a_scope() const;
+  private:
+  bool _internal_has_a_scope() const;
+  public:
   void clear_a_scope();
   const std::string& a_scope() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -186,7 +197,11 @@ class IPCServiceWorkerDescriptor final :
   std::string* _internal_mutable_a_scope();
   public:
 
-  // string a_scriptURL = 6;
+  // required string a_scriptURL = 6;
+  bool has_a_scripturl() const;
+  private:
+  bool _internal_has_a_scripturl() const;
+  public:
   void clear_a_scripturl();
   const std::string& a_scripturl() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -200,7 +215,11 @@ class IPCServiceWorkerDescriptor final :
   std::string* _internal_mutable_a_scripturl();
   public:
 
-  // bytes a_state = 7;
+  // required bytes a_state = 7;
+  bool has_a_state() const;
+  private:
+  bool _internal_has_a_state() const;
+  public:
   void clear_a_state();
   const std::string& a_state() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -214,7 +233,7 @@ class IPCServiceWorkerDescriptor final :
   std::string* _internal_mutable_a_state();
   public:
 
-  // .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 4;
+  // required .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 4;
   bool has_a_principalinfo() const;
   private:
   bool _internal_has_a_principalinfo() const;
@@ -232,7 +251,11 @@ class IPCServiceWorkerDescriptor final :
       ::protobuf::mozilla::ipc::PrincipalInfo* a_principalinfo);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_principalinfo();
 
-  // uint64 a_id = 1;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
+  private:
+  bool _internal_has_a_id() const;
+  public:
   void clear_a_id();
   uint64_t a_id() const;
   void set_a_id(uint64_t value);
@@ -241,7 +264,11 @@ class IPCServiceWorkerDescriptor final :
   void _internal_set_a_id(uint64_t value);
   public:
 
-  // uint64 a_registrationId = 2;
+  // required uint64 a_registrationId = 2;
+  bool has_a_registrationid() const;
+  private:
+  bool _internal_has_a_registrationid() const;
+  public:
   void clear_a_registrationid();
   uint64_t a_registrationid() const;
   void set_a_registrationid(uint64_t value);
@@ -250,7 +277,11 @@ class IPCServiceWorkerDescriptor final :
   void _internal_set_a_registrationid(uint64_t value);
   public:
 
-  // uint64 a_registrationVersion = 3;
+  // required uint64 a_registrationVersion = 3;
+  bool has_a_registrationversion() const;
+  private:
+  bool _internal_has_a_registrationversion() const;
+  public:
   void clear_a_registrationversion();
   uint64_t a_registrationversion() const;
   void set_a_registrationversion(uint64_t value);
@@ -259,7 +290,11 @@ class IPCServiceWorkerDescriptor final :
   void _internal_set_a_registrationversion(uint64_t value);
   public:
 
-  // bool a_handlesFetch = 8;
+  // required bool a_handlesFetch = 8;
+  bool has_a_handlesfetch() const;
+  private:
+  bool _internal_has_a_handlesfetch() const;
+  public:
   void clear_a_handlesfetch();
   bool a_handlesfetch() const;
   void set_a_handlesfetch(bool value);
@@ -272,10 +307,15 @@ class IPCServiceWorkerDescriptor final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_scope_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_scripturl_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_state_;
@@ -284,7 +324,6 @@ class IPCServiceWorkerDescriptor final :
     uint64_t a_registrationid_;
     uint64_t a_registrationversion_;
     bool a_handlesfetch_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_IPCServiceWorkerDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -300,9 +339,17 @@ class IPCServiceWorkerDescriptor final :
 #endif  // __GNUC__
 // IPCServiceWorkerDescriptor
 
-// uint64 a_id = 1;
+// required uint64 a_id = 1;
+inline bool IPCServiceWorkerDescriptor::_internal_has_a_id() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool IPCServiceWorkerDescriptor::has_a_id() const {
+  return _internal_has_a_id();
+}
 inline void IPCServiceWorkerDescriptor::clear_a_id() {
   _impl_.a_id_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline uint64_t IPCServiceWorkerDescriptor::_internal_a_id() const {
   return _impl_.a_id_;
@@ -312,7 +359,7 @@ inline uint64_t IPCServiceWorkerDescriptor::a_id() const {
   return _internal_a_id();
 }
 inline void IPCServiceWorkerDescriptor::_internal_set_a_id(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.a_id_ = value;
 }
 inline void IPCServiceWorkerDescriptor::set_a_id(uint64_t value) {
@@ -320,9 +367,17 @@ inline void IPCServiceWorkerDescriptor::set_a_id(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCServiceWorkerDescriptor.a_id)
 }
 
-// uint64 a_registrationId = 2;
+// required uint64 a_registrationId = 2;
+inline bool IPCServiceWorkerDescriptor::_internal_has_a_registrationid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool IPCServiceWorkerDescriptor::has_a_registrationid() const {
+  return _internal_has_a_registrationid();
+}
 inline void IPCServiceWorkerDescriptor::clear_a_registrationid() {
   _impl_.a_registrationid_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline uint64_t IPCServiceWorkerDescriptor::_internal_a_registrationid() const {
   return _impl_.a_registrationid_;
@@ -332,7 +387,7 @@ inline uint64_t IPCServiceWorkerDescriptor::a_registrationid() const {
   return _internal_a_registrationid();
 }
 inline void IPCServiceWorkerDescriptor::_internal_set_a_registrationid(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000020u;
   _impl_.a_registrationid_ = value;
 }
 inline void IPCServiceWorkerDescriptor::set_a_registrationid(uint64_t value) {
@@ -340,9 +395,17 @@ inline void IPCServiceWorkerDescriptor::set_a_registrationid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCServiceWorkerDescriptor.a_registrationId)
 }
 
-// uint64 a_registrationVersion = 3;
+// required uint64 a_registrationVersion = 3;
+inline bool IPCServiceWorkerDescriptor::_internal_has_a_registrationversion() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool IPCServiceWorkerDescriptor::has_a_registrationversion() const {
+  return _internal_has_a_registrationversion();
+}
 inline void IPCServiceWorkerDescriptor::clear_a_registrationversion() {
   _impl_.a_registrationversion_ = uint64_t{0u};
+  _impl_._has_bits_[0] &= ~0x00000040u;
 }
 inline uint64_t IPCServiceWorkerDescriptor::_internal_a_registrationversion() const {
   return _impl_.a_registrationversion_;
@@ -352,7 +415,7 @@ inline uint64_t IPCServiceWorkerDescriptor::a_registrationversion() const {
   return _internal_a_registrationversion();
 }
 inline void IPCServiceWorkerDescriptor::_internal_set_a_registrationversion(uint64_t value) {
-  
+  _impl_._has_bits_[0] |= 0x00000040u;
   _impl_.a_registrationversion_ = value;
 }
 inline void IPCServiceWorkerDescriptor::set_a_registrationversion(uint64_t value) {
@@ -360,9 +423,11 @@ inline void IPCServiceWorkerDescriptor::set_a_registrationversion(uint64_t value
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCServiceWorkerDescriptor.a_registrationVersion)
 }
 
-// .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 4;
+// required .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 4;
 inline bool IPCServiceWorkerDescriptor::_internal_has_a_principalinfo() const {
-  return this != internal_default_instance() && _impl_.a_principalinfo_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_principalinfo_ != nullptr);
+  return value;
 }
 inline bool IPCServiceWorkerDescriptor::has_a_principalinfo() const {
   return _internal_has_a_principalinfo();
@@ -383,14 +448,14 @@ inline void IPCServiceWorkerDescriptor::unsafe_arena_set_allocated_a_principalin
   }
   _impl_.a_principalinfo_ = a_principalinfo;
   if (a_principalinfo) {
-    
+    _impl_._has_bits_[0] |= 0x00000008u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000008u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCServiceWorkerDescriptor.a_principalInfo)
 }
 inline ::protobuf::mozilla::ipc::PrincipalInfo* IPCServiceWorkerDescriptor::release_a_principalinfo() {
-  
+  _impl_._has_bits_[0] &= ~0x00000008u;
   ::protobuf::mozilla::ipc::PrincipalInfo* temp = _impl_.a_principalinfo_;
   _impl_.a_principalinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -406,13 +471,13 @@ inline ::protobuf::mozilla::ipc::PrincipalInfo* IPCServiceWorkerDescriptor::rele
 }
 inline ::protobuf::mozilla::ipc::PrincipalInfo* IPCServiceWorkerDescriptor::unsafe_arena_release_a_principalinfo() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCServiceWorkerDescriptor.a_principalInfo)
-  
+  _impl_._has_bits_[0] &= ~0x00000008u;
   ::protobuf::mozilla::ipc::PrincipalInfo* temp = _impl_.a_principalinfo_;
   _impl_.a_principalinfo_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::ipc::PrincipalInfo* IPCServiceWorkerDescriptor::_internal_mutable_a_principalinfo() {
-  
+  _impl_._has_bits_[0] |= 0x00000008u;
   if (_impl_.a_principalinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ipc::PrincipalInfo>(GetArenaForAllocation());
     _impl_.a_principalinfo_ = p;
@@ -437,17 +502,25 @@ inline void IPCServiceWorkerDescriptor::set_allocated_a_principalinfo(::protobuf
       a_principalinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_principalinfo, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000008u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000008u;
   }
   _impl_.a_principalinfo_ = a_principalinfo;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCServiceWorkerDescriptor.a_principalInfo)
 }
 
-// string a_scope = 5;
+// required string a_scope = 5;
+inline bool IPCServiceWorkerDescriptor::_internal_has_a_scope() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool IPCServiceWorkerDescriptor::has_a_scope() const {
+  return _internal_has_a_scope();
+}
 inline void IPCServiceWorkerDescriptor::clear_a_scope() {
   _impl_.a_scope_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& IPCServiceWorkerDescriptor::a_scope() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCServiceWorkerDescriptor.a_scope)
@@ -456,7 +529,7 @@ inline const std::string& IPCServiceWorkerDescriptor::a_scope() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCServiceWorkerDescriptor::set_a_scope(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_scope_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCServiceWorkerDescriptor.a_scope)
 }
@@ -469,22 +542,32 @@ inline const std::string& IPCServiceWorkerDescriptor::_internal_a_scope() const 
   return _impl_.a_scope_.Get();
 }
 inline void IPCServiceWorkerDescriptor::_internal_set_a_scope(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_scope_.Set(value, GetArenaForAllocation());
 }
 inline std::string* IPCServiceWorkerDescriptor::_internal_mutable_a_scope() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_scope_.Mutable(GetArenaForAllocation());
 }
 inline std::string* IPCServiceWorkerDescriptor::release_a_scope() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCServiceWorkerDescriptor.a_scope)
-  return _impl_.a_scope_.Release();
+  if (!_internal_has_a_scope()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_scope_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_scope_.IsDefault()) {
+    _impl_.a_scope_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void IPCServiceWorkerDescriptor::set_allocated_a_scope(std::string* a_scope) {
   if (a_scope != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_scope_.SetAllocated(a_scope, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -495,9 +578,17 @@ inline void IPCServiceWorkerDescriptor::set_allocated_a_scope(std::string* a_sco
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCServiceWorkerDescriptor.a_scope)
 }
 
-// string a_scriptURL = 6;
+// required string a_scriptURL = 6;
+inline bool IPCServiceWorkerDescriptor::_internal_has_a_scripturl() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool IPCServiceWorkerDescriptor::has_a_scripturl() const {
+  return _internal_has_a_scripturl();
+}
 inline void IPCServiceWorkerDescriptor::clear_a_scripturl() {
   _impl_.a_scripturl_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& IPCServiceWorkerDescriptor::a_scripturl() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCServiceWorkerDescriptor.a_scriptURL)
@@ -506,7 +597,7 @@ inline const std::string& IPCServiceWorkerDescriptor::a_scripturl() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCServiceWorkerDescriptor::set_a_scripturl(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_scripturl_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCServiceWorkerDescriptor.a_scriptURL)
 }
@@ -519,22 +610,32 @@ inline const std::string& IPCServiceWorkerDescriptor::_internal_a_scripturl() co
   return _impl_.a_scripturl_.Get();
 }
 inline void IPCServiceWorkerDescriptor::_internal_set_a_scripturl(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_scripturl_.Set(value, GetArenaForAllocation());
 }
 inline std::string* IPCServiceWorkerDescriptor::_internal_mutable_a_scripturl() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_scripturl_.Mutable(GetArenaForAllocation());
 }
 inline std::string* IPCServiceWorkerDescriptor::release_a_scripturl() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCServiceWorkerDescriptor.a_scriptURL)
-  return _impl_.a_scripturl_.Release();
+  if (!_internal_has_a_scripturl()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_scripturl_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_scripturl_.IsDefault()) {
+    _impl_.a_scripturl_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void IPCServiceWorkerDescriptor::set_allocated_a_scripturl(std::string* a_scripturl) {
   if (a_scripturl != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_scripturl_.SetAllocated(a_scripturl, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -545,9 +646,17 @@ inline void IPCServiceWorkerDescriptor::set_allocated_a_scripturl(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCServiceWorkerDescriptor.a_scriptURL)
 }
 
-// bytes a_state = 7;
+// required bytes a_state = 7;
+inline bool IPCServiceWorkerDescriptor::_internal_has_a_state() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool IPCServiceWorkerDescriptor::has_a_state() const {
+  return _internal_has_a_state();
+}
 inline void IPCServiceWorkerDescriptor::clear_a_state() {
   _impl_.a_state_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& IPCServiceWorkerDescriptor::a_state() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCServiceWorkerDescriptor.a_state)
@@ -556,7 +665,7 @@ inline const std::string& IPCServiceWorkerDescriptor::a_state() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCServiceWorkerDescriptor::set_a_state(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000004u;
  _impl_.a_state_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCServiceWorkerDescriptor.a_state)
 }
@@ -569,22 +678,32 @@ inline const std::string& IPCServiceWorkerDescriptor::_internal_a_state() const 
   return _impl_.a_state_.Get();
 }
 inline void IPCServiceWorkerDescriptor::_internal_set_a_state(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_state_.Set(value, GetArenaForAllocation());
 }
 inline std::string* IPCServiceWorkerDescriptor::_internal_mutable_a_state() {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   return _impl_.a_state_.Mutable(GetArenaForAllocation());
 }
 inline std::string* IPCServiceWorkerDescriptor::release_a_state() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCServiceWorkerDescriptor.a_state)
-  return _impl_.a_state_.Release();
+  if (!_internal_has_a_state()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000004u;
+  auto* p = _impl_.a_state_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_state_.IsDefault()) {
+    _impl_.a_state_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void IPCServiceWorkerDescriptor::set_allocated_a_state(std::string* a_state) {
   if (a_state != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.a_state_.SetAllocated(a_state, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -595,9 +714,17 @@ inline void IPCServiceWorkerDescriptor::set_allocated_a_state(std::string* a_sta
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCServiceWorkerDescriptor.a_state)
 }
 
-// bool a_handlesFetch = 8;
+// required bool a_handlesFetch = 8;
+inline bool IPCServiceWorkerDescriptor::_internal_has_a_handlesfetch() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
+  return value;
+}
+inline bool IPCServiceWorkerDescriptor::has_a_handlesfetch() const {
+  return _internal_has_a_handlesfetch();
+}
 inline void IPCServiceWorkerDescriptor::clear_a_handlesfetch() {
   _impl_.a_handlesfetch_ = false;
+  _impl_._has_bits_[0] &= ~0x00000080u;
 }
 inline bool IPCServiceWorkerDescriptor::_internal_a_handlesfetch() const {
   return _impl_.a_handlesfetch_;
@@ -607,7 +734,7 @@ inline bool IPCServiceWorkerDescriptor::a_handlesfetch() const {
   return _internal_a_handlesfetch();
 }
 inline void IPCServiceWorkerDescriptor::_internal_set_a_handlesfetch(bool value) {
-  
+  _impl_._has_bits_[0] |= 0x00000080u;
   _impl_.a_handlesfetch_ = value;
 }
 inline void IPCServiceWorkerDescriptor::set_a_handlesfetch(bool value) {

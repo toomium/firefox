@@ -96,6 +96,13 @@ class TCPError final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const TCPError& default_instance() {
     return *internal_default_instance();
   }
@@ -172,7 +179,11 @@ class TCPError final :
     kAMessageFieldNumber = 2,
     kAErrorCodeFieldNumber = 3,
   };
-  // string a_name = 1;
+  // required string a_name = 1;
+  bool has_a_name() const;
+  private:
+  bool _internal_has_a_name() const;
+  public:
   void clear_a_name();
   const std::string& a_name() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -186,7 +197,11 @@ class TCPError final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // string a_message = 2;
+  // required string a_message = 2;
+  bool has_a_message() const;
+  private:
+  bool _internal_has_a_message() const;
+  public:
   void clear_a_message();
   const std::string& a_message() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -200,7 +215,11 @@ class TCPError final :
   std::string* _internal_mutable_a_message();
   public:
 
-  // bytes a_errorCode = 3;
+  // required bytes a_errorCode = 3;
+  bool has_a_errorcode() const;
+  private:
+  bool _internal_has_a_errorcode() const;
+  public:
   void clear_a_errorcode();
   const std::string& a_errorcode() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -218,14 +237,18 @@ class TCPError final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_name_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_message_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_errorcode_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTCPSocket_5fprotobuf_2eh_2eproto;
@@ -261,6 +284,13 @@ class SendableData_a_type_mVArrayOfuint8_t final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const SendableData_a_type_mVArrayOfuint8_t& default_instance() {
@@ -368,7 +398,6 @@ class SendableData_a_type_mVArrayOfuint8_t final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_mvarrayofuint8_t_;
-    mutable std::atomic<int> _a_mvarrayofuint8_t_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -405,6 +434,13 @@ class SendableData final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const SendableData& default_instance() {
@@ -587,6 +623,13 @@ class CallbackData final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const CallbackData& default_instance() {
     return *internal_default_instance();
   }
@@ -765,9 +808,17 @@ class CallbackData final :
 #endif  // __GNUC__
 // TCPError
 
-// string a_name = 1;
+// required string a_name = 1;
+inline bool TCPError::_internal_has_a_name() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool TCPError::has_a_name() const {
+  return _internal_has_a_name();
+}
 inline void TCPError::clear_a_name() {
   _impl_.a_name_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& TCPError::a_name() const {
   // @@protoc_insertion_point(field_get:protobuf.TCPError.a_name)
@@ -776,7 +827,7 @@ inline const std::string& TCPError::a_name() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void TCPError::set_a_name(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.TCPError.a_name)
 }
@@ -789,22 +840,32 @@ inline const std::string& TCPError::_internal_a_name() const {
   return _impl_.a_name_.Get();
 }
 inline void TCPError::_internal_set_a_name(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_name_.Set(value, GetArenaForAllocation());
 }
 inline std::string* TCPError::_internal_mutable_a_name() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_name_.Mutable(GetArenaForAllocation());
 }
 inline std::string* TCPError::release_a_name() {
   // @@protoc_insertion_point(field_release:protobuf.TCPError.a_name)
-  return _impl_.a_name_.Release();
+  if (!_internal_has_a_name()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.a_name_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_name_.IsDefault()) {
+    _impl_.a_name_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void TCPError::set_allocated_a_name(std::string* a_name) {
   if (a_name != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_name_.SetAllocated(a_name, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -815,9 +876,17 @@ inline void TCPError::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.TCPError.a_name)
 }
 
-// string a_message = 2;
+// required string a_message = 2;
+inline bool TCPError::_internal_has_a_message() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool TCPError::has_a_message() const {
+  return _internal_has_a_message();
+}
 inline void TCPError::clear_a_message() {
   _impl_.a_message_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& TCPError::a_message() const {
   // @@protoc_insertion_point(field_get:protobuf.TCPError.a_message)
@@ -826,7 +895,7 @@ inline const std::string& TCPError::a_message() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void TCPError::set_a_message(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.TCPError.a_message)
 }
@@ -839,22 +908,32 @@ inline const std::string& TCPError::_internal_a_message() const {
   return _impl_.a_message_.Get();
 }
 inline void TCPError::_internal_set_a_message(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_message_.Set(value, GetArenaForAllocation());
 }
 inline std::string* TCPError::_internal_mutable_a_message() {
-  
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_message_.Mutable(GetArenaForAllocation());
 }
 inline std::string* TCPError::release_a_message() {
   // @@protoc_insertion_point(field_release:protobuf.TCPError.a_message)
-  return _impl_.a_message_.Release();
+  if (!_internal_has_a_message()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.a_message_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_message_.IsDefault()) {
+    _impl_.a_message_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void TCPError::set_allocated_a_message(std::string* a_message) {
   if (a_message != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_message_.SetAllocated(a_message, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -865,9 +944,17 @@ inline void TCPError::set_allocated_a_message(std::string* a_message) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.TCPError.a_message)
 }
 
-// bytes a_errorCode = 3;
+// required bytes a_errorCode = 3;
+inline bool TCPError::_internal_has_a_errorcode() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool TCPError::has_a_errorcode() const {
+  return _internal_has_a_errorcode();
+}
 inline void TCPError::clear_a_errorcode() {
   _impl_.a_errorcode_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& TCPError::a_errorcode() const {
   // @@protoc_insertion_point(field_get:protobuf.TCPError.a_errorCode)
@@ -876,7 +963,7 @@ inline const std::string& TCPError::a_errorcode() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void TCPError::set_a_errorcode(ArgT0&& arg0, ArgT... args) {
- 
+ _impl_._has_bits_[0] |= 0x00000004u;
  _impl_.a_errorcode_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.TCPError.a_errorCode)
 }
@@ -889,22 +976,32 @@ inline const std::string& TCPError::_internal_a_errorcode() const {
   return _impl_.a_errorcode_.Get();
 }
 inline void TCPError::_internal_set_a_errorcode(const std::string& value) {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_errorcode_.Set(value, GetArenaForAllocation());
 }
 inline std::string* TCPError::_internal_mutable_a_errorcode() {
-  
+  _impl_._has_bits_[0] |= 0x00000004u;
   return _impl_.a_errorcode_.Mutable(GetArenaForAllocation());
 }
 inline std::string* TCPError::release_a_errorcode() {
   // @@protoc_insertion_point(field_release:protobuf.TCPError.a_errorCode)
-  return _impl_.a_errorcode_.Release();
+  if (!_internal_has_a_errorcode()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000004u;
+  auto* p = _impl_.a_errorcode_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.a_errorcode_.IsDefault()) {
+    _impl_.a_errorcode_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
 }
 inline void TCPError::set_allocated_a_errorcode(std::string* a_errorcode) {
   if (a_errorcode != nullptr) {
-    
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.a_errorcode_.SetAllocated(a_errorcode, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

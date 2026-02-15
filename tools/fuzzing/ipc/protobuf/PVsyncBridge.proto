@@ -5,7 +5,7 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/gfx/ipc/PVsyncBridge.ipdl
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.gfx.PVsyncBridge;
@@ -14,8 +14,8 @@ package protobuf.mozilla.gfx.PVsyncBridge;
 
 // Message declarations
 message Msg_NotifyVsync {
-  bytes a_vsync = 1;
-  bytes a_layersId = 2;
+  required bytes a_vsync = 1;
+  required bytes a_layersId = 2;
 }
 
 // Parameter mappings stats:

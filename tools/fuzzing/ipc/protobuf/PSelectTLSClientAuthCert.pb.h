@@ -102,6 +102,13 @@ class Msg_TLSClientAuthCertSelected final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Msg_TLSClientAuthCertSelected& default_instance() {
     return *internal_default_instance();
   }
@@ -195,7 +202,7 @@ class Msg_TLSClientAuthCertSelected final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::psm::ByteArray >&
       a_aselectedcertchainbytes() const;
 
-  // .protobuf.mozilla.psm.ByteArray a_aSelectedCertBytes = 1;
+  // required .protobuf.mozilla.psm.ByteArray a_aSelectedCertBytes = 1;
   bool has_a_aselectedcertbytes() const;
   private:
   bool _internal_has_a_aselectedcertbytes() const;
@@ -221,9 +228,10 @@ class Msg_TLSClientAuthCertSelected final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::psm::ByteArray > a_aselectedcertchainbytes_;
     ::protobuf::mozilla::psm::ByteArray* a_aselectedcertbytes_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSelectTLSClientAuthCert_2eproto;
@@ -259,6 +267,13 @@ class Msg___delete__ final :
       CopyFrom(from);
     }
     return *this;
+  }
+
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
   static const Msg___delete__& default_instance() {
@@ -378,6 +393,13 @@ class Reply___delete__ final :
     return *this;
   }
 
+  inline const std::string& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  }
+  inline std::string* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  }
+
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -473,9 +495,11 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_TLSClientAuthCertSelected
 
-// .protobuf.mozilla.psm.ByteArray a_aSelectedCertBytes = 1;
+// required .protobuf.mozilla.psm.ByteArray a_aSelectedCertBytes = 1;
 inline bool Msg_TLSClientAuthCertSelected::_internal_has_a_aselectedcertbytes() const {
-  return this != internal_default_instance() && _impl_.a_aselectedcertbytes_ != nullptr;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.a_aselectedcertbytes_ != nullptr);
+  return value;
 }
 inline bool Msg_TLSClientAuthCertSelected::has_a_aselectedcertbytes() const {
   return _internal_has_a_aselectedcertbytes();
@@ -496,14 +520,14 @@ inline void Msg_TLSClientAuthCertSelected::unsafe_arena_set_allocated_a_aselecte
   }
   _impl_.a_aselectedcertbytes_ = a_aselectedcertbytes;
   if (a_aselectedcertbytes) {
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.psm.PSelectTLSClientAuthCert.Msg_TLSClientAuthCertSelected.a_aSelectedCertBytes)
 }
 inline ::protobuf::mozilla::psm::ByteArray* Msg_TLSClientAuthCertSelected::release_a_aselectedcertbytes() {
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::psm::ByteArray* temp = _impl_.a_aselectedcertbytes_;
   _impl_.a_aselectedcertbytes_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -519,13 +543,13 @@ inline ::protobuf::mozilla::psm::ByteArray* Msg_TLSClientAuthCertSelected::relea
 }
 inline ::protobuf::mozilla::psm::ByteArray* Msg_TLSClientAuthCertSelected::unsafe_arena_release_a_aselectedcertbytes() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.psm.PSelectTLSClientAuthCert.Msg_TLSClientAuthCertSelected.a_aSelectedCertBytes)
-  
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::psm::ByteArray* temp = _impl_.a_aselectedcertbytes_;
   _impl_.a_aselectedcertbytes_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::psm::ByteArray* Msg_TLSClientAuthCertSelected::_internal_mutable_a_aselectedcertbytes() {
-  
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_aselectedcertbytes_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::psm::ByteArray>(GetArenaForAllocation());
     _impl_.a_aselectedcertbytes_ = p;
@@ -550,9 +574,9 @@ inline void Msg_TLSClientAuthCertSelected::set_allocated_a_aselectedcertbytes(::
       a_aselectedcertbytes = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_aselectedcertbytes, submessage_arena);
     }
-    
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aselectedcertbytes_ = a_aselectedcertbytes;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.psm.PSelectTLSClientAuthCert.Msg_TLSClientAuthCertSelected.a_aSelectedCertBytes)

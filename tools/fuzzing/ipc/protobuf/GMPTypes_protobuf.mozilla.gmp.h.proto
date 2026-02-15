@@ -5,16 +5,16 @@
 
 // Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/media/gmp/GMPTypes.ipdlh
 
-syntax = "proto3";
+syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.gmp;
 
 // Structs and unions declarations
 message NodeIdParts {
-  string a_mOrigin = 1;
-  string a_mTopLevelOrigin = 2;
-  string a_mGMPName = 3;
+  required string a_mOrigin = 1;
+  required string a_mTopLevelOrigin = 2;
+  required string a_mGMPName = 3;
 }
 
 message NodeIdVariant {
@@ -25,75 +25,75 @@ message NodeIdVariant {
 }
 
 message GMPVideoEncodedFrameData {
-  uint32 a_mEncodedWidth = 1;
-  uint32 a_mEncodedHeight = 2;
-  uint64 a_mTimestamp = 3;
-  uint64 a_mDuration = 4;
-  uint32 a_mFrameType = 5;
-  uint32 a_mSize = 6;
-  sint32 a_mTemporalLayerId = 7;
-  bytes a_mBufferType = 8;
-  bool a_mCompleteFrame = 9;
+  required uint32 a_mEncodedWidth = 1;
+  required uint32 a_mEncodedHeight = 2;
+  required uint64 a_mTimestamp = 3;
+  required uint64 a_mDuration = 4;
+  required uint32 a_mFrameType = 5;
+  required uint32 a_mSize = 6;
+  required sint32 a_mTemporalLayerId = 7;
+  required bytes a_mBufferType = 8;
+  required bool a_mCompleteFrame = 9;
 }
 
 message GMPPlaneData {
-  sint32 a_mOffset = 1;
-  sint32 a_mSize = 2;
-  sint32 a_mStride = 3;
+  required sint32 a_mOffset = 1;
+  required sint32 a_mSize = 2;
+  required sint32 a_mStride = 3;
 }
 
 message GMPVideoi420FrameData {
-  protobuf.mozilla.gmp.GMPPlaneData a_mYPlane = 1;
-  protobuf.mozilla.gmp.GMPPlaneData a_mUPlane = 2;
-  protobuf.mozilla.gmp.GMPPlaneData a_mVPlane = 3;
-  sint32 a_mWidth = 4;
-  sint32 a_mHeight = 5;
-  uint64 a_mTimestamp = 6;
+  required protobuf.mozilla.gmp.GMPPlaneData a_mYPlane = 1;
+  required protobuf.mozilla.gmp.GMPPlaneData a_mUPlane = 2;
+  required protobuf.mozilla.gmp.GMPPlaneData a_mVPlane = 3;
+  required sint32 a_mWidth = 4;
+  required sint32 a_mHeight = 5;
+  required uint64 a_mTimestamp = 6;
   optional uint64 a_mUpdatedTimestamp = 7;
-  uint64 a_mDuration = 8;
+  required uint64 a_mDuration = 8;
 }
 
 message CDMInputBuffer {
-  bytes a_mData = 1;
+  required bytes a_mData = 1;
   repeated uint32 a_mKeyId = 2;
   repeated uint32 a_mIV = 3;
-  sint64 a_mTimestamp = 4;
-  sint64 a_mDuration = 5;
+  required sint64 a_mTimestamp = 4;
+  required sint64 a_mDuration = 5;
   repeated uint32 a_mClearBytes = 6;
   repeated uint32 a_mCipherBytes = 7;
-  uint32 a_mCryptByteBlock = 8;
-  uint32 a_mSkipByteBlock = 9;
-  bytes a_mEncryptionScheme = 10;
+  required uint32 a_mCryptByteBlock = 8;
+  required uint32 a_mSkipByteBlock = 9;
+  required bytes a_mEncryptionScheme = 10;
 }
 
 message CDMVideoDecoderConfig {
-  uint32 a_mCodec = 1;
-  uint32 a_mProfile = 2;
-  uint32 a_mFormat = 3;
-  sint32 a_mImageWidth = 4;
-  sint32 a_mImageHeight = 5;
+  required uint32 a_mCodec = 1;
+  required uint32 a_mProfile = 2;
+  required uint32 a_mFormat = 3;
+  required sint32 a_mImageWidth = 4;
+  required sint32 a_mImageHeight = 5;
   repeated uint32 a_mExtraData = 6;
-  bytes a_mEncryptionScheme = 7;
+  required bytes a_mEncryptionScheme = 7;
 }
 
 message CDMKeyInformation {
   repeated uint32 a_mKeyId = 1;
-  uint32 a_mStatus = 2;
-  uint32 a_mSystemCode = 3;
+  required uint32 a_mStatus = 2;
+  required uint32 a_mSystemCode = 3;
 }
 
 message CDMVideoPlane {
-  uint32 a_mPlaneOffset = 1;
-  uint32 a_mStride = 2;
+  required uint32 a_mPlaneOffset = 1;
+  required uint32 a_mStride = 2;
 }
 
 message CDMVideoFrame {
-  uint32 a_mFormat = 1;
-  sint32 a_mImageWidth = 2;
-  sint32 a_mImageHeight = 3;
-  protobuf.mozilla.gmp.CDMVideoPlane a_mYPlane = 4;
-  protobuf.mozilla.gmp.CDMVideoPlane a_mUPlane = 5;
-  protobuf.mozilla.gmp.CDMVideoPlane a_mVPlane = 6;
-  sint64 a_mTimestamp = 7;
-  sint64 a_mDuration = 8;
+  required uint32 a_mFormat = 1;
+  required sint32 a_mImageWidth = 2;
+  required sint32 a_mImageHeight = 3;
+  required protobuf.mozilla.gmp.CDMVideoPlane a_mYPlane = 4;
+  required protobuf.mozilla.gmp.CDMVideoPlane a_mUPlane = 5;
+  required protobuf.mozilla.gmp.CDMVideoPlane a_mVPlane = 6;
+  required sint64 a_mTimestamp = 7;
+  required sint64 a_mDuration = 8;
 }
