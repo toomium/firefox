@@ -13,8 +13,9 @@ from ipdl.cxx.ast import *
 from ipdl.cxx.code import *
 from ipdl.type import ActorType, UnionType, TypeVisitor, builtinHeaderIncludes
 from ipdl.util import hash_str
-from ipdl.protobuf.convert import getNamespace, ProtobufTypeMapper, getProtobufVarName, getUnionArrayMemberType, getUnionEnumName
+from ipdl.protobuf.convert import getNamespace, getProtobufVarName, getUnionEnumName
 from ipdl.builtin import PBTypeMappings, PBCastTypes, PBConvertTypes
+from ipdl.protobuf import mapping
 import ipdl.type
 
 from pprint import pprint
@@ -116,20 +117,16 @@ def _getNamespacedObject(name, namespaces, addParent=True):
     return f"{getNamespace("::", namespaces, addParent=addParent)}::{name}"
 
 def _protobufTypeIsScalar(type):
-    return type.name() in PBTypeMappings.keys()
+    return mapping.IPDLTypeIsSimple(type)
 
 def _protobufTypeNeedsCast(type):
     return type.name() in PBCastTypes
 
 def _protobufTypeIsStructOrUnion(type):
-    return isinstance(type, ipdl.type.StructType) or isinstance(type, ipdl.type.UnionType)
+    return mapping.IPDLTypeIsStructured(type)
 
 def _protobufTypeIsMappedToBytes(type):
-    return not (_protobufTypeIsScalar(type)
-            or  _protobufTypeIsStructOrUnion(type)
-            or  _protobufTypeIsArray(type)
-            or  _protobufTypeIsMaybe(type)
-            )
+    return mapping.IPDLTypeIsComplex(type)
 
 def _protobufTypeIsConvertible(type):
     return type.name() in PBConvertTypes
@@ -141,7 +138,7 @@ def _protobufTypeIsMaybe(type):
     return isinstance(type, ipdl.type.MaybeType)
 
 def __protobufGetType(ipdltype):
-    return ProtobufTypeMapper().mapType(ipdltype)
+    return mapping.ProtobufTypeMapper().mapType(ipdltype)
 
 def _protocolHeaderName(p, side=""):
     if side:
@@ -2105,23 +2102,9 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                         Type(
                             _actorName(ip.decl.fullname, "Parent")
                         ),
-                        _actorName(ip.decl.shortname, "Parent")#_otherSide(self.side).title()),
+                        _actorName(ip.decl.shortname, "Parent"),
                     )
                 )
-
-        # if inc.tu.filetype == "header":
-        #     self.hdrfile.addthing(
-        #         CppDirective("include", '"' + _ipdlhHeaderName(inc.tu) + '.h"')
-        #     )
-        #     # Inherit cpp includes defined by imported header files, as they may
-        #     # be required to serialize an imported `using` type.
-        #     for cxxinc in inc.tu.cxxIncludes:
-        #         cxxinc.accept(self)
-        # else:
-        #     self.cppIncludeHeaders += [
-        #         _protocolHeaderName(inc.tu.protocol, "parent") + ".h",
-        #         _protocolHeaderName(inc.tu.protocol, "child") + ".h",
-        #     ]
 
     def generateProtobufIncludes(self, tu):
         protoIncludes = []

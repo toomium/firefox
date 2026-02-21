@@ -476,5 +476,6 @@ message Reply_PCacheStreamControlConstructor {
 // Parameter mappings stats:
 // Total parameters in this file 131
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 3, "<class 'ipdl.type.BuiltinCType'>": 48, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 8, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 44, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 4, "<class 'ipdl.type.NotNullType'>": 4, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 9, "<class 'ipdl.type.UnionType'>": 11, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 80
+// Simple mappings performed: 80
+// Structured mappings performed: 23
 // Message structs/unions generated from ipdl structs/unions: 0

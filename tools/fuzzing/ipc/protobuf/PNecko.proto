@@ -303,5 +303,6 @@ message Reply_PTCPSocketConstructor {
 // Parameter mappings stats:
 // Total parameters in this file 91
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 3, "<class 'ipdl.type.ArrayType'>": 0, "<class 'ipdl.type.BuiltinCType'>": 23, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 1, "<class 'ipdl.type.FDType'>": 1, "<class 'ipdl.type.ImportedCxxType'>": 53, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 4, "<class 'ipdl.type.NotNullType'>": 1, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 3, "<class 'ipdl.type.UnionType'>": 2, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 48
+// Simple mappings performed: 48
+// Structured mappings performed: 7
 // Message structs/unions generated from ipdl structs/unions: 0

@@ -210,5 +210,6 @@ message Reply_TestNsIntRegion {
 // Parameter mappings stats:
 // Total parameters in this file 62
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 14, "<class 'ipdl.type.BuiltinCType'>": 2, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 0, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 12, "<class 'ipdl.type.UnionType'>": 34, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 4
+// Simple mappings performed: 4
+// Structured mappings performed: 55
 // Message structs/unions generated from ipdl structs/unions: 0

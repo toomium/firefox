@@ -14,5 +14,6 @@ import public "PTestDataStructuresCommon_protobuf.mozilla._foo.h.proto";
 // Parameter mappings stats:
 // Total parameters in this file 50
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 1, "<class 'ipdl.type.ArrayType'>": 22, "<class 'ipdl.type.BuiltinCType'>": 17, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 1, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 1, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 2, "<class 'ipdl.type.StructType'>": 5, "<class 'ipdl.type.UnionType'>": 1, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 27
+// Simple mappings performed: 27
+// Structured mappings performed: 12
 // Message structs/unions generated from ipdl structs/unions: 21

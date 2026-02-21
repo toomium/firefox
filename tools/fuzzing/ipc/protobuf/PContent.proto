@@ -1756,5 +1756,6 @@ message Msg_AttributionConversion {
 // Parameter mappings stats:
 // Total parameters in this file 796
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 1, "<class 'ipdl.type.ArrayType'>": 77, "<class 'ipdl.type.BuiltinCType'>": 136, "<class 'ipdl.type.ByteBufType'>": 2, "<class 'ipdl.type.EndpointType'>": 16, "<class 'ipdl.type.FDType'>": 4, "<class 'ipdl.type.ImportedCxxType'>": 452, "<class 'ipdl.type.ManagedEndpointType'>": 5, "<class 'ipdl.type.MaybeType'>": 43, "<class 'ipdl.type.NotNullType'>": 10, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 36, "<class 'ipdl.type.UnionType'>": 13, "<class 'ipdl.type.UniquePtrType'>": 1}
-// Scalar mappings performed: 400
+// Simple mappings performed: 400
+// Structured mappings performed: 73
 // Message structs/unions generated from ipdl structs/unions: 33
