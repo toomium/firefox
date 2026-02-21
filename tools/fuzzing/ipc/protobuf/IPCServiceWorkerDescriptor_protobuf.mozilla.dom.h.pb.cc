@@ -79,7 +79,7 @@ class IPCServiceWorkerDescriptor::_Internal {
     (*has_bits)[0] |= 128u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x000000ff) ^ 0x000000ff) != 0;
+    return ((has_bits[0] & 0x0000000c) ^ 0x0000000c) != 0;
   }
 };
 
@@ -235,7 +235,7 @@ const char* IPCServiceWorkerDescriptor::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint64 a_id = 1;
+      // optional uint64 a_id = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_id(&has_bits);
@@ -244,7 +244,7 @@ const char* IPCServiceWorkerDescriptor::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // required uint64 a_registrationId = 2;
+      // optional uint64 a_registrationId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_registrationid(&has_bits);
@@ -253,7 +253,7 @@ const char* IPCServiceWorkerDescriptor::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // required uint64 a_registrationVersion = 3;
+      // optional uint64 a_registrationVersion = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_registrationversion(&has_bits);
@@ -270,7 +270,7 @@ const char* IPCServiceWorkerDescriptor::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // required string a_scope = 5;
+      // optional string a_scope = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_a_scope();
@@ -279,7 +279,7 @@ const char* IPCServiceWorkerDescriptor::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // required string a_scriptURL = 6;
+      // optional string a_scriptURL = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           auto str = _internal_mutable_a_scripturl();
@@ -297,7 +297,7 @@ const char* IPCServiceWorkerDescriptor::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // required bool a_handlesFetch = 8;
+      // optional bool a_handlesFetch = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
           _Internal::set_has_a_handlesfetch(&has_bits);
@@ -337,19 +337,19 @@ uint8_t* IPCServiceWorkerDescriptor::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint64 a_id = 1;
+  // optional uint64 a_id = 1;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_id(), target);
   }
 
-  // required uint64 a_registrationId = 2;
+  // optional uint64 a_registrationId = 2;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(2, this->_internal_a_registrationid(), target);
   }
 
-  // required uint64 a_registrationVersion = 3;
+  // optional uint64 a_registrationVersion = 3;
   if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(3, this->_internal_a_registrationversion(), target);
@@ -362,13 +362,13 @@ uint8_t* IPCServiceWorkerDescriptor::_InternalSerialize(
         _Internal::a_principalinfo(this).GetCachedSize(), target, stream);
   }
 
-  // required string a_scope = 5;
+  // optional string a_scope = 5;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         5, this->_internal_a_scope(), target);
   }
 
-  // required string a_scriptURL = 6;
+  // optional string a_scriptURL = 6;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         6, this->_internal_a_scripturl(), target);
@@ -380,7 +380,7 @@ uint8_t* IPCServiceWorkerDescriptor::_InternalSerialize(
         7, this->_internal_a_state(), target);
   }
 
-  // required bool a_handlesFetch = 8;
+  // optional bool a_handlesFetch = 8;
   if (cached_has_bits & 0x00000080u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(8, this->_internal_a_handlesfetch(), target);
@@ -398,20 +398,6 @@ size_t IPCServiceWorkerDescriptor::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.IPCServiceWorkerDescriptor)
   size_t total_size = 0;
 
-  if (_internal_has_a_scope()) {
-    // required string a_scope = 5;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_scope());
-  }
-
-  if (_internal_has_a_scripturl()) {
-    // required string a_scriptURL = 6;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_scripturl());
-  }
-
   if (_internal_has_a_state()) {
     // required bytes a_state = 7;
     total_size += 1 +
@@ -426,43 +412,13 @@ size_t IPCServiceWorkerDescriptor::RequiredFieldsByteSizeFallback() const {
         *_impl_.a_principalinfo_);
   }
 
-  if (_internal_has_a_id()) {
-    // required uint64 a_id = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_id());
-  }
-
-  if (_internal_has_a_registrationid()) {
-    // required uint64 a_registrationId = 2;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_registrationid());
-  }
-
-  if (_internal_has_a_registrationversion()) {
-    // required uint64 a_registrationVersion = 3;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_registrationversion());
-  }
-
-  if (_internal_has_a_handlesfetch()) {
-    // required bool a_handlesFetch = 8;
-    total_size += 1 + 1;
-  }
-
   return total_size;
 }
 size_t IPCServiceWorkerDescriptor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCServiceWorkerDescriptor)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x000000ff) ^ 0x000000ff) == 0) {  // All required fields are present.
-    // required string a_scope = 5;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_scope());
-
-    // required string a_scriptURL = 6;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_scripturl());
-
+  if (((_impl_._has_bits_[0] & 0x0000000c) ^ 0x0000000c) == 0) {  // All required fields are present.
     // required bytes a_state = 7;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -473,18 +429,6 @@ size_t IPCServiceWorkerDescriptor::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_principalinfo_);
 
-    // required uint64 a_id = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_id());
-
-    // required uint64 a_registrationId = 2;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_registrationid());
-
-    // required uint64 a_registrationVersion = 3;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_registrationversion());
-
-    // required bool a_handlesFetch = 8;
-    total_size += 1 + 1;
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
@@ -492,6 +436,45 @@ size_t IPCServiceWorkerDescriptor::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional string a_scope = 5;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_scope());
+    }
+
+    // optional string a_scriptURL = 6;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_scripturl());
+    }
+
+  }
+  if (cached_has_bits & 0x000000f0u) {
+    // optional uint64 a_id = 1;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_id());
+    }
+
+    // optional uint64 a_registrationId = 2;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_registrationid());
+    }
+
+    // optional uint64 a_registrationVersion = 3;
+    if (cached_has_bits & 0x00000040u) {
+      total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_registrationversion());
+    }
+
+    // optional bool a_handlesFetch = 8;
+    if (cached_has_bits & 0x00000080u) {
+      total_size += 1 + 1;
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }

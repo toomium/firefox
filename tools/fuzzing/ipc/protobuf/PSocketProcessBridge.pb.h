@@ -197,7 +197,7 @@ class Msg_InitBackgroundDataBridge final :
   std::string* _internal_mutable_a_aendpoint();
   public:
 
-  // required uint64 a_aChannelID = 2;
+  // optional uint64 a_aChannelID = 2;
   bool has_a_achannelid() const;
   private:
   bool _internal_has_a_achannelid() const;
@@ -213,9 +213,6 @@ class Msg_InitBackgroundDataBridge final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcessBridge.Msg_InitBackgroundDataBridge)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -455,7 +452,7 @@ inline void Msg_InitBackgroundDataBridge::set_allocated_a_aendpoint(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcessBridge.Msg_InitBackgroundDataBridge.a_aEndpoint)
 }
 
-// required uint64 a_aChannelID = 2;
+// optional uint64 a_aChannelID = 2;
 inline bool Msg_InitBackgroundDataBridge::_internal_has_a_achannelid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

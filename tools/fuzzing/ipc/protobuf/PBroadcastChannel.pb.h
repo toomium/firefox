@@ -632,7 +632,7 @@ class Msg_RefMessageDelivered final :
   std::string* _internal_mutable_a_messageid();
   public:
 
-  // required uint32 a_actorsOnSamePid = 2;
+  // optional uint32 a_actorsOnSamePid = 2;
   bool has_a_actorsonsamepid() const;
   private:
   bool _internal_has_a_actorsonsamepid() const;
@@ -648,9 +648,6 @@ class Msg_RefMessageDelivered final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBroadcastChannel.Msg_RefMessageDelivered)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1177,7 +1174,7 @@ inline void Msg_RefMessageDelivered::set_allocated_a_messageid(std::string* a_me
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBroadcastChannel.Msg_RefMessageDelivered.a_messageID)
 }
 
-// required uint32 a_actorsOnSamePid = 2;
+// optional uint32 a_actorsOnSamePid = 2;
 inline bool Msg_RefMessageDelivered::_internal_has_a_actorsonsamepid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

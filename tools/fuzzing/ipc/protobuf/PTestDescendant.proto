@@ -16,7 +16,7 @@ package protobuf.mozilla._ipdltest.PTestDescendant;
 
 // Message declarations
 message Msg_PTestDescendantSubConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
   optional bytes a_dummy = 2;
 }
 

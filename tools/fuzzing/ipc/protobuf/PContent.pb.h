@@ -1678,7 +1678,7 @@ class Msg_ConstructPopupBrowser final :
       ::protobuf::mozilla::dom::WindowGlobalInit* a_windowinit);
   ::protobuf::mozilla::dom::WindowGlobalInit* unsafe_arena_release_a_windowinit();
 
-  // required uint32 a_chromeFlags = 6;
+  // optional uint32 a_chromeFlags = 6;
   bool has_a_chromeflags() const;
   private:
   bool _internal_has_a_chromeflags() const;
@@ -2188,7 +2188,7 @@ class Msg_PExtensionsConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -2570,7 +2570,7 @@ class Msg_ConstructBrowser final :
       ::protobuf::mozilla::dom::WindowGlobalInit* a_windowinit);
   ::protobuf::mozilla::dom::WindowGlobalInit* unsafe_arena_release_a_windowinit();
 
-  // required uint32 a_chromeFlags = 6;
+  // optional uint32 a_chromeFlags = 6;
   bool has_a_chromeflags() const;
   private:
   bool _internal_has_a_chromeflags() const;
@@ -2583,7 +2583,7 @@ class Msg_ConstructBrowser final :
   void _internal_set_a_chromeflags(uint32_t value);
   public:
 
-  // required bool a_isForBrowser = 8;
+  // optional bool a_isForBrowser = 8;
   bool has_a_isforbrowser() const;
   private:
   bool _internal_has_a_isforbrowser() const;
@@ -2596,7 +2596,7 @@ class Msg_ConstructBrowser final :
   void _internal_set_a_isforbrowser(bool value);
   public:
 
-  // required bool a_isTopLevel = 9;
+  // optional bool a_isTopLevel = 9;
   bool has_a_istoplevel() const;
   private:
   bool _internal_has_a_istoplevel() const;
@@ -2787,7 +2787,7 @@ class Msg_PWebBrowserPersistDocumentConstructor final :
   std::string* _internal_mutable_a_acontext();
   public:
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -2803,9 +2803,6 @@ class Msg_PWebBrowserPersistDocumentConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_PWebBrowserPersistDocumentConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4154,7 +4151,7 @@ class Msg_NetworkLinkTypeChange final :
   enum : int {
     kATypeFieldNumber = 1,
   };
-  // required uint32 a_type = 1;
+  // optional uint32 a_type = 1;
   bool has_a_type() const;
   private:
   bool _internal_has_a_type() const;
@@ -4712,7 +4709,7 @@ class Msg_RequestMemoryReport final :
   std::string* _internal_mutable_a_dmdfile();
   public:
 
-  // required uint32 a_generation = 1;
+  // optional uint32 a_generation = 1;
   bool has_a_generation() const;
   private:
   bool _internal_has_a_generation() const;
@@ -4725,7 +4722,7 @@ class Msg_RequestMemoryReport final :
   void _internal_set_a_generation(uint32_t value);
   public:
 
-  // required bool a_anonymize = 2;
+  // optional bool a_anonymize = 2;
   bool has_a_anonymize() const;
   private:
   bool _internal_has_a_anonymize() const;
@@ -4738,7 +4735,7 @@ class Msg_RequestMemoryReport final :
   void _internal_set_a_anonymize(bool value);
   public:
 
-  // required bool a_minimizeMemoryUsage = 3;
+  // optional bool a_minimizeMemoryUsage = 3;
   bool has_a_minimizememoryusage() const;
   private:
   bool _internal_has_a_minimizememoryusage() const;
@@ -4754,9 +4751,6 @@ class Msg_RequestMemoryReport final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_RequestMemoryReport)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4886,7 +4880,7 @@ class Reply_RequestMemoryReport final :
   enum : int {
     kAAGenerationFieldNumber = 1,
   };
-  // required uint32 a_aGeneration = 1;
+  // optional uint32 a_aGeneration = 1;
   bool has_a_ageneration() const;
   private:
   bool _internal_has_a_ageneration() const;
@@ -5029,7 +5023,7 @@ class Msg_BidiKeyboardNotify final :
     kAIsLangRTLFieldNumber = 1,
     kAHaveBidiKeyboardsFieldNumber = 2,
   };
-  // required bool a_isLangRTL = 1;
+  // optional bool a_isLangRTL = 1;
   bool has_a_islangrtl() const;
   private:
   bool _internal_has_a_islangrtl() const;
@@ -5042,7 +5036,7 @@ class Msg_BidiKeyboardNotify final :
   void _internal_set_a_islangrtl(bool value);
   public:
 
-  // required bool a_haveBidiKeyboards = 2;
+  // optional bool a_haveBidiKeyboards = 2;
   bool has_a_havebidikeyboards() const;
   private:
   bool _internal_has_a_havebidikeyboards() const;
@@ -5058,9 +5052,6 @@ class Msg_BidiKeyboardNotify final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_BidiKeyboardNotify)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5227,7 +5218,7 @@ class Msg_PCycleCollectWithLogsConstructor final :
   std::string* _internal_mutable_a_cclog();
   public:
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -5240,7 +5231,7 @@ class Msg_PCycleCollectWithLogsConstructor final :
   void _internal_set_a_actorid(int64_t value);
   public:
 
-  // required bool a_dumpAllTraces = 2;
+  // optional bool a_dumpAllTraces = 2;
   bool has_a_dumpalltraces() const;
   private:
   bool _internal_has_a_dumpalltraces() const;
@@ -5512,7 +5503,7 @@ class Msg_PTestShellConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -5798,7 +5789,7 @@ class Msg_PScriptCacheConstructor final :
       ::protobuf::mozilla::dom::FileDescOrError* a_cachefile);
   ::protobuf::mozilla::dom::FileDescOrError* unsafe_arena_release_a_cachefile();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -5811,7 +5802,7 @@ class Msg_PScriptCacheConstructor final :
   void _internal_set_a_actorid(int64_t value);
   public:
 
-  // required bool a_wantCacheData = 3;
+  // optional bool a_wantCacheData = 3;
   bool has_a_wantcachedata() const;
   private:
   bool _internal_has_a_wantcachedata() const;
@@ -5827,9 +5818,6 @@ class Msg_PScriptCacheConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_PScriptCacheConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -6158,7 +6146,7 @@ class Msg_RegisterChrome final :
   std::string* _internal_add_a_overrides();
   public:
 
-  // required string a_locale = 4;
+  // optional string a_locale = 4;
   bool has_a_locale() const;
   private:
   bool _internal_has_a_locale() const;
@@ -6176,7 +6164,7 @@ class Msg_RegisterChrome final :
   std::string* _internal_mutable_a_locale();
   public:
 
-  // required bool a_reset = 5;
+  // optional bool a_reset = 5;
   bool has_a_reset() const;
   private:
   bool _internal_has_a_reset() const;
@@ -6192,9 +6180,6 @@ class Msg_RegisterChrome final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_RegisterChrome)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -7153,7 +7138,7 @@ class Msg_SetOffline final :
   enum : int {
     kAOfflineFieldNumber = 1,
   };
-  // required bool a_offline = 1;
+  // optional bool a_offline = 1;
   bool has_a_offline() const;
   private:
   bool _internal_has_a_offline() const;
@@ -7295,7 +7280,7 @@ class Msg_SetConnectivity final :
   enum : int {
     kAConnectivityFieldNumber = 1,
   };
-  // required bool a_connectivity = 1;
+  // optional bool a_connectivity = 1;
   bool has_a_connectivity() const;
   private:
   bool _internal_has_a_connectivity() const;
@@ -7437,7 +7422,7 @@ class Msg_SetCaptivePortalState final :
   enum : int {
     kAAStateFieldNumber = 1,
   };
-  // required sint32 a_aState = 1;
+  // optional sint32 a_aState = 1;
   bool has_a_astate() const;
   private:
   bool _internal_has_a_astate() const;
@@ -8359,7 +8344,7 @@ class Msg_UpdatePerfStatsCollectionMask final :
   enum : int {
     kAAMaskFieldNumber = 1,
   };
-  // required uint64 a_aMask = 1;
+  // optional uint64 a_aMask = 1;
   bool has_a_amask() const;
   private:
   bool _internal_has_a_amask() const;
@@ -8625,7 +8610,7 @@ class Reply_CollectPerfStatsJSON final :
   enum : int {
     kAAStatsFieldNumber = 1,
   };
-  // required string a_aStats = 1;
+  // optional string a_aStats = 1;
   bool has_a_astats() const;
   private:
   bool _internal_has_a_astats() const;
@@ -8897,7 +8882,7 @@ class Reply_CollectScrollingMetrics final :
     kAPixelsScrolledFieldNumber = 1,
     kAScrollDurationMSFieldNumber = 2,
   };
-  // required uint32 a_pixelsScrolled = 1;
+  // optional uint32 a_pixelsScrolled = 1;
   bool has_a_pixelsscrolled() const;
   private:
   bool _internal_has_a_pixelsscrolled() const;
@@ -8910,7 +8895,7 @@ class Reply_CollectScrollingMetrics final :
   void _internal_set_a_pixelsscrolled(uint32_t value);
   public:
 
-  // required uint32 a_scrollDurationMS = 2;
+  // optional uint32 a_scrollDurationMS = 2;
   bool has_a_scrolldurationms() const;
   private:
   bool _internal_has_a_scrolldurationms() const;
@@ -8926,9 +8911,6 @@ class Reply_CollectScrollingMetrics final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Reply_CollectScrollingMetrics)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -9203,7 +9185,7 @@ class Msg_GeolocationError final :
   enum : int {
     kAErrorCodeFieldNumber = 1,
   };
-  // required uint32 a_errorCode = 1;
+  // optional uint32 a_errorCode = 1;
   bool has_a_errorcode() const;
   private:
   bool _internal_has_a_errorcode() const;
@@ -9644,7 +9626,7 @@ class Msg_RebuildFontList final :
   enum : int {
     kAAFullRebuildFieldNumber = 1,
   };
-  // required bool a_aFullRebuild = 1;
+  // optional bool a_aFullRebuild = 1;
   bool has_a_afullrebuild() const;
   private:
   bool _internal_has_a_afullrebuild() const;
@@ -9953,7 +9935,7 @@ class Msg_FontListShmBlockAdded final :
   std::string* _internal_mutable_a_ahandle();
   public:
 
-  // required uint32 a_aGeneration = 1;
+  // optional uint32 a_aGeneration = 1;
   bool has_a_ageneration() const;
   private:
   bool _internal_has_a_ageneration() const;
@@ -9966,7 +9948,7 @@ class Msg_FontListShmBlockAdded final :
   void _internal_set_a_ageneration(uint32_t value);
   public:
 
-  // required uint32 a_aIndex = 2;
+  // optional uint32 a_aIndex = 2;
   bool has_a_aindex() const;
   private:
   bool _internal_has_a_aindex() const;
@@ -9982,9 +9964,6 @@ class Msg_FontListShmBlockAdded final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_FontListShmBlockAdded)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -11449,7 +11428,7 @@ class Msg_FlushMemory final :
   enum : int {
     kAReasonFieldNumber = 1,
   };
-  // required string a_reason = 1;
+  // optional string a_reason = 1;
   bool has_a_reason() const;
   private:
   bool _internal_has_a_reason() const;
@@ -12216,7 +12195,7 @@ class Msg_ActivateA11y final :
   enum : int {
     kAADomainsFieldNumber = 1,
   };
-  // required uint64 a_aDomains = 1;
+  // optional uint64 a_aDomains = 1;
   bool has_a_adomains() const;
   private:
   bool _internal_has_a_adomains() const;
@@ -12482,7 +12461,7 @@ class Msg_SetCacheDomains final :
   enum : int {
     kAACacheDomainsFieldNumber = 1,
   };
-  // required uint64 a_aCacheDomains = 1;
+  // optional uint64 a_aCacheDomains = 1;
   bool has_a_acachedomains() const;
   private:
   bool _internal_has_a_acachedomains() const;
@@ -12631,7 +12610,7 @@ class Msg_AppInfo final :
     kASourceURLFieldNumber = 7,
     kAUpdateURLFieldNumber = 8,
   };
-  // required string a_version = 1;
+  // optional string a_version = 1;
   bool has_a_version() const;
   private:
   bool _internal_has_a_version() const;
@@ -12649,7 +12628,7 @@ class Msg_AppInfo final :
   std::string* _internal_mutable_a_version();
   public:
 
-  // required string a_buildID = 2;
+  // optional string a_buildID = 2;
   bool has_a_buildid() const;
   private:
   bool _internal_has_a_buildid() const;
@@ -12667,7 +12646,7 @@ class Msg_AppInfo final :
   std::string* _internal_mutable_a_buildid();
   public:
 
-  // required string a_name = 3;
+  // optional string a_name = 3;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -12685,7 +12664,7 @@ class Msg_AppInfo final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required string a_UAName = 4;
+  // optional string a_UAName = 4;
   bool has_a_uaname() const;
   private:
   bool _internal_has_a_uaname() const;
@@ -12703,7 +12682,7 @@ class Msg_AppInfo final :
   std::string* _internal_mutable_a_uaname();
   public:
 
-  // required string a_ID = 5;
+  // optional string a_ID = 5;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -12721,7 +12700,7 @@ class Msg_AppInfo final :
   std::string* _internal_mutable_a_id();
   public:
 
-  // required string a_vendor = 6;
+  // optional string a_vendor = 6;
   bool has_a_vendor() const;
   private:
   bool _internal_has_a_vendor() const;
@@ -12739,7 +12718,7 @@ class Msg_AppInfo final :
   std::string* _internal_mutable_a_vendor();
   public:
 
-  // required string a_sourceURL = 7;
+  // optional string a_sourceURL = 7;
   bool has_a_sourceurl() const;
   private:
   bool _internal_has_a_sourceurl() const;
@@ -12757,7 +12736,7 @@ class Msg_AppInfo final :
   std::string* _internal_mutable_a_sourceurl();
   public:
 
-  // required string a_updateURL = 8;
+  // optional string a_updateURL = 8;
   bool has_a_updateurl() const;
   private:
   bool _internal_has_a_updateurl() const;
@@ -12778,9 +12757,6 @@ class Msg_AppInfo final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_AppInfo)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -12915,7 +12891,7 @@ class Msg_RemoteType final :
     kAARemoteTypeFieldNumber = 1,
     kAAProfileFieldNumber = 2,
   };
-  // required string a_aRemoteType = 1;
+  // optional string a_aRemoteType = 1;
   bool has_a_aremotetype() const;
   private:
   bool _internal_has_a_aremotetype() const;
@@ -12933,7 +12909,7 @@ class Msg_RemoteType final :
   std::string* _internal_mutable_a_aremotetype();
   public:
 
-  // required string a_aProfile = 2;
+  // optional string a_aProfile = 2;
   bool has_a_aprofile() const;
   private:
   bool _internal_has_a_aprofile() const;
@@ -12954,9 +12930,6 @@ class Msg_RemoteType final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_RemoteType)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -13566,7 +13539,7 @@ class Msg_UnregisterJSWindowActor final :
   enum : int {
     kANameFieldNumber = 1,
   };
-  // required string a_name = 1;
+  // optional string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -13713,7 +13686,7 @@ class Msg_UnregisterJSProcessActor final :
   enum : int {
     kANameFieldNumber = 1,
   };
-  // required string a_name = 1;
+  // optional string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -13999,7 +13972,7 @@ class Msg_SetXPCOMProcessAttributes final :
       ::protobuf::mozilla::dom::SystemFontList* a_systemfontlist);
   ::protobuf::mozilla::dom::SystemFontList* unsafe_arena_release_a_systemfontlist();
 
-  // required bool a_aIsStartingUp = 8;
+  // optional bool a_aIsStartingUp = 8;
   bool has_a_aisstartingup() const;
   private:
   bool _internal_has_a_aisstartingup() const;
@@ -14565,7 +14538,7 @@ class Msg_LoadAndRegisterSheet final :
   std::string* _internal_mutable_a_uri();
   public:
 
-  // required uint32 a_type = 2;
+  // optional uint32 a_type = 2;
   bool has_a_type() const;
   private:
   bool _internal_has_a_type() const;
@@ -14727,7 +14700,7 @@ class Msg_UnregisterSheet final :
   std::string* _internal_mutable_a_uri();
   public:
 
-  // required uint32 a_type = 2;
+  // optional uint32 a_type = 2;
   bool has_a_type() const;
   private:
   bool _internal_has_a_type() const;
@@ -14872,7 +14845,7 @@ class Msg_NotifyIdleObserver final :
     kAStrFieldNumber = 3,
     kAObserverIdFieldNumber = 1,
   };
-  // required string a_topic = 2;
+  // optional string a_topic = 2;
   bool has_a_topic() const;
   private:
   bool _internal_has_a_topic() const;
@@ -14890,7 +14863,7 @@ class Msg_NotifyIdleObserver final :
   std::string* _internal_mutable_a_topic();
   public:
 
-  // required string a_str = 3;
+  // optional string a_str = 3;
   bool has_a_str() const;
   private:
   bool _internal_has_a_str() const;
@@ -14908,7 +14881,7 @@ class Msg_NotifyIdleObserver final :
   std::string* _internal_mutable_a_str();
   public:
 
-  // required uint64 a_observerId = 1;
+  // optional uint64 a_observerId = 1;
   bool has_a_observerid() const;
   private:
   bool _internal_has_a_observerid() const;
@@ -14924,9 +14897,6 @@ class Msg_NotifyIdleObserver final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_NotifyIdleObserver)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -15075,7 +15045,7 @@ class Msg_DomainSetChanged final :
   std::string* _internal_mutable_a_adomain();
   public:
 
-  // required uint32 a_aSetType = 1;
+  // optional uint32 a_aSetType = 1;
   bool has_a_asettype() const;
   private:
   bool _internal_has_a_asettype() const;
@@ -15088,7 +15058,7 @@ class Msg_DomainSetChanged final :
   void _internal_set_a_asettype(uint32_t value);
   public:
 
-  // required uint32 a_aChangeType = 2;
+  // optional uint32 a_aChangeType = 2;
   bool has_a_achangetype() const;
   private:
   bool _internal_has_a_achangetype() const;
@@ -15104,9 +15074,6 @@ class Msg_DomainSetChanged final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_DomainSetChanged)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -15483,7 +15450,7 @@ class Msg_LoadProcessScript final :
   enum : int {
     kAUrlFieldNumber = 1,
   };
-  // required string a_url = 1;
+  // optional string a_url = 1;
   bool has_a_url() const;
   private:
   bool _internal_has_a_url() const;
@@ -15903,7 +15870,7 @@ class Msg_Push final :
     kAPrincipalFieldNumber = 2,
     kAMessageIdFieldNumber = 3,
   };
-  // required string a_scope = 1;
+  // optional string a_scope = 1;
   bool has_a_scope() const;
   private:
   bool _internal_has_a_scope() const;
@@ -15939,7 +15906,7 @@ class Msg_Push final :
   std::string* _internal_mutable_a_principal();
   public:
 
-  // required string a_messageId = 3;
+  // optional string a_messageId = 3;
   bool has_a_messageid() const;
   private:
   bool _internal_has_a_messageid() const;
@@ -15960,9 +15927,6 @@ class Msg_Push final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_Push)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -16116,7 +16080,7 @@ class Msg_PushWithData final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_data();
 
-  // required string a_scope = 1;
+  // optional string a_scope = 1;
   bool has_a_scope() const;
   private:
   bool _internal_has_a_scope() const;
@@ -16152,7 +16116,7 @@ class Msg_PushWithData final :
   std::string* _internal_mutable_a_principal();
   public:
 
-  // required string a_messageId = 3;
+  // optional string a_messageId = 3;
   bool has_a_messageid() const;
   private:
   bool _internal_has_a_messageid() const;
@@ -16173,9 +16137,6 @@ class Msg_PushWithData final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_PushWithData)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -16478,7 +16439,7 @@ class Msg_BlobURLRegistration final :
     kAAPartitionKeyFieldNumber = 4,
     kAABlobFieldNumber = 2,
   };
-  // required string a_aURI = 1;
+  // optional string a_aURI = 1;
   bool has_a_auri() const;
   private:
   bool _internal_has_a_auri() const;
@@ -16514,7 +16475,7 @@ class Msg_BlobURLRegistration final :
   std::string* _internal_mutable_a_aprincipal();
   public:
 
-  // required string a_aPartitionKey = 4;
+  // optional string a_aPartitionKey = 4;
   bool has_a_apartitionkey() const;
   private:
   bool _internal_has_a_apartitionkey() const;
@@ -16553,9 +16514,6 @@ class Msg_BlobURLRegistration final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_BlobURLRegistration)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -17002,7 +16960,7 @@ class Msg_ProvideAnonymousTemporaryFile final :
       ::protobuf::mozilla::dom::FileDescOrError* a_afd);
   ::protobuf::mozilla::dom::FileDescOrError* unsafe_arena_release_a_afd();
 
-  // required uint64 a_aID = 1;
+  // optional uint64 a_aID = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -17018,9 +16976,6 @@ class Msg_ProvideAnonymousTemporaryFile final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_ProvideAnonymousTemporaryFile)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -17173,7 +17128,7 @@ class Msg_SetPermissionsWithKey final :
   std::string* _internal_add_a_apermissions();
   public:
 
-  // required string a_aPermissionKey = 1;
+  // optional string a_aPermissionKey = 1;
   bool has_a_apermissionkey() const;
   private:
   bool _internal_has_a_apermissionkey() const;
@@ -17738,7 +17693,7 @@ class Reply_FlushCodeCoverageCounters final :
   enum : int {
     kAUnusedFieldNumber = 1,
   };
-  // required bool a_unused = 1;
+  // optional bool a_unused = 1;
   bool has_a_unused() const;
   private:
   bool _internal_has_a_unused() const;
@@ -19203,7 +19158,7 @@ class Msg_RegisterBrowsingContextGroup final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::OriginAgentClusterInitializer >&
       a_auseoriginagentcluster() const;
 
-  // required uint64 a_aGroupId = 1;
+  // optional uint64 a_aGroupId = 1;
   bool has_a_agroupid() const;
   private:
   bool _internal_has_a_agroupid() const;
@@ -19347,7 +19302,7 @@ class Msg_DestroyBrowsingContextGroup final :
   enum : int {
     kAAGroupIdFieldNumber = 1,
   };
-  // required uint64 a_aGroupId = 1;
+  // optional uint64 a_aGroupId = 1;
   bool has_a_agroupid() const;
   private:
   bool _internal_has_a_agroupid() const;
@@ -19509,7 +19464,7 @@ class Msg_SetUseOriginAgentCluster final :
   std::string* _internal_mutable_a_aprincipal();
   public:
 
-  // required uint64 a_aGroupId = 1;
+  // optional uint64 a_aGroupId = 1;
   bool has_a_agroupid() const;
   private:
   bool _internal_has_a_agroupid() const;
@@ -19522,7 +19477,7 @@ class Msg_SetUseOriginAgentCluster final :
   void _internal_set_a_agroupid(uint64_t value);
   public:
 
-  // required bool a_aUseOriginAgentCluster = 3;
+  // optional bool a_aUseOriginAgentCluster = 3;
   bool has_a_auseoriginagentcluster() const;
   private:
   bool _internal_has_a_auseoriginagentcluster() const;
@@ -19538,9 +19493,6 @@ class Msg_SetUseOriginAgentCluster final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_SetUseOriginAgentCluster)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -19707,7 +19659,7 @@ class Msg_LoadURI final :
   std::string* _internal_mutable_a_aloadstate();
   public:
 
-  // required bool a_aSetNavigating = 3;
+  // optional bool a_aSetNavigating = 3;
   bool has_a_asetnavigating() const;
   private:
   bool _internal_has_a_asetnavigating() const;
@@ -19854,7 +19806,7 @@ class Reply_LoadURI final :
   enum : int {
     kAASuccessFieldNumber = 1,
   };
-  // required bool a_aSuccess = 1;
+  // optional bool a_aSuccess = 1;
   bool has_a_asuccess() const;
   private:
   bool _internal_has_a_asuccess() const;
@@ -20162,7 +20114,7 @@ class Msg_DisplayLoadError final :
   std::string* _internal_mutable_a_acontext();
   public:
 
-  // required string a_aURI = 2;
+  // optional string a_aURI = 2;
   bool has_a_auri() const;
   private:
   bool _internal_has_a_auri() const;
@@ -20183,9 +20135,6 @@ class Msg_DisplayLoadError final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_DisplayLoadError)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -20347,7 +20296,7 @@ class Msg_GoBack final :
   void _internal_set_a_acancelcontentjsepoch(int32_t value);
   public:
 
-  // required bool a_aRequireUserInteraction = 3;
+  // optional bool a_aRequireUserInteraction = 3;
   bool has_a_arequireuserinteraction() const;
   private:
   bool _internal_has_a_arequireuserinteraction() const;
@@ -20360,7 +20309,7 @@ class Msg_GoBack final :
   void _internal_set_a_arequireuserinteraction(bool value);
   public:
 
-  // required bool a_aUserActivation = 4;
+  // optional bool a_aUserActivation = 4;
   bool has_a_auseractivation() const;
   private:
   bool _internal_has_a_auseractivation() const;
@@ -20376,9 +20325,6 @@ class Msg_GoBack final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_GoBack)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -20542,7 +20488,7 @@ class Msg_GoForward final :
   void _internal_set_a_acancelcontentjsepoch(int32_t value);
   public:
 
-  // required bool a_aRequireUserInteraction = 3;
+  // optional bool a_aRequireUserInteraction = 3;
   bool has_a_arequireuserinteraction() const;
   private:
   bool _internal_has_a_arequireuserinteraction() const;
@@ -20555,7 +20501,7 @@ class Msg_GoForward final :
   void _internal_set_a_arequireuserinteraction(bool value);
   public:
 
-  // required bool a_aUserActivation = 4;
+  // optional bool a_aUserActivation = 4;
   bool has_a_auseractivation() const;
   private:
   bool _internal_has_a_auseractivation() const;
@@ -20571,9 +20517,6 @@ class Msg_GoForward final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_GoForward)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -20724,7 +20667,7 @@ class Msg_GoToIndex final :
   std::string* _internal_mutable_a_acontext();
   public:
 
-  // required sint32 a_aIndex = 2;
+  // optional sint32 a_aIndex = 2;
   bool has_a_aindex() const;
   private:
   bool _internal_has_a_aindex() const;
@@ -20750,7 +20693,7 @@ class Msg_GoToIndex final :
   void _internal_set_a_acancelcontentjsepoch(int32_t value);
   public:
 
-  // required bool a_aUserActivation = 4;
+  // optional bool a_aUserActivation = 4;
   bool has_a_auseractivation() const;
   private:
   bool _internal_has_a_auseractivation() const;
@@ -20766,9 +20709,6 @@ class Msg_GoToIndex final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_GoToIndex)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -20917,7 +20857,7 @@ class Msg_Reload final :
   std::string* _internal_mutable_a_acontext();
   public:
 
-  // required uint32 a_aReloadFlags = 2;
+  // optional uint32 a_aReloadFlags = 2;
   bool has_a_areloadflags() const;
   private:
   bool _internal_has_a_areloadflags() const;
@@ -20933,9 +20873,6 @@ class Msg_Reload final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_Reload)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -21082,7 +21019,7 @@ class Msg_StopLoad final :
   std::string* _internal_mutable_a_acontext();
   public:
 
-  // required uint32 a_aStopFlags = 2;
+  // optional uint32 a_aStopFlags = 2;
   bool has_a_astopflags() const;
   private:
   bool _internal_has_a_astopflags() const;
@@ -21098,9 +21035,6 @@ class Msg_StopLoad final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_StopLoad)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -21249,7 +21183,7 @@ class Msg_OnAllowAccessFor final :
   std::string* _internal_mutable_a_aparentcontext();
   public:
 
-  // required string a_aTrackingOrigin = 2;
+  // optional string a_aTrackingOrigin = 2;
   bool has_a_atrackingorigin() const;
   private:
   bool _internal_has_a_atrackingorigin() const;
@@ -21285,7 +21219,7 @@ class Msg_OnAllowAccessFor final :
   std::string* _internal_mutable_a_areason();
   public:
 
-  // required uint32 a_aCookieBehavior = 3;
+  // optional uint32 a_aCookieBehavior = 3;
   bool has_a_acookiebehavior() const;
   private:
   bool _internal_has_a_acookiebehavior() const;
@@ -21471,7 +21405,7 @@ class Msg_OnContentBlockingDecision final :
   std::string* _internal_mutable_a_areason();
   public:
 
-  // required uint32 a_aRejectedReason = 3;
+  // optional uint32 a_aRejectedReason = 3;
   bool has_a_arejectedreason() const;
   private:
   bool _internal_has_a_arejectedreason() const;
@@ -21804,7 +21738,7 @@ class Msg_HistoryCommitIndexAndLength final :
   std::string* _internal_mutable_a_achangeid();
   public:
 
-  // required uint32 a_aIndex = 2;
+  // optional uint32 a_aIndex = 2;
   bool has_a_aindex() const;
   private:
   bool _internal_has_a_aindex() const;
@@ -21817,7 +21751,7 @@ class Msg_HistoryCommitIndexAndLength final :
   void _internal_set_a_aindex(uint32_t value);
   public:
 
-  // required uint32 a_aLength = 3;
+  // optional uint32 a_aLength = 3;
   bool has_a_alength() const;
   private:
   bool _internal_has_a_alength() const;
@@ -22890,7 +22824,7 @@ class Msg_InitNextGenLocalStorageEnabled final :
   enum : int {
     kAEnabledFieldNumber = 1,
   };
-  // required bool a_enabled = 1;
+  // optional bool a_enabled = 1;
   bool has_a_enabled() const;
   private:
   bool _internal_has_a_enabled() const;
@@ -23032,7 +22966,7 @@ class Msg_PRemotePrintJobConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -23631,7 +23565,7 @@ class Msg_SessionHistoryEntryTitle final :
   std::string* _internal_mutable_a_acontext();
   public:
 
-  // required string a_aTitle = 2;
+  // optional string a_aTitle = 2;
   bool has_a_atitle() const;
   private:
   bool _internal_has_a_atitle() const;
@@ -23652,9 +23586,6 @@ class Msg_SessionHistoryEntryTitle final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_SessionHistoryEntryTitle)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -23801,7 +23732,7 @@ class Msg_SessionHistoryEntryScrollRestorationIsManual final :
   std::string* _internal_mutable_a_acontext();
   public:
 
-  // required bool a_aIsManual = 2;
+  // optional bool a_aIsManual = 2;
   bool has_a_aismanual() const;
   private:
   bool _internal_has_a_aismanual() const;
@@ -23817,9 +23748,6 @@ class Msg_SessionHistoryEntryScrollRestorationIsManual final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_SessionHistoryEntryScrollRestorationIsManual)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -23967,7 +23895,7 @@ class Msg_SessionHistoryEntryScrollPosition final :
   std::string* _internal_mutable_a_acontext();
   public:
 
-  // required sint32 a_aX = 2;
+  // optional sint32 a_aX = 2;
   bool has_a_ax() const;
   private:
   bool _internal_has_a_ax() const;
@@ -23980,7 +23908,7 @@ class Msg_SessionHistoryEntryScrollPosition final :
   void _internal_set_a_ax(int32_t value);
   public:
 
-  // required sint32 a_aY = 3;
+  // optional sint32 a_aY = 3;
   bool has_a_ay() const;
   private:
   bool _internal_has_a_ay() const;
@@ -23996,9 +23924,6 @@ class Msg_SessionHistoryEntryScrollPosition final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_SessionHistoryEntryScrollPosition)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -24146,7 +24071,7 @@ class Msg_SessionHistoryEntryCacheKey final :
   std::string* _internal_mutable_a_acontext();
   public:
 
-  // required uint32 a_aCacheKey = 2;
+  // optional uint32 a_aCacheKey = 2;
   bool has_a_acachekey() const;
   private:
   bool _internal_has_a_acachekey() const;
@@ -24162,9 +24087,6 @@ class Msg_SessionHistoryEntryCacheKey final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_SessionHistoryEntryCacheKey)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -24311,7 +24233,7 @@ class Msg_SessionHistoryEntryStoreWindowNameInContiguousEntries final :
   std::string* _internal_mutable_a_acontext();
   public:
 
-  // required string a_aName = 2;
+  // optional string a_aName = 2;
   bool has_a_aname() const;
   private:
   bool _internal_has_a_aname() const;
@@ -24332,9 +24254,6 @@ class Msg_SessionHistoryEntryStoreWindowNameInContiguousEntries final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_SessionHistoryEntryStoreWindowNameInContiguousEntries)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -25814,7 +25733,7 @@ class Msg_InitStreamFilter final :
     kAAddonIdFieldNumber = 2,
     kAChannelIdFieldNumber = 1,
   };
-  // required string a_addonId = 2;
+  // optional string a_addonId = 2;
   bool has_a_addonid() const;
   private:
   bool _internal_has_a_addonid() const;
@@ -25832,7 +25751,7 @@ class Msg_InitStreamFilter final :
   std::string* _internal_mutable_a_addonid();
   public:
 
-  // required uint64 a_channelId = 1;
+  // optional uint64 a_channelId = 1;
   bool has_a_channelid() const;
   private:
   bool _internal_has_a_channelid() const;
@@ -25848,9 +25767,6 @@ class Msg_InitStreamFilter final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_InitStreamFilter)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -26125,7 +26041,7 @@ class Msg_PRemoteSpellcheckEngineConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -26705,7 +26621,7 @@ class Reply_IsSecureURI final :
   enum : int {
     kAIsSecureURIFieldNumber = 1,
   };
-  // required bool a_isSecureURI = 1;
+  // optional bool a_isSecureURI = 1;
   bool has_a_issecureuri() const;
   private:
   bool _internal_has_a_issecureuri() const;
@@ -26885,7 +26801,7 @@ class Msg_AccumulateMixedContentHSTS final :
   std::string* _internal_mutable_a_aoriginattributes();
   public:
 
-  // required bool a_aActive = 2;
+  // optional bool a_aActive = 2;
   bool has_a_aactive() const;
   private:
   bool _internal_has_a_aactive() const;
@@ -26901,9 +26817,6 @@ class Msg_AccumulateMixedContentHSTS final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_AccumulateMixedContentHSTS)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -27032,7 +26945,7 @@ class Msg_PHalConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -27298,7 +27211,7 @@ class Msg_PHeapSnapshotTempFileHelperConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -27564,7 +27477,7 @@ class Msg_PNeckoConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -27830,7 +27743,7 @@ class Msg_PSpeechSynthesisConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -28096,7 +28009,7 @@ class Msg_PMediaConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -28362,7 +28275,7 @@ class Msg_PWebrtcGlobalConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -28918,7 +28831,7 @@ class Msg_PURLClassifierConstructor final :
   std::string* _internal_mutable_a_principal();
   public:
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -29061,7 +28974,7 @@ class Reply_PURLClassifierConstructor final :
   enum : int {
     kASuccessFieldNumber = 1,
   };
-  // required bool a_success = 1;
+  // optional bool a_success = 1;
   bool has_a_success() const;
   private:
   bool _internal_has_a_success() const;
@@ -29241,7 +29154,7 @@ class Msg_PURLClassifierLocalConstructor final :
   std::string* _internal_mutable_a_uri();
   public:
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -29572,7 +29485,7 @@ class Msg_PURLClassifierLocalByNameConstructor final :
   std::string* _internal_mutable_a_alisttype();
   public:
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -29588,9 +29501,6 @@ class Msg_PURLClassifierLocalByNameConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_PURLClassifierLocalByNameConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -29844,7 +29754,7 @@ class Msg_PSessionStorageObserverConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -30281,7 +30191,7 @@ class Msg_SetURITitle final :
   std::string* _internal_mutable_a_uri();
   public:
 
-  // required string a_title = 2;
+  // optional string a_title = 2;
   bool has_a_title() const;
   private:
   bool _internal_has_a_title() const;
@@ -30507,7 +30417,7 @@ class Msg_LoadURIExternal final :
   std::string* _internal_mutable_a_browsingcontext();
   public:
 
-  // required bool a_wasExternallyTriggered = 5;
+  // optional bool a_wasExternallyTriggered = 5;
   bool has_a_wasexternallytriggered() const;
   private:
   bool _internal_has_a_wasexternallytriggered() const;
@@ -30520,7 +30430,7 @@ class Msg_LoadURIExternal final :
   void _internal_set_a_wasexternallytriggered(bool value);
   public:
 
-  // required bool a_hasValidUserGestureActivation = 6;
+  // optional bool a_hasValidUserGestureActivation = 6;
   bool has_a_hasvalidusergestureactivation() const;
   private:
   bool _internal_has_a_hasvalidusergestureactivation() const;
@@ -30533,7 +30443,7 @@ class Msg_LoadURIExternal final :
   void _internal_set_a_hasvalidusergestureactivation(bool value);
   public:
 
-  // required bool a_newWindowTarget = 7;
+  // optional bool a_newWindowTarget = 7;
   bool has_a_newwindowtarget() const;
   private:
   bool _internal_has_a_newwindowtarget() const;
@@ -30549,9 +30459,6 @@ class Msg_LoadURIExternal final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_LoadURIExternal)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -30684,7 +30591,7 @@ class Msg_ExtProtocolChannelConnectParent final :
   enum : int {
     kARegistrarIdFieldNumber = 1,
   };
-  // required uint64 a_registrarId = 1;
+  // optional uint64 a_registrarId = 1;
   bool has_a_registrarid() const;
   private:
   bool _internal_has_a_registrarid() const;
@@ -30827,7 +30734,7 @@ class Msg_SyncMessage final :
     kAAMessageFieldNumber = 1,
     kAADataFieldNumber = 2,
   };
-  // required string a_aMessage = 1;
+  // optional string a_aMessage = 1;
   bool has_a_amessage() const;
   private:
   bool _internal_has_a_amessage() const;
@@ -30866,9 +30773,6 @@ class Msg_SyncMessage final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_SyncMessage)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -31167,7 +31071,7 @@ class Msg_AddSecurityState final :
   std::string* _internal_mutable_a_acontext();
   public:
 
-  // required uint32 a_aStateFlags = 2;
+  // optional uint32 a_aStateFlags = 2;
   bool has_a_astateflags() const;
   private:
   bool _internal_has_a_astateflags() const;
@@ -31183,9 +31087,6 @@ class Msg_AddSecurityState final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_AddSecurityState)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -31342,7 +31243,7 @@ class Msg_PExternalHelperAppConstructor final :
   std::string* _internal_mutable_a_uri();
   public:
 
-  // required string a_aMimeContentType = 4;
+  // optional string a_aMimeContentType = 4;
   bool has_a_amimecontenttype() const;
   private:
   bool _internal_has_a_amimecontenttype() const;
@@ -31360,7 +31261,7 @@ class Msg_PExternalHelperAppConstructor final :
   std::string* _internal_mutable_a_amimecontenttype();
   public:
 
-  // required string a_aContentDisposition = 5;
+  // optional string a_aContentDisposition = 5;
   bool has_a_acontentdisposition() const;
   private:
   bool _internal_has_a_acontentdisposition() const;
@@ -31378,7 +31279,7 @@ class Msg_PExternalHelperAppConstructor final :
   std::string* _internal_mutable_a_acontentdisposition();
   public:
 
-  // required string a_aContentDispositionFilename = 7;
+  // optional string a_aContentDispositionFilename = 7;
   bool has_a_acontentdispositionfilename() const;
   private:
   bool _internal_has_a_acontentdispositionfilename() const;
@@ -31450,7 +31351,7 @@ class Msg_PExternalHelperAppConstructor final :
       ::protobuf::mozilla::net::LoadInfoArgs* a_loadinfoargs);
   ::protobuf::mozilla::net::LoadInfoArgs* unsafe_arena_release_a_loadinfoargs();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -31463,7 +31364,7 @@ class Msg_PExternalHelperAppConstructor final :
   void _internal_set_a_actorid(int64_t value);
   public:
 
-  // required uint32 a_aContentDispositionHint = 6;
+  // optional uint32 a_aContentDispositionHint = 6;
   bool has_a_acontentdispositionhint() const;
   private:
   bool _internal_has_a_acontentdispositionhint() const;
@@ -31476,7 +31377,7 @@ class Msg_PExternalHelperAppConstructor final :
   void _internal_set_a_acontentdispositionhint(uint32_t value);
   public:
 
-  // required bool a_aForceSave = 8;
+  // optional bool a_aForceSave = 8;
   bool has_a_aforcesave() const;
   private:
   bool _internal_has_a_aforcesave() const;
@@ -31489,7 +31390,7 @@ class Msg_PExternalHelperAppConstructor final :
   void _internal_set_a_aforcesave(bool value);
   public:
 
-  // required bool a_aWasFileChannel = 10;
+  // optional bool a_aWasFileChannel = 10;
   bool has_a_awasfilechannel() const;
   private:
   bool _internal_has_a_awasfilechannel() const;
@@ -31502,7 +31403,7 @@ class Msg_PExternalHelperAppConstructor final :
   void _internal_set_a_awasfilechannel(bool value);
   public:
 
-  // required sint64 a_aContentLength = 9;
+  // optional sint64 a_aContentLength = 9;
   bool has_a_acontentlength() const;
   private:
   bool _internal_has_a_acontentlength() const;
@@ -31782,7 +31683,7 @@ class Msg_PHandlerServiceConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -32048,7 +31949,7 @@ class Msg_AddGeolocationListener final :
   enum : int {
     kAHighAccuracyFieldNumber = 1,
   };
-  // required bool a_highAccuracy = 1;
+  // optional bool a_highAccuracy = 1;
   bool has_a_highaccuracy() const;
   private:
   bool _internal_has_a_highaccuracy() const;
@@ -32314,7 +32215,7 @@ class Msg_SetGeolocationHigherAccuracy final :
   enum : int {
     kAEnableFieldNumber = 1,
   };
-  // required bool a_enable = 1;
+  // optional bool a_enable = 1;
   bool has_a_enable() const;
   private:
   bool _internal_has_a_enable() const;
@@ -32456,7 +32357,7 @@ class Msg_ConsoleMessage final :
   enum : int {
     kAMessageFieldNumber = 1,
   };
-  // required string a_message = 1;
+  // optional string a_message = 1;
   bool has_a_message() const;
   private:
   bool _internal_has_a_message() const;
@@ -32611,7 +32512,7 @@ class Msg_ScriptErrorWithStack final :
     kAIsFromPrivateWindowFieldNumber = 7,
     kAIsFromChromeContextFieldNumber = 8,
   };
-  // required string a_message = 1;
+  // optional string a_message = 1;
   bool has_a_message() const;
   private:
   bool _internal_has_a_message() const;
@@ -32629,7 +32530,7 @@ class Msg_ScriptErrorWithStack final :
   std::string* _internal_mutable_a_message();
   public:
 
-  // required string a_sourceName = 2;
+  // optional string a_sourceName = 2;
   bool has_a_sourcename() const;
   private:
   bool _internal_has_a_sourcename() const;
@@ -32647,7 +32548,7 @@ class Msg_ScriptErrorWithStack final :
   std::string* _internal_mutable_a_sourcename();
   public:
 
-  // required string a_category = 6;
+  // optional string a_category = 6;
   bool has_a_category() const;
   private:
   bool _internal_has_a_category() const;
@@ -32683,7 +32584,7 @@ class Msg_ScriptErrorWithStack final :
       ::protobuf::mozilla::dom::ClonedMessageData* a_stack);
   ::protobuf::mozilla::dom::ClonedMessageData* unsafe_arena_release_a_stack();
 
-  // required uint32 a_lineNumber = 3;
+  // optional uint32 a_lineNumber = 3;
   bool has_a_linenumber() const;
   private:
   bool _internal_has_a_linenumber() const;
@@ -32696,7 +32597,7 @@ class Msg_ScriptErrorWithStack final :
   void _internal_set_a_linenumber(uint32_t value);
   public:
 
-  // required uint32 a_colNumber = 4;
+  // optional uint32 a_colNumber = 4;
   bool has_a_colnumber() const;
   private:
   bool _internal_has_a_colnumber() const;
@@ -32709,7 +32610,7 @@ class Msg_ScriptErrorWithStack final :
   void _internal_set_a_colnumber(uint32_t value);
   public:
 
-  // required uint32 a_flags = 5;
+  // optional uint32 a_flags = 5;
   bool has_a_flags() const;
   private:
   bool _internal_has_a_flags() const;
@@ -32722,7 +32623,7 @@ class Msg_ScriptErrorWithStack final :
   void _internal_set_a_flags(uint32_t value);
   public:
 
-  // required bool a_isFromPrivateWindow = 7;
+  // optional bool a_isFromPrivateWindow = 7;
   bool has_a_isfromprivatewindow() const;
   private:
   bool _internal_has_a_isfromprivatewindow() const;
@@ -32735,7 +32636,7 @@ class Msg_ScriptErrorWithStack final :
   void _internal_set_a_isfromprivatewindow(bool value);
   public:
 
-  // required bool a_isFromChromeContext = 8;
+  // optional bool a_isFromChromeContext = 8;
   bool has_a_isfromchromecontext() const;
   private:
   bool _internal_has_a_isfromchromecontext() const;
@@ -32751,9 +32652,6 @@ class Msg_ScriptErrorWithStack final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_ScriptErrorWithStack)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -34447,7 +34345,7 @@ class Reply_ClipboardHasType final :
   enum : int {
     kAHasTypeFieldNumber = 1,
   };
-  // required bool a_hasType = 1;
+  // optional bool a_hasType = 1;
   bool has_a_hastype() const;
   private:
   bool _internal_has_a_hastype() const;
@@ -34627,7 +34525,7 @@ class Msg_PClipboardWriteRequestConstructor final :
   std::string* _internal_mutable_a_asettingwindowcontext();
   public:
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -34899,7 +34797,7 @@ class Msg_GetIconForExtension final :
     kAAFileExtFieldNumber = 1,
     kAAIconSizeFieldNumber = 2,
   };
-  // required string a_aFileExt = 1;
+  // optional string a_aFileExt = 1;
   bool has_a_afileext() const;
   private:
   bool _internal_has_a_afileext() const;
@@ -34917,7 +34815,7 @@ class Msg_GetIconForExtension final :
   std::string* _internal_mutable_a_afileext();
   public:
 
-  // required uint32 a_aIconSize = 2;
+  // optional uint32 a_aIconSize = 2;
   bool has_a_aiconsize() const;
   private:
   bool _internal_has_a_aiconsize() const;
@@ -34933,9 +34831,6 @@ class Msg_GetIconForExtension final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_GetIconForExtension)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -35375,7 +35270,7 @@ class Msg_CopyFavicon final :
   std::string* _internal_mutable_a_newuri();
   public:
 
-  // required bool a_isPrivate = 3;
+  // optional bool a_isPrivate = 3;
   bool has_a_isprivate() const;
   private:
   bool _internal_has_a_isprivate() const;
@@ -35839,7 +35734,7 @@ class Msg_GraphicsError final :
   enum : int {
     kAAErrorFieldNumber = 1,
   };
-  // required string a_aError = 1;
+  // optional string a_aError = 1;
   bool has_a_aerror() const;
   private:
   bool _internal_has_a_aerror() const;
@@ -35986,7 +35881,7 @@ class Msg_BeginDriverCrashGuard final :
   enum : int {
     kAAGuardTypeFieldNumber = 1,
   };
-  // required uint32 a_aGuardType = 1;
+  // optional uint32 a_aGuardType = 1;
   bool has_a_aguardtype() const;
   private:
   bool _internal_has_a_aguardtype() const;
@@ -36128,7 +36023,7 @@ class Reply_BeginDriverCrashGuard final :
   enum : int {
     kACrashDetectedFieldNumber = 1,
   };
-  // required bool a_crashDetected = 1;
+  // optional bool a_crashDetected = 1;
   bool has_a_crashdetected() const;
   private:
   bool _internal_has_a_crashdetected() const;
@@ -36270,7 +36165,7 @@ class Msg_EndDriverCrashGuard final :
   enum : int {
     kAAGuardTypeFieldNumber = 1,
   };
-  // required uint32 a_aGuardType = 1;
+  // optional uint32 a_aGuardType = 1;
   bool has_a_aguardtype() const;
   private:
   bool _internal_has_a_aguardtype() const;
@@ -36537,7 +36432,7 @@ class Msg_AddIdleObserver final :
     kAObserverIdFieldNumber = 1,
     kAIdleTimeInSFieldNumber = 2,
   };
-  // required uint64 a_observerId = 1;
+  // optional uint64 a_observerId = 1;
   bool has_a_observerid() const;
   private:
   bool _internal_has_a_observerid() const;
@@ -36550,7 +36445,7 @@ class Msg_AddIdleObserver final :
   void _internal_set_a_observerid(uint64_t value);
   public:
 
-  // required uint32 a_idleTimeInS = 2;
+  // optional uint32 a_idleTimeInS = 2;
   bool has_a_idletimeins() const;
   private:
   bool _internal_has_a_idletimeins() const;
@@ -36566,9 +36461,6 @@ class Msg_AddIdleObserver final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_AddIdleObserver)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -36697,7 +36589,7 @@ class Msg_RemoveIdleObserver final :
     kAObserverIdFieldNumber = 1,
     kAIdleTimeInSFieldNumber = 2,
   };
-  // required uint64 a_observerId = 1;
+  // optional uint64 a_observerId = 1;
   bool has_a_observerid() const;
   private:
   bool _internal_has_a_observerid() const;
@@ -36710,7 +36602,7 @@ class Msg_RemoveIdleObserver final :
   void _internal_set_a_observerid(uint64_t value);
   public:
 
-  // required uint32 a_idleTimeInS = 2;
+  // optional uint32 a_idleTimeInS = 2;
   bool has_a_idletimeins() const;
   private:
   bool _internal_has_a_idletimeins() const;
@@ -36726,9 +36618,6 @@ class Msg_RemoveIdleObserver final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_RemoveIdleObserver)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -37003,7 +36892,7 @@ class Msg_RequestAnonymousTemporaryFile final :
   enum : int {
     kAAIDFieldNumber = 1,
   };
-  // required uint64 a_aID = 1;
+  // optional uint64 a_aID = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -37471,7 +37360,7 @@ class Msg_PContentPermissionRequestConstructor final :
   std::string* _internal_mutable_a_tabid();
   public:
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -37484,7 +37373,7 @@ class Msg_PContentPermissionRequestConstructor final :
   void _internal_set_a_actorid(int64_t value);
   public:
 
-  // required bool a_aIsHandlingUserInput = 5;
+  // optional bool a_aIsHandlingUserInput = 5;
   bool has_a_aishandlinguserinput() const;
   private:
   bool _internal_has_a_aishandlinguserinput() const;
@@ -37497,7 +37386,7 @@ class Msg_PContentPermissionRequestConstructor final :
   void _internal_set_a_aishandlinguserinput(bool value);
   public:
 
-  // required bool a_aMaybeUnsafePermissionDelegate = 6;
+  // optional bool a_aMaybeUnsafePermissionDelegate = 6;
   bool has_a_amaybeunsafepermissiondelegate() const;
   private:
   bool _internal_has_a_amaybeunsafepermissiondelegate() const;
@@ -37513,9 +37402,6 @@ class Msg_PContentPermissionRequestConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_PContentPermissionRequestConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -37772,7 +37658,7 @@ class Msg_ShutdownProfile final :
   enum : int {
     kAAProfileFieldNumber = 1,
   };
-  // required string a_aProfile = 1;
+  // optional string a_aProfile = 1;
   bool has_a_aprofile() const;
   private:
   bool _internal_has_a_aprofile() const;
@@ -37919,7 +37805,7 @@ class Msg_ShutdownPerfStats final :
   enum : int {
     kAAPerfStatsFieldNumber = 1,
   };
-  // required string a_aPerfStats = 1;
+  // optional string a_aPerfStats = 1;
   bool has_a_aperfstats() const;
   private:
   bool _internal_has_a_aperfstats() const;
@@ -38067,7 +37953,7 @@ class Msg_GetFontListShmBlock final :
     kAAGenerationFieldNumber = 1,
     kAAIndexFieldNumber = 2,
   };
-  // required uint32 a_aGeneration = 1;
+  // optional uint32 a_aGeneration = 1;
   bool has_a_ageneration() const;
   private:
   bool _internal_has_a_ageneration() const;
@@ -38080,7 +37966,7 @@ class Msg_GetFontListShmBlock final :
   void _internal_set_a_ageneration(uint32_t value);
   public:
 
-  // required uint32 a_aIndex = 2;
+  // optional uint32 a_aIndex = 2;
   bool has_a_aindex() const;
   private:
   bool _internal_has_a_aindex() const;
@@ -38096,9 +37982,6 @@ class Msg_GetFontListShmBlock final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_GetFontListShmBlock)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -38375,7 +38258,7 @@ class Msg_InitializeFamily final :
     kAAFamilyIndexFieldNumber = 2,
     kAALoadCmapsFieldNumber = 3,
   };
-  // required uint32 a_aGeneration = 1;
+  // optional uint32 a_aGeneration = 1;
   bool has_a_ageneration() const;
   private:
   bool _internal_has_a_ageneration() const;
@@ -38388,7 +38271,7 @@ class Msg_InitializeFamily final :
   void _internal_set_a_ageneration(uint32_t value);
   public:
 
-  // required uint32 a_aFamilyIndex = 2;
+  // optional uint32 a_aFamilyIndex = 2;
   bool has_a_afamilyindex() const;
   private:
   bool _internal_has_a_afamilyindex() const;
@@ -38401,7 +38284,7 @@ class Msg_InitializeFamily final :
   void _internal_set_a_afamilyindex(uint32_t value);
   public:
 
-  // required bool a_aLoadCmaps = 3;
+  // optional bool a_aLoadCmaps = 3;
   bool has_a_aloadcmaps() const;
   private:
   bool _internal_has_a_aloadcmaps() const;
@@ -38417,9 +38300,6 @@ class Msg_InitializeFamily final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_InitializeFamily)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -38694,7 +38574,7 @@ class Msg_SetCharacterMap final :
   std::string* _internal_mutable_a_amap();
   public:
 
-  // required uint32 a_aGeneration = 1;
+  // optional uint32 a_aGeneration = 1;
   bool has_a_ageneration() const;
   private:
   bool _internal_has_a_ageneration() const;
@@ -38707,7 +38587,7 @@ class Msg_SetCharacterMap final :
   void _internal_set_a_ageneration(uint32_t value);
   public:
 
-  // required uint32 a_aFamilyIndex = 2;
+  // optional uint32 a_aFamilyIndex = 2;
   bool has_a_afamilyindex() const;
   private:
   bool _internal_has_a_afamilyindex() const;
@@ -38720,7 +38600,7 @@ class Msg_SetCharacterMap final :
   void _internal_set_a_afamilyindex(uint32_t value);
   public:
 
-  // required bool a_aAlias = 3;
+  // optional bool a_aAlias = 3;
   bool has_a_aalias() const;
   private:
   bool _internal_has_a_aalias() const;
@@ -38733,7 +38613,7 @@ class Msg_SetCharacterMap final :
   void _internal_set_a_aalias(bool value);
   public:
 
-  // required uint32 a_aFaceIndex = 4;
+  // optional uint32 a_aFaceIndex = 4;
   bool has_a_afaceindex() const;
   private:
   bool _internal_has_a_afaceindex() const;
@@ -38749,9 +38629,6 @@ class Msg_SetCharacterMap final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_SetCharacterMap)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -38884,7 +38761,7 @@ class Msg_SetupFamilyCharMap final :
     kAAFamilyIndexFieldNumber = 2,
     kAAAliasFieldNumber = 3,
   };
-  // required uint32 a_aGeneration = 1;
+  // optional uint32 a_aGeneration = 1;
   bool has_a_ageneration() const;
   private:
   bool _internal_has_a_ageneration() const;
@@ -38897,7 +38774,7 @@ class Msg_SetupFamilyCharMap final :
   void _internal_set_a_ageneration(uint32_t value);
   public:
 
-  // required uint32 a_aFamilyIndex = 2;
+  // optional uint32 a_aFamilyIndex = 2;
   bool has_a_afamilyindex() const;
   private:
   bool _internal_has_a_afamilyindex() const;
@@ -38910,7 +38787,7 @@ class Msg_SetupFamilyCharMap final :
   void _internal_set_a_afamilyindex(uint32_t value);
   public:
 
-  // required bool a_aAlias = 3;
+  // optional bool a_aAlias = 3;
   bool has_a_aalias() const;
   private:
   bool _internal_has_a_aalias() const;
@@ -38926,9 +38803,6 @@ class Msg_SetupFamilyCharMap final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_SetupFamilyCharMap)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -39058,7 +38932,7 @@ class Msg_InitOtherFamilyNames final :
     kAAGenerationFieldNumber = 1,
     kAADeferFieldNumber = 2,
   };
-  // required uint32 a_aGeneration = 1;
+  // optional uint32 a_aGeneration = 1;
   bool has_a_ageneration() const;
   private:
   bool _internal_has_a_ageneration() const;
@@ -39071,7 +38945,7 @@ class Msg_InitOtherFamilyNames final :
   void _internal_set_a_ageneration(uint32_t value);
   public:
 
-  // required bool a_aDefer = 2;
+  // optional bool a_aDefer = 2;
   bool has_a_adefer() const;
   private:
   bool _internal_has_a_adefer() const;
@@ -39087,9 +38961,6 @@ class Msg_InitOtherFamilyNames final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_InitOtherFamilyNames)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -39217,7 +39088,7 @@ class Reply_InitOtherFamilyNames final :
   enum : int {
     kAALoadedFieldNumber = 1,
   };
-  // required bool a_aLoaded = 1;
+  // optional bool a_aLoaded = 1;
   bool has_a_aloaded() const;
   private:
   bool _internal_has_a_aloaded() const;
@@ -39360,7 +39231,7 @@ class Msg_StartCmapLoading final :
     kAAGenerationFieldNumber = 1,
     kAAStartIndexFieldNumber = 2,
   };
-  // required uint32 a_aGeneration = 1;
+  // optional uint32 a_aGeneration = 1;
   bool has_a_ageneration() const;
   private:
   bool _internal_has_a_ageneration() const;
@@ -39373,7 +39244,7 @@ class Msg_StartCmapLoading final :
   void _internal_set_a_ageneration(uint32_t value);
   public:
 
-  // required uint32 a_aStartIndex = 2;
+  // optional uint32 a_aStartIndex = 2;
   bool has_a_astartindex() const;
   private:
   bool _internal_has_a_astartindex() const;
@@ -39389,9 +39260,6 @@ class Msg_StartCmapLoading final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_StartCmapLoading)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -39901,7 +39769,7 @@ class Msg_CreateWindow final :
   std::string* _internal_mutable_a_auritoload();
   public:
 
-  // required string a_aFeatures = 10;
+  // optional string a_aFeatures = 10;
   bool has_a_afeatures() const;
   private:
   bool _internal_has_a_afeatures() const;
@@ -40009,7 +39877,7 @@ class Msg_CreateWindow final :
   std::string* _internal_mutable_a_aoriginattributes();
   public:
 
-  // required uint32 a_aChromeFlags = 4;
+  // optional uint32 a_aChromeFlags = 4;
   bool has_a_achromeflags() const;
   private:
   bool _internal_has_a_achromeflags() const;
@@ -40022,7 +39890,7 @@ class Msg_CreateWindow final :
   void _internal_set_a_achromeflags(uint32_t value);
   public:
 
-  // required bool a_aCalledFromJS = 5;
+  // optional bool a_aCalledFromJS = 5;
   bool has_a_acalledfromjs() const;
   private:
   bool _internal_has_a_acalledfromjs() const;
@@ -40035,7 +39903,7 @@ class Msg_CreateWindow final :
   void _internal_set_a_acalledfromjs(bool value);
   public:
 
-  // required bool a_aForPrinting = 6;
+  // optional bool a_aForPrinting = 6;
   bool has_a_aforprinting() const;
   private:
   bool _internal_has_a_aforprinting() const;
@@ -40048,7 +39916,7 @@ class Msg_CreateWindow final :
   void _internal_set_a_aforprinting(bool value);
   public:
 
-  // required bool a_aForWindowDotPrint = 7;
+  // optional bool a_aForWindowDotPrint = 7;
   bool has_a_aforwindowdotprint() const;
   private:
   bool _internal_has_a_aforwindowdotprint() const;
@@ -40061,7 +39929,7 @@ class Msg_CreateWindow final :
   void _internal_set_a_aforwindowdotprint(bool value);
   public:
 
-  // required bool a_aTopLevelCreatedByContent = 8;
+  // optional bool a_aTopLevelCreatedByContent = 8;
   bool has_a_atoplevelcreatedbycontent() const;
   private:
   bool _internal_has_a_atoplevelcreatedbycontent() const;
@@ -40074,7 +39942,7 @@ class Msg_CreateWindow final :
   void _internal_set_a_atoplevelcreatedbycontent(bool value);
   public:
 
-  // required bool a_aUserActivation = 16;
+  // optional bool a_aUserActivation = 16;
   bool has_a_auseractivation() const;
   private:
   bool _internal_has_a_auseractivation() const;
@@ -40087,7 +39955,7 @@ class Msg_CreateWindow final :
   void _internal_set_a_auseractivation(bool value);
   public:
 
-  // required bool a_aTextDirectiveUserActivation = 17;
+  // optional bool a_aTextDirectiveUserActivation = 17;
   bool has_a_atextdirectiveuseractivation() const;
   private:
   bool _internal_has_a_atextdirectiveuseractivation() const;
@@ -40463,7 +40331,7 @@ class Msg_CreateWindowInDifferentProcess final :
   std::string* _internal_mutable_a_auritoload();
   public:
 
-  // required string a_aFeatures = 7;
+  // optional string a_aFeatures = 7;
   bool has_a_afeatures() const;
   private:
   bool _internal_has_a_afeatures() const;
@@ -40499,7 +40367,7 @@ class Msg_CreateWindowInDifferentProcess final :
   std::string* _internal_mutable_a_amodifiers();
   public:
 
-  // required string a_aName = 9;
+  // optional string a_aName = 9;
   bool has_a_aname() const;
   private:
   bool _internal_has_a_aname() const;
@@ -40589,7 +40457,7 @@ class Msg_CreateWindowInDifferentProcess final :
   std::string* _internal_mutable_a_aoriginattributes();
   public:
 
-  // required uint32 a_aChromeFlags = 3;
+  // optional uint32 a_aChromeFlags = 3;
   bool has_a_achromeflags() const;
   private:
   bool _internal_has_a_achromeflags() const;
@@ -40602,7 +40470,7 @@ class Msg_CreateWindowInDifferentProcess final :
   void _internal_set_a_achromeflags(uint32_t value);
   public:
 
-  // required bool a_aCalledFromJS = 4;
+  // optional bool a_aCalledFromJS = 4;
   bool has_a_acalledfromjs() const;
   private:
   bool _internal_has_a_acalledfromjs() const;
@@ -40615,7 +40483,7 @@ class Msg_CreateWindowInDifferentProcess final :
   void _internal_set_a_acalledfromjs(bool value);
   public:
 
-  // required bool a_aTopLevelCreatedByContent = 5;
+  // optional bool a_aTopLevelCreatedByContent = 5;
   bool has_a_atoplevelcreatedbycontent() const;
   private:
   bool _internal_has_a_atoplevelcreatedbycontent() const;
@@ -40628,7 +40496,7 @@ class Msg_CreateWindowInDifferentProcess final :
   void _internal_set_a_atoplevelcreatedbycontent(bool value);
   public:
 
-  // required bool a_aUserActivation = 14;
+  // optional bool a_aUserActivation = 14;
   bool has_a_auseractivation() const;
   private:
   bool _internal_has_a_auseractivation() const;
@@ -40641,7 +40509,7 @@ class Msg_CreateWindowInDifferentProcess final :
   void _internal_set_a_auseractivation(bool value);
   public:
 
-  // required bool a_aTextDirectiveUserActivation = 15;
+  // optional bool a_aTextDirectiveUserActivation = 15;
   bool has_a_atextdirectiveuseractivation() const;
   private:
   bool _internal_has_a_atextdirectiveuseractivation() const;
@@ -40802,7 +40670,7 @@ class Msg_NotifyPushObservers final :
     kAPrincipalFieldNumber = 2,
     kAMessageIdFieldNumber = 3,
   };
-  // required string a_scope = 1;
+  // optional string a_scope = 1;
   bool has_a_scope() const;
   private:
   bool _internal_has_a_scope() const;
@@ -40838,7 +40706,7 @@ class Msg_NotifyPushObservers final :
   std::string* _internal_mutable_a_principal();
   public:
 
-  // required string a_messageId = 3;
+  // optional string a_messageId = 3;
   bool has_a_messageid() const;
   private:
   bool _internal_has_a_messageid() const;
@@ -40859,9 +40727,6 @@ class Msg_NotifyPushObservers final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_NotifyPushObservers)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -41015,7 +40880,7 @@ class Msg_NotifyPushObserversWithData final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_data();
 
-  // required string a_scope = 1;
+  // optional string a_scope = 1;
   bool has_a_scope() const;
   private:
   bool _internal_has_a_scope() const;
@@ -41051,7 +40916,7 @@ class Msg_NotifyPushObserversWithData final :
   std::string* _internal_mutable_a_principal();
   public:
 
-  // required string a_messageId = 3;
+  // optional string a_messageId = 3;
   bool has_a_messageid() const;
   private:
   bool _internal_has_a_messageid() const;
@@ -41072,9 +40937,6 @@ class Msg_NotifyPushObserversWithData final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_NotifyPushObserversWithData)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -41248,7 +41110,7 @@ class Msg_GetFilesRequest final :
   std::string* _internal_mutable_a_aid();
   public:
 
-  // required bool a_aRecursiveFlag = 3;
+  // optional bool a_aRecursiveFlag = 3;
   bool has_a_arecursiveflag() const;
   private:
   bool _internal_has_a_arecursiveflag() const;
@@ -41264,9 +41126,6 @@ class Msg_GetFilesRequest final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_GetFilesRequest)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -41545,7 +41404,7 @@ class Msg_StoreAndBroadcastBlobURLRegistration final :
     kAAPartitionKeyFieldNumber = 4,
     kABlobFieldNumber = 2,
   };
-  // required string a_url = 1;
+  // optional string a_url = 1;
   bool has_a_url() const;
   private:
   bool _internal_has_a_url() const;
@@ -41581,7 +41440,7 @@ class Msg_StoreAndBroadcastBlobURLRegistration final :
   std::string* _internal_mutable_a_principal();
   public:
 
-  // required string a_aPartitionKey = 4;
+  // optional string a_aPartitionKey = 4;
   bool has_a_apartitionkey() const;
   private:
   bool _internal_has_a_apartitionkey() const;
@@ -41620,9 +41479,6 @@ class Msg_StoreAndBroadcastBlobURLRegistration final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_StoreAndBroadcastBlobURLRegistration)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -43268,7 +43124,7 @@ class Msg_AddCertException final :
   std::string* _internal_mutable_a_acert();
   public:
 
-  // required string a_aHostName = 2;
+  // optional string a_aHostName = 2;
   bool has_a_ahostname() const;
   private:
   bool _internal_has_a_ahostname() const;
@@ -43304,7 +43160,7 @@ class Msg_AddCertException final :
   std::string* _internal_mutable_a_aoriginattributes();
   public:
 
-  // required sint32 a_aPort = 3;
+  // optional sint32 a_aPort = 3;
   bool has_a_aport() const;
   private:
   bool _internal_has_a_aport() const;
@@ -43317,7 +43173,7 @@ class Msg_AddCertException final :
   void _internal_set_a_aport(int32_t value);
   public:
 
-  // required bool a_aIsTemporary = 5;
+  // optional bool a_aIsTemporary = 5;
   bool has_a_aistemporary() const;
   private:
   bool _internal_has_a_aistemporary() const;
@@ -43333,9 +43189,6 @@ class Msg_AddCertException final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_AddCertException)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -43760,7 +43613,7 @@ class Reply_AutomaticStorageAccessPermissionCanBeGranted final :
   enum : int {
     kASuccessFieldNumber = 1,
   };
-  // required bool a_success = 1;
+  // optional bool a_success = 1;
   bool has_a_success() const;
   private:
   bool _internal_has_a_success() const;
@@ -43944,7 +43797,7 @@ class Msg_StorageAccessPermissionGrantedForOrigin final :
   std::string* _internal_mutable_a_atrackingprincipal();
   public:
 
-  // required string a_aTrackingOrigin = 4;
+  // optional string a_aTrackingOrigin = 4;
   bool has_a_atrackingorigin() const;
   private:
   bool _internal_has_a_atrackingorigin() const;
@@ -43980,7 +43833,7 @@ class Msg_StorageAccessPermissionGrantedForOrigin final :
   std::string* _internal_mutable_a_areason();
   public:
 
-  // required uint64 a_aTopLevelWindowId = 1;
+  // optional uint64 a_aTopLevelWindowId = 1;
   bool has_a_atoplevelwindowid() const;
   private:
   bool _internal_has_a_atoplevelwindowid() const;
@@ -43993,7 +43846,7 @@ class Msg_StorageAccessPermissionGrantedForOrigin final :
   void _internal_set_a_atoplevelwindowid(uint64_t value);
   public:
 
-  // required sint32 a_aAllowMode = 5;
+  // optional sint32 a_aAllowMode = 5;
   bool has_a_aallowmode() const;
   private:
   bool _internal_has_a_aallowmode() const;
@@ -44006,7 +43859,7 @@ class Msg_StorageAccessPermissionGrantedForOrigin final :
   void _internal_set_a_aallowmode(int32_t value);
   public:
 
-  // required bool a_aFrameOnly = 7;
+  // optional bool a_aFrameOnly = 7;
   bool has_a_aframeonly() const;
   private:
   bool _internal_has_a_aframeonly() const;
@@ -44022,9 +43875,6 @@ class Msg_StorageAccessPermissionGrantedForOrigin final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_StorageAccessPermissionGrantedForOrigin)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -44157,7 +44007,7 @@ class Reply_StorageAccessPermissionGrantedForOrigin final :
   enum : int {
     kAUnusedFieldNumber = 1,
   };
-  // required bool a_unused = 1;
+  // optional bool a_unused = 1;
   bool has_a_unused() const;
   private:
   bool _internal_has_a_unused() const;
@@ -44340,7 +44190,7 @@ class Msg_CompleteAllowAccessFor final :
   std::string* _internal_mutable_a_atrackingprincipal();
   public:
 
-  // required string a_aTrackingOrigin = 4;
+  // optional string a_aTrackingOrigin = 4;
   bool has_a_atrackingorigin() const;
   private:
   bool _internal_has_a_atrackingorigin() const;
@@ -44376,7 +44226,7 @@ class Msg_CompleteAllowAccessFor final :
   std::string* _internal_mutable_a_areason();
   public:
 
-  // required uint64 a_aTopLevelWindowId = 2;
+  // optional uint64 a_aTopLevelWindowId = 2;
   bool has_a_atoplevelwindowid() const;
   private:
   bool _internal_has_a_atoplevelwindowid() const;
@@ -44389,7 +44239,7 @@ class Msg_CompleteAllowAccessFor final :
   void _internal_set_a_atoplevelwindowid(uint64_t value);
   public:
 
-  // required uint32 a_aCookieBehavior = 5;
+  // optional uint32 a_aCookieBehavior = 5;
   bool has_a_acookiebehavior() const;
   private:
   bool _internal_has_a_acookiebehavior() const;
@@ -44853,7 +44703,7 @@ class Reply_SetAllowStorageAccessRequestFlag final :
   enum : int {
     kASuccessFieldNumber = 1,
   };
-  // required bool a_success = 1;
+  // optional bool a_success = 1;
   bool has_a_success() const;
   private:
   bool _internal_has_a_success() const;
@@ -45162,7 +45012,7 @@ class Reply_TestAllowStorageAccessRequestFlag final :
   enum : int {
     kASuccessFieldNumber = 1,
   };
-  // required bool a_success = 1;
+  // optional bool a_success = 1;
   bool has_a_success() const;
   private:
   bool _internal_has_a_success() const;
@@ -45779,7 +45629,7 @@ class Msg_TestStorageAccessPermission final :
   std::string* _internal_mutable_a_aembeddingprincipal();
   public:
 
-  // required string a_aEmbeddedOrigin = 2;
+  // optional string a_aEmbeddedOrigin = 2;
   bool has_a_aembeddedorigin() const;
   private:
   bool _internal_has_a_aembeddedorigin() const;
@@ -46428,7 +46278,7 @@ class Msg_NotifyPictureInPictureModeChanged final :
   std::string* _internal_mutable_a_acontext();
   public:
 
-  // required bool a_aEnabled = 2;
+  // optional bool a_aEnabled = 2;
   bool has_a_aenabled() const;
   private:
   bool _internal_has_a_aenabled() const;
@@ -46444,9 +46294,6 @@ class Msg_NotifyPictureInPictureModeChanged final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_NotifyPictureInPictureModeChanged)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -46593,7 +46440,7 @@ class Msg_NotifyMediaSessionUpdated final :
   std::string* _internal_mutable_a_acontext();
   public:
 
-  // required bool a_aIsCreated = 2;
+  // optional bool a_aIsCreated = 2;
   bool has_a_aiscreated() const;
   private:
   bool _internal_has_a_aiscreated() const;
@@ -46609,9 +46456,6 @@ class Msg_NotifyMediaSessionUpdated final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_NotifyMediaSessionUpdated)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -47114,7 +46958,7 @@ class Msg_NotifyMediaSessionSupportedActionChanged final :
   std::string* _internal_mutable_a_aaction();
   public:
 
-  // required bool a_aEnabled = 3;
+  // optional bool a_aEnabled = 3;
   bool has_a_aenabled() const;
   private:
   bool _internal_has_a_aenabled() const;
@@ -47280,7 +47124,7 @@ class Msg_NotifyMediaFullScreenState final :
   std::string* _internal_mutable_a_acontext();
   public:
 
-  // required bool a_aIsInFullScreen = 2;
+  // optional bool a_aIsInFullScreen = 2;
   bool has_a_aisinfullscreen() const;
   private:
   bool _internal_has_a_aisinfullscreen() const;
@@ -47296,9 +47140,6 @@ class Msg_NotifyMediaFullScreenState final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_NotifyMediaFullScreenState)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -47802,7 +47643,7 @@ class Msg_AddOrRemovePageAwakeRequest final :
   std::string* _internal_mutable_a_acontext();
   public:
 
-  // required bool a_aShouldAddCount = 2;
+  // optional bool a_aShouldAddCount = 2;
   bool has_a_ashouldaddcount() const;
   private:
   bool _internal_has_a_ashouldaddcount() const;
@@ -47818,9 +47659,6 @@ class Msg_AddOrRemovePageAwakeRequest final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_AddOrRemovePageAwakeRequest)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -47967,7 +47805,7 @@ class Msg_ReportServiceWorkerShutdownProgress final :
   std::string* _internal_mutable_a_aprogress();
   public:
 
-  // required uint32 a_aShutdownStateId = 1;
+  // optional uint32 a_aShutdownStateId = 1;
   bool has_a_ashutdownstateid() const;
   private:
   bool _internal_has_a_ashutdownstateid() const;
@@ -47983,9 +47821,6 @@ class Msg_ReportServiceWorkerShutdownProgress final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_ReportServiceWorkerShutdownProgress)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -48279,7 +48114,7 @@ class Msg_HistoryReload final :
   std::string* _internal_mutable_a_acontext();
   public:
 
-  // required uint32 a_aReloadFlags = 2;
+  // optional uint32 a_aReloadFlags = 2;
   bool has_a_areloadflags() const;
   private:
   bool _internal_has_a_areloadflags() const;
@@ -48295,9 +48130,6 @@ class Msg_HistoryReload final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_HistoryReload)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -48444,7 +48276,7 @@ class Msg_NotifyOnHistoryReload final :
   std::string* _internal_mutable_a_acontext();
   public:
 
-  // required bool a_aForceReload = 2;
+  // optional bool a_aForceReload = 2;
   bool has_a_aforcereload() const;
   private:
   bool _internal_has_a_aforcereload() const;
@@ -48460,9 +48292,6 @@ class Msg_NotifyOnHistoryReload final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_NotifyOnHistoryReload)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -48610,7 +48439,7 @@ class Reply_NotifyOnHistoryReload final :
   std::string* _internal_mutable_a_loadstate();
   public:
 
-  // required bool a_canReload = 1;
+  // optional bool a_canReload = 1;
   bool has_a_canreload() const;
   private:
   bool _internal_has_a_canreload() const;
@@ -48828,7 +48657,7 @@ class Msg_HistoryCommit final :
   std::string* _internal_mutable_a_apartitionedprincipal();
   public:
 
-  // required uint64 a_aLoadID = 2;
+  // optional uint64 a_aLoadID = 2;
   bool has_a_aloadid() const;
   private:
   bool _internal_has_a_aloadid() const;
@@ -48841,7 +48670,7 @@ class Msg_HistoryCommit final :
   void _internal_set_a_aloadid(uint64_t value);
   public:
 
-  // required uint32 a_aLoadType = 4;
+  // optional uint32 a_aLoadType = 4;
   bool has_a_aloadtype() const;
   private:
   bool _internal_has_a_aloadtype() const;
@@ -48854,7 +48683,7 @@ class Msg_HistoryCommit final :
   void _internal_set_a_aloadtype(uint32_t value);
   public:
 
-  // required bool a_aCloneEntryChildren = 5;
+  // optional bool a_aCloneEntryChildren = 5;
   bool has_a_acloneentrychildren() const;
   private:
   bool _internal_has_a_acloneentrychildren() const;
@@ -48867,7 +48696,7 @@ class Msg_HistoryCommit final :
   void _internal_set_a_acloneentrychildren(bool value);
   public:
 
-  // required bool a_aChannelExpired = 6;
+  // optional bool a_aChannelExpired = 6;
   bool has_a_achannelexpired() const;
   private:
   bool _internal_has_a_achannelexpired() const;
@@ -48880,7 +48709,7 @@ class Msg_HistoryCommit final :
   void _internal_set_a_achannelexpired(bool value);
   public:
 
-  // required uint32 a_aCacheKey = 7;
+  // optional uint32 a_aCacheKey = 7;
   bool has_a_acachekey() const;
   private:
   bool _internal_has_a_acachekey() const;
@@ -49054,7 +48883,7 @@ class Msg_HistoryGo final :
   std::string* _internal_mutable_a_acontext();
   public:
 
-  // required uint64 a_aHistoryEpoch = 3;
+  // optional uint64 a_aHistoryEpoch = 3;
   bool has_a_ahistoryepoch() const;
   private:
   bool _internal_has_a_ahistoryepoch() const;
@@ -49067,7 +48896,7 @@ class Msg_HistoryGo final :
   void _internal_set_a_ahistoryepoch(uint64_t value);
   public:
 
-  // required sint32 a_aOffset = 2;
+  // optional sint32 a_aOffset = 2;
   bool has_a_aoffset() const;
   private:
   bool _internal_has_a_aoffset() const;
@@ -49080,7 +48909,7 @@ class Msg_HistoryGo final :
   void _internal_set_a_aoffset(int32_t value);
   public:
 
-  // required bool a_aRequireUserInteraction = 4;
+  // optional bool a_aRequireUserInteraction = 4;
   bool has_a_arequireuserinteraction() const;
   private:
   bool _internal_has_a_arequireuserinteraction() const;
@@ -49093,7 +48922,7 @@ class Msg_HistoryGo final :
   void _internal_set_a_arequireuserinteraction(bool value);
   public:
 
-  // required bool a_aUserActivation = 5;
+  // optional bool a_aUserActivation = 5;
   bool has_a_auseractivation() const;
   private:
   bool _internal_has_a_auseractivation() const;
@@ -49109,9 +48938,6 @@ class Msg_HistoryGo final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_HistoryGo)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -49389,7 +49215,7 @@ class Msg_BlobURLDataRequest final :
     kAAPartitionKeyFieldNumber = 6,
     kAAInnerWindowIdFieldNumber = 5,
   };
-  // required string a_aBlobURL = 1;
+  // optional string a_aBlobURL = 1;
   bool has_a_abloburl() const;
   private:
   bool _internal_has_a_abloburl() const;
@@ -49461,7 +49287,7 @@ class Msg_BlobURLDataRequest final :
   std::string* _internal_mutable_a_aoriginattributes();
   public:
 
-  // required string a_aPartitionKey = 6;
+  // optional string a_aPartitionKey = 6;
   bool has_a_apartitionkey() const;
   private:
   bool _internal_has_a_apartitionkey() const;
@@ -49479,7 +49305,7 @@ class Msg_BlobURLDataRequest final :
   std::string* _internal_mutable_a_apartitionkey();
   public:
 
-  // required uint64 a_aInnerWindowId = 5;
+  // optional uint64 a_aInnerWindowId = 5;
   bool has_a_ainnerwindowid() const;
   private:
   bool _internal_has_a_ainnerwindowid() const;
@@ -49853,7 +49679,7 @@ class Msg_SetActiveSessionHistoryEntry final :
   std::string* _internal_mutable_a_changeid();
   public:
 
-  // required uint32 a_loadType = 4;
+  // optional uint32 a_loadType = 4;
   bool has_a_loadtype() const;
   private:
   bool _internal_has_a_loadtype() const;
@@ -49866,7 +49692,7 @@ class Msg_SetActiveSessionHistoryEntry final :
   void _internal_set_a_loadtype(uint32_t value);
   public:
 
-  // required uint32 a_updatedCacheKey = 5;
+  // optional uint32 a_updatedCacheKey = 5;
   bool has_a_updatedcachekey() const;
   private:
   bool _internal_has_a_updatedcachekey() const;
@@ -50503,7 +50329,7 @@ class Msg_CleanupPendingLoadState final :
   enum : int {
     kAALoadIdentifierFieldNumber = 1,
   };
-  // required uint64 a_aLoadIdentifier = 1;
+  // optional uint64 a_aLoadIdentifier = 1;
   bool has_a_aloadidentifier() const;
   private:
   bool _internal_has_a_aloadidentifier() const;
@@ -50653,7 +50479,7 @@ class Msg_ScriptError final :
     kAIsFromChromeContextFieldNumber = 9,
     kAInnerWindowIdFieldNumber = 8,
   };
-  // required string a_message = 1;
+  // optional string a_message = 1;
   bool has_a_message() const;
   private:
   bool _internal_has_a_message() const;
@@ -50671,7 +50497,7 @@ class Msg_ScriptError final :
   std::string* _internal_mutable_a_message();
   public:
 
-  // required string a_sourceName = 2;
+  // optional string a_sourceName = 2;
   bool has_a_sourcename() const;
   private:
   bool _internal_has_a_sourcename() const;
@@ -50689,7 +50515,7 @@ class Msg_ScriptError final :
   std::string* _internal_mutable_a_sourcename();
   public:
 
-  // required string a_category = 6;
+  // optional string a_category = 6;
   bool has_a_category() const;
   private:
   bool _internal_has_a_category() const;
@@ -50707,7 +50533,7 @@ class Msg_ScriptError final :
   std::string* _internal_mutable_a_category();
   public:
 
-  // required uint32 a_lineNumber = 3;
+  // optional uint32 a_lineNumber = 3;
   bool has_a_linenumber() const;
   private:
   bool _internal_has_a_linenumber() const;
@@ -50720,7 +50546,7 @@ class Msg_ScriptError final :
   void _internal_set_a_linenumber(uint32_t value);
   public:
 
-  // required uint32 a_colNumber = 4;
+  // optional uint32 a_colNumber = 4;
   bool has_a_colnumber() const;
   private:
   bool _internal_has_a_colnumber() const;
@@ -50733,7 +50559,7 @@ class Msg_ScriptError final :
   void _internal_set_a_colnumber(uint32_t value);
   public:
 
-  // required uint32 a_flags = 5;
+  // optional uint32 a_flags = 5;
   bool has_a_flags() const;
   private:
   bool _internal_has_a_flags() const;
@@ -50746,7 +50572,7 @@ class Msg_ScriptError final :
   void _internal_set_a_flags(uint32_t value);
   public:
 
-  // required bool a_isFromPrivateWindow = 7;
+  // optional bool a_isFromPrivateWindow = 7;
   bool has_a_isfromprivatewindow() const;
   private:
   bool _internal_has_a_isfromprivatewindow() const;
@@ -50759,7 +50585,7 @@ class Msg_ScriptError final :
   void _internal_set_a_isfromprivatewindow(bool value);
   public:
 
-  // required bool a_isFromChromeContext = 9;
+  // optional bool a_isFromChromeContext = 9;
   bool has_a_isfromchromecontext() const;
   private:
   bool _internal_has_a_isfromchromecontext() const;
@@ -50772,7 +50598,7 @@ class Msg_ScriptError final :
   void _internal_set_a_isfromchromecontext(bool value);
   public:
 
-  // required uint64 a_innerWindowId = 8;
+  // optional uint64 a_innerWindowId = 8;
   bool has_a_innerwindowid() const;
   private:
   bool _internal_has_a_innerwindowid() const;
@@ -50788,9 +50614,6 @@ class Msg_ScriptError final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_ScriptError)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -50928,7 +50751,7 @@ class Msg_ReportFrameTimingData final :
     kAADataFieldNumber = 4,
     kALoadInfoFieldNumber = 1,
   };
-  // required string a_entryName = 2;
+  // optional string a_entryName = 2;
   bool has_a_entryname() const;
   private:
   bool _internal_has_a_entryname() const;
@@ -50946,7 +50769,7 @@ class Msg_ReportFrameTimingData final :
   std::string* _internal_mutable_a_entryname();
   public:
 
-  // required string a_initiatorType = 3;
+  // optional string a_initiatorType = 3;
   bool has_a_initiatortype() const;
   private:
   bool _internal_has_a_initiatortype() const;
@@ -51173,7 +50996,7 @@ class Msg_CommitBrowsingContextTransaction final :
   std::string* _internal_mutable_a_atransaction();
   public:
 
-  // required uint64 a_aEpoch = 3;
+  // optional uint64 a_aEpoch = 3;
   bool has_a_aepoch() const;
   private:
   bool _internal_has_a_aepoch() const;
@@ -51321,7 +51144,7 @@ class Msg_AsyncMessage final :
     kAAMessageFieldNumber = 1,
     kAADataFieldNumber = 2,
   };
-  // required string a_aMessage = 1;
+  // optional string a_aMessage = 1;
   bool has_a_amessage() const;
   private:
   bool _internal_has_a_amessage() const;
@@ -51360,9 +51183,6 @@ class Msg_AsyncMessage final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_AsyncMessage)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -51491,7 +51311,7 @@ class Msg_NotifyPushSubscriptionModifiedObservers final :
     kAScopeFieldNumber = 1,
     kAPrincipalFieldNumber = 2,
   };
-  // required string a_scope = 1;
+  // optional string a_scope = 1;
   bool has_a_scope() const;
   private:
   bool _internal_has_a_scope() const;
@@ -51660,7 +51480,7 @@ class Msg_PushError final :
     kAMessageFieldNumber = 3,
     kAFlagsFieldNumber = 4,
   };
-  // required string a_scope = 1;
+  // optional string a_scope = 1;
   bool has_a_scope() const;
   private:
   bool _internal_has_a_scope() const;
@@ -51696,7 +51516,7 @@ class Msg_PushError final :
   std::string* _internal_mutable_a_principal();
   public:
 
-  // required string a_message = 3;
+  // optional string a_message = 3;
   bool has_a_message() const;
   private:
   bool _internal_has_a_message() const;
@@ -51714,7 +51534,7 @@ class Msg_PushError final :
   std::string* _internal_mutable_a_message();
   public:
 
-  // required uint32 a_flags = 4;
+  // optional uint32 a_flags = 4;
   bool has_a_flags() const;
   private:
   bool _internal_has_a_flags() const;
@@ -51730,9 +51550,6 @@ class Msg_PushError final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_PushError)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -51881,7 +51698,7 @@ class Msg_CreateBrowsingContext final :
   std::string* _internal_mutable_a_ainit();
   public:
 
-  // required uint64 a_aGroupId = 1;
+  // optional uint64 a_aGroupId = 1;
   bool has_a_agroupid() const;
   private:
   bool _internal_has_a_agroupid() const;
@@ -51897,9 +51714,6 @@ class Msg_CreateBrowsingContext final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_CreateBrowsingContext)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -52046,7 +51860,7 @@ class Msg_DiscardBrowsingContext final :
   std::string* _internal_mutable_a_acontext();
   public:
 
-  // required bool a_aDoDiscard = 2;
+  // optional bool a_aDoDiscard = 2;
   bool has_a_adodiscard() const;
   private:
   bool _internal_has_a_adodiscard() const;
@@ -52062,9 +51876,6 @@ class Msg_DiscardBrowsingContext final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_DiscardBrowsingContext)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -52192,7 +52003,7 @@ class Reply_DiscardBrowsingContext final :
   enum : int {
     kAUnusedFieldNumber = 1,
   };
-  // required uint64 a_unused = 1;
+  // optional uint64 a_unused = 1;
   bool has_a_unused() const;
   private:
   bool _internal_has_a_unused() const;
@@ -52374,7 +52185,7 @@ class Msg_AdjustWindowFocus final :
   std::string* _internal_mutable_a_aancestorbrowsingcontexttofocus();
   public:
 
-  // required uint64 a_aActionId = 3;
+  // optional uint64 a_aActionId = 3;
   bool has_a_aactionid() const;
   private:
   bool _internal_has_a_aactionid() const;
@@ -52387,7 +52198,7 @@ class Msg_AdjustWindowFocus final :
   void _internal_set_a_aactionid(uint64_t value);
   public:
 
-  // required bool a_aIsVisible = 2;
+  // optional bool a_aIsVisible = 2;
   bool has_a_aisvisible() const;
   private:
   bool _internal_has_a_aisvisible() const;
@@ -52400,7 +52211,7 @@ class Msg_AdjustWindowFocus final :
   void _internal_set_a_aisvisible(bool value);
   public:
 
-  // required bool a_aShouldClearAncestorFocus = 4;
+  // optional bool a_aShouldClearAncestorFocus = 4;
   bool has_a_ashouldclearancestorfocus() const;
   private:
   bool _internal_has_a_ashouldclearancestorfocus() const;
@@ -52568,7 +52379,7 @@ class Msg_WindowClose final :
   std::string* _internal_mutable_a_acontext();
   public:
 
-  // required bool a_aTrustedCaller = 2;
+  // optional bool a_aTrustedCaller = 2;
   bool has_a_atrustedcaller() const;
   private:
   bool _internal_has_a_atrustedcaller() const;
@@ -52584,9 +52395,6 @@ class Msg_WindowClose final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_WindowClose)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -52752,7 +52560,7 @@ class Msg_WindowFocus final :
   std::string* _internal_mutable_a_acallertype();
   public:
 
-  // required uint64 a_aActionId = 3;
+  // optional uint64 a_aActionId = 3;
   bool has_a_aactionid() const;
   private:
   bool _internal_has_a_aactionid() const;
@@ -53107,7 +52915,7 @@ class Msg_RaiseWindow final :
   std::string* _internal_mutable_a_acallertype();
   public:
 
-  // required uint64 a_aActionId = 3;
+  // optional uint64 a_aActionId = 3;
   bool has_a_aactionid() const;
   private:
   bool _internal_has_a_aactionid() const;
@@ -53420,7 +53228,7 @@ class Msg_SetFocusedBrowsingContext final :
   std::string* _internal_mutable_a_acontext();
   public:
 
-  // required uint64 a_aActionId = 2;
+  // optional uint64 a_aActionId = 2;
   bool has_a_aactionid() const;
   private:
   bool _internal_has_a_aactionid() const;
@@ -53436,9 +53244,6 @@ class Msg_SetFocusedBrowsingContext final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_SetFocusedBrowsingContext)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -53585,7 +53390,7 @@ class Msg_SetActiveBrowsingContext final :
   std::string* _internal_mutable_a_acontext();
   public:
 
-  // required uint64 a_aActionId = 2;
+  // optional uint64 a_aActionId = 2;
   bool has_a_aactionid() const;
   private:
   bool _internal_has_a_aactionid() const;
@@ -53601,9 +53406,6 @@ class Msg_SetActiveBrowsingContext final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_SetActiveBrowsingContext)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -53750,7 +53552,7 @@ class Msg_UnsetActiveBrowsingContext final :
   std::string* _internal_mutable_a_acontext();
   public:
 
-  // required uint64 a_aActionId = 2;
+  // optional uint64 a_aActionId = 2;
   bool has_a_aactionid() const;
   private:
   bool _internal_has_a_aactionid() const;
@@ -53766,9 +53568,6 @@ class Msg_UnsetActiveBrowsingContext final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_UnsetActiveBrowsingContext)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -53915,7 +53714,7 @@ class Msg_SetFocusedElement final :
   std::string* _internal_mutable_a_acontext();
   public:
 
-  // required bool a_aNeedsFocus = 2;
+  // optional bool a_aNeedsFocus = 2;
   bool has_a_aneedsfocus() const;
   private:
   bool _internal_has_a_aneedsfocus() const;
@@ -53931,9 +53730,6 @@ class Msg_SetFocusedElement final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_SetFocusedElement)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -54099,7 +53895,7 @@ class Msg_FinalizeFocusOuter final :
   std::string* _internal_mutable_a_acallertype();
   public:
 
-  // required bool a_aCanFocus = 2;
+  // optional bool a_aCanFocus = 2;
   bool has_a_acanfocus() const;
   private:
   bool _internal_has_a_acanfocus() const;
@@ -54246,7 +54042,7 @@ class Msg_InsertNewFocusActionId final :
   enum : int {
     kAAActionIdFieldNumber = 1,
   };
-  // required uint64 a_aActionId = 1;
+  // optional uint64 a_aActionId = 1;
   bool has_a_aactionid() const;
   private:
   bool _internal_has_a_aactionid() const;
@@ -54449,7 +54245,7 @@ class Msg_BlurToParent final :
   std::string* _internal_mutable_a_aancestorbrowsingcontexttofocus();
   public:
 
-  // required uint64 a_aActionId = 8;
+  // optional uint64 a_aActionId = 8;
   bool has_a_aactionid() const;
   private:
   bool _internal_has_a_aactionid() const;
@@ -54462,7 +54258,7 @@ class Msg_BlurToParent final :
   void _internal_set_a_aactionid(uint64_t value);
   public:
 
-  // required bool a_aIsLeavingDocument = 4;
+  // optional bool a_aIsLeavingDocument = 4;
   bool has_a_aisleavingdocument() const;
   private:
   bool _internal_has_a_aisleavingdocument() const;
@@ -54475,7 +54271,7 @@ class Msg_BlurToParent final :
   void _internal_set_a_aisleavingdocument(bool value);
   public:
 
-  // required bool a_aAdjustWidget = 5;
+  // optional bool a_aAdjustWidget = 5;
   bool has_a_aadjustwidget() const;
   private:
   bool _internal_has_a_aadjustwidget() const;
@@ -54488,7 +54284,7 @@ class Msg_BlurToParent final :
   void _internal_set_a_aadjustwidget(bool value);
   public:
 
-  // required bool a_aBrowsingContextToClearHandled = 6;
+  // optional bool a_aBrowsingContextToClearHandled = 6;
   bool has_a_abrowsingcontexttoclearhandled() const;
   private:
   bool _internal_has_a_abrowsingcontexttoclearhandled() const;
@@ -54501,7 +54297,7 @@ class Msg_BlurToParent final :
   void _internal_set_a_abrowsingcontexttoclearhandled(bool value);
   public:
 
-  // required bool a_aAncestorBrowsingContextToFocusHandled = 7;
+  // optional bool a_aAncestorBrowsingContextToFocusHandled = 7;
   bool has_a_aancestorbrowsingcontexttofocushandled() const;
   private:
   bool _internal_has_a_aancestorbrowsingcontexttofocushandled() const;
@@ -54712,7 +54508,7 @@ class Msg_BlurToChild final :
   std::string* _internal_mutable_a_aancestorbrowsingcontexttofocus();
   public:
 
-  // required uint64 a_aActionId = 6;
+  // optional uint64 a_aActionId = 6;
   bool has_a_aactionid() const;
   private:
   bool _internal_has_a_aactionid() const;
@@ -54725,7 +54521,7 @@ class Msg_BlurToChild final :
   void _internal_set_a_aactionid(uint64_t value);
   public:
 
-  // required bool a_aIsLeavingDocument = 4;
+  // optional bool a_aIsLeavingDocument = 4;
   bool has_a_aisleavingdocument() const;
   private:
   bool _internal_has_a_aisleavingdocument() const;
@@ -54738,7 +54534,7 @@ class Msg_BlurToChild final :
   void _internal_set_a_aisleavingdocument(bool value);
   public:
 
-  // required bool a_aAdjustWidget = 5;
+  // optional bool a_aAdjustWidget = 5;
   bool has_a_aadjustwidget() const;
   private:
   bool _internal_has_a_aadjustwidget() const;
@@ -54927,7 +54723,7 @@ class Msg_SetupFocusedAndActive final :
   std::string* _internal_mutable_a_aactivebrowsingcontext();
   public:
 
-  // required uint64 a_aActionIdForFocused = 2;
+  // optional uint64 a_aActionIdForFocused = 2;
   bool has_a_aactionidforfocused() const;
   private:
   bool _internal_has_a_aactionidforfocused() const;
@@ -54940,7 +54736,7 @@ class Msg_SetupFocusedAndActive final :
   void _internal_set_a_aactionidforfocused(uint64_t value);
   public:
 
-  // required uint64 a_aActionId = 4;
+  // optional uint64 a_aActionId = 4;
   bool has_a_aactionid() const;
   private:
   bool _internal_has_a_aactionid() const;
@@ -55108,7 +54904,7 @@ class Msg_ReviseActiveBrowsingContext final :
   std::string* _internal_mutable_a_aactivebrowsingcontext();
   public:
 
-  // required uint64 a_aOldActionId = 1;
+  // optional uint64 a_aOldActionId = 1;
   bool has_a_aoldactionid() const;
   private:
   bool _internal_has_a_aoldactionid() const;
@@ -55121,7 +54917,7 @@ class Msg_ReviseActiveBrowsingContext final :
   void _internal_set_a_aoldactionid(uint64_t value);
   public:
 
-  // required uint64 a_aNewActionId = 3;
+  // optional uint64 a_aNewActionId = 3;
   bool has_a_anewactionid() const;
   private:
   bool _internal_has_a_anewactionid() const;
@@ -55137,9 +54933,6 @@ class Msg_ReviseActiveBrowsingContext final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_ReviseActiveBrowsingContext)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -55288,7 +55081,7 @@ class Msg_ReviseFocusedBrowsingContext final :
   std::string* _internal_mutable_a_afocusedbrowsingcontext();
   public:
 
-  // required uint64 a_aOldActionId = 1;
+  // optional uint64 a_aOldActionId = 1;
   bool has_a_aoldactionid() const;
   private:
   bool _internal_has_a_aoldactionid() const;
@@ -55301,7 +55094,7 @@ class Msg_ReviseFocusedBrowsingContext final :
   void _internal_set_a_aoldactionid(uint64_t value);
   public:
 
-  // required uint64 a_aNewActionId = 3;
+  // optional uint64 a_aNewActionId = 3;
   bool has_a_anewactionid() const;
   private:
   bool _internal_has_a_anewactionid() const;
@@ -55317,9 +55110,6 @@ class Msg_ReviseFocusedBrowsingContext final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_ReviseFocusedBrowsingContext)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -55823,7 +55613,7 @@ class Msg_CommitWindowContextTransaction final :
   std::string* _internal_mutable_a_atransaction();
   public:
 
-  // required uint64 a_aEpoch = 3;
+  // optional uint64 a_aEpoch = 3;
   bool has_a_aepoch() const;
   private:
   bool _internal_has_a_aepoch() const;
@@ -56117,7 +55907,7 @@ class Msg_DiscardWindowContext final :
   enum : int {
     kAAContextIdFieldNumber = 1,
   };
-  // required uint64 a_aContextId = 1;
+  // optional uint64 a_aContextId = 1;
   bool has_a_acontextid() const;
   private:
   bool _internal_has_a_acontextid() const;
@@ -56259,7 +56049,7 @@ class Reply_DiscardWindowContext final :
   enum : int {
     kAUnusedFieldNumber = 1,
   };
-  // required bool a_unused = 1;
+  // optional bool a_unused = 1;
   bool has_a_unused() const;
   private:
   bool _internal_has_a_unused() const;
@@ -57996,7 +57786,7 @@ class Msg_AttributionEvent final :
     kAATargetHostFieldNumber = 5,
     kAAIndexFieldNumber = 3,
   };
-  // required string a_aSourceHost = 1;
+  // optional string a_aSourceHost = 1;
   bool has_a_asourcehost() const;
   private:
   bool _internal_has_a_asourcehost() const;
@@ -58032,7 +57822,7 @@ class Msg_AttributionEvent final :
   std::string* _internal_mutable_a_atype();
   public:
 
-  // required string a_aAd = 4;
+  // optional string a_aAd = 4;
   bool has_a_aad() const;
   private:
   bool _internal_has_a_aad() const;
@@ -58050,7 +57840,7 @@ class Msg_AttributionEvent final :
   std::string* _internal_mutable_a_aad();
   public:
 
-  // required string a_aTargetHost = 5;
+  // optional string a_aTargetHost = 5;
   bool has_a_atargethost() const;
   private:
   bool _internal_has_a_atargethost() const;
@@ -58068,7 +57858,7 @@ class Msg_AttributionEvent final :
   std::string* _internal_mutable_a_atargethost();
   public:
 
-  // required uint32 a_aIndex = 3;
+  // optional uint32 a_aIndex = 3;
   bool has_a_aindex() const;
   private:
   bool _internal_has_a_aindex() const;
@@ -58084,9 +57874,6 @@ class Msg_AttributionEvent final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_AttributionEvent)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -58271,7 +58058,7 @@ class Msg_AttributionConversion final :
   std::string* _internal_add_a_aimpressionsourcehosts();
   public:
 
-  // required string a_aTargetHost = 1;
+  // optional string a_aTargetHost = 1;
   bool has_a_atargethost() const;
   private:
   bool _internal_has_a_atargethost() const;
@@ -58289,7 +58076,7 @@ class Msg_AttributionConversion final :
   std::string* _internal_mutable_a_atargethost();
   public:
 
-  // required string a_aTask = 2;
+  // optional string a_aTask = 2;
   bool has_a_atask() const;
   private:
   bool _internal_has_a_atask() const;
@@ -58325,7 +58112,7 @@ class Msg_AttributionConversion final :
   std::string* _internal_mutable_a_aimpressiontype();
   public:
 
-  // required uint32 a_aHistogramSize = 3;
+  // optional uint32 a_aHistogramSize = 3;
   bool has_a_ahistogramsize() const;
   private:
   bool _internal_has_a_ahistogramsize() const;
@@ -58354,9 +58141,6 @@ class Msg_AttributionConversion final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_AttributionConversion)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -58764,7 +58548,7 @@ inline void Msg_ConstructPopupBrowser::set_allocated_a_windowinit(::protobuf::mo
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_ConstructPopupBrowser.a_windowInit)
 }
 
-// required uint32 a_chromeFlags = 6;
+// optional uint32 a_chromeFlags = 6;
 inline bool Msg_ConstructPopupBrowser::_internal_has_a_chromeflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -59182,7 +58966,7 @@ inline void Msg_UpdateRemotePrintSettings::set_allocated_a_aprintdata(::protobuf
 
 // Msg_PExtensionsConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PExtensionsConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -59596,7 +59380,7 @@ inline void Msg_ConstructBrowser::set_allocated_a_windowinit(::protobuf::mozilla
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_ConstructBrowser.a_windowInit)
 }
 
-// required uint32 a_chromeFlags = 6;
+// optional uint32 a_chromeFlags = 6;
 inline bool Msg_ConstructBrowser::_internal_has_a_chromeflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -59692,7 +59476,7 @@ inline void Msg_ConstructBrowser::set_allocated_a_cpid(std::string* a_cpid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_ConstructBrowser.a_cpId)
 }
 
-// required bool a_isForBrowser = 8;
+// optional bool a_isForBrowser = 8;
 inline bool Msg_ConstructBrowser::_internal_has_a_isforbrowser() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -59720,7 +59504,7 @@ inline void Msg_ConstructBrowser::set_a_isforbrowser(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_ConstructBrowser.a_isForBrowser)
 }
 
-// required bool a_isTopLevel = 9;
+// optional bool a_isTopLevel = 9;
 inline bool Msg_ConstructBrowser::_internal_has_a_istoplevel() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -59752,7 +59536,7 @@ inline void Msg_ConstructBrowser::set_a_istoplevel(bool value) {
 
 // Msg_PWebBrowserPersistDocumentConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PWebBrowserPersistDocumentConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -61032,7 +60816,7 @@ Msg_ReinitRendering::mutable_a_namespaces() {
 
 // Msg_NetworkLinkTypeChange
 
-// required uint32 a_type = 1;
+// optional uint32 a_type = 1;
 inline bool Msg_NetworkLinkTypeChange::_internal_has_a_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -61144,7 +60928,7 @@ inline void Msg_SetProcessSandbox::set_allocated_a_abroker(std::string* a_abroke
 
 // Msg_RequestMemoryReport
 
-// required uint32 a_generation = 1;
+// optional uint32 a_generation = 1;
 inline bool Msg_RequestMemoryReport::_internal_has_a_generation() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -61172,7 +60956,7 @@ inline void Msg_RequestMemoryReport::set_a_generation(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_RequestMemoryReport.a_generation)
 }
 
-// required bool a_anonymize = 2;
+// optional bool a_anonymize = 2;
 inline bool Msg_RequestMemoryReport::_internal_has_a_anonymize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -61200,7 +60984,7 @@ inline void Msg_RequestMemoryReport::set_a_anonymize(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_RequestMemoryReport.a_anonymize)
 }
 
-// required bool a_minimizeMemoryUsage = 3;
+// optional bool a_minimizeMemoryUsage = 3;
 inline bool Msg_RequestMemoryReport::_internal_has_a_minimizememoryusage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -61300,7 +61084,7 @@ inline void Msg_RequestMemoryReport::set_allocated_a_dmdfile(std::string* a_dmdf
 
 // Reply_RequestMemoryReport
 
-// required uint32 a_aGeneration = 1;
+// optional uint32 a_aGeneration = 1;
 inline bool Reply_RequestMemoryReport::_internal_has_a_ageneration() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -61332,7 +61116,7 @@ inline void Reply_RequestMemoryReport::set_a_ageneration(uint32_t value) {
 
 // Msg_BidiKeyboardNotify
 
-// required bool a_isLangRTL = 1;
+// optional bool a_isLangRTL = 1;
 inline bool Msg_BidiKeyboardNotify::_internal_has_a_islangrtl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -61360,7 +61144,7 @@ inline void Msg_BidiKeyboardNotify::set_a_islangrtl(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_BidiKeyboardNotify.a_isLangRTL)
 }
 
-// required bool a_haveBidiKeyboards = 2;
+// optional bool a_haveBidiKeyboards = 2;
 inline bool Msg_BidiKeyboardNotify::_internal_has_a_havebidikeyboards() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -61392,7 +61176,7 @@ inline void Msg_BidiKeyboardNotify::set_a_havebidikeyboards(bool value) {
 
 // Msg_PCycleCollectWithLogsConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PCycleCollectWithLogsConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -61420,7 +61204,7 @@ inline void Msg_PCycleCollectWithLogsConstructor::set_a_actorid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PCycleCollectWithLogsConstructor.a_actorid)
 }
 
-// required bool a_dumpAllTraces = 2;
+// optional bool a_dumpAllTraces = 2;
 inline bool Msg_PCycleCollectWithLogsConstructor::_internal_has_a_dumpalltraces() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -61592,7 +61376,7 @@ inline void Msg_PCycleCollectWithLogsConstructor::set_allocated_a_cclog(std::str
 
 // Msg_PTestShellConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PTestShellConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -61628,7 +61412,7 @@ inline void Msg_PTestShellConstructor::set_a_actorid(int64_t value) {
 
 // Msg_PScriptCacheConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PScriptCacheConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -61743,7 +61527,7 @@ inline void Msg_PScriptCacheConstructor::set_allocated_a_cachefile(::protobuf::m
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_PScriptCacheConstructor.a_cacheFile)
 }
 
-// required bool a_wantCacheData = 3;
+// optional bool a_wantCacheData = 3;
 inline bool Msg_PScriptCacheConstructor::_internal_has_a_wantcachedata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -62004,7 +61788,7 @@ Msg_RegisterChrome::mutable_a_overrides() {
   return &_impl_.a_overrides_;
 }
 
-// required string a_locale = 4;
+// optional string a_locale = 4;
 inline bool Msg_RegisterChrome::_internal_has_a_locale() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -62072,7 +61856,7 @@ inline void Msg_RegisterChrome::set_allocated_a_locale(std::string* a_locale) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_RegisterChrome.a_locale)
 }
 
-// required bool a_reset = 5;
+// optional bool a_reset = 5;
 inline bool Msg_RegisterChrome::_internal_has_a_reset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -63135,7 +62919,7 @@ inline void Msg_ClearScriptCache::set_allocated_a_aurl(std::string* a_aurl) {
 
 // Msg_SetOffline
 
-// required bool a_offline = 1;
+// optional bool a_offline = 1;
 inline bool Msg_SetOffline::_internal_has_a_offline() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -63167,7 +62951,7 @@ inline void Msg_SetOffline::set_a_offline(bool value) {
 
 // Msg_SetConnectivity
 
-// required bool a_connectivity = 1;
+// optional bool a_connectivity = 1;
 inline bool Msg_SetConnectivity::_internal_has_a_connectivity() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -63199,7 +62983,7 @@ inline void Msg_SetConnectivity::set_a_connectivity(bool value) {
 
 // Msg_SetCaptivePortalState
 
-// required sint32 a_aState = 1;
+// optional sint32 a_aState = 1;
 inline bool Msg_SetCaptivePortalState::_internal_has_a_astate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -63753,7 +63537,7 @@ inline void Msg_VarUpdate::set_allocated_a_var(::protobuf::mozilla::gfx::GfxVarU
 
 // Msg_UpdatePerfStatsCollectionMask
 
-// required uint64 a_aMask = 1;
+// optional uint64 a_aMask = 1;
 inline bool Msg_UpdatePerfStatsCollectionMask::_internal_has_a_amask() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -63789,7 +63573,7 @@ inline void Msg_UpdatePerfStatsCollectionMask::set_a_amask(uint64_t value) {
 
 // Reply_CollectPerfStatsJSON
 
-// required string a_aStats = 1;
+// optional string a_aStats = 1;
 inline bool Reply_CollectPerfStatsJSON::_internal_has_a_astats() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -63865,7 +63649,7 @@ inline void Reply_CollectPerfStatsJSON::set_allocated_a_astats(std::string* a_as
 
 // Reply_CollectScrollingMetrics
 
-// required uint32 a_pixelsScrolled = 1;
+// optional uint32 a_pixelsScrolled = 1;
 inline bool Reply_CollectScrollingMetrics::_internal_has_a_pixelsscrolled() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -63893,7 +63677,7 @@ inline void Reply_CollectScrollingMetrics::set_a_pixelsscrolled(uint32_t value) 
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Reply_CollectScrollingMetrics.a_pixelsScrolled)
 }
 
-// required uint32 a_scrollDurationMS = 2;
+// optional uint32 a_scrollDurationMS = 2;
 inline bool Reply_CollectScrollingMetrics::_internal_has_a_scrolldurationms() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -63997,7 +63781,7 @@ inline void Msg_GeolocationUpdate::set_allocated_a_aposition(std::string* a_apos
 
 // Msg_GeolocationError
 
-// required uint32 a_errorCode = 1;
+// optional uint32 a_errorCode = 1;
 inline bool Msg_GeolocationError::_internal_has_a_errorcode() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -64199,7 +63983,7 @@ inline void Msg_UpdateFontList::set_allocated_a_fontlist(::protobuf::mozilla::do
 
 // Msg_RebuildFontList
 
-// required bool a_aFullRebuild = 1;
+// optional bool a_aFullRebuild = 1;
 inline bool Msg_RebuildFontList::_internal_has_a_afullrebuild() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -64303,7 +64087,7 @@ inline void Msg_ForceGlobalReflow::set_allocated_a_aflags(std::string* a_aflags)
 
 // Msg_FontListShmBlockAdded
 
-// required uint32 a_aGeneration = 1;
+// optional uint32 a_aGeneration = 1;
 inline bool Msg_FontListShmBlockAdded::_internal_has_a_ageneration() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -64331,7 +64115,7 @@ inline void Msg_FontListShmBlockAdded::set_a_ageneration(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_FontListShmBlockAdded.a_aGeneration)
 }
 
-// required uint32 a_aIndex = 2;
+// optional uint32 a_aIndex = 2;
 inline bool Msg_FontListShmBlockAdded::_internal_has_a_aindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -65014,7 +64798,7 @@ inline void Msg_AddPermission::set_allocated_a_permission(std::string* a_permiss
 
 // Msg_FlushMemory
 
-// required string a_reason = 1;
+// optional string a_reason = 1;
 inline bool Msg_FlushMemory::_internal_has_a_reason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -65106,7 +64890,7 @@ inline void Msg_FlushMemory::set_allocated_a_reason(std::string* a_reason) {
 
 // Msg_ActivateA11y
 
-// required uint64 a_aDomains = 1;
+// optional uint64 a_aDomains = 1;
 inline bool Msg_ActivateA11y::_internal_has_a_adomains() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -65142,7 +64926,7 @@ inline void Msg_ActivateA11y::set_a_adomains(uint64_t value) {
 
 // Msg_SetCacheDomains
 
-// required uint64 a_aCacheDomains = 1;
+// optional uint64 a_aCacheDomains = 1;
 inline bool Msg_SetCacheDomains::_internal_has_a_acachedomains() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -65174,7 +64958,7 @@ inline void Msg_SetCacheDomains::set_a_acachedomains(uint64_t value) {
 
 // Msg_AppInfo
 
-// required string a_version = 1;
+// optional string a_version = 1;
 inline bool Msg_AppInfo::_internal_has_a_version() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -65242,7 +65026,7 @@ inline void Msg_AppInfo::set_allocated_a_version(std::string* a_version) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_AppInfo.a_version)
 }
 
-// required string a_buildID = 2;
+// optional string a_buildID = 2;
 inline bool Msg_AppInfo::_internal_has_a_buildid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -65310,7 +65094,7 @@ inline void Msg_AppInfo::set_allocated_a_buildid(std::string* a_buildid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_AppInfo.a_buildID)
 }
 
-// required string a_name = 3;
+// optional string a_name = 3;
 inline bool Msg_AppInfo::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -65378,7 +65162,7 @@ inline void Msg_AppInfo::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_AppInfo.a_name)
 }
 
-// required string a_UAName = 4;
+// optional string a_UAName = 4;
 inline bool Msg_AppInfo::_internal_has_a_uaname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -65446,7 +65230,7 @@ inline void Msg_AppInfo::set_allocated_a_uaname(std::string* a_uaname) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_AppInfo.a_UAName)
 }
 
-// required string a_ID = 5;
+// optional string a_ID = 5;
 inline bool Msg_AppInfo::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -65514,7 +65298,7 @@ inline void Msg_AppInfo::set_allocated_a_id(std::string* a_id) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_AppInfo.a_ID)
 }
 
-// required string a_vendor = 6;
+// optional string a_vendor = 6;
 inline bool Msg_AppInfo::_internal_has_a_vendor() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -65582,7 +65366,7 @@ inline void Msg_AppInfo::set_allocated_a_vendor(std::string* a_vendor) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_AppInfo.a_vendor)
 }
 
-// required string a_sourceURL = 7;
+// optional string a_sourceURL = 7;
 inline bool Msg_AppInfo::_internal_has_a_sourceurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -65650,7 +65434,7 @@ inline void Msg_AppInfo::set_allocated_a_sourceurl(std::string* a_sourceurl) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_AppInfo.a_sourceURL)
 }
 
-// required string a_updateURL = 8;
+// optional string a_updateURL = 8;
 inline bool Msg_AppInfo::_internal_has_a_updateurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -65722,7 +65506,7 @@ inline void Msg_AppInfo::set_allocated_a_updateurl(std::string* a_updateurl) {
 
 // Msg_RemoteType
 
-// required string a_aRemoteType = 1;
+// optional string a_aRemoteType = 1;
 inline bool Msg_RemoteType::_internal_has_a_aremotetype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -65790,7 +65574,7 @@ inline void Msg_RemoteType::set_allocated_a_aremotetype(std::string* a_aremotety
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_RemoteType.a_aRemoteType)
 }
 
-// required string a_aProfile = 2;
+// optional string a_aProfile = 2;
 inline bool Msg_RemoteType::_internal_has_a_aprofile() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -66121,7 +65905,7 @@ Msg_InitJSActorInfos::a_awindowinfos() const {
 
 // Msg_UnregisterJSWindowActor
 
-// required string a_name = 1;
+// optional string a_name = 1;
 inline bool Msg_UnregisterJSWindowActor::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -66193,7 +65977,7 @@ inline void Msg_UnregisterJSWindowActor::set_allocated_a_name(std::string* a_nam
 
 // Msg_UnregisterJSProcessActor
 
-// required string a_name = 1;
+// optional string a_name = 1;
 inline bool Msg_UnregisterJSProcessActor::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -66805,7 +66589,7 @@ Msg_SetXPCOMProcessAttributes::mutable_a_sharedfontlistblocks() {
   return &_impl_.a_sharedfontlistblocks_;
 }
 
-// required bool a_aIsStartingUp = 8;
+// optional bool a_aIsStartingUp = 8;
 inline bool Msg_SetXPCOMProcessAttributes::_internal_has_a_aisstartingup() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -66985,7 +66769,7 @@ inline void Msg_LoadAndRegisterSheet::set_allocated_a_uri(std::string* a_uri) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_LoadAndRegisterSheet.a_uri)
 }
 
-// required uint32 a_type = 2;
+// optional uint32 a_type = 2;
 inline bool Msg_LoadAndRegisterSheet::_internal_has_a_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -67085,7 +66869,7 @@ inline void Msg_UnregisterSheet::set_allocated_a_uri(std::string* a_uri) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_UnregisterSheet.a_uri)
 }
 
-// required uint32 a_type = 2;
+// optional uint32 a_type = 2;
 inline bool Msg_UnregisterSheet::_internal_has_a_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -67117,7 +66901,7 @@ inline void Msg_UnregisterSheet::set_a_type(uint32_t value) {
 
 // Msg_NotifyIdleObserver
 
-// required uint64 a_observerId = 1;
+// optional uint64 a_observerId = 1;
 inline bool Msg_NotifyIdleObserver::_internal_has_a_observerid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -67145,7 +66929,7 @@ inline void Msg_NotifyIdleObserver::set_a_observerid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_NotifyIdleObserver.a_observerId)
 }
 
-// required string a_topic = 2;
+// optional string a_topic = 2;
 inline bool Msg_NotifyIdleObserver::_internal_has_a_topic() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -67213,7 +66997,7 @@ inline void Msg_NotifyIdleObserver::set_allocated_a_topic(std::string* a_topic) 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_NotifyIdleObserver.a_topic)
 }
 
-// required string a_str = 3;
+// optional string a_str = 3;
 inline bool Msg_NotifyIdleObserver::_internal_has_a_str() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -67285,7 +67069,7 @@ inline void Msg_NotifyIdleObserver::set_allocated_a_str(std::string* a_str) {
 
 // Msg_DomainSetChanged
 
-// required uint32 a_aSetType = 1;
+// optional uint32 a_aSetType = 1;
 inline bool Msg_DomainSetChanged::_internal_has_a_asettype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -67313,7 +67097,7 @@ inline void Msg_DomainSetChanged::set_a_asettype(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_DomainSetChanged.a_aSetType)
 }
 
-// required uint32 a_aChangeType = 2;
+// optional uint32 a_aChangeType = 2;
 inline bool Msg_DomainSetChanged::_internal_has_a_achangetype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -67421,7 +67205,7 @@ inline void Msg_DomainSetChanged::set_allocated_a_adomain(std::string* a_adomain
 
 // Msg_LoadProcessScript
 
-// required string a_url = 1;
+// optional string a_url = 1;
 inline bool Msg_LoadProcessScript::_internal_has_a_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -67569,7 +67353,7 @@ inline void Msg_UpdateWindow::set_allocated_a_achildid(std::string* a_achildid) 
 
 // Msg_Push
 
-// required string a_scope = 1;
+// optional string a_scope = 1;
 inline bool Msg_Push::_internal_has_a_scope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -67705,7 +67489,7 @@ inline void Msg_Push::set_allocated_a_principal(std::string* a_principal) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_Push.a_principal)
 }
 
-// required string a_messageId = 3;
+// optional string a_messageId = 3;
 inline bool Msg_Push::_internal_has_a_messageid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -67777,7 +67561,7 @@ inline void Msg_Push::set_allocated_a_messageid(std::string* a_messageid) {
 
 // Msg_PushWithData
 
-// required string a_scope = 1;
+// optional string a_scope = 1;
 inline bool Msg_PushWithData::_internal_has_a_scope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -67913,7 +67697,7 @@ inline void Msg_PushWithData::set_allocated_a_principal(std::string* a_principal
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_PushWithData.a_principal)
 }
 
-// required string a_messageId = 3;
+// optional string a_messageId = 3;
 inline bool Msg_PushWithData::_internal_has_a_messageid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -68191,7 +67975,7 @@ inline void Msg_GetFilesResponse::set_allocated_a_aresult(::protobuf::mozilla::d
 
 // Msg_BlobURLRegistration
 
-// required string a_aURI = 1;
+// optional string a_aURI = 1;
 inline bool Msg_BlobURLRegistration::_internal_has_a_auri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -68414,7 +68198,7 @@ inline void Msg_BlobURLRegistration::set_allocated_a_aprincipal(std::string* a_a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_BlobURLRegistration.a_aPrincipal)
 }
 
-// required string a_aPartitionKey = 4;
+// optional string a_aPartitionKey = 4;
 inline bool Msg_BlobURLRegistration::_internal_has_a_apartitionkey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -68606,7 +68390,7 @@ Msg_GMPsChanged::a_capabilities() const {
 
 // Msg_ProvideAnonymousTemporaryFile
 
-// required uint64 a_aID = 1;
+// optional uint64 a_aID = 1;
 inline bool Msg_ProvideAnonymousTemporaryFile::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -68725,7 +68509,7 @@ inline void Msg_ProvideAnonymousTemporaryFile::set_allocated_a_afd(::protobuf::m
 
 // Msg_SetPermissionsWithKey
 
-// required string a_aPermissionKey = 1;
+// optional string a_aPermissionKey = 1;
 inline bool Msg_SetPermissionsWithKey::_internal_has_a_apermissionkey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -68989,7 +68773,7 @@ inline void Msg_ShareCodeCoverageMutex::set_allocated_a_handle(std::string* a_ha
 
 // Reply_FlushCodeCoverageCounters
 
-// required bool a_unused = 1;
+// optional bool a_unused = 1;
 inline bool Reply_FlushCodeCoverageCounters::_internal_has_a_unused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -69566,7 +69350,7 @@ inline void Msg_UpdateMediaControlAction::set_allocated_a_aaction(std::string* a
 
 // Msg_RegisterBrowsingContextGroup
 
-// required uint64 a_aGroupId = 1;
+// optional uint64 a_aGroupId = 1;
 inline bool Msg_RegisterBrowsingContextGroup::_internal_has_a_agroupid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -69672,7 +69456,7 @@ Msg_RegisterBrowsingContextGroup::a_auseoriginagentcluster() const {
 
 // Msg_DestroyBrowsingContextGroup
 
-// required uint64 a_aGroupId = 1;
+// optional uint64 a_aGroupId = 1;
 inline bool Msg_DestroyBrowsingContextGroup::_internal_has_a_agroupid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -69704,7 +69488,7 @@ inline void Msg_DestroyBrowsingContextGroup::set_a_agroupid(uint64_t value) {
 
 // Msg_SetUseOriginAgentCluster
 
-// required uint64 a_aGroupId = 1;
+// optional uint64 a_aGroupId = 1;
 inline bool Msg_SetUseOriginAgentCluster::_internal_has_a_agroupid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -69800,7 +69584,7 @@ inline void Msg_SetUseOriginAgentCluster::set_allocated_a_aprincipal(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_SetUseOriginAgentCluster.a_aPrincipal)
 }
 
-// required bool a_aUseOriginAgentCluster = 3;
+// optional bool a_aUseOriginAgentCluster = 3;
 inline bool Msg_SetUseOriginAgentCluster::_internal_has_a_auseoriginagentcluster() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -69968,7 +69752,7 @@ inline void Msg_LoadURI::set_allocated_a_aloadstate(std::string* a_aloadstate) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_LoadURI.a_aLoadState)
 }
 
-// required bool a_aSetNavigating = 3;
+// optional bool a_aSetNavigating = 3;
 inline bool Msg_LoadURI::_internal_has_a_asetnavigating() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -70000,7 +69784,7 @@ inline void Msg_LoadURI::set_a_asetnavigating(bool value) {
 
 // Reply_LoadURI
 
-// required bool a_aSuccess = 1;
+// optional bool a_aSuccess = 1;
 inline bool Reply_LoadURI::_internal_has_a_asuccess() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -70172,7 +69956,7 @@ inline void Msg_DisplayLoadError::set_allocated_a_acontext(std::string* a_aconte
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_DisplayLoadError.a_aContext)
 }
 
-// required string a_aURI = 2;
+// optional string a_aURI = 2;
 inline bool Msg_DisplayLoadError::_internal_has_a_auri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -70340,7 +70124,7 @@ inline void Msg_GoBack::set_a_acancelcontentjsepoch(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_GoBack.a_aCancelContentJSEpoch)
 }
 
-// required bool a_aRequireUserInteraction = 3;
+// optional bool a_aRequireUserInteraction = 3;
 inline bool Msg_GoBack::_internal_has_a_arequireuserinteraction() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -70368,7 +70152,7 @@ inline void Msg_GoBack::set_a_arequireuserinteraction(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_GoBack.a_aRequireUserInteraction)
 }
 
-// required bool a_aUserActivation = 4;
+// optional bool a_aUserActivation = 4;
 inline bool Msg_GoBack::_internal_has_a_auseractivation() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -70496,7 +70280,7 @@ inline void Msg_GoForward::set_a_acancelcontentjsepoch(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_GoForward.a_aCancelContentJSEpoch)
 }
 
-// required bool a_aRequireUserInteraction = 3;
+// optional bool a_aRequireUserInteraction = 3;
 inline bool Msg_GoForward::_internal_has_a_arequireuserinteraction() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -70524,7 +70308,7 @@ inline void Msg_GoForward::set_a_arequireuserinteraction(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_GoForward.a_aRequireUserInteraction)
 }
 
-// required bool a_aUserActivation = 4;
+// optional bool a_aUserActivation = 4;
 inline bool Msg_GoForward::_internal_has_a_auseractivation() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -70624,7 +70408,7 @@ inline void Msg_GoToIndex::set_allocated_a_acontext(std::string* a_acontext) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_GoToIndex.a_aContext)
 }
 
-// required sint32 a_aIndex = 2;
+// optional sint32 a_aIndex = 2;
 inline bool Msg_GoToIndex::_internal_has_a_aindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -70680,7 +70464,7 @@ inline void Msg_GoToIndex::set_a_acancelcontentjsepoch(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_GoToIndex.a_aCancelContentJSEpoch)
 }
 
-// required bool a_aUserActivation = 4;
+// optional bool a_aUserActivation = 4;
 inline bool Msg_GoToIndex::_internal_has_a_auseractivation() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -70780,7 +70564,7 @@ inline void Msg_Reload::set_allocated_a_acontext(std::string* a_acontext) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_Reload.a_aContext)
 }
 
-// required uint32 a_aReloadFlags = 2;
+// optional uint32 a_aReloadFlags = 2;
 inline bool Msg_Reload::_internal_has_a_areloadflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -70880,7 +70664,7 @@ inline void Msg_StopLoad::set_allocated_a_acontext(std::string* a_acontext) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_StopLoad.a_aContext)
 }
 
-// required uint32 a_aStopFlags = 2;
+// optional uint32 a_aStopFlags = 2;
 inline bool Msg_StopLoad::_internal_has_a_astopflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -70980,7 +70764,7 @@ inline void Msg_OnAllowAccessFor::set_allocated_a_aparentcontext(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_OnAllowAccessFor.a_aParentContext)
 }
 
-// required string a_aTrackingOrigin = 2;
+// optional string a_aTrackingOrigin = 2;
 inline bool Msg_OnAllowAccessFor::_internal_has_a_atrackingorigin() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -71048,7 +70832,7 @@ inline void Msg_OnAllowAccessFor::set_allocated_a_atrackingorigin(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_OnAllowAccessFor.a_aTrackingOrigin)
 }
 
-// required uint32 a_aCookieBehavior = 3;
+// optional uint32 a_aCookieBehavior = 3;
 inline bool Msg_OnAllowAccessFor::_internal_has_a_acookiebehavior() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -71284,7 +71068,7 @@ inline void Msg_OnContentBlockingDecision::set_allocated_a_areason(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_OnContentBlockingDecision.a_aReason)
 }
 
-// required uint32 a_aRejectedReason = 3;
+// optional uint32 a_aRejectedReason = 3;
 inline bool Msg_OnContentBlockingDecision::_internal_has_a_arejectedreason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -71456,7 +71240,7 @@ inline void Msg_HistoryCommitIndexAndLength::set_allocated_a_acontext(std::strin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_HistoryCommitIndexAndLength.a_aContext)
 }
 
-// required uint32 a_aIndex = 2;
+// optional uint32 a_aIndex = 2;
 inline bool Msg_HistoryCommitIndexAndLength::_internal_has_a_aindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -71484,7 +71268,7 @@ inline void Msg_HistoryCommitIndexAndLength::set_a_aindex(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_HistoryCommitIndexAndLength.a_aIndex)
 }
 
-// required uint32 a_aLength = 3;
+// optional uint32 a_aLength = 3;
 inline bool Msg_HistoryCommitIndexAndLength::_internal_has_a_alength() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -72152,7 +71936,7 @@ inline void Msg_UpdateMediaCodecsSupported::set_allocated_a_asupported(std::stri
 
 // Msg_InitNextGenLocalStorageEnabled
 
-// required bool a_enabled = 1;
+// optional bool a_enabled = 1;
 inline bool Msg_InitNextGenLocalStorageEnabled::_internal_has_a_enabled() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -72184,7 +71968,7 @@ inline void Msg_InitNextGenLocalStorageEnabled::set_a_enabled(bool value) {
 
 // Msg_PRemotePrintJobConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PRemotePrintJobConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -72500,7 +72284,7 @@ inline void Msg_SessionHistoryEntryTitle::set_allocated_a_acontext(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_SessionHistoryEntryTitle.a_aContext)
 }
 
-// required string a_aTitle = 2;
+// optional string a_aTitle = 2;
 inline bool Msg_SessionHistoryEntryTitle::_internal_has_a_atitle() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -72640,7 +72424,7 @@ inline void Msg_SessionHistoryEntryScrollRestorationIsManual::set_allocated_a_ac
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_SessionHistoryEntryScrollRestorationIsManual.a_aContext)
 }
 
-// required bool a_aIsManual = 2;
+// optional bool a_aIsManual = 2;
 inline bool Msg_SessionHistoryEntryScrollRestorationIsManual::_internal_has_a_aismanual() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -72740,7 +72524,7 @@ inline void Msg_SessionHistoryEntryScrollPosition::set_allocated_a_acontext(std:
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_SessionHistoryEntryScrollPosition.a_aContext)
 }
 
-// required sint32 a_aX = 2;
+// optional sint32 a_aX = 2;
 inline bool Msg_SessionHistoryEntryScrollPosition::_internal_has_a_ax() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -72768,7 +72552,7 @@ inline void Msg_SessionHistoryEntryScrollPosition::set_a_ax(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_SessionHistoryEntryScrollPosition.a_aX)
 }
 
-// required sint32 a_aY = 3;
+// optional sint32 a_aY = 3;
 inline bool Msg_SessionHistoryEntryScrollPosition::_internal_has_a_ay() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -72868,7 +72652,7 @@ inline void Msg_SessionHistoryEntryCacheKey::set_allocated_a_acontext(std::strin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_SessionHistoryEntryCacheKey.a_aContext)
 }
 
-// required uint32 a_aCacheKey = 2;
+// optional uint32 a_aCacheKey = 2;
 inline bool Msg_SessionHistoryEntryCacheKey::_internal_has_a_acachekey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -72968,7 +72752,7 @@ inline void Msg_SessionHistoryEntryStoreWindowNameInContiguousEntries::set_alloc
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_SessionHistoryEntryStoreWindowNameInContiguousEntries.a_aContext)
 }
 
-// required string a_aName = 2;
+// optional string a_aName = 2;
 inline bool Msg_SessionHistoryEntryStoreWindowNameInContiguousEntries::_internal_has_a_aname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -73763,7 +73547,7 @@ inline void Msg_CreateClipboardContentAnalysis::set_allocated_a_aparentendpoint(
 
 // Msg_InitStreamFilter
 
-// required uint64 a_channelId = 1;
+// optional uint64 a_channelId = 1;
 inline bool Msg_InitStreamFilter::_internal_has_a_channelid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -73791,7 +73575,7 @@ inline void Msg_InitStreamFilter::set_a_channelid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_InitStreamFilter.a_channelId)
 }
 
-// required string a_addonId = 2;
+// optional string a_addonId = 2;
 inline bool Msg_InitStreamFilter::_internal_has_a_addonid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -73935,7 +73719,7 @@ inline void Reply_InitStreamFilter::set_allocated_a_aendpoint(std::string* a_aen
 
 // Msg_PRemoteSpellcheckEngineConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PRemoteSpellcheckEngineConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -74202,7 +73986,7 @@ inline void Msg_IsSecureURI::set_allocated_a_aoriginattributes(std::string* a_ao
 
 // Reply_IsSecureURI
 
-// required bool a_isSecureURI = 1;
+// optional bool a_isSecureURI = 1;
 inline bool Reply_IsSecureURI::_internal_has_a_issecureuri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -74302,7 +74086,7 @@ inline void Msg_AccumulateMixedContentHSTS::set_allocated_a_auri(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_AccumulateMixedContentHSTS.a_aURI)
 }
 
-// required bool a_aActive = 2;
+// optional bool a_aActive = 2;
 inline bool Msg_AccumulateMixedContentHSTS::_internal_has_a_aactive() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -74402,7 +74186,7 @@ inline void Msg_AccumulateMixedContentHSTS::set_allocated_a_aoriginattributes(st
 
 // Msg_PHalConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PHalConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -74438,7 +74222,7 @@ inline void Msg_PHalConstructor::set_a_actorid(int64_t value) {
 
 // Msg_PHeapSnapshotTempFileHelperConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PHeapSnapshotTempFileHelperConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -74474,7 +74258,7 @@ inline void Msg_PHeapSnapshotTempFileHelperConstructor::set_a_actorid(int64_t va
 
 // Msg_PNeckoConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PNeckoConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -74510,7 +74294,7 @@ inline void Msg_PNeckoConstructor::set_a_actorid(int64_t value) {
 
 // Msg_PSpeechSynthesisConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PSpeechSynthesisConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -74546,7 +74330,7 @@ inline void Msg_PSpeechSynthesisConstructor::set_a_actorid(int64_t value) {
 
 // Msg_PMediaConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PMediaConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -74582,7 +74366,7 @@ inline void Msg_PMediaConstructor::set_a_actorid(int64_t value) {
 
 // Msg_PWebrtcGlobalConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PWebrtcGlobalConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -74713,7 +74497,7 @@ inline void Reply_CreateAudioIPCConnection::set_allocated_a_fd(::protobuf::mozil
 
 // Msg_PURLClassifierConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PURLClassifierConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -74813,7 +74597,7 @@ inline void Msg_PURLClassifierConstructor::set_allocated_a_principal(std::string
 
 // Reply_PURLClassifierConstructor
 
-// required bool a_success = 1;
+// optional bool a_success = 1;
 inline bool Reply_PURLClassifierConstructor::_internal_has_a_success() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -74845,7 +74629,7 @@ inline void Reply_PURLClassifierConstructor::set_a_success(bool value) {
 
 // Msg_PURLClassifierLocalConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PURLClassifierLocalConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -74986,7 +74770,7 @@ Msg_PURLClassifierLocalConstructor::a_features() const {
 
 // Msg_PURLClassifierLocalByNameConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PURLClassifierLocalByNameConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -75233,7 +75017,7 @@ inline void Msg_PURLClassifierLocalByNameConstructor::set_allocated_a_alisttype(
 
 // Msg_PSessionStorageObserverConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PSessionStorageObserverConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -75416,7 +75200,7 @@ inline void Msg_SetURITitle::set_allocated_a_uri(std::string* a_uri) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_SetURITitle.a_uri)
 }
 
-// required string a_title = 2;
+// optional string a_title = 2;
 inline bool Msg_SetURITitle::_internal_has_a_title() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -75760,7 +75544,7 @@ inline void Msg_LoadURIExternal::set_allocated_a_browsingcontext(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_LoadURIExternal.a_browsingContext)
 }
 
-// required bool a_wasExternallyTriggered = 5;
+// optional bool a_wasExternallyTriggered = 5;
 inline bool Msg_LoadURIExternal::_internal_has_a_wasexternallytriggered() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -75788,7 +75572,7 @@ inline void Msg_LoadURIExternal::set_a_wasexternallytriggered(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_LoadURIExternal.a_wasExternallyTriggered)
 }
 
-// required bool a_hasValidUserGestureActivation = 6;
+// optional bool a_hasValidUserGestureActivation = 6;
 inline bool Msg_LoadURIExternal::_internal_has_a_hasvalidusergestureactivation() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -75816,7 +75600,7 @@ inline void Msg_LoadURIExternal::set_a_hasvalidusergestureactivation(bool value)
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_LoadURIExternal.a_hasValidUserGestureActivation)
 }
 
-// required bool a_newWindowTarget = 7;
+// optional bool a_newWindowTarget = 7;
 inline bool Msg_LoadURIExternal::_internal_has_a_newwindowtarget() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -75848,7 +75632,7 @@ inline void Msg_LoadURIExternal::set_a_newwindowtarget(bool value) {
 
 // Msg_ExtProtocolChannelConnectParent
 
-// required uint64 a_registrarId = 1;
+// optional uint64 a_registrarId = 1;
 inline bool Msg_ExtProtocolChannelConnectParent::_internal_has_a_registrarid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -75880,7 +75664,7 @@ inline void Msg_ExtProtocolChannelConnectParent::set_a_registrarid(uint64_t valu
 
 // Msg_SyncMessage
 
-// required string a_aMessage = 1;
+// optional string a_aMessage = 1;
 inline bool Msg_SyncMessage::_internal_has_a_amessage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -76186,7 +75970,7 @@ inline void Msg_AddSecurityState::set_allocated_a_acontext(std::string* a_aconte
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_AddSecurityState.a_aContext)
 }
 
-// required uint32 a_aStateFlags = 2;
+// optional uint32 a_aStateFlags = 2;
 inline bool Msg_AddSecurityState::_internal_has_a_astateflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -76218,7 +76002,7 @@ inline void Msg_AddSecurityState::set_a_astateflags(uint32_t value) {
 
 // Msg_PExternalHelperAppConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PExternalHelperAppConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -76401,7 +76185,7 @@ inline void Msg_PExternalHelperAppConstructor::set_allocated_a_loadinfoargs(::pr
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_PExternalHelperAppConstructor.a_loadInfoArgs)
 }
 
-// required string a_aMimeContentType = 4;
+// optional string a_aMimeContentType = 4;
 inline bool Msg_PExternalHelperAppConstructor::_internal_has_a_amimecontenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -76469,7 +76253,7 @@ inline void Msg_PExternalHelperAppConstructor::set_allocated_a_amimecontenttype(
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_PExternalHelperAppConstructor.a_aMimeContentType)
 }
 
-// required string a_aContentDisposition = 5;
+// optional string a_aContentDisposition = 5;
 inline bool Msg_PExternalHelperAppConstructor::_internal_has_a_acontentdisposition() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -76537,7 +76321,7 @@ inline void Msg_PExternalHelperAppConstructor::set_allocated_a_acontentdispositi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_PExternalHelperAppConstructor.a_aContentDisposition)
 }
 
-// required uint32 a_aContentDispositionHint = 6;
+// optional uint32 a_aContentDispositionHint = 6;
 inline bool Msg_PExternalHelperAppConstructor::_internal_has_a_acontentdispositionhint() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -76565,7 +76349,7 @@ inline void Msg_PExternalHelperAppConstructor::set_a_acontentdispositionhint(uin
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PExternalHelperAppConstructor.a_aContentDispositionHint)
 }
 
-// required string a_aContentDispositionFilename = 7;
+// optional string a_aContentDispositionFilename = 7;
 inline bool Msg_PExternalHelperAppConstructor::_internal_has_a_acontentdispositionfilename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -76633,7 +76417,7 @@ inline void Msg_PExternalHelperAppConstructor::set_allocated_a_acontentdispositi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_PExternalHelperAppConstructor.a_aContentDispositionFilename)
 }
 
-// required bool a_aForceSave = 8;
+// optional bool a_aForceSave = 8;
 inline bool Msg_PExternalHelperAppConstructor::_internal_has_a_aforcesave() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -76661,7 +76445,7 @@ inline void Msg_PExternalHelperAppConstructor::set_a_aforcesave(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PExternalHelperAppConstructor.a_aForceSave)
 }
 
-// required sint64 a_aContentLength = 9;
+// optional sint64 a_aContentLength = 9;
 inline bool Msg_PExternalHelperAppConstructor::_internal_has_a_acontentlength() const {
   bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
   return value;
@@ -76689,7 +76473,7 @@ inline void Msg_PExternalHelperAppConstructor::set_a_acontentlength(int64_t valu
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PExternalHelperAppConstructor.a_aContentLength)
 }
 
-// required bool a_aWasFileChannel = 10;
+// optional bool a_aWasFileChannel = 10;
 inline bool Msg_PExternalHelperAppConstructor::_internal_has_a_awasfilechannel() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
@@ -76861,7 +76645,7 @@ inline void Msg_PExternalHelperAppConstructor::set_allocated_a_acontext(std::str
 
 // Msg_PHandlerServiceConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PHandlerServiceConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -76897,7 +76681,7 @@ inline void Msg_PHandlerServiceConstructor::set_a_actorid(int64_t value) {
 
 // Msg_AddGeolocationListener
 
-// required bool a_highAccuracy = 1;
+// optional bool a_highAccuracy = 1;
 inline bool Msg_AddGeolocationListener::_internal_has_a_highaccuracy() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -76933,7 +76717,7 @@ inline void Msg_AddGeolocationListener::set_a_highaccuracy(bool value) {
 
 // Msg_SetGeolocationHigherAccuracy
 
-// required bool a_enable = 1;
+// optional bool a_enable = 1;
 inline bool Msg_SetGeolocationHigherAccuracy::_internal_has_a_enable() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -76965,7 +76749,7 @@ inline void Msg_SetGeolocationHigherAccuracy::set_a_enable(bool value) {
 
 // Msg_ConsoleMessage
 
-// required string a_message = 1;
+// optional string a_message = 1;
 inline bool Msg_ConsoleMessage::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -77037,7 +76821,7 @@ inline void Msg_ConsoleMessage::set_allocated_a_message(std::string* a_message) 
 
 // Msg_ScriptErrorWithStack
 
-// required string a_message = 1;
+// optional string a_message = 1;
 inline bool Msg_ScriptErrorWithStack::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -77105,7 +76889,7 @@ inline void Msg_ScriptErrorWithStack::set_allocated_a_message(std::string* a_mes
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_ScriptErrorWithStack.a_message)
 }
 
-// required string a_sourceName = 2;
+// optional string a_sourceName = 2;
 inline bool Msg_ScriptErrorWithStack::_internal_has_a_sourcename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -77173,7 +76957,7 @@ inline void Msg_ScriptErrorWithStack::set_allocated_a_sourcename(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_ScriptErrorWithStack.a_sourceName)
 }
 
-// required uint32 a_lineNumber = 3;
+// optional uint32 a_lineNumber = 3;
 inline bool Msg_ScriptErrorWithStack::_internal_has_a_linenumber() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -77201,7 +76985,7 @@ inline void Msg_ScriptErrorWithStack::set_a_linenumber(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_ScriptErrorWithStack.a_lineNumber)
 }
 
-// required uint32 a_colNumber = 4;
+// optional uint32 a_colNumber = 4;
 inline bool Msg_ScriptErrorWithStack::_internal_has_a_colnumber() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -77229,7 +77013,7 @@ inline void Msg_ScriptErrorWithStack::set_a_colnumber(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_ScriptErrorWithStack.a_colNumber)
 }
 
-// required uint32 a_flags = 5;
+// optional uint32 a_flags = 5;
 inline bool Msg_ScriptErrorWithStack::_internal_has_a_flags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -77257,7 +77041,7 @@ inline void Msg_ScriptErrorWithStack::set_a_flags(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_ScriptErrorWithStack.a_flags)
 }
 
-// required string a_category = 6;
+// optional string a_category = 6;
 inline bool Msg_ScriptErrorWithStack::_internal_has_a_category() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -77325,7 +77109,7 @@ inline void Msg_ScriptErrorWithStack::set_allocated_a_category(std::string* a_ca
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_ScriptErrorWithStack.a_category)
 }
 
-// required bool a_isFromPrivateWindow = 7;
+// optional bool a_isFromPrivateWindow = 7;
 inline bool Msg_ScriptErrorWithStack::_internal_has_a_isfromprivatewindow() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -77353,7 +77137,7 @@ inline void Msg_ScriptErrorWithStack::set_a_isfromprivatewindow(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_ScriptErrorWithStack.a_isFromPrivateWindow)
 }
 
-// required bool a_isFromChromeContext = 8;
+// optional bool a_isFromChromeContext = 8;
 inline bool Msg_ScriptErrorWithStack::_internal_has_a_isfromchromecontext() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -78904,7 +78688,7 @@ inline void Msg_ClipboardHasType::set_allocated_a_awhichclipboard(std::string* a
 
 // Reply_ClipboardHasType
 
-// required bool a_hasType = 1;
+// optional bool a_hasType = 1;
 inline bool Reply_ClipboardHasType::_internal_has_a_hastype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -78936,7 +78720,7 @@ inline void Reply_ClipboardHasType::set_a_hastype(bool value) {
 
 // Msg_PClipboardWriteRequestConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PClipboardWriteRequestConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -79108,7 +78892,7 @@ inline void Msg_PClipboardWriteRequestConstructor::set_allocated_a_asettingwindo
 
 // Msg_GetIconForExtension
 
-// required string a_aFileExt = 1;
+// optional string a_aFileExt = 1;
 inline bool Msg_GetIconForExtension::_internal_has_a_afileext() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -79176,7 +78960,7 @@ inline void Msg_GetIconForExtension::set_allocated_a_afileext(std::string* a_afi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_GetIconForExtension.a_aFileExt)
 }
 
-// required uint32 a_aIconSize = 2;
+// optional uint32 a_aIconSize = 2;
 inline bool Msg_GetIconForExtension::_internal_has_a_aiconsize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -79399,7 +79183,7 @@ inline void Msg_CopyFavicon::set_allocated_a_newuri(std::string* a_newuri) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_CopyFavicon.a_newURI)
 }
 
-// required bool a_isPrivate = 3;
+// optional bool a_isPrivate = 3;
 inline bool Msg_CopyFavicon::_internal_has_a_isprivate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -79688,7 +79472,7 @@ inline void Reply_FindImageText::set_allocated_a_result(::protobuf::mozilla::dom
 
 // Msg_GraphicsError
 
-// required string a_aError = 1;
+// optional string a_aError = 1;
 inline bool Msg_GraphicsError::_internal_has_a_aerror() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -79760,7 +79544,7 @@ inline void Msg_GraphicsError::set_allocated_a_aerror(std::string* a_aerror) {
 
 // Msg_BeginDriverCrashGuard
 
-// required uint32 a_aGuardType = 1;
+// optional uint32 a_aGuardType = 1;
 inline bool Msg_BeginDriverCrashGuard::_internal_has_a_aguardtype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -79792,7 +79576,7 @@ inline void Msg_BeginDriverCrashGuard::set_a_aguardtype(uint32_t value) {
 
 // Reply_BeginDriverCrashGuard
 
-// required bool a_crashDetected = 1;
+// optional bool a_crashDetected = 1;
 inline bool Reply_BeginDriverCrashGuard::_internal_has_a_crashdetected() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -79824,7 +79608,7 @@ inline void Reply_BeginDriverCrashGuard::set_a_crashdetected(bool value) {
 
 // Msg_EndDriverCrashGuard
 
-// required uint32 a_aGuardType = 1;
+// optional uint32 a_aGuardType = 1;
 inline bool Msg_EndDriverCrashGuard::_internal_has_a_aguardtype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -79860,7 +79644,7 @@ inline void Msg_EndDriverCrashGuard::set_a_aguardtype(uint32_t value) {
 
 // Msg_AddIdleObserver
 
-// required uint64 a_observerId = 1;
+// optional uint64 a_observerId = 1;
 inline bool Msg_AddIdleObserver::_internal_has_a_observerid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -79888,7 +79672,7 @@ inline void Msg_AddIdleObserver::set_a_observerid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_AddIdleObserver.a_observerId)
 }
 
-// required uint32 a_idleTimeInS = 2;
+// optional uint32 a_idleTimeInS = 2;
 inline bool Msg_AddIdleObserver::_internal_has_a_idletimeins() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -79920,7 +79704,7 @@ inline void Msg_AddIdleObserver::set_a_idletimeins(uint32_t value) {
 
 // Msg_RemoveIdleObserver
 
-// required uint64 a_observerId = 1;
+// optional uint64 a_observerId = 1;
 inline bool Msg_RemoveIdleObserver::_internal_has_a_observerid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -79948,7 +79732,7 @@ inline void Msg_RemoveIdleObserver::set_a_observerid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_RemoveIdleObserver.a_observerId)
 }
 
-// required uint32 a_idleTimeInS = 2;
+// optional uint32 a_idleTimeInS = 2;
 inline bool Msg_RemoveIdleObserver::_internal_has_a_idletimeins() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -80052,7 +79836,7 @@ inline void Msg_BackUpXResources::set_allocated_a_axsocketfd(std::string* a_axso
 
 // Msg_RequestAnonymousTemporaryFile
 
-// required uint64 a_aID = 1;
+// optional uint64 a_aID = 1;
 inline bool Msg_RequestAnonymousTemporaryFile::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -80092,7 +79876,7 @@ inline void Msg_RequestAnonymousTemporaryFile::set_a_aid(uint64_t value) {
 
 // Msg_PContentPermissionRequestConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PContentPermissionRequestConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -80293,7 +80077,7 @@ inline void Msg_PContentPermissionRequestConstructor::set_allocated_a_atoplevelp
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_PContentPermissionRequestConstructor.a_aTopLevelPrincipal)
 }
 
-// required bool a_aIsHandlingUserInput = 5;
+// optional bool a_aIsHandlingUserInput = 5;
 inline bool Msg_PContentPermissionRequestConstructor::_internal_has_a_aishandlinguserinput() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -80321,7 +80105,7 @@ inline void Msg_PContentPermissionRequestConstructor::set_a_aishandlinguserinput
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PContentPermissionRequestConstructor.a_aIsHandlingUserInput)
 }
 
-// required bool a_aMaybeUnsafePermissionDelegate = 6;
+// optional bool a_aMaybeUnsafePermissionDelegate = 6;
 inline bool Msg_PContentPermissionRequestConstructor::_internal_has_a_amaybeunsafepermissiondelegate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -80425,7 +80209,7 @@ inline void Msg_PContentPermissionRequestConstructor::set_allocated_a_tabid(std:
 
 // Msg_ShutdownProfile
 
-// required string a_aProfile = 1;
+// optional string a_aProfile = 1;
 inline bool Msg_ShutdownProfile::_internal_has_a_aprofile() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -80497,7 +80281,7 @@ inline void Msg_ShutdownProfile::set_allocated_a_aprofile(std::string* a_aprofil
 
 // Msg_ShutdownPerfStats
 
-// required string a_aPerfStats = 1;
+// optional string a_aPerfStats = 1;
 inline bool Msg_ShutdownPerfStats::_internal_has_a_aperfstats() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -80569,7 +80353,7 @@ inline void Msg_ShutdownPerfStats::set_allocated_a_aperfstats(std::string* a_ape
 
 // Msg_GetFontListShmBlock
 
-// required uint32 a_aGeneration = 1;
+// optional uint32 a_aGeneration = 1;
 inline bool Msg_GetFontListShmBlock::_internal_has_a_ageneration() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -80597,7 +80381,7 @@ inline void Msg_GetFontListShmBlock::set_a_ageneration(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_GetFontListShmBlock.a_aGeneration)
 }
 
-// required uint32 a_aIndex = 2;
+// optional uint32 a_aIndex = 2;
 inline bool Msg_GetFontListShmBlock::_internal_has_a_aindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -80701,7 +80485,7 @@ inline void Reply_GetFontListShmBlock::set_allocated_a_ahandle(std::string* a_ah
 
 // Msg_InitializeFamily
 
-// required uint32 a_aGeneration = 1;
+// optional uint32 a_aGeneration = 1;
 inline bool Msg_InitializeFamily::_internal_has_a_ageneration() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -80729,7 +80513,7 @@ inline void Msg_InitializeFamily::set_a_ageneration(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_InitializeFamily.a_aGeneration)
 }
 
-// required uint32 a_aFamilyIndex = 2;
+// optional uint32 a_aFamilyIndex = 2;
 inline bool Msg_InitializeFamily::_internal_has_a_afamilyindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -80757,7 +80541,7 @@ inline void Msg_InitializeFamily::set_a_afamilyindex(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_InitializeFamily.a_aFamilyIndex)
 }
 
-// required bool a_aLoadCmaps = 3;
+// optional bool a_aLoadCmaps = 3;
 inline bool Msg_InitializeFamily::_internal_has_a_aloadcmaps() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -80793,7 +80577,7 @@ inline void Msg_InitializeFamily::set_a_aloadcmaps(bool value) {
 
 // Msg_SetCharacterMap
 
-// required uint32 a_aGeneration = 1;
+// optional uint32 a_aGeneration = 1;
 inline bool Msg_SetCharacterMap::_internal_has_a_ageneration() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -80821,7 +80605,7 @@ inline void Msg_SetCharacterMap::set_a_ageneration(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_SetCharacterMap.a_aGeneration)
 }
 
-// required uint32 a_aFamilyIndex = 2;
+// optional uint32 a_aFamilyIndex = 2;
 inline bool Msg_SetCharacterMap::_internal_has_a_afamilyindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -80849,7 +80633,7 @@ inline void Msg_SetCharacterMap::set_a_afamilyindex(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_SetCharacterMap.a_aFamilyIndex)
 }
 
-// required bool a_aAlias = 3;
+// optional bool a_aAlias = 3;
 inline bool Msg_SetCharacterMap::_internal_has_a_aalias() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -80877,7 +80661,7 @@ inline void Msg_SetCharacterMap::set_a_aalias(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_SetCharacterMap.a_aAlias)
 }
 
-// required uint32 a_aFaceIndex = 4;
+// optional uint32 a_aFaceIndex = 4;
 inline bool Msg_SetCharacterMap::_internal_has_a_afaceindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -80977,7 +80761,7 @@ inline void Msg_SetCharacterMap::set_allocated_a_amap(std::string* a_amap) {
 
 // Msg_SetupFamilyCharMap
 
-// required uint32 a_aGeneration = 1;
+// optional uint32 a_aGeneration = 1;
 inline bool Msg_SetupFamilyCharMap::_internal_has_a_ageneration() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -81005,7 +80789,7 @@ inline void Msg_SetupFamilyCharMap::set_a_ageneration(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_SetupFamilyCharMap.a_aGeneration)
 }
 
-// required uint32 a_aFamilyIndex = 2;
+// optional uint32 a_aFamilyIndex = 2;
 inline bool Msg_SetupFamilyCharMap::_internal_has_a_afamilyindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -81033,7 +80817,7 @@ inline void Msg_SetupFamilyCharMap::set_a_afamilyindex(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_SetupFamilyCharMap.a_aFamilyIndex)
 }
 
-// required bool a_aAlias = 3;
+// optional bool a_aAlias = 3;
 inline bool Msg_SetupFamilyCharMap::_internal_has_a_aalias() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -81065,7 +80849,7 @@ inline void Msg_SetupFamilyCharMap::set_a_aalias(bool value) {
 
 // Msg_InitOtherFamilyNames
 
-// required uint32 a_aGeneration = 1;
+// optional uint32 a_aGeneration = 1;
 inline bool Msg_InitOtherFamilyNames::_internal_has_a_ageneration() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -81093,7 +80877,7 @@ inline void Msg_InitOtherFamilyNames::set_a_ageneration(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_InitOtherFamilyNames.a_aGeneration)
 }
 
-// required bool a_aDefer = 2;
+// optional bool a_aDefer = 2;
 inline bool Msg_InitOtherFamilyNames::_internal_has_a_adefer() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -81125,7 +80909,7 @@ inline void Msg_InitOtherFamilyNames::set_a_adefer(bool value) {
 
 // Reply_InitOtherFamilyNames
 
-// required bool a_aLoaded = 1;
+// optional bool a_aLoaded = 1;
 inline bool Reply_InitOtherFamilyNames::_internal_has_a_aloaded() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -81157,7 +80941,7 @@ inline void Reply_InitOtherFamilyNames::set_a_aloaded(bool value) {
 
 // Msg_StartCmapLoading
 
-// required uint32 a_aGeneration = 1;
+// optional uint32 a_aGeneration = 1;
 inline bool Msg_StartCmapLoading::_internal_has_a_ageneration() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -81185,7 +80969,7 @@ inline void Msg_StartCmapLoading::set_a_ageneration(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_StartCmapLoading.a_aGeneration)
 }
 
-// required uint32 a_aStartIndex = 2;
+// optional uint32 a_aStartIndex = 2;
 inline bool Msg_StartCmapLoading::_internal_has_a_astartindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -81565,7 +81349,7 @@ inline void Msg_CreateWindow::set_allocated_a_anewtab(std::string* a_anewtab) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_CreateWindow.a_aNewTab)
 }
 
-// required uint32 a_aChromeFlags = 4;
+// optional uint32 a_aChromeFlags = 4;
 inline bool Msg_CreateWindow::_internal_has_a_achromeflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
@@ -81593,7 +81377,7 @@ inline void Msg_CreateWindow::set_a_achromeflags(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_CreateWindow.a_aChromeFlags)
 }
 
-// required bool a_aCalledFromJS = 5;
+// optional bool a_aCalledFromJS = 5;
 inline bool Msg_CreateWindow::_internal_has_a_acalledfromjs() const {
   bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
   return value;
@@ -81621,7 +81405,7 @@ inline void Msg_CreateWindow::set_a_acalledfromjs(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_CreateWindow.a_aCalledFromJS)
 }
 
-// required bool a_aForPrinting = 6;
+// optional bool a_aForPrinting = 6;
 inline bool Msg_CreateWindow::_internal_has_a_aforprinting() const {
   bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
   return value;
@@ -81649,7 +81433,7 @@ inline void Msg_CreateWindow::set_a_aforprinting(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_CreateWindow.a_aForPrinting)
 }
 
-// required bool a_aForWindowDotPrint = 7;
+// optional bool a_aForWindowDotPrint = 7;
 inline bool Msg_CreateWindow::_internal_has_a_aforwindowdotprint() const {
   bool value = (_impl_._has_bits_[0] & 0x00002000u) != 0;
   return value;
@@ -81677,7 +81461,7 @@ inline void Msg_CreateWindow::set_a_aforwindowdotprint(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_CreateWindow.a_aForWindowDotPrint)
 }
 
-// required bool a_aTopLevelCreatedByContent = 8;
+// optional bool a_aTopLevelCreatedByContent = 8;
 inline bool Msg_CreateWindow::_internal_has_a_atoplevelcreatedbycontent() const {
   bool value = (_impl_._has_bits_[0] & 0x00004000u) != 0;
   return value;
@@ -81773,7 +81557,7 @@ inline void Msg_CreateWindow::set_allocated_a_auritoload(std::string* a_auritolo
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_CreateWindow.a_aURIToLoad)
 }
 
-// required string a_aFeatures = 10;
+// optional string a_aFeatures = 10;
 inline bool Msg_CreateWindow::_internal_has_a_afeatures() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -82181,7 +81965,7 @@ inline void Msg_CreateWindow::set_allocated_a_aoriginattributes(std::string* a_a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_CreateWindow.a_aOriginAttributes)
 }
 
-// required bool a_aUserActivation = 16;
+// optional bool a_aUserActivation = 16;
 inline bool Msg_CreateWindow::_internal_has_a_auseractivation() const {
   bool value = (_impl_._has_bits_[0] & 0x00008000u) != 0;
   return value;
@@ -82209,7 +81993,7 @@ inline void Msg_CreateWindow::set_a_auseractivation(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_CreateWindow.a_aUserActivation)
 }
 
-// required bool a_aTextDirectiveUserActivation = 17;
+// optional bool a_aTextDirectiveUserActivation = 17;
 inline bool Msg_CreateWindow::_internal_has_a_atextdirectiveuseractivation() const {
   bool value = (_impl_._has_bits_[0] & 0x00010000u) != 0;
   return value;
@@ -82468,7 +82252,7 @@ inline void Msg_CreateWindowInDifferentProcess::set_allocated_a_aparent(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_CreateWindowInDifferentProcess.a_aParent)
 }
 
-// required uint32 a_aChromeFlags = 3;
+// optional uint32 a_aChromeFlags = 3;
 inline bool Msg_CreateWindowInDifferentProcess::_internal_has_a_achromeflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
@@ -82496,7 +82280,7 @@ inline void Msg_CreateWindowInDifferentProcess::set_a_achromeflags(uint32_t valu
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_CreateWindowInDifferentProcess.a_aChromeFlags)
 }
 
-// required bool a_aCalledFromJS = 4;
+// optional bool a_aCalledFromJS = 4;
 inline bool Msg_CreateWindowInDifferentProcess::_internal_has_a_acalledfromjs() const {
   bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
   return value;
@@ -82524,7 +82308,7 @@ inline void Msg_CreateWindowInDifferentProcess::set_a_acalledfromjs(bool value) 
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_CreateWindowInDifferentProcess.a_aCalledFromJS)
 }
 
-// required bool a_aTopLevelCreatedByContent = 5;
+// optional bool a_aTopLevelCreatedByContent = 5;
 inline bool Msg_CreateWindowInDifferentProcess::_internal_has_a_atoplevelcreatedbycontent() const {
   bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
   return value;
@@ -82620,7 +82404,7 @@ inline void Msg_CreateWindowInDifferentProcess::set_allocated_a_auritoload(std::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_CreateWindowInDifferentProcess.a_aURIToLoad)
 }
 
-// required string a_aFeatures = 7;
+// optional string a_aFeatures = 7;
 inline bool Msg_CreateWindowInDifferentProcess::_internal_has_a_afeatures() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -82756,7 +82540,7 @@ inline void Msg_CreateWindowInDifferentProcess::set_allocated_a_amodifiers(std::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_CreateWindowInDifferentProcess.a_aModifiers)
 }
 
-// required string a_aName = 9;
+// optional string a_aName = 9;
 inline bool Msg_CreateWindowInDifferentProcess::_internal_has_a_aname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -83096,7 +82880,7 @@ inline void Msg_CreateWindowInDifferentProcess::set_allocated_a_aoriginattribute
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_CreateWindowInDifferentProcess.a_aOriginAttributes)
 }
 
-// required bool a_aUserActivation = 14;
+// optional bool a_aUserActivation = 14;
 inline bool Msg_CreateWindowInDifferentProcess::_internal_has_a_auseractivation() const {
   bool value = (_impl_._has_bits_[0] & 0x00002000u) != 0;
   return value;
@@ -83124,7 +82908,7 @@ inline void Msg_CreateWindowInDifferentProcess::set_a_auseractivation(bool value
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_CreateWindowInDifferentProcess.a_aUserActivation)
 }
 
-// required bool a_aTextDirectiveUserActivation = 15;
+// optional bool a_aTextDirectiveUserActivation = 15;
 inline bool Msg_CreateWindowInDifferentProcess::_internal_has_a_atextdirectiveuseractivation() const {
   bool value = (_impl_._has_bits_[0] & 0x00004000u) != 0;
   return value;
@@ -83156,7 +82940,7 @@ inline void Msg_CreateWindowInDifferentProcess::set_a_atextdirectiveuseractivati
 
 // Msg_NotifyPushObservers
 
-// required string a_scope = 1;
+// optional string a_scope = 1;
 inline bool Msg_NotifyPushObservers::_internal_has_a_scope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -83292,7 +83076,7 @@ inline void Msg_NotifyPushObservers::set_allocated_a_principal(std::string* a_pr
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_NotifyPushObservers.a_principal)
 }
 
-// required string a_messageId = 3;
+// optional string a_messageId = 3;
 inline bool Msg_NotifyPushObservers::_internal_has_a_messageid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -83364,7 +83148,7 @@ inline void Msg_NotifyPushObservers::set_allocated_a_messageid(std::string* a_me
 
 // Msg_NotifyPushObserversWithData
 
-// required string a_scope = 1;
+// optional string a_scope = 1;
 inline bool Msg_NotifyPushObserversWithData::_internal_has_a_scope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -83500,7 +83284,7 @@ inline void Msg_NotifyPushObserversWithData::set_allocated_a_principal(std::stri
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_NotifyPushObserversWithData.a_principal)
 }
 
-// required string a_messageId = 3;
+// optional string a_messageId = 3;
 inline bool Msg_NotifyPushObserversWithData::_internal_has_a_messageid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -83762,7 +83546,7 @@ Msg_GetFilesRequest::mutable_a_adirectories() {
   return &_impl_.a_adirectories_;
 }
 
-// required bool a_aRecursiveFlag = 3;
+// optional bool a_aRecursiveFlag = 3;
 inline bool Msg_GetFilesRequest::_internal_has_a_arecursiveflag() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -83866,7 +83650,7 @@ inline void Msg_DeleteGetFilesRequest::set_allocated_a_aid(std::string* a_aid) {
 
 // Msg_StoreAndBroadcastBlobURLRegistration
 
-// required string a_url = 1;
+// optional string a_url = 1;
 inline bool Msg_StoreAndBroadcastBlobURLRegistration::_internal_has_a_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -84089,7 +83873,7 @@ inline void Msg_StoreAndBroadcastBlobURLRegistration::set_allocated_a_principal(
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_StoreAndBroadcastBlobURLRegistration.a_principal)
 }
 
-// required string a_aPartitionKey = 4;
+// optional string a_aPartitionKey = 4;
 inline bool Msg_StoreAndBroadcastBlobURLRegistration::_internal_has_a_apartitionkey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -84991,7 +84775,7 @@ inline void Msg_AddCertException::set_allocated_a_acert(std::string* a_acert) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_AddCertException.a_aCert)
 }
 
-// required string a_aHostName = 2;
+// optional string a_aHostName = 2;
 inline bool Msg_AddCertException::_internal_has_a_ahostname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -85059,7 +84843,7 @@ inline void Msg_AddCertException::set_allocated_a_ahostname(std::string* a_ahost
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_AddCertException.a_aHostName)
 }
 
-// required sint32 a_aPort = 3;
+// optional sint32 a_aPort = 3;
 inline bool Msg_AddCertException::_internal_has_a_aport() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -85155,7 +84939,7 @@ inline void Msg_AddCertException::set_allocated_a_aoriginattributes(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_AddCertException.a_aOriginAttributes)
 }
 
-// required bool a_aIsTemporary = 5;
+// optional bool a_aIsTemporary = 5;
 inline bool Msg_AddCertException::_internal_has_a_aistemporary() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -85331,7 +85115,7 @@ inline void Msg_AutomaticStorageAccessPermissionCanBeGranted::set_allocated_a_ap
 
 // Reply_AutomaticStorageAccessPermissionCanBeGranted
 
-// required bool a_success = 1;
+// optional bool a_success = 1;
 inline bool Reply_AutomaticStorageAccessPermissionCanBeGranted::_internal_has_a_success() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -85363,7 +85147,7 @@ inline void Reply_AutomaticStorageAccessPermissionCanBeGranted::set_a_success(bo
 
 // Msg_StorageAccessPermissionGrantedForOrigin
 
-// required uint64 a_aTopLevelWindowId = 1;
+// optional uint64 a_aTopLevelWindowId = 1;
 inline bool Msg_StorageAccessPermissionGrantedForOrigin::_internal_has_a_atoplevelwindowid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -85527,7 +85311,7 @@ inline void Msg_StorageAccessPermissionGrantedForOrigin::set_allocated_a_atracki
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_StorageAccessPermissionGrantedForOrigin.a_aTrackingPrincipal)
 }
 
-// required string a_aTrackingOrigin = 4;
+// optional string a_aTrackingOrigin = 4;
 inline bool Msg_StorageAccessPermissionGrantedForOrigin::_internal_has_a_atrackingorigin() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -85595,7 +85379,7 @@ inline void Msg_StorageAccessPermissionGrantedForOrigin::set_allocated_a_atracki
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_StorageAccessPermissionGrantedForOrigin.a_aTrackingOrigin)
 }
 
-// required sint32 a_aAllowMode = 5;
+// optional sint32 a_aAllowMode = 5;
 inline bool Msg_StorageAccessPermissionGrantedForOrigin::_internal_has_a_aallowmode() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -85691,7 +85475,7 @@ inline void Msg_StorageAccessPermissionGrantedForOrigin::set_allocated_a_areason
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_StorageAccessPermissionGrantedForOrigin.a_aReason)
 }
 
-// required bool a_aFrameOnly = 7;
+// optional bool a_aFrameOnly = 7;
 inline bool Msg_StorageAccessPermissionGrantedForOrigin::_internal_has_a_aframeonly() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -85723,7 +85507,7 @@ inline void Msg_StorageAccessPermissionGrantedForOrigin::set_a_aframeonly(bool v
 
 // Reply_StorageAccessPermissionGrantedForOrigin
 
-// required bool a_unused = 1;
+// optional bool a_unused = 1;
 inline bool Reply_StorageAccessPermissionGrantedForOrigin::_internal_has_a_unused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -85823,7 +85607,7 @@ inline void Msg_CompleteAllowAccessFor::set_allocated_a_aparentcontext(std::stri
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_CompleteAllowAccessFor.a_aParentContext)
 }
 
-// required uint64 a_aTopLevelWindowId = 2;
+// optional uint64 a_aTopLevelWindowId = 2;
 inline bool Msg_CompleteAllowAccessFor::_internal_has_a_atoplevelwindowid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -85919,7 +85703,7 @@ inline void Msg_CompleteAllowAccessFor::set_allocated_a_atrackingprincipal(std::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_CompleteAllowAccessFor.a_aTrackingPrincipal)
 }
 
-// required string a_aTrackingOrigin = 4;
+// optional string a_aTrackingOrigin = 4;
 inline bool Msg_CompleteAllowAccessFor::_internal_has_a_atrackingorigin() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -85987,7 +85771,7 @@ inline void Msg_CompleteAllowAccessFor::set_allocated_a_atrackingorigin(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_CompleteAllowAccessFor.a_aTrackingOrigin)
 }
 
-// required uint32 a_aCookieBehavior = 5;
+// optional uint32 a_aCookieBehavior = 5;
 inline bool Msg_CompleteAllowAccessFor::_internal_has_a_acookiebehavior() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -86299,7 +86083,7 @@ inline void Msg_SetAllowStorageAccessRequestFlag::set_allocated_a_aembeddedorigi
 
 // Reply_SetAllowStorageAccessRequestFlag
 
-// required bool a_success = 1;
+// optional bool a_success = 1;
 inline bool Reply_SetAllowStorageAccessRequestFlag::_internal_has_a_success() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -86471,7 +86255,7 @@ inline void Msg_TestAllowStorageAccessRequestFlag::set_allocated_a_aembeddingori
 
 // Reply_TestAllowStorageAccessRequestFlag
 
-// required bool a_success = 1;
+// optional bool a_success = 1;
 inline bool Reply_TestAllowStorageAccessRequestFlag::_internal_has_a_success() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -86815,7 +86599,7 @@ inline void Msg_TestStorageAccessPermission::set_allocated_a_aembeddingprincipal
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_TestStorageAccessPermission.a_aEmbeddingPrincipal)
 }
 
-// required string a_aEmbeddedOrigin = 2;
+// optional string a_aEmbeddedOrigin = 2;
 inline bool Msg_TestStorageAccessPermission::_internal_has_a_aembeddedorigin() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -87267,7 +87051,7 @@ inline void Msg_NotifyPictureInPictureModeChanged::set_allocated_a_acontext(std:
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_NotifyPictureInPictureModeChanged.a_aContext)
 }
 
-// required bool a_aEnabled = 2;
+// optional bool a_aEnabled = 2;
 inline bool Msg_NotifyPictureInPictureModeChanged::_internal_has_a_aenabled() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -87367,7 +87151,7 @@ inline void Msg_NotifyMediaSessionUpdated::set_allocated_a_acontext(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_NotifyMediaSessionUpdated.a_aContext)
 }
 
-// required bool a_aIsCreated = 2;
+// optional bool a_aIsCreated = 2;
 inline bool Msg_NotifyMediaSessionUpdated::_internal_has_a_aiscreated() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -87815,7 +87599,7 @@ inline void Msg_NotifyMediaSessionSupportedActionChanged::set_allocated_a_aactio
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_NotifyMediaSessionSupportedActionChanged.a_aAction)
 }
 
-// required bool a_aEnabled = 3;
+// optional bool a_aEnabled = 3;
 inline bool Msg_NotifyMediaSessionSupportedActionChanged::_internal_has_a_aenabled() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -87915,7 +87699,7 @@ inline void Msg_NotifyMediaFullScreenState::set_allocated_a_acontext(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_NotifyMediaFullScreenState.a_aContext)
 }
 
-// required bool a_aIsInFullScreen = 2;
+// optional bool a_aIsInFullScreen = 2;
 inline bool Msg_NotifyMediaFullScreenState::_internal_has_a_aisinfullscreen() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -88363,7 +88147,7 @@ inline void Msg_AddOrRemovePageAwakeRequest::set_allocated_a_acontext(std::strin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_AddOrRemovePageAwakeRequest.a_aContext)
 }
 
-// required bool a_aShouldAddCount = 2;
+// optional bool a_aShouldAddCount = 2;
 inline bool Msg_AddOrRemovePageAwakeRequest::_internal_has_a_ashouldaddcount() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -88395,7 +88179,7 @@ inline void Msg_AddOrRemovePageAwakeRequest::set_a_ashouldaddcount(bool value) {
 
 // Msg_ReportServiceWorkerShutdownProgress
 
-// required uint32 a_aShutdownStateId = 1;
+// optional uint32 a_aShutdownStateId = 1;
 inline bool Msg_ReportServiceWorkerShutdownProgress::_internal_has_a_ashutdownstateid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -88635,7 +88419,7 @@ inline void Msg_HistoryReload::set_allocated_a_acontext(std::string* a_acontext)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_HistoryReload.a_aContext)
 }
 
-// required uint32 a_aReloadFlags = 2;
+// optional uint32 a_aReloadFlags = 2;
 inline bool Msg_HistoryReload::_internal_has_a_areloadflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -88735,7 +88519,7 @@ inline void Msg_NotifyOnHistoryReload::set_allocated_a_acontext(std::string* a_a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_NotifyOnHistoryReload.a_aContext)
 }
 
-// required bool a_aForceReload = 2;
+// optional bool a_aForceReload = 2;
 inline bool Msg_NotifyOnHistoryReload::_internal_has_a_aforcereload() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -88767,7 +88551,7 @@ inline void Msg_NotifyOnHistoryReload::set_a_aforcereload(bool value) {
 
 // Reply_NotifyOnHistoryReload
 
-// required bool a_canReload = 1;
+// optional bool a_canReload = 1;
 inline bool Reply_NotifyOnHistoryReload::_internal_has_a_canreload() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -88963,7 +88747,7 @@ inline void Msg_HistoryCommit::set_allocated_a_acontext(std::string* a_acontext)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_HistoryCommit.a_aContext)
 }
 
-// required uint64 a_aLoadID = 2;
+// optional uint64 a_aLoadID = 2;
 inline bool Msg_HistoryCommit::_internal_has_a_aloadid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -89059,7 +88843,7 @@ inline void Msg_HistoryCommit::set_allocated_a_achangeid(std::string* a_achangei
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_HistoryCommit.a_aChangeID)
 }
 
-// required uint32 a_aLoadType = 4;
+// optional uint32 a_aLoadType = 4;
 inline bool Msg_HistoryCommit::_internal_has_a_aloadtype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -89087,7 +88871,7 @@ inline void Msg_HistoryCommit::set_a_aloadtype(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_HistoryCommit.a_aLoadType)
 }
 
-// required bool a_aCloneEntryChildren = 5;
+// optional bool a_aCloneEntryChildren = 5;
 inline bool Msg_HistoryCommit::_internal_has_a_acloneentrychildren() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -89115,7 +88899,7 @@ inline void Msg_HistoryCommit::set_a_acloneentrychildren(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_HistoryCommit.a_aCloneEntryChildren)
 }
 
-// required bool a_aChannelExpired = 6;
+// optional bool a_aChannelExpired = 6;
 inline bool Msg_HistoryCommit::_internal_has_a_achannelexpired() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -89143,7 +88927,7 @@ inline void Msg_HistoryCommit::set_a_achannelexpired(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_HistoryCommit.a_aChannelExpired)
 }
 
-// required uint32 a_aCacheKey = 7;
+// optional uint32 a_aCacheKey = 7;
 inline bool Msg_HistoryCommit::_internal_has_a_acachekey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -89311,7 +89095,7 @@ inline void Msg_HistoryGo::set_allocated_a_acontext(std::string* a_acontext) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_HistoryGo.a_aContext)
 }
 
-// required sint32 a_aOffset = 2;
+// optional sint32 a_aOffset = 2;
 inline bool Msg_HistoryGo::_internal_has_a_aoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -89339,7 +89123,7 @@ inline void Msg_HistoryGo::set_a_aoffset(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_HistoryGo.a_aOffset)
 }
 
-// required uint64 a_aHistoryEpoch = 3;
+// optional uint64 a_aHistoryEpoch = 3;
 inline bool Msg_HistoryGo::_internal_has_a_ahistoryepoch() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -89367,7 +89151,7 @@ inline void Msg_HistoryGo::set_a_ahistoryepoch(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_HistoryGo.a_aHistoryEpoch)
 }
 
-// required bool a_aRequireUserInteraction = 4;
+// optional bool a_aRequireUserInteraction = 4;
 inline bool Msg_HistoryGo::_internal_has_a_arequireuserinteraction() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -89395,7 +89179,7 @@ inline void Msg_HistoryGo::set_a_arequireuserinteraction(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_HistoryGo.a_aRequireUserInteraction)
 }
 
-// required bool a_aUserActivation = 5;
+// optional bool a_aUserActivation = 5;
 inline bool Msg_HistoryGo::_internal_has_a_auseractivation() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -89459,7 +89243,7 @@ inline void Reply_HistoryGo::set_a_requestedindex(int32_t value) {
 
 // Msg_BlobURLDataRequest
 
-// required string a_aBlobURL = 1;
+// optional string a_aBlobURL = 1;
 inline bool Msg_BlobURLDataRequest::_internal_has_a_abloburl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -89731,7 +89515,7 @@ inline void Msg_BlobURLDataRequest::set_allocated_a_aoriginattributes(std::strin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_BlobURLDataRequest.a_aOriginAttributes)
 }
 
-// required uint64 a_aInnerWindowId = 5;
+// optional uint64 a_aInnerWindowId = 5;
 inline bool Msg_BlobURLDataRequest::_internal_has_a_ainnerwindowid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -89759,7 +89543,7 @@ inline void Msg_BlobURLDataRequest::set_a_ainnerwindowid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_BlobURLDataRequest.a_aInnerWindowId)
 }
 
-// required string a_aPartitionKey = 6;
+// optional string a_aPartitionKey = 6;
 inline bool Msg_BlobURLDataRequest::_internal_has_a_apartitionkey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -90126,7 +89910,7 @@ inline void Msg_SetActiveSessionHistoryEntry::set_allocated_a_info(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_SetActiveSessionHistoryEntry.a_info)
 }
 
-// required uint32 a_loadType = 4;
+// optional uint32 a_loadType = 4;
 inline bool Msg_SetActiveSessionHistoryEntry::_internal_has_a_loadtype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -90154,7 +89938,7 @@ inline void Msg_SetActiveSessionHistoryEntry::set_a_loadtype(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_SetActiveSessionHistoryEntry.a_loadType)
 }
 
-// required uint32 a_updatedCacheKey = 5;
+// optional uint32 a_updatedCacheKey = 5;
 inline bool Msg_SetActiveSessionHistoryEntry::_internal_has_a_updatedcachekey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -90606,7 +90390,7 @@ inline void Msg_RemoveFromSessionHistory::set_allocated_a_changeid(std::string* 
 
 // Msg_CleanupPendingLoadState
 
-// required uint64 a_aLoadIdentifier = 1;
+// optional uint64 a_aLoadIdentifier = 1;
 inline bool Msg_CleanupPendingLoadState::_internal_has_a_aloadidentifier() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -90638,7 +90422,7 @@ inline void Msg_CleanupPendingLoadState::set_a_aloadidentifier(uint64_t value) {
 
 // Msg_ScriptError
 
-// required string a_message = 1;
+// optional string a_message = 1;
 inline bool Msg_ScriptError::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -90706,7 +90490,7 @@ inline void Msg_ScriptError::set_allocated_a_message(std::string* a_message) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_ScriptError.a_message)
 }
 
-// required string a_sourceName = 2;
+// optional string a_sourceName = 2;
 inline bool Msg_ScriptError::_internal_has_a_sourcename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -90774,7 +90558,7 @@ inline void Msg_ScriptError::set_allocated_a_sourcename(std::string* a_sourcenam
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_ScriptError.a_sourceName)
 }
 
-// required uint32 a_lineNumber = 3;
+// optional uint32 a_lineNumber = 3;
 inline bool Msg_ScriptError::_internal_has_a_linenumber() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -90802,7 +90586,7 @@ inline void Msg_ScriptError::set_a_linenumber(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_ScriptError.a_lineNumber)
 }
 
-// required uint32 a_colNumber = 4;
+// optional uint32 a_colNumber = 4;
 inline bool Msg_ScriptError::_internal_has_a_colnumber() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -90830,7 +90614,7 @@ inline void Msg_ScriptError::set_a_colnumber(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_ScriptError.a_colNumber)
 }
 
-// required uint32 a_flags = 5;
+// optional uint32 a_flags = 5;
 inline bool Msg_ScriptError::_internal_has_a_flags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -90858,7 +90642,7 @@ inline void Msg_ScriptError::set_a_flags(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_ScriptError.a_flags)
 }
 
-// required string a_category = 6;
+// optional string a_category = 6;
 inline bool Msg_ScriptError::_internal_has_a_category() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -90926,7 +90710,7 @@ inline void Msg_ScriptError::set_allocated_a_category(std::string* a_category) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_ScriptError.a_category)
 }
 
-// required bool a_isFromPrivateWindow = 7;
+// optional bool a_isFromPrivateWindow = 7;
 inline bool Msg_ScriptError::_internal_has_a_isfromprivatewindow() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -90954,7 +90738,7 @@ inline void Msg_ScriptError::set_a_isfromprivatewindow(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_ScriptError.a_isFromPrivateWindow)
 }
 
-// required uint64 a_innerWindowId = 8;
+// optional uint64 a_innerWindowId = 8;
 inline bool Msg_ScriptError::_internal_has_a_innerwindowid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -90982,7 +90766,7 @@ inline void Msg_ScriptError::set_a_innerwindowid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_ScriptError.a_innerWindowId)
 }
 
-// required bool a_isFromChromeContext = 9;
+// optional bool a_isFromChromeContext = 9;
 inline bool Msg_ScriptError::_internal_has_a_isfromchromecontext() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -91101,7 +90885,7 @@ inline void Msg_ReportFrameTimingData::set_allocated_a_loadinfo(::protobuf::mozi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_ReportFrameTimingData.a_loadInfo)
 }
 
-// required string a_entryName = 2;
+// optional string a_entryName = 2;
 inline bool Msg_ReportFrameTimingData::_internal_has_a_entryname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -91169,7 +90953,7 @@ inline void Msg_ReportFrameTimingData::set_allocated_a_entryname(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_ReportFrameTimingData.a_entryName)
 }
 
-// required string a_initiatorType = 3;
+// optional string a_initiatorType = 3;
 inline bool Msg_ReportFrameTimingData::_internal_has_a_initiatortype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -91445,7 +91229,7 @@ inline void Msg_CommitBrowsingContextTransaction::set_allocated_a_atransaction(s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_CommitBrowsingContextTransaction.a_aTransaction)
 }
 
-// required uint64 a_aEpoch = 3;
+// optional uint64 a_aEpoch = 3;
 inline bool Msg_CommitBrowsingContextTransaction::_internal_has_a_aepoch() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -91477,7 +91261,7 @@ inline void Msg_CommitBrowsingContextTransaction::set_a_aepoch(uint64_t value) {
 
 // Msg_AsyncMessage
 
-// required string a_aMessage = 1;
+// optional string a_aMessage = 1;
 inline bool Msg_AsyncMessage::_internal_has_a_amessage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -91636,7 +91420,7 @@ inline void Msg_AsyncMessage::set_allocated_a_adata(::protobuf::mozilla::dom::Cl
 
 // Msg_NotifyPushSubscriptionModifiedObservers
 
-// required string a_scope = 1;
+// optional string a_scope = 1;
 inline bool Msg_NotifyPushSubscriptionModifiedObservers::_internal_has_a_scope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -91776,7 +91560,7 @@ inline void Msg_NotifyPushSubscriptionModifiedObservers::set_allocated_a_princip
 
 // Msg_PushError
 
-// required string a_scope = 1;
+// optional string a_scope = 1;
 inline bool Msg_PushError::_internal_has_a_scope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -91912,7 +91696,7 @@ inline void Msg_PushError::set_allocated_a_principal(std::string* a_principal) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_PushError.a_principal)
 }
 
-// required string a_message = 3;
+// optional string a_message = 3;
 inline bool Msg_PushError::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -91980,7 +91764,7 @@ inline void Msg_PushError::set_allocated_a_message(std::string* a_message) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_PushError.a_message)
 }
 
-// required uint32 a_flags = 4;
+// optional uint32 a_flags = 4;
 inline bool Msg_PushError::_internal_has_a_flags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -92012,7 +91796,7 @@ inline void Msg_PushError::set_a_flags(uint32_t value) {
 
 // Msg_CreateBrowsingContext
 
-// required uint64 a_aGroupId = 1;
+// optional uint64 a_aGroupId = 1;
 inline bool Msg_CreateBrowsingContext::_internal_has_a_agroupid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -92180,7 +91964,7 @@ inline void Msg_DiscardBrowsingContext::set_allocated_a_acontext(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_DiscardBrowsingContext.a_aContext)
 }
 
-// required bool a_aDoDiscard = 2;
+// optional bool a_aDoDiscard = 2;
 inline bool Msg_DiscardBrowsingContext::_internal_has_a_adodiscard() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -92212,7 +91996,7 @@ inline void Msg_DiscardBrowsingContext::set_a_adodiscard(bool value) {
 
 // Reply_DiscardBrowsingContext
 
-// required uint64 a_unused = 1;
+// optional uint64 a_unused = 1;
 inline bool Reply_DiscardBrowsingContext::_internal_has_a_unused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -92312,7 +92096,7 @@ inline void Msg_AdjustWindowFocus::set_allocated_a_acontext(std::string* a_acont
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_AdjustWindowFocus.a_aContext)
 }
 
-// required bool a_aIsVisible = 2;
+// optional bool a_aIsVisible = 2;
 inline bool Msg_AdjustWindowFocus::_internal_has_a_aisvisible() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -92340,7 +92124,7 @@ inline void Msg_AdjustWindowFocus::set_a_aisvisible(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_AdjustWindowFocus.a_aIsVisible)
 }
 
-// required uint64 a_aActionId = 3;
+// optional uint64 a_aActionId = 3;
 inline bool Msg_AdjustWindowFocus::_internal_has_a_aactionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -92368,7 +92152,7 @@ inline void Msg_AdjustWindowFocus::set_a_aactionid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_AdjustWindowFocus.a_aActionId)
 }
 
-// required bool a_aShouldClearAncestorFocus = 4;
+// optional bool a_aShouldClearAncestorFocus = 4;
 inline bool Msg_AdjustWindowFocus::_internal_has_a_ashouldclearancestorfocus() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -92536,7 +92320,7 @@ inline void Msg_WindowClose::set_allocated_a_acontext(std::string* a_acontext) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_WindowClose.a_aContext)
 }
 
-// required bool a_aTrustedCaller = 2;
+// optional bool a_aTrustedCaller = 2;
 inline bool Msg_WindowClose::_internal_has_a_atrustedcaller() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -92704,7 +92488,7 @@ inline void Msg_WindowFocus::set_allocated_a_acallertype(std::string* a_acallert
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_WindowFocus.a_aCallerType)
 }
 
-// required uint64 a_aActionId = 3;
+// optional uint64 a_aActionId = 3;
 inline bool Msg_WindowFocus::_internal_has_a_aactionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -93012,7 +92796,7 @@ inline void Msg_RaiseWindow::set_allocated_a_acallertype(std::string* a_acallert
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_RaiseWindow.a_aCallerType)
 }
 
-// required uint64 a_aActionId = 3;
+// optional uint64 a_aActionId = 3;
 inline bool Msg_RaiseWindow::_internal_has_a_aactionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -93184,7 +92968,7 @@ inline void Msg_SetFocusedBrowsingContext::set_allocated_a_acontext(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_SetFocusedBrowsingContext.a_aContext)
 }
 
-// required uint64 a_aActionId = 2;
+// optional uint64 a_aActionId = 2;
 inline bool Msg_SetFocusedBrowsingContext::_internal_has_a_aactionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -93284,7 +93068,7 @@ inline void Msg_SetActiveBrowsingContext::set_allocated_a_acontext(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_SetActiveBrowsingContext.a_aContext)
 }
 
-// required uint64 a_aActionId = 2;
+// optional uint64 a_aActionId = 2;
 inline bool Msg_SetActiveBrowsingContext::_internal_has_a_aactionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -93384,7 +93168,7 @@ inline void Msg_UnsetActiveBrowsingContext::set_allocated_a_acontext(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_UnsetActiveBrowsingContext.a_aContext)
 }
 
-// required uint64 a_aActionId = 2;
+// optional uint64 a_aActionId = 2;
 inline bool Msg_UnsetActiveBrowsingContext::_internal_has_a_aactionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -93484,7 +93268,7 @@ inline void Msg_SetFocusedElement::set_allocated_a_acontext(std::string* a_acont
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_SetFocusedElement.a_aContext)
 }
 
-// required bool a_aNeedsFocus = 2;
+// optional bool a_aNeedsFocus = 2;
 inline bool Msg_SetFocusedElement::_internal_has_a_aneedsfocus() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -93584,7 +93368,7 @@ inline void Msg_FinalizeFocusOuter::set_allocated_a_acontext(std::string* a_acon
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_FinalizeFocusOuter.a_aContext)
 }
 
-// required bool a_aCanFocus = 2;
+// optional bool a_aCanFocus = 2;
 inline bool Msg_FinalizeFocusOuter::_internal_has_a_acanfocus() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -93684,7 +93468,7 @@ inline void Msg_FinalizeFocusOuter::set_allocated_a_acallertype(std::string* a_a
 
 // Msg_InsertNewFocusActionId
 
-// required uint64 a_aActionId = 1;
+// optional uint64 a_aActionId = 1;
 inline bool Msg_InsertNewFocusActionId::_internal_has_a_aactionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -93920,7 +93704,7 @@ inline void Msg_BlurToParent::set_allocated_a_aancestorbrowsingcontexttofocus(st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_BlurToParent.a_aAncestorBrowsingContextToFocus)
 }
 
-// required bool a_aIsLeavingDocument = 4;
+// optional bool a_aIsLeavingDocument = 4;
 inline bool Msg_BlurToParent::_internal_has_a_aisleavingdocument() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -93948,7 +93732,7 @@ inline void Msg_BlurToParent::set_a_aisleavingdocument(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_BlurToParent.a_aIsLeavingDocument)
 }
 
-// required bool a_aAdjustWidget = 5;
+// optional bool a_aAdjustWidget = 5;
 inline bool Msg_BlurToParent::_internal_has_a_aadjustwidget() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -93976,7 +93760,7 @@ inline void Msg_BlurToParent::set_a_aadjustwidget(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_BlurToParent.a_aAdjustWidget)
 }
 
-// required bool a_aBrowsingContextToClearHandled = 6;
+// optional bool a_aBrowsingContextToClearHandled = 6;
 inline bool Msg_BlurToParent::_internal_has_a_abrowsingcontexttoclearhandled() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -94004,7 +93788,7 @@ inline void Msg_BlurToParent::set_a_abrowsingcontexttoclearhandled(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_BlurToParent.a_aBrowsingContextToClearHandled)
 }
 
-// required bool a_aAncestorBrowsingContextToFocusHandled = 7;
+// optional bool a_aAncestorBrowsingContextToFocusHandled = 7;
 inline bool Msg_BlurToParent::_internal_has_a_aancestorbrowsingcontexttofocushandled() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -94032,7 +93816,7 @@ inline void Msg_BlurToParent::set_a_aancestorbrowsingcontexttofocushandled(bool 
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_BlurToParent.a_aAncestorBrowsingContextToFocusHandled)
 }
 
-// required uint64 a_aActionId = 8;
+// optional uint64 a_aActionId = 8;
 inline bool Msg_BlurToParent::_internal_has_a_aactionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -94268,7 +94052,7 @@ inline void Msg_BlurToChild::set_allocated_a_aancestorbrowsingcontexttofocus(std
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_BlurToChild.a_aAncestorBrowsingContextToFocus)
 }
 
-// required bool a_aIsLeavingDocument = 4;
+// optional bool a_aIsLeavingDocument = 4;
 inline bool Msg_BlurToChild::_internal_has_a_aisleavingdocument() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -94296,7 +94080,7 @@ inline void Msg_BlurToChild::set_a_aisleavingdocument(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_BlurToChild.a_aIsLeavingDocument)
 }
 
-// required bool a_aAdjustWidget = 5;
+// optional bool a_aAdjustWidget = 5;
 inline bool Msg_BlurToChild::_internal_has_a_aadjustwidget() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -94324,7 +94108,7 @@ inline void Msg_BlurToChild::set_a_aadjustwidget(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_BlurToChild.a_aAdjustWidget)
 }
 
-// required uint64 a_aActionId = 6;
+// optional uint64 a_aActionId = 6;
 inline bool Msg_BlurToChild::_internal_has_a_aactionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -94424,7 +94208,7 @@ inline void Msg_SetupFocusedAndActive::set_allocated_a_afocusedbrowsingcontext(s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_SetupFocusedAndActive.a_aFocusedBrowsingContext)
 }
 
-// required uint64 a_aActionIdForFocused = 2;
+// optional uint64 a_aActionIdForFocused = 2;
 inline bool Msg_SetupFocusedAndActive::_internal_has_a_aactionidforfocused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -94520,7 +94304,7 @@ inline void Msg_SetupFocusedAndActive::set_allocated_a_aactivebrowsingcontext(st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_SetupFocusedAndActive.a_aActiveBrowsingContext)
 }
 
-// required uint64 a_aActionId = 4;
+// optional uint64 a_aActionId = 4;
 inline bool Msg_SetupFocusedAndActive::_internal_has_a_aactionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -94552,7 +94336,7 @@ inline void Msg_SetupFocusedAndActive::set_a_aactionid(uint64_t value) {
 
 // Msg_ReviseActiveBrowsingContext
 
-// required uint64 a_aOldActionId = 1;
+// optional uint64 a_aOldActionId = 1;
 inline bool Msg_ReviseActiveBrowsingContext::_internal_has_a_aoldactionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -94648,7 +94432,7 @@ inline void Msg_ReviseActiveBrowsingContext::set_allocated_a_aactivebrowsingcont
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_ReviseActiveBrowsingContext.a_aActiveBrowsingContext)
 }
 
-// required uint64 a_aNewActionId = 3;
+// optional uint64 a_aNewActionId = 3;
 inline bool Msg_ReviseActiveBrowsingContext::_internal_has_a_anewactionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -94680,7 +94464,7 @@ inline void Msg_ReviseActiveBrowsingContext::set_a_anewactionid(uint64_t value) 
 
 // Msg_ReviseFocusedBrowsingContext
 
-// required uint64 a_aOldActionId = 1;
+// optional uint64 a_aOldActionId = 1;
 inline bool Msg_ReviseFocusedBrowsingContext::_internal_has_a_aoldactionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -94776,7 +94560,7 @@ inline void Msg_ReviseFocusedBrowsingContext::set_allocated_a_afocusedbrowsingco
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_ReviseFocusedBrowsingContext.a_aFocusedBrowsingContext)
 }
 
-// required uint64 a_aNewActionId = 3;
+// optional uint64 a_aNewActionId = 3;
 inline bool Msg_ReviseFocusedBrowsingContext::_internal_has_a_anewactionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -95262,7 +95046,7 @@ inline void Msg_CommitWindowContextTransaction::set_allocated_a_atransaction(std
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_CommitWindowContextTransaction.a_aTransaction)
 }
 
-// required uint64 a_aEpoch = 3;
+// optional uint64 a_aEpoch = 3;
 inline bool Msg_CommitWindowContextTransaction::_internal_has_a_aepoch() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -95366,7 +95150,7 @@ inline void Msg_CreateWindowContext::set_allocated_a_ainit(std::string* a_ainit)
 
 // Msg_DiscardWindowContext
 
-// required uint64 a_aContextId = 1;
+// optional uint64 a_aContextId = 1;
 inline bool Msg_DiscardWindowContext::_internal_has_a_acontextid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -95398,7 +95182,7 @@ inline void Msg_DiscardWindowContext::set_a_acontextid(uint64_t value) {
 
 // Reply_DiscardWindowContext
 
-// required bool a_unused = 1;
+// optional bool a_unused = 1;
 inline bool Reply_DiscardWindowContext::_internal_has_a_unused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -96154,7 +95938,7 @@ inline void Reply_RequestGeolocationPermissionFromUser::set_allocated_a_astatus(
 
 // Msg_AttributionEvent
 
-// required string a_aSourceHost = 1;
+// optional string a_aSourceHost = 1;
 inline bool Msg_AttributionEvent::_internal_has_a_asourcehost() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -96290,7 +96074,7 @@ inline void Msg_AttributionEvent::set_allocated_a_atype(std::string* a_atype) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_AttributionEvent.a_aType)
 }
 
-// required uint32 a_aIndex = 3;
+// optional uint32 a_aIndex = 3;
 inline bool Msg_AttributionEvent::_internal_has_a_aindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -96318,7 +96102,7 @@ inline void Msg_AttributionEvent::set_a_aindex(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_AttributionEvent.a_aIndex)
 }
 
-// required string a_aAd = 4;
+// optional string a_aAd = 4;
 inline bool Msg_AttributionEvent::_internal_has_a_aad() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -96386,7 +96170,7 @@ inline void Msg_AttributionEvent::set_allocated_a_aad(std::string* a_aad) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_AttributionEvent.a_aAd)
 }
 
-// required string a_aTargetHost = 5;
+// optional string a_aTargetHost = 5;
 inline bool Msg_AttributionEvent::_internal_has_a_atargethost() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -96458,7 +96242,7 @@ inline void Msg_AttributionEvent::set_allocated_a_atargethost(std::string* a_ata
 
 // Msg_AttributionConversion
 
-// required string a_aTargetHost = 1;
+// optional string a_aTargetHost = 1;
 inline bool Msg_AttributionConversion::_internal_has_a_atargethost() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -96526,7 +96310,7 @@ inline void Msg_AttributionConversion::set_allocated_a_atargethost(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_AttributionConversion.a_aTargetHost)
 }
 
-// required string a_aTask = 2;
+// optional string a_aTask = 2;
 inline bool Msg_AttributionConversion::_internal_has_a_atask() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -96594,7 +96378,7 @@ inline void Msg_AttributionConversion::set_allocated_a_atask(std::string* a_atas
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_AttributionConversion.a_aTask)
 }
 
-// required uint32 a_aHistogramSize = 3;
+// optional uint32 a_aHistogramSize = 3;
 inline bool Msg_AttributionConversion::_internal_has_a_ahistogramsize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;

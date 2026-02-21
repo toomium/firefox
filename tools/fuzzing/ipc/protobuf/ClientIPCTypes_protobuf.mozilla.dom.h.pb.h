@@ -333,7 +333,7 @@ class ClientSourceConstructorArgs final :
   std::string* _internal_mutable_a_creationtime();
   public:
 
-  // required string a_url = 6;
+  // optional string a_url = 6;
   bool has_a_url() const;
   private:
   bool _internal_has_a_url() const;
@@ -605,7 +605,7 @@ class IPCClientInfo final :
   std::string* _internal_mutable_a_creationtime();
   public:
 
-  // required string a_url = 6;
+  // optional string a_url = 6;
   bool has_a_url() const;
   private:
   bool _internal_has_a_url() const;
@@ -892,7 +892,7 @@ class IPCClientWindowState final :
   std::string* _internal_mutable_a_storageaccess();
   public:
 
-  // required bool a_focused = 4;
+  // optional bool a_focused = 4;
   bool has_a_focused() const;
   private:
   bool _internal_has_a_focused() const;
@@ -1728,7 +1728,7 @@ class ClientSourceExecutionReadyArgs final :
     kAUrlFieldNumber = 1,
     kAFrameTypeFieldNumber = 2,
   };
-  // required string a_url = 1;
+  // optional string a_url = 1;
   bool has_a_url() const;
   private:
   bool _internal_has_a_url() const;
@@ -1767,9 +1767,6 @@ class ClientSourceExecutionReadyArgs final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.ClientSourceExecutionReadyArgs)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2194,7 +2191,7 @@ class ClientNavigateArgs final :
     kATargetFieldNumber = 1,
     kAServiceWorkerFieldNumber = 4,
   };
-  // required string a_url = 2;
+  // optional string a_url = 2;
   bool has_a_url() const;
   private:
   bool _internal_has_a_url() const;
@@ -2212,7 +2209,7 @@ class ClientNavigateArgs final :
   std::string* _internal_mutable_a_url();
   public:
 
-  // required string a_baseURL = 3;
+  // optional string a_baseURL = 3;
   bool has_a_baseurl() const;
   private:
   bool _internal_has_a_baseurl() const;
@@ -2609,7 +2606,7 @@ class ClientMatchAllArgs final :
       ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* a_serviceworker);
   ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* unsafe_arena_release_a_serviceworker();
 
-  // required bool a_includeUncontrolled = 3;
+  // optional bool a_includeUncontrolled = 3;
   bool has_a_includeuncontrolled() const;
   private:
   bool _internal_has_a_includeuncontrolled() const;
@@ -3076,7 +3073,7 @@ class ClientOpenWindowArgs final :
     kAPrincipalInfoFieldNumber = 1,
     kACspInfoFieldNumber = 2,
   };
-  // required string a_url = 3;
+  // optional string a_url = 3;
   bool has_a_url() const;
   private:
   bool _internal_has_a_url() const;
@@ -3094,7 +3091,7 @@ class ClientOpenWindowArgs final :
   std::string* _internal_mutable_a_url();
   public:
 
-  // required string a_baseURL = 4;
+  // optional string a_baseURL = 4;
   bool has_a_baseurl() const;
   private:
   bool _internal_has_a_baseurl() const;
@@ -3151,9 +3148,6 @@ class ClientOpenWindowArgs final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.ClientOpenWindowArgs)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3912,7 +3906,7 @@ class ClientNavigateOpConstructorArgs final :
   std::string* _internal_mutable_a_target();
   public:
 
-  // required string a_url = 2;
+  // optional string a_url = 2;
   bool has_a_url() const;
   private:
   bool _internal_has_a_url() const;
@@ -3930,7 +3924,7 @@ class ClientNavigateOpConstructorArgs final :
   std::string* _internal_mutable_a_url();
   public:
 
-  // required string a_baseURL = 3;
+  // optional string a_baseURL = 3;
   bool has_a_baseurl() const;
   private:
   bool _internal_has_a_baseurl() const;
@@ -3951,9 +3945,6 @@ class ClientNavigateOpConstructorArgs final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.ClientNavigateOpConstructorArgs)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4567,7 +4558,7 @@ inline void ClientSourceConstructorArgs::set_allocated_a_creationtime(std::strin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ClientSourceConstructorArgs.a_creationTime)
 }
 
-// required string a_url = 6;
+// optional string a_url = 6;
 inline bool ClientSourceConstructorArgs::_internal_has_a_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -5066,7 +5057,7 @@ inline void IPCClientInfo::set_allocated_a_creationtime(std::string* a_creationt
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCClientInfo.a_creationTime)
 }
 
-// required string a_url = 6;
+// optional string a_url = 6;
 inline bool IPCClientInfo::_internal_has_a_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -5584,7 +5575,7 @@ inline void IPCClientWindowState::set_allocated_a_storageaccess(std::string* a_s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCClientWindowState.a_storageAccess)
 }
 
-// required bool a_focused = 4;
+// optional bool a_focused = 4;
 inline bool IPCClientWindowState::_internal_has_a_focused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -6186,7 +6177,7 @@ inline PostMessageSource::ContentCase PostMessageSource::content_case() const {
 
 // ClientSourceExecutionReadyArgs
 
-// required string a_url = 1;
+// optional string a_url = 1;
 inline bool ClientSourceExecutionReadyArgs::_internal_has_a_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6579,7 +6570,7 @@ inline void ClientNavigateArgs::set_allocated_a_target(::protobuf::mozilla::dom:
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ClientNavigateArgs.a_target)
 }
 
-// required string a_url = 2;
+// optional string a_url = 2;
 inline bool ClientNavigateArgs::_internal_has_a_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6647,7 +6638,7 @@ inline void ClientNavigateArgs::set_allocated_a_url(std::string* a_url) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ClientNavigateArgs.a_url)
 }
 
-// required string a_baseURL = 3;
+// optional string a_baseURL = 3;
 inline bool ClientNavigateArgs::_internal_has_a_baseurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7139,7 +7130,7 @@ inline void ClientMatchAllArgs::set_allocated_a_type(std::string* a_type) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ClientMatchAllArgs.a_type)
 }
 
-// required bool a_includeUncontrolled = 3;
+// optional bool a_includeUncontrolled = 3;
 inline bool ClientMatchAllArgs::_internal_has_a_includeuncontrolled() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -7595,7 +7586,7 @@ inline void ClientOpenWindowArgs::set_allocated_a_cspinfo(::protobuf::mozilla::i
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ClientOpenWindowArgs.a_cspInfo)
 }
 
-// required string a_url = 3;
+// optional string a_url = 3;
 inline bool ClientOpenWindowArgs::_internal_has_a_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7663,7 +7654,7 @@ inline void ClientOpenWindowArgs::set_allocated_a_url(std::string* a_url) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ClientOpenWindowArgs.a_url)
 }
 
-// required string a_baseURL = 4;
+// optional string a_baseURL = 4;
 inline bool ClientOpenWindowArgs::_internal_has_a_baseurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8530,7 +8521,7 @@ inline void ClientNavigateOpConstructorArgs::set_allocated_a_target(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ClientNavigateOpConstructorArgs.a_target)
 }
 
-// required string a_url = 2;
+// optional string a_url = 2;
 inline bool ClientNavigateOpConstructorArgs::_internal_has_a_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8598,7 +8589,7 @@ inline void ClientNavigateOpConstructorArgs::set_allocated_a_url(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ClientNavigateOpConstructorArgs.a_url)
 }
 
-// required string a_baseURL = 3;
+// optional string a_baseURL = 3;
 inline bool ClientNavigateOpConstructorArgs::_internal_has_a_baseurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

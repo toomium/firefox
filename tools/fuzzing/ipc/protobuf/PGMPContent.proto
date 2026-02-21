@@ -16,22 +16,22 @@ package protobuf.mozilla.gmp.PGMPContent;
 
 // Message declarations
 message Msg_PGMPVideoDecoderConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
 }
 
 message Reply_PGMPVideoDecoderConstructor {
 }
 
 message Msg_PGMPVideoEncoderConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
 }
 
 message Reply_PGMPVideoEncoderConstructor {
 }
 
 message Msg_PChromiumCDMConstructor {
-  required sint64 a_actorid = 1;
-  required string a_aKeySystem = 2;
+  optional sint64 a_actorid = 1;
+  optional string a_aKeySystem = 2;
 }
 
 message Reply_PChromiumCDMConstructor {

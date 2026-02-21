@@ -22,7 +22,7 @@ message Msg_DeleteMe {
 }
 
 message Msg_PBackgroundIDBFactoryRequestConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
   required protobuf.mozilla.dom.indexedDB.FactoryRequestParams a_params = 2;
 }
 
@@ -45,7 +45,7 @@ message Reply___delete__ {
 }
 
 message Msg_PBackgroundIDBDatabaseConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
   required protobuf.mozilla.dom.indexedDB.DatabaseSpec a_spec = 2;
   required bytes a_request = 3;
 }

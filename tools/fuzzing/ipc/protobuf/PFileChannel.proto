@@ -27,7 +27,7 @@ message Msg_NotifyListeners {
 }
 
 message Msg_SetChannelIdForRedirect {
-  required uint64 a_aChannelId = 1;
+  optional uint64 a_aChannelId = 1;
 }
 
 // Parameter mappings stats:

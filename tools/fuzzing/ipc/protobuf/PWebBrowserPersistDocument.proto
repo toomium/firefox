@@ -29,22 +29,22 @@ message Msg_InitFailure {
 }
 
 message Msg_SetPersistFlags {
-  required uint32 a_aNewFlags = 1;
+  optional uint32 a_aNewFlags = 1;
 }
 
 message Msg_PWebBrowserPersistResourcesConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
 }
 
 message Reply_PWebBrowserPersistResourcesConstructor {
 }
 
 message Msg_PWebBrowserPersistSerializeConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
   required protobuf.mozilla.WebBrowserPersistURIMap a_aMap = 2;
-  required string a_aRequestedContentType = 3;
-  required uint32 a_aEncoderFlags = 4;
-  required uint32 a_aWrapColumn = 5;
+  optional string a_aRequestedContentType = 3;
+  optional uint32 a_aEncoderFlags = 4;
+  optional uint32 a_aWrapColumn = 5;
 }
 
 message Reply_PWebBrowserPersistSerializeConstructor {

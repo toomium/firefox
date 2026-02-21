@@ -14,9 +14,9 @@ import "DOMTypes.proto";
 
 // Structs and unions declarations
 message FrameTransitionData {
-  required bool a_clientRedirect = 1;
-  required bool a_formSubmit = 2;
-  required bool a_forwardBack = 3;
-  required bool a_reload = 4;
-  required bool a_serverRedirect = 5;
+  optional bool a_clientRedirect = 1;
+  optional bool a_formSubmit = 2;
+  optional bool a_forwardBack = 3;
+  optional bool a_reload = 4;
+  optional bool a_serverRedirect = 5;
 }

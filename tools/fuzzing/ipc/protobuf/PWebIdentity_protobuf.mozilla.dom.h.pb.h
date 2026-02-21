@@ -176,7 +176,7 @@ class IPCIdentityCredential final :
     kAIdFieldNumber = 1,
     kATokenFieldNumber = 2,
   };
-  // required string a_id = 1;
+  // optional string a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -424,7 +424,7 @@ class WebIdentityGetCredentialResponse final :
 #endif  // __GNUC__
 // IPCIdentityCredential
 
-// required string a_id = 1;
+// optional string a_id = 1;
 inline bool IPCIdentityCredential::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

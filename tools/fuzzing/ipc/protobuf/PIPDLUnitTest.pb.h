@@ -185,7 +185,7 @@ class Msg_Start final :
     kAPortFieldNumber = 2,
     kAChannelIdFieldNumber = 3,
   };
-  // required string a_name = 1;
+  // optional string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -541,7 +541,7 @@ class Msg_Complete final :
 #endif  // __GNUC__
 // Msg_Start
 
-// required string a_name = 1;
+// optional string a_name = 1;
 inline bool Msg_Start::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

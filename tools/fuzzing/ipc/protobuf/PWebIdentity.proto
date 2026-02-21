@@ -22,7 +22,7 @@ message Msg_RequestCancel {
 message Msg_GetIdentityCredential {
   required bytes a_aOptions = 1;
   required bytes a_aMediationRequirement = 2;
-  required bool a_aHasUserActivation = 3;
+  optional bool a_aHasUserActivation = 3;
 }
 
 message Reply_GetIdentityCredential {

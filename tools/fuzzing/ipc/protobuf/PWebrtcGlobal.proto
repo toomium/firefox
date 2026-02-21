@@ -22,12 +22,12 @@ message Reply___delete__ {
 }
 
 message Msg_PeerConnectionCreated {
-  required string a_aPcId = 1;
-  required bool a_aIsLongTermStatsDisabled = 2;
+  optional string a_aPcId = 1;
+  optional bool a_aIsLongTermStatsDisabled = 2;
 }
 
 message Msg_PeerConnectionDestroyed {
-  required string a_aPcId = 1;
+  optional string a_aPcId = 1;
 }
 
 message Msg_PeerConnectionFinalStats {
@@ -35,7 +35,7 @@ message Msg_PeerConnectionFinalStats {
 }
 
 message Msg_GetStats {
-  required string a_aPcIdFilter = 1;
+  optional string a_aPcIdFilter = 1;
 }
 
 message Reply_GetStats {
@@ -56,7 +56,7 @@ message Msg_ClearLog {
 }
 
 message Msg_SetAecLogging {
-  required bool a_aEnable = 1;
+  optional bool a_aEnable = 1;
 }
 
 // Parameter mappings stats:

@@ -184,9 +184,6 @@ class Msg_NotifyNetworkConnectivityServiceObservers::_Internal {
   static void set_has_a_atopic(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_NotifyNetworkConnectivityServiceObservers::Msg_NotifyNetworkConnectivityServiceObservers(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -269,7 +266,7 @@ const char* Msg_NotifyNetworkConnectivityServiceObservers::_InternalParse(const 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aTopic = 1;
+      // optional string a_aTopic = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_atopic();
@@ -309,7 +306,7 @@ uint8_t* Msg_NotifyNetworkConnectivityServiceObservers::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aTopic = 1;
+  // optional string a_aTopic = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_atopic(), target);
@@ -327,15 +324,17 @@ size_t Msg_NotifyNetworkConnectivityServiceObservers::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PTRRService.Msg_NotifyNetworkConnectivityServiceObservers)
   size_t total_size = 0;
 
-  // required string a_aTopic = 1;
-  if (_internal_has_a_atopic()) {
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional string a_aTopic = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_atopic());
   }
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -372,7 +371,6 @@ void Msg_NotifyNetworkConnectivityServiceObservers::CopyFrom(const Msg_NotifyNet
 }
 
 bool Msg_NotifyNetworkConnectivityServiceObservers::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -549,9 +547,6 @@ class Msg_SetConfirmationState::_Internal {
   static void set_has_a_anewstate(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_SetConfirmationState::Msg_SetConfirmationState(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -619,7 +614,7 @@ const char* Msg_SetConfirmationState::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 a_aNewState = 1;
+      // optional uint32 a_aNewState = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_anewstate(&has_bits);
@@ -659,7 +654,7 @@ uint8_t* Msg_SetConfirmationState::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 a_aNewState = 1;
+  // optional uint32 a_aNewState = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_anewstate(), target);
@@ -677,13 +672,15 @@ size_t Msg_SetConfirmationState::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PTRRService.Msg_SetConfirmationState)
   size_t total_size = 0;
 
-  // required uint32 a_aNewState = 1;
-  if (_internal_has_a_anewstate()) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_anewstate());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional uint32 a_aNewState = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_anewstate());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -720,7 +717,6 @@ void Msg_SetConfirmationState::CopyFrom(const Msg_SetConfirmationState& from) {
 }
 
 bool Msg_SetConfirmationState::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1227,9 +1223,6 @@ class Msg_UpdateParentalControlEnabled::_Internal {
   static void set_has_a_aenabled(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_UpdateParentalControlEnabled::Msg_UpdateParentalControlEnabled(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1297,7 +1290,7 @@ const char* Msg_UpdateParentalControlEnabled::_InternalParse(const char* ptr, ::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_aEnabled = 1;
+      // optional bool a_aEnabled = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_aenabled(&has_bits);
@@ -1337,7 +1330,7 @@ uint8_t* Msg_UpdateParentalControlEnabled::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_aEnabled = 1;
+  // optional bool a_aEnabled = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_aenabled(), target);
@@ -1355,13 +1348,15 @@ size_t Msg_UpdateParentalControlEnabled::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PTRRService.Msg_UpdateParentalControlEnabled)
   size_t total_size = 0;
 
-  // required bool a_aEnabled = 1;
-  if (_internal_has_a_aenabled()) {
-    total_size += 1 + 1;
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_aEnabled = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1398,7 +1393,6 @@ void Msg_UpdateParentalControlEnabled::CopyFrom(const Msg_UpdateParentalControlE
 }
 
 bool Msg_UpdateParentalControlEnabled::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1421,9 +1415,6 @@ class Msg_ClearDNSCache::_Internal {
   using HasBits = decltype(std::declval<Msg_ClearDNSCache>()._impl_._has_bits_);
   static void set_has_a_atrrtoo(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -1492,7 +1483,7 @@ const char* Msg_ClearDNSCache::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_aTrrToo = 1;
+      // optional bool a_aTrrToo = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_atrrtoo(&has_bits);
@@ -1532,7 +1523,7 @@ uint8_t* Msg_ClearDNSCache::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_aTrrToo = 1;
+  // optional bool a_aTrrToo = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_atrrtoo(), target);
@@ -1550,13 +1541,15 @@ size_t Msg_ClearDNSCache::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PTRRService.Msg_ClearDNSCache)
   size_t total_size = 0;
 
-  // required bool a_aTrrToo = 1;
-  if (_internal_has_a_atrrtoo()) {
-    total_size += 1 + 1;
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_aTrrToo = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1593,7 +1586,6 @@ void Msg_ClearDNSCache::CopyFrom(const Msg_ClearDNSCache& from) {
 }
 
 bool Msg_ClearDNSCache::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1616,9 +1608,6 @@ class Msg_SetDetectedTrrURI::_Internal {
   using HasBits = decltype(std::declval<Msg_SetDetectedTrrURI>()._impl_._has_bits_);
   static void set_has_a_auri(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -1702,7 +1691,7 @@ const char* Msg_SetDetectedTrrURI::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aURI = 1;
+      // optional string a_aURI = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_auri();
@@ -1742,7 +1731,7 @@ uint8_t* Msg_SetDetectedTrrURI::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aURI = 1;
+  // optional string a_aURI = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_auri(), target);
@@ -1760,15 +1749,17 @@ size_t Msg_SetDetectedTrrURI::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PTRRService.Msg_SetDetectedTrrURI)
   size_t total_size = 0;
 
-  // required string a_aURI = 1;
-  if (_internal_has_a_auri()) {
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional string a_aURI = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_auri());
   }
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1805,7 +1796,6 @@ void Msg_SetDetectedTrrURI::CopyFrom(const Msg_SetDetectedTrrURI& from) {
 }
 
 bool Msg_SetDetectedTrrURI::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 

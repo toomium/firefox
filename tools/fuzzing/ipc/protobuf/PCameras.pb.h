@@ -264,7 +264,7 @@ class Msg_CaptureEnded final :
   enum : int {
     kAStreamIdFieldNumber = 1,
   };
-  // required sint32 a_streamId = 1;
+  // optional sint32 a_streamId = 1;
   bool has_a_streamid() const;
   private:
   bool _internal_has_a_streamid() const;
@@ -444,7 +444,7 @@ class Msg_DeliverFrame final :
       ::protobuf::mozilla::camera::VideoFrameProperties* a_props);
   ::protobuf::mozilla::camera::VideoFrameProperties* unsafe_arena_release_a_props();
 
-  // required sint32 a_streamId = 1;
+  // optional sint32 a_streamId = 1;
   bool has_a_streamid() const;
   private:
   bool _internal_has_a_streamid() const;
@@ -715,7 +715,7 @@ class Msg_ReplyNumberOfCaptureDevices final :
   enum : int {
     kADeviceCountFieldNumber = 1,
   };
-  // required sint32 a_deviceCount = 1;
+  // optional sint32 a_deviceCount = 1;
   bool has_a_devicecount() const;
   private:
   bool _internal_has_a_devicecount() const;
@@ -857,7 +857,7 @@ class Msg_ReplyNumberOfCapabilities final :
   enum : int {
     kACapabilityCountFieldNumber = 1,
   };
-  // required sint32 a_capabilityCount = 1;
+  // optional sint32 a_capabilityCount = 1;
   bool has_a_capabilitycount() const;
   private:
   bool _internal_has_a_capabilitycount() const;
@@ -999,7 +999,7 @@ class Msg_ReplyAllocateCapture final :
   enum : int {
     kACaptureIdFieldNumber = 1,
   };
-  // required sint32 a_captureId = 1;
+  // optional sint32 a_captureId = 1;
   bool has_a_captureid() const;
   private:
   bool _internal_has_a_captureid() const;
@@ -1291,7 +1291,7 @@ class Msg_ReplyGetCaptureDevice final :
     kAScaryFieldNumber = 3,
     kAPlaceholderFieldNumber = 4,
   };
-  // required string a_device_name = 1;
+  // optional string a_device_name = 1;
   bool has_a_device_name() const;
   private:
   bool _internal_has_a_device_name() const;
@@ -1309,7 +1309,7 @@ class Msg_ReplyGetCaptureDevice final :
   std::string* _internal_mutable_a_device_name();
   public:
 
-  // required string a_device_id = 2;
+  // optional string a_device_id = 2;
   bool has_a_device_id() const;
   private:
   bool _internal_has_a_device_id() const;
@@ -1327,7 +1327,7 @@ class Msg_ReplyGetCaptureDevice final :
   std::string* _internal_mutable_a_device_id();
   public:
 
-  // required bool a_scary = 3;
+  // optional bool a_scary = 3;
   bool has_a_scary() const;
   private:
   bool _internal_has_a_scary() const;
@@ -1340,7 +1340,7 @@ class Msg_ReplyGetCaptureDevice final :
   void _internal_set_a_scary(bool value);
   public:
 
-  // required bool a_placeholder = 4;
+  // optional bool a_placeholder = 4;
   bool has_a_placeholder() const;
   private:
   bool _internal_has_a_placeholder() const;
@@ -1356,9 +1356,6 @@ class Msg_ReplyGetCaptureDevice final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2150,7 +2147,7 @@ class Msg_NumberOfCapabilities final :
   std::string* _internal_mutable_a_engine();
   public:
 
-  // required string a_deviceUniqueIdUTF8 = 2;
+  // optional string a_deviceUniqueIdUTF8 = 2;
   bool has_a_deviceuniqueidutf8() const;
   private:
   bool _internal_has_a_deviceuniqueidutf8() const;
@@ -2171,9 +2168,6 @@ class Msg_NumberOfCapabilities final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.camera.PCameras.Msg_NumberOfCapabilities)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2321,7 +2315,7 @@ class Msg_GetCaptureCapability final :
   std::string* _internal_mutable_a_engine();
   public:
 
-  // required string a_unique_idUTF8 = 2;
+  // optional string a_unique_idUTF8 = 2;
   bool has_a_unique_idutf8() const;
   private:
   bool _internal_has_a_unique_idutf8() const;
@@ -2339,7 +2333,7 @@ class Msg_GetCaptureCapability final :
   std::string* _internal_mutable_a_unique_idutf8();
   public:
 
-  // required sint32 a_capability_number = 3;
+  // optional sint32 a_capability_number = 3;
   bool has_a_capability_number() const;
   private:
   bool _internal_has_a_capability_number() const;
@@ -2355,9 +2349,6 @@ class Msg_GetCaptureCapability final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2505,7 +2496,7 @@ class Msg_GetCaptureDevice final :
   std::string* _internal_mutable_a_engine();
   public:
 
-  // required sint32 a_deviceIndex = 2;
+  // optional sint32 a_deviceIndex = 2;
   bool has_a_deviceindex() const;
   private:
   bool _internal_has_a_deviceindex() const;
@@ -2521,9 +2512,6 @@ class Msg_GetCaptureDevice final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.camera.PCameras.Msg_GetCaptureDevice)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2671,7 +2659,7 @@ class Msg_AllocateCapture final :
   std::string* _internal_mutable_a_engine();
   public:
 
-  // required string a_unique_idUTF8 = 2;
+  // optional string a_unique_idUTF8 = 2;
   bool has_a_unique_idutf8() const;
   private:
   bool _internal_has_a_unique_idutf8() const;
@@ -2689,7 +2677,7 @@ class Msg_AllocateCapture final :
   std::string* _internal_mutable_a_unique_idutf8();
   public:
 
-  // required uint64 a_windowID = 3;
+  // optional uint64 a_windowID = 3;
   bool has_a_windowid() const;
   private:
   bool _internal_has_a_windowid() const;
@@ -2705,9 +2693,6 @@ class Msg_AllocateCapture final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.camera.PCameras.Msg_AllocateCapture)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2855,7 +2840,7 @@ class Msg_ReleaseCapture final :
   std::string* _internal_mutable_a_engine();
   public:
 
-  // required sint32 a_captureId = 2;
+  // optional sint32 a_captureId = 2;
   bool has_a_captureid() const;
   private:
   bool _internal_has_a_captureid() const;
@@ -2871,9 +2856,6 @@ class Msg_ReleaseCapture final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.camera.PCameras.Msg_ReleaseCapture)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3039,7 +3021,7 @@ class Msg_StartCapture final :
       ::protobuf::mozilla::camera::VideoCaptureCapability* a_capability);
   ::protobuf::mozilla::camera::VideoCaptureCapability* unsafe_arena_release_a_capability();
 
-  // required sint32 a_captureId = 2;
+  // optional sint32 a_captureId = 2;
   bool has_a_captureid() const;
   private:
   bool _internal_has_a_captureid() const;
@@ -3205,7 +3187,7 @@ class Msg_FocusOnSelectedSource final :
   std::string* _internal_mutable_a_engine();
   public:
 
-  // required sint32 a_captureId = 2;
+  // optional sint32 a_captureId = 2;
   bool has_a_captureid() const;
   private:
   bool _internal_has_a_captureid() const;
@@ -3221,9 +3203,6 @@ class Msg_FocusOnSelectedSource final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.camera.PCameras.Msg_FocusOnSelectedSource)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3370,7 +3349,7 @@ class Msg_StopCapture final :
   std::string* _internal_mutable_a_engine();
   public:
 
-  // required sint32 a_captureId = 2;
+  // optional sint32 a_captureId = 2;
   bool has_a_captureid() const;
   private:
   bool _internal_has_a_captureid() const;
@@ -3386,9 +3365,6 @@ class Msg_StopCapture final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.camera.PCameras.Msg_StopCapture)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3707,7 +3683,7 @@ class Msg_EnsureInitialized final :
 #endif  // __GNUC__
 // Msg_CaptureEnded
 
-// required sint32 a_streamId = 1;
+// optional sint32 a_streamId = 1;
 inline bool Msg_CaptureEnded::_internal_has_a_streamid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3739,7 +3715,7 @@ inline void Msg_CaptureEnded::set_a_streamid(int32_t value) {
 
 // Msg_DeliverFrame
 
-// required sint32 a_streamId = 1;
+// optional sint32 a_streamId = 1;
 inline bool Msg_DeliverFrame::_internal_has_a_streamid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -3930,7 +3906,7 @@ inline void Msg_DeliverFrame::set_allocated_a_props(::protobuf::mozilla::camera:
 
 // Msg_ReplyNumberOfCaptureDevices
 
-// required sint32 a_deviceCount = 1;
+// optional sint32 a_deviceCount = 1;
 inline bool Msg_ReplyNumberOfCaptureDevices::_internal_has_a_devicecount() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3962,7 +3938,7 @@ inline void Msg_ReplyNumberOfCaptureDevices::set_a_devicecount(int32_t value) {
 
 // Msg_ReplyNumberOfCapabilities
 
-// required sint32 a_capabilityCount = 1;
+// optional sint32 a_capabilityCount = 1;
 inline bool Msg_ReplyNumberOfCapabilities::_internal_has_a_capabilitycount() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3994,7 +3970,7 @@ inline void Msg_ReplyNumberOfCapabilities::set_a_capabilitycount(int32_t value) 
 
 // Msg_ReplyAllocateCapture
 
-// required sint32 a_captureId = 1;
+// optional sint32 a_captureId = 1;
 inline bool Msg_ReplyAllocateCapture::_internal_has_a_captureid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4117,7 +4093,7 @@ inline void Msg_ReplyGetCaptureCapability::set_allocated_a_cap(::protobuf::mozil
 
 // Msg_ReplyGetCaptureDevice
 
-// required string a_device_name = 1;
+// optional string a_device_name = 1;
 inline bool Msg_ReplyGetCaptureDevice::_internal_has_a_device_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4185,7 +4161,7 @@ inline void Msg_ReplyGetCaptureDevice::set_allocated_a_device_name(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.a_device_name)
 }
 
-// required string a_device_id = 2;
+// optional string a_device_id = 2;
 inline bool Msg_ReplyGetCaptureDevice::_internal_has_a_device_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4253,7 +4229,7 @@ inline void Msg_ReplyGetCaptureDevice::set_allocated_a_device_id(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.a_device_id)
 }
 
-// required bool a_scary = 3;
+// optional bool a_scary = 3;
 inline bool Msg_ReplyGetCaptureDevice::_internal_has_a_scary() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -4281,7 +4257,7 @@ inline void Msg_ReplyGetCaptureDevice::set_a_scary(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.a_scary)
 }
 
-// required bool a_placeholder = 4;
+// optional bool a_placeholder = 4;
 inline bool Msg_ReplyGetCaptureDevice::_internal_has_a_placeholder() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -4469,7 +4445,7 @@ inline void Msg_NumberOfCapabilities::set_allocated_a_engine(std::string* a_engi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_NumberOfCapabilities.a_engine)
 }
 
-// required string a_deviceUniqueIdUTF8 = 2;
+// optional string a_deviceUniqueIdUTF8 = 2;
 inline bool Msg_NumberOfCapabilities::_internal_has_a_deviceuniqueidutf8() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4609,7 +4585,7 @@ inline void Msg_GetCaptureCapability::set_allocated_a_engine(std::string* a_engi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability.a_engine)
 }
 
-// required string a_unique_idUTF8 = 2;
+// optional string a_unique_idUTF8 = 2;
 inline bool Msg_GetCaptureCapability::_internal_has_a_unique_idutf8() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4677,7 +4653,7 @@ inline void Msg_GetCaptureCapability::set_allocated_a_unique_idutf8(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability.a_unique_idUTF8)
 }
 
-// required sint32 a_capability_number = 3;
+// optional sint32 a_capability_number = 3;
 inline bool Msg_GetCaptureCapability::_internal_has_a_capability_number() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -4777,7 +4753,7 @@ inline void Msg_GetCaptureDevice::set_allocated_a_engine(std::string* a_engine) 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_GetCaptureDevice.a_engine)
 }
 
-// required sint32 a_deviceIndex = 2;
+// optional sint32 a_deviceIndex = 2;
 inline bool Msg_GetCaptureDevice::_internal_has_a_deviceindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4877,7 +4853,7 @@ inline void Msg_AllocateCapture::set_allocated_a_engine(std::string* a_engine) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_AllocateCapture.a_engine)
 }
 
-// required string a_unique_idUTF8 = 2;
+// optional string a_unique_idUTF8 = 2;
 inline bool Msg_AllocateCapture::_internal_has_a_unique_idutf8() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4945,7 +4921,7 @@ inline void Msg_AllocateCapture::set_allocated_a_unique_idutf8(std::string* a_un
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_AllocateCapture.a_unique_idUTF8)
 }
 
-// required uint64 a_windowID = 3;
+// optional uint64 a_windowID = 3;
 inline bool Msg_AllocateCapture::_internal_has_a_windowid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -5045,7 +5021,7 @@ inline void Msg_ReleaseCapture::set_allocated_a_engine(std::string* a_engine) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_ReleaseCapture.a_engine)
 }
 
-// required sint32 a_captureId = 2;
+// optional sint32 a_captureId = 2;
 inline bool Msg_ReleaseCapture::_internal_has_a_captureid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5145,7 +5121,7 @@ inline void Msg_StartCapture::set_allocated_a_engine(std::string* a_engine) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_StartCapture.a_engine)
 }
 
-// required sint32 a_captureId = 2;
+// optional sint32 a_captureId = 2;
 inline bool Msg_StartCapture::_internal_has_a_captureid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -5332,7 +5308,7 @@ inline void Msg_FocusOnSelectedSource::set_allocated_a_engine(std::string* a_eng
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_FocusOnSelectedSource.a_engine)
 }
 
-// required sint32 a_captureId = 2;
+// optional sint32 a_captureId = 2;
 inline bool Msg_FocusOnSelectedSource::_internal_has_a_captureid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5432,7 +5408,7 @@ inline void Msg_StopCapture::set_allocated_a_engine(std::string* a_engine) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_StopCapture.a_engine)
 }
 
-// required sint32 a_captureId = 2;
+// optional sint32 a_captureId = 2;
 inline bool Msg_StopCapture::_internal_has_a_captureid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

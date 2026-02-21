@@ -139,7 +139,7 @@ class LSSetItemInfo::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000002) ^ 0x00000002) != 0;
   }
 };
 
@@ -243,7 +243,7 @@ const char* LSSetItemInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_key = 1;
+      // optional string a_key = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_key();
@@ -292,7 +292,7 @@ uint8_t* LSSetItemInfo::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_key = 1;
+  // optional string a_key = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_key(), target);
@@ -312,47 +312,27 @@ uint8_t* LSSetItemInfo::_InternalSerialize(
   return target;
 }
 
-size_t LSSetItemInfo::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.LSSetItemInfo)
-  size_t total_size = 0;
-
-  if (_internal_has_a_key()) {
-    // required string a_key = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_key());
-  }
-
-  if (_internal_has_a_value()) {
-    // required bytes a_value = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_value());
-  }
-
-  return total_size;
-}
 size_t LSSetItemInfo::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.LSSetItemInfo)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string a_key = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_key());
-
-    // required bytes a_value = 2;
+  // required bytes a_value = 2;
+  if (_internal_has_a_value()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_value());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional string a_key = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_key());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -427,9 +407,6 @@ class LSRemoveItemInfo::_Internal {
   using HasBits = decltype(std::declval<LSRemoveItemInfo>()._impl_._has_bits_);
   static void set_has_a_key(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -513,7 +490,7 @@ const char* LSRemoveItemInfo::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_key = 1;
+      // optional string a_key = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_key();
@@ -553,7 +530,7 @@ uint8_t* LSRemoveItemInfo::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_key = 1;
+  // optional string a_key = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_key(), target);
@@ -571,15 +548,17 @@ size_t LSRemoveItemInfo::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.LSRemoveItemInfo)
   size_t total_size = 0;
 
-  // required string a_key = 1;
-  if (_internal_has_a_key()) {
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional string a_key = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_key());
   }
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -616,7 +595,6 @@ void LSRemoveItemInfo::CopyFrom(const LSRemoveItemInfo& from) {
 }
 
 bool LSRemoveItemInfo::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1143,9 +1121,6 @@ bool LSWriteInfo::IsInitialized() const {
       break;
     }
     case kAMVLSRemoveItemInfo: {
-      if (_internal_has_a_mvlsremoveiteminfo()) {
-        if (!_impl_.content_.a_mvlsremoveiteminfo_->IsInitialized()) return false;
-      }
       break;
     }
     case kAMVLSClearInfo: {
@@ -1185,7 +1160,7 @@ class LSSetItemAndNotifyInfo::_Internal {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
+    return ((has_bits[0] & 0x00000006) ^ 0x00000006) != 0;
   }
 };
 
@@ -1307,7 +1282,7 @@ const char* LSSetItemAndNotifyInfo::_InternalParse(const char* ptr, ::_pbi::Pars
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_key = 1;
+      // optional string a_key = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_key();
@@ -1365,7 +1340,7 @@ uint8_t* LSSetItemAndNotifyInfo::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_key = 1;
+  // optional string a_key = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_key(), target);
@@ -1395,13 +1370,6 @@ size_t LSSetItemAndNotifyInfo::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.LSSetItemAndNotifyInfo)
   size_t total_size = 0;
 
-  if (_internal_has_a_key()) {
-    // required string a_key = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_key());
-  }
-
   if (_internal_has_a_oldvalue()) {
     // required bytes a_oldValue = 2;
     total_size += 1 +
@@ -1422,12 +1390,7 @@ size_t LSSetItemAndNotifyInfo::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.LSSetItemAndNotifyInfo)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required string a_key = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_key());
-
+  if (((_impl_._has_bits_[0] & 0x00000006) ^ 0x00000006) == 0) {  // All required fields are present.
     // required bytes a_oldValue = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -1444,6 +1407,14 @@ size_t LSSetItemAndNotifyInfo::ByteSizeLong() const {
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional string a_key = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_key());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1530,7 +1501,7 @@ class LSRemoveItemAndNotifyInfo::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000002) ^ 0x00000002) != 0;
   }
 };
 
@@ -1634,7 +1605,7 @@ const char* LSRemoveItemAndNotifyInfo::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_key = 1;
+      // optional string a_key = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_key();
@@ -1683,7 +1654,7 @@ uint8_t* LSRemoveItemAndNotifyInfo::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_key = 1;
+  // optional string a_key = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_key(), target);
@@ -1703,47 +1674,27 @@ uint8_t* LSRemoveItemAndNotifyInfo::_InternalSerialize(
   return target;
 }
 
-size_t LSRemoveItemAndNotifyInfo::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo)
-  size_t total_size = 0;
-
-  if (_internal_has_a_key()) {
-    // required string a_key = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_key());
-  }
-
-  if (_internal_has_a_oldvalue()) {
-    // required bytes a_oldValue = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_oldvalue());
-  }
-
-  return total_size;
-}
 size_t LSRemoveItemAndNotifyInfo::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string a_key = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_key());
-
-    // required bytes a_oldValue = 2;
+  // required bytes a_oldValue = 2;
+  if (_internal_has_a_oldvalue()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_oldvalue());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional string a_key = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_key());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();

@@ -18,16 +18,16 @@ package protobuf.mozilla.layers.PAPZCTreeManager;
 message Msg_ZoomToRect {
   required bytes a_aGuid = 1;
   required bytes a_aZoomTarget = 2;
-  required uint32 a_Flags = 3;
+  optional uint32 a_Flags = 3;
 }
 
 message Msg_ContentReceivedInputBlock {
-  required uint64 a_aInputBlockId = 1;
-  required bool a_PreventDefault = 2;
+  optional uint64 a_aInputBlockId = 1;
+  optional bool a_PreventDefault = 2;
 }
 
 message Msg_SetTargetAPZC {
-  required uint64 a_aInputBlockId = 1;
+  optional uint64 a_aInputBlockId = 1;
   repeated bytes a_Targets = 2;
 }
 
@@ -41,11 +41,11 @@ message Msg_SetKeyboardMap {
 }
 
 message Msg_SetDPI {
-  required float a_aDpiValue = 1;
+  optional float a_aDpiValue = 1;
 }
 
 message Msg_SetAllowedTouchBehavior {
-  required uint64 a_aInputBlockId = 1;
+  optional uint64 a_aInputBlockId = 1;
   repeated bytes a_aValues = 2;
 }
 
@@ -64,11 +64,11 @@ message Msg_StopAutoscroll {
 }
 
 message Msg_SetLongTapEnabled {
-  required bool a_aTapGestureEnabled = 1;
+  optional bool a_aTapGestureEnabled = 1;
 }
 
 message Msg_SetBrowserGestureResponse {
-  required uint64 a_aInputBlockId = 1;
+  optional uint64 a_aInputBlockId = 1;
   required bytes a_aResponse = 2;
 }
 
@@ -92,7 +92,7 @@ message Msg_CancelAutoscroll {
 
 message Msg_NotifyScaleGestureComplete {
   required bytes a_aScrollId = 1;
-  required float a_aScale = 2;
+  optional float a_aScale = 2;
 }
 
 // Parameter mappings stats:

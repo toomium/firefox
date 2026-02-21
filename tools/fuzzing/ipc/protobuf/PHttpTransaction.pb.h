@@ -433,7 +433,7 @@ class Msg_OnStartRequest final :
       ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* a_conninfoargs);
   ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* unsafe_arena_release_a_conninfoargs();
 
-  // required sint32 a_proxyConnectResponseCode = 6;
+  // optional sint32 a_proxyConnectResponseCode = 6;
   bool has_a_proxyconnectresponsecode() const;
   private:
   bool _internal_has_a_proxyconnectresponsecode() const;
@@ -446,7 +446,7 @@ class Msg_OnStartRequest final :
   void _internal_set_a_proxyconnectresponsecode(int32_t value);
   public:
 
-  // required bool a_proxyConnectFailed = 4;
+  // optional bool a_proxyConnectFailed = 4;
   bool has_a_proxyconnectfailed() const;
   private:
   bool _internal_has_a_proxyconnectfailed() const;
@@ -459,7 +459,7 @@ class Msg_OnStartRequest final :
   void _internal_set_a_proxyconnectfailed(bool value);
   public:
 
-  // required bool a_dataToChildProcess = 9;
+  // optional bool a_dataToChildProcess = 9;
   bool has_a_datatochildprocess() const;
   private:
   bool _internal_has_a_datatochildprocess() const;
@@ -472,7 +472,7 @@ class Msg_OnStartRequest final :
   void _internal_set_a_datatochildprocess(bool value);
   public:
 
-  // required bool a_restarted = 10;
+  // optional bool a_restarted = 10;
   bool has_a_restarted() const;
   private:
   bool _internal_has_a_restarted() const;
@@ -485,7 +485,7 @@ class Msg_OnStartRequest final :
   void _internal_set_a_restarted(bool value);
   public:
 
-  // required bool a_supportsHttp3 = 12;
+  // optional bool a_supportsHttp3 = 12;
   bool has_a_supportshttp3() const;
   private:
   bool _internal_has_a_supportshttp3() const;
@@ -498,7 +498,7 @@ class Msg_OnStartRequest final :
   void _internal_set_a_supportshttp3(bool value);
   public:
 
-  // required uint32 a_HTTPSSVCReceivedStage = 11;
+  // optional uint32 a_HTTPSSVCReceivedStage = 11;
   bool has_a_httpssvcreceivedstage() const;
   private:
   bool _internal_has_a_httpssvcreceivedstage() const;
@@ -511,7 +511,7 @@ class Msg_OnStartRequest final :
   void _internal_set_a_httpssvcreceivedstage(uint32_t value);
   public:
 
-  // required uint32 a_caps = 15;
+  // optional uint32 a_caps = 15;
   bool has_a_caps() const;
   private:
   bool _internal_has_a_caps() const;
@@ -711,7 +711,7 @@ class Msg_OnTransportStatus final :
       ::protobuf::mozilla::net::NetworkAddressArg* a_networkaddressarg);
   ::protobuf::mozilla::net::NetworkAddressArg* unsafe_arena_release_a_networkaddressarg();
 
-  // required sint64 a_progress = 2;
+  // optional sint64 a_progress = 2;
   bool has_a_progress() const;
   private:
   bool _internal_has_a_progress() const;
@@ -724,7 +724,7 @@ class Msg_OnTransportStatus final :
   void _internal_set_a_progress(int64_t value);
   public:
 
-  // required sint64 a_progressMax = 3;
+  // optional sint64 a_progressMax = 3;
   bool has_a_progressmax() const;
   private:
   bool _internal_has_a_progressmax() const;
@@ -740,9 +740,6 @@ class Msg_OnTransportStatus final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PHttpTransaction.Msg_OnTransportStatus)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -875,7 +872,7 @@ class Msg_OnDataAvailable final :
     kAOffsetFieldNumber = 2,
     kACountFieldNumber = 3,
   };
-  // required string a_data = 1;
+  // optional string a_data = 1;
   bool has_a_data() const;
   private:
   bool _internal_has_a_data() const;
@@ -911,7 +908,7 @@ class Msg_OnDataAvailable final :
   std::string* _internal_mutable_a_ondataavailablestart();
   public:
 
-  // required uint64 a_offset = 2;
+  // optional uint64 a_offset = 2;
   bool has_a_offset() const;
   private:
   bool _internal_has_a_offset() const;
@@ -924,7 +921,7 @@ class Msg_OnDataAvailable final :
   void _internal_set_a_offset(uint64_t value);
   public:
 
-  // required uint32 a_count = 3;
+  // optional uint32 a_count = 3;
   bool has_a_count() const;
   private:
   bool _internal_has_a_count() const;
@@ -940,9 +937,6 @@ class Msg_OnDataAvailable final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PHttpTransaction.Msg_OnDataAvailable)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1187,7 +1181,7 @@ class Msg_OnStopRequest final :
       ::protobuf::mozilla::net::TransactionObserverResult* a_transactionobserverresult);
   ::protobuf::mozilla::net::TransactionObserverResult* unsafe_arena_release_a_transactionobserverresult();
 
-  // required sint64 a_transferSize = 3;
+  // optional sint64 a_transferSize = 3;
   bool has_a_transfersize() const;
   private:
   bool _internal_has_a_transfersize() const;
@@ -1200,7 +1194,7 @@ class Msg_OnStopRequest final :
   void _internal_set_a_transfersize(int64_t value);
   public:
 
-  // required bool a_responseIsComplete = 2;
+  // optional bool a_responseIsComplete = 2;
   bool has_a_responseiscomplete() const;
   private:
   bool _internal_has_a_responseiscomplete() const;
@@ -1501,7 +1495,7 @@ class Msg_EarlyHint final :
     kAReferrerPolicyFieldNumber = 2,
     kACspHeaderFieldNumber = 3,
   };
-  // required string a_linkHeader = 1;
+  // optional string a_linkHeader = 1;
   bool has_a_linkheader() const;
   private:
   bool _internal_has_a_linkheader() const;
@@ -1519,7 +1513,7 @@ class Msg_EarlyHint final :
   std::string* _internal_mutable_a_linkheader();
   public:
 
-  // required string a_referrerPolicy = 2;
+  // optional string a_referrerPolicy = 2;
   bool has_a_referrerpolicy() const;
   private:
   bool _internal_has_a_referrerpolicy() const;
@@ -1537,7 +1531,7 @@ class Msg_EarlyHint final :
   std::string* _internal_mutable_a_referrerpolicy();
   public:
 
-  // required string a_cspHeader = 3;
+  // optional string a_cspHeader = 3;
   bool has_a_cspheader() const;
   private:
   bool _internal_has_a_cspheader() const;
@@ -1558,9 +1552,6 @@ class Msg_EarlyHint final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PHttpTransaction.Msg_EarlyHint)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2118,7 +2109,7 @@ class Msg_Init final :
       ::protobuf::mozilla::ipc::IPCStream* a_requestbody);
   ::protobuf::mozilla::ipc::IPCStream* unsafe_arena_release_a_requestbody();
 
-  // required uint32 a_caps = 1;
+  // optional uint32 a_caps = 1;
   bool has_a_caps() const;
   private:
   bool _internal_has_a_caps() const;
@@ -2131,7 +2122,7 @@ class Msg_Init final :
   void _internal_set_a_caps(uint32_t value);
   public:
 
-  // required uint32 a_httpTrafficCategory = 8;
+  // optional uint32 a_httpTrafficCategory = 8;
   bool has_a_httptrafficcategory() const;
   private:
   bool _internal_has_a_httptrafficcategory() const;
@@ -2144,7 +2135,7 @@ class Msg_Init final :
   void _internal_set_a_httptrafficcategory(uint32_t value);
   public:
 
-  // required uint64 a_reqContentLength = 5;
+  // optional uint64 a_reqContentLength = 5;
   bool has_a_reqcontentlength() const;
   private:
   bool _internal_has_a_reqcontentlength() const;
@@ -2157,7 +2148,7 @@ class Msg_Init final :
   void _internal_set_a_reqcontentlength(uint64_t value);
   public:
 
-  // required uint64 a_topLevelOuterContentWindowId = 7;
+  // optional uint64 a_topLevelOuterContentWindowId = 7;
   bool has_a_topleveloutercontentwindowid() const;
   private:
   bool _internal_has_a_topleveloutercontentwindowid() const;
@@ -2170,7 +2161,7 @@ class Msg_Init final :
   void _internal_set_a_topleveloutercontentwindowid(uint64_t value);
   public:
 
-  // required uint64 a_requestContextID = 9;
+  // optional uint64 a_requestContextID = 9;
   bool has_a_requestcontextid() const;
   private:
   bool _internal_has_a_requestcontextid() const;
@@ -2183,7 +2174,7 @@ class Msg_Init final :
   void _internal_set_a_requestcontextid(uint64_t value);
   public:
 
-  // required uint32 a_initialRwin = 11;
+  // optional uint32 a_initialRwin = 11;
   bool has_a_initialrwin() const;
   private:
   bool _internal_has_a_initialrwin() const;
@@ -2196,7 +2187,7 @@ class Msg_Init final :
   void _internal_set_a_initialrwin(uint32_t value);
   public:
 
-  // required bool a_reqBodyIncludesHeaders = 6;
+  // optional bool a_reqBodyIncludesHeaders = 6;
   bool has_a_reqbodyincludesheaders() const;
   private:
   bool _internal_has_a_reqbodyincludesheaders() const;
@@ -2209,7 +2200,7 @@ class Msg_Init final :
   void _internal_set_a_reqbodyincludesheaders(bool value);
   public:
 
-  // required bool a_responseTimeoutEnabled = 12;
+  // optional bool a_responseTimeoutEnabled = 12;
   bool has_a_responsetimeoutenabled() const;
   private:
   bool _internal_has_a_responsetimeoutenabled() const;
@@ -2222,7 +2213,7 @@ class Msg_Init final :
   void _internal_set_a_responsetimeoutenabled(bool value);
   public:
 
-  // required bool a_hasTransactionObserver = 14;
+  // optional bool a_hasTransactionObserver = 14;
   bool has_a_hastransactionobserver() const;
   private:
   bool _internal_has_a_hastransactionobserver() const;
@@ -2235,7 +2226,7 @@ class Msg_Init final :
   void _internal_set_a_hastransactionobserver(bool value);
   public:
 
-  // required bool a_aIsDocumentLoad = 16;
+  // optional bool a_aIsDocumentLoad = 16;
   bool has_a_aisdocumentload() const;
   private:
   bool _internal_has_a_aisdocumentload() const;
@@ -2248,7 +2239,7 @@ class Msg_Init final :
   void _internal_set_a_aisdocumentload(bool value);
   public:
 
-  // required uint64 a_channelId = 13;
+  // optional uint64 a_channelId = 13;
   bool has_a_channelid() const;
   private:
   bool _internal_has_a_channelid() const;
@@ -3280,7 +3271,7 @@ inline void Msg_OnStartRequest::set_allocated_a_securityinfo(std::string* a_secu
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpTransaction.Msg_OnStartRequest.a_securityInfo)
 }
 
-// required bool a_proxyConnectFailed = 4;
+// optional bool a_proxyConnectFailed = 4;
 inline bool Msg_OnStartRequest::_internal_has_a_proxyconnectfailed() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
@@ -3395,7 +3386,7 @@ inline void Msg_OnStartRequest::set_allocated_a_timings(::protobuf::mozilla::net
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpTransaction.Msg_OnStartRequest.a_timings)
 }
 
-// required sint32 a_proxyConnectResponseCode = 6;
+// optional sint32 a_proxyConnectResponseCode = 6;
 inline bool Msg_OnStartRequest::_internal_has_a_proxyconnectresponsecode() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -3538,7 +3529,7 @@ inline void Msg_OnStartRequest::set_allocated_a_altsvcused(std::string* a_altsvc
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpTransaction.Msg_OnStartRequest.a_altSvcUsed)
 }
 
-// required bool a_dataToChildProcess = 9;
+// optional bool a_dataToChildProcess = 9;
 inline bool Msg_OnStartRequest::_internal_has_a_datatochildprocess() const {
   bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
   return value;
@@ -3566,7 +3557,7 @@ inline void Msg_OnStartRequest::set_a_datatochildprocess(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpTransaction.Msg_OnStartRequest.a_dataToChildProcess)
 }
 
-// required bool a_restarted = 10;
+// optional bool a_restarted = 10;
 inline bool Msg_OnStartRequest::_internal_has_a_restarted() const {
   bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
   return value;
@@ -3594,7 +3585,7 @@ inline void Msg_OnStartRequest::set_a_restarted(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpTransaction.Msg_OnStartRequest.a_restarted)
 }
 
-// required uint32 a_HTTPSSVCReceivedStage = 11;
+// optional uint32 a_HTTPSSVCReceivedStage = 11;
 inline bool Msg_OnStartRequest::_internal_has_a_httpssvcreceivedstage() const {
   bool value = (_impl_._has_bits_[0] & 0x00004000u) != 0;
   return value;
@@ -3622,7 +3613,7 @@ inline void Msg_OnStartRequest::set_a_httpssvcreceivedstage(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpTransaction.Msg_OnStartRequest.a_HTTPSSVCReceivedStage)
 }
 
-// required bool a_supportsHttp3 = 12;
+// optional bool a_supportsHttp3 = 12;
 inline bool Msg_OnStartRequest::_internal_has_a_supportshttp3() const {
   bool value = (_impl_._has_bits_[0] & 0x00002000u) != 0;
   return value;
@@ -3786,7 +3777,7 @@ inline void Msg_OnStartRequest::set_allocated_a_trrskipreason(std::string* a_trr
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpTransaction.Msg_OnStartRequest.a_trrSkipReason)
 }
 
-// required uint32 a_caps = 15;
+// optional uint32 a_caps = 15;
 inline bool Msg_OnStartRequest::_internal_has_a_caps() const {
   bool value = (_impl_._has_bits_[0] & 0x00008000u) != 0;
   return value;
@@ -4041,7 +4032,7 @@ inline void Msg_OnTransportStatus::set_allocated_a_status(std::string* a_status)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpTransaction.Msg_OnTransportStatus.a_status)
 }
 
-// required sint64 a_progress = 2;
+// optional sint64 a_progress = 2;
 inline bool Msg_OnTransportStatus::_internal_has_a_progress() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -4069,7 +4060,7 @@ inline void Msg_OnTransportStatus::set_a_progress(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpTransaction.Msg_OnTransportStatus.a_progress)
 }
 
-// required sint64 a_progressMax = 3;
+// optional sint64 a_progressMax = 3;
 inline bool Msg_OnTransportStatus::_internal_has_a_progressmax() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -4188,7 +4179,7 @@ inline void Msg_OnTransportStatus::set_allocated_a_networkaddressarg(::protobuf:
 
 // Msg_OnDataAvailable
 
-// required string a_data = 1;
+// optional string a_data = 1;
 inline bool Msg_OnDataAvailable::_internal_has_a_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4256,7 +4247,7 @@ inline void Msg_OnDataAvailable::set_allocated_a_data(std::string* a_data) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpTransaction.Msg_OnDataAvailable.a_data)
 }
 
-// required uint64 a_offset = 2;
+// optional uint64 a_offset = 2;
 inline bool Msg_OnDataAvailable::_internal_has_a_offset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -4284,7 +4275,7 @@ inline void Msg_OnDataAvailable::set_a_offset(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpTransaction.Msg_OnDataAvailable.a_offset)
 }
 
-// required uint32 a_count = 3;
+// optional uint32 a_count = 3;
 inline bool Msg_OnDataAvailable::_internal_has_a_count() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -4452,7 +4443,7 @@ inline void Msg_OnStopRequest::set_allocated_a_status(std::string* a_status) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpTransaction.Msg_OnStopRequest.a_status)
 }
 
-// required bool a_responseIsComplete = 2;
+// optional bool a_responseIsComplete = 2;
 inline bool Msg_OnStopRequest::_internal_has_a_responseiscomplete() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -4480,7 +4471,7 @@ inline void Msg_OnStopRequest::set_a_responseiscomplete(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpTransaction.Msg_OnStopRequest.a_responseIsComplete)
 }
 
-// required sint64 a_transferSize = 3;
+// optional sint64 a_transferSize = 3;
 inline bool Msg_OnStopRequest::_internal_has_a_transfersize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -4962,7 +4953,7 @@ inline void Msg_OnInitFailed::set_allocated_a_status(std::string* a_status) {
 
 // Msg_EarlyHint
 
-// required string a_linkHeader = 1;
+// optional string a_linkHeader = 1;
 inline bool Msg_EarlyHint::_internal_has_a_linkheader() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5030,7 +5021,7 @@ inline void Msg_EarlyHint::set_allocated_a_linkheader(std::string* a_linkheader)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpTransaction.Msg_EarlyHint.a_linkHeader)
 }
 
-// required string a_referrerPolicy = 2;
+// optional string a_referrerPolicy = 2;
 inline bool Msg_EarlyHint::_internal_has_a_referrerpolicy() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5098,7 +5089,7 @@ inline void Msg_EarlyHint::set_allocated_a_referrerpolicy(std::string* a_referre
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpTransaction.Msg_EarlyHint.a_referrerPolicy)
 }
 
-// required string a_cspHeader = 3;
+// optional string a_cspHeader = 3;
 inline bool Msg_EarlyHint::_internal_has_a_cspheader() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -5178,7 +5169,7 @@ inline void Msg_EarlyHint::set_allocated_a_cspheader(std::string* a_cspheader) {
 
 // Msg_Init
 
-// required uint32 a_caps = 1;
+// optional uint32 a_caps = 1;
 inline bool Msg_Init::_internal_has_a_caps() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -5448,7 +5439,7 @@ inline void Msg_Init::set_allocated_a_requestbody(::protobuf::mozilla::ipc::IPCS
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpTransaction.Msg_Init.a_requestBody)
 }
 
-// required uint64 a_reqContentLength = 5;
+// optional uint64 a_reqContentLength = 5;
 inline bool Msg_Init::_internal_has_a_reqcontentlength() const {
   bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
   return value;
@@ -5476,7 +5467,7 @@ inline void Msg_Init::set_a_reqcontentlength(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpTransaction.Msg_Init.a_reqContentLength)
 }
 
-// required bool a_reqBodyIncludesHeaders = 6;
+// optional bool a_reqBodyIncludesHeaders = 6;
 inline bool Msg_Init::_internal_has_a_reqbodyincludesheaders() const {
   bool value = (_impl_._has_bits_[0] & 0x00008000u) != 0;
   return value;
@@ -5504,7 +5495,7 @@ inline void Msg_Init::set_a_reqbodyincludesheaders(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpTransaction.Msg_Init.a_reqBodyIncludesHeaders)
 }
 
-// required uint64 a_topLevelOuterContentWindowId = 7;
+// optional uint64 a_topLevelOuterContentWindowId = 7;
 inline bool Msg_Init::_internal_has_a_topleveloutercontentwindowid() const {
   bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
   return value;
@@ -5532,7 +5523,7 @@ inline void Msg_Init::set_a_topleveloutercontentwindowid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpTransaction.Msg_Init.a_topLevelOuterContentWindowId)
 }
 
-// required uint32 a_httpTrafficCategory = 8;
+// optional uint32 a_httpTrafficCategory = 8;
 inline bool Msg_Init::_internal_has_a_httptrafficcategory() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
@@ -5560,7 +5551,7 @@ inline void Msg_Init::set_a_httptrafficcategory(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpTransaction.Msg_Init.a_httpTrafficCategory)
 }
 
-// required uint64 a_requestContextID = 9;
+// optional uint64 a_requestContextID = 9;
 inline bool Msg_Init::_internal_has_a_requestcontextid() const {
   bool value = (_impl_._has_bits_[0] & 0x00002000u) != 0;
   return value;
@@ -5656,7 +5647,7 @@ inline void Msg_Init::set_allocated_a_classofservice(std::string* a_classofservi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpTransaction.Msg_Init.a_classOfService)
 }
 
-// required uint32 a_initialRwin = 11;
+// optional uint32 a_initialRwin = 11;
 inline bool Msg_Init::_internal_has_a_initialrwin() const {
   bool value = (_impl_._has_bits_[0] & 0x00004000u) != 0;
   return value;
@@ -5684,7 +5675,7 @@ inline void Msg_Init::set_a_initialrwin(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpTransaction.Msg_Init.a_initialRwin)
 }
 
-// required bool a_responseTimeoutEnabled = 12;
+// optional bool a_responseTimeoutEnabled = 12;
 inline bool Msg_Init::_internal_has_a_responsetimeoutenabled() const {
   bool value = (_impl_._has_bits_[0] & 0x00010000u) != 0;
   return value;
@@ -5712,7 +5703,7 @@ inline void Msg_Init::set_a_responsetimeoutenabled(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpTransaction.Msg_Init.a_responseTimeoutEnabled)
 }
 
-// required uint64 a_channelId = 13;
+// optional uint64 a_channelId = 13;
 inline bool Msg_Init::_internal_has_a_channelid() const {
   bool value = (_impl_._has_bits_[0] & 0x00080000u) != 0;
   return value;
@@ -5740,7 +5731,7 @@ inline void Msg_Init::set_a_channelid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpTransaction.Msg_Init.a_channelId)
 }
 
-// required bool a_hasTransactionObserver = 14;
+// optional bool a_hasTransactionObserver = 14;
 inline bool Msg_Init::_internal_has_a_hastransactionobserver() const {
   bool value = (_impl_._has_bits_[0] & 0x00020000u) != 0;
   return value;
@@ -5836,7 +5827,7 @@ inline void Msg_Init::set_allocated_a_throttlequeue(std::string* a_throttlequeue
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpTransaction.Msg_Init.a_throttleQueue)
 }
 
-// required bool a_aIsDocumentLoad = 16;
+// optional bool a_aIsDocumentLoad = 16;
 inline bool Msg_Init::_internal_has_a_aisdocumentload() const {
   bool value = (_impl_._has_bits_[0] & 0x00040000u) != 0;
   return value;

@@ -208,7 +208,7 @@ class Checkbox final :
   enum : int {
     kAValueFieldNumber = 1,
   };
-  // required bool a_value = 1;
+  // optional bool a_value = 1;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -350,7 +350,7 @@ class TextField final :
   enum : int {
     kAValueFieldNumber = 1,
   };
-  // required string a_value = 1;
+  // optional string a_value = 1;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -650,7 +650,7 @@ class SingleSelect final :
     kAValueFieldNumber = 2,
     kAIndexFieldNumber = 1,
   };
-  // required string a_value = 2;
+  // optional string a_value = 2;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -668,7 +668,7 @@ class SingleSelect final :
   std::string* _internal_mutable_a_value();
   public:
 
-  // required uint32 a_index = 1;
+  // optional uint32 a_index = 1;
   bool has_a_index() const;
   private:
   bool _internal_has_a_index() const;
@@ -684,9 +684,6 @@ class SingleSelect final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.sessionstore.SingleSelect)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1240,7 +1237,7 @@ class FormEntry final :
     kAIdFieldNumber = 1,
     kAValueFieldNumber = 2,
   };
-  // required string a_id = 1;
+  // optional string a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -1279,9 +1276,6 @@ class FormEntry final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.sessionstore.FormEntry)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1449,7 +1443,7 @@ class FormData final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::sessionstore::FormEntry >&
       a_xpath() const;
 
-  // required string a_innerHTML = 4;
+  // optional string a_innerHTML = 4;
   bool has_a_innerhtml() const;
   private:
   bool _internal_has_a_innerhtml() const;
@@ -1467,7 +1461,7 @@ class FormData final :
   std::string* _internal_mutable_a_innerhtml();
   public:
 
-  // required string a_uri = 5;
+  // optional string a_uri = 5;
   bool has_a_uri() const;
   private:
   bool _internal_has_a_uri() const;
@@ -1485,7 +1479,7 @@ class FormData final :
   std::string* _internal_mutable_a_uri();
   public:
 
-  // required bool a_hasData = 1;
+  // optional bool a_hasData = 1;
   bool has_a_hasdata() const;
   private:
   bool _internal_has_a_hasdata() const;
@@ -1501,9 +1495,6 @@ class FormData final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.sessionstore.FormData)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1653,7 +1644,7 @@ class DocShellRestoreState final :
   std::string* _internal_mutable_a_uri();
   public:
 
-  // required string a_docShellCaps = 2;
+  // optional string a_docShellCaps = 2;
   bool has_a_docshellcaps() const;
   private:
   bool _internal_has_a_docshellcaps() const;
@@ -1698,7 +1689,7 @@ class DocShellRestoreState final :
 #endif  // __GNUC__
 // Checkbox
 
-// required bool a_value = 1;
+// optional bool a_value = 1;
 inline bool Checkbox::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1730,7 +1721,7 @@ inline void Checkbox::set_a_value(bool value) {
 
 // TextField
 
-// required string a_value = 1;
+// optional string a_value = 1;
 inline bool TextField::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1881,7 +1872,7 @@ FileList::mutable_a_valuelist() {
 
 // SingleSelect
 
-// required uint32 a_index = 1;
+// optional uint32 a_index = 1;
 inline bool SingleSelect::_internal_has_a_index() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1909,7 +1900,7 @@ inline void SingleSelect::set_a_index(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.SingleSelect.a_index)
 }
 
-// required string a_value = 2;
+// optional string a_value = 2;
 inline bool SingleSelect::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2509,7 +2500,7 @@ inline FormEntryValue::ContentCase FormEntryValue::content_case() const {
 
 // FormEntry
 
-// required string a_id = 1;
+// optional string a_id = 1;
 inline bool FormEntry::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2671,7 +2662,7 @@ inline void FormEntry::set_allocated_a_value(::protobuf::mozilla::dom::sessionst
 
 // FormData
 
-// required bool a_hasData = 1;
+// optional bool a_hasData = 1;
 inline bool FormData::_internal_has_a_hasdata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2779,7 +2770,7 @@ FormData::a_xpath() const {
   return _impl_.a_xpath_;
 }
 
-// required string a_innerHTML = 4;
+// optional string a_innerHTML = 4;
 inline bool FormData::_internal_has_a_innerhtml() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2847,7 +2838,7 @@ inline void FormData::set_allocated_a_innerhtml(std::string* a_innerhtml) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.sessionstore.FormData.a_innerHTML)
 }
 
-// required string a_uri = 5;
+// optional string a_uri = 5;
 inline bool FormData::_internal_has_a_uri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2987,7 +2978,7 @@ inline void DocShellRestoreState::set_allocated_a_uri(std::string* a_uri) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.sessionstore.DocShellRestoreState.a_URI)
 }
 
-// required string a_docShellCaps = 2;
+// optional string a_docShellCaps = 2;
 inline bool DocShellRestoreState::_internal_has_a_docshellcaps() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

@@ -215,7 +215,7 @@ class UnidirectionalStream final :
   std::string* _internal_mutable_a_outstream();
   public:
 
-  // required uint64 a_streamId = 1;
+  // optional uint64 a_streamId = 1;
   bool has_a_streamid() const;
   private:
   bool _internal_has_a_streamid() const;
@@ -581,7 +581,7 @@ class BidirectionalStream final :
   std::string* _internal_mutable_a_outstream();
   public:
 
-  // required uint64 a_streamId = 1;
+  // optional uint64 a_streamId = 1;
   bool has_a_streamid() const;
   private:
   bool _internal_has_a_streamid() const;
@@ -1286,7 +1286,7 @@ class StreamResetOrStopSendingError final :
 #endif  // __GNUC__
 // UnidirectionalStream
 
-// required uint64 a_streamId = 1;
+// optional uint64 a_streamId = 1;
 inline bool UnidirectionalStream::_internal_has_a_streamid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1550,7 +1550,7 @@ inline UnidirectionalStreamResponse::ContentCase UnidirectionalStreamResponse::c
 
 // BidirectionalStream
 
-// required uint64 a_streamId = 1;
+// optional uint64 a_streamId = 1;
 inline bool BidirectionalStream::_internal_has_a_streamid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

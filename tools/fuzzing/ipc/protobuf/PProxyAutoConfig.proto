@@ -14,20 +14,20 @@ package protobuf.mozilla.net.PProxyAutoConfig;
 
 // Message declarations
 message Msg_ConfigurePAC {
-  required string a_aPACURI = 1;
-  required string a_aPACScriptData = 2;
-  required bool a_aIncludePath = 3;
-  required uint32 a_aExtraHeapSize = 4;
+  optional string a_aPACURI = 1;
+  optional string a_aPACScriptData = 2;
+  optional bool a_aIncludePath = 3;
+  optional uint32 a_aExtraHeapSize = 4;
 }
 
 message Msg_GetProxyForURI {
-  required string a_aTestURI = 1;
-  required string a_aTestHost = 2;
+  optional string a_aTestURI = 1;
+  optional string a_aTestHost = 2;
 }
 
 message Reply_GetProxyForURI {
   required bytes a_aStatus = 1;
-  required string a_aResult = 2;
+  optional string a_aResult = 2;
 }
 
 // Parameter mappings stats:

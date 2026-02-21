@@ -1663,7 +1663,7 @@ class Msg_PWebrtcTCPSocketConstructor final :
   std::string* _internal_mutable_a_tabid();
   public:
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -1953,7 +1953,7 @@ class Msg_ObserveHttpActivity final :
   std::string* _internal_mutable_a_atimestamp();
   public:
 
-  // required string a_aExtraStringData = 6;
+  // optional string a_aExtraStringData = 6;
   bool has_a_aextrastringdata() const;
   private:
   bool _internal_has_a_aextrastringdata() const;
@@ -1989,7 +1989,7 @@ class Msg_ObserveHttpActivity final :
       ::protobuf::mozilla::net::HttpActivityArgs* a_aactivityargs);
   ::protobuf::mozilla::net::HttpActivityArgs* unsafe_arena_release_a_aactivityargs();
 
-  // required uint32 a_aActivityType = 2;
+  // optional uint32 a_aActivityType = 2;
   bool has_a_aactivitytype() const;
   private:
   bool _internal_has_a_aactivitytype() const;
@@ -2002,7 +2002,7 @@ class Msg_ObserveHttpActivity final :
   void _internal_set_a_aactivitytype(uint32_t value);
   public:
 
-  // required uint32 a_aActivitySubtype = 3;
+  // optional uint32 a_aActivitySubtype = 3;
   bool has_a_aactivitysubtype() const;
   private:
   bool _internal_has_a_aactivitysubtype() const;
@@ -2015,7 +2015,7 @@ class Msg_ObserveHttpActivity final :
   void _internal_set_a_aactivitysubtype(uint32_t value);
   public:
 
-  // required uint64 a_aExtraSizeData = 5;
+  // optional uint64 a_aExtraSizeData = 5;
   bool has_a_aextrasizedata() const;
   private:
   bool _internal_has_a_aextrasizedata() const;
@@ -2312,7 +2312,7 @@ class Msg_PAltServiceConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -2598,7 +2598,7 @@ class Msg_PProxyConfigLookupConstructor final :
   std::string* _internal_mutable_a_auri();
   public:
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -2611,7 +2611,7 @@ class Msg_PProxyConfigLookupConstructor final :
   void _internal_set_a_actorid(int64_t value);
   public:
 
-  // required uint32 a_aFlags = 3;
+  // optional uint32 a_aFlags = 3;
   bool has_a_aflags() const;
   private:
   bool _internal_has_a_aflags() const;
@@ -2627,9 +2627,6 @@ class Msg_PProxyConfigLookupConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_PProxyConfigLookupConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3029,7 +3026,7 @@ class Msg_OnConsoleMessage final :
   enum : int {
     kAAMessageFieldNumber = 1,
   };
-  // required string a_aMessage = 1;
+  // optional string a_aMessage = 1;
   bool has_a_amessage() const;
   private:
   bool _internal_has_a_amessage() const;
@@ -3638,7 +3635,7 @@ class Msg_RequestMemoryReport final :
   std::string* _internal_mutable_a_dmdfile();
   public:
 
-  // required uint32 a_generation = 1;
+  // optional uint32 a_generation = 1;
   bool has_a_generation() const;
   private:
   bool _internal_has_a_generation() const;
@@ -3651,7 +3648,7 @@ class Msg_RequestMemoryReport final :
   void _internal_set_a_generation(uint32_t value);
   public:
 
-  // required bool a_anonymize = 2;
+  // optional bool a_anonymize = 2;
   bool has_a_anonymize() const;
   private:
   bool _internal_has_a_anonymize() const;
@@ -3664,7 +3661,7 @@ class Msg_RequestMemoryReport final :
   void _internal_set_a_anonymize(bool value);
   public:
 
-  // required bool a_minimizeMemoryUsage = 3;
+  // optional bool a_minimizeMemoryUsage = 3;
   bool has_a_minimizememoryusage() const;
   private:
   bool _internal_has_a_minimizememoryusage() const;
@@ -3680,9 +3677,6 @@ class Msg_RequestMemoryReport final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_RequestMemoryReport)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3812,7 +3806,7 @@ class Reply_RequestMemoryReport final :
   enum : int {
     kAAGenerationFieldNumber = 1,
   };
-  // required uint32 a_aGeneration = 1;
+  // optional uint32 a_aGeneration = 1;
   bool has_a_ageneration() const;
   private:
   bool _internal_has_a_ageneration() const;
@@ -3954,7 +3948,7 @@ class Msg_SetOffline final :
   enum : int {
     kAOfflineFieldNumber = 1,
   };
-  // required bool a_offline = 1;
+  // optional bool a_offline = 1;
   bool has_a_offline() const;
   private:
   bool _internal_has_a_offline() const;
@@ -4096,7 +4090,7 @@ class Msg_SetConnectivity final :
   enum : int {
     kAConnectivityFieldNumber = 1,
   };
-  // required bool a_connectivity = 1;
+  // optional bool a_connectivity = 1;
   bool has_a_connectivity() const;
   private:
   bool _internal_has_a_connectivity() const;
@@ -4826,7 +4820,7 @@ class Msg_PHttpTransactionConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -5111,7 +5105,7 @@ class Msg_PHttpConnectionMgrConstructor final :
       ::protobuf::mozilla::net::HttpHandlerInitArgs* a_aargs);
   ::protobuf::mozilla::net::HttpHandlerInitArgs* unsafe_arena_release_a_aargs();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -5127,9 +5121,6 @@ class Msg_PHttpConnectionMgrConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_PHttpConnectionMgrConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5381,7 +5372,7 @@ class Msg_UpdateDeviceModelId final :
   enum : int {
     kAAModelIdFieldNumber = 1,
   };
-  // required string a_aModelId = 1;
+  // optional string a_aModelId = 1;
   bool has_a_amodelid() const;
   private:
   bool _internal_has_a_amodelid() const;
@@ -5528,7 +5519,7 @@ class Msg_OnHttpActivityDistributorActivated final :
   enum : int {
     kAAIsActivatedFieldNumber = 1,
   };
-  // required bool a_aIsActivated = 1;
+  // optional bool a_aIsActivated = 1;
   bool has_a_aisactivated() const;
   private:
   bool _internal_has_a_aisactivated() const;
@@ -5670,7 +5661,7 @@ class Msg_OnHttpActivityDistributorObserveProxyResponse final :
   enum : int {
     kAAIsEnabledFieldNumber = 1,
   };
-  // required bool a_aIsEnabled = 1;
+  // optional bool a_aIsEnabled = 1;
   bool has_a_aisenabled() const;
   private:
   bool _internal_has_a_aisenabled() const;
@@ -5812,7 +5803,7 @@ class Msg_OnHttpActivityDistributorObserveConnection final :
   enum : int {
     kAAIsEnabledFieldNumber = 1,
   };
-  // required bool a_aIsEnabled = 1;
+  // optional bool a_aIsEnabled = 1;
   bool has_a_aisenabled() const;
   private:
   bool _internal_has_a_aisenabled() const;
@@ -5956,7 +5947,7 @@ class Msg_PInputChannelThrottleQueueConstructor final :
     kAMeanBytesPerSecondFieldNumber = 2,
     kAMaxBytesPerSecondFieldNumber = 3,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -5969,7 +5960,7 @@ class Msg_PInputChannelThrottleQueueConstructor final :
   void _internal_set_a_actorid(int64_t value);
   public:
 
-  // required uint32 a_meanBytesPerSecond = 2;
+  // optional uint32 a_meanBytesPerSecond = 2;
   bool has_a_meanbytespersecond() const;
   private:
   bool _internal_has_a_meanbytespersecond() const;
@@ -5982,7 +5973,7 @@ class Msg_PInputChannelThrottleQueueConstructor final :
   void _internal_set_a_meanbytespersecond(uint32_t value);
   public:
 
-  // required uint32 a_maxBytesPerSecond = 3;
+  // optional uint32 a_maxBytesPerSecond = 3;
   bool has_a_maxbytespersecond() const;
   private:
   bool _internal_has_a_maxbytespersecond() const;
@@ -5998,9 +5989,6 @@ class Msg_PInputChannelThrottleQueueConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_PInputChannelThrottleQueueConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -6273,7 +6261,7 @@ class Msg_PAltSvcTransactionConstructor final :
       ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* a_aconninfo);
   ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* unsafe_arena_release_a_aconninfo();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -6286,7 +6274,7 @@ class Msg_PAltSvcTransactionConstructor final :
   void _internal_set_a_actorid(int64_t value);
   public:
 
-  // required uint32 a_aCaps = 3;
+  // optional uint32 a_aCaps = 3;
   bool has_a_acaps() const;
   private:
   bool _internal_has_a_acaps() const;
@@ -6302,9 +6290,6 @@ class Msg_PAltSvcTransactionConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_PAltSvcTransactionConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -6855,7 +6840,7 @@ class Msg_PTRRServiceConstructor final :
   std::string* _internal_add_a_adnssuffixlist();
   public:
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -6868,7 +6853,7 @@ class Msg_PTRRServiceConstructor final :
   void _internal_set_a_actorid(int64_t value);
   public:
 
-  // required bool a_aCaptiveIsPassed = 2;
+  // optional bool a_aCaptiveIsPassed = 2;
   bool has_a_acaptiveispassed() const;
   private:
   bool _internal_has_a_acaptiveispassed() const;
@@ -6881,7 +6866,7 @@ class Msg_PTRRServiceConstructor final :
   void _internal_set_a_acaptiveispassed(bool value);
   public:
 
-  // required bool a_aParentalControlEnabled = 3;
+  // optional bool a_aParentalControlEnabled = 3;
   bool has_a_aparentalcontrolenabled() const;
   private:
   bool _internal_has_a_aparentalcontrolenabled() const;
@@ -6897,9 +6882,6 @@ class Msg_PTRRServiceConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -7153,7 +7135,7 @@ class Msg_PNativeDNSResolverOverrideConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -7420,7 +7402,7 @@ class Msg_NotifyObserver final :
     kAATopicFieldNumber = 1,
     kAADataFieldNumber = 2,
   };
-  // required string a_aTopic = 1;
+  // optional string a_aTopic = 1;
   bool has_a_atopic() const;
   private:
   bool _internal_has_a_atopic() const;
@@ -7438,7 +7420,7 @@ class Msg_NotifyObserver final :
   std::string* _internal_mutable_a_atopic();
   public:
 
-  // required string a_aData = 2;
+  // optional string a_aData = 2;
   bool has_a_adata() const;
   private:
   bool _internal_has_a_adata() const;
@@ -7459,9 +7441,6 @@ class Msg_NotifyObserver final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_NotifyObserver)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -9478,7 +9457,7 @@ class Reply_TestTriggerMetrics final :
   enum : int {
     kAUnusedFieldNumber = 1,
   };
-  // required bool a_unused = 1;
+  // optional bool a_unused = 1;
   bool has_a_unused() const;
   private:
   bool _internal_has_a_unused() const;
@@ -9920,7 +9899,7 @@ class Msg_PDNSRequestConstructor final :
     kAPortFieldNumber = 4,
     kATypeFieldNumber = 5,
   };
-  // required string a_hostName = 2;
+  // optional string a_hostName = 2;
   bool has_a_hostname() const;
   private:
   bool _internal_has_a_hostname() const;
@@ -9938,7 +9917,7 @@ class Msg_PDNSRequestConstructor final :
   std::string* _internal_mutable_a_hostname();
   public:
 
-  // required string a_trrServer = 3;
+  // optional string a_trrServer = 3;
   bool has_a_trrserver() const;
   private:
   bool _internal_has_a_trrserver() const;
@@ -9992,7 +9971,7 @@ class Msg_PDNSRequestConstructor final :
   std::string* _internal_mutable_a_flags();
   public:
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -10005,7 +9984,7 @@ class Msg_PDNSRequestConstructor final :
   void _internal_set_a_actorid(int64_t value);
   public:
 
-  // required sint32 a_port = 4;
+  // optional sint32 a_port = 4;
   bool has_a_port() const;
   private:
   bool _internal_has_a_port() const;
@@ -10018,7 +9997,7 @@ class Msg_PDNSRequestConstructor final :
   void _internal_set_a_port(int32_t value);
   public:
 
-  // required uint32 a_type = 5;
+  // optional uint32 a_type = 5;
   bool has_a_type() const;
   private:
   bool _internal_has_a_type() const;
@@ -10839,7 +10818,7 @@ inline void Msg_RecordDiscardedData::set_allocated_a_data(std::string* a_data) {
 
 // Msg_PWebrtcTCPSocketConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PWebrtcTCPSocketConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11030,7 +11009,7 @@ inline void Msg_ObserveHttpActivity::set_allocated_a_aactivityargs(::protobuf::m
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.a_aActivityArgs)
 }
 
-// required uint32 a_aActivityType = 2;
+// optional uint32 a_aActivityType = 2;
 inline bool Msg_ObserveHttpActivity::_internal_has_a_aactivitytype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -11058,7 +11037,7 @@ inline void Msg_ObserveHttpActivity::set_a_aactivitytype(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.a_aActivityType)
 }
 
-// required uint32 a_aActivitySubtype = 3;
+// optional uint32 a_aActivitySubtype = 3;
 inline bool Msg_ObserveHttpActivity::_internal_has_a_aactivitysubtype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -11154,7 +11133,7 @@ inline void Msg_ObserveHttpActivity::set_allocated_a_atimestamp(std::string* a_a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.a_aTimestamp)
 }
 
-// required uint64 a_aExtraSizeData = 5;
+// optional uint64 a_aExtraSizeData = 5;
 inline bool Msg_ObserveHttpActivity::_internal_has_a_aextrasizedata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -11182,7 +11161,7 @@ inline void Msg_ObserveHttpActivity::set_a_aextrasizedata(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.a_aExtraSizeData)
 }
 
-// required string a_aExtraStringData = 6;
+// optional string a_aExtraStringData = 6;
 inline bool Msg_ObserveHttpActivity::_internal_has_a_aextrastringdata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11326,7 +11305,7 @@ inline void Msg_InitSocketBackground::set_allocated_a_aendpoint(std::string* a_a
 
 // Msg_PAltServiceConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PAltServiceConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11362,7 +11341,7 @@ inline void Msg_PAltServiceConstructor::set_a_actorid(int64_t value) {
 
 // Msg_PProxyConfigLookupConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PProxyConfigLookupConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11458,7 +11437,7 @@ inline void Msg_PProxyConfigLookupConstructor::set_allocated_a_auri(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PProxyConfigLookupConstructor.a_aUri)
 }
 
-// required uint32 a_aFlags = 3;
+// optional uint32 a_aFlags = 3;
 inline bool Msg_PProxyConfigLookupConstructor::_internal_has_a_aflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -11585,7 +11564,7 @@ inline void Msg_ExcludeHttp2OrHttp3::set_allocated_a_aargs(::protobuf::mozilla::
 
 // Msg_OnConsoleMessage
 
-// required string a_aMessage = 1;
+// optional string a_aMessage = 1;
 inline bool Msg_OnConsoleMessage::_internal_has_a_amessage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11911,7 +11890,7 @@ inline void Msg_PreferenceUpdate::set_allocated_a_pref(::protobuf::mozilla::dom:
 
 // Msg_RequestMemoryReport
 
-// required uint32 a_generation = 1;
+// optional uint32 a_generation = 1;
 inline bool Msg_RequestMemoryReport::_internal_has_a_generation() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11939,7 +11918,7 @@ inline void Msg_RequestMemoryReport::set_a_generation(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_RequestMemoryReport.a_generation)
 }
 
-// required bool a_anonymize = 2;
+// optional bool a_anonymize = 2;
 inline bool Msg_RequestMemoryReport::_internal_has_a_anonymize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -11967,7 +11946,7 @@ inline void Msg_RequestMemoryReport::set_a_anonymize(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_RequestMemoryReport.a_anonymize)
 }
 
-// required bool a_minimizeMemoryUsage = 3;
+// optional bool a_minimizeMemoryUsage = 3;
 inline bool Msg_RequestMemoryReport::_internal_has_a_minimizememoryusage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -12067,7 +12046,7 @@ inline void Msg_RequestMemoryReport::set_allocated_a_dmdfile(std::string* a_dmdf
 
 // Reply_RequestMemoryReport
 
-// required uint32 a_aGeneration = 1;
+// optional uint32 a_aGeneration = 1;
 inline bool Reply_RequestMemoryReport::_internal_has_a_ageneration() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12099,7 +12078,7 @@ inline void Reply_RequestMemoryReport::set_a_ageneration(uint32_t value) {
 
 // Msg_SetOffline
 
-// required bool a_offline = 1;
+// optional bool a_offline = 1;
 inline bool Msg_SetOffline::_internal_has_a_offline() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12131,7 +12110,7 @@ inline void Msg_SetOffline::set_a_offline(bool value) {
 
 // Msg_SetConnectivity
 
-// required bool a_connectivity = 1;
+// optional bool a_connectivity = 1;
 inline bool Msg_SetConnectivity::_internal_has_a_connectivity() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12451,7 +12430,7 @@ inline void Msg_InitProfiler::set_allocated_a_aendpoint(std::string* a_aendpoint
 
 // Msg_PHttpTransactionConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PHttpTransactionConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12487,7 +12466,7 @@ inline void Msg_PHttpTransactionConstructor::set_a_actorid(int64_t value) {
 
 // Msg_PHttpConnectionMgrConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PHttpConnectionMgrConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -12610,7 +12589,7 @@ inline void Msg_PHttpConnectionMgrConstructor::set_allocated_a_aargs(::protobuf:
 
 // Msg_UpdateDeviceModelId
 
-// required string a_aModelId = 1;
+// optional string a_aModelId = 1;
 inline bool Msg_UpdateDeviceModelId::_internal_has_a_amodelid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12682,7 +12661,7 @@ inline void Msg_UpdateDeviceModelId::set_allocated_a_amodelid(std::string* a_amo
 
 // Msg_OnHttpActivityDistributorActivated
 
-// required bool a_aIsActivated = 1;
+// optional bool a_aIsActivated = 1;
 inline bool Msg_OnHttpActivityDistributorActivated::_internal_has_a_aisactivated() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12714,7 +12693,7 @@ inline void Msg_OnHttpActivityDistributorActivated::set_a_aisactivated(bool valu
 
 // Msg_OnHttpActivityDistributorObserveProxyResponse
 
-// required bool a_aIsEnabled = 1;
+// optional bool a_aIsEnabled = 1;
 inline bool Msg_OnHttpActivityDistributorObserveProxyResponse::_internal_has_a_aisenabled() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12746,7 +12725,7 @@ inline void Msg_OnHttpActivityDistributorObserveProxyResponse::set_a_aisenabled(
 
 // Msg_OnHttpActivityDistributorObserveConnection
 
-// required bool a_aIsEnabled = 1;
+// optional bool a_aIsEnabled = 1;
 inline bool Msg_OnHttpActivityDistributorObserveConnection::_internal_has_a_aisenabled() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12778,7 +12757,7 @@ inline void Msg_OnHttpActivityDistributorObserveConnection::set_a_aisenabled(boo
 
 // Msg_PInputChannelThrottleQueueConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PInputChannelThrottleQueueConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12806,7 +12785,7 @@ inline void Msg_PInputChannelThrottleQueueConstructor::set_a_actorid(int64_t val
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PInputChannelThrottleQueueConstructor.a_actorid)
 }
 
-// required uint32 a_meanBytesPerSecond = 2;
+// optional uint32 a_meanBytesPerSecond = 2;
 inline bool Msg_PInputChannelThrottleQueueConstructor::_internal_has_a_meanbytespersecond() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -12834,7 +12813,7 @@ inline void Msg_PInputChannelThrottleQueueConstructor::set_a_meanbytespersecond(
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PInputChannelThrottleQueueConstructor.a_meanBytesPerSecond)
 }
 
-// required uint32 a_maxBytesPerSecond = 3;
+// optional uint32 a_maxBytesPerSecond = 3;
 inline bool Msg_PInputChannelThrottleQueueConstructor::_internal_has_a_maxbytespersecond() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -12870,7 +12849,7 @@ inline void Msg_PInputChannelThrottleQueueConstructor::set_a_maxbytespersecond(u
 
 // Msg_PAltSvcTransactionConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PAltSvcTransactionConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -12985,7 +12964,7 @@ inline void Msg_PAltSvcTransactionConstructor::set_allocated_a_aconninfo(::proto
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PAltSvcTransactionConstructor.a_aConnInfo)
 }
 
-// required uint32 a_aCaps = 3;
+// optional uint32 a_aCaps = 3;
 inline bool Msg_PAltSvcTransactionConstructor::_internal_has_a_acaps() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -13097,7 +13076,7 @@ inline void Reply_ClearSessionCache::set_allocated_a_ok(std::string* a_ok) {
 
 // Msg_PTRRServiceConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PTRRServiceConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -13125,7 +13104,7 @@ inline void Msg_PTRRServiceConstructor::set_a_actorid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.a_actorid)
 }
 
-// required bool a_aCaptiveIsPassed = 2;
+// optional bool a_aCaptiveIsPassed = 2;
 inline bool Msg_PTRRServiceConstructor::_internal_has_a_acaptiveispassed() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -13153,7 +13132,7 @@ inline void Msg_PTRRServiceConstructor::set_a_acaptiveispassed(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.a_aCaptiveIsPassed)
 }
 
-// required bool a_aParentalControlEnabled = 3;
+// optional bool a_aParentalControlEnabled = 3;
 inline bool Msg_PTRRServiceConstructor::_internal_has_a_aparentalcontrolenabled() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -13264,7 +13243,7 @@ Msg_PTRRServiceConstructor::mutable_a_adnssuffixlist() {
 
 // Msg_PNativeDNSResolverOverrideConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PNativeDNSResolverOverrideConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -13300,7 +13279,7 @@ inline void Msg_PNativeDNSResolverOverrideConstructor::set_a_actorid(int64_t val
 
 // Msg_NotifyObserver
 
-// required string a_aTopic = 1;
+// optional string a_aTopic = 1;
 inline bool Msg_NotifyObserver::_internal_has_a_atopic() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -13368,7 +13347,7 @@ inline void Msg_NotifyObserver::set_allocated_a_atopic(std::string* a_atopic) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_NotifyObserver.a_aTopic)
 }
 
-// required string a_aData = 2;
+// optional string a_aData = 2;
 inline bool Msg_NotifyObserver::_internal_has_a_adata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -13944,7 +13923,7 @@ inline void Reply_FlushFOGData::set_allocated_a_buf(std::string* a_buf) {
 
 // Reply_TestTriggerMetrics
 
-// required bool a_unused = 1;
+// optional bool a_unused = 1;
 inline bool Reply_TestTriggerMetrics::_internal_has_a_unused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -14120,7 +14099,7 @@ inline void Msg_AddNetAddrOverride::set_allocated_a_ato(std::string* a_ato) {
 
 // Msg_PDNSRequestConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PDNSRequestConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -14148,7 +14127,7 @@ inline void Msg_PDNSRequestConstructor::set_a_actorid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_actorid)
 }
 
-// required string a_hostName = 2;
+// optional string a_hostName = 2;
 inline bool Msg_PDNSRequestConstructor::_internal_has_a_hostname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -14216,7 +14195,7 @@ inline void Msg_PDNSRequestConstructor::set_allocated_a_hostname(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_hostName)
 }
 
-// required string a_trrServer = 3;
+// optional string a_trrServer = 3;
 inline bool Msg_PDNSRequestConstructor::_internal_has_a_trrserver() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -14284,7 +14263,7 @@ inline void Msg_PDNSRequestConstructor::set_allocated_a_trrserver(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_trrServer)
 }
 
-// required sint32 a_port = 4;
+// optional sint32 a_port = 4;
 inline bool Msg_PDNSRequestConstructor::_internal_has_a_port() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -14312,7 +14291,7 @@ inline void Msg_PDNSRequestConstructor::set_a_port(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_port)
 }
 
-// required uint32 a_type = 5;
+// optional uint32 a_type = 5;
 inline bool Msg_PDNSRequestConstructor::_internal_has_a_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;

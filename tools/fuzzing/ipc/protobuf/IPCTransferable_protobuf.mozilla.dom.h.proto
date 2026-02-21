@@ -46,7 +46,7 @@ message IPCTransferableDataType {
 }
 
 message IPCTransferableDataItem {
-  required string a_flavor = 1;
+  optional string a_flavor = 1;
   required protobuf.mozilla.dom.IPCTransferableDataType a_data = 2;
 }
 
@@ -63,7 +63,7 @@ message IPCTransferableDataOrError {
 
 message IPCTransferable {
   required protobuf.mozilla.dom.IPCTransferableData a_data = 1;
-  required bool a_isPrivateData = 2;
+  optional bool a_isPrivateData = 2;
   optional bytes a_dataPrincipal = 3;
   optional protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 4;
   required bytes a_contentPolicyType = 5;

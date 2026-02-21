@@ -29,9 +29,9 @@ message Msg_OnDataAvailable {
 
 message Msg_OnStopRequest {
   required bytes a_aReason = 1;
-  required string a_aContentCharset = 2;
-  required string a_aHintCharset = 3;
-  required string a_aDocumentCharset = 4;
+  optional string a_aContentCharset = 2;
+  optional string a_aHintCharset = 3;
+  optional string a_aDocumentCharset = 4;
 }
 
 message Msg___delete__ {

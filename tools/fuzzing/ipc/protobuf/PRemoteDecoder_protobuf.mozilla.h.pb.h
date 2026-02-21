@@ -392,7 +392,7 @@ class InitCompletionIPDL final :
   std::string* _internal_mutable_a_type();
   public:
 
-  // required string a_decoderDescription = 2;
+  // optional string a_decoderDescription = 2;
   bool has_a_decoderdescription() const;
   private:
   bool _internal_has_a_decoderdescription() const;
@@ -410,7 +410,7 @@ class InitCompletionIPDL final :
   std::string* _internal_mutable_a_decoderdescription();
   public:
 
-  // required string a_decoderProcessName = 3;
+  // optional string a_decoderProcessName = 3;
   bool has_a_decoderprocessname() const;
   private:
   bool _internal_has_a_decoderprocessname() const;
@@ -428,7 +428,7 @@ class InitCompletionIPDL final :
   std::string* _internal_mutable_a_decoderprocessname();
   public:
 
-  // required string a_decoderCodecName = 4;
+  // optional string a_decoderCodecName = 4;
   bool has_a_decodercodecname() const;
   private:
   bool _internal_has_a_decodercodecname() const;
@@ -446,7 +446,7 @@ class InitCompletionIPDL final :
   std::string* _internal_mutable_a_decodercodecname();
   public:
 
-  // required string a_hardwareReason = 6;
+  // optional string a_hardwareReason = 6;
   bool has_a_hardwarereason() const;
   private:
   bool _internal_has_a_hardwarereason() const;
@@ -482,7 +482,7 @@ class InitCompletionIPDL final :
   std::string* _internal_mutable_a_conversion();
   public:
 
-  // required bool a_hardware = 5;
+  // optional bool a_hardware = 5;
   bool has_a_hardware() const;
   private:
   bool _internal_has_a_hardware() const;
@@ -495,7 +495,7 @@ class InitCompletionIPDL final :
   void _internal_set_a_hardware(bool value);
   public:
 
-  // required bool a_shouldDecoderAlwaysBeRecycled = 8;
+  // optional bool a_shouldDecoderAlwaysBeRecycled = 8;
   bool has_a_shoulddecoderalwaysberecycled() const;
   private:
   bool _internal_has_a_shoulddecoderalwaysberecycled() const;
@@ -1149,7 +1149,7 @@ inline void InitCompletionIPDL::set_allocated_a_type(std::string* a_type) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.InitCompletionIPDL.a_type)
 }
 
-// required string a_decoderDescription = 2;
+// optional string a_decoderDescription = 2;
 inline bool InitCompletionIPDL::_internal_has_a_decoderdescription() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1217,7 +1217,7 @@ inline void InitCompletionIPDL::set_allocated_a_decoderdescription(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.InitCompletionIPDL.a_decoderDescription)
 }
 
-// required string a_decoderProcessName = 3;
+// optional string a_decoderProcessName = 3;
 inline bool InitCompletionIPDL::_internal_has_a_decoderprocessname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1285,7 +1285,7 @@ inline void InitCompletionIPDL::set_allocated_a_decoderprocessname(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.InitCompletionIPDL.a_decoderProcessName)
 }
 
-// required string a_decoderCodecName = 4;
+// optional string a_decoderCodecName = 4;
 inline bool InitCompletionIPDL::_internal_has_a_decodercodecname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1353,7 +1353,7 @@ inline void InitCompletionIPDL::set_allocated_a_decodercodecname(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.InitCompletionIPDL.a_decoderCodecName)
 }
 
-// required bool a_hardware = 5;
+// optional bool a_hardware = 5;
 inline bool InitCompletionIPDL::_internal_has_a_hardware() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -1381,7 +1381,7 @@ inline void InitCompletionIPDL::set_a_hardware(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.InitCompletionIPDL.a_hardware)
 }
 
-// required string a_hardwareReason = 6;
+// optional string a_hardwareReason = 6;
 inline bool InitCompletionIPDL::_internal_has_a_hardwarereason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -1517,7 +1517,7 @@ inline void InitCompletionIPDL::set_allocated_a_conversion(std::string* a_conver
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.InitCompletionIPDL.a_conversion)
 }
 
-// required bool a_shouldDecoderAlwaysBeRecycled = 8;
+// optional bool a_shouldDecoderAlwaysBeRecycled = 8;
 inline bool InitCompletionIPDL::_internal_has_a_shoulddecoderalwaysberecycled() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;

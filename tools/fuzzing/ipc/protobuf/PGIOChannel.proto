@@ -35,17 +35,17 @@ message Msg_Resume {
 
 message Msg_OnStartRequest {
   required bytes a_aChannelStatus = 1;
-  required sint64 a_aContentLength = 2;
-  required string a_aContentType = 3;
-  required string a_aEntityID = 4;
+  optional sint64 a_aContentLength = 2;
+  optional string a_aContentType = 3;
+  optional string a_aEntityID = 4;
   required protobuf.mozilla.ipc.URIParams a_aURI = 5;
 }
 
 message Msg_OnDataAvailable {
   required bytes a_channelStatus = 1;
-  required string a_data = 2;
-  required uint64 a_offset = 3;
-  required uint32 a_count = 4;
+  optional string a_data = 2;
+  optional uint64 a_offset = 3;
+  optional uint32 a_count = 4;
 }
 
 message Msg_OnStopRequest {

@@ -411,7 +411,7 @@ class Reply_Start final :
   enum : int {
     kAUnusedFieldNumber = 1,
   };
-  // required bool a_unused = 1;
+  // optional bool a_unused = 1;
   bool has_a_unused() const;
   private:
   bool _internal_has_a_unused() const;
@@ -700,7 +700,7 @@ class Reply_EnsureStarted final :
   enum : int {
     kAUnusedFieldNumber = 1,
   };
-  // required bool a_unused = 1;
+  // optional bool a_unused = 1;
   bool has_a_unused() const;
   private:
   bool _internal_has_a_unused() const;
@@ -966,7 +966,7 @@ class Reply_Stop final :
   enum : int {
     kAUnusedFieldNumber = 1,
   };
-  // required bool a_unused = 1;
+  // optional bool a_unused = 1;
   bool has_a_unused() const;
   private:
   bool _internal_has_a_unused() const;
@@ -1232,7 +1232,7 @@ class Reply_Pause final :
   enum : int {
     kAUnusedFieldNumber = 1,
   };
-  // required bool a_unused = 1;
+  // optional bool a_unused = 1;
   bool has_a_unused() const;
   private:
   bool _internal_has_a_unused() const;
@@ -1498,7 +1498,7 @@ class Reply_Resume final :
   enum : int {
     kAUnusedFieldNumber = 1,
   };
-  // required bool a_unused = 1;
+  // optional bool a_unused = 1;
   bool has_a_unused() const;
   private:
   bool _internal_has_a_unused() const;
@@ -1764,7 +1764,7 @@ class Reply_PauseSampling final :
   enum : int {
     kAUnusedFieldNumber = 1,
   };
-  // required bool a_unused = 1;
+  // optional bool a_unused = 1;
   bool has_a_unused() const;
   private:
   bool _internal_has_a_unused() const;
@@ -2030,7 +2030,7 @@ class Reply_ResumeSampling final :
   enum : int {
     kAUnusedFieldNumber = 1,
   };
-  // required bool a_unused = 1;
+  // optional bool a_unused = 1;
   bool has_a_unused() const;
   private:
   bool _internal_has_a_unused() const;
@@ -2296,7 +2296,7 @@ class Reply_WaitOnePeriodicSampling final :
   enum : int {
     kASampledFieldNumber = 1,
   };
-  // required bool a_sampled = 1;
+  // optional bool a_sampled = 1;
   bool has_a_sampled() const;
   private:
   bool _internal_has_a_sampled() const;
@@ -3510,7 +3510,7 @@ inline void Msg_Start::set_allocated_a_params(::protobuf::mozilla::ProfilerInitP
 
 // Reply_Start
 
-// required bool a_unused = 1;
+// optional bool a_unused = 1;
 inline bool Reply_Start::_internal_has_a_unused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3633,7 +3633,7 @@ inline void Msg_EnsureStarted::set_allocated_a_params(::protobuf::mozilla::Profi
 
 // Reply_EnsureStarted
 
-// required bool a_unused = 1;
+// optional bool a_unused = 1;
 inline bool Reply_EnsureStarted::_internal_has_a_unused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3669,7 +3669,7 @@ inline void Reply_EnsureStarted::set_a_unused(bool value) {
 
 // Reply_Stop
 
-// required bool a_unused = 1;
+// optional bool a_unused = 1;
 inline bool Reply_Stop::_internal_has_a_unused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3705,7 +3705,7 @@ inline void Reply_Stop::set_a_unused(bool value) {
 
 // Reply_Pause
 
-// required bool a_unused = 1;
+// optional bool a_unused = 1;
 inline bool Reply_Pause::_internal_has_a_unused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3741,7 +3741,7 @@ inline void Reply_Pause::set_a_unused(bool value) {
 
 // Reply_Resume
 
-// required bool a_unused = 1;
+// optional bool a_unused = 1;
 inline bool Reply_Resume::_internal_has_a_unused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3777,7 +3777,7 @@ inline void Reply_Resume::set_a_unused(bool value) {
 
 // Reply_PauseSampling
 
-// required bool a_unused = 1;
+// optional bool a_unused = 1;
 inline bool Reply_PauseSampling::_internal_has_a_unused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3813,7 +3813,7 @@ inline void Reply_PauseSampling::set_a_unused(bool value) {
 
 // Reply_ResumeSampling
 
-// required bool a_unused = 1;
+// optional bool a_unused = 1;
 inline bool Reply_ResumeSampling::_internal_has_a_unused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3849,7 +3849,7 @@ inline void Reply_ResumeSampling::set_a_unused(bool value) {
 
 // Reply_WaitOnePeriodicSampling
 
-// required bool a_sampled = 1;
+// optional bool a_sampled = 1;
 inline bool Reply_WaitOnePeriodicSampling::_internal_has_a_sampled() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

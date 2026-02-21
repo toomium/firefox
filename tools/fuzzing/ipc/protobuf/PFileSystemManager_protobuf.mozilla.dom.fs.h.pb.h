@@ -310,7 +310,7 @@ class FileSystemEntryMetadata final :
   std::string* _internal_mutable_a_entryname();
   public:
 
-  // required bool a_directory = 3;
+  // optional bool a_directory = 3;
   bool has_a_directory() const;
   private:
   bool _internal_has_a_directory() const;
@@ -646,7 +646,7 @@ class FileSystemGetHandleRequest final :
       ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* a_handle);
   ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* unsafe_arena_release_a_handle();
 
-  // required bool a_create = 2;
+  // optional bool a_create = 2;
   bool has_a_create() const;
   private:
   bool _internal_has_a_create() const;
@@ -662,9 +662,6 @@ class FileSystemGetHandleRequest final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.fs.FileSystemGetHandleRequest)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2587,7 +2584,7 @@ class FileSystemGetWritableRequest final :
   std::string* _internal_mutable_a_entryid();
   public:
 
-  // required bool a_keepData = 2;
+  // optional bool a_keepData = 2;
   bool has_a_keepdata() const;
   private:
   bool _internal_has_a_keepdata() const;
@@ -2603,9 +2600,6 @@ class FileSystemGetWritableRequest final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.fs.FileSystemGetWritableRequest)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3761,7 +3755,7 @@ class FileSystemRemoveEntryRequest final :
       ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* a_handle);
   ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* unsafe_arena_release_a_handle();
 
-  // required bool a_recursive = 2;
+  // optional bool a_recursive = 2;
   bool has_a_recursive() const;
   private:
   bool _internal_has_a_recursive() const;
@@ -3777,9 +3771,6 @@ class FileSystemRemoveEntryRequest final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.fs.FileSystemRemoveEntryRequest)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4650,7 +4641,7 @@ inline void FileSystemEntryMetadata::set_allocated_a_entryname(std::string* a_en
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.a_entryName)
 }
 
-// required bool a_directory = 3;
+// optional bool a_directory = 3;
 inline bool FileSystemEntryMetadata::_internal_has_a_directory() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -4912,7 +4903,7 @@ inline void FileSystemGetHandleRequest::set_allocated_a_handle(::protobuf::mozil
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetHandleRequest.a_handle)
 }
 
-// required bool a_create = 2;
+// optional bool a_create = 2;
 inline bool FileSystemGetHandleRequest::_internal_has_a_create() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6568,7 +6559,7 @@ inline void FileSystemGetWritableRequest::set_allocated_a_entryid(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetWritableRequest.a_entryId)
 }
 
-// required bool a_keepData = 2;
+// optional bool a_keepData = 2;
 inline bool FileSystemGetWritableRequest::_internal_has_a_keepdata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7490,7 +7481,7 @@ inline void FileSystemRemoveEntryRequest::set_allocated_a_handle(::protobuf::moz
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemRemoveEntryRequest.a_handle)
 }
 
-// required bool a_recursive = 2;
+// optional bool a_recursive = 2;
 inline bool FileSystemRemoveEntryRequest::_internal_has_a_recursive() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

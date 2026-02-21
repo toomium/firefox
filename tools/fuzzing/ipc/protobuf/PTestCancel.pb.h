@@ -1718,7 +1718,7 @@ class Reply_CheckChild final :
   enum : int {
     kAReplyFieldNumber = 1,
   };
-  // required uint32 a_reply = 1;
+  // optional uint32 a_reply = 1;
   bool has_a_reply() const;
   private:
   bool _internal_has_a_reply() const;
@@ -1984,7 +1984,7 @@ class Reply_CheckParent final :
   enum : int {
     kAReplyFieldNumber = 1,
   };
-  // required uint32 a_reply = 1;
+  // optional uint32 a_reply = 1;
   bool has_a_reply() const;
   private:
   bool _internal_has_a_reply() const;
@@ -2071,7 +2071,7 @@ class Reply_CheckParent final :
 
 // Reply_CheckChild
 
-// required uint32 a_reply = 1;
+// optional uint32 a_reply = 1;
 inline bool Reply_CheckChild::_internal_has_a_reply() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2107,7 +2107,7 @@ inline void Reply_CheckChild::set_a_reply(uint32_t value) {
 
 // Reply_CheckParent
 
-// required uint32 a_reply = 1;
+// optional uint32 a_reply = 1;
 inline bool Reply_CheckParent::_internal_has_a_reply() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

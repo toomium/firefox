@@ -215,7 +215,7 @@ class GamepadAdded final :
     kANumLightsFieldNumber = 8,
     kANumTouchesFieldNumber = 9,
   };
-  // required string a_id = 1;
+  // optional string a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -269,7 +269,7 @@ class GamepadAdded final :
   std::string* _internal_mutable_a_hand();
   public:
 
-  // required uint32 a_display_id = 4;
+  // optional uint32 a_display_id = 4;
   bool has_a_display_id() const;
   private:
   bool _internal_has_a_display_id() const;
@@ -282,7 +282,7 @@ class GamepadAdded final :
   void _internal_set_a_display_id(uint32_t value);
   public:
 
-  // required uint32 a_num_buttons = 5;
+  // optional uint32 a_num_buttons = 5;
   bool has_a_num_buttons() const;
   private:
   bool _internal_has_a_num_buttons() const;
@@ -295,7 +295,7 @@ class GamepadAdded final :
   void _internal_set_a_num_buttons(uint32_t value);
   public:
 
-  // required uint32 a_num_axes = 6;
+  // optional uint32 a_num_axes = 6;
   bool has_a_num_axes() const;
   private:
   bool _internal_has_a_num_axes() const;
@@ -308,7 +308,7 @@ class GamepadAdded final :
   void _internal_set_a_num_axes(uint32_t value);
   public:
 
-  // required uint32 a_num_haptics = 7;
+  // optional uint32 a_num_haptics = 7;
   bool has_a_num_haptics() const;
   private:
   bool _internal_has_a_num_haptics() const;
@@ -321,7 +321,7 @@ class GamepadAdded final :
   void _internal_set_a_num_haptics(uint32_t value);
   public:
 
-  // required uint32 a_num_lights = 8;
+  // optional uint32 a_num_lights = 8;
   bool has_a_num_lights() const;
   private:
   bool _internal_has_a_num_lights() const;
@@ -334,7 +334,7 @@ class GamepadAdded final :
   void _internal_set_a_num_lights(uint32_t value);
   public:
 
-  // required uint32 a_num_touches = 9;
+  // optional uint32 a_num_touches = 9;
   bool has_a_num_touches() const;
   private:
   bool _internal_has_a_num_touches() const;
@@ -612,7 +612,7 @@ class GamepadAxisInformation final :
     kAValueFieldNumber = 2,
     kAAxisFieldNumber = 1,
   };
-  // required double a_value = 2;
+  // optional double a_value = 2;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -625,7 +625,7 @@ class GamepadAxisInformation final :
   void _internal_set_a_value(double value);
   public:
 
-  // required uint32 a_axis = 1;
+  // optional uint32 a_axis = 1;
   bool has_a_axis() const;
   private:
   bool _internal_has_a_axis() const;
@@ -641,9 +641,6 @@ class GamepadAxisInformation final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.GamepadAxisInformation)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -774,7 +771,7 @@ class GamepadButtonInformation final :
     kAPressedFieldNumber = 3,
     kATouchedFieldNumber = 4,
   };
-  // required double a_value = 2;
+  // optional double a_value = 2;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -787,7 +784,7 @@ class GamepadButtonInformation final :
   void _internal_set_a_value(double value);
   public:
 
-  // required uint32 a_button = 1;
+  // optional uint32 a_button = 1;
   bool has_a_button() const;
   private:
   bool _internal_has_a_button() const;
@@ -800,7 +797,7 @@ class GamepadButtonInformation final :
   void _internal_set_a_button(uint32_t value);
   public:
 
-  // required bool a_pressed = 3;
+  // optional bool a_pressed = 3;
   bool has_a_pressed() const;
   private:
   bool _internal_has_a_pressed() const;
@@ -813,7 +810,7 @@ class GamepadButtonInformation final :
   void _internal_set_a_pressed(bool value);
   public:
 
-  // required bool a_touched = 4;
+  // optional bool a_touched = 4;
   bool has_a_touched() const;
   private:
   bool _internal_has_a_touched() const;
@@ -829,9 +826,6 @@ class GamepadButtonInformation final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.GamepadButtonInformation)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1127,7 +1121,7 @@ class GamepadLightIndicatorTypeInformation final :
   std::string* _internal_mutable_a_type();
   public:
 
-  // required uint32 a_light = 1;
+  // optional uint32 a_light = 1;
   bool has_a_light() const;
   private:
   bool _internal_has_a_light() const;
@@ -1143,9 +1137,6 @@ class GamepadLightIndicatorTypeInformation final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.GamepadLightIndicatorTypeInformation)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1439,7 +1430,7 @@ class GamepadTouchInformation final :
   std::string* _internal_mutable_a_touch_state();
   public:
 
-  // required uint32 a_index = 1;
+  // optional uint32 a_index = 1;
   bool has_a_index() const;
   private:
   bool _internal_has_a_index() const;
@@ -1455,9 +1446,6 @@ class GamepadTouchInformation final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.GamepadTouchInformation)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1969,7 +1957,7 @@ class GamepadChangeEvent final :
 #endif  // __GNUC__
 // GamepadAdded
 
-// required string a_id = 1;
+// optional string a_id = 1;
 inline bool GamepadAdded::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2173,7 +2161,7 @@ inline void GamepadAdded::set_allocated_a_hand(std::string* a_hand) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.GamepadAdded.a_hand)
 }
 
-// required uint32 a_display_id = 4;
+// optional uint32 a_display_id = 4;
 inline bool GamepadAdded::_internal_has_a_display_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -2201,7 +2189,7 @@ inline void GamepadAdded::set_a_display_id(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.GamepadAdded.a_display_id)
 }
 
-// required uint32 a_num_buttons = 5;
+// optional uint32 a_num_buttons = 5;
 inline bool GamepadAdded::_internal_has_a_num_buttons() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -2229,7 +2217,7 @@ inline void GamepadAdded::set_a_num_buttons(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.GamepadAdded.a_num_buttons)
 }
 
-// required uint32 a_num_axes = 6;
+// optional uint32 a_num_axes = 6;
 inline bool GamepadAdded::_internal_has_a_num_axes() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -2257,7 +2245,7 @@ inline void GamepadAdded::set_a_num_axes(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.GamepadAdded.a_num_axes)
 }
 
-// required uint32 a_num_haptics = 7;
+// optional uint32 a_num_haptics = 7;
 inline bool GamepadAdded::_internal_has_a_num_haptics() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -2285,7 +2273,7 @@ inline void GamepadAdded::set_a_num_haptics(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.GamepadAdded.a_num_haptics)
 }
 
-// required uint32 a_num_lights = 8;
+// optional uint32 a_num_lights = 8;
 inline bool GamepadAdded::_internal_has_a_num_lights() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -2313,7 +2301,7 @@ inline void GamepadAdded::set_a_num_lights(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.GamepadAdded.a_num_lights)
 }
 
-// required uint32 a_num_touches = 9;
+// optional uint32 a_num_touches = 9;
 inline bool GamepadAdded::_internal_has_a_num_touches() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -2349,7 +2337,7 @@ inline void GamepadAdded::set_a_num_touches(uint32_t value) {
 
 // GamepadAxisInformation
 
-// required uint32 a_axis = 1;
+// optional uint32 a_axis = 1;
 inline bool GamepadAxisInformation::_internal_has_a_axis() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2377,7 +2365,7 @@ inline void GamepadAxisInformation::set_a_axis(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.GamepadAxisInformation.a_axis)
 }
 
-// required double a_value = 2;
+// optional double a_value = 2;
 inline bool GamepadAxisInformation::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2409,7 +2397,7 @@ inline void GamepadAxisInformation::set_a_value(double value) {
 
 // GamepadButtonInformation
 
-// required uint32 a_button = 1;
+// optional uint32 a_button = 1;
 inline bool GamepadButtonInformation::_internal_has_a_button() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2437,7 +2425,7 @@ inline void GamepadButtonInformation::set_a_button(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.GamepadButtonInformation.a_button)
 }
 
-// required double a_value = 2;
+// optional double a_value = 2;
 inline bool GamepadButtonInformation::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2465,7 +2453,7 @@ inline void GamepadButtonInformation::set_a_value(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.GamepadButtonInformation.a_value)
 }
 
-// required bool a_pressed = 3;
+// optional bool a_pressed = 3;
 inline bool GamepadButtonInformation::_internal_has_a_pressed() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2493,7 +2481,7 @@ inline void GamepadButtonInformation::set_a_pressed(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.GamepadButtonInformation.a_pressed)
 }
 
-// required bool a_touched = 4;
+// optional bool a_touched = 4;
 inline bool GamepadButtonInformation::_internal_has_a_touched() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -2597,7 +2585,7 @@ inline void GamepadPoseInformation::set_allocated_a_pose_state(std::string* a_po
 
 // GamepadLightIndicatorTypeInformation
 
-// required uint32 a_light = 1;
+// optional uint32 a_light = 1;
 inline bool GamepadLightIndicatorTypeInformation::_internal_has_a_light() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2769,7 +2757,7 @@ inline void GamepadHandInformation::set_allocated_a_hand(std::string* a_hand) {
 
 // GamepadTouchInformation
 
-// required uint32 a_index = 1;
+// optional uint32 a_index = 1;
 inline bool GamepadTouchInformation::_internal_has_a_index() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

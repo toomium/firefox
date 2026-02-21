@@ -244,7 +244,7 @@ class Msg_OnVerifySSLServerCertFinished final :
   std::string* _internal_mutable_a_aoverridableerrorcategory();
   public:
 
-  // required uint32 a_aCertTransparencyStatus = 2;
+  // optional uint32 a_aCertTransparencyStatus = 2;
   bool has_a_acerttransparencystatus() const;
   private:
   bool _internal_has_a_acerttransparencystatus() const;
@@ -257,7 +257,7 @@ class Msg_OnVerifySSLServerCertFinished final :
   void _internal_set_a_acerttransparencystatus(uint32_t value);
   public:
 
-  // required sint32 a_aFinalError = 5;
+  // optional sint32 a_aFinalError = 5;
   bool has_a_afinalerror() const;
   private:
   bool _internal_has_a_afinalerror() const;
@@ -270,7 +270,7 @@ class Msg_OnVerifySSLServerCertFinished final :
   void _internal_set_a_afinalerror(int32_t value);
   public:
 
-  // required bool a_aSucceeded = 4;
+  // optional bool a_aSucceeded = 4;
   bool has_a_asucceeded() const;
   private:
   bool _internal_has_a_asucceeded() const;
@@ -283,7 +283,7 @@ class Msg_OnVerifySSLServerCertFinished final :
   void _internal_set_a_asucceeded(bool value);
   public:
 
-  // required bool a_aIsBuiltCertChainRootBuiltInRoot = 7;
+  // optional bool a_aIsBuiltCertChainRootBuiltInRoot = 7;
   bool has_a_aisbuiltcertchainrootbuiltinroot() const;
   private:
   bool _internal_has_a_aisbuiltcertchainrootbuiltinroot() const;
@@ -296,7 +296,7 @@ class Msg_OnVerifySSLServerCertFinished final :
   void _internal_set_a_aisbuiltcertchainrootbuiltinroot(bool value);
   public:
 
-  // required bool a_aMadeOCSPRequests = 8;
+  // optional bool a_aMadeOCSPRequests = 8;
   bool has_a_amadeocsprequests() const;
   private:
   bool _internal_has_a_amadeocsprequests() const;
@@ -630,7 +630,7 @@ Msg_OnVerifySSLServerCertFinished::a_abuiltcertchain() const {
   return _impl_.a_abuiltcertchain_;
 }
 
-// required uint32 a_aCertTransparencyStatus = 2;
+// optional uint32 a_aCertTransparencyStatus = 2;
 inline bool Msg_OnVerifySSLServerCertFinished::_internal_has_a_acerttransparencystatus() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -726,7 +726,7 @@ inline void Msg_OnVerifySSLServerCertFinished::set_allocated_a_aevstatus(std::st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aEVStatus)
 }
 
-// required bool a_aSucceeded = 4;
+// optional bool a_aSucceeded = 4;
 inline bool Msg_OnVerifySSLServerCertFinished::_internal_has_a_asucceeded() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -754,7 +754,7 @@ inline void Msg_OnVerifySSLServerCertFinished::set_a_asucceeded(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aSucceeded)
 }
 
-// required sint32 a_aFinalError = 5;
+// optional sint32 a_aFinalError = 5;
 inline bool Msg_OnVerifySSLServerCertFinished::_internal_has_a_afinalerror() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -850,7 +850,7 @@ inline void Msg_OnVerifySSLServerCertFinished::set_allocated_a_aoverridableerror
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aOverridableErrorCategory)
 }
 
-// required bool a_aIsBuiltCertChainRootBuiltInRoot = 7;
+// optional bool a_aIsBuiltCertChainRootBuiltInRoot = 7;
 inline bool Msg_OnVerifySSLServerCertFinished::_internal_has_a_aisbuiltcertchainrootbuiltinroot() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -878,7 +878,7 @@ inline void Msg_OnVerifySSLServerCertFinished::set_a_aisbuiltcertchainrootbuilti
   // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aIsBuiltCertChainRootBuiltInRoot)
 }
 
-// required bool a_aMadeOCSPRequests = 8;
+// optional bool a_aMadeOCSPRequests = 8;
 inline bool Msg_OnVerifySSLServerCertFinished::_internal_has_a_amadeocsprequests() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;

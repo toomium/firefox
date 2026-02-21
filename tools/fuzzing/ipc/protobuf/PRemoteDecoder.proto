@@ -58,7 +58,7 @@ message Msg_Shutdown {
 }
 
 message Reply_Shutdown {
-  required bool a_unused = 1;
+  optional bool a_unused = 1;
 }
 
 message Msg_SetSeekThreshold {

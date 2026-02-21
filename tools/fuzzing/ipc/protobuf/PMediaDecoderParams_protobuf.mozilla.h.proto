@@ -12,11 +12,11 @@ package protobuf.mozilla;
 
 // Structs and unions declarations
 message MediaDataIPDL {
-  required sint64 a_offset = 1;
+  optional sint64 a_offset = 1;
   required bytes a_time = 2;
   required bytes a_timecode = 3;
   required bytes a_duration = 4;
-  required bool a_keyframe = 5;
+  optional bool a_keyframe = 5;
 }
 
 message CryptoInfo {

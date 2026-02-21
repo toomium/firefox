@@ -186,7 +186,7 @@ class Msg_Close final :
   enum : int {
     kAAAbortFieldNumber = 1,
   };
-  // required bool a_aAbort = 1;
+  // optional bool a_aAbort = 1;
   bool has_a_aabort() const;
   private:
   bool _internal_has_a_aabort() const;
@@ -620,7 +620,7 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_Close
 
-// required bool a_aAbort = 1;
+// optional bool a_aAbort = 1;
 inline bool Msg_Close::_internal_has_a_aabort() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

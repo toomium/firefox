@@ -23,44 +23,44 @@ message Msg_Resume {
 }
 
 message Reply_Resume {
-  required bool a_aOutResumed = 1;
+  optional bool a_aOutResumed = 1;
 }
 
 message Msg_ResumeAndResize {
-  required sint32 a_aX = 1;
-  required sint32 a_aY = 2;
-  required sint32 a_aWidth = 3;
-  required sint32 a_aHeight = 4;
+  optional sint32 a_aX = 1;
+  optional sint32 a_aY = 2;
+  optional sint32 a_aWidth = 3;
+  optional sint32 a_aHeight = 4;
 }
 
 message Reply_ResumeAndResize {
-  required bool a_aOutResumed = 1;
+  optional bool a_aOutResumed = 1;
 }
 
 message Msg_InvalidateAndRender {
 }
 
 message Msg_MaxToolbarHeight {
-  required sint32 a_aHeight = 1;
+  optional sint32 a_aHeight = 1;
 }
 
 message Msg_FixedBottomOffset {
-  required sint32 a_aOffset = 1;
+  optional sint32 a_aOffset = 1;
 }
 
 message Msg_DefaultClearColor {
-  required uint32 a_aColor = 1;
+  optional uint32 a_aColor = 1;
 }
 
 message Msg_RequestScreenPixels {
 }
 
 message Msg_EnableLayerUpdateNotifications {
-  required bool a_aEnable = 1;
+  optional bool a_aEnable = 1;
 }
 
 message Msg_ToolbarAnimatorMessageFromCompositor {
-  required sint32 a_aMessage = 1;
+  optional sint32 a_aMessage = 1;
 }
 
 message Msg_NotifyCompositorScrollUpdate {
@@ -70,7 +70,7 @@ message Msg_NotifyCompositorScrollUpdate {
 message Msg_ScreenPixels {
   required bytes a_aMem = 1;
   required bytes a_aSize = 2;
-  required bool a_aNeedsYFlip = 3;
+  optional bool a_aNeedsYFlip = 3;
 }
 
 // Parameter mappings stats:

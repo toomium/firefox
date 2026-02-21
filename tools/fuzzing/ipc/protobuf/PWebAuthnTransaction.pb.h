@@ -919,7 +919,7 @@ class Reply_RequestIsUVPAA final :
   enum : int {
     kAAvailableFieldNumber = 1,
   };
-  // required bool a_available = 1;
+  // optional bool a_available = 1;
   bool has_a_available() const;
   private:
   bool _internal_has_a_available() const;
@@ -1698,7 +1698,7 @@ inline void Reply_RequestSign::set_allocated_a_response(::protobuf::mozilla::dom
 
 // Reply_RequestIsUVPAA
 
-// required bool a_available = 1;
+// optional bool a_available = 1;
 inline bool Reply_RequestIsUVPAA::_internal_has_a_available() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

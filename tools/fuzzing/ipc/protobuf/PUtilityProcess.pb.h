@@ -1754,7 +1754,7 @@ class Msg_Init final :
   std::string* _internal_mutable_a_sandboxbroker();
   public:
 
-  // required bool a_canRecordReleaseTelemetry = 2;
+  // optional bool a_canRecordReleaseTelemetry = 2;
   bool has_a_canrecordreleasetelemetry() const;
   private:
   bool _internal_has_a_canrecordreleasetelemetry() const;
@@ -1767,7 +1767,7 @@ class Msg_Init final :
   void _internal_set_a_canrecordreleasetelemetry(bool value);
   public:
 
-  // required bool a_aIsReadyForBackgroundProcessing = 3;
+  // optional bool a_aIsReadyForBackgroundProcessing = 3;
   bool has_a_aisreadyforbackgroundprocessing() const;
   private:
   bool _internal_has_a_aisreadyforbackgroundprocessing() const;
@@ -1783,9 +1783,6 @@ class Msg_Init final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PUtilityProcess.Msg_Init)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2082,7 +2079,7 @@ class Msg_RequestMemoryReport final :
   std::string* _internal_mutable_a_dmdfile();
   public:
 
-  // required uint32 a_generation = 1;
+  // optional uint32 a_generation = 1;
   bool has_a_generation() const;
   private:
   bool _internal_has_a_generation() const;
@@ -2095,7 +2092,7 @@ class Msg_RequestMemoryReport final :
   void _internal_set_a_generation(uint32_t value);
   public:
 
-  // required bool a_anonymize = 2;
+  // optional bool a_anonymize = 2;
   bool has_a_anonymize() const;
   private:
   bool _internal_has_a_anonymize() const;
@@ -2108,7 +2105,7 @@ class Msg_RequestMemoryReport final :
   void _internal_set_a_anonymize(bool value);
   public:
 
-  // required bool a_minimizeMemoryUsage = 3;
+  // optional bool a_minimizeMemoryUsage = 3;
   bool has_a_minimizememoryusage() const;
   private:
   bool _internal_has_a_minimizememoryusage() const;
@@ -2124,9 +2121,6 @@ class Msg_RequestMemoryReport final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PUtilityProcess.Msg_RequestMemoryReport)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2256,7 +2250,7 @@ class Reply_RequestMemoryReport final :
   enum : int {
     kAAGenerationFieldNumber = 1,
   };
-  // required uint32 a_aGeneration = 1;
+  // optional uint32 a_aGeneration = 1;
   bool has_a_ageneration() const;
   private:
   bool _internal_has_a_ageneration() const;
@@ -2940,7 +2934,7 @@ class Reply_TestTriggerMetrics final :
   enum : int {
     kAUnusedFieldNumber = 1,
   };
-  // required bool a_unused = 1;
+  // optional bool a_unused = 1;
   bool has_a_unused() const;
   private:
   bool _internal_has_a_unused() const;
@@ -4210,7 +4204,7 @@ inline void Msg_Init::set_allocated_a_sandboxbroker(std::string* a_sandboxbroker
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PUtilityProcess.Msg_Init.a_sandboxBroker)
 }
 
-// required bool a_canRecordReleaseTelemetry = 2;
+// optional bool a_canRecordReleaseTelemetry = 2;
 inline bool Msg_Init::_internal_has_a_canrecordreleasetelemetry() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4238,7 +4232,7 @@ inline void Msg_Init::set_a_canrecordreleasetelemetry(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_Init.a_canRecordReleaseTelemetry)
 }
 
-// required bool a_aIsReadyForBackgroundProcessing = 3;
+// optional bool a_aIsReadyForBackgroundProcessing = 3;
 inline bool Msg_Init::_internal_has_a_aisreadyforbackgroundprocessing() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -4342,7 +4336,7 @@ inline void Msg_InitProfiler::set_allocated_a_endpoint(std::string* a_endpoint) 
 
 // Msg_RequestMemoryReport
 
-// required uint32 a_generation = 1;
+// optional uint32 a_generation = 1;
 inline bool Msg_RequestMemoryReport::_internal_has_a_generation() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4370,7 +4364,7 @@ inline void Msg_RequestMemoryReport::set_a_generation(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_RequestMemoryReport.a_generation)
 }
 
-// required bool a_anonymize = 2;
+// optional bool a_anonymize = 2;
 inline bool Msg_RequestMemoryReport::_internal_has_a_anonymize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -4398,7 +4392,7 @@ inline void Msg_RequestMemoryReport::set_a_anonymize(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_RequestMemoryReport.a_anonymize)
 }
 
-// required bool a_minimizeMemoryUsage = 3;
+// optional bool a_minimizeMemoryUsage = 3;
 inline bool Msg_RequestMemoryReport::_internal_has_a_minimizememoryusage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -4498,7 +4492,7 @@ inline void Msg_RequestMemoryReport::set_allocated_a_dmdfile(std::string* a_dmdf
 
 // Reply_RequestMemoryReport
 
-// required uint32 a_aGeneration = 1;
+// optional uint32 a_aGeneration = 1;
 inline bool Reply_RequestMemoryReport::_internal_has_a_ageneration() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4701,7 +4695,7 @@ inline void Reply_FlushFOGData::set_allocated_a_buf(std::string* a_buf) {
 
 // Reply_TestTriggerMetrics
 
-// required bool a_unused = 1;
+// optional bool a_unused = 1;
 inline bool Reply_TestTriggerMetrics::_internal_has_a_unused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

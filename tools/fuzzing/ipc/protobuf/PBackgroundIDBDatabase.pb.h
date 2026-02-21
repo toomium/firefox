@@ -623,7 +623,7 @@ class Msg_PBackgroundIDBDatabaseFileConstructor final :
       ::protobuf::mozilla::dom::IPCBlob* a_blob);
   ::protobuf::mozilla::dom::IPCBlob* unsafe_arena_release_a_blob();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -639,9 +639,6 @@ class Msg_PBackgroundIDBDatabaseFileConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.PBackgroundIDBDatabase.Msg_PBackgroundIDBDatabaseFileConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -956,7 +953,7 @@ class Msg_PBackgroundIDBTransactionConstructor final :
   std::string* _internal_mutable_a_durability();
   public:
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -1477,7 +1474,7 @@ class Msg_VersionChange final :
     kAOldVersionFieldNumber = 1,
     kANewVersionFieldNumber = 2,
   };
-  // required uint64 a_oldVersion = 1;
+  // optional uint64 a_oldVersion = 1;
   bool has_a_oldversion() const;
   private:
   bool _internal_has_a_oldversion() const;
@@ -1885,7 +1882,7 @@ class Msg_PBackgroundIDBVersionChangeTransactionConstructor final :
     kANextObjectStoreIdFieldNumber = 4,
     kANextIndexIdFieldNumber = 5,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -1898,7 +1895,7 @@ class Msg_PBackgroundIDBVersionChangeTransactionConstructor final :
   void _internal_set_a_actorid(int64_t value);
   public:
 
-  // required uint64 a_currentVersion = 2;
+  // optional uint64 a_currentVersion = 2;
   bool has_a_currentversion() const;
   private:
   bool _internal_has_a_currentversion() const;
@@ -1911,7 +1908,7 @@ class Msg_PBackgroundIDBVersionChangeTransactionConstructor final :
   void _internal_set_a_currentversion(uint64_t value);
   public:
 
-  // required uint64 a_requestedVersion = 3;
+  // optional uint64 a_requestedVersion = 3;
   bool has_a_requestedversion() const;
   private:
   bool _internal_has_a_requestedversion() const;
@@ -1924,7 +1921,7 @@ class Msg_PBackgroundIDBVersionChangeTransactionConstructor final :
   void _internal_set_a_requestedversion(uint64_t value);
   public:
 
-  // required sint64 a_nextObjectStoreId = 4;
+  // optional sint64 a_nextObjectStoreId = 4;
   bool has_a_nextobjectstoreid() const;
   private:
   bool _internal_has_a_nextobjectstoreid() const;
@@ -1937,7 +1934,7 @@ class Msg_PBackgroundIDBVersionChangeTransactionConstructor final :
   void _internal_set_a_nextobjectstoreid(int64_t value);
   public:
 
-  // required sint64 a_nextIndexId = 5;
+  // optional sint64 a_nextIndexId = 5;
   bool has_a_nextindexid() const;
   private:
   bool _internal_has_a_nextindexid() const;
@@ -1953,9 +1950,6 @@ class Msg_PBackgroundIDBVersionChangeTransactionConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.PBackgroundIDBDatabase.Msg_PBackgroundIDBVersionChangeTransactionConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2119,7 +2113,7 @@ class Reply_PBackgroundIDBVersionChangeTransactionConstructor final :
 
 // Msg_PBackgroundIDBDatabaseFileConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PBackgroundIDBDatabaseFileConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2242,7 +2236,7 @@ inline void Msg_PBackgroundIDBDatabaseFileConstructor::set_allocated_a_blob(::pr
 
 // Msg_PBackgroundIDBTransactionConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PBackgroundIDBTransactionConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2497,7 +2491,7 @@ inline void Msg_PBackgroundIDBTransactionConstructor::set_allocated_a_durability
 
 // Msg_VersionChange
 
-// required uint64 a_oldVersion = 1;
+// optional uint64 a_oldVersion = 1;
 inline bool Msg_VersionChange::_internal_has_a_oldversion() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2565,7 +2559,7 @@ inline void Msg_VersionChange::set_a_newversion(uint64_t value) {
 
 // Msg_PBackgroundIDBVersionChangeTransactionConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PBackgroundIDBVersionChangeTransactionConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2593,7 +2587,7 @@ inline void Msg_PBackgroundIDBVersionChangeTransactionConstructor::set_a_actorid
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIDBDatabase.Msg_PBackgroundIDBVersionChangeTransactionConstructor.a_actorid)
 }
 
-// required uint64 a_currentVersion = 2;
+// optional uint64 a_currentVersion = 2;
 inline bool Msg_PBackgroundIDBVersionChangeTransactionConstructor::_internal_has_a_currentversion() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2621,7 +2615,7 @@ inline void Msg_PBackgroundIDBVersionChangeTransactionConstructor::set_a_current
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIDBDatabase.Msg_PBackgroundIDBVersionChangeTransactionConstructor.a_currentVersion)
 }
 
-// required uint64 a_requestedVersion = 3;
+// optional uint64 a_requestedVersion = 3;
 inline bool Msg_PBackgroundIDBVersionChangeTransactionConstructor::_internal_has_a_requestedversion() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2649,7 +2643,7 @@ inline void Msg_PBackgroundIDBVersionChangeTransactionConstructor::set_a_request
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIDBDatabase.Msg_PBackgroundIDBVersionChangeTransactionConstructor.a_requestedVersion)
 }
 
-// required sint64 a_nextObjectStoreId = 4;
+// optional sint64 a_nextObjectStoreId = 4;
 inline bool Msg_PBackgroundIDBVersionChangeTransactionConstructor::_internal_has_a_nextobjectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -2677,7 +2671,7 @@ inline void Msg_PBackgroundIDBVersionChangeTransactionConstructor::set_a_nextobj
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIDBDatabase.Msg_PBackgroundIDBVersionChangeTransactionConstructor.a_nextObjectStoreId)
 }
 
-// required sint64 a_nextIndexId = 5;
+// optional sint64 a_nextIndexId = 5;
 inline bool Msg_PBackgroundIDBVersionChangeTransactionConstructor::_internal_has_a_nextindexid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;

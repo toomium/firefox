@@ -2322,7 +2322,7 @@ class AnimationSegment::_Internal {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000007e) ^ 0x0000007e) != 0;
+    return ((has_bits[0] & 0x00000006) ^ 0x00000006) != 0;
   }
 };
 
@@ -2468,7 +2468,7 @@ const char* AnimationSegment::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required float a_startPortion = 3;
+      // optional float a_startPortion = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 29)) {
           _Internal::set_has_a_startportion(&has_bits);
@@ -2477,7 +2477,7 @@ const char* AnimationSegment::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required float a_endPortion = 4;
+      // optional float a_endPortion = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 37)) {
           _Internal::set_has_a_endportion(&has_bits);
@@ -2486,7 +2486,7 @@ const char* AnimationSegment::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_startComposite = 5;
+      // optional uint32 a_startComposite = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_a_startcomposite(&has_bits);
@@ -2495,7 +2495,7 @@ const char* AnimationSegment::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_endComposite = 6;
+      // optional uint32 a_endComposite = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
           _Internal::set_has_a_endcomposite(&has_bits);
@@ -2558,25 +2558,25 @@ uint8_t* AnimationSegment::_InternalSerialize(
         _Internal::a_endstate(this).GetCachedSize(), target, stream);
   }
 
-  // required float a_startPortion = 3;
+  // optional float a_startPortion = 3;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(3, this->_internal_a_startportion(), target);
   }
 
-  // required float a_endPortion = 4;
+  // optional float a_endPortion = 4;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(4, this->_internal_a_endportion(), target);
   }
 
-  // required uint32 a_startComposite = 5;
+  // optional uint32 a_startComposite = 5;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(5, this->_internal_a_startcomposite(), target);
   }
 
-  // required uint32 a_endComposite = 6;
+  // optional uint32 a_endComposite = 6;
   if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(6, this->_internal_a_endcomposite(), target);
@@ -2614,33 +2614,13 @@ size_t AnimationSegment::RequiredFieldsByteSizeFallback() const {
         *_impl_.a_endstate_);
   }
 
-  if (_internal_has_a_startportion()) {
-    // required float a_startPortion = 3;
-    total_size += 1 + 4;
-  }
-
-  if (_internal_has_a_endportion()) {
-    // required float a_endPortion = 4;
-    total_size += 1 + 4;
-  }
-
-  if (_internal_has_a_startcomposite()) {
-    // required uint32 a_startComposite = 5;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_startcomposite());
-  }
-
-  if (_internal_has_a_endcomposite()) {
-    // required uint32 a_endComposite = 6;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_endcomposite());
-  }
-
   return total_size;
 }
 size_t AnimationSegment::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.AnimationSegment)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000007e) ^ 0x0000007e) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x00000006) ^ 0x00000006) == 0) {  // All required fields are present.
     // required .protobuf.mozilla.layers.Animatable a_startState = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -2650,18 +2630,6 @@ size_t AnimationSegment::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_endstate_);
-
-    // required float a_startPortion = 3;
-    total_size += 1 + 4;
-
-    // required float a_endPortion = 4;
-    total_size += 1 + 4;
-
-    // required uint32 a_startComposite = 5;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_startcomposite());
-
-    // required uint32 a_endComposite = 6;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_endcomposite());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -2678,6 +2646,28 @@ size_t AnimationSegment::ByteSizeLong() const {
         this->_internal_a_samplefn());
   }
 
+  if (cached_has_bits & 0x00000078u) {
+    // optional float a_startPortion = 3;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += 1 + 4;
+    }
+
+    // optional float a_endPortion = 4;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += 1 + 4;
+    }
+
+    // optional uint32 a_startComposite = 5;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_startcomposite());
+    }
+
+    // optional uint32 a_endComposite = 6;
+    if (cached_has_bits & 0x00000040u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_endcomposite());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -3795,7 +3785,7 @@ class TransformData::_Internal {
     (*has_bits)[0] |= 16u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000027) ^ 0x00000027) != 0;
+    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
   }
 };
 
@@ -3976,7 +3966,7 @@ const char* TransformData::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_appUnitsPerDevPixel = 4;
+      // optional sint32 a_appUnitsPerDevPixel = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_a_appunitsperdevpixel(&has_bits);
@@ -4050,7 +4040,7 @@ uint8_t* TransformData::_InternalSerialize(
         3, this->_internal_a_bounds(), target);
   }
 
-  // required sint32 a_appUnitsPerDevPixel = 4;
+  // optional sint32 a_appUnitsPerDevPixel = 4;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(4, this->_internal_a_appunitsperdevpixel(), target);
@@ -4103,18 +4093,13 @@ size_t TransformData::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_bounds());
   }
 
-  if (_internal_has_a_appunitsperdevpixel()) {
-    // required sint32 a_appUnitsPerDevPixel = 4;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_appunitsperdevpixel());
-  }
-
   return total_size;
 }
 size_t TransformData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.TransformData)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000027) ^ 0x00000027) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
     // required bytes a_origin = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -4130,9 +4115,6 @@ size_t TransformData::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_bounds());
 
-    // required sint32 a_appUnitsPerDevPixel = 4;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_appunitsperdevpixel());
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
@@ -4141,7 +4123,7 @@ size_t TransformData::ByteSizeLong() const {
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000018u) {
+  if (cached_has_bits & 0x00000038u) {
     // optional .protobuf.mozilla.layers.MotionPathData a_motionPathData = 5;
     if (cached_has_bits & 0x00000008u) {
       total_size += 1 +
@@ -4154,6 +4136,11 @@ size_t TransformData::ByteSizeLong() const {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.a_partialprerenderdata_);
+    }
+
+    // optional sint32 a_appUnitsPerDevPixel = 4;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_appunitsperdevpixel());
     }
 
   }
@@ -4619,7 +4606,7 @@ class Animation::_Internal {
     (*has_bits)[0] |= 1024u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x000ff97d) ^ 0x000ff97d) != 0;
+    return ((has_bits[0] & 0x0000017d) ^ 0x0000017d) != 0;
   }
 };
 
@@ -4979,7 +4966,7 @@ const char* Animation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // required float a_iterations = 8;
+      // optional float a_iterations = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 69)) {
           _Internal::set_has_a_iterations(&has_bits);
@@ -4988,7 +4975,7 @@ const char* Animation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // required float a_iterationStart = 9;
+      // optional float a_iterationStart = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 77)) {
           _Internal::set_has_a_iterationstart(&has_bits);
@@ -4997,7 +4984,7 @@ const char* Animation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_direction = 10;
+      // optional uint32 a_direction = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 80)) {
           _Internal::set_has_a_direction(&has_bits);
@@ -5006,7 +4993,7 @@ const char* Animation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_fillMode = 11;
+      // optional uint32 a_fillMode = 11;
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 88)) {
           _Internal::set_has_a_fillmode(&has_bits);
@@ -5024,7 +5011,7 @@ const char* Animation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // required float a_playbackRate = 13;
+      // optional float a_playbackRate = 13;
       case 13:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 109)) {
           _Internal::set_has_a_playbackrate(&has_bits);
@@ -5033,7 +5020,7 @@ const char* Animation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // required float a_previousPlaybackRate = 14;
+      // optional float a_previousPlaybackRate = 14;
       case 14:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 117)) {
           _Internal::set_has_a_previousplaybackrate(&has_bits);
@@ -5051,7 +5038,7 @@ const char* Animation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_iterationComposite = 16;
+      // optional uint32 a_iterationComposite = 16;
       case 16:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 128)) {
           _Internal::set_has_a_iterationcomposite(&has_bits);
@@ -5060,7 +5047,7 @@ const char* Animation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // required bool a_isNotPlaying = 17;
+      // optional bool a_isNotPlaying = 17;
       case 17:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 136)) {
           _Internal::set_has_a_isnotplaying(&has_bits);
@@ -5069,7 +5056,7 @@ const char* Animation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // required bool a_isNotAnimating = 18;
+      // optional bool a_isNotAnimating = 18;
       case 18:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 144)) {
           _Internal::set_has_a_isnotanimating(&has_bits);
@@ -5186,25 +5173,25 @@ uint8_t* Animation::_InternalSerialize(
         InternalWriteMessage(7, repfield, repfield.GetCachedSize(), target, stream);
   }
 
-  // required float a_iterations = 8;
+  // optional float a_iterations = 8;
   if (cached_has_bits & 0x00000800u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(8, this->_internal_a_iterations(), target);
   }
 
-  // required float a_iterationStart = 9;
+  // optional float a_iterationStart = 9;
   if (cached_has_bits & 0x00001000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(9, this->_internal_a_iterationstart(), target);
   }
 
-  // required uint32 a_direction = 10;
+  // optional uint32 a_direction = 10;
   if (cached_has_bits & 0x00002000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(10, this->_internal_a_direction(), target);
   }
 
-  // required uint32 a_fillMode = 11;
+  // optional uint32 a_fillMode = 11;
   if (cached_has_bits & 0x00004000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(11, this->_internal_a_fillmode(), target);
@@ -5216,13 +5203,13 @@ uint8_t* Animation::_InternalSerialize(
         12, this->_internal_a_property(), target);
   }
 
-  // required float a_playbackRate = 13;
+  // optional float a_playbackRate = 13;
   if (cached_has_bits & 0x00008000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(13, this->_internal_a_playbackrate(), target);
   }
 
-  // required float a_previousPlaybackRate = 14;
+  // optional float a_previousPlaybackRate = 14;
   if (cached_has_bits & 0x00010000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(14, this->_internal_a_previousplaybackrate(), target);
@@ -5234,19 +5221,19 @@ uint8_t* Animation::_InternalSerialize(
         15, this->_internal_a_easingfunction(), target);
   }
 
-  // required uint32 a_iterationComposite = 16;
+  // optional uint32 a_iterationComposite = 16;
   if (cached_has_bits & 0x00020000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(16, this->_internal_a_iterationcomposite(), target);
   }
 
-  // required bool a_isNotPlaying = 17;
+  // optional bool a_isNotPlaying = 17;
   if (cached_has_bits & 0x00040000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(17, this->_internal_a_isnotplaying(), target);
   }
 
-  // required bool a_isNotAnimating = 18;
+  // optional bool a_isNotAnimating = 18;
   if (cached_has_bits & 0x00080000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(18, this->_internal_a_isnotanimating(), target);
@@ -5340,60 +5327,13 @@ size_t Animation::RequiredFieldsByteSizeFallback() const {
         *_impl_.a_basestyle_);
   }
 
-  if (_internal_has_a_iterations()) {
-    // required float a_iterations = 8;
-    total_size += 1 + 4;
-  }
-
-  if (_internal_has_a_iterationstart()) {
-    // required float a_iterationStart = 9;
-    total_size += 1 + 4;
-  }
-
-  if (_internal_has_a_direction()) {
-    // required uint32 a_direction = 10;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_direction());
-  }
-
-  if (_internal_has_a_fillmode()) {
-    // required uint32 a_fillMode = 11;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_fillmode());
-  }
-
-  if (_internal_has_a_playbackrate()) {
-    // required float a_playbackRate = 13;
-    total_size += 1 + 4;
-  }
-
-  if (_internal_has_a_previousplaybackrate()) {
-    // required float a_previousPlaybackRate = 14;
-    total_size += 1 + 4;
-  }
-
-  if (_internal_has_a_iterationcomposite()) {
-    // required uint32 a_iterationComposite = 16;
-    total_size += 2 +
-      ::_pbi::WireFormatLite::UInt32Size(
-        this->_internal_a_iterationcomposite());
-  }
-
-  if (_internal_has_a_isnotplaying()) {
-    // required bool a_isNotPlaying = 17;
-    total_size += 2 + 1;
-  }
-
-  if (_internal_has_a_isnotanimating()) {
-    // required bool a_isNotAnimating = 18;
-    total_size += 2 + 1;
-  }
-
   return total_size;
 }
 size_t Animation::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.Animation)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x000ff97d) ^ 0x000ff97d) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x0000017d) ^ 0x0000017d) == 0) {  // All required fields are present.
     // required bytes a_originTime = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -5429,35 +5369,6 @@ size_t Animation::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_basestyle_);
 
-    // required float a_iterations = 8;
-    total_size += 1 + 4;
-
-    // required float a_iterationStart = 9;
-    total_size += 1 + 4;
-
-    // required uint32 a_direction = 10;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_direction());
-
-    // required uint32 a_fillMode = 11;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_fillmode());
-
-    // required float a_playbackRate = 13;
-    total_size += 1 + 4;
-
-    // required float a_previousPlaybackRate = 14;
-    total_size += 1 + 4;
-
-    // required uint32 a_iterationComposite = 16;
-    total_size += 2 +
-      ::_pbi::WireFormatLite::UInt32Size(
-        this->_internal_a_iterationcomposite());
-
-    // required bool a_isNotPlaying = 17;
-    total_size += 2 + 1;
-
-    // required bool a_isNotAnimating = 18;
-    total_size += 2 + 1;
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
@@ -5487,7 +5398,7 @@ size_t Animation::ByteSizeLong() const {
         this->_internal_a_easingfunction());
   }
 
-  if (cached_has_bits & 0x00000600u) {
+  if (cached_has_bits & 0x0000fe00u) {
     // optional .protobuf.mozilla.layers.TransformData a_transformData = 20;
     if (cached_has_bits & 0x00000200u) {
       total_size += 2 +
@@ -5502,14 +5413,63 @@ size_t Animation::ByteSizeLong() const {
           *_impl_.a_scrolltimelineoptions_);
     }
 
-  }
-  // optional uint64 a_replacedTransitionId = 21;
-  if (cached_has_bits & 0x00100000u) {
-    total_size += 2 +
-      ::_pbi::WireFormatLite::UInt64Size(
-        this->_internal_a_replacedtransitionid());
-  }
+    // optional float a_iterations = 8;
+    if (cached_has_bits & 0x00000800u) {
+      total_size += 1 + 4;
+    }
 
+    // optional float a_iterationStart = 9;
+    if (cached_has_bits & 0x00001000u) {
+      total_size += 1 + 4;
+    }
+
+    // optional uint32 a_direction = 10;
+    if (cached_has_bits & 0x00002000u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_direction());
+    }
+
+    // optional uint32 a_fillMode = 11;
+    if (cached_has_bits & 0x00004000u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_fillmode());
+    }
+
+    // optional float a_playbackRate = 13;
+    if (cached_has_bits & 0x00008000u) {
+      total_size += 1 + 4;
+    }
+
+  }
+  if (cached_has_bits & 0x001f0000u) {
+    // optional float a_previousPlaybackRate = 14;
+    if (cached_has_bits & 0x00010000u) {
+      total_size += 1 + 4;
+    }
+
+    // optional uint32 a_iterationComposite = 16;
+    if (cached_has_bits & 0x00020000u) {
+      total_size += 2 +
+        ::_pbi::WireFormatLite::UInt32Size(
+          this->_internal_a_iterationcomposite());
+    }
+
+    // optional bool a_isNotPlaying = 17;
+    if (cached_has_bits & 0x00040000u) {
+      total_size += 2 + 1;
+    }
+
+    // optional bool a_isNotAnimating = 18;
+    if (cached_has_bits & 0x00080000u) {
+      total_size += 2 + 1;
+    }
+
+    // optional uint64 a_replacedTransitionId = 21;
+    if (cached_has_bits & 0x00100000u) {
+      total_size += 2 +
+        ::_pbi::WireFormatLite::UInt64Size(
+          this->_internal_a_replacedtransitionid());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -5690,9 +5650,6 @@ class CompositorAnimations::_Internal {
   static void set_has_a_id(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 CompositorAnimations::CompositorAnimations(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -5777,7 +5734,7 @@ const char* CompositorAnimations::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // required uint64 a_id = 2;
+      // optional uint64 a_id = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_id(&has_bits);
@@ -5825,7 +5782,7 @@ uint8_t* CompositorAnimations::_InternalSerialize(
   }
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint64 a_id = 2;
+  // optional uint64 a_id = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(2, this->_internal_a_id(), target);
@@ -5843,10 +5800,6 @@ size_t CompositorAnimations::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.CompositorAnimations)
   size_t total_size = 0;
 
-  // required uint64 a_id = 2;
-  if (_internal_has_a_id()) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_id());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -5856,6 +5809,12 @@ size_t CompositorAnimations::ByteSizeLong() const {
   for (const auto& msg : this->_impl_.a_animations_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  // optional uint64 a_id = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_id());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -5894,7 +5853,6 @@ void CompositorAnimations::CopyFrom(const CompositorAnimations& from) {
 }
 
 bool CompositorAnimations::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_animations_))
     return false;
   return true;
@@ -5928,7 +5886,7 @@ class UntrustedShmemSection::_Internal {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -6033,7 +5991,7 @@ const char* UntrustedShmemSection::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_offset = 2;
+      // optional uint32 a_offset = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_offset(&has_bits);
@@ -6042,7 +6000,7 @@ const char* UntrustedShmemSection::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_size = 3;
+      // optional uint32 a_size = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_size(&has_bits);
@@ -6088,13 +6046,13 @@ uint8_t* UntrustedShmemSection::_InternalSerialize(
         1, this->_internal_a_shmem(), target);
   }
 
-  // required uint32 a_offset = 2;
+  // optional uint32 a_offset = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_offset(), target);
   }
 
-  // required uint32 a_size = 3;
+  // optional uint32 a_size = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_size(), target);
@@ -6108,52 +6066,33 @@ uint8_t* UntrustedShmemSection::_InternalSerialize(
   return target;
 }
 
-size_t UntrustedShmemSection::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.UntrustedShmemSection)
-  size_t total_size = 0;
-
-  if (_internal_has_a_shmem()) {
-    // required bytes a_shmem = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_shmem());
-  }
-
-  if (_internal_has_a_offset()) {
-    // required uint32 a_offset = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_offset());
-  }
-
-  if (_internal_has_a_size()) {
-    // required uint32 a_size = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_size());
-  }
-
-  return total_size;
-}
 size_t UntrustedShmemSection::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.UntrustedShmemSection)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes a_shmem = 1;
+  // required bytes a_shmem = 1;
+  if (_internal_has_a_shmem()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_shmem());
-
-    // required uint32 a_offset = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_offset());
-
-    // required uint32 a_size = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_size());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000006u) {
+    // optional uint32 a_offset = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_offset());
+    }
+
+    // optional uint32 a_size = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_size());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -7298,7 +7237,7 @@ class TimedTexture::_Internal {
     (*has_bits)[0] |= 32u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000003f) ^ 0x0000003f) != 0;
+    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
   }
 };
 
@@ -7461,7 +7400,7 @@ const char* TimedTexture::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_frameID = 4;
+      // optional uint32 a_frameID = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_a_frameid(&has_bits);
@@ -7470,7 +7409,7 @@ const char* TimedTexture::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_producerID = 5;
+      // optional uint32 a_producerID = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_a_producerid(&has_bits);
@@ -7479,7 +7418,7 @@ const char* TimedTexture::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
         } else
           goto handle_unusual;
         continue;
-      // required bool a_readLocked = 6;
+      // optional bool a_readLocked = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
           _Internal::set_has_a_readlocked(&has_bits);
@@ -7537,19 +7476,19 @@ uint8_t* TimedTexture::_InternalSerialize(
         3, this->_internal_a_picture(), target);
   }
 
-  // required uint32 a_frameID = 4;
+  // optional uint32 a_frameID = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(4, this->_internal_a_frameid(), target);
   }
 
-  // required uint32 a_producerID = 5;
+  // optional uint32 a_producerID = 5;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(5, this->_internal_a_producerid(), target);
   }
 
-  // required bool a_readLocked = 6;
+  // optional bool a_readLocked = 6;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(6, this->_internal_a_readlocked(), target);
@@ -7588,28 +7527,13 @@ size_t TimedTexture::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_picture());
   }
 
-  if (_internal_has_a_frameid()) {
-    // required uint32 a_frameID = 4;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_frameid());
-  }
-
-  if (_internal_has_a_producerid()) {
-    // required uint32 a_producerID = 5;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_producerid());
-  }
-
-  if (_internal_has_a_readlocked()) {
-    // required bool a_readLocked = 6;
-    total_size += 1 + 1;
-  }
-
   return total_size;
 }
 size_t TimedTexture::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.TimedTexture)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000003f) ^ 0x0000003f) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
     // required bytes a_texture = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -7625,15 +7549,6 @@ size_t TimedTexture::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_picture());
 
-    // required uint32 a_frameID = 4;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_frameid());
-
-    // required uint32 a_producerID = 5;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_producerid());
-
-    // required bool a_readLocked = 6;
-    total_size += 1 + 1;
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
@@ -7641,6 +7556,24 @@ size_t TimedTexture::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000038u) {
+    // optional uint32 a_frameID = 4;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_frameid());
+    }
+
+    // optional uint32 a_producerID = 5;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_producerid());
+    }
+
+    // optional bool a_readLocked = 6;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += 1 + 1;
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -8681,9 +8614,6 @@ class OpNotifyNotUsed::_Internal {
   static void set_has_a_fwdtransactionid(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
-  }
 };
 
 OpNotifyNotUsed::OpNotifyNotUsed(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -8760,7 +8690,7 @@ const char* OpNotifyNotUsed::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint64 a_TextureId = 1;
+      // optional uint64 a_TextureId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_textureid(&has_bits);
@@ -8769,7 +8699,7 @@ const char* OpNotifyNotUsed::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required uint64 a_fwdTransactionId = 2;
+      // optional uint64 a_fwdTransactionId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_fwdtransactionid(&has_bits);
@@ -8809,13 +8739,13 @@ uint8_t* OpNotifyNotUsed::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint64 a_TextureId = 1;
+  // optional uint64 a_TextureId = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_textureid(), target);
   }
 
-  // required uint64 a_fwdTransactionId = 2;
+  // optional uint64 a_fwdTransactionId = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(2, this->_internal_a_fwdtransactionid(), target);
@@ -8829,40 +8759,27 @@ uint8_t* OpNotifyNotUsed::_InternalSerialize(
   return target;
 }
 
-size_t OpNotifyNotUsed::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.OpNotifyNotUsed)
-  size_t total_size = 0;
-
-  if (_internal_has_a_textureid()) {
-    // required uint64 a_TextureId = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_textureid());
-  }
-
-  if (_internal_has_a_fwdtransactionid()) {
-    // required uint64 a_fwdTransactionId = 2;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_fwdtransactionid());
-  }
-
-  return total_size;
-}
 size_t OpNotifyNotUsed::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.OpNotifyNotUsed)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required uint64 a_TextureId = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_textureid());
-
-    // required uint64 a_fwdTransactionId = 2;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_fwdtransactionid());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional uint64 a_TextureId = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_textureid());
+    }
+
+    // optional uint64 a_fwdTransactionId = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_fwdtransactionid());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -8905,7 +8822,6 @@ void OpNotifyNotUsed::CopyFrom(const OpNotifyNotUsed& from) {
 }
 
 bool OpNotifyNotUsed::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -10305,7 +10221,7 @@ class ImageCompositeNotification::_Internal {
     (*has_bits)[0] |= 16u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000001f) ^ 0x0000001f) != 0;
+    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
   }
 };
 
@@ -10466,7 +10382,7 @@ const char* ImageCompositeNotification::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_frameID = 4;
+      // optional uint32 a_frameID = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_a_frameid(&has_bits);
@@ -10475,7 +10391,7 @@ const char* ImageCompositeNotification::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_producerID = 5;
+      // optional uint32 a_producerID = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_a_producerid(&has_bits);
@@ -10533,13 +10449,13 @@ uint8_t* ImageCompositeNotification::_InternalSerialize(
         3, this->_internal_a_firstcompositetimestamp(), target);
   }
 
-  // required uint32 a_frameID = 4;
+  // optional uint32 a_frameID = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(4, this->_internal_a_frameid(), target);
   }
 
-  // required uint32 a_producerID = 5;
+  // optional uint32 a_producerID = 5;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(5, this->_internal_a_producerid(), target);
@@ -10578,23 +10494,13 @@ size_t ImageCompositeNotification::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_firstcompositetimestamp());
   }
 
-  if (_internal_has_a_frameid()) {
-    // required uint32 a_frameID = 4;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_frameid());
-  }
-
-  if (_internal_has_a_producerid()) {
-    // required uint32 a_producerID = 5;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_producerid());
-  }
-
   return total_size;
 }
 size_t ImageCompositeNotification::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.ImageCompositeNotification)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
     // required bytes a_compositable = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -10610,12 +10516,6 @@ size_t ImageCompositeNotification::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_firstcompositetimestamp());
 
-    // required uint32 a_frameID = 4;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_frameid());
-
-    // required uint32 a_producerID = 5;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_producerid());
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
@@ -10623,6 +10523,19 @@ size_t ImageCompositeNotification::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000018u) {
+    // optional uint32 a_frameID = 4;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_frameid());
+    }
+
+    // optional uint32 a_producerID = 5;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_producerid());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -10943,17 +10856,6 @@ void AsyncParentMessageData::CopyFrom(const AsyncParentMessageData& from) {
 }
 
 bool AsyncParentMessageData::IsInitialized() const {
-  switch (content_case()) {
-    case kAMVOpNotifyNotUsed: {
-      if (_internal_has_a_mvopnotifynotused()) {
-        if (!_impl_.content_.a_mvopnotifynotused_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case CONTENT_NOT_SET: {
-      break;
-    }
-  }
   return true;
 }
 

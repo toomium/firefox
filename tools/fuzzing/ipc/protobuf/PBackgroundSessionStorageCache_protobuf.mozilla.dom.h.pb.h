@@ -189,7 +189,7 @@ class SSSetItemInfo final :
     kAKeyFieldNumber = 1,
     kAValueFieldNumber = 2,
   };
-  // required string a_key = 1;
+  // optional string a_key = 1;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -207,7 +207,7 @@ class SSSetItemInfo final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // required string a_value = 2;
+  // optional string a_value = 2;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -228,9 +228,6 @@ class SSSetItemInfo final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.SSSetItemInfo)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -358,7 +355,7 @@ class SSRemoveItemInfo final :
   enum : int {
     kAKeyFieldNumber = 1,
   };
-  // required string a_key = 1;
+  // optional string a_key = 1;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -856,7 +853,7 @@ class SSCacheCopy final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::SSSetItemInfo >&
       a_data() const;
 
-  // required string a_originKey = 1;
+  // optional string a_originKey = 1;
   bool has_a_originkey() const;
   private:
   bool _internal_has_a_originkey() const;
@@ -896,9 +893,6 @@ class SSCacheCopy final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
@@ -923,7 +917,7 @@ class SSCacheCopy final :
 #endif  // __GNUC__
 // SSSetItemInfo
 
-// required string a_key = 1;
+// optional string a_key = 1;
 inline bool SSSetItemInfo::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -991,7 +985,7 @@ inline void SSSetItemInfo::set_allocated_a_key(std::string* a_key) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.SSSetItemInfo.a_key)
 }
 
-// required string a_value = 2;
+// optional string a_value = 2;
 inline bool SSSetItemInfo::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1063,7 +1057,7 @@ inline void SSSetItemInfo::set_allocated_a_value(std::string* a_value) {
 
 // SSRemoveItemInfo
 
-// required string a_key = 1;
+// optional string a_key = 1;
 inline bool SSRemoveItemInfo::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1374,7 +1368,7 @@ inline SSWriteInfo::ContentCase SSWriteInfo::content_case() const {
 
 // SSCacheCopy
 
-// required string a_originKey = 1;
+// optional string a_originKey = 1;
 inline bool SSCacheCopy::_internal_has_a_originkey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

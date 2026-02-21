@@ -176,7 +176,7 @@ class HandlerApp final :
     kANameFieldNumber = 1,
     kADetailedDescriptionFieldNumber = 2,
   };
-  // required string a_name = 1;
+  // optional string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -194,7 +194,7 @@ class HandlerApp final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required string a_detailedDescription = 2;
+  // optional string a_detailedDescription = 2;
   bool has_a_detaileddescription() const;
   private:
   bool _internal_has_a_detaileddescription() const;
@@ -215,9 +215,6 @@ class HandlerApp final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.HandlerApp)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -394,7 +391,7 @@ class HandlerInfo final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::HandlerApp >&
       a_possibleapplicationhandlers() const;
 
-  // required string a_type = 1;
+  // optional string a_type = 1;
   bool has_a_type() const;
   private:
   bool _internal_has_a_type() const;
@@ -412,7 +409,7 @@ class HandlerInfo final :
   std::string* _internal_mutable_a_type();
   public:
 
-  // required string a_description = 3;
+  // optional string a_description = 3;
   bool has_a_description() const;
   private:
   bool _internal_has_a_description() const;
@@ -448,7 +445,7 @@ class HandlerInfo final :
       ::protobuf::mozilla::dom::HandlerApp* a_preferredapplicationhandler);
   ::protobuf::mozilla::dom::HandlerApp* unsafe_arena_release_a_preferredapplicationhandler();
 
-  // required bool a_isMIMEInfo = 2;
+  // optional bool a_isMIMEInfo = 2;
   bool has_a_ismimeinfo() const;
   private:
   bool _internal_has_a_ismimeinfo() const;
@@ -461,7 +458,7 @@ class HandlerInfo final :
   void _internal_set_a_ismimeinfo(bool value);
   public:
 
-  // required bool a_alwaysAskBeforeHandling = 4;
+  // optional bool a_alwaysAskBeforeHandling = 4;
   bool has_a_alwaysaskbeforehandling() const;
   private:
   bool _internal_has_a_alwaysaskbeforehandling() const;
@@ -474,7 +471,7 @@ class HandlerInfo final :
   void _internal_set_a_alwaysaskbeforehandling(bool value);
   public:
 
-  // required sint32 a_preferredAction = 8;
+  // optional sint32 a_preferredAction = 8;
   bool has_a_preferredaction() const;
   private:
   bool _internal_has_a_preferredaction() const;
@@ -490,9 +487,6 @@ class HandlerInfo final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.HandlerInfo)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -523,7 +517,7 @@ class HandlerInfo final :
 #endif  // __GNUC__
 // HandlerApp
 
-// required string a_name = 1;
+// optional string a_name = 1;
 inline bool HandlerApp::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -591,7 +585,7 @@ inline void HandlerApp::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.HandlerApp.a_name)
 }
 
-// required string a_detailedDescription = 2;
+// optional string a_detailedDescription = 2;
 inline bool HandlerApp::_internal_has_a_detaileddescription() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -663,7 +657,7 @@ inline void HandlerApp::set_allocated_a_detaileddescription(std::string* a_detai
 
 // HandlerInfo
 
-// required string a_type = 1;
+// optional string a_type = 1;
 inline bool HandlerInfo::_internal_has_a_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -731,7 +725,7 @@ inline void HandlerInfo::set_allocated_a_type(std::string* a_type) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.HandlerInfo.a_type)
 }
 
-// required bool a_isMIMEInfo = 2;
+// optional bool a_isMIMEInfo = 2;
 inline bool HandlerInfo::_internal_has_a_ismimeinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -759,7 +753,7 @@ inline void HandlerInfo::set_a_ismimeinfo(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.HandlerInfo.a_isMIMEInfo)
 }
 
-// required string a_description = 3;
+// optional string a_description = 3;
 inline bool HandlerInfo::_internal_has_a_description() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -827,7 +821,7 @@ inline void HandlerInfo::set_allocated_a_description(std::string* a_description)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.HandlerInfo.a_description)
 }
 
-// required bool a_alwaysAskBeforeHandling = 4;
+// optional bool a_alwaysAskBeforeHandling = 4;
 inline bool HandlerInfo::_internal_has_a_alwaysaskbeforehandling() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -1060,7 +1054,7 @@ HandlerInfo::a_possibleapplicationhandlers() const {
   return _impl_.a_possibleapplicationhandlers_;
 }
 
-// required sint32 a_preferredAction = 8;
+// optional sint32 a_preferredAction = 8;
 inline bool HandlerInfo::_internal_has_a_preferredaction() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;

@@ -25,13 +25,13 @@ message Reply_Ping {
 }
 
 message Msg_PTextureConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
   required protobuf.mozilla.layers.SurfaceDescriptor a_aSharedData = 2;
   required protobuf.mozilla.layers.ReadLockDescriptor a_aReadLock = 3;
   required bytes a_aBackend = 4;
   required bytes a_aTextureFlags = 5;
   required bytes a_aContentId = 6;
-  required uint64 a_aSerial = 7;
+  optional uint64 a_aSerial = 7;
 }
 
 message Reply_PTextureConstructor {

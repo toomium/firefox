@@ -19,7 +19,7 @@ import "PMediaDecoderParams.proto";
 
 // Message declarations
 message Msg_PRemoteDecoderConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
   required protobuf.mozilla.RemoteDecoderInfoIPDL a_info = 2;
   required bytes a_options = 3;
   optional bytes a_identifier = 4;
@@ -31,7 +31,7 @@ message Reply_PRemoteDecoderConstructor {
 }
 
 message Msg_PRemoteEncoderConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
   required bytes a_config = 2;
 }
 

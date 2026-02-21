@@ -582,7 +582,7 @@ class Msg_SetChannelIdForRedirect final :
   enum : int {
     kAAChannelIdFieldNumber = 1,
   };
-  // required uint64 a_aChannelId = 1;
+  // optional uint64 a_aChannelId = 1;
   bool has_a_achannelid() const;
   private:
   bool _internal_has_a_achannelid() const;
@@ -720,7 +720,7 @@ inline void Msg_NotifyListeners::set_allocated_a_afilechannelinfo(::protobuf::mo
 
 // Msg_SetChannelIdForRedirect
 
-// required uint64 a_aChannelId = 1;
+// optional uint64 a_aChannelId = 1;
 inline bool Msg_SetChannelIdForRedirect::_internal_has_a_achannelid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

@@ -12,11 +12,11 @@ package protobuf.mozilla.widget;
 
 // Structs and unions declarations
 message LookAndFeelFont {
-  required bool a_haveFont = 1;
-  required string a_name = 2;
-  required float a_size = 3;
-  required float a_weight = 4;
-  required bool a_italic = 5;
+  optional bool a_haveFont = 1;
+  optional string a_name = 2;
+  optional float a_size = 3;
+  optional float a_weight = 4;
+  optional bool a_italic = 5;
 }
 
 message LookAndFeelTables {
@@ -30,8 +30,8 @@ message LookAndFeelTables {
   repeated uint32 a_fontMap = 8;
   repeated uint32 a_lightColorMap = 9;
   repeated uint32 a_darkColorMap = 10;
-  required uint32 a_passwordChar = 11;
-  required bool a_passwordEcho = 12;
+  optional uint32 a_passwordChar = 11;
+  optional bool a_passwordEcho = 12;
 }
 
 message FullLookAndFeel {

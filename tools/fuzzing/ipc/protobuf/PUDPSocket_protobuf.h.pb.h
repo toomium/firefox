@@ -179,7 +179,7 @@ class UDPAddressInfo final :
     kAAddrFieldNumber = 1,
     kAPortFieldNumber = 2,
   };
-  // required string a_addr = 1;
+  // optional string a_addr = 1;
   bool has_a_addr() const;
   private:
   bool _internal_has_a_addr() const;
@@ -197,7 +197,7 @@ class UDPAddressInfo final :
   std::string* _internal_mutable_a_addr();
   public:
 
-  // required uint32 a_port = 2;
+  // optional uint32 a_port = 2;
   bool has_a_port() const;
   private:
   bool _internal_has_a_port() const;
@@ -213,9 +213,6 @@ class UDPAddressInfo final :
   // @@protoc_insertion_point(class_scope:protobuf.UDPAddressInfo)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -762,7 +759,7 @@ class UDPData final :
 #endif  // __GNUC__
 // UDPAddressInfo
 
-// required string a_addr = 1;
+// optional string a_addr = 1;
 inline bool UDPAddressInfo::_internal_has_a_addr() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -830,7 +827,7 @@ inline void UDPAddressInfo::set_allocated_a_addr(std::string* a_addr) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.UDPAddressInfo.a_addr)
 }
 
-// required uint32 a_port = 2;
+// optional uint32 a_port = 2;
 inline bool UDPAddressInfo::_internal_has_a_port() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

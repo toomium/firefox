@@ -200,7 +200,7 @@ class PermissionRequest final :
   std::string* _internal_add_a_options();
   public:
 
-  // required string a_type = 1;
+  // optional string a_type = 1;
   bool has_a_type() const;
   private:
   bool _internal_has_a_type() const;
@@ -349,7 +349,7 @@ class PermissionChoice final :
     kATypeFieldNumber = 1,
     kAChoiceFieldNumber = 2,
   };
-  // required string a_type = 1;
+  // optional string a_type = 1;
   bool has_a_type() const;
   private:
   bool _internal_has_a_type() const;
@@ -367,7 +367,7 @@ class PermissionChoice final :
   std::string* _internal_mutable_a_type();
   public:
 
-  // required string a_choice = 2;
+  // optional string a_choice = 2;
   bool has_a_choice() const;
   private:
   bool _internal_has_a_choice() const;
@@ -388,9 +388,6 @@ class PermissionChoice final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PermissionChoice)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -415,7 +412,7 @@ class PermissionChoice final :
 #endif  // __GNUC__
 // PermissionRequest
 
-// required string a_type = 1;
+// optional string a_type = 1;
 inline bool PermissionRequest::_internal_has_a_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -562,7 +559,7 @@ PermissionRequest::mutable_a_options() {
 
 // PermissionChoice
 
-// required string a_type = 1;
+// optional string a_type = 1;
 inline bool PermissionChoice::_internal_has_a_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -630,7 +627,7 @@ inline void PermissionChoice::set_allocated_a_type(std::string* a_type) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PermissionChoice.a_type)
 }
 
-// required string a_choice = 2;
+// optional string a_choice = 2;
 inline bool PermissionChoice::_internal_has_a_choice() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

@@ -190,7 +190,7 @@ class ProtocolFdMapping final :
   std::string* _internal_mutable_a_fd();
   public:
 
-  // required uint32 a_protocolId = 1;
+  // optional uint32 a_protocolId = 1;
   bool has_a_protocolid() const;
   private:
   bool _internal_has_a_protocolid() const;
@@ -206,9 +206,6 @@ class ProtocolFdMapping final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.ProtocolFdMapping)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -233,7 +230,7 @@ class ProtocolFdMapping final :
 #endif  // __GNUC__
 // ProtocolFdMapping
 
-// required uint32 a_protocolId = 1;
+// optional uint32 a_protocolId = 1;
 inline bool ProtocolFdMapping::_internal_has_a_protocolid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

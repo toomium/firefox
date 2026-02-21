@@ -966,7 +966,7 @@ class Msg_SetAudioOutputVolume final :
   enum : int {
     kAAVolumeFieldNumber = 1,
   };
-  // required float a_aVolume = 1;
+  // optional float a_aVolume = 1;
   bool has_a_avolume() const;
   private:
   bool _internal_has_a_avolume() const;
@@ -1110,7 +1110,7 @@ class Msg_OnEnd final :
     kAAElapsedTimeFieldNumber = 2,
     kAACharIndexFieldNumber = 3,
   };
-  // required bool a_aIsError = 1;
+  // optional bool a_aIsError = 1;
   bool has_a_aiserror() const;
   private:
   bool _internal_has_a_aiserror() const;
@@ -1123,7 +1123,7 @@ class Msg_OnEnd final :
   void _internal_set_a_aiserror(bool value);
   public:
 
-  // required float a_aElapsedTime = 2;
+  // optional float a_aElapsedTime = 2;
   bool has_a_aelapsedtime() const;
   private:
   bool _internal_has_a_aelapsedtime() const;
@@ -1136,7 +1136,7 @@ class Msg_OnEnd final :
   void _internal_set_a_aelapsedtime(float value);
   public:
 
-  // required uint32 a_aCharIndex = 3;
+  // optional uint32 a_aCharIndex = 3;
   bool has_a_acharindex() const;
   private:
   bool _internal_has_a_acharindex() const;
@@ -1152,9 +1152,6 @@ class Msg_OnEnd final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnEnd)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1283,7 +1280,7 @@ class Msg_OnStart final :
   enum : int {
     kAAUriFieldNumber = 1,
   };
-  // required string a_aUri = 1;
+  // optional string a_aUri = 1;
   bool has_a_auri() const;
   private:
   bool _internal_has_a_auri() const;
@@ -1431,7 +1428,7 @@ class Msg_OnPause final :
     kAAElapsedTimeFieldNumber = 1,
     kAACharIndexFieldNumber = 2,
   };
-  // required float a_aElapsedTime = 1;
+  // optional float a_aElapsedTime = 1;
   bool has_a_aelapsedtime() const;
   private:
   bool _internal_has_a_aelapsedtime() const;
@@ -1444,7 +1441,7 @@ class Msg_OnPause final :
   void _internal_set_a_aelapsedtime(float value);
   public:
 
-  // required uint32 a_aCharIndex = 2;
+  // optional uint32 a_aCharIndex = 2;
   bool has_a_acharindex() const;
   private:
   bool _internal_has_a_acharindex() const;
@@ -1460,9 +1457,6 @@ class Msg_OnPause final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnPause)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1591,7 +1585,7 @@ class Msg_OnResume final :
     kAAElapsedTimeFieldNumber = 1,
     kAACharIndexFieldNumber = 2,
   };
-  // required float a_aElapsedTime = 1;
+  // optional float a_aElapsedTime = 1;
   bool has_a_aelapsedtime() const;
   private:
   bool _internal_has_a_aelapsedtime() const;
@@ -1604,7 +1598,7 @@ class Msg_OnResume final :
   void _internal_set_a_aelapsedtime(float value);
   public:
 
-  // required uint32 a_aCharIndex = 2;
+  // optional uint32 a_aCharIndex = 2;
   bool has_a_acharindex() const;
   private:
   bool _internal_has_a_acharindex() const;
@@ -1620,9 +1614,6 @@ class Msg_OnResume final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnResume)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1754,7 +1745,7 @@ class Msg_OnBoundary final :
     kAACharLengthFieldNumber = 4,
     kAArgcFieldNumber = 5,
   };
-  // required string a_aName = 1;
+  // optional string a_aName = 1;
   bool has_a_aname() const;
   private:
   bool _internal_has_a_aname() const;
@@ -1772,7 +1763,7 @@ class Msg_OnBoundary final :
   std::string* _internal_mutable_a_aname();
   public:
 
-  // required float a_aElapsedTime = 2;
+  // optional float a_aElapsedTime = 2;
   bool has_a_aelapsedtime() const;
   private:
   bool _internal_has_a_aelapsedtime() const;
@@ -1785,7 +1776,7 @@ class Msg_OnBoundary final :
   void _internal_set_a_aelapsedtime(float value);
   public:
 
-  // required uint32 a_aCharIndex = 3;
+  // optional uint32 a_aCharIndex = 3;
   bool has_a_acharindex() const;
   private:
   bool _internal_has_a_acharindex() const;
@@ -1798,7 +1789,7 @@ class Msg_OnBoundary final :
   void _internal_set_a_acharindex(uint32_t value);
   public:
 
-  // required uint32 a_aCharLength = 4;
+  // optional uint32 a_aCharLength = 4;
   bool has_a_acharlength() const;
   private:
   bool _internal_has_a_acharlength() const;
@@ -1811,7 +1802,7 @@ class Msg_OnBoundary final :
   void _internal_set_a_acharlength(uint32_t value);
   public:
 
-  // required uint32 a_argc = 5;
+  // optional uint32 a_argc = 5;
   bool has_a_argc() const;
   private:
   bool _internal_has_a_argc() const;
@@ -1827,9 +1818,6 @@ class Msg_OnBoundary final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnBoundary)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1962,7 +1950,7 @@ class Msg_OnMark final :
     kAAElapsedTimeFieldNumber = 2,
     kAACharIndexFieldNumber = 3,
   };
-  // required string a_aName = 1;
+  // optional string a_aName = 1;
   bool has_a_aname() const;
   private:
   bool _internal_has_a_aname() const;
@@ -1980,7 +1968,7 @@ class Msg_OnMark final :
   std::string* _internal_mutable_a_aname();
   public:
 
-  // required float a_aElapsedTime = 2;
+  // optional float a_aElapsedTime = 2;
   bool has_a_aelapsedtime() const;
   private:
   bool _internal_has_a_aelapsedtime() const;
@@ -1993,7 +1981,7 @@ class Msg_OnMark final :
   void _internal_set_a_aelapsedtime(float value);
   public:
 
-  // required uint32 a_aCharIndex = 3;
+  // optional uint32 a_aCharIndex = 3;
   bool has_a_acharindex() const;
   private:
   bool _internal_has_a_acharindex() const;
@@ -2009,9 +1997,6 @@ class Msg_OnMark final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnMark)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2061,7 +2046,7 @@ class Msg_OnMark final :
 
 // Msg_SetAudioOutputVolume
 
-// required float a_aVolume = 1;
+// optional float a_aVolume = 1;
 inline bool Msg_SetAudioOutputVolume::_internal_has_a_avolume() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2093,7 +2078,7 @@ inline void Msg_SetAudioOutputVolume::set_a_avolume(float value) {
 
 // Msg_OnEnd
 
-// required bool a_aIsError = 1;
+// optional bool a_aIsError = 1;
 inline bool Msg_OnEnd::_internal_has_a_aiserror() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2121,7 +2106,7 @@ inline void Msg_OnEnd::set_a_aiserror(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnEnd.a_aIsError)
 }
 
-// required float a_aElapsedTime = 2;
+// optional float a_aElapsedTime = 2;
 inline bool Msg_OnEnd::_internal_has_a_aelapsedtime() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2149,7 +2134,7 @@ inline void Msg_OnEnd::set_a_aelapsedtime(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnEnd.a_aElapsedTime)
 }
 
-// required uint32 a_aCharIndex = 3;
+// optional uint32 a_aCharIndex = 3;
 inline bool Msg_OnEnd::_internal_has_a_acharindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2181,7 +2166,7 @@ inline void Msg_OnEnd::set_a_acharindex(uint32_t value) {
 
 // Msg_OnStart
 
-// required string a_aUri = 1;
+// optional string a_aUri = 1;
 inline bool Msg_OnStart::_internal_has_a_auri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2253,7 +2238,7 @@ inline void Msg_OnStart::set_allocated_a_auri(std::string* a_auri) {
 
 // Msg_OnPause
 
-// required float a_aElapsedTime = 1;
+// optional float a_aElapsedTime = 1;
 inline bool Msg_OnPause::_internal_has_a_aelapsedtime() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2281,7 +2266,7 @@ inline void Msg_OnPause::set_a_aelapsedtime(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnPause.a_aElapsedTime)
 }
 
-// required uint32 a_aCharIndex = 2;
+// optional uint32 a_aCharIndex = 2;
 inline bool Msg_OnPause::_internal_has_a_acharindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2313,7 +2298,7 @@ inline void Msg_OnPause::set_a_acharindex(uint32_t value) {
 
 // Msg_OnResume
 
-// required float a_aElapsedTime = 1;
+// optional float a_aElapsedTime = 1;
 inline bool Msg_OnResume::_internal_has_a_aelapsedtime() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2341,7 +2326,7 @@ inline void Msg_OnResume::set_a_aelapsedtime(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnResume.a_aElapsedTime)
 }
 
-// required uint32 a_aCharIndex = 2;
+// optional uint32 a_aCharIndex = 2;
 inline bool Msg_OnResume::_internal_has_a_acharindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2373,7 +2358,7 @@ inline void Msg_OnResume::set_a_acharindex(uint32_t value) {
 
 // Msg_OnBoundary
 
-// required string a_aName = 1;
+// optional string a_aName = 1;
 inline bool Msg_OnBoundary::_internal_has_a_aname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2441,7 +2426,7 @@ inline void Msg_OnBoundary::set_allocated_a_aname(std::string* a_aname) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnBoundary.a_aName)
 }
 
-// required float a_aElapsedTime = 2;
+// optional float a_aElapsedTime = 2;
 inline bool Msg_OnBoundary::_internal_has_a_aelapsedtime() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2469,7 +2454,7 @@ inline void Msg_OnBoundary::set_a_aelapsedtime(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnBoundary.a_aElapsedTime)
 }
 
-// required uint32 a_aCharIndex = 3;
+// optional uint32 a_aCharIndex = 3;
 inline bool Msg_OnBoundary::_internal_has_a_acharindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2497,7 +2482,7 @@ inline void Msg_OnBoundary::set_a_acharindex(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnBoundary.a_aCharIndex)
 }
 
-// required uint32 a_aCharLength = 4;
+// optional uint32 a_aCharLength = 4;
 inline bool Msg_OnBoundary::_internal_has_a_acharlength() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -2525,7 +2510,7 @@ inline void Msg_OnBoundary::set_a_acharlength(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnBoundary.a_aCharLength)
 }
 
-// required uint32 a_argc = 5;
+// optional uint32 a_argc = 5;
 inline bool Msg_OnBoundary::_internal_has_a_argc() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -2557,7 +2542,7 @@ inline void Msg_OnBoundary::set_a_argc(uint32_t value) {
 
 // Msg_OnMark
 
-// required string a_aName = 1;
+// optional string a_aName = 1;
 inline bool Msg_OnMark::_internal_has_a_aname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2625,7 +2610,7 @@ inline void Msg_OnMark::set_allocated_a_aname(std::string* a_aname) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnMark.a_aName)
 }
 
-// required float a_aElapsedTime = 2;
+// optional float a_aElapsedTime = 2;
 inline bool Msg_OnMark::_internal_has_a_aelapsedtime() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2653,7 +2638,7 @@ inline void Msg_OnMark::set_a_aelapsedtime(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnMark.a_aElapsedTime)
 }
 
-// required uint32 a_aCharIndex = 3;
+// optional uint32 a_aCharIndex = 3;
 inline bool Msg_OnMark::_internal_has_a_acharindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

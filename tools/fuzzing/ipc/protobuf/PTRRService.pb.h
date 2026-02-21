@@ -216,7 +216,7 @@ class Msg_NotifyNetworkConnectivityServiceObservers final :
   enum : int {
     kAATopicFieldNumber = 1,
   };
-  // required string a_aTopic = 1;
+  // optional string a_aTopic = 1;
   bool has_a_atopic() const;
   private:
   bool _internal_has_a_atopic() const;
@@ -487,7 +487,7 @@ class Msg_SetConfirmationState final :
   enum : int {
     kAANewStateFieldNumber = 1,
   };
-  // required uint32 a_aNewState = 1;
+  // optional uint32 a_aNewState = 1;
   bool has_a_anewstate() const;
   private:
   bool _internal_has_a_anewstate() const;
@@ -1029,7 +1029,7 @@ class Msg_UpdateParentalControlEnabled final :
   enum : int {
     kAAEnabledFieldNumber = 1,
   };
-  // required bool a_aEnabled = 1;
+  // optional bool a_aEnabled = 1;
   bool has_a_aenabled() const;
   private:
   bool _internal_has_a_aenabled() const;
@@ -1171,7 +1171,7 @@ class Msg_ClearDNSCache final :
   enum : int {
     kAATrrTooFieldNumber = 1,
   };
-  // required bool a_aTrrToo = 1;
+  // optional bool a_aTrrToo = 1;
   bool has_a_atrrtoo() const;
   private:
   bool _internal_has_a_atrrtoo() const;
@@ -1313,7 +1313,7 @@ class Msg_SetDetectedTrrURI final :
   enum : int {
     kAAURIFieldNumber = 1,
   };
-  // required string a_aURI = 1;
+  // optional string a_aURI = 1;
   bool has_a_auri() const;
   private:
   bool _internal_has_a_auri() const;
@@ -1656,7 +1656,7 @@ class Msg_UpdateEtcHosts final :
 #endif  // __GNUC__
 // Msg_NotifyNetworkConnectivityServiceObservers
 
-// required string a_aTopic = 1;
+// optional string a_aTopic = 1;
 inline bool Msg_NotifyNetworkConnectivityServiceObservers::_internal_has_a_atopic() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1732,7 +1732,7 @@ inline void Msg_NotifyNetworkConnectivityServiceObservers::set_allocated_a_atopi
 
 // Msg_SetConfirmationState
 
-// required uint32 a_aNewState = 1;
+// optional uint32 a_aNewState = 1;
 inline bool Msg_SetConfirmationState::_internal_has_a_anewstate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1851,7 +1851,7 @@ Msg_UpdatePlatformDNSInformation::mutable_a_asuffixlist() {
 
 // Msg_UpdateParentalControlEnabled
 
-// required bool a_aEnabled = 1;
+// optional bool a_aEnabled = 1;
 inline bool Msg_UpdateParentalControlEnabled::_internal_has_a_aenabled() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1883,7 +1883,7 @@ inline void Msg_UpdateParentalControlEnabled::set_a_aenabled(bool value) {
 
 // Msg_ClearDNSCache
 
-// required bool a_aTrrToo = 1;
+// optional bool a_aTrrToo = 1;
 inline bool Msg_ClearDNSCache::_internal_has_a_atrrtoo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1915,7 +1915,7 @@ inline void Msg_ClearDNSCache::set_a_atrrtoo(bool value) {
 
 // Msg_SetDetectedTrrURI
 
-// required string a_aURI = 1;
+// optional string a_aURI = 1;
 inline bool Msg_SetDetectedTrrURI::_internal_has_a_auri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

@@ -384,7 +384,7 @@ class Msg_Preload final :
     kAOriginNoSuffixFieldNumber = 2,
     kAAlreadyLoadedCountFieldNumber = 3,
   };
-  // required string a_originSuffix = 1;
+  // optional string a_originSuffix = 1;
   bool has_a_originsuffix() const;
   private:
   bool _internal_has_a_originsuffix() const;
@@ -402,7 +402,7 @@ class Msg_Preload final :
   std::string* _internal_mutable_a_originsuffix();
   public:
 
-  // required string a_originNoSuffix = 2;
+  // optional string a_originNoSuffix = 2;
   bool has_a_originnosuffix() const;
   private:
   bool _internal_has_a_originnosuffix() const;
@@ -420,7 +420,7 @@ class Msg_Preload final :
   std::string* _internal_mutable_a_originnosuffix();
   public:
 
-  // required uint32 a_alreadyLoadedCount = 3;
+  // optional uint32 a_alreadyLoadedCount = 3;
   bool has_a_alreadyloadedcount() const;
   private:
   bool _internal_has_a_alreadyloadedcount() const;
@@ -436,9 +436,6 @@ class Msg_Preload final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBackgroundStorage.Msg_Preload)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -768,7 +765,7 @@ class Msg_AsyncPreload final :
     kAOriginNoSuffixFieldNumber = 2,
     kAPriorityFieldNumber = 3,
   };
-  // required string a_originSuffix = 1;
+  // optional string a_originSuffix = 1;
   bool has_a_originsuffix() const;
   private:
   bool _internal_has_a_originsuffix() const;
@@ -786,7 +783,7 @@ class Msg_AsyncPreload final :
   std::string* _internal_mutable_a_originsuffix();
   public:
 
-  // required string a_originNoSuffix = 2;
+  // optional string a_originNoSuffix = 2;
   bool has_a_originnosuffix() const;
   private:
   bool _internal_has_a_originnosuffix() const;
@@ -804,7 +801,7 @@ class Msg_AsyncPreload final :
   std::string* _internal_mutable_a_originnosuffix();
   public:
 
-  // required bool a_priority = 3;
+  // optional bool a_priority = 3;
   bool has_a_priority() const;
   private:
   bool _internal_has_a_priority() const;
@@ -820,9 +817,6 @@ class Msg_AsyncPreload final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncPreload)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -951,7 +945,7 @@ class Msg_AsyncGetUsage final :
   enum : int {
     kAScopeFieldNumber = 1,
   };
-  // required string a_scope = 1;
+  // optional string a_scope = 1;
   bool has_a_scope() const;
   private:
   bool _internal_has_a_scope() const;
@@ -1101,7 +1095,7 @@ class Msg_AsyncAddItem final :
     kAKeyFieldNumber = 3,
     kAValueFieldNumber = 4,
   };
-  // required string a_originSuffix = 1;
+  // optional string a_originSuffix = 1;
   bool has_a_originsuffix() const;
   private:
   bool _internal_has_a_originsuffix() const;
@@ -1119,7 +1113,7 @@ class Msg_AsyncAddItem final :
   std::string* _internal_mutable_a_originsuffix();
   public:
 
-  // required string a_originNoSuffix = 2;
+  // optional string a_originNoSuffix = 2;
   bool has_a_originnosuffix() const;
   private:
   bool _internal_has_a_originnosuffix() const;
@@ -1137,7 +1131,7 @@ class Msg_AsyncAddItem final :
   std::string* _internal_mutable_a_originnosuffix();
   public:
 
-  // required string a_key = 3;
+  // optional string a_key = 3;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -1155,7 +1149,7 @@ class Msg_AsyncAddItem final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // required string a_value = 4;
+  // optional string a_value = 4;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -1176,9 +1170,6 @@ class Msg_AsyncAddItem final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncAddItem)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1311,7 +1302,7 @@ class Msg_AsyncUpdateItem final :
     kAKeyFieldNumber = 3,
     kAValueFieldNumber = 4,
   };
-  // required string a_originSuffix = 1;
+  // optional string a_originSuffix = 1;
   bool has_a_originsuffix() const;
   private:
   bool _internal_has_a_originsuffix() const;
@@ -1329,7 +1320,7 @@ class Msg_AsyncUpdateItem final :
   std::string* _internal_mutable_a_originsuffix();
   public:
 
-  // required string a_originNoSuffix = 2;
+  // optional string a_originNoSuffix = 2;
   bool has_a_originnosuffix() const;
   private:
   bool _internal_has_a_originnosuffix() const;
@@ -1347,7 +1338,7 @@ class Msg_AsyncUpdateItem final :
   std::string* _internal_mutable_a_originnosuffix();
   public:
 
-  // required string a_key = 3;
+  // optional string a_key = 3;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -1365,7 +1356,7 @@ class Msg_AsyncUpdateItem final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // required string a_value = 4;
+  // optional string a_value = 4;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -1386,9 +1377,6 @@ class Msg_AsyncUpdateItem final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncUpdateItem)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1520,7 +1508,7 @@ class Msg_AsyncRemoveItem final :
     kAOriginNoSuffixFieldNumber = 2,
     kAKeyFieldNumber = 3,
   };
-  // required string a_originSuffix = 1;
+  // optional string a_originSuffix = 1;
   bool has_a_originsuffix() const;
   private:
   bool _internal_has_a_originsuffix() const;
@@ -1538,7 +1526,7 @@ class Msg_AsyncRemoveItem final :
   std::string* _internal_mutable_a_originsuffix();
   public:
 
-  // required string a_originNoSuffix = 2;
+  // optional string a_originNoSuffix = 2;
   bool has_a_originnosuffix() const;
   private:
   bool _internal_has_a_originnosuffix() const;
@@ -1556,7 +1544,7 @@ class Msg_AsyncRemoveItem final :
   std::string* _internal_mutable_a_originnosuffix();
   public:
 
-  // required string a_key = 3;
+  // optional string a_key = 3;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -1577,9 +1565,6 @@ class Msg_AsyncRemoveItem final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncRemoveItem)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1709,7 +1694,7 @@ class Msg_AsyncClear final :
     kAOriginSuffixFieldNumber = 1,
     kAOriginNoSuffixFieldNumber = 2,
   };
-  // required string a_originSuffix = 1;
+  // optional string a_originSuffix = 1;
   bool has_a_originsuffix() const;
   private:
   bool _internal_has_a_originsuffix() const;
@@ -1727,7 +1712,7 @@ class Msg_AsyncClear final :
   std::string* _internal_mutable_a_originsuffix();
   public:
 
-  // required string a_originNoSuffix = 2;
+  // optional string a_originNoSuffix = 2;
   bool has_a_originnosuffix() const;
   private:
   bool _internal_has_a_originnosuffix() const;
@@ -1748,9 +1733,6 @@ class Msg_AsyncClear final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncClear)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2250,7 +2232,7 @@ class Msg_ClearMatchingOrigin final :
   enum : int {
     kAOriginNoSuffixFieldNumber = 1,
   };
-  // required string a_originNoSuffix = 1;
+  // optional string a_originNoSuffix = 1;
   bool has_a_originnosuffix() const;
   private:
   bool _internal_has_a_originnosuffix() const;
@@ -2794,7 +2776,7 @@ class Msg_Observe final :
     kAOriginAttributesPatternFieldNumber = 2,
     kAOriginScopeFieldNumber = 3,
   };
-  // required string a_topic = 1;
+  // optional string a_topic = 1;
   bool has_a_topic() const;
   private:
   bool _internal_has_a_topic() const;
@@ -2812,7 +2794,7 @@ class Msg_Observe final :
   std::string* _internal_mutable_a_topic();
   public:
 
-  // required string a_originAttributesPattern = 2;
+  // optional string a_originAttributesPattern = 2;
   bool has_a_originattributespattern() const;
   private:
   bool _internal_has_a_originattributespattern() const;
@@ -2830,7 +2812,7 @@ class Msg_Observe final :
   std::string* _internal_mutable_a_originattributespattern();
   public:
 
-  // required string a_originScope = 3;
+  // optional string a_originScope = 3;
   bool has_a_originscope() const;
   private:
   bool _internal_has_a_originscope() const;
@@ -2851,9 +2833,6 @@ class Msg_Observe final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBackgroundStorage.Msg_Observe)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3137,7 +3116,7 @@ class Msg_LoadItem final :
     kAKeyFieldNumber = 3,
     kAValueFieldNumber = 4,
   };
-  // required string a_originSuffix = 1;
+  // optional string a_originSuffix = 1;
   bool has_a_originsuffix() const;
   private:
   bool _internal_has_a_originsuffix() const;
@@ -3155,7 +3134,7 @@ class Msg_LoadItem final :
   std::string* _internal_mutable_a_originsuffix();
   public:
 
-  // required string a_originNoSuffix = 2;
+  // optional string a_originNoSuffix = 2;
   bool has_a_originnosuffix() const;
   private:
   bool _internal_has_a_originnosuffix() const;
@@ -3173,7 +3152,7 @@ class Msg_LoadItem final :
   std::string* _internal_mutable_a_originnosuffix();
   public:
 
-  // required string a_key = 3;
+  // optional string a_key = 3;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -3191,7 +3170,7 @@ class Msg_LoadItem final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // required string a_value = 4;
+  // optional string a_value = 4;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -3212,9 +3191,6 @@ class Msg_LoadItem final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBackgroundStorage.Msg_LoadItem)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3346,7 +3322,7 @@ class Msg_LoadDone final :
     kAOriginNoSuffixFieldNumber = 2,
     kARvFieldNumber = 3,
   };
-  // required string a_originSuffix = 1;
+  // optional string a_originSuffix = 1;
   bool has_a_originsuffix() const;
   private:
   bool _internal_has_a_originsuffix() const;
@@ -3364,7 +3340,7 @@ class Msg_LoadDone final :
   std::string* _internal_mutable_a_originsuffix();
   public:
 
-  // required string a_originNoSuffix = 2;
+  // optional string a_originNoSuffix = 2;
   bool has_a_originnosuffix() const;
   private:
   bool _internal_has_a_originnosuffix() const;
@@ -3403,9 +3379,6 @@ class Msg_LoadDone final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBackgroundStorage.Msg_LoadDone)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3535,7 +3508,7 @@ class Msg_LoadUsage final :
     kAScopeFieldNumber = 1,
     kAUsageFieldNumber = 2,
   };
-  // required string a_scope = 1;
+  // optional string a_scope = 1;
   bool has_a_scope() const;
   private:
   bool _internal_has_a_scope() const;
@@ -3553,7 +3526,7 @@ class Msg_LoadUsage final :
   std::string* _internal_mutable_a_scope();
   public:
 
-  // required sint64 a_usage = 2;
+  // optional sint64 a_usage = 2;
   bool has_a_usage() const;
   private:
   bool _internal_has_a_usage() const;
@@ -3569,9 +3542,6 @@ class Msg_LoadUsage final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBackgroundStorage.Msg_LoadUsage)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3747,7 +3717,7 @@ class Msg_Error final :
 
 // Msg_Preload
 
-// required string a_originSuffix = 1;
+// optional string a_originSuffix = 1;
 inline bool Msg_Preload::_internal_has_a_originsuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3815,7 +3785,7 @@ inline void Msg_Preload::set_allocated_a_originsuffix(std::string* a_originsuffi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_Preload.a_originSuffix)
 }
 
-// required string a_originNoSuffix = 2;
+// optional string a_originNoSuffix = 2;
 inline bool Msg_Preload::_internal_has_a_originnosuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3883,7 +3853,7 @@ inline void Msg_Preload::set_allocated_a_originnosuffix(std::string* a_originnos
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_Preload.a_originNoSuffix)
 }
 
-// required uint32 a_alreadyLoadedCount = 3;
+// optional uint32 a_alreadyLoadedCount = 3;
 inline bool Msg_Preload::_internal_has_a_alreadyloadedcount() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -4137,7 +4107,7 @@ inline void Reply_Preload::set_allocated_a_rv(std::string* a_rv) {
 
 // Msg_AsyncPreload
 
-// required string a_originSuffix = 1;
+// optional string a_originSuffix = 1;
 inline bool Msg_AsyncPreload::_internal_has_a_originsuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4205,7 +4175,7 @@ inline void Msg_AsyncPreload::set_allocated_a_originsuffix(std::string* a_origin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncPreload.a_originSuffix)
 }
 
-// required string a_originNoSuffix = 2;
+// optional string a_originNoSuffix = 2;
 inline bool Msg_AsyncPreload::_internal_has_a_originnosuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4273,7 +4243,7 @@ inline void Msg_AsyncPreload::set_allocated_a_originnosuffix(std::string* a_orig
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncPreload.a_originNoSuffix)
 }
 
-// required bool a_priority = 3;
+// optional bool a_priority = 3;
 inline bool Msg_AsyncPreload::_internal_has_a_priority() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -4305,7 +4275,7 @@ inline void Msg_AsyncPreload::set_a_priority(bool value) {
 
 // Msg_AsyncGetUsage
 
-// required string a_scope = 1;
+// optional string a_scope = 1;
 inline bool Msg_AsyncGetUsage::_internal_has_a_scope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4377,7 +4347,7 @@ inline void Msg_AsyncGetUsage::set_allocated_a_scope(std::string* a_scope) {
 
 // Msg_AsyncAddItem
 
-// required string a_originSuffix = 1;
+// optional string a_originSuffix = 1;
 inline bool Msg_AsyncAddItem::_internal_has_a_originsuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4445,7 +4415,7 @@ inline void Msg_AsyncAddItem::set_allocated_a_originsuffix(std::string* a_origin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncAddItem.a_originSuffix)
 }
 
-// required string a_originNoSuffix = 2;
+// optional string a_originNoSuffix = 2;
 inline bool Msg_AsyncAddItem::_internal_has_a_originnosuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4513,7 +4483,7 @@ inline void Msg_AsyncAddItem::set_allocated_a_originnosuffix(std::string* a_orig
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncAddItem.a_originNoSuffix)
 }
 
-// required string a_key = 3;
+// optional string a_key = 3;
 inline bool Msg_AsyncAddItem::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -4581,7 +4551,7 @@ inline void Msg_AsyncAddItem::set_allocated_a_key(std::string* a_key) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncAddItem.a_key)
 }
 
-// required string a_value = 4;
+// optional string a_value = 4;
 inline bool Msg_AsyncAddItem::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -4653,7 +4623,7 @@ inline void Msg_AsyncAddItem::set_allocated_a_value(std::string* a_value) {
 
 // Msg_AsyncUpdateItem
 
-// required string a_originSuffix = 1;
+// optional string a_originSuffix = 1;
 inline bool Msg_AsyncUpdateItem::_internal_has_a_originsuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4721,7 +4691,7 @@ inline void Msg_AsyncUpdateItem::set_allocated_a_originsuffix(std::string* a_ori
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncUpdateItem.a_originSuffix)
 }
 
-// required string a_originNoSuffix = 2;
+// optional string a_originNoSuffix = 2;
 inline bool Msg_AsyncUpdateItem::_internal_has_a_originnosuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4789,7 +4759,7 @@ inline void Msg_AsyncUpdateItem::set_allocated_a_originnosuffix(std::string* a_o
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncUpdateItem.a_originNoSuffix)
 }
 
-// required string a_key = 3;
+// optional string a_key = 3;
 inline bool Msg_AsyncUpdateItem::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -4857,7 +4827,7 @@ inline void Msg_AsyncUpdateItem::set_allocated_a_key(std::string* a_key) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncUpdateItem.a_key)
 }
 
-// required string a_value = 4;
+// optional string a_value = 4;
 inline bool Msg_AsyncUpdateItem::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -4929,7 +4899,7 @@ inline void Msg_AsyncUpdateItem::set_allocated_a_value(std::string* a_value) {
 
 // Msg_AsyncRemoveItem
 
-// required string a_originSuffix = 1;
+// optional string a_originSuffix = 1;
 inline bool Msg_AsyncRemoveItem::_internal_has_a_originsuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4997,7 +4967,7 @@ inline void Msg_AsyncRemoveItem::set_allocated_a_originsuffix(std::string* a_ori
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncRemoveItem.a_originSuffix)
 }
 
-// required string a_originNoSuffix = 2;
+// optional string a_originNoSuffix = 2;
 inline bool Msg_AsyncRemoveItem::_internal_has_a_originnosuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5065,7 +5035,7 @@ inline void Msg_AsyncRemoveItem::set_allocated_a_originnosuffix(std::string* a_o
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncRemoveItem.a_originNoSuffix)
 }
 
-// required string a_key = 3;
+// optional string a_key = 3;
 inline bool Msg_AsyncRemoveItem::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -5137,7 +5107,7 @@ inline void Msg_AsyncRemoveItem::set_allocated_a_key(std::string* a_key) {
 
 // Msg_AsyncClear
 
-// required string a_originSuffix = 1;
+// optional string a_originSuffix = 1;
 inline bool Msg_AsyncClear::_internal_has_a_originsuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5205,7 +5175,7 @@ inline void Msg_AsyncClear::set_allocated_a_originsuffix(std::string* a_originsu
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncClear.a_originSuffix)
 }
 
-// required string a_originNoSuffix = 2;
+// optional string a_originNoSuffix = 2;
 inline bool Msg_AsyncClear::_internal_has_a_originnosuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5289,7 +5259,7 @@ inline void Msg_AsyncClear::set_allocated_a_originnosuffix(std::string* a_origin
 
 // Msg_ClearMatchingOrigin
 
-// required string a_originNoSuffix = 1;
+// optional string a_originNoSuffix = 1;
 inline bool Msg_ClearMatchingOrigin::_internal_has_a_originnosuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5441,7 +5411,7 @@ inline void Msg_ClearMatchingOriginAttributes::set_allocated_a_pattern(std::stri
 
 // Msg_Observe
 
-// required string a_topic = 1;
+// optional string a_topic = 1;
 inline bool Msg_Observe::_internal_has_a_topic() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5509,7 +5479,7 @@ inline void Msg_Observe::set_allocated_a_topic(std::string* a_topic) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_Observe.a_topic)
 }
 
-// required string a_originAttributesPattern = 2;
+// optional string a_originAttributesPattern = 2;
 inline bool Msg_Observe::_internal_has_a_originattributespattern() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5577,7 +5547,7 @@ inline void Msg_Observe::set_allocated_a_originattributespattern(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_Observe.a_originAttributesPattern)
 }
 
-// required string a_originScope = 3;
+// optional string a_originScope = 3;
 inline bool Msg_Observe::_internal_has_a_originscope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -5728,7 +5698,7 @@ Msg_OriginsHavingData::mutable_a_origins() {
 
 // Msg_LoadItem
 
-// required string a_originSuffix = 1;
+// optional string a_originSuffix = 1;
 inline bool Msg_LoadItem::_internal_has_a_originsuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5796,7 +5766,7 @@ inline void Msg_LoadItem::set_allocated_a_originsuffix(std::string* a_originsuff
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_LoadItem.a_originSuffix)
 }
 
-// required string a_originNoSuffix = 2;
+// optional string a_originNoSuffix = 2;
 inline bool Msg_LoadItem::_internal_has_a_originnosuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5864,7 +5834,7 @@ inline void Msg_LoadItem::set_allocated_a_originnosuffix(std::string* a_originno
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_LoadItem.a_originNoSuffix)
 }
 
-// required string a_key = 3;
+// optional string a_key = 3;
 inline bool Msg_LoadItem::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -5932,7 +5902,7 @@ inline void Msg_LoadItem::set_allocated_a_key(std::string* a_key) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_LoadItem.a_key)
 }
 
-// required string a_value = 4;
+// optional string a_value = 4;
 inline bool Msg_LoadItem::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -6004,7 +5974,7 @@ inline void Msg_LoadItem::set_allocated_a_value(std::string* a_value) {
 
 // Msg_LoadDone
 
-// required string a_originSuffix = 1;
+// optional string a_originSuffix = 1;
 inline bool Msg_LoadDone::_internal_has_a_originsuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6072,7 +6042,7 @@ inline void Msg_LoadDone::set_allocated_a_originsuffix(std::string* a_originsuff
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_LoadDone.a_originSuffix)
 }
 
-// required string a_originNoSuffix = 2;
+// optional string a_originNoSuffix = 2;
 inline bool Msg_LoadDone::_internal_has_a_originnosuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6212,7 +6182,7 @@ inline void Msg_LoadDone::set_allocated_a_rv(std::string* a_rv) {
 
 // Msg_LoadUsage
 
-// required string a_scope = 1;
+// optional string a_scope = 1;
 inline bool Msg_LoadUsage::_internal_has_a_scope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6280,7 +6250,7 @@ inline void Msg_LoadUsage::set_allocated_a_scope(std::string* a_scope) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_LoadUsage.a_scope)
 }
 
-// required sint64 a_usage = 2;
+// optional sint64 a_usage = 2;
 inline bool Msg_LoadUsage::_internal_has_a_usage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

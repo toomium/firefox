@@ -243,7 +243,7 @@ class Msg_LaunchGMP final :
   std::string* _internal_add_a_alreadybridgedto();
   public:
 
-  // required string a_api = 2;
+  // optional string a_api = 2;
   bool has_a_api() const;
   private:
   bool _internal_has_a_api() const;
@@ -282,9 +282,6 @@ class Msg_LaunchGMP final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -563,7 +560,7 @@ class Msg_GetGMPNodeId final :
     kATopLevelOriginFieldNumber = 2,
     kAGmpNameFieldNumber = 3,
   };
-  // required string a_origin = 1;
+  // optional string a_origin = 1;
   bool has_a_origin() const;
   private:
   bool _internal_has_a_origin() const;
@@ -581,7 +578,7 @@ class Msg_GetGMPNodeId final :
   std::string* _internal_mutable_a_origin();
   public:
 
-  // required string a_topLevelOrigin = 2;
+  // optional string a_topLevelOrigin = 2;
   bool has_a_toplevelorigin() const;
   private:
   bool _internal_has_a_toplevelorigin() const;
@@ -599,7 +596,7 @@ class Msg_GetGMPNodeId final :
   std::string* _internal_mutable_a_toplevelorigin();
   public:
 
-  // required string a_gmpName = 3;
+  // optional string a_gmpName = 3;
   bool has_a_gmpname() const;
   private:
   bool _internal_has_a_gmpname() const;
@@ -620,9 +617,6 @@ class Msg_GetGMPNodeId final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -751,7 +745,7 @@ class Reply_GetGMPNodeId final :
   enum : int {
     kAIdFieldNumber = 1,
   };
-  // required string a_id = 1;
+  // optional string a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -1006,7 +1000,7 @@ inline void Msg_LaunchGMP::set_allocated_a_nodeidvariant(::protobuf::mozilla::gm
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_nodeIdVariant)
 }
 
-// required string a_api = 2;
+// optional string a_api = 2;
 inline bool Msg_LaunchGMP::_internal_has_a_api() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1319,7 +1313,7 @@ inline void Reply_LaunchGMP::set_allocated_a_aresult(::protobuf::mozilla::gmp::G
 
 // Msg_GetGMPNodeId
 
-// required string a_origin = 1;
+// optional string a_origin = 1;
 inline bool Msg_GetGMPNodeId::_internal_has_a_origin() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1387,7 +1381,7 @@ inline void Msg_GetGMPNodeId::set_allocated_a_origin(std::string* a_origin) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId.a_origin)
 }
 
-// required string a_topLevelOrigin = 2;
+// optional string a_topLevelOrigin = 2;
 inline bool Msg_GetGMPNodeId::_internal_has_a_toplevelorigin() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1455,7 +1449,7 @@ inline void Msg_GetGMPNodeId::set_allocated_a_toplevelorigin(std::string* a_topl
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId.a_topLevelOrigin)
 }
 
-// required string a_gmpName = 3;
+// optional string a_gmpName = 3;
 inline bool Msg_GetGMPNodeId::_internal_has_a_gmpname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1527,7 +1521,7 @@ inline void Msg_GetGMPNodeId::set_allocated_a_gmpname(std::string* a_gmpname) {
 
 // Reply_GetGMPNodeId
 
-// required string a_id = 1;
+// optional string a_id = 1;
 inline bool Reply_GetGMPNodeId::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

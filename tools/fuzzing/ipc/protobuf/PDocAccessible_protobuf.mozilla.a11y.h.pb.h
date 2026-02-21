@@ -279,7 +279,7 @@ class AccessibleData final :
   std::string* _internal_mutable_a_cachefields();
   public:
 
-  // required uint64 a_ID = 1;
+  // optional uint64 a_ID = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -292,7 +292,7 @@ class AccessibleData final :
   void _internal_set_a_id(uint64_t value);
   public:
 
-  // required uint64 a_ParentID = 3;
+  // optional uint64 a_ParentID = 3;
   bool has_a_parentid() const;
   private:
   bool _internal_has_a_parentid() const;
@@ -305,7 +305,7 @@ class AccessibleData final :
   void _internal_set_a_parentid(uint64_t value);
   public:
 
-  // required uint32 a_IndexInParent = 4;
+  // optional uint32 a_IndexInParent = 4;
   bool has_a_indexinparent() const;
   private:
   bool _internal_has_a_indexinparent() const;
@@ -318,7 +318,7 @@ class AccessibleData final :
   void _internal_set_a_indexinparent(uint32_t value);
   public:
 
-  // required uint32 a_RoleMapEntryIndex = 7;
+  // optional uint32 a_RoleMapEntryIndex = 7;
   bool has_a_rolemapentryindex() const;
   private:
   bool _internal_has_a_rolemapentryindex() const;
@@ -658,7 +658,7 @@ class ShowEventData final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::a11y::AccessibleData >&
       a_newtree() const;
 
-  // required bool a_EventSuppressed = 2;
+  // optional bool a_EventSuppressed = 2;
   bool has_a_eventsuppressed() const;
   private:
   bool _internal_has_a_eventsuppressed() const;
@@ -671,7 +671,7 @@ class ShowEventData final :
   void _internal_set_a_eventsuppressed(bool value);
   public:
 
-  // required bool a_Complete = 3;
+  // optional bool a_Complete = 3;
   bool has_a_complete() const;
   private:
   bool _internal_has_a_complete() const;
@@ -684,7 +684,7 @@ class ShowEventData final :
   void _internal_set_a_complete(bool value);
   public:
 
-  // required bool a_FromUser = 4;
+  // optional bool a_FromUser = 4;
   bool has_a_fromuser() const;
   private:
   bool _internal_has_a_fromuser() const;
@@ -700,9 +700,6 @@ class ShowEventData final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.ShowEventData)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -833,7 +830,7 @@ class HideEventData final :
     kAIDFieldNumber = 1,
     kAIsFromUserInputFieldNumber = 2,
   };
-  // required uint64 a_ID = 1;
+  // optional uint64 a_ID = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -846,7 +843,7 @@ class HideEventData final :
   void _internal_set_a_id(uint64_t value);
   public:
 
-  // required bool a_IsFromUserInput = 2;
+  // optional bool a_IsFromUserInput = 2;
   bool has_a_isfromuserinput() const;
   private:
   bool _internal_has_a_isfromuserinput() const;
@@ -862,9 +859,6 @@ class HideEventData final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.HideEventData)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -993,7 +987,7 @@ class ReorderEventData final :
     kAIDFieldNumber = 1,
     kATypeFieldNumber = 2,
   };
-  // required uint64 a_ID = 1;
+  // optional uint64 a_ID = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -1006,7 +1000,7 @@ class ReorderEventData final :
   void _internal_set_a_id(uint64_t value);
   public:
 
-  // required uint32 a_Type = 2;
+  // optional uint32 a_Type = 2;
   bool has_a_type() const;
   private:
   bool _internal_has_a_type() const;
@@ -1022,9 +1016,6 @@ class ReorderEventData final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.ReorderEventData)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1157,7 +1148,7 @@ class TextChangeEventData final :
     kAIsInsertFieldNumber = 5,
     kAFromUserFieldNumber = 6,
   };
-  // required string a_Str = 2;
+  // optional string a_Str = 2;
   bool has_a_str() const;
   private:
   bool _internal_has_a_str() const;
@@ -1175,7 +1166,7 @@ class TextChangeEventData final :
   std::string* _internal_mutable_a_str();
   public:
 
-  // required uint64 a_ID = 1;
+  // optional uint64 a_ID = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -1188,7 +1179,7 @@ class TextChangeEventData final :
   void _internal_set_a_id(uint64_t value);
   public:
 
-  // required sint32 a_Start = 3;
+  // optional sint32 a_Start = 3;
   bool has_a_start() const;
   private:
   bool _internal_has_a_start() const;
@@ -1201,7 +1192,7 @@ class TextChangeEventData final :
   void _internal_set_a_start(int32_t value);
   public:
 
-  // required uint32 a_Len = 4;
+  // optional uint32 a_Len = 4;
   bool has_a_len() const;
   private:
   bool _internal_has_a_len() const;
@@ -1214,7 +1205,7 @@ class TextChangeEventData final :
   void _internal_set_a_len(uint32_t value);
   public:
 
-  // required bool a_IsInsert = 5;
+  // optional bool a_IsInsert = 5;
   bool has_a_isinsert() const;
   private:
   bool _internal_has_a_isinsert() const;
@@ -1227,7 +1218,7 @@ class TextChangeEventData final :
   void _internal_set_a_isinsert(bool value);
   public:
 
-  // required bool a_FromUser = 6;
+  // optional bool a_FromUser = 6;
   bool has_a_fromuser() const;
   private:
   bool _internal_has_a_fromuser() const;
@@ -1243,9 +1234,6 @@ class TextChangeEventData final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.TextChangeEventData)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1631,7 +1619,7 @@ class TextRangeData final :
     kAStartOffsetFieldNumber = 3,
     kAEndOffsetFieldNumber = 4,
   };
-  // required uint64 a_StartID = 1;
+  // optional uint64 a_StartID = 1;
   bool has_a_startid() const;
   private:
   bool _internal_has_a_startid() const;
@@ -1644,7 +1632,7 @@ class TextRangeData final :
   void _internal_set_a_startid(uint64_t value);
   public:
 
-  // required uint64 a_EndID = 2;
+  // optional uint64 a_EndID = 2;
   bool has_a_endid() const;
   private:
   bool _internal_has_a_endid() const;
@@ -1657,7 +1645,7 @@ class TextRangeData final :
   void _internal_set_a_endid(uint64_t value);
   public:
 
-  // required sint32 a_StartOffset = 3;
+  // optional sint32 a_StartOffset = 3;
   bool has_a_startoffset() const;
   private:
   bool _internal_has_a_startoffset() const;
@@ -1670,7 +1658,7 @@ class TextRangeData final :
   void _internal_set_a_startoffset(int32_t value);
   public:
 
-  // required sint32 a_EndOffset = 4;
+  // optional sint32 a_EndOffset = 4;
   bool has_a_endoffset() const;
   private:
   bool _internal_has_a_endoffset() const;
@@ -1686,9 +1674,6 @@ class TextRangeData final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.TextRangeData)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1715,7 +1700,7 @@ class TextRangeData final :
 #endif  // __GNUC__
 // AccessibleData
 
-// required uint64 a_ID = 1;
+// optional uint64 a_ID = 1;
 inline bool AccessibleData::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -1811,7 +1796,7 @@ inline void AccessibleData::set_allocated_a_role(std::string* a_role) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.AccessibleData.a_Role)
 }
 
-// required uint64 a_ParentID = 3;
+// optional uint64 a_ParentID = 3;
 inline bool AccessibleData::_internal_has_a_parentid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -1839,7 +1824,7 @@ inline void AccessibleData::set_a_parentid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.AccessibleData.a_ParentID)
 }
 
-// required uint32 a_IndexInParent = 4;
+// optional uint32 a_IndexInParent = 4;
 inline bool AccessibleData::_internal_has_a_indexinparent() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -2003,7 +1988,7 @@ inline void AccessibleData::set_allocated_a_generictypes(std::string* a_generict
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.AccessibleData.a_GenericTypes)
 }
 
-// required uint32 a_RoleMapEntryIndex = 7;
+// optional uint32 a_RoleMapEntryIndex = 7;
 inline bool AccessibleData::_internal_has_a_rolemapentryindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -2252,7 +2237,7 @@ ShowEventData::a_newtree() const {
   return _impl_.a_newtree_;
 }
 
-// required bool a_EventSuppressed = 2;
+// optional bool a_EventSuppressed = 2;
 inline bool ShowEventData::_internal_has_a_eventsuppressed() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2280,7 +2265,7 @@ inline void ShowEventData::set_a_eventsuppressed(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.ShowEventData.a_EventSuppressed)
 }
 
-// required bool a_Complete = 3;
+// optional bool a_Complete = 3;
 inline bool ShowEventData::_internal_has_a_complete() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2308,7 +2293,7 @@ inline void ShowEventData::set_a_complete(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.ShowEventData.a_Complete)
 }
 
-// required bool a_FromUser = 4;
+// optional bool a_FromUser = 4;
 inline bool ShowEventData::_internal_has_a_fromuser() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2340,7 +2325,7 @@ inline void ShowEventData::set_a_fromuser(bool value) {
 
 // HideEventData
 
-// required uint64 a_ID = 1;
+// optional uint64 a_ID = 1;
 inline bool HideEventData::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2368,7 +2353,7 @@ inline void HideEventData::set_a_id(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.HideEventData.a_ID)
 }
 
-// required bool a_IsFromUserInput = 2;
+// optional bool a_IsFromUserInput = 2;
 inline bool HideEventData::_internal_has_a_isfromuserinput() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2400,7 +2385,7 @@ inline void HideEventData::set_a_isfromuserinput(bool value) {
 
 // ReorderEventData
 
-// required uint64 a_ID = 1;
+// optional uint64 a_ID = 1;
 inline bool ReorderEventData::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2428,7 +2413,7 @@ inline void ReorderEventData::set_a_id(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.ReorderEventData.a_ID)
 }
 
-// required uint32 a_Type = 2;
+// optional uint32 a_Type = 2;
 inline bool ReorderEventData::_internal_has_a_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2460,7 +2445,7 @@ inline void ReorderEventData::set_a_type(uint32_t value) {
 
 // TextChangeEventData
 
-// required uint64 a_ID = 1;
+// optional uint64 a_ID = 1;
 inline bool TextChangeEventData::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2488,7 +2473,7 @@ inline void TextChangeEventData::set_a_id(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.TextChangeEventData.a_ID)
 }
 
-// required string a_Str = 2;
+// optional string a_Str = 2;
 inline bool TextChangeEventData::_internal_has_a_str() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2556,7 +2541,7 @@ inline void TextChangeEventData::set_allocated_a_str(std::string* a_str) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.TextChangeEventData.a_Str)
 }
 
-// required sint32 a_Start = 3;
+// optional sint32 a_Start = 3;
 inline bool TextChangeEventData::_internal_has_a_start() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2584,7 +2569,7 @@ inline void TextChangeEventData::set_a_start(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.TextChangeEventData.a_Start)
 }
 
-// required uint32 a_Len = 4;
+// optional uint32 a_Len = 4;
 inline bool TextChangeEventData::_internal_has_a_len() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -2612,7 +2597,7 @@ inline void TextChangeEventData::set_a_len(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.TextChangeEventData.a_Len)
 }
 
-// required bool a_IsInsert = 5;
+// optional bool a_IsInsert = 5;
 inline bool TextChangeEventData::_internal_has_a_isinsert() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -2640,7 +2625,7 @@ inline void TextChangeEventData::set_a_isinsert(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.TextChangeEventData.a_IsInsert)
 }
 
-// required bool a_FromUser = 6;
+// optional bool a_FromUser = 6;
 inline bool TextChangeEventData::_internal_has_a_fromuser() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -3055,7 +3040,7 @@ inline MutationEventData::ContentCase MutationEventData::content_case() const {
 
 // TextRangeData
 
-// required uint64 a_StartID = 1;
+// optional uint64 a_StartID = 1;
 inline bool TextRangeData::_internal_has_a_startid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3083,7 +3068,7 @@ inline void TextRangeData::set_a_startid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.TextRangeData.a_StartID)
 }
 
-// required uint64 a_EndID = 2;
+// optional uint64 a_EndID = 2;
 inline bool TextRangeData::_internal_has_a_endid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3111,7 +3096,7 @@ inline void TextRangeData::set_a_endid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.TextRangeData.a_EndID)
 }
 
-// required sint32 a_StartOffset = 3;
+// optional sint32 a_StartOffset = 3;
 inline bool TextRangeData::_internal_has_a_startoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -3139,7 +3124,7 @@ inline void TextRangeData::set_a_startoffset(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.TextRangeData.a_StartOffset)
 }
 
-// required sint32 a_EndOffset = 4;
+// optional sint32 a_EndOffset = 4;
 inline bool TextRangeData::_internal_has_a_endoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;

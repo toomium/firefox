@@ -197,7 +197,7 @@ class LSSetItemInfo final :
     kAKeyFieldNumber = 1,
     kAValueFieldNumber = 2,
   };
-  // required string a_key = 1;
+  // optional string a_key = 1;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -236,9 +236,6 @@ class LSSetItemInfo final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.LSSetItemInfo)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -366,7 +363,7 @@ class LSRemoveItemInfo final :
   enum : int {
     kAKeyFieldNumber = 1,
   };
-  // required string a_key = 1;
+  // optional string a_key = 1;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -846,7 +843,7 @@ class LSSetItemAndNotifyInfo final :
     kAOldValueFieldNumber = 2,
     kAValueFieldNumber = 3,
   };
-  // required string a_key = 1;
+  // optional string a_key = 1;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -1035,7 +1032,7 @@ class LSRemoveItemAndNotifyInfo final :
     kAKeyFieldNumber = 1,
     kAOldValueFieldNumber = 2,
   };
-  // required string a_key = 1;
+  // optional string a_key = 1;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -1074,9 +1071,6 @@ class LSRemoveItemAndNotifyInfo final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1308,7 +1302,7 @@ class LSWriteAndNotifyInfo final :
 #endif  // __GNUC__
 // LSSetItemInfo
 
-// required string a_key = 1;
+// optional string a_key = 1;
 inline bool LSSetItemInfo::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1448,7 +1442,7 @@ inline void LSSetItemInfo::set_allocated_a_value(std::string* a_value) {
 
 // LSRemoveItemInfo
 
-// required string a_key = 1;
+// optional string a_key = 1;
 inline bool LSRemoveItemInfo::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1759,7 +1753,7 @@ inline LSWriteInfo::ContentCase LSWriteInfo::content_case() const {
 
 // LSSetItemAndNotifyInfo
 
-// required string a_key = 1;
+// optional string a_key = 1;
 inline bool LSSetItemAndNotifyInfo::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1967,7 +1961,7 @@ inline void LSSetItemAndNotifyInfo::set_allocated_a_value(std::string* a_value) 
 
 // LSRemoveItemAndNotifyInfo
 
-// required string a_key = 1;
+// optional string a_key = 1;
 inline bool LSRemoveItemAndNotifyInfo::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

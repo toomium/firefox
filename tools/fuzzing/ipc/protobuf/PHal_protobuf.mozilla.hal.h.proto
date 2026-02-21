@@ -13,9 +13,9 @@ package protobuf.mozilla.hal;
 
 // Structs and unions declarations
 message BatteryInformation {
-  required double a_level = 1;
-  required bool a_charging = 2;
-  required double a_remainingTime = 3;
+  optional double a_level = 1;
+  optional bool a_charging = 2;
+  optional double a_remainingTime = 3;
 }
 
 message SensorData {
@@ -25,14 +25,14 @@ message SensorData {
 }
 
 message NetworkInformation {
-  required uint32 a_type = 1;
-  required bool a_isWifi = 2;
-  required uint32 a_dhcpGateway = 3;
+  optional uint32 a_type = 1;
+  optional bool a_isWifi = 2;
+  optional uint32 a_dhcpGateway = 3;
 }
 
 message WakeLockInformation {
-  required string a_topic = 1;
-  required uint32 a_numLocks = 2;
-  required uint32 a_numHidden = 3;
+  optional string a_topic = 1;
+  optional uint32 a_numLocks = 2;
+  optional uint32 a_numHidden = 3;
   repeated uint64 a_lockingProcesses = 4;
 }

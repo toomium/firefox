@@ -89,7 +89,7 @@ class DNSRecord::_Internal {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000007f) ^ 0x0000007f) != 0;
+    return ((has_bits[0] & 0x00000006) ^ 0x00000006) != 0;
   }
 };
 
@@ -231,7 +231,7 @@ const char* DNSRecord::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_canonicalName = 1;
+      // optional string a_canonicalName = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_canonicalname();
@@ -254,7 +254,7 @@ const char* DNSRecord::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // required double a_trrFetchDuration = 3;
+      // optional double a_trrFetchDuration = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 25)) {
           _Internal::set_has_a_trrfetchduration(&has_bits);
@@ -263,7 +263,7 @@ const char* DNSRecord::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // required double a_trrFetchDurationNetworkOnly = 4;
+      // optional double a_trrFetchDurationNetworkOnly = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 33)) {
           _Internal::set_has_a_trrfetchdurationnetworkonly(&has_bits);
@@ -272,7 +272,7 @@ const char* DNSRecord::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // required bool a_isTRR = 5;
+      // optional bool a_isTRR = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_a_istrr(&has_bits);
@@ -290,7 +290,7 @@ const char* DNSRecord::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_ttl = 7;
+      // optional uint32 a_ttl = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
           _Internal::set_has_a_ttl(&has_bits);
@@ -339,7 +339,7 @@ uint8_t* DNSRecord::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_canonicalName = 1;
+  // optional string a_canonicalName = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_canonicalname(), target);
@@ -351,19 +351,19 @@ uint8_t* DNSRecord::_InternalSerialize(
     target = stream->WriteBytes(2, s, target);
   }
 
-  // required double a_trrFetchDuration = 3;
+  // optional double a_trrFetchDuration = 3;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(3, this->_internal_a_trrfetchduration(), target);
   }
 
-  // required double a_trrFetchDurationNetworkOnly = 4;
+  // optional double a_trrFetchDurationNetworkOnly = 4;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(4, this->_internal_a_trrfetchdurationnetworkonly(), target);
   }
 
-  // required bool a_isTRR = 5;
+  // optional bool a_isTRR = 5;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_a_istrr(), target);
@@ -375,7 +375,7 @@ uint8_t* DNSRecord::_InternalSerialize(
         6, this->_internal_a_effectivetrrmode(), target);
   }
 
-  // required uint32 a_ttl = 7;
+  // optional uint32 a_ttl = 7;
   if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(7, this->_internal_a_ttl(), target);
@@ -399,13 +399,6 @@ size_t DNSRecord::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.DNSRecord)
   size_t total_size = 0;
 
-  if (_internal_has_a_canonicalname()) {
-    // required string a_canonicalName = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_canonicalname());
-  }
-
   if (_internal_has_a_effectivetrrmode()) {
     // required bytes a_effectiveTRRMode = 6;
     total_size += 1 +
@@ -420,38 +413,13 @@ size_t DNSRecord::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_lastupdate());
   }
 
-  if (_internal_has_a_trrfetchduration()) {
-    // required double a_trrFetchDuration = 3;
-    total_size += 1 + 8;
-  }
-
-  if (_internal_has_a_trrfetchdurationnetworkonly()) {
-    // required double a_trrFetchDurationNetworkOnly = 4;
-    total_size += 1 + 8;
-  }
-
-  if (_internal_has_a_istrr()) {
-    // required bool a_isTRR = 5;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_ttl()) {
-    // required uint32 a_ttl = 7;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_ttl());
-  }
-
   return total_size;
 }
 size_t DNSRecord::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.DNSRecord)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000007f) ^ 0x0000007f) == 0) {  // All required fields are present.
-    // required string a_canonicalName = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_canonicalname());
-
+  if (((_impl_._has_bits_[0] & 0x00000006) ^ 0x00000006) == 0) {  // All required fields are present.
     // required bytes a_effectiveTRRMode = 6;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -461,18 +429,6 @@ size_t DNSRecord::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_lastupdate());
-
-    // required double a_trrFetchDuration = 3;
-    total_size += 1 + 8;
-
-    // required double a_trrFetchDurationNetworkOnly = 4;
-    total_size += 1 + 8;
-
-    // required bool a_isTRR = 5;
-    total_size += 1 + 1;
-
-    // required uint32 a_ttl = 7;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_ttl());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -489,6 +445,36 @@ size_t DNSRecord::ByteSizeLong() const {
       _impl_.a_addrs_.Get(i));
   }
 
+  // optional string a_canonicalName = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_canonicalname());
+  }
+
+  if (cached_has_bits & 0x00000078u) {
+    // optional double a_trrFetchDuration = 3;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += 1 + 8;
+    }
+
+    // optional double a_trrFetchDurationNetworkOnly = 4;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += 1 + 8;
+    }
+
+    // optional bool a_isTRR = 5;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += 1 + 1;
+    }
+
+    // optional uint32 a_ttl = 7;
+    if (cached_has_bits & 0x00000040u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_ttl());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }

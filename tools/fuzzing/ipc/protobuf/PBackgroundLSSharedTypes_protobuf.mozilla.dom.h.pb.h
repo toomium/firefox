@@ -207,7 +207,7 @@ class LSRequestCommonParams final :
     kAPrincipalInfoFieldNumber = 1,
     kAStoragePrincipalInfoFieldNumber = 2,
   };
-  // required string a_originKey = 3;
+  // optional string a_originKey = 3;
   bool has_a_originkey() const;
   private:
   bool _internal_has_a_originkey() const;
@@ -1672,7 +1672,7 @@ class LSItemInfo final :
     kAKeyFieldNumber = 1,
     kAValueFieldNumber = 2,
   };
-  // required string a_key = 1;
+  // optional string a_key = 1;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -1711,9 +1711,6 @@ class LSItemInfo final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.LSItemInfo)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1912,7 +1909,7 @@ inline void LSRequestCommonParams::set_allocated_a_storageprincipalinfo(::protob
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSRequestCommonParams.a_storagePrincipalInfo)
 }
 
-// required string a_originKey = 3;
+// optional string a_originKey = 3;
 inline bool LSRequestCommonParams::_internal_has_a_originkey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3412,7 +3409,7 @@ inline LSSimpleRequestParams::ContentCase LSSimpleRequestParams::content_case() 
 
 // LSItemInfo
 
-// required string a_key = 1;
+// optional string a_key = 1;
 inline bool LSItemInfo::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

@@ -43,7 +43,7 @@ message Msg_NoteDOMContentLoaded {
 }
 
 message Msg_PClientSourceOpConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
   required protobuf.mozilla.dom.ClientOpConstructorArgs a_aArgs = 2;
 }
 

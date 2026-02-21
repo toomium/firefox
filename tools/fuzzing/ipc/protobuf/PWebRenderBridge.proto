@@ -24,7 +24,7 @@ message Msg_EnsureConnected {
 message Reply_EnsureConnected {
   required bytes a_textureFactoryIdentifier = 1;
   required bytes a_maybeIdNamespace = 2;
-  required string a_error = 3;
+  optional string a_error = 3;
 }
 
 message Msg_NewCompositable {
@@ -43,30 +43,30 @@ message Msg_DeleteCompositorAnimations {
 message Msg_SetDisplayList {
   required bytes a_displayList = 1;
   repeated protobuf.mozilla.layers.OpDestroy a_toDestroy = 2;
-  required uint64 a_fwdTransactionId = 3;
+  optional uint64 a_fwdTransactionId = 3;
   required bytes a_transactionId = 4;
-  required bool a_containsSVGGroup = 5;
+  optional bool a_containsSVGGroup = 5;
   required bytes a_vsyncId = 6;
   required bytes a_vsyncStartTime = 7;
   required bytes a_refreshStartTime = 8;
   required bytes a_txnStartTime = 9;
-  required string a_txnURL = 10;
+  optional string a_txnURL = 10;
   required bytes a_fwdTime = 11;
   repeated bytes a_payloads = 12;
-  required bool a_renderOffscreen = 13;
+  optional bool a_renderOffscreen = 13;
 }
 
 message Msg_EmptyTransaction {
   required bytes a_focusTarget = 1;
   required bytes a_transationData = 2;
   repeated protobuf.mozilla.layers.OpDestroy a_toDestroy = 3;
-  required uint64 a_fwdTransactionId = 4;
+  optional uint64 a_fwdTransactionId = 4;
   required bytes a_transactionId = 5;
   required bytes a_vsyncId = 6;
   required bytes a_vsyncStartTime = 7;
   required bytes a_refreshStartTime = 8;
   required bytes a_txnStartTime = 9;
-  required string a_txnURL = 10;
+  optional string a_txnURL = 10;
   required bytes a_fwdTime = 11;
   repeated bytes a_payloads = 12;
 }
@@ -92,7 +92,7 @@ message Msg_GetSnapshot {
 }
 
 message Reply_GetSnapshot {
-  required bool a_aNeedsYFlip = 1;
+  optional bool a_aNeedsYFlip = 1;
 }
 
 message Msg_ClearCachedResources {
@@ -102,7 +102,7 @@ message Msg_ClearAnimationResources {
 }
 
 message Msg_SetDefaultClearColor {
-  required uint32 a_aColor = 1;
+  optional uint32 a_aColor = 1;
 }
 
 message Msg_InvalidateRenderedFrame {
@@ -116,8 +116,8 @@ message Msg_Capture {
 }
 
 message Msg_StartCaptureSequence {
-  required string a_aPath = 1;
-  required uint32 a_aFlags = 2;
+  optional string a_aPath = 1;
+  optional uint32 a_aFlags = 2;
 }
 
 message Msg_StopCaptureSequence {
@@ -130,7 +130,7 @@ message Reply_SyncWithCompositor {
 }
 
 message Msg_SetConfirmedTargetAPZC {
-  required uint64 a_aInputBlockId = 1;
+  optional uint64 a_aInputBlockId = 1;
   repeated bytes a_aTargets = 2;
 }
 
@@ -148,7 +148,7 @@ message Reply_LeaveTestMode {
 }
 
 message Msg_GetAnimationValue {
-  required uint64 a_aCompositorAnimationsId = 1;
+  optional uint64 a_aCompositorAnimationsId = 1;
 }
 
 message Reply_GetAnimationValue {
@@ -157,8 +157,8 @@ message Reply_GetAnimationValue {
 
 message Msg_SetAsyncScrollOffset {
   required bytes a_scrollId = 1;
-  required float a_x = 2;
-  required float a_y = 3;
+  optional float a_x = 2;
+  optional float a_y = 3;
 }
 
 message Reply_SetAsyncScrollOffset {
@@ -166,7 +166,7 @@ message Reply_SetAsyncScrollOffset {
 
 message Msg_SetAsyncZoom {
   required bytes a_scrollId = 1;
-  required float a_zoom = 2;
+  optional float a_zoom = 2;
 }
 
 message Reply_SetAsyncZoom {
@@ -193,7 +193,7 @@ message Msg_EndWheelTransaction {
 }
 
 message Reply_EndWheelTransaction {
-  required bool a_unused = 1;
+  optional bool a_unused = 1;
 }
 
 message Msg_Shutdown {

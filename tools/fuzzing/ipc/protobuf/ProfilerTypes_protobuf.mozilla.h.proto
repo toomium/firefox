@@ -12,30 +12,30 @@ package protobuf.mozilla;
 
 // Structs and unions declarations
 message ProfilerInitParams {
-  required bool a_enabled = 1;
-  required uint32 a_entries = 2;
+  optional bool a_enabled = 1;
+  optional uint32 a_entries = 2;
   optional double a_duration = 3;
-  required double a_interval = 4;
-  required uint32 a_features = 5;
-  required uint64 a_activeTabID = 6;
+  optional double a_interval = 4;
+  optional uint32 a_features = 5;
+  optional uint64 a_activeTabID = 6;
   repeated string a_filters = 7;
 }
 
 message ProfileBufferChunkMetadata {
   required bytes a_doneTimeStamp = 1;
-  required uint32 a_bufferBytes = 2;
+  optional uint32 a_bufferBytes = 2;
 }
 
 message ProfileBufferChunkManagerUpdate {
-  required uint64 a_unreleasedBytes = 1;
-  required uint64 a_releasedBytes = 2;
+  optional uint64 a_unreleasedBytes = 1;
+  optional uint64 a_releasedBytes = 2;
   required bytes a_oldestDoneTimeStamp = 3;
   repeated protobuf.mozilla.ProfileBufferChunkMetadata a_newlyReleasedChunks = 4;
 }
 
 message GatherProfileProgress {
-  required uint32 a_progressProportionValueUnderlyingType = 1;
-  required string a_progressLocation = 2;
+  optional uint32 a_progressProportionValueUnderlyingType = 1;
+  optional string a_progressLocation = 2;
 }
 
 message IPCProfileAndAdditionalInformation {

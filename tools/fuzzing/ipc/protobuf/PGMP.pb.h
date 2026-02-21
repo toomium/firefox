@@ -407,7 +407,7 @@ class Msg_PGMPTimerConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -673,7 +673,7 @@ class Msg_PGMPStorageConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -1334,7 +1334,7 @@ class Msg_StartPlugin final :
   enum : int {
     kAAdapterFieldNumber = 1,
   };
-  // required string a_adapter = 1;
+  // optional string a_adapter = 1;
   bool has_a_adapter() const;
   private:
   bool _internal_has_a_adapter() const;
@@ -1605,7 +1605,7 @@ class Msg_ProvideStorageId final :
   enum : int {
     kAStorageIdFieldNumber = 1,
   };
-  // required string a_storageId = 1;
+  // optional string a_storageId = 1;
   bool has_a_storageid() const;
   private:
   bool _internal_has_a_storageid() const;
@@ -1752,7 +1752,7 @@ class Msg_PreloadLibs final :
   enum : int {
     kALibsFieldNumber = 1,
   };
-  // required string a_libs = 1;
+  // optional string a_libs = 1;
   bool has_a_libs() const;
   private:
   bool _internal_has_a_libs() const;
@@ -2859,7 +2859,7 @@ class Reply_TestTriggerMetrics final :
   enum : int {
     kAUnusedFieldNumber = 1,
   };
-  // required bool a_unused = 1;
+  // optional bool a_unused = 1;
   bool has_a_unused() const;
   private:
   bool _internal_has_a_unused() const;
@@ -3125,7 +3125,7 @@ class Reply_Shutdown final :
   enum : int {
     kAProfileFieldNumber = 1,
   };
-  // required string a_profile = 1;
+  // optional string a_profile = 1;
   bool has_a_profile() const;
   private:
   bool _internal_has_a_profile() const;
@@ -3260,7 +3260,7 @@ inline void Msg_InitCrashReporter::set_allocated_a_ainitargs(::protobuf::CrashRe
 
 // Msg_PGMPTimerConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PGMPTimerConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3296,7 +3296,7 @@ inline void Msg_PGMPTimerConstructor::set_a_actorid(int64_t value) {
 
 // Msg_PGMPStorageConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PGMPStorageConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3412,7 +3412,7 @@ inline void Msg_FOGData::set_allocated_a_buf(std::string* a_buf) {
 
 // Msg_StartPlugin
 
-// required string a_adapter = 1;
+// optional string a_adapter = 1;
 inline bool Msg_StartPlugin::_internal_has_a_adapter() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3488,7 +3488,7 @@ inline void Msg_StartPlugin::set_allocated_a_adapter(std::string* a_adapter) {
 
 // Msg_ProvideStorageId
 
-// required string a_storageId = 1;
+// optional string a_storageId = 1;
 inline bool Msg_ProvideStorageId::_internal_has_a_storageid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3560,7 +3560,7 @@ inline void Msg_ProvideStorageId::set_allocated_a_storageid(std::string* a_stora
 
 // Msg_PreloadLibs
 
-// required string a_libs = 1;
+// optional string a_libs = 1;
 inline bool Msg_PreloadLibs::_internal_has_a_libs() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3951,7 +3951,7 @@ inline void Reply_FlushFOGData::set_allocated_a_buf(std::string* a_buf) {
 
 // Reply_TestTriggerMetrics
 
-// required bool a_unused = 1;
+// optional bool a_unused = 1;
 inline bool Reply_TestTriggerMetrics::_internal_has_a_unused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3987,7 +3987,7 @@ inline void Reply_TestTriggerMetrics::set_a_unused(bool value) {
 
 // Reply_Shutdown
 
-// required string a_profile = 1;
+// optional string a_profile = 1;
 inline bool Reply_Shutdown::_internal_has_a_profile() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

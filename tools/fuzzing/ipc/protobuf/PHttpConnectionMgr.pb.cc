@@ -712,9 +712,6 @@ class Msg_UpdateCurrentBrowserId::_Internal {
   static void set_has_a_aid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_UpdateCurrentBrowserId::Msg_UpdateCurrentBrowserId(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -782,7 +779,7 @@ const char* Msg_UpdateCurrentBrowserId::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint64 a_aId = 1;
+      // optional uint64 a_aId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_aid(&has_bits);
@@ -822,7 +819,7 @@ uint8_t* Msg_UpdateCurrentBrowserId::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint64 a_aId = 1;
+  // optional uint64 a_aId = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_aid(), target);
@@ -840,13 +837,15 @@ size_t Msg_UpdateCurrentBrowserId::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PHttpConnectionMgr.Msg_UpdateCurrentBrowserId)
   size_t total_size = 0;
 
-  // required uint64 a_aId = 1;
-  if (_internal_has_a_aid()) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_aid());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional uint64 a_aId = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_aid());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -883,7 +882,6 @@ void Msg_UpdateCurrentBrowserId::CopyFrom(const Msg_UpdateCurrentBrowserId& from
 }
 
 bool Msg_UpdateCurrentBrowserId::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -911,7 +909,7 @@ class Msg_AddTransaction::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -1008,7 +1006,7 @@ const char* Msg_AddTransaction::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_aPriority = 2;
+      // optional sint32 a_aPriority = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_apriority(&has_bits);
@@ -1054,7 +1052,7 @@ uint8_t* Msg_AddTransaction::_InternalSerialize(
         1, this->_internal_a_atrans(), target);
   }
 
-  // required sint32 a_aPriority = 2;
+  // optional sint32 a_aPriority = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_a_apriority(), target);
@@ -1068,43 +1066,25 @@ uint8_t* Msg_AddTransaction::_InternalSerialize(
   return target;
 }
 
-size_t Msg_AddTransaction::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.PHttpConnectionMgr.Msg_AddTransaction)
-  size_t total_size = 0;
-
-  if (_internal_has_a_atrans()) {
-    // required bytes a_aTrans = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_atrans());
-  }
-
-  if (_internal_has_a_apriority()) {
-    // required sint32 a_aPriority = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_apriority());
-  }
-
-  return total_size;
-}
 size_t Msg_AddTransaction::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PHttpConnectionMgr.Msg_AddTransaction)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_aTrans = 1;
+  // required bytes a_aTrans = 1;
+  if (_internal_has_a_atrans()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_atrans());
-
-    // required sint32 a_aPriority = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_apriority());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional sint32 a_aPriority = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000002u) {
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_apriority());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1185,7 +1165,7 @@ class Msg_AddTransactionWithStickyConn::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
   }
 };
 
@@ -1302,7 +1282,7 @@ const char* Msg_AddTransactionWithStickyConn::_InternalParse(const char* ptr, ::
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_aPriority = 2;
+      // optional sint32 a_aPriority = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_apriority(&has_bits);
@@ -1357,7 +1337,7 @@ uint8_t* Msg_AddTransactionWithStickyConn::_InternalSerialize(
         1, this->_internal_a_atrans(), target);
   }
 
-  // required sint32 a_aPriority = 2;
+  // optional sint32 a_aPriority = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_a_apriority(), target);
@@ -1395,18 +1375,13 @@ size_t Msg_AddTransactionWithStickyConn::RequiredFieldsByteSizeFallback() const 
         this->_internal_a_atranswithstickyconn());
   }
 
-  if (_internal_has_a_apriority()) {
-    // required sint32 a_aPriority = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_apriority());
-  }
-
   return total_size;
 }
 size_t Msg_AddTransactionWithStickyConn::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PHttpConnectionMgr.Msg_AddTransactionWithStickyConn)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
     // required bytes a_aTrans = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -1417,15 +1392,18 @@ size_t Msg_AddTransactionWithStickyConn::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_atranswithstickyconn());
 
-    // required sint32 a_aPriority = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_apriority());
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional sint32 a_aPriority = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000004u) {
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_apriority());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1510,7 +1488,7 @@ class Msg_RescheduleTransaction::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -1607,7 +1585,7 @@ const char* Msg_RescheduleTransaction::_InternalParse(const char* ptr, ::_pbi::P
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_aPriority = 2;
+      // optional sint32 a_aPriority = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_apriority(&has_bits);
@@ -1653,7 +1631,7 @@ uint8_t* Msg_RescheduleTransaction::_InternalSerialize(
         1, this->_internal_a_atrans(), target);
   }
 
-  // required sint32 a_aPriority = 2;
+  // optional sint32 a_aPriority = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_a_apriority(), target);
@@ -1667,43 +1645,25 @@ uint8_t* Msg_RescheduleTransaction::_InternalSerialize(
   return target;
 }
 
-size_t Msg_RescheduleTransaction::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.PHttpConnectionMgr.Msg_RescheduleTransaction)
-  size_t total_size = 0;
-
-  if (_internal_has_a_atrans()) {
-    // required bytes a_aTrans = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_atrans());
-  }
-
-  if (_internal_has_a_apriority()) {
-    // required sint32 a_aPriority = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_apriority());
-  }
-
-  return total_size;
-}
 size_t Msg_RescheduleTransaction::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PHttpConnectionMgr.Msg_RescheduleTransaction)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_aTrans = 1;
+  // required bytes a_aTrans = 1;
+  if (_internal_has_a_atrans()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_atrans());
-
-    // required sint32 a_aPriority = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_apriority());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional sint32 a_aPriority = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000002u) {
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_apriority());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -2378,7 +2338,7 @@ class Msg_SpeculativeConnect::_Internal {
     (*has_bits)[0] |= 16u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000001a) ^ 0x0000001a) != 0;
+    return ((has_bits[0] & 0x00000002) ^ 0x00000002) != 0;
   }
 };
 
@@ -2528,7 +2488,7 @@ const char* Msg_SpeculativeConnect::_InternalParse(const char* ptr, ::_pbi::Pars
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_aCaps = 3;
+      // optional uint32 a_aCaps = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_acaps(&has_bits);
@@ -2546,7 +2506,7 @@ const char* Msg_SpeculativeConnect::_InternalParse(const char* ptr, ::_pbi::Pars
         } else
           goto handle_unusual;
         continue;
-      // required bool a_aFetchHTTPSRR = 5;
+      // optional bool a_aFetchHTTPSRR = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_a_afetchhttpsrr(&has_bits);
@@ -2600,7 +2560,7 @@ uint8_t* Msg_SpeculativeConnect::_InternalSerialize(
         _Internal::a_aoverriderargs(this).GetCachedSize(), target, stream);
   }
 
-  // required uint32 a_aCaps = 3;
+  // optional uint32 a_aCaps = 3;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_acaps(), target);
@@ -2612,7 +2572,7 @@ uint8_t* Msg_SpeculativeConnect::_InternalSerialize(
         4, this->_internal_a_atrans(), target);
   }
 
-  // required bool a_aFetchHTTPSRR = 5;
+  // optional bool a_aFetchHTTPSRR = 5;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_a_afetchhttpsrr(), target);
@@ -2626,47 +2586,15 @@ uint8_t* Msg_SpeculativeConnect::_InternalSerialize(
   return target;
 }
 
-size_t Msg_SpeculativeConnect::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.PHttpConnectionMgr.Msg_SpeculativeConnect)
-  size_t total_size = 0;
-
-  if (_internal_has_a_aconninfo()) {
-    // required .protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_aConnInfo = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_aconninfo_);
-  }
-
-  if (_internal_has_a_acaps()) {
-    // required uint32 a_aCaps = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acaps());
-  }
-
-  if (_internal_has_a_afetchhttpsrr()) {
-    // required bool a_aFetchHTTPSRR = 5;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t Msg_SpeculativeConnect::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PHttpConnectionMgr.Msg_SpeculativeConnect)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000001a) ^ 0x0000001a) == 0) {  // All required fields are present.
-    // required .protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_aConnInfo = 1;
+  // required .protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_aConnInfo = 1;
+  if (_internal_has_a_aconninfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_aconninfo_);
-
-    // required uint32 a_aCaps = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acaps());
-
-    // required bool a_aFetchHTTPSRR = 5;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -2680,13 +2608,25 @@ size_t Msg_SpeculativeConnect::ByteSizeLong() const {
         this->_internal_a_atrans());
   }
 
-  // optional .protobuf.mozilla.net.SpeculativeConnectionOverriderArgs a_aOverriderArgs = 2;
-  if (cached_has_bits & 0x00000004u) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_aoverriderargs_);
-  }
+  if (cached_has_bits & 0x0000001cu) {
+    // optional .protobuf.mozilla.net.SpeculativeConnectionOverriderArgs a_aOverriderArgs = 2;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.a_aoverriderargs_);
+    }
 
+    // optional uint32 a_aCaps = 3;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acaps());
+    }
+
+    // optional bool a_aFetchHTTPSRR = 5;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += 1 + 1;
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -2744,9 +2684,6 @@ bool Msg_SpeculativeConnect::IsInitialized() const {
   if (_internal_has_a_aconninfo()) {
     if (!_impl_.a_aconninfo_->IsInitialized()) return false;
   }
-  if (_internal_has_a_aoverriderargs()) {
-    if (!_impl_.a_aoverriderargs_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -2785,7 +2722,7 @@ class Msg_StartWebSocketConnection::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -2882,7 +2819,7 @@ const char* Msg_StartWebSocketConnection::_InternalParse(const char* ptr, ::_pbi
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_aListenerId = 2;
+      // optional uint32 a_aListenerId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_alistenerid(&has_bits);
@@ -2928,7 +2865,7 @@ uint8_t* Msg_StartWebSocketConnection::_InternalSerialize(
         1, this->_internal_a_atranswithstickyconn(), target);
   }
 
-  // required uint32 a_aListenerId = 2;
+  // optional uint32 a_aListenerId = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_alistenerid(), target);
@@ -2942,43 +2879,25 @@ uint8_t* Msg_StartWebSocketConnection::_InternalSerialize(
   return target;
 }
 
-size_t Msg_StartWebSocketConnection::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.PHttpConnectionMgr.Msg_StartWebSocketConnection)
-  size_t total_size = 0;
-
-  if (_internal_has_a_atranswithstickyconn()) {
-    // required bytes a_aTransWithStickyConn = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_atranswithstickyconn());
-  }
-
-  if (_internal_has_a_alistenerid()) {
-    // required uint32 a_aListenerId = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_alistenerid());
-  }
-
-  return total_size;
-}
 size_t Msg_StartWebSocketConnection::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PHttpConnectionMgr.Msg_StartWebSocketConnection)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_aTransWithStickyConn = 1;
+  // required bytes a_aTransWithStickyConn = 1;
+  if (_internal_has_a_atranswithstickyconn()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_atranswithstickyconn());
-
-    // required uint32 a_aListenerId = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_alistenerid());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional uint32 a_aListenerId = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000002u) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_alistenerid());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();

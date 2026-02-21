@@ -602,7 +602,7 @@ class Reply_Resume final :
   enum : int {
     kAAOutResumedFieldNumber = 1,
   };
-  // required bool a_aOutResumed = 1;
+  // optional bool a_aOutResumed = 1;
   bool has_a_aoutresumed() const;
   private:
   bool _internal_has_a_aoutresumed() const;
@@ -747,7 +747,7 @@ class Msg_ResumeAndResize final :
     kAAWidthFieldNumber = 3,
     kAAHeightFieldNumber = 4,
   };
-  // required sint32 a_aX = 1;
+  // optional sint32 a_aX = 1;
   bool has_a_ax() const;
   private:
   bool _internal_has_a_ax() const;
@@ -760,7 +760,7 @@ class Msg_ResumeAndResize final :
   void _internal_set_a_ax(int32_t value);
   public:
 
-  // required sint32 a_aY = 2;
+  // optional sint32 a_aY = 2;
   bool has_a_ay() const;
   private:
   bool _internal_has_a_ay() const;
@@ -773,7 +773,7 @@ class Msg_ResumeAndResize final :
   void _internal_set_a_ay(int32_t value);
   public:
 
-  // required sint32 a_aWidth = 3;
+  // optional sint32 a_aWidth = 3;
   bool has_a_awidth() const;
   private:
   bool _internal_has_a_awidth() const;
@@ -786,7 +786,7 @@ class Msg_ResumeAndResize final :
   void _internal_set_a_awidth(int32_t value);
   public:
 
-  // required sint32 a_aHeight = 4;
+  // optional sint32 a_aHeight = 4;
   bool has_a_aheight() const;
   private:
   bool _internal_has_a_aheight() const;
@@ -802,9 +802,6 @@ class Msg_ResumeAndResize final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PUiCompositorController.Msg_ResumeAndResize)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -934,7 +931,7 @@ class Reply_ResumeAndResize final :
   enum : int {
     kAAOutResumedFieldNumber = 1,
   };
-  // required bool a_aOutResumed = 1;
+  // optional bool a_aOutResumed = 1;
   bool has_a_aoutresumed() const;
   private:
   bool _internal_has_a_aoutresumed() const;
@@ -1200,7 +1197,7 @@ class Msg_MaxToolbarHeight final :
   enum : int {
     kAAHeightFieldNumber = 1,
   };
-  // required sint32 a_aHeight = 1;
+  // optional sint32 a_aHeight = 1;
   bool has_a_aheight() const;
   private:
   bool _internal_has_a_aheight() const;
@@ -1342,7 +1339,7 @@ class Msg_FixedBottomOffset final :
   enum : int {
     kAAOffsetFieldNumber = 1,
   };
-  // required sint32 a_aOffset = 1;
+  // optional sint32 a_aOffset = 1;
   bool has_a_aoffset() const;
   private:
   bool _internal_has_a_aoffset() const;
@@ -1484,7 +1481,7 @@ class Msg_DefaultClearColor final :
   enum : int {
     kAAColorFieldNumber = 1,
   };
-  // required uint32 a_aColor = 1;
+  // optional uint32 a_aColor = 1;
   bool has_a_acolor() const;
   private:
   bool _internal_has_a_acolor() const;
@@ -1750,7 +1747,7 @@ class Msg_EnableLayerUpdateNotifications final :
   enum : int {
     kAAEnableFieldNumber = 1,
   };
-  // required bool a_aEnable = 1;
+  // optional bool a_aEnable = 1;
   bool has_a_aenable() const;
   private:
   bool _internal_has_a_aenable() const;
@@ -1892,7 +1889,7 @@ class Msg_ToolbarAnimatorMessageFromCompositor final :
   enum : int {
     kAAMessageFieldNumber = 1,
   };
-  // required sint32 a_aMessage = 1;
+  // optional sint32 a_aMessage = 1;
   bool has_a_amessage() const;
   private:
   bool _internal_has_a_amessage() const;
@@ -2219,7 +2216,7 @@ class Msg_ScreenPixels final :
   std::string* _internal_mutable_a_asize();
   public:
 
-  // required bool a_aNeedsYFlip = 3;
+  // optional bool a_aNeedsYFlip = 3;
   bool has_a_aneedsyflip() const;
   private:
   bool _internal_has_a_aneedsyflip() const;
@@ -2275,7 +2272,7 @@ class Msg_ScreenPixels final :
 
 // Reply_Resume
 
-// required bool a_aOutResumed = 1;
+// optional bool a_aOutResumed = 1;
 inline bool Reply_Resume::_internal_has_a_aoutresumed() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2307,7 +2304,7 @@ inline void Reply_Resume::set_a_aoutresumed(bool value) {
 
 // Msg_ResumeAndResize
 
-// required sint32 a_aX = 1;
+// optional sint32 a_aX = 1;
 inline bool Msg_ResumeAndResize::_internal_has_a_ax() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2335,7 +2332,7 @@ inline void Msg_ResumeAndResize::set_a_ax(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Msg_ResumeAndResize.a_aX)
 }
 
-// required sint32 a_aY = 2;
+// optional sint32 a_aY = 2;
 inline bool Msg_ResumeAndResize::_internal_has_a_ay() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2363,7 +2360,7 @@ inline void Msg_ResumeAndResize::set_a_ay(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Msg_ResumeAndResize.a_aY)
 }
 
-// required sint32 a_aWidth = 3;
+// optional sint32 a_aWidth = 3;
 inline bool Msg_ResumeAndResize::_internal_has_a_awidth() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2391,7 +2388,7 @@ inline void Msg_ResumeAndResize::set_a_awidth(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Msg_ResumeAndResize.a_aWidth)
 }
 
-// required sint32 a_aHeight = 4;
+// optional sint32 a_aHeight = 4;
 inline bool Msg_ResumeAndResize::_internal_has_a_aheight() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -2423,7 +2420,7 @@ inline void Msg_ResumeAndResize::set_a_aheight(int32_t value) {
 
 // Reply_ResumeAndResize
 
-// required bool a_aOutResumed = 1;
+// optional bool a_aOutResumed = 1;
 inline bool Reply_ResumeAndResize::_internal_has_a_aoutresumed() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2459,7 +2456,7 @@ inline void Reply_ResumeAndResize::set_a_aoutresumed(bool value) {
 
 // Msg_MaxToolbarHeight
 
-// required sint32 a_aHeight = 1;
+// optional sint32 a_aHeight = 1;
 inline bool Msg_MaxToolbarHeight::_internal_has_a_aheight() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2491,7 +2488,7 @@ inline void Msg_MaxToolbarHeight::set_a_aheight(int32_t value) {
 
 // Msg_FixedBottomOffset
 
-// required sint32 a_aOffset = 1;
+// optional sint32 a_aOffset = 1;
 inline bool Msg_FixedBottomOffset::_internal_has_a_aoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2523,7 +2520,7 @@ inline void Msg_FixedBottomOffset::set_a_aoffset(int32_t value) {
 
 // Msg_DefaultClearColor
 
-// required uint32 a_aColor = 1;
+// optional uint32 a_aColor = 1;
 inline bool Msg_DefaultClearColor::_internal_has_a_acolor() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2559,7 +2556,7 @@ inline void Msg_DefaultClearColor::set_a_acolor(uint32_t value) {
 
 // Msg_EnableLayerUpdateNotifications
 
-// required bool a_aEnable = 1;
+// optional bool a_aEnable = 1;
 inline bool Msg_EnableLayerUpdateNotifications::_internal_has_a_aenable() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2591,7 +2588,7 @@ inline void Msg_EnableLayerUpdateNotifications::set_a_aenable(bool value) {
 
 // Msg_ToolbarAnimatorMessageFromCompositor
 
-// required sint32 a_aMessage = 1;
+// optional sint32 a_aMessage = 1;
 inline bool Msg_ToolbarAnimatorMessageFromCompositor::_internal_has_a_amessage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2831,7 +2828,7 @@ inline void Msg_ScreenPixels::set_allocated_a_asize(std::string* a_asize) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PUiCompositorController.Msg_ScreenPixels.a_aSize)
 }
 
-// required bool a_aNeedsYFlip = 3;
+// optional bool a_aNeedsYFlip = 3;
 inline bool Msg_ScreenPixels::_internal_has_a_aneedsyflip() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

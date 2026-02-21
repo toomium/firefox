@@ -432,9 +432,6 @@ class Msg_AddIPOverride::_Internal {
   static void set_has_a_aipliteral(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
-  }
 };
 
 Msg_AddIPOverride::Msg_AddIPOverride(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -537,7 +534,7 @@ const char* Msg_AddIPOverride::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aHost = 1;
+      // optional string a_aHost = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_ahost();
@@ -546,7 +543,7 @@ const char* Msg_AddIPOverride::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required string a_aIPLiteral = 2;
+      // optional string a_aIPLiteral = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_aipliteral();
@@ -586,13 +583,13 @@ uint8_t* Msg_AddIPOverride::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aHost = 1;
+  // optional string a_aHost = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_ahost(), target);
   }
 
-  // required string a_aIPLiteral = 2;
+  // optional string a_aIPLiteral = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_aipliteral(), target);
@@ -606,48 +603,31 @@ uint8_t* Msg_AddIPOverride::_InternalSerialize(
   return target;
 }
 
-size_t Msg_AddIPOverride::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride)
-  size_t total_size = 0;
-
-  if (_internal_has_a_ahost()) {
-    // required string a_aHost = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_ahost());
-  }
-
-  if (_internal_has_a_aipliteral()) {
-    // required string a_aIPLiteral = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_aipliteral());
-  }
-
-  return total_size;
-}
 size_t Msg_AddIPOverride::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string a_aHost = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_ahost());
-
-    // required string a_aIPLiteral = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_aipliteral());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional string a_aHost = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_ahost());
+    }
+
+    // optional string a_aIPLiteral = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_aipliteral());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -689,7 +669,6 @@ void Msg_AddIPOverride::CopyFrom(const Msg_AddIPOverride& from) {
 }
 
 bool Msg_AddIPOverride::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -721,9 +700,6 @@ class Msg_AddHTTPSRecordOverride::_Internal {
   using HasBits = decltype(std::declval<Msg_AddHTTPSRecordOverride>()._impl_._has_bits_);
   static void set_has_a_ahost(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -811,7 +787,7 @@ const char* Msg_AddHTTPSRecordOverride::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aHost = 1;
+      // optional string a_aHost = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_ahost();
@@ -867,7 +843,7 @@ uint8_t* Msg_AddHTTPSRecordOverride::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aHost = 1;
+  // optional string a_aHost = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_ahost(), target);
@@ -891,12 +867,6 @@ size_t Msg_AddHTTPSRecordOverride::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddHTTPSRecordOverride)
   size_t total_size = 0;
 
-  // required string a_aHost = 1;
-  if (_internal_has_a_ahost()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_ahost());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -908,6 +878,14 @@ size_t Msg_AddHTTPSRecordOverride::ByteSizeLong() const {
     total_size += 1 *
                   ::_pbi::FromIntSize(this->_internal_a_adata_size());
     total_size += data_size;
+  }
+
+  // optional string a_aHost = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_ahost());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -946,7 +924,6 @@ void Msg_AddHTTPSRecordOverride::CopyFrom(const Msg_AddHTTPSRecordOverride& from
 }
 
 bool Msg_AddHTTPSRecordOverride::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -978,9 +955,6 @@ class Msg_SetCnameOverride::_Internal {
   }
   static void set_has_a_acname(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
   }
 };
 
@@ -1084,7 +1058,7 @@ const char* Msg_SetCnameOverride::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aHost = 1;
+      // optional string a_aHost = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_ahost();
@@ -1093,7 +1067,7 @@ const char* Msg_SetCnameOverride::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // required string a_aCNAME = 2;
+      // optional string a_aCNAME = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_acname();
@@ -1133,13 +1107,13 @@ uint8_t* Msg_SetCnameOverride::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aHost = 1;
+  // optional string a_aHost = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_ahost(), target);
   }
 
-  // required string a_aCNAME = 2;
+  // optional string a_aCNAME = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_acname(), target);
@@ -1153,48 +1127,31 @@ uint8_t* Msg_SetCnameOverride::_InternalSerialize(
   return target;
 }
 
-size_t Msg_SetCnameOverride::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride)
-  size_t total_size = 0;
-
-  if (_internal_has_a_ahost()) {
-    // required string a_aHost = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_ahost());
-  }
-
-  if (_internal_has_a_acname()) {
-    // required string a_aCNAME = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_acname());
-  }
-
-  return total_size;
-}
 size_t Msg_SetCnameOverride::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string a_aHost = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_ahost());
-
-    // required string a_aCNAME = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_acname());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional string a_aHost = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_ahost());
+    }
+
+    // optional string a_aCNAME = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_acname());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -1236,7 +1193,6 @@ void Msg_SetCnameOverride::CopyFrom(const Msg_SetCnameOverride& from) {
 }
 
 bool Msg_SetCnameOverride::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1268,9 +1224,6 @@ class Msg_ClearHostOverride::_Internal {
   using HasBits = decltype(std::declval<Msg_ClearHostOverride>()._impl_._has_bits_);
   static void set_has_a_ahost(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -1354,7 +1307,7 @@ const char* Msg_ClearHostOverride::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aHost = 1;
+      // optional string a_aHost = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_ahost();
@@ -1394,7 +1347,7 @@ uint8_t* Msg_ClearHostOverride::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aHost = 1;
+  // optional string a_aHost = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_ahost(), target);
@@ -1412,15 +1365,17 @@ size_t Msg_ClearHostOverride::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_ClearHostOverride)
   size_t total_size = 0;
 
-  // required string a_aHost = 1;
-  if (_internal_has_a_ahost()) {
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional string a_aHost = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_ahost());
   }
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1457,7 +1412,6 @@ void Msg_ClearHostOverride::CopyFrom(const Msg_ClearHostOverride& from) {
 }
 
 bool Msg_ClearHostOverride::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 

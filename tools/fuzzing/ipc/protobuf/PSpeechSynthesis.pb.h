@@ -362,7 +362,7 @@ class Msg_VoiceRemoved final :
   enum : int {
     kAAUriFieldNumber = 1,
   };
-  // required string a_aUri = 1;
+  // optional string a_aUri = 1;
   bool has_a_auri() const;
   private:
   bool _internal_has_a_auri() const;
@@ -510,7 +510,7 @@ class Msg_SetDefaultVoice final :
     kAAUriFieldNumber = 1,
     kAAIsDefaultFieldNumber = 2,
   };
-  // required string a_aUri = 1;
+  // optional string a_aUri = 1;
   bool has_a_auri() const;
   private:
   bool _internal_has_a_auri() const;
@@ -528,7 +528,7 @@ class Msg_SetDefaultVoice final :
   std::string* _internal_mutable_a_auri();
   public:
 
-  // required bool a_aIsDefault = 2;
+  // optional bool a_aIsDefault = 2;
   bool has_a_aisdefault() const;
   private:
   bool _internal_has_a_aisdefault() const;
@@ -544,9 +544,6 @@ class Msg_SetDefaultVoice final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PSpeechSynthesis.Msg_SetDefaultVoice)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -674,7 +671,7 @@ class Msg_IsSpeakingChanged final :
   enum : int {
     kAAIsSpeakingFieldNumber = 1,
   };
-  // required bool a_aIsSpeaking = 1;
+  // optional bool a_aIsSpeaking = 1;
   bool has_a_aisspeaking() const;
   private:
   bool _internal_has_a_aisspeaking() const;
@@ -940,7 +937,7 @@ class Msg_NotifyVoicesError final :
   enum : int {
     kAAErrorFieldNumber = 1,
   };
-  // required string a_aError = 1;
+  // optional string a_aError = 1;
   bool has_a_aerror() const;
   private:
   bool _internal_has_a_aerror() const;
@@ -1131,7 +1128,7 @@ class Msg_InitialVoicesAndState final :
   std::string* _internal_add_a_adefaults();
   public:
 
-  // required bool a_aIsSpeaking = 3;
+  // optional bool a_aIsSpeaking = 3;
   bool has_a_aisspeaking() const;
   private:
   bool _internal_has_a_aisspeaking() const;
@@ -1530,7 +1527,7 @@ class Msg_PSpeechSynthesisRequestConstructor final :
     kAAPitchFieldNumber = 7,
     kAAShouldResistFingerprintingFieldNumber = 8,
   };
-  // required string a_aText = 2;
+  // optional string a_aText = 2;
   bool has_a_atext() const;
   private:
   bool _internal_has_a_atext() const;
@@ -1548,7 +1545,7 @@ class Msg_PSpeechSynthesisRequestConstructor final :
   std::string* _internal_mutable_a_atext();
   public:
 
-  // required string a_aUri = 3;
+  // optional string a_aUri = 3;
   bool has_a_auri() const;
   private:
   bool _internal_has_a_auri() const;
@@ -1566,7 +1563,7 @@ class Msg_PSpeechSynthesisRequestConstructor final :
   std::string* _internal_mutable_a_auri();
   public:
 
-  // required string a_aLang = 4;
+  // optional string a_aLang = 4;
   bool has_a_alang() const;
   private:
   bool _internal_has_a_alang() const;
@@ -1584,7 +1581,7 @@ class Msg_PSpeechSynthesisRequestConstructor final :
   std::string* _internal_mutable_a_alang();
   public:
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -1597,7 +1594,7 @@ class Msg_PSpeechSynthesisRequestConstructor final :
   void _internal_set_a_actorid(int64_t value);
   public:
 
-  // required float a_aVolume = 5;
+  // optional float a_aVolume = 5;
   bool has_a_avolume() const;
   private:
   bool _internal_has_a_avolume() const;
@@ -1610,7 +1607,7 @@ class Msg_PSpeechSynthesisRequestConstructor final :
   void _internal_set_a_avolume(float value);
   public:
 
-  // required float a_aRate = 6;
+  // optional float a_aRate = 6;
   bool has_a_arate() const;
   private:
   bool _internal_has_a_arate() const;
@@ -1623,7 +1620,7 @@ class Msg_PSpeechSynthesisRequestConstructor final :
   void _internal_set_a_arate(float value);
   public:
 
-  // required float a_aPitch = 7;
+  // optional float a_aPitch = 7;
   bool has_a_apitch() const;
   private:
   bool _internal_has_a_apitch() const;
@@ -1636,7 +1633,7 @@ class Msg_PSpeechSynthesisRequestConstructor final :
   void _internal_set_a_apitch(float value);
   public:
 
-  // required bool a_aShouldResistFingerprinting = 8;
+  // optional bool a_aShouldResistFingerprinting = 8;
   bool has_a_ashouldresistfingerprinting() const;
   private:
   bool _internal_has_a_ashouldresistfingerprinting() const;
@@ -1652,9 +1649,6 @@ class Msg_PSpeechSynthesisRequestConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1900,7 +1894,7 @@ inline void Msg_VoiceAdded::set_allocated_a_avoice(::protobuf::mozilla::dom::Rem
 
 // Msg_VoiceRemoved
 
-// required string a_aUri = 1;
+// optional string a_aUri = 1;
 inline bool Msg_VoiceRemoved::_internal_has_a_auri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1972,7 +1966,7 @@ inline void Msg_VoiceRemoved::set_allocated_a_auri(std::string* a_auri) {
 
 // Msg_SetDefaultVoice
 
-// required string a_aUri = 1;
+// optional string a_aUri = 1;
 inline bool Msg_SetDefaultVoice::_internal_has_a_auri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2040,7 +2034,7 @@ inline void Msg_SetDefaultVoice::set_allocated_a_auri(std::string* a_auri) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSpeechSynthesis.Msg_SetDefaultVoice.a_aUri)
 }
 
-// required bool a_aIsDefault = 2;
+// optional bool a_aIsDefault = 2;
 inline bool Msg_SetDefaultVoice::_internal_has_a_aisdefault() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2072,7 +2066,7 @@ inline void Msg_SetDefaultVoice::set_a_aisdefault(bool value) {
 
 // Msg_IsSpeakingChanged
 
-// required bool a_aIsSpeaking = 1;
+// optional bool a_aIsSpeaking = 1;
 inline bool Msg_IsSpeakingChanged::_internal_has_a_aisspeaking() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2108,7 +2102,7 @@ inline void Msg_IsSpeakingChanged::set_a_aisspeaking(bool value) {
 
 // Msg_NotifyVoicesError
 
-// required string a_aError = 1;
+// optional string a_aError = 1;
 inline bool Msg_NotifyVoicesError::_internal_has_a_aerror() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2292,7 +2286,7 @@ Msg_InitialVoicesAndState::mutable_a_adefaults() {
   return &_impl_.a_adefaults_;
 }
 
-// required bool a_aIsSpeaking = 3;
+// optional bool a_aIsSpeaking = 3;
 inline bool Msg_InitialVoicesAndState::_internal_has_a_aisspeaking() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2332,7 +2326,7 @@ inline void Msg_InitialVoicesAndState::set_a_aisspeaking(bool value) {
 
 // Msg_PSpeechSynthesisRequestConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -2360,7 +2354,7 @@ inline void Msg_PSpeechSynthesisRequestConstructor::set_a_actorid(int64_t value)
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_actorid)
 }
 
-// required string a_aText = 2;
+// optional string a_aText = 2;
 inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_a_atext() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2428,7 +2422,7 @@ inline void Msg_PSpeechSynthesisRequestConstructor::set_allocated_a_atext(std::s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aText)
 }
 
-// required string a_aUri = 3;
+// optional string a_aUri = 3;
 inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_a_auri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2496,7 +2490,7 @@ inline void Msg_PSpeechSynthesisRequestConstructor::set_allocated_a_auri(std::st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aUri)
 }
 
-// required string a_aLang = 4;
+// optional string a_aLang = 4;
 inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_a_alang() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2564,7 +2558,7 @@ inline void Msg_PSpeechSynthesisRequestConstructor::set_allocated_a_alang(std::s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aLang)
 }
 
-// required float a_aVolume = 5;
+// optional float a_aVolume = 5;
 inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_a_avolume() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -2592,7 +2586,7 @@ inline void Msg_PSpeechSynthesisRequestConstructor::set_a_avolume(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aVolume)
 }
 
-// required float a_aRate = 6;
+// optional float a_aRate = 6;
 inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_a_arate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -2620,7 +2614,7 @@ inline void Msg_PSpeechSynthesisRequestConstructor::set_a_arate(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aRate)
 }
 
-// required float a_aPitch = 7;
+// optional float a_aPitch = 7;
 inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_a_apitch() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -2648,7 +2642,7 @@ inline void Msg_PSpeechSynthesisRequestConstructor::set_a_apitch(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aPitch)
 }
 
-// required bool a_aShouldResistFingerprinting = 8;
+// optional bool a_aShouldResistFingerprinting = 8;
 inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_a_ashouldresistfingerprinting() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;

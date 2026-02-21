@@ -970,7 +970,7 @@ class OpPushExternalImageForTexture::_Internal {
     (*has_bits)[0] |= 8u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000000f) ^ 0x0000000f) != 0;
+    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
   }
 };
 
@@ -1123,7 +1123,7 @@ const char* OpPushExternalImageForTexture::_InternalParse(const char* ptr, ::_pb
         } else
           goto handle_unusual;
         continue;
-      // required bool a_isUpdate = 4;
+      // optional bool a_isUpdate = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_a_isupdate(&has_bits);
@@ -1181,7 +1181,7 @@ uint8_t* OpPushExternalImageForTexture::_InternalSerialize(
         3, this->_internal_a_texture(), target);
   }
 
-  // required bool a_isUpdate = 4;
+  // optional bool a_isUpdate = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_a_isupdate(), target);
@@ -1220,18 +1220,13 @@ size_t OpPushExternalImageForTexture::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_texture());
   }
 
-  if (_internal_has_a_isupdate()) {
-    // required bool a_isUpdate = 4;
-    total_size += 1 + 1;
-  }
-
   return total_size;
 }
 size_t OpPushExternalImageForTexture::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.OpPushExternalImageForTexture)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
     // required bytes a_externalImageId = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -1247,15 +1242,18 @@ size_t OpPushExternalImageForTexture::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_texture());
 
-    // required bool a_isUpdate = 4;
-    total_size += 1 + 1;
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_isUpdate = 4;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000008u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -3672,9 +3670,6 @@ class OffsetRange::_Internal {
   static void set_has_a_length(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
-  }
 };
 
 OffsetRange::OffsetRange(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -3753,7 +3748,7 @@ const char* OffsetRange::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 a_source = 1;
+      // optional uint32 a_source = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_source(&has_bits);
@@ -3762,7 +3757,7 @@ const char* OffsetRange::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_start = 2;
+      // optional uint32 a_start = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_start(&has_bits);
@@ -3771,7 +3766,7 @@ const char* OffsetRange::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_length = 3;
+      // optional uint32 a_length = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_length(&has_bits);
@@ -3811,19 +3806,19 @@ uint8_t* OffsetRange::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 a_source = 1;
+  // optional uint32 a_source = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_source(), target);
   }
 
-  // required uint32 a_start = 2;
+  // optional uint32 a_start = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_start(), target);
   }
 
-  // required uint32 a_length = 3;
+  // optional uint32 a_length = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_length(), target);
@@ -3837,48 +3832,32 @@ uint8_t* OffsetRange::_InternalSerialize(
   return target;
 }
 
-size_t OffsetRange::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.OffsetRange)
-  size_t total_size = 0;
-
-  if (_internal_has_a_source()) {
-    // required uint32 a_source = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_source());
-  }
-
-  if (_internal_has_a_start()) {
-    // required uint32 a_start = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_start());
-  }
-
-  if (_internal_has_a_length()) {
-    // required uint32 a_length = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_length());
-  }
-
-  return total_size;
-}
 size_t OffsetRange::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.OffsetRange)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required uint32 a_source = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_source());
-
-    // required uint32 a_start = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_start());
-
-    // required uint32 a_length = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_length());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    // optional uint32 a_source = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_source());
+    }
+
+    // optional uint32 a_start = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_start());
+    }
+
+    // optional uint32 a_length = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_length());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -3924,7 +3903,6 @@ void OffsetRange::CopyFrom(const OffsetRange& from) {
 }
 
 bool OffsetRange::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -3964,7 +3942,7 @@ class OpAddImage::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000000f) ^ 0x0000000f) != 0;
+    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
   }
 };
 
@@ -4103,7 +4081,7 @@ const char* OpAddImage::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_tiling = 3;
+      // optional uint32 a_tiling = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_tiling(&has_bits);
@@ -4165,7 +4143,7 @@ uint8_t* OpAddImage::_InternalSerialize(
         _Internal::a_bytes(this).GetCachedSize(), target, stream);
   }
 
-  // required uint32 a_tiling = 3;
+  // optional uint32 a_tiling = 3;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_tiling(), target);
@@ -4210,18 +4188,13 @@ size_t OpAddImage::RequiredFieldsByteSizeFallback() const {
         *_impl_.a_bytes_);
   }
 
-  if (_internal_has_a_tiling()) {
-    // required uint32 a_tiling = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_tiling());
-  }
-
   return total_size;
 }
 size_t OpAddImage::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.OpAddImage)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
     // required bytes a_descriptor = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -4237,15 +4210,18 @@ size_t OpAddImage::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_bytes_);
 
-    // required uint32 a_tiling = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_tiling());
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional uint32 a_tiling = 3;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000008u) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_tiling());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -4297,9 +4273,6 @@ void OpAddImage::CopyFrom(const OpAddImage& from) {
 
 bool OpAddImage::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_bytes()) {
-    if (!_impl_.a_bytes_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -4352,7 +4325,7 @@ class OpAddBlobImage::_Internal {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000001f) ^ 0x0000001f) != 0;
+    return ((has_bits[0] & 0x0000000f) ^ 0x0000000f) != 0;
   }
 };
 
@@ -4518,7 +4491,7 @@ const char* OpAddBlobImage::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_tiling = 4;
+      // optional uint32 a_tiling = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_a_tiling(&has_bits);
@@ -4586,7 +4559,7 @@ uint8_t* OpAddBlobImage::_InternalSerialize(
         3, this->_internal_a_visiblerect(), target);
   }
 
-  // required uint32 a_tiling = 4;
+  // optional uint32 a_tiling = 4;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(4, this->_internal_a_tiling(), target);
@@ -4638,18 +4611,13 @@ size_t OpAddBlobImage::RequiredFieldsByteSizeFallback() const {
         *_impl_.a_bytes_);
   }
 
-  if (_internal_has_a_tiling()) {
-    // required uint32 a_tiling = 4;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_tiling());
-  }
-
   return total_size;
 }
 size_t OpAddBlobImage::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.OpAddBlobImage)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
     // required bytes a_descriptor = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -4670,15 +4638,18 @@ size_t OpAddBlobImage::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_bytes_);
 
-    // required uint32 a_tiling = 4;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_tiling());
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional uint32 a_tiling = 4;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000010u) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_tiling());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -4733,9 +4704,6 @@ void OpAddBlobImage::CopyFrom(const OpAddBlobImage& from) {
 
 bool OpAddBlobImage::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_bytes()) {
-    if (!_impl_.a_bytes_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -5305,9 +5273,6 @@ void OpUpdateImage::CopyFrom(const OpUpdateImage& from) {
 
 bool OpUpdateImage::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_bytes()) {
-    if (!_impl_.a_bytes_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -5753,9 +5718,6 @@ void OpUpdateBlobImage::CopyFrom(const OpUpdateBlobImage& from) {
 
 bool OpUpdateBlobImage::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_bytes()) {
-    if (!_impl_.a_bytes_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -7097,7 +7059,7 @@ class OpAddRawFont::_Internal {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
   }
 };
 
@@ -7209,7 +7171,7 @@ const char* OpAddRawFont::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_fontIndex = 2;
+      // optional uint32 a_fontIndex = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_fontindex(&has_bits);
@@ -7265,7 +7227,7 @@ uint8_t* OpAddRawFont::_InternalSerialize(
         _Internal::a_bytes(this).GetCachedSize(), target, stream);
   }
 
-  // required uint32 a_fontIndex = 2;
+  // optional uint32 a_fontIndex = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_fontindex(), target);
@@ -7303,18 +7265,13 @@ size_t OpAddRawFont::RequiredFieldsByteSizeFallback() const {
         *_impl_.a_bytes_);
   }
 
-  if (_internal_has_a_fontindex()) {
-    // required uint32 a_fontIndex = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_fontindex());
-  }
-
   return total_size;
 }
 size_t OpAddRawFont::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.OpAddRawFont)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
     // required bytes a_key = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -7325,15 +7282,18 @@ size_t OpAddRawFont::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_bytes_);
 
-    // required uint32 a_fontIndex = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_fontindex());
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional uint32 a_fontIndex = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000004u) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_fontindex());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -7382,9 +7342,6 @@ void OpAddRawFont::CopyFrom(const OpAddRawFont& from) {
 
 bool OpAddRawFont::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_bytes()) {
-    if (!_impl_.a_bytes_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -7427,7 +7384,7 @@ class OpAddFontDescriptor::_Internal {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
   }
 };
 
@@ -7539,7 +7496,7 @@ const char* OpAddFontDescriptor::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_fontIndex = 2;
+      // optional uint32 a_fontIndex = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_fontindex(&has_bits);
@@ -7595,7 +7552,7 @@ uint8_t* OpAddFontDescriptor::_InternalSerialize(
         _Internal::a_bytes(this).GetCachedSize(), target, stream);
   }
 
-  // required uint32 a_fontIndex = 2;
+  // optional uint32 a_fontIndex = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_fontindex(), target);
@@ -7633,18 +7590,13 @@ size_t OpAddFontDescriptor::RequiredFieldsByteSizeFallback() const {
         *_impl_.a_bytes_);
   }
 
-  if (_internal_has_a_fontindex()) {
-    // required uint32 a_fontIndex = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_fontindex());
-  }
-
   return total_size;
 }
 size_t OpAddFontDescriptor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.OpAddFontDescriptor)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
     // required bytes a_key = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -7655,15 +7607,18 @@ size_t OpAddFontDescriptor::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_bytes_);
 
-    // required uint32 a_fontIndex = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_fontindex());
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional uint32 a_fontIndex = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000004u) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_fontindex());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -7712,9 +7667,6 @@ void OpAddFontDescriptor::CopyFrom(const OpAddFontDescriptor& from) {
 
 bool OpAddFontDescriptor::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_bytes()) {
-    if (!_impl_.a_bytes_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -7983,7 +7935,7 @@ class OpAddFontInstance::_Internal {
     (*has_bits)[0] |= 32u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000003f) ^ 0x0000003f) != 0;
+    return ((has_bits[0] & 0x0000001f) ^ 0x0000001f) != 0;
   }
 };
 
@@ -8185,7 +8137,7 @@ const char* OpAddFontInstance::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required float a_glyphSize = 6;
+      // optional float a_glyphSize = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 53)) {
           _Internal::set_has_a_glyphsize(&has_bits);
@@ -8256,7 +8208,7 @@ uint8_t* OpAddFontInstance::_InternalSerialize(
         5, this->_internal_a_fontkey(), target);
   }
 
-  // required float a_glyphSize = 6;
+  // optional float a_glyphSize = 6;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(6, this->_internal_a_glyphsize(), target);
@@ -8309,18 +8261,13 @@ size_t OpAddFontInstance::RequiredFieldsByteSizeFallback() const {
         *_impl_.a_variations_);
   }
 
-  if (_internal_has_a_glyphsize()) {
-    // required float a_glyphSize = 6;
-    total_size += 1 + 4;
-  }
-
   return total_size;
 }
 size_t OpAddFontInstance::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.OpAddFontInstance)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000003f) ^ 0x0000003f) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
     // required bytes a_options = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -8346,15 +8293,18 @@ size_t OpAddFontInstance::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_variations_);
 
-    // required float a_glyphSize = 6;
-    total_size += 1 + 4;
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional float a_glyphSize = 6;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000020u) {
+    total_size += 1 + 4;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -8412,9 +8362,6 @@ void OpAddFontInstance::CopyFrom(const OpAddFontInstance& from) {
 
 bool OpAddFontInstance::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_variations()) {
-    if (!_impl_.a_variations_->IsInitialized()) return false;
-  }
   return true;
 }
 

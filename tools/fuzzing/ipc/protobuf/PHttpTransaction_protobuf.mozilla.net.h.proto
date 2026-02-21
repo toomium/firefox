@@ -17,8 +17,8 @@ import "NeckoChannelParams.proto";
 message NetworkAddressArg {
   required bytes a_selfAddr = 1;
   required bytes a_peerAddr = 2;
-  required bool a_resolvedByTRR = 3;
+  optional bool a_resolvedByTRR = 3;
   required bytes a_mode = 4;
   required bytes a_trrSkipReason = 5;
-  required bool a_echConfigUsed = 6;
+  optional bool a_echConfigUsed = 6;
 }

@@ -241,7 +241,7 @@ class Msg_Close final :
     kAReasonFieldNumber = 2,
     kACodeFieldNumber = 1,
   };
-  // required string a_reason = 2;
+  // optional string a_reason = 2;
   bool has_a_reason() const;
   private:
   bool _internal_has_a_reason() const;
@@ -259,7 +259,7 @@ class Msg_Close final :
   std::string* _internal_mutable_a_reason();
   public:
 
-  // required uint32 a_code = 1;
+  // optional uint32 a_code = 1;
   bool has_a_code() const;
   private:
   bool _internal_has_a_code() const;
@@ -275,9 +275,6 @@ class Msg_Close final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebTransport.Msg_Close)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1425,7 +1422,7 @@ class Reply_GetMaxDatagramSize final :
   enum : int {
     kAMaxDatagramSizeFieldNumber = 1,
   };
-  // required uint64 a_maxDatagramSize = 1;
+  // optional uint64 a_maxDatagramSize = 1;
   bool has_a_maxdatagramsize() const;
   private:
   bool _internal_has_a_maxdatagramsize() const;
@@ -1568,7 +1565,7 @@ class Msg_SetSendOrder final :
     kAStreamIdFieldNumber = 1,
     kASendOrderFieldNumber = 2,
   };
-  // required uint64 a_streamId = 1;
+  // optional uint64 a_streamId = 1;
   bool has_a_streamid() const;
   private:
   bool _internal_has_a_streamid() const;
@@ -1743,7 +1740,7 @@ class Msg_IncomingUnidirectionalStream final :
   std::string* _internal_mutable_a_receive();
   public:
 
-  // required uint64 a_streamId = 1;
+  // optional uint64 a_streamId = 1;
   bool has_a_streamid() const;
   private:
   bool _internal_has_a_streamid() const;
@@ -1924,7 +1921,7 @@ class Msg_IncomingBidirectionalStream final :
   std::string* _internal_mutable_a_send();
   public:
 
-  // required uint64 a_streamId = 1;
+  // optional uint64 a_streamId = 1;
   bool has_a_streamid() const;
   private:
   bool _internal_has_a_streamid() const;
@@ -2241,7 +2238,7 @@ class Msg_RemoteClosed final :
     kACleanlyFieldNumber = 1,
     kACodeFieldNumber = 2,
   };
-  // required string a_reason = 3;
+  // optional string a_reason = 3;
   bool has_a_reason() const;
   private:
   bool _internal_has_a_reason() const;
@@ -2259,7 +2256,7 @@ class Msg_RemoteClosed final :
   std::string* _internal_mutable_a_reason();
   public:
 
-  // required bool a_cleanly = 1;
+  // optional bool a_cleanly = 1;
   bool has_a_cleanly() const;
   private:
   bool _internal_has_a_cleanly() const;
@@ -2272,7 +2269,7 @@ class Msg_RemoteClosed final :
   void _internal_set_a_cleanly(bool value);
   public:
 
-  // required uint32 a_code = 2;
+  // optional uint32 a_code = 2;
   bool has_a_code() const;
   private:
   bool _internal_has_a_code() const;
@@ -2288,9 +2285,6 @@ class Msg_RemoteClosed final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebTransport.Msg_RemoteClosed)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2438,7 +2432,7 @@ class Msg_OnStreamResetOrStopSending final :
       ::protobuf::mozilla::dom::StreamResetOrStopSendingError* a_error);
   ::protobuf::mozilla::dom::StreamResetOrStopSendingError* unsafe_arena_release_a_error();
 
-  // required uint64 a_streamId = 1;
+  // optional uint64 a_streamId = 1;
   bool has_a_streamid() const;
   private:
   bool _internal_has_a_streamid() const;
@@ -2454,9 +2448,6 @@ class Msg_OnStreamResetOrStopSending final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebTransport.Msg_OnStreamResetOrStopSending)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2752,7 +2743,7 @@ class Reply_CloseAll final :
 #endif  // __GNUC__
 // Msg_Close
 
-// required uint32 a_code = 1;
+// optional uint32 a_code = 1;
 inline bool Msg_Close::_internal_has_a_code() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2780,7 +2771,7 @@ inline void Msg_Close::set_a_code(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebTransport.Msg_Close.a_code)
 }
 
-// required string a_reason = 2;
+// optional string a_reason = 2;
 inline bool Msg_Close::_internal_has_a_reason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3293,7 +3284,7 @@ inline void Reply_OutgoingDatagram::set_allocated_a_response(std::string* a_resp
 
 // Reply_GetMaxDatagramSize
 
-// required uint64 a_maxDatagramSize = 1;
+// optional uint64 a_maxDatagramSize = 1;
 inline bool Reply_GetMaxDatagramSize::_internal_has_a_maxdatagramsize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3325,7 +3316,7 @@ inline void Reply_GetMaxDatagramSize::set_a_maxdatagramsize(uint64_t value) {
 
 // Msg_SetSendOrder
 
-// required uint64 a_streamId = 1;
+// optional uint64 a_streamId = 1;
 inline bool Msg_SetSendOrder::_internal_has_a_streamid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3385,7 +3376,7 @@ inline void Msg_SetSendOrder::set_a_sendorder(int64_t value) {
 
 // Msg_IncomingUnidirectionalStream
 
-// required uint64 a_streamId = 1;
+// optional uint64 a_streamId = 1;
 inline bool Msg_IncomingUnidirectionalStream::_internal_has_a_streamid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3485,7 +3476,7 @@ inline void Msg_IncomingUnidirectionalStream::set_allocated_a_receive(std::strin
 
 // Msg_IncomingBidirectionalStream
 
-// required uint64 a_streamId = 1;
+// optional uint64 a_streamId = 1;
 inline bool Msg_IncomingBidirectionalStream::_internal_has_a_streamid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -3772,7 +3763,7 @@ inline void Msg_IncomingDatagram::set_allocated_a_receivedtime(std::string* a_re
 
 // Msg_RemoteClosed
 
-// required bool a_cleanly = 1;
+// optional bool a_cleanly = 1;
 inline bool Msg_RemoteClosed::_internal_has_a_cleanly() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3800,7 +3791,7 @@ inline void Msg_RemoteClosed::set_a_cleanly(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebTransport.Msg_RemoteClosed.a_cleanly)
 }
 
-// required uint32 a_code = 2;
+// optional uint32 a_code = 2;
 inline bool Msg_RemoteClosed::_internal_has_a_code() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -3828,7 +3819,7 @@ inline void Msg_RemoteClosed::set_a_code(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebTransport.Msg_RemoteClosed.a_code)
 }
 
-// required string a_reason = 3;
+// optional string a_reason = 3;
 inline bool Msg_RemoteClosed::_internal_has_a_reason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3900,7 +3891,7 @@ inline void Msg_RemoteClosed::set_allocated_a_reason(std::string* a_reason) {
 
 // Msg_OnStreamResetOrStopSending
 
-// required uint64 a_streamId = 1;
+// optional uint64 a_streamId = 1;
 inline bool Msg_OnStreamResetOrStopSending::_internal_has_a_streamid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

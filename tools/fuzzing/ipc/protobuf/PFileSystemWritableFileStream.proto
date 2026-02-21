@@ -16,7 +16,7 @@ package protobuf.mozilla.dom.PFileSystemWritableFileStream;
 
 // Message declarations
 message Msg_Close {
-  required bool a_aAbort = 1;
+  optional bool a_aAbort = 1;
 }
 
 message Reply_Close {

@@ -250,7 +250,7 @@ class Msg_Bind final :
       ::protobuf::UDPAddressInfo* a_addressinfo);
   ::protobuf::UDPAddressInfo* unsafe_arena_release_a_addressinfo();
 
-  // required bool a_addressReuse = 2;
+  // optional bool a_addressReuse = 2;
   bool has_a_addressreuse() const;
   private:
   bool _internal_has_a_addressreuse() const;
@@ -263,7 +263,7 @@ class Msg_Bind final :
   void _internal_set_a_addressreuse(bool value);
   public:
 
-  // required bool a_loopback = 3;
+  // optional bool a_loopback = 3;
   bool has_a_loopback() const;
   private:
   bool _internal_has_a_loopback() const;
@@ -276,7 +276,7 @@ class Msg_Bind final :
   void _internal_set_a_loopback(bool value);
   public:
 
-  // required uint32 a_recvBufferSize = 4;
+  // optional uint32 a_recvBufferSize = 4;
   bool has_a_recvbuffersize() const;
   private:
   bool _internal_has_a_recvbuffersize() const;
@@ -289,7 +289,7 @@ class Msg_Bind final :
   void _internal_set_a_recvbuffersize(uint32_t value);
   public:
 
-  // required uint32 a_sendBufferSize = 5;
+  // optional uint32 a_sendBufferSize = 5;
   bool has_a_sendbuffersize() const;
   private:
   bool _internal_has_a_sendbuffersize() const;
@@ -305,9 +305,6 @@ class Msg_Bind final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PUDPSocket.Msg_Bind)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -756,7 +753,7 @@ class Msg_JoinMulticast final :
     kAMulticastAddressFieldNumber = 1,
     kAIfaceFieldNumber = 2,
   };
-  // required string a_multicastAddress = 1;
+  // optional string a_multicastAddress = 1;
   bool has_a_multicastaddress() const;
   private:
   bool _internal_has_a_multicastaddress() const;
@@ -774,7 +771,7 @@ class Msg_JoinMulticast final :
   std::string* _internal_mutable_a_multicastaddress();
   public:
 
-  // required string a_iface = 2;
+  // optional string a_iface = 2;
   bool has_a_iface() const;
   private:
   bool _internal_has_a_iface() const;
@@ -795,9 +792,6 @@ class Msg_JoinMulticast final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PUDPSocket.Msg_JoinMulticast)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -926,7 +920,7 @@ class Msg_LeaveMulticast final :
     kAMulticastAddressFieldNumber = 1,
     kAIfaceFieldNumber = 2,
   };
-  // required string a_multicastAddress = 1;
+  // optional string a_multicastAddress = 1;
   bool has_a_multicastaddress() const;
   private:
   bool _internal_has_a_multicastaddress() const;
@@ -944,7 +938,7 @@ class Msg_LeaveMulticast final :
   std::string* _internal_mutable_a_multicastaddress();
   public:
 
-  // required string a_iface = 2;
+  // optional string a_iface = 2;
   bool has_a_iface() const;
   private:
   bool _internal_has_a_iface() const;
@@ -965,9 +959,6 @@ class Msg_LeaveMulticast final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PUDPSocket.Msg_LeaveMulticast)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1934,7 +1925,7 @@ class Msg_CallbackError final :
     kAFilenameFieldNumber = 2,
     kALineNumberFieldNumber = 3,
   };
-  // required string a_message = 1;
+  // optional string a_message = 1;
   bool has_a_message() const;
   private:
   bool _internal_has_a_message() const;
@@ -1952,7 +1943,7 @@ class Msg_CallbackError final :
   std::string* _internal_mutable_a_message();
   public:
 
-  // required string a_filename = 2;
+  // optional string a_filename = 2;
   bool has_a_filename() const;
   private:
   bool _internal_has_a_filename() const;
@@ -1970,7 +1961,7 @@ class Msg_CallbackError final :
   std::string* _internal_mutable_a_filename();
   public:
 
-  // required uint32 a_lineNumber = 3;
+  // optional uint32 a_lineNumber = 3;
   bool has_a_linenumber() const;
   private:
   bool _internal_has_a_linenumber() const;
@@ -1986,9 +1977,6 @@ class Msg_CallbackError final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PUDPSocket.Msg_CallbackError)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2349,7 +2337,7 @@ inline void Msg_Bind::set_allocated_a_addressinfo(::protobuf::UDPAddressInfo* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PUDPSocket.Msg_Bind.a_addressInfo)
 }
 
-// required bool a_addressReuse = 2;
+// optional bool a_addressReuse = 2;
 inline bool Msg_Bind::_internal_has_a_addressreuse() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2377,7 +2365,7 @@ inline void Msg_Bind::set_a_addressreuse(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PUDPSocket.Msg_Bind.a_addressReuse)
 }
 
-// required bool a_loopback = 3;
+// optional bool a_loopback = 3;
 inline bool Msg_Bind::_internal_has_a_loopback() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2405,7 +2393,7 @@ inline void Msg_Bind::set_a_loopback(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PUDPSocket.Msg_Bind.a_loopback)
 }
 
-// required uint32 a_recvBufferSize = 4;
+// optional uint32 a_recvBufferSize = 4;
 inline bool Msg_Bind::_internal_has_a_recvbuffersize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -2433,7 +2421,7 @@ inline void Msg_Bind::set_a_recvbuffersize(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PUDPSocket.Msg_Bind.a_recvBufferSize)
 }
 
-// required uint32 a_sendBufferSize = 5;
+// optional uint32 a_sendBufferSize = 5;
 inline bool Msg_Bind::_internal_has_a_sendbuffersize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -2734,7 +2722,7 @@ inline void Msg_OutgoingData::set_allocated_a_addr(::protobuf::UDPSocketAddr* a_
 
 // Msg_JoinMulticast
 
-// required string a_multicastAddress = 1;
+// optional string a_multicastAddress = 1;
 inline bool Msg_JoinMulticast::_internal_has_a_multicastaddress() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2802,7 +2790,7 @@ inline void Msg_JoinMulticast::set_allocated_a_multicastaddress(std::string* a_m
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PUDPSocket.Msg_JoinMulticast.a_multicastAddress)
 }
 
-// required string a_iface = 2;
+// optional string a_iface = 2;
 inline bool Msg_JoinMulticast::_internal_has_a_iface() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2874,7 +2862,7 @@ inline void Msg_JoinMulticast::set_allocated_a_iface(std::string* a_iface) {
 
 // Msg_LeaveMulticast
 
-// required string a_multicastAddress = 1;
+// optional string a_multicastAddress = 1;
 inline bool Msg_LeaveMulticast::_internal_has_a_multicastaddress() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2942,7 +2930,7 @@ inline void Msg_LeaveMulticast::set_allocated_a_multicastaddress(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PUDPSocket.Msg_LeaveMulticast.a_multicastAddress)
 }
 
-// required string a_iface = 2;
+// optional string a_iface = 2;
 inline bool Msg_LeaveMulticast::_internal_has_a_iface() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3346,7 +3334,7 @@ Msg_CallbackReceivedData::mutable_a_data() {
 
 // Msg_CallbackError
 
-// required string a_message = 1;
+// optional string a_message = 1;
 inline bool Msg_CallbackError::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3414,7 +3402,7 @@ inline void Msg_CallbackError::set_allocated_a_message(std::string* a_message) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PUDPSocket.Msg_CallbackError.a_message)
 }
 
-// required string a_filename = 2;
+// optional string a_filename = 2;
 inline bool Msg_CallbackError::_internal_has_a_filename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3482,7 +3470,7 @@ inline void Msg_CallbackError::set_allocated_a_filename(std::string* a_filename)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PUDPSocket.Msg_CallbackError.a_filename)
 }
 
-// required uint32 a_lineNumber = 3;
+// optional uint32 a_lineNumber = 3;
 inline bool Msg_CallbackError::_internal_has_a_linenumber() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

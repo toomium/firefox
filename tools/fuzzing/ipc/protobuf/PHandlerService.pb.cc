@@ -268,7 +268,7 @@ class Msg_FillHandlerInfo::_Internal {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000002) ^ 0x00000002) != 0;
   }
 };
 
@@ -380,7 +380,7 @@ const char* Msg_FillHandlerInfo::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // required string a_aOverrideType = 2;
+      // optional string a_aOverrideType = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_aoverridetype();
@@ -427,7 +427,7 @@ uint8_t* Msg_FillHandlerInfo::_InternalSerialize(
         _Internal::a_ahandlerinfodata(this).GetCachedSize(), target, stream);
   }
 
-  // required string a_aOverrideType = 2;
+  // optional string a_aOverrideType = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_aoverridetype(), target);
@@ -441,47 +441,27 @@ uint8_t* Msg_FillHandlerInfo::_InternalSerialize(
   return target;
 }
 
-size_t Msg_FillHandlerInfo::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PHandlerService.Msg_FillHandlerInfo)
-  size_t total_size = 0;
-
-  if (_internal_has_a_aoverridetype()) {
-    // required string a_aOverrideType = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_aoverridetype());
-  }
-
-  if (_internal_has_a_ahandlerinfodata()) {
-    // required .protobuf.mozilla.dom.HandlerInfo a_aHandlerInfoData = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_ahandlerinfodata_);
-  }
-
-  return total_size;
-}
 size_t Msg_FillHandlerInfo::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PHandlerService.Msg_FillHandlerInfo)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string a_aOverrideType = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_aoverridetype());
-
-    // required .protobuf.mozilla.dom.HandlerInfo a_aHandlerInfoData = 1;
+  // required .protobuf.mozilla.dom.HandlerInfo a_aHandlerInfoData = 1;
+  if (_internal_has_a_ahandlerinfodata()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_ahandlerinfodata_);
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional string a_aOverrideType = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_aoverridetype());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -775,9 +755,6 @@ class Msg_ExistsForProtocolOS::_Internal {
   static void set_has_a_aprotocolscheme(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_ExistsForProtocolOS::Msg_ExistsForProtocolOS(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -860,7 +837,7 @@ const char* Msg_ExistsForProtocolOS::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aProtocolScheme = 1;
+      // optional string a_aProtocolScheme = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_aprotocolscheme();
@@ -900,7 +877,7 @@ uint8_t* Msg_ExistsForProtocolOS::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aProtocolScheme = 1;
+  // optional string a_aProtocolScheme = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_aprotocolscheme(), target);
@@ -918,15 +895,17 @@ size_t Msg_ExistsForProtocolOS::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PHandlerService.Msg_ExistsForProtocolOS)
   size_t total_size = 0;
 
-  // required string a_aProtocolScheme = 1;
-  if (_internal_has_a_aprotocolscheme()) {
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional string a_aProtocolScheme = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_aprotocolscheme());
   }
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -963,7 +942,6 @@ void Msg_ExistsForProtocolOS::CopyFrom(const Msg_ExistsForProtocolOS& from) {
 }
 
 bool Msg_ExistsForProtocolOS::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -991,9 +969,6 @@ class Reply_ExistsForProtocolOS::_Internal {
   using HasBits = decltype(std::declval<Reply_ExistsForProtocolOS>()._impl_._has_bits_);
   static void set_has_a_exists(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -1062,7 +1037,7 @@ const char* Reply_ExistsForProtocolOS::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_exists = 1;
+      // optional bool a_exists = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_exists(&has_bits);
@@ -1102,7 +1077,7 @@ uint8_t* Reply_ExistsForProtocolOS::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_exists = 1;
+  // optional bool a_exists = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_exists(), target);
@@ -1120,13 +1095,15 @@ size_t Reply_ExistsForProtocolOS::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PHandlerService.Reply_ExistsForProtocolOS)
   size_t total_size = 0;
 
-  // required bool a_exists = 1;
-  if (_internal_has_a_exists()) {
-    total_size += 1 + 1;
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_exists = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1163,7 +1140,6 @@ void Reply_ExistsForProtocolOS::CopyFrom(const Reply_ExistsForProtocolOS& from) 
 }
 
 bool Reply_ExistsForProtocolOS::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1186,9 +1162,6 @@ class Msg_ExistsForProtocol::_Internal {
   using HasBits = decltype(std::declval<Msg_ExistsForProtocol>()._impl_._has_bits_);
   static void set_has_a_aprotocolscheme(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -1272,7 +1245,7 @@ const char* Msg_ExistsForProtocol::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aProtocolScheme = 1;
+      // optional string a_aProtocolScheme = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_aprotocolscheme();
@@ -1312,7 +1285,7 @@ uint8_t* Msg_ExistsForProtocol::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aProtocolScheme = 1;
+  // optional string a_aProtocolScheme = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_aprotocolscheme(), target);
@@ -1330,15 +1303,17 @@ size_t Msg_ExistsForProtocol::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PHandlerService.Msg_ExistsForProtocol)
   size_t total_size = 0;
 
-  // required string a_aProtocolScheme = 1;
-  if (_internal_has_a_aprotocolscheme()) {
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional string a_aProtocolScheme = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_aprotocolscheme());
   }
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1375,7 +1350,6 @@ void Msg_ExistsForProtocol::CopyFrom(const Msg_ExistsForProtocol& from) {
 }
 
 bool Msg_ExistsForProtocol::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1403,9 +1377,6 @@ class Reply_ExistsForProtocol::_Internal {
   using HasBits = decltype(std::declval<Reply_ExistsForProtocol>()._impl_._has_bits_);
   static void set_has_a_exists(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -1474,7 +1445,7 @@ const char* Reply_ExistsForProtocol::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_exists = 1;
+      // optional bool a_exists = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_exists(&has_bits);
@@ -1514,7 +1485,7 @@ uint8_t* Reply_ExistsForProtocol::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_exists = 1;
+  // optional bool a_exists = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_exists(), target);
@@ -1532,13 +1503,15 @@ size_t Reply_ExistsForProtocol::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PHandlerService.Reply_ExistsForProtocol)
   size_t total_size = 0;
 
-  // required bool a_exists = 1;
-  if (_internal_has_a_exists()) {
-    total_size += 1 + 1;
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_exists = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1575,7 +1548,6 @@ void Reply_ExistsForProtocol::CopyFrom(const Reply_ExistsForProtocol& from) {
 }
 
 bool Reply_ExistsForProtocol::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1816,9 +1788,6 @@ class Reply_Exists::_Internal {
   static void set_has_a_exists(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Reply_Exists::Reply_Exists(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1886,7 +1855,7 @@ const char* Reply_Exists::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_exists = 1;
+      // optional bool a_exists = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_exists(&has_bits);
@@ -1926,7 +1895,7 @@ uint8_t* Reply_Exists::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_exists = 1;
+  // optional bool a_exists = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_exists(), target);
@@ -1944,13 +1913,15 @@ size_t Reply_Exists::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PHandlerService.Reply_Exists)
   size_t total_size = 0;
 
-  // required bool a_exists = 1;
-  if (_internal_has_a_exists()) {
-    total_size += 1 + 1;
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_exists = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1987,7 +1958,6 @@ void Reply_Exists::CopyFrom(const Reply_Exists& from) {
 }
 
 bool Reply_Exists::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -2010,9 +1980,6 @@ class Msg_GetTypeFromExtension::_Internal {
   using HasBits = decltype(std::declval<Msg_GetTypeFromExtension>()._impl_._has_bits_);
   static void set_has_a_afileextension(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -2096,7 +2063,7 @@ const char* Msg_GetTypeFromExtension::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aFileExtension = 1;
+      // optional string a_aFileExtension = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_afileextension();
@@ -2136,7 +2103,7 @@ uint8_t* Msg_GetTypeFromExtension::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aFileExtension = 1;
+  // optional string a_aFileExtension = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_afileextension(), target);
@@ -2154,15 +2121,17 @@ size_t Msg_GetTypeFromExtension::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PHandlerService.Msg_GetTypeFromExtension)
   size_t total_size = 0;
 
-  // required string a_aFileExtension = 1;
-  if (_internal_has_a_afileextension()) {
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional string a_aFileExtension = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_afileextension());
   }
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -2199,7 +2168,6 @@ void Msg_GetTypeFromExtension::CopyFrom(const Msg_GetTypeFromExtension& from) {
 }
 
 bool Msg_GetTypeFromExtension::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -2227,9 +2195,6 @@ class Reply_GetTypeFromExtension::_Internal {
   using HasBits = decltype(std::declval<Reply_GetTypeFromExtension>()._impl_._has_bits_);
   static void set_has_a_type(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -2313,7 +2278,7 @@ const char* Reply_GetTypeFromExtension::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_type = 1;
+      // optional string a_type = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_type();
@@ -2353,7 +2318,7 @@ uint8_t* Reply_GetTypeFromExtension::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_type = 1;
+  // optional string a_type = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_type(), target);
@@ -2371,15 +2336,17 @@ size_t Reply_GetTypeFromExtension::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PHandlerService.Reply_GetTypeFromExtension)
   size_t total_size = 0;
 
-  // required string a_type = 1;
-  if (_internal_has_a_type()) {
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional string a_type = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_type());
   }
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -2416,7 +2383,6 @@ void Reply_GetTypeFromExtension::CopyFrom(const Reply_GetTypeFromExtension& from
 }
 
 bool Reply_GetTypeFromExtension::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -2447,9 +2413,6 @@ class Msg_GetMIMEInfoFromOS::_Internal {
   }
   static void set_has_a_aextension(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
   }
 };
 
@@ -2553,7 +2516,7 @@ const char* Msg_GetMIMEInfoFromOS::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aMIMEType = 1;
+      // optional string a_aMIMEType = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_amimetype();
@@ -2562,7 +2525,7 @@ const char* Msg_GetMIMEInfoFromOS::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // required string a_aExtension = 2;
+      // optional string a_aExtension = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_aextension();
@@ -2602,13 +2565,13 @@ uint8_t* Msg_GetMIMEInfoFromOS::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aMIMEType = 1;
+  // optional string a_aMIMEType = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_amimetype(), target);
   }
 
-  // required string a_aExtension = 2;
+  // optional string a_aExtension = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_aextension(), target);
@@ -2622,48 +2585,31 @@ uint8_t* Msg_GetMIMEInfoFromOS::_InternalSerialize(
   return target;
 }
 
-size_t Msg_GetMIMEInfoFromOS::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PHandlerService.Msg_GetMIMEInfoFromOS)
-  size_t total_size = 0;
-
-  if (_internal_has_a_amimetype()) {
-    // required string a_aMIMEType = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_amimetype());
-  }
-
-  if (_internal_has_a_aextension()) {
-    // required string a_aExtension = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_aextension());
-  }
-
-  return total_size;
-}
 size_t Msg_GetMIMEInfoFromOS::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PHandlerService.Msg_GetMIMEInfoFromOS)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string a_aMIMEType = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_amimetype());
-
-    // required string a_aExtension = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_aextension());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional string a_aMIMEType = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_amimetype());
+    }
+
+    // optional string a_aExtension = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_aextension());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -2705,7 +2651,6 @@ void Msg_GetMIMEInfoFromOS::CopyFrom(const Msg_GetMIMEInfoFromOS& from) {
 }
 
 bool Msg_GetMIMEInfoFromOS::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -2746,7 +2691,7 @@ class Reply_GetMIMEInfoFromOS::_Internal {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
   }
 };
 
@@ -2871,7 +2816,7 @@ const char* Reply_GetMIMEInfoFromOS::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required bool a_found = 3;
+      // optional bool a_found = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_found(&has_bits);
@@ -2924,7 +2869,7 @@ uint8_t* Reply_GetMIMEInfoFromOS::_InternalSerialize(
         _Internal::a_handlerinfodata(this).GetCachedSize(), target, stream);
   }
 
-  // required bool a_found = 3;
+  // optional bool a_found = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_found(), target);
@@ -2956,18 +2901,13 @@ size_t Reply_GetMIMEInfoFromOS::RequiredFieldsByteSizeFallback() const {
         *_impl_.a_handlerinfodata_);
   }
 
-  if (_internal_has_a_found()) {
-    // required bool a_found = 3;
-    total_size += 1 + 1;
-  }
-
   return total_size;
 }
 size_t Reply_GetMIMEInfoFromOS::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PHandlerService.Reply_GetMIMEInfoFromOS)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
     // required bytes a_rv = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -2978,15 +2918,18 @@ size_t Reply_GetMIMEInfoFromOS::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_handlerinfodata_);
 
-    // required bool a_found = 3;
-    total_size += 1 + 1;
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_found = 3;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000004u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -3072,9 +3015,6 @@ class Msg_GetApplicationDescription::_Internal {
   static void set_has_a_ascheme(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_GetApplicationDescription::Msg_GetApplicationDescription(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -3157,7 +3097,7 @@ const char* Msg_GetApplicationDescription::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aScheme = 1;
+      // optional string a_aScheme = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_ascheme();
@@ -3197,7 +3137,7 @@ uint8_t* Msg_GetApplicationDescription::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aScheme = 1;
+  // optional string a_aScheme = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_ascheme(), target);
@@ -3215,15 +3155,17 @@ size_t Msg_GetApplicationDescription::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PHandlerService.Msg_GetApplicationDescription)
   size_t total_size = 0;
 
-  // required string a_aScheme = 1;
-  if (_internal_has_a_ascheme()) {
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional string a_aScheme = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_ascheme());
   }
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -3260,7 +3202,6 @@ void Msg_GetApplicationDescription::CopyFrom(const Msg_GetApplicationDescription
 }
 
 bool Msg_GetApplicationDescription::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -3293,7 +3234,7 @@ class Reply_GetApplicationDescription::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -3406,7 +3347,7 @@ const char* Reply_GetApplicationDescription::_InternalParse(const char* ptr, ::_
         } else
           goto handle_unusual;
         continue;
-      // required string a_description = 2;
+      // optional string a_description = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_description();
@@ -3452,7 +3393,7 @@ uint8_t* Reply_GetApplicationDescription::_InternalSerialize(
         1, this->_internal_a_rv(), target);
   }
 
-  // required string a_description = 2;
+  // optional string a_description = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_description(), target);
@@ -3466,47 +3407,27 @@ uint8_t* Reply_GetApplicationDescription::_InternalSerialize(
   return target;
 }
 
-size_t Reply_GetApplicationDescription::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PHandlerService.Reply_GetApplicationDescription)
-  size_t total_size = 0;
-
-  if (_internal_has_a_rv()) {
-    // required bytes a_rv = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_rv());
-  }
-
-  if (_internal_has_a_description()) {
-    // required string a_description = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_description());
-  }
-
-  return total_size;
-}
 size_t Reply_GetApplicationDescription::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PHandlerService.Reply_GetApplicationDescription)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_rv = 1;
+  // required bytes a_rv = 1;
+  if (_internal_has_a_rv()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_rv());
-
-    // required string a_description = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_description());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional string a_description = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000002u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_description());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();

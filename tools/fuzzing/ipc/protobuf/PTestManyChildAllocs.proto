@@ -22,7 +22,7 @@ message Msg_Done {
 }
 
 message Msg_PTestManyChildAllocsSubConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
 }
 
 message Reply_PTestManyChildAllocsSubConstructor {

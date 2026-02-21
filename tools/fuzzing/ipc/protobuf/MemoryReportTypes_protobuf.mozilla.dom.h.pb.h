@@ -177,7 +177,7 @@ class MemoryReport final :
     kAAmountFieldNumber = 5,
     kAGenerationFieldNumber = 6,
   };
-  // required string a_process = 1;
+  // optional string a_process = 1;
   bool has_a_process() const;
   private:
   bool _internal_has_a_process() const;
@@ -195,7 +195,7 @@ class MemoryReport final :
   std::string* _internal_mutable_a_process();
   public:
 
-  // required string a_path = 2;
+  // optional string a_path = 2;
   bool has_a_path() const;
   private:
   bool _internal_has_a_path() const;
@@ -213,7 +213,7 @@ class MemoryReport final :
   std::string* _internal_mutable_a_path();
   public:
 
-  // required string a_desc = 7;
+  // optional string a_desc = 7;
   bool has_a_desc() const;
   private:
   bool _internal_has_a_desc() const;
@@ -231,7 +231,7 @@ class MemoryReport final :
   std::string* _internal_mutable_a_desc();
   public:
 
-  // required sint32 a_kind = 3;
+  // optional sint32 a_kind = 3;
   bool has_a_kind() const;
   private:
   bool _internal_has_a_kind() const;
@@ -244,7 +244,7 @@ class MemoryReport final :
   void _internal_set_a_kind(int32_t value);
   public:
 
-  // required sint32 a_units = 4;
+  // optional sint32 a_units = 4;
   bool has_a_units() const;
   private:
   bool _internal_has_a_units() const;
@@ -257,7 +257,7 @@ class MemoryReport final :
   void _internal_set_a_units(int32_t value);
   public:
 
-  // required sint64 a_amount = 5;
+  // optional sint64 a_amount = 5;
   bool has_a_amount() const;
   private:
   bool _internal_has_a_amount() const;
@@ -270,7 +270,7 @@ class MemoryReport final :
   void _internal_set_a_amount(int64_t value);
   public:
 
-  // required uint32 a_generation = 6;
+  // optional uint32 a_generation = 6;
   bool has_a_generation() const;
   private:
   bool _internal_has_a_generation() const;
@@ -286,9 +286,6 @@ class MemoryReport final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.MemoryReport)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -318,7 +315,7 @@ class MemoryReport final :
 #endif  // __GNUC__
 // MemoryReport
 
-// required string a_process = 1;
+// optional string a_process = 1;
 inline bool MemoryReport::_internal_has_a_process() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -386,7 +383,7 @@ inline void MemoryReport::set_allocated_a_process(std::string* a_process) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.MemoryReport.a_process)
 }
 
-// required string a_path = 2;
+// optional string a_path = 2;
 inline bool MemoryReport::_internal_has_a_path() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -454,7 +451,7 @@ inline void MemoryReport::set_allocated_a_path(std::string* a_path) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.MemoryReport.a_path)
 }
 
-// required sint32 a_kind = 3;
+// optional sint32 a_kind = 3;
 inline bool MemoryReport::_internal_has_a_kind() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -482,7 +479,7 @@ inline void MemoryReport::set_a_kind(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MemoryReport.a_kind)
 }
 
-// required sint32 a_units = 4;
+// optional sint32 a_units = 4;
 inline bool MemoryReport::_internal_has_a_units() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -510,7 +507,7 @@ inline void MemoryReport::set_a_units(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MemoryReport.a_units)
 }
 
-// required sint64 a_amount = 5;
+// optional sint64 a_amount = 5;
 inline bool MemoryReport::_internal_has_a_amount() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -538,7 +535,7 @@ inline void MemoryReport::set_a_amount(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MemoryReport.a_amount)
 }
 
-// required uint32 a_generation = 6;
+// optional uint32 a_generation = 6;
 inline bool MemoryReport::_internal_has_a_generation() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -566,7 +563,7 @@ inline void MemoryReport::set_a_generation(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MemoryReport.a_generation)
 }
 
-// required string a_desc = 7;
+// optional string a_desc = 7;
 inline bool MemoryReport::_internal_has_a_desc() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

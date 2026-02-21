@@ -23,7 +23,7 @@ import "DOMTypes.proto";
 // Message declarations
 message Msg_Cancel {
   required bytes a_status = 1;
-  required string a_reason = 2;
+  optional string a_reason = 2;
 }
 
 message Msg___delete__ {
@@ -39,7 +39,7 @@ message Msg_FailedAsyncOpen {
 message Msg_DisconnectChildListeners {
   required bytes a_aStatus = 1;
   required bytes a_aLoadGroupReason = 2;
-  required bool a_aContinueNavigating = 3;
+  optional bool a_aContinueNavigating = 3;
 }
 
 message Msg_RedirectToRealChannel {

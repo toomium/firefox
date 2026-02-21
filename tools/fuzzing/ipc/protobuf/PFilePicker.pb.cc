@@ -111,7 +111,7 @@ class Msg_Open::_Internal {
     (*has_bits)[0] |= 32u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x000000ff) ^ 0x000000ff) != 0;
+    return ((has_bits[0] & 0x00000020) ^ 0x00000020) != 0;
   }
 };
 
@@ -311,7 +311,7 @@ const char* Msg_Open::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint32 a_selectedType = 1;
+      // optional sint32 a_selectedType = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_selectedtype(&has_bits);
@@ -320,7 +320,7 @@ const char* Msg_Open::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
         } else
           goto handle_unusual;
         continue;
-      // required bool a_addToRecentDocs = 2;
+      // optional bool a_addToRecentDocs = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_addtorecentdocs(&has_bits);
@@ -329,7 +329,7 @@ const char* Msg_Open::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
         } else
           goto handle_unusual;
         continue;
-      // required string a_defaultFile = 3;
+      // optional string a_defaultFile = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_defaultfile();
@@ -338,7 +338,7 @@ const char* Msg_Open::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
         } else
           goto handle_unusual;
         continue;
-      // required string a_defaultExtension = 4;
+      // optional string a_defaultExtension = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_defaultextension();
@@ -389,7 +389,7 @@ const char* Msg_Open::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
         } else
           goto handle_unusual;
         continue;
-      // required string a_displayDirectory = 8;
+      // optional string a_displayDirectory = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
           auto str = _internal_mutable_a_displaydirectory();
@@ -398,7 +398,7 @@ const char* Msg_Open::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
         } else
           goto handle_unusual;
         continue;
-      // required string a_displaySpecialDirectory = 9;
+      // optional string a_displaySpecialDirectory = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
           auto str = _internal_mutable_a_displayspecialdirectory();
@@ -407,7 +407,7 @@ const char* Msg_Open::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
         } else
           goto handle_unusual;
         continue;
-      // required string a_okButtonLabel = 10;
+      // optional string a_okButtonLabel = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 82)) {
           auto str = _internal_mutable_a_okbuttonlabel();
@@ -456,25 +456,25 @@ uint8_t* Msg_Open::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required sint32 a_selectedType = 1;
+  // optional sint32 a_selectedType = 1;
   if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_a_selectedtype(), target);
   }
 
-  // required bool a_addToRecentDocs = 2;
+  // optional bool a_addToRecentDocs = 2;
   if (cached_has_bits & 0x00000080u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_addtorecentdocs(), target);
   }
 
-  // required string a_defaultFile = 3;
+  // optional string a_defaultFile = 3;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_defaultfile(), target);
   }
 
-  // required string a_defaultExtension = 4;
+  // optional string a_defaultExtension = 4;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_a_defaultextension(), target);
@@ -498,19 +498,19 @@ uint8_t* Msg_Open::_InternalSerialize(
     target = stream->WriteString(7, s, target);
   }
 
-  // required string a_displayDirectory = 8;
+  // optional string a_displayDirectory = 8;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteStringMaybeAliased(
         8, this->_internal_a_displaydirectory(), target);
   }
 
-  // required string a_displaySpecialDirectory = 9;
+  // optional string a_displaySpecialDirectory = 9;
   if (cached_has_bits & 0x00000008u) {
     target = stream->WriteStringMaybeAliased(
         9, this->_internal_a_displayspecialdirectory(), target);
   }
 
-  // required string a_okButtonLabel = 10;
+  // optional string a_okButtonLabel = 10;
   if (cached_has_bits & 0x00000010u) {
     target = stream->WriteStringMaybeAliased(
         10, this->_internal_a_okbuttonlabel(), target);
@@ -530,107 +530,15 @@ uint8_t* Msg_Open::_InternalSerialize(
   return target;
 }
 
-size_t Msg_Open::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PFilePicker.Msg_Open)
-  size_t total_size = 0;
-
-  if (_internal_has_a_defaultfile()) {
-    // required string a_defaultFile = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_defaultfile());
-  }
-
-  if (_internal_has_a_defaultextension()) {
-    // required string a_defaultExtension = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_defaultextension());
-  }
-
-  if (_internal_has_a_displaydirectory()) {
-    // required string a_displayDirectory = 8;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_displaydirectory());
-  }
-
-  if (_internal_has_a_displayspecialdirectory()) {
-    // required string a_displaySpecialDirectory = 9;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_displayspecialdirectory());
-  }
-
-  if (_internal_has_a_okbuttonlabel()) {
-    // required string a_okButtonLabel = 10;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_okbuttonlabel());
-  }
-
-  if (_internal_has_a_capture()) {
-    // required bytes a_capture = 11;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_capture());
-  }
-
-  if (_internal_has_a_selectedtype()) {
-    // required sint32 a_selectedType = 1;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_selectedtype());
-  }
-
-  if (_internal_has_a_addtorecentdocs()) {
-    // required bool a_addToRecentDocs = 2;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t Msg_Open::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PFilePicker.Msg_Open)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x000000ff) ^ 0x000000ff) == 0) {  // All required fields are present.
-    // required string a_defaultFile = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_defaultfile());
-
-    // required string a_defaultExtension = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_defaultextension());
-
-    // required string a_displayDirectory = 8;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_displaydirectory());
-
-    // required string a_displaySpecialDirectory = 9;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_displayspecialdirectory());
-
-    // required string a_okButtonLabel = 10;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_okbuttonlabel());
-
-    // required bytes a_capture = 11;
+  // required bytes a_capture = 11;
+  if (_internal_has_a_capture()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_capture());
-
-    // required sint32 a_selectedType = 1;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_selectedtype());
-
-    // required bool a_addToRecentDocs = 2;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -660,6 +568,56 @@ size_t Msg_Open::ByteSizeLong() const {
       _impl_.a_rawfilters_.Get(i));
   }
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000001fu) {
+    // optional string a_defaultFile = 3;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_defaultfile());
+    }
+
+    // optional string a_defaultExtension = 4;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_defaultextension());
+    }
+
+    // optional string a_displayDirectory = 8;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_displaydirectory());
+    }
+
+    // optional string a_displaySpecialDirectory = 9;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_displayspecialdirectory());
+    }
+
+    // optional string a_okButtonLabel = 10;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_okbuttonlabel());
+    }
+
+  }
+  if (cached_has_bits & 0x000000c0u) {
+    // optional sint32 a_selectedType = 1;
+    if (cached_has_bits & 0x00000040u) {
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_selectedtype());
+    }
+
+    // optional bool a_addToRecentDocs = 2;
+    if (cached_has_bits & 0x00000080u) {
+      total_size += 1 + 1;
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }

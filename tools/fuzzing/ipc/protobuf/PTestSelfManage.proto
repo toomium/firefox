@@ -16,7 +16,7 @@ package protobuf.mozilla._ipdltest.PTestSelfManage;
 
 // Message declarations
 message Msg_PTestSelfManageConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
 }
 
 message Reply_PTestSelfManageConstructor {

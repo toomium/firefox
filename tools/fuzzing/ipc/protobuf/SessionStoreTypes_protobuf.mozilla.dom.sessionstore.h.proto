@@ -15,11 +15,11 @@ import "DOMTypes.proto";
 
 // Structs and unions declarations
 message Checkbox {
-  required bool a_value = 1;
+  optional bool a_value = 1;
 }
 
 message TextField {
-  required string a_value = 1;
+  optional string a_value = 1;
 }
 
 message FileList {
@@ -27,8 +27,8 @@ message FileList {
 }
 
 message SingleSelect {
-  required uint32 a_index = 1;
-  required string a_value = 2;
+  optional uint32 a_index = 1;
+  optional string a_value = 2;
 }
 
 message MultipleSelect {
@@ -47,19 +47,19 @@ message FormEntryValue {
 }
 
 message FormEntry {
-  required string a_id = 1;
+  optional string a_id = 1;
   required protobuf.mozilla.dom.sessionstore.FormEntryValue a_value = 2;
 }
 
 message FormData {
-  required bool a_hasData = 1;
+  optional bool a_hasData = 1;
   repeated protobuf.mozilla.dom.sessionstore.FormEntry a_id = 2;
   repeated protobuf.mozilla.dom.sessionstore.FormEntry a_xpath = 3;
-  required string a_innerHTML = 4;
-  required string a_uri = 5;
+  optional string a_innerHTML = 4;
+  optional string a_uri = 5;
 }
 
 message DocShellRestoreState {
   optional bytes a_URI = 1;
-  required string a_docShellCaps = 2;
+  optional string a_docShellCaps = 2;
 }

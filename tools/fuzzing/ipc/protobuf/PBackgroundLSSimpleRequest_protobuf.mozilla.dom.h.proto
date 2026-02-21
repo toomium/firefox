@@ -14,7 +14,7 @@ import "PBackgroundLSSharedTypes.proto";
 
 // Structs and unions declarations
 message LSSimpleRequestPreloadedResponse {
-  required bool a_preloaded = 1;
+  optional bool a_preloaded = 1;
 }
 
 message LSSimpleRequestGetStateResponse {

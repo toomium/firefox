@@ -18,11 +18,11 @@ import "PBackgroundSharedTypes.proto";
 
 // Message declarations
 message Msg_CaptureEnded {
-  required sint32 a_streamId = 1;
+  optional sint32 a_streamId = 1;
 }
 
 message Msg_DeliverFrame {
-  required sint32 a_streamId = 1;
+  optional sint32 a_streamId = 1;
   required bytes a_buffer = 2;
   required protobuf.mozilla.camera.VideoFrameProperties a_props = 3;
 }
@@ -31,15 +31,15 @@ message Msg_DeviceChange {
 }
 
 message Msg_ReplyNumberOfCaptureDevices {
-  required sint32 a_deviceCount = 1;
+  optional sint32 a_deviceCount = 1;
 }
 
 message Msg_ReplyNumberOfCapabilities {
-  required sint32 a_capabilityCount = 1;
+  optional sint32 a_capabilityCount = 1;
 }
 
 message Msg_ReplyAllocateCapture {
-  required sint32 a_captureId = 1;
+  optional sint32 a_captureId = 1;
 }
 
 message Msg_ReplyGetCaptureCapability {
@@ -47,10 +47,10 @@ message Msg_ReplyGetCaptureCapability {
 }
 
 message Msg_ReplyGetCaptureDevice {
-  required string a_device_name = 1;
-  required string a_device_id = 2;
-  required bool a_scary = 3;
-  required bool a_placeholder = 4;
+  optional string a_device_name = 1;
+  optional string a_device_id = 2;
+  optional bool a_scary = 3;
+  optional bool a_placeholder = 4;
 }
 
 message Msg_ReplyFailure {
@@ -71,45 +71,45 @@ message Msg_NumberOfCaptureDevices {
 
 message Msg_NumberOfCapabilities {
   required bytes a_engine = 1;
-  required string a_deviceUniqueIdUTF8 = 2;
+  optional string a_deviceUniqueIdUTF8 = 2;
 }
 
 message Msg_GetCaptureCapability {
   required bytes a_engine = 1;
-  required string a_unique_idUTF8 = 2;
-  required sint32 a_capability_number = 3;
+  optional string a_unique_idUTF8 = 2;
+  optional sint32 a_capability_number = 3;
 }
 
 message Msg_GetCaptureDevice {
   required bytes a_engine = 1;
-  required sint32 a_deviceIndex = 2;
+  optional sint32 a_deviceIndex = 2;
 }
 
 message Msg_AllocateCapture {
   required bytes a_engine = 1;
-  required string a_unique_idUTF8 = 2;
-  required uint64 a_windowID = 3;
+  optional string a_unique_idUTF8 = 2;
+  optional uint64 a_windowID = 3;
 }
 
 message Msg_ReleaseCapture {
   required bytes a_engine = 1;
-  required sint32 a_captureId = 2;
+  optional sint32 a_captureId = 2;
 }
 
 message Msg_StartCapture {
   required bytes a_engine = 1;
-  required sint32 a_captureId = 2;
+  optional sint32 a_captureId = 2;
   required protobuf.mozilla.camera.VideoCaptureCapability a_capability = 3;
 }
 
 message Msg_FocusOnSelectedSource {
   required bytes a_engine = 1;
-  required sint32 a_captureId = 2;
+  optional sint32 a_captureId = 2;
 }
 
 message Msg_StopCapture {
   required bytes a_engine = 1;
-  required sint32 a_captureId = 2;
+  optional sint32 a_captureId = 2;
 }
 
 message Msg_ReleaseFrame {

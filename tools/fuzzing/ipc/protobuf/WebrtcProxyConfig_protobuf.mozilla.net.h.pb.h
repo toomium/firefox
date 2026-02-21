@@ -193,7 +193,7 @@ class WebrtcProxyConfig final :
   std::string* _internal_mutable_a_tabid();
   public:
 
-  // required string a_alpn = 2;
+  // optional string a_alpn = 2;
   bool has_a_alpn() const;
   private:
   bool _internal_has_a_alpn() const;
@@ -229,7 +229,7 @@ class WebrtcProxyConfig final :
       ::protobuf::mozilla::net::LoadInfoArgs* a_loadinfoargs);
   ::protobuf::mozilla::net::LoadInfoArgs* unsafe_arena_release_a_loadinfoargs();
 
-  // required bool a_forceProxy = 4;
+  // optional bool a_forceProxy = 4;
   bool has_a_forceproxy() const;
   private:
   bool _internal_has_a_forceproxy() const;
@@ -342,7 +342,7 @@ inline void WebrtcProxyConfig::set_allocated_a_tabid(std::string* a_tabid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.WebrtcProxyConfig.a_tabId)
 }
 
-// required string a_alpn = 2;
+// optional string a_alpn = 2;
 inline bool WebrtcProxyConfig::_internal_has_a_alpn() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -497,7 +497,7 @@ inline void WebrtcProxyConfig::set_allocated_a_loadinfoargs(::protobuf::mozilla:
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.WebrtcProxyConfig.a_loadInfoArgs)
 }
 
-// required bool a_forceProxy = 4;
+// optional bool a_forceProxy = 4;
 inline bool WebrtcProxyConfig::_internal_has_a_forceproxy() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;

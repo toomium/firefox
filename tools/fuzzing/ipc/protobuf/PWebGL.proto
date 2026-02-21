@@ -38,7 +38,7 @@ message Msg_WaitForTxn {
 
 message Msg_DispatchCommands {
   required bytes a_commands = 1;
-  required uint64 a_size = 2;
+  optional uint64 a_size = 2;
 }
 
 message Msg_Ping {
@@ -55,17 +55,17 @@ message Reply_SyncPing {
 }
 
 message Msg_TexImage {
-  required uint32 a_level = 1;
-  required uint32 a_respecFormat = 2;
+  optional uint32 a_level = 1;
+  optional uint32 a_respecFormat = 2;
   required bytes a_offset = 3;
   required bytes a_pi = 4;
   required bytes a_src = 5;
 }
 
 message Msg_GetBufferSubData {
-  required uint32 a_target = 1;
-  required uint64 a_srcByteOffset = 2;
-  required uint64 a_byteSize = 3;
+  optional uint32 a_target = 1;
+  optional uint64 a_srcByteOffset = 2;
+  optional uint64 a_byteSize = 3;
 }
 
 message Reply_GetBufferSubData {
@@ -89,30 +89,30 @@ message Reply_ReadPixels {
 }
 
 message Msg_CheckFramebufferStatus {
-  required uint32 a_target = 1;
+  optional uint32 a_target = 1;
 }
 
 message Reply_CheckFramebufferStatus {
-  required uint32 a_ret = 1;
+  optional uint32 a_ret = 1;
 }
 
 message Msg_ClientWaitSync {
-  required uint64 a_id = 1;
-  required uint32 a_flags = 2;
-  required uint64 a_timeout = 3;
+  optional uint64 a_id = 1;
+  optional uint32 a_flags = 2;
+  optional uint64 a_timeout = 3;
 }
 
 message Reply_ClientWaitSync {
-  required uint32 a_ret = 1;
+  optional uint32 a_ret = 1;
 }
 
 message Msg_CreateOpaqueFramebuffer {
-  required uint64 a_id = 1;
+  optional uint64 a_id = 1;
   required bytes a_options = 2;
 }
 
 message Reply_CreateOpaqueFramebuffer {
-  required bool a_ret = 1;
+  optional bool a_ret = 1;
 }
 
 message Msg_DrawingBufferSize {
@@ -129,8 +129,8 @@ message Reply_Finish {
 }
 
 message Msg_GetBufferParameter {
-  required uint32 a_target = 1;
-  required uint32 a_pname = 2;
+  optional uint32 a_target = 1;
+  optional uint32 a_pname = 2;
 }
 
 message Reply_GetBufferParameter {
@@ -138,7 +138,7 @@ message Reply_GetBufferParameter {
 }
 
 message Msg_GetCompileResult {
-  required uint64 a_id = 1;
+  optional uint64 a_id = 1;
 }
 
 message Reply_GetCompileResult {
@@ -149,22 +149,22 @@ message Msg_GetError {
 }
 
 message Reply_GetError {
-  required uint32 a_ret = 1;
+  optional uint32 a_ret = 1;
 }
 
 message Msg_GetFragDataLocation {
-  required uint64 a_id = 1;
+  optional uint64 a_id = 1;
   required bytes a_name = 2;
 }
 
 message Reply_GetFragDataLocation {
-  required sint32 a_ret = 1;
+  optional sint32 a_ret = 1;
 }
 
 message Msg_GetFramebufferAttachmentParameter {
-  required uint64 a_id = 1;
-  required uint32 a_attachment = 2;
-  required uint32 a_pname = 3;
+  optional uint64 a_id = 1;
+  optional uint32 a_attachment = 2;
+  optional uint32 a_pname = 3;
 }
 
 message Reply_GetFramebufferAttachmentParameter {
@@ -172,8 +172,8 @@ message Reply_GetFramebufferAttachmentParameter {
 }
 
 message Msg_GetFrontBuffer {
-  required uint64 a_fb = 1;
-  required bool a_vr = 2;
+  optional uint64 a_fb = 1;
+  optional bool a_vr = 2;
 }
 
 message Reply_GetFrontBuffer {
@@ -181,8 +181,8 @@ message Reply_GetFrontBuffer {
 }
 
 message Msg_GetIndexedParameter {
-  required uint32 a_target = 1;
-  required uint32 a_index = 2;
+  optional uint32 a_target = 1;
+  optional uint32 a_index = 2;
 }
 
 message Reply_GetIndexedParameter {
@@ -190,9 +190,9 @@ message Reply_GetIndexedParameter {
 }
 
 message Msg_GetInternalformatParameter {
-  required uint32 a_target = 1;
-  required uint32 a_internalFormat = 2;
-  required uint32 a_pname = 3;
+  optional uint32 a_target = 1;
+  optional uint32 a_internalFormat = 2;
+  optional uint32 a_pname = 3;
 }
 
 message Reply_GetInternalformatParameter {
@@ -200,7 +200,7 @@ message Reply_GetInternalformatParameter {
 }
 
 message Msg_GetLinkResult {
-  required uint64 a_id = 1;
+  optional uint64 a_id = 1;
 }
 
 message Reply_GetLinkResult {
@@ -208,7 +208,7 @@ message Reply_GetLinkResult {
 }
 
 message Msg_GetNumber {
-  required uint32 a_pname = 1;
+  optional uint32 a_pname = 1;
 }
 
 message Reply_GetNumber {
@@ -216,8 +216,8 @@ message Reply_GetNumber {
 }
 
 message Msg_GetQueryParameter {
-  required uint64 a_id = 1;
-  required uint32 a_pname = 2;
+  optional uint64 a_id = 1;
+  optional uint32 a_pname = 2;
 }
 
 message Reply_GetQueryParameter {
@@ -225,8 +225,8 @@ message Reply_GetQueryParameter {
 }
 
 message Msg_GetRenderbufferParameter {
-  required uint64 a_id = 1;
-  required uint32 a_pname = 2;
+  optional uint64 a_id = 1;
+  optional uint32 a_pname = 2;
 }
 
 message Reply_GetRenderbufferParameter {
@@ -234,8 +234,8 @@ message Reply_GetRenderbufferParameter {
 }
 
 message Msg_GetSamplerParameter {
-  required uint64 a_id = 1;
-  required uint32 a_pname = 2;
+  optional uint64 a_id = 1;
+  optional uint32 a_pname = 2;
 }
 
 message Reply_GetSamplerParameter {
@@ -243,7 +243,7 @@ message Reply_GetSamplerParameter {
 }
 
 message Msg_GetString {
-  required uint32 a_pname = 1;
+  optional uint32 a_pname = 1;
 }
 
 message Reply_GetString {
@@ -251,8 +251,8 @@ message Reply_GetString {
 }
 
 message Msg_GetTexParameter {
-  required uint64 a_id = 1;
-  required uint32 a_pname = 2;
+  optional uint64 a_id = 1;
+  optional uint32 a_pname = 2;
 }
 
 message Reply_GetTexParameter {
@@ -260,8 +260,8 @@ message Reply_GetTexParameter {
 }
 
 message Msg_GetUniform {
-  required uint64 a_id = 1;
-  required uint32 a_loc = 2;
+  optional uint64 a_id = 1;
+  optional uint32 a_loc = 2;
 }
 
 message Reply_GetUniform {
@@ -269,8 +269,8 @@ message Reply_GetUniform {
 }
 
 message Msg_GetVertexAttrib {
-  required uint32 a_index = 1;
-  required uint32 a_pname = 2;
+  optional uint32 a_index = 1;
+  optional uint32 a_pname = 2;
 }
 
 message Reply_GetVertexAttrib {
@@ -284,11 +284,11 @@ message Reply_OnMemoryPressure {
 }
 
 message Msg_ValidateProgram {
-  required uint64 a_id = 1;
+  optional uint64 a_id = 1;
 }
 
 message Reply_ValidateProgram {
-  required bool a_ret = 1;
+  optional bool a_ret = 1;
 }
 
 message Msg_JsWarning {
@@ -300,7 +300,7 @@ message Msg_OnContextLoss {
 }
 
 message Msg_OnSyncComplete {
-  required uint64 a_id = 1;
+  optional uint64 a_id = 1;
 }
 
 // Parameter mappings stats:

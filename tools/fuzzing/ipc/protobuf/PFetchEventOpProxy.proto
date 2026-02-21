@@ -18,10 +18,10 @@ import "FetchTypes.proto";
 
 // Message declarations
 message Msg_AsyncLog {
-  required string a_aScriptSpec = 1;
-  required uint32 a_aLineNumber = 2;
-  required uint32 a_aColumnNumber = 3;
-  required string a_aMessageName = 4;
+  optional string a_aScriptSpec = 1;
+  optional uint32 a_aLineNumber = 2;
+  optional uint32 a_aColumnNumber = 3;
+  optional string a_aMessageName = 4;
   repeated string a_aParams = 5;
 }
 

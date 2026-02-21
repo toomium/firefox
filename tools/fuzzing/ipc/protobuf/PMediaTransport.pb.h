@@ -279,7 +279,7 @@ class Msg_GetIceLog final :
   enum : int {
     kAPatternFieldNumber = 1,
   };
-  // required string a_pattern = 1;
+  // optional string a_pattern = 1;
   bool has_a_pattern() const;
   private:
   bool _internal_has_a_pattern() const;
@@ -1469,7 +1469,7 @@ class Msg_EnsureProvisionalTransport final :
   std::string* _internal_mutable_a_localpwd();
   public:
 
-  // required sint32 a_componentCount = 4;
+  // optional sint32 a_componentCount = 4;
   bool has_a_componentcount() const;
   private:
   bool _internal_has_a_componentcount() const;
@@ -1636,7 +1636,7 @@ class Msg_SetTargetForDefaultLocalAddressLookup final :
   std::string* _internal_mutable_a_targetip();
   public:
 
-  // required uint32 a_targetPort = 2;
+  // optional uint32 a_targetPort = 2;
   bool has_a_targetport() const;
   private:
   bool _internal_has_a_targetport() const;
@@ -1652,9 +1652,6 @@ class Msg_SetTargetForDefaultLocalAddressLookup final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMediaTransport.Msg_SetTargetForDefaultLocalAddressLookup)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1802,7 +1799,7 @@ class Msg_StartIceGathering final :
   std::string* _internal_mutable_a_stunaddrs();
   public:
 
-  // required bool a_defaultRouteOnly = 1;
+  // optional bool a_defaultRouteOnly = 1;
   bool has_a_defaultrouteonly() const;
   private:
   bool _internal_has_a_defaultrouteonly() const;
@@ -1815,7 +1812,7 @@ class Msg_StartIceGathering final :
   void _internal_set_a_defaultrouteonly(bool value);
   public:
 
-  // required bool a_obfuscateHostAddresses = 2;
+  // optional bool a_obfuscateHostAddresses = 2;
   bool has_a_obfuscatehostaddresses() const;
   private:
   bool _internal_has_a_obfuscatehostaddresses() const;
@@ -1831,9 +1828,6 @@ class Msg_StartIceGathering final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMediaTransport.Msg_StartIceGathering)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2125,7 +2119,7 @@ class Msg_ActivateTransport final :
   std::string* _internal_mutable_a_digests();
   public:
 
-  // required sint32 a_componentCount = 4;
+  // optional sint32 a_componentCount = 4;
   bool has_a_componentcount() const;
   private:
   bool _internal_has_a_componentcount() const;
@@ -2138,7 +2132,7 @@ class Msg_ActivateTransport final :
   void _internal_set_a_componentcount(int32_t value);
   public:
 
-  // required sint32 a_authType = 9;
+  // optional sint32 a_authType = 9;
   bool has_a_authtype() const;
   private:
   bool _internal_has_a_authtype() const;
@@ -2151,7 +2145,7 @@ class Msg_ActivateTransport final :
   void _internal_set_a_authtype(int32_t value);
   public:
 
-  // required bool a_dtlsClient = 10;
+  // optional bool a_dtlsClient = 10;
   bool has_a_dtlsclient() const;
   private:
   bool _internal_has_a_dtlsclient() const;
@@ -2164,7 +2158,7 @@ class Msg_ActivateTransport final :
   void _internal_set_a_dtlsclient(bool value);
   public:
 
-  // required bool a_privacyRequested = 12;
+  // optional bool a_privacyRequested = 12;
   bool has_a_privacyrequested() const;
   private:
   bool _internal_has_a_privacyrequested() const;
@@ -2486,7 +2480,7 @@ class Msg_StartIceChecks final :
   std::string* _internal_mutable_a_iceoptions();
   public:
 
-  // required bool a_isControlling = 1;
+  // optional bool a_isControlling = 1;
   bool has_a_iscontrolling() const;
   private:
   bool _internal_has_a_iscontrolling() const;
@@ -2502,9 +2496,6 @@ class Msg_StartIceChecks final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMediaTransport.Msg_StartIceChecks)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3012,7 +3003,7 @@ class Msg_UpdateNetworkState final :
   enum : int {
     kAOnlineFieldNumber = 1,
   };
-  // required bool a_online = 1;
+  // optional bool a_online = 1;
   bool has_a_online() const;
   private:
   bool _internal_has_a_online() const;
@@ -3173,7 +3164,7 @@ class Msg_GetIceStats final :
   std::string* _internal_mutable_a_transportid();
   public:
 
-  // required double a_now = 2;
+  // optional double a_now = 2;
   bool has_a_now() const;
   private:
   bool _internal_has_a_now() const;
@@ -3189,9 +3180,6 @@ class Msg_GetIceStats final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMediaTransport.Msg_GetIceStats)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3802,7 +3790,7 @@ class Msg_OnGatheringStateChange final :
   std::string* _internal_mutable_a_transportid();
   public:
 
-  // required sint32 a_state = 2;
+  // optional sint32 a_state = 2;
   bool has_a_state() const;
   private:
   bool _internal_has_a_state() const;
@@ -3818,9 +3806,6 @@ class Msg_OnGatheringStateChange final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMediaTransport.Msg_OnGatheringStateChange)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3967,7 +3952,7 @@ class Msg_OnConnectionStateChange final :
   std::string* _internal_mutable_a_transportid();
   public:
 
-  // required sint32 a_state = 2;
+  // optional sint32 a_state = 2;
   bool has_a_state() const;
   private:
   bool _internal_has_a_state() const;
@@ -3983,9 +3968,6 @@ class Msg_OnConnectionStateChange final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMediaTransport.Msg_OnConnectionStateChange)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4472,7 +4454,7 @@ class Msg_OnStateChange final :
   std::string* _internal_mutable_a_transportid();
   public:
 
-  // required sint32 a_state = 2;
+  // optional sint32 a_state = 2;
   bool has_a_state() const;
   private:
   bool _internal_has_a_state() const;
@@ -4488,9 +4470,6 @@ class Msg_OnStateChange final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMediaTransport.Msg_OnStateChange)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4637,7 +4616,7 @@ class Msg_OnRtcpStateChange final :
   std::string* _internal_mutable_a_transportid();
   public:
 
-  // required sint32 a_state = 2;
+  // optional sint32 a_state = 2;
   bool has_a_state() const;
   private:
   bool _internal_has_a_state() const;
@@ -4653,9 +4632,6 @@ class Msg_OnRtcpStateChange final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMediaTransport.Msg_OnRtcpStateChange)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4680,7 +4656,7 @@ class Msg_OnRtcpStateChange final :
 #endif  // __GNUC__
 // Msg_GetIceLog
 
-// required string a_pattern = 1;
+// optional string a_pattern = 1;
 inline bool Msg_GetIceLog::_internal_has_a_pattern() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5350,7 +5326,7 @@ inline void Msg_EnsureProvisionalTransport::set_allocated_a_localpwd(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMediaTransport.Msg_EnsureProvisionalTransport.a_localPwd)
 }
 
-// required sint32 a_componentCount = 4;
+// optional sint32 a_componentCount = 4;
 inline bool Msg_EnsureProvisionalTransport::_internal_has_a_componentcount() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -5450,7 +5426,7 @@ inline void Msg_SetTargetForDefaultLocalAddressLookup::set_allocated_a_targetip(
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMediaTransport.Msg_SetTargetForDefaultLocalAddressLookup.a_targetIp)
 }
 
-// required uint32 a_targetPort = 2;
+// optional uint32 a_targetPort = 2;
 inline bool Msg_SetTargetForDefaultLocalAddressLookup::_internal_has_a_targetport() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5482,7 +5458,7 @@ inline void Msg_SetTargetForDefaultLocalAddressLookup::set_a_targetport(uint32_t
 
 // Msg_StartIceGathering
 
-// required bool a_defaultRouteOnly = 1;
+// optional bool a_defaultRouteOnly = 1;
 inline bool Msg_StartIceGathering::_internal_has_a_defaultrouteonly() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5510,7 +5486,7 @@ inline void Msg_StartIceGathering::set_a_defaultrouteonly(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMediaTransport.Msg_StartIceGathering.a_defaultRouteOnly)
 }
 
-// required bool a_obfuscateHostAddresses = 2;
+// optional bool a_obfuscateHostAddresses = 2;
 inline bool Msg_StartIceGathering::_internal_has_a_obfuscatehostaddresses() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -5814,7 +5790,7 @@ inline void Msg_ActivateTransport::set_allocated_a_localpwd(std::string* a_local
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMediaTransport.Msg_ActivateTransport.a_localPwd)
 }
 
-// required sint32 a_componentCount = 4;
+// optional sint32 a_componentCount = 4;
 inline bool Msg_ActivateTransport::_internal_has_a_componentcount() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -6072,7 +6048,7 @@ Msg_ActivateTransport::mutable_a_certder() {
   return _internal_mutable_a_certder();
 }
 
-// required sint32 a_authType = 9;
+// optional sint32 a_authType = 9;
 inline bool Msg_ActivateTransport::_internal_has_a_authtype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -6100,7 +6076,7 @@ inline void Msg_ActivateTransport::set_a_authtype(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMediaTransport.Msg_ActivateTransport.a_authType)
 }
 
-// required bool a_dtlsClient = 10;
+// optional bool a_dtlsClient = 10;
 inline bool Msg_ActivateTransport::_internal_has_a_dtlsclient() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -6196,7 +6172,7 @@ inline void Msg_ActivateTransport::set_allocated_a_digests(std::string* a_digest
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMediaTransport.Msg_ActivateTransport.a_digests)
 }
 
-// required bool a_privacyRequested = 12;
+// optional bool a_privacyRequested = 12;
 inline bool Msg_ActivateTransport::_internal_has_a_privacyrequested() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -6300,7 +6276,7 @@ inline void Msg_RemoveTransportsExcept::set_allocated_a_transportids(std::string
 
 // Msg_StartIceChecks
 
-// required bool a_isControlling = 1;
+// optional bool a_isControlling = 1;
 inline bool Msg_StartIceChecks::_internal_has_a_iscontrolling() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6816,7 +6792,7 @@ inline void Msg_AddIceCandidate::set_allocated_a_obfuscatedaddr(std::string* a_o
 
 // Msg_UpdateNetworkState
 
-// required bool a_online = 1;
+// optional bool a_online = 1;
 inline bool Msg_UpdateNetworkState::_internal_has_a_online() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6916,7 +6892,7 @@ inline void Msg_GetIceStats::set_allocated_a_transportid(std::string* a_transpor
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMediaTransport.Msg_GetIceStats.a_transportId)
 }
 
-// required double a_now = 2;
+// optional double a_now = 2;
 inline bool Msg_GetIceStats::_internal_has_a_now() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7300,7 +7276,7 @@ inline void Msg_OnGatheringStateChange::set_allocated_a_transportid(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMediaTransport.Msg_OnGatheringStateChange.a_transportId)
 }
 
-// required sint32 a_state = 2;
+// optional sint32 a_state = 2;
 inline bool Msg_OnGatheringStateChange::_internal_has_a_state() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7400,7 +7376,7 @@ inline void Msg_OnConnectionStateChange::set_allocated_a_transportid(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMediaTransport.Msg_OnConnectionStateChange.a_transportId)
 }
 
-// required sint32 a_state = 2;
+// optional sint32 a_state = 2;
 inline bool Msg_OnConnectionStateChange::_internal_has_a_state() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7780,7 +7756,7 @@ inline void Msg_OnStateChange::set_allocated_a_transportid(std::string* a_transp
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMediaTransport.Msg_OnStateChange.a_transportId)
 }
 
-// required sint32 a_state = 2;
+// optional sint32 a_state = 2;
 inline bool Msg_OnStateChange::_internal_has_a_state() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7880,7 +7856,7 @@ inline void Msg_OnRtcpStateChange::set_allocated_a_transportid(std::string* a_tr
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMediaTransport.Msg_OnRtcpStateChange.a_transportId)
 }
 
-// required sint32 a_state = 2;
+// optional sint32 a_state = 2;
 inline bool Msg_OnRtcpStateChange::_internal_has_a_state() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

@@ -798,9 +798,6 @@ class Msg_AsyncLog::_Internal {
   static void set_has_a_amessagename(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000000f) ^ 0x0000000f) != 0;
-  }
 };
 
 Msg_AsyncLog::Msg_AsyncLog(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -919,7 +916,7 @@ const char* Msg_AsyncLog::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aScriptSpec = 1;
+      // optional string a_aScriptSpec = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_ascriptspec();
@@ -928,7 +925,7 @@ const char* Msg_AsyncLog::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_aLineNumber = 2;
+      // optional uint32 a_aLineNumber = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_alinenumber(&has_bits);
@@ -937,7 +934,7 @@ const char* Msg_AsyncLog::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_aColumnNumber = 3;
+      // optional uint32 a_aColumnNumber = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_acolumnnumber(&has_bits);
@@ -946,7 +943,7 @@ const char* Msg_AsyncLog::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
         } else
           goto handle_unusual;
         continue;
-      // required string a_aMessageName = 4;
+      // optional string a_aMessageName = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_amessagename();
@@ -1000,25 +997,25 @@ uint8_t* Msg_AsyncLog::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aScriptSpec = 1;
+  // optional string a_aScriptSpec = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_ascriptspec(), target);
   }
 
-  // required uint32 a_aLineNumber = 2;
+  // optional uint32 a_aLineNumber = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_alinenumber(), target);
   }
 
-  // required uint32 a_aColumnNumber = 3;
+  // optional uint32 a_aColumnNumber = 3;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_acolumnnumber(), target);
   }
 
-  // required string a_aMessageName = 4;
+  // optional string a_aMessageName = 4;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_a_amessagename(), target);
@@ -1038,60 +1035,10 @@ uint8_t* Msg_AsyncLog::_InternalSerialize(
   return target;
 }
 
-size_t Msg_AsyncLog::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PFetchEventOp.Msg_AsyncLog)
-  size_t total_size = 0;
-
-  if (_internal_has_a_ascriptspec()) {
-    // required string a_aScriptSpec = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_ascriptspec());
-  }
-
-  if (_internal_has_a_amessagename()) {
-    // required string a_aMessageName = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_amessagename());
-  }
-
-  if (_internal_has_a_alinenumber()) {
-    // required uint32 a_aLineNumber = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_alinenumber());
-  }
-
-  if (_internal_has_a_acolumnnumber()) {
-    // required uint32 a_aColumnNumber = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acolumnnumber());
-  }
-
-  return total_size;
-}
 size_t Msg_AsyncLog::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PFetchEventOp.Msg_AsyncLog)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required string a_aScriptSpec = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_ascriptspec());
-
-    // required string a_aMessageName = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_amessagename());
-
-    // required uint32 a_aLineNumber = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_alinenumber());
-
-    // required uint32 a_aColumnNumber = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acolumnnumber());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1104,6 +1051,33 @@ size_t Msg_AsyncLog::ByteSizeLong() const {
       _impl_.a_aparams_.Get(i));
   }
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000000fu) {
+    // optional string a_aScriptSpec = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_ascriptspec());
+    }
+
+    // optional string a_aMessageName = 4;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_amessagename());
+    }
+
+    // optional uint32 a_aLineNumber = 2;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_alinenumber());
+    }
+
+    // optional uint32 a_aColumnNumber = 3;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acolumnnumber());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -1153,7 +1127,6 @@ void Msg_AsyncLog::CopyFrom(const Msg_AsyncLog& from) {
 }
 
 bool Msg_AsyncLog::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 

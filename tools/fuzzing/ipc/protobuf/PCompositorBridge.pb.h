@@ -922,7 +922,7 @@ class Msg_ObserveLayersUpdate final :
   std::string* _internal_mutable_a_alayersid();
   public:
 
-  // required bool a_aActive = 2;
+  // optional bool a_aActive = 2;
   bool has_a_aactive() const;
   private:
   bool _internal_has_a_aactive() const;
@@ -938,9 +938,6 @@ class Msg_ObserveLayersUpdate final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PCompositorBridge.Msg_ObserveLayersUpdate)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1676,7 +1673,7 @@ class Msg_PCompositorWidgetConstructor final :
       ::protobuf::mozilla::widget::CompositorWidgetInitData* a_ainitdata);
   ::protobuf::mozilla::widget::CompositorWidgetInitData* unsafe_arena_release_a_ainitdata();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -1692,9 +1689,6 @@ class Msg_PCompositorWidgetConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PCompositorBridge.Msg_PCompositorWidgetConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2236,7 +2230,7 @@ class Msg_PAPZConstructor final :
   std::string* _internal_mutable_a_layersid();
   public:
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -2252,9 +2246,6 @@ class Msg_PAPZConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PCompositorBridge.Msg_PAPZConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2525,7 +2516,7 @@ class Msg_PAPZCTreeManagerConstructor final :
   std::string* _internal_mutable_a_layersid();
   public:
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -2541,9 +2532,6 @@ class Msg_PAPZCTreeManagerConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PCompositorBridge.Msg_PAPZCTreeManagerConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5652,7 +5640,7 @@ class Msg_StartFrameTimeRecording final :
   enum : int {
     kABufferSizeFieldNumber = 1,
   };
-  // required sint32 a_bufferSize = 1;
+  // optional sint32 a_bufferSize = 1;
   bool has_a_buffersize() const;
   private:
   bool _internal_has_a_buffersize() const;
@@ -5794,7 +5782,7 @@ class Reply_StartFrameTimeRecording final :
   enum : int {
     kAStartIndexFieldNumber = 1,
   };
-  // required uint32 a_startIndex = 1;
+  // optional uint32 a_startIndex = 1;
   bool has_a_startindex() const;
   private:
   bool _internal_has_a_startindex() const;
@@ -5936,7 +5924,7 @@ class Msg_StopFrameTimeRecording final :
   enum : int {
     kAStartIndexFieldNumber = 1,
   };
-  // required uint32 a_startIndex = 1;
+  // optional uint32 a_startIndex = 1;
   bool has_a_startindex() const;
   private:
   bool _internal_has_a_startindex() const;
@@ -6343,7 +6331,7 @@ class Msg_PTextureConstructor final :
       ::protobuf::mozilla::layers::ReadLockDescriptor* a_areadlock);
   ::protobuf::mozilla::layers::ReadLockDescriptor* unsafe_arena_release_a_areadlock();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -6356,7 +6344,7 @@ class Msg_PTextureConstructor final :
   void _internal_set_a_actorid(int64_t value);
   public:
 
-  // required uint64 a_aSerial = 7;
+  // optional uint64 a_aSerial = 7;
   bool has_a_aserial() const;
   private:
   bool _internal_has_a_aserial() const;
@@ -6937,7 +6925,7 @@ class Msg_PWebRenderBridgeConstructor final :
   std::string* _internal_mutable_a_akind();
   public:
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -7209,7 +7197,7 @@ class Msg_CheckContentOnlyTDR final :
   enum : int {
     kASequenceNumFieldNumber = 1,
   };
-  // required uint32 a_sequenceNum = 1;
+  // optional uint32 a_sequenceNum = 1;
   bool has_a_sequencenum() const;
   private:
   bool _internal_has_a_sequencenum() const;
@@ -7351,7 +7339,7 @@ class Reply_CheckContentOnlyTDR final :
   enum : int {
     kAIsContentOnlyTDRFieldNumber = 1,
   };
-  // required bool a_isContentOnlyTDR = 1;
+  // optional bool a_isContentOnlyTDR = 1;
   bool has_a_iscontentonlytdr() const;
   private:
   bool _internal_has_a_iscontentonlytdr() const;
@@ -7640,7 +7628,7 @@ class Reply_BeginRecording final :
   enum : int {
     kASuccessFieldNumber = 1,
   };
-  // required bool a_success = 1;
+  // optional bool a_success = 1;
   bool has_a_success() const;
   private:
   bool _internal_has_a_success() const;
@@ -8177,7 +8165,7 @@ class Msg_DynamicToolbarOffsetChanged final :
   enum : int {
     kAAOffsetFieldNumber = 1,
   };
-  // required sint32 a_aOffset = 1;
+  // optional sint32 a_aOffset = 1;
   bool has_a_aoffset() const;
   private:
   bool _internal_has_a_aoffset() const;
@@ -8649,7 +8637,7 @@ inline void Msg_ObserveLayersUpdate::set_allocated_a_alayersid(std::string* a_al
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PCompositorBridge.Msg_ObserveLayersUpdate.a_aLayersId)
 }
 
-// required bool a_aActive = 2;
+// optional bool a_aActive = 2;
 inline bool Msg_ObserveLayersUpdate::_internal_has_a_aactive() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8948,7 +8936,7 @@ Msg_NotifyJankedAnimations::mutable_a_ajankedanimations() {
 
 // Msg_PCompositorWidgetConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PCompositorWidgetConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -9147,7 +9135,7 @@ inline void Msg_Initialize::set_allocated_a_rootlayertreeid(std::string* a_rootl
 
 // Msg_PAPZConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PAPZConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -9251,7 +9239,7 @@ inline void Msg_PAPZConstructor::set_allocated_a_layersid(std::string* a_layersi
 
 // Msg_PAPZCTreeManagerConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PAPZCTreeManagerConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -10187,7 +10175,7 @@ inline void Msg_ForcePresent::set_allocated_a_areasons(std::string* a_areasons) 
 
 // Msg_StartFrameTimeRecording
 
-// required sint32 a_bufferSize = 1;
+// optional sint32 a_bufferSize = 1;
 inline bool Msg_StartFrameTimeRecording::_internal_has_a_buffersize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10219,7 +10207,7 @@ inline void Msg_StartFrameTimeRecording::set_a_buffersize(int32_t value) {
 
 // Reply_StartFrameTimeRecording
 
-// required uint32 a_startIndex = 1;
+// optional uint32 a_startIndex = 1;
 inline bool Reply_StartFrameTimeRecording::_internal_has_a_startindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10251,7 +10239,7 @@ inline void Reply_StartFrameTimeRecording::set_a_startindex(uint32_t value) {
 
 // Msg_StopFrameTimeRecording
 
-// required uint32 a_startIndex = 1;
+// optional uint32 a_startIndex = 1;
 inline bool Msg_StopFrameTimeRecording::_internal_has_a_startindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10334,7 +10322,7 @@ Reply_StopFrameTimeRecording::mutable_a_intervals() {
 
 // Msg_PTextureConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PTextureConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -10740,7 +10728,7 @@ inline void Msg_PTextureConstructor::set_allocated_a_id(std::string* a_id) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PCompositorBridge.Msg_PTextureConstructor.a_id)
 }
 
-// required uint64 a_aSerial = 7;
+// optional uint64 a_aSerial = 7;
 inline bool Msg_PTextureConstructor::_internal_has_a_aserial() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -10852,7 +10840,7 @@ inline void Msg_PTextureConstructor::set_allocated_a_aexternalimageid(std::strin
 
 // Msg_PWebRenderBridgeConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PWebRenderBridgeConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -11092,7 +11080,7 @@ inline void Msg_PWebRenderBridgeConstructor::set_allocated_a_akind(std::string* 
 
 // Msg_CheckContentOnlyTDR
 
-// required uint32 a_sequenceNum = 1;
+// optional uint32 a_sequenceNum = 1;
 inline bool Msg_CheckContentOnlyTDR::_internal_has_a_sequencenum() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11124,7 +11112,7 @@ inline void Msg_CheckContentOnlyTDR::set_a_sequencenum(uint32_t value) {
 
 // Reply_CheckContentOnlyTDR
 
-// required bool a_isContentOnlyTDR = 1;
+// optional bool a_isContentOnlyTDR = 1;
 inline bool Reply_CheckContentOnlyTDR::_internal_has_a_iscontentonlytdr() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11228,7 +11216,7 @@ inline void Msg_BeginRecording::set_allocated_a_arecordingstart(std::string* a_a
 
 // Reply_BeginRecording
 
-// required bool a_success = 1;
+// optional bool a_success = 1;
 inline bool Reply_BeginRecording::_internal_has_a_success() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11359,7 +11347,7 @@ inline void Reply_EndRecording::set_allocated_a_recording(::protobuf::mozilla::l
 
 // Msg_DynamicToolbarOffsetChanged
 
-// required sint32 a_aOffset = 1;
+// optional sint32 a_aOffset = 1;
 inline bool Msg_DynamicToolbarOffsetChanged::_internal_has_a_aoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

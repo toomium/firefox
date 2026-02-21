@@ -216,7 +216,7 @@ class WebProgressData final :
   std::string* _internal_mutable_a_browsingcontext();
   public:
 
-  // required uint32 a_loadType = 2;
+  // optional uint32 a_loadType = 2;
   bool has_a_loadtype() const;
   private:
   bool _internal_has_a_loadtype() const;
@@ -232,9 +232,6 @@ class WebProgressData final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.WebProgressData)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -401,7 +398,7 @@ class RequestData final :
   std::string* _internal_mutable_a_originalrequesturi();
   public:
 
-  // required string a_matchedList = 3;
+  // optional string a_matchedList = 3;
   bool has_a_matchedlist() const;
   private:
   bool _internal_has_a_matchedlist() const;
@@ -419,7 +416,7 @@ class RequestData final :
   std::string* _internal_mutable_a_matchedlist();
   public:
 
-  // required string a_canceledReason = 4;
+  // optional string a_canceledReason = 4;
   bool has_a_canceledreason() const;
   private:
   bool _internal_has_a_canceledreason() const;
@@ -440,9 +437,6 @@ class RequestData final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.RequestData)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -576,7 +570,7 @@ class WebProgressStateChangeData final :
     kAIsNavigatingFieldNumber = 1,
     kAMayEnableCharacterEncodingMenuFieldNumber = 2,
   };
-  // required string a_contentType = 3;
+  // optional string a_contentType = 3;
   bool has_a_contenttype() const;
   private:
   bool _internal_has_a_contenttype() const;
@@ -594,7 +588,7 @@ class WebProgressStateChangeData final :
   std::string* _internal_mutable_a_contenttype();
   public:
 
-  // required string a_charset = 4;
+  // optional string a_charset = 4;
   bool has_a_charset() const;
   private:
   bool _internal_has_a_charset() const;
@@ -630,7 +624,7 @@ class WebProgressStateChangeData final :
   std::string* _internal_mutable_a_documenturi();
   public:
 
-  // required bool a_isNavigating = 1;
+  // optional bool a_isNavigating = 1;
   bool has_a_isnavigating() const;
   private:
   bool _internal_has_a_isnavigating() const;
@@ -643,7 +637,7 @@ class WebProgressStateChangeData final :
   void _internal_set_a_isnavigating(bool value);
   public:
 
-  // required bool a_mayEnableCharacterEncodingMenu = 2;
+  // optional bool a_mayEnableCharacterEncodingMenu = 2;
   bool has_a_mayenablecharacterencodingmenu() const;
   private:
   bool _internal_has_a_mayenablecharacterencodingmenu() const;
@@ -659,9 +653,6 @@ class WebProgressStateChangeData final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.WebProgressStateChangeData)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -803,7 +794,7 @@ class WebProgressLocationChangeData final :
     kAIsSyntheticDocumentFieldNumber = 2,
     kAMayEnableCharacterEncodingMenuFieldNumber = 3,
   };
-  // required string a_contentType = 4;
+  // optional string a_contentType = 4;
   bool has_a_contenttype() const;
   private:
   bool _internal_has_a_contenttype() const;
@@ -821,7 +812,7 @@ class WebProgressLocationChangeData final :
   std::string* _internal_mutable_a_contenttype();
   public:
 
-  // required string a_title = 5;
+  // optional string a_title = 5;
   bool has_a_title() const;
   private:
   bool _internal_has_a_title() const;
@@ -839,7 +830,7 @@ class WebProgressLocationChangeData final :
   std::string* _internal_mutable_a_title();
   public:
 
-  // required string a_charset = 6;
+  // optional string a_charset = 6;
   bool has_a_charset() const;
   private:
   bool _internal_has_a_charset() const;
@@ -960,7 +951,7 @@ class WebProgressLocationChangeData final :
   void _internal_set_a_requestcontextid(uint64_t value);
   public:
 
-  // required bool a_isNavigating = 1;
+  // optional bool a_isNavigating = 1;
   bool has_a_isnavigating() const;
   private:
   bool _internal_has_a_isnavigating() const;
@@ -973,7 +964,7 @@ class WebProgressLocationChangeData final :
   void _internal_set_a_isnavigating(bool value);
   public:
 
-  // required bool a_isSyntheticDocument = 2;
+  // optional bool a_isSyntheticDocument = 2;
   bool has_a_issyntheticdocument() const;
   private:
   bool _internal_has_a_issyntheticdocument() const;
@@ -986,7 +977,7 @@ class WebProgressLocationChangeData final :
   void _internal_set_a_issyntheticdocument(bool value);
   public:
 
-  // required bool a_mayEnableCharacterEncodingMenu = 3;
+  // optional bool a_mayEnableCharacterEncodingMenu = 3;
   bool has_a_mayenablecharacterencodingmenu() const;
   private:
   bool _internal_has_a_mayenablecharacterencodingmenu() const;
@@ -1002,9 +993,6 @@ class WebProgressLocationChangeData final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.WebProgressLocationChangeData)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1149,7 +1137,7 @@ class PrintPreviewResultInfo final :
     kAPageWidthFieldNumber = 7,
     kAPageHeightFieldNumber = 8,
   };
-  // required uint32 a_sheetCount = 1;
+  // optional uint32 a_sheetCount = 1;
   bool has_a_sheetcount() const;
   private:
   bool _internal_has_a_sheetcount() const;
@@ -1162,7 +1150,7 @@ class PrintPreviewResultInfo final :
   void _internal_set_a_sheetcount(uint32_t value);
   public:
 
-  // required uint32 a_totalPageCount = 2;
+  // optional uint32 a_totalPageCount = 2;
   bool has_a_totalpagecount() const;
   private:
   bool _internal_has_a_totalpagecount() const;
@@ -1175,7 +1163,7 @@ class PrintPreviewResultInfo final :
   void _internal_set_a_totalpagecount(uint32_t value);
   public:
 
-  // required bool a_isEmpty = 3;
+  // optional bool a_isEmpty = 3;
   bool has_a_isempty() const;
   private:
   bool _internal_has_a_isempty() const;
@@ -1188,7 +1176,7 @@ class PrintPreviewResultInfo final :
   void _internal_set_a_isempty(bool value);
   public:
 
-  // required bool a_hasSelection = 4;
+  // optional bool a_hasSelection = 4;
   bool has_a_hasselection() const;
   private:
   bool _internal_has_a_hasselection() const;
@@ -1201,7 +1189,7 @@ class PrintPreviewResultInfo final :
   void _internal_set_a_hasselection(bool value);
   public:
 
-  // required bool a_hasSelfSelection = 5;
+  // optional bool a_hasSelfSelection = 5;
   bool has_a_hasselfselection() const;
   private:
   bool _internal_has_a_hasselfselection() const;
@@ -1256,9 +1244,6 @@ class PrintPreviewResultInfo final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PrintPreviewResultInfo)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1357,7 +1342,7 @@ inline void WebProgressData::set_allocated_a_browsingcontext(std::string* a_brow
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebProgressData.a_browsingContext)
 }
 
-// required uint32 a_loadType = 2;
+// optional uint32 a_loadType = 2;
 inline bool WebProgressData::_internal_has_a_loadtype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1525,7 +1510,7 @@ inline void RequestData::set_allocated_a_originalrequesturi(std::string* a_origi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RequestData.a_originalRequestURI)
 }
 
-// required string a_matchedList = 3;
+// optional string a_matchedList = 3;
 inline bool RequestData::_internal_has_a_matchedlist() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1593,7 +1578,7 @@ inline void RequestData::set_allocated_a_matchedlist(std::string* a_matchedlist)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RequestData.a_matchedList)
 }
 
-// required string a_canceledReason = 4;
+// optional string a_canceledReason = 4;
 inline bool RequestData::_internal_has_a_canceledreason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1665,7 +1650,7 @@ inline void RequestData::set_allocated_a_canceledreason(std::string* a_canceledr
 
 // WebProgressStateChangeData
 
-// required bool a_isNavigating = 1;
+// optional bool a_isNavigating = 1;
 inline bool WebProgressStateChangeData::_internal_has_a_isnavigating() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1693,7 +1678,7 @@ inline void WebProgressStateChangeData::set_a_isnavigating(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebProgressStateChangeData.a_isNavigating)
 }
 
-// required bool a_mayEnableCharacterEncodingMenu = 2;
+// optional bool a_mayEnableCharacterEncodingMenu = 2;
 inline bool WebProgressStateChangeData::_internal_has_a_mayenablecharacterencodingmenu() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -1721,7 +1706,7 @@ inline void WebProgressStateChangeData::set_a_mayenablecharacterencodingmenu(boo
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebProgressStateChangeData.a_mayEnableCharacterEncodingMenu)
 }
 
-// required string a_contentType = 3;
+// optional string a_contentType = 3;
 inline bool WebProgressStateChangeData::_internal_has_a_contenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1789,7 +1774,7 @@ inline void WebProgressStateChangeData::set_allocated_a_contenttype(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebProgressStateChangeData.a_contentType)
 }
 
-// required string a_charset = 4;
+// optional string a_charset = 4;
 inline bool WebProgressStateChangeData::_internal_has_a_charset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1929,7 +1914,7 @@ inline void WebProgressStateChangeData::set_allocated_a_documenturi(std::string*
 
 // WebProgressLocationChangeData
 
-// required bool a_isNavigating = 1;
+// optional bool a_isNavigating = 1;
 inline bool WebProgressLocationChangeData::_internal_has_a_isnavigating() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -1957,7 +1942,7 @@ inline void WebProgressLocationChangeData::set_a_isnavigating(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebProgressLocationChangeData.a_isNavigating)
 }
 
-// required bool a_isSyntheticDocument = 2;
+// optional bool a_isSyntheticDocument = 2;
 inline bool WebProgressLocationChangeData::_internal_has_a_issyntheticdocument() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
@@ -1985,7 +1970,7 @@ inline void WebProgressLocationChangeData::set_a_issyntheticdocument(bool value)
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebProgressLocationChangeData.a_isSyntheticDocument)
 }
 
-// required bool a_mayEnableCharacterEncodingMenu = 3;
+// optional bool a_mayEnableCharacterEncodingMenu = 3;
 inline bool WebProgressLocationChangeData::_internal_has_a_mayenablecharacterencodingmenu() const {
   bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
   return value;
@@ -2013,7 +1998,7 @@ inline void WebProgressLocationChangeData::set_a_mayenablecharacterencodingmenu(
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebProgressLocationChangeData.a_mayEnableCharacterEncodingMenu)
 }
 
-// required string a_contentType = 4;
+// optional string a_contentType = 4;
 inline bool WebProgressLocationChangeData::_internal_has_a_contenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2081,7 +2066,7 @@ inline void WebProgressLocationChangeData::set_allocated_a_contenttype(std::stri
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebProgressLocationChangeData.a_contentType)
 }
 
-// required string a_title = 5;
+// optional string a_title = 5;
 inline bool WebProgressLocationChangeData::_internal_has_a_title() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2149,7 +2134,7 @@ inline void WebProgressLocationChangeData::set_allocated_a_title(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebProgressLocationChangeData.a_title)
 }
 
-// required string a_charset = 6;
+// optional string a_charset = 6;
 inline bool WebProgressLocationChangeData::_internal_has_a_charset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2589,7 +2574,7 @@ inline void WebProgressLocationChangeData::set_a_requestcontextid(uint64_t value
 
 // PrintPreviewResultInfo
 
-// required uint32 a_sheetCount = 1;
+// optional uint32 a_sheetCount = 1;
 inline bool PrintPreviewResultInfo::_internal_has_a_sheetcount() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2617,7 +2602,7 @@ inline void PrintPreviewResultInfo::set_a_sheetcount(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PrintPreviewResultInfo.a_sheetCount)
 }
 
-// required uint32 a_totalPageCount = 2;
+// optional uint32 a_totalPageCount = 2;
 inline bool PrintPreviewResultInfo::_internal_has_a_totalpagecount() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2645,7 +2630,7 @@ inline void PrintPreviewResultInfo::set_a_totalpagecount(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PrintPreviewResultInfo.a_totalPageCount)
 }
 
-// required bool a_isEmpty = 3;
+// optional bool a_isEmpty = 3;
 inline bool PrintPreviewResultInfo::_internal_has_a_isempty() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2673,7 +2658,7 @@ inline void PrintPreviewResultInfo::set_a_isempty(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PrintPreviewResultInfo.a_isEmpty)
 }
 
-// required bool a_hasSelection = 4;
+// optional bool a_hasSelection = 4;
 inline bool PrintPreviewResultInfo::_internal_has_a_hasselection() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -2701,7 +2686,7 @@ inline void PrintPreviewResultInfo::set_a_hasselection(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PrintPreviewResultInfo.a_hasSelection)
 }
 
-// required bool a_hasSelfSelection = 5;
+// optional bool a_hasSelfSelection = 5;
 inline bool PrintPreviewResultInfo::_internal_has_a_hasselfselection() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;

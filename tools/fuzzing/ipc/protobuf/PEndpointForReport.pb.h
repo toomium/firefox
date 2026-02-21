@@ -178,7 +178,7 @@ class Msg___delete__ final :
   enum : int {
     kAEndpointURLFieldNumber = 1,
   };
-  // required string a_endpointURL = 1;
+  // optional string a_endpointURL = 1;
   bool has_a_endpointurl() const;
   private:
   bool _internal_has_a_endpointurl() const;
@@ -346,7 +346,7 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg___delete__
 
-// required string a_endpointURL = 1;
+// optional string a_endpointURL = 1;
 inline bool Msg___delete__::_internal_has_a_endpointurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

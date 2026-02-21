@@ -23,12 +23,12 @@ message Msg_Register {
 
 message Msg_Unregister {
   required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
-  required string a_scope = 2;
+  optional string a_scope = 2;
 }
 
 message Msg_PropagateUnregister {
   required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
-  required string a_scope = 2;
+  optional string a_scope = 2;
 }
 
 message Msg___delete__ {

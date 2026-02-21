@@ -12,18 +12,18 @@ package protobuf.mozilla.ipc;
 
 // Structs and unions declarations
 message ContentSecurityPolicy {
-  required string a_policy = 1;
-  required bool a_reportOnlyFlag = 2;
-  required bool a_deliveredViaMetaTagFlag = 3;
-  required bool a_hasRequireTrustedTypesForDirective = 4;
+  optional string a_policy = 1;
+  optional bool a_reportOnlyFlag = 2;
+  optional bool a_deliveredViaMetaTagFlag = 3;
+  optional bool a_hasRequireTrustedTypesForDirective = 4;
 }
 
 message ContentPrincipalInfo {
   required bytes a_attrs = 1;
-  required string a_originNoSuffix = 2;
-  required string a_spec = 3;
+  optional string a_originNoSuffix = 2;
+  optional string a_spec = 3;
   optional string a_domain = 4;
-  required string a_baseDomain = 5;
+  optional string a_baseDomain = 5;
 }
 
 message SystemPrincipalInfo {
@@ -31,7 +31,7 @@ message SystemPrincipalInfo {
 
 message NullPrincipalInfo {
   required bytes a_attrs = 1;
-  required string a_spec = 2;
+  optional string a_spec = 2;
 }
 
 message ExpandedPrincipalInfo {
@@ -51,14 +51,14 @@ message PrincipalInfo {
 message CSPInfo {
   repeated protobuf.mozilla.ipc.ContentSecurityPolicy a_policyInfos = 1;
   required protobuf.mozilla.ipc.PrincipalInfo a_requestPrincipalInfo = 2;
-  required string a_selfURISpec = 3;
-  required string a_referrer = 4;
-  required uint64 a_innerWindowID = 5;
+  optional string a_selfURISpec = 3;
+  optional string a_referrer = 4;
+  optional uint64 a_innerWindowID = 5;
   required bytes a_requireTrustedTypesForDirectiveState = 6;
-  required bool a_skipAllowInlineStyleCheck = 7;
+  optional bool a_skipAllowInlineStyleCheck = 7;
 }
 
 message WebTransportHash {
-  required string a_algorithm = 1;
+  optional string a_algorithm = 1;
   repeated uint32 a_value = 2;
 }

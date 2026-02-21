@@ -177,7 +177,7 @@ class IPCServerTiming final :
     kADescriptionFieldNumber = 3,
     kADurationFieldNumber = 2,
   };
-  // required string a_name = 1;
+  // optional string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -195,7 +195,7 @@ class IPCServerTiming final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required string a_description = 3;
+  // optional string a_description = 3;
   bool has_a_description() const;
   private:
   bool _internal_has_a_description() const;
@@ -213,7 +213,7 @@ class IPCServerTiming final :
   std::string* _internal_mutable_a_description();
   public:
 
-  // required double a_duration = 2;
+  // optional double a_duration = 2;
   bool has_a_duration() const;
   private:
   bool _internal_has_a_duration() const;
@@ -229,9 +229,6 @@ class IPCServerTiming final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCServerTiming)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -410,7 +407,7 @@ class IPCPerformanceTimingData final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCServerTiming >&
       a_servertiming() const;
 
-  // required string a_nextHopProtocol = 2;
+  // optional string a_nextHopProtocol = 2;
   bool has_a_nexthopprotocol() const;
   private:
   bool _internal_has_a_nexthopprotocol() const;
@@ -752,7 +749,7 @@ class IPCPerformanceTimingData final :
   std::string* _internal_mutable_a_fetchstart();
   public:
 
-  // required string a_contentType = 27;
+  // optional string a_contentType = 27;
   bool has_a_contenttype() const;
   private:
   bool _internal_has_a_contenttype() const;
@@ -788,7 +785,7 @@ class IPCPerformanceTimingData final :
   std::string* _internal_mutable_a_bodyinfoaccessallowed();
   public:
 
-  // required uint64 a_encodedBodySize = 21;
+  // optional uint64 a_encodedBodySize = 21;
   bool has_a_encodedbodysize() const;
   private:
   bool _internal_has_a_encodedbodysize() const;
@@ -801,7 +798,7 @@ class IPCPerformanceTimingData final :
   void _internal_set_a_encodedbodysize(uint64_t value);
   public:
 
-  // required uint64 a_transferSize = 22;
+  // optional uint64 a_transferSize = 22;
   bool has_a_transfersize() const;
   private:
   bool _internal_has_a_transfersize() const;
@@ -814,7 +811,7 @@ class IPCPerformanceTimingData final :
   void _internal_set_a_transfersize(uint64_t value);
   public:
 
-  // required uint64 a_decodedBodySize = 23;
+  // optional uint64 a_decodedBodySize = 23;
   bool has_a_decodedbodysize() const;
   private:
   bool _internal_has_a_decodedbodysize() const;
@@ -827,7 +824,7 @@ class IPCPerformanceTimingData final :
   void _internal_set_a_decodedbodysize(uint64_t value);
   public:
 
-  // required uint32 a_responseStatus = 24;
+  // optional uint32 a_responseStatus = 24;
   bool has_a_responsestatus() const;
   private:
   bool _internal_has_a_responsestatus() const;
@@ -840,7 +837,7 @@ class IPCPerformanceTimingData final :
   void _internal_set_a_responsestatus(uint32_t value);
   public:
 
-  // required uint32 a_redirectCount = 25;
+  // optional uint32 a_redirectCount = 25;
   bool has_a_redirectcount() const;
   private:
   bool _internal_has_a_redirectcount() const;
@@ -853,7 +850,7 @@ class IPCPerformanceTimingData final :
   void _internal_set_a_redirectcount(uint32_t value);
   public:
 
-  // required bool a_renderBlocking = 26;
+  // optional bool a_renderBlocking = 26;
   bool has_a_renderblocking() const;
   private:
   bool _internal_has_a_renderblocking() const;
@@ -866,7 +863,7 @@ class IPCPerformanceTimingData final :
   void _internal_set_a_renderblocking(bool value);
   public:
 
-  // required bool a_allRedirectsSameOrigin = 28;
+  // optional bool a_allRedirectsSameOrigin = 28;
   bool has_a_allredirectssameorigin() const;
   private:
   bool _internal_has_a_allredirectssameorigin() const;
@@ -879,7 +876,7 @@ class IPCPerformanceTimingData final :
   void _internal_set_a_allredirectssameorigin(bool value);
   public:
 
-  // required bool a_allRedirectsPassTAO = 29;
+  // optional bool a_allRedirectsPassTAO = 29;
   bool has_a_allredirectspasstao() const;
   private:
   bool _internal_has_a_allredirectspasstao() const;
@@ -892,7 +889,7 @@ class IPCPerformanceTimingData final :
   void _internal_set_a_allredirectspasstao(bool value);
   public:
 
-  // required bool a_secureConnection = 30;
+  // optional bool a_secureConnection = 30;
   bool has_a_secureconnection() const;
   private:
   bool _internal_has_a_secureconnection() const;
@@ -905,7 +902,7 @@ class IPCPerformanceTimingData final :
   void _internal_set_a_secureconnection(bool value);
   public:
 
-  // required bool a_timingAllowed = 32;
+  // optional bool a_timingAllowed = 32;
   bool has_a_timingallowed() const;
   private:
   bool _internal_has_a_timingallowed() const;
@@ -918,7 +915,7 @@ class IPCPerformanceTimingData final :
   void _internal_set_a_timingallowed(bool value);
   public:
 
-  // required bool a_initialized = 33;
+  // optional bool a_initialized = 33;
   bool has_a_initialized() const;
   private:
   bool _internal_has_a_initialized() const;
@@ -992,7 +989,7 @@ class IPCPerformanceTimingData final :
 #endif  // __GNUC__
 // IPCServerTiming
 
-// required string a_name = 1;
+// optional string a_name = 1;
 inline bool IPCServerTiming::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1060,7 +1057,7 @@ inline void IPCServerTiming::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCServerTiming.a_name)
 }
 
-// required double a_duration = 2;
+// optional double a_duration = 2;
 inline bool IPCServerTiming::_internal_has_a_duration() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1088,7 +1085,7 @@ inline void IPCServerTiming::set_a_duration(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCServerTiming.a_duration)
 }
 
-// required string a_description = 3;
+// optional string a_description = 3;
 inline bool IPCServerTiming::_internal_has_a_description() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1200,7 +1197,7 @@ IPCPerformanceTimingData::a_servertiming() const {
   return _impl_.a_servertiming_;
 }
 
-// required string a_nextHopProtocol = 2;
+// optional string a_nextHopProtocol = 2;
 inline bool IPCPerformanceTimingData::_internal_has_a_nexthopprotocol() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2492,7 +2489,7 @@ inline void IPCPerformanceTimingData::set_allocated_a_fetchstart(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.a_fetchStart)
 }
 
-// required uint64 a_encodedBodySize = 21;
+// optional uint64 a_encodedBodySize = 21;
 inline bool IPCPerformanceTimingData::_internal_has_a_encodedbodysize() const {
   bool value = (_impl_._has_bits_[0] & 0x00200000u) != 0;
   return value;
@@ -2520,7 +2517,7 @@ inline void IPCPerformanceTimingData::set_a_encodedbodysize(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_encodedBodySize)
 }
 
-// required uint64 a_transferSize = 22;
+// optional uint64 a_transferSize = 22;
 inline bool IPCPerformanceTimingData::_internal_has_a_transfersize() const {
   bool value = (_impl_._has_bits_[0] & 0x00400000u) != 0;
   return value;
@@ -2548,7 +2545,7 @@ inline void IPCPerformanceTimingData::set_a_transfersize(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_transferSize)
 }
 
-// required uint64 a_decodedBodySize = 23;
+// optional uint64 a_decodedBodySize = 23;
 inline bool IPCPerformanceTimingData::_internal_has_a_decodedbodysize() const {
   bool value = (_impl_._has_bits_[0] & 0x00800000u) != 0;
   return value;
@@ -2576,7 +2573,7 @@ inline void IPCPerformanceTimingData::set_a_decodedbodysize(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_decodedBodySize)
 }
 
-// required uint32 a_responseStatus = 24;
+// optional uint32 a_responseStatus = 24;
 inline bool IPCPerformanceTimingData::_internal_has_a_responsestatus() const {
   bool value = (_impl_._has_bits_[0] & 0x01000000u) != 0;
   return value;
@@ -2604,7 +2601,7 @@ inline void IPCPerformanceTimingData::set_a_responsestatus(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_responseStatus)
 }
 
-// required uint32 a_redirectCount = 25;
+// optional uint32 a_redirectCount = 25;
 inline bool IPCPerformanceTimingData::_internal_has_a_redirectcount() const {
   bool value = (_impl_._has_bits_[0] & 0x02000000u) != 0;
   return value;
@@ -2632,7 +2629,7 @@ inline void IPCPerformanceTimingData::set_a_redirectcount(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_redirectCount)
 }
 
-// required bool a_renderBlocking = 26;
+// optional bool a_renderBlocking = 26;
 inline bool IPCPerformanceTimingData::_internal_has_a_renderblocking() const {
   bool value = (_impl_._has_bits_[0] & 0x04000000u) != 0;
   return value;
@@ -2660,7 +2657,7 @@ inline void IPCPerformanceTimingData::set_a_renderblocking(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_renderBlocking)
 }
 
-// required string a_contentType = 27;
+// optional string a_contentType = 27;
 inline bool IPCPerformanceTimingData::_internal_has_a_contenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00080000u) != 0;
   return value;
@@ -2728,7 +2725,7 @@ inline void IPCPerformanceTimingData::set_allocated_a_contenttype(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.a_contentType)
 }
 
-// required bool a_allRedirectsSameOrigin = 28;
+// optional bool a_allRedirectsSameOrigin = 28;
 inline bool IPCPerformanceTimingData::_internal_has_a_allredirectssameorigin() const {
   bool value = (_impl_._has_bits_[0] & 0x08000000u) != 0;
   return value;
@@ -2756,7 +2753,7 @@ inline void IPCPerformanceTimingData::set_a_allredirectssameorigin(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_allRedirectsSameOrigin)
 }
 
-// required bool a_allRedirectsPassTAO = 29;
+// optional bool a_allRedirectsPassTAO = 29;
 inline bool IPCPerformanceTimingData::_internal_has_a_allredirectspasstao() const {
   bool value = (_impl_._has_bits_[0] & 0x10000000u) != 0;
   return value;
@@ -2784,7 +2781,7 @@ inline void IPCPerformanceTimingData::set_a_allredirectspasstao(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_allRedirectsPassTAO)
 }
 
-// required bool a_secureConnection = 30;
+// optional bool a_secureConnection = 30;
 inline bool IPCPerformanceTimingData::_internal_has_a_secureconnection() const {
   bool value = (_impl_._has_bits_[0] & 0x20000000u) != 0;
   return value;
@@ -2880,7 +2877,7 @@ inline void IPCPerformanceTimingData::set_allocated_a_bodyinfoaccessallowed(std:
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.a_bodyInfoAccessAllowed)
 }
 
-// required bool a_timingAllowed = 32;
+// optional bool a_timingAllowed = 32;
 inline bool IPCPerformanceTimingData::_internal_has_a_timingallowed() const {
   bool value = (_impl_._has_bits_[0] & 0x40000000u) != 0;
   return value;
@@ -2908,7 +2905,7 @@ inline void IPCPerformanceTimingData::set_a_timingallowed(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_timingAllowed)
 }
 
-// required bool a_initialized = 33;
+// optional bool a_initialized = 33;
 inline bool IPCPerformanceTimingData::_internal_has_a_initialized() const {
   bool value = (_impl_._has_bits_[0] & 0x80000000u) != 0;
   return value;

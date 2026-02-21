@@ -22,14 +22,14 @@ message Msg_GetRequest {
   required bytes a_cookieURI = 1;
   required bytes a_attrs = 2;
   optional bytes a_partitionedAttrs = 3;
-  required bool a_thirdPartyContext = 4;
-  required bool a_partitionForeign = 5;
-  required bool a_usingStorageAccess = 6;
-  required bool a_isOn3PCBExceptionList = 7;
-  required bool a_matchName = 8;
-  required string a_name = 9;
-  required string a_path = 10;
-  required bool a_onlyFirstMatch = 11;
+  optional bool a_thirdPartyContext = 4;
+  optional bool a_partitionForeign = 5;
+  optional bool a_usingStorageAccess = 6;
+  optional bool a_isOn3PCBExceptionList = 7;
+  optional bool a_matchName = 8;
+  optional string a_name = 9;
+  optional string a_path = 10;
+  optional bool a_onlyFirstMatch = 11;
 }
 
 message Reply_GetRequest {
@@ -39,46 +39,46 @@ message Reply_GetRequest {
 message Msg_SetRequest {
   required bytes a_cookieURI = 1;
   required bytes a_attrs = 2;
-  required bool a_thirdPartyContext = 3;
-  required bool a_partitionForeign = 4;
-  required bool a_usingStorageAccess = 5;
-  required bool a_isOn3PCBExceptionList = 6;
-  required string a_name = 7;
-  required string a_value = 8;
-  required bool a_session = 9;
-  required sint64 a_expires = 10;
-  required string a_domain = 11;
-  required string a_path = 12;
-  required sint32 a_sameSite = 13;
-  required bool a_partitioned = 14;
+  optional bool a_thirdPartyContext = 3;
+  optional bool a_partitionForeign = 4;
+  optional bool a_usingStorageAccess = 5;
+  optional bool a_isOn3PCBExceptionList = 6;
+  optional string a_name = 7;
+  optional string a_value = 8;
+  optional bool a_session = 9;
+  optional sint64 a_expires = 10;
+  optional string a_domain = 11;
+  optional string a_path = 12;
+  optional sint32 a_sameSite = 13;
+  optional bool a_partitioned = 14;
   required bytes a_operationId = 15;
 }
 
 message Reply_SetRequest {
-  required bool a_waitForNotification = 1;
+  optional bool a_waitForNotification = 1;
 }
 
 message Msg_DeleteRequest {
   required bytes a_cookieURI = 1;
   required bytes a_attrs = 2;
-  required bool a_thirdPartyContext = 3;
-  required bool a_partitionForeign = 4;
-  required bool a_usingStorageAccess = 5;
-  required bool a_isOn3PCBExceptionList = 6;
-  required string a_name = 7;
-  required string a_domain = 8;
-  required string a_path = 9;
-  required bool a_partitioned = 10;
+  optional bool a_thirdPartyContext = 3;
+  optional bool a_partitionForeign = 4;
+  optional bool a_usingStorageAccess = 5;
+  optional bool a_isOn3PCBExceptionList = 6;
+  optional string a_name = 7;
+  optional string a_domain = 8;
+  optional string a_path = 9;
+  optional bool a_partitioned = 10;
   required bytes a_operationID = 11;
 }
 
 message Reply_DeleteRequest {
-  required bool a_waitForNotification = 1;
+  optional bool a_waitForNotification = 1;
 }
 
 message Msg_GetSubscriptionsRequest {
   required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
-  required string a_scopeURL = 2;
+  optional string a_scopeURL = 2;
 }
 
 message Reply_GetSubscriptionsRequest {
@@ -87,13 +87,13 @@ message Reply_GetSubscriptionsRequest {
 
 message Msg_SubscribeOrUnsubscribeRequest {
   required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
-  required string a_scopeURL = 2;
+  optional string a_scopeURL = 2;
   repeated protobuf.mozilla.dom.CookieSubscription a_subscriptions = 3;
-  required bool a_subscribe = 4;
+  optional bool a_subscribe = 4;
 }
 
 message Reply_SubscribeOrUnsubscribeRequest {
-  required bool a_result = 1;
+  optional bool a_result = 1;
 }
 
 message Msg_Close {

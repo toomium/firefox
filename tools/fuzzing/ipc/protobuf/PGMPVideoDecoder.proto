@@ -19,7 +19,7 @@ import "GMPTypes.proto";
 message Msg_InitDecode {
   required bytes a_aCodecSettings = 1;
   repeated uint32 a_aCodecSpecific = 2;
-  required sint32 a_aCoreCount = 3;
+  optional sint32 a_aCoreCount = 3;
 }
 
 message Msg_GiveShmem {
@@ -29,9 +29,9 @@ message Msg_GiveShmem {
 message Msg_Decode {
   required protobuf.mozilla.gmp.GMPVideoEncodedFrameData a_aInputFrame = 1;
   required bytes a_aInputShmem = 2;
-  required bool a_aMissingFrames = 3;
+  optional bool a_aMissingFrames = 3;
   repeated uint32 a_aCodecSpecificInfo = 4;
-  required sint64 a_aRenderTimeMs = 5;
+  optional sint64 a_aRenderTimeMs = 5;
 }
 
 message Msg_Reset {
@@ -61,11 +61,11 @@ message Msg_DecodedShmem {
 }
 
 message Msg_ReceivedDecodedReferenceFrame {
-  required uint64 a_aPictureId = 1;
+  optional uint64 a_aPictureId = 1;
 }
 
 message Msg_ReceivedDecodedFrame {
-  required uint64 a_aPictureId = 1;
+  optional uint64 a_aPictureId = 1;
 }
 
 message Msg_InputDataExhausted {

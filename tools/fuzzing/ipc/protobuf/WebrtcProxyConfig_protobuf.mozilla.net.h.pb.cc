@@ -63,7 +63,7 @@ class WebrtcProxyConfig::_Internal {
     (*has_bits)[0] |= 8u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000000f) ^ 0x0000000f) != 0;
+    return ((has_bits[0] & 0x00000005) ^ 0x00000005) != 0;
   }
 };
 
@@ -198,7 +198,7 @@ const char* WebrtcProxyConfig::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required string a_alpn = 2;
+      // optional string a_alpn = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_alpn();
@@ -215,7 +215,7 @@ const char* WebrtcProxyConfig::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required bool a_forceProxy = 4;
+      // optional bool a_forceProxy = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_a_forceproxy(&has_bits);
@@ -261,7 +261,7 @@ uint8_t* WebrtcProxyConfig::_InternalSerialize(
         1, this->_internal_a_tabid(), target);
   }
 
-  // required string a_alpn = 2;
+  // optional string a_alpn = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_alpn(), target);
@@ -274,7 +274,7 @@ uint8_t* WebrtcProxyConfig::_InternalSerialize(
         _Internal::a_loadinfoargs(this).GetCachedSize(), target, stream);
   }
 
-  // required bool a_forceProxy = 4;
+  // optional bool a_forceProxy = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_a_forceproxy(), target);
@@ -299,23 +299,11 @@ size_t WebrtcProxyConfig::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_tabid());
   }
 
-  if (_internal_has_a_alpn()) {
-    // required string a_alpn = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_alpn());
-  }
-
   if (_internal_has_a_loadinfoargs()) {
     // required .protobuf.mozilla.net.LoadInfoArgs a_loadInfoArgs = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_loadinfoargs_);
-  }
-
-  if (_internal_has_a_forceproxy()) {
-    // required bool a_forceProxy = 4;
-    total_size += 1 + 1;
   }
 
   return total_size;
@@ -324,24 +312,16 @@ size_t WebrtcProxyConfig::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.WebrtcProxyConfig)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x00000005) ^ 0x00000005) == 0) {  // All required fields are present.
     // required bytes a_tabId = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_tabid());
 
-    // required string a_alpn = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_alpn());
-
     // required .protobuf.mozilla.net.LoadInfoArgs a_loadInfoArgs = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_loadinfoargs_);
-
-    // required bool a_forceProxy = 4;
-    total_size += 1 + 1;
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -349,6 +329,19 @@ size_t WebrtcProxyConfig::ByteSizeLong() const {
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional string a_alpn = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000002u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_alpn());
+  }
+
+  // optional bool a_forceProxy = 4;
+  if (cached_has_bits & 0x00000008u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();

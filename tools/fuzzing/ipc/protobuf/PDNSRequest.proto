@@ -17,10 +17,10 @@ import "PDNSRequestParams.proto";
 
 // Message declarations
 message Msg_CancelDNSRequest {
-  required string a_hostName = 1;
-  required string a_trrServer = 2;
-  required sint32 a_port = 3;
-  required uint32 a_type = 4;
+  optional string a_hostName = 1;
+  optional string a_trrServer = 2;
+  optional sint32 a_port = 3;
+  optional uint32 a_type = 4;
   required bytes a_originAttributes = 5;
   required bytes a_flags = 6;
   required bytes a_reason = 7;

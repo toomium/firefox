@@ -18,13 +18,13 @@ import "PPrintingTypes.proto";
 
 // Message declarations
 message Msg_RequestFocus {
-  required bool a_canRaise = 1;
+  optional bool a_canRaise = 1;
   required bytes a_aCallerType = 2;
 }
 
 message Msg_MoveFocus {
-  required bool a_forward = 1;
-  required bool a_forDocumentNavigation = 2;
+  optional bool a_forward = 1;
+  optional bool a_forDocumentNavigation = 2;
 }
 
 message Msg_MaybeFireEmbedderLoadEvents {
@@ -36,7 +36,7 @@ message Msg_ScrollRectIntoView {
   required bytes a_aVertical = 2;
   required bytes a_aHorizontal = 3;
   required bytes a_aScrollFlags = 4;
-  required sint32 a_aAppUnitsPerDevPixel = 5;
+  optional sint32 a_aAppUnitsPerDevPixel = 5;
 }
 
 message Msg_SubFrameCrashed {
@@ -65,7 +65,7 @@ message Msg_LoadURL {
 }
 
 message Msg_ResumeLoad {
-  required uint64 a_aPendingSwitchID = 1;
+  optional uint64 a_aPendingSwitchID = 1;
 }
 
 message Msg_Show {
@@ -82,7 +82,7 @@ message Msg_UpdateDimensions {
 }
 
 message Msg_RenderLayers {
-  required bool a_aEnabled = 1;
+  optional bool a_aEnabled = 1;
 }
 
 message Msg_UpdateEffects {
@@ -94,8 +94,8 @@ message Msg_UpdateRemotePrintSettings {
 }
 
 message Msg_NavigateByKey {
-  required bool a_aForward = 1;
-  required bool a_aForDocumentNavigation = 2;
+  optional bool a_aForward = 1;
+  optional bool a_aForDocumentNavigation = 2;
 }
 
 message Msg_DispatchSynthesizedMouseEvent {
@@ -103,12 +103,12 @@ message Msg_DispatchSynthesizedMouseEvent {
 }
 
 message Msg_Activate {
-  required uint64 a_aActionId = 1;
+  optional uint64 a_aActionId = 1;
 }
 
 message Msg_Deactivate {
-  required bool a_aWindowLowering = 1;
-  required uint64 a_aActionId = 2;
+  optional bool a_aWindowLowering = 1;
+  optional uint64 a_aActionId = 2;
 }
 
 message Msg_UpdateRemoteStyle {
@@ -120,7 +120,7 @@ message Msg_WillChangeProcess {
 
 message Msg_SetEmbedderAccessible {
   required bytes a_aDoc = 1;
-  required uint64 a_aID = 2;
+  optional uint64 a_aID = 2;
 }
 
 // Parameter mappings stats:

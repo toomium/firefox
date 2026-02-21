@@ -329,7 +329,7 @@ class Reply_Try_Success_CustomErr_QmIpcFail final :
   enum : int {
     kATryDidNotReturnFieldNumber = 1,
   };
-  // required bool a_tryDidNotReturn = 1;
+  // optional bool a_tryDidNotReturn = 1;
   bool has_a_trydidnotreturn() const;
   private:
   bool _internal_has_a_trydidnotreturn() const;
@@ -595,7 +595,7 @@ class Reply_Try_Success_CustomErr_IpcFail final :
   enum : int {
     kATryDidNotReturnFieldNumber = 1,
   };
-  // required bool a_tryDidNotReturn = 1;
+  // optional bool a_tryDidNotReturn = 1;
   bool has_a_trydidnotreturn() const;
   private:
   bool _internal_has_a_trydidnotreturn() const;
@@ -861,7 +861,7 @@ class Reply_TryInspect_Success_CustomErr_QmIpcFail final :
   enum : int {
     kATryDidNotReturnFieldNumber = 1,
   };
-  // required bool a_tryDidNotReturn = 1;
+  // optional bool a_tryDidNotReturn = 1;
   bool has_a_trydidnotreturn() const;
   private:
   bool _internal_has_a_trydidnotreturn() const;
@@ -1127,7 +1127,7 @@ class Reply_TryInspect_Success_CustomErr_IpcFail final :
   enum : int {
     kATryDidNotReturnFieldNumber = 1,
   };
-  // required bool a_tryDidNotReturn = 1;
+  // optional bool a_tryDidNotReturn = 1;
   bool has_a_trydidnotreturn() const;
   private:
   bool _internal_has_a_trydidnotreturn() const;
@@ -1170,7 +1170,7 @@ class Reply_TryInspect_Success_CustomErr_IpcFail final :
 
 // Reply_Try_Success_CustomErr_QmIpcFail
 
-// required bool a_tryDidNotReturn = 1;
+// optional bool a_tryDidNotReturn = 1;
 inline bool Reply_Try_Success_CustomErr_QmIpcFail::_internal_has_a_trydidnotreturn() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1206,7 +1206,7 @@ inline void Reply_Try_Success_CustomErr_QmIpcFail::set_a_trydidnotreturn(bool va
 
 // Reply_Try_Success_CustomErr_IpcFail
 
-// required bool a_tryDidNotReturn = 1;
+// optional bool a_tryDidNotReturn = 1;
 inline bool Reply_Try_Success_CustomErr_IpcFail::_internal_has_a_trydidnotreturn() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1242,7 +1242,7 @@ inline void Reply_Try_Success_CustomErr_IpcFail::set_a_trydidnotreturn(bool valu
 
 // Reply_TryInspect_Success_CustomErr_QmIpcFail
 
-// required bool a_tryDidNotReturn = 1;
+// optional bool a_tryDidNotReturn = 1;
 inline bool Reply_TryInspect_Success_CustomErr_QmIpcFail::_internal_has_a_trydidnotreturn() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1278,7 +1278,7 @@ inline void Reply_TryInspect_Success_CustomErr_QmIpcFail::set_a_trydidnotreturn(
 
 // Reply_TryInspect_Success_CustomErr_IpcFail
 
-// required bool a_tryDidNotReturn = 1;
+// optional bool a_tryDidNotReturn = 1;
 inline bool Reply_TryInspect_Success_CustomErr_IpcFail::_internal_has_a_trydidnotreturn() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

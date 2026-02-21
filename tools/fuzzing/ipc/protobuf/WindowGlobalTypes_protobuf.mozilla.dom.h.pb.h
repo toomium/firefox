@@ -291,7 +291,7 @@ class WindowGlobalInit final :
       ::protobuf::mozilla::net::CookieJarSettingsArgs* a_cookiejarsettings);
   ::protobuf::mozilla::net::CookieJarSettingsArgs* unsafe_arena_release_a_cookiejarsettings();
 
-  // required bool a_isInitialDocument = 5;
+  // optional bool a_isInitialDocument = 5;
   bool has_a_isinitialdocument() const;
   private:
   bool _internal_has_a_isinitialdocument() const;
@@ -304,7 +304,7 @@ class WindowGlobalInit final :
   void _internal_set_a_isinitialdocument(bool value);
   public:
 
-  // required bool a_blockAllMixedContent = 6;
+  // optional bool a_blockAllMixedContent = 6;
   bool has_a_blockallmixedcontent() const;
   private:
   bool _internal_has_a_blockallmixedcontent() const;
@@ -317,7 +317,7 @@ class WindowGlobalInit final :
   void _internal_set_a_blockallmixedcontent(bool value);
   public:
 
-  // required bool a_upgradeInsecureRequests = 7;
+  // optional bool a_upgradeInsecureRequests = 7;
   bool has_a_upgradeinsecurerequests() const;
   private:
   bool _internal_has_a_upgradeinsecurerequests() const;
@@ -330,7 +330,7 @@ class WindowGlobalInit final :
   void _internal_set_a_upgradeinsecurerequests(bool value);
   public:
 
-  // required uint32 a_sandboxFlags = 8;
+  // optional uint32 a_sandboxFlags = 8;
   bool has_a_sandboxflags() const;
   private:
   bool _internal_has_a_sandboxflags() const;
@@ -343,7 +343,7 @@ class WindowGlobalInit final :
   void _internal_set_a_sandboxflags(uint32_t value);
   public:
 
-  // required uint32 a_httpsOnlyStatus = 10;
+  // optional uint32 a_httpsOnlyStatus = 10;
   bool has_a_httpsonlystatus() const;
   private:
   bool _internal_has_a_httpsonlystatus() const;
@@ -667,7 +667,7 @@ inline void WindowGlobalInit::set_allocated_a_documenturi(std::string* a_documen
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WindowGlobalInit.a_documentURI)
 }
 
-// required bool a_isInitialDocument = 5;
+// optional bool a_isInitialDocument = 5;
 inline bool WindowGlobalInit::_internal_has_a_isinitialdocument() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -695,7 +695,7 @@ inline void WindowGlobalInit::set_a_isinitialdocument(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WindowGlobalInit.a_isInitialDocument)
 }
 
-// required bool a_blockAllMixedContent = 6;
+// optional bool a_blockAllMixedContent = 6;
 inline bool WindowGlobalInit::_internal_has_a_blockallmixedcontent() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -723,7 +723,7 @@ inline void WindowGlobalInit::set_a_blockallmixedcontent(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WindowGlobalInit.a_blockAllMixedContent)
 }
 
-// required bool a_upgradeInsecureRequests = 7;
+// optional bool a_upgradeInsecureRequests = 7;
 inline bool WindowGlobalInit::_internal_has_a_upgradeinsecurerequests() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -751,7 +751,7 @@ inline void WindowGlobalInit::set_a_upgradeinsecurerequests(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WindowGlobalInit.a_upgradeInsecureRequests)
 }
 
-// required uint32 a_sandboxFlags = 8;
+// optional uint32 a_sandboxFlags = 8;
 inline bool WindowGlobalInit::_internal_has_a_sandboxflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -866,7 +866,7 @@ inline void WindowGlobalInit::set_allocated_a_cookiejarsettings(::protobuf::mozi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WindowGlobalInit.a_cookieJarSettings)
 }
 
-// required uint32 a_httpsOnlyStatus = 10;
+// optional uint32 a_httpsOnlyStatus = 10;
 inline bool WindowGlobalInit::_internal_has_a_httpsonlystatus() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;

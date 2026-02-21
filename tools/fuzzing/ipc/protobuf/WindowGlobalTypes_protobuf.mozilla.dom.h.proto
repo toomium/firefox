@@ -19,11 +19,11 @@ message WindowGlobalInit {
   optional bytes a_principal = 2;
   optional bytes a_storagePrincipal = 3;
   optional bytes a_documentURI = 4;
-  required bool a_isInitialDocument = 5;
-  required bool a_blockAllMixedContent = 6;
-  required bool a_upgradeInsecureRequests = 7;
-  required uint32 a_sandboxFlags = 8;
+  optional bool a_isInitialDocument = 5;
+  optional bool a_blockAllMixedContent = 6;
+  optional bool a_upgradeInsecureRequests = 7;
+  optional uint32 a_sandboxFlags = 8;
   required protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 9;
-  required uint32 a_httpsOnlyStatus = 10;
+  optional uint32 a_httpsOnlyStatus = 10;
   optional bytes a_securityInfo = 11;
 }

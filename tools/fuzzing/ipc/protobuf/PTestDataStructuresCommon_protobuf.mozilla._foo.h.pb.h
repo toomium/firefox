@@ -471,7 +471,7 @@ class SIntDouble final :
     kADFieldNumber = 2,
     kAIFieldNumber = 1,
   };
-  // required double a_d = 2;
+  // optional double a_d = 2;
   bool has_a_d() const;
   private:
   bool _internal_has_a_d() const;
@@ -484,7 +484,7 @@ class SIntDouble final :
   void _internal_set_a_d(double value);
   public:
 
-  // required sint32 a_i = 1;
+  // optional sint32 a_i = 1;
   bool has_a_i() const;
   private:
   bool _internal_has_a_i() const;
@@ -500,9 +500,6 @@ class SIntDouble final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.SIntDouble)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1181,7 +1178,7 @@ class SIntDoubleArrays final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >*
       mutable_a_ad();
 
-  // required sint32 a_i = 1;
+  // optional sint32 a_i = 1;
   bool has_a_i() const;
   private:
   bool _internal_has_a_i() const;
@@ -2027,7 +2024,7 @@ class SActors final :
   std::string* _internal_add_a_ap();
   public:
 
-  // required sint32 a_i = 1;
+  // optional sint32 a_i = 1;
   bool has_a_i() const;
   private:
   bool _internal_has_a_i() const;
@@ -2914,7 +2911,7 @@ class Structs final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::SActors >&
       a_aa() const;
 
-  // required sint32 a_i = 1;
+  // optional sint32 a_i = 1;
   bool has_a_i() const;
   private:
   bool _internal_has_a_i() const;
@@ -3990,7 +3987,7 @@ class WithUnions final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::Unions >&
       a_au() const;
 
-  // required sint32 a_i = 1;
+  // optional sint32 a_i = 1;
   bool has_a_i() const;
   private:
   bool _internal_has_a_i() const;
@@ -4136,7 +4133,7 @@ class CommonAttrs final :
   enum : int {
     kADummyFieldNumber = 1,
   };
-  // required bool a_dummy = 1;
+  // optional bool a_dummy = 1;
   bool has_a_dummy() const;
   private:
   bool _internal_has_a_dummy() const;
@@ -4278,7 +4275,7 @@ class FooAttrs final :
   enum : int {
     kADummyFieldNumber = 1,
   };
-  // required sint32 a_dummy = 1;
+  // optional sint32 a_dummy = 1;
   bool has_a_dummy() const;
   private:
   bool _internal_has_a_dummy() const;
@@ -4420,7 +4417,7 @@ class BarAttrs final :
   enum : int {
     kADummyFieldNumber = 1,
   };
-  // required float a_dummy = 1;
+  // optional float a_dummy = 1;
   bool has_a_dummy() const;
   private:
   bool _internal_has_a_dummy() const;
@@ -5291,7 +5288,7 @@ class ShmemStruct final :
   std::string* _internal_mutable_a_mem();
   public:
 
-  // required sint32 a_i = 1;
+  // optional sint32 a_i = 1;
   bool has_a_i() const;
   private:
   bool _internal_has_a_i() const;
@@ -5307,9 +5304,6 @@ class ShmemStruct final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.ShmemStruct)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5727,7 +5721,7 @@ inline IntDouble::ContentCase IntDouble::content_case() const {
 
 // SIntDouble
 
-// required sint32 a_i = 1;
+// optional sint32 a_i = 1;
 inline bool SIntDouble::_internal_has_a_i() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5755,7 +5749,7 @@ inline void SIntDouble::set_a_i(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.SIntDouble.a_i)
 }
 
-// required double a_d = 2;
+// optional double a_d = 2;
 inline bool SIntDouble::_internal_has_a_d() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6088,7 +6082,7 @@ inline IntDoubleArrays::ContentCase IntDoubleArrays::content_case() const {
 
 // SIntDoubleArrays
 
-// required sint32 a_i = 1;
+// optional sint32 a_i = 1;
 inline bool SIntDoubleArrays::_internal_has_a_i() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6615,7 +6609,7 @@ inline Actors::ContentCase Actors::content_case() const {
 
 // SActors
 
-// required sint32 a_i = 1;
+// optional sint32 a_i = 1;
 inline bool SActors::_internal_has_a_i() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7216,7 +7210,7 @@ inline Unions::ContentCase Unions::content_case() const {
 
 // Structs
 
-// required sint32 a_i = 1;
+// optional sint32 a_i = 1;
 inline bool Structs::_internal_has_a_i() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7975,7 +7969,7 @@ inline WithStructs::ContentCase WithStructs::content_case() const {
 
 // WithUnions
 
-// required sint32 a_i = 1;
+// optional sint32 a_i = 1;
 inline bool WithUnions::_internal_has_a_i() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8209,7 +8203,7 @@ WithUnions::a_au() const {
 
 // CommonAttrs
 
-// required bool a_dummy = 1;
+// optional bool a_dummy = 1;
 inline bool CommonAttrs::_internal_has_a_dummy() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8241,7 +8235,7 @@ inline void CommonAttrs::set_a_dummy(bool value) {
 
 // FooAttrs
 
-// required sint32 a_dummy = 1;
+// optional sint32 a_dummy = 1;
 inline bool FooAttrs::_internal_has_a_dummy() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8273,7 +8267,7 @@ inline void FooAttrs::set_a_dummy(int32_t value) {
 
 // BarAttrs
 
-// required float a_dummy = 1;
+// optional float a_dummy = 1;
 inline bool BarAttrs::_internal_has_a_dummy() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8976,7 +8970,7 @@ inline Op::ContentCase Op::content_case() const {
 
 // ShmemStruct
 
-// required sint32 a_i = 1;
+// optional sint32 a_i = 1;
 inline bool ShmemStruct::_internal_has_a_i() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

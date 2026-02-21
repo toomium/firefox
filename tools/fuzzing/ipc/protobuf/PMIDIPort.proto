@@ -37,8 +37,8 @@ message Msg_Receive {
 }
 
 message Msg_UpdateStatus {
-  required uint32 a_deviceState = 1;
-  required uint32 a_connectionState = 2;
+  optional uint32 a_deviceState = 1;
+  optional uint32 a_connectionState = 2;
 }
 
 // Parameter mappings stats:

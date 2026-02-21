@@ -696,7 +696,7 @@ class Msg_HistoryChange final :
       ::protobuf::mozilla::extensions::FrameTransitionData* a_transitiondata);
   ::protobuf::mozilla::extensions::FrameTransitionData* unsafe_arena_release_a_transitiondata();
 
-  // required bool a_isHistoryStateUpdated = 4;
+  // optional bool a_isHistoryStateUpdated = 4;
   bool has_a_ishistorystateupdated() const;
   private:
   bool _internal_has_a_ishistorystateupdated() const;
@@ -709,7 +709,7 @@ class Msg_HistoryChange final :
   void _internal_set_a_ishistorystateupdated(bool value);
   public:
 
-  // required bool a_isReferenceFragmentUpdated = 5;
+  // optional bool a_isReferenceFragmentUpdated = 5;
   bool has_a_isreferencefragmentupdated() const;
   private:
   bool _internal_has_a_isreferencefragmentupdated() const;
@@ -915,7 +915,7 @@ class Msg_StateChange final :
   std::string* _internal_mutable_a_status();
   public:
 
-  // required uint32 a_stateFlags = 4;
+  // optional uint32 a_stateFlags = 4;
   bool has_a_stateflags() const;
   private:
   bool _internal_has_a_stateflags() const;
@@ -1101,7 +1101,7 @@ class Msg_CreatedNavigationTarget final :
   std::string* _internal_mutable_a_sourcebc();
   public:
 
-  // required string a_url = 3;
+  // optional string a_url = 3;
   bool has_a_url() const;
   private:
   bool _internal_has_a_url() const;
@@ -1775,7 +1775,7 @@ inline void Msg_HistoryChange::set_allocated_a_location(std::string* a_location)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.a_location)
 }
 
-// required bool a_isHistoryStateUpdated = 4;
+// optional bool a_isHistoryStateUpdated = 4;
 inline bool Msg_HistoryChange::_internal_has_a_ishistorystateupdated() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1803,7 +1803,7 @@ inline void Msg_HistoryChange::set_a_ishistorystateupdated(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.a_isHistoryStateUpdated)
 }
 
-// required bool a_isReferenceFragmentUpdated = 5;
+// optional bool a_isReferenceFragmentUpdated = 5;
 inline bool Msg_HistoryChange::_internal_has_a_isreferencefragmentupdated() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -2039,7 +2039,7 @@ inline void Msg_StateChange::set_allocated_a_status(std::string* a_status) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.a_status)
 }
 
-// required uint32 a_stateFlags = 4;
+// optional uint32 a_stateFlags = 4;
 inline bool Msg_StateChange::_internal_has_a_stateflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -2207,7 +2207,7 @@ inline void Msg_CreatedNavigationTarget::set_allocated_a_sourcebc(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.a_sourceBC)
 }
 
-// required string a_url = 3;
+// optional string a_url = 3;
 inline bool Msg_CreatedNavigationTarget::_internal_has_a_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

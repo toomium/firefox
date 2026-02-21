@@ -212,7 +212,7 @@ class Msg_OpenComplete final :
     kAARecordNameFieldNumber = 1,
     kAAStatusFieldNumber = 2,
   };
-  // required string a_aRecordName = 1;
+  // optional string a_aRecordName = 1;
   bool has_a_arecordname() const;
   private:
   bool _internal_has_a_arecordname() const;
@@ -251,9 +251,6 @@ class Msg_OpenComplete final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPStorage.Msg_OpenComplete)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -405,7 +402,7 @@ class Msg_ReadComplete final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_abytes();
 
-  // required string a_aRecordName = 1;
+  // optional string a_aRecordName = 1;
   bool has_a_arecordname() const;
   private:
   bool _internal_has_a_arecordname() const;
@@ -444,9 +441,6 @@ class Msg_ReadComplete final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -576,7 +570,7 @@ class Msg_WriteComplete final :
     kAARecordNameFieldNumber = 1,
     kAAStatusFieldNumber = 2,
   };
-  // required string a_aRecordName = 1;
+  // optional string a_aRecordName = 1;
   bool has_a_arecordname() const;
   private:
   bool _internal_has_a_arecordname() const;
@@ -615,9 +609,6 @@ class Msg_WriteComplete final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPStorage.Msg_WriteComplete)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -869,7 +860,7 @@ class Msg_Open final :
   enum : int {
     kAARecordNameFieldNumber = 1,
   };
-  // required string a_aRecordName = 1;
+  // optional string a_aRecordName = 1;
   bool has_a_arecordname() const;
   private:
   bool _internal_has_a_arecordname() const;
@@ -1016,7 +1007,7 @@ class Msg_Read final :
   enum : int {
     kAARecordNameFieldNumber = 1,
   };
-  // required string a_aRecordName = 1;
+  // optional string a_aRecordName = 1;
   bool has_a_arecordname() const;
   private:
   bool _internal_has_a_arecordname() const;
@@ -1186,7 +1177,7 @@ class Msg_Write final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_abytes();
 
-  // required string a_aRecordName = 1;
+  // optional string a_aRecordName = 1;
   bool has_a_arecordname() const;
   private:
   bool _internal_has_a_arecordname() const;
@@ -1334,7 +1325,7 @@ class Msg_Close final :
   enum : int {
     kAARecordNameFieldNumber = 1,
   };
-  // required string a_aRecordName = 1;
+  // optional string a_aRecordName = 1;
   bool has_a_arecordname() const;
   private:
   bool _internal_has_a_arecordname() const;
@@ -1626,7 +1617,7 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_OpenComplete
 
-// required string a_aRecordName = 1;
+// optional string a_aRecordName = 1;
 inline bool Msg_OpenComplete::_internal_has_a_arecordname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1766,7 +1757,7 @@ inline void Msg_OpenComplete::set_allocated_a_astatus(std::string* a_astatus) {
 
 // Msg_ReadComplete
 
-// required string a_aRecordName = 1;
+// optional string a_aRecordName = 1;
 inline bool Msg_ReadComplete::_internal_has_a_arecordname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1953,7 +1944,7 @@ Msg_ReadComplete::mutable_a_abytes() {
 
 // Msg_WriteComplete
 
-// required string a_aRecordName = 1;
+// optional string a_aRecordName = 1;
 inline bool Msg_WriteComplete::_internal_has_a_arecordname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2097,7 +2088,7 @@ inline void Msg_WriteComplete::set_allocated_a_astatus(std::string* a_astatus) {
 
 // Msg_Open
 
-// required string a_aRecordName = 1;
+// optional string a_aRecordName = 1;
 inline bool Msg_Open::_internal_has_a_arecordname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2169,7 +2160,7 @@ inline void Msg_Open::set_allocated_a_arecordname(std::string* a_arecordname) {
 
 // Msg_Read
 
-// required string a_aRecordName = 1;
+// optional string a_aRecordName = 1;
 inline bool Msg_Read::_internal_has_a_arecordname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2241,7 +2232,7 @@ inline void Msg_Read::set_allocated_a_arecordname(std::string* a_arecordname) {
 
 // Msg_Write
 
-// required string a_aRecordName = 1;
+// optional string a_aRecordName = 1;
 inline bool Msg_Write::_internal_has_a_arecordname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2360,7 +2351,7 @@ Msg_Write::mutable_a_abytes() {
 
 // Msg_Close
 
-// required string a_aRecordName = 1;
+// optional string a_aRecordName = 1;
 inline bool Msg_Close::_internal_has_a_arecordname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

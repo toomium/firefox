@@ -78,9 +78,6 @@ class Msg___delete__::_Internal {
   static void set_has_a_avalidateresult(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg___delete__::Msg___delete__(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -148,7 +145,7 @@ const char* Msg___delete__::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_aValidateResult = 1;
+      // optional bool a_aValidateResult = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_avalidateresult(&has_bits);
@@ -188,7 +185,7 @@ uint8_t* Msg___delete__::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_aValidateResult = 1;
+  // optional bool a_aValidateResult = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_avalidateresult(), target);
@@ -206,13 +203,15 @@ size_t Msg___delete__::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PAltSvcTransaction.Msg___delete__)
   size_t total_size = 0;
 
-  // required bool a_aValidateResult = 1;
-  if (_internal_has_a_avalidateresult()) {
-    total_size += 1 + 1;
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_aValidateResult = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -249,7 +248,6 @@ void Msg___delete__::CopyFrom(const Msg___delete__& from) {
 }
 
 bool Msg___delete__::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -421,9 +419,6 @@ class Msg_OnTransactionClose::_Internal {
   static void set_has_a_avalidateresult(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_OnTransactionClose::Msg_OnTransactionClose(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -491,7 +486,7 @@ const char* Msg_OnTransactionClose::_InternalParse(const char* ptr, ::_pbi::Pars
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_aValidateResult = 1;
+      // optional bool a_aValidateResult = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_avalidateresult(&has_bits);
@@ -531,7 +526,7 @@ uint8_t* Msg_OnTransactionClose::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_aValidateResult = 1;
+  // optional bool a_aValidateResult = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_avalidateresult(), target);
@@ -549,13 +544,15 @@ size_t Msg_OnTransactionClose::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PAltSvcTransaction.Msg_OnTransactionClose)
   size_t total_size = 0;
 
-  // required bool a_aValidateResult = 1;
-  if (_internal_has_a_avalidateresult()) {
-    total_size += 1 + 1;
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_aValidateResult = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -592,7 +589,6 @@ void Msg_OnTransactionClose::CopyFrom(const Msg_OnTransactionClose& from) {
 }
 
 bool Msg_OnTransactionClose::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 

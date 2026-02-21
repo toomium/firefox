@@ -603,7 +603,7 @@ class Msg_PBackgroundTestConstructor final :
     kATestArgFieldNumber = 2,
     kAActoridFieldNumber = 1,
   };
-  // required string a_testArg = 2;
+  // optional string a_testArg = 2;
   bool has_a_testarg() const;
   private:
   bool _internal_has_a_testarg() const;
@@ -621,7 +621,7 @@ class Msg_PBackgroundTestConstructor final :
   std::string* _internal_mutable_a_testarg();
   public:
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -637,9 +637,6 @@ class Msg_PBackgroundTestConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundTestConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -893,7 +890,7 @@ class Msg_PBackgroundIDBFactoryConstructor final :
     kALoggingInfoFieldNumber = 2,
     kAActoridFieldNumber = 1,
   };
-  // required string a_systemLocale = 3;
+  // optional string a_systemLocale = 3;
   bool has_a_systemlocale() const;
   private:
   bool _internal_has_a_systemlocale() const;
@@ -929,7 +926,7 @@ class Msg_PBackgroundIDBFactoryConstructor final :
       ::protobuf::mozilla::dom::indexedDB::LoggingInfo* a_logginginfo);
   ::protobuf::mozilla::dom::indexedDB::LoggingInfo* unsafe_arena_release_a_logginginfo();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -945,9 +942,6 @@ class Msg_PBackgroundIDBFactoryConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundIDBFactoryConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1200,7 +1194,7 @@ class Msg_PBackgroundIndexedDBUtilsConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -1628,7 +1622,7 @@ class Msg_PBackgroundSDBConnectionConstructor final :
       ::protobuf::mozilla::ipc::PrincipalInfo* a_principalinfo);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_principalinfo();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -1900,7 +1894,7 @@ class Msg_PBackgroundLSObserverConstructor final :
     kAActoridFieldNumber = 1,
     kAObserverIdFieldNumber = 2,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -1913,7 +1907,7 @@ class Msg_PBackgroundLSObserverConstructor final :
   void _internal_set_a_actorid(int64_t value);
   public:
 
-  // required uint64 a_observerId = 2;
+  // optional uint64 a_observerId = 2;
   bool has_a_observerid() const;
   private:
   bool _internal_has_a_observerid() const;
@@ -1929,9 +1923,6 @@ class Msg_PBackgroundLSObserverConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundLSObserverConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2202,7 +2193,7 @@ class Msg_PBackgroundLSRequestConstructor final :
       ::protobuf::mozilla::dom::LSRequestParams* a_params);
   ::protobuf::mozilla::dom::LSRequestParams* unsafe_arena_release_a_params();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -2218,9 +2209,6 @@ class Msg_PBackgroundLSRequestConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundLSRequestConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2491,7 +2479,7 @@ class Msg_PBackgroundLSSimpleRequestConstructor final :
       ::protobuf::mozilla::dom::LSSimpleRequestParams* a_params);
   ::protobuf::mozilla::dom::LSSimpleRequestParams* unsafe_arena_release_a_params();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -2507,9 +2495,6 @@ class Msg_PBackgroundLSSimpleRequestConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundLSSimpleRequestConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2764,7 +2749,7 @@ class Msg_PBackgroundLocalStorageCacheConstructor final :
     kAActoridFieldNumber = 1,
     kAPrivateBrowsingIdFieldNumber = 4,
   };
-  // required string a_originKey = 3;
+  // optional string a_originKey = 3;
   bool has_a_originkey() const;
   private:
   bool _internal_has_a_originkey() const;
@@ -2800,7 +2785,7 @@ class Msg_PBackgroundLocalStorageCacheConstructor final :
       ::protobuf::mozilla::ipc::PrincipalInfo* a_principalinfo);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_principalinfo();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -2813,7 +2798,7 @@ class Msg_PBackgroundLocalStorageCacheConstructor final :
   void _internal_set_a_actorid(int64_t value);
   public:
 
-  // required uint32 a_privateBrowsingId = 4;
+  // optional uint32 a_privateBrowsingId = 4;
   bool has_a_privatebrowsingid() const;
   private:
   bool _internal_has_a_privatebrowsingid() const;
@@ -2829,9 +2814,6 @@ class Msg_PBackgroundLocalStorageCacheConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundLocalStorageCacheConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3086,7 +3068,7 @@ class Msg_PBackgroundSessionStorageManagerConstructor final :
     kAActoridFieldNumber = 1,
     kAATopContextIdFieldNumber = 2,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -3099,7 +3081,7 @@ class Msg_PBackgroundSessionStorageManagerConstructor final :
   void _internal_set_a_actorid(int64_t value);
   public:
 
-  // required uint64 a_aTopContextId = 2;
+  // optional uint64 a_aTopContextId = 2;
   bool has_a_atopcontextid() const;
   private:
   bool _internal_has_a_atopcontextid() const;
@@ -3115,9 +3097,6 @@ class Msg_PBackgroundSessionStorageManagerConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundSessionStorageManagerConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3369,7 +3348,7 @@ class Msg_PBackgroundSessionStorageServiceConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -3637,7 +3616,7 @@ class Msg_PBackgroundStorageConstructor final :
     kAActoridFieldNumber = 1,
     kAPrivateBrowsingIdFieldNumber = 3,
   };
-  // required string a_profilePath = 2;
+  // optional string a_profilePath = 2;
   bool has_a_profilepath() const;
   private:
   bool _internal_has_a_profilepath() const;
@@ -3655,7 +3634,7 @@ class Msg_PBackgroundStorageConstructor final :
   std::string* _internal_mutable_a_profilepath();
   public:
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -3668,7 +3647,7 @@ class Msg_PBackgroundStorageConstructor final :
   void _internal_set_a_actorid(int64_t value);
   public:
 
-  // required uint32 a_privateBrowsingId = 3;
+  // optional uint32 a_privateBrowsingId = 3;
   bool has_a_privatebrowsingid() const;
   private:
   bool _internal_has_a_privatebrowsingid() const;
@@ -3684,9 +3663,6 @@ class Msg_PBackgroundStorageConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundStorageConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4281,7 +4257,7 @@ class Msg_CreateWebTransportParent final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::ipc::WebTransportHash >&
       a_aservercerthashes() const;
 
-  // required string a_aURL = 1;
+  // optional string a_aURL = 1;
   bool has_a_aurl() const;
   private:
   bool _internal_has_a_aurl() const;
@@ -4353,7 +4329,7 @@ class Msg_CreateWebTransportParent final :
       ::protobuf::mozilla::dom::IPCClientInfo* a_aclientinfo);
   ::protobuf::mozilla::dom::IPCClientInfo* unsafe_arena_release_a_aclientinfo();
 
-  // required bool a_aDedicated = 4;
+  // optional bool a_aDedicated = 4;
   bool has_a_adedicated() const;
   private:
   bool _internal_has_a_adedicated() const;
@@ -4366,7 +4342,7 @@ class Msg_CreateWebTransportParent final :
   void _internal_set_a_adedicated(bool value);
   public:
 
-  // required bool a_aRequireUnreliable = 5;
+  // optional bool a_aRequireUnreliable = 5;
   bool has_a_arequireunreliable() const;
   private:
   bool _internal_has_a_arequireunreliable() const;
@@ -4379,7 +4355,7 @@ class Msg_CreateWebTransportParent final :
   void _internal_set_a_arequireunreliable(bool value);
   public:
 
-  // required uint32 a_aCongestionControl = 6;
+  // optional uint32 a_aCongestionControl = 6;
   bool has_a_acongestioncontrol() const;
   private:
   bool _internal_has_a_acongestioncontrol() const;
@@ -4395,9 +4371,6 @@ class Msg_CreateWebTransportParent final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_CreateWebTransportParent)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4550,7 +4523,7 @@ class Reply_CreateWebTransportParent final :
   std::string* _internal_mutable_a_rv();
   public:
 
-  // required uint32 a_aReliability = 2;
+  // optional uint32 a_aReliability = 2;
   bool has_a_areliability() const;
   private:
   bool _internal_has_a_areliability() const;
@@ -4566,9 +4539,6 @@ class Reply_CreateWebTransportParent final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Reply_CreateWebTransportParent)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4755,7 +4725,7 @@ class Msg_CreateNotificationParent final :
   std::string* _internal_mutable_a_aeffectivestorageprincipal();
   public:
 
-  // required string a_aScope = 5;
+  // optional string a_aScope = 5;
   bool has_a_ascope() const;
   private:
   bool _internal_has_a_ascope() const;
@@ -4791,7 +4761,7 @@ class Msg_CreateNotificationParent final :
       ::protobuf::mozilla::dom::IPCNotification* a_anotification);
   ::protobuf::mozilla::dom::IPCNotification* unsafe_arena_release_a_anotification();
 
-  // required bool a_aIsSecureContext = 4;
+  // optional bool a_aIsSecureContext = 4;
   bool has_a_aissecurecontext() const;
   private:
   bool _internal_has_a_aissecurecontext() const;
@@ -4941,7 +4911,7 @@ class Reply_CreateNotificationParent final :
   enum : int {
     kARvFieldNumber = 1,
   };
-  // required bool a_rv = 1;
+  // optional bool a_rv = 1;
   bool has_a_rv() const;
   private:
   bool _internal_has_a_rv() const;
@@ -5083,7 +5053,7 @@ class Msg_PVsyncConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -5349,7 +5319,7 @@ class Msg_PCamerasConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -5617,7 +5587,7 @@ class Msg_PUDPSocketConstructor final :
     kAPInfoFieldNumber = 2,
     kAActoridFieldNumber = 1,
   };
-  // required string a_filter = 3;
+  // optional string a_filter = 3;
   bool has_a_filter() const;
   private:
   bool _internal_has_a_filter() const;
@@ -5653,7 +5623,7 @@ class Msg_PUDPSocketConstructor final :
       ::protobuf::mozilla::ipc::PrincipalInfo* a_pinfo);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_pinfo();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -5669,9 +5639,6 @@ class Msg_PUDPSocketConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PUDPSocketConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5927,7 +5894,7 @@ class Msg_PBroadcastChannelConstructor final :
     kAPInfoFieldNumber = 2,
     kAActoridFieldNumber = 1,
   };
-  // required string a_origin = 3;
+  // optional string a_origin = 3;
   bool has_a_origin() const;
   private:
   bool _internal_has_a_origin() const;
@@ -5945,7 +5912,7 @@ class Msg_PBroadcastChannelConstructor final :
   std::string* _internal_mutable_a_origin();
   public:
 
-  // required string a_channel = 4;
+  // optional string a_channel = 4;
   bool has_a_channel() const;
   private:
   bool _internal_has_a_channel() const;
@@ -5981,7 +5948,7 @@ class Msg_PBroadcastChannelConstructor final :
       ::protobuf::mozilla::ipc::PrincipalInfo* a_pinfo);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_pinfo();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -5997,9 +5964,6 @@ class Msg_PBroadcastChannelConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PBroadcastChannelConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -6253,7 +6217,7 @@ class Msg_PCookieStoreConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -6519,7 +6483,7 @@ class Msg_PServiceWorkerManagerConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -6947,7 +6911,7 @@ class Msg_PCacheStorageConstructor final :
       ::protobuf::mozilla::ipc::PrincipalInfo* a_aprincipalinfo);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_aprincipalinfo();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -7257,7 +7221,7 @@ class Msg_PMessagePortConstructor final :
   std::string* _internal_mutable_a_destinationuuid();
   public:
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -7270,7 +7234,7 @@ class Msg_PMessagePortConstructor final :
   void _internal_set_a_actorid(int64_t value);
   public:
 
-  // required uint32 a_sequenceId = 4;
+  // optional uint32 a_sequenceId = 4;
   bool has_a_sequenceid() const;
   private:
   bool _internal_has_a_sequenceid() const;
@@ -7580,7 +7544,7 @@ class Msg_MessagePortForceClose final :
   std::string* _internal_mutable_a_destinationuuid();
   public:
 
-  // required uint32 a_sequenceId = 3;
+  // optional uint32 a_sequenceId = 3;
   bool has_a_sequenceid() const;
   private:
   bool _internal_has_a_sequenceid() const;
@@ -7727,7 +7691,7 @@ class Msg_PQuotaConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -8242,7 +8206,7 @@ class Msg_PropagateBackgroundSessionStorageManager final :
     kACurrentTopContextIdFieldNumber = 1,
     kATargetTopContextIdFieldNumber = 2,
   };
-  // required uint64 a_currentTopContextId = 1;
+  // optional uint64 a_currentTopContextId = 1;
   bool has_a_currenttopcontextid() const;
   private:
   bool _internal_has_a_currenttopcontextid() const;
@@ -8255,7 +8219,7 @@ class Msg_PropagateBackgroundSessionStorageManager final :
   void _internal_set_a_currenttopcontextid(uint64_t value);
   public:
 
-  // required uint64 a_targetTopContextId = 2;
+  // optional uint64 a_targetTopContextId = 2;
   bool has_a_targettopcontextid() const;
   private:
   bool _internal_has_a_targettopcontextid() const;
@@ -8271,9 +8235,6 @@ class Msg_PropagateBackgroundSessionStorageManager final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PropagateBackgroundSessionStorageManager)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -8401,7 +8362,7 @@ class Msg_RemoveBackgroundSessionStorageManager final :
   enum : int {
     kATopContextIdFieldNumber = 1,
   };
-  // required uint64 a_topContextId = 1;
+  // optional uint64 a_topContextId = 1;
   bool has_a_topcontextid() const;
   private:
   bool _internal_has_a_topcontextid() const;
@@ -8545,7 +8506,7 @@ class Msg_GetSessionStorageManagerData final :
     kAASizeLimitFieldNumber = 2,
     kAACancelSessionStoreTimerFieldNumber = 3,
   };
-  // required uint64 a_aTopContextId = 1;
+  // optional uint64 a_aTopContextId = 1;
   bool has_a_atopcontextid() const;
   private:
   bool _internal_has_a_atopcontextid() const;
@@ -8558,7 +8519,7 @@ class Msg_GetSessionStorageManagerData final :
   void _internal_set_a_atopcontextid(uint64_t value);
   public:
 
-  // required uint32 a_aSizeLimit = 2;
+  // optional uint32 a_aSizeLimit = 2;
   bool has_a_asizelimit() const;
   private:
   bool _internal_has_a_asizelimit() const;
@@ -8571,7 +8532,7 @@ class Msg_GetSessionStorageManagerData final :
   void _internal_set_a_asizelimit(uint32_t value);
   public:
 
-  // required bool a_aCancelSessionStoreTimer = 3;
+  // optional bool a_aCancelSessionStoreTimer = 3;
   bool has_a_acancelsessionstoretimer() const;
   private:
   bool _internal_has_a_acancelsessionstoretimer() const;
@@ -8587,9 +8548,6 @@ class Msg_GetSessionStorageManagerData final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_GetSessionStorageManagerData)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -8895,7 +8853,7 @@ class Msg_LoadSessionStorageManagerData final :
   std::string* _internal_add_a_aorigincachecopy();
   public:
 
-  // required uint64 a_aTopContextId = 1;
+  // optional uint64 a_aTopContextId = 1;
   bool has_a_atopcontextid() const;
   private:
   bool _internal_has_a_atopcontextid() const;
@@ -9057,7 +9015,7 @@ class Msg_PFileSystemRequestConstructor final :
       ::protobuf::mozilla::dom::FileSystemParams* a_params);
   ::protobuf::mozilla::dom::FileSystemParams* unsafe_arena_release_a_params();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -9073,9 +9031,6 @@ class Msg_PFileSystemRequestConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PFileSystemRequestConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -9327,7 +9282,7 @@ class Msg_PGamepadEventChannelConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -9593,7 +9548,7 @@ class Msg_PGamepadTestChannelConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -9860,7 +9815,7 @@ class Msg_PHttpBackgroundChannelConstructor final :
     kAActoridFieldNumber = 1,
     kAChannelIdFieldNumber = 2,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -9873,7 +9828,7 @@ class Msg_PHttpBackgroundChannelConstructor final :
   void _internal_set_a_actorid(int64_t value);
   public:
 
-  // required uint64 a_channelId = 2;
+  // optional uint64 a_channelId = 2;
   bool has_a_channelid() const;
   private:
   bool _internal_has_a_channelid() const;
@@ -9889,9 +9844,6 @@ class Msg_PHttpBackgroundChannelConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PHttpBackgroundChannelConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -10182,7 +10134,7 @@ class Msg_PSharedWorkerConstructor final :
       ::protobuf::mozilla::dom::MessagePortIdentifier* a_portidentifier);
   ::protobuf::mozilla::dom::MessagePortIdentifier* unsafe_arena_release_a_portidentifier();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -10195,7 +10147,7 @@ class Msg_PSharedWorkerConstructor final :
   void _internal_set_a_actorid(int64_t value);
   public:
 
-  // required uint64 a_windowID = 3;
+  // optional uint64 a_windowID = 3;
   bool has_a_windowid() const;
   private:
   bool _internal_has_a_windowid() const;
@@ -10467,7 +10419,7 @@ class Msg_PTemporaryIPCBlobConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -10739,7 +10691,7 @@ class Msg_PFileCreatorConstructor final :
     kAAExistenceCheckFieldNumber = 6,
     kAAIsFromNsIFileFieldNumber = 7,
   };
-  // required string a_aFullPath = 2;
+  // optional string a_aFullPath = 2;
   bool has_a_afullpath() const;
   private:
   bool _internal_has_a_afullpath() const;
@@ -10757,7 +10709,7 @@ class Msg_PFileCreatorConstructor final :
   std::string* _internal_mutable_a_afullpath();
   public:
 
-  // required string a_aType = 3;
+  // optional string a_aType = 3;
   bool has_a_atype() const;
   private:
   bool _internal_has_a_atype() const;
@@ -10775,7 +10727,7 @@ class Msg_PFileCreatorConstructor final :
   std::string* _internal_mutable_a_atype();
   public:
 
-  // required string a_aName = 4;
+  // optional string a_aName = 4;
   bool has_a_aname() const;
   private:
   bool _internal_has_a_aname() const;
@@ -10793,7 +10745,7 @@ class Msg_PFileCreatorConstructor final :
   std::string* _internal_mutable_a_aname();
   public:
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -10819,7 +10771,7 @@ class Msg_PFileCreatorConstructor final :
   void _internal_set_a_lastmodified(int64_t value);
   public:
 
-  // required bool a_aExistenceCheck = 6;
+  // optional bool a_aExistenceCheck = 6;
   bool has_a_aexistencecheck() const;
   private:
   bool _internal_has_a_aexistencecheck() const;
@@ -10832,7 +10784,7 @@ class Msg_PFileCreatorConstructor final :
   void _internal_set_a_aexistencecheck(bool value);
   public:
 
-  // required bool a_aIsFromNsIFile = 7;
+  // optional bool a_aIsFromNsIFile = 7;
   bool has_a_aisfromnsifile() const;
   private:
   bool _internal_has_a_aisfromnsifile() const;
@@ -10848,9 +10800,6 @@ class Msg_PFileCreatorConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PFileCreatorConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -11107,7 +11056,7 @@ class Msg_PClientManagerConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -11558,7 +11507,7 @@ class Msg_CreateMIDIPort final :
       ::protobuf::mozilla::dom::MIDIPortInfo* a_portinfo);
   ::protobuf::mozilla::dom::MIDIPortInfo* unsafe_arena_release_a_portinfo();
 
-  // required bool a_sysexEnabled = 3;
+  // optional bool a_sysexEnabled = 3;
   bool has_a_sysexenabled() const;
   private:
   bool _internal_has_a_sysexenabled() const;
@@ -11829,7 +11778,7 @@ class Reply_HasMIDIDevice final :
   enum : int {
     kAHasDeviceFieldNumber = 1,
   };
-  // required bool a_hasDevice = 1;
+  // optional bool a_hasDevice = 1;
   bool has_a_hasdevice() const;
   private:
   bool _internal_has_a_hasdevice() const;
@@ -12307,7 +12256,7 @@ class Msg_PServiceWorkerConstructor final :
       ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* a_adescriptor);
   ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* unsafe_arena_release_a_adescriptor();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -12323,9 +12272,6 @@ class Msg_PServiceWorkerConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PServiceWorkerConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -12596,7 +12542,7 @@ class Msg_PRemoteWorkerControllerConstructor final :
       ::protobuf::mozilla::dom::RemoteWorkerData* a_adata);
   ::protobuf::mozilla::dom::RemoteWorkerData* unsafe_arena_release_a_adata();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -12612,9 +12558,6 @@ class Msg_PRemoteWorkerControllerConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PRemoteWorkerControllerConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -12866,7 +12809,7 @@ class Msg_PServiceWorkerContainerConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -13170,7 +13113,7 @@ class Msg_PServiceWorkerRegistrationConstructor final :
       ::protobuf::mozilla::dom::IPCClientInfo* a_aforclient);
   ::protobuf::mozilla::dom::IPCClientInfo* unsafe_arena_release_a_aforclient();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -13443,7 +13386,7 @@ class Msg_PEndpointForReportConstructor final :
     kAAPrincipalInfoFieldNumber = 3,
     kAActoridFieldNumber = 1,
   };
-  // required string a_aGroupName = 2;
+  // optional string a_aGroupName = 2;
   bool has_a_agroupname() const;
   private:
   bool _internal_has_a_agroupname() const;
@@ -13479,7 +13422,7 @@ class Msg_PEndpointForReportConstructor final :
       ::protobuf::mozilla::ipc::PrincipalInfo* a_aprincipalinfo);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_aprincipalinfo();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -13495,9 +13438,6 @@ class Msg_PEndpointForReportConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PEndpointForReportConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -13752,7 +13692,7 @@ class Msg_RemoveEndpoint final :
     kAAEndpointURLFieldNumber = 2,
     kAAPrincipalInfoFieldNumber = 3,
   };
-  // required string a_aGroupName = 1;
+  // optional string a_aGroupName = 1;
   bool has_a_agroupname() const;
   private:
   bool _internal_has_a_agroupname() const;
@@ -13770,7 +13710,7 @@ class Msg_RemoveEndpoint final :
   std::string* _internal_mutable_a_agroupname();
   public:
 
-  // required string a_aEndpointURL = 2;
+  // optional string a_aEndpointURL = 2;
   bool has_a_aendpointurl() const;
   private:
   bool _internal_has_a_aendpointurl() const;
@@ -13809,9 +13749,6 @@ class Msg_RemoveEndpoint final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_RemoveEndpoint)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -13940,7 +13877,7 @@ class Msg_PIdleSchedulerConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -14855,7 +14792,7 @@ class Msg_PLockManagerConstructor final :
   std::string* _internal_mutable_a_aclientid();
   public:
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -14871,9 +14808,6 @@ class Msg_PLockManagerConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PLockManagerConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -15126,7 +15060,7 @@ class Msg_PFetchConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -15392,7 +15326,7 @@ class Msg_RequestCameraAccess final :
   enum : int {
     kAAAllowPermissionRequestFieldNumber = 1,
   };
-  // required bool a_aAllowPermissionRequest = 1;
+  // optional bool a_aAllowPermissionRequest = 1;
   bool has_a_aallowpermissionrequest() const;
   private:
   bool _internal_has_a_aallowpermissionrequest() const;
@@ -15681,7 +15615,7 @@ class Msg_PCacheConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -15947,7 +15881,7 @@ class Msg_PCacheStreamControlConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -16110,7 +16044,7 @@ class Reply_PCacheStreamControlConstructor final :
 #endif  // __GNUC__
 // Msg_PBackgroundTestConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PBackgroundTestConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -16138,7 +16072,7 @@ inline void Msg_PBackgroundTestConstructor::set_a_actorid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundTestConstructor.a_actorid)
 }
 
-// required string a_testArg = 2;
+// optional string a_testArg = 2;
 inline bool Msg_PBackgroundTestConstructor::_internal_has_a_testarg() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -16214,7 +16148,7 @@ inline void Msg_PBackgroundTestConstructor::set_allocated_a_testarg(std::string*
 
 // Msg_PBackgroundIDBFactoryConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PBackgroundIDBFactoryConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -16329,7 +16263,7 @@ inline void Msg_PBackgroundIDBFactoryConstructor::set_allocated_a_logginginfo(::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundIDBFactoryConstructor.a_loggingInfo)
 }
 
-// required string a_systemLocale = 3;
+// optional string a_systemLocale = 3;
 inline bool Msg_PBackgroundIDBFactoryConstructor::_internal_has_a_systemlocale() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -16405,7 +16339,7 @@ inline void Msg_PBackgroundIDBFactoryConstructor::set_allocated_a_systemlocale(s
 
 // Msg_PBackgroundIndexedDBUtilsConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PBackgroundIndexedDBUtilsConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -16445,7 +16379,7 @@ inline void Msg_PBackgroundIndexedDBUtilsConstructor::set_a_actorid(int64_t valu
 
 // Msg_PBackgroundSDBConnectionConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PBackgroundSDBConnectionConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -16636,7 +16570,7 @@ inline void Msg_PBackgroundSDBConnectionConstructor::set_allocated_a_principalin
 
 // Msg_PBackgroundLSObserverConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PBackgroundLSObserverConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -16664,7 +16598,7 @@ inline void Msg_PBackgroundLSObserverConstructor::set_a_actorid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundLSObserverConstructor.a_actorid)
 }
 
-// required uint64 a_observerId = 2;
+// optional uint64 a_observerId = 2;
 inline bool Msg_PBackgroundLSObserverConstructor::_internal_has_a_observerid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -16700,7 +16634,7 @@ inline void Msg_PBackgroundLSObserverConstructor::set_a_observerid(uint64_t valu
 
 // Msg_PBackgroundLSRequestConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PBackgroundLSRequestConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -16823,7 +16757,7 @@ inline void Msg_PBackgroundLSRequestConstructor::set_allocated_a_params(::protob
 
 // Msg_PBackgroundLSSimpleRequestConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PBackgroundLSSimpleRequestConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -16946,7 +16880,7 @@ inline void Msg_PBackgroundLSSimpleRequestConstructor::set_allocated_a_params(::
 
 // Msg_PBackgroundLocalStorageCacheConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PBackgroundLocalStorageCacheConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -17061,7 +16995,7 @@ inline void Msg_PBackgroundLocalStorageCacheConstructor::set_allocated_a_princip
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundLocalStorageCacheConstructor.a_principalInfo)
 }
 
-// required string a_originKey = 3;
+// optional string a_originKey = 3;
 inline bool Msg_PBackgroundLocalStorageCacheConstructor::_internal_has_a_originkey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -17129,7 +17063,7 @@ inline void Msg_PBackgroundLocalStorageCacheConstructor::set_allocated_a_origink
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundLocalStorageCacheConstructor.a_originKey)
 }
 
-// required uint32 a_privateBrowsingId = 4;
+// optional uint32 a_privateBrowsingId = 4;
 inline bool Msg_PBackgroundLocalStorageCacheConstructor::_internal_has_a_privatebrowsingid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -17165,7 +17099,7 @@ inline void Msg_PBackgroundLocalStorageCacheConstructor::set_a_privatebrowsingid
 
 // Msg_PBackgroundSessionStorageManagerConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PBackgroundSessionStorageManagerConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -17193,7 +17127,7 @@ inline void Msg_PBackgroundSessionStorageManagerConstructor::set_a_actorid(int64
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundSessionStorageManagerConstructor.a_actorid)
 }
 
-// required uint64 a_aTopContextId = 2;
+// optional uint64 a_aTopContextId = 2;
 inline bool Msg_PBackgroundSessionStorageManagerConstructor::_internal_has_a_atopcontextid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -17229,7 +17163,7 @@ inline void Msg_PBackgroundSessionStorageManagerConstructor::set_a_atopcontextid
 
 // Msg_PBackgroundSessionStorageServiceConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PBackgroundSessionStorageServiceConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -17265,7 +17199,7 @@ inline void Msg_PBackgroundSessionStorageServiceConstructor::set_a_actorid(int64
 
 // Msg_PBackgroundStorageConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PBackgroundStorageConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -17293,7 +17227,7 @@ inline void Msg_PBackgroundStorageConstructor::set_a_actorid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundStorageConstructor.a_actorid)
 }
 
-// required string a_profilePath = 2;
+// optional string a_profilePath = 2;
 inline bool Msg_PBackgroundStorageConstructor::_internal_has_a_profilepath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -17361,7 +17295,7 @@ inline void Msg_PBackgroundStorageConstructor::set_allocated_a_profilepath(std::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundStorageConstructor.a_profilePath)
 }
 
-// required uint32 a_privateBrowsingId = 3;
+// optional uint32 a_privateBrowsingId = 3;
 inline bool Msg_PBackgroundStorageConstructor::_internal_has_a_privatebrowsingid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -17628,7 +17562,7 @@ inline void Reply_CreateFileSystemManagerParent::set_allocated_a_rv(std::string*
 
 // Msg_CreateWebTransportParent
 
-// required string a_aURL = 1;
+// optional string a_aURL = 1;
 inline bool Msg_CreateWebTransportParent::_internal_has_a_aurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -17851,7 +17785,7 @@ inline void Msg_CreateWebTransportParent::set_allocated_a_aclientinfo(::protobuf
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_CreateWebTransportParent.a_aClientInfo)
 }
 
-// required bool a_aDedicated = 4;
+// optional bool a_aDedicated = 4;
 inline bool Msg_CreateWebTransportParent::_internal_has_a_adedicated() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -17879,7 +17813,7 @@ inline void Msg_CreateWebTransportParent::set_a_adedicated(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_CreateWebTransportParent.a_aDedicated)
 }
 
-// required bool a_aRequireUnreliable = 5;
+// optional bool a_aRequireUnreliable = 5;
 inline bool Msg_CreateWebTransportParent::_internal_has_a_arequireunreliable() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -17907,7 +17841,7 @@ inline void Msg_CreateWebTransportParent::set_a_arequireunreliable(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_CreateWebTransportParent.a_aRequireUnreliable)
 }
 
-// required uint32 a_aCongestionControl = 6;
+// optional uint32 a_aCongestionControl = 6;
 inline bool Msg_CreateWebTransportParent::_internal_has_a_acongestioncontrol() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -18112,7 +18046,7 @@ inline void Reply_CreateWebTransportParent::set_allocated_a_rv(std::string* a_rv
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Reply_CreateWebTransportParent.a_rv)
 }
 
-// required uint32 a_aReliability = 2;
+// optional uint32 a_aReliability = 2;
 inline bool Reply_CreateWebTransportParent::_internal_has_a_areliability() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -18348,7 +18282,7 @@ inline void Msg_CreateNotificationParent::set_allocated_a_aeffectivestorageprinc
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_CreateNotificationParent.a_aEffectiveStoragePrincipal)
 }
 
-// required bool a_aIsSecureContext = 4;
+// optional bool a_aIsSecureContext = 4;
 inline bool Msg_CreateNotificationParent::_internal_has_a_aissecurecontext() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -18376,7 +18310,7 @@ inline void Msg_CreateNotificationParent::set_a_aissecurecontext(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_CreateNotificationParent.a_aIsSecureContext)
 }
 
-// required string a_aScope = 5;
+// optional string a_aScope = 5;
 inline bool Msg_CreateNotificationParent::_internal_has_a_ascope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -18535,7 +18469,7 @@ inline void Msg_CreateNotificationParent::set_allocated_a_anotification(::protob
 
 // Reply_CreateNotificationParent
 
-// required bool a_rv = 1;
+// optional bool a_rv = 1;
 inline bool Reply_CreateNotificationParent::_internal_has_a_rv() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -18567,7 +18501,7 @@ inline void Reply_CreateNotificationParent::set_a_rv(bool value) {
 
 // Msg_PVsyncConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PVsyncConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -18603,7 +18537,7 @@ inline void Msg_PVsyncConstructor::set_a_actorid(int64_t value) {
 
 // Msg_PCamerasConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PCamerasConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -18639,7 +18573,7 @@ inline void Msg_PCamerasConstructor::set_a_actorid(int64_t value) {
 
 // Msg_PUDPSocketConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PUDPSocketConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -18754,7 +18688,7 @@ inline void Msg_PUDPSocketConstructor::set_allocated_a_pinfo(::protobuf::mozilla
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PUDPSocketConstructor.a_pInfo)
 }
 
-// required string a_filter = 3;
+// optional string a_filter = 3;
 inline bool Msg_PUDPSocketConstructor::_internal_has_a_filter() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -18830,7 +18764,7 @@ inline void Msg_PUDPSocketConstructor::set_allocated_a_filter(std::string* a_fil
 
 // Msg_PBroadcastChannelConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PBroadcastChannelConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -18945,7 +18879,7 @@ inline void Msg_PBroadcastChannelConstructor::set_allocated_a_pinfo(::protobuf::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PBroadcastChannelConstructor.a_pInfo)
 }
 
-// required string a_origin = 3;
+// optional string a_origin = 3;
 inline bool Msg_PBroadcastChannelConstructor::_internal_has_a_origin() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -19013,7 +18947,7 @@ inline void Msg_PBroadcastChannelConstructor::set_allocated_a_origin(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PBroadcastChannelConstructor.a_origin)
 }
 
-// required string a_channel = 4;
+// optional string a_channel = 4;
 inline bool Msg_PBroadcastChannelConstructor::_internal_has_a_channel() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -19089,7 +19023,7 @@ inline void Msg_PBroadcastChannelConstructor::set_allocated_a_channel(std::strin
 
 // Msg_PCookieStoreConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PCookieStoreConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -19125,7 +19059,7 @@ inline void Msg_PCookieStoreConstructor::set_a_actorid(int64_t value) {
 
 // Msg_PServiceWorkerManagerConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PServiceWorkerManagerConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -19165,7 +19099,7 @@ inline void Msg_PServiceWorkerManagerConstructor::set_a_actorid(int64_t value) {
 
 // Msg_PCacheStorageConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PCacheStorageConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -19356,7 +19290,7 @@ inline void Msg_PCacheStorageConstructor::set_allocated_a_aprincipalinfo(::proto
 
 // Msg_PMessagePortConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PMessagePortConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -19520,7 +19454,7 @@ inline void Msg_PMessagePortConstructor::set_allocated_a_destinationuuid(std::st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PMessagePortConstructor.a_destinationUuid)
 }
 
-// required uint32 a_sequenceId = 4;
+// optional uint32 a_sequenceId = 4;
 inline bool Msg_PMessagePortConstructor::_internal_has_a_sequenceid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -19692,7 +19626,7 @@ inline void Msg_MessagePortForceClose::set_allocated_a_destinationuuid(std::stri
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_MessagePortForceClose.a_destinationUuid)
 }
 
-// required uint32 a_sequenceId = 3;
+// optional uint32 a_sequenceId = 3;
 inline bool Msg_MessagePortForceClose::_internal_has_a_sequenceid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -19724,7 +19658,7 @@ inline void Msg_MessagePortForceClose::set_a_sequenceid(uint32_t value) {
 
 // Msg_PQuotaConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PQuotaConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -19768,7 +19702,7 @@ inline void Msg_PQuotaConstructor::set_a_actorid(int64_t value) {
 
 // Msg_PropagateBackgroundSessionStorageManager
 
-// required uint64 a_currentTopContextId = 1;
+// optional uint64 a_currentTopContextId = 1;
 inline bool Msg_PropagateBackgroundSessionStorageManager::_internal_has_a_currenttopcontextid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -19796,7 +19730,7 @@ inline void Msg_PropagateBackgroundSessionStorageManager::set_a_currenttopcontex
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PropagateBackgroundSessionStorageManager.a_currentTopContextId)
 }
 
-// required uint64 a_targetTopContextId = 2;
+// optional uint64 a_targetTopContextId = 2;
 inline bool Msg_PropagateBackgroundSessionStorageManager::_internal_has_a_targettopcontextid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -19828,7 +19762,7 @@ inline void Msg_PropagateBackgroundSessionStorageManager::set_a_targettopcontext
 
 // Msg_RemoveBackgroundSessionStorageManager
 
-// required uint64 a_topContextId = 1;
+// optional uint64 a_topContextId = 1;
 inline bool Msg_RemoveBackgroundSessionStorageManager::_internal_has_a_topcontextid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -19860,7 +19794,7 @@ inline void Msg_RemoveBackgroundSessionStorageManager::set_a_topcontextid(uint64
 
 // Msg_GetSessionStorageManagerData
 
-// required uint64 a_aTopContextId = 1;
+// optional uint64 a_aTopContextId = 1;
 inline bool Msg_GetSessionStorageManagerData::_internal_has_a_atopcontextid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -19888,7 +19822,7 @@ inline void Msg_GetSessionStorageManagerData::set_a_atopcontextid(uint64_t value
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_GetSessionStorageManagerData.a_aTopContextId)
 }
 
-// required uint32 a_aSizeLimit = 2;
+// optional uint32 a_aSizeLimit = 2;
 inline bool Msg_GetSessionStorageManagerData::_internal_has_a_asizelimit() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -19916,7 +19850,7 @@ inline void Msg_GetSessionStorageManagerData::set_a_asizelimit(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_GetSessionStorageManagerData.a_aSizeLimit)
 }
 
-// required bool a_aCancelSessionStoreTimer = 3;
+// optional bool a_aCancelSessionStoreTimer = 3;
 inline bool Msg_GetSessionStorageManagerData::_internal_has_a_acancelsessionstoretimer() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -20027,7 +19961,7 @@ Reply_GetSessionStorageManagerData::mutable_a_acachecopy() {
 
 // Msg_LoadSessionStorageManagerData
 
-// required uint64 a_aTopContextId = 1;
+// optional uint64 a_aTopContextId = 1;
 inline bool Msg_LoadSessionStorageManagerData::_internal_has_a_atopcontextid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -20134,7 +20068,7 @@ Msg_LoadSessionStorageManagerData::mutable_a_aorigincachecopy() {
 
 // Msg_PFileSystemRequestConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PFileSystemRequestConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -20257,7 +20191,7 @@ inline void Msg_PFileSystemRequestConstructor::set_allocated_a_params(::protobuf
 
 // Msg_PGamepadEventChannelConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PGamepadEventChannelConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -20293,7 +20227,7 @@ inline void Msg_PGamepadEventChannelConstructor::set_a_actorid(int64_t value) {
 
 // Msg_PGamepadTestChannelConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PGamepadTestChannelConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -20329,7 +20263,7 @@ inline void Msg_PGamepadTestChannelConstructor::set_a_actorid(int64_t value) {
 
 // Msg_PHttpBackgroundChannelConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PHttpBackgroundChannelConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -20357,7 +20291,7 @@ inline void Msg_PHttpBackgroundChannelConstructor::set_a_actorid(int64_t value) 
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PHttpBackgroundChannelConstructor.a_actorid)
 }
 
-// required uint64 a_channelId = 2;
+// optional uint64 a_channelId = 2;
 inline bool Msg_PHttpBackgroundChannelConstructor::_internal_has_a_channelid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -20393,7 +20327,7 @@ inline void Msg_PHttpBackgroundChannelConstructor::set_a_channelid(uint64_t valu
 
 // Msg_PSharedWorkerConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PSharedWorkerConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -20508,7 +20442,7 @@ inline void Msg_PSharedWorkerConstructor::set_allocated_a_data(::protobuf::mozil
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PSharedWorkerConstructor.a_data)
 }
 
-// required uint64 a_windowID = 3;
+// optional uint64 a_windowID = 3;
 inline bool Msg_PSharedWorkerConstructor::_internal_has_a_windowid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -20631,7 +20565,7 @@ inline void Msg_PSharedWorkerConstructor::set_allocated_a_portidentifier(::proto
 
 // Msg_PTemporaryIPCBlobConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PTemporaryIPCBlobConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -20667,7 +20601,7 @@ inline void Msg_PTemporaryIPCBlobConstructor::set_a_actorid(int64_t value) {
 
 // Msg_PFileCreatorConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PFileCreatorConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -20695,7 +20629,7 @@ inline void Msg_PFileCreatorConstructor::set_a_actorid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PFileCreatorConstructor.a_actorid)
 }
 
-// required string a_aFullPath = 2;
+// optional string a_aFullPath = 2;
 inline bool Msg_PFileCreatorConstructor::_internal_has_a_afullpath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -20763,7 +20697,7 @@ inline void Msg_PFileCreatorConstructor::set_allocated_a_afullpath(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PFileCreatorConstructor.a_aFullPath)
 }
 
-// required string a_aType = 3;
+// optional string a_aType = 3;
 inline bool Msg_PFileCreatorConstructor::_internal_has_a_atype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -20831,7 +20765,7 @@ inline void Msg_PFileCreatorConstructor::set_allocated_a_atype(std::string* a_at
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PFileCreatorConstructor.a_aType)
 }
 
-// required string a_aName = 4;
+// optional string a_aName = 4;
 inline bool Msg_PFileCreatorConstructor::_internal_has_a_aname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -20927,7 +20861,7 @@ inline void Msg_PFileCreatorConstructor::set_a_lastmodified(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PFileCreatorConstructor.a_lastModified)
 }
 
-// required bool a_aExistenceCheck = 6;
+// optional bool a_aExistenceCheck = 6;
 inline bool Msg_PFileCreatorConstructor::_internal_has_a_aexistencecheck() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -20955,7 +20889,7 @@ inline void Msg_PFileCreatorConstructor::set_a_aexistencecheck(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PFileCreatorConstructor.a_aExistenceCheck)
 }
 
-// required bool a_aIsFromNsIFile = 7;
+// optional bool a_aIsFromNsIFile = 7;
 inline bool Msg_PFileCreatorConstructor::_internal_has_a_aisfromnsifile() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -20991,7 +20925,7 @@ inline void Msg_PFileCreatorConstructor::set_a_aisfromnsifile(bool value) {
 
 // Msg_PClientManagerConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PClientManagerConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -21254,7 +21188,7 @@ inline void Msg_CreateMIDIPort::set_allocated_a_portinfo(::protobuf::mozilla::do
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_CreateMIDIPort.a_portInfo)
 }
 
-// required bool a_sysexEnabled = 3;
+// optional bool a_sysexEnabled = 3;
 inline bool Msg_CreateMIDIPort::_internal_has_a_sysexenabled() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -21290,7 +21224,7 @@ inline void Msg_CreateMIDIPort::set_a_sysexenabled(bool value) {
 
 // Reply_HasMIDIDevice
 
-// required bool a_hasDevice = 1;
+// optional bool a_hasDevice = 1;
 inline bool Reply_HasMIDIDevice::_internal_has_a_hasdevice() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -21553,7 +21487,7 @@ inline void Msg_StorageActivity::set_allocated_a_principalinfo(::protobuf::mozil
 
 // Msg_PServiceWorkerConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PServiceWorkerConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -21676,7 +21610,7 @@ inline void Msg_PServiceWorkerConstructor::set_allocated_a_adescriptor(::protobu
 
 // Msg_PRemoteWorkerControllerConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PRemoteWorkerControllerConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -21799,7 +21733,7 @@ inline void Msg_PRemoteWorkerControllerConstructor::set_allocated_a_adata(::prot
 
 // Msg_PServiceWorkerContainerConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PServiceWorkerContainerConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -21835,7 +21769,7 @@ inline void Msg_PServiceWorkerContainerConstructor::set_a_actorid(int64_t value)
 
 // Msg_PServiceWorkerRegistrationConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PServiceWorkerRegistrationConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -22045,7 +21979,7 @@ inline void Msg_PServiceWorkerRegistrationConstructor::set_allocated_a_aforclien
 
 // Msg_PEndpointForReportConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PEndpointForReportConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -22073,7 +22007,7 @@ inline void Msg_PEndpointForReportConstructor::set_a_actorid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PEndpointForReportConstructor.a_actorid)
 }
 
-// required string a_aGroupName = 2;
+// optional string a_aGroupName = 2;
 inline bool Msg_PEndpointForReportConstructor::_internal_has_a_agroupname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -22236,7 +22170,7 @@ inline void Msg_PEndpointForReportConstructor::set_allocated_a_aprincipalinfo(::
 
 // Msg_RemoveEndpoint
 
-// required string a_aGroupName = 1;
+// optional string a_aGroupName = 1;
 inline bool Msg_RemoveEndpoint::_internal_has_a_agroupname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -22304,7 +22238,7 @@ inline void Msg_RemoveEndpoint::set_allocated_a_agroupname(std::string* a_agroup
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_RemoveEndpoint.a_aGroupName)
 }
 
-// required string a_aEndpointURL = 2;
+// optional string a_aEndpointURL = 2;
 inline bool Msg_RemoveEndpoint::_internal_has_a_aendpointurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -22463,7 +22397,7 @@ inline void Msg_RemoveEndpoint::set_allocated_a_aprincipalinfo(::protobuf::mozil
 
 // Msg_PIdleSchedulerConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PIdleSchedulerConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -22855,7 +22789,7 @@ inline void Reply_EnsureUtilityProcessAndCreateBridge::set_allocated_a_aendpoint
 
 // Msg_PLockManagerConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PLockManagerConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -23027,7 +22961,7 @@ inline void Msg_PLockManagerConstructor::set_allocated_a_aclientid(std::string* 
 
 // Msg_PFetchConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PFetchConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -23063,7 +22997,7 @@ inline void Msg_PFetchConstructor::set_a_actorid(int64_t value) {
 
 // Msg_RequestCameraAccess
 
-// required bool a_aAllowPermissionRequest = 1;
+// optional bool a_aAllowPermissionRequest = 1;
 inline bool Msg_RequestCameraAccess::_internal_has_a_aallowpermissionrequest() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -23167,7 +23101,7 @@ inline void Reply_RequestCameraAccess::set_allocated_a_rv(std::string* a_rv) {
 
 // Msg_PCacheConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PCacheConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -23203,7 +23137,7 @@ inline void Msg_PCacheConstructor::set_a_actorid(int64_t value) {
 
 // Msg_PCacheStreamControlConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PCacheStreamControlConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

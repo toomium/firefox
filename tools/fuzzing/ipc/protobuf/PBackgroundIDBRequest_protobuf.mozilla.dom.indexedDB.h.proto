@@ -44,7 +44,7 @@ message ObjectStoreClearResponse {
 }
 
 message ObjectStoreCountResponse {
-  required uint64 a_count = 1;
+  optional uint64 a_count = 1;
 }
 
 message IndexGetResponse {
@@ -64,7 +64,7 @@ message IndexGetAllKeysResponse {
 }
 
 message IndexCountResponse {
-  required uint64 a_count = 1;
+  optional uint64 a_count = 1;
 }
 
 message RequestResponse {

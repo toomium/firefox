@@ -192,7 +192,7 @@ class IPCServiceWorkerRegistrationDescriptor final :
     kAIdFieldNumber = 1,
     kAVersionFieldNumber = 2,
   };
-  // required string a_scope = 4;
+  // optional string a_scope = 4;
   bool has_a_scope() const;
   private:
   bool _internal_has_a_scope() const;
@@ -300,7 +300,7 @@ class IPCServiceWorkerRegistrationDescriptor final :
       ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* a_active);
   ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* unsafe_arena_release_a_active();
 
-  // required uint64 a_id = 1;
+  // optional uint64 a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -313,7 +313,7 @@ class IPCServiceWorkerRegistrationDescriptor final :
   void _internal_set_a_id(uint64_t value);
   public:
 
-  // required uint64 a_version = 2;
+  // optional uint64 a_version = 2;
   bool has_a_version() const;
   private:
   bool _internal_has_a_version() const;
@@ -878,7 +878,7 @@ class IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult final :
 #endif  // __GNUC__
 // IPCServiceWorkerRegistrationDescriptor
 
-// required uint64 a_id = 1;
+// optional uint64 a_id = 1;
 inline bool IPCServiceWorkerRegistrationDescriptor::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -906,7 +906,7 @@ inline void IPCServiceWorkerRegistrationDescriptor::set_a_id(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor.a_id)
 }
 
-// required uint64 a_version = 2;
+// optional uint64 a_version = 2;
 inline bool IPCServiceWorkerRegistrationDescriptor::_internal_has_a_version() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -1021,7 +1021,7 @@ inline void IPCServiceWorkerRegistrationDescriptor::set_allocated_a_principalinf
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor.a_principalInfo)
 }
 
-// required string a_scope = 4;
+// optional string a_scope = 4;
 inline bool IPCServiceWorkerRegistrationDescriptor::_internal_has_a_scope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

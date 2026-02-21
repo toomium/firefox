@@ -18,7 +18,7 @@ import "LayersSurfaces.proto";
 
 // Message declarations
 message Msg_PCompositorBridgeConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
   required protobuf.mozilla.layers.CompositorBridgeOptions a_options = 2;
 }
 

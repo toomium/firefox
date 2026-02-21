@@ -20,7 +20,7 @@ message Msg_Start {
 }
 
 message Msg_PTestJSONHandleConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
 }
 
 message Reply_PTestJSONHandleConstructor {

@@ -28,7 +28,7 @@ message Reply___delete__ {
 
 message Msg_MakeFrameLocal {
   required bytes a_aFrameContext = 1;
-  required uint64 a_aSwitchId = 2;
+  optional uint64 a_aSwitchId = 2;
 }
 
 message Msg_MakeFrameRemote {
@@ -39,14 +39,14 @@ message Msg_MakeFrameRemote {
 }
 
 message Reply_MakeFrameRemote {
-  required bool a_success = 1;
+  optional bool a_success = 1;
 }
 
 message Msg_DrawSnapshot {
   optional bytes a_aRect = 1;
-  required float a_aScale = 2;
+  optional float a_aScale = 2;
   required bytes a_aBackgroundColor = 3;
-  required uint32 a_aFlags = 4;
+  optional uint32 a_aFlags = 4;
 }
 
 message Reply_DrawSnapshot {
@@ -54,7 +54,7 @@ message Reply_DrawSnapshot {
 }
 
 message Msg_DispatchSecurityPolicyViolation {
-  required string a_aViolationEventJSON = 1;
+  optional string a_aViolationEventJSON = 1;
 }
 
 message Msg_SaveStorageAccessPermissionGranted {
@@ -72,7 +72,7 @@ message Msg_RestoreDocShellState {
 }
 
 message Reply_RestoreDocShellState {
-  required bool a_success = 1;
+  optional bool a_success = 1;
 }
 
 message Msg_RestoreTabContent {
@@ -80,7 +80,7 @@ message Msg_RestoreTabContent {
 }
 
 message Reply_RestoreTabContent {
-  required bool a_success = 1;
+  optional bool a_success = 1;
 }
 
 message Msg_RawMessage {
@@ -92,7 +92,7 @@ message Msg_RawMessage {
 message Msg_LoadURI {
   required bytes a_aTargetBC = 1;
   required bytes a_aLoadState = 2;
-  required bool a_aSetNavigating = 3;
+  optional bool a_aSetNavigating = 3;
 }
 
 message Msg_InternalLoad {
@@ -109,20 +109,20 @@ message Msg_UpdateDocumentPrincipal {
 }
 
 message Msg_UpdateDocumentHasLoaded {
-  required bool a_aDocumentHasLoaded = 1;
+  optional bool a_aDocumentHasLoaded = 1;
 }
 
 message Msg_UpdateDocumentHasUserInteracted {
-  required bool a_aDocumentHasUserInteracted = 1;
+  optional bool a_aDocumentHasUserInteracted = 1;
 }
 
 message Msg_UpdateSandboxFlags {
-  required uint32 a_aSandboxFlags = 1;
+  optional uint32 a_aSandboxFlags = 1;
 }
 
 message Msg_UpdateDocumentCspSettings {
-  required bool a_aBlockAllMixedContent = 1;
-  required bool a_aUpgradeInsecureRequests = 2;
+  optional bool a_aBlockAllMixedContent = 1;
+  optional bool a_aUpgradeInsecureRequests = 2;
 }
 
 message Msg_UpdateCookieJarSettings {
@@ -130,7 +130,7 @@ message Msg_UpdateCookieJarSettings {
 }
 
 message Msg_UpdateDocumentTitle {
-  required string a_aTitle = 1;
+  optional string a_aTitle = 1;
 }
 
 message Msg_UpdateDocumentSecurityInfo {
@@ -138,11 +138,11 @@ message Msg_UpdateDocumentSecurityInfo {
 }
 
 message Msg_UpdateHttpsOnlyStatus {
-  required uint32 a_aHttpsOnlyStatus = 1;
+  optional uint32 a_aHttpsOnlyStatus = 1;
 }
 
 message Msg_SetIsInitialDocument {
-  required bool a_aIsInitialDocument = 1;
+  optional bool a_aIsInitialDocument = 1;
 }
 
 message Msg_Share {
@@ -157,7 +157,7 @@ message Msg_GetContentBlockingEvents {
 }
 
 message Reply_GetContentBlockingEvents {
-  required uint32 a_events = 1;
+  optional uint32 a_events = 1;
 }
 
 message Msg_SetClientInfo {
@@ -165,12 +165,12 @@ message Msg_SetClientInfo {
 }
 
 message Msg_CheckPermitUnload {
-  required bool a_aHasInProcessBlocker = 1;
+  optional bool a_aHasInProcessBlocker = 1;
   required bytes a_aAction = 2;
 }
 
 message Reply_CheckPermitUnload {
-  required bool a_permitUnload = 1;
+  optional bool a_permitUnload = 1;
 }
 
 message Msg_ExpectPageUseCounters {
@@ -185,12 +185,12 @@ message Msg_RequestRestoreTabContent {
 }
 
 message Msg_UpdateBFCacheStatus {
-  required uint32 a_aOnFlags = 1;
-  required uint32 a_aOffFlags = 2;
+  optional uint32 a_aOnFlags = 1;
+  optional uint32 a_aOffFlags = 2;
 }
 
 message Msg_UpdateActivePeerConnectionStatus {
-  required bool a_aIsAdded = 1;
+  optional bool a_aIsAdded = 1;
 }
 
 message Msg_SetSingleChannelId {
@@ -208,19 +208,19 @@ message Msg_ReloadWithHttpsOnlyException {
 }
 
 message Msg_GetStorageAccessPermission {
-  required bool a_aIncludeIdentityCredential = 1;
+  optional bool a_aIncludeIdentityCredential = 1;
 }
 
 message Reply_GetStorageAccessPermission {
-  required uint32 a_permission_action = 1;
+  optional uint32 a_permission_action = 1;
 }
 
 message Msg_SetCookies {
-  required string a_baseDomain = 1;
+  optional string a_baseDomain = 1;
   required bytes a_attrs = 2;
   optional bytes a_host = 3;
-  required bool a_fromHttp = 4;
-  required bool a_isThirdParty = 5;
+  optional bool a_fromHttp = 4;
+  optional bool a_isThirdParty = 5;
   repeated protobuf.mozilla.net.CookieStruct a_cookies = 6;
 }
 
@@ -231,22 +231,22 @@ message Msg_RecordUserActivationForBTP {
 }
 
 message Msg_PWebAuthnTransactionConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
 }
 
 message Reply_PWebAuthnTransactionConstructor {
 }
 
 message Msg_PWebIdentityConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
 }
 
 message Reply_PWebIdentityConstructor {
 }
 
 message Msg_NotifyPermissionChange {
-  required string a_type = 1;
-  required uint32 a_permission = 2;
+  optional string a_type = 1;
+  optional uint32 a_permission = 2;
 }
 
 // Parameter mappings stats:

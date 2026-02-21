@@ -17,7 +17,7 @@ package protobuf.mozilla.net.PSocketProcessBridge;
 // Message declarations
 message Msg_InitBackgroundDataBridge {
   required bytes a_aEndpoint = 1;
-  required uint64 a_aChannelID = 2;
+  optional uint64 a_aChannelID = 2;
 }
 
 message Msg_InitMediaTransport {

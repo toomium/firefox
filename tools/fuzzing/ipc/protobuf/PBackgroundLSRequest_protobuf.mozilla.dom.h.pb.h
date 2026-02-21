@@ -183,7 +183,7 @@ class LSRequestPreloadDatastoreResponse final :
   enum : int {
     kAInvalidatedFieldNumber = 1,
   };
-  // required bool a_invalidated = 1;
+  // optional bool a_invalidated = 1;
   bool has_a_invalidated() const;
   private:
   bool _internal_has_a_invalidated() const;
@@ -344,7 +344,7 @@ class LSRequestPrepareDatastoreResponse final :
   std::string* _internal_mutable_a_databasechildendpoint();
   public:
 
-  // required bool a_invalidated = 2;
+  // optional bool a_invalidated = 2;
   bool has_a_invalidated() const;
   private:
   bool _internal_has_a_invalidated() const;
@@ -360,9 +360,6 @@ class LSRequestPrepareDatastoreResponse final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.LSRequestPrepareDatastoreResponse)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -490,7 +487,7 @@ class LSRequestPrepareObserverResponse final :
   enum : int {
     kAObserverIdFieldNumber = 1,
   };
-  // required uint64 a_observerId = 1;
+  // optional uint64 a_observerId = 1;
   bool has_a_observerid() const;
   private:
   bool _internal_has_a_observerid() const;
@@ -758,7 +755,7 @@ class LSRequestResponse final :
 #endif  // __GNUC__
 // LSRequestPreloadDatastoreResponse
 
-// required bool a_invalidated = 1;
+// optional bool a_invalidated = 1;
 inline bool LSRequestPreloadDatastoreResponse::_internal_has_a_invalidated() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -858,7 +855,7 @@ inline void LSRequestPrepareDatastoreResponse::set_allocated_a_databasechildendp
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSRequestPrepareDatastoreResponse.a_databaseChildEndpoint)
 }
 
-// required bool a_invalidated = 2;
+// optional bool a_invalidated = 2;
 inline bool LSRequestPrepareDatastoreResponse::_internal_has_a_invalidated() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -890,7 +887,7 @@ inline void LSRequestPrepareDatastoreResponse::set_a_invalidated(bool value) {
 
 // LSRequestPrepareObserverResponse
 
-// required uint64 a_observerId = 1;
+// optional uint64 a_observerId = 1;
 inline bool LSRequestPrepareObserverResponse::_internal_has_a_observerid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

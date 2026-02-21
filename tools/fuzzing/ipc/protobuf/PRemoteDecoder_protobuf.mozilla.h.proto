@@ -23,13 +23,13 @@ message DecodedOutputIPDL {
 
 message InitCompletionIPDL {
   required bytes a_type = 1;
-  required string a_decoderDescription = 2;
-  required string a_decoderProcessName = 3;
-  required string a_decoderCodecName = 4;
-  required bool a_hardware = 5;
-  required string a_hardwareReason = 6;
+  optional string a_decoderDescription = 2;
+  optional string a_decoderProcessName = 3;
+  optional string a_decoderCodecName = 4;
+  optional bool a_hardware = 5;
+  optional string a_hardwareReason = 6;
   required bytes a_conversion = 7;
-  required bool a_shouldDecoderAlwaysBeRecycled = 8;
+  optional bool a_shouldDecoderAlwaysBeRecycled = 8;
 }
 
 message InitResultIPDL {

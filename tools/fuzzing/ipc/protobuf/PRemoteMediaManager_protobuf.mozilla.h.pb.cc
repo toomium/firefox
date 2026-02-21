@@ -65,7 +65,7 @@ class VideoDecoderInfoIPDL::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -162,7 +162,7 @@ const char* VideoDecoderInfoIPDL::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // required float a_framerate = 2;
+      // optional float a_framerate = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 21)) {
           _Internal::set_has_a_framerate(&has_bits);
@@ -208,7 +208,7 @@ uint8_t* VideoDecoderInfoIPDL::_InternalSerialize(
         1, this->_internal_a_videoinfo(), target);
   }
 
-  // required float a_framerate = 2;
+  // optional float a_framerate = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(2, this->_internal_a_framerate(), target);
@@ -222,43 +222,25 @@ uint8_t* VideoDecoderInfoIPDL::_InternalSerialize(
   return target;
 }
 
-size_t VideoDecoderInfoIPDL::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.VideoDecoderInfoIPDL)
-  size_t total_size = 0;
-
-  if (_internal_has_a_videoinfo()) {
-    // required bytes a_videoInfo = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_videoinfo());
-  }
-
-  if (_internal_has_a_framerate()) {
-    // required float a_framerate = 2;
-    total_size += 1 + 4;
-  }
-
-  return total_size;
-}
 size_t VideoDecoderInfoIPDL::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.VideoDecoderInfoIPDL)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_videoInfo = 1;
+  // required bytes a_videoInfo = 1;
+  if (_internal_has_a_videoinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_videoinfo());
-
-    // required float a_framerate = 2;
-    total_size += 1 + 4;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional float a_framerate = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000002u) {
+    total_size += 1 + 4;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();

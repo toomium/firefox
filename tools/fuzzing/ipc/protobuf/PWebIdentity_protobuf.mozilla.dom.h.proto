@@ -13,7 +13,7 @@ package protobuf.mozilla.dom;
 
 // Structs and unions declarations
 message IPCIdentityCredential {
-  required string a_id = 1;
+  optional string a_id = 1;
   optional string a_token = 2;
 }
 

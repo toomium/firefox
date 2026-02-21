@@ -368,9 +368,6 @@ class Pref::_Internal {
   static void set_has_a_uservalue(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000019) ^ 0x00000019) != 0;
-  }
 };
 
 const ::protobuf::mozilla::dom::PrefValue&
@@ -493,7 +490,7 @@ const char* Pref::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_name = 1;
+      // optional string a_name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_name();
@@ -502,7 +499,7 @@ const char* Pref::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
         } else
           goto handle_unusual;
         continue;
-      // required bool a_isLocked = 2;
+      // optional bool a_isLocked = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_islocked(&has_bits);
@@ -511,7 +508,7 @@ const char* Pref::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
         } else
           goto handle_unusual;
         continue;
-      // required bool a_isSanitized = 3;
+      // optional bool a_isSanitized = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_issanitized(&has_bits);
@@ -567,19 +564,19 @@ uint8_t* Pref::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_name = 1;
+  // optional string a_name = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_name(), target);
   }
 
-  // required bool a_isLocked = 2;
+  // optional bool a_isLocked = 2;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_islocked(), target);
   }
 
-  // required bool a_isSanitized = 3;
+  // optional bool a_isSanitized = 3;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_issanitized(), target);
@@ -607,54 +604,23 @@ uint8_t* Pref::_InternalSerialize(
   return target;
 }
 
-size_t Pref::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.Pref)
-  size_t total_size = 0;
-
-  if (_internal_has_a_name()) {
-    // required string a_name = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_name());
-  }
-
-  if (_internal_has_a_islocked()) {
-    // required bool a_isLocked = 2;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_issanitized()) {
-    // required bool a_isSanitized = 3;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t Pref::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.Pref)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000019) ^ 0x00000019) == 0) {  // All required fields are present.
-    // required string a_name = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_name());
-
-    // required bool a_isLocked = 2;
-    total_size += 1 + 1;
-
-    // required bool a_isSanitized = 3;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000006u) {
+  if (cached_has_bits & 0x0000001fu) {
+    // optional string a_name = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_name());
+    }
+
     // optional .protobuf.mozilla.dom.PrefValue a_defaultValue = 4;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
@@ -667,6 +633,16 @@ size_t Pref::ByteSizeLong() const {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.a_uservalue_);
+    }
+
+    // optional bool a_isLocked = 2;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool a_isSanitized = 3;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += 1 + 1;
     }
 
   }
@@ -723,7 +699,6 @@ void Pref::CopyFrom(const Pref& from) {
 }
 
 bool Pref::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 

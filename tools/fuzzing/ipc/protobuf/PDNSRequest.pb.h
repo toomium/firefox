@@ -193,7 +193,7 @@ class Msg_CancelDNSRequest final :
     kAPortFieldNumber = 3,
     kATypeFieldNumber = 4,
   };
-  // required string a_hostName = 1;
+  // optional string a_hostName = 1;
   bool has_a_hostname() const;
   private:
   bool _internal_has_a_hostname() const;
@@ -211,7 +211,7 @@ class Msg_CancelDNSRequest final :
   std::string* _internal_mutable_a_hostname();
   public:
 
-  // required string a_trrServer = 2;
+  // optional string a_trrServer = 2;
   bool has_a_trrserver() const;
   private:
   bool _internal_has_a_trrserver() const;
@@ -283,7 +283,7 @@ class Msg_CancelDNSRequest final :
   std::string* _internal_mutable_a_reason();
   public:
 
-  // required sint32 a_port = 3;
+  // optional sint32 a_port = 3;
   bool has_a_port() const;
   private:
   bool _internal_has_a_port() const;
@@ -296,7 +296,7 @@ class Msg_CancelDNSRequest final :
   void _internal_set_a_port(int32_t value);
   public:
 
-  // required uint32 a_type = 4;
+  // optional uint32 a_type = 4;
   bool has_a_type() const;
   private:
   bool _internal_has_a_type() const;
@@ -739,7 +739,7 @@ class Msg_LookupCompleted final :
 #endif  // __GNUC__
 // Msg_CancelDNSRequest
 
-// required string a_hostName = 1;
+// optional string a_hostName = 1;
 inline bool Msg_CancelDNSRequest::_internal_has_a_hostname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -807,7 +807,7 @@ inline void Msg_CancelDNSRequest::set_allocated_a_hostname(std::string* a_hostna
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PDNSRequest.Msg_CancelDNSRequest.a_hostName)
 }
 
-// required string a_trrServer = 2;
+// optional string a_trrServer = 2;
 inline bool Msg_CancelDNSRequest::_internal_has_a_trrserver() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -875,7 +875,7 @@ inline void Msg_CancelDNSRequest::set_allocated_a_trrserver(std::string* a_trrse
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PDNSRequest.Msg_CancelDNSRequest.a_trrServer)
 }
 
-// required sint32 a_port = 3;
+// optional sint32 a_port = 3;
 inline bool Msg_CancelDNSRequest::_internal_has_a_port() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -903,7 +903,7 @@ inline void Msg_CancelDNSRequest::set_a_port(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PDNSRequest.Msg_CancelDNSRequest.a_port)
 }
 
-// required uint32 a_type = 4;
+// optional uint32 a_type = 4;
 inline bool Msg_CancelDNSRequest::_internal_has_a_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;

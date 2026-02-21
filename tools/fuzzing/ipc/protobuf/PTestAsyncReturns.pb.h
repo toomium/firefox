@@ -318,7 +318,7 @@ class Reply_Ping final :
   enum : int {
     kAOneFieldNumber = 1,
   };
-  // required bool a_one = 1;
+  // optional bool a_one = 1;
   bool has_a_one() const;
   private:
   bool _internal_has_a_one() const;
@@ -584,7 +584,7 @@ class Reply_NoReturn final :
   enum : int {
     kAUnusedFieldNumber = 1,
   };
-  // required bool a_unused = 1;
+  // optional bool a_unused = 1;
   bool has_a_unused() const;
   private:
   bool _internal_has_a_unused() const;
@@ -851,7 +851,7 @@ class Reply_Pong final :
     kAParam1FieldNumber = 1,
     kAParam2FieldNumber = 2,
   };
-  // required uint32 a_param1 = 1;
+  // optional uint32 a_param1 = 1;
   bool has_a_param1() const;
   private:
   bool _internal_has_a_param1() const;
@@ -864,7 +864,7 @@ class Reply_Pong final :
   void _internal_set_a_param1(uint32_t value);
   public:
 
-  // required uint32 a_param2 = 2;
+  // optional uint32 a_param2 = 2;
   bool has_a_param2() const;
   private:
   bool _internal_has_a_param2() const;
@@ -880,9 +880,6 @@ class Reply_Pong final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.PTestAsyncReturns.Reply_Pong)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -911,7 +908,7 @@ class Reply_Pong final :
 
 // Reply_Ping
 
-// required bool a_one = 1;
+// optional bool a_one = 1;
 inline bool Reply_Ping::_internal_has_a_one() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -947,7 +944,7 @@ inline void Reply_Ping::set_a_one(bool value) {
 
 // Reply_NoReturn
 
-// required bool a_unused = 1;
+// optional bool a_unused = 1;
 inline bool Reply_NoReturn::_internal_has_a_unused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -983,7 +980,7 @@ inline void Reply_NoReturn::set_a_unused(bool value) {
 
 // Reply_Pong
 
-// required uint32 a_param1 = 1;
+// optional uint32 a_param1 = 1;
 inline bool Reply_Pong::_internal_has_a_param1() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1011,7 +1008,7 @@ inline void Reply_Pong::set_a_param1(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestAsyncReturns.Reply_Pong.a_param1)
 }
 
-// required uint32 a_param2 = 2;
+// optional uint32 a_param2 = 2;
 inline bool Reply_Pong::_internal_has_a_param2() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

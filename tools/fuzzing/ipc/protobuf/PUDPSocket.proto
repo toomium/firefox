@@ -19,10 +19,10 @@ import "IPCStream.proto";
 // Message declarations
 message Msg_Bind {
   required protobuf.UDPAddressInfo a_addressInfo = 1;
-  required bool a_addressReuse = 2;
-  required bool a_loopback = 3;
-  required uint32 a_recvBufferSize = 4;
-  required uint32 a_sendBufferSize = 5;
+  optional bool a_addressReuse = 2;
+  optional bool a_loopback = 3;
+  optional uint32 a_recvBufferSize = 4;
+  optional uint32 a_sendBufferSize = 5;
 }
 
 message Msg_Connect {
@@ -35,13 +35,13 @@ message Msg_OutgoingData {
 }
 
 message Msg_JoinMulticast {
-  required string a_multicastAddress = 1;
-  required string a_iface = 2;
+  optional string a_multicastAddress = 1;
+  optional string a_iface = 2;
 }
 
 message Msg_LeaveMulticast {
-  required string a_multicastAddress = 1;
-  required string a_iface = 2;
+  optional string a_multicastAddress = 1;
+  optional string a_iface = 2;
 }
 
 message Msg_Close {
@@ -67,9 +67,9 @@ message Msg_CallbackReceivedData {
 }
 
 message Msg_CallbackError {
-  required string a_message = 1;
-  required string a_filename = 2;
-  required uint32 a_lineNumber = 3;
+  optional string a_message = 1;
+  optional string a_filename = 2;
+  optional uint32 a_lineNumber = 3;
 }
 
 message Msg___delete__ {

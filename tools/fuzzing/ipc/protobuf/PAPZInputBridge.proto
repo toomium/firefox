@@ -15,7 +15,7 @@ package protobuf.mozilla.layers.PAPZInputBridge;
 // Message declarations
 message Msg_ReceiveMultiTouchInputEvent {
   required bytes a_aEvent = 1;
-  required bool a_aWantsCallback = 2;
+  optional bool a_aWantsCallback = 2;
 }
 
 message Reply_ReceiveMultiTouchInputEvent {
@@ -25,7 +25,7 @@ message Reply_ReceiveMultiTouchInputEvent {
 
 message Msg_ReceiveMouseInputEvent {
   required bytes a_aEvent = 1;
-  required bool a_aWantsCallback = 2;
+  optional bool a_aWantsCallback = 2;
 }
 
 message Reply_ReceiveMouseInputEvent {
@@ -35,7 +35,7 @@ message Reply_ReceiveMouseInputEvent {
 
 message Msg_ReceivePanGestureInputEvent {
   required bytes a_aEvent = 1;
-  required bool a_aWantsCallback = 2;
+  optional bool a_aWantsCallback = 2;
 }
 
 message Reply_ReceivePanGestureInputEvent {
@@ -45,7 +45,7 @@ message Reply_ReceivePanGestureInputEvent {
 
 message Msg_ReceivePinchGestureInputEvent {
   required bytes a_aEvent = 1;
-  required bool a_aWantsCallback = 2;
+  optional bool a_aWantsCallback = 2;
 }
 
 message Reply_ReceivePinchGestureInputEvent {
@@ -55,7 +55,7 @@ message Reply_ReceivePinchGestureInputEvent {
 
 message Msg_ReceiveTapGestureInputEvent {
   required bytes a_aEvent = 1;
-  required bool a_aWantsCallback = 2;
+  optional bool a_aWantsCallback = 2;
 }
 
 message Reply_ReceiveTapGestureInputEvent {
@@ -65,7 +65,7 @@ message Reply_ReceiveTapGestureInputEvent {
 
 message Msg_ReceiveScrollWheelInputEvent {
   required bytes a_aEvent = 1;
-  required bool a_aWantsCallback = 2;
+  optional bool a_aWantsCallback = 2;
 }
 
 message Reply_ReceiveScrollWheelInputEvent {
@@ -75,7 +75,7 @@ message Reply_ReceiveScrollWheelInputEvent {
 
 message Msg_ReceiveKeyboardInputEvent {
   required bytes a_aEvent = 1;
-  required bool a_aWantsCallback = 2;
+  optional bool a_aWantsCallback = 2;
 }
 
 message Reply_ReceiveKeyboardInputEvent {
@@ -96,12 +96,12 @@ message Msg_ProcessUnhandledEvent {
 message Reply_ProcessUnhandledEvent {
   required bytes a_aOutRefPoint = 1;
   required bytes a_aOutTargetGuid = 2;
-  required uint64 a_aOutFocusSequenceNumber = 3;
+  optional uint64 a_aOutFocusSequenceNumber = 3;
   required bytes a_aOutLayersId = 4;
 }
 
 message Msg_CallInputBlockCallback {
-  required uint64 a_aInputBlockId = 1;
+  optional uint64 a_aInputBlockId = 1;
   required bytes a_aHandledResult = 2;
 }
 
@@ -110,7 +110,7 @@ message Msg_HandleTap {
   required bytes a_point = 2;
   required bytes a_aModifiers = 3;
   required bytes a_aGuid = 4;
-  required uint64 a_aInputBlockId = 5;
+  optional uint64 a_aInputBlockId = 5;
   optional bytes a_aDoubleTapToZoomMetrics = 6;
 }
 

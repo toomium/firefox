@@ -217,7 +217,7 @@ class HeaderEntry final :
     kANameFieldNumber = 1,
     kAValueFieldNumber = 2,
   };
-  // required string a_name = 1;
+  // optional string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -235,7 +235,7 @@ class HeaderEntry final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required string a_value = 2;
+  // optional string a_value = 2;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -256,9 +256,6 @@ class HeaderEntry final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.HeaderEntry)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -386,7 +383,7 @@ class StringInputStreamParams final :
   enum : int {
     kADataFieldNumber = 1,
   };
-  // required string a_data = 1;
+  // optional string a_data = 1;
   bool has_a_data() const;
   private:
   bool _internal_has_a_data() const;
@@ -553,7 +550,7 @@ class FileInputStreamParams final :
   std::string* _internal_mutable_a_filedescriptor();
   public:
 
-  // required sint32 a_behaviorFlags = 2;
+  // optional sint32 a_behaviorFlags = 2;
   bool has_a_behaviorflags() const;
   private:
   bool _internal_has_a_behaviorflags() const;
@@ -566,7 +563,7 @@ class FileInputStreamParams final :
   void _internal_set_a_behaviorflags(int32_t value);
   public:
 
-  // required sint32 a_ioFlags = 3;
+  // optional sint32 a_ioFlags = 3;
   bool has_a_ioflags() const;
   private:
   bool _internal_has_a_ioflags() const;
@@ -582,9 +579,6 @@ class FileInputStreamParams final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.FileInputStreamParams)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -752,7 +746,7 @@ class MultiplexInputStreamParams final :
   std::string* _internal_mutable_a_status();
   public:
 
-  // required uint32 a_currentStream = 2;
+  // optional uint32 a_currentStream = 2;
   bool has_a_currentstream() const;
   private:
   bool _internal_has_a_currentstream() const;
@@ -765,7 +759,7 @@ class MultiplexInputStreamParams final :
   void _internal_set_a_currentstream(uint32_t value);
   public:
 
-  // required bool a_startedReadingCurrent = 4;
+  // optional bool a_startedReadingCurrent = 4;
   bool has_a_startedreadingcurrent() const;
   private:
   bool _internal_has_a_startedreadingcurrent() const;
@@ -781,9 +775,6 @@ class MultiplexInputStreamParams final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.MultiplexInputStreamParams)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -935,7 +926,7 @@ class SlicedInputStreamParams final :
       ::protobuf::mozilla::ipc::InputStreamParams* a_stream);
   ::protobuf::mozilla::ipc::InputStreamParams* unsafe_arena_release_a_stream();
 
-  // required uint64 a_start = 2;
+  // optional uint64 a_start = 2;
   bool has_a_start() const;
   private:
   bool _internal_has_a_start() const;
@@ -948,7 +939,7 @@ class SlicedInputStreamParams final :
   void _internal_set_a_start(uint64_t value);
   public:
 
-  // required uint64 a_length = 3;
+  // optional uint64 a_length = 3;
   bool has_a_length() const;
   private:
   bool _internal_has_a_length() const;
@@ -961,7 +952,7 @@ class SlicedInputStreamParams final :
   void _internal_set_a_length(uint64_t value);
   public:
 
-  // required uint64 a_curPos = 4;
+  // optional uint64 a_curPos = 4;
   bool has_a_curpos() const;
   private:
   bool _internal_has_a_curpos() const;
@@ -974,7 +965,7 @@ class SlicedInputStreamParams final :
   void _internal_set_a_curpos(uint64_t value);
   public:
 
-  // required bool a_closed = 5;
+  // optional bool a_closed = 5;
   bool has_a_closed() const;
   private:
   bool _internal_has_a_closed() const;
@@ -990,9 +981,6 @@ class SlicedInputStreamParams final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.SlicedInputStreamParams)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1820,7 +1808,7 @@ class EncryptedFileInputStreamParams final :
       ::protobuf::mozilla::ipc::InputStreamParams* a_inputstreamparams);
   ::protobuf::mozilla::ipc::InputStreamParams* unsafe_arena_release_a_inputstreamparams();
 
-  // required uint32 a_blockSize = 3;
+  // optional uint32 a_blockSize = 3;
   bool has_a_blocksize() const;
   private:
   bool _internal_has_a_blocksize() const;
@@ -1836,9 +1824,6 @@ class EncryptedFileInputStreamParams final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.EncryptedFileInputStreamParams)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1986,7 +1971,7 @@ class BufferedInputStreamParams final :
       ::protobuf::mozilla::ipc::InputStreamParams* a_optionalstream);
   ::protobuf::mozilla::ipc::InputStreamParams* unsafe_arena_release_a_optionalstream();
 
-  // required uint32 a_bufferSize = 2;
+  // optional uint32 a_bufferSize = 2;
   bool has_a_buffersize() const;
   private:
   bool _internal_has_a_buffersize() const;
@@ -2167,7 +2152,7 @@ class MIMEInputStreamParams final :
       ::protobuf::mozilla::ipc::InputStreamParams* a_optionalstream);
   ::protobuf::mozilla::ipc::InputStreamParams* unsafe_arena_release_a_optionalstream();
 
-  // required bool a_startedReading = 3;
+  // optional bool a_startedReading = 3;
   bool has_a_startedreading() const;
   private:
   bool _internal_has_a_startedreading() const;
@@ -2331,7 +2316,7 @@ class InputStreamLengthWrapperParams final :
       ::protobuf::mozilla::ipc::InputStreamParams* a_stream);
   ::protobuf::mozilla::ipc::InputStreamParams* unsafe_arena_release_a_stream();
 
-  // required sint64 a_length = 2;
+  // optional sint64 a_length = 2;
   bool has_a_length() const;
   private:
   bool _internal_has_a_length() const;
@@ -2344,7 +2329,7 @@ class InputStreamLengthWrapperParams final :
   void _internal_set_a_length(int64_t value);
   public:
 
-  // required bool a_consumed = 3;
+  // optional bool a_consumed = 3;
   bool has_a_consumed() const;
   private:
   bool _internal_has_a_consumed() const;
@@ -2360,9 +2345,6 @@ class InputStreamLengthWrapperParams final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.InputStreamLengthWrapperParams)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2388,7 +2370,7 @@ class InputStreamLengthWrapperParams final :
 #endif  // __GNUC__
 // HeaderEntry
 
-// required string a_name = 1;
+// optional string a_name = 1;
 inline bool HeaderEntry::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2456,7 +2438,7 @@ inline void HeaderEntry::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.HeaderEntry.a_name)
 }
 
-// required string a_value = 2;
+// optional string a_value = 2;
 inline bool HeaderEntry::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2528,7 +2510,7 @@ inline void HeaderEntry::set_allocated_a_value(std::string* a_value) {
 
 // StringInputStreamParams
 
-// required string a_data = 1;
+// optional string a_data = 1;
 inline bool StringInputStreamParams::_internal_has_a_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2668,7 +2650,7 @@ inline void FileInputStreamParams::set_allocated_a_filedescriptor(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.FileInputStreamParams.a_fileDescriptor)
 }
 
-// required sint32 a_behaviorFlags = 2;
+// optional sint32 a_behaviorFlags = 2;
 inline bool FileInputStreamParams::_internal_has_a_behaviorflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2696,7 +2678,7 @@ inline void FileInputStreamParams::set_a_behaviorflags(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.FileInputStreamParams.a_behaviorFlags)
 }
 
-// required sint32 a_ioFlags = 3;
+// optional sint32 a_ioFlags = 3;
 inline bool FileInputStreamParams::_internal_has_a_ioflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2768,7 +2750,7 @@ MultiplexInputStreamParams::a_streams() const {
   return _impl_.a_streams_;
 }
 
-// required uint32 a_currentStream = 2;
+// optional uint32 a_currentStream = 2;
 inline bool MultiplexInputStreamParams::_internal_has_a_currentstream() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2864,7 +2846,7 @@ inline void MultiplexInputStreamParams::set_allocated_a_status(std::string* a_st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.MultiplexInputStreamParams.a_status)
 }
 
-// required bool a_startedReadingCurrent = 4;
+// optional bool a_startedReadingCurrent = 4;
 inline bool MultiplexInputStreamParams::_internal_has_a_startedreadingcurrent() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2986,7 +2968,7 @@ inline void SlicedInputStreamParams::set_allocated_a_stream(::protobuf::mozilla:
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.SlicedInputStreamParams.a_stream)
 }
 
-// required uint64 a_start = 2;
+// optional uint64 a_start = 2;
 inline bool SlicedInputStreamParams::_internal_has_a_start() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3014,7 +2996,7 @@ inline void SlicedInputStreamParams::set_a_start(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.SlicedInputStreamParams.a_start)
 }
 
-// required uint64 a_length = 3;
+// optional uint64 a_length = 3;
 inline bool SlicedInputStreamParams::_internal_has_a_length() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -3042,7 +3024,7 @@ inline void SlicedInputStreamParams::set_a_length(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.SlicedInputStreamParams.a_length)
 }
 
-// required uint64 a_curPos = 4;
+// optional uint64 a_curPos = 4;
 inline bool SlicedInputStreamParams::_internal_has_a_curpos() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -3070,7 +3052,7 @@ inline void SlicedInputStreamParams::set_a_curpos(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.SlicedInputStreamParams.a_curPos)
 }
 
-// required bool a_closed = 5;
+// optional bool a_closed = 5;
 inline bool SlicedInputStreamParams::_internal_has_a_closed() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -4136,7 +4118,7 @@ EncryptedFileInputStreamParams::mutable_a_key() {
   return _internal_mutable_a_key();
 }
 
-// required uint32 a_blockSize = 3;
+// optional uint32 a_blockSize = 3;
 inline bool EncryptedFileInputStreamParams::_internal_has_a_blocksize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4258,7 +4240,7 @@ inline void BufferedInputStreamParams::set_allocated_a_optionalstream(::protobuf
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.BufferedInputStreamParams.a_optionalStream)
 }
 
-// required uint32 a_bufferSize = 2;
+// optional uint32 a_bufferSize = 2;
 inline bool BufferedInputStreamParams::_internal_has_a_buffersize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4420,7 +4402,7 @@ MIMEInputStreamParams::a_headers() const {
   return _impl_.a_headers_;
 }
 
-// required bool a_startedReading = 3;
+// optional bool a_startedReading = 3;
 inline bool MIMEInputStreamParams::_internal_has_a_startedreading() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4542,7 +4524,7 @@ inline void InputStreamLengthWrapperParams::set_allocated_a_stream(::protobuf::m
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.InputStreamLengthWrapperParams.a_stream)
 }
 
-// required sint64 a_length = 2;
+// optional sint64 a_length = 2;
 inline bool InputStreamLengthWrapperParams::_internal_has_a_length() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4570,7 +4552,7 @@ inline void InputStreamLengthWrapperParams::set_a_length(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.InputStreamLengthWrapperParams.a_length)
 }
 
-// required bool a_consumed = 3;
+// optional bool a_consumed = 3;
 inline bool InputStreamLengthWrapperParams::_internal_has_a_consumed() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

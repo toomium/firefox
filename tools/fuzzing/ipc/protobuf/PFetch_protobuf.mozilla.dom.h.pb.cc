@@ -99,7 +99,7 @@ class FetchOpArgs::_Internal {
     (*has_bits)[0] |= 2048u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000fcf) ^ 0x00000fcf) != 0;
+    return ((has_bits[0] & 0x0000000e) ^ 0x0000000e) != 0;
   }
 };
 
@@ -316,7 +316,7 @@ const char* FetchOpArgs::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // required string a_workerScript = 3;
+      // optional string a_workerScript = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_workerscript();
@@ -349,7 +349,7 @@ const char* FetchOpArgs::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // required bool a_needOnDataAvailable = 7;
+      // optional bool a_needOnDataAvailable = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
           _Internal::set_has_a_needondataavailable(&has_bits);
@@ -358,7 +358,7 @@ const char* FetchOpArgs::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // required bool a_hasCSPEventListener = 8;
+      // optional bool a_hasCSPEventListener = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
           _Internal::set_has_a_hascspeventlistener(&has_bits);
@@ -367,7 +367,7 @@ const char* FetchOpArgs::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // required uint64 a_associatedBrowsingContextID = 9;
+      // optional uint64 a_associatedBrowsingContextID = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 72)) {
           _Internal::set_has_a_associatedbrowsingcontextid(&has_bits);
@@ -376,7 +376,7 @@ const char* FetchOpArgs::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // required bool a_isThirdPartyContext = 10;
+      // optional bool a_isThirdPartyContext = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 80)) {
           _Internal::set_has_a_isthirdpartycontext(&has_bits);
@@ -385,7 +385,7 @@ const char* FetchOpArgs::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // required bool a_isWorkerRequest = 11;
+      // optional bool a_isWorkerRequest = 11;
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 88)) {
           _Internal::set_has_a_isworkerrequest(&has_bits);
@@ -394,7 +394,7 @@ const char* FetchOpArgs::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // required bool a_isOn3PCBExceptionList = 12;
+      // optional bool a_isOn3PCBExceptionList = 12;
       case 12:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 96)) {
           _Internal::set_has_a_ison3pcbexceptionlist(&has_bits);
@@ -448,7 +448,7 @@ uint8_t* FetchOpArgs::_InternalSerialize(
         _Internal::a_principalinfo(this).GetCachedSize(), target, stream);
   }
 
-  // required string a_workerScript = 3;
+  // optional string a_workerScript = 3;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_workerscript(), target);
@@ -475,37 +475,37 @@ uint8_t* FetchOpArgs::_InternalSerialize(
         _Internal::a_cookiejarsettings(this).GetCachedSize(), target, stream);
   }
 
-  // required bool a_needOnDataAvailable = 7;
+  // optional bool a_needOnDataAvailable = 7;
   if (cached_has_bits & 0x00000080u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(7, this->_internal_a_needondataavailable(), target);
   }
 
-  // required bool a_hasCSPEventListener = 8;
+  // optional bool a_hasCSPEventListener = 8;
   if (cached_has_bits & 0x00000100u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(8, this->_internal_a_hascspeventlistener(), target);
   }
 
-  // required uint64 a_associatedBrowsingContextID = 9;
+  // optional uint64 a_associatedBrowsingContextID = 9;
   if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(9, this->_internal_a_associatedbrowsingcontextid(), target);
   }
 
-  // required bool a_isThirdPartyContext = 10;
+  // optional bool a_isThirdPartyContext = 10;
   if (cached_has_bits & 0x00000200u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(10, this->_internal_a_isthirdpartycontext(), target);
   }
 
-  // required bool a_isWorkerRequest = 11;
+  // optional bool a_isWorkerRequest = 11;
   if (cached_has_bits & 0x00000400u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(11, this->_internal_a_isworkerrequest(), target);
   }
 
-  // required bool a_isOn3PCBExceptionList = 12;
+  // optional bool a_isOn3PCBExceptionList = 12;
   if (cached_has_bits & 0x00000800u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(12, this->_internal_a_ison3pcbexceptionlist(), target);
@@ -522,13 +522,6 @@ uint8_t* FetchOpArgs::_InternalSerialize(
 size_t FetchOpArgs::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.FetchOpArgs)
   size_t total_size = 0;
-
-  if (_internal_has_a_workerscript()) {
-    // required string a_workerScript = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_workerscript());
-  }
 
   if (_internal_has_a_request()) {
     // required .protobuf.mozilla.dom.IPCInternalRequest a_request = 1;
@@ -551,48 +544,13 @@ size_t FetchOpArgs::RequiredFieldsByteSizeFallback() const {
         *_impl_.a_clientinfo_);
   }
 
-  if (_internal_has_a_associatedbrowsingcontextid()) {
-    // required uint64 a_associatedBrowsingContextID = 9;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_associatedbrowsingcontextid());
-  }
-
-  if (_internal_has_a_needondataavailable()) {
-    // required bool a_needOnDataAvailable = 7;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_hascspeventlistener()) {
-    // required bool a_hasCSPEventListener = 8;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_isthirdpartycontext()) {
-    // required bool a_isThirdPartyContext = 10;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_isworkerrequest()) {
-    // required bool a_isWorkerRequest = 11;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_ison3pcbexceptionlist()) {
-    // required bool a_isOn3PCBExceptionList = 12;
-    total_size += 1 + 1;
-  }
-
   return total_size;
 }
 size_t FetchOpArgs::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.FetchOpArgs)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000fcf) ^ 0x00000fcf) == 0) {  // All required fields are present.
-    // required string a_workerScript = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_workerscript());
-
+  if (((_impl_._has_bits_[0] & 0x0000000e) ^ 0x0000000e) == 0) {  // All required fields are present.
     // required .protobuf.mozilla.dom.IPCInternalRequest a_request = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -608,24 +566,6 @@ size_t FetchOpArgs::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_clientinfo_);
 
-    // required uint64 a_associatedBrowsingContextID = 9;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_associatedbrowsingcontextid());
-
-    // required bool a_needOnDataAvailable = 7;
-    total_size += 1 + 1;
-
-    // required bool a_hasCSPEventListener = 8;
-    total_size += 1 + 1;
-
-    // required bool a_isThirdPartyContext = 10;
-    total_size += 1 + 1;
-
-    // required bool a_isWorkerRequest = 11;
-    total_size += 1 + 1;
-
-    // required bool a_isOn3PCBExceptionList = 12;
-    total_size += 1 + 1;
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
@@ -633,8 +573,15 @@ size_t FetchOpArgs::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  // optional string a_workerScript = 3;
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000030u) {
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_workerscript());
+  }
+
+  if (cached_has_bits & 0x000000f0u) {
     // optional .protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_controller = 5;
     if (cached_has_bits & 0x00000010u) {
       total_size += 1 +
@@ -647,6 +594,38 @@ size_t FetchOpArgs::ByteSizeLong() const {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.a_cookiejarsettings_);
+    }
+
+    // optional uint64 a_associatedBrowsingContextID = 9;
+    if (cached_has_bits & 0x00000040u) {
+      total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_associatedbrowsingcontextid());
+    }
+
+    // optional bool a_needOnDataAvailable = 7;
+    if (cached_has_bits & 0x00000080u) {
+      total_size += 1 + 1;
+    }
+
+  }
+  if (cached_has_bits & 0x00000f00u) {
+    // optional bool a_hasCSPEventListener = 8;
+    if (cached_has_bits & 0x00000100u) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool a_isThirdPartyContext = 10;
+    if (cached_has_bits & 0x00000200u) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool a_isWorkerRequest = 11;
+    if (cached_has_bits & 0x00000400u) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool a_isOn3PCBExceptionList = 12;
+    if (cached_has_bits & 0x00000800u) {
+      total_size += 1 + 1;
     }
 
   }

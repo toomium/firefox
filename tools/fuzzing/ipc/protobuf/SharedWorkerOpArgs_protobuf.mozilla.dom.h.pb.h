@@ -971,7 +971,7 @@ class SharedWorkerAddWindowIDOpArgs final :
   enum : int {
     kAWindowIDFieldNumber = 1,
   };
-  // required uint64 a_windowID = 1;
+  // optional uint64 a_windowID = 1;
   bool has_a_windowid() const;
   private:
   bool _internal_has_a_windowid() const;
@@ -1113,7 +1113,7 @@ class SharedWorkerRemoveWindowIDOpArgs final :
   enum : int {
     kAWindowIDFieldNumber = 1,
   };
-  // required uint64 a_windowID = 1;
+  // optional uint64 a_windowID = 1;
   bool has_a_windowid() const;
   private:
   bool _internal_has_a_windowid() const;
@@ -1580,7 +1580,7 @@ inline void SharedWorkerPortIdentifierOpArgs::set_allocated_a_portidentifier(::p
 
 // SharedWorkerAddWindowIDOpArgs
 
-// required uint64 a_windowID = 1;
+// optional uint64 a_windowID = 1;
 inline bool SharedWorkerAddWindowIDOpArgs::_internal_has_a_windowid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1612,7 +1612,7 @@ inline void SharedWorkerAddWindowIDOpArgs::set_a_windowid(uint64_t value) {
 
 // SharedWorkerRemoveWindowIDOpArgs
 
-// required uint64 a_windowID = 1;
+// optional uint64 a_windowID = 1;
 inline bool SharedWorkerRemoveWindowIDOpArgs::_internal_has_a_windowid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

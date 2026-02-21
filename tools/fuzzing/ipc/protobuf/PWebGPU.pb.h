@@ -719,7 +719,7 @@ class Reply_DeviceActionWithAck final :
   enum : int {
     kADummyFieldNumber = 1,
   };
-  // required bool a_dummy = 1;
+  // optional bool a_dummy = 1;
   bool has_a_dummy() const;
   private:
   bool _internal_has_a_dummy() const;
@@ -2358,7 +2358,7 @@ class Reply_AdapterRequestDevice final :
   enum : int {
     kASuccessFieldNumber = 1,
   };
-  // required bool a_success = 1;
+  // optional bool a_success = 1;
   bool has_a_success() const;
   private:
   bool _internal_has_a_success() const;
@@ -2686,7 +2686,7 @@ class Msg_DeviceCreateShaderModule final :
   std::string* _internal_mutable_a_bufferid();
   public:
 
-  // required string a_label = 3;
+  // optional string a_label = 3;
   bool has_a_label() const;
   private:
   bool _internal_has_a_label() const;
@@ -2704,7 +2704,7 @@ class Msg_DeviceCreateShaderModule final :
   std::string* _internal_mutable_a_label();
   public:
 
-  // required string a_code = 4;
+  // optional string a_code = 4;
   bool has_a_code() const;
   private:
   bool _internal_has_a_code() const;
@@ -3049,7 +3049,7 @@ class Msg_BufferMap final :
   std::string* _internal_mutable_a_bufferid();
   public:
 
-  // required uint64 a_offset = 4;
+  // optional uint64 a_offset = 4;
   bool has_a_offset() const;
   private:
   bool _internal_has_a_offset() const;
@@ -3062,7 +3062,7 @@ class Msg_BufferMap final :
   void _internal_set_a_offset(uint64_t value);
   public:
 
-  // required uint64 a_size = 5;
+  // optional uint64 a_size = 5;
   bool has_a_size() const;
   private:
   bool _internal_has_a_size() const;
@@ -3075,7 +3075,7 @@ class Msg_BufferMap final :
   void _internal_set_a_size(uint64_t value);
   public:
 
-  // required uint32 a_aMode = 3;
+  // optional uint32 a_aMode = 3;
   bool has_a_amode() const;
   private:
   bool _internal_has_a_amode() const;
@@ -3409,7 +3409,7 @@ class Msg_BufferUnmap final :
   std::string* _internal_mutable_a_bufferid();
   public:
 
-  // required bool a_flush = 3;
+  // optional bool a_flush = 3;
   bool has_a_flush() const;
   private:
   bool _internal_has_a_flush() const;
@@ -7268,7 +7268,7 @@ class Msg_DeviceCreateSwapChain final :
   std::string* _internal_mutable_a_ownerid();
   public:
 
-  // required bool a_useExternalTextureInSwapChain = 6;
+  // optional bool a_useExternalTextureInSwapChain = 6;
   bool has_a_useexternaltextureinswapchain() const;
   private:
   bool _internal_has_a_useexternaltextureinswapchain() const;
@@ -8320,7 +8320,7 @@ class Msg_ReportError final :
   std::string* _internal_mutable_a_atype();
   public:
 
-  // required string a_message = 3;
+  // optional string a_message = 3;
   bool has_a_message() const;
   private:
   bool _internal_has_a_message() const;
@@ -8491,7 +8491,7 @@ class Msg_UncapturedError final :
   std::string* _internal_mutable_a_adeviceid();
   public:
 
-  // required string a_message = 2;
+  // optional string a_message = 2;
   bool has_a_message() const;
   private:
   bool _internal_has_a_message() const;
@@ -8659,7 +8659,7 @@ class Msg_DeviceLost final :
   std::string* _internal_mutable_a_adeviceid();
   public:
 
-  // required string a_message = 3;
+  // optional string a_message = 3;
   bool has_a_message() const;
   private:
   bool _internal_has_a_message() const;
@@ -8693,9 +8693,6 @@ class Msg_DeviceLost final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -9249,7 +9246,7 @@ inline void Msg_DeviceActionWithAck::set_allocated_a_buf(std::string* a_buf) {
 
 // Reply_DeviceActionWithAck
 
-// required bool a_dummy = 1;
+// optional bool a_dummy = 1;
 inline bool Reply_DeviceActionWithAck::_internal_has_a_dummy() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10877,7 +10874,7 @@ inline void Msg_AdapterRequestDevice::set_allocated_a_newqueueid(std::string* a_
 
 // Reply_AdapterRequestDevice
 
-// required bool a_success = 1;
+// optional bool a_success = 1;
 inline bool Reply_AdapterRequestDevice::_internal_has_a_success() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11117,7 +11114,7 @@ inline void Msg_DeviceCreateShaderModule::set_allocated_a_bufferid(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_bufferId)
 }
 
-// required string a_label = 3;
+// optional string a_label = 3;
 inline bool Msg_DeviceCreateShaderModule::_internal_has_a_label() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -11185,7 +11182,7 @@ inline void Msg_DeviceCreateShaderModule::set_allocated_a_label(std::string* a_l
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_label)
 }
 
-// required string a_code = 4;
+// optional string a_code = 4;
 inline bool Msg_DeviceCreateShaderModule::_internal_has_a_code() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -11472,7 +11469,7 @@ inline void Msg_BufferMap::set_allocated_a_bufferid(std::string* a_bufferid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.a_bufferId)
 }
 
-// required uint32 a_aMode = 3;
+// optional uint32 a_aMode = 3;
 inline bool Msg_BufferMap::_internal_has_a_amode() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -11500,7 +11497,7 @@ inline void Msg_BufferMap::set_a_amode(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.a_aMode)
 }
 
-// required uint64 a_offset = 4;
+// optional uint64 a_offset = 4;
 inline bool Msg_BufferMap::_internal_has_a_offset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -11528,7 +11525,7 @@ inline void Msg_BufferMap::set_a_offset(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.a_offset)
 }
 
-// required uint64 a_size = 5;
+// optional uint64 a_size = 5;
 inline bool Msg_BufferMap::_internal_has_a_size() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -11787,7 +11784,7 @@ inline void Msg_BufferUnmap::set_allocated_a_bufferid(std::string* a_bufferid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.a_bufferId)
 }
 
-// required bool a_flush = 3;
+// optional bool a_flush = 3;
 inline bool Msg_BufferUnmap::_internal_has_a_flush() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -14523,7 +14520,7 @@ inline void Msg_DeviceCreateSwapChain::set_allocated_a_ownerid(std::string* a_ow
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_ownerId)
 }
 
-// required bool a_useExternalTextureInSwapChain = 6;
+// optional bool a_useExternalTextureInSwapChain = 6;
 inline bool Msg_DeviceCreateSwapChain::_internal_has_a_useexternaltextureinswapchain() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -15459,7 +15456,7 @@ inline void Msg_ReportError::set_allocated_a_atype(std::string* a_atype) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.a_aType)
 }
 
-// required string a_message = 3;
+// optional string a_message = 3;
 inline bool Msg_ReportError::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -15599,7 +15596,7 @@ inline void Msg_UncapturedError::set_allocated_a_adeviceid(std::string* a_adevic
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_UncapturedError.a_aDeviceId)
 }
 
-// required string a_message = 2;
+// optional string a_message = 2;
 inline bool Msg_UncapturedError::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -15767,7 +15764,7 @@ inline void Msg_DeviceLost::set_a_reason(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.a_reason)
 }
 
-// required string a_message = 3;
+// optional string a_message = 3;
 inline bool Msg_DeviceLost::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

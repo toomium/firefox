@@ -31,16 +31,16 @@ message Msg_RequestContentRepaint {
 
 message Msg_UpdateOverscrollVelocity {
   required bytes a_aGuid = 1;
-  required float a_aX = 2;
-  required float a_aY = 3;
-  required bool a_aIsRootContent = 4;
+  optional float a_aX = 2;
+  optional float a_aY = 3;
+  optional bool a_aIsRootContent = 4;
 }
 
 message Msg_UpdateOverscrollOffset {
   required bytes a_aGuid = 1;
-  required float a_aX = 2;
-  required float a_aY = 3;
-  required bool a_aIsRootContent = 4;
+  optional float a_aX = 2;
+  optional float a_aY = 3;
+  optional bool a_aIsRootContent = 4;
 }
 
 message Msg_HideDynamicToolbar {
@@ -48,13 +48,13 @@ message Msg_HideDynamicToolbar {
 
 message Msg_NotifyMozMouseScrollEvent {
   required bytes a_aScrollId = 1;
-  required string a_aEvent = 2;
+  optional string a_aEvent = 2;
 }
 
 message Msg_NotifyAPZStateChange {
   required bytes a_aGuid = 1;
   required bytes a_aChange = 2;
-  required sint32 a_aArg = 3;
+  optional sint32 a_aArg = 3;
   optional uint64 a_aInputBlockId = 4;
 }
 
@@ -62,7 +62,7 @@ message Msg_NotifyFlushComplete {
 }
 
 message Msg_NotifyAsyncScrollbarDragInitiated {
-  required uint64 a_aDragBlockId = 1;
+  optional uint64 a_aDragBlockId = 1;
   required bytes a_aScrollId = 2;
   required bytes a_aDirection = 3;
 }

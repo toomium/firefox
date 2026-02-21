@@ -33,11 +33,11 @@ message SharedWorkerPortIdentifierOpArgs {
 }
 
 message SharedWorkerAddWindowIDOpArgs {
-  required uint64 a_windowID = 1;
+  optional uint64 a_windowID = 1;
 }
 
 message SharedWorkerRemoveWindowIDOpArgs {
-  required uint64 a_windowID = 1;
+  optional uint64 a_windowID = 1;
 }
 
 message SharedWorkerOpArgs {

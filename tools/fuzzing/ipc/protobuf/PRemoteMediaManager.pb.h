@@ -275,7 +275,7 @@ class Msg_PRemoteDecoderConstructor final :
       ::protobuf::mozilla::RemoteDecoderInfoIPDL* a_info);
   ::protobuf::mozilla::RemoteDecoderInfoIPDL* unsafe_arena_release_a_info();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -581,7 +581,7 @@ class Msg_PRemoteEncoderConstructor final :
   std::string* _internal_mutable_a_config();
   public:
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -597,9 +597,6 @@ class Msg_PRemoteEncoderConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteEncoderConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1189,7 +1186,7 @@ class Msg_DeallocateSurfaceDescriptorGPUVideo final :
 #endif  // __GNUC__
 // Msg_PRemoteDecoderConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PRemoteDecoderConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -1544,7 +1541,7 @@ inline void Msg_PRemoteDecoderConstructor::set_allocated_a_trackingid(std::strin
 
 // Msg_PRemoteEncoderConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PRemoteEncoderConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

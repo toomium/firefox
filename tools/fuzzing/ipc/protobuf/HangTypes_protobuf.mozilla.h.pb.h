@@ -216,7 +216,7 @@ class HangEntryBufOffset final :
   enum : int {
     kAIndexFieldNumber = 1,
   };
-  // required uint32 a_index = 1;
+  // optional uint32 a_index = 1;
   bool has_a_index() const;
   private:
   bool _internal_has_a_index() const;
@@ -359,7 +359,7 @@ class HangEntryModOffset final :
     kAModuleFieldNumber = 1,
     kAOffsetFieldNumber = 2,
   };
-  // required uint32 a_module = 1;
+  // optional uint32 a_module = 1;
   bool has_a_module() const;
   private:
   bool _internal_has_a_module() const;
@@ -372,7 +372,7 @@ class HangEntryModOffset final :
   void _internal_set_a_module(uint32_t value);
   public:
 
-  // required uint32 a_offset = 2;
+  // optional uint32 a_offset = 2;
   bool has_a_offset() const;
   private:
   bool _internal_has_a_offset() const;
@@ -388,9 +388,6 @@ class HangEntryModOffset final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.HangEntryModOffset)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1625,7 +1622,7 @@ class HangModule final :
     kANameFieldNumber = 1,
     kABreakpadIdFieldNumber = 2,
   };
-  // required string a_name = 1;
+  // optional string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -1643,7 +1640,7 @@ class HangModule final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required string a_breakpadId = 2;
+  // optional string a_breakpadId = 2;
   bool has_a_breakpadid() const;
   private:
   bool _internal_has_a_breakpadid() const;
@@ -1664,9 +1661,6 @@ class HangModule final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.HangModule)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1985,7 +1979,7 @@ class HangAnnotation final :
     kANameFieldNumber = 1,
     kAValueFieldNumber = 2,
   };
-  // required string a_name = 1;
+  // optional string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -2003,7 +1997,7 @@ class HangAnnotation final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required string a_value = 2;
+  // optional string a_value = 2;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -2024,9 +2018,6 @@ class HangAnnotation final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.HangAnnotation)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2196,7 +2187,7 @@ class HangDetails final :
   std::string* _internal_mutable_a_duration();
   public:
 
-  // required string a_process = 2;
+  // optional string a_process = 2;
   bool has_a_process() const;
   private:
   bool _internal_has_a_process() const;
@@ -2214,7 +2205,7 @@ class HangDetails final :
   std::string* _internal_mutable_a_process();
   public:
 
-  // required string a_remoteType = 3;
+  // optional string a_remoteType = 3;
   bool has_a_remotetype() const;
   private:
   bool _internal_has_a_remotetype() const;
@@ -2232,7 +2223,7 @@ class HangDetails final :
   std::string* _internal_mutable_a_remotetype();
   public:
 
-  // required string a_threadName = 4;
+  // optional string a_threadName = 4;
   bool has_a_threadname() const;
   private:
   bool _internal_has_a_threadname() const;
@@ -2250,7 +2241,7 @@ class HangDetails final :
   std::string* _internal_mutable_a_threadname();
   public:
 
-  // required string a_runnableName = 5;
+  // optional string a_runnableName = 5;
   bool has_a_runnablename() const;
   private:
   bool _internal_has_a_runnablename() const;
@@ -2321,7 +2312,7 @@ class HangDetails final :
 #endif  // __GNUC__
 // HangEntryBufOffset
 
-// required uint32 a_index = 1;
+// optional uint32 a_index = 1;
 inline bool HangEntryBufOffset::_internal_has_a_index() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2353,7 +2344,7 @@ inline void HangEntryBufOffset::set_a_index(uint32_t value) {
 
 // HangEntryModOffset
 
-// required uint32 a_module = 1;
+// optional uint32 a_module = 1;
 inline bool HangEntryModOffset::_internal_has_a_module() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2381,7 +2372,7 @@ inline void HangEntryModOffset::set_a_module(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.HangEntryModOffset.a_module)
 }
 
-// required uint32 a_offset = 2;
+// optional uint32 a_offset = 2;
 inline bool HangEntryModOffset::_internal_has_a_offset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3187,7 +3178,7 @@ inline HangEntry::ContentCase HangEntry::content_case() const {
 
 // HangModule
 
-// required string a_name = 1;
+// optional string a_name = 1;
 inline bool HangModule::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3255,7 +3246,7 @@ inline void HangModule::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.HangModule.a_name)
 }
 
-// required string a_breakpadId = 2;
+// optional string a_breakpadId = 2;
 inline bool HangModule::_internal_has_a_breakpadid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3458,7 +3449,7 @@ HangStack::a_modules() const {
 
 // HangAnnotation
 
-// required string a_name = 1;
+// optional string a_name = 1;
 inline bool HangAnnotation::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3526,7 +3517,7 @@ inline void HangAnnotation::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.HangAnnotation.a_name)
 }
 
-// required string a_value = 2;
+// optional string a_value = 2;
 inline bool HangAnnotation::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3666,7 +3657,7 @@ inline void HangDetails::set_allocated_a_duration(std::string* a_duration) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.HangDetails.a_duration)
 }
 
-// required string a_process = 2;
+// optional string a_process = 2;
 inline bool HangDetails::_internal_has_a_process() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3734,7 +3725,7 @@ inline void HangDetails::set_allocated_a_process(std::string* a_process) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.HangDetails.a_process)
 }
 
-// required string a_remoteType = 3;
+// optional string a_remoteType = 3;
 inline bool HangDetails::_internal_has_a_remotetype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -3802,7 +3793,7 @@ inline void HangDetails::set_allocated_a_remotetype(std::string* a_remotetype) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.HangDetails.a_remoteType)
 }
 
-// required string a_threadName = 4;
+// optional string a_threadName = 4;
 inline bool HangDetails::_internal_has_a_threadname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -3870,7 +3861,7 @@ inline void HangDetails::set_allocated_a_threadname(std::string* a_threadname) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.HangDetails.a_threadName)
 }
 
-// required string a_runnableName = 5;
+// optional string a_runnableName = 5;
 inline bool HangDetails::_internal_has_a_runnablename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;

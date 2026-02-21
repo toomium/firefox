@@ -206,7 +206,7 @@ class Msg_GamepadTestEvent final :
       ::protobuf::mozilla::dom::GamepadChangeEvent* a_agamepadevent);
   ::protobuf::mozilla::dom::GamepadChangeEvent* unsafe_arena_release_a_agamepadevent();
 
-  // required uint32 a_aID = 1;
+  // optional uint32 a_aID = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -222,9 +222,6 @@ class Msg_GamepadTestEvent final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PGamepadTestChannel.Msg_GamepadTestEvent)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -619,7 +616,7 @@ class Msg_ReplyGamepadHandle final :
   std::string* _internal_mutable_a_ahandle();
   public:
 
-  // required uint32 a_aID = 1;
+  // optional uint32 a_aID = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -635,9 +632,6 @@ class Msg_ReplyGamepadHandle final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PGamepadTestChannel.Msg_ReplyGamepadHandle)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -662,7 +656,7 @@ class Msg_ReplyGamepadHandle final :
 #endif  // __GNUC__
 // Msg_GamepadTestEvent
 
-// required uint32 a_aID = 1;
+// optional uint32 a_aID = 1;
 inline bool Msg_GamepadTestEvent::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -789,7 +783,7 @@ inline void Msg_GamepadTestEvent::set_allocated_a_agamepadevent(::protobuf::mozi
 
 // Msg_ReplyGamepadHandle
 
-// required uint32 a_aID = 1;
+// optional uint32 a_aID = 1;
 inline bool Msg_ReplyGamepadHandle::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

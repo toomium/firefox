@@ -344,9 +344,6 @@ class Msg_PostMessageToDebugger::_Internal {
   static void set_has_a_amessage(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_PostMessageToDebugger::Msg_PostMessageToDebugger(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -429,7 +426,7 @@ const char* Msg_PostMessageToDebugger::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aMessage = 1;
+      // optional string a_aMessage = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_amessage();
@@ -469,7 +466,7 @@ uint8_t* Msg_PostMessageToDebugger::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aMessage = 1;
+  // optional string a_aMessage = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_amessage(), target);
@@ -487,15 +484,17 @@ size_t Msg_PostMessageToDebugger::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PRemoteWorkerDebugger.Msg_PostMessageToDebugger)
   size_t total_size = 0;
 
-  // required string a_aMessage = 1;
-  if (_internal_has_a_amessage()) {
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional string a_aMessage = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_amessage());
   }
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -532,7 +531,6 @@ void Msg_PostMessageToDebugger::CopyFrom(const Msg_PostMessageToDebugger& from) 
 }
 
 bool Msg_PostMessageToDebugger::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -752,9 +750,6 @@ void Msg_ReportErrorToDebugger::CopyFrom(const Msg_ReportErrorToDebugger& from) 
 
 bool Msg_ReportErrorToDebugger::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_aerrorinfo()) {
-    if (!_impl_.a_aerrorinfo_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -1074,9 +1069,6 @@ class Msg_AddWindowID::_Internal {
   static void set_has_a_awindowid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_AddWindowID::Msg_AddWindowID(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1144,7 +1136,7 @@ const char* Msg_AddWindowID::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint64 a_aWindowID = 1;
+      // optional uint64 a_aWindowID = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_awindowid(&has_bits);
@@ -1184,7 +1176,7 @@ uint8_t* Msg_AddWindowID::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint64 a_aWindowID = 1;
+  // optional uint64 a_aWindowID = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_awindowid(), target);
@@ -1202,13 +1194,15 @@ size_t Msg_AddWindowID::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PRemoteWorkerDebugger.Msg_AddWindowID)
   size_t total_size = 0;
 
-  // required uint64 a_aWindowID = 1;
-  if (_internal_has_a_awindowid()) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_awindowid());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional uint64 a_aWindowID = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_awindowid());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1245,7 +1239,6 @@ void Msg_AddWindowID::CopyFrom(const Msg_AddWindowID& from) {
 }
 
 bool Msg_AddWindowID::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1268,9 +1261,6 @@ class Msg_RemoveWindowID::_Internal {
   using HasBits = decltype(std::declval<Msg_RemoveWindowID>()._impl_._has_bits_);
   static void set_has_a_awindowid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -1339,7 +1329,7 @@ const char* Msg_RemoveWindowID::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint64 a_aWindowID = 1;
+      // optional uint64 a_aWindowID = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_awindowid(&has_bits);
@@ -1379,7 +1369,7 @@ uint8_t* Msg_RemoveWindowID::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint64 a_aWindowID = 1;
+  // optional uint64 a_aWindowID = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_awindowid(), target);
@@ -1397,13 +1387,15 @@ size_t Msg_RemoveWindowID::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PRemoteWorkerDebugger.Msg_RemoveWindowID)
   size_t total_size = 0;
 
-  // required uint64 a_aWindowID = 1;
-  if (_internal_has_a_awindowid()) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_awindowid());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional uint64 a_aWindowID = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_awindowid());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1440,7 +1432,6 @@ void Msg_RemoveWindowID::CopyFrom(const Msg_RemoveWindowID& from) {
 }
 
 bool Msg_RemoveWindowID::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1760,9 +1751,6 @@ class Msg_Initialize::_Internal {
   static void set_has_a_aurl(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_Initialize::Msg_Initialize(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1845,7 +1833,7 @@ const char* Msg_Initialize::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aURL = 1;
+      // optional string a_aURL = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_aurl();
@@ -1885,7 +1873,7 @@ uint8_t* Msg_Initialize::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aURL = 1;
+  // optional string a_aURL = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_aurl(), target);
@@ -1903,15 +1891,17 @@ size_t Msg_Initialize::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PRemoteWorkerDebugger.Msg_Initialize)
   size_t total_size = 0;
 
-  // required string a_aURL = 1;
-  if (_internal_has_a_aurl()) {
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional string a_aURL = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_aurl());
   }
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1948,7 +1938,6 @@ void Msg_Initialize::CopyFrom(const Msg_Initialize& from) {
 }
 
 bool Msg_Initialize::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1976,9 +1965,6 @@ class Msg_PostMessage::_Internal {
   using HasBits = decltype(std::declval<Msg_PostMessage>()._impl_._has_bits_);
   static void set_has_a_amessage(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -2062,7 +2048,7 @@ const char* Msg_PostMessage::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aMessage = 1;
+      // optional string a_aMessage = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_amessage();
@@ -2102,7 +2088,7 @@ uint8_t* Msg_PostMessage::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aMessage = 1;
+  // optional string a_aMessage = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_amessage(), target);
@@ -2120,15 +2106,17 @@ size_t Msg_PostMessage::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PRemoteWorkerDebugger.Msg_PostMessage)
   size_t total_size = 0;
 
-  // required string a_aMessage = 1;
-  if (_internal_has_a_amessage()) {
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional string a_aMessage = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_amessage());
   }
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -2165,7 +2153,6 @@ void Msg_PostMessage::CopyFrom(const Msg_PostMessage& from) {
 }
 
 bool Msg_PostMessage::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -2193,9 +2180,6 @@ class Msg_SetDebuggerReady::_Internal {
   using HasBits = decltype(std::declval<Msg_SetDebuggerReady>()._impl_._has_bits_);
   static void set_has_a_aready(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -2264,7 +2248,7 @@ const char* Msg_SetDebuggerReady::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_aReady = 1;
+      // optional bool a_aReady = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_aready(&has_bits);
@@ -2304,7 +2288,7 @@ uint8_t* Msg_SetDebuggerReady::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_aReady = 1;
+  // optional bool a_aReady = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_aready(), target);
@@ -2322,13 +2306,15 @@ size_t Msg_SetDebuggerReady::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PRemoteWorkerDebugger.Msg_SetDebuggerReady)
   size_t total_size = 0;
 
-  // required bool a_aReady = 1;
-  if (_internal_has_a_aready()) {
-    total_size += 1 + 1;
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_aReady = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -2365,7 +2351,6 @@ void Msg_SetDebuggerReady::CopyFrom(const Msg_SetDebuggerReady& from) {
 }
 
 bool Msg_SetDebuggerReady::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 

@@ -17,29 +17,29 @@ import "PrefsTypes.proto";
 
 // Structs and unions declarations
 message HttpHandlerInitArgs {
-  required string a_mLegacyAppName = 1;
-  required string a_mLegacyAppVersion = 2;
-  required string a_mPlatform = 3;
-  required string a_mOscpu = 4;
-  required string a_mMisc = 5;
-  required string a_mProduct = 6;
-  required string a_mProductSub = 7;
-  required string a_mAppName = 8;
-  required string a_mAppVersion = 9;
-  required string a_mCompatFirefox = 10;
-  required string a_mCompatDevice = 11;
-  required string a_mDeviceModelId = 12;
+  optional string a_mLegacyAppName = 1;
+  optional string a_mLegacyAppVersion = 2;
+  optional string a_mPlatform = 3;
+  optional string a_mOscpu = 4;
+  optional string a_mMisc = 5;
+  optional string a_mProduct = 6;
+  optional string a_mProductSub = 7;
+  optional string a_mAppName = 8;
+  optional string a_mAppVersion = 9;
+  optional string a_mCompatFirefox = 10;
+  optional string a_mCompatDevice = 11;
+  optional string a_mDeviceModelId = 12;
 }
 
 message SocketDataArgs {
-  required uint64 a_totalSent = 1;
-  required uint64 a_totalRecv = 2;
+  optional uint64 a_totalSent = 1;
+  optional uint64 a_totalRecv = 2;
   repeated bytes a_info = 3;
 }
 
 message SocketPorcessInitAttributes {
-  required bool a_mOffline = 1;
-  required bool a_mConnectivity = 2;
-  required bool a_mInitSandbox = 3;
+  optional bool a_mOffline = 1;
+  optional bool a_mConnectivity = 2;
+  optional bool a_mInitSandbox = 3;
   optional bytes a_mSandboxBroker = 4;
 }

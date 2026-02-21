@@ -186,7 +186,7 @@ class FileSystemGetDirectoryListingParams final :
     kADomPathFieldNumber = 3,
     kAFiltersFieldNumber = 4,
   };
-  // required string a_filesystem = 1;
+  // optional string a_filesystem = 1;
   bool has_a_filesystem() const;
   private:
   bool _internal_has_a_filesystem() const;
@@ -204,7 +204,7 @@ class FileSystemGetDirectoryListingParams final :
   std::string* _internal_mutable_a_filesystem();
   public:
 
-  // required string a_realPath = 2;
+  // optional string a_realPath = 2;
   bool has_a_realpath() const;
   private:
   bool _internal_has_a_realpath() const;
@@ -222,7 +222,7 @@ class FileSystemGetDirectoryListingParams final :
   std::string* _internal_mutable_a_realpath();
   public:
 
-  // required string a_domPath = 3;
+  // optional string a_domPath = 3;
   bool has_a_dompath() const;
   private:
   bool _internal_has_a_dompath() const;
@@ -240,7 +240,7 @@ class FileSystemGetDirectoryListingParams final :
   std::string* _internal_mutable_a_dompath();
   public:
 
-  // required string a_filters = 4;
+  // optional string a_filters = 4;
   bool has_a_filters() const;
   private:
   bool _internal_has_a_filters() const;
@@ -261,9 +261,6 @@ class FileSystemGetDirectoryListingParams final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -396,7 +393,7 @@ class FileSystemGetFilesParams final :
     kADomPathFieldNumber = 3,
     kARecursiveFlagFieldNumber = 4,
   };
-  // required string a_filesystem = 1;
+  // optional string a_filesystem = 1;
   bool has_a_filesystem() const;
   private:
   bool _internal_has_a_filesystem() const;
@@ -414,7 +411,7 @@ class FileSystemGetFilesParams final :
   std::string* _internal_mutable_a_filesystem();
   public:
 
-  // required string a_realPath = 2;
+  // optional string a_realPath = 2;
   bool has_a_realpath() const;
   private:
   bool _internal_has_a_realpath() const;
@@ -432,7 +429,7 @@ class FileSystemGetFilesParams final :
   std::string* _internal_mutable_a_realpath();
   public:
 
-  // required string a_domPath = 3;
+  // optional string a_domPath = 3;
   bool has_a_dompath() const;
   private:
   bool _internal_has_a_dompath() const;
@@ -450,7 +447,7 @@ class FileSystemGetFilesParams final :
   std::string* _internal_mutable_a_dompath();
   public:
 
-  // required bool a_recursiveFlag = 4;
+  // optional bool a_recursiveFlag = 4;
   bool has_a_recursiveflag() const;
   private:
   bool _internal_has_a_recursiveflag() const;
@@ -466,9 +463,6 @@ class FileSystemGetFilesParams final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.FileSystemGetFilesParams)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -599,7 +593,7 @@ class FileSystemGetFileOrDirectoryParams final :
     kAFilesystemFieldNumber = 1,
     kARealPathFieldNumber = 2,
   };
-  // required string a_filesystem = 1;
+  // optional string a_filesystem = 1;
   bool has_a_filesystem() const;
   private:
   bool _internal_has_a_filesystem() const;
@@ -617,7 +611,7 @@ class FileSystemGetFileOrDirectoryParams final :
   std::string* _internal_mutable_a_filesystem();
   public:
 
-  // required string a_realPath = 2;
+  // optional string a_realPath = 2;
   bool has_a_realpath() const;
   private:
   bool _internal_has_a_realpath() const;
@@ -638,9 +632,6 @@ class FileSystemGetFileOrDirectoryParams final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.FileSystemGetFileOrDirectoryParams)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -872,7 +863,7 @@ class FileSystemParams final :
 #endif  // __GNUC__
 // FileSystemGetDirectoryListingParams
 
-// required string a_filesystem = 1;
+// optional string a_filesystem = 1;
 inline bool FileSystemGetDirectoryListingParams::_internal_has_a_filesystem() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -940,7 +931,7 @@ inline void FileSystemGetDirectoryListingParams::set_allocated_a_filesystem(std:
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.a_filesystem)
 }
 
-// required string a_realPath = 2;
+// optional string a_realPath = 2;
 inline bool FileSystemGetDirectoryListingParams::_internal_has_a_realpath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1008,7 +999,7 @@ inline void FileSystemGetDirectoryListingParams::set_allocated_a_realpath(std::s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.a_realPath)
 }
 
-// required string a_domPath = 3;
+// optional string a_domPath = 3;
 inline bool FileSystemGetDirectoryListingParams::_internal_has_a_dompath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1076,7 +1067,7 @@ inline void FileSystemGetDirectoryListingParams::set_allocated_a_dompath(std::st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.a_domPath)
 }
 
-// required string a_filters = 4;
+// optional string a_filters = 4;
 inline bool FileSystemGetDirectoryListingParams::_internal_has_a_filters() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1148,7 +1139,7 @@ inline void FileSystemGetDirectoryListingParams::set_allocated_a_filters(std::st
 
 // FileSystemGetFilesParams
 
-// required string a_filesystem = 1;
+// optional string a_filesystem = 1;
 inline bool FileSystemGetFilesParams::_internal_has_a_filesystem() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1216,7 +1207,7 @@ inline void FileSystemGetFilesParams::set_allocated_a_filesystem(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemGetFilesParams.a_filesystem)
 }
 
-// required string a_realPath = 2;
+// optional string a_realPath = 2;
 inline bool FileSystemGetFilesParams::_internal_has_a_realpath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1284,7 +1275,7 @@ inline void FileSystemGetFilesParams::set_allocated_a_realpath(std::string* a_re
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemGetFilesParams.a_realPath)
 }
 
-// required string a_domPath = 3;
+// optional string a_domPath = 3;
 inline bool FileSystemGetFilesParams::_internal_has_a_dompath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1352,7 +1343,7 @@ inline void FileSystemGetFilesParams::set_allocated_a_dompath(std::string* a_dom
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemGetFilesParams.a_domPath)
 }
 
-// required bool a_recursiveFlag = 4;
+// optional bool a_recursiveFlag = 4;
 inline bool FileSystemGetFilesParams::_internal_has_a_recursiveflag() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1384,7 +1375,7 @@ inline void FileSystemGetFilesParams::set_a_recursiveflag(bool value) {
 
 // FileSystemGetFileOrDirectoryParams
 
-// required string a_filesystem = 1;
+// optional string a_filesystem = 1;
 inline bool FileSystemGetFileOrDirectoryParams::_internal_has_a_filesystem() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1452,7 +1443,7 @@ inline void FileSystemGetFileOrDirectoryParams::set_allocated_a_filesystem(std::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemGetFileOrDirectoryParams.a_filesystem)
 }
 
-// required string a_realPath = 2;
+// optional string a_realPath = 2;
 inline bool FileSystemGetFileOrDirectoryParams::_internal_has_a_realpath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

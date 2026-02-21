@@ -252,7 +252,7 @@ class Msg_SessionStoreUpdate final :
   void _internal_set_a_aprivatemode(bool value);
   public:
 
-  // required bool a_aNeedCollectSHistory = 4;
+  // optional bool a_aNeedCollectSHistory = 4;
   bool has_a_aneedcollectshistory() const;
   private:
   bool _internal_has_a_aneedcollectshistory() const;
@@ -265,7 +265,7 @@ class Msg_SessionStoreUpdate final :
   void _internal_set_a_aneedcollectshistory(bool value);
   public:
 
-  // required uint32 a_aEpoch = 5;
+  // optional uint32 a_aEpoch = 5;
   bool has_a_aepoch() const;
   private:
   bool _internal_has_a_aepoch() const;
@@ -281,9 +281,6 @@ class Msg_SessionStoreUpdate final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PSessionStore.Msg_SessionStoreUpdate)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -471,7 +468,7 @@ class Msg_IncrementalSessionStoreUpdate final :
       ::protobuf::mozilla::dom::sessionstore::FormData* a_aformdata);
   ::protobuf::mozilla::dom::sessionstore::FormData* unsafe_arena_release_a_aformdata();
 
-  // required uint32 a_aEpoch = 4;
+  // optional uint32 a_aEpoch = 4;
   bool has_a_aepoch() const;
   private:
   bool _internal_has_a_aepoch() const;
@@ -487,9 +484,6 @@ class Msg_IncrementalSessionStoreUpdate final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PSessionStore.Msg_IncrementalSessionStoreUpdate)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -638,7 +632,7 @@ class Msg_ResetSessionStore final :
   std::string* _internal_mutable_a_abrowsingcontext();
   public:
 
-  // required uint32 a_aEpoch = 2;
+  // optional uint32 a_aEpoch = 2;
   bool has_a_aepoch() const;
   private:
   bool _internal_has_a_aepoch() const;
@@ -654,9 +648,6 @@ class Msg_ResetSessionStore final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PSessionStore.Msg_ResetSessionStore)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -908,7 +899,7 @@ class Reply_FlushTabState final :
   enum : int {
     kAAHadContextFieldNumber = 1,
   };
-  // required bool a_aHadContext = 1;
+  // optional bool a_aHadContext = 1;
   bool has_a_ahadcontext() const;
   private:
   bool _internal_has_a_ahadcontext() const;
@@ -1359,7 +1350,7 @@ inline void Msg_SessionStoreUpdate::set_allocated_a_azoom(std::string* a_azoom) 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSessionStore.Msg_SessionStoreUpdate.a_aZoom)
 }
 
-// required bool a_aNeedCollectSHistory = 4;
+// optional bool a_aNeedCollectSHistory = 4;
 inline bool Msg_SessionStoreUpdate::_internal_has_a_aneedcollectshistory() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1387,7 +1378,7 @@ inline void Msg_SessionStoreUpdate::set_a_aneedcollectshistory(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSessionStore.Msg_SessionStoreUpdate.a_aNeedCollectSHistory)
 }
 
-// required uint32 a_aEpoch = 5;
+// optional uint32 a_aEpoch = 5;
 inline bool Msg_SessionStoreUpdate::_internal_has_a_aepoch() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -1642,7 +1633,7 @@ inline void Msg_IncrementalSessionStoreUpdate::set_allocated_a_ascrollposition(s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSessionStore.Msg_IncrementalSessionStoreUpdate.a_aScrollPosition)
 }
 
-// required uint32 a_aEpoch = 4;
+// optional uint32 a_aEpoch = 4;
 inline bool Msg_IncrementalSessionStoreUpdate::_internal_has_a_aepoch() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1742,7 +1733,7 @@ inline void Msg_ResetSessionStore::set_allocated_a_abrowsingcontext(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSessionStore.Msg_ResetSessionStore.a_aBrowsingContext)
 }
 
-// required uint32 a_aEpoch = 2;
+// optional uint32 a_aEpoch = 2;
 inline bool Msg_ResetSessionStore::_internal_has_a_aepoch() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1778,7 +1769,7 @@ inline void Msg_ResetSessionStore::set_a_aepoch(uint32_t value) {
 
 // Reply_FlushTabState
 
-// required bool a_aHadContext = 1;
+// optional bool a_aHadContext = 1;
 inline bool Reply_FlushTabState::_internal_has_a_ahadcontext() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

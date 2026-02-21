@@ -688,7 +688,7 @@ class Msg_Cancel final :
   std::string* _internal_mutable_a_status();
   public:
 
-  // required string a_aReason = 3;
+  // optional string a_aReason = 3;
   bool has_a_areason() const;
   private:
   bool _internal_has_a_areason() const;
@@ -724,7 +724,7 @@ class Msg_Cancel final :
   std::string* _internal_mutable_a_logstring();
   public:
 
-  // required uint32 a_requestBlockingReason = 2;
+  // optional uint32 a_requestBlockingReason = 2;
   bool has_a_requestblockingreason() const;
   private:
   bool _internal_has_a_requestblockingreason() const;
@@ -740,9 +740,6 @@ class Msg_Cancel final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PHttpChannel.Msg_Cancel)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -987,7 +984,7 @@ class Msg_Redirect2Verify final :
       ::protobuf::mozilla::net::CorsPreflightArgs* a_corspreflightargs);
   ::protobuf::mozilla::net::CorsPreflightArgs* unsafe_arena_release_a_corspreflightargs();
 
-  // required uint32 a_sourceRequestBlockingReason = 3;
+  // optional uint32 a_sourceRequestBlockingReason = 3;
   bool has_a_sourcerequestblockingreason() const;
   private:
   bool _internal_has_a_sourcerequestblockingreason() const;
@@ -1000,7 +997,7 @@ class Msg_Redirect2Verify final :
   void _internal_set_a_sourcerequestblockingreason(uint32_t value);
   public:
 
-  // required uint32 a_loadFlags = 5;
+  // optional uint32 a_loadFlags = 5;
   bool has_a_loadflags() const;
   private:
   bool _internal_has_a_loadflags() const;
@@ -1152,7 +1149,7 @@ class Msg_DocumentChannelCleanup final :
   enum : int {
     kAClearCacheEntryFieldNumber = 1,
   };
-  // required bool a_clearCacheEntry = 1;
+  // optional bool a_clearCacheEntry = 1;
   bool has_a_clearcacheentry() const;
   private:
   bool _internal_has_a_clearcacheentry() const;
@@ -1507,7 +1504,7 @@ class Msg_SetCookies final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::CookieStruct >&
       a_cookies() const;
 
-  // required string a_baseDomain = 1;
+  // optional string a_baseDomain = 1;
   bool has_a_basedomain() const;
   private:
   bool _internal_has_a_basedomain() const;
@@ -1561,7 +1558,7 @@ class Msg_SetCookies final :
   std::string* _internal_mutable_a_host();
   public:
 
-  // required bool a_fromHttp = 4;
+  // optional bool a_fromHttp = 4;
   bool has_a_fromhttp() const;
   private:
   bool _internal_has_a_fromhttp() const;
@@ -1574,7 +1571,7 @@ class Msg_SetCookies final :
   void _internal_set_a_fromhttp(bool value);
   public:
 
-  // required bool a_isThirdParty = 5;
+  // optional bool a_isThirdParty = 5;
   bool has_a_isthirdparty() const;
   private:
   bool _internal_has_a_isthirdparty() const;
@@ -1590,9 +1587,6 @@ class Msg_SetCookies final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PHttpChannel.Msg_SetCookies)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1972,7 +1966,7 @@ class Msg_BytesRead final :
   enum : int {
     kACountFieldNumber = 1,
   };
-  // required sint32 a_count = 1;
+  // optional sint32 a_count = 1;
   bool has_a_count() const;
   private:
   bool _internal_has_a_count() const;
@@ -2750,7 +2744,7 @@ class Msg_Redirect1Begin final :
       ::protobuf::mozilla::net::ResourceTimingStructArgs* a_timing);
   ::protobuf::mozilla::net::ResourceTimingStructArgs* unsafe_arena_release_a_timing();
 
-  // required uint32 a_registrarId = 1;
+  // optional uint32 a_registrarId = 1;
   bool has_a_registrarid() const;
   private:
   bool _internal_has_a_registrarid() const;
@@ -2763,7 +2757,7 @@ class Msg_Redirect1Begin final :
   void _internal_set_a_registrarid(uint32_t value);
   public:
 
-  // required uint32 a_newLoadFlags = 3;
+  // optional uint32 a_newLoadFlags = 3;
   bool has_a_newloadflags() const;
   private:
   bool _internal_has_a_newloadflags() const;
@@ -2776,7 +2770,7 @@ class Msg_Redirect1Begin final :
   void _internal_set_a_newloadflags(uint32_t value);
   public:
 
-  // required uint64 a_channelId = 8;
+  // optional uint64 a_channelId = 8;
   bool has_a_channelid() const;
   private:
   bool _internal_has_a_channelid() const;
@@ -2789,7 +2783,7 @@ class Msg_Redirect1Begin final :
   void _internal_set_a_channelid(uint64_t value);
   public:
 
-  // required uint32 a_redirectFlags = 4;
+  // optional uint32 a_redirectFlags = 4;
   bool has_a_redirectflags() const;
   private:
   bool _internal_has_a_redirectflags() const;
@@ -3215,7 +3209,7 @@ class Msg_ReportSecurityMessage final :
     kAMessageTagFieldNumber = 1,
     kAMessageCategoryFieldNumber = 2,
   };
-  // required string a_messageTag = 1;
+  // optional string a_messageTag = 1;
   bool has_a_messagetag() const;
   private:
   bool _internal_has_a_messagetag() const;
@@ -3233,7 +3227,7 @@ class Msg_ReportSecurityMessage final :
   std::string* _internal_mutable_a_messagetag();
   public:
 
-  // required string a_messageCategory = 2;
+  // optional string a_messageCategory = 2;
   bool has_a_messagecategory() const;
   private:
   bool _internal_has_a_messagecategory() const;
@@ -3254,9 +3248,6 @@ class Msg_ReportSecurityMessage final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PHttpChannel.Msg_ReportSecurityMessage)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3510,7 +3501,7 @@ class Msg_LogBlockedCORSRequest final :
     kACategoryFieldNumber = 2,
     kAIsWarningFieldNumber = 3,
   };
-  // required string a_message = 1;
+  // optional string a_message = 1;
   bool has_a_message() const;
   private:
   bool _internal_has_a_message() const;
@@ -3528,7 +3519,7 @@ class Msg_LogBlockedCORSRequest final :
   std::string* _internal_mutable_a_message();
   public:
 
-  // required string a_category = 2;
+  // optional string a_category = 2;
   bool has_a_category() const;
   private:
   bool _internal_has_a_category() const;
@@ -3546,7 +3537,7 @@ class Msg_LogBlockedCORSRequest final :
   std::string* _internal_mutable_a_category();
   public:
 
-  // required bool a_isWarning = 3;
+  // optional bool a_isWarning = 3;
   bool has_a_iswarning() const;
   private:
   bool _internal_has_a_iswarning() const;
@@ -3562,9 +3553,6 @@ class Msg_LogBlockedCORSRequest final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PHttpChannel.Msg_LogBlockedCORSRequest)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3696,7 +3684,7 @@ class Msg_LogMimeTypeMismatch final :
     kAContentTypeFieldNumber = 4,
     kAWarningFieldNumber = 2,
   };
-  // required string a_messageName = 1;
+  // optional string a_messageName = 1;
   bool has_a_messagename() const;
   private:
   bool _internal_has_a_messagename() const;
@@ -3714,7 +3702,7 @@ class Msg_LogMimeTypeMismatch final :
   std::string* _internal_mutable_a_messagename();
   public:
 
-  // required string a_url = 3;
+  // optional string a_url = 3;
   bool has_a_url() const;
   private:
   bool _internal_has_a_url() const;
@@ -3732,7 +3720,7 @@ class Msg_LogMimeTypeMismatch final :
   std::string* _internal_mutable_a_url();
   public:
 
-  // required string a_contentType = 4;
+  // optional string a_contentType = 4;
   bool has_a_contenttype() const;
   private:
   bool _internal_has_a_contenttype() const;
@@ -3750,7 +3738,7 @@ class Msg_LogMimeTypeMismatch final :
   std::string* _internal_mutable_a_contenttype();
   public:
 
-  // required bool a_warning = 2;
+  // optional bool a_warning = 2;
   bool has_a_warning() const;
   private:
   bool _internal_has_a_warning() const;
@@ -3766,9 +3754,6 @@ class Msg_LogMimeTypeMismatch final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PHttpChannel.Msg_LogMimeTypeMismatch)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4045,7 +4030,7 @@ class Msg_SetPriority final :
   enum : int {
     kAPriorityFieldNumber = 1,
   };
-  // required sint32 a_priority = 1;
+  // optional sint32 a_priority = 1;
   bool has_a_priority() const;
   private:
   bool _internal_has_a_priority() const;
@@ -4232,7 +4217,7 @@ inline void Msg_Cancel::set_allocated_a_status(std::string* a_status) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpChannel.Msg_Cancel.a_status)
 }
 
-// required uint32 a_requestBlockingReason = 2;
+// optional uint32 a_requestBlockingReason = 2;
 inline bool Msg_Cancel::_internal_has_a_requestblockingreason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -4260,7 +4245,7 @@ inline void Msg_Cancel::set_a_requestblockingreason(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpChannel.Msg_Cancel.a_requestBlockingReason)
 }
 
-// required string a_aReason = 3;
+// optional string a_aReason = 3;
 inline bool Msg_Cancel::_internal_has_a_areason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4536,7 +4521,7 @@ inline void Msg_Redirect2Verify::set_allocated_a_changedheaders(std::string* a_c
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpChannel.Msg_Redirect2Verify.a_changedHeaders)
 }
 
-// required uint32 a_sourceRequestBlockingReason = 3;
+// optional uint32 a_sourceRequestBlockingReason = 3;
 inline bool Msg_Redirect2Verify::_internal_has_a_sourcerequestblockingreason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -4651,7 +4636,7 @@ inline void Msg_Redirect2Verify::set_allocated_a_targetloadinfoforwarder(::proto
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpChannel.Msg_Redirect2Verify.a_targetLoadInfoForwarder)
 }
 
-// required uint32 a_loadFlags = 5;
+// optional uint32 a_loadFlags = 5;
 inline bool Msg_Redirect2Verify::_internal_has_a_loadflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -4906,7 +4891,7 @@ inline void Msg_Redirect2Verify::set_allocated_a_corspreflightargs(::protobuf::m
 
 // Msg_DocumentChannelCleanup
 
-// required bool a_clearCacheEntry = 1;
+// optional bool a_clearCacheEntry = 1;
 inline bool Msg_DocumentChannelCleanup::_internal_has_a_clearcacheentry() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5165,7 +5150,7 @@ inline void Msg_RemoveCorsPreflightCacheEntry::set_allocated_a_originattributes(
 
 // Msg_SetCookies
 
-// required string a_baseDomain = 1;
+// optional string a_baseDomain = 1;
 inline bool Msg_SetCookies::_internal_has_a_basedomain() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5369,7 +5354,7 @@ inline void Msg_SetCookies::set_allocated_a_host(std::string* a_host) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpChannel.Msg_SetCookies.a_host)
 }
 
-// required bool a_fromHttp = 4;
+// optional bool a_fromHttp = 4;
 inline bool Msg_SetCookies::_internal_has_a_fromhttp() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -5397,7 +5382,7 @@ inline void Msg_SetCookies::set_a_fromhttp(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpChannel.Msg_SetCookies.a_fromHttp)
 }
 
-// required bool a_isThirdParty = 5;
+// optional bool a_isThirdParty = 5;
 inline bool Msg_SetCookies::_internal_has_a_isthirdparty() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -5474,7 +5459,7 @@ Msg_SetCookies::a_cookies() const {
 
 // Msg_BytesRead
 
-// required sint32 a_count = 1;
+// optional sint32 a_count = 1;
 inline bool Msg_BytesRead::_internal_has_a_count() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5590,7 +5575,7 @@ inline void Msg_FailedAsyncOpen::set_allocated_a_status(std::string* a_status) {
 
 // Msg_Redirect1Begin
 
-// required uint32 a_registrarId = 1;
+// optional uint32 a_registrarId = 1;
 inline bool Msg_Redirect1Begin::_internal_has_a_registrarid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -5686,7 +5671,7 @@ inline void Msg_Redirect1Begin::set_allocated_a_neworiginaluri(std::string* a_ne
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpChannel.Msg_Redirect1Begin.a_newOriginalUri)
 }
 
-// required uint32 a_newLoadFlags = 3;
+// optional uint32 a_newLoadFlags = 3;
 inline bool Msg_Redirect1Begin::_internal_has_a_newloadflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -5714,7 +5699,7 @@ inline void Msg_Redirect1Begin::set_a_newloadflags(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpChannel.Msg_Redirect1Begin.a_newLoadFlags)
 }
 
-// required uint32 a_redirectFlags = 4;
+// optional uint32 a_redirectFlags = 4;
 inline bool Msg_Redirect1Begin::_internal_has_a_redirectflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -5965,7 +5950,7 @@ inline void Msg_Redirect1Begin::set_allocated_a_securityinfo(std::string* a_secu
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpChannel.Msg_Redirect1Begin.a_securityInfo)
 }
 
-// required uint64 a_channelId = 8;
+// optional uint64 a_channelId = 8;
 inline bool Msg_Redirect1Begin::_internal_has_a_channelid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -6228,7 +6213,7 @@ inline void Msg_RedirectFailed::set_allocated_a_status(std::string* a_status) {
 
 // Msg_ReportSecurityMessage
 
-// required string a_messageTag = 1;
+// optional string a_messageTag = 1;
 inline bool Msg_ReportSecurityMessage::_internal_has_a_messagetag() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6296,7 +6281,7 @@ inline void Msg_ReportSecurityMessage::set_allocated_a_messagetag(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpChannel.Msg_ReportSecurityMessage.a_messageTag)
 }
 
-// required string a_messageCategory = 2;
+// optional string a_messageCategory = 2;
 inline bool Msg_ReportSecurityMessage::_internal_has_a_messagecategory() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6372,7 +6357,7 @@ inline void Msg_ReportSecurityMessage::set_allocated_a_messagecategory(std::stri
 
 // Msg_LogBlockedCORSRequest
 
-// required string a_message = 1;
+// optional string a_message = 1;
 inline bool Msg_LogBlockedCORSRequest::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6440,7 +6425,7 @@ inline void Msg_LogBlockedCORSRequest::set_allocated_a_message(std::string* a_me
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpChannel.Msg_LogBlockedCORSRequest.a_message)
 }
 
-// required string a_category = 2;
+// optional string a_category = 2;
 inline bool Msg_LogBlockedCORSRequest::_internal_has_a_category() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6508,7 +6493,7 @@ inline void Msg_LogBlockedCORSRequest::set_allocated_a_category(std::string* a_c
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpChannel.Msg_LogBlockedCORSRequest.a_category)
 }
 
-// required bool a_isWarning = 3;
+// optional bool a_isWarning = 3;
 inline bool Msg_LogBlockedCORSRequest::_internal_has_a_iswarning() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -6540,7 +6525,7 @@ inline void Msg_LogBlockedCORSRequest::set_a_iswarning(bool value) {
 
 // Msg_LogMimeTypeMismatch
 
-// required string a_messageName = 1;
+// optional string a_messageName = 1;
 inline bool Msg_LogMimeTypeMismatch::_internal_has_a_messagename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6608,7 +6593,7 @@ inline void Msg_LogMimeTypeMismatch::set_allocated_a_messagename(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpChannel.Msg_LogMimeTypeMismatch.a_messageName)
 }
 
-// required bool a_warning = 2;
+// optional bool a_warning = 2;
 inline bool Msg_LogMimeTypeMismatch::_internal_has_a_warning() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -6636,7 +6621,7 @@ inline void Msg_LogMimeTypeMismatch::set_a_warning(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpChannel.Msg_LogMimeTypeMismatch.a_warning)
 }
 
-// required string a_url = 3;
+// optional string a_url = 3;
 inline bool Msg_LogMimeTypeMismatch::_internal_has_a_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6704,7 +6689,7 @@ inline void Msg_LogMimeTypeMismatch::set_allocated_a_url(std::string* a_url) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpChannel.Msg_LogMimeTypeMismatch.a_url)
 }
 
-// required string a_contentType = 4;
+// optional string a_contentType = 4;
 inline bool Msg_LogMimeTypeMismatch::_internal_has_a_contenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -6867,7 +6852,7 @@ inline void Msg_OriginalCacheInputStreamAvailable::set_allocated_a_stream(::prot
 
 // Msg_SetPriority
 
-// required sint32 a_priority = 1;
+// optional sint32 a_priority = 1;
 inline bool Msg_SetPriority::_internal_has_a_priority() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

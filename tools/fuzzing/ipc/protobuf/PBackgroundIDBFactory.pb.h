@@ -355,7 +355,7 @@ class Msg_PBackgroundIDBFactoryRequestConstructor final :
       ::protobuf::mozilla::dom::indexedDB::FactoryRequestParams* a_params);
   ::protobuf::mozilla::dom::indexedDB::FactoryRequestParams* unsafe_arena_release_a_params();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -371,9 +371,6 @@ class Msg_PBackgroundIDBFactoryRequestConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactory.Msg_PBackgroundIDBFactoryRequestConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1228,7 +1225,7 @@ class Msg_PBackgroundIDBDatabaseConstructor final :
       ::protobuf::mozilla::dom::indexedDB::DatabaseSpec* a_spec);
   ::protobuf::mozilla::dom::indexedDB::DatabaseSpec* unsafe_arena_release_a_spec();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -1400,7 +1397,7 @@ class Reply_PBackgroundIDBDatabaseConstructor final :
 
 // Msg_PBackgroundIDBFactoryRequestConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PBackgroundIDBFactoryRequestConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1781,7 +1778,7 @@ inline void Reply_GetDatabases::set_allocated_a_response(::protobuf::mozilla::do
 
 // Msg_PBackgroundIDBDatabaseConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PBackgroundIDBDatabaseConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

@@ -397,9 +397,6 @@ class Msg_NotifyResult::_Internal {
   static void set_has_a_allow(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 void Msg_NotifyResult::clear_a_choices() {
@@ -474,7 +471,7 @@ const char* Msg_NotifyResult::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_allow = 1;
+      // optional bool a_allow = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_allow(&has_bits);
@@ -527,7 +524,7 @@ uint8_t* Msg_NotifyResult::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_allow = 1;
+  // optional bool a_allow = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_allow(), target);
@@ -553,10 +550,6 @@ size_t Msg_NotifyResult::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PContentPermissionRequest.Msg_NotifyResult)
   size_t total_size = 0;
 
-  // required bool a_allow = 1;
-  if (_internal_has_a_allow()) {
-    total_size += 1 + 1;
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -566,6 +559,12 @@ size_t Msg_NotifyResult::ByteSizeLong() const {
   for (const auto& msg : this->_impl_.a_choices_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  // optional bool a_allow = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 + 1;
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -604,9 +603,6 @@ void Msg_NotifyResult::CopyFrom(const Msg_NotifyResult& from) {
 }
 
 bool Msg_NotifyResult::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_choices_))
-    return false;
   return true;
 }
 

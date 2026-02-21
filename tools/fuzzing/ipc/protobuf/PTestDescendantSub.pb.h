@@ -434,7 +434,7 @@ class Msg_PTestDescendantSubsubConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -605,7 +605,7 @@ class Reply_PTestDescendantSubsubConstructor final :
 
 // Msg_PTestDescendantSubsubConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PTestDescendantSubsubConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

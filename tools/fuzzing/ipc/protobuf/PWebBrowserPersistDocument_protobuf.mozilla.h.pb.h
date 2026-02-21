@@ -190,7 +190,7 @@ class WebBrowserPersistDocumentAttrs final :
     kASessionHistoryCacheKeyFieldNumber = 10,
     kAPersistFlagsFieldNumber = 11,
   };
-  // required string a_documentURI = 2;
+  // optional string a_documentURI = 2;
   bool has_a_documenturi() const;
   private:
   bool _internal_has_a_documenturi() const;
@@ -208,7 +208,7 @@ class WebBrowserPersistDocumentAttrs final :
   std::string* _internal_mutable_a_documenturi();
   public:
 
-  // required string a_baseURI = 3;
+  // optional string a_baseURI = 3;
   bool has_a_baseuri() const;
   private:
   bool _internal_has_a_baseuri() const;
@@ -226,7 +226,7 @@ class WebBrowserPersistDocumentAttrs final :
   std::string* _internal_mutable_a_baseuri();
   public:
 
-  // required string a_contentType = 4;
+  // optional string a_contentType = 4;
   bool has_a_contenttype() const;
   private:
   bool _internal_has_a_contenttype() const;
@@ -244,7 +244,7 @@ class WebBrowserPersistDocumentAttrs final :
   std::string* _internal_mutable_a_contenttype();
   public:
 
-  // required string a_characterSet = 5;
+  // optional string a_characterSet = 5;
   bool has_a_characterset() const;
   private:
   bool _internal_has_a_characterset() const;
@@ -262,7 +262,7 @@ class WebBrowserPersistDocumentAttrs final :
   std::string* _internal_mutable_a_characterset();
   public:
 
-  // required string a_title = 6;
+  // optional string a_title = 6;
   bool has_a_title() const;
   private:
   bool _internal_has_a_title() const;
@@ -298,7 +298,7 @@ class WebBrowserPersistDocumentAttrs final :
   std::string* _internal_mutable_a_referrerinfo();
   public:
 
-  // required string a_contentDisposition = 9;
+  // optional string a_contentDisposition = 9;
   bool has_a_contentdisposition() const;
   private:
   bool _internal_has_a_contentdisposition() const;
@@ -352,7 +352,7 @@ class WebBrowserPersistDocumentAttrs final :
       ::protobuf::mozilla::ipc::PrincipalInfo* a_principal);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_principal();
 
-  // required bool a_isPrivate = 1;
+  // optional bool a_isPrivate = 1;
   bool has_a_isprivate() const;
   private:
   bool _internal_has_a_isprivate() const;
@@ -365,7 +365,7 @@ class WebBrowserPersistDocumentAttrs final :
   void _internal_set_a_isprivate(bool value);
   public:
 
-  // required uint32 a_sessionHistoryCacheKey = 10;
+  // optional uint32 a_sessionHistoryCacheKey = 10;
   bool has_a_sessionhistorycachekey() const;
   private:
   bool _internal_has_a_sessionhistorycachekey() const;
@@ -378,7 +378,7 @@ class WebBrowserPersistDocumentAttrs final :
   void _internal_set_a_sessionhistorycachekey(uint32_t value);
   public:
 
-  // required uint32 a_persistFlags = 11;
+  // optional uint32 a_persistFlags = 11;
   bool has_a_persistflags() const;
   private:
   bool _internal_has_a_persistflags() const;
@@ -535,7 +535,7 @@ class WebBrowserPersistURIMapEntry final :
     kAMapFromFieldNumber = 1,
     kAMapToFieldNumber = 2,
   };
-  // required string a_mapFrom = 1;
+  // optional string a_mapFrom = 1;
   bool has_a_mapfrom() const;
   private:
   bool _internal_has_a_mapfrom() const;
@@ -553,7 +553,7 @@ class WebBrowserPersistURIMapEntry final :
   std::string* _internal_mutable_a_mapfrom();
   public:
 
-  // required string a_mapTo = 2;
+  // optional string a_mapTo = 2;
   bool has_a_mapto() const;
   private:
   bool _internal_has_a_mapto() const;
@@ -574,9 +574,6 @@ class WebBrowserPersistURIMapEntry final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.WebBrowserPersistURIMapEntry)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -723,7 +720,7 @@ class WebBrowserPersistURIMap final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::WebBrowserPersistURIMapEntry >&
       a_mapuris() const;
 
-  // required string a_targetBaseURI = 2;
+  // optional string a_targetBaseURI = 2;
   bool has_a_targetbaseuri() const;
   private:
   bool _internal_has_a_targetbaseuri() const;
@@ -768,7 +765,7 @@ class WebBrowserPersistURIMap final :
 #endif  // __GNUC__
 // WebBrowserPersistDocumentAttrs
 
-// required bool a_isPrivate = 1;
+// optional bool a_isPrivate = 1;
 inline bool WebBrowserPersistDocumentAttrs::_internal_has_a_isprivate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -796,7 +793,7 @@ inline void WebBrowserPersistDocumentAttrs::set_a_isprivate(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.WebBrowserPersistDocumentAttrs.a_isPrivate)
 }
 
-// required string a_documentURI = 2;
+// optional string a_documentURI = 2;
 inline bool WebBrowserPersistDocumentAttrs::_internal_has_a_documenturi() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -864,7 +861,7 @@ inline void WebBrowserPersistDocumentAttrs::set_allocated_a_documenturi(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.WebBrowserPersistDocumentAttrs.a_documentURI)
 }
 
-// required string a_baseURI = 3;
+// optional string a_baseURI = 3;
 inline bool WebBrowserPersistDocumentAttrs::_internal_has_a_baseuri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -932,7 +929,7 @@ inline void WebBrowserPersistDocumentAttrs::set_allocated_a_baseuri(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.WebBrowserPersistDocumentAttrs.a_baseURI)
 }
 
-// required string a_contentType = 4;
+// optional string a_contentType = 4;
 inline bool WebBrowserPersistDocumentAttrs::_internal_has_a_contenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1000,7 +997,7 @@ inline void WebBrowserPersistDocumentAttrs::set_allocated_a_contenttype(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.WebBrowserPersistDocumentAttrs.a_contentType)
 }
 
-// required string a_characterSet = 5;
+// optional string a_characterSet = 5;
 inline bool WebBrowserPersistDocumentAttrs::_internal_has_a_characterset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1068,7 +1065,7 @@ inline void WebBrowserPersistDocumentAttrs::set_allocated_a_characterset(std::st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.WebBrowserPersistDocumentAttrs.a_characterSet)
 }
 
-// required string a_title = 6;
+// optional string a_title = 6;
 inline bool WebBrowserPersistDocumentAttrs::_internal_has_a_title() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -1291,7 +1288,7 @@ inline void WebBrowserPersistDocumentAttrs::set_allocated_a_cookiejarsettings(::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.WebBrowserPersistDocumentAttrs.a_cookieJarSettings)
 }
 
-// required string a_contentDisposition = 9;
+// optional string a_contentDisposition = 9;
 inline bool WebBrowserPersistDocumentAttrs::_internal_has_a_contentdisposition() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -1359,7 +1356,7 @@ inline void WebBrowserPersistDocumentAttrs::set_allocated_a_contentdisposition(s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.WebBrowserPersistDocumentAttrs.a_contentDisposition)
 }
 
-// required uint32 a_sessionHistoryCacheKey = 10;
+// optional uint32 a_sessionHistoryCacheKey = 10;
 inline bool WebBrowserPersistDocumentAttrs::_internal_has_a_sessionhistorycachekey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
@@ -1387,7 +1384,7 @@ inline void WebBrowserPersistDocumentAttrs::set_a_sessionhistorycachekey(uint32_
   // @@protoc_insertion_point(field_set:protobuf.mozilla.WebBrowserPersistDocumentAttrs.a_sessionHistoryCacheKey)
 }
 
-// required uint32 a_persistFlags = 11;
+// optional uint32 a_persistFlags = 11;
 inline bool WebBrowserPersistDocumentAttrs::_internal_has_a_persistflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
   return value;
@@ -1506,7 +1503,7 @@ inline void WebBrowserPersistDocumentAttrs::set_allocated_a_principal(::protobuf
 
 // WebBrowserPersistURIMapEntry
 
-// required string a_mapFrom = 1;
+// optional string a_mapFrom = 1;
 inline bool WebBrowserPersistURIMapEntry::_internal_has_a_mapfrom() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1574,7 +1571,7 @@ inline void WebBrowserPersistURIMapEntry::set_allocated_a_mapfrom(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.WebBrowserPersistURIMapEntry.a_mapFrom)
 }
 
-// required string a_mapTo = 2;
+// optional string a_mapTo = 2;
 inline bool WebBrowserPersistURIMapEntry::_internal_has_a_mapto() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1686,7 +1683,7 @@ WebBrowserPersistURIMap::a_mapuris() const {
   return _impl_.a_mapuris_;
 }
 
-// required string a_targetBaseURI = 2;
+// optional string a_targetBaseURI = 2;
 inline bool WebBrowserPersistURIMap::_internal_has_a_targetbaseuri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

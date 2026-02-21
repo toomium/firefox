@@ -289,7 +289,7 @@ class Msg_GetRequest final :
   std::string* _internal_mutable_a_partitionedattrs();
   public:
 
-  // required string a_name = 9;
+  // optional string a_name = 9;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -307,7 +307,7 @@ class Msg_GetRequest final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required string a_path = 10;
+  // optional string a_path = 10;
   bool has_a_path() const;
   private:
   bool _internal_has_a_path() const;
@@ -325,7 +325,7 @@ class Msg_GetRequest final :
   std::string* _internal_mutable_a_path();
   public:
 
-  // required bool a_thirdPartyContext = 4;
+  // optional bool a_thirdPartyContext = 4;
   bool has_a_thirdpartycontext() const;
   private:
   bool _internal_has_a_thirdpartycontext() const;
@@ -338,7 +338,7 @@ class Msg_GetRequest final :
   void _internal_set_a_thirdpartycontext(bool value);
   public:
 
-  // required bool a_partitionForeign = 5;
+  // optional bool a_partitionForeign = 5;
   bool has_a_partitionforeign() const;
   private:
   bool _internal_has_a_partitionforeign() const;
@@ -351,7 +351,7 @@ class Msg_GetRequest final :
   void _internal_set_a_partitionforeign(bool value);
   public:
 
-  // required bool a_usingStorageAccess = 6;
+  // optional bool a_usingStorageAccess = 6;
   bool has_a_usingstorageaccess() const;
   private:
   bool _internal_has_a_usingstorageaccess() const;
@@ -364,7 +364,7 @@ class Msg_GetRequest final :
   void _internal_set_a_usingstorageaccess(bool value);
   public:
 
-  // required bool a_isOn3PCBExceptionList = 7;
+  // optional bool a_isOn3PCBExceptionList = 7;
   bool has_a_ison3pcbexceptionlist() const;
   private:
   bool _internal_has_a_ison3pcbexceptionlist() const;
@@ -377,7 +377,7 @@ class Msg_GetRequest final :
   void _internal_set_a_ison3pcbexceptionlist(bool value);
   public:
 
-  // required bool a_matchName = 8;
+  // optional bool a_matchName = 8;
   bool has_a_matchname() const;
   private:
   bool _internal_has_a_matchname() const;
@@ -390,7 +390,7 @@ class Msg_GetRequest final :
   void _internal_set_a_matchname(bool value);
   public:
 
-  // required bool a_onlyFirstMatch = 11;
+  // optional bool a_onlyFirstMatch = 11;
   bool has_a_onlyfirstmatch() const;
   private:
   bool _internal_has_a_onlyfirstmatch() const;
@@ -741,7 +741,7 @@ class Msg_SetRequest final :
   std::string* _internal_mutable_a_attrs();
   public:
 
-  // required string a_name = 7;
+  // optional string a_name = 7;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -759,7 +759,7 @@ class Msg_SetRequest final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required string a_value = 8;
+  // optional string a_value = 8;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -777,7 +777,7 @@ class Msg_SetRequest final :
   std::string* _internal_mutable_a_value();
   public:
 
-  // required string a_domain = 11;
+  // optional string a_domain = 11;
   bool has_a_domain() const;
   private:
   bool _internal_has_a_domain() const;
@@ -795,7 +795,7 @@ class Msg_SetRequest final :
   std::string* _internal_mutable_a_domain();
   public:
 
-  // required string a_path = 12;
+  // optional string a_path = 12;
   bool has_a_path() const;
   private:
   bool _internal_has_a_path() const;
@@ -831,7 +831,7 @@ class Msg_SetRequest final :
   std::string* _internal_mutable_a_operationid();
   public:
 
-  // required bool a_thirdPartyContext = 3;
+  // optional bool a_thirdPartyContext = 3;
   bool has_a_thirdpartycontext() const;
   private:
   bool _internal_has_a_thirdpartycontext() const;
@@ -844,7 +844,7 @@ class Msg_SetRequest final :
   void _internal_set_a_thirdpartycontext(bool value);
   public:
 
-  // required bool a_partitionForeign = 4;
+  // optional bool a_partitionForeign = 4;
   bool has_a_partitionforeign() const;
   private:
   bool _internal_has_a_partitionforeign() const;
@@ -857,7 +857,7 @@ class Msg_SetRequest final :
   void _internal_set_a_partitionforeign(bool value);
   public:
 
-  // required bool a_usingStorageAccess = 5;
+  // optional bool a_usingStorageAccess = 5;
   bool has_a_usingstorageaccess() const;
   private:
   bool _internal_has_a_usingstorageaccess() const;
@@ -870,7 +870,7 @@ class Msg_SetRequest final :
   void _internal_set_a_usingstorageaccess(bool value);
   public:
 
-  // required bool a_isOn3PCBExceptionList = 6;
+  // optional bool a_isOn3PCBExceptionList = 6;
   bool has_a_ison3pcbexceptionlist() const;
   private:
   bool _internal_has_a_ison3pcbexceptionlist() const;
@@ -883,7 +883,7 @@ class Msg_SetRequest final :
   void _internal_set_a_ison3pcbexceptionlist(bool value);
   public:
 
-  // required bool a_session = 9;
+  // optional bool a_session = 9;
   bool has_a_session() const;
   private:
   bool _internal_has_a_session() const;
@@ -896,7 +896,7 @@ class Msg_SetRequest final :
   void _internal_set_a_session(bool value);
   public:
 
-  // required bool a_partitioned = 14;
+  // optional bool a_partitioned = 14;
   bool has_a_partitioned() const;
   private:
   bool _internal_has_a_partitioned() const;
@@ -909,7 +909,7 @@ class Msg_SetRequest final :
   void _internal_set_a_partitioned(bool value);
   public:
 
-  // required sint64 a_expires = 10;
+  // optional sint64 a_expires = 10;
   bool has_a_expires() const;
   private:
   bool _internal_has_a_expires() const;
@@ -922,7 +922,7 @@ class Msg_SetRequest final :
   void _internal_set_a_expires(int64_t value);
   public:
 
-  // required sint32 a_sameSite = 13;
+  // optional sint32 a_sameSite = 13;
   bool has_a_samesite() const;
   private:
   bool _internal_has_a_samesite() const;
@@ -1081,7 +1081,7 @@ class Reply_SetRequest final :
   enum : int {
     kAWaitForNotificationFieldNumber = 1,
   };
-  // required bool a_waitForNotification = 1;
+  // optional bool a_waitForNotification = 1;
   bool has_a_waitfornotification() const;
   private:
   bool _internal_has_a_waitfornotification() const;
@@ -1269,7 +1269,7 @@ class Msg_DeleteRequest final :
   std::string* _internal_mutable_a_attrs();
   public:
 
-  // required string a_name = 7;
+  // optional string a_name = 7;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -1287,7 +1287,7 @@ class Msg_DeleteRequest final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required string a_domain = 8;
+  // optional string a_domain = 8;
   bool has_a_domain() const;
   private:
   bool _internal_has_a_domain() const;
@@ -1305,7 +1305,7 @@ class Msg_DeleteRequest final :
   std::string* _internal_mutable_a_domain();
   public:
 
-  // required string a_path = 9;
+  // optional string a_path = 9;
   bool has_a_path() const;
   private:
   bool _internal_has_a_path() const;
@@ -1341,7 +1341,7 @@ class Msg_DeleteRequest final :
   std::string* _internal_mutable_a_operationid();
   public:
 
-  // required bool a_thirdPartyContext = 3;
+  // optional bool a_thirdPartyContext = 3;
   bool has_a_thirdpartycontext() const;
   private:
   bool _internal_has_a_thirdpartycontext() const;
@@ -1354,7 +1354,7 @@ class Msg_DeleteRequest final :
   void _internal_set_a_thirdpartycontext(bool value);
   public:
 
-  // required bool a_partitionForeign = 4;
+  // optional bool a_partitionForeign = 4;
   bool has_a_partitionforeign() const;
   private:
   bool _internal_has_a_partitionforeign() const;
@@ -1367,7 +1367,7 @@ class Msg_DeleteRequest final :
   void _internal_set_a_partitionforeign(bool value);
   public:
 
-  // required bool a_usingStorageAccess = 5;
+  // optional bool a_usingStorageAccess = 5;
   bool has_a_usingstorageaccess() const;
   private:
   bool _internal_has_a_usingstorageaccess() const;
@@ -1380,7 +1380,7 @@ class Msg_DeleteRequest final :
   void _internal_set_a_usingstorageaccess(bool value);
   public:
 
-  // required bool a_isOn3PCBExceptionList = 6;
+  // optional bool a_isOn3PCBExceptionList = 6;
   bool has_a_ison3pcbexceptionlist() const;
   private:
   bool _internal_has_a_ison3pcbexceptionlist() const;
@@ -1393,7 +1393,7 @@ class Msg_DeleteRequest final :
   void _internal_set_a_ison3pcbexceptionlist(bool value);
   public:
 
-  // required bool a_partitioned = 10;
+  // optional bool a_partitioned = 10;
   bool has_a_partitioned() const;
   private:
   bool _internal_has_a_partitioned() const;
@@ -1548,7 +1548,7 @@ class Reply_DeleteRequest final :
   enum : int {
     kAWaitForNotificationFieldNumber = 1,
   };
-  // required bool a_waitForNotification = 1;
+  // optional bool a_waitForNotification = 1;
   bool has_a_waitfornotification() const;
   private:
   bool _internal_has_a_waitfornotification() const;
@@ -1691,7 +1691,7 @@ class Msg_GetSubscriptionsRequest final :
     kAScopeURLFieldNumber = 2,
     kAPrincipalInfoFieldNumber = 1,
   };
-  // required string a_scopeURL = 2;
+  // optional string a_scopeURL = 2;
   bool has_a_scopeurl() const;
   private:
   bool _internal_has_a_scopeurl() const;
@@ -1730,9 +1730,6 @@ class Msg_GetSubscriptionsRequest final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PCookieStore.Msg_GetSubscriptionsRequest)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2027,7 +2024,7 @@ class Msg_SubscribeOrUnsubscribeRequest final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::CookieSubscription >&
       a_subscriptions() const;
 
-  // required string a_scopeURL = 2;
+  // optional string a_scopeURL = 2;
   bool has_a_scopeurl() const;
   private:
   bool _internal_has_a_scopeurl() const;
@@ -2063,7 +2060,7 @@ class Msg_SubscribeOrUnsubscribeRequest final :
       ::protobuf::mozilla::ipc::PrincipalInfo* a_principalinfo);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_principalinfo();
 
-  // required bool a_subscribe = 4;
+  // optional bool a_subscribe = 4;
   bool has_a_subscribe() const;
   private:
   bool _internal_has_a_subscribe() const;
@@ -2079,9 +2076,6 @@ class Msg_SubscribeOrUnsubscribeRequest final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PCookieStore.Msg_SubscribeOrUnsubscribeRequest)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2211,7 +2205,7 @@ class Reply_SubscribeOrUnsubscribeRequest final :
   enum : int {
     kAResultFieldNumber = 1,
   };
-  // required bool a_result = 1;
+  // optional bool a_result = 1;
   bool has_a_result() const;
   private:
   bool _internal_has_a_result() const;
@@ -2826,7 +2820,7 @@ inline void Msg_GetRequest::set_allocated_a_partitionedattrs(std::string* a_part
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PCookieStore.Msg_GetRequest.a_partitionedAttrs)
 }
 
-// required bool a_thirdPartyContext = 4;
+// optional bool a_thirdPartyContext = 4;
 inline bool Msg_GetRequest::_internal_has_a_thirdpartycontext() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -2854,7 +2848,7 @@ inline void Msg_GetRequest::set_a_thirdpartycontext(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PCookieStore.Msg_GetRequest.a_thirdPartyContext)
 }
 
-// required bool a_partitionForeign = 5;
+// optional bool a_partitionForeign = 5;
 inline bool Msg_GetRequest::_internal_has_a_partitionforeign() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -2882,7 +2876,7 @@ inline void Msg_GetRequest::set_a_partitionforeign(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PCookieStore.Msg_GetRequest.a_partitionForeign)
 }
 
-// required bool a_usingStorageAccess = 6;
+// optional bool a_usingStorageAccess = 6;
 inline bool Msg_GetRequest::_internal_has_a_usingstorageaccess() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -2910,7 +2904,7 @@ inline void Msg_GetRequest::set_a_usingstorageaccess(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PCookieStore.Msg_GetRequest.a_usingStorageAccess)
 }
 
-// required bool a_isOn3PCBExceptionList = 7;
+// optional bool a_isOn3PCBExceptionList = 7;
 inline bool Msg_GetRequest::_internal_has_a_ison3pcbexceptionlist() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -2938,7 +2932,7 @@ inline void Msg_GetRequest::set_a_ison3pcbexceptionlist(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PCookieStore.Msg_GetRequest.a_isOn3PCBExceptionList)
 }
 
-// required bool a_matchName = 8;
+// optional bool a_matchName = 8;
 inline bool Msg_GetRequest::_internal_has_a_matchname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -2966,7 +2960,7 @@ inline void Msg_GetRequest::set_a_matchname(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PCookieStore.Msg_GetRequest.a_matchName)
 }
 
-// required string a_name = 9;
+// optional string a_name = 9;
 inline bool Msg_GetRequest::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -3034,7 +3028,7 @@ inline void Msg_GetRequest::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PCookieStore.Msg_GetRequest.a_name)
 }
 
-// required string a_path = 10;
+// optional string a_path = 10;
 inline bool Msg_GetRequest::_internal_has_a_path() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -3102,7 +3096,7 @@ inline void Msg_GetRequest::set_allocated_a_path(std::string* a_path) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PCookieStore.Msg_GetRequest.a_path)
 }
 
-// required bool a_onlyFirstMatch = 11;
+// optional bool a_onlyFirstMatch = 11;
 inline bool Msg_GetRequest::_internal_has_a_onlyfirstmatch() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
@@ -3311,7 +3305,7 @@ inline void Msg_SetRequest::set_allocated_a_attrs(std::string* a_attrs) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PCookieStore.Msg_SetRequest.a_attrs)
 }
 
-// required bool a_thirdPartyContext = 3;
+// optional bool a_thirdPartyContext = 3;
 inline bool Msg_SetRequest::_internal_has_a_thirdpartycontext() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -3339,7 +3333,7 @@ inline void Msg_SetRequest::set_a_thirdpartycontext(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PCookieStore.Msg_SetRequest.a_thirdPartyContext)
 }
 
-// required bool a_partitionForeign = 4;
+// optional bool a_partitionForeign = 4;
 inline bool Msg_SetRequest::_internal_has_a_partitionforeign() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -3367,7 +3361,7 @@ inline void Msg_SetRequest::set_a_partitionforeign(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PCookieStore.Msg_SetRequest.a_partitionForeign)
 }
 
-// required bool a_usingStorageAccess = 5;
+// optional bool a_usingStorageAccess = 5;
 inline bool Msg_SetRequest::_internal_has_a_usingstorageaccess() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -3395,7 +3389,7 @@ inline void Msg_SetRequest::set_a_usingstorageaccess(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PCookieStore.Msg_SetRequest.a_usingStorageAccess)
 }
 
-// required bool a_isOn3PCBExceptionList = 6;
+// optional bool a_isOn3PCBExceptionList = 6;
 inline bool Msg_SetRequest::_internal_has_a_ison3pcbexceptionlist() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
@@ -3423,7 +3417,7 @@ inline void Msg_SetRequest::set_a_ison3pcbexceptionlist(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PCookieStore.Msg_SetRequest.a_isOn3PCBExceptionList)
 }
 
-// required string a_name = 7;
+// optional string a_name = 7;
 inline bool Msg_SetRequest::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -3491,7 +3485,7 @@ inline void Msg_SetRequest::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PCookieStore.Msg_SetRequest.a_name)
 }
 
-// required string a_value = 8;
+// optional string a_value = 8;
 inline bool Msg_SetRequest::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -3559,7 +3553,7 @@ inline void Msg_SetRequest::set_allocated_a_value(std::string* a_value) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PCookieStore.Msg_SetRequest.a_value)
 }
 
-// required bool a_session = 9;
+// optional bool a_session = 9;
 inline bool Msg_SetRequest::_internal_has_a_session() const {
   bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
   return value;
@@ -3587,7 +3581,7 @@ inline void Msg_SetRequest::set_a_session(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PCookieStore.Msg_SetRequest.a_session)
 }
 
-// required sint64 a_expires = 10;
+// optional sint64 a_expires = 10;
 inline bool Msg_SetRequest::_internal_has_a_expires() const {
   bool value = (_impl_._has_bits_[0] & 0x00002000u) != 0;
   return value;
@@ -3615,7 +3609,7 @@ inline void Msg_SetRequest::set_a_expires(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PCookieStore.Msg_SetRequest.a_expires)
 }
 
-// required string a_domain = 11;
+// optional string a_domain = 11;
 inline bool Msg_SetRequest::_internal_has_a_domain() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -3683,7 +3677,7 @@ inline void Msg_SetRequest::set_allocated_a_domain(std::string* a_domain) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PCookieStore.Msg_SetRequest.a_domain)
 }
 
-// required string a_path = 12;
+// optional string a_path = 12;
 inline bool Msg_SetRequest::_internal_has_a_path() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -3751,7 +3745,7 @@ inline void Msg_SetRequest::set_allocated_a_path(std::string* a_path) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PCookieStore.Msg_SetRequest.a_path)
 }
 
-// required sint32 a_sameSite = 13;
+// optional sint32 a_sameSite = 13;
 inline bool Msg_SetRequest::_internal_has_a_samesite() const {
   bool value = (_impl_._has_bits_[0] & 0x00004000u) != 0;
   return value;
@@ -3779,7 +3773,7 @@ inline void Msg_SetRequest::set_a_samesite(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PCookieStore.Msg_SetRequest.a_sameSite)
 }
 
-// required bool a_partitioned = 14;
+// optional bool a_partitioned = 14;
 inline bool Msg_SetRequest::_internal_has_a_partitioned() const {
   bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
   return value;
@@ -3879,7 +3873,7 @@ inline void Msg_SetRequest::set_allocated_a_operationid(std::string* a_operation
 
 // Reply_SetRequest
 
-// required bool a_waitForNotification = 1;
+// optional bool a_waitForNotification = 1;
 inline bool Reply_SetRequest::_internal_has_a_waitfornotification() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4047,7 +4041,7 @@ inline void Msg_DeleteRequest::set_allocated_a_attrs(std::string* a_attrs) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PCookieStore.Msg_DeleteRequest.a_attrs)
 }
 
-// required bool a_thirdPartyContext = 3;
+// optional bool a_thirdPartyContext = 3;
 inline bool Msg_DeleteRequest::_internal_has_a_thirdpartycontext() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -4075,7 +4069,7 @@ inline void Msg_DeleteRequest::set_a_thirdpartycontext(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PCookieStore.Msg_DeleteRequest.a_thirdPartyContext)
 }
 
-// required bool a_partitionForeign = 4;
+// optional bool a_partitionForeign = 4;
 inline bool Msg_DeleteRequest::_internal_has_a_partitionforeign() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -4103,7 +4097,7 @@ inline void Msg_DeleteRequest::set_a_partitionforeign(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PCookieStore.Msg_DeleteRequest.a_partitionForeign)
 }
 
-// required bool a_usingStorageAccess = 5;
+// optional bool a_usingStorageAccess = 5;
 inline bool Msg_DeleteRequest::_internal_has_a_usingstorageaccess() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -4131,7 +4125,7 @@ inline void Msg_DeleteRequest::set_a_usingstorageaccess(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PCookieStore.Msg_DeleteRequest.a_usingStorageAccess)
 }
 
-// required bool a_isOn3PCBExceptionList = 6;
+// optional bool a_isOn3PCBExceptionList = 6;
 inline bool Msg_DeleteRequest::_internal_has_a_ison3pcbexceptionlist() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -4159,7 +4153,7 @@ inline void Msg_DeleteRequest::set_a_ison3pcbexceptionlist(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PCookieStore.Msg_DeleteRequest.a_isOn3PCBExceptionList)
 }
 
-// required string a_name = 7;
+// optional string a_name = 7;
 inline bool Msg_DeleteRequest::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -4227,7 +4221,7 @@ inline void Msg_DeleteRequest::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PCookieStore.Msg_DeleteRequest.a_name)
 }
 
-// required string a_domain = 8;
+// optional string a_domain = 8;
 inline bool Msg_DeleteRequest::_internal_has_a_domain() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -4295,7 +4289,7 @@ inline void Msg_DeleteRequest::set_allocated_a_domain(std::string* a_domain) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PCookieStore.Msg_DeleteRequest.a_domain)
 }
 
-// required string a_path = 9;
+// optional string a_path = 9;
 inline bool Msg_DeleteRequest::_internal_has_a_path() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -4363,7 +4357,7 @@ inline void Msg_DeleteRequest::set_allocated_a_path(std::string* a_path) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PCookieStore.Msg_DeleteRequest.a_path)
 }
 
-// required bool a_partitioned = 10;
+// optional bool a_partitioned = 10;
 inline bool Msg_DeleteRequest::_internal_has_a_partitioned() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
@@ -4463,7 +4457,7 @@ inline void Msg_DeleteRequest::set_allocated_a_operationid(std::string* a_operat
 
 // Reply_DeleteRequest
 
-// required bool a_waitForNotification = 1;
+// optional bool a_waitForNotification = 1;
 inline bool Reply_DeleteRequest::_internal_has_a_waitfornotification() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4582,7 +4576,7 @@ inline void Msg_GetSubscriptionsRequest::set_allocated_a_principalinfo(::protobu
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PCookieStore.Msg_GetSubscriptionsRequest.a_principalInfo)
 }
 
-// required string a_scopeURL = 2;
+// optional string a_scopeURL = 2;
 inline bool Msg_GetSubscriptionsRequest::_internal_has_a_scopeurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4782,7 +4776,7 @@ inline void Msg_SubscribeOrUnsubscribeRequest::set_allocated_a_principalinfo(::p
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PCookieStore.Msg_SubscribeOrUnsubscribeRequest.a_principalInfo)
 }
 
-// required string a_scopeURL = 2;
+// optional string a_scopeURL = 2;
 inline bool Msg_SubscribeOrUnsubscribeRequest::_internal_has_a_scopeurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4887,7 +4881,7 @@ Msg_SubscribeOrUnsubscribeRequest::a_subscriptions() const {
   return _impl_.a_subscriptions_;
 }
 
-// required bool a_subscribe = 4;
+// optional bool a_subscribe = 4;
 inline bool Msg_SubscribeOrUnsubscribeRequest::_internal_has_a_subscribe() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -4919,7 +4913,7 @@ inline void Msg_SubscribeOrUnsubscribeRequest::set_a_subscribe(bool value) {
 
 // Reply_SubscribeOrUnsubscribeRequest
 
-// required bool a_result = 1;
+// optional bool a_result = 1;
 inline bool Reply_SubscribeOrUnsubscribeRequest::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

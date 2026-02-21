@@ -327,7 +327,7 @@ class Msg_RegisterMDNSHostname final :
     kAHostnameFieldNumber = 1,
     kAAddressFieldNumber = 2,
   };
-  // required string a_hostname = 1;
+  // optional string a_hostname = 1;
   bool has_a_hostname() const;
   private:
   bool _internal_has_a_hostname() const;
@@ -345,7 +345,7 @@ class Msg_RegisterMDNSHostname final :
   std::string* _internal_mutable_a_hostname();
   public:
 
-  // required string a_address = 2;
+  // optional string a_address = 2;
   bool has_a_address() const;
   private:
   bool _internal_has_a_address() const;
@@ -366,9 +366,6 @@ class Msg_RegisterMDNSHostname final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PStunAddrsRequest.Msg_RegisterMDNSHostname)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -496,7 +493,7 @@ class Msg_QueryMDNSHostname final :
   enum : int {
     kAHostnameFieldNumber = 1,
   };
-  // required string a_hostname = 1;
+  // optional string a_hostname = 1;
   bool has_a_hostname() const;
   private:
   bool _internal_has_a_hostname() const;
@@ -643,7 +640,7 @@ class Msg_UnregisterMDNSHostname final :
   enum : int {
     kAHostnameFieldNumber = 1,
   };
-  // required string a_hostname = 1;
+  // optional string a_hostname = 1;
   bool has_a_hostname() const;
   private:
   bool _internal_has_a_hostname() const;
@@ -1039,7 +1036,7 @@ class Msg_OnMDNSQueryComplete final :
     kAHostnameFieldNumber = 1,
     kAAddressFieldNumber = 2,
   };
-  // required string a_hostname = 1;
+  // optional string a_hostname = 1;
   bool has_a_hostname() const;
   private:
   bool _internal_has_a_hostname() const;
@@ -1078,9 +1075,6 @@ class Msg_OnMDNSQueryComplete final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PStunAddrsRequest.Msg_OnMDNSQueryComplete)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1256,7 +1250,7 @@ class Msg_OnStunAddrsAvailable final :
 
 // Msg_RegisterMDNSHostname
 
-// required string a_hostname = 1;
+// optional string a_hostname = 1;
 inline bool Msg_RegisterMDNSHostname::_internal_has_a_hostname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1324,7 +1318,7 @@ inline void Msg_RegisterMDNSHostname::set_allocated_a_hostname(std::string* a_ho
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PStunAddrsRequest.Msg_RegisterMDNSHostname.a_hostname)
 }
 
-// required string a_address = 2;
+// optional string a_address = 2;
 inline bool Msg_RegisterMDNSHostname::_internal_has_a_address() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1396,7 +1390,7 @@ inline void Msg_RegisterMDNSHostname::set_allocated_a_address(std::string* a_add
 
 // Msg_QueryMDNSHostname
 
-// required string a_hostname = 1;
+// optional string a_hostname = 1;
 inline bool Msg_QueryMDNSHostname::_internal_has_a_hostname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1468,7 +1462,7 @@ inline void Msg_QueryMDNSHostname::set_allocated_a_hostname(std::string* a_hostn
 
 // Msg_UnregisterMDNSHostname
 
-// required string a_hostname = 1;
+// optional string a_hostname = 1;
 inline bool Msg_UnregisterMDNSHostname::_internal_has_a_hostname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1548,7 +1542,7 @@ inline void Msg_UnregisterMDNSHostname::set_allocated_a_hostname(std::string* a_
 
 // Msg_OnMDNSQueryComplete
 
-// required string a_hostname = 1;
+// optional string a_hostname = 1;
 inline bool Msg_OnMDNSQueryComplete::_internal_has_a_hostname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

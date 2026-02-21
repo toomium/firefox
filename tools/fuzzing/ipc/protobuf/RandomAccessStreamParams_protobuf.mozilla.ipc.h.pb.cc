@@ -83,7 +83,7 @@ class FileRandomAccessStreamParams::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -180,7 +180,7 @@ const char* FileRandomAccessStreamParams::_InternalParse(const char* ptr, ::_pbi
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_behaviorFlags = 2;
+      // optional sint32 a_behaviorFlags = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_behaviorflags(&has_bits);
@@ -226,7 +226,7 @@ uint8_t* FileRandomAccessStreamParams::_InternalSerialize(
         1, this->_internal_a_filedescriptor(), target);
   }
 
-  // required sint32 a_behaviorFlags = 2;
+  // optional sint32 a_behaviorFlags = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_a_behaviorflags(), target);
@@ -240,43 +240,25 @@ uint8_t* FileRandomAccessStreamParams::_InternalSerialize(
   return target;
 }
 
-size_t FileRandomAccessStreamParams::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.ipc.FileRandomAccessStreamParams)
-  size_t total_size = 0;
-
-  if (_internal_has_a_filedescriptor()) {
-    // required bytes a_fileDescriptor = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_filedescriptor());
-  }
-
-  if (_internal_has_a_behaviorflags()) {
-    // required sint32 a_behaviorFlags = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_behaviorflags());
-  }
-
-  return total_size;
-}
 size_t FileRandomAccessStreamParams::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.ipc.FileRandomAccessStreamParams)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_fileDescriptor = 1;
+  // required bytes a_fileDescriptor = 1;
+  if (_internal_has_a_filedescriptor()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_filedescriptor());
-
-    // required sint32 a_behaviorFlags = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_behaviorflags());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional sint32 a_behaviorFlags = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000002u) {
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_behaviorflags());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();

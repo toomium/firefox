@@ -182,7 +182,7 @@ class Msg___delete__ final :
   enum : int {
     kAAValidateResultFieldNumber = 1,
   };
-  // required bool a_aValidateResult = 1;
+  // optional bool a_aValidateResult = 1;
   bool has_a_avalidateresult() const;
   private:
   bool _internal_has_a_avalidateresult() const;
@@ -448,7 +448,7 @@ class Msg_OnTransactionClose final :
   enum : int {
     kAAValidateResultFieldNumber = 1,
   };
-  // required bool a_aValidateResult = 1;
+  // optional bool a_aValidateResult = 1;
   bool has_a_avalidateresult() const;
   private:
   bool _internal_has_a_avalidateresult() const;
@@ -487,7 +487,7 @@ class Msg_OnTransactionClose final :
 #endif  // __GNUC__
 // Msg___delete__
 
-// required bool a_aValidateResult = 1;
+// optional bool a_aValidateResult = 1;
 inline bool Msg___delete__::_internal_has_a_avalidateresult() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -523,7 +523,7 @@ inline void Msg___delete__::set_a_avalidateresult(bool value) {
 
 // Msg_OnTransactionClose
 
-// required bool a_aValidateResult = 1;
+// optional bool a_aValidateResult = 1;
 inline bool Msg_OnTransactionClose::_internal_has_a_avalidateresult() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

@@ -14,12 +14,12 @@ package protobuf.mozilla.dom.quota.PRemoteQuotaObject;
 
 // Message declarations
 message Msg_MaybeUpdateSize {
-  required sint64 a_size = 1;
-  required bool a_truncate = 2;
+  optional sint64 a_size = 1;
+  optional bool a_truncate = 2;
 }
 
 message Reply_MaybeUpdateSize {
-  required bool a_result = 1;
+  optional bool a_result = 1;
 }
 
 // Parameter mappings stats:

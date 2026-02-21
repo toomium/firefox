@@ -448,7 +448,7 @@ class SurfaceDescriptorD3D10::_Internal {
     (*has_bits)[0] |= 64u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x000001bc) ^ 0x000001bc) != 0;
+    return ((has_bits[0] & 0x0000003c) ^ 0x0000003c) != 0;
   }
 };
 
@@ -669,7 +669,7 @@ const char* SurfaceDescriptorD3D10::_InternalParse(const char* ptr, ::_pbi::Pars
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_arrayIndex = 3;
+      // optional uint32 a_arrayIndex = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_arrayindex(&has_bits);
@@ -714,7 +714,7 @@ const char* SurfaceDescriptorD3D10::_InternalParse(const char* ptr, ::_pbi::Pars
         } else
           goto handle_unusual;
         continue;
-      // required bool a_hasKeyedMutex = 8;
+      // optional bool a_hasKeyedMutex = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
           _Internal::set_has_a_haskeyedmutex(&has_bits);
@@ -775,7 +775,7 @@ uint8_t* SurfaceDescriptorD3D10::_InternalSerialize(
         2, this->_internal_a_gpuprocesstextureid(), target);
   }
 
-  // required uint32 a_arrayIndex = 3;
+  // optional uint32 a_arrayIndex = 3;
   if (cached_has_bits & 0x00000080u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_arrayindex(), target);
@@ -805,7 +805,7 @@ uint8_t* SurfaceDescriptorD3D10::_InternalSerialize(
         7, this->_internal_a_colorrange(), target);
   }
 
-  // required bool a_hasKeyedMutex = 8;
+  // optional bool a_hasKeyedMutex = 8;
   if (cached_has_bits & 0x00000100u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(8, this->_internal_a_haskeyedmutex(), target);
@@ -857,23 +857,13 @@ size_t SurfaceDescriptorD3D10::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_colorrange());
   }
 
-  if (_internal_has_a_arrayindex()) {
-    // required uint32 a_arrayIndex = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_arrayindex());
-  }
-
-  if (_internal_has_a_haskeyedmutex()) {
-    // required bool a_hasKeyedMutex = 8;
-    total_size += 1 + 1;
-  }
-
   return total_size;
 }
 size_t SurfaceDescriptorD3D10::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.SurfaceDescriptorD3D10)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x000001bc) ^ 0x000001bc) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x0000003c) ^ 0x0000003c) == 0) {  // All required fields are present.
     // required bytes a_format = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -893,12 +883,6 @@ size_t SurfaceDescriptorD3D10::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_colorrange());
-
-    // required uint32 a_arrayIndex = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_arrayindex());
-
-    // required bool a_hasKeyedMutex = 8;
-    total_size += 1 + 1;
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -924,11 +908,23 @@ size_t SurfaceDescriptorD3D10::ByteSizeLong() const {
     }
 
   }
-  // optional bytes a_fencesHolderId = 9;
-  if (cached_has_bits & 0x00000040u) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_fencesholderid());
+  if (cached_has_bits & 0x000000c0u) {
+    // optional bytes a_fencesHolderId = 9;
+    if (cached_has_bits & 0x00000040u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+          this->_internal_a_fencesholderid());
+    }
+
+    // optional uint32 a_arrayIndex = 3;
+    if (cached_has_bits & 0x00000080u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_arrayindex());
+    }
+
+  }
+  // optional bool a_hasKeyedMutex = 8;
+  if (cached_has_bits & 0x00000100u) {
+    total_size += 1 + 1;
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1788,7 +1784,7 @@ class SurfaceDescriptorMacIOSurface::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000000d) ^ 0x0000000d) != 0;
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -1904,7 +1900,7 @@ const char* SurfaceDescriptorMacIOSurface::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 a_surfaceId = 1;
+      // optional uint32 a_surfaceId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_surfaceid(&has_bits);
@@ -1913,7 +1909,7 @@ const char* SurfaceDescriptorMacIOSurface::_InternalParse(const char* ptr, ::_pb
         } else
           goto handle_unusual;
         continue;
-      // required bool a_isOpaque = 2;
+      // optional bool a_isOpaque = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_isopaque(&has_bits);
@@ -1971,13 +1967,13 @@ uint8_t* SurfaceDescriptorMacIOSurface::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 a_surfaceId = 1;
+  // optional uint32 a_surfaceId = 1;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_surfaceid(), target);
   }
 
-  // required bool a_isOpaque = 2;
+  // optional bool a_isOpaque = 2;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_isopaque(), target);
@@ -2003,60 +1999,40 @@ uint8_t* SurfaceDescriptorMacIOSurface::_InternalSerialize(
   return target;
 }
 
-size_t SurfaceDescriptorMacIOSurface::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.SurfaceDescriptorMacIOSurface)
-  size_t total_size = 0;
-
-  if (_internal_has_a_yuvcolorspace()) {
-    // required bytes a_yUVColorSpace = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_yuvcolorspace());
-  }
-
-  if (_internal_has_a_surfaceid()) {
-    // required uint32 a_surfaceId = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_surfaceid());
-  }
-
-  if (_internal_has_a_isopaque()) {
-    // required bool a_isOpaque = 2;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t SurfaceDescriptorMacIOSurface::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.SurfaceDescriptorMacIOSurface)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000000d) ^ 0x0000000d) == 0) {  // All required fields are present.
-    // required bytes a_yUVColorSpace = 3;
+  // required bytes a_yUVColorSpace = 3;
+  if (_internal_has_a_yuvcolorspace()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_yuvcolorspace());
-
-    // required uint32 a_surfaceId = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_surfaceid());
-
-    // required bool a_isOpaque = 2;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional bytes a_gpuFence = 4;
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000002u) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_gpufence());
-  }
+  if (cached_has_bits & 0x0000000eu) {
+    // optional bytes a_gpuFence = 4;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+          this->_internal_a_gpufence());
+    }
 
+    // optional uint32 a_surfaceId = 1;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_surfaceid());
+    }
+
+    // optional bool a_isOpaque = 2;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += 1 + 1;
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -2172,7 +2148,7 @@ class SurfaceDescriptorDMABuf::_Internal {
     (*has_bits)[0] |= 16u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x000003ef) ^ 0x000003ef) != 0;
+    return ((has_bits[0] & 0x0000000f) ^ 0x0000000f) != 0;
   }
 };
 
@@ -2397,7 +2373,7 @@ const char* SurfaceDescriptorDMABuf::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 a_bufferType = 1;
+      // optional uint32 a_bufferType = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_buffertype(&has_bits);
@@ -2406,7 +2382,7 @@ const char* SurfaceDescriptorDMABuf::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_fourccFormat = 2;
+      // optional uint32 a_fourccFormat = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_fourccformat(&has_bits);
@@ -2431,7 +2407,7 @@ const char* SurfaceDescriptorDMABuf::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_flags = 4;
+      // optional uint32 a_flags = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_a_flags(&has_bits);
@@ -2616,7 +2592,7 @@ const char* SurfaceDescriptorDMABuf::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_uid = 18;
+      // optional uint32 a_uid = 18;
       case 18:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 144)) {
           _Internal::set_has_a_uid(&has_bits);
@@ -2625,7 +2601,7 @@ const char* SurfaceDescriptorDMABuf::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_pid = 19;
+      // optional uint32 a_pid = 19;
       case 19:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 152)) {
           _Internal::set_has_a_pid(&has_bits);
@@ -2688,13 +2664,13 @@ uint8_t* SurfaceDescriptorDMABuf::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 a_bufferType = 1;
+  // optional uint32 a_bufferType = 1;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_buffertype(), target);
   }
 
-  // required uint32 a_fourccFormat = 2;
+  // optional uint32 a_fourccFormat = 2;
   if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_fourccformat(), target);
@@ -2706,7 +2682,7 @@ uint8_t* SurfaceDescriptorDMABuf::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(3, this->_internal_a_modifier(i), target);
   }
 
-  // required uint32 a_flags = 4;
+  // optional uint32 a_flags = 4;
   if (cached_has_bits & 0x00000080u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(4, this->_internal_a_flags(), target);
@@ -2790,13 +2766,13 @@ uint8_t* SurfaceDescriptorDMABuf::_InternalSerialize(
     target = stream->WriteBytes(17, s, target);
   }
 
-  // required uint32 a_uid = 18;
+  // optional uint32 a_uid = 18;
   if (cached_has_bits & 0x00000100u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(18, this->_internal_a_uid(), target);
   }
 
-  // required uint32 a_pid = 19;
+  // optional uint32 a_pid = 19;
   if (cached_has_bits & 0x00000200u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(19, this->_internal_a_pid(), target);
@@ -2854,42 +2830,13 @@ size_t SurfaceDescriptorDMABuf::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_transferfunction());
   }
 
-  if (_internal_has_a_buffertype()) {
-    // required uint32 a_bufferType = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_buffertype());
-  }
-
-  if (_internal_has_a_fourccformat()) {
-    // required uint32 a_fourccFormat = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_fourccformat());
-  }
-
-  if (_internal_has_a_flags()) {
-    // required uint32 a_flags = 4;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_flags());
-  }
-
-  if (_internal_has_a_uid()) {
-    // required uint32 a_uid = 18;
-    total_size += 2 +
-      ::_pbi::WireFormatLite::UInt32Size(
-        this->_internal_a_uid());
-  }
-
-  if (_internal_has_a_pid()) {
-    // required uint32 a_pid = 19;
-    total_size += 2 +
-      ::_pbi::WireFormatLite::UInt32Size(
-        this->_internal_a_pid());
-  }
-
   return total_size;
 }
 size_t SurfaceDescriptorDMABuf::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.SurfaceDescriptorDMABuf)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x000003ef) ^ 0x000003ef) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
     // required bytes a_yUVColorSpace = 13;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -2909,25 +2856,6 @@ size_t SurfaceDescriptorDMABuf::ByteSizeLong() const {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_transferfunction());
-
-    // required uint32 a_bufferType = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_buffertype());
-
-    // required uint32 a_fourccFormat = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_fourccformat());
-
-    // required uint32 a_flags = 4;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_flags());
-
-    // required uint32 a_uid = 18;
-    total_size += 2 +
-      ::_pbi::WireFormatLite::UInt32Size(
-        this->_internal_a_uid());
-
-    // required uint32 a_pid = 19;
-    total_size += 2 +
-      ::_pbi::WireFormatLite::UInt32Size(
-        this->_internal_a_pid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -3032,14 +2960,47 @@ size_t SurfaceDescriptorDMABuf::ByteSizeLong() const {
       _impl_.a_refcount_.Get(i));
   }
 
-  // optional bytes a_semaphoreFd = 21;
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000010u) {
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_semaphorefd());
-  }
+  if (cached_has_bits & 0x000000f0u) {
+    // optional bytes a_semaphoreFd = 21;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += 2 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+          this->_internal_a_semaphorefd());
+    }
 
+    // optional uint32 a_bufferType = 1;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_buffertype());
+    }
+
+    // optional uint32 a_fourccFormat = 2;
+    if (cached_has_bits & 0x00000040u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_fourccformat());
+    }
+
+    // optional uint32 a_flags = 4;
+    if (cached_has_bits & 0x00000080u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_flags());
+    }
+
+  }
+  if (cached_has_bits & 0x00000300u) {
+    // optional uint32 a_uid = 18;
+    if (cached_has_bits & 0x00000100u) {
+      total_size += 2 +
+        ::_pbi::WireFormatLite::UInt32Size(
+          this->_internal_a_uid());
+    }
+
+    // optional uint32 a_pid = 19;
+    if (cached_has_bits & 0x00000200u) {
+      total_size += 2 +
+        ::_pbi::WireFormatLite::UInt32Size(
+          this->_internal_a_pid());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -3198,7 +3159,7 @@ class SurfaceTextureDescriptor::_Internal {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000003b) ^ 0x0000003b) != 0;
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
   }
 };
 
@@ -3334,7 +3295,7 @@ const char* SurfaceTextureDescriptor::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint64 a_handle = 1;
+      // optional uint64 a_handle = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_handle(&has_bits);
@@ -3361,7 +3322,7 @@ const char* SurfaceTextureDescriptor::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required bool a_continuous = 4;
+      // optional bool a_continuous = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_a_continuous(&has_bits);
@@ -3370,7 +3331,7 @@ const char* SurfaceTextureDescriptor::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required bool a_forceBT709ColorSpace = 5;
+      // optional bool a_forceBT709ColorSpace = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_a_forcebt709colorspace(&has_bits);
@@ -3419,7 +3380,7 @@ uint8_t* SurfaceTextureDescriptor::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint64 a_handle = 1;
+  // optional uint64 a_handle = 1;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_handle(), target);
@@ -3437,13 +3398,13 @@ uint8_t* SurfaceTextureDescriptor::_InternalSerialize(
         3, this->_internal_a_format(), target);
   }
 
-  // required bool a_continuous = 4;
+  // optional bool a_continuous = 4;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_a_continuous(), target);
   }
 
-  // required bool a_forceBT709ColorSpace = 5;
+  // optional bool a_forceBT709ColorSpace = 5;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_a_forcebt709colorspace(), target);
@@ -3481,28 +3442,13 @@ size_t SurfaceTextureDescriptor::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_format());
   }
 
-  if (_internal_has_a_handle()) {
-    // required uint64 a_handle = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_handle());
-  }
-
-  if (_internal_has_a_continuous()) {
-    // required bool a_continuous = 4;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_forcebt709colorspace()) {
-    // required bool a_forceBT709ColorSpace = 5;
-    total_size += 1 + 1;
-  }
-
   return total_size;
 }
 size_t SurfaceTextureDescriptor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.SurfaceTextureDescriptor)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000003b) ^ 0x0000003b) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
     // required bytes a_size = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -3513,15 +3459,6 @@ size_t SurfaceTextureDescriptor::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_format());
 
-    // required uint64 a_handle = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_handle());
-
-    // required bool a_continuous = 4;
-    total_size += 1 + 1;
-
-    // required bool a_forceBT709ColorSpace = 5;
-    total_size += 1 + 1;
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
@@ -3529,14 +3466,31 @@ size_t SurfaceTextureDescriptor::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional bytes a_transformOverride = 6;
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000004u) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_transformoverride());
-  }
+  if (cached_has_bits & 0x0000003cu) {
+    // optional bytes a_transformOverride = 6;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+          this->_internal_a_transformoverride());
+    }
 
+    // optional uint64 a_handle = 1;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_handle());
+    }
+
+    // optional bool a_continuous = 4;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool a_forceBT709ColorSpace = 5;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += 1 + 1;
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -3641,7 +3595,7 @@ class SurfaceDescriptorAndroidHardwareBuffer::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
   }
 };
 
@@ -3749,7 +3703,7 @@ const char* SurfaceDescriptorAndroidHardwareBuffer::_InternalParse(const char* p
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint64 a_bufferId = 1;
+      // optional uint64 a_bufferId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_bufferid(&has_bits);
@@ -3807,7 +3761,7 @@ uint8_t* SurfaceDescriptorAndroidHardwareBuffer::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint64 a_bufferId = 1;
+  // optional uint64 a_bufferId = 1;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_bufferid(), target);
@@ -3851,18 +3805,13 @@ size_t SurfaceDescriptorAndroidHardwareBuffer::RequiredFieldsByteSizeFallback() 
         this->_internal_a_format());
   }
 
-  if (_internal_has_a_bufferid()) {
-    // required uint64 a_bufferId = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_bufferid());
-  }
-
   return total_size;
 }
 size_t SurfaceDescriptorAndroidHardwareBuffer::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.SurfaceDescriptorAndroidHardwareBuffer)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
     // required bytes a_size = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -3873,15 +3822,18 @@ size_t SurfaceDescriptorAndroidHardwareBuffer::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_format());
 
-    // required uint64 a_bufferId = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_bufferid());
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional uint64 a_bufferId = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000004u) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_bufferid());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -3972,7 +3924,7 @@ class EGLImageDescriptor::_Internal {
     (*has_bits)[0] |= 8u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000000f) ^ 0x0000000f) != 0;
+    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
   }
 };
 
@@ -4125,7 +4077,7 @@ const char* EGLImageDescriptor::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // required bool a_hasAlpha = 4;
+      // optional bool a_hasAlpha = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_a_hasalpha(&has_bits);
@@ -4183,7 +4135,7 @@ uint8_t* EGLImageDescriptor::_InternalSerialize(
         3, this->_internal_a_size(), target);
   }
 
-  // required bool a_hasAlpha = 4;
+  // optional bool a_hasAlpha = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_a_hasalpha(), target);
@@ -4222,18 +4174,13 @@ size_t EGLImageDescriptor::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_size());
   }
 
-  if (_internal_has_a_hasalpha()) {
-    // required bool a_hasAlpha = 4;
-    total_size += 1 + 1;
-  }
-
   return total_size;
 }
 size_t EGLImageDescriptor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.EGLImageDescriptor)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
     // required bytes a_image = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -4249,15 +4196,18 @@ size_t EGLImageDescriptor::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_size());
 
-    // required bool a_hasAlpha = 4;
-    total_size += 1 + 1;
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_hasAlpha = 4;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000008u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -4358,7 +4308,7 @@ class SurfaceDescriptorSharedGLTexture::_Internal {
     (*has_bits)[0] |= 16u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000001f) ^ 0x0000001f) != 0;
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
   }
 };
 
@@ -4476,7 +4426,7 @@ const char* SurfaceDescriptorSharedGLTexture::_InternalParse(const char* ptr, ::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 a_texture = 1;
+      // optional uint32 a_texture = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_texture(&has_bits);
@@ -4485,7 +4435,7 @@ const char* SurfaceDescriptorSharedGLTexture::_InternalParse(const char* ptr, ::
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_target = 2;
+      // optional uint32 a_target = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_target(&has_bits);
@@ -4512,7 +4462,7 @@ const char* SurfaceDescriptorSharedGLTexture::_InternalParse(const char* ptr, ::
         } else
           goto handle_unusual;
         continue;
-      // required bool a_hasAlpha = 5;
+      // optional bool a_hasAlpha = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_a_hasalpha(&has_bits);
@@ -4552,13 +4502,13 @@ uint8_t* SurfaceDescriptorSharedGLTexture::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 a_texture = 1;
+  // optional uint32 a_texture = 1;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_texture(), target);
   }
 
-  // required uint32 a_target = 2;
+  // optional uint32 a_target = 2;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_target(), target);
@@ -4576,7 +4526,7 @@ uint8_t* SurfaceDescriptorSharedGLTexture::_InternalSerialize(
         4, this->_internal_a_size(), target);
   }
 
-  // required bool a_hasAlpha = 5;
+  // optional bool a_hasAlpha = 5;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_a_hasalpha(), target);
@@ -4608,28 +4558,13 @@ size_t SurfaceDescriptorSharedGLTexture::RequiredFieldsByteSizeFallback() const 
         this->_internal_a_size());
   }
 
-  if (_internal_has_a_texture()) {
-    // required uint32 a_texture = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_texture());
-  }
-
-  if (_internal_has_a_target()) {
-    // required uint32 a_target = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_target());
-  }
-
-  if (_internal_has_a_hasalpha()) {
-    // required bool a_hasAlpha = 5;
-    total_size += 1 + 1;
-  }
-
   return total_size;
 }
 size_t SurfaceDescriptorSharedGLTexture::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.SurfaceDescriptorSharedGLTexture)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
     // required bytes a_fence = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -4640,15 +4575,6 @@ size_t SurfaceDescriptorSharedGLTexture::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_size());
 
-    // required uint32 a_texture = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_texture());
-
-    // required uint32 a_target = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_target());
-
-    // required bool a_hasAlpha = 5;
-    total_size += 1 + 1;
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
@@ -4656,6 +4582,24 @@ size_t SurfaceDescriptorSharedGLTexture::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000001cu) {
+    // optional uint32 a_texture = 1;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_texture());
+    }
+
+    // optional uint32 a_target = 2;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_target());
+    }
+
+    // optional bool a_hasAlpha = 5;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += 1 + 1;
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -5655,7 +5599,7 @@ class SurfaceDescriptorRemoteDecoder::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000000f) ^ 0x0000000f) != 0;
+    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
   }
 };
 
@@ -5777,7 +5721,7 @@ const char* SurfaceDescriptorRemoteDecoder::_InternalParse(const char* ptr, ::_p
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint64 a_handle = 1;
+      // optional uint64 a_handle = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_handle(&has_bits);
@@ -5843,7 +5787,7 @@ uint8_t* SurfaceDescriptorRemoteDecoder::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint64 a_handle = 1;
+  // optional uint64 a_handle = 1;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_handle(), target);
@@ -5901,18 +5845,13 @@ size_t SurfaceDescriptorRemoteDecoder::RequiredFieldsByteSizeFallback() const {
         *_impl_.a_subdesc_);
   }
 
-  if (_internal_has_a_handle()) {
-    // required uint64 a_handle = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_handle());
-  }
-
   return total_size;
 }
 size_t SurfaceDescriptorRemoteDecoder::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.SurfaceDescriptorRemoteDecoder)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
     // required bytes a_source = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -5928,15 +5867,18 @@ size_t SurfaceDescriptorRemoteDecoder::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_subdesc_);
 
-    // required uint64 a_handle = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_handle());
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional uint64 a_handle = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000008u) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_handle());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -6619,7 +6561,7 @@ class YCbCrDescriptor::_Internal {
     (*has_bits)[0] |= 128u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00001fff) ^ 0x00001fff) != 0;
+    return ((has_bits[0] & 0x000000ff) ^ 0x000000ff) != 0;
   }
 };
 
@@ -6867,7 +6809,7 @@ const char* YCbCrDescriptor::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_yStride = 3;
+      // optional uint32 a_yStride = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_ystride(&has_bits);
@@ -6885,7 +6827,7 @@ const char* YCbCrDescriptor::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_cbCrStride = 5;
+      // optional uint32 a_cbCrStride = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_a_cbcrstride(&has_bits);
@@ -6894,7 +6836,7 @@ const char* YCbCrDescriptor::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_yOffset = 6;
+      // optional uint32 a_yOffset = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
           _Internal::set_has_a_yoffset(&has_bits);
@@ -6903,7 +6845,7 @@ const char* YCbCrDescriptor::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_cbOffset = 7;
+      // optional uint32 a_cbOffset = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
           _Internal::set_has_a_cboffset(&has_bits);
@@ -6912,7 +6854,7 @@ const char* YCbCrDescriptor::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_crOffset = 8;
+      // optional uint32 a_crOffset = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
           _Internal::set_has_a_croffset(&has_bits);
@@ -7009,7 +6951,7 @@ uint8_t* YCbCrDescriptor::_InternalSerialize(
         2, this->_internal_a_ysize(), target);
   }
 
-  // required uint32 a_yStride = 3;
+  // optional uint32 a_yStride = 3;
   if (cached_has_bits & 0x00000100u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_ystride(), target);
@@ -7021,25 +6963,25 @@ uint8_t* YCbCrDescriptor::_InternalSerialize(
         4, this->_internal_a_cbcrsize(), target);
   }
 
-  // required uint32 a_cbCrStride = 5;
+  // optional uint32 a_cbCrStride = 5;
   if (cached_has_bits & 0x00000200u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(5, this->_internal_a_cbcrstride(), target);
   }
 
-  // required uint32 a_yOffset = 6;
+  // optional uint32 a_yOffset = 6;
   if (cached_has_bits & 0x00000400u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(6, this->_internal_a_yoffset(), target);
   }
 
-  // required uint32 a_cbOffset = 7;
+  // optional uint32 a_cbOffset = 7;
   if (cached_has_bits & 0x00000800u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(7, this->_internal_a_cboffset(), target);
   }
 
-  // required uint32 a_crOffset = 8;
+  // optional uint32 a_crOffset = 8;
   if (cached_has_bits & 0x00001000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(8, this->_internal_a_croffset(), target);
@@ -7143,38 +7085,13 @@ size_t YCbCrDescriptor::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_chromasubsampling());
   }
 
-  if (_internal_has_a_ystride()) {
-    // required uint32 a_yStride = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_ystride());
-  }
-
-  if (_internal_has_a_cbcrstride()) {
-    // required uint32 a_cbCrStride = 5;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_cbcrstride());
-  }
-
-  if (_internal_has_a_yoffset()) {
-    // required uint32 a_yOffset = 6;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_yoffset());
-  }
-
-  if (_internal_has_a_cboffset()) {
-    // required uint32 a_cbOffset = 7;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_cboffset());
-  }
-
-  if (_internal_has_a_croffset()) {
-    // required uint32 a_crOffset = 8;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_croffset());
-  }
-
   return total_size;
 }
 size_t YCbCrDescriptor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.YCbCrDescriptor)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00001fff) ^ 0x00001fff) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x000000ff) ^ 0x000000ff) == 0) {  // All required fields are present.
     // required bytes a_display = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -7215,21 +7132,6 @@ size_t YCbCrDescriptor::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_chromasubsampling());
 
-    // required uint32 a_yStride = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_ystride());
-
-    // required uint32 a_cbCrStride = 5;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_cbcrstride());
-
-    // required uint32 a_yOffset = 6;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_yoffset());
-
-    // required uint32 a_cbOffset = 7;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_cboffset());
-
-    // required uint32 a_crOffset = 8;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_croffset());
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
@@ -7237,6 +7139,34 @@ size_t YCbCrDescriptor::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00001f00u) {
+    // optional uint32 a_yStride = 3;
+    if (cached_has_bits & 0x00000100u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_ystride());
+    }
+
+    // optional uint32 a_cbCrStride = 5;
+    if (cached_has_bits & 0x00000200u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_cbcrstride());
+    }
+
+    // optional uint32 a_yOffset = 6;
+    if (cached_has_bits & 0x00000400u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_yoffset());
+    }
+
+    // optional uint32 a_cbOffset = 7;
+    if (cached_has_bits & 0x00000800u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_cboffset());
+    }
+
+    // optional uint32 a_crOffset = 8;
+    if (cached_has_bits & 0x00001000u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_croffset());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -8260,7 +8190,7 @@ class SurfaceDescriptorShared::_Internal {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000000f) ^ 0x0000000f) != 0;
+    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
   }
 };
 
@@ -8395,7 +8325,7 @@ const char* SurfaceDescriptorShared::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_stride = 2;
+      // optional sint32 a_stride = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_stride(&has_bits);
@@ -8459,7 +8389,7 @@ uint8_t* SurfaceDescriptorShared::_InternalSerialize(
         1, this->_internal_a_size(), target);
   }
 
-  // required sint32 a_stride = 2;
+  // optional sint32 a_stride = 2;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_a_stride(), target);
@@ -8510,18 +8440,13 @@ size_t SurfaceDescriptorShared::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_handle());
   }
 
-  if (_internal_has_a_stride()) {
-    // required sint32 a_stride = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_stride());
-  }
-
   return total_size;
 }
 size_t SurfaceDescriptorShared::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.SurfaceDescriptorShared)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
     // required bytes a_size = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -8537,15 +8462,18 @@ size_t SurfaceDescriptorShared::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_handle());
 
-    // required sint32 a_stride = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_stride());
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional sint32 a_stride = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000008u) {
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_stride());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -9226,7 +9154,7 @@ class SurfaceDescriptorCanvasSurface::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
   }
 };
 
@@ -9334,7 +9262,7 @@ const char* SurfaceDescriptorCanvasSurface::_InternalParse(const char* ptr, ::_p
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 a_managerId = 1;
+      // optional uint32 a_managerId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_managerid(&has_bits);
@@ -9392,7 +9320,7 @@ uint8_t* SurfaceDescriptorCanvasSurface::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 a_managerId = 1;
+  // optional uint32 a_managerId = 1;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_managerid(), target);
@@ -9436,18 +9364,13 @@ size_t SurfaceDescriptorCanvasSurface::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_surfaceid());
   }
 
-  if (_internal_has_a_managerid()) {
-    // required uint32 a_managerId = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_managerid());
-  }
-
   return total_size;
 }
 size_t SurfaceDescriptorCanvasSurface::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.SurfaceDescriptorCanvasSurface)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
     // required bytes a_canvasId = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -9458,15 +9381,18 @@ size_t SurfaceDescriptorCanvasSurface::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_surfaceid());
 
-    // required uint32 a_managerId = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_managerid());
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional uint32 a_managerId = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000004u) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_managerid());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();

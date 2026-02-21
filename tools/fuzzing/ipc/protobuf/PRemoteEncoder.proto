@@ -54,18 +54,18 @@ message Reply_Drain {
 }
 
 message Msg_ReleaseTicket {
-  required uint32 a_ticketId = 1;
+  optional uint32 a_ticketId = 1;
 }
 
 message Msg_Shutdown {
 }
 
 message Reply_Shutdown {
-  required bool a_unused = 1;
+  optional bool a_unused = 1;
 }
 
 message Msg_SetBitrate {
-  required uint32 a_aBitsPerSec = 1;
+  optional uint32 a_aBitsPerSec = 1;
 }
 
 message Reply_SetBitrate {

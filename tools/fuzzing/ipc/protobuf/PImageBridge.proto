@@ -28,25 +28,25 @@ message Msg_DidComposite {
 
 message Msg_ReportFramesDropped {
   required bytes a_aHandle = 1;
-  required uint32 a_aFrames = 2;
+  optional uint32 a_aFrames = 2;
 }
 
 message Msg_Update {
   repeated protobuf.mozilla.layers.CompositableOperation a_ops = 1;
   repeated protobuf.mozilla.layers.OpDestroy a_toDestroy = 2;
-  required uint64 a_fwdTransactionId = 3;
+  optional uint64 a_fwdTransactionId = 3;
 }
 
 message Msg_WillClose {
 }
 
 message Msg_PTextureConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
   required protobuf.mozilla.layers.SurfaceDescriptor a_aSharedData = 2;
   required protobuf.mozilla.layers.ReadLockDescriptor a_aReadLock = 3;
   required bytes a_aBackend = 4;
   required bytes a_aTextureFlags = 5;
-  required uint64 a_aSerial = 6;
+  optional uint64 a_aSerial = 6;
   required bytes a_aExternalImageId = 7;
 }
 
@@ -54,7 +54,7 @@ message Reply_PTextureConstructor {
 }
 
 message Msg_PMediaSystemResourceManagerConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
 }
 
 message Reply_PMediaSystemResourceManagerConstructor {

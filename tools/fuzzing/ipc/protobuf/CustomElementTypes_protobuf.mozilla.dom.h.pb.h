@@ -373,7 +373,7 @@ class FormDataTuple final :
     kANameFieldNumber = 1,
     kAValueFieldNumber = 2,
   };
-  // required string a_name = 1;
+  // optional string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -412,9 +412,6 @@ class FormDataTuple final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.FormDataTuple)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1153,7 +1150,7 @@ inline IPCFormDataValue::ContentCase IPCFormDataValue::content_case() const {
 
 // FormDataTuple
 
-// required string a_name = 1;
+// optional string a_name = 1;
 inline bool FormDataTuple::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

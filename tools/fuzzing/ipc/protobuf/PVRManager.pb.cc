@@ -351,9 +351,6 @@ class Msg_PVRLayerConstructor::_Internal {
   static void set_has_a_agroup(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
-  }
 };
 
 Msg_PVRLayerConstructor::Msg_PVRLayerConstructor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -432,7 +429,7 @@ const char* Msg_PVRLayerConstructor::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint64 a_actorid = 1;
+      // optional sint64 a_actorid = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_actorid(&has_bits);
@@ -441,7 +438,7 @@ const char* Msg_PVRLayerConstructor::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_aDisplayID = 2;
+      // optional uint32 a_aDisplayID = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_adisplayid(&has_bits);
@@ -450,7 +447,7 @@ const char* Msg_PVRLayerConstructor::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_aGroup = 3;
+      // optional uint32 a_aGroup = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_agroup(&has_bits);
@@ -490,19 +487,19 @@ uint8_t* Msg_PVRLayerConstructor::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_actorid(), target);
   }
 
-  // required uint32 a_aDisplayID = 2;
+  // optional uint32 a_aDisplayID = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_adisplayid(), target);
   }
 
-  // required uint32 a_aGroup = 3;
+  // optional uint32 a_aGroup = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_agroup(), target);
@@ -516,48 +513,32 @@ uint8_t* Msg_PVRLayerConstructor::_InternalSerialize(
   return target;
 }
 
-size_t Msg_PVRLayerConstructor::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.gfx.PVRManager.Msg_PVRLayerConstructor)
-  size_t total_size = 0;
-
-  if (_internal_has_a_actorid()) {
-    // required sint64 a_actorid = 1;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
-  }
-
-  if (_internal_has_a_adisplayid()) {
-    // required uint32 a_aDisplayID = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_adisplayid());
-  }
-
-  if (_internal_has_a_agroup()) {
-    // required uint32 a_aGroup = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_agroup());
-  }
-
-  return total_size;
-}
 size_t Msg_PVRLayerConstructor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PVRManager.Msg_PVRLayerConstructor)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required sint64 a_actorid = 1;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
-
-    // required uint32 a_aDisplayID = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_adisplayid());
-
-    // required uint32 a_aGroup = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_agroup());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    // optional sint64 a_actorid = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
+    }
+
+    // optional uint32 a_aDisplayID = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_adisplayid());
+    }
+
+    // optional uint32 a_aGroup = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_agroup());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -603,7 +584,6 @@ void Msg_PVRLayerConstructor::CopyFrom(const Msg_PVRLayerConstructor& from) {
 }
 
 bool Msg_PVRLayerConstructor::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1079,9 +1059,6 @@ class Msg_SetGroupMask::_Internal {
   static void set_has_a_agroupmask(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
-  }
 };
 
 Msg_SetGroupMask::Msg_SetGroupMask(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1158,7 +1135,7 @@ const char* Msg_SetGroupMask::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 a_aDisplayID = 1;
+      // optional uint32 a_aDisplayID = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_adisplayid(&has_bits);
@@ -1167,7 +1144,7 @@ const char* Msg_SetGroupMask::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_aGroupMask = 2;
+      // optional uint32 a_aGroupMask = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_agroupmask(&has_bits);
@@ -1207,13 +1184,13 @@ uint8_t* Msg_SetGroupMask::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 a_aDisplayID = 1;
+  // optional uint32 a_aDisplayID = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_adisplayid(), target);
   }
 
-  // required uint32 a_aGroupMask = 2;
+  // optional uint32 a_aGroupMask = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_agroupmask(), target);
@@ -1227,40 +1204,27 @@ uint8_t* Msg_SetGroupMask::_InternalSerialize(
   return target;
 }
 
-size_t Msg_SetGroupMask::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.gfx.PVRManager.Msg_SetGroupMask)
-  size_t total_size = 0;
-
-  if (_internal_has_a_adisplayid()) {
-    // required uint32 a_aDisplayID = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_adisplayid());
-  }
-
-  if (_internal_has_a_agroupmask()) {
-    // required uint32 a_aGroupMask = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_agroupmask());
-  }
-
-  return total_size;
-}
 size_t Msg_SetGroupMask::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PVRManager.Msg_SetGroupMask)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required uint32 a_aDisplayID = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_adisplayid());
-
-    // required uint32 a_aGroupMask = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_agroupmask());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional uint32 a_aDisplayID = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_adisplayid());
+    }
+
+    // optional uint32 a_aGroupMask = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_agroupmask());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -1303,7 +1267,6 @@ void Msg_SetGroupMask::CopyFrom(const Msg_SetGroupMask& from) {
 }
 
 bool Msg_SetGroupMask::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1331,9 +1294,6 @@ class Msg_SetHaveEventListener::_Internal {
   using HasBits = decltype(std::declval<Msg_SetHaveEventListener>()._impl_._has_bits_);
   static void set_has_a_ahaveeventlistener(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -1402,7 +1362,7 @@ const char* Msg_SetHaveEventListener::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_aHaveEventListener = 1;
+      // optional bool a_aHaveEventListener = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_ahaveeventlistener(&has_bits);
@@ -1442,7 +1402,7 @@ uint8_t* Msg_SetHaveEventListener::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_aHaveEventListener = 1;
+  // optional bool a_aHaveEventListener = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_ahaveeventlistener(), target);
@@ -1460,13 +1420,15 @@ size_t Msg_SetHaveEventListener::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PVRManager.Msg_SetHaveEventListener)
   size_t total_size = 0;
 
-  // required bool a_aHaveEventListener = 1;
-  if (_internal_has_a_ahaveeventlistener()) {
-    total_size += 1 + 1;
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_aHaveEventListener = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1503,7 +1465,6 @@ void Msg_SetHaveEventListener::CopyFrom(const Msg_SetHaveEventListener& from) {
 }
 
 bool Msg_SetHaveEventListener::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1836,7 +1797,7 @@ class Msg_VibrateHaptic::_Internal {
     (*has_bits)[0] |= 8u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000001f) ^ 0x0000001f) != 0;
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -1945,7 +1906,7 @@ const char* Msg_VibrateHaptic::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_aHapticIndex = 2;
+      // optional uint32 a_aHapticIndex = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_ahapticindex(&has_bits);
@@ -1954,7 +1915,7 @@ const char* Msg_VibrateHaptic::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required double a_aIntensity = 3;
+      // optional double a_aIntensity = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 25)) {
           _Internal::set_has_a_aintensity(&has_bits);
@@ -1963,7 +1924,7 @@ const char* Msg_VibrateHaptic::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required double a_aDuration = 4;
+      // optional double a_aDuration = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 33)) {
           _Internal::set_has_a_aduration(&has_bits);
@@ -1972,7 +1933,7 @@ const char* Msg_VibrateHaptic::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_aPromiseID = 5;
+      // optional uint32 a_aPromiseID = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_a_apromiseid(&has_bits);
@@ -2018,25 +1979,25 @@ uint8_t* Msg_VibrateHaptic::_InternalSerialize(
         1, this->_internal_a_agamepadhandle(), target);
   }
 
-  // required uint32 a_aHapticIndex = 2;
+  // optional uint32 a_aHapticIndex = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_ahapticindex(), target);
   }
 
-  // required double a_aIntensity = 3;
+  // optional double a_aIntensity = 3;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(3, this->_internal_a_aintensity(), target);
   }
 
-  // required double a_aDuration = 4;
+  // optional double a_aDuration = 4;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(4, this->_internal_a_aduration(), target);
   }
 
-  // required uint32 a_aPromiseID = 5;
+  // optional uint32 a_aPromiseID = 5;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(5, this->_internal_a_apromiseid(), target);
@@ -2050,68 +2011,43 @@ uint8_t* Msg_VibrateHaptic::_InternalSerialize(
   return target;
 }
 
-size_t Msg_VibrateHaptic::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic)
-  size_t total_size = 0;
-
-  if (_internal_has_a_agamepadhandle()) {
-    // required bytes a_aGamepadHandle = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_agamepadhandle());
-  }
-
-  if (_internal_has_a_aintensity()) {
-    // required double a_aIntensity = 3;
-    total_size += 1 + 8;
-  }
-
-  if (_internal_has_a_ahapticindex()) {
-    // required uint32 a_aHapticIndex = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_ahapticindex());
-  }
-
-  if (_internal_has_a_apromiseid()) {
-    // required uint32 a_aPromiseID = 5;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_apromiseid());
-  }
-
-  if (_internal_has_a_aduration()) {
-    // required double a_aDuration = 4;
-    total_size += 1 + 8;
-  }
-
-  return total_size;
-}
 size_t Msg_VibrateHaptic::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
-    // required bytes a_aGamepadHandle = 1;
+  // required bytes a_aGamepadHandle = 1;
+  if (_internal_has_a_agamepadhandle()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_agamepadhandle());
-
-    // required double a_aIntensity = 3;
-    total_size += 1 + 8;
-
-    // required uint32 a_aHapticIndex = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_ahapticindex());
-
-    // required uint32 a_aPromiseID = 5;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_apromiseid());
-
-    // required double a_aDuration = 4;
-    total_size += 1 + 8;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000001eu) {
+    // optional double a_aIntensity = 3;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 + 8;
+    }
+
+    // optional uint32 a_aHapticIndex = 2;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_ahapticindex());
+    }
+
+    // optional uint32 a_aPromiseID = 5;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_apromiseid());
+    }
+
+    // optional double a_aDuration = 4;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += 1 + 8;
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -2415,9 +2351,6 @@ class Msg_StartVRNavigation::_Internal {
   static void set_has_a_adeviceid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_StartVRNavigation::Msg_StartVRNavigation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2485,7 +2418,7 @@ const char* Msg_StartVRNavigation::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 a_aDeviceID = 1;
+      // optional uint32 a_aDeviceID = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_adeviceid(&has_bits);
@@ -2525,7 +2458,7 @@ uint8_t* Msg_StartVRNavigation::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 a_aDeviceID = 1;
+  // optional uint32 a_aDeviceID = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_adeviceid(), target);
@@ -2543,13 +2476,15 @@ size_t Msg_StartVRNavigation::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PVRManager.Msg_StartVRNavigation)
   size_t total_size = 0;
 
-  // required uint32 a_aDeviceID = 1;
-  if (_internal_has_a_adeviceid()) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_adeviceid());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional uint32 a_aDeviceID = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_adeviceid());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -2586,7 +2521,6 @@ void Msg_StartVRNavigation::CopyFrom(const Msg_StartVRNavigation& from) {
 }
 
 bool Msg_StartVRNavigation::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -2614,7 +2548,7 @@ class Msg_StopVRNavigation::_Internal {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -2702,7 +2636,7 @@ const char* Msg_StopVRNavigation::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 a_aDeviceID = 1;
+      // optional uint32 a_aDeviceID = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_adeviceid(&has_bits);
@@ -2751,7 +2685,7 @@ uint8_t* Msg_StopVRNavigation::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 a_aDeviceID = 1;
+  // optional uint32 a_aDeviceID = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_adeviceid(), target);
@@ -2771,43 +2705,25 @@ uint8_t* Msg_StopVRNavigation::_InternalSerialize(
   return target;
 }
 
-size_t Msg_StopVRNavigation::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.gfx.PVRManager.Msg_StopVRNavigation)
-  size_t total_size = 0;
-
-  if (_internal_has_a_aduration()) {
-    // required bytes a_aDuration = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_aduration());
-  }
-
-  if (_internal_has_a_adeviceid()) {
-    // required uint32 a_aDeviceID = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_adeviceid());
-  }
-
-  return total_size;
-}
 size_t Msg_StopVRNavigation::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PVRManager.Msg_StopVRNavigation)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_aDuration = 2;
+  // required bytes a_aDuration = 2;
+  if (_internal_has_a_aduration()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_aduration());
-
-    // required uint32 a_aDeviceID = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_adeviceid());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional uint32 a_aDeviceID = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000002u) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_adeviceid());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -3949,9 +3865,6 @@ class Msg_ReplyGamepadVibrateHaptic::_Internal {
   static void set_has_a_apromiseid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_ReplyGamepadVibrateHaptic::Msg_ReplyGamepadVibrateHaptic(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -4019,7 +3932,7 @@ const char* Msg_ReplyGamepadVibrateHaptic::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 a_aPromiseID = 1;
+      // optional uint32 a_aPromiseID = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_apromiseid(&has_bits);
@@ -4059,7 +3972,7 @@ uint8_t* Msg_ReplyGamepadVibrateHaptic::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 a_aPromiseID = 1;
+  // optional uint32 a_aPromiseID = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_apromiseid(), target);
@@ -4077,13 +3990,15 @@ size_t Msg_ReplyGamepadVibrateHaptic::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PVRManager.Msg_ReplyGamepadVibrateHaptic)
   size_t total_size = 0;
 
-  // required uint32 a_aPromiseID = 1;
-  if (_internal_has_a_apromiseid()) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_apromiseid());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional uint32 a_aPromiseID = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_apromiseid());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -4120,7 +4035,6 @@ void Msg_ReplyGamepadVibrateHaptic::CopyFrom(const Msg_ReplyGamepadVibrateHaptic
 }
 
 bool Msg_ReplyGamepadVibrateHaptic::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -4143,9 +4057,6 @@ class Msg_NotifyPuppetCommandBufferCompleted::_Internal {
   using HasBits = decltype(std::declval<Msg_NotifyPuppetCommandBufferCompleted>()._impl_._has_bits_);
   static void set_has_a_asuccess(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -4214,7 +4125,7 @@ const char* Msg_NotifyPuppetCommandBufferCompleted::_InternalParse(const char* p
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_aSuccess = 1;
+      // optional bool a_aSuccess = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_asuccess(&has_bits);
@@ -4254,7 +4165,7 @@ uint8_t* Msg_NotifyPuppetCommandBufferCompleted::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_aSuccess = 1;
+  // optional bool a_aSuccess = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_asuccess(), target);
@@ -4272,13 +4183,15 @@ size_t Msg_NotifyPuppetCommandBufferCompleted::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PVRManager.Msg_NotifyPuppetCommandBufferCompleted)
   size_t total_size = 0;
 
-  // required bool a_aSuccess = 1;
-  if (_internal_has_a_asuccess()) {
-    total_size += 1 + 1;
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_aSuccess = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -4315,7 +4228,6 @@ void Msg_NotifyPuppetCommandBufferCompleted::CopyFrom(const Msg_NotifyPuppetComm
 }
 
 bool Msg_NotifyPuppetCommandBufferCompleted::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 

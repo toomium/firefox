@@ -707,7 +707,7 @@ class Msg_PQuotaRequestConstructor final :
       ::protobuf::mozilla::dom::quota::RequestParams* a_params);
   ::protobuf::mozilla::dom::quota::RequestParams* unsafe_arena_release_a_params();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -723,9 +723,6 @@ class Msg_PQuotaRequestConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.quota.PQuota.Msg_PQuotaRequestConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4134,7 +4131,7 @@ class Msg_InitializeTemporaryOrigin final :
       ::protobuf::mozilla::ipc::PrincipalInfo* a_principalinfo);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_principalinfo();
 
-  // required bool a_createIfNonExistent = 3;
+  // optional bool a_createIfNonExistent = 3;
   bool has_a_createifnonexistent() const;
   private:
   bool _internal_has_a_createifnonexistent() const;
@@ -4802,7 +4799,7 @@ class Msg_InitializeTemporaryClient final :
       ::protobuf::mozilla::ipc::PrincipalInfo* a_principalinfo);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_principalinfo();
 
-  // required bool a_createIfNonExistent = 4;
+  // optional bool a_createIfNonExistent = 4;
   bool has_a_createifnonexistent() const;
   private:
   bool _internal_has_a_createifnonexistent() const;
@@ -5387,7 +5384,7 @@ class Msg_GetUsage final :
   std::string* _internal_mutable_a_parentendpoint();
   public:
 
-  // required bool a_getAll = 1;
+  // optional bool a_getAll = 1;
   bool has_a_getall() const;
   private:
   bool _internal_has_a_getall() const;
@@ -5403,9 +5400,6 @@ class Msg_GetUsage final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.quota.PQuota.Msg_GetUsage)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -9951,7 +9945,7 @@ class Msg_SetThumbnailPrivateIdentityId final :
   enum : int {
     kAAThumbnailPrivateIdentityIdFieldNumber = 1,
   };
-  // required uint32 a_aThumbnailPrivateIdentityId = 1;
+  // optional uint32 a_aThumbnailPrivateIdentityId = 1;
   bool has_a_athumbnailprivateidentityid() const;
   private:
   bool _internal_has_a_athumbnailprivateidentityid() const;
@@ -9998,7 +9992,7 @@ class Msg_SetThumbnailPrivateIdentityId final :
 
 // Msg_PQuotaRequestConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PQuotaRequestConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11824,7 +11818,7 @@ inline void Msg_InitializeTemporaryOrigin::set_allocated_a_principalinfo(::proto
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.quota.PQuota.Msg_InitializeTemporaryOrigin.a_principalInfo)
 }
 
-// required bool a_createIfNonExistent = 3;
+// optional bool a_createIfNonExistent = 3;
 inline bool Msg_InitializeTemporaryOrigin::_internal_has_a_createifnonexistent() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -12420,7 +12414,7 @@ inline void Msg_InitializeTemporaryClient::set_allocated_a_clienttype(std::strin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.quota.PQuota.Msg_InitializeTemporaryClient.a_clientType)
 }
 
-// required bool a_createIfNonExistent = 4;
+// optional bool a_createIfNonExistent = 4;
 inline bool Msg_InitializeTemporaryClient::_internal_has_a_createifnonexistent() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -12638,7 +12632,7 @@ inline void Reply_InitializeTemporaryStorage::set_allocated_a_response(::protobu
 
 // Msg_GetUsage
 
-// required bool a_getAll = 1;
+// optional bool a_getAll = 1;
 inline bool Msg_GetUsage::_internal_has_a_getall() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -15365,7 +15359,7 @@ inline void Msg_AbortOperationsForProcess::set_allocated_a_contentparentid(std::
 
 // Msg_SetThumbnailPrivateIdentityId
 
-// required uint32 a_aThumbnailPrivateIdentityId = 1;
+// optional uint32 a_aThumbnailPrivateIdentityId = 1;
 inline bool Msg_SetThumbnailPrivateIdentityId::_internal_has_a_athumbnailprivateidentityid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

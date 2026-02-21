@@ -81,7 +81,7 @@ class MediaDataIPDL::_Internal {
     (*has_bits)[0] |= 16u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000001f) ^ 0x0000001f) != 0;
+    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
   }
 };
 
@@ -215,7 +215,7 @@ const char* MediaDataIPDL::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint64 a_offset = 1;
+      // optional sint64 a_offset = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_offset(&has_bits);
@@ -251,7 +251,7 @@ const char* MediaDataIPDL::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // required bool a_keyframe = 5;
+      // optional bool a_keyframe = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_a_keyframe(&has_bits);
@@ -291,7 +291,7 @@ uint8_t* MediaDataIPDL::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required sint64 a_offset = 1;
+  // optional sint64 a_offset = 1;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_offset(), target);
@@ -315,7 +315,7 @@ uint8_t* MediaDataIPDL::_InternalSerialize(
         4, this->_internal_a_duration(), target);
   }
 
-  // required bool a_keyframe = 5;
+  // optional bool a_keyframe = 5;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_a_keyframe(), target);
@@ -354,23 +354,13 @@ size_t MediaDataIPDL::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_duration());
   }
 
-  if (_internal_has_a_offset()) {
-    // required sint64 a_offset = 1;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_offset());
-  }
-
-  if (_internal_has_a_keyframe()) {
-    // required bool a_keyframe = 5;
-    total_size += 1 + 1;
-  }
-
   return total_size;
 }
 size_t MediaDataIPDL::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.MediaDataIPDL)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
     // required bytes a_time = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -386,12 +376,6 @@ size_t MediaDataIPDL::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_duration());
 
-    // required sint64 a_offset = 1;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_offset());
-
-    // required bool a_keyframe = 5;
-    total_size += 1 + 1;
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
@@ -399,6 +383,19 @@ size_t MediaDataIPDL::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000018u) {
+    // optional sint64 a_offset = 1;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_offset());
+    }
+
+    // optional bool a_keyframe = 5;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += 1 + 1;
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }

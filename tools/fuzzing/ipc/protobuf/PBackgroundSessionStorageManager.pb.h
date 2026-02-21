@@ -201,7 +201,7 @@ class Msg_PBackgroundSessionStorageCacheConstructor final :
     kAAPrincipalInfoFieldNumber = 2,
     kAActoridFieldNumber = 1,
   };
-  // required string a_aOriginKey = 3;
+  // optional string a_aOriginKey = 3;
   bool has_a_aoriginkey() const;
   private:
   bool _internal_has_a_aoriginkey() const;
@@ -237,7 +237,7 @@ class Msg_PBackgroundSessionStorageCacheConstructor final :
       ::protobuf::mozilla::ipc::PrincipalInfo* a_aprincipalinfo);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_aprincipalinfo();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -253,9 +253,6 @@ class Msg_PBackgroundSessionStorageCacheConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBackgroundSessionStorageManager.Msg_PBackgroundSessionStorageCacheConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -527,7 +524,7 @@ class Msg_ClearStorages final :
   std::string* _internal_mutable_a_apattern();
   public:
 
-  // required string a_aOriginScope = 2;
+  // optional string a_aOriginScope = 2;
   bool has_a_aoriginscope() const;
   private:
   bool _internal_has_a_aoriginscope() const;
@@ -548,9 +545,6 @@ class Msg_ClearStorages final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBackgroundSessionStorageManager.Msg_ClearStorages)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1051,7 +1045,7 @@ class Msg_ClearStoragesForOrigin final :
     kAAOriginAttrsFieldNumber = 1,
     kAAOriginKeyFieldNumber = 2,
   };
-  // required string a_aOriginAttrs = 1;
+  // optional string a_aOriginAttrs = 1;
   bool has_a_aoriginattrs() const;
   private:
   bool _internal_has_a_aoriginattrs() const;
@@ -1069,7 +1063,7 @@ class Msg_ClearStoragesForOrigin final :
   std::string* _internal_mutable_a_aoriginattrs();
   public:
 
-  // required string a_aOriginKey = 2;
+  // optional string a_aOriginKey = 2;
   bool has_a_aoriginkey() const;
   private:
   bool _internal_has_a_aoriginkey() const;
@@ -1090,9 +1084,6 @@ class Msg_ClearStoragesForOrigin final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBackgroundSessionStorageManager.Msg_ClearStoragesForOrigin)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1117,7 +1108,7 @@ class Msg_ClearStoragesForOrigin final :
 #endif  // __GNUC__
 // Msg_PBackgroundSessionStorageCacheConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PBackgroundSessionStorageCacheConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1232,7 +1223,7 @@ inline void Msg_PBackgroundSessionStorageCacheConstructor::set_allocated_a_aprin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundSessionStorageManager.Msg_PBackgroundSessionStorageCacheConstructor.a_aPrincipalInfo)
 }
 
-// required string a_aOriginKey = 3;
+// optional string a_aOriginKey = 3;
 inline bool Msg_PBackgroundSessionStorageCacheConstructor::_internal_has_a_aoriginkey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1376,7 +1367,7 @@ inline void Msg_ClearStorages::set_allocated_a_apattern(std::string* a_apattern)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundSessionStorageManager.Msg_ClearStorages.a_aPattern)
 }
 
-// required string a_aOriginScope = 2;
+// optional string a_aOriginScope = 2;
 inline bool Msg_ClearStorages::_internal_has_a_aoriginscope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1460,7 +1451,7 @@ inline void Msg_ClearStorages::set_allocated_a_aoriginscope(std::string* a_aorig
 
 // Msg_ClearStoragesForOrigin
 
-// required string a_aOriginAttrs = 1;
+// optional string a_aOriginAttrs = 1;
 inline bool Msg_ClearStoragesForOrigin::_internal_has_a_aoriginattrs() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1528,7 +1519,7 @@ inline void Msg_ClearStoragesForOrigin::set_allocated_a_aoriginattrs(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundSessionStorageManager.Msg_ClearStoragesForOrigin.a_aOriginAttrs)
 }
 
-// required string a_aOriginKey = 2;
+// optional string a_aOriginKey = 2;
 inline bool Msg_ClearStoragesForOrigin::_internal_has_a_aoriginkey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

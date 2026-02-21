@@ -194,7 +194,7 @@ class HttpHandlerInitArgs final :
     kAMCompatDeviceFieldNumber = 11,
     kAMDeviceModelIdFieldNumber = 12,
   };
-  // required string a_mLegacyAppName = 1;
+  // optional string a_mLegacyAppName = 1;
   bool has_a_mlegacyappname() const;
   private:
   bool _internal_has_a_mlegacyappname() const;
@@ -212,7 +212,7 @@ class HttpHandlerInitArgs final :
   std::string* _internal_mutable_a_mlegacyappname();
   public:
 
-  // required string a_mLegacyAppVersion = 2;
+  // optional string a_mLegacyAppVersion = 2;
   bool has_a_mlegacyappversion() const;
   private:
   bool _internal_has_a_mlegacyappversion() const;
@@ -230,7 +230,7 @@ class HttpHandlerInitArgs final :
   std::string* _internal_mutable_a_mlegacyappversion();
   public:
 
-  // required string a_mPlatform = 3;
+  // optional string a_mPlatform = 3;
   bool has_a_mplatform() const;
   private:
   bool _internal_has_a_mplatform() const;
@@ -248,7 +248,7 @@ class HttpHandlerInitArgs final :
   std::string* _internal_mutable_a_mplatform();
   public:
 
-  // required string a_mOscpu = 4;
+  // optional string a_mOscpu = 4;
   bool has_a_moscpu() const;
   private:
   bool _internal_has_a_moscpu() const;
@@ -266,7 +266,7 @@ class HttpHandlerInitArgs final :
   std::string* _internal_mutable_a_moscpu();
   public:
 
-  // required string a_mMisc = 5;
+  // optional string a_mMisc = 5;
   bool has_a_mmisc() const;
   private:
   bool _internal_has_a_mmisc() const;
@@ -284,7 +284,7 @@ class HttpHandlerInitArgs final :
   std::string* _internal_mutable_a_mmisc();
   public:
 
-  // required string a_mProduct = 6;
+  // optional string a_mProduct = 6;
   bool has_a_mproduct() const;
   private:
   bool _internal_has_a_mproduct() const;
@@ -302,7 +302,7 @@ class HttpHandlerInitArgs final :
   std::string* _internal_mutable_a_mproduct();
   public:
 
-  // required string a_mProductSub = 7;
+  // optional string a_mProductSub = 7;
   bool has_a_mproductsub() const;
   private:
   bool _internal_has_a_mproductsub() const;
@@ -320,7 +320,7 @@ class HttpHandlerInitArgs final :
   std::string* _internal_mutable_a_mproductsub();
   public:
 
-  // required string a_mAppName = 8;
+  // optional string a_mAppName = 8;
   bool has_a_mappname() const;
   private:
   bool _internal_has_a_mappname() const;
@@ -338,7 +338,7 @@ class HttpHandlerInitArgs final :
   std::string* _internal_mutable_a_mappname();
   public:
 
-  // required string a_mAppVersion = 9;
+  // optional string a_mAppVersion = 9;
   bool has_a_mappversion() const;
   private:
   bool _internal_has_a_mappversion() const;
@@ -356,7 +356,7 @@ class HttpHandlerInitArgs final :
   std::string* _internal_mutable_a_mappversion();
   public:
 
-  // required string a_mCompatFirefox = 10;
+  // optional string a_mCompatFirefox = 10;
   bool has_a_mcompatfirefox() const;
   private:
   bool _internal_has_a_mcompatfirefox() const;
@@ -374,7 +374,7 @@ class HttpHandlerInitArgs final :
   std::string* _internal_mutable_a_mcompatfirefox();
   public:
 
-  // required string a_mCompatDevice = 11;
+  // optional string a_mCompatDevice = 11;
   bool has_a_mcompatdevice() const;
   private:
   bool _internal_has_a_mcompatdevice() const;
@@ -392,7 +392,7 @@ class HttpHandlerInitArgs final :
   std::string* _internal_mutable_a_mcompatdevice();
   public:
 
-  // required string a_mDeviceModelId = 12;
+  // optional string a_mDeviceModelId = 12;
   bool has_a_mdevicemodelid() const;
   private:
   bool _internal_has_a_mdevicemodelid() const;
@@ -413,9 +413,6 @@ class HttpHandlerInitArgs final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.HttpHandlerInitArgs)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -579,7 +576,7 @@ class SocketDataArgs final :
   std::string* _internal_add_a_info();
   public:
 
-  // required uint64 a_totalSent = 1;
+  // optional uint64 a_totalSent = 1;
   bool has_a_totalsent() const;
   private:
   bool _internal_has_a_totalsent() const;
@@ -592,7 +589,7 @@ class SocketDataArgs final :
   void _internal_set_a_totalsent(uint64_t value);
   public:
 
-  // required uint64 a_totalRecv = 2;
+  // optional uint64 a_totalRecv = 2;
   bool has_a_totalrecv() const;
   private:
   bool _internal_has_a_totalrecv() const;
@@ -608,9 +605,6 @@ class SocketDataArgs final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.SocketDataArgs)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -760,7 +754,7 @@ class SocketPorcessInitAttributes final :
   std::string* _internal_mutable_a_msandboxbroker();
   public:
 
-  // required bool a_mOffline = 1;
+  // optional bool a_mOffline = 1;
   bool has_a_moffline() const;
   private:
   bool _internal_has_a_moffline() const;
@@ -773,7 +767,7 @@ class SocketPorcessInitAttributes final :
   void _internal_set_a_moffline(bool value);
   public:
 
-  // required bool a_mConnectivity = 2;
+  // optional bool a_mConnectivity = 2;
   bool has_a_mconnectivity() const;
   private:
   bool _internal_has_a_mconnectivity() const;
@@ -786,7 +780,7 @@ class SocketPorcessInitAttributes final :
   void _internal_set_a_mconnectivity(bool value);
   public:
 
-  // required bool a_mInitSandbox = 3;
+  // optional bool a_mInitSandbox = 3;
   bool has_a_minitsandbox() const;
   private:
   bool _internal_has_a_minitsandbox() const;
@@ -802,9 +796,6 @@ class SocketPorcessInitAttributes final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.SocketPorcessInitAttributes)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -831,7 +822,7 @@ class SocketPorcessInitAttributes final :
 #endif  // __GNUC__
 // HttpHandlerInitArgs
 
-// required string a_mLegacyAppName = 1;
+// optional string a_mLegacyAppName = 1;
 inline bool HttpHandlerInitArgs::_internal_has_a_mlegacyappname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -899,7 +890,7 @@ inline void HttpHandlerInitArgs::set_allocated_a_mlegacyappname(std::string* a_m
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpHandlerInitArgs.a_mLegacyAppName)
 }
 
-// required string a_mLegacyAppVersion = 2;
+// optional string a_mLegacyAppVersion = 2;
 inline bool HttpHandlerInitArgs::_internal_has_a_mlegacyappversion() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -967,7 +958,7 @@ inline void HttpHandlerInitArgs::set_allocated_a_mlegacyappversion(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpHandlerInitArgs.a_mLegacyAppVersion)
 }
 
-// required string a_mPlatform = 3;
+// optional string a_mPlatform = 3;
 inline bool HttpHandlerInitArgs::_internal_has_a_mplatform() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1035,7 +1026,7 @@ inline void HttpHandlerInitArgs::set_allocated_a_mplatform(std::string* a_mplatf
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpHandlerInitArgs.a_mPlatform)
 }
 
-// required string a_mOscpu = 4;
+// optional string a_mOscpu = 4;
 inline bool HttpHandlerInitArgs::_internal_has_a_moscpu() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1103,7 +1094,7 @@ inline void HttpHandlerInitArgs::set_allocated_a_moscpu(std::string* a_moscpu) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpHandlerInitArgs.a_mOscpu)
 }
 
-// required string a_mMisc = 5;
+// optional string a_mMisc = 5;
 inline bool HttpHandlerInitArgs::_internal_has_a_mmisc() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -1171,7 +1162,7 @@ inline void HttpHandlerInitArgs::set_allocated_a_mmisc(std::string* a_mmisc) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpHandlerInitArgs.a_mMisc)
 }
 
-// required string a_mProduct = 6;
+// optional string a_mProduct = 6;
 inline bool HttpHandlerInitArgs::_internal_has_a_mproduct() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -1239,7 +1230,7 @@ inline void HttpHandlerInitArgs::set_allocated_a_mproduct(std::string* a_mproduc
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpHandlerInitArgs.a_mProduct)
 }
 
-// required string a_mProductSub = 7;
+// optional string a_mProductSub = 7;
 inline bool HttpHandlerInitArgs::_internal_has_a_mproductsub() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -1307,7 +1298,7 @@ inline void HttpHandlerInitArgs::set_allocated_a_mproductsub(std::string* a_mpro
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpHandlerInitArgs.a_mProductSub)
 }
 
-// required string a_mAppName = 8;
+// optional string a_mAppName = 8;
 inline bool HttpHandlerInitArgs::_internal_has_a_mappname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -1375,7 +1366,7 @@ inline void HttpHandlerInitArgs::set_allocated_a_mappname(std::string* a_mappnam
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpHandlerInitArgs.a_mAppName)
 }
 
-// required string a_mAppVersion = 9;
+// optional string a_mAppVersion = 9;
 inline bool HttpHandlerInitArgs::_internal_has_a_mappversion() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -1443,7 +1434,7 @@ inline void HttpHandlerInitArgs::set_allocated_a_mappversion(std::string* a_mapp
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpHandlerInitArgs.a_mAppVersion)
 }
 
-// required string a_mCompatFirefox = 10;
+// optional string a_mCompatFirefox = 10;
 inline bool HttpHandlerInitArgs::_internal_has_a_mcompatfirefox() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -1511,7 +1502,7 @@ inline void HttpHandlerInitArgs::set_allocated_a_mcompatfirefox(std::string* a_m
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpHandlerInitArgs.a_mCompatFirefox)
 }
 
-// required string a_mCompatDevice = 11;
+// optional string a_mCompatDevice = 11;
 inline bool HttpHandlerInitArgs::_internal_has_a_mcompatdevice() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
@@ -1579,7 +1570,7 @@ inline void HttpHandlerInitArgs::set_allocated_a_mcompatdevice(std::string* a_mc
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpHandlerInitArgs.a_mCompatDevice)
 }
 
-// required string a_mDeviceModelId = 12;
+// optional string a_mDeviceModelId = 12;
 inline bool HttpHandlerInitArgs::_internal_has_a_mdevicemodelid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
   return value;
@@ -1651,7 +1642,7 @@ inline void HttpHandlerInitArgs::set_allocated_a_mdevicemodelid(std::string* a_m
 
 // SocketDataArgs
 
-// required uint64 a_totalSent = 1;
+// optional uint64 a_totalSent = 1;
 inline bool SocketDataArgs::_internal_has_a_totalsent() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1679,7 +1670,7 @@ inline void SocketDataArgs::set_a_totalsent(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.SocketDataArgs.a_totalSent)
 }
 
-// required uint64 a_totalRecv = 2;
+// optional uint64 a_totalRecv = 2;
 inline bool SocketDataArgs::_internal_has_a_totalrecv() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1786,7 +1777,7 @@ SocketDataArgs::mutable_a_info() {
 
 // SocketPorcessInitAttributes
 
-// required bool a_mOffline = 1;
+// optional bool a_mOffline = 1;
 inline bool SocketPorcessInitAttributes::_internal_has_a_moffline() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1814,7 +1805,7 @@ inline void SocketPorcessInitAttributes::set_a_moffline(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.SocketPorcessInitAttributes.a_mOffline)
 }
 
-// required bool a_mConnectivity = 2;
+// optional bool a_mConnectivity = 2;
 inline bool SocketPorcessInitAttributes::_internal_has_a_mconnectivity() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1842,7 +1833,7 @@ inline void SocketPorcessInitAttributes::set_a_mconnectivity(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.SocketPorcessInitAttributes.a_mConnectivity)
 }
 
-// required bool a_mInitSandbox = 3;
+// optional bool a_mInitSandbox = 3;
 inline bool SocketPorcessInitAttributes::_internal_has_a_minitsandbox() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;

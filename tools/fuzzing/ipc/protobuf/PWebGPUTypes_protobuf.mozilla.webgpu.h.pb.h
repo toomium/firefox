@@ -181,7 +181,7 @@ class BufferMapSuccess final :
     kASizeFieldNumber = 2,
     kAWritableFieldNumber = 3,
   };
-  // required uint64 a_offset = 1;
+  // optional uint64 a_offset = 1;
   bool has_a_offset() const;
   private:
   bool _internal_has_a_offset() const;
@@ -194,7 +194,7 @@ class BufferMapSuccess final :
   void _internal_set_a_offset(uint64_t value);
   public:
 
-  // required uint64 a_size = 2;
+  // optional uint64 a_size = 2;
   bool has_a_size() const;
   private:
   bool _internal_has_a_size() const;
@@ -207,7 +207,7 @@ class BufferMapSuccess final :
   void _internal_set_a_size(uint64_t value);
   public:
 
-  // required bool a_writable = 3;
+  // optional bool a_writable = 3;
   bool has_a_writable() const;
   private:
   bool _internal_has_a_writable() const;
@@ -223,9 +223,6 @@ class BufferMapSuccess final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.BufferMapSuccess)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -354,7 +351,7 @@ class BufferMapError final :
   enum : int {
     kAMessageFieldNumber = 1,
   };
-  // required string a_message = 1;
+  // optional string a_message = 1;
   bool has_a_message() const;
   private:
   bool _internal_has_a_message() const;
@@ -583,7 +580,7 @@ class BufferMapResult final :
 #endif  // __GNUC__
 // BufferMapSuccess
 
-// required uint64 a_offset = 1;
+// optional uint64 a_offset = 1;
 inline bool BufferMapSuccess::_internal_has_a_offset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -611,7 +608,7 @@ inline void BufferMapSuccess::set_a_offset(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.BufferMapSuccess.a_offset)
 }
 
-// required uint64 a_size = 2;
+// optional uint64 a_size = 2;
 inline bool BufferMapSuccess::_internal_has_a_size() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -639,7 +636,7 @@ inline void BufferMapSuccess::set_a_size(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.BufferMapSuccess.a_size)
 }
 
-// required bool a_writable = 3;
+// optional bool a_writable = 3;
 inline bool BufferMapSuccess::_internal_has_a_writable() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -671,7 +668,7 @@ inline void BufferMapSuccess::set_a_writable(bool value) {
 
 // BufferMapError
 
-// required string a_message = 1;
+// optional string a_message = 1;
 inline bool BufferMapError::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

@@ -17,28 +17,28 @@ message Msg_Try_Success_CustomErr_QmIpcFail {
 }
 
 message Reply_Try_Success_CustomErr_QmIpcFail {
-  required bool a_tryDidNotReturn = 1;
+  optional bool a_tryDidNotReturn = 1;
 }
 
 message Msg_Try_Success_CustomErr_IpcFail {
 }
 
 message Reply_Try_Success_CustomErr_IpcFail {
-  required bool a_tryDidNotReturn = 1;
+  optional bool a_tryDidNotReturn = 1;
 }
 
 message Msg_TryInspect_Success_CustomErr_QmIpcFail {
 }
 
 message Reply_TryInspect_Success_CustomErr_QmIpcFail {
-  required bool a_tryDidNotReturn = 1;
+  optional bool a_tryDidNotReturn = 1;
 }
 
 message Msg_TryInspect_Success_CustomErr_IpcFail {
 }
 
 message Reply_TryInspect_Success_CustomErr_IpcFail {
-  required bool a_tryDidNotReturn = 1;
+  optional bool a_tryDidNotReturn = 1;
 }
 
 // Parameter mappings stats:

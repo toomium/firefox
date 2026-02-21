@@ -28,8 +28,8 @@ message Msg_Abort {
 }
 
 message Msg_PBackgroundIDBCursorConstructor {
-  required sint64 a_actorid = 1;
-  required sint64 a_requestId = 2;
+  optional sint64 a_actorid = 1;
+  optional sint64 a_requestId = 2;
   required protobuf.mozilla.dom.indexedDB.OpenCursorParams a_params = 3;
 }
 
@@ -37,8 +37,8 @@ message Reply_PBackgroundIDBCursorConstructor {
 }
 
 message Msg_PBackgroundIDBRequestConstructor {
-  required sint64 a_actorid = 1;
-  required sint64 a_requestId = 2;
+  optional sint64 a_actorid = 1;
+  optional sint64 a_requestId = 2;
   required protobuf.mozilla.dom.indexedDB.RequestParams a_params = 3;
 }
 

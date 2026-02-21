@@ -467,7 +467,7 @@ class Msg_PeerConnectionCreated final :
     kAAPcIdFieldNumber = 1,
     kAAIsLongTermStatsDisabledFieldNumber = 2,
   };
-  // required string a_aPcId = 1;
+  // optional string a_aPcId = 1;
   bool has_a_apcid() const;
   private:
   bool _internal_has_a_apcid() const;
@@ -485,7 +485,7 @@ class Msg_PeerConnectionCreated final :
   std::string* _internal_mutable_a_apcid();
   public:
 
-  // required bool a_aIsLongTermStatsDisabled = 2;
+  // optional bool a_aIsLongTermStatsDisabled = 2;
   bool has_a_aislongtermstatsdisabled() const;
   private:
   bool _internal_has_a_aislongtermstatsdisabled() const;
@@ -501,9 +501,6 @@ class Msg_PeerConnectionCreated final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionCreated)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -631,7 +628,7 @@ class Msg_PeerConnectionDestroyed final :
   enum : int {
     kAAPcIdFieldNumber = 1,
   };
-  // required string a_aPcId = 1;
+  // optional string a_aPcId = 1;
   bool has_a_apcid() const;
   private:
   bool _internal_has_a_apcid() const;
@@ -925,7 +922,7 @@ class Msg_GetStats final :
   enum : int {
     kAAPcIdFilterFieldNumber = 1,
   };
-  // required string a_aPcIdFilter = 1;
+  // optional string a_aPcIdFilter = 1;
   bool has_a_apcidfilter() const;
   private:
   bool _internal_has_a_apcidfilter() const;
@@ -1743,7 +1740,7 @@ class Msg_SetAecLogging final :
   enum : int {
     kAAEnableFieldNumber = 1,
   };
-  // required bool a_aEnable = 1;
+  // optional bool a_aEnable = 1;
   bool has_a_aenable() const;
   private:
   bool _internal_has_a_aenable() const;
@@ -1790,7 +1787,7 @@ class Msg_SetAecLogging final :
 
 // Msg_PeerConnectionCreated
 
-// required string a_aPcId = 1;
+// optional string a_aPcId = 1;
 inline bool Msg_PeerConnectionCreated::_internal_has_a_apcid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1858,7 +1855,7 @@ inline void Msg_PeerConnectionCreated::set_allocated_a_apcid(std::string* a_apci
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionCreated.a_aPcId)
 }
 
-// required bool a_aIsLongTermStatsDisabled = 2;
+// optional bool a_aIsLongTermStatsDisabled = 2;
 inline bool Msg_PeerConnectionCreated::_internal_has_a_aislongtermstatsdisabled() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1890,7 +1887,7 @@ inline void Msg_PeerConnectionCreated::set_a_aislongtermstatsdisabled(bool value
 
 // Msg_PeerConnectionDestroyed
 
-// required string a_aPcId = 1;
+// optional string a_aPcId = 1;
 inline bool Msg_PeerConnectionDestroyed::_internal_has_a_apcid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2034,7 +2031,7 @@ inline void Msg_PeerConnectionFinalStats::set_allocated_a_afinalstats(std::strin
 
 // Msg_GetStats
 
-// required string a_aPcIdFilter = 1;
+// optional string a_aPcIdFilter = 1;
 inline bool Msg_GetStats::_internal_has_a_apcidfilter() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2269,7 +2266,7 @@ inline void Reply_GetLog::set_allocated_a_logs(std::string* a_logs) {
 
 // Msg_SetAecLogging
 
-// required bool a_aEnable = 1;
+// optional bool a_aEnable = 1;
 inline bool Msg_SetAecLogging::_internal_has_a_aenable() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

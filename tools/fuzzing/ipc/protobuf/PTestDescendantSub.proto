@@ -22,7 +22,7 @@ message Reply___delete__ {
 }
 
 message Msg_PTestDescendantSubsubConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
 }
 
 message Reply_PTestDescendantSubsubConstructor {

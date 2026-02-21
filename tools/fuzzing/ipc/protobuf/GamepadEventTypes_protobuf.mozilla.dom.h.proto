@@ -12,30 +12,30 @@ package protobuf.mozilla.dom;
 
 // Structs and unions declarations
 message GamepadAdded {
-  required string a_id = 1;
+  optional string a_id = 1;
   required bytes a_mapping = 2;
   required bytes a_hand = 3;
-  required uint32 a_display_id = 4;
-  required uint32 a_num_buttons = 5;
-  required uint32 a_num_axes = 6;
-  required uint32 a_num_haptics = 7;
-  required uint32 a_num_lights = 8;
-  required uint32 a_num_touches = 9;
+  optional uint32 a_display_id = 4;
+  optional uint32 a_num_buttons = 5;
+  optional uint32 a_num_axes = 6;
+  optional uint32 a_num_haptics = 7;
+  optional uint32 a_num_lights = 8;
+  optional uint32 a_num_touches = 9;
 }
 
 message GamepadRemoved {
 }
 
 message GamepadAxisInformation {
-  required uint32 a_axis = 1;
-  required double a_value = 2;
+  optional uint32 a_axis = 1;
+  optional double a_value = 2;
 }
 
 message GamepadButtonInformation {
-  required uint32 a_button = 1;
-  required double a_value = 2;
-  required bool a_pressed = 3;
-  required bool a_touched = 4;
+  optional uint32 a_button = 1;
+  optional double a_value = 2;
+  optional bool a_pressed = 3;
+  optional bool a_touched = 4;
 }
 
 message GamepadPoseInformation {
@@ -43,7 +43,7 @@ message GamepadPoseInformation {
 }
 
 message GamepadLightIndicatorTypeInformation {
-  required uint32 a_light = 1;
+  optional uint32 a_light = 1;
   required bytes a_type = 2;
 }
 
@@ -52,7 +52,7 @@ message GamepadHandInformation {
 }
 
 message GamepadTouchInformation {
-  required uint32 a_index = 1;
+  optional uint32 a_index = 1;
   required bytes a_touch_state = 2;
 }
 

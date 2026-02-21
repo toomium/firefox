@@ -1393,7 +1393,7 @@ class ObjectStoreCountResponse final :
   enum : int {
     kACountFieldNumber = 1,
   };
-  // required uint64 a_count = 1;
+  // optional uint64 a_count = 1;
   bool has_a_count() const;
   private:
   bool _internal_has_a_count() const;
@@ -2127,7 +2127,7 @@ class IndexCountResponse final :
   enum : int {
     kACountFieldNumber = 1,
   };
-  // required uint64 a_count = 1;
+  // optional uint64 a_count = 1;
   bool has_a_count() const;
   private:
   bool _internal_has_a_count() const;
@@ -4151,7 +4151,7 @@ ObjectStoreGetAllKeysResponse::mutable_a_keys() {
 
 // ObjectStoreCountResponse
 
-// required uint64 a_count = 1;
+// optional uint64 a_count = 1;
 inline bool ObjectStoreCountResponse::_internal_has_a_count() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4466,7 +4466,7 @@ IndexGetAllKeysResponse::mutable_a_keys() {
 
 // IndexCountResponse
 
-// required uint64 a_count = 1;
+// optional uint64 a_count = 1;
 inline bool IndexCountResponse::_internal_has_a_count() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

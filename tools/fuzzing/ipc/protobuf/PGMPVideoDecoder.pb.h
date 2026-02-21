@@ -281,7 +281,7 @@ class Msg_InitDecode final :
   std::string* _internal_mutable_a_acodecsettings();
   public:
 
-  // required sint32 a_aCoreCount = 3;
+  // optional sint32 a_aCoreCount = 3;
   bool has_a_acorecount() const;
   private:
   bool _internal_has_a_acorecount() const;
@@ -297,9 +297,6 @@ class Msg_InitDecode final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPVideoDecoder.Msg_InitDecode)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -637,7 +634,7 @@ class Msg_Decode final :
       ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* a_ainputframe);
   ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* unsafe_arena_release_a_ainputframe();
 
-  // required sint64 a_aRenderTimeMs = 5;
+  // optional sint64 a_aRenderTimeMs = 5;
   bool has_a_arendertimems() const;
   private:
   bool _internal_has_a_arendertimems() const;
@@ -650,7 +647,7 @@ class Msg_Decode final :
   void _internal_set_a_arendertimems(int64_t value);
   public:
 
-  // required bool a_aMissingFrames = 3;
+  // optional bool a_aMissingFrames = 3;
   bool has_a_amissingframes() const;
   private:
   bool _internal_has_a_amissingframes() const;
@@ -1783,7 +1780,7 @@ class Msg_ReceivedDecodedReferenceFrame final :
   enum : int {
     kAAPictureIdFieldNumber = 1,
   };
-  // required uint64 a_aPictureId = 1;
+  // optional uint64 a_aPictureId = 1;
   bool has_a_apictureid() const;
   private:
   bool _internal_has_a_apictureid() const;
@@ -1925,7 +1922,7 @@ class Msg_ReceivedDecodedFrame final :
   enum : int {
     kAAPictureIdFieldNumber = 1,
   };
-  // required uint64 a_aPictureId = 1;
+  // optional uint64 a_aPictureId = 1;
   bool has_a_apictureid() const;
   private:
   bool _internal_has_a_apictureid() const;
@@ -2722,7 +2719,7 @@ Msg_InitDecode::mutable_a_acodecspecific() {
   return _internal_mutable_a_acodecspecific();
 }
 
-// required sint32 a_aCoreCount = 3;
+// optional sint32 a_aCoreCount = 3;
 inline bool Msg_InitDecode::_internal_has_a_acorecount() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2981,7 +2978,7 @@ inline void Msg_Decode::set_allocated_a_ainputshmem(std::string* a_ainputshmem) 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPVideoDecoder.Msg_Decode.a_aInputShmem)
 }
 
-// required bool a_aMissingFrames = 3;
+// optional bool a_aMissingFrames = 3;
 inline bool Msg_Decode::_internal_has_a_amissingframes() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -3056,7 +3053,7 @@ Msg_Decode::mutable_a_acodecspecificinfo() {
   return _internal_mutable_a_acodecspecificinfo();
 }
 
-// required sint64 a_aRenderTimeMs = 5;
+// optional sint64 a_aRenderTimeMs = 5;
 inline bool Msg_Decode::_internal_has_a_arendertimems() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -3473,7 +3470,7 @@ inline void Msg_DecodedShmem::set_allocated_a_adecodedshmem(std::string* a_adeco
 
 // Msg_ReceivedDecodedReferenceFrame
 
-// required uint64 a_aPictureId = 1;
+// optional uint64 a_aPictureId = 1;
 inline bool Msg_ReceivedDecodedReferenceFrame::_internal_has_a_apictureid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3505,7 +3502,7 @@ inline void Msg_ReceivedDecodedReferenceFrame::set_a_apictureid(uint64_t value) 
 
 // Msg_ReceivedDecodedFrame
 
-// required uint64 a_aPictureId = 1;
+// optional uint64 a_aPictureId = 1;
 inline bool Msg_ReceivedDecodedFrame::_internal_has_a_apictureid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

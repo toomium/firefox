@@ -988,7 +988,7 @@ class Msg_UpdateStatus final :
     kADeviceStateFieldNumber = 1,
     kAConnectionStateFieldNumber = 2,
   };
-  // required uint32 a_deviceState = 1;
+  // optional uint32 a_deviceState = 1;
   bool has_a_devicestate() const;
   private:
   bool _internal_has_a_devicestate() const;
@@ -1001,7 +1001,7 @@ class Msg_UpdateStatus final :
   void _internal_set_a_devicestate(uint32_t value);
   public:
 
-  // required uint32 a_connectionState = 2;
+  // optional uint32 a_connectionState = 2;
   bool has_a_connectionstate() const;
   private:
   bool _internal_has_a_connectionstate() const;
@@ -1017,9 +1017,6 @@ class Msg_UpdateStatus final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMIDIPort.Msg_UpdateStatus)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1142,7 +1139,7 @@ Msg_Receive::a_msg() const {
 
 // Msg_UpdateStatus
 
-// required uint32 a_deviceState = 1;
+// optional uint32 a_deviceState = 1;
 inline bool Msg_UpdateStatus::_internal_has_a_devicestate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1170,7 +1167,7 @@ inline void Msg_UpdateStatus::set_a_devicestate(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMIDIPort.Msg_UpdateStatus.a_deviceState)
 }
 
-// required uint32 a_connectionState = 2;
+// optional uint32 a_connectionState = 2;
 inline bool Msg_UpdateStatus::_internal_has_a_connectionstate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

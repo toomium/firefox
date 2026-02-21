@@ -496,7 +496,7 @@ class Msg_Init final :
       ::protobuf::mozilla::gfx::DevicePrefs* a_deviceprefs);
   ::protobuf::mozilla::gfx::DevicePrefs* unsafe_arena_release_a_deviceprefs();
 
-  // required uint32 a_wrNamespace = 5;
+  // optional uint32 a_wrNamespace = 5;
   bool has_a_wrnamespace() const;
   private:
   bool _internal_has_a_wrnamespace() const;
@@ -512,9 +512,6 @@ class Msg_Init final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PGPU.Msg_Init)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -664,7 +661,7 @@ class Msg_InitCompositorManager final :
   std::string* _internal_mutable_a_endpoint();
   public:
 
-  // required uint32 a_aNamespace = 2;
+  // optional uint32 a_aNamespace = 2;
   bool has_a_anamespace() const;
   private:
   bool _internal_has_a_anamespace() const;
@@ -680,9 +677,6 @@ class Msg_InitCompositorManager final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PGPU.Msg_InitCompositorManager)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2658,7 +2652,7 @@ class Msg_NewContentCompositorManager final :
   std::string* _internal_mutable_a_childid();
   public:
 
-  // required uint32 a_aNamespace = 3;
+  // optional uint32 a_aNamespace = 3;
   bool has_a_anamespace() const;
   private:
   bool _internal_has_a_anamespace() const;
@@ -4128,7 +4122,7 @@ class Msg_NotifyGpuObservers final :
   enum : int {
     kAATopicFieldNumber = 1,
   };
-  // required string a_aTopic = 1;
+  // optional string a_aTopic = 1;
   bool has_a_atopic() const;
   private:
   bool _internal_has_a_atopic() const;
@@ -4296,7 +4290,7 @@ class Msg_RequestMemoryReport final :
   std::string* _internal_mutable_a_dmdfile();
   public:
 
-  // required uint32 a_generation = 1;
+  // optional uint32 a_generation = 1;
   bool has_a_generation() const;
   private:
   bool _internal_has_a_generation() const;
@@ -4309,7 +4303,7 @@ class Msg_RequestMemoryReport final :
   void _internal_set_a_generation(uint32_t value);
   public:
 
-  // required bool a_anonymize = 2;
+  // optional bool a_anonymize = 2;
   bool has_a_anonymize() const;
   private:
   bool _internal_has_a_anonymize() const;
@@ -4322,7 +4316,7 @@ class Msg_RequestMemoryReport final :
   void _internal_set_a_anonymize(bool value);
   public:
 
-  // required bool a_minimizeMemoryUsage = 3;
+  // optional bool a_minimizeMemoryUsage = 3;
   bool has_a_minimizememoryusage() const;
   private:
   bool _internal_has_a_minimizememoryusage() const;
@@ -4338,9 +4332,6 @@ class Msg_RequestMemoryReport final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PGPU.Msg_RequestMemoryReport)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4470,7 +4461,7 @@ class Reply_RequestMemoryReport final :
   enum : int {
     kAAGenerationFieldNumber = 1,
   };
-  // required uint32 a_aGeneration = 1;
+  // optional uint32 a_aGeneration = 1;
   bool has_a_ageneration() const;
   private:
   bool _internal_has_a_ageneration() const;
@@ -4736,7 +4727,7 @@ class Msg_UpdatePerfStatsCollectionMask final :
   enum : int {
     kAAMaskFieldNumber = 1,
   };
-  // required uint64 a_aMask = 1;
+  // optional uint64 a_aMask = 1;
   bool has_a_amask() const;
   private:
   bool _internal_has_a_amask() const;
@@ -5002,7 +4993,7 @@ class Reply_CollectPerfStatsJSON final :
   enum : int {
     kAAStatsFieldNumber = 1,
   };
-  // required string a_aStats = 1;
+  // optional string a_aStats = 1;
   bool has_a_astats() const;
   private:
   bool _internal_has_a_astats() const;
@@ -5544,7 +5535,7 @@ class Reply_TestTriggerMetrics final :
   enum : int {
     kAUnusedFieldNumber = 1,
   };
-  // required bool a_unused = 1;
+  // optional bool a_unused = 1;
   bool has_a_unused() const;
   private:
   bool _internal_has_a_unused() const;
@@ -5958,7 +5949,7 @@ class Msg_ReportCheckerboard final :
     kALogFieldNumber = 2,
     kASeverityFieldNumber = 1,
   };
-  // required string a_log = 2;
+  // optional string a_log = 2;
   bool has_a_log() const;
   private:
   bool _internal_has_a_log() const;
@@ -5976,7 +5967,7 @@ class Msg_ReportCheckerboard final :
   std::string* _internal_mutable_a_log();
   public:
 
-  // required uint32 a_severity = 1;
+  // optional uint32 a_severity = 1;
   bool has_a_severity() const;
   private:
   bool _internal_has_a_severity() const;
@@ -5992,9 +5983,6 @@ class Msg_ReportCheckerboard final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PGPU.Msg_ReportCheckerboard)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -6122,7 +6110,7 @@ class Msg_GraphicsError final :
   enum : int {
     kAAErrorFieldNumber = 1,
   };
-  // required string a_aError = 1;
+  // optional string a_aError = 1;
   bool has_a_aerror() const;
   private:
   bool _internal_has_a_aerror() const;
@@ -6664,7 +6652,7 @@ class Msg_NotifyUiObservers final :
   enum : int {
     kAATopicFieldNumber = 1,
   };
-  // required string a_aTopic = 1;
+  // optional string a_aTopic = 1;
   bool has_a_atopic() const;
   private:
   bool _internal_has_a_atopic() const;
@@ -8450,7 +8438,7 @@ class Msg_FlushMemory final :
   enum : int {
     kAReasonFieldNumber = 1,
   };
-  // required string a_reason = 1;
+  // optional string a_reason = 1;
   bool has_a_reason() const;
   private:
   bool _internal_has_a_reason() const;
@@ -8933,7 +8921,7 @@ class Msg_UsedFallback final :
   std::string* _internal_mutable_a_afallback();
   public:
 
-  // required string a_message = 2;
+  // optional string a_message = 2;
   bool has_a_message() const;
   private:
   bool _internal_has_a_message() const;
@@ -8954,9 +8942,6 @@ class Msg_UsedFallback final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PGPU.Msg_UsedFallback)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -9620,7 +9605,7 @@ Msg_Init::a_features() const {
   return _impl_.a_features_;
 }
 
-// required uint32 a_wrNamespace = 5;
+// optional uint32 a_wrNamespace = 5;
 inline bool Msg_Init::_internal_has_a_wrnamespace() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -9720,7 +9705,7 @@ inline void Msg_InitCompositorManager::set_allocated_a_endpoint(std::string* a_e
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PGPU.Msg_InitCompositorManager.a_endpoint)
 }
 
-// required uint32 a_aNamespace = 2;
+// optional uint32 a_aNamespace = 2;
 inline bool Msg_InitCompositorManager::_internal_has_a_anamespace() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -10926,7 +10911,7 @@ inline void Msg_NewContentCompositorManager::set_allocated_a_childid(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PGPU.Msg_NewContentCompositorManager.a_childId)
 }
 
-// required uint32 a_aNamespace = 3;
+// optional uint32 a_aNamespace = 3;
 inline bool Msg_NewContentCompositorManager::_internal_has_a_anamespace() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -11663,7 +11648,7 @@ inline void Reply_GetDeviceStatus::set_allocated_a_status(::protobuf::mozilla::g
 
 // Msg_NotifyGpuObservers
 
-// required string a_aTopic = 1;
+// optional string a_aTopic = 1;
 inline bool Msg_NotifyGpuObservers::_internal_has_a_atopic() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11735,7 +11720,7 @@ inline void Msg_NotifyGpuObservers::set_allocated_a_atopic(std::string* a_atopic
 
 // Msg_RequestMemoryReport
 
-// required uint32 a_generation = 1;
+// optional uint32 a_generation = 1;
 inline bool Msg_RequestMemoryReport::_internal_has_a_generation() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11763,7 +11748,7 @@ inline void Msg_RequestMemoryReport::set_a_generation(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PGPU.Msg_RequestMemoryReport.a_generation)
 }
 
-// required bool a_anonymize = 2;
+// optional bool a_anonymize = 2;
 inline bool Msg_RequestMemoryReport::_internal_has_a_anonymize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -11791,7 +11776,7 @@ inline void Msg_RequestMemoryReport::set_a_anonymize(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PGPU.Msg_RequestMemoryReport.a_anonymize)
 }
 
-// required bool a_minimizeMemoryUsage = 3;
+// optional bool a_minimizeMemoryUsage = 3;
 inline bool Msg_RequestMemoryReport::_internal_has_a_minimizememoryusage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -11891,7 +11876,7 @@ inline void Msg_RequestMemoryReport::set_allocated_a_dmdfile(std::string* a_dmdf
 
 // Reply_RequestMemoryReport
 
-// required uint32 a_aGeneration = 1;
+// optional uint32 a_aGeneration = 1;
 inline bool Reply_RequestMemoryReport::_internal_has_a_ageneration() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11927,7 +11912,7 @@ inline void Reply_RequestMemoryReport::set_a_ageneration(uint32_t value) {
 
 // Msg_UpdatePerfStatsCollectionMask
 
-// required uint64 a_aMask = 1;
+// optional uint64 a_aMask = 1;
 inline bool Msg_UpdatePerfStatsCollectionMask::_internal_has_a_amask() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11963,7 +11948,7 @@ inline void Msg_UpdatePerfStatsCollectionMask::set_a_amask(uint64_t value) {
 
 // Reply_CollectPerfStatsJSON
 
-// required string a_aStats = 1;
+// optional string a_aStats = 1;
 inline bool Reply_CollectPerfStatsJSON::_internal_has_a_astats() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12115,7 +12100,7 @@ inline void Reply_FlushFOGData::set_allocated_a_buf(std::string* a_buf) {
 
 // Reply_TestTriggerMetrics
 
-// required bool a_unused = 1;
+// optional bool a_unused = 1;
 inline bool Reply_TestTriggerMetrics::_internal_has_a_unused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12242,7 +12227,7 @@ inline void Msg_InitComplete::set_allocated_a_data(::protobuf::mozilla::gfx::GPU
 
 // Msg_ReportCheckerboard
 
-// required uint32 a_severity = 1;
+// optional uint32 a_severity = 1;
 inline bool Msg_ReportCheckerboard::_internal_has_a_severity() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -12270,7 +12255,7 @@ inline void Msg_ReportCheckerboard::set_a_severity(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PGPU.Msg_ReportCheckerboard.a_severity)
 }
 
-// required string a_log = 2;
+// optional string a_log = 2;
 inline bool Msg_ReportCheckerboard::_internal_has_a_log() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12342,7 +12327,7 @@ inline void Msg_ReportCheckerboard::set_allocated_a_log(std::string* a_log) {
 
 // Msg_GraphicsError
 
-// required string a_aError = 1;
+// optional string a_aError = 1;
 inline bool Msg_GraphicsError::_internal_has_a_aerror() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12513,7 +12498,7 @@ inline void Msg_InitCrashReporter::set_allocated_a_ainitargs(::protobuf::CrashRe
 
 // Msg_NotifyUiObservers
 
-// required string a_aTopic = 1;
+// optional string a_aTopic = 1;
 inline bool Msg_NotifyUiObservers::_internal_has_a_atopic() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -13431,7 +13416,7 @@ inline void Msg_NotifySwapChainInfo::set_allocated_a_info(std::string* a_info) {
 
 // Msg_FlushMemory
 
-// required string a_reason = 1;
+// optional string a_reason = 1;
 inline bool Msg_FlushMemory::_internal_has_a_reason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -13821,7 +13806,7 @@ inline void Msg_UsedFallback::set_allocated_a_afallback(std::string* a_afallback
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PGPU.Msg_UsedFallback.a_aFallback)
 }
 
-// required string a_message = 2;
+// optional string a_message = 2;
 inline bool Msg_UsedFallback::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

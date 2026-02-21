@@ -368,7 +368,7 @@ class Msg_AbortFetchOp final :
   enum : int {
     kAAForceAbortFieldNumber = 1,
   };
-  // required bool a_aForceAbort = 1;
+  // optional bool a_aForceAbort = 1;
   bool has_a_aforceabort() const;
   private:
   bool _internal_has_a_aforceabort() const;
@@ -1074,7 +1074,7 @@ class Msg_OnCSPViolationEvent final :
   enum : int {
     kAAJSONFieldNumber = 1,
   };
-  // required string a_aJSON = 1;
+  // optional string a_aJSON = 1;
   bool has_a_ajson() const;
   private:
   bool _internal_has_a_ajson() const;
@@ -1368,7 +1368,7 @@ class Msg_OnNotifyNetworkMonitorAlternateStack final :
   enum : int {
     kAAChannelIDFieldNumber = 1,
   };
-  // required uint64 a_aChannelID = 1;
+  // optional uint64 a_aChannelID = 1;
   bool has_a_achannelid() const;
   private:
   bool _internal_has_a_achannelid() const;
@@ -1769,7 +1769,7 @@ inline void Msg_FetchOp::set_allocated_a_aargs(::protobuf::mozilla::dom::FetchOp
 
 // Msg_AbortFetchOp
 
-// required bool a_aForceAbort = 1;
+// optional bool a_aForceAbort = 1;
 inline bool Msg_AbortFetchOp::_internal_has_a_aforceabort() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2028,7 +2028,7 @@ Msg_OnFlushConsoleReport::a_areports() const {
 
 // Msg_OnCSPViolationEvent
 
-// required string a_aJSON = 1;
+// optional string a_aJSON = 1;
 inline bool Msg_OnCSPViolationEvent::_internal_has_a_ajson() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2191,7 +2191,7 @@ inline void Msg_OnReportPerformanceTiming::set_allocated_a_atiming(::protobuf::m
 
 // Msg_OnNotifyNetworkMonitorAlternateStack
 
-// required uint64 a_aChannelID = 1;
+// optional uint64 a_aChannelID = 1;
 inline bool Msg_OnNotifyNetworkMonitorAlternateStack::_internal_has_a_achannelid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

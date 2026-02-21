@@ -316,7 +316,7 @@ class SystemFontListEntry final :
     kAPatternFieldNumber = 1,
     kAAppFontFamilyFieldNumber = 2,
   };
-  // required string a_pattern = 1;
+  // optional string a_pattern = 1;
   bool has_a_pattern() const;
   private:
   bool _internal_has_a_pattern() const;
@@ -334,7 +334,7 @@ class SystemFontListEntry final :
   std::string* _internal_mutable_a_pattern();
   public:
 
-  // required bool a_appFontFamily = 2;
+  // optional bool a_appFontFamily = 2;
   bool has_a_appfontfamily() const;
   private:
   bool _internal_has_a_appfontfamily() const;
@@ -350,9 +350,6 @@ class SystemFontListEntry final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.SystemFontListEntry)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -483,7 +480,7 @@ class SystemFontOptions final :
     kAHintStyleFieldNumber = 3,
     kALcdFilterFieldNumber = 4,
   };
-  // required sint32 a_antialias = 1;
+  // optional sint32 a_antialias = 1;
   bool has_a_antialias() const;
   private:
   bool _internal_has_a_antialias() const;
@@ -496,7 +493,7 @@ class SystemFontOptions final :
   void _internal_set_a_antialias(int32_t value);
   public:
 
-  // required sint32 a_subpixelOrder = 2;
+  // optional sint32 a_subpixelOrder = 2;
   bool has_a_subpixelorder() const;
   private:
   bool _internal_has_a_subpixelorder() const;
@@ -509,7 +506,7 @@ class SystemFontOptions final :
   void _internal_set_a_subpixelorder(int32_t value);
   public:
 
-  // required sint32 a_hintStyle = 3;
+  // optional sint32 a_hintStyle = 3;
   bool has_a_hintstyle() const;
   private:
   bool _internal_has_a_hintstyle() const;
@@ -522,7 +519,7 @@ class SystemFontOptions final :
   void _internal_set_a_hintstyle(int32_t value);
   public:
 
-  // required sint32 a_lcdFilter = 4;
+  // optional sint32 a_lcdFilter = 4;
   bool has_a_lcdfilter() const;
   private:
   bool _internal_has_a_lcdfilter() const;
@@ -538,9 +535,6 @@ class SystemFontOptions final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.SystemFontOptions)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1014,7 +1008,7 @@ class ClipboardCapabilities final :
     kASupportsFindClipboardFieldNumber = 2,
     kASupportsSelectionCacheFieldNumber = 3,
   };
-  // required bool a_supportsSelectionClipboard = 1;
+  // optional bool a_supportsSelectionClipboard = 1;
   bool has_a_supportsselectionclipboard() const;
   private:
   bool _internal_has_a_supportsselectionclipboard() const;
@@ -1027,7 +1021,7 @@ class ClipboardCapabilities final :
   void _internal_set_a_supportsselectionclipboard(bool value);
   public:
 
-  // required bool a_supportsFindClipboard = 2;
+  // optional bool a_supportsFindClipboard = 2;
   bool has_a_supportsfindclipboard() const;
   private:
   bool _internal_has_a_supportsfindclipboard() const;
@@ -1040,7 +1034,7 @@ class ClipboardCapabilities final :
   void _internal_set_a_supportsfindclipboard(bool value);
   public:
 
-  // required bool a_supportsSelectionCache = 3;
+  // optional bool a_supportsSelectionCache = 3;
   bool has_a_supportsselectioncache() const;
   private:
   bool _internal_has_a_supportsselectioncache() const;
@@ -1056,9 +1050,6 @@ class ClipboardCapabilities final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.ClipboardCapabilities)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1472,7 +1463,7 @@ class DomainPolicyClone final :
   std::string* _internal_add_a_superallowlist();
   public:
 
-  // required bool a_active = 1;
+  // optional bool a_active = 1;
   bool has_a_active() const;
   private:
   bool _internal_has_a_active() const;
@@ -1623,7 +1614,7 @@ class AndroidSystemInfo final :
     kASdkVersionFieldNumber = 5,
     kAIsTabletFieldNumber = 6,
   };
-  // required string a_device = 1;
+  // optional string a_device = 1;
   bool has_a_device() const;
   private:
   bool _internal_has_a_device() const;
@@ -1641,7 +1632,7 @@ class AndroidSystemInfo final :
   std::string* _internal_mutable_a_device();
   public:
 
-  // required string a_manufacturer = 2;
+  // optional string a_manufacturer = 2;
   bool has_a_manufacturer() const;
   private:
   bool _internal_has_a_manufacturer() const;
@@ -1659,7 +1650,7 @@ class AndroidSystemInfo final :
   std::string* _internal_mutable_a_manufacturer();
   public:
 
-  // required string a_release_version = 3;
+  // optional string a_release_version = 3;
   bool has_a_release_version() const;
   private:
   bool _internal_has_a_release_version() const;
@@ -1677,7 +1668,7 @@ class AndroidSystemInfo final :
   std::string* _internal_mutable_a_release_version();
   public:
 
-  // required string a_hardware = 4;
+  // optional string a_hardware = 4;
   bool has_a_hardware() const;
   private:
   bool _internal_has_a_hardware() const;
@@ -1695,7 +1686,7 @@ class AndroidSystemInfo final :
   std::string* _internal_mutable_a_hardware();
   public:
 
-  // required uint32 a_sdk_version = 5;
+  // optional uint32 a_sdk_version = 5;
   bool has_a_sdk_version() const;
   private:
   bool _internal_has_a_sdk_version() const;
@@ -1708,7 +1699,7 @@ class AndroidSystemInfo final :
   void _internal_set_a_sdk_version(uint32_t value);
   public:
 
-  // required bool a_isTablet = 6;
+  // optional bool a_isTablet = 6;
   bool has_a_istablet() const;
   private:
   bool _internal_has_a_istablet() const;
@@ -1724,9 +1715,6 @@ class AndroidSystemInfo final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.AndroidSystemInfo)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2340,7 +2328,7 @@ class BlobURLRegistrationData final :
     kABlobFieldNumber = 2,
     kARevokedFieldNumber = 5,
   };
-  // required string a_url = 1;
+  // optional string a_url = 1;
   bool has_a_url() const;
   private:
   bool _internal_has_a_url() const;
@@ -2376,7 +2364,7 @@ class BlobURLRegistrationData final :
   std::string* _internal_mutable_a_principal();
   public:
 
-  // required string a_partitionKey = 4;
+  // optional string a_partitionKey = 4;
   bool has_a_partitionkey() const;
   private:
   bool _internal_has_a_partitionkey() const;
@@ -2412,7 +2400,7 @@ class BlobURLRegistrationData final :
       ::protobuf::mozilla::dom::IPCBlob* a_blob);
   ::protobuf::mozilla::dom::IPCBlob* unsafe_arena_release_a_blob();
 
-  // required bool a_revoked = 5;
+  // optional bool a_revoked = 5;
   bool has_a_revoked() const;
   private:
   bool _internal_has_a_revoked() const;
@@ -2566,7 +2554,7 @@ class JSWindowActorEventDecl final :
     kAPassiveFieldNumber = 5,
     kACreateActorFieldNumber = 6,
   };
-  // required string a_name = 1;
+  // optional string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -2584,7 +2572,7 @@ class JSWindowActorEventDecl final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required bool a_capture = 2;
+  // optional bool a_capture = 2;
   bool has_a_capture() const;
   private:
   bool _internal_has_a_capture() const;
@@ -2597,7 +2585,7 @@ class JSWindowActorEventDecl final :
   void _internal_set_a_capture(bool value);
   public:
 
-  // required bool a_systemGroup = 3;
+  // optional bool a_systemGroup = 3;
   bool has_a_systemgroup() const;
   private:
   bool _internal_has_a_systemgroup() const;
@@ -2610,7 +2598,7 @@ class JSWindowActorEventDecl final :
   void _internal_set_a_systemgroup(bool value);
   public:
 
-  // required bool a_allowUntrusted = 4;
+  // optional bool a_allowUntrusted = 4;
   bool has_a_allowuntrusted() const;
   private:
   bool _internal_has_a_allowuntrusted() const;
@@ -2636,7 +2624,7 @@ class JSWindowActorEventDecl final :
   void _internal_set_a_passive(bool value);
   public:
 
-  // required bool a_createActor = 6;
+  // optional bool a_createActor = 6;
   bool has_a_createactor() const;
   private:
   bool _internal_has_a_createactor() const;
@@ -2652,9 +2640,6 @@ class JSWindowActorEventDecl final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.JSWindowActorEventDecl)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2908,7 +2893,7 @@ class JSWindowActorInfo final :
   std::string* _internal_add_a_messagemanagergroups();
   public:
 
-  // required string a_name = 1;
+  // optional string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -2944,7 +2929,7 @@ class JSWindowActorInfo final :
   std::string* _internal_mutable_a_url();
   public:
 
-  // required bool a_allFrames = 2;
+  // optional bool a_allFrames = 2;
   bool has_a_allframes() const;
   private:
   bool _internal_has_a_allframes() const;
@@ -2957,7 +2942,7 @@ class JSWindowActorInfo final :
   void _internal_set_a_allframes(bool value);
   public:
 
-  // required bool a_loadInDevToolsLoader = 3;
+  // optional bool a_loadInDevToolsLoader = 3;
   bool has_a_loadindevtoolsloader() const;
   private:
   bool _internal_has_a_loadindevtoolsloader() const;
@@ -2973,9 +2958,6 @@ class JSWindowActorInfo final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.JSWindowActorInfo)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3163,7 +3145,7 @@ class JSProcessActorInfo final :
   std::string* _internal_add_a_remotetypes();
   public:
 
-  // required string a_name = 1;
+  // optional string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -3199,7 +3181,7 @@ class JSProcessActorInfo final :
   std::string* _internal_mutable_a_url();
   public:
 
-  // required bool a_isESModule = 2;
+  // optional bool a_isESModule = 2;
   bool has_a_isesmodule() const;
   private:
   bool _internal_has_a_isesmodule() const;
@@ -3212,7 +3194,7 @@ class JSProcessActorInfo final :
   void _internal_set_a_isesmodule(bool value);
   public:
 
-  // required bool a_loadInDevToolsLoader = 3;
+  // optional bool a_loadInDevToolsLoader = 3;
   bool has_a_loadindevtoolsloader() const;
   private:
   bool _internal_has_a_loadindevtoolsloader() const;
@@ -3228,9 +3210,6 @@ class JSProcessActorInfo final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.JSProcessActorInfo)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3387,7 +3366,7 @@ class GMPAPITags final :
   std::string* _internal_add_a_tags();
   public:
 
-  // required string a_api = 1;
+  // optional string a_api = 1;
   bool has_a_api() const;
   private:
   bool _internal_has_a_api() const;
@@ -3555,7 +3534,7 @@ class GMPCapabilityData final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::GMPAPITags >&
       a_capabilities() const;
 
-  // required string a_name = 1;
+  // optional string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -3573,7 +3552,7 @@ class GMPCapabilityData final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required string a_version = 2;
+  // optional string a_version = 2;
   bool has_a_version() const;
   private:
   bool _internal_has_a_version() const;
@@ -3594,9 +3573,6 @@ class GMPCapabilityData final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.GMPCapabilityData)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3777,7 +3753,7 @@ class L10nFileSourceDescriptor final :
   std::string* _internal_add_a_index();
   public:
 
-  // required string a_name = 1;
+  // optional string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -3795,7 +3771,7 @@ class L10nFileSourceDescriptor final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required string a_metasource = 2;
+  // optional string a_metasource = 2;
   bool has_a_metasource() const;
   private:
   bool _internal_has_a_metasource() const;
@@ -3813,7 +3789,7 @@ class L10nFileSourceDescriptor final :
   std::string* _internal_mutable_a_metasource();
   public:
 
-  // required string a_prePath = 4;
+  // optional string a_prePath = 4;
   bool has_a_prepath() const;
   private:
   bool _internal_has_a_prepath() const;
@@ -3834,9 +3810,6 @@ class L10nFileSourceDescriptor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.L10nFileSourceDescriptor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4172,7 +4145,7 @@ class XPCOMInitData final :
   std::string* _internal_mutable_a_perfstatsmask();
   public:
 
-  // required string a_trrDomain = 18;
+  // optional string a_trrDomain = 18;
   bool has_a_trrdomain() const;
   private:
   bool _internal_has_a_trrdomain() const;
@@ -4280,7 +4253,7 @@ class XPCOMInitData final :
       ::protobuf::mozilla::gfx::ContentDeviceData* a_contentdevicedata);
   ::protobuf::mozilla::gfx::ContentDeviceData* unsafe_arena_release_a_contentdevicedata();
 
-  // required sint32 a_captivePortalState = 3;
+  // optional sint32 a_captivePortalState = 3;
   bool has_a_captiveportalstate() const;
   private:
   bool _internal_has_a_captiveportalstate() const;
@@ -4293,7 +4266,7 @@ class XPCOMInitData final :
   void _internal_set_a_captiveportalstate(int32_t value);
   public:
 
-  // required bool a_isOffline = 1;
+  // optional bool a_isOffline = 1;
   bool has_a_isoffline() const;
   private:
   bool _internal_has_a_isoffline() const;
@@ -4306,7 +4279,7 @@ class XPCOMInitData final :
   void _internal_set_a_isoffline(bool value);
   public:
 
-  // required bool a_isConnected = 2;
+  // optional bool a_isConnected = 2;
   bool has_a_isconnected() const;
   private:
   bool _internal_has_a_isconnected() const;
@@ -4319,7 +4292,7 @@ class XPCOMInitData final :
   void _internal_set_a_isconnected(bool value);
   public:
 
-  // required bool a_isLangRTL = 4;
+  // optional bool a_isLangRTL = 4;
   bool has_a_islangrtl() const;
   private:
   bool _internal_has_a_islangrtl() const;
@@ -4332,7 +4305,7 @@ class XPCOMInitData final :
   void _internal_set_a_islangrtl(bool value);
   public:
 
-  // required bool a_haveBidiKeyboards = 5;
+  // optional bool a_haveBidiKeyboards = 5;
   bool has_a_havebidikeyboards() const;
   private:
   bool _internal_has_a_havebidikeyboards() const;
@@ -4515,7 +4488,7 @@ class VisitedQueryResult final :
   std::string* _internal_mutable_a_uri();
   public:
 
-  // required bool a_visited = 2;
+  // optional bool a_visited = 2;
   bool has_a_visited() const;
   private:
   bool _internal_has_a_visited() const;
@@ -4659,7 +4632,7 @@ class StringBundleDescriptor final :
     kABundleURLFieldNumber = 1,
     kAMapHandleFieldNumber = 2,
   };
-  // required string a_bundleURL = 1;
+  // optional string a_bundleURL = 1;
   bool has_a_bundleurl() const;
   private:
   bool _internal_has_a_bundleurl() const;
@@ -4698,9 +4671,6 @@ class StringBundleDescriptor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.StringBundleDescriptor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4853,7 +4823,7 @@ class IPCURLClassifierFeature final :
   std::string* _internal_add_a_tables();
   public:
 
-  // required string a_featureName = 1;
+  // optional string a_featureName = 1;
   bool has_a_featurename() const;
   private:
   bool _internal_has_a_featurename() const;
@@ -5028,7 +4998,7 @@ class PostMessageData final :
   std::string* _internal_mutable_a_source();
   public:
 
-  // required string a_origin = 2;
+  // optional string a_origin = 2;
   bool has_a_origin() const;
   private:
   bool _internal_has_a_origin() const;
@@ -5046,7 +5016,7 @@ class PostMessageData final :
   std::string* _internal_mutable_a_origin();
   public:
 
-  // required string a_targetOrigin = 3;
+  // optional string a_targetOrigin = 3;
   bool has_a_targetorigin() const;
   private:
   bool _internal_has_a_targetorigin() const;
@@ -5136,7 +5106,7 @@ class PostMessageData final :
   std::string* _internal_mutable_a_calleruri();
   public:
 
-  // required string a_scriptLocation = 9;
+  // optional string a_scriptLocation = 9;
   bool has_a_scriptlocation() const;
   private:
   bool _internal_has_a_scriptlocation() const;
@@ -5154,7 +5124,7 @@ class PostMessageData final :
   std::string* _internal_mutable_a_scriptlocation();
   public:
 
-  // required uint64 a_innerWindowId = 10;
+  // optional uint64 a_innerWindowId = 10;
   bool has_a_innerwindowid() const;
   private:
   bool _internal_has_a_innerwindowid() const;
@@ -5167,7 +5137,7 @@ class PostMessageData final :
   void _internal_set_a_innerwindowid(uint64_t value);
   public:
 
-  // required bool a_isFromPrivateWindow = 8;
+  // optional bool a_isFromPrivateWindow = 8;
   bool has_a_isfromprivatewindow() const;
   private:
   bool _internal_has_a_isfromprivatewindow() const;
@@ -5183,9 +5153,6 @@ class PostMessageData final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PostMessageData)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5525,7 +5492,7 @@ class OriginAgentClusterInitializer final :
   std::string* _internal_mutable_a_principal();
   public:
 
-  // required bool a_useOriginAgentCluster = 2;
+  // optional bool a_useOriginAgentCluster = 2;
   bool has_a_useoriginagentcluster() const;
   private:
   bool _internal_has_a_useoriginagentcluster() const;
@@ -5541,9 +5508,6 @@ class OriginAgentClusterInitializer final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.OriginAgentClusterInitializer)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5882,7 +5846,7 @@ class TextRecognitionQuad final :
   std::string* _internal_add_a_points();
   public:
 
-  // required string a_string = 2;
+  // optional string a_string = 2;
   bool has_a_string() const;
   private:
   bool _internal_has_a_string() const;
@@ -5900,7 +5864,7 @@ class TextRecognitionQuad final :
   std::string* _internal_mutable_a_string();
   public:
 
-  // required float a_confidence = 1;
+  // optional float a_confidence = 1;
   bool has_a_confidence() const;
   private:
   bool _internal_has_a_confidence() const;
@@ -5916,9 +5880,6 @@ class TextRecognitionQuad final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.TextRecognitionQuad)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -6737,7 +6698,7 @@ class BroadcastBlobURLUnregistrationRequest final :
     kAUrlFieldNumber = 1,
     kAPrincipalFieldNumber = 2,
   };
-  // required string a_url = 1;
+  // optional string a_url = 1;
   bool has_a_url() const;
   private:
   bool _internal_has_a_url() const;
@@ -6800,7 +6761,7 @@ class BroadcastBlobURLUnregistrationRequest final :
 #endif  // __GNUC__
 // SystemFontListEntry
 
-// required string a_pattern = 1;
+// optional string a_pattern = 1;
 inline bool SystemFontListEntry::_internal_has_a_pattern() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6868,7 +6829,7 @@ inline void SystemFontListEntry::set_allocated_a_pattern(std::string* a_pattern)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.SystemFontListEntry.a_pattern)
 }
 
-// required bool a_appFontFamily = 2;
+// optional bool a_appFontFamily = 2;
 inline bool SystemFontListEntry::_internal_has_a_appfontfamily() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6900,7 +6861,7 @@ inline void SystemFontListEntry::set_a_appfontfamily(bool value) {
 
 // SystemFontOptions
 
-// required sint32 a_antialias = 1;
+// optional sint32 a_antialias = 1;
 inline bool SystemFontOptions::_internal_has_a_antialias() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6928,7 +6889,7 @@ inline void SystemFontOptions::set_a_antialias(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.SystemFontOptions.a_antialias)
 }
 
-// required sint32 a_subpixelOrder = 2;
+// optional sint32 a_subpixelOrder = 2;
 inline bool SystemFontOptions::_internal_has_a_subpixelorder() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6956,7 +6917,7 @@ inline void SystemFontOptions::set_a_subpixelorder(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.SystemFontOptions.a_subpixelOrder)
 }
 
-// required sint32 a_hintStyle = 3;
+// optional sint32 a_hintStyle = 3;
 inline bool SystemFontOptions::_internal_has_a_hintstyle() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -6984,7 +6945,7 @@ inline void SystemFontOptions::set_a_hintstyle(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.SystemFontOptions.a_hintStyle)
 }
 
-// required sint32 a_lcdFilter = 4;
+// optional sint32 a_lcdFilter = 4;
 inline bool SystemFontOptions::_internal_has_a_lcdfilter() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -7239,7 +7200,7 @@ inline SystemParameterValue::ContentCase SystemParameterValue::content_case() co
 
 // ClipboardCapabilities
 
-// required bool a_supportsSelectionClipboard = 1;
+// optional bool a_supportsSelectionClipboard = 1;
 inline bool ClipboardCapabilities::_internal_has_a_supportsselectionclipboard() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7267,7 +7228,7 @@ inline void ClipboardCapabilities::set_a_supportsselectionclipboard(bool value) 
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ClipboardCapabilities.a_supportsSelectionClipboard)
 }
 
-// required bool a_supportsFindClipboard = 2;
+// optional bool a_supportsFindClipboard = 2;
 inline bool ClipboardCapabilities::_internal_has_a_supportsfindclipboard() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7295,7 +7256,7 @@ inline void ClipboardCapabilities::set_a_supportsfindclipboard(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ClipboardCapabilities.a_supportsFindClipboard)
 }
 
-// required bool a_supportsSelectionCache = 3;
+// optional bool a_supportsSelectionCache = 3;
 inline bool ClipboardCapabilities::_internal_has_a_supportsselectioncache() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -7494,7 +7455,7 @@ inline FileDescOrError::ContentCase FileDescOrError::content_case() const {
 
 // DomainPolicyClone
 
-// required bool a_active = 1;
+// optional bool a_active = 1;
 inline bool DomainPolicyClone::_internal_has_a_active() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7826,7 +7787,7 @@ DomainPolicyClone::mutable_a_superallowlist() {
 
 // AndroidSystemInfo
 
-// required string a_device = 1;
+// optional string a_device = 1;
 inline bool AndroidSystemInfo::_internal_has_a_device() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7894,7 +7855,7 @@ inline void AndroidSystemInfo::set_allocated_a_device(std::string* a_device) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.AndroidSystemInfo.a_device)
 }
 
-// required string a_manufacturer = 2;
+// optional string a_manufacturer = 2;
 inline bool AndroidSystemInfo::_internal_has_a_manufacturer() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7962,7 +7923,7 @@ inline void AndroidSystemInfo::set_allocated_a_manufacturer(std::string* a_manuf
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.AndroidSystemInfo.a_manufacturer)
 }
 
-// required string a_release_version = 3;
+// optional string a_release_version = 3;
 inline bool AndroidSystemInfo::_internal_has_a_release_version() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -8030,7 +7991,7 @@ inline void AndroidSystemInfo::set_allocated_a_release_version(std::string* a_re
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.AndroidSystemInfo.a_release_version)
 }
 
-// required string a_hardware = 4;
+// optional string a_hardware = 4;
 inline bool AndroidSystemInfo::_internal_has_a_hardware() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -8098,7 +8059,7 @@ inline void AndroidSystemInfo::set_allocated_a_hardware(std::string* a_hardware)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.AndroidSystemInfo.a_hardware)
 }
 
-// required uint32 a_sdk_version = 5;
+// optional uint32 a_sdk_version = 5;
 inline bool AndroidSystemInfo::_internal_has_a_sdk_version() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -8126,7 +8087,7 @@ inline void AndroidSystemInfo::set_a_sdk_version(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.AndroidSystemInfo.a_sdk_version)
 }
 
-// required bool a_isTablet = 6;
+// optional bool a_isTablet = 6;
 inline bool AndroidSystemInfo::_internal_has_a_istablet() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -8432,7 +8393,7 @@ inline GetFilesResponseResult::ContentCase GetFilesResponseResult::content_case(
 
 // BlobURLRegistrationData
 
-// required string a_url = 1;
+// optional string a_url = 1;
 inline bool BlobURLRegistrationData::_internal_has_a_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8655,7 +8616,7 @@ inline void BlobURLRegistrationData::set_allocated_a_principal(std::string* a_pr
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.BlobURLRegistrationData.a_principal)
 }
 
-// required string a_partitionKey = 4;
+// optional string a_partitionKey = 4;
 inline bool BlobURLRegistrationData::_internal_has_a_partitionkey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -8723,7 +8684,7 @@ inline void BlobURLRegistrationData::set_allocated_a_partitionkey(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.BlobURLRegistrationData.a_partitionKey)
 }
 
-// required bool a_revoked = 5;
+// optional bool a_revoked = 5;
 inline bool BlobURLRegistrationData::_internal_has_a_revoked() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -8755,7 +8716,7 @@ inline void BlobURLRegistrationData::set_a_revoked(bool value) {
 
 // JSWindowActorEventDecl
 
-// required string a_name = 1;
+// optional string a_name = 1;
 inline bool JSWindowActorEventDecl::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8823,7 +8784,7 @@ inline void JSWindowActorEventDecl::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.JSWindowActorEventDecl.a_name)
 }
 
-// required bool a_capture = 2;
+// optional bool a_capture = 2;
 inline bool JSWindowActorEventDecl::_internal_has_a_capture() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8851,7 +8812,7 @@ inline void JSWindowActorEventDecl::set_a_capture(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.JSWindowActorEventDecl.a_capture)
 }
 
-// required bool a_systemGroup = 3;
+// optional bool a_systemGroup = 3;
 inline bool JSWindowActorEventDecl::_internal_has_a_systemgroup() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -8879,7 +8840,7 @@ inline void JSWindowActorEventDecl::set_a_systemgroup(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.JSWindowActorEventDecl.a_systemGroup)
 }
 
-// required bool a_allowUntrusted = 4;
+// optional bool a_allowUntrusted = 4;
 inline bool JSWindowActorEventDecl::_internal_has_a_allowuntrusted() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -8935,7 +8896,7 @@ inline void JSWindowActorEventDecl::set_a_passive(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.JSWindowActorEventDecl.a_passive)
 }
 
-// required bool a_createActor = 6;
+// optional bool a_createActor = 6;
 inline bool JSWindowActorEventDecl::_internal_has_a_createactor() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -8967,7 +8928,7 @@ inline void JSWindowActorEventDecl::set_a_createactor(bool value) {
 
 // JSWindowActorInfo
 
-// required string a_name = 1;
+// optional string a_name = 1;
 inline bool JSWindowActorInfo::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9035,7 +8996,7 @@ inline void JSWindowActorInfo::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.JSWindowActorInfo.a_name)
 }
 
-// required bool a_allFrames = 2;
+// optional bool a_allFrames = 2;
 inline bool JSWindowActorInfo::_internal_has_a_allframes() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -9063,7 +9024,7 @@ inline void JSWindowActorInfo::set_a_allframes(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.JSWindowActorInfo.a_allFrames)
 }
 
-// required bool a_loadInDevToolsLoader = 3;
+// optional bool a_loadInDevToolsLoader = 3;
 inline bool JSWindowActorInfo::_internal_has_a_loadindevtoolsloader() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -9503,7 +9464,7 @@ JSWindowActorInfo::mutable_a_messagemanagergroups() {
 
 // JSProcessActorInfo
 
-// required string a_name = 1;
+// optional string a_name = 1;
 inline bool JSProcessActorInfo::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9571,7 +9532,7 @@ inline void JSProcessActorInfo::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.JSProcessActorInfo.a_name)
 }
 
-// required bool a_isESModule = 2;
+// optional bool a_isESModule = 2;
 inline bool JSProcessActorInfo::_internal_has_a_isesmodule() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -9599,7 +9560,7 @@ inline void JSProcessActorInfo::set_a_isesmodule(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.JSProcessActorInfo.a_isESModule)
 }
 
-// required bool a_loadInDevToolsLoader = 3;
+// optional bool a_loadInDevToolsLoader = 3;
 inline bool JSProcessActorInfo::_internal_has_a_loadindevtoolsloader() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -9849,7 +9810,7 @@ JSProcessActorInfo::mutable_a_remotetypes() {
 
 // GMPAPITags
 
-// required string a_api = 1;
+// optional string a_api = 1;
 inline bool GMPAPITags::_internal_has_a_api() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9996,7 +9957,7 @@ GMPAPITags::mutable_a_tags() {
 
 // GMPCapabilityData
 
-// required string a_name = 1;
+// optional string a_name = 1;
 inline bool GMPCapabilityData::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10064,7 +10025,7 @@ inline void GMPCapabilityData::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.GMPCapabilityData.a_name)
 }
 
-// required string a_version = 2;
+// optional string a_version = 2;
 inline bool GMPCapabilityData::_internal_has_a_version() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -10176,7 +10137,7 @@ GMPCapabilityData::a_capabilities() const {
 
 // L10nFileSourceDescriptor
 
-// required string a_name = 1;
+// optional string a_name = 1;
 inline bool L10nFileSourceDescriptor::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10244,7 +10205,7 @@ inline void L10nFileSourceDescriptor::set_allocated_a_name(std::string* a_name) 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.L10nFileSourceDescriptor.a_name)
 }
 
-// required string a_metasource = 2;
+// optional string a_metasource = 2;
 inline bool L10nFileSourceDescriptor::_internal_has_a_metasource() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -10387,7 +10348,7 @@ L10nFileSourceDescriptor::mutable_a_locales() {
   return &_impl_.a_locales_;
 }
 
-// required string a_prePath = 4;
+// optional string a_prePath = 4;
 inline bool L10nFileSourceDescriptor::_internal_has_a_prepath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -10534,7 +10495,7 @@ L10nFileSourceDescriptor::mutable_a_index() {
 
 // XPCOMInitData
 
-// required bool a_isOffline = 1;
+// optional bool a_isOffline = 1;
 inline bool XPCOMInitData::_internal_has_a_isoffline() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -10562,7 +10523,7 @@ inline void XPCOMInitData::set_a_isoffline(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.XPCOMInitData.a_isOffline)
 }
 
-// required bool a_isConnected = 2;
+// optional bool a_isConnected = 2;
 inline bool XPCOMInitData::_internal_has_a_isconnected() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
@@ -10590,7 +10551,7 @@ inline void XPCOMInitData::set_a_isconnected(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.XPCOMInitData.a_isConnected)
 }
 
-// required sint32 a_captivePortalState = 3;
+// optional sint32 a_captivePortalState = 3;
 inline bool XPCOMInitData::_internal_has_a_captiveportalstate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -10618,7 +10579,7 @@ inline void XPCOMInitData::set_a_captiveportalstate(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.XPCOMInitData.a_captivePortalState)
 }
 
-// required bool a_isLangRTL = 4;
+// optional bool a_isLangRTL = 4;
 inline bool XPCOMInitData::_internal_has_a_islangrtl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
   return value;
@@ -10646,7 +10607,7 @@ inline void XPCOMInitData::set_a_islangrtl(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.XPCOMInitData.a_isLangRTL)
 }
 
-// required bool a_haveBidiKeyboards = 5;
+// optional bool a_haveBidiKeyboards = 5;
 inline bool XPCOMInitData::_internal_has_a_havebidikeyboards() const {
   bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
   return value;
@@ -11491,7 +11452,7 @@ inline void XPCOMInitData::set_allocated_a_perfstatsmask(std::string* a_perfstat
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.XPCOMInitData.a_perfStatsMask)
 }
 
-// required string a_trrDomain = 18;
+// optional string a_trrDomain = 18;
 inline bool XPCOMInitData::_internal_has_a_trrdomain() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -11767,7 +11728,7 @@ inline void VisitedQueryResult::set_allocated_a_uri(std::string* a_uri) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.VisitedQueryResult.a_uri)
 }
 
-// required bool a_visited = 2;
+// optional bool a_visited = 2;
 inline bool VisitedQueryResult::_internal_has_a_visited() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11799,7 +11760,7 @@ inline void VisitedQueryResult::set_a_visited(bool value) {
 
 // StringBundleDescriptor
 
-// required string a_bundleURL = 1;
+// optional string a_bundleURL = 1;
 inline bool StringBundleDescriptor::_internal_has_a_bundleurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11939,7 +11900,7 @@ inline void StringBundleDescriptor::set_allocated_a_maphandle(std::string* a_map
 
 // IPCURLClassifierFeature
 
-// required string a_featureName = 1;
+// optional string a_featureName = 1;
 inline bool IPCURLClassifierFeature::_internal_has_a_featurename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12154,7 +12115,7 @@ inline void PostMessageData::set_allocated_a_source(std::string* a_source) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PostMessageData.a_source)
 }
 
-// required string a_origin = 2;
+// optional string a_origin = 2;
 inline bool PostMessageData::_internal_has_a_origin() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -12222,7 +12183,7 @@ inline void PostMessageData::set_allocated_a_origin(std::string* a_origin) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PostMessageData.a_origin)
 }
 
-// required string a_targetOrigin = 3;
+// optional string a_targetOrigin = 3;
 inline bool PostMessageData::_internal_has_a_targetorigin() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -12562,7 +12523,7 @@ inline void PostMessageData::set_allocated_a_calleruri(std::string* a_calleruri)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PostMessageData.a_callerURI)
 }
 
-// required bool a_isFromPrivateWindow = 8;
+// optional bool a_isFromPrivateWindow = 8;
 inline bool PostMessageData::_internal_has_a_isfromprivatewindow() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -12590,7 +12551,7 @@ inline void PostMessageData::set_a_isfromprivatewindow(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PostMessageData.a_isFromPrivateWindow)
 }
 
-// required string a_scriptLocation = 9;
+// optional string a_scriptLocation = 9;
 inline bool PostMessageData::_internal_has_a_scriptlocation() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -12658,7 +12619,7 @@ inline void PostMessageData::set_allocated_a_scriptlocation(std::string* a_scrip
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PostMessageData.a_scriptLocation)
 }
 
-// required uint64 a_innerWindowId = 10;
+// optional uint64 a_innerWindowId = 10;
 inline bool PostMessageData::_internal_has_a_innerwindowid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -12925,7 +12886,7 @@ inline void OriginAgentClusterInitializer::set_allocated_a_principal(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.OriginAgentClusterInitializer.a_principal)
 }
 
-// required bool a_useOriginAgentCluster = 2;
+// optional bool a_useOriginAgentCluster = 2;
 inline bool OriginAgentClusterInitializer::_internal_has_a_useoriginagentcluster() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -13113,7 +13074,7 @@ inline BlobURLDataRequestResult::ContentCase BlobURLDataRequestResult::content_c
 
 // TextRecognitionQuad
 
-// required float a_confidence = 1;
+// optional float a_confidence = 1;
 inline bool TextRecognitionQuad::_internal_has_a_confidence() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -13141,7 +13102,7 @@ inline void TextRecognitionQuad::set_a_confidence(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.TextRecognitionQuad.a_confidence)
 }
 
-// required string a_string = 2;
+// optional string a_string = 2;
 inline bool TextRecognitionQuad::_internal_has_a_string() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -13807,7 +13768,7 @@ inline ClipboardReadRequestOrError::ContentCase ClipboardReadRequestOrError::con
 
 // BroadcastBlobURLUnregistrationRequest
 
-// required string a_url = 1;
+// optional string a_url = 1;
 inline bool BroadcastBlobURLUnregistrationRequest::_internal_has_a_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

@@ -33,21 +33,21 @@ message Msg_HistoryChange {
   required bytes a_bc = 1;
   required protobuf.mozilla.extensions.FrameTransitionData a_transitionData = 2;
   optional bytes a_location = 3;
-  required bool a_isHistoryStateUpdated = 4;
-  required bool a_isReferenceFragmentUpdated = 5;
+  optional bool a_isHistoryStateUpdated = 4;
+  optional bool a_isReferenceFragmentUpdated = 5;
 }
 
 message Msg_StateChange {
   required bytes a_bc = 1;
   optional bytes a_requestURI = 2;
   required bytes a_status = 3;
-  required uint32 a_stateFlags = 4;
+  optional uint32 a_stateFlags = 4;
 }
 
 message Msg_CreatedNavigationTarget {
   required bytes a_bc = 1;
   required bytes a_sourceBC = 2;
-  required string a_url = 3;
+  optional string a_url = 3;
 }
 
 message Msg_DOMContentLoaded {

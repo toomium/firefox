@@ -244,7 +244,7 @@ class Msg_SubmitFrame final :
       ::protobuf::mozilla::layers::SurfaceDescriptor* a_atexture);
   ::protobuf::mozilla::layers::SurfaceDescriptor* unsafe_arena_release_a_atexture();
 
-  // required uint64 a_aFrameId = 2;
+  // optional uint64 a_aFrameId = 2;
   bool has_a_aframeid() const;
   private:
   bool _internal_has_a_aframeid() const;
@@ -748,7 +748,7 @@ inline void Msg_SubmitFrame::set_allocated_a_atexture(::protobuf::mozilla::layer
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PVRLayer.Msg_SubmitFrame.a_aTexture)
 }
 
-// required uint64 a_aFrameId = 2;
+// optional uint64 a_aFrameId = 2;
 inline bool Msg_SubmitFrame::_internal_has_a_aframeid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;

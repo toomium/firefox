@@ -458,7 +458,7 @@ class Msg_NotifyResult final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::PermissionChoice >&
       a_choices() const;
 
-  // required bool a_allow = 1;
+  // optional bool a_allow = 1;
   bool has_a_allow() const;
   private:
   bool _internal_has_a_allow() const;
@@ -754,7 +754,7 @@ class Reply___delete__ final :
 
 // Msg_NotifyResult
 
-// required bool a_allow = 1;
+// optional bool a_allow = 1;
 inline bool Msg_NotifyResult::_internal_has_a_allow() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

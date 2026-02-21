@@ -377,7 +377,7 @@ class Msg_GetIdentityCredential final :
   std::string* _internal_mutable_a_amediationrequirement();
   public:
 
-  // required bool a_aHasUserActivation = 3;
+  // optional bool a_aHasUserActivation = 3;
   bool has_a_ahasuseractivation() const;
   private:
   bool _internal_has_a_ahasuseractivation() const;
@@ -1815,7 +1815,7 @@ inline void Msg_GetIdentityCredential::set_allocated_a_amediationrequirement(std
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebIdentity.Msg_GetIdentityCredential.a_aMediationRequirement)
 }
 
-// required bool a_aHasUserActivation = 3;
+// optional bool a_aHasUserActivation = 3;
 inline bool Msg_GetIdentityCredential::_internal_has_a_ahasuseractivation() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

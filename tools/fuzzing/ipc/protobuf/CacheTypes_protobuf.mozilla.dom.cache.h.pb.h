@@ -288,7 +288,7 @@ class CacheQueryParams final :
     kAIgnoreVaryFieldNumber = 3,
     kACacheNameSetFieldNumber = 4,
   };
-  // required string a_cacheName = 5;
+  // optional string a_cacheName = 5;
   bool has_a_cachename() const;
   private:
   bool _internal_has_a_cachename() const;
@@ -306,7 +306,7 @@ class CacheQueryParams final :
   std::string* _internal_mutable_a_cachename();
   public:
 
-  // required bool a_ignoreSearch = 1;
+  // optional bool a_ignoreSearch = 1;
   bool has_a_ignoresearch() const;
   private:
   bool _internal_has_a_ignoresearch() const;
@@ -319,7 +319,7 @@ class CacheQueryParams final :
   void _internal_set_a_ignoresearch(bool value);
   public:
 
-  // required bool a_ignoreMethod = 2;
+  // optional bool a_ignoreMethod = 2;
   bool has_a_ignoremethod() const;
   private:
   bool _internal_has_a_ignoremethod() const;
@@ -332,7 +332,7 @@ class CacheQueryParams final :
   void _internal_set_a_ignoremethod(bool value);
   public:
 
-  // required bool a_ignoreVary = 3;
+  // optional bool a_ignoreVary = 3;
   bool has_a_ignorevary() const;
   private:
   bool _internal_has_a_ignorevary() const;
@@ -345,7 +345,7 @@ class CacheQueryParams final :
   void _internal_set_a_ignorevary(bool value);
   public:
 
-  // required bool a_cacheNameSet = 4;
+  // optional bool a_cacheNameSet = 4;
   bool has_a_cachenameset() const;
   private:
   bool _internal_has_a_cachenameset() const;
@@ -361,9 +361,6 @@ class CacheQueryParams final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.cache.CacheQueryParams)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -682,7 +679,7 @@ class HeadersEntry final :
     kANameFieldNumber = 1,
     kAValueFieldNumber = 2,
   };
-  // required string a_name = 1;
+  // optional string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -700,7 +697,7 @@ class HeadersEntry final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required string a_value = 2;
+  // optional string a_value = 2;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -721,9 +718,6 @@ class HeadersEntry final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.cache.HeadersEntry)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -886,7 +880,7 @@ class CacheRequest final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::cache::HeadersEntry >&
       a_headers() const;
 
-  // required string a_method = 1;
+  // optional string a_method = 1;
   bool has_a_method() const;
   private:
   bool _internal_has_a_method() const;
@@ -904,7 +898,7 @@ class CacheRequest final :
   std::string* _internal_mutable_a_method();
   public:
 
-  // required string a_urlWithoutQuery = 2;
+  // optional string a_urlWithoutQuery = 2;
   bool has_a_urlwithoutquery() const;
   private:
   bool _internal_has_a_urlwithoutquery() const;
@@ -922,7 +916,7 @@ class CacheRequest final :
   std::string* _internal_mutable_a_urlwithoutquery();
   public:
 
-  // required string a_urlQuery = 3;
+  // optional string a_urlQuery = 3;
   bool has_a_urlquery() const;
   private:
   bool _internal_has_a_urlquery() const;
@@ -940,7 +934,7 @@ class CacheRequest final :
   std::string* _internal_mutable_a_urlquery();
   public:
 
-  // required string a_urlFragment = 4;
+  // optional string a_urlFragment = 4;
   bool has_a_urlfragment() const;
   private:
   bool _internal_has_a_urlfragment() const;
@@ -976,7 +970,7 @@ class CacheRequest final :
   std::string* _internal_mutable_a_headersguard();
   public:
 
-  // required string a_referrer = 7;
+  // optional string a_referrer = 7;
   bool has_a_referrer() const;
   private:
   bool _internal_has_a_referrer() const;
@@ -1102,7 +1096,7 @@ class CacheRequest final :
   std::string* _internal_mutable_a_requestredirect();
   public:
 
-  // required string a_integrity = 16;
+  // optional string a_integrity = 16;
   bool has_a_integrity() const;
   private:
   bool _internal_has_a_integrity() const;
@@ -1174,7 +1168,7 @@ class CacheRequest final :
       ::protobuf::mozilla::ipc::PrincipalInfo* a_principalinfo);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_principalinfo();
 
-  // required sint64 a_bodyDiskSize = 12;
+  // optional sint64 a_bodyDiskSize = 12;
   bool has_a_bodydisksize() const;
   private:
   bool _internal_has_a_bodydisksize() const;
@@ -1408,7 +1402,7 @@ class CacheResponse final :
   std::string* _internal_mutable_a_type();
   public:
 
-  // required string a_statusText = 4;
+  // optional string a_statusText = 4;
   bool has_a_statustext() const;
   private:
   bool _internal_has_a_statustext() const;
@@ -1516,7 +1510,7 @@ class CacheResponse final :
       ::protobuf::mozilla::ipc::PrincipalInfo* a_principalinfo);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_principalinfo();
 
-  // required uint32 a_status = 3;
+  // optional uint32 a_status = 3;
   bool has_a_status() const;
   private:
   bool _internal_has_a_status() const;
@@ -1529,7 +1523,7 @@ class CacheResponse final :
   void _internal_set_a_status(uint32_t value);
   public:
 
-  // required uint32 a_paddingInfo = 11;
+  // optional uint32 a_paddingInfo = 11;
   bool has_a_paddinginfo() const;
   private:
   bool _internal_has_a_paddinginfo() const;
@@ -1542,7 +1536,7 @@ class CacheResponse final :
   void _internal_set_a_paddinginfo(uint32_t value);
   public:
 
-  // required sint64 a_bodyDiskSize = 8;
+  // optional sint64 a_bodyDiskSize = 8;
   bool has_a_bodydisksize() const;
   private:
   bool _internal_has_a_bodydisksize() const;
@@ -1555,7 +1549,7 @@ class CacheResponse final :
   void _internal_set_a_bodydisksize(int64_t value);
   public:
 
-  // required sint64 a_paddingSize = 12;
+  // optional sint64 a_paddingSize = 12;
   bool has_a_paddingsize() const;
   private:
   bool _internal_has_a_paddingsize() const;
@@ -2958,7 +2952,7 @@ class StorageHasArgs final :
   enum : int {
     kAKeyFieldNumber = 1,
   };
-  // required string a_key = 1;
+  // optional string a_key = 1;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -3105,7 +3099,7 @@ class StorageOpenArgs final :
   enum : int {
     kAKeyFieldNumber = 1,
   };
-  // required string a_key = 1;
+  // optional string a_key = 1;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -3252,7 +3246,7 @@ class StorageDeleteArgs final :
   enum : int {
     kAKeyFieldNumber = 1,
   };
-  // required string a_key = 1;
+  // optional string a_key = 1;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -4301,7 +4295,7 @@ class CacheDeleteResult final :
   enum : int {
     kASuccessFieldNumber = 1,
   };
-  // required bool a_success = 1;
+  // optional bool a_success = 1;
   bool has_a_success() const;
   private:
   bool _internal_has_a_success() const;
@@ -4736,7 +4730,7 @@ class StorageHasResult final :
   enum : int {
     kASuccessFieldNumber = 1,
   };
-  // required bool a_success = 1;
+  // optional bool a_success = 1;
   bool has_a_success() const;
   private:
   bool _internal_has_a_success() const;
@@ -5045,7 +5039,7 @@ class StorageDeleteResult final :
   enum : int {
     kASuccessFieldNumber = 1,
   };
-  // required bool a_success = 1;
+  // optional bool a_success = 1;
   bool has_a_success() const;
   private:
   bool _internal_has_a_success() const;
@@ -5619,7 +5613,7 @@ class CacheOpResult final :
 #endif  // __GNUC__
 // CacheQueryParams
 
-// required bool a_ignoreSearch = 1;
+// optional bool a_ignoreSearch = 1;
 inline bool CacheQueryParams::_internal_has_a_ignoresearch() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5647,7 +5641,7 @@ inline void CacheQueryParams::set_a_ignoresearch(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.cache.CacheQueryParams.a_ignoreSearch)
 }
 
-// required bool a_ignoreMethod = 2;
+// optional bool a_ignoreMethod = 2;
 inline bool CacheQueryParams::_internal_has_a_ignoremethod() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -5675,7 +5669,7 @@ inline void CacheQueryParams::set_a_ignoremethod(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.cache.CacheQueryParams.a_ignoreMethod)
 }
 
-// required bool a_ignoreVary = 3;
+// optional bool a_ignoreVary = 3;
 inline bool CacheQueryParams::_internal_has_a_ignorevary() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -5703,7 +5697,7 @@ inline void CacheQueryParams::set_a_ignorevary(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.cache.CacheQueryParams.a_ignoreVary)
 }
 
-// required bool a_cacheNameSet = 4;
+// optional bool a_cacheNameSet = 4;
 inline bool CacheQueryParams::_internal_has_a_cachenameset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -5731,7 +5725,7 @@ inline void CacheQueryParams::set_a_cachenameset(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.cache.CacheQueryParams.a_cacheNameSet)
 }
 
-// required string a_cacheName = 5;
+// optional string a_cacheName = 5;
 inline bool CacheQueryParams::_internal_has_a_cachename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6030,7 +6024,7 @@ inline void CacheReadStream::set_allocated_a_stream(::protobuf::mozilla::ipc::IP
 
 // HeadersEntry
 
-// required string a_name = 1;
+// optional string a_name = 1;
 inline bool HeadersEntry::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6098,7 +6092,7 @@ inline void HeadersEntry::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.cache.HeadersEntry.a_name)
 }
 
-// required string a_value = 2;
+// optional string a_value = 2;
 inline bool HeadersEntry::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6170,7 +6164,7 @@ inline void HeadersEntry::set_allocated_a_value(std::string* a_value) {
 
 // CacheRequest
 
-// required string a_method = 1;
+// optional string a_method = 1;
 inline bool CacheRequest::_internal_has_a_method() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6238,7 +6232,7 @@ inline void CacheRequest::set_allocated_a_method(std::string* a_method) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.cache.CacheRequest.a_method)
 }
 
-// required string a_urlWithoutQuery = 2;
+// optional string a_urlWithoutQuery = 2;
 inline bool CacheRequest::_internal_has_a_urlwithoutquery() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6306,7 +6300,7 @@ inline void CacheRequest::set_allocated_a_urlwithoutquery(std::string* a_urlwith
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.cache.CacheRequest.a_urlWithoutQuery)
 }
 
-// required string a_urlQuery = 3;
+// optional string a_urlQuery = 3;
 inline bool CacheRequest::_internal_has_a_urlquery() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -6374,7 +6368,7 @@ inline void CacheRequest::set_allocated_a_urlquery(std::string* a_urlquery) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.cache.CacheRequest.a_urlQuery)
 }
 
-// required string a_urlFragment = 4;
+// optional string a_urlFragment = 4;
 inline bool CacheRequest::_internal_has_a_urlfragment() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -6550,7 +6544,7 @@ inline void CacheRequest::set_allocated_a_headersguard(std::string* a_headersgua
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.cache.CacheRequest.a_headersGuard)
 }
 
-// required string a_referrer = 7;
+// optional string a_referrer = 7;
 inline bool CacheRequest::_internal_has_a_referrer() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -6912,7 +6906,7 @@ inline void CacheRequest::set_allocated_a_body(::protobuf::mozilla::dom::cache::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.cache.CacheRequest.a_body)
 }
 
-// required sint64 a_bodyDiskSize = 12;
+// optional sint64 a_bodyDiskSize = 12;
 inline bool CacheRequest::_internal_has_a_bodydisksize() const {
   bool value = (_impl_._has_bits_[0] & 0x00010000u) != 0;
   return value;
@@ -7144,7 +7138,7 @@ inline void CacheRequest::set_allocated_a_requestredirect(std::string* a_request
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.cache.CacheRequest.a_requestRedirect)
 }
 
-// required string a_integrity = 16;
+// optional string a_integrity = 16;
 inline bool CacheRequest::_internal_has_a_integrity() const {
   bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
   return value;
@@ -7514,7 +7508,7 @@ CacheResponse::mutable_a_urllist() {
   return &_impl_.a_urllist_;
 }
 
-// required uint32 a_status = 3;
+// optional uint32 a_status = 3;
 inline bool CacheResponse::_internal_has_a_status() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -7542,7 +7536,7 @@ inline void CacheResponse::set_a_status(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.cache.CacheResponse.a_status)
 }
 
-// required string a_statusText = 4;
+// optional string a_statusText = 4;
 inline bool CacheResponse::_internal_has_a_statustext() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7808,7 +7802,7 @@ inline void CacheResponse::set_allocated_a_body(::protobuf::mozilla::dom::cache:
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.cache.CacheResponse.a_body)
 }
 
-// required sint64 a_bodyDiskSize = 8;
+// optional sint64 a_bodyDiskSize = 8;
 inline bool CacheResponse::_internal_has_a_bodydisksize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -7991,7 +7985,7 @@ inline void CacheResponse::set_allocated_a_principalinfo(::protobuf::mozilla::ip
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.cache.CacheResponse.a_principalInfo)
 }
 
-// required uint32 a_paddingInfo = 11;
+// optional uint32 a_paddingInfo = 11;
 inline bool CacheResponse::_internal_has_a_paddinginfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -8019,7 +8013,7 @@ inline void CacheResponse::set_a_paddinginfo(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.cache.CacheResponse.a_paddingInfo)
 }
 
-// required sint64 a_paddingSize = 12;
+// optional sint64 a_paddingSize = 12;
 inline bool CacheResponse::_internal_has_a_paddingsize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
@@ -9539,7 +9533,7 @@ inline void StorageMatchArgs::set_allocated_a_openmode(std::string* a_openmode) 
 
 // StorageHasArgs
 
-// required string a_key = 1;
+// optional string a_key = 1;
 inline bool StorageHasArgs::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9611,7 +9605,7 @@ inline void StorageHasArgs::set_allocated_a_key(std::string* a_key) {
 
 // StorageOpenArgs
 
-// required string a_key = 1;
+// optional string a_key = 1;
 inline bool StorageOpenArgs::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9683,7 +9677,7 @@ inline void StorageOpenArgs::set_allocated_a_key(std::string* a_key) {
 
 // StorageDeleteArgs
 
-// required string a_key = 1;
+// optional string a_key = 1;
 inline bool StorageDeleteArgs::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10654,7 +10648,7 @@ CacheMatchAllResult::a_responselist() const {
 
 // CacheDeleteResult
 
-// required bool a_success = 1;
+// optional bool a_success = 1;
 inline bool CacheDeleteResult::_internal_has_a_success() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10824,7 +10818,7 @@ inline void StorageMatchResult::set_allocated_a_mayberesponse(::protobuf::mozill
 
 // StorageHasResult
 
-// required bool a_success = 1;
+// optional bool a_success = 1;
 inline bool StorageHasResult::_internal_has_a_success() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10996,7 +10990,7 @@ inline void StorageOpenResult::set_allocated_a_ns(std::string* a_ns) {
 
 // StorageDeleteResult
 
-// required bool a_success = 1;
+// optional bool a_success = 1;
 inline bool StorageDeleteResult::_internal_has_a_success() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

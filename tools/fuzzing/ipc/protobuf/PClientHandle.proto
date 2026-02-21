@@ -20,7 +20,7 @@ message Msg_Teardown {
 }
 
 message Msg_PClientHandleOpConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
   required protobuf.mozilla.dom.ClientOpConstructorArgs a_aArgs = 2;
 }
 

@@ -479,7 +479,7 @@ class Reply_RequestStateDelete final :
   enum : int {
     kAResultFieldNumber = 1,
   };
-  // required bool a_result = 1;
+  // optional bool a_result = 1;
   bool has_a_result() const;
   private:
   bool _internal_has_a_result() const;
@@ -5359,7 +5359,7 @@ class Reply_RequestHasPendingProposals final :
   enum : int {
     kAResultFieldNumber = 1,
   };
-  // required bool a_result = 1;
+  // optional bool a_result = 1;
   bool has_a_result() const;
   private:
   bool _internal_has_a_result() const;
@@ -5675,7 +5675,7 @@ class Reply_RequestClearPendingProposals final :
   enum : int {
     kAResultFieldNumber = 1,
   };
-  // required bool a_result = 1;
+  // optional bool a_result = 1;
   bool has_a_result() const;
   private:
   bool _internal_has_a_result() const;
@@ -5991,7 +5991,7 @@ class Reply_RequestHasPendingCommit final :
   enum : int {
     kAResultFieldNumber = 1,
   };
-  // required bool a_result = 1;
+  // optional bool a_result = 1;
   bool has_a_result() const;
   private:
   bool _internal_has_a_result() const;
@@ -6307,7 +6307,7 @@ class Reply_RequestClearPendingCommit final :
   enum : int {
     kAResultFieldNumber = 1,
   };
-  // required bool a_result = 1;
+  // optional bool a_result = 1;
   bool has_a_result() const;
   private:
   bool _internal_has_a_result() const;
@@ -6862,7 +6862,7 @@ class Msg_RequestExportSecret final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_content();
 
-  // required uint64 a_len = 5;
+  // optional uint64 a_len = 5;
   bool has_a_len() const;
   private:
   bool _internal_has_a_len() const;
@@ -7650,7 +7650,7 @@ class Reply_RequestGetGroupEpoch final :
 
 // Reply_RequestStateDelete
 
-// required bool a_result = 1;
+// optional bool a_result = 1;
 inline bool Reply_RequestStateDelete::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10415,7 +10415,7 @@ Msg_RequestHasPendingProposals::mutable_a_identifier() {
 
 // Reply_RequestHasPendingProposals
 
-// required bool a_result = 1;
+// optional bool a_result = 1;
 inline bool Reply_RequestHasPendingProposals::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10545,7 +10545,7 @@ Msg_RequestClearPendingProposals::mutable_a_identifier() {
 
 // Reply_RequestClearPendingProposals
 
-// required bool a_result = 1;
+// optional bool a_result = 1;
 inline bool Reply_RequestClearPendingProposals::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10675,7 +10675,7 @@ Msg_RequestHasPendingCommit::mutable_a_identifier() {
 
 // Reply_RequestHasPendingCommit
 
-// required bool a_result = 1;
+// optional bool a_result = 1;
 inline bool Reply_RequestHasPendingCommit::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10805,7 +10805,7 @@ Msg_RequestClearPendingCommit::mutable_a_identifier() {
 
 // Reply_RequestClearPendingCommit
 
-// required bool a_result = 1;
+// optional bool a_result = 1;
 inline bool Reply_RequestClearPendingCommit::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11195,7 +11195,7 @@ Msg_RequestExportSecret::mutable_a_content() {
   return _internal_mutable_a_content();
 }
 
-// required uint64 a_len = 5;
+// optional uint64 a_len = 5;
 inline bool Msg_RequestExportSecret::_internal_has_a_len() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

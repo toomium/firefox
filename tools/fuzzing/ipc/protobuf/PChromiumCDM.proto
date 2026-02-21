@@ -17,61 +17,61 @@ import "GMPTypes.proto";
 
 // Message declarations
 message Msg_Init {
-  required bool a_aAllowDistinctiveIdentifier = 1;
-  required bool a_aAllowPersistentState = 2;
+  optional bool a_aAllowDistinctiveIdentifier = 1;
+  optional bool a_aAllowPersistentState = 2;
 }
 
 message Reply_Init {
-  required bool a_aSuccess = 1;
+  optional bool a_aSuccess = 1;
 }
 
 message Msg_GetStatusForPolicy {
-  required uint32 a_aPromiseId = 1;
+  optional uint32 a_aPromiseId = 1;
   required bytes a_aMinHdcpVersion = 2;
 }
 
 message Msg_SetServerCertificate {
-  required uint32 a_aPromiseId = 1;
+  optional uint32 a_aPromiseId = 1;
   repeated uint32 a_aServerCert = 2;
 }
 
 message Msg_CreateSessionAndGenerateRequest {
-  required uint32 a_aPromiseId = 1;
-  required uint32 a_aSessionType = 2;
-  required uint32 a_aInitDataType = 3;
+  optional uint32 a_aPromiseId = 1;
+  optional uint32 a_aSessionType = 2;
+  optional uint32 a_aInitDataType = 3;
   repeated uint32 a_aInitData = 4;
 }
 
 message Msg_LoadSession {
-  required uint32 a_aPromiseId = 1;
-  required uint32 a_aSessionType = 2;
-  required string a_aSessionId = 3;
+  optional uint32 a_aPromiseId = 1;
+  optional uint32 a_aSessionType = 2;
+  optional string a_aSessionId = 3;
 }
 
 message Msg_UpdateSession {
-  required uint32 a_aPromiseId = 1;
-  required string a_aSessionId = 2;
+  optional uint32 a_aPromiseId = 1;
+  optional string a_aSessionId = 2;
   repeated uint32 a_aResponse = 3;
 }
 
 message Msg_CloseSession {
-  required uint32 a_aPromiseId = 1;
-  required string a_aSessionId = 2;
+  optional uint32 a_aPromiseId = 1;
+  optional string a_aSessionId = 2;
 }
 
 message Msg_RemoveSession {
-  required uint32 a_aPromiseId = 1;
-  required string a_aSessionId = 2;
+  optional uint32 a_aPromiseId = 1;
+  optional string a_aSessionId = 2;
 }
 
 message Msg_CompleteQueryOutputProtectionStatus {
-  required bool a_aSuccess = 1;
-  required uint32 a_aLinkMask = 2;
-  required uint32 a_aProtectionMask = 3;
+  optional bool a_aSuccess = 1;
+  optional uint32 a_aLinkMask = 2;
+  optional uint32 a_aProtectionMask = 3;
 }
 
 message Msg_Decrypt {
-  required uint32 a_aId = 1;
+  optional uint32 a_aId = 1;
   required protobuf.mozilla.gmp.CDMInputBuffer a_aBuffer = 2;
 }
 
@@ -109,67 +109,67 @@ message Reply___delete__ {
 }
 
 message Msg_OnResolvePromiseWithKeyStatus {
-  required uint32 a_aPromiseId = 1;
-  required uint32 a_aKeyStatus = 2;
+  optional uint32 a_aPromiseId = 1;
+  optional uint32 a_aKeyStatus = 2;
 }
 
 message Msg_OnResolveNewSessionPromise {
-  required uint32 a_aPromiseId = 1;
-  required string a_aSessionId = 2;
+  optional uint32 a_aPromiseId = 1;
+  optional string a_aSessionId = 2;
 }
 
 message Msg_OnResolvePromise {
-  required uint32 a_aPromiseId = 1;
+  optional uint32 a_aPromiseId = 1;
 }
 
 message Msg_OnRejectPromise {
-  required uint32 a_aPromiseId = 1;
-  required uint32 a_aException = 2;
-  required uint32 a_aSystemCode = 3;
-  required string a_aErrorMessage = 4;
+  optional uint32 a_aPromiseId = 1;
+  optional uint32 a_aException = 2;
+  optional uint32 a_aSystemCode = 3;
+  optional string a_aErrorMessage = 4;
 }
 
 message Msg_OnSessionMessage {
-  required string a_aSessionId = 1;
-  required uint32 a_aMessageType = 2;
+  optional string a_aSessionId = 1;
+  optional uint32 a_aMessageType = 2;
   repeated uint32 a_aMessage = 3;
 }
 
 message Msg_OnSessionKeysChange {
-  required string a_aSessionId = 1;
+  optional string a_aSessionId = 1;
   repeated protobuf.mozilla.gmp.CDMKeyInformation a_aKeysInfo = 2;
 }
 
 message Msg_OnExpirationChange {
-  required string a_aSessionId = 1;
-  required double a_aSecondsSinceEpoch = 2;
+  optional string a_aSessionId = 1;
+  optional double a_aSecondsSinceEpoch = 2;
 }
 
 message Msg_OnSessionClosed {
-  required string a_aSessionId = 1;
+  optional string a_aSessionId = 1;
 }
 
 message Msg_OnQueryOutputProtectionStatus {
 }
 
 message Msg_ResolveLoadSessionPromise {
-  required uint32 a_aPromiseId = 1;
-  required bool a_aSuccessful = 2;
+  optional uint32 a_aPromiseId = 1;
+  optional bool a_aSuccessful = 2;
 }
 
 message Msg_Decrypted {
-  required uint32 a_aId = 1;
-  required uint32 a_aStatus = 2;
+  optional uint32 a_aId = 1;
+  optional uint32 a_aStatus = 2;
   required bytes a_aDecryptedData = 3;
 }
 
 message Msg_DecryptFailed {
-  required uint32 a_aId = 1;
-  required uint32 a_aStatus = 2;
+  optional uint32 a_aId = 1;
+  optional uint32 a_aStatus = 2;
 }
 
 message Msg_OnDecoderInitDone {
-  required uint32 a_aStatus = 1;
+  optional uint32 a_aStatus = 1;
 }
 
 message Msg_DecodedShmem {
@@ -183,7 +183,7 @@ message Msg_DecodedData {
 }
 
 message Msg_DecodeFailed {
-  required uint32 a_aStatus = 1;
+  optional uint32 a_aStatus = 1;
 }
 
 message Msg_ResetVideoDecoderComplete {

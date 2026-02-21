@@ -34,41 +34,41 @@ message Msg_ForceEnd {
 }
 
 message Msg_SetAudioOutputVolume {
-  required float a_aVolume = 1;
+  optional float a_aVolume = 1;
 }
 
 message Msg_OnEnd {
-  required bool a_aIsError = 1;
-  required float a_aElapsedTime = 2;
-  required uint32 a_aCharIndex = 3;
+  optional bool a_aIsError = 1;
+  optional float a_aElapsedTime = 2;
+  optional uint32 a_aCharIndex = 3;
 }
 
 message Msg_OnStart {
-  required string a_aUri = 1;
+  optional string a_aUri = 1;
 }
 
 message Msg_OnPause {
-  required float a_aElapsedTime = 1;
-  required uint32 a_aCharIndex = 2;
+  optional float a_aElapsedTime = 1;
+  optional uint32 a_aCharIndex = 2;
 }
 
 message Msg_OnResume {
-  required float a_aElapsedTime = 1;
-  required uint32 a_aCharIndex = 2;
+  optional float a_aElapsedTime = 1;
+  optional uint32 a_aCharIndex = 2;
 }
 
 message Msg_OnBoundary {
-  required string a_aName = 1;
-  required float a_aElapsedTime = 2;
-  required uint32 a_aCharIndex = 3;
-  required uint32 a_aCharLength = 4;
-  required uint32 a_argc = 5;
+  optional string a_aName = 1;
+  optional float a_aElapsedTime = 2;
+  optional uint32 a_aCharIndex = 3;
+  optional uint32 a_aCharLength = 4;
+  optional uint32 a_argc = 5;
 }
 
 message Msg_OnMark {
-  required string a_aName = 1;
-  required float a_aElapsedTime = 2;
-  required uint32 a_aCharIndex = 3;
+  optional string a_aName = 1;
+  optional float a_aElapsedTime = 2;
+  optional uint32 a_aCharIndex = 3;
 }
 
 // Parameter mappings stats:

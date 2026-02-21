@@ -555,7 +555,7 @@ class Msg_PTextureConstructor final :
       ::protobuf::mozilla::layers::ReadLockDescriptor* a_areadlock);
   ::protobuf::mozilla::layers::ReadLockDescriptor* unsafe_arena_release_a_areadlock();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -568,7 +568,7 @@ class Msg_PTextureConstructor final :
   void _internal_set_a_actorid(int64_t value);
   public:
 
-  // required uint64 a_aSerial = 7;
+  // optional uint64 a_aSerial = 7;
   bool has_a_aserial() const;
   private:
   bool _internal_has_a_aserial() const;
@@ -816,7 +816,7 @@ inline void Reply_Ping::set_allocated_a_ok(std::string* a_ok) {
 
 // Msg_PTextureConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PTextureConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -1222,7 +1222,7 @@ inline void Msg_PTextureConstructor::set_allocated_a_acontentid(std::string* a_a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PVideoBridge.Msg_PTextureConstructor.a_aContentId)
 }
 
-// required uint64 a_aSerial = 7;
+// optional uint64 a_aSerial = 7;
 inline bool Msg_PTextureConstructor::_internal_has_a_aserial() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;

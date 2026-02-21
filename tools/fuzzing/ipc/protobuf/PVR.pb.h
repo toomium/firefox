@@ -834,7 +834,7 @@ class Msg_OpenVRControllerActionPathToVR final :
   enum : int {
     kAAPathFieldNumber = 1,
   };
-  // required string a_aPath = 1;
+  // optional string a_aPath = 1;
   bool has_a_apath() const;
   private:
   bool _internal_has_a_apath() const;
@@ -1000,7 +1000,7 @@ class Msg_OpenVRControllerManifestPathToVR final :
   std::string* _internal_mutable_a_atype();
   public:
 
-  // required string a_aPath = 2;
+  // optional string a_aPath = 2;
   bool has_a_apath() const;
   private:
   bool _internal_has_a_apath() const;
@@ -1021,9 +1021,6 @@ class Msg_OpenVRControllerManifestPathToVR final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerManifestPathToVR)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1172,7 +1169,7 @@ class Msg_RequestMemoryReport final :
   std::string* _internal_mutable_a_dmdfile();
   public:
 
-  // required uint32 a_generation = 1;
+  // optional uint32 a_generation = 1;
   bool has_a_generation() const;
   private:
   bool _internal_has_a_generation() const;
@@ -1185,7 +1182,7 @@ class Msg_RequestMemoryReport final :
   void _internal_set_a_generation(uint32_t value);
   public:
 
-  // required bool a_anonymize = 2;
+  // optional bool a_anonymize = 2;
   bool has_a_anonymize() const;
   private:
   bool _internal_has_a_anonymize() const;
@@ -1198,7 +1195,7 @@ class Msg_RequestMemoryReport final :
   void _internal_set_a_anonymize(bool value);
   public:
 
-  // required bool a_minimizeMemoryUsage = 3;
+  // optional bool a_minimizeMemoryUsage = 3;
   bool has_a_minimizememoryusage() const;
   private:
   bool _internal_has_a_minimizememoryusage() const;
@@ -1214,9 +1211,6 @@ class Msg_RequestMemoryReport final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PVR.Msg_RequestMemoryReport)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1346,7 +1340,7 @@ class Reply_RequestMemoryReport final :
   enum : int {
     kAAGenerationFieldNumber = 1,
   };
-  // required uint32 a_aGeneration = 1;
+  // optional uint32 a_aGeneration = 1;
   bool has_a_ageneration() const;
   private:
   bool _internal_has_a_ageneration() const;
@@ -1612,7 +1606,7 @@ class Msg_OpenVRControllerActionPathToParent final :
   enum : int {
     kAAPathFieldNumber = 1,
   };
-  // required string a_aPath = 1;
+  // optional string a_aPath = 1;
   bool has_a_apath() const;
   private:
   bool _internal_has_a_apath() const;
@@ -1778,7 +1772,7 @@ class Msg_OpenVRControllerManifestPathToParent final :
   std::string* _internal_mutable_a_atype();
   public:
 
-  // required string a_aPath = 2;
+  // optional string a_aPath = 2;
   bool has_a_apath() const;
   private:
   bool _internal_has_a_apath() const;
@@ -1799,9 +1793,6 @@ class Msg_OpenVRControllerManifestPathToParent final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerManifestPathToParent)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2502,7 +2493,7 @@ inline void Msg_PreferenceUpdate::set_allocated_a_pref(::protobuf::mozilla::dom:
 
 // Msg_OpenVRControllerActionPathToVR
 
-// required string a_aPath = 1;
+// optional string a_aPath = 1;
 inline bool Msg_OpenVRControllerActionPathToVR::_internal_has_a_apath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2642,7 +2633,7 @@ inline void Msg_OpenVRControllerManifestPathToVR::set_allocated_a_atype(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerManifestPathToVR.a_aType)
 }
 
-// required string a_aPath = 2;
+// optional string a_aPath = 2;
 inline bool Msg_OpenVRControllerManifestPathToVR::_internal_has_a_apath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2714,7 +2705,7 @@ inline void Msg_OpenVRControllerManifestPathToVR::set_allocated_a_apath(std::str
 
 // Msg_RequestMemoryReport
 
-// required uint32 a_generation = 1;
+// optional uint32 a_generation = 1;
 inline bool Msg_RequestMemoryReport::_internal_has_a_generation() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2742,7 +2733,7 @@ inline void Msg_RequestMemoryReport::set_a_generation(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVR.Msg_RequestMemoryReport.a_generation)
 }
 
-// required bool a_anonymize = 2;
+// optional bool a_anonymize = 2;
 inline bool Msg_RequestMemoryReport::_internal_has_a_anonymize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2770,7 +2761,7 @@ inline void Msg_RequestMemoryReport::set_a_anonymize(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVR.Msg_RequestMemoryReport.a_anonymize)
 }
 
-// required bool a_minimizeMemoryUsage = 3;
+// optional bool a_minimizeMemoryUsage = 3;
 inline bool Msg_RequestMemoryReport::_internal_has_a_minimizememoryusage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -2870,7 +2861,7 @@ inline void Msg_RequestMemoryReport::set_allocated_a_dmdfile(std::string* a_dmdf
 
 // Reply_RequestMemoryReport
 
-// required uint32 a_aGeneration = 1;
+// optional uint32 a_aGeneration = 1;
 inline bool Reply_RequestMemoryReport::_internal_has_a_ageneration() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2906,7 +2897,7 @@ inline void Reply_RequestMemoryReport::set_a_ageneration(uint32_t value) {
 
 // Msg_OpenVRControllerActionPathToParent
 
-// required string a_aPath = 1;
+// optional string a_aPath = 1;
 inline bool Msg_OpenVRControllerActionPathToParent::_internal_has_a_apath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3046,7 +3037,7 @@ inline void Msg_OpenVRControllerManifestPathToParent::set_allocated_a_atype(std:
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerManifestPathToParent.a_aType)
 }
 
-// required string a_aPath = 2;
+// optional string a_aPath = 2;
 inline bool Msg_OpenVRControllerManifestPathToParent::_internal_has_a_apath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

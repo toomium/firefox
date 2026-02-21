@@ -31,25 +31,25 @@ message Msg_RespondPayment {
 }
 
 message Msg_ChangeShippingAddress {
-  required string a_aRequestId = 1;
+  optional string a_aRequestId = 1;
   required protobuf.mozilla.dom.IPCPaymentAddress a_aAddress = 2;
 }
 
 message Msg_ChangeShippingOption {
-  required string a_aRequestId = 1;
-  required string a_aOption = 2;
+  optional string a_aRequestId = 1;
+  optional string a_aOption = 2;
 }
 
 message Msg_ChangePayerDetail {
-  required string a_aRequestId = 1;
-  required string a_aPayerName = 2;
-  required string a_aPayerEmail = 3;
-  required string a_aPayerPhone = 4;
+  optional string a_aRequestId = 1;
+  optional string a_aPayerName = 2;
+  optional string a_aPayerEmail = 3;
+  optional string a_aPayerPhone = 4;
 }
 
 message Msg_ChangePaymentMethod {
-  required string a_aRequestId = 1;
-  required string a_aMethodName = 2;
+  optional string a_aRequestId = 1;
+  optional string a_aMethodName = 2;
   required protobuf.mozilla.dom.IPCMethodChangeDetails a_aMethodDetails = 3;
 }
 

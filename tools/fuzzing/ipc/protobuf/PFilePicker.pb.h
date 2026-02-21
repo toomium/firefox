@@ -266,7 +266,7 @@ class Msg_Open final :
   std::string* _internal_add_a_rawfilters();
   public:
 
-  // required string a_defaultFile = 3;
+  // optional string a_defaultFile = 3;
   bool has_a_defaultfile() const;
   private:
   bool _internal_has_a_defaultfile() const;
@@ -284,7 +284,7 @@ class Msg_Open final :
   std::string* _internal_mutable_a_defaultfile();
   public:
 
-  // required string a_defaultExtension = 4;
+  // optional string a_defaultExtension = 4;
   bool has_a_defaultextension() const;
   private:
   bool _internal_has_a_defaultextension() const;
@@ -302,7 +302,7 @@ class Msg_Open final :
   std::string* _internal_mutable_a_defaultextension();
   public:
 
-  // required string a_displayDirectory = 8;
+  // optional string a_displayDirectory = 8;
   bool has_a_displaydirectory() const;
   private:
   bool _internal_has_a_displaydirectory() const;
@@ -320,7 +320,7 @@ class Msg_Open final :
   std::string* _internal_mutable_a_displaydirectory();
   public:
 
-  // required string a_displaySpecialDirectory = 9;
+  // optional string a_displaySpecialDirectory = 9;
   bool has_a_displayspecialdirectory() const;
   private:
   bool _internal_has_a_displayspecialdirectory() const;
@@ -338,7 +338,7 @@ class Msg_Open final :
   std::string* _internal_mutable_a_displayspecialdirectory();
   public:
 
-  // required string a_okButtonLabel = 10;
+  // optional string a_okButtonLabel = 10;
   bool has_a_okbuttonlabel() const;
   private:
   bool _internal_has_a_okbuttonlabel() const;
@@ -374,7 +374,7 @@ class Msg_Open final :
   std::string* _internal_mutable_a_capture();
   public:
 
-  // required sint32 a_selectedType = 1;
+  // optional sint32 a_selectedType = 1;
   bool has_a_selectedtype() const;
   private:
   bool _internal_has_a_selectedtype() const;
@@ -387,7 +387,7 @@ class Msg_Open final :
   void _internal_set_a_selectedtype(int32_t value);
   public:
 
-  // required bool a_addToRecentDocs = 2;
+  // optional bool a_addToRecentDocs = 2;
   bool has_a_addtorecentdocs() const;
   private:
   bool _internal_has_a_addtorecentdocs() const;
@@ -403,9 +403,6 @@ class Msg_Open final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PFilePicker.Msg_Open)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -733,7 +730,7 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_Open
 
-// required sint32 a_selectedType = 1;
+// optional sint32 a_selectedType = 1;
 inline bool Msg_Open::_internal_has_a_selectedtype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -761,7 +758,7 @@ inline void Msg_Open::set_a_selectedtype(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PFilePicker.Msg_Open.a_selectedType)
 }
 
-// required bool a_addToRecentDocs = 2;
+// optional bool a_addToRecentDocs = 2;
 inline bool Msg_Open::_internal_has_a_addtorecentdocs() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -789,7 +786,7 @@ inline void Msg_Open::set_a_addtorecentdocs(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PFilePicker.Msg_Open.a_addToRecentDocs)
 }
 
-// required string a_defaultFile = 3;
+// optional string a_defaultFile = 3;
 inline bool Msg_Open::_internal_has_a_defaultfile() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -857,7 +854,7 @@ inline void Msg_Open::set_allocated_a_defaultfile(std::string* a_defaultfile) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PFilePicker.Msg_Open.a_defaultFile)
 }
 
-// required string a_defaultExtension = 4;
+// optional string a_defaultExtension = 4;
 inline bool Msg_Open::_internal_has_a_defaultextension() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1150,7 +1147,7 @@ Msg_Open::mutable_a_rawfilters() {
   return &_impl_.a_rawfilters_;
 }
 
-// required string a_displayDirectory = 8;
+// optional string a_displayDirectory = 8;
 inline bool Msg_Open::_internal_has_a_displaydirectory() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1218,7 +1215,7 @@ inline void Msg_Open::set_allocated_a_displaydirectory(std::string* a_displaydir
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PFilePicker.Msg_Open.a_displayDirectory)
 }
 
-// required string a_displaySpecialDirectory = 9;
+// optional string a_displaySpecialDirectory = 9;
 inline bool Msg_Open::_internal_has_a_displayspecialdirectory() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1286,7 +1283,7 @@ inline void Msg_Open::set_allocated_a_displayspecialdirectory(std::string* a_dis
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PFilePicker.Msg_Open.a_displaySpecialDirectory)
 }
 
-// required string a_okButtonLabel = 10;
+// optional string a_okButtonLabel = 10;
 inline bool Msg_Open::_internal_has_a_okbuttonlabel() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;

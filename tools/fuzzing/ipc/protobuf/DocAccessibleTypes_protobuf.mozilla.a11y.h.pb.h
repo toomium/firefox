@@ -190,7 +190,7 @@ class CacheData final :
   std::string* _internal_mutable_a_fields();
   public:
 
-  // required uint64 a_ID = 1;
+  // optional uint64 a_ID = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -230,7 +230,7 @@ class CacheData final :
 #endif  // __GNUC__
 // CacheData
 
-// required uint64 a_ID = 1;
+// optional uint64 a_ID = 1;
 inline bool CacheData::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

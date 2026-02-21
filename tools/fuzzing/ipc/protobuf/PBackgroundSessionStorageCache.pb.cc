@@ -576,8 +576,6 @@ void Reply_Load::CopyFrom(const Reply_Load& from) {
 }
 
 bool Reply_Load::IsInitialized() const {
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_adata_))
-    return false;
   return true;
 }
 
@@ -768,8 +766,6 @@ void Msg_Checkpoint::CopyFrom(const Msg_Checkpoint& from) {
 }
 
 bool Msg_Checkpoint::IsInitialized() const {
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_awriteinfos_))
-    return false;
   return true;
 }
 

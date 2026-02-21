@@ -438,7 +438,7 @@ class Msg_ExecuteCommand final :
   enum : int {
     kAACommandFieldNumber = 1,
   };
-  // required string a_aCommand = 1;
+  // optional string a_aCommand = 1;
   bool has_a_acommand() const;
   private:
   bool _internal_has_a_acommand() const;
@@ -586,7 +586,7 @@ class Msg_PTestShellCommandConstructor final :
     kAACommandFieldNumber = 2,
     kAActoridFieldNumber = 1,
   };
-  // required string a_aCommand = 2;
+  // optional string a_aCommand = 2;
   bool has_a_acommand() const;
   private:
   bool _internal_has_a_acommand() const;
@@ -604,7 +604,7 @@ class Msg_PTestShellCommandConstructor final :
   std::string* _internal_mutable_a_acommand();
   public:
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -620,9 +620,6 @@ class Msg_PTestShellCommandConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PTestShell.Msg_PTestShellCommandConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -779,7 +776,7 @@ class Reply_PTestShellCommandConstructor final :
 
 // Msg_ExecuteCommand
 
-// required string a_aCommand = 1;
+// optional string a_aCommand = 1;
 inline bool Msg_ExecuteCommand::_internal_has_a_acommand() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -851,7 +848,7 @@ inline void Msg_ExecuteCommand::set_allocated_a_acommand(std::string* a_acommand
 
 // Msg_PTestShellCommandConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PTestShellCommandConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -879,7 +876,7 @@ inline void Msg_PTestShellCommandConstructor::set_a_actorid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PTestShell.Msg_PTestShellCommandConstructor.a_actorid)
 }
 
-// required string a_aCommand = 2;
+// optional string a_aCommand = 2;
 inline bool Msg_PTestShellCommandConstructor::_internal_has_a_acommand() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

@@ -213,7 +213,7 @@ class Msg_PTestDescendantSubConstructor final :
   std::string* _internal_mutable_a_dummy();
   public:
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -919,7 +919,7 @@ class Msg_Ok final :
 #endif  // __GNUC__
 // Msg_PTestDescendantSubConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PTestDescendantSubConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

@@ -877,7 +877,7 @@ class Msg_OnStartRequest final :
   std::string* _internal_mutable_a_achannelstatus();
   public:
 
-  // required string a_aContentType = 3;
+  // optional string a_aContentType = 3;
   bool has_a_acontenttype() const;
   private:
   bool _internal_has_a_acontenttype() const;
@@ -895,7 +895,7 @@ class Msg_OnStartRequest final :
   std::string* _internal_mutable_a_acontenttype();
   public:
 
-  // required string a_aEntityID = 4;
+  // optional string a_aEntityID = 4;
   bool has_a_aentityid() const;
   private:
   bool _internal_has_a_aentityid() const;
@@ -931,7 +931,7 @@ class Msg_OnStartRequest final :
       ::protobuf::mozilla::ipc::URIParams* a_auri);
   ::protobuf::mozilla::ipc::URIParams* unsafe_arena_release_a_auri();
 
-  // required sint64 a_aContentLength = 2;
+  // optional sint64 a_aContentLength = 2;
   bool has_a_acontentlength() const;
   private:
   bool _internal_has_a_acontentlength() const;
@@ -1101,7 +1101,7 @@ class Msg_OnDataAvailable final :
   std::string* _internal_mutable_a_channelstatus();
   public:
 
-  // required string a_data = 2;
+  // optional string a_data = 2;
   bool has_a_data() const;
   private:
   bool _internal_has_a_data() const;
@@ -1119,7 +1119,7 @@ class Msg_OnDataAvailable final :
   std::string* _internal_mutable_a_data();
   public:
 
-  // required uint64 a_offset = 3;
+  // optional uint64 a_offset = 3;
   bool has_a_offset() const;
   private:
   bool _internal_has_a_offset() const;
@@ -1132,7 +1132,7 @@ class Msg_OnDataAvailable final :
   void _internal_set_a_offset(uint64_t value);
   public:
 
-  // required uint32 a_count = 4;
+  // optional uint32 a_count = 4;
   bool has_a_count() const;
   private:
   bool _internal_has_a_count() const;
@@ -1148,9 +1148,6 @@ class Msg_OnDataAvailable final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1751,7 +1748,7 @@ inline void Msg_OnStartRequest::set_allocated_a_achannelstatus(std::string* a_ac
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.a_aChannelStatus)
 }
 
-// required sint64 a_aContentLength = 2;
+// optional sint64 a_aContentLength = 2;
 inline bool Msg_OnStartRequest::_internal_has_a_acontentlength() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -1779,7 +1776,7 @@ inline void Msg_OnStartRequest::set_a_acontentlength(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.a_aContentLength)
 }
 
-// required string a_aContentType = 3;
+// optional string a_aContentType = 3;
 inline bool Msg_OnStartRequest::_internal_has_a_acontenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1847,7 +1844,7 @@ inline void Msg_OnStartRequest::set_allocated_a_acontenttype(std::string* a_acon
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.a_aContentType)
 }
 
-// required string a_aEntityID = 4;
+// optional string a_aEntityID = 4;
 inline bool Msg_OnStartRequest::_internal_has_a_aentityid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2074,7 +2071,7 @@ inline void Msg_OnDataAvailable::set_allocated_a_channelstatus(std::string* a_ch
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.a_channelStatus)
 }
 
-// required string a_data = 2;
+// optional string a_data = 2;
 inline bool Msg_OnDataAvailable::_internal_has_a_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2142,7 +2139,7 @@ inline void Msg_OnDataAvailable::set_allocated_a_data(std::string* a_data) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.a_data)
 }
 
-// required uint64 a_offset = 3;
+// optional uint64 a_offset = 3;
 inline bool Msg_OnDataAvailable::_internal_has_a_offset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2170,7 +2167,7 @@ inline void Msg_OnDataAvailable::set_a_offset(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.a_offset)
 }
 
-// required uint32 a_count = 4;
+// optional uint32 a_count = 4;
 inline bool Msg_OnDataAvailable::_internal_has_a_count() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;

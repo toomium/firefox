@@ -16,32 +16,32 @@ package protobuf.mozilla.gfx.PCanvasManager;
 
 // Message declarations
 message Msg_PCanvasConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
 }
 
 message Reply_PCanvasConstructor {
 }
 
 message Msg_PWebGLConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
 }
 
 message Reply_PWebGLConstructor {
 }
 
 message Msg_PWebGPUConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
 }
 
 message Reply_PWebGPUConstructor {
 }
 
 message Msg_Initialize {
-  required uint32 a_aManagerId = 1;
+  optional uint32 a_aManagerId = 1;
 }
 
 message Msg_GetSnapshot {
-  required uint32 a_aManagerId = 1;
+  optional uint32 a_aManagerId = 1;
   required bytes a_aProtocolId = 2;
   optional bytes a_ownerId = 3;
   optional bytes a_commandEncoderId = 4;

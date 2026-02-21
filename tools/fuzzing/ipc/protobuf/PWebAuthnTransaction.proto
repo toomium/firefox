@@ -36,7 +36,7 @@ message Msg_RequestIsUVPAA {
 }
 
 message Reply_RequestIsUVPAA {
-  required bool a_available = 1;
+  optional bool a_available = 1;
 }
 
 message Msg_RequestCancel {

@@ -115,7 +115,7 @@ class Msg_CancelDNSRequest::_Internal {
     (*has_bits)[0] |= 16u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000007f) ^ 0x0000007f) != 0;
+    return ((has_bits[0] & 0x0000001c) ^ 0x0000001c) != 0;
   }
 };
 
@@ -285,7 +285,7 @@ const char* Msg_CancelDNSRequest::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_hostName = 1;
+      // optional string a_hostName = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_hostname();
@@ -294,7 +294,7 @@ const char* Msg_CancelDNSRequest::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // required string a_trrServer = 2;
+      // optional string a_trrServer = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_trrserver();
@@ -303,7 +303,7 @@ const char* Msg_CancelDNSRequest::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_port = 3;
+      // optional sint32 a_port = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_port(&has_bits);
@@ -312,7 +312,7 @@ const char* Msg_CancelDNSRequest::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_type = 4;
+      // optional uint32 a_type = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_a_type(&has_bits);
@@ -379,25 +379,25 @@ uint8_t* Msg_CancelDNSRequest::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_hostName = 1;
+  // optional string a_hostName = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_hostname(), target);
   }
 
-  // required string a_trrServer = 2;
+  // optional string a_trrServer = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_trrserver(), target);
   }
 
-  // required sint32 a_port = 3;
+  // optional sint32 a_port = 3;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_a_port(), target);
   }
 
-  // required uint32 a_type = 4;
+  // optional uint32 a_type = 4;
   if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(4, this->_internal_a_type(), target);
@@ -433,20 +433,6 @@ size_t Msg_CancelDNSRequest::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.PDNSRequest.Msg_CancelDNSRequest)
   size_t total_size = 0;
 
-  if (_internal_has_a_hostname()) {
-    // required string a_hostName = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_hostname());
-  }
-
-  if (_internal_has_a_trrserver()) {
-    // required string a_trrServer = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_trrserver());
-  }
-
   if (_internal_has_a_originattributes()) {
     // required bytes a_originAttributes = 5;
     total_size += 1 +
@@ -468,33 +454,13 @@ size_t Msg_CancelDNSRequest::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_reason());
   }
 
-  if (_internal_has_a_port()) {
-    // required sint32 a_port = 3;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_port());
-  }
-
-  if (_internal_has_a_type()) {
-    // required uint32 a_type = 4;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_type());
-  }
-
   return total_size;
 }
 size_t Msg_CancelDNSRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PDNSRequest.Msg_CancelDNSRequest)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000007f) ^ 0x0000007f) == 0) {  // All required fields are present.
-    // required string a_hostName = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_hostname());
-
-    // required string a_trrServer = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_trrserver());
-
+  if (((_impl_._has_bits_[0] & 0x0000001c) ^ 0x0000001c) == 0) {  // All required fields are present.
     // required bytes a_originAttributes = 5;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -510,12 +476,6 @@ size_t Msg_CancelDNSRequest::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_reason());
 
-    // required sint32 a_port = 3;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_port());
-
-    // required uint32 a_type = 4;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_type());
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
@@ -523,6 +483,35 @@ size_t Msg_CancelDNSRequest::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional string a_hostName = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_hostname());
+    }
+
+    // optional string a_trrServer = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_trrserver());
+    }
+
+  }
+  if (cached_has_bits & 0x00000060u) {
+    // optional sint32 a_port = 3;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_port());
+    }
+
+    // optional uint32 a_type = 4;
+    if (cached_has_bits & 0x00000040u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_type());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }

@@ -340,7 +340,7 @@ class Msg_StreamNeeded final :
     kAAStartFieldNumber = 1,
     kAALengthFieldNumber = 2,
   };
-  // required uint64 a_aStart = 1;
+  // optional uint64 a_aStart = 1;
   bool has_a_astart() const;
   private:
   bool _internal_has_a_astart() const;
@@ -353,7 +353,7 @@ class Msg_StreamNeeded final :
   void _internal_set_a_astart(uint64_t value);
   public:
 
-  // required uint64 a_aLength = 2;
+  // optional uint64 a_aLength = 2;
   bool has_a_alength() const;
   private:
   bool _internal_has_a_alength() const;
@@ -369,9 +369,6 @@ class Msg_StreamNeeded final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PRemoteLazyInputStream.Msg_StreamNeeded)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -770,7 +767,7 @@ class Reply_LengthNeeded final :
   enum : int {
     kALengthFieldNumber = 1,
   };
-  // required sint64 a_length = 1;
+  // optional sint64 a_length = 1;
   bool has_a_length() const;
   private:
   bool _internal_has_a_length() const;
@@ -1005,7 +1002,7 @@ inline void Msg_Clone::set_allocated_a_acloneendpoint(std::string* a_acloneendpo
 
 // Msg_StreamNeeded
 
-// required uint64 a_aStart = 1;
+// optional uint64 a_aStart = 1;
 inline bool Msg_StreamNeeded::_internal_has_a_astart() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1033,7 +1030,7 @@ inline void Msg_StreamNeeded::set_a_astart(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteLazyInputStream.Msg_StreamNeeded.a_aStart)
 }
 
-// required uint64 a_aLength = 2;
+// optional uint64 a_aLength = 2;
 inline bool Msg_StreamNeeded::_internal_has_a_alength() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1160,7 +1157,7 @@ inline void Reply_StreamNeeded::set_allocated_a_stream(::protobuf::mozilla::ipc:
 
 // Reply_LengthNeeded
 
-// required sint64 a_length = 1;
+// optional sint64 a_length = 1;
 inline bool Reply_LengthNeeded::_internal_has_a_length() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

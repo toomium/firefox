@@ -104,9 +104,6 @@ class LookAndFeelFont::_Internal {
   static void set_has_a_italic(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000001f) ^ 0x0000001f) != 0;
-  }
 };
 
 LookAndFeelFont::LookAndFeelFont(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -205,7 +202,7 @@ const char* LookAndFeelFont::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_haveFont = 1;
+      // optional bool a_haveFont = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_havefont(&has_bits);
@@ -214,7 +211,7 @@ const char* LookAndFeelFont::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required string a_name = 2;
+      // optional string a_name = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_name();
@@ -223,7 +220,7 @@ const char* LookAndFeelFont::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required float a_size = 3;
+      // optional float a_size = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 29)) {
           _Internal::set_has_a_size(&has_bits);
@@ -232,7 +229,7 @@ const char* LookAndFeelFont::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required float a_weight = 4;
+      // optional float a_weight = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 37)) {
           _Internal::set_has_a_weight(&has_bits);
@@ -241,7 +238,7 @@ const char* LookAndFeelFont::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required bool a_italic = 5;
+      // optional bool a_italic = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_a_italic(&has_bits);
@@ -281,31 +278,31 @@ uint8_t* LookAndFeelFont::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_haveFont = 1;
+  // optional bool a_haveFont = 1;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_havefont(), target);
   }
 
-  // required string a_name = 2;
+  // optional string a_name = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_name(), target);
   }
 
-  // required float a_size = 3;
+  // optional float a_size = 3;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(3, this->_internal_a_size(), target);
   }
 
-  // required float a_weight = 4;
+  // optional float a_weight = 4;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(4, this->_internal_a_weight(), target);
   }
 
-  // required bool a_italic = 5;
+  // optional bool a_italic = 5;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_a_italic(), target);
@@ -319,68 +316,44 @@ uint8_t* LookAndFeelFont::_InternalSerialize(
   return target;
 }
 
-size_t LookAndFeelFont::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.widget.LookAndFeelFont)
-  size_t total_size = 0;
-
-  if (_internal_has_a_name()) {
-    // required string a_name = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_name());
-  }
-
-  if (_internal_has_a_size()) {
-    // required float a_size = 3;
-    total_size += 1 + 4;
-  }
-
-  if (_internal_has_a_havefont()) {
-    // required bool a_haveFont = 1;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_italic()) {
-    // required bool a_italic = 5;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_weight()) {
-    // required float a_weight = 4;
-    total_size += 1 + 4;
-  }
-
-  return total_size;
-}
 size_t LookAndFeelFont::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.widget.LookAndFeelFont)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
-    // required string a_name = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_name());
-
-    // required float a_size = 3;
-    total_size += 1 + 4;
-
-    // required bool a_haveFont = 1;
-    total_size += 1 + 1;
-
-    // required bool a_italic = 5;
-    total_size += 1 + 1;
-
-    // required float a_weight = 4;
-    total_size += 1 + 4;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000001fu) {
+    // optional string a_name = 2;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_name());
+    }
+
+    // optional float a_size = 3;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 + 4;
+    }
+
+    // optional bool a_haveFont = 1;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool a_italic = 5;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += 1 + 1;
+    }
+
+    // optional float a_weight = 4;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += 1 + 4;
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -432,7 +405,6 @@ void LookAndFeelFont::CopyFrom(const LookAndFeelFont& from) {
 }
 
 bool LookAndFeelFont::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -469,9 +441,6 @@ class LookAndFeelTables::_Internal {
   }
   static void set_has_a_passwordecho(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
   }
 };
 
@@ -742,7 +711,7 @@ const char* LookAndFeelTables::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_passwordChar = 11;
+      // optional uint32 a_passwordChar = 11;
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 88)) {
           _Internal::set_has_a_passwordchar(&has_bits);
@@ -751,7 +720,7 @@ const char* LookAndFeelTables::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required bool a_passwordEcho = 12;
+      // optional bool a_passwordEcho = 12;
       case 12:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 96)) {
           _Internal::set_has_a_passwordecho(&has_bits);
@@ -853,13 +822,13 @@ uint8_t* LookAndFeelTables::_InternalSerialize(
   }
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 a_passwordChar = 11;
+  // optional uint32 a_passwordChar = 11;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(11, this->_internal_a_passwordchar(), target);
   }
 
-  // required bool a_passwordEcho = 12;
+  // optional bool a_passwordEcho = 12;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(12, this->_internal_a_passwordecho(), target);
@@ -873,36 +842,10 @@ uint8_t* LookAndFeelTables::_InternalSerialize(
   return target;
 }
 
-size_t LookAndFeelTables::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.widget.LookAndFeelTables)
-  size_t total_size = 0;
-
-  if (_internal_has_a_passwordchar()) {
-    // required uint32 a_passwordChar = 11;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_passwordchar());
-  }
-
-  if (_internal_has_a_passwordecho()) {
-    // required bool a_passwordEcho = 12;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t LookAndFeelTables::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.widget.LookAndFeelTables)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required uint32 a_passwordChar = 11;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_passwordchar());
-
-    // required bool a_passwordEcho = 12;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -993,6 +936,19 @@ size_t LookAndFeelTables::ByteSizeLong() const {
     total_size += data_size;
   }
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional uint32 a_passwordChar = 11;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_passwordchar());
+    }
+
+    // optional bool a_passwordEcho = 12;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 + 1;
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -1045,9 +1001,6 @@ void LookAndFeelTables::CopyFrom(const LookAndFeelTables& from) {
 }
 
 bool LookAndFeelTables::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_fonts_))
-    return false;
   return true;
 }
 
@@ -1273,9 +1226,6 @@ void FullLookAndFeel::CopyFrom(const FullLookAndFeel& from) {
 
 bool FullLookAndFeel::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_tables()) {
-    if (!_impl_.a_tables_->IsInitialized()) return false;
-  }
   return true;
 }
 

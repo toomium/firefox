@@ -309,7 +309,7 @@ class MessagePortIdentifier final :
   std::string* _internal_mutable_a_destinationuuid();
   public:
 
-  // required uint32 a_sequenceId = 3;
+  // optional uint32 a_sequenceId = 3;
   bool has_a_sequenceid() const;
   private:
   bool _internal_has_a_sequenceid() const;
@@ -322,7 +322,7 @@ class MessagePortIdentifier final :
   void _internal_set_a_sequenceid(uint32_t value);
   public:
 
-  // required bool a_neutered = 4;
+  // optional bool a_neutered = 4;
   bool has_a_neutered() const;
   private:
   bool _internal_has_a_neutered() const;
@@ -1624,7 +1624,7 @@ class ScreenDetails final :
   std::string* _internal_mutable_a_orientation();
   public:
 
-  // required sint32 a_pixelDepth = 5;
+  // optional sint32 a_pixelDepth = 5;
   bool has_a_pixeldepth() const;
   private:
   bool _internal_has_a_pixeldepth() const;
@@ -1637,7 +1637,7 @@ class ScreenDetails final :
   void _internal_set_a_pixeldepth(int32_t value);
   public:
 
-  // required sint32 a_colorDepth = 6;
+  // optional sint32 a_colorDepth = 6;
   bool has_a_colordepth() const;
   private:
   bool _internal_has_a_colordepth() const;
@@ -1650,7 +1650,7 @@ class ScreenDetails final :
   void _internal_set_a_colordepth(int32_t value);
   public:
 
-  // required uint32 a_refreshRate = 7;
+  // optional uint32 a_refreshRate = 7;
   bool has_a_refreshrate() const;
   private:
   bool _internal_has_a_refreshrate() const;
@@ -1663,7 +1663,7 @@ class ScreenDetails final :
   void _internal_set_a_refreshrate(uint32_t value);
   public:
 
-  // required float a_dpi = 10;
+  // optional float a_dpi = 10;
   bool has_a_dpi() const;
   private:
   bool _internal_has_a_dpi() const;
@@ -1676,7 +1676,7 @@ class ScreenDetails final :
   void _internal_set_a_dpi(float value);
   public:
 
-  // required uint32 a_orientationAngle = 12;
+  // optional uint32 a_orientationAngle = 12;
   bool has_a_orientationangle() const;
   private:
   bool _internal_has_a_orientationangle() const;
@@ -1689,7 +1689,7 @@ class ScreenDetails final :
   void _internal_set_a_orientationangle(uint32_t value);
   public:
 
-  // required bool a_isPseudoDisplay = 13;
+  // optional bool a_isPseudoDisplay = 13;
   bool has_a_ispseudodisplay() const;
   private:
   bool _internal_has_a_ispseudodisplay() const;
@@ -1702,7 +1702,7 @@ class ScreenDetails final :
   void _internal_set_a_ispseudodisplay(bool value);
   public:
 
-  // required bool a_isHDR = 14;
+  // optional bool a_isHDR = 14;
   bool has_a_ishdr() const;
   private:
   bool _internal_has_a_ishdr() const;
@@ -2071,7 +2071,7 @@ class FrameScriptInfo final :
     kAUrlFieldNumber = 1,
     kARunInGlobalScopeFieldNumber = 2,
   };
-  // required string a_url = 1;
+  // optional string a_url = 1;
   bool has_a_url() const;
   private:
   bool _internal_has_a_url() const;
@@ -2089,7 +2089,7 @@ class FrameScriptInfo final :
   std::string* _internal_mutable_a_url();
   public:
 
-  // required bool a_runInGlobalScope = 2;
+  // optional bool a_runInGlobalScope = 2;
   bool has_a_runinglobalscope() const;
   private:
   bool _internal_has_a_runinglobalscope() const;
@@ -2105,9 +2105,6 @@ class FrameScriptInfo final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.FrameScriptInfo)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2293,7 +2290,7 @@ class CreatedWindowInfo final :
       ::protobuf::mozilla::dom::DimensionInfo* a_dimensions);
   ::protobuf::mozilla::dom::DimensionInfo* unsafe_arena_release_a_dimensions();
 
-  // required bool a_windowOpened = 2;
+  // optional bool a_windowOpened = 2;
   bool has_a_windowopened() const;
   private:
   bool _internal_has_a_windowopened() const;
@@ -2306,7 +2303,7 @@ class CreatedWindowInfo final :
   void _internal_set_a_windowopened(bool value);
   public:
 
-  // required uint32 a_maxTouchPoints = 4;
+  // optional uint32 a_maxTouchPoints = 4;
   bool has_a_maxtouchpoints() const;
   private:
   bool _internal_has_a_maxtouchpoints() const;
@@ -2722,7 +2719,7 @@ class DocShellLoadStateInit final :
   std::string* _internal_mutable_a_unstrippeduri();
   public:
 
-  // required string a_Target = 14;
+  // optional string a_Target = 14;
   bool has_a_target() const;
   private:
   bool _internal_has_a_target() const;
@@ -2740,7 +2737,7 @@ class DocShellLoadStateInit final :
   std::string* _internal_mutable_a_target();
   public:
 
-  // required string a_TypeHint = 15;
+  // optional string a_TypeHint = 15;
   bool has_a_typehint() const;
   private:
   bool _internal_has_a_typehint() const;
@@ -2758,7 +2755,7 @@ class DocShellLoadStateInit final :
   std::string* _internal_mutable_a_typehint();
   public:
 
-  // required string a_FileName = 16;
+  // optional string a_FileName = 16;
   bool has_a_filename() const;
   private:
   bool _internal_has_a_filename() const;
@@ -2812,7 +2809,7 @@ class DocShellLoadStateInit final :
   std::string* _internal_mutable_a_targetbrowsingcontext();
   public:
 
-  // required string a_TriggeringRemoteType = 19;
+  // optional string a_TriggeringRemoteType = 19;
   bool has_a_triggeringremotetype() const;
   private:
   bool _internal_has_a_triggeringremotetype() const;
@@ -2830,7 +2827,7 @@ class DocShellLoadStateInit final :
   std::string* _internal_mutable_a_triggeringremotetype();
   public:
 
-  // required string a_SrcdocData = 20;
+  // optional string a_SrcdocData = 20;
   bool has_a_srcdocdata() const;
   private:
   bool _internal_has_a_srcdocdata() const;
@@ -2974,7 +2971,7 @@ class DocShellLoadStateInit final :
   std::string* _internal_mutable_a_httpsupgradetelemetry();
   public:
 
-  // required uint64 a_LoadIdentifier = 13;
+  // optional uint64 a_LoadIdentifier = 13;
   bool has_a_loadidentifier() const;
   private:
   bool _internal_has_a_loadidentifier() const;
@@ -2987,7 +2984,7 @@ class DocShellLoadStateInit final :
   void _internal_set_a_loadidentifier(uint64_t value);
   public:
 
-  // required uint32 a_LoadType = 24;
+  // optional uint32 a_LoadType = 24;
   bool has_a_loadtype() const;
   private:
   bool _internal_has_a_loadtype() const;
@@ -3000,7 +2997,7 @@ class DocShellLoadStateInit final :
   void _internal_set_a_loadtype(uint32_t value);
   public:
 
-  // required uint32 a_LoadFlags = 25;
+  // optional uint32 a_LoadFlags = 25;
   bool has_a_loadflags() const;
   private:
   bool _internal_has_a_loadflags() const;
@@ -3013,7 +3010,7 @@ class DocShellLoadStateInit final :
   void _internal_set_a_loadflags(uint32_t value);
   public:
 
-  // required uint32 a_InternalLoadFlags = 26;
+  // optional uint32 a_InternalLoadFlags = 26;
   bool has_a_internalloadflags() const;
   private:
   bool _internal_has_a_internalloadflags() const;
@@ -3026,7 +3023,7 @@ class DocShellLoadStateInit final :
   void _internal_set_a_internalloadflags(uint32_t value);
   public:
 
-  // required uint32 a_TriggeringSandboxFlags = 28;
+  // optional uint32 a_TriggeringSandboxFlags = 28;
   bool has_a_triggeringsandboxflags() const;
   private:
   bool _internal_has_a_triggeringsandboxflags() const;
@@ -3039,7 +3036,7 @@ class DocShellLoadStateInit final :
   void _internal_set_a_triggeringsandboxflags(uint32_t value);
   public:
 
-  // required uint64 a_TriggeringWindowId = 29;
+  // optional uint64 a_TriggeringWindowId = 29;
   bool has_a_triggeringwindowid() const;
   private:
   bool _internal_has_a_triggeringwindowid() const;
@@ -3065,7 +3062,7 @@ class DocShellLoadStateInit final :
   void _internal_set_a_cancelcontentjsepoch(int32_t value);
   public:
 
-  // required bool a_TriggeringStorageAccess = 30;
+  // optional bool a_TriggeringStorageAccess = 30;
   bool has_a_triggeringstorageaccess() const;
   private:
   bool _internal_has_a_triggeringstorageaccess() const;
@@ -3078,7 +3075,7 @@ class DocShellLoadStateInit final :
   void _internal_set_a_triggeringstorageaccess(bool value);
   public:
 
-  // required bool a_ResultPrincipalURIIsSome = 33;
+  // optional bool a_ResultPrincipalURIIsSome = 33;
   bool has_a_resultprincipaluriissome() const;
   private:
   bool _internal_has_a_resultprincipaluriissome() const;
@@ -3091,7 +3088,7 @@ class DocShellLoadStateInit final :
   void _internal_set_a_resultprincipaluriissome(bool value);
   public:
 
-  // required bool a_KeepResultPrincipalURIIfSet = 34;
+  // optional bool a_KeepResultPrincipalURIIfSet = 34;
   bool has_a_keepresultprincipaluriifset() const;
   private:
   bool _internal_has_a_keepresultprincipaluriifset() const;
@@ -3104,7 +3101,7 @@ class DocShellLoadStateInit final :
   void _internal_set_a_keepresultprincipaluriifset(bool value);
   public:
 
-  // required bool a_LoadReplace = 35;
+  // optional bool a_LoadReplace = 35;
   bool has_a_loadreplace() const;
   private:
   bool _internal_has_a_loadreplace() const;
@@ -3117,7 +3114,7 @@ class DocShellLoadStateInit final :
   void _internal_set_a_loadreplace(bool value);
   public:
 
-  // required bool a_InheritPrincipal = 36;
+  // optional bool a_InheritPrincipal = 36;
   bool has_a_inheritprincipal() const;
   private:
   bool _internal_has_a_inheritprincipal() const;
@@ -3130,7 +3127,7 @@ class DocShellLoadStateInit final :
   void _internal_set_a_inheritprincipal(bool value);
   public:
 
-  // required bool a_PrincipalIsExplicit = 37;
+  // optional bool a_PrincipalIsExplicit = 37;
   bool has_a_principalisexplicit() const;
   private:
   bool _internal_has_a_principalisexplicit() const;
@@ -3143,7 +3140,7 @@ class DocShellLoadStateInit final :
   void _internal_set_a_principalisexplicit(bool value);
   public:
 
-  // required bool a_ForceAllowDataURI = 38;
+  // optional bool a_ForceAllowDataURI = 38;
   bool has_a_forceallowdatauri() const;
   private:
   bool _internal_has_a_forceallowdatauri() const;
@@ -3156,7 +3153,7 @@ class DocShellLoadStateInit final :
   void _internal_set_a_forceallowdatauri(bool value);
   public:
 
-  // required bool a_IsExemptFromHTTPSFirstMode = 39;
+  // optional bool a_IsExemptFromHTTPSFirstMode = 39;
   bool has_a_isexemptfromhttpsfirstmode() const;
   private:
   bool _internal_has_a_isexemptfromhttpsfirstmode() const;
@@ -3169,7 +3166,7 @@ class DocShellLoadStateInit final :
   void _internal_set_a_isexemptfromhttpsfirstmode(bool value);
   public:
 
-  // required bool a_OriginalFrameSrc = 40;
+  // optional bool a_OriginalFrameSrc = 40;
   bool has_a_originalframesrc() const;
   private:
   bool _internal_has_a_originalframesrc() const;
@@ -3182,7 +3179,7 @@ class DocShellLoadStateInit final :
   void _internal_set_a_originalframesrc(bool value);
   public:
 
-  // required bool a_ShouldCheckForRecursion = 41;
+  // optional bool a_ShouldCheckForRecursion = 41;
   bool has_a_shouldcheckforrecursion() const;
   private:
   bool _internal_has_a_shouldcheckforrecursion() const;
@@ -3195,7 +3192,7 @@ class DocShellLoadStateInit final :
   void _internal_set_a_shouldcheckforrecursion(bool value);
   public:
 
-  // required bool a_IsFormSubmission = 42;
+  // optional bool a_IsFormSubmission = 42;
   bool has_a_isformsubmission() const;
   private:
   bool _internal_has_a_isformsubmission() const;
@@ -3208,7 +3205,7 @@ class DocShellLoadStateInit final :
   void _internal_set_a_isformsubmission(bool value);
   public:
 
-  // required bool a_FirstParty = 43;
+  // optional bool a_FirstParty = 43;
   bool has_a_firstparty() const;
   private:
   bool _internal_has_a_firstparty() const;
@@ -3221,7 +3218,7 @@ class DocShellLoadStateInit final :
   void _internal_set_a_firstparty(bool value);
   public:
 
-  // required bool a_HasValidUserGestureActivation = 44;
+  // optional bool a_HasValidUserGestureActivation = 44;
   bool has_a_hasvalidusergestureactivation() const;
   private:
   bool _internal_has_a_hasvalidusergestureactivation() const;
@@ -3234,7 +3231,7 @@ class DocShellLoadStateInit final :
   void _internal_set_a_hasvalidusergestureactivation(bool value);
   public:
 
-  // required bool a_TextDirectiveUserActivation = 45;
+  // optional bool a_TextDirectiveUserActivation = 45;
   bool has_a_textdirectiveuseractivation() const;
   private:
   bool _internal_has_a_textdirectiveuseractivation() const;
@@ -3247,7 +3244,7 @@ class DocShellLoadStateInit final :
   void _internal_set_a_textdirectiveuseractivation(bool value);
   public:
 
-  // required bool a_AllowFocusMove = 46;
+  // optional bool a_AllowFocusMove = 46;
   bool has_a_allowfocusmove() const;
   private:
   bool _internal_has_a_allowfocusmove() const;
@@ -3260,7 +3257,7 @@ class DocShellLoadStateInit final :
   void _internal_set_a_allowfocusmove(bool value);
   public:
 
-  // required bool a_IsFromProcessingFrameAttributes = 47;
+  // optional bool a_IsFromProcessingFrameAttributes = 47;
   bool has_a_isfromprocessingframeattributes() const;
   private:
   bool _internal_has_a_isfromprocessingframeattributes() const;
@@ -3273,7 +3270,7 @@ class DocShellLoadStateInit final :
   void _internal_set_a_isfromprocessingframeattributes(bool value);
   public:
 
-  // required bool a_ChannelInitialized = 50;
+  // optional bool a_ChannelInitialized = 50;
   bool has_a_channelinitialized() const;
   private:
   bool _internal_has_a_channelinitialized() const;
@@ -3286,7 +3283,7 @@ class DocShellLoadStateInit final :
   void _internal_set_a_channelinitialized(bool value);
   public:
 
-  // required bool a_TryToReplaceWithSessionHistoryLoad = 51;
+  // optional bool a_TryToReplaceWithSessionHistoryLoad = 51;
   bool has_a_trytoreplacewithsessionhistoryload() const;
   private:
   bool _internal_has_a_trytoreplacewithsessionhistoryload() const;
@@ -3299,7 +3296,7 @@ class DocShellLoadStateInit final :
   void _internal_set_a_trytoreplacewithsessionhistoryload(bool value);
   public:
 
-  // required bool a_IsMetaRefresh = 52;
+  // optional bool a_IsMetaRefresh = 52;
   bool has_a_ismetarefresh() const;
   private:
   bool _internal_has_a_ismetarefresh() const;
@@ -3585,7 +3582,7 @@ class TimedChannelInfo final :
   std::string* _internal_mutable_a_redirectend();
   public:
 
-  // required string a_initiatorType = 7;
+  // optional string a_initiatorType = 7;
   bool has_a_initiatortype() const;
   private:
   bool _internal_has_a_initiatortype() const;
@@ -3747,7 +3744,7 @@ class TimedChannelInfo final :
   std::string* _internal_mutable_a_responseend();
   public:
 
-  // required sint32 a_redirectCount = 1;
+  // optional sint32 a_redirectCount = 1;
   bool has_a_redirectcount() const;
   private:
   bool _internal_has_a_redirectcount() const;
@@ -3760,7 +3757,7 @@ class TimedChannelInfo final :
   void _internal_set_a_redirectcount(int32_t value);
   public:
 
-  // required sint32 a_internalRedirectCount = 2;
+  // optional sint32 a_internalRedirectCount = 2;
   bool has_a_internalredirectcount() const;
   private:
   bool _internal_has_a_internalredirectcount() const;
@@ -3773,7 +3770,7 @@ class TimedChannelInfo final :
   void _internal_set_a_internalredirectcount(int32_t value);
   public:
 
-  // required bool a_allRedirectsSameOrigin = 8;
+  // optional bool a_allRedirectsSameOrigin = 8;
   bool has_a_allredirectssameorigin() const;
   private:
   bool _internal_has_a_allredirectssameorigin() const;
@@ -3786,7 +3783,7 @@ class TimedChannelInfo final :
   void _internal_set_a_allredirectssameorigin(bool value);
   public:
 
-  // required bool a_allRedirectsPassTimingAllowCheck = 9;
+  // optional bool a_allRedirectsPassTimingAllowCheck = 9;
   bool has_a_allredirectspasstimingallowcheck() const;
   private:
   bool _internal_has_a_allredirectspasstimingallowcheck() const;
@@ -3812,7 +3809,7 @@ class TimedChannelInfo final :
   void _internal_set_a_timingallowcheckforprincipal(bool value);
   public:
 
-  // required bool a_renderBlocking = 11;
+  // optional bool a_renderBlocking = 11;
   bool has_a_renderblocking() const;
   private:
   bool _internal_has_a_renderblocking() const;
@@ -4111,7 +4108,7 @@ class ReplacementChannelConfigInit final :
       ::protobuf::mozilla::dom::TimedChannelInfo* a_timedchannelinfo);
   ::protobuf::mozilla::dom::TimedChannelInfo* unsafe_arena_release_a_timedchannelinfo();
 
-  // required uint32 a_redirectFlags = 1;
+  // optional uint32 a_redirectFlags = 1;
   bool has_a_redirectflags() const;
   private:
   bool _internal_has_a_redirectflags() const;
@@ -4137,7 +4134,7 @@ class ReplacementChannelConfigInit final :
   void _internal_set_a_privatebrowsing(bool value);
   public:
 
-  // required bool a_uploadStreamHasHeaders = 9;
+  // optional bool a_uploadStreamHasHeaders = 9;
   bool has_a_uploadstreamhasheaders() const;
   private:
   bool _internal_has_a_uploadstreamhasheaders() const;
@@ -4150,7 +4147,7 @@ class ReplacementChannelConfigInit final :
   void _internal_set_a_uploadstreamhasheaders(bool value);
   public:
 
-  // required uint64 a_uploadStreamLength = 8;
+  // optional uint64 a_uploadStreamLength = 8;
   bool has_a_uploadstreamlength() const;
   private:
   bool _internal_has_a_uploadstreamlength() const;
@@ -4166,9 +4163,6 @@ class ReplacementChannelConfigInit final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.ReplacementChannelConfigInit)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4711,7 +4705,7 @@ class IDPLVariant final :
       ::protobuf::mozilla::dom::IPDLVariantValue* a_data);
   ::protobuf::mozilla::dom::IPDLVariantValue* unsafe_arena_release_a_data();
 
-  // required uint32 a_type = 1;
+  // optional uint32 a_type = 1;
   bool has_a_type() const;
   private:
   bool _internal_has_a_type() const;
@@ -4727,9 +4721,6 @@ class IDPLVariant final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IDPLVariant)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4858,7 +4849,7 @@ class IPDLProperty final :
     kANameFieldNumber = 1,
     kAValueFieldNumber = 2,
   };
-  // required string a_name = 1;
+  // optional string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -5029,7 +5020,7 @@ class ParentShowInfo final :
     kADefaultScaleFieldNumber = 6,
     kAWidgetRoundingFieldNumber = 5,
   };
-  // required string a_name = 1;
+  // optional string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -5047,7 +5038,7 @@ class ParentShowInfo final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required bool a_fakeShowInfo = 2;
+  // optional bool a_fakeShowInfo = 2;
   bool has_a_fakeshowinfo() const;
   private:
   bool _internal_has_a_fakeshowinfo() const;
@@ -5060,7 +5051,7 @@ class ParentShowInfo final :
   void _internal_set_a_fakeshowinfo(bool value);
   public:
 
-  // required bool a_isTransparent = 3;
+  // optional bool a_isTransparent = 3;
   bool has_a_istransparent() const;
   private:
   bool _internal_has_a_istransparent() const;
@@ -5073,7 +5064,7 @@ class ParentShowInfo final :
   void _internal_set_a_istransparent(bool value);
   public:
 
-  // required float a_dpi = 4;
+  // optional float a_dpi = 4;
   bool has_a_dpi() const;
   private:
   bool _internal_has_a_dpi() const;
@@ -5086,7 +5077,7 @@ class ParentShowInfo final :
   void _internal_set_a_dpi(float value);
   public:
 
-  // required double a_defaultScale = 6;
+  // optional double a_defaultScale = 6;
   bool has_a_defaultscale() const;
   private:
   bool _internal_has_a_defaultscale() const;
@@ -5099,7 +5090,7 @@ class ParentShowInfo final :
   void _internal_set_a_defaultscale(double value);
   public:
 
-  // required sint32 a_widgetRounding = 5;
+  // optional sint32 a_widgetRounding = 5;
   bool has_a_widgetrounding() const;
   private:
   bool _internal_has_a_widgetrounding() const;
@@ -5115,9 +5106,6 @@ class ParentShowInfo final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.ParentShowInfo)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5496,7 +5484,7 @@ class IPCImage final :
   std::string* _internal_mutable_a_size();
   public:
 
-  // required uint32 a_stride = 2;
+  // optional uint32 a_stride = 2;
   bool has_a_stride() const;
   private:
   bool _internal_has_a_stride() const;
@@ -5645,7 +5633,7 @@ class IPCNotificationAction final :
     kANameFieldNumber = 1,
     kATitleFieldNumber = 2,
   };
-  // required string a_name = 1;
+  // optional string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -5663,7 +5651,7 @@ class IPCNotificationAction final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required string a_title = 2;
+  // optional string a_title = 2;
   bool has_a_title() const;
   private:
   bool _internal_has_a_title() const;
@@ -5684,9 +5672,6 @@ class IPCNotificationAction final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCNotificationAction)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5864,7 +5849,7 @@ class IPCNotificationOptions final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCNotificationAction >&
       a_actions() const;
 
-  // required string a_title = 1;
+  // optional string a_title = 1;
   bool has_a_title() const;
   private:
   bool _internal_has_a_title() const;
@@ -5900,7 +5885,7 @@ class IPCNotificationOptions final :
   std::string* _internal_mutable_a_dir();
   public:
 
-  // required string a_lang = 3;
+  // optional string a_lang = 3;
   bool has_a_lang() const;
   private:
   bool _internal_has_a_lang() const;
@@ -5918,7 +5903,7 @@ class IPCNotificationOptions final :
   std::string* _internal_mutable_a_lang();
   public:
 
-  // required string a_body = 4;
+  // optional string a_body = 4;
   bool has_a_body() const;
   private:
   bool _internal_has_a_body() const;
@@ -5936,7 +5921,7 @@ class IPCNotificationOptions final :
   std::string* _internal_mutable_a_body();
   public:
 
-  // required string a_tag = 5;
+  // optional string a_tag = 5;
   bool has_a_tag() const;
   private:
   bool _internal_has_a_tag() const;
@@ -5954,7 +5939,7 @@ class IPCNotificationOptions final :
   std::string* _internal_mutable_a_tag();
   public:
 
-  // required string a_icon = 6;
+  // optional string a_icon = 6;
   bool has_a_icon() const;
   private:
   bool _internal_has_a_icon() const;
@@ -5972,7 +5957,7 @@ class IPCNotificationOptions final :
   std::string* _internal_mutable_a_icon();
   public:
 
-  // required string a_dataSerialized = 10;
+  // optional string a_dataSerialized = 10;
   bool has_a_dataserialized() const;
   private:
   bool _internal_has_a_dataserialized() const;
@@ -5990,7 +5975,7 @@ class IPCNotificationOptions final :
   std::string* _internal_mutable_a_dataserialized();
   public:
 
-  // required bool a_requireInteraction = 7;
+  // optional bool a_requireInteraction = 7;
   bool has_a_requireinteraction() const;
   private:
   bool _internal_has_a_requireinteraction() const;
@@ -6003,7 +5988,7 @@ class IPCNotificationOptions final :
   void _internal_set_a_requireinteraction(bool value);
   public:
 
-  // required bool a_silent = 8;
+  // optional bool a_silent = 8;
   bool has_a_silent() const;
   private:
   bool _internal_has_a_silent() const;
@@ -6019,9 +6004,6 @@ class IPCNotificationOptions final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCNotificationOptions)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -6159,7 +6141,7 @@ class IPCNotification final :
     kAIdFieldNumber = 1,
     kAOptionsFieldNumber = 2,
   };
-  // required string a_id = 1;
+  // optional string a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -6198,9 +6180,6 @@ class IPCNotification final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCNotification)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -6694,7 +6673,7 @@ inline void MessagePortIdentifier::set_allocated_a_destinationuuid(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.MessagePortIdentifier.a_destinationUuid)
 }
 
-// required uint32 a_sequenceId = 3;
+// optional uint32 a_sequenceId = 3;
 inline bool MessagePortIdentifier::_internal_has_a_sequenceid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -6722,7 +6701,7 @@ inline void MessagePortIdentifier::set_a_sequenceid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MessagePortIdentifier.a_sequenceId)
 }
 
-// required bool a_neutered = 4;
+// optional bool a_neutered = 4;
 inline bool MessagePortIdentifier::_internal_has_a_neutered() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -7772,7 +7751,7 @@ inline void ScreenDetails::set_allocated_a_availrectdisplaypix(std::string* a_av
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ScreenDetails.a_availRectDisplayPix)
 }
 
-// required sint32 a_pixelDepth = 5;
+// optional sint32 a_pixelDepth = 5;
 inline bool ScreenDetails::_internal_has_a_pixeldepth() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -7800,7 +7779,7 @@ inline void ScreenDetails::set_a_pixeldepth(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ScreenDetails.a_pixelDepth)
 }
 
-// required sint32 a_colorDepth = 6;
+// optional sint32 a_colorDepth = 6;
 inline bool ScreenDetails::_internal_has_a_colordepth() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -7828,7 +7807,7 @@ inline void ScreenDetails::set_a_colordepth(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ScreenDetails.a_colorDepth)
 }
 
-// required uint32 a_refreshRate = 7;
+// optional uint32 a_refreshRate = 7;
 inline bool ScreenDetails::_internal_has_a_refreshrate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -7992,7 +7971,7 @@ inline void ScreenDetails::set_allocated_a_defaultcssscalefactor(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ScreenDetails.a_defaultCSSScaleFactor)
 }
 
-// required float a_dpi = 10;
+// optional float a_dpi = 10;
 inline bool ScreenDetails::_internal_has_a_dpi() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
@@ -8088,7 +8067,7 @@ inline void ScreenDetails::set_allocated_a_orientation(std::string* a_orientatio
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ScreenDetails.a_orientation)
 }
 
-// required uint32 a_orientationAngle = 12;
+// optional uint32 a_orientationAngle = 12;
 inline bool ScreenDetails::_internal_has_a_orientationangle() const {
   bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
   return value;
@@ -8116,7 +8095,7 @@ inline void ScreenDetails::set_a_orientationangle(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ScreenDetails.a_orientationAngle)
 }
 
-// required bool a_isPseudoDisplay = 13;
+// optional bool a_isPseudoDisplay = 13;
 inline bool ScreenDetails::_internal_has_a_ispseudodisplay() const {
   bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
   return value;
@@ -8144,7 +8123,7 @@ inline void ScreenDetails::set_a_ispseudodisplay(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ScreenDetails.a_isPseudoDisplay)
 }
 
-// required bool a_isHDR = 14;
+// optional bool a_isHDR = 14;
 inline bool ScreenDetails::_internal_has_a_ishdr() const {
   bool value = (_impl_._has_bits_[0] & 0x00002000u) != 0;
   return value;
@@ -8452,7 +8431,7 @@ inline void DimensionInfo::set_allocated_a_chromeoffset(std::string* a_chromeoff
 
 // FrameScriptInfo
 
-// required string a_url = 1;
+// optional string a_url = 1;
 inline bool FrameScriptInfo::_internal_has_a_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8520,7 +8499,7 @@ inline void FrameScriptInfo::set_allocated_a_url(std::string* a_url) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FrameScriptInfo.a_url)
 }
 
-// required bool a_runInGlobalScope = 2;
+// optional bool a_runInGlobalScope = 2;
 inline bool FrameScriptInfo::_internal_has_a_runinglobalscope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8620,7 +8599,7 @@ inline void CreatedWindowInfo::set_allocated_a_rv(std::string* a_rv) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.CreatedWindowInfo.a_rv)
 }
 
-// required bool a_windowOpened = 2;
+// optional bool a_windowOpened = 2;
 inline bool CreatedWindowInfo::_internal_has_a_windowopened() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -8688,7 +8667,7 @@ CreatedWindowInfo::a_framescripts() const {
   return _impl_.a_framescripts_;
 }
 
-// required uint32 a_maxTouchPoints = 4;
+// optional uint32 a_maxTouchPoints = 4;
 inline bool CreatedWindowInfo::_internal_has_a_maxtouchpoints() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -9626,7 +9605,7 @@ inline void DocShellLoadStateInit::set_allocated_a_unstrippeduri(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.DocShellLoadStateInit.a_UnstrippedURI)
 }
 
-// required uint64 a_LoadIdentifier = 13;
+// optional uint64 a_LoadIdentifier = 13;
 inline bool DocShellLoadStateInit::_internal_has_a_loadidentifier() const {
   bool value = (_impl_._has_bits_[0] & 0x04000000u) != 0;
   return value;
@@ -9654,7 +9633,7 @@ inline void DocShellLoadStateInit::set_a_loadidentifier(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.DocShellLoadStateInit.a_LoadIdentifier)
 }
 
-// required string a_Target = 14;
+// optional string a_Target = 14;
 inline bool DocShellLoadStateInit::_internal_has_a_target() const {
   bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
   return value;
@@ -9722,7 +9701,7 @@ inline void DocShellLoadStateInit::set_allocated_a_target(std::string* a_target)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.DocShellLoadStateInit.a_Target)
 }
 
-// required string a_TypeHint = 15;
+// optional string a_TypeHint = 15;
 inline bool DocShellLoadStateInit::_internal_has_a_typehint() const {
   bool value = (_impl_._has_bits_[0] & 0x00002000u) != 0;
   return value;
@@ -9790,7 +9769,7 @@ inline void DocShellLoadStateInit::set_allocated_a_typehint(std::string* a_typeh
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.DocShellLoadStateInit.a_TypeHint)
 }
 
-// required string a_FileName = 16;
+// optional string a_FileName = 16;
 inline bool DocShellLoadStateInit::_internal_has_a_filename() const {
   bool value = (_impl_._has_bits_[0] & 0x00004000u) != 0;
   return value;
@@ -9994,7 +9973,7 @@ inline void DocShellLoadStateInit::set_allocated_a_targetbrowsingcontext(std::st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.DocShellLoadStateInit.a_TargetBrowsingContext)
 }
 
-// required string a_TriggeringRemoteType = 19;
+// optional string a_TriggeringRemoteType = 19;
 inline bool DocShellLoadStateInit::_internal_has_a_triggeringremotetype() const {
   bool value = (_impl_._has_bits_[0] & 0x00020000u) != 0;
   return value;
@@ -10062,7 +10041,7 @@ inline void DocShellLoadStateInit::set_allocated_a_triggeringremotetype(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.DocShellLoadStateInit.a_TriggeringRemoteType)
 }
 
-// required string a_SrcdocData = 20;
+// optional string a_SrcdocData = 20;
 inline bool DocShellLoadStateInit::_internal_has_a_srcdocdata() const {
   bool value = (_impl_._has_bits_[0] & 0x00040000u) != 0;
   return value;
@@ -10334,7 +10313,7 @@ inline void DocShellLoadStateInit::set_allocated_a_loadingsessionhistoryinfo(std
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.DocShellLoadStateInit.a_loadingSessionHistoryInfo)
 }
 
-// required uint32 a_LoadType = 24;
+// optional uint32 a_LoadType = 24;
 inline bool DocShellLoadStateInit::_internal_has_a_loadtype() const {
   bool value = (_impl_._has_bits_[0] & 0x08000000u) != 0;
   return value;
@@ -10362,7 +10341,7 @@ inline void DocShellLoadStateInit::set_a_loadtype(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.DocShellLoadStateInit.a_LoadType)
 }
 
-// required uint32 a_LoadFlags = 25;
+// optional uint32 a_LoadFlags = 25;
 inline bool DocShellLoadStateInit::_internal_has_a_loadflags() const {
   bool value = (_impl_._has_bits_[0] & 0x10000000u) != 0;
   return value;
@@ -10390,7 +10369,7 @@ inline void DocShellLoadStateInit::set_a_loadflags(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.DocShellLoadStateInit.a_LoadFlags)
 }
 
-// required uint32 a_InternalLoadFlags = 26;
+// optional uint32 a_InternalLoadFlags = 26;
 inline bool DocShellLoadStateInit::_internal_has_a_internalloadflags() const {
   bool value = (_impl_._has_bits_[0] & 0x20000000u) != 0;
   return value;
@@ -10486,7 +10465,7 @@ inline void DocShellLoadStateInit::set_allocated_a_usernavigationinvolvement(std
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.DocShellLoadStateInit.a_userNavigationInvolvement)
 }
 
-// required uint32 a_TriggeringSandboxFlags = 28;
+// optional uint32 a_TriggeringSandboxFlags = 28;
 inline bool DocShellLoadStateInit::_internal_has_a_triggeringsandboxflags() const {
   bool value = (_impl_._has_bits_[0] & 0x40000000u) != 0;
   return value;
@@ -10514,7 +10493,7 @@ inline void DocShellLoadStateInit::set_a_triggeringsandboxflags(uint32_t value) 
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.DocShellLoadStateInit.a_TriggeringSandboxFlags)
 }
 
-// required uint64 a_TriggeringWindowId = 29;
+// optional uint64 a_TriggeringWindowId = 29;
 inline bool DocShellLoadStateInit::_internal_has_a_triggeringwindowid() const {
   bool value = (_impl_._has_bits_[0] & 0x80000000u) != 0;
   return value;
@@ -10542,7 +10521,7 @@ inline void DocShellLoadStateInit::set_a_triggeringwindowid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.DocShellLoadStateInit.a_TriggeringWindowId)
 }
 
-// required bool a_TriggeringStorageAccess = 30;
+// optional bool a_TriggeringStorageAccess = 30;
 inline bool DocShellLoadStateInit::_internal_has_a_triggeringstorageaccess() const {
   bool value = (_impl_._has_bits_[1] & 0x00000002u) != 0;
   return value;
@@ -10666,7 +10645,7 @@ inline void DocShellLoadStateInit::set_a_cancelcontentjsepoch(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.DocShellLoadStateInit.a_CancelContentJSEpoch)
 }
 
-// required bool a_ResultPrincipalURIIsSome = 33;
+// optional bool a_ResultPrincipalURIIsSome = 33;
 inline bool DocShellLoadStateInit::_internal_has_a_resultprincipaluriissome() const {
   bool value = (_impl_._has_bits_[1] & 0x00000004u) != 0;
   return value;
@@ -10694,7 +10673,7 @@ inline void DocShellLoadStateInit::set_a_resultprincipaluriissome(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.DocShellLoadStateInit.a_ResultPrincipalURIIsSome)
 }
 
-// required bool a_KeepResultPrincipalURIIfSet = 34;
+// optional bool a_KeepResultPrincipalURIIfSet = 34;
 inline bool DocShellLoadStateInit::_internal_has_a_keepresultprincipaluriifset() const {
   bool value = (_impl_._has_bits_[1] & 0x00000008u) != 0;
   return value;
@@ -10722,7 +10701,7 @@ inline void DocShellLoadStateInit::set_a_keepresultprincipaluriifset(bool value)
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.DocShellLoadStateInit.a_KeepResultPrincipalURIIfSet)
 }
 
-// required bool a_LoadReplace = 35;
+// optional bool a_LoadReplace = 35;
 inline bool DocShellLoadStateInit::_internal_has_a_loadreplace() const {
   bool value = (_impl_._has_bits_[1] & 0x00000010u) != 0;
   return value;
@@ -10750,7 +10729,7 @@ inline void DocShellLoadStateInit::set_a_loadreplace(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.DocShellLoadStateInit.a_LoadReplace)
 }
 
-// required bool a_InheritPrincipal = 36;
+// optional bool a_InheritPrincipal = 36;
 inline bool DocShellLoadStateInit::_internal_has_a_inheritprincipal() const {
   bool value = (_impl_._has_bits_[1] & 0x00000020u) != 0;
   return value;
@@ -10778,7 +10757,7 @@ inline void DocShellLoadStateInit::set_a_inheritprincipal(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.DocShellLoadStateInit.a_InheritPrincipal)
 }
 
-// required bool a_PrincipalIsExplicit = 37;
+// optional bool a_PrincipalIsExplicit = 37;
 inline bool DocShellLoadStateInit::_internal_has_a_principalisexplicit() const {
   bool value = (_impl_._has_bits_[1] & 0x00000040u) != 0;
   return value;
@@ -10806,7 +10785,7 @@ inline void DocShellLoadStateInit::set_a_principalisexplicit(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.DocShellLoadStateInit.a_PrincipalIsExplicit)
 }
 
-// required bool a_ForceAllowDataURI = 38;
+// optional bool a_ForceAllowDataURI = 38;
 inline bool DocShellLoadStateInit::_internal_has_a_forceallowdatauri() const {
   bool value = (_impl_._has_bits_[1] & 0x00000080u) != 0;
   return value;
@@ -10834,7 +10813,7 @@ inline void DocShellLoadStateInit::set_a_forceallowdatauri(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.DocShellLoadStateInit.a_ForceAllowDataURI)
 }
 
-// required bool a_IsExemptFromHTTPSFirstMode = 39;
+// optional bool a_IsExemptFromHTTPSFirstMode = 39;
 inline bool DocShellLoadStateInit::_internal_has_a_isexemptfromhttpsfirstmode() const {
   bool value = (_impl_._has_bits_[1] & 0x00000100u) != 0;
   return value;
@@ -10862,7 +10841,7 @@ inline void DocShellLoadStateInit::set_a_isexemptfromhttpsfirstmode(bool value) 
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.DocShellLoadStateInit.a_IsExemptFromHTTPSFirstMode)
 }
 
-// required bool a_OriginalFrameSrc = 40;
+// optional bool a_OriginalFrameSrc = 40;
 inline bool DocShellLoadStateInit::_internal_has_a_originalframesrc() const {
   bool value = (_impl_._has_bits_[1] & 0x00000200u) != 0;
   return value;
@@ -10890,7 +10869,7 @@ inline void DocShellLoadStateInit::set_a_originalframesrc(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.DocShellLoadStateInit.a_OriginalFrameSrc)
 }
 
-// required bool a_ShouldCheckForRecursion = 41;
+// optional bool a_ShouldCheckForRecursion = 41;
 inline bool DocShellLoadStateInit::_internal_has_a_shouldcheckforrecursion() const {
   bool value = (_impl_._has_bits_[1] & 0x00000400u) != 0;
   return value;
@@ -10918,7 +10897,7 @@ inline void DocShellLoadStateInit::set_a_shouldcheckforrecursion(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.DocShellLoadStateInit.a_ShouldCheckForRecursion)
 }
 
-// required bool a_IsFormSubmission = 42;
+// optional bool a_IsFormSubmission = 42;
 inline bool DocShellLoadStateInit::_internal_has_a_isformsubmission() const {
   bool value = (_impl_._has_bits_[1] & 0x00000800u) != 0;
   return value;
@@ -10946,7 +10925,7 @@ inline void DocShellLoadStateInit::set_a_isformsubmission(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.DocShellLoadStateInit.a_IsFormSubmission)
 }
 
-// required bool a_FirstParty = 43;
+// optional bool a_FirstParty = 43;
 inline bool DocShellLoadStateInit::_internal_has_a_firstparty() const {
   bool value = (_impl_._has_bits_[1] & 0x00001000u) != 0;
   return value;
@@ -10974,7 +10953,7 @@ inline void DocShellLoadStateInit::set_a_firstparty(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.DocShellLoadStateInit.a_FirstParty)
 }
 
-// required bool a_HasValidUserGestureActivation = 44;
+// optional bool a_HasValidUserGestureActivation = 44;
 inline bool DocShellLoadStateInit::_internal_has_a_hasvalidusergestureactivation() const {
   bool value = (_impl_._has_bits_[1] & 0x00002000u) != 0;
   return value;
@@ -11002,7 +10981,7 @@ inline void DocShellLoadStateInit::set_a_hasvalidusergestureactivation(bool valu
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.DocShellLoadStateInit.a_HasValidUserGestureActivation)
 }
 
-// required bool a_TextDirectiveUserActivation = 45;
+// optional bool a_TextDirectiveUserActivation = 45;
 inline bool DocShellLoadStateInit::_internal_has_a_textdirectiveuseractivation() const {
   bool value = (_impl_._has_bits_[1] & 0x00004000u) != 0;
   return value;
@@ -11030,7 +11009,7 @@ inline void DocShellLoadStateInit::set_a_textdirectiveuseractivation(bool value)
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.DocShellLoadStateInit.a_TextDirectiveUserActivation)
 }
 
-// required bool a_AllowFocusMove = 46;
+// optional bool a_AllowFocusMove = 46;
 inline bool DocShellLoadStateInit::_internal_has_a_allowfocusmove() const {
   bool value = (_impl_._has_bits_[1] & 0x00008000u) != 0;
   return value;
@@ -11058,7 +11037,7 @@ inline void DocShellLoadStateInit::set_a_allowfocusmove(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.DocShellLoadStateInit.a_AllowFocusMove)
 }
 
-// required bool a_IsFromProcessingFrameAttributes = 47;
+// optional bool a_IsFromProcessingFrameAttributes = 47;
 inline bool DocShellLoadStateInit::_internal_has_a_isfromprocessingframeattributes() const {
   bool value = (_impl_._has_bits_[1] & 0x00010000u) != 0;
   return value;
@@ -11222,7 +11201,7 @@ inline void DocShellLoadStateInit::set_allocated_a_httpsupgradetelemetry(std::st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.DocShellLoadStateInit.a_HttpsUpgradeTelemetry)
 }
 
-// required bool a_ChannelInitialized = 50;
+// optional bool a_ChannelInitialized = 50;
 inline bool DocShellLoadStateInit::_internal_has_a_channelinitialized() const {
   bool value = (_impl_._has_bits_[1] & 0x00020000u) != 0;
   return value;
@@ -11250,7 +11229,7 @@ inline void DocShellLoadStateInit::set_a_channelinitialized(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.DocShellLoadStateInit.a_ChannelInitialized)
 }
 
-// required bool a_TryToReplaceWithSessionHistoryLoad = 51;
+// optional bool a_TryToReplaceWithSessionHistoryLoad = 51;
 inline bool DocShellLoadStateInit::_internal_has_a_trytoreplacewithsessionhistoryload() const {
   bool value = (_impl_._has_bits_[1] & 0x00040000u) != 0;
   return value;
@@ -11278,7 +11257,7 @@ inline void DocShellLoadStateInit::set_a_trytoreplacewithsessionhistoryload(bool
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.DocShellLoadStateInit.a_TryToReplaceWithSessionHistoryLoad)
 }
 
-// required bool a_IsMetaRefresh = 52;
+// optional bool a_IsMetaRefresh = 52;
 inline bool DocShellLoadStateInit::_internal_has_a_ismetarefresh() const {
   bool value = (_impl_._has_bits_[1] & 0x00080000u) != 0;
   return value;
@@ -11310,7 +11289,7 @@ inline void DocShellLoadStateInit::set_a_ismetarefresh(bool value) {
 
 // TimedChannelInfo
 
-// required sint32 a_redirectCount = 1;
+// optional sint32 a_redirectCount = 1;
 inline bool TimedChannelInfo::_internal_has_a_redirectcount() const {
   bool value = (_impl_._has_bits_[0] & 0x00002000u) != 0;
   return value;
@@ -11338,7 +11317,7 @@ inline void TimedChannelInfo::set_a_redirectcount(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.TimedChannelInfo.a_redirectCount)
 }
 
-// required sint32 a_internalRedirectCount = 2;
+// optional sint32 a_internalRedirectCount = 2;
 inline bool TimedChannelInfo::_internal_has_a_internalredirectcount() const {
   bool value = (_impl_._has_bits_[0] & 0x00004000u) != 0;
   return value;
@@ -11638,7 +11617,7 @@ inline void TimedChannelInfo::set_allocated_a_redirectend(std::string* a_redirec
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.TimedChannelInfo.a_redirectEnd)
 }
 
-// required string a_initiatorType = 7;
+// optional string a_initiatorType = 7;
 inline bool TimedChannelInfo::_internal_has_a_initiatortype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -11706,7 +11685,7 @@ inline void TimedChannelInfo::set_allocated_a_initiatortype(std::string* a_initi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.TimedChannelInfo.a_initiatorType)
 }
 
-// required bool a_allRedirectsSameOrigin = 8;
+// optional bool a_allRedirectsSameOrigin = 8;
 inline bool TimedChannelInfo::_internal_has_a_allredirectssameorigin() const {
   bool value = (_impl_._has_bits_[0] & 0x00008000u) != 0;
   return value;
@@ -11734,7 +11713,7 @@ inline void TimedChannelInfo::set_a_allredirectssameorigin(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.TimedChannelInfo.a_allRedirectsSameOrigin)
 }
 
-// required bool a_allRedirectsPassTimingAllowCheck = 9;
+// optional bool a_allRedirectsPassTimingAllowCheck = 9;
 inline bool TimedChannelInfo::_internal_has_a_allredirectspasstimingallowcheck() const {
   bool value = (_impl_._has_bits_[0] & 0x00010000u) != 0;
   return value;
@@ -11790,7 +11769,7 @@ inline void TimedChannelInfo::set_a_timingallowcheckforprincipal(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.TimedChannelInfo.a_timingAllowCheckForPrincipal)
 }
 
-// required bool a_renderBlocking = 11;
+// optional bool a_renderBlocking = 11;
 inline bool TimedChannelInfo::_internal_has_a_renderblocking() const {
   bool value = (_impl_._has_bits_[0] & 0x00040000u) != 0;
   return value;
@@ -12366,7 +12345,7 @@ inline void TimedChannelInfo::set_allocated_a_responseend(std::string* a_respons
 
 // ReplacementChannelConfigInit
 
-// required uint32 a_redirectFlags = 1;
+// optional uint32 a_redirectFlags = 1;
 inline bool ReplacementChannelConfigInit::_internal_has_a_redirectflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -12784,7 +12763,7 @@ inline void ReplacementChannelConfigInit::set_allocated_a_uploadstream(std::stri
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ReplacementChannelConfigInit.a_uploadStream)
 }
 
-// required uint64 a_uploadStreamLength = 8;
+// optional uint64 a_uploadStreamLength = 8;
 inline bool ReplacementChannelConfigInit::_internal_has_a_uploadstreamlength() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
@@ -12812,7 +12791,7 @@ inline void ReplacementChannelConfigInit::set_a_uploadstreamlength(uint64_t valu
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ReplacementChannelConfigInit.a_uploadStreamLength)
 }
 
-// required bool a_uploadStreamHasHeaders = 9;
+// optional bool a_uploadStreamHasHeaders = 9;
 inline bool ReplacementChannelConfigInit::_internal_has_a_uploadstreamhasheaders() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -13682,7 +13661,7 @@ inline IPDLVariantValue::ContentCase IPDLVariantValue::content_case() const {
 
 // IDPLVariant
 
-// required uint32 a_type = 1;
+// optional uint32 a_type = 1;
 inline bool IDPLVariant::_internal_has_a_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -13804,7 +13783,7 @@ inline void IDPLVariant::set_allocated_a_data(::protobuf::mozilla::dom::IPDLVari
 
 // IPDLProperty
 
-// required string a_name = 1;
+// optional string a_name = 1;
 inline bool IPDLProperty::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -13944,7 +13923,7 @@ inline void IPDLProperty::set_allocated_a_value(std::string* a_value) {
 
 // ParentShowInfo
 
-// required string a_name = 1;
+// optional string a_name = 1;
 inline bool ParentShowInfo::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -14012,7 +13991,7 @@ inline void ParentShowInfo::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ParentShowInfo.a_name)
 }
 
-// required bool a_fakeShowInfo = 2;
+// optional bool a_fakeShowInfo = 2;
 inline bool ParentShowInfo::_internal_has_a_fakeshowinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -14040,7 +14019,7 @@ inline void ParentShowInfo::set_a_fakeshowinfo(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ParentShowInfo.a_fakeShowInfo)
 }
 
-// required bool a_isTransparent = 3;
+// optional bool a_isTransparent = 3;
 inline bool ParentShowInfo::_internal_has_a_istransparent() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -14068,7 +14047,7 @@ inline void ParentShowInfo::set_a_istransparent(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ParentShowInfo.a_isTransparent)
 }
 
-// required float a_dpi = 4;
+// optional float a_dpi = 4;
 inline bool ParentShowInfo::_internal_has_a_dpi() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -14096,7 +14075,7 @@ inline void ParentShowInfo::set_a_dpi(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ParentShowInfo.a_dpi)
 }
 
-// required sint32 a_widgetRounding = 5;
+// optional sint32 a_widgetRounding = 5;
 inline bool ParentShowInfo::_internal_has_a_widgetrounding() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -14124,7 +14103,7 @@ inline void ParentShowInfo::set_a_widgetrounding(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ParentShowInfo.a_widgetRounding)
 }
 
-// required double a_defaultScale = 6;
+// optional double a_defaultScale = 6;
 inline bool ParentShowInfo::_internal_has_a_defaultscale() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -14432,7 +14411,7 @@ inline void IPCImage::set_allocated_a_data(std::string* a_data) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCImage.a_data)
 }
 
-// required uint32 a_stride = 2;
+// optional uint32 a_stride = 2;
 inline bool IPCImage::_internal_has_a_stride() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -14600,7 +14579,7 @@ inline void IPCImage::set_allocated_a_size(std::string* a_size) {
 
 // IPCNotificationAction
 
-// required string a_name = 1;
+// optional string a_name = 1;
 inline bool IPCNotificationAction::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -14668,7 +14647,7 @@ inline void IPCNotificationAction::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCNotificationAction.a_name)
 }
 
-// required string a_title = 2;
+// optional string a_title = 2;
 inline bool IPCNotificationAction::_internal_has_a_title() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -14740,7 +14719,7 @@ inline void IPCNotificationAction::set_allocated_a_title(std::string* a_title) {
 
 // IPCNotificationOptions
 
-// required string a_title = 1;
+// optional string a_title = 1;
 inline bool IPCNotificationOptions::_internal_has_a_title() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -14876,7 +14855,7 @@ inline void IPCNotificationOptions::set_allocated_a_dir(std::string* a_dir) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCNotificationOptions.a_dir)
 }
 
-// required string a_lang = 3;
+// optional string a_lang = 3;
 inline bool IPCNotificationOptions::_internal_has_a_lang() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -14944,7 +14923,7 @@ inline void IPCNotificationOptions::set_allocated_a_lang(std::string* a_lang) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCNotificationOptions.a_lang)
 }
 
-// required string a_body = 4;
+// optional string a_body = 4;
 inline bool IPCNotificationOptions::_internal_has_a_body() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -15012,7 +14991,7 @@ inline void IPCNotificationOptions::set_allocated_a_body(std::string* a_body) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCNotificationOptions.a_body)
 }
 
-// required string a_tag = 5;
+// optional string a_tag = 5;
 inline bool IPCNotificationOptions::_internal_has_a_tag() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -15080,7 +15059,7 @@ inline void IPCNotificationOptions::set_allocated_a_tag(std::string* a_tag) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCNotificationOptions.a_tag)
 }
 
-// required string a_icon = 6;
+// optional string a_icon = 6;
 inline bool IPCNotificationOptions::_internal_has_a_icon() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -15148,7 +15127,7 @@ inline void IPCNotificationOptions::set_allocated_a_icon(std::string* a_icon) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCNotificationOptions.a_icon)
 }
 
-// required bool a_requireInteraction = 7;
+// optional bool a_requireInteraction = 7;
 inline bool IPCNotificationOptions::_internal_has_a_requireinteraction() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -15176,7 +15155,7 @@ inline void IPCNotificationOptions::set_a_requireinteraction(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCNotificationOptions.a_requireInteraction)
 }
 
-// required bool a_silent = 8;
+// optional bool a_silent = 8;
 inline bool IPCNotificationOptions::_internal_has_a_silent() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -15251,7 +15230,7 @@ IPCNotificationOptions::mutable_a_vibrate() {
   return _internal_mutable_a_vibrate();
 }
 
-// required string a_dataSerialized = 10;
+// optional string a_dataSerialized = 10;
 inline bool IPCNotificationOptions::_internal_has_a_dataserialized() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -15363,7 +15342,7 @@ IPCNotificationOptions::a_actions() const {
 
 // IPCNotification
 
-// required string a_id = 1;
+// optional string a_id = 1;
 inline bool IPCNotification::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

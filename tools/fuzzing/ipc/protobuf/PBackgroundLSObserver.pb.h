@@ -564,7 +564,7 @@ class Msg_Observe final :
     kAPrincipalInfoFieldNumber = 1,
     kAPrivateBrowsingIdFieldNumber = 2,
   };
-  // required string a_documentURI = 3;
+  // optional string a_documentURI = 3;
   bool has_a_documenturi() const;
   private:
   bool _internal_has_a_documenturi() const;
@@ -582,7 +582,7 @@ class Msg_Observe final :
   std::string* _internal_mutable_a_documenturi();
   public:
 
-  // required string a_key = 4;
+  // optional string a_key = 4;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -654,7 +654,7 @@ class Msg_Observe final :
       ::protobuf::mozilla::ipc::PrincipalInfo* a_principalinfo);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_principalinfo();
 
-  // required uint32 a_privateBrowsingId = 2;
+  // optional uint32 a_privateBrowsingId = 2;
   bool has_a_privatebrowsingid() const;
   private:
   bool _internal_has_a_privatebrowsingid() const;
@@ -800,7 +800,7 @@ inline void Msg_Observe::set_allocated_a_principalinfo(::protobuf::mozilla::ipc:
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundLSObserver.Msg_Observe.a_principalInfo)
 }
 
-// required uint32 a_privateBrowsingId = 2;
+// optional uint32 a_privateBrowsingId = 2;
 inline bool Msg_Observe::_internal_has_a_privatebrowsingid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -828,7 +828,7 @@ inline void Msg_Observe::set_a_privatebrowsingid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSObserver.Msg_Observe.a_privateBrowsingId)
 }
 
-// required string a_documentURI = 3;
+// optional string a_documentURI = 3;
 inline bool Msg_Observe::_internal_has_a_documenturi() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -896,7 +896,7 @@ inline void Msg_Observe::set_allocated_a_documenturi(std::string* a_documenturi)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundLSObserver.Msg_Observe.a_documentURI)
 }
 
-// required string a_key = 4;
+// optional string a_key = 4;
 inline bool Msg_Observe::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

@@ -24,7 +24,7 @@ message Reply_Query {
 }
 
 message Msg_PLockRequestConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
   required protobuf.mozilla.dom.locks.IPCLockRequest a_aRequest = 2;
 }
 

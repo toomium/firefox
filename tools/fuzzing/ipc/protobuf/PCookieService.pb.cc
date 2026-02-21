@@ -201,7 +201,7 @@ class Msg_SetCookies::_Internal {
     (*has_bits)[0] |= 16u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000001b) ^ 0x0000001b) != 0;
+    return ((has_bits[0] & 0x00000002) ^ 0x00000002) != 0;
   }
 };
 
@@ -340,7 +340,7 @@ const char* Msg_SetCookies::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_baseDomain = 1;
+      // optional string a_baseDomain = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_basedomain();
@@ -367,7 +367,7 @@ const char* Msg_SetCookies::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required bool a_fromHttp = 4;
+      // optional bool a_fromHttp = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_a_fromhttp(&has_bits);
@@ -376,7 +376,7 @@ const char* Msg_SetCookies::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required bool a_isThirdParty = 5;
+      // optional bool a_isThirdParty = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_a_isthirdparty(&has_bits);
@@ -429,7 +429,7 @@ uint8_t* Msg_SetCookies::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_baseDomain = 1;
+  // optional string a_baseDomain = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_basedomain(), target);
@@ -447,13 +447,13 @@ uint8_t* Msg_SetCookies::_InternalSerialize(
         3, this->_internal_a_host(), target);
   }
 
-  // required bool a_fromHttp = 4;
+  // optional bool a_fromHttp = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_a_fromhttp(), target);
   }
 
-  // required bool a_isThirdParty = 5;
+  // optional bool a_isThirdParty = 5;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_a_isthirdparty(), target);
@@ -475,59 +475,15 @@ uint8_t* Msg_SetCookies::_InternalSerialize(
   return target;
 }
 
-size_t Msg_SetCookies::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.PCookieService.Msg_SetCookies)
-  size_t total_size = 0;
-
-  if (_internal_has_a_basedomain()) {
-    // required string a_baseDomain = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_basedomain());
-  }
-
-  if (_internal_has_a_attrs()) {
-    // required bytes a_attrs = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_attrs());
-  }
-
-  if (_internal_has_a_fromhttp()) {
-    // required bool a_fromHttp = 4;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_isthirdparty()) {
-    // required bool a_isThirdParty = 5;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t Msg_SetCookies::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PCookieService.Msg_SetCookies)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000001b) ^ 0x0000001b) == 0) {  // All required fields are present.
-    // required string a_baseDomain = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_basedomain());
-
-    // required bytes a_attrs = 2;
+  // required bytes a_attrs = 2;
+  if (_internal_has_a_attrs()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_attrs());
-
-    // required bool a_fromHttp = 4;
-    total_size += 1 + 1;
-
-    // required bool a_isThirdParty = 5;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -540,14 +496,33 @@ size_t Msg_SetCookies::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // optional bytes a_host = 3;
+  // optional string a_baseDomain = 1;
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000004u) {
+  if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_host());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_basedomain());
   }
 
+  if (cached_has_bits & 0x0000001cu) {
+    // optional bytes a_host = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+          this->_internal_a_host());
+    }
+
+    // optional bool a_fromHttp = 4;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool a_isThirdParty = 5;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += 1 + 1;
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -601,8 +576,6 @@ void Msg_SetCookies::CopyFrom(const Msg_SetCookies& from) {
 
 bool Msg_SetCookies::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_cookies_))
-    return false;
   return true;
 }
 
@@ -669,9 +642,6 @@ class Msg_GetCookieList::_Internal {
   }
   static void set_has_a_hadcrosssiteredirects(HasBits* has_bits) {
     (*has_bits)[0] |= 256u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x000001fe) ^ 0x000001fe) != 0;
   }
 };
 
@@ -793,7 +763,7 @@ const char* Msg_GetCookieList::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required bool a_isForeign = 2;
+      // optional bool a_isForeign = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_isforeign(&has_bits);
@@ -802,7 +772,7 @@ const char* Msg_GetCookieList::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required bool a_isThirdPartyTrackingResource = 3;
+      // optional bool a_isThirdPartyTrackingResource = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_isthirdpartytrackingresource(&has_bits);
@@ -811,7 +781,7 @@ const char* Msg_GetCookieList::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required bool a_isThirdPartySocialTrackingResource = 4;
+      // optional bool a_isThirdPartySocialTrackingResource = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_a_isthirdpartysocialtrackingresource(&has_bits);
@@ -820,7 +790,7 @@ const char* Msg_GetCookieList::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required bool a_firstPartyStorageAccessPermissionGranted = 5;
+      // optional bool a_firstPartyStorageAccessPermissionGranted = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_a_firstpartystorageaccesspermissiongranted(&has_bits);
@@ -829,7 +799,7 @@ const char* Msg_GetCookieList::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_rejectedReason = 6;
+      // optional uint32 a_rejectedReason = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
           _Internal::set_has_a_rejectedreason(&has_bits);
@@ -838,7 +808,7 @@ const char* Msg_GetCookieList::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required bool a_isSafeTopLevelNav = 7;
+      // optional bool a_isSafeTopLevelNav = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
           _Internal::set_has_a_issafetoplevelnav(&has_bits);
@@ -847,7 +817,7 @@ const char* Msg_GetCookieList::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required bool a_isSameSiteForeign = 8;
+      // optional bool a_isSameSiteForeign = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
           _Internal::set_has_a_issamesiteforeign(&has_bits);
@@ -856,7 +826,7 @@ const char* Msg_GetCookieList::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required bool a_hadCrossSiteRedirects = 9;
+      // optional bool a_hadCrossSiteRedirects = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 72)) {
           _Internal::set_has_a_hadcrosssiteredirects(&has_bits);
@@ -916,49 +886,49 @@ uint8_t* Msg_GetCookieList::_InternalSerialize(
         1, this->_internal_a_host(), target);
   }
 
-  // required bool a_isForeign = 2;
+  // optional bool a_isForeign = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_isforeign(), target);
   }
 
-  // required bool a_isThirdPartyTrackingResource = 3;
+  // optional bool a_isThirdPartyTrackingResource = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_isthirdpartytrackingresource(), target);
   }
 
-  // required bool a_isThirdPartySocialTrackingResource = 4;
+  // optional bool a_isThirdPartySocialTrackingResource = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_a_isthirdpartysocialtrackingresource(), target);
   }
 
-  // required bool a_firstPartyStorageAccessPermissionGranted = 5;
+  // optional bool a_firstPartyStorageAccessPermissionGranted = 5;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_a_firstpartystorageaccesspermissiongranted(), target);
   }
 
-  // required uint32 a_rejectedReason = 6;
+  // optional uint32 a_rejectedReason = 6;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(6, this->_internal_a_rejectedreason(), target);
   }
 
-  // required bool a_isSafeTopLevelNav = 7;
+  // optional bool a_isSafeTopLevelNav = 7;
   if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(7, this->_internal_a_issafetoplevelnav(), target);
   }
 
-  // required bool a_isSameSiteForeign = 8;
+  // optional bool a_isSameSiteForeign = 8;
   if (cached_has_bits & 0x00000080u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(8, this->_internal_a_issamesiteforeign(), target);
   }
 
-  // required bool a_hadCrossSiteRedirects = 9;
+  // optional bool a_hadCrossSiteRedirects = 9;
   if (cached_has_bits & 0x00000100u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(9, this->_internal_a_hadcrosssiteredirects(), target);
@@ -978,84 +948,10 @@ uint8_t* Msg_GetCookieList::_InternalSerialize(
   return target;
 }
 
-size_t Msg_GetCookieList::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.PCookieService.Msg_GetCookieList)
-  size_t total_size = 0;
-
-  if (_internal_has_a_isforeign()) {
-    // required bool a_isForeign = 2;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_isthirdpartytrackingresource()) {
-    // required bool a_isThirdPartyTrackingResource = 3;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_isthirdpartysocialtrackingresource()) {
-    // required bool a_isThirdPartySocialTrackingResource = 4;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_firstpartystorageaccesspermissiongranted()) {
-    // required bool a_firstPartyStorageAccessPermissionGranted = 5;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_rejectedreason()) {
-    // required uint32 a_rejectedReason = 6;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_rejectedreason());
-  }
-
-  if (_internal_has_a_issafetoplevelnav()) {
-    // required bool a_isSafeTopLevelNav = 7;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_issamesiteforeign()) {
-    // required bool a_isSameSiteForeign = 8;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_hadcrosssiteredirects()) {
-    // required bool a_hadCrossSiteRedirects = 9;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t Msg_GetCookieList::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PCookieService.Msg_GetCookieList)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x000001fe) ^ 0x000001fe) == 0) {  // All required fields are present.
-    // required bool a_isForeign = 2;
-    total_size += 1 + 1;
-
-    // required bool a_isThirdPartyTrackingResource = 3;
-    total_size += 1 + 1;
-
-    // required bool a_isThirdPartySocialTrackingResource = 4;
-    total_size += 1 + 1;
-
-    // required bool a_firstPartyStorageAccessPermissionGranted = 5;
-    total_size += 1 + 1;
-
-    // required uint32 a_rejectedReason = 6;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_rejectedreason());
-
-    // required bool a_isSafeTopLevelNav = 7;
-    total_size += 1 + 1;
-
-    // required bool a_isSameSiteForeign = 8;
-    total_size += 1 + 1;
-
-    // required bool a_hadCrossSiteRedirects = 9;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1068,12 +964,54 @@ size_t Msg_GetCookieList::ByteSizeLong() const {
       _impl_.a_attrslist_.Get(i));
   }
 
-  // optional bytes a_host = 1;
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_host());
+  if (cached_has_bits & 0x000000ffu) {
+    // optional bytes a_host = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+          this->_internal_a_host());
+    }
+
+    // optional bool a_isForeign = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool a_isThirdPartyTrackingResource = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool a_isThirdPartySocialTrackingResource = 4;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool a_firstPartyStorageAccessPermissionGranted = 5;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += 1 + 1;
+    }
+
+    // optional uint32 a_rejectedReason = 6;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_rejectedreason());
+    }
+
+    // optional bool a_isSafeTopLevelNav = 7;
+    if (cached_has_bits & 0x00000040u) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool a_isSameSiteForeign = 8;
+    if (cached_has_bits & 0x00000080u) {
+      total_size += 1 + 1;
+    }
+
+  }
+  // optional bool a_hadCrossSiteRedirects = 9;
+  if (cached_has_bits & 0x00000100u) {
+    total_size += 1 + 1;
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1140,7 +1078,6 @@ void Msg_GetCookieList::CopyFrom(const Msg_GetCookieList& from) {
 }
 
 bool Msg_GetCookieList::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -2166,9 +2103,6 @@ void Msg_RemoveCookie::CopyFrom(const Msg_RemoveCookie& from) {
 
 bool Msg_RemoveCookie::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_cookie()) {
-    if (!_impl_.a_cookie_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -2403,8 +2337,6 @@ void Msg_RemoveBatchDeletedCookies::CopyFrom(const Msg_RemoveBatchDeletedCookies
 }
 
 bool Msg_RemoveBatchDeletedCookies::IsInitialized() const {
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_cookieslist_))
-    return false;
   return true;
 }
 
@@ -2886,9 +2818,6 @@ void Msg_AddCookie::CopyFrom(const Msg_AddCookie& from) {
 
 bool Msg_AddCookie::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_cookie()) {
-    if (!_impl_.a_cookie_->IsInitialized()) return false;
-  }
   return true;
 }
 

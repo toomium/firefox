@@ -12,22 +12,22 @@ package protobuf.mozilla.dom;
 
 // Structs and unions declarations
 message FileSystemGetDirectoryListingParams {
-  required string a_filesystem = 1;
-  required string a_realPath = 2;
-  required string a_domPath = 3;
-  required string a_filters = 4;
+  optional string a_filesystem = 1;
+  optional string a_realPath = 2;
+  optional string a_domPath = 3;
+  optional string a_filters = 4;
 }
 
 message FileSystemGetFilesParams {
-  required string a_filesystem = 1;
-  required string a_realPath = 2;
-  required string a_domPath = 3;
-  required bool a_recursiveFlag = 4;
+  optional string a_filesystem = 1;
+  optional string a_realPath = 2;
+  optional string a_domPath = 3;
+  optional bool a_recursiveFlag = 4;
 }
 
 message FileSystemGetFileOrDirectoryParams {
-  required string a_filesystem = 1;
-  required string a_realPath = 2;
+  optional string a_filesystem = 1;
+  optional string a_realPath = 2;
 }
 
 message FileSystemParams {

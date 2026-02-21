@@ -453,7 +453,7 @@ class Msg_Event final :
     kAAIDFieldNumber = 1,
     kATypeFieldNumber = 2,
   };
-  // required uint64 a_aID = 1;
+  // optional uint64 a_aID = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -466,7 +466,7 @@ class Msg_Event final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required uint32 a_type = 2;
+  // optional uint32 a_type = 2;
   bool has_a_type() const;
   private:
   bool _internal_has_a_type() const;
@@ -482,9 +482,6 @@ class Msg_Event final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_Event)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -614,7 +611,7 @@ class Msg_StateChangeEvent final :
     kAAStateFieldNumber = 2,
     kAAEnabledFieldNumber = 3,
   };
-  // required uint64 a_aID = 1;
+  // optional uint64 a_aID = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -627,7 +624,7 @@ class Msg_StateChangeEvent final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required uint64 a_aState = 2;
+  // optional uint64 a_aState = 2;
   bool has_a_astate() const;
   private:
   bool _internal_has_a_astate() const;
@@ -640,7 +637,7 @@ class Msg_StateChangeEvent final :
   void _internal_set_a_astate(uint64_t value);
   public:
 
-  // required bool a_aEnabled = 3;
+  // optional bool a_aEnabled = 3;
   bool has_a_aenabled() const;
   private:
   bool _internal_has_a_aenabled() const;
@@ -656,9 +653,6 @@ class Msg_StateChangeEvent final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_StateChangeEvent)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -811,7 +805,7 @@ class Msg_CaretMoveEvent final :
   std::string* _internal_mutable_a_acaretrect();
   public:
 
-  // required uint64 a_aID = 1;
+  // optional uint64 a_aID = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -824,7 +818,7 @@ class Msg_CaretMoveEvent final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required sint32 a_aOffset = 3;
+  // optional sint32 a_aOffset = 3;
   bool has_a_aoffset() const;
   private:
   bool _internal_has_a_aoffset() const;
@@ -837,7 +831,7 @@ class Msg_CaretMoveEvent final :
   void _internal_set_a_aoffset(int32_t value);
   public:
 
-  // required bool a_aIsSelectionCollapsed = 4;
+  // optional bool a_aIsSelectionCollapsed = 4;
   bool has_a_aisselectioncollapsed() const;
   private:
   bool _internal_has_a_aisselectioncollapsed() const;
@@ -850,7 +844,7 @@ class Msg_CaretMoveEvent final :
   void _internal_set_a_aisselectioncollapsed(bool value);
   public:
 
-  // required bool a_aIsAtEndOfLine = 5;
+  // optional bool a_aIsAtEndOfLine = 5;
   bool has_a_aisatendofline() const;
   private:
   bool _internal_has_a_aisatendofline() const;
@@ -863,7 +857,7 @@ class Msg_CaretMoveEvent final :
   void _internal_set_a_aisatendofline(bool value);
   public:
 
-  // required bool a_aFromUser = 7;
+  // optional bool a_aFromUser = 7;
   bool has_a_afromuser() const;
   private:
   bool _internal_has_a_afromuser() const;
@@ -876,7 +870,7 @@ class Msg_CaretMoveEvent final :
   void _internal_set_a_afromuser(bool value);
   public:
 
-  // required sint32 a_aGranularity = 6;
+  // optional sint32 a_aGranularity = 6;
   bool has_a_agranularity() const;
   private:
   bool _internal_has_a_agranularity() const;
@@ -892,9 +886,6 @@ class Msg_CaretMoveEvent final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1299,7 +1290,7 @@ class Msg_SelectionEvent final :
     kAAWidgetIDFieldNumber = 2,
     kAATypeFieldNumber = 3,
   };
-  // required uint64 a_aID = 1;
+  // optional uint64 a_aID = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -1312,7 +1303,7 @@ class Msg_SelectionEvent final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required uint64 a_aWidgetID = 2;
+  // optional uint64 a_aWidgetID = 2;
   bool has_a_awidgetid() const;
   private:
   bool _internal_has_a_awidgetid() const;
@@ -1325,7 +1316,7 @@ class Msg_SelectionEvent final :
   void _internal_set_a_awidgetid(uint64_t value);
   public:
 
-  // required uint32 a_aType = 3;
+  // optional uint32 a_aType = 3;
   bool has_a_atype() const;
   private:
   bool _internal_has_a_atype() const;
@@ -1341,9 +1332,6 @@ class Msg_SelectionEvent final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectionEvent)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1491,7 +1479,7 @@ class Msg_RoleChangedEvent final :
   std::string* _internal_mutable_a_arole();
   public:
 
-  // required uint32 a_aRoleMapEntryIndex = 2;
+  // optional uint32 a_aRoleMapEntryIndex = 2;
   bool has_a_arolemapentryindex() const;
   private:
   bool _internal_has_a_arolemapentryindex() const;
@@ -1507,9 +1495,6 @@ class Msg_RoleChangedEvent final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_RoleChangedEvent)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1656,7 +1641,7 @@ class Msg_FocusEvent final :
   std::string* _internal_mutable_a_acaretrect();
   public:
 
-  // required uint64 a_aID = 1;
+  // optional uint64 a_aID = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -1672,9 +1657,6 @@ class Msg_FocusEvent final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_FocusEvent)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1807,7 +1789,7 @@ class Msg_ScrollingEvent final :
     kAAMaxScrollXFieldNumber = 5,
     kAAMaxScrollYFieldNumber = 6,
   };
-  // required uint64 a_aID = 1;
+  // optional uint64 a_aID = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -1820,7 +1802,7 @@ class Msg_ScrollingEvent final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required uint64 a_aType = 2;
+  // optional uint64 a_aType = 2;
   bool has_a_atype() const;
   private:
   bool _internal_has_a_atype() const;
@@ -1833,7 +1815,7 @@ class Msg_ScrollingEvent final :
   void _internal_set_a_atype(uint64_t value);
   public:
 
-  // required uint32 a_aScrollX = 3;
+  // optional uint32 a_aScrollX = 3;
   bool has_a_ascrollx() const;
   private:
   bool _internal_has_a_ascrollx() const;
@@ -1846,7 +1828,7 @@ class Msg_ScrollingEvent final :
   void _internal_set_a_ascrollx(uint32_t value);
   public:
 
-  // required uint32 a_aScrollY = 4;
+  // optional uint32 a_aScrollY = 4;
   bool has_a_ascrolly() const;
   private:
   bool _internal_has_a_ascrolly() const;
@@ -1859,7 +1841,7 @@ class Msg_ScrollingEvent final :
   void _internal_set_a_ascrolly(uint32_t value);
   public:
 
-  // required uint32 a_aMaxScrollX = 5;
+  // optional uint32 a_aMaxScrollX = 5;
   bool has_a_amaxscrollx() const;
   private:
   bool _internal_has_a_amaxscrollx() const;
@@ -1872,7 +1854,7 @@ class Msg_ScrollingEvent final :
   void _internal_set_a_amaxscrollx(uint32_t value);
   public:
 
-  // required uint32 a_aMaxScrollY = 6;
+  // optional uint32 a_aMaxScrollY = 6;
   bool has_a_amaxscrolly() const;
   private:
   bool _internal_has_a_amaxscrolly() const;
@@ -1888,9 +1870,6 @@ class Msg_ScrollingEvent final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2024,7 +2003,7 @@ class Msg_AnnouncementEvent final :
     kAAIDFieldNumber = 1,
     kAAPriorityFieldNumber = 3,
   };
-  // required string a_aAnnouncement = 2;
+  // optional string a_aAnnouncement = 2;
   bool has_a_aannouncement() const;
   private:
   bool _internal_has_a_aannouncement() const;
@@ -2042,7 +2021,7 @@ class Msg_AnnouncementEvent final :
   std::string* _internal_mutable_a_aannouncement();
   public:
 
-  // required uint64 a_aID = 1;
+  // optional uint64 a_aID = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -2055,7 +2034,7 @@ class Msg_AnnouncementEvent final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required uint32 a_aPriority = 3;
+  // optional uint32 a_aPriority = 3;
   bool has_a_apriority() const;
   private:
   bool _internal_has_a_apriority() const;
@@ -2071,9 +2050,6 @@ class Msg_AnnouncementEvent final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2221,7 +2197,7 @@ class Msg_TextSelectionChangeEvent final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::a11y::TextRangeData >&
       a_aselection() const;
 
-  // required uint64 a_aID = 1;
+  // optional uint64 a_aID = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -2383,7 +2359,7 @@ class Msg_BindChildDoc final :
   std::string* _internal_mutable_a_achilddoc();
   public:
 
-  // required uint64 a_aID = 2;
+  // optional uint64 a_aID = 2;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -2399,9 +2375,6 @@ class Msg_BindChildDoc final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_BindChildDoc)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3393,7 +3366,7 @@ class Msg_ScrollTo final :
     kAAIDFieldNumber = 1,
     kAAScrollTypeFieldNumber = 2,
   };
-  // required uint64 a_aID = 1;
+  // optional uint64 a_aID = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -3406,7 +3379,7 @@ class Msg_ScrollTo final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required uint32 a_aScrollType = 2;
+  // optional uint32 a_aScrollType = 2;
   bool has_a_ascrolltype() const;
   private:
   bool _internal_has_a_ascrolltype() const;
@@ -3422,9 +3395,6 @@ class Msg_ScrollTo final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTo)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3555,7 +3525,7 @@ class Msg_ScrollToPoint final :
     kAAXFieldNumber = 3,
     kAAYFieldNumber = 4,
   };
-  // required uint64 a_aID = 1;
+  // optional uint64 a_aID = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -3568,7 +3538,7 @@ class Msg_ScrollToPoint final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required uint32 a_aScrollType = 2;
+  // optional uint32 a_aScrollType = 2;
   bool has_a_ascrolltype() const;
   private:
   bool _internal_has_a_ascrolltype() const;
@@ -3581,7 +3551,7 @@ class Msg_ScrollToPoint final :
   void _internal_set_a_ascrolltype(uint32_t value);
   public:
 
-  // required sint32 a_aX = 3;
+  // optional sint32 a_aX = 3;
   bool has_a_ax() const;
   private:
   bool _internal_has_a_ax() const;
@@ -3594,7 +3564,7 @@ class Msg_ScrollToPoint final :
   void _internal_set_a_ax(int32_t value);
   public:
 
-  // required sint32 a_aY = 4;
+  // optional sint32 a_aY = 4;
   bool has_a_ay() const;
   private:
   bool _internal_has_a_ay() const;
@@ -3610,9 +3580,6 @@ class Msg_ScrollToPoint final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollToPoint)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3744,7 +3711,7 @@ class Msg_Announce final :
     kAAIDFieldNumber = 1,
     kAAPriorityFieldNumber = 3,
   };
-  // required string a_aAnnouncement = 2;
+  // optional string a_aAnnouncement = 2;
   bool has_a_aannouncement() const;
   private:
   bool _internal_has_a_aannouncement() const;
@@ -3762,7 +3729,7 @@ class Msg_Announce final :
   std::string* _internal_mutable_a_aannouncement();
   public:
 
-  // required uint64 a_aID = 1;
+  // optional uint64 a_aID = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -3775,7 +3742,7 @@ class Msg_Announce final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required uint32 a_aPriority = 3;
+  // optional uint32 a_aPriority = 3;
   bool has_a_apriority() const;
   private:
   bool _internal_has_a_apriority() const;
@@ -3791,9 +3758,6 @@ class Msg_Announce final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3927,7 +3891,7 @@ class Msg_SetTextSelection final :
     kAASelectionNumFieldNumber = 5,
     kAASetFocusFieldNumber = 6,
   };
-  // required uint64 a_aStartID = 1;
+  // optional uint64 a_aStartID = 1;
   bool has_a_astartid() const;
   private:
   bool _internal_has_a_astartid() const;
@@ -3940,7 +3904,7 @@ class Msg_SetTextSelection final :
   void _internal_set_a_astartid(uint64_t value);
   public:
 
-  // required uint64 a_aEndID = 3;
+  // optional uint64 a_aEndID = 3;
   bool has_a_aendid() const;
   private:
   bool _internal_has_a_aendid() const;
@@ -3953,7 +3917,7 @@ class Msg_SetTextSelection final :
   void _internal_set_a_aendid(uint64_t value);
   public:
 
-  // required sint32 a_aStartOffset = 2;
+  // optional sint32 a_aStartOffset = 2;
   bool has_a_astartoffset() const;
   private:
   bool _internal_has_a_astartoffset() const;
@@ -3966,7 +3930,7 @@ class Msg_SetTextSelection final :
   void _internal_set_a_astartoffset(int32_t value);
   public:
 
-  // required sint32 a_aEndOffset = 4;
+  // optional sint32 a_aEndOffset = 4;
   bool has_a_aendoffset() const;
   private:
   bool _internal_has_a_aendoffset() const;
@@ -3979,7 +3943,7 @@ class Msg_SetTextSelection final :
   void _internal_set_a_aendoffset(int32_t value);
   public:
 
-  // required sint32 a_aSelectionNum = 5;
+  // optional sint32 a_aSelectionNum = 5;
   bool has_a_aselectionnum() const;
   private:
   bool _internal_has_a_aselectionnum() const;
@@ -3992,7 +3956,7 @@ class Msg_SetTextSelection final :
   void _internal_set_a_aselectionnum(int32_t value);
   public:
 
-  // required bool a_aSetFocus = 6;
+  // optional bool a_aSetFocus = 6;
   bool has_a_asetfocus() const;
   private:
   bool _internal_has_a_asetfocus() const;
@@ -4008,9 +3972,6 @@ class Msg_SetTextSelection final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4143,7 +4104,7 @@ class Msg_RemoveTextSelection final :
     kAAIDFieldNumber = 1,
     kAASelectionNumFieldNumber = 2,
   };
-  // required uint64 a_aID = 1;
+  // optional uint64 a_aID = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -4156,7 +4117,7 @@ class Msg_RemoveTextSelection final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required sint32 a_aSelectionNum = 2;
+  // optional sint32 a_aSelectionNum = 2;
   bool has_a_aselectionnum() const;
   private:
   bool _internal_has_a_aselectionnum() const;
@@ -4172,9 +4133,6 @@ class Msg_RemoveTextSelection final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_RemoveTextSelection)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4306,7 +4264,7 @@ class Msg_ScrollTextLeafRangeIntoView final :
     kAAEndOffsetFieldNumber = 4,
     kAAScrollTypeFieldNumber = 5,
   };
-  // required uint64 a_aStartID = 1;
+  // optional uint64 a_aStartID = 1;
   bool has_a_astartid() const;
   private:
   bool _internal_has_a_astartid() const;
@@ -4319,7 +4277,7 @@ class Msg_ScrollTextLeafRangeIntoView final :
   void _internal_set_a_astartid(uint64_t value);
   public:
 
-  // required uint64 a_aEndID = 3;
+  // optional uint64 a_aEndID = 3;
   bool has_a_aendid() const;
   private:
   bool _internal_has_a_aendid() const;
@@ -4332,7 +4290,7 @@ class Msg_ScrollTextLeafRangeIntoView final :
   void _internal_set_a_aendid(uint64_t value);
   public:
 
-  // required sint32 a_aStartOffset = 2;
+  // optional sint32 a_aStartOffset = 2;
   bool has_a_astartoffset() const;
   private:
   bool _internal_has_a_astartoffset() const;
@@ -4345,7 +4303,7 @@ class Msg_ScrollTextLeafRangeIntoView final :
   void _internal_set_a_astartoffset(int32_t value);
   public:
 
-  // required sint32 a_aEndOffset = 4;
+  // optional sint32 a_aEndOffset = 4;
   bool has_a_aendoffset() const;
   private:
   bool _internal_has_a_aendoffset() const;
@@ -4358,7 +4316,7 @@ class Msg_ScrollTextLeafRangeIntoView final :
   void _internal_set_a_aendoffset(int32_t value);
   public:
 
-  // required uint32 a_aScrollType = 5;
+  // optional uint32 a_aScrollType = 5;
   bool has_a_ascrolltype() const;
   private:
   bool _internal_has_a_ascrolltype() const;
@@ -4374,9 +4332,6 @@ class Msg_ScrollTextLeafRangeIntoView final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4512,7 +4467,7 @@ class Msg_ScrollSubstringToPoint final :
     kAAXFieldNumber = 5,
     kAAYFieldNumber = 6,
   };
-  // required uint64 a_aID = 1;
+  // optional uint64 a_aID = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -4525,7 +4480,7 @@ class Msg_ScrollSubstringToPoint final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required sint32 a_aStartOffset = 2;
+  // optional sint32 a_aStartOffset = 2;
   bool has_a_astartoffset() const;
   private:
   bool _internal_has_a_astartoffset() const;
@@ -4538,7 +4493,7 @@ class Msg_ScrollSubstringToPoint final :
   void _internal_set_a_astartoffset(int32_t value);
   public:
 
-  // required sint32 a_aEndOffset = 3;
+  // optional sint32 a_aEndOffset = 3;
   bool has_a_aendoffset() const;
   private:
   bool _internal_has_a_aendoffset() const;
@@ -4551,7 +4506,7 @@ class Msg_ScrollSubstringToPoint final :
   void _internal_set_a_aendoffset(int32_t value);
   public:
 
-  // required uint32 a_aCoordinateType = 4;
+  // optional uint32 a_aCoordinateType = 4;
   bool has_a_acoordinatetype() const;
   private:
   bool _internal_has_a_acoordinatetype() const;
@@ -4564,7 +4519,7 @@ class Msg_ScrollSubstringToPoint final :
   void _internal_set_a_acoordinatetype(uint32_t value);
   public:
 
-  // required sint32 a_aX = 5;
+  // optional sint32 a_aX = 5;
   bool has_a_ax() const;
   private:
   bool _internal_has_a_ax() const;
@@ -4577,7 +4532,7 @@ class Msg_ScrollSubstringToPoint final :
   void _internal_set_a_ax(int32_t value);
   public:
 
-  // required sint32 a_aY = 6;
+  // optional sint32 a_aY = 6;
   bool has_a_ay() const;
   private:
   bool _internal_has_a_ay() const;
@@ -4593,9 +4548,6 @@ class Msg_ScrollSubstringToPoint final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4728,7 +4680,7 @@ class Msg_ReplaceText final :
     kAATextFieldNumber = 2,
     kAAIDFieldNumber = 1,
   };
-  // required string a_aText = 2;
+  // optional string a_aText = 2;
   bool has_a_atext() const;
   private:
   bool _internal_has_a_atext() const;
@@ -4746,7 +4698,7 @@ class Msg_ReplaceText final :
   std::string* _internal_mutable_a_atext();
   public:
 
-  // required uint64 a_aID = 1;
+  // optional uint64 a_aID = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -4762,9 +4714,6 @@ class Msg_ReplaceText final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_ReplaceText)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4894,7 +4843,7 @@ class Msg_InsertText final :
     kAAIDFieldNumber = 1,
     kAAPositionFieldNumber = 3,
   };
-  // required string a_aText = 2;
+  // optional string a_aText = 2;
   bool has_a_atext() const;
   private:
   bool _internal_has_a_atext() const;
@@ -4912,7 +4861,7 @@ class Msg_InsertText final :
   std::string* _internal_mutable_a_atext();
   public:
 
-  // required uint64 a_aID = 1;
+  // optional uint64 a_aID = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -4925,7 +4874,7 @@ class Msg_InsertText final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required sint32 a_aPosition = 3;
+  // optional sint32 a_aPosition = 3;
   bool has_a_aposition() const;
   private:
   bool _internal_has_a_aposition() const;
@@ -4941,9 +4890,6 @@ class Msg_InsertText final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5074,7 +5020,7 @@ class Msg_CopyText final :
     kAAStartPosFieldNumber = 2,
     kAAEndPosFieldNumber = 3,
   };
-  // required uint64 a_aID = 1;
+  // optional uint64 a_aID = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -5087,7 +5033,7 @@ class Msg_CopyText final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required sint32 a_aStartPos = 2;
+  // optional sint32 a_aStartPos = 2;
   bool has_a_astartpos() const;
   private:
   bool _internal_has_a_astartpos() const;
@@ -5100,7 +5046,7 @@ class Msg_CopyText final :
   void _internal_set_a_astartpos(int32_t value);
   public:
 
-  // required sint32 a_aEndPos = 3;
+  // optional sint32 a_aEndPos = 3;
   bool has_a_aendpos() const;
   private:
   bool _internal_has_a_aendpos() const;
@@ -5116,9 +5062,6 @@ class Msg_CopyText final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_CopyText)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5249,7 +5192,7 @@ class Msg_CutText final :
     kAAStartPosFieldNumber = 2,
     kAAEndPosFieldNumber = 3,
   };
-  // required uint64 a_aID = 1;
+  // optional uint64 a_aID = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -5262,7 +5205,7 @@ class Msg_CutText final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required sint32 a_aStartPos = 2;
+  // optional sint32 a_aStartPos = 2;
   bool has_a_astartpos() const;
   private:
   bool _internal_has_a_astartpos() const;
@@ -5275,7 +5218,7 @@ class Msg_CutText final :
   void _internal_set_a_astartpos(int32_t value);
   public:
 
-  // required sint32 a_aEndPos = 3;
+  // optional sint32 a_aEndPos = 3;
   bool has_a_aendpos() const;
   private:
   bool _internal_has_a_aendpos() const;
@@ -5291,9 +5234,6 @@ class Msg_CutText final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_CutText)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5424,7 +5364,7 @@ class Msg_DeleteText final :
     kAAStartPosFieldNumber = 2,
     kAAEndPosFieldNumber = 3,
   };
-  // required uint64 a_aID = 1;
+  // optional uint64 a_aID = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -5437,7 +5377,7 @@ class Msg_DeleteText final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required sint32 a_aStartPos = 2;
+  // optional sint32 a_aStartPos = 2;
   bool has_a_astartpos() const;
   private:
   bool _internal_has_a_astartpos() const;
@@ -5450,7 +5390,7 @@ class Msg_DeleteText final :
   void _internal_set_a_astartpos(int32_t value);
   public:
 
-  // required sint32 a_aEndPos = 3;
+  // optional sint32 a_aEndPos = 3;
   bool has_a_aendpos() const;
   private:
   bool _internal_has_a_aendpos() const;
@@ -5466,9 +5406,6 @@ class Msg_DeleteText final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_DeleteText)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5598,7 +5535,7 @@ class Msg_PasteText final :
     kAAIDFieldNumber = 1,
     kAAPositionFieldNumber = 2,
   };
-  // required uint64 a_aID = 1;
+  // optional uint64 a_aID = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -5611,7 +5548,7 @@ class Msg_PasteText final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required sint32 a_aPosition = 2;
+  // optional sint32 a_aPosition = 2;
   bool has_a_aposition() const;
   private:
   bool _internal_has_a_aposition() const;
@@ -5627,9 +5564,6 @@ class Msg_PasteText final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_PasteText)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5757,7 +5691,7 @@ class Msg_TakeSelection final :
   enum : int {
     kAAIDFieldNumber = 1,
   };
-  // required uint64 a_aID = 1;
+  // optional uint64 a_aID = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -5900,7 +5834,7 @@ class Msg_SetSelected final :
     kAAIDFieldNumber = 1,
     kAASelectedFieldNumber = 2,
   };
-  // required uint64 a_aID = 1;
+  // optional uint64 a_aID = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -5913,7 +5847,7 @@ class Msg_SetSelected final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required bool a_aSelected = 2;
+  // optional bool a_aSelected = 2;
   bool has_a_aselected() const;
   private:
   bool _internal_has_a_aselected() const;
@@ -5929,9 +5863,6 @@ class Msg_SetSelected final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_SetSelected)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -6060,7 +5991,7 @@ class Msg_DoActionAsync final :
     kAAIDFieldNumber = 1,
     kAAIndexFieldNumber = 2,
   };
-  // required uint64 a_aID = 1;
+  // optional uint64 a_aID = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -6073,7 +6004,7 @@ class Msg_DoActionAsync final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required uint32 a_aIndex = 2;
+  // optional uint32 a_aIndex = 2;
   bool has_a_aindex() const;
   private:
   bool _internal_has_a_aindex() const;
@@ -6089,9 +6020,6 @@ class Msg_DoActionAsync final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_DoActionAsync)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -6220,7 +6148,7 @@ class Msg_SetCurValue final :
     kAAIDFieldNumber = 1,
     kAAValueFieldNumber = 2,
   };
-  // required uint64 a_aID = 1;
+  // optional uint64 a_aID = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -6233,7 +6161,7 @@ class Msg_SetCurValue final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required double a_aValue = 2;
+  // optional double a_aValue = 2;
   bool has_a_avalue() const;
   private:
   bool _internal_has_a_avalue() const;
@@ -6249,9 +6177,6 @@ class Msg_SetCurValue final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_SetCurValue)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -6379,7 +6304,7 @@ class Msg_TakeFocus final :
   enum : int {
     kAAIDFieldNumber = 1,
   };
-  // required uint64 a_aID = 1;
+  // optional uint64 a_aID = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -6541,7 +6466,7 @@ class Msg_VerifyCache final :
   std::string* _internal_mutable_a_afields();
   public:
 
-  // required uint64 a_aID = 1;
+  // optional uint64 a_aID = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -6554,7 +6479,7 @@ class Msg_VerifyCache final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required uint64 a_aCacheDomain = 2;
+  // optional uint64 a_aCacheDomain = 2;
   bool has_a_acachedomain() const;
   private:
   bool _internal_has_a_acachedomain() const;
@@ -6570,9 +6495,6 @@ class Msg_VerifyCache final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_VerifyCache)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -6726,7 +6648,7 @@ class Msg_AckMutationEvents final :
 
 // Msg_Event
 
-// required uint64 a_aID = 1;
+// optional uint64 a_aID = 1;
 inline bool Msg_Event::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6754,7 +6676,7 @@ inline void Msg_Event::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_Event.a_aID)
 }
 
-// required uint32 a_type = 2;
+// optional uint32 a_type = 2;
 inline bool Msg_Event::_internal_has_a_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6786,7 +6708,7 @@ inline void Msg_Event::set_a_type(uint32_t value) {
 
 // Msg_StateChangeEvent
 
-// required uint64 a_aID = 1;
+// optional uint64 a_aID = 1;
 inline bool Msg_StateChangeEvent::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6814,7 +6736,7 @@ inline void Msg_StateChangeEvent::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_StateChangeEvent.a_aID)
 }
 
-// required uint64 a_aState = 2;
+// optional uint64 a_aState = 2;
 inline bool Msg_StateChangeEvent::_internal_has_a_astate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6842,7 +6764,7 @@ inline void Msg_StateChangeEvent::set_a_astate(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_StateChangeEvent.a_aState)
 }
 
-// required bool a_aEnabled = 3;
+// optional bool a_aEnabled = 3;
 inline bool Msg_StateChangeEvent::_internal_has_a_aenabled() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -6874,7 +6796,7 @@ inline void Msg_StateChangeEvent::set_a_aenabled(bool value) {
 
 // Msg_CaretMoveEvent
 
-// required uint64 a_aID = 1;
+// optional uint64 a_aID = 1;
 inline bool Msg_CaretMoveEvent::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6970,7 +6892,7 @@ inline void Msg_CaretMoveEvent::set_allocated_a_acaretrect(std::string* a_acaret
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aCaretRect)
 }
 
-// required sint32 a_aOffset = 3;
+// optional sint32 a_aOffset = 3;
 inline bool Msg_CaretMoveEvent::_internal_has_a_aoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -6998,7 +6920,7 @@ inline void Msg_CaretMoveEvent::set_a_aoffset(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aOffset)
 }
 
-// required bool a_aIsSelectionCollapsed = 4;
+// optional bool a_aIsSelectionCollapsed = 4;
 inline bool Msg_CaretMoveEvent::_internal_has_a_aisselectioncollapsed() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -7026,7 +6948,7 @@ inline void Msg_CaretMoveEvent::set_a_aisselectioncollapsed(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aIsSelectionCollapsed)
 }
 
-// required bool a_aIsAtEndOfLine = 5;
+// optional bool a_aIsAtEndOfLine = 5;
 inline bool Msg_CaretMoveEvent::_internal_has_a_aisatendofline() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -7054,7 +6976,7 @@ inline void Msg_CaretMoveEvent::set_a_aisatendofline(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aIsAtEndOfLine)
 }
 
-// required sint32 a_aGranularity = 6;
+// optional sint32 a_aGranularity = 6;
 inline bool Msg_CaretMoveEvent::_internal_has_a_agranularity() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -7082,7 +7004,7 @@ inline void Msg_CaretMoveEvent::set_a_agranularity(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aGranularity)
 }
 
-// required bool a_aFromUser = 7;
+// optional bool a_aFromUser = 7;
 inline bool Msg_CaretMoveEvent::_internal_has_a_afromuser() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -7159,7 +7081,7 @@ Msg_MutationEvents::a_adata() const {
 
 // Msg_SelectionEvent
 
-// required uint64 a_aID = 1;
+// optional uint64 a_aID = 1;
 inline bool Msg_SelectionEvent::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7187,7 +7109,7 @@ inline void Msg_SelectionEvent::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectionEvent.a_aID)
 }
 
-// required uint64 a_aWidgetID = 2;
+// optional uint64 a_aWidgetID = 2;
 inline bool Msg_SelectionEvent::_internal_has_a_awidgetid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7215,7 +7137,7 @@ inline void Msg_SelectionEvent::set_a_awidgetid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectionEvent.a_aWidgetID)
 }
 
-// required uint32 a_aType = 3;
+// optional uint32 a_aType = 3;
 inline bool Msg_SelectionEvent::_internal_has_a_atype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -7315,7 +7237,7 @@ inline void Msg_RoleChangedEvent::set_allocated_a_arole(std::string* a_arole) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_RoleChangedEvent.a_aRole)
 }
 
-// required uint32 a_aRoleMapEntryIndex = 2;
+// optional uint32 a_aRoleMapEntryIndex = 2;
 inline bool Msg_RoleChangedEvent::_internal_has_a_arolemapentryindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7347,7 +7269,7 @@ inline void Msg_RoleChangedEvent::set_a_arolemapentryindex(uint32_t value) {
 
 // Msg_FocusEvent
 
-// required uint64 a_aID = 1;
+// optional uint64 a_aID = 1;
 inline bool Msg_FocusEvent::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7447,7 +7369,7 @@ inline void Msg_FocusEvent::set_allocated_a_acaretrect(std::string* a_acaretrect
 
 // Msg_ScrollingEvent
 
-// required uint64 a_aID = 1;
+// optional uint64 a_aID = 1;
 inline bool Msg_ScrollingEvent::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7475,7 +7397,7 @@ inline void Msg_ScrollingEvent::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.a_aID)
 }
 
-// required uint64 a_aType = 2;
+// optional uint64 a_aType = 2;
 inline bool Msg_ScrollingEvent::_internal_has_a_atype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7503,7 +7425,7 @@ inline void Msg_ScrollingEvent::set_a_atype(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.a_aType)
 }
 
-// required uint32 a_aScrollX = 3;
+// optional uint32 a_aScrollX = 3;
 inline bool Msg_ScrollingEvent::_internal_has_a_ascrollx() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -7531,7 +7453,7 @@ inline void Msg_ScrollingEvent::set_a_ascrollx(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.a_aScrollX)
 }
 
-// required uint32 a_aScrollY = 4;
+// optional uint32 a_aScrollY = 4;
 inline bool Msg_ScrollingEvent::_internal_has_a_ascrolly() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -7559,7 +7481,7 @@ inline void Msg_ScrollingEvent::set_a_ascrolly(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.a_aScrollY)
 }
 
-// required uint32 a_aMaxScrollX = 5;
+// optional uint32 a_aMaxScrollX = 5;
 inline bool Msg_ScrollingEvent::_internal_has_a_amaxscrollx() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -7587,7 +7509,7 @@ inline void Msg_ScrollingEvent::set_a_amaxscrollx(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.a_aMaxScrollX)
 }
 
-// required uint32 a_aMaxScrollY = 6;
+// optional uint32 a_aMaxScrollY = 6;
 inline bool Msg_ScrollingEvent::_internal_has_a_amaxscrolly() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -7619,7 +7541,7 @@ inline void Msg_ScrollingEvent::set_a_amaxscrolly(uint32_t value) {
 
 // Msg_AnnouncementEvent
 
-// required uint64 a_aID = 1;
+// optional uint64 a_aID = 1;
 inline bool Msg_AnnouncementEvent::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7647,7 +7569,7 @@ inline void Msg_AnnouncementEvent::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent.a_aID)
 }
 
-// required string a_aAnnouncement = 2;
+// optional string a_aAnnouncement = 2;
 inline bool Msg_AnnouncementEvent::_internal_has_a_aannouncement() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7715,7 +7637,7 @@ inline void Msg_AnnouncementEvent::set_allocated_a_aannouncement(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent.a_aAnnouncement)
 }
 
-// required uint32 a_aPriority = 3;
+// optional uint32 a_aPriority = 3;
 inline bool Msg_AnnouncementEvent::_internal_has_a_apriority() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -7747,7 +7669,7 @@ inline void Msg_AnnouncementEvent::set_a_apriority(uint32_t value) {
 
 // Msg_TextSelectionChangeEvent
 
-// required uint64 a_aID = 1;
+// optional uint64 a_aID = 1;
 inline bool Msg_TextSelectionChangeEvent::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7884,7 +7806,7 @@ inline void Msg_BindChildDoc::set_allocated_a_achilddoc(std::string* a_achilddoc
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_BindChildDoc.a_aChildDoc)
 }
 
-// required uint64 a_aID = 2;
+// optional uint64 a_aID = 2;
 inline bool Msg_BindChildDoc::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8186,7 +8108,7 @@ Msg_AccessiblesWillMove::mutable_a_aids() {
 
 // Msg_ScrollTo
 
-// required uint64 a_aID = 1;
+// optional uint64 a_aID = 1;
 inline bool Msg_ScrollTo::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8214,7 +8136,7 @@ inline void Msg_ScrollTo::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTo.a_aID)
 }
 
-// required uint32 a_aScrollType = 2;
+// optional uint32 a_aScrollType = 2;
 inline bool Msg_ScrollTo::_internal_has_a_ascrolltype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8246,7 +8168,7 @@ inline void Msg_ScrollTo::set_a_ascrolltype(uint32_t value) {
 
 // Msg_ScrollToPoint
 
-// required uint64 a_aID = 1;
+// optional uint64 a_aID = 1;
 inline bool Msg_ScrollToPoint::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8274,7 +8196,7 @@ inline void Msg_ScrollToPoint::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollToPoint.a_aID)
 }
 
-// required uint32 a_aScrollType = 2;
+// optional uint32 a_aScrollType = 2;
 inline bool Msg_ScrollToPoint::_internal_has_a_ascrolltype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8302,7 +8224,7 @@ inline void Msg_ScrollToPoint::set_a_ascrolltype(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollToPoint.a_aScrollType)
 }
 
-// required sint32 a_aX = 3;
+// optional sint32 a_aX = 3;
 inline bool Msg_ScrollToPoint::_internal_has_a_ax() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -8330,7 +8252,7 @@ inline void Msg_ScrollToPoint::set_a_ax(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollToPoint.a_aX)
 }
 
-// required sint32 a_aY = 4;
+// optional sint32 a_aY = 4;
 inline bool Msg_ScrollToPoint::_internal_has_a_ay() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -8362,7 +8284,7 @@ inline void Msg_ScrollToPoint::set_a_ay(int32_t value) {
 
 // Msg_Announce
 
-// required uint64 a_aID = 1;
+// optional uint64 a_aID = 1;
 inline bool Msg_Announce::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8390,7 +8312,7 @@ inline void Msg_Announce::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce.a_aID)
 }
 
-// required string a_aAnnouncement = 2;
+// optional string a_aAnnouncement = 2;
 inline bool Msg_Announce::_internal_has_a_aannouncement() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8458,7 +8380,7 @@ inline void Msg_Announce::set_allocated_a_aannouncement(std::string* a_aannounce
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce.a_aAnnouncement)
 }
 
-// required uint32 a_aPriority = 3;
+// optional uint32 a_aPriority = 3;
 inline bool Msg_Announce::_internal_has_a_apriority() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -8490,7 +8412,7 @@ inline void Msg_Announce::set_a_apriority(uint32_t value) {
 
 // Msg_SetTextSelection
 
-// required uint64 a_aStartID = 1;
+// optional uint64 a_aStartID = 1;
 inline bool Msg_SetTextSelection::_internal_has_a_astartid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8518,7 +8440,7 @@ inline void Msg_SetTextSelection::set_a_astartid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.a_aStartID)
 }
 
-// required sint32 a_aStartOffset = 2;
+// optional sint32 a_aStartOffset = 2;
 inline bool Msg_SetTextSelection::_internal_has_a_astartoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -8546,7 +8468,7 @@ inline void Msg_SetTextSelection::set_a_astartoffset(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.a_aStartOffset)
 }
 
-// required uint64 a_aEndID = 3;
+// optional uint64 a_aEndID = 3;
 inline bool Msg_SetTextSelection::_internal_has_a_aendid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8574,7 +8496,7 @@ inline void Msg_SetTextSelection::set_a_aendid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.a_aEndID)
 }
 
-// required sint32 a_aEndOffset = 4;
+// optional sint32 a_aEndOffset = 4;
 inline bool Msg_SetTextSelection::_internal_has_a_aendoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -8602,7 +8524,7 @@ inline void Msg_SetTextSelection::set_a_aendoffset(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.a_aEndOffset)
 }
 
-// required sint32 a_aSelectionNum = 5;
+// optional sint32 a_aSelectionNum = 5;
 inline bool Msg_SetTextSelection::_internal_has_a_aselectionnum() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -8630,7 +8552,7 @@ inline void Msg_SetTextSelection::set_a_aselectionnum(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.a_aSelectionNum)
 }
 
-// required bool a_aSetFocus = 6;
+// optional bool a_aSetFocus = 6;
 inline bool Msg_SetTextSelection::_internal_has_a_asetfocus() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -8662,7 +8584,7 @@ inline void Msg_SetTextSelection::set_a_asetfocus(bool value) {
 
 // Msg_RemoveTextSelection
 
-// required uint64 a_aID = 1;
+// optional uint64 a_aID = 1;
 inline bool Msg_RemoveTextSelection::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8690,7 +8612,7 @@ inline void Msg_RemoveTextSelection::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_RemoveTextSelection.a_aID)
 }
 
-// required sint32 a_aSelectionNum = 2;
+// optional sint32 a_aSelectionNum = 2;
 inline bool Msg_RemoveTextSelection::_internal_has_a_aselectionnum() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8722,7 +8644,7 @@ inline void Msg_RemoveTextSelection::set_a_aselectionnum(int32_t value) {
 
 // Msg_ScrollTextLeafRangeIntoView
 
-// required uint64 a_aStartID = 1;
+// optional uint64 a_aStartID = 1;
 inline bool Msg_ScrollTextLeafRangeIntoView::_internal_has_a_astartid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8750,7 +8672,7 @@ inline void Msg_ScrollTextLeafRangeIntoView::set_a_astartid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.a_aStartID)
 }
 
-// required sint32 a_aStartOffset = 2;
+// optional sint32 a_aStartOffset = 2;
 inline bool Msg_ScrollTextLeafRangeIntoView::_internal_has_a_astartoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -8778,7 +8700,7 @@ inline void Msg_ScrollTextLeafRangeIntoView::set_a_astartoffset(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.a_aStartOffset)
 }
 
-// required uint64 a_aEndID = 3;
+// optional uint64 a_aEndID = 3;
 inline bool Msg_ScrollTextLeafRangeIntoView::_internal_has_a_aendid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8806,7 +8728,7 @@ inline void Msg_ScrollTextLeafRangeIntoView::set_a_aendid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.a_aEndID)
 }
 
-// required sint32 a_aEndOffset = 4;
+// optional sint32 a_aEndOffset = 4;
 inline bool Msg_ScrollTextLeafRangeIntoView::_internal_has_a_aendoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -8834,7 +8756,7 @@ inline void Msg_ScrollTextLeafRangeIntoView::set_a_aendoffset(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.a_aEndOffset)
 }
 
-// required uint32 a_aScrollType = 5;
+// optional uint32 a_aScrollType = 5;
 inline bool Msg_ScrollTextLeafRangeIntoView::_internal_has_a_ascrolltype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -8866,7 +8788,7 @@ inline void Msg_ScrollTextLeafRangeIntoView::set_a_ascrolltype(uint32_t value) {
 
 // Msg_ScrollSubstringToPoint
 
-// required uint64 a_aID = 1;
+// optional uint64 a_aID = 1;
 inline bool Msg_ScrollSubstringToPoint::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8894,7 +8816,7 @@ inline void Msg_ScrollSubstringToPoint::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.a_aID)
 }
 
-// required sint32 a_aStartOffset = 2;
+// optional sint32 a_aStartOffset = 2;
 inline bool Msg_ScrollSubstringToPoint::_internal_has_a_astartoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8922,7 +8844,7 @@ inline void Msg_ScrollSubstringToPoint::set_a_astartoffset(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.a_aStartOffset)
 }
 
-// required sint32 a_aEndOffset = 3;
+// optional sint32 a_aEndOffset = 3;
 inline bool Msg_ScrollSubstringToPoint::_internal_has_a_aendoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -8950,7 +8872,7 @@ inline void Msg_ScrollSubstringToPoint::set_a_aendoffset(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.a_aEndOffset)
 }
 
-// required uint32 a_aCoordinateType = 4;
+// optional uint32 a_aCoordinateType = 4;
 inline bool Msg_ScrollSubstringToPoint::_internal_has_a_acoordinatetype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -8978,7 +8900,7 @@ inline void Msg_ScrollSubstringToPoint::set_a_acoordinatetype(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.a_aCoordinateType)
 }
 
-// required sint32 a_aX = 5;
+// optional sint32 a_aX = 5;
 inline bool Msg_ScrollSubstringToPoint::_internal_has_a_ax() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -9006,7 +8928,7 @@ inline void Msg_ScrollSubstringToPoint::set_a_ax(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.a_aX)
 }
 
-// required sint32 a_aY = 6;
+// optional sint32 a_aY = 6;
 inline bool Msg_ScrollSubstringToPoint::_internal_has_a_ay() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -9038,7 +8960,7 @@ inline void Msg_ScrollSubstringToPoint::set_a_ay(int32_t value) {
 
 // Msg_ReplaceText
 
-// required uint64 a_aID = 1;
+// optional uint64 a_aID = 1;
 inline bool Msg_ReplaceText::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -9066,7 +8988,7 @@ inline void Msg_ReplaceText::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ReplaceText.a_aID)
 }
 
-// required string a_aText = 2;
+// optional string a_aText = 2;
 inline bool Msg_ReplaceText::_internal_has_a_atext() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9138,7 +9060,7 @@ inline void Msg_ReplaceText::set_allocated_a_atext(std::string* a_atext) {
 
 // Msg_InsertText
 
-// required uint64 a_aID = 1;
+// optional uint64 a_aID = 1;
 inline bool Msg_InsertText::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -9166,7 +9088,7 @@ inline void Msg_InsertText::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.a_aID)
 }
 
-// required string a_aText = 2;
+// optional string a_aText = 2;
 inline bool Msg_InsertText::_internal_has_a_atext() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9234,7 +9156,7 @@ inline void Msg_InsertText::set_allocated_a_atext(std::string* a_atext) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.a_aText)
 }
 
-// required sint32 a_aPosition = 3;
+// optional sint32 a_aPosition = 3;
 inline bool Msg_InsertText::_internal_has_a_aposition() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -9266,7 +9188,7 @@ inline void Msg_InsertText::set_a_aposition(int32_t value) {
 
 // Msg_CopyText
 
-// required uint64 a_aID = 1;
+// optional uint64 a_aID = 1;
 inline bool Msg_CopyText::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9294,7 +9216,7 @@ inline void Msg_CopyText::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CopyText.a_aID)
 }
 
-// required sint32 a_aStartPos = 2;
+// optional sint32 a_aStartPos = 2;
 inline bool Msg_CopyText::_internal_has_a_astartpos() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -9322,7 +9244,7 @@ inline void Msg_CopyText::set_a_astartpos(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CopyText.a_aStartPos)
 }
 
-// required sint32 a_aEndPos = 3;
+// optional sint32 a_aEndPos = 3;
 inline bool Msg_CopyText::_internal_has_a_aendpos() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -9354,7 +9276,7 @@ inline void Msg_CopyText::set_a_aendpos(int32_t value) {
 
 // Msg_CutText
 
-// required uint64 a_aID = 1;
+// optional uint64 a_aID = 1;
 inline bool Msg_CutText::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9382,7 +9304,7 @@ inline void Msg_CutText::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CutText.a_aID)
 }
 
-// required sint32 a_aStartPos = 2;
+// optional sint32 a_aStartPos = 2;
 inline bool Msg_CutText::_internal_has_a_astartpos() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -9410,7 +9332,7 @@ inline void Msg_CutText::set_a_astartpos(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CutText.a_aStartPos)
 }
 
-// required sint32 a_aEndPos = 3;
+// optional sint32 a_aEndPos = 3;
 inline bool Msg_CutText::_internal_has_a_aendpos() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -9442,7 +9364,7 @@ inline void Msg_CutText::set_a_aendpos(int32_t value) {
 
 // Msg_DeleteText
 
-// required uint64 a_aID = 1;
+// optional uint64 a_aID = 1;
 inline bool Msg_DeleteText::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9470,7 +9392,7 @@ inline void Msg_DeleteText::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_DeleteText.a_aID)
 }
 
-// required sint32 a_aStartPos = 2;
+// optional sint32 a_aStartPos = 2;
 inline bool Msg_DeleteText::_internal_has_a_astartpos() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -9498,7 +9420,7 @@ inline void Msg_DeleteText::set_a_astartpos(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_DeleteText.a_aStartPos)
 }
 
-// required sint32 a_aEndPos = 3;
+// optional sint32 a_aEndPos = 3;
 inline bool Msg_DeleteText::_internal_has_a_aendpos() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -9530,7 +9452,7 @@ inline void Msg_DeleteText::set_a_aendpos(int32_t value) {
 
 // Msg_PasteText
 
-// required uint64 a_aID = 1;
+// optional uint64 a_aID = 1;
 inline bool Msg_PasteText::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9558,7 +9480,7 @@ inline void Msg_PasteText::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_PasteText.a_aID)
 }
 
-// required sint32 a_aPosition = 2;
+// optional sint32 a_aPosition = 2;
 inline bool Msg_PasteText::_internal_has_a_aposition() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -9590,7 +9512,7 @@ inline void Msg_PasteText::set_a_aposition(int32_t value) {
 
 // Msg_TakeSelection
 
-// required uint64 a_aID = 1;
+// optional uint64 a_aID = 1;
 inline bool Msg_TakeSelection::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9622,7 +9544,7 @@ inline void Msg_TakeSelection::set_a_aid(uint64_t value) {
 
 // Msg_SetSelected
 
-// required uint64 a_aID = 1;
+// optional uint64 a_aID = 1;
 inline bool Msg_SetSelected::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9650,7 +9572,7 @@ inline void Msg_SetSelected::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetSelected.a_aID)
 }
 
-// required bool a_aSelected = 2;
+// optional bool a_aSelected = 2;
 inline bool Msg_SetSelected::_internal_has_a_aselected() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -9682,7 +9604,7 @@ inline void Msg_SetSelected::set_a_aselected(bool value) {
 
 // Msg_DoActionAsync
 
-// required uint64 a_aID = 1;
+// optional uint64 a_aID = 1;
 inline bool Msg_DoActionAsync::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9710,7 +9632,7 @@ inline void Msg_DoActionAsync::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_DoActionAsync.a_aID)
 }
 
-// required uint32 a_aIndex = 2;
+// optional uint32 a_aIndex = 2;
 inline bool Msg_DoActionAsync::_internal_has_a_aindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -9742,7 +9664,7 @@ inline void Msg_DoActionAsync::set_a_aindex(uint32_t value) {
 
 // Msg_SetCurValue
 
-// required uint64 a_aID = 1;
+// optional uint64 a_aID = 1;
 inline bool Msg_SetCurValue::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9770,7 +9692,7 @@ inline void Msg_SetCurValue::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetCurValue.a_aID)
 }
 
-// required double a_aValue = 2;
+// optional double a_aValue = 2;
 inline bool Msg_SetCurValue::_internal_has_a_avalue() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -9802,7 +9724,7 @@ inline void Msg_SetCurValue::set_a_avalue(double value) {
 
 // Msg_TakeFocus
 
-// required uint64 a_aID = 1;
+// optional uint64 a_aID = 1;
 inline bool Msg_TakeFocus::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9834,7 +9756,7 @@ inline void Msg_TakeFocus::set_a_aid(uint64_t value) {
 
 // Msg_VerifyCache
 
-// required uint64 a_aID = 1;
+// optional uint64 a_aID = 1;
 inline bool Msg_VerifyCache::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -9862,7 +9784,7 @@ inline void Msg_VerifyCache::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_VerifyCache.a_aID)
 }
 
-// required uint64 a_aCacheDomain = 2;
+// optional uint64 a_aCacheDomain = 2;
 inline bool Msg_VerifyCache::_internal_has_a_acachedomain() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

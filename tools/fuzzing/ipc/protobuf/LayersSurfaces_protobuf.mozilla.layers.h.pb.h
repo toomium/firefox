@@ -389,7 +389,7 @@ class SurfaceDescriptorD3D10 final :
   std::string* _internal_mutable_a_fencesholderid();
   public:
 
-  // required uint32 a_arrayIndex = 3;
+  // optional uint32 a_arrayIndex = 3;
   bool has_a_arrayindex() const;
   private:
   bool _internal_has_a_arrayindex() const;
@@ -402,7 +402,7 @@ class SurfaceDescriptorD3D10 final :
   void _internal_set_a_arrayindex(uint32_t value);
   public:
 
-  // required bool a_hasKeyedMutex = 8;
+  // optional bool a_hasKeyedMutex = 8;
   bool has_a_haskeyedmutex() const;
   private:
   bool _internal_has_a_haskeyedmutex() const;
@@ -924,7 +924,7 @@ class SurfaceDescriptorMacIOSurface final :
   std::string* _internal_mutable_a_gpufence();
   public:
 
-  // required uint32 a_surfaceId = 1;
+  // optional uint32 a_surfaceId = 1;
   bool has_a_surfaceid() const;
   private:
   bool _internal_has_a_surfaceid() const;
@@ -937,7 +937,7 @@ class SurfaceDescriptorMacIOSurface final :
   void _internal_set_a_surfaceid(uint32_t value);
   public:
 
-  // required bool a_isOpaque = 2;
+  // optional bool a_isOpaque = 2;
   bool has_a_isopaque() const;
   private:
   bool _internal_has_a_isopaque() const;
@@ -953,9 +953,6 @@ class SurfaceDescriptorMacIOSurface final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.SurfaceDescriptorMacIOSurface)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1443,7 +1440,7 @@ class SurfaceDescriptorDMABuf final :
   std::string* _internal_mutable_a_semaphorefd();
   public:
 
-  // required uint32 a_bufferType = 1;
+  // optional uint32 a_bufferType = 1;
   bool has_a_buffertype() const;
   private:
   bool _internal_has_a_buffertype() const;
@@ -1456,7 +1453,7 @@ class SurfaceDescriptorDMABuf final :
   void _internal_set_a_buffertype(uint32_t value);
   public:
 
-  // required uint32 a_fourccFormat = 2;
+  // optional uint32 a_fourccFormat = 2;
   bool has_a_fourccformat() const;
   private:
   bool _internal_has_a_fourccformat() const;
@@ -1469,7 +1466,7 @@ class SurfaceDescriptorDMABuf final :
   void _internal_set_a_fourccformat(uint32_t value);
   public:
 
-  // required uint32 a_flags = 4;
+  // optional uint32 a_flags = 4;
   bool has_a_flags() const;
   private:
   bool _internal_has_a_flags() const;
@@ -1482,7 +1479,7 @@ class SurfaceDescriptorDMABuf final :
   void _internal_set_a_flags(uint32_t value);
   public:
 
-  // required uint32 a_uid = 18;
+  // optional uint32 a_uid = 18;
   bool has_a_uid() const;
   private:
   bool _internal_has_a_uid() const;
@@ -1495,7 +1492,7 @@ class SurfaceDescriptorDMABuf final :
   void _internal_set_a_uid(uint32_t value);
   public:
 
-  // required uint32 a_pid = 19;
+  // optional uint32 a_pid = 19;
   bool has_a_pid() const;
   private:
   bool _internal_has_a_pid() const;
@@ -1719,7 +1716,7 @@ class SurfaceTextureDescriptor final :
   std::string* _internal_mutable_a_transformoverride();
   public:
 
-  // required uint64 a_handle = 1;
+  // optional uint64 a_handle = 1;
   bool has_a_handle() const;
   private:
   bool _internal_has_a_handle() const;
@@ -1732,7 +1729,7 @@ class SurfaceTextureDescriptor final :
   void _internal_set_a_handle(uint64_t value);
   public:
 
-  // required bool a_continuous = 4;
+  // optional bool a_continuous = 4;
   bool has_a_continuous() const;
   private:
   bool _internal_has_a_continuous() const;
@@ -1745,7 +1742,7 @@ class SurfaceTextureDescriptor final :
   void _internal_set_a_continuous(bool value);
   public:
 
-  // required bool a_forceBT709ColorSpace = 5;
+  // optional bool a_forceBT709ColorSpace = 5;
   bool has_a_forcebt709colorspace() const;
   private:
   bool _internal_has_a_forcebt709colorspace() const;
@@ -1933,7 +1930,7 @@ class SurfaceDescriptorAndroidHardwareBuffer final :
   std::string* _internal_mutable_a_format();
   public:
 
-  // required uint64 a_bufferId = 1;
+  // optional uint64 a_bufferId = 1;
   bool has_a_bufferid() const;
   private:
   bool _internal_has_a_bufferid() const;
@@ -2137,7 +2134,7 @@ class EGLImageDescriptor final :
   std::string* _internal_mutable_a_size();
   public:
 
-  // required bool a_hasAlpha = 4;
+  // optional bool a_hasAlpha = 4;
   bool has_a_hasalpha() const;
   private:
   bool _internal_has_a_hasalpha() const;
@@ -2325,7 +2322,7 @@ class SurfaceDescriptorSharedGLTexture final :
   std::string* _internal_mutable_a_size();
   public:
 
-  // required uint32 a_texture = 1;
+  // optional uint32 a_texture = 1;
   bool has_a_texture() const;
   private:
   bool _internal_has_a_texture() const;
@@ -2338,7 +2335,7 @@ class SurfaceDescriptorSharedGLTexture final :
   void _internal_set_a_texture(uint32_t value);
   public:
 
-  // required uint32 a_target = 2;
+  // optional uint32 a_target = 2;
   bool has_a_target() const;
   private:
   bool _internal_has_a_target() const;
@@ -2351,7 +2348,7 @@ class SurfaceDescriptorSharedGLTexture final :
   void _internal_set_a_target(uint32_t value);
   public:
 
-  // required bool a_hasAlpha = 5;
+  // optional bool a_hasAlpha = 5;
   bool has_a_hasalpha() const;
   private:
   bool _internal_has_a_hasalpha() const;
@@ -3020,7 +3017,7 @@ class SurfaceDescriptorRemoteDecoder final :
       ::protobuf::mozilla::layers::RemoteDecoderVideoSubDescriptor* a_subdesc);
   ::protobuf::mozilla::layers::RemoteDecoderVideoSubDescriptor* unsafe_arena_release_a_subdesc();
 
-  // required uint64 a_handle = 1;
+  // optional uint64 a_handle = 1;
   bool has_a_handle() const;
   private:
   bool _internal_has_a_handle() const;
@@ -3657,7 +3654,7 @@ class YCbCrDescriptor final :
   std::string* _internal_mutable_a_chromasubsampling();
   public:
 
-  // required uint32 a_yStride = 3;
+  // optional uint32 a_yStride = 3;
   bool has_a_ystride() const;
   private:
   bool _internal_has_a_ystride() const;
@@ -3670,7 +3667,7 @@ class YCbCrDescriptor final :
   void _internal_set_a_ystride(uint32_t value);
   public:
 
-  // required uint32 a_cbCrStride = 5;
+  // optional uint32 a_cbCrStride = 5;
   bool has_a_cbcrstride() const;
   private:
   bool _internal_has_a_cbcrstride() const;
@@ -3683,7 +3680,7 @@ class YCbCrDescriptor final :
   void _internal_set_a_cbcrstride(uint32_t value);
   public:
 
-  // required uint32 a_yOffset = 6;
+  // optional uint32 a_yOffset = 6;
   bool has_a_yoffset() const;
   private:
   bool _internal_has_a_yoffset() const;
@@ -3696,7 +3693,7 @@ class YCbCrDescriptor final :
   void _internal_set_a_yoffset(uint32_t value);
   public:
 
-  // required uint32 a_cbOffset = 7;
+  // optional uint32 a_cbOffset = 7;
   bool has_a_cboffset() const;
   private:
   bool _internal_has_a_cboffset() const;
@@ -3709,7 +3706,7 @@ class YCbCrDescriptor final :
   void _internal_set_a_cboffset(uint32_t value);
   public:
 
-  // required uint32 a_crOffset = 8;
+  // optional uint32 a_crOffset = 8;
   bool has_a_croffset() const;
   private:
   bool _internal_has_a_croffset() const;
@@ -4463,7 +4460,7 @@ class SurfaceDescriptorShared final :
   std::string* _internal_mutable_a_handle();
   public:
 
-  // required sint32 a_stride = 2;
+  // optional sint32 a_stride = 2;
   bool has_a_stride() const;
   private:
   bool _internal_has_a_stride() const;
@@ -4989,7 +4986,7 @@ class SurfaceDescriptorCanvasSurface final :
   std::string* _internal_mutable_a_surfaceid();
   public:
 
-  // required uint32 a_managerId = 1;
+  // optional uint32 a_managerId = 1;
   bool has_a_managerid() const;
   private:
   bool _internal_has_a_managerid() const;
@@ -5640,7 +5637,7 @@ inline void SurfaceDescriptorD3D10::set_allocated_a_gpuprocesstextureid(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptorD3D10.a_gpuProcessTextureId)
 }
 
-// required uint32 a_arrayIndex = 3;
+// optional uint32 a_arrayIndex = 3;
 inline bool SurfaceDescriptorD3D10::_internal_has_a_arrayindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -5940,7 +5937,7 @@ inline void SurfaceDescriptorD3D10::set_allocated_a_colorrange(std::string* a_co
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptorD3D10.a_colorRange)
 }
 
-// required bool a_hasKeyedMutex = 8;
+// optional bool a_hasKeyedMutex = 8;
 inline bool SurfaceDescriptorD3D10::_internal_has_a_haskeyedmutex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -6724,7 +6721,7 @@ inline void SurfaceDescriptorDXGIYCbCr::set_allocated_a_fencesholderid(std::stri
 
 // SurfaceDescriptorMacIOSurface
 
-// required uint32 a_surfaceId = 1;
+// optional uint32 a_surfaceId = 1;
 inline bool SurfaceDescriptorMacIOSurface::_internal_has_a_surfaceid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -6752,7 +6749,7 @@ inline void SurfaceDescriptorMacIOSurface::set_a_surfaceid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.SurfaceDescriptorMacIOSurface.a_surfaceId)
 }
 
-// required bool a_isOpaque = 2;
+// optional bool a_isOpaque = 2;
 inline bool SurfaceDescriptorMacIOSurface::_internal_has_a_isopaque() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -6920,7 +6917,7 @@ inline void SurfaceDescriptorMacIOSurface::set_allocated_a_gpufence(std::string*
 
 // SurfaceDescriptorDMABuf
 
-// required uint32 a_bufferType = 1;
+// optional uint32 a_bufferType = 1;
 inline bool SurfaceDescriptorDMABuf::_internal_has_a_buffertype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -6948,7 +6945,7 @@ inline void SurfaceDescriptorDMABuf::set_a_buffertype(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.SurfaceDescriptorDMABuf.a_bufferType)
 }
 
-// required uint32 a_fourccFormat = 2;
+// optional uint32 a_fourccFormat = 2;
 inline bool SurfaceDescriptorDMABuf::_internal_has_a_fourccformat() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -7023,7 +7020,7 @@ SurfaceDescriptorDMABuf::mutable_a_modifier() {
   return _internal_mutable_a_modifier();
 }
 
-// required uint32 a_flags = 4;
+// optional uint32 a_flags = 4;
 inline bool SurfaceDescriptorDMABuf::_internal_has_a_flags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -7802,7 +7799,7 @@ SurfaceDescriptorDMABuf::mutable_a_fence() {
   return &_impl_.a_fence_;
 }
 
-// required uint32 a_uid = 18;
+// optional uint32 a_uid = 18;
 inline bool SurfaceDescriptorDMABuf::_internal_has_a_uid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -7830,7 +7827,7 @@ inline void SurfaceDescriptorDMABuf::set_a_uid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.SurfaceDescriptorDMABuf.a_uid)
 }
 
-// required uint32 a_pid = 19;
+// optional uint32 a_pid = 19;
 inline bool SurfaceDescriptorDMABuf::_internal_has_a_pid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -8005,7 +8002,7 @@ inline void SurfaceDescriptorDMABuf::set_allocated_a_semaphorefd(std::string* a_
 
 // SurfaceTextureDescriptor
 
-// required uint64 a_handle = 1;
+// optional uint64 a_handle = 1;
 inline bool SurfaceTextureDescriptor::_internal_has_a_handle() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -8169,7 +8166,7 @@ inline void SurfaceTextureDescriptor::set_allocated_a_format(std::string* a_form
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceTextureDescriptor.a_format)
 }
 
-// required bool a_continuous = 4;
+// optional bool a_continuous = 4;
 inline bool SurfaceTextureDescriptor::_internal_has_a_continuous() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -8197,7 +8194,7 @@ inline void SurfaceTextureDescriptor::set_a_continuous(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.SurfaceTextureDescriptor.a_continuous)
 }
 
-// required bool a_forceBT709ColorSpace = 5;
+// optional bool a_forceBT709ColorSpace = 5;
 inline bool SurfaceTextureDescriptor::_internal_has_a_forcebt709colorspace() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -8297,7 +8294,7 @@ inline void SurfaceTextureDescriptor::set_allocated_a_transformoverride(std::str
 
 // SurfaceDescriptorAndroidHardwareBuffer
 
-// required uint64 a_bufferId = 1;
+// optional uint64 a_bufferId = 1;
 inline bool SurfaceDescriptorAndroidHardwareBuffer::_internal_has_a_bufferid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -8669,7 +8666,7 @@ inline void EGLImageDescriptor::set_allocated_a_size(std::string* a_size) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.EGLImageDescriptor.a_size)
 }
 
-// required bool a_hasAlpha = 4;
+// optional bool a_hasAlpha = 4;
 inline bool EGLImageDescriptor::_internal_has_a_hasalpha() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -8701,7 +8698,7 @@ inline void EGLImageDescriptor::set_a_hasalpha(bool value) {
 
 // SurfaceDescriptorSharedGLTexture
 
-// required uint32 a_texture = 1;
+// optional uint32 a_texture = 1;
 inline bool SurfaceDescriptorSharedGLTexture::_internal_has_a_texture() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -8729,7 +8726,7 @@ inline void SurfaceDescriptorSharedGLTexture::set_a_texture(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.SurfaceDescriptorSharedGLTexture.a_texture)
 }
 
-// required uint32 a_target = 2;
+// optional uint32 a_target = 2;
 inline bool SurfaceDescriptorSharedGLTexture::_internal_has_a_target() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -8893,7 +8890,7 @@ inline void SurfaceDescriptorSharedGLTexture::set_allocated_a_size(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptorSharedGLTexture.a_size)
 }
 
-// required bool a_hasAlpha = 5;
+// optional bool a_hasAlpha = 5;
 inline bool SurfaceDescriptorSharedGLTexture::_internal_has_a_hasalpha() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -9593,7 +9590,7 @@ inline RemoteDecoderVideoSubDescriptor::ContentCase RemoteDecoderVideoSubDescrip
 
 // SurfaceDescriptorRemoteDecoder
 
-// required uint64 a_handle = 1;
+// optional uint64 a_handle = 1;
 inline bool SurfaceDescriptorRemoteDecoder::_internal_has_a_handle() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -10214,7 +10211,7 @@ inline void YCbCrDescriptor::set_allocated_a_ysize(std::string* a_ysize) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.YCbCrDescriptor.a_ySize)
 }
 
-// required uint32 a_yStride = 3;
+// optional uint32 a_yStride = 3;
 inline bool YCbCrDescriptor::_internal_has_a_ystride() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -10310,7 +10307,7 @@ inline void YCbCrDescriptor::set_allocated_a_cbcrsize(std::string* a_cbcrsize) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.YCbCrDescriptor.a_cbCrSize)
 }
 
-// required uint32 a_cbCrStride = 5;
+// optional uint32 a_cbCrStride = 5;
 inline bool YCbCrDescriptor::_internal_has_a_cbcrstride() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -10338,7 +10335,7 @@ inline void YCbCrDescriptor::set_a_cbcrstride(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.YCbCrDescriptor.a_cbCrStride)
 }
 
-// required uint32 a_yOffset = 6;
+// optional uint32 a_yOffset = 6;
 inline bool YCbCrDescriptor::_internal_has_a_yoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
@@ -10366,7 +10363,7 @@ inline void YCbCrDescriptor::set_a_yoffset(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.YCbCrDescriptor.a_yOffset)
 }
 
-// required uint32 a_cbOffset = 7;
+// optional uint32 a_cbOffset = 7;
 inline bool YCbCrDescriptor::_internal_has_a_cboffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
   return value;
@@ -10394,7 +10391,7 @@ inline void YCbCrDescriptor::set_a_cboffset(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.YCbCrDescriptor.a_cbOffset)
 }
 
-// required uint32 a_crOffset = 8;
+// optional uint32 a_crOffset = 8;
 inline bool YCbCrDescriptor::_internal_has_a_croffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
   return value;
@@ -11346,7 +11343,7 @@ inline void SurfaceDescriptorShared::set_allocated_a_size(std::string* a_size) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptorShared.a_size)
 }
 
-// required sint32 a_stride = 2;
+// optional sint32 a_stride = 2;
 inline bool SurfaceDescriptorShared::_internal_has_a_stride() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -11794,7 +11791,7 @@ inline void SurfaceDescriptorRemoteTexture::set_allocated_a_ownerid(std::string*
 
 // SurfaceDescriptorCanvasSurface
 
-// required uint32 a_managerId = 1;
+// optional uint32 a_managerId = 1;
 inline bool SurfaceDescriptorCanvasSurface::_internal_has_a_managerid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

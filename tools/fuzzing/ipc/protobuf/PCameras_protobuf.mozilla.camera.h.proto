@@ -14,26 +14,26 @@ import "PBackgroundSharedTypes.proto";
 
 // Structs and unions declarations
 message VideoCaptureCapability {
-  required sint32 a_width = 1;
-  required sint32 a_height = 2;
-  required sint32 a_maxFPS = 3;
-  required sint32 a_videoType = 4;
-  required bool a_interlaced = 5;
+  optional sint32 a_width = 1;
+  optional sint32 a_height = 2;
+  optional sint32 a_maxFPS = 3;
+  optional sint32 a_videoType = 4;
+  optional bool a_interlaced = 5;
 }
 
 message VideoFrameProperties {
   required bytes a_captureTime = 1;
-  required uint32 a_bufferSize = 2;
-  required uint32 a_rtpTimeStamp = 3;
-  required sint64 a_ntpTimeMs = 4;
-  required sint64 a_renderTimeMs = 5;
-  required sint32 a_rotation = 6;
-  required sint32 a_yAllocatedSize = 7;
-  required sint32 a_uAllocatedSize = 8;
-  required sint32 a_vAllocatedSize = 9;
-  required sint32 a_width = 10;
-  required sint32 a_height = 11;
-  required sint32 a_yStride = 12;
-  required sint32 a_uStride = 13;
-  required sint32 a_vStride = 14;
+  optional uint32 a_bufferSize = 2;
+  optional uint32 a_rtpTimeStamp = 3;
+  optional sint64 a_ntpTimeMs = 4;
+  optional sint64 a_renderTimeMs = 5;
+  optional sint32 a_rotation = 6;
+  optional sint32 a_yAllocatedSize = 7;
+  optional sint32 a_uAllocatedSize = 8;
+  optional sint32 a_vAllocatedSize = 9;
+  optional sint32 a_width = 10;
+  optional sint32 a_height = 11;
+  optional sint32 a_yStride = 12;
+  optional sint32 a_uStride = 13;
+  optional sint32 a_vStride = 14;
 }

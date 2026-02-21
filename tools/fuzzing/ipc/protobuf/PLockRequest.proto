@@ -17,11 +17,11 @@ package protobuf.mozilla.dom.locks.PLockRequest;
 // Message declarations
 message Msg_Resolve {
   required bytes a_aMode = 1;
-  required bool a_aIsAvailable = 2;
+  optional bool a_aIsAvailable = 2;
 }
 
 message Msg___delete__ {
-  required bool a_aAborted = 1;
+  optional bool a_aAborted = 1;
 }
 
 message Reply___delete__ {

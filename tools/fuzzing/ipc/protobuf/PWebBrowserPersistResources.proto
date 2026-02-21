@@ -16,7 +16,7 @@ package protobuf.mozilla.PWebBrowserPersistResources;
 
 // Message declarations
 message Msg_VisitResource {
-  required string a_aURI = 1;
+  optional string a_aURI = 1;
   required bytes a_aContentPolicyType = 2;
 }
 

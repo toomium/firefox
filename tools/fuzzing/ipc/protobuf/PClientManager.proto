@@ -20,7 +20,7 @@ message Msg_Teardown {
 }
 
 message Msg_PClientHandleConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
   required protobuf.mozilla.dom.IPCClientInfo a_aClientInfo = 2;
 }
 
@@ -28,7 +28,7 @@ message Reply_PClientHandleConstructor {
 }
 
 message Msg_PClientManagerOpConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
   required protobuf.mozilla.dom.ClientOpConstructorArgs a_aArgs = 2;
 }
 
@@ -36,7 +36,7 @@ message Reply_PClientManagerOpConstructor {
 }
 
 message Msg_PClientSourceConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
   required protobuf.mozilla.dom.ClientSourceConstructorArgs a_aArgs = 2;
 }
 
@@ -52,7 +52,7 @@ message Msg_ForgetFutureClientSource {
 }
 
 message Msg_PClientNavigateOpConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
   required protobuf.mozilla.dom.ClientNavigateOpConstructorArgs a_aArgs = 2;
 }
 

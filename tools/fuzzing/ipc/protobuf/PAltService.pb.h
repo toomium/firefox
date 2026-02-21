@@ -189,7 +189,7 @@ class Msg_ClearHostMapping final :
     kAOriginAttributesFieldNumber = 3,
     kAPortFieldNumber = 2,
   };
-  // required string a_host = 1;
+  // optional string a_host = 1;
   bool has_a_host() const;
   private:
   bool _internal_has_a_host() const;
@@ -225,7 +225,7 @@ class Msg_ClearHostMapping final :
   std::string* _internal_mutable_a_originattributes();
   public:
 
-  // required sint32 a_port = 2;
+  // optional sint32 a_port = 2;
   bool has_a_port() const;
   private:
   bool _internal_has_a_port() const;
@@ -241,9 +241,6 @@ class Msg_ClearHostMapping final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PAltService.Msg_ClearHostMapping)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -399,7 +396,7 @@ class Msg_ProcessHeader final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::ProxyInfoCloneArgs >&
       a_proxyinfo() const;
 
-  // required string a_buf = 1;
+  // optional string a_buf = 1;
   bool has_a_buf() const;
   private:
   bool _internal_has_a_buf() const;
@@ -417,7 +414,7 @@ class Msg_ProcessHeader final :
   std::string* _internal_mutable_a_buf();
   public:
 
-  // required string a_originScheme = 2;
+  // optional string a_originScheme = 2;
   bool has_a_originscheme() const;
   private:
   bool _internal_has_a_originscheme() const;
@@ -435,7 +432,7 @@ class Msg_ProcessHeader final :
   std::string* _internal_mutable_a_originscheme();
   public:
 
-  // required string a_originHost = 3;
+  // optional string a_originHost = 3;
   bool has_a_originhost() const;
   private:
   bool _internal_has_a_originhost() const;
@@ -453,7 +450,7 @@ class Msg_ProcessHeader final :
   std::string* _internal_mutable_a_originhost();
   public:
 
-  // required string a_username = 5;
+  // optional string a_username = 5;
   bool has_a_username() const;
   private:
   bool _internal_has_a_username() const;
@@ -507,7 +504,7 @@ class Msg_ProcessHeader final :
       ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* a_conninfoargs);
   ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* unsafe_arena_release_a_conninfoargs();
 
-  // required sint32 a_originPort = 4;
+  // optional sint32 a_originPort = 4;
   bool has_a_originport() const;
   private:
   bool _internal_has_a_originport() const;
@@ -520,7 +517,7 @@ class Msg_ProcessHeader final :
   void _internal_set_a_originport(int32_t value);
   public:
 
-  // required bool a_privateBrowsing = 6;
+  // optional bool a_privateBrowsing = 6;
   bool has_a_privatebrowsing() const;
   private:
   bool _internal_has_a_privatebrowsing() const;
@@ -533,7 +530,7 @@ class Msg_ProcessHeader final :
   void _internal_set_a_privatebrowsing(bool value);
   public:
 
-  // required uint32 a_caps = 8;
+  // optional uint32 a_caps = 8;
   bool has_a_caps() const;
   private:
   bool _internal_has_a_caps() const;
@@ -832,7 +829,7 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_ClearHostMapping
 
-// required string a_host = 1;
+// optional string a_host = 1;
 inline bool Msg_ClearHostMapping::_internal_has_a_host() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -900,7 +897,7 @@ inline void Msg_ClearHostMapping::set_allocated_a_host(std::string* a_host) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PAltService.Msg_ClearHostMapping.a_host)
 }
 
-// required sint32 a_port = 2;
+// optional sint32 a_port = 2;
 inline bool Msg_ClearHostMapping::_internal_has_a_port() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1000,7 +997,7 @@ inline void Msg_ClearHostMapping::set_allocated_a_originattributes(std::string* 
 
 // Msg_ProcessHeader
 
-// required string a_buf = 1;
+// optional string a_buf = 1;
 inline bool Msg_ProcessHeader::_internal_has_a_buf() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1068,7 +1065,7 @@ inline void Msg_ProcessHeader::set_allocated_a_buf(std::string* a_buf) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_buf)
 }
 
-// required string a_originScheme = 2;
+// optional string a_originScheme = 2;
 inline bool Msg_ProcessHeader::_internal_has_a_originscheme() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1136,7 +1133,7 @@ inline void Msg_ProcessHeader::set_allocated_a_originscheme(std::string* a_origi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_originScheme)
 }
 
-// required string a_originHost = 3;
+// optional string a_originHost = 3;
 inline bool Msg_ProcessHeader::_internal_has_a_originhost() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1204,7 +1201,7 @@ inline void Msg_ProcessHeader::set_allocated_a_originhost(std::string* a_originh
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_originHost)
 }
 
-// required sint32 a_originPort = 4;
+// optional sint32 a_originPort = 4;
 inline bool Msg_ProcessHeader::_internal_has_a_originport() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -1232,7 +1229,7 @@ inline void Msg_ProcessHeader::set_a_originport(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_originPort)
 }
 
-// required string a_username = 5;
+// optional string a_username = 5;
 inline bool Msg_ProcessHeader::_internal_has_a_username() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1300,7 +1297,7 @@ inline void Msg_ProcessHeader::set_allocated_a_username(std::string* a_username)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_username)
 }
 
-// required bool a_privateBrowsing = 6;
+// optional bool a_privateBrowsing = 6;
 inline bool Msg_ProcessHeader::_internal_has_a_privatebrowsing() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -1365,7 +1362,7 @@ Msg_ProcessHeader::a_proxyinfo() const {
   return _impl_.a_proxyinfo_;
 }
 
-// required uint32 a_caps = 8;
+// optional uint32 a_caps = 8;
 inline bool Msg_ProcessHeader::_internal_has_a_caps() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;

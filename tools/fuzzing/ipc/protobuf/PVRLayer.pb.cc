@@ -102,7 +102,7 @@ class Msg_SubmitFrame::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000000f) ^ 0x0000000f) != 0;
+    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
   }
 };
 
@@ -236,7 +236,7 @@ const char* Msg_SubmitFrame::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required uint64 a_aFrameId = 2;
+      // optional uint64 a_aFrameId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_aframeid(&has_bits);
@@ -301,7 +301,7 @@ uint8_t* Msg_SubmitFrame::_InternalSerialize(
         _Internal::a_atexture(this).GetCachedSize(), target, stream);
   }
 
-  // required uint64 a_aFrameId = 2;
+  // optional uint64 a_aFrameId = 2;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(2, this->_internal_a_aframeid(), target);
@@ -352,18 +352,13 @@ size_t Msg_SubmitFrame::RequiredFieldsByteSizeFallback() const {
         *_impl_.a_atexture_);
   }
 
-  if (_internal_has_a_aframeid()) {
-    // required uint64 a_aFrameId = 2;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_aframeid());
-  }
-
   return total_size;
 }
 size_t Msg_SubmitFrame::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PVRLayer.Msg_SubmitFrame)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
     // required bytes a_aLeftEyeRect = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -379,15 +374,18 @@ size_t Msg_SubmitFrame::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_atexture_);
 
-    // required uint64 a_aFrameId = 2;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_aframeid());
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional uint64 a_aFrameId = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000008u) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_aframeid());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();

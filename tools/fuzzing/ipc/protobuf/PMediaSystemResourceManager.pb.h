@@ -195,7 +195,7 @@ class Msg_Response final :
     kAAIdFieldNumber = 1,
     kAASuccessFieldNumber = 2,
   };
-  // required uint32 a_aId = 1;
+  // optional uint32 a_aId = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -208,7 +208,7 @@ class Msg_Response final :
   void _internal_set_a_aid(uint32_t value);
   public:
 
-  // required bool a_aSuccess = 2;
+  // optional bool a_aSuccess = 2;
   bool has_a_asuccess() const;
   private:
   bool _internal_has_a_asuccess() const;
@@ -224,9 +224,6 @@ class Msg_Response final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Response)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -622,7 +619,7 @@ class Msg_Acquire final :
   std::string* _internal_mutable_a_aresourcetype();
   public:
 
-  // required uint32 a_aId = 1;
+  // optional uint32 a_aId = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -635,7 +632,7 @@ class Msg_Acquire final :
   void _internal_set_a_aid(uint32_t value);
   public:
 
-  // required bool a_aWillWait = 3;
+  // optional bool a_aWillWait = 3;
   bool has_a_awillwait() const;
   private:
   bool _internal_has_a_awillwait() const;
@@ -651,9 +648,6 @@ class Msg_Acquire final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Acquire)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -782,7 +776,7 @@ class Msg_Release final :
   enum : int {
     kAAIdFieldNumber = 1,
   };
-  // required uint32 a_aId = 1;
+  // optional uint32 a_aId = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -945,7 +939,7 @@ class Msg_RemoveResourceManager final :
 #endif  // __GNUC__
 // Msg_Response
 
-// required uint32 a_aId = 1;
+// optional uint32 a_aId = 1;
 inline bool Msg_Response::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -973,7 +967,7 @@ inline void Msg_Response::set_a_aid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Response.a_aId)
 }
 
-// required bool a_aSuccess = 2;
+// optional bool a_aSuccess = 2;
 inline bool Msg_Response::_internal_has_a_asuccess() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1013,7 +1007,7 @@ inline void Msg_Response::set_a_asuccess(bool value) {
 
 // Msg_Acquire
 
-// required uint32 a_aId = 1;
+// optional uint32 a_aId = 1;
 inline bool Msg_Acquire::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1109,7 +1103,7 @@ inline void Msg_Acquire::set_allocated_a_aresourcetype(std::string* a_aresourcet
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Acquire.a_aResourceType)
 }
 
-// required bool a_aWillWait = 3;
+// optional bool a_aWillWait = 3;
 inline bool Msg_Acquire::_internal_has_a_awillwait() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1141,7 +1135,7 @@ inline void Msg_Acquire::set_a_awillwait(bool value) {
 
 // Msg_Release
 
-// required uint32 a_aId = 1;
+// optional uint32 a_aId = 1;
 inline bool Msg_Release::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

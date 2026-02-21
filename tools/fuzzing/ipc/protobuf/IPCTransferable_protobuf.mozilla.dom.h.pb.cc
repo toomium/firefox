@@ -1784,7 +1784,7 @@ class IPCTransferableDataItem::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000002) ^ 0x00000002) != 0;
   }
 };
 
@@ -1884,7 +1884,7 @@ const char* IPCTransferableDataItem::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_flavor = 1;
+      // optional string a_flavor = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_flavor();
@@ -1932,7 +1932,7 @@ uint8_t* IPCTransferableDataItem::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_flavor = 1;
+  // optional string a_flavor = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_flavor(), target);
@@ -1953,47 +1953,27 @@ uint8_t* IPCTransferableDataItem::_InternalSerialize(
   return target;
 }
 
-size_t IPCTransferableDataItem::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.IPCTransferableDataItem)
-  size_t total_size = 0;
-
-  if (_internal_has_a_flavor()) {
-    // required string a_flavor = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_flavor());
-  }
-
-  if (_internal_has_a_data()) {
-    // required .protobuf.mozilla.dom.IPCTransferableDataType a_data = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_data_);
-  }
-
-  return total_size;
-}
 size_t IPCTransferableDataItem::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCTransferableDataItem)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string a_flavor = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_flavor());
-
-    // required .protobuf.mozilla.dom.IPCTransferableDataType a_data = 2;
+  // required .protobuf.mozilla.dom.IPCTransferableDataType a_data = 2;
+  if (_internal_has_a_data()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_data_);
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional string a_flavor = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_flavor());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -2575,7 +2555,7 @@ class IPCTransferable::_Internal {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000002a) ^ 0x0000002a) != 0;
+    return ((has_bits[0] & 0x0000000a) ^ 0x0000000a) != 0;
   }
 };
 
@@ -2741,7 +2721,7 @@ const char* IPCTransferable::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required bool a_isPrivateData = 2;
+      // optional bool a_isPrivateData = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_isprivatedata(&has_bits);
@@ -2823,7 +2803,7 @@ uint8_t* IPCTransferable::_InternalSerialize(
         _Internal::a_data(this).GetCachedSize(), target, stream);
   }
 
-  // required bool a_isPrivateData = 2;
+  // optional bool a_isPrivateData = 2;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_isprivatedata(), target);
@@ -2880,18 +2860,13 @@ size_t IPCTransferable::RequiredFieldsByteSizeFallback() const {
         *_impl_.a_data_);
   }
 
-  if (_internal_has_a_isprivatedata()) {
-    // required bool a_isPrivateData = 2;
-    total_size += 1 + 1;
-  }
-
   return total_size;
 }
 size_t IPCTransferable::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCTransferable)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000002a) ^ 0x0000002a) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x0000000a) ^ 0x0000000a) == 0) {  // All required fields are present.
     // required bytes a_contentPolicyType = 5;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -2901,9 +2876,6 @@ size_t IPCTransferable::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_data_);
-
-    // required bool a_isPrivateData = 2;
-    total_size += 1 + 1;
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -2927,13 +2899,20 @@ size_t IPCTransferable::ByteSizeLong() const {
         this->_internal_a_referrerinfo());
   }
 
-  // optional .protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 4;
-  if (cached_has_bits & 0x00000010u) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_cookiejarsettings_);
-  }
+  if (cached_has_bits & 0x00000030u) {
+    // optional .protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 4;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *_impl_.a_cookiejarsettings_);
+    }
 
+    // optional bool a_isPrivateData = 2;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += 1 + 1;
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }

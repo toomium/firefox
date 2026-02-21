@@ -20,9 +20,9 @@ message EncodedInputIPDL {
 }
 
 message EncodeInitCompletionIPDL {
-  required string a_description = 1;
-  required bool a_hardware = 2;
-  required string a_hardwareReason = 3;
+  optional string a_description = 1;
+  optional bool a_hardware = 2;
+  optional string a_hardwareReason = 3;
 }
 
 message EncodeInitResultIPDL {
@@ -34,7 +34,7 @@ message EncodeInitResultIPDL {
 
 message EncodeCompletionIPDL {
   optional bytes a_samples = 1;
-  required uint32 a_ticketId = 2;
+  optional uint32 a_ticketId = 2;
 }
 
 message EncodeResultIPDL {

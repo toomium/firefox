@@ -18,16 +18,16 @@ import "IPCBlob.proto";
 
 // Message declarations
 message Msg_Open {
-  required sint32 a_selectedType = 1;
-  required bool a_addToRecentDocs = 2;
-  required string a_defaultFile = 3;
-  required string a_defaultExtension = 4;
+  optional sint32 a_selectedType = 1;
+  optional bool a_addToRecentDocs = 2;
+  optional string a_defaultFile = 3;
+  optional string a_defaultExtension = 4;
   repeated string a_filters = 5;
   repeated string a_filterNames = 6;
   repeated string a_rawFilters = 7;
-  required string a_displayDirectory = 8;
-  required string a_displaySpecialDirectory = 9;
-  required string a_okButtonLabel = 10;
+  optional string a_displayDirectory = 8;
+  optional string a_displaySpecialDirectory = 9;
+  optional string a_okButtonLabel = 10;
   required bytes a_capture = 11;
 }
 

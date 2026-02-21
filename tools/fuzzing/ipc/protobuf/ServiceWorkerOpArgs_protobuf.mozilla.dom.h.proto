@@ -24,16 +24,16 @@ message ServiceWorkerUpdateStateOpArgs {
 }
 
 message ServiceWorkerTerminateWorkerOpArgs {
-  required uint32 a_shutdownStateId = 1;
+  optional uint32 a_shutdownStateId = 1;
 }
 
 message ServiceWorkerLifeCycleEventOpArgs {
-  required string a_eventName = 1;
+  optional string a_eventName = 1;
 }
 
 message ServiceWorkerCookieChangeEventOpArgs {
   required protobuf.mozilla.net.CookieStruct a_cookie = 1;
-  required bool a_deleted = 2;
+  optional bool a_deleted = 2;
 }
 
 message OptionalPushData {
@@ -47,12 +47,12 @@ message OptionalPushData {
 }
 
 message ServiceWorkerPushEventOpArgs {
-  required string a_messageId = 1;
+  optional string a_messageId = 1;
   required protobuf.mozilla.dom.OptionalPushData a_data = 2;
 }
 
 message PushSubscriptionData {
-  required string a_endpoint = 1;
+  optional string a_endpoint = 1;
   repeated uint32 a_rawP256dhKey = 2;
   repeated uint32 a_authSecret = 3;
   repeated uint32 a_appServerKey = 4;
@@ -64,7 +64,7 @@ message ServiceWorkerPushSubscriptionChangeEventOpArgs {
 
 message ServiceWorkerNotificationClickEventOpArgs {
   required protobuf.mozilla.dom.IPCNotification a_notification = 1;
-  required string a_action = 2;
+  optional string a_action = 2;
 }
 
 message ServiceWorkerNotificationCloseEventOpArgs {
@@ -79,8 +79,8 @@ message ServiceWorkerNotificationEventOpArgs {
 }
 
 message ServiceWorkerExtensionAPIEventOpArgs {
-  required string a_apiNamespace = 1;
-  required string a_apiEventName = 2;
+  optional string a_apiNamespace = 1;
+  optional string a_apiEventName = 2;
 }
 
 message ServiceWorkerMessageEventOpArgs {
@@ -89,12 +89,12 @@ message ServiceWorkerMessageEventOpArgs {
 }
 
 message ServiceWorkerFetchEventOpArgsCommon {
-  required string a_workerScriptSpec = 1;
+  optional string a_workerScriptSpec = 1;
   required protobuf.mozilla.dom.IPCInternalRequest a_internalRequest = 2;
-  required string a_clientId = 3;
-  required string a_resultingClientId = 4;
-  required bool a_isNonSubresourceRequest = 5;
-  required bool a_preloadNavigation = 6;
+  optional string a_clientId = 3;
+  optional string a_resultingClientId = 4;
+  optional bool a_isNonSubresourceRequest = 5;
+  optional bool a_preloadNavigation = 6;
   required bytes a_testingInjectCancellation = 7;
 }
 
@@ -113,7 +113,7 @@ message ParentToChildServiceWorkerFetchEventOpArgs {
 }
 
 message ServiceWorkerUpdateIsOnContentBlockingAllowListOpArgs {
-  required bool a_onContentBlockingAllowList = 1;
+  optional bool a_onContentBlockingAllowList = 1;
 }
 
 message ServiceWorkerOpArgs {
@@ -134,9 +134,9 @@ message ServiceWorkerOpArgs {
 }
 
 message FetchEventRespondWithClosure {
-  required string a_respondWithScriptSpec = 1;
-  required uint32 a_respondWithLineNumber = 2;
-  required uint32 a_respondWithColumnNumber = 3;
+  optional string a_respondWithScriptSpec = 1;
+  optional uint32 a_respondWithLineNumber = 2;
+  optional uint32 a_respondWithColumnNumber = 3;
 }
 
 message FetchEventTimeStamps {
@@ -182,8 +182,8 @@ message ParentToParentFetchEventRespondWithResult {
 }
 
 message ServiceWorkerCheckScriptEvaluationOpResult {
-  required bool a_workerScriptExecutedSuccessfully = 1;
-  required bool a_fetchHandlerWasAdded = 2;
+  optional bool a_workerScriptExecutedSuccessfully = 1;
+  optional bool a_fetchHandlerWasAdded = 2;
 }
 
 message ServiceWorkerFetchEventOpResult {
@@ -191,7 +191,7 @@ message ServiceWorkerFetchEventOpResult {
 }
 
 message ServiceWorkerExtensionAPIEventOpResult {
-  required bool a_extensionAPIEventListenerWasAdded = 1;
+  optional bool a_extensionAPIEventListenerWasAdded = 1;
 }
 
 message ServiceWorkerOpResult {

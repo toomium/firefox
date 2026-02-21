@@ -669,7 +669,7 @@ class Msg_AsyncLog final :
   std::string* _internal_add_a_aparams();
   public:
 
-  // required string a_aScriptSpec = 1;
+  // optional string a_aScriptSpec = 1;
   bool has_a_ascriptspec() const;
   private:
   bool _internal_has_a_ascriptspec() const;
@@ -687,7 +687,7 @@ class Msg_AsyncLog final :
   std::string* _internal_mutable_a_ascriptspec();
   public:
 
-  // required string a_aMessageName = 4;
+  // optional string a_aMessageName = 4;
   bool has_a_amessagename() const;
   private:
   bool _internal_has_a_amessagename() const;
@@ -705,7 +705,7 @@ class Msg_AsyncLog final :
   std::string* _internal_mutable_a_amessagename();
   public:
 
-  // required uint32 a_aLineNumber = 2;
+  // optional uint32 a_aLineNumber = 2;
   bool has_a_alinenumber() const;
   private:
   bool _internal_has_a_alinenumber() const;
@@ -718,7 +718,7 @@ class Msg_AsyncLog final :
   void _internal_set_a_alinenumber(uint32_t value);
   public:
 
-  // required uint32 a_aColumnNumber = 3;
+  // optional uint32 a_aColumnNumber = 3;
   bool has_a_acolumnnumber() const;
   private:
   bool _internal_has_a_acolumnnumber() const;
@@ -734,9 +734,6 @@ class Msg_AsyncLog final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PFetchEventOp.Msg_AsyncLog)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1455,7 +1452,7 @@ inline void Msg_PreloadResponseEnd::set_allocated_a_aargs(::protobuf::mozilla::d
 
 // Msg_AsyncLog
 
-// required string a_aScriptSpec = 1;
+// optional string a_aScriptSpec = 1;
 inline bool Msg_AsyncLog::_internal_has_a_ascriptspec() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1523,7 +1520,7 @@ inline void Msg_AsyncLog::set_allocated_a_ascriptspec(std::string* a_ascriptspec
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PFetchEventOp.Msg_AsyncLog.a_aScriptSpec)
 }
 
-// required uint32 a_aLineNumber = 2;
+// optional uint32 a_aLineNumber = 2;
 inline bool Msg_AsyncLog::_internal_has_a_alinenumber() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1551,7 +1548,7 @@ inline void Msg_AsyncLog::set_a_alinenumber(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PFetchEventOp.Msg_AsyncLog.a_aLineNumber)
 }
 
-// required uint32 a_aColumnNumber = 3;
+// optional uint32 a_aColumnNumber = 3;
 inline bool Msg_AsyncLog::_internal_has_a_acolumnnumber() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1579,7 +1576,7 @@ inline void Msg_AsyncLog::set_a_acolumnnumber(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PFetchEventOp.Msg_AsyncLog.a_aColumnNumber)
 }
 
-// required string a_aMessageName = 4;
+// optional string a_aMessageName = 4;
 inline bool Msg_AsyncLog::_internal_has_a_amessagename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

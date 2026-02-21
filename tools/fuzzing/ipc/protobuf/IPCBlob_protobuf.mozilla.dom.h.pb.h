@@ -182,7 +182,7 @@ class IPCFile final :
     kALastModifiedFieldNumber = 2,
     kAIsDirectoryFieldNumber = 5,
   };
-  // required string a_name = 1;
+  // optional string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -200,7 +200,7 @@ class IPCFile final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required string a_DOMPath = 3;
+  // optional string a_DOMPath = 3;
   bool has_a_dompath() const;
   private:
   bool _internal_has_a_dompath() const;
@@ -218,7 +218,7 @@ class IPCFile final :
   std::string* _internal_mutable_a_dompath();
   public:
 
-  // required string a_fullPath = 4;
+  // optional string a_fullPath = 4;
   bool has_a_fullpath() const;
   private:
   bool _internal_has_a_fullpath() const;
@@ -236,7 +236,7 @@ class IPCFile final :
   std::string* _internal_mutable_a_fullpath();
   public:
 
-  // required sint64 a_lastModified = 2;
+  // optional sint64 a_lastModified = 2;
   bool has_a_lastmodified() const;
   private:
   bool _internal_has_a_lastmodified() const;
@@ -249,7 +249,7 @@ class IPCFile final :
   void _internal_set_a_lastmodified(int64_t value);
   public:
 
-  // required bool a_isDirectory = 5;
+  // optional bool a_isDirectory = 5;
   bool has_a_isdirectory() const;
   private:
   bool _internal_has_a_isdirectory() const;
@@ -265,9 +265,6 @@ class IPCFile final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCFile)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -403,7 +400,7 @@ class IPCBlob final :
     kASizeFieldNumber = 2,
     kAFileIdFieldNumber = 6,
   };
-  // required string a_type = 1;
+  // optional string a_type = 1;
   bool has_a_type() const;
   private:
   bool _internal_has_a_type() const;
@@ -421,7 +418,7 @@ class IPCBlob final :
   std::string* _internal_mutable_a_type();
   public:
 
-  // required string a_blobImplType = 3;
+  // optional string a_blobImplType = 3;
   bool has_a_blobimpltype() const;
   private:
   bool _internal_has_a_blobimpltype() const;
@@ -475,7 +472,7 @@ class IPCBlob final :
       ::protobuf::mozilla::dom::IPCFile* a_file);
   ::protobuf::mozilla::dom::IPCFile* unsafe_arena_release_a_file();
 
-  // required uint64 a_size = 2;
+  // optional uint64 a_size = 2;
   bool has_a_size() const;
   private:
   bool _internal_has_a_size() const;
@@ -488,7 +485,7 @@ class IPCBlob final :
   void _internal_set_a_size(uint64_t value);
   public:
 
-  // required sint64 a_fileId = 6;
+  // optional sint64 a_fileId = 6;
   bool has_a_fileid() const;
   private:
   bool _internal_has_a_fileid() const;
@@ -504,9 +501,6 @@ class IPCBlob final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCBlob)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -535,7 +529,7 @@ class IPCBlob final :
 #endif  // __GNUC__
 // IPCFile
 
-// required string a_name = 1;
+// optional string a_name = 1;
 inline bool IPCFile::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -603,7 +597,7 @@ inline void IPCFile::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCFile.a_name)
 }
 
-// required sint64 a_lastModified = 2;
+// optional sint64 a_lastModified = 2;
 inline bool IPCFile::_internal_has_a_lastmodified() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -631,7 +625,7 @@ inline void IPCFile::set_a_lastmodified(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCFile.a_lastModified)
 }
 
-// required string a_DOMPath = 3;
+// optional string a_DOMPath = 3;
 inline bool IPCFile::_internal_has_a_dompath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -699,7 +693,7 @@ inline void IPCFile::set_allocated_a_dompath(std::string* a_dompath) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCFile.a_DOMPath)
 }
 
-// required string a_fullPath = 4;
+// optional string a_fullPath = 4;
 inline bool IPCFile::_internal_has_a_fullpath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -767,7 +761,7 @@ inline void IPCFile::set_allocated_a_fullpath(std::string* a_fullpath) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCFile.a_fullPath)
 }
 
-// required bool a_isDirectory = 5;
+// optional bool a_isDirectory = 5;
 inline bool IPCFile::_internal_has_a_isdirectory() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -799,7 +793,7 @@ inline void IPCFile::set_a_isdirectory(bool value) {
 
 // IPCBlob
 
-// required string a_type = 1;
+// optional string a_type = 1;
 inline bool IPCBlob::_internal_has_a_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -867,7 +861,7 @@ inline void IPCBlob::set_allocated_a_type(std::string* a_type) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCBlob.a_type)
 }
 
-// required uint64 a_size = 2;
+// optional uint64 a_size = 2;
 inline bool IPCBlob::_internal_has_a_size() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -895,7 +889,7 @@ inline void IPCBlob::set_a_size(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCBlob.a_size)
 }
 
-// required string a_blobImplType = 3;
+// optional string a_blobImplType = 3;
 inline bool IPCBlob::_internal_has_a_blobimpltype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1140,7 +1134,7 @@ inline void IPCBlob::set_allocated_a_file(::protobuf::mozilla::dom::IPCFile* a_f
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCBlob.a_file)
 }
 
-// required sint64 a_fileId = 6;
+// optional sint64 a_fileId = 6;
 inline bool IPCBlob::_internal_has_a_fileid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;

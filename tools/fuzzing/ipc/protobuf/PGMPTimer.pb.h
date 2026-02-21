@@ -186,7 +186,7 @@ class Msg_TimerExpired final :
   enum : int {
     kAATimerIdFieldNumber = 1,
   };
-  // required uint32 a_aTimerId = 1;
+  // optional uint32 a_aTimerId = 1;
   bool has_a_atimerid() const;
   private:
   bool _internal_has_a_atimerid() const;
@@ -329,7 +329,7 @@ class Msg_SetTimer final :
     kAATimerIdFieldNumber = 1,
     kAATimeoutMsFieldNumber = 2,
   };
-  // required uint32 a_aTimerId = 1;
+  // optional uint32 a_aTimerId = 1;
   bool has_a_atimerid() const;
   private:
   bool _internal_has_a_atimerid() const;
@@ -342,7 +342,7 @@ class Msg_SetTimer final :
   void _internal_set_a_atimerid(uint32_t value);
   public:
 
-  // required uint32 a_aTimeoutMs = 2;
+  // optional uint32 a_aTimeoutMs = 2;
   bool has_a_atimeoutms() const;
   private:
   bool _internal_has_a_atimeoutms() const;
@@ -358,9 +358,6 @@ class Msg_SetTimer final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPTimer.Msg_SetTimer)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -633,7 +630,7 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_TimerExpired
 
-// required uint32 a_aTimerId = 1;
+// optional uint32 a_aTimerId = 1;
 inline bool Msg_TimerExpired::_internal_has_a_atimerid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -665,7 +662,7 @@ inline void Msg_TimerExpired::set_a_atimerid(uint32_t value) {
 
 // Msg_SetTimer
 
-// required uint32 a_aTimerId = 1;
+// optional uint32 a_aTimerId = 1;
 inline bool Msg_SetTimer::_internal_has_a_atimerid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -693,7 +690,7 @@ inline void Msg_SetTimer::set_a_atimerid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPTimer.Msg_SetTimer.a_aTimerId)
 }
 
-// required uint32 a_aTimeoutMs = 2;
+// optional uint32 a_aTimeoutMs = 2;
 inline bool Msg_SetTimer::_internal_has_a_atimeoutms() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

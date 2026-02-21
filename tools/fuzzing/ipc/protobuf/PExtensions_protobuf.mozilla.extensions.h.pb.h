@@ -176,7 +176,7 @@ class FrameTransitionData final :
     kAReloadFieldNumber = 4,
     kAServerRedirectFieldNumber = 5,
   };
-  // required bool a_clientRedirect = 1;
+  // optional bool a_clientRedirect = 1;
   bool has_a_clientredirect() const;
   private:
   bool _internal_has_a_clientredirect() const;
@@ -189,7 +189,7 @@ class FrameTransitionData final :
   void _internal_set_a_clientredirect(bool value);
   public:
 
-  // required bool a_formSubmit = 2;
+  // optional bool a_formSubmit = 2;
   bool has_a_formsubmit() const;
   private:
   bool _internal_has_a_formsubmit() const;
@@ -202,7 +202,7 @@ class FrameTransitionData final :
   void _internal_set_a_formsubmit(bool value);
   public:
 
-  // required bool a_forwardBack = 3;
+  // optional bool a_forwardBack = 3;
   bool has_a_forwardback() const;
   private:
   bool _internal_has_a_forwardback() const;
@@ -215,7 +215,7 @@ class FrameTransitionData final :
   void _internal_set_a_forwardback(bool value);
   public:
 
-  // required bool a_reload = 4;
+  // optional bool a_reload = 4;
   bool has_a_reload() const;
   private:
   bool _internal_has_a_reload() const;
@@ -228,7 +228,7 @@ class FrameTransitionData final :
   void _internal_set_a_reload(bool value);
   public:
 
-  // required bool a_serverRedirect = 5;
+  // optional bool a_serverRedirect = 5;
   bool has_a_serverredirect() const;
   private:
   bool _internal_has_a_serverredirect() const;
@@ -244,9 +244,6 @@ class FrameTransitionData final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.extensions.FrameTransitionData)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -274,7 +271,7 @@ class FrameTransitionData final :
 #endif  // __GNUC__
 // FrameTransitionData
 
-// required bool a_clientRedirect = 1;
+// optional bool a_clientRedirect = 1;
 inline bool FrameTransitionData::_internal_has_a_clientredirect() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -302,7 +299,7 @@ inline void FrameTransitionData::set_a_clientredirect(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.FrameTransitionData.a_clientRedirect)
 }
 
-// required bool a_formSubmit = 2;
+// optional bool a_formSubmit = 2;
 inline bool FrameTransitionData::_internal_has_a_formsubmit() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -330,7 +327,7 @@ inline void FrameTransitionData::set_a_formsubmit(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.FrameTransitionData.a_formSubmit)
 }
 
-// required bool a_forwardBack = 3;
+// optional bool a_forwardBack = 3;
 inline bool FrameTransitionData::_internal_has_a_forwardback() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -358,7 +355,7 @@ inline void FrameTransitionData::set_a_forwardback(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.FrameTransitionData.a_forwardBack)
 }
 
-// required bool a_reload = 4;
+// optional bool a_reload = 4;
 inline bool FrameTransitionData::_internal_has_a_reload() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -386,7 +383,7 @@ inline void FrameTransitionData::set_a_reload(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.FrameTransitionData.a_reload)
 }
 
-// required bool a_serverRedirect = 5;
+// optional bool a_serverRedirect = 5;
 inline bool FrameTransitionData::_internal_has_a_serverredirect() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;

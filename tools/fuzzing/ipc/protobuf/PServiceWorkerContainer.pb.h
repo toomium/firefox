@@ -215,7 +215,7 @@ class Msg_Register final :
     kAAUpdateViaCacheFieldNumber = 4,
     kAAClientInfoFieldNumber = 1,
   };
-  // required string a_aScopeURL = 2;
+  // optional string a_aScopeURL = 2;
   bool has_a_ascopeurl() const;
   private:
   bool _internal_has_a_ascopeurl() const;
@@ -233,7 +233,7 @@ class Msg_Register final :
   std::string* _internal_mutable_a_ascopeurl();
   public:
 
-  // required string a_aScriptURL = 3;
+  // optional string a_aScriptURL = 3;
   bool has_a_ascripturl() const;
   private:
   bool _internal_has_a_ascripturl() const;
@@ -570,7 +570,7 @@ class Msg_GetRegistration final :
     kAAURLFieldNumber = 2,
     kAAClientInfoFieldNumber = 1,
   };
-  // required string a_aURL = 2;
+  // optional string a_aURL = 2;
   bool has_a_aurl() const;
   private:
   bool _internal_has_a_aurl() const;
@@ -609,9 +609,6 @@ class Msg_GetRegistration final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PServiceWorkerContainer.Msg_GetRegistration)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1706,7 +1703,7 @@ inline void Msg_Register::set_allocated_a_aclientinfo(::protobuf::mozilla::dom::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PServiceWorkerContainer.Msg_Register.a_aClientInfo)
 }
 
-// required string a_aScopeURL = 2;
+// optional string a_aScopeURL = 2;
 inline bool Msg_Register::_internal_has_a_ascopeurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1774,7 +1771,7 @@ inline void Msg_Register::set_allocated_a_ascopeurl(std::string* a_ascopeurl) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PServiceWorkerContainer.Msg_Register.a_aScopeURL)
 }
 
-// required string a_aScriptURL = 3;
+// optional string a_aScriptURL = 3;
 inline bool Msg_Register::_internal_has_a_ascripturl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2092,7 +2089,7 @@ inline void Msg_GetRegistration::set_allocated_a_aclientinfo(::protobuf::mozilla
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PServiceWorkerContainer.Msg_GetRegistration.a_aClientInfo)
 }
 
-// required string a_aURL = 2;
+// optional string a_aURL = 2;
 inline bool Msg_GetRegistration::_internal_has_a_aurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

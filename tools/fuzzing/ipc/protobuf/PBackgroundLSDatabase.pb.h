@@ -316,7 +316,7 @@ class Msg_PBackgroundLSSnapshotConstructor final :
     kAMinSizeFieldNumber = 5,
     kAIncreasePeakUsageFieldNumber = 4,
   };
-  // required string a_documentURI = 2;
+  // optional string a_documentURI = 2;
   bool has_a_documenturi() const;
   private:
   bool _internal_has_a_documenturi() const;
@@ -334,7 +334,7 @@ class Msg_PBackgroundLSSnapshotConstructor final :
   std::string* _internal_mutable_a_documenturi();
   public:
 
-  // required string a_key = 3;
+  // optional string a_key = 3;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -352,7 +352,7 @@ class Msg_PBackgroundLSSnapshotConstructor final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -365,7 +365,7 @@ class Msg_PBackgroundLSSnapshotConstructor final :
   void _internal_set_a_actorid(int64_t value);
   public:
 
-  // required sint64 a_minSize = 5;
+  // optional sint64 a_minSize = 5;
   bool has_a_minsize() const;
   private:
   bool _internal_has_a_minsize() const;
@@ -378,7 +378,7 @@ class Msg_PBackgroundLSSnapshotConstructor final :
   void _internal_set_a_minsize(int64_t value);
   public:
 
-  // required bool a_increasePeakUsage = 4;
+  // optional bool a_increasePeakUsage = 4;
   bool has_a_increasepeakusage() const;
   private:
   bool _internal_has_a_increasepeakusage() const;
@@ -394,9 +394,6 @@ class Msg_PBackgroundLSSnapshotConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -699,7 +696,7 @@ class Msg_RequestAllowToClose final :
 
 // Msg_PBackgroundLSSnapshotConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PBackgroundLSSnapshotConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -727,7 +724,7 @@ inline void Msg_PBackgroundLSSnapshotConstructor::set_a_actorid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_actorid)
 }
 
-// required string a_documentURI = 2;
+// optional string a_documentURI = 2;
 inline bool Msg_PBackgroundLSSnapshotConstructor::_internal_has_a_documenturi() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -795,7 +792,7 @@ inline void Msg_PBackgroundLSSnapshotConstructor::set_allocated_a_documenturi(st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_documentURI)
 }
 
-// required string a_key = 3;
+// optional string a_key = 3;
 inline bool Msg_PBackgroundLSSnapshotConstructor::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -863,7 +860,7 @@ inline void Msg_PBackgroundLSSnapshotConstructor::set_allocated_a_key(std::strin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_key)
 }
 
-// required bool a_increasePeakUsage = 4;
+// optional bool a_increasePeakUsage = 4;
 inline bool Msg_PBackgroundLSSnapshotConstructor::_internal_has_a_increasepeakusage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -891,7 +888,7 @@ inline void Msg_PBackgroundLSSnapshotConstructor::set_a_increasepeakusage(bool v
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_increasePeakUsage)
 }
 
-// required sint64 a_minSize = 5;
+// optional sint64 a_minSize = 5;
 inline bool Msg_PBackgroundLSSnapshotConstructor::_internal_has_a_minsize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;

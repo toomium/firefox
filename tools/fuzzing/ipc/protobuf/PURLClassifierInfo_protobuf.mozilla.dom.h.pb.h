@@ -177,7 +177,7 @@ class ClassifierInfo final :
     kAProviderFieldNumber = 2,
     kAFullhashFieldNumber = 3,
   };
-  // required string a_list = 1;
+  // optional string a_list = 1;
   bool has_a_list() const;
   private:
   bool _internal_has_a_list() const;
@@ -195,7 +195,7 @@ class ClassifierInfo final :
   std::string* _internal_mutable_a_list();
   public:
 
-  // required string a_provider = 2;
+  // optional string a_provider = 2;
   bool has_a_provider() const;
   private:
   bool _internal_has_a_provider() const;
@@ -213,7 +213,7 @@ class ClassifierInfo final :
   std::string* _internal_mutable_a_provider();
   public:
 
-  // required string a_fullhash = 3;
+  // optional string a_fullhash = 3;
   bool has_a_fullhash() const;
   private:
   bool _internal_has_a_fullhash() const;
@@ -234,9 +234,6 @@ class ClassifierInfo final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.ClassifierInfo)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -385,7 +382,7 @@ class URLClassifierLocalResult final :
   std::string* _internal_mutable_a_uri();
   public:
 
-  // required string a_featureName = 2;
+  // optional string a_featureName = 2;
   bool has_a_featurename() const;
   private:
   bool _internal_has_a_featurename() const;
@@ -403,7 +400,7 @@ class URLClassifierLocalResult final :
   std::string* _internal_mutable_a_featurename();
   public:
 
-  // required string a_matchingList = 3;
+  // optional string a_matchingList = 3;
   bool has_a_matchinglist() const;
   private:
   bool _internal_has_a_matchinglist() const;
@@ -424,9 +421,6 @@ class URLClassifierLocalResult final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.URLClassifierLocalResult)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -452,7 +446,7 @@ class URLClassifierLocalResult final :
 #endif  // __GNUC__
 // ClassifierInfo
 
-// required string a_list = 1;
+// optional string a_list = 1;
 inline bool ClassifierInfo::_internal_has_a_list() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -520,7 +514,7 @@ inline void ClassifierInfo::set_allocated_a_list(std::string* a_list) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ClassifierInfo.a_list)
 }
 
-// required string a_provider = 2;
+// optional string a_provider = 2;
 inline bool ClassifierInfo::_internal_has_a_provider() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -588,7 +582,7 @@ inline void ClassifierInfo::set_allocated_a_provider(std::string* a_provider) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ClassifierInfo.a_provider)
 }
 
-// required string a_fullhash = 3;
+// optional string a_fullhash = 3;
 inline bool ClassifierInfo::_internal_has_a_fullhash() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -728,7 +722,7 @@ inline void URLClassifierLocalResult::set_allocated_a_uri(std::string* a_uri) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.URLClassifierLocalResult.a_uri)
 }
 
-// required string a_featureName = 2;
+// optional string a_featureName = 2;
 inline bool URLClassifierLocalResult::_internal_has_a_featurename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -796,7 +790,7 @@ inline void URLClassifierLocalResult::set_allocated_a_featurename(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.URLClassifierLocalResult.a_featureName)
 }
 
-// required string a_matchingList = 3;
+// optional string a_matchingList = 3;
 inline bool URLClassifierLocalResult::_internal_has_a_matchinglist() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

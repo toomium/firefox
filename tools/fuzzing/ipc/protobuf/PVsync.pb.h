@@ -209,7 +209,7 @@ class Msg_Notify final :
   std::string* _internal_mutable_a_avsync();
   public:
 
-  // required float a_aVsyncRate = 2;
+  // optional float a_aVsyncRate = 2;
   bool has_a_avsyncrate() const;
   private:
   bool _internal_has_a_avsyncrate() const;
@@ -225,9 +225,6 @@ class Msg_Notify final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PVsync.Msg_Notify)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -816,7 +813,7 @@ inline void Msg_Notify::set_allocated_a_avsync(std::string* a_avsync) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PVsync.Msg_Notify.a_aVsync)
 }
 
-// required float a_aVsyncRate = 2;
+// optional float a_aVsyncRate = 2;
 inline bool Msg_Notify::_internal_has_a_avsyncrate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

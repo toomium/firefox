@@ -152,7 +152,7 @@ class Msg_PRemoteDecoderConstructor::_Internal {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000019) ^ 0x00000019) != 0;
+    return ((has_bits[0] & 0x00000009) ^ 0x00000009) != 0;
   }
 };
 
@@ -304,7 +304,7 @@ const char* Msg_PRemoteDecoderConstructor::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint64 a_actorid = 1;
+      // optional sint64 a_actorid = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_actorid(&has_bits);
@@ -388,7 +388,7 @@ uint8_t* Msg_PRemoteDecoderConstructor::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_actorid(), target);
@@ -451,18 +451,13 @@ size_t Msg_PRemoteDecoderConstructor::RequiredFieldsByteSizeFallback() const {
         *_impl_.a_info_);
   }
 
-  if (_internal_has_a_actorid()) {
-    // required sint64 a_actorid = 1;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
-  }
-
   return total_size;
 }
 size_t Msg_PRemoteDecoderConstructor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteDecoderConstructor)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000019) ^ 0x00000019) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x00000009) ^ 0x00000009) == 0) {  // All required fields are present.
     // required bytes a_options = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -472,9 +467,6 @@ size_t Msg_PRemoteDecoderConstructor::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_info_);
-
-    // required sint64 a_actorid = 1;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -500,11 +492,18 @@ size_t Msg_PRemoteDecoderConstructor::ByteSizeLong() const {
     }
 
   }
-  // optional uint64 a_mediaEngineId = 5;
-  if (cached_has_bits & 0x00000020u) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_mediaengineid());
-  }
+  if (cached_has_bits & 0x00000030u) {
+    // optional sint64 a_actorid = 1;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
+    }
 
+    // optional uint64 a_mediaEngineId = 5;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_mediaengineid());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -758,7 +757,7 @@ class Msg_PRemoteEncoderConstructor::_Internal {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -846,7 +845,7 @@ const char* Msg_PRemoteEncoderConstructor::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint64 a_actorid = 1;
+      // optional sint64 a_actorid = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_actorid(&has_bits);
@@ -895,7 +894,7 @@ uint8_t* Msg_PRemoteEncoderConstructor::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_actorid(), target);
@@ -915,43 +914,25 @@ uint8_t* Msg_PRemoteEncoderConstructor::_InternalSerialize(
   return target;
 }
 
-size_t Msg_PRemoteEncoderConstructor::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteEncoderConstructor)
-  size_t total_size = 0;
-
-  if (_internal_has_a_config()) {
-    // required bytes a_config = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_config());
-  }
-
-  if (_internal_has_a_actorid()) {
-    // required sint64 a_actorid = 1;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
-  }
-
-  return total_size;
-}
 size_t Msg_PRemoteEncoderConstructor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteEncoderConstructor)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_config = 2;
+  // required bytes a_config = 2;
+  if (_internal_has_a_config()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_config());
-
-    // required sint64 a_actorid = 1;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional sint64 a_actorid = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000002u) {
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();

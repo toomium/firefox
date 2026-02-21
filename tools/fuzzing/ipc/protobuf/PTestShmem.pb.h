@@ -224,7 +224,7 @@ class Msg_Give final :
   std::string* _internal_mutable_a_unsafe();
   public:
 
-  // required uint32 a_expectedSize = 3;
+  // optional uint32 a_expectedSize = 3;
   bool has_a_expectedsize() const;
   private:
   bool _internal_has_a_expectedsize() const;
@@ -409,7 +409,7 @@ class Msg_Take final :
   std::string* _internal_mutable_a_unsafe();
   public:
 
-  // required uint32 a_expectedSize = 3;
+  // optional uint32 a_expectedSize = 3;
   bool has_a_expectedsize() const;
   private:
   bool _internal_has_a_expectedsize() const;
@@ -837,7 +837,7 @@ inline void Msg_Give::set_allocated_a_unsafe(std::string* a_unsafe) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.PTestShmem.Msg_Give.a_unsafe)
 }
 
-// required uint32 a_expectedSize = 3;
+// optional uint32 a_expectedSize = 3;
 inline bool Msg_Give::_internal_has_a_expectedsize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1005,7 +1005,7 @@ inline void Msg_Take::set_allocated_a_unsafe(std::string* a_unsafe) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.PTestShmem.Msg_Take.a_unsafe)
 }
 
-// required uint32 a_expectedSize = 3;
+// optional uint32 a_expectedSize = 3;
 inline bool Msg_Take::_internal_has_a_expectedsize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

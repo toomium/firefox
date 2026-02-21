@@ -74,7 +74,7 @@ class GMPLaunchResult::_Internal {
     (*has_bits)[0] |= 32u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000007f) ^ 0x0000007f) != 0;
+    return ((has_bits[0] & 0x0000001b) ^ 0x0000001b) != 0;
   }
 };
 
@@ -254,7 +254,7 @@ const char* GMPLaunchResult::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 a_pluginId = 1;
+      // optional uint32 a_pluginId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_pluginid(&has_bits);
@@ -281,7 +281,7 @@ const char* GMPLaunchResult::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required string a_displayName = 4;
+      // optional string a_displayName = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_displayname();
@@ -308,7 +308,7 @@ const char* GMPLaunchResult::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required string a_errorDescription = 7;
+      // optional string a_errorDescription = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           auto str = _internal_mutable_a_errordescription();
@@ -348,7 +348,7 @@ uint8_t* GMPLaunchResult::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 a_pluginId = 1;
+  // optional uint32 a_pluginId = 1;
   if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_pluginid(), target);
@@ -366,7 +366,7 @@ uint8_t* GMPLaunchResult::_InternalSerialize(
         3, this->_internal_a_pid(), target);
   }
 
-  // required string a_displayName = 4;
+  // optional string a_displayName = 4;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_a_displayname(), target);
@@ -384,7 +384,7 @@ uint8_t* GMPLaunchResult::_InternalSerialize(
         6, this->_internal_a_result(), target);
   }
 
-  // required string a_errorDescription = 7;
+  // optional string a_errorDescription = 7;
   if (cached_has_bits & 0x00000020u) {
     target = stream->WriteStringMaybeAliased(
         7, this->_internal_a_errordescription(), target);
@@ -416,13 +416,6 @@ size_t GMPLaunchResult::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_pid());
   }
 
-  if (_internal_has_a_displayname()) {
-    // required string a_displayName = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_displayname());
-  }
-
   if (_internal_has_a_endpoint()) {
     // required bytes a_endpoint = 5;
     total_size += 1 +
@@ -437,25 +430,13 @@ size_t GMPLaunchResult::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_result());
   }
 
-  if (_internal_has_a_errordescription()) {
-    // required string a_errorDescription = 7;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_errordescription());
-  }
-
-  if (_internal_has_a_pluginid()) {
-    // required uint32 a_pluginId = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_pluginid());
-  }
-
   return total_size;
 }
 size_t GMPLaunchResult::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gmp.GMPLaunchResult)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000007f) ^ 0x0000007f) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x0000001b) ^ 0x0000001b) == 0) {  // All required fields are present.
     // required bytes a_pluginType = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -465,11 +446,6 @@ size_t GMPLaunchResult::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_pid());
-
-    // required string a_displayName = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_displayname());
 
     // required bytes a_endpoint = 5;
     total_size += 1 +
@@ -481,14 +457,6 @@ size_t GMPLaunchResult::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_result());
 
-    // required string a_errorDescription = 7;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_errordescription());
-
-    // required uint32 a_pluginId = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_pluginid());
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
@@ -496,6 +464,28 @@ size_t GMPLaunchResult::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  // optional string a_displayName = 4;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000004u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_displayname());
+  }
+
+  if (cached_has_bits & 0x00000060u) {
+    // optional string a_errorDescription = 7;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_errordescription());
+    }
+
+    // optional uint32 a_pluginId = 1;
+    if (cached_has_bits & 0x00000040u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_pluginid());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }

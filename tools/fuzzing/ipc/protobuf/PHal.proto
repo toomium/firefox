@@ -66,7 +66,7 @@ message Reply_GetCurrentNetworkInformation {
 }
 
 message Msg_ModifyWakeLock {
-  required string a_aTopic = 1;
+  optional string a_aTopic = 1;
   required bytes a_aLockAdjust = 2;
   required bytes a_aHiddenAdjust = 3;
 }
@@ -78,7 +78,7 @@ message Msg_DisableWakeLockNotifications {
 }
 
 message Msg_GetWakeLockInfo {
-  required string a_aTopic = 1;
+  optional string a_aTopic = 1;
 }
 
 message Reply_GetWakeLockInfo {
@@ -97,7 +97,7 @@ message Msg_UnlockScreenOrientation {
 }
 
 message Msg_PerformHapticFeedback {
-  required sint32 a_aType = 1;
+  optional sint32 a_aType = 1;
 }
 
 message Msg_NotifySensorChange {

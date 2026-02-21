@@ -245,7 +245,7 @@ class Msg_IdleTime final :
   std::string* _internal_mutable_a_budget();
   public:
 
-  // required uint64 a_id = 1;
+  // optional uint64 a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -261,9 +261,6 @@ class Msg_IdleTime final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PIdleScheduler.Msg_IdleTime)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -534,7 +531,7 @@ class Reply_InitForIdleUse final :
   std::string* _internal_mutable_a_state();
   public:
 
-  // required uint32 a_childId = 2;
+  // optional uint32 a_childId = 2;
   bool has_a_childid() const;
   private:
   bool _internal_has_a_childid() const;
@@ -696,7 +693,7 @@ class Msg_RequestIdleTime final :
   std::string* _internal_mutable_a_budget();
   public:
 
-  // required uint64 a_id = 1;
+  // optional uint64 a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -712,9 +709,6 @@ class Msg_RequestIdleTime final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PIdleScheduler.Msg_RequestIdleTime)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -842,7 +836,7 @@ class Msg_IdleTimeUsed final :
   enum : int {
     kAIdFieldNumber = 1,
   };
-  // required uint64 a_id = 1;
+  // optional uint64 a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -1480,7 +1474,7 @@ class Reply_RequestGC final :
   enum : int {
     kAMayGcFieldNumber = 1,
   };
-  // required bool a_may_gc = 1;
+  // optional bool a_may_gc = 1;
   bool has_a_may_gc() const;
   private:
   bool _internal_has_a_may_gc() const;
@@ -2015,7 +2009,7 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_IdleTime
 
-// required uint64 a_id = 1;
+// optional uint64 a_id = 1;
 inline bool Msg_IdleTime::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2187,7 +2181,7 @@ inline void Reply_InitForIdleUse::set_allocated_a_state(std::string* a_state) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PIdleScheduler.Reply_InitForIdleUse.a_state)
 }
 
-// required uint32 a_childId = 2;
+// optional uint32 a_childId = 2;
 inline bool Reply_InitForIdleUse::_internal_has_a_childid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2219,7 +2213,7 @@ inline void Reply_InitForIdleUse::set_a_childid(uint32_t value) {
 
 // Msg_RequestIdleTime
 
-// required uint64 a_id = 1;
+// optional uint64 a_id = 1;
 inline bool Msg_RequestIdleTime::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2319,7 +2313,7 @@ inline void Msg_RequestIdleTime::set_allocated_a_budget(std::string* a_budget) {
 
 // Msg_IdleTimeUsed
 
-// required uint64 a_id = 1;
+// optional uint64 a_id = 1;
 inline bool Msg_IdleTimeUsed::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2367,7 +2361,7 @@ inline void Msg_IdleTimeUsed::set_a_id(uint64_t value) {
 
 // Reply_RequestGC
 
-// required bool a_may_gc = 1;
+// optional bool a_may_gc = 1;
 inline bool Reply_RequestGC::_internal_has_a_may_gc() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

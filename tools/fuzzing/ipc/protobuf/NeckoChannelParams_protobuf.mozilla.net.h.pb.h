@@ -333,7 +333,7 @@ class CookiePermissionData final :
       ::protobuf::mozilla::ipc::PrincipalInfo* a_principalinfo);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_principalinfo();
 
-  // required uint32 a_cookiePermission = 2;
+  // optional uint32 a_cookiePermission = 2;
   bool has_a_cookiepermission() const;
   private:
   bool _internal_has_a_cookiepermission() const;
@@ -349,9 +349,6 @@ class CookiePermissionData final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.CookiePermissionData)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -528,7 +525,7 @@ class CookieJarSettingsArgs final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_fingerprintingrandomizationkey();
 
-  // required string a_partitionKey = 7;
+  // optional string a_partitionKey = 7;
   bool has_a_partitionkey() const;
   private:
   bool _internal_has_a_partitionkey() const;
@@ -546,7 +543,7 @@ class CookieJarSettingsArgs final :
   std::string* _internal_mutable_a_partitionkey();
   public:
 
-  // required uint32 a_cookieBehavior = 1;
+  // optional uint32 a_cookieBehavior = 1;
   bool has_a_cookiebehavior() const;
   private:
   bool _internal_has_a_cookiebehavior() const;
@@ -559,7 +556,7 @@ class CookieJarSettingsArgs final :
   void _internal_set_a_cookiebehavior(uint32_t value);
   public:
 
-  // required bool a_isFirstPartyIsolated = 2;
+  // optional bool a_isFirstPartyIsolated = 2;
   bool has_a_isfirstpartyisolated() const;
   private:
   bool _internal_has_a_isfirstpartyisolated() const;
@@ -572,7 +569,7 @@ class CookieJarSettingsArgs final :
   void _internal_set_a_isfirstpartyisolated(bool value);
   public:
 
-  // required bool a_shouldResistFingerprinting = 3;
+  // optional bool a_shouldResistFingerprinting = 3;
   bool has_a_shouldresistfingerprinting() const;
   private:
   bool _internal_has_a_shouldresistfingerprinting() const;
@@ -585,7 +582,7 @@ class CookieJarSettingsArgs final :
   void _internal_set_a_shouldresistfingerprinting(bool value);
   public:
 
-  // required bool a_isOnContentBlockingAllowList = 4;
+  // optional bool a_isOnContentBlockingAllowList = 4;
   bool has_a_isoncontentblockingallowlist() const;
   private:
   bool _internal_has_a_isoncontentblockingallowlist() const;
@@ -598,7 +595,7 @@ class CookieJarSettingsArgs final :
   void _internal_set_a_isoncontentblockingallowlist(bool value);
   public:
 
-  // required bool a_isFixed = 6;
+  // optional bool a_isFixed = 6;
   bool has_a_isfixed() const;
   private:
   bool _internal_has_a_isfixed() const;
@@ -611,7 +608,7 @@ class CookieJarSettingsArgs final :
   void _internal_set_a_isfixed(bool value);
   public:
 
-  // required uint64 a_topLevelWindowContextId = 10;
+  // optional uint64 a_topLevelWindowContextId = 10;
   bool has_a_toplevelwindowcontextid() const;
   private:
   bool _internal_has_a_toplevelwindowcontextid() const;
@@ -624,7 +621,7 @@ class CookieJarSettingsArgs final :
   void _internal_set_a_toplevelwindowcontextid(uint64_t value);
   public:
 
-  // required bool a_hasFingerprintingRandomizationKey = 8;
+  // optional bool a_hasFingerprintingRandomizationKey = 8;
   bool has_a_hasfingerprintingrandomizationkey() const;
   private:
   bool _internal_has_a_hasfingerprintingrandomizationkey() const;
@@ -640,9 +637,6 @@ class CookieJarSettingsArgs final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.CookieJarSettingsArgs)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -780,7 +774,7 @@ class PreferredAlternativeDataTypeParams final :
     kAContentTypeFieldNumber = 2,
     kADeliverAltDataFieldNumber = 3,
   };
-  // required string a_type = 1;
+  // optional string a_type = 1;
   bool has_a_type() const;
   private:
   bool _internal_has_a_type() const;
@@ -798,7 +792,7 @@ class PreferredAlternativeDataTypeParams final :
   std::string* _internal_mutable_a_type();
   public:
 
-  // required string a_contentType = 2;
+  // optional string a_contentType = 2;
   bool has_a_contenttype() const;
   private:
   bool _internal_has_a_contenttype() const;
@@ -837,9 +831,6 @@ class PreferredAlternativeDataTypeParams final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PreferredAlternativeDataTypeParams)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -970,7 +961,7 @@ class RedirectHistoryEntryInfo final :
     kAPrincipalInfoFieldNumber = 1,
     kAReferrerUriFieldNumber = 2,
   };
-  // required string a_remoteAddress = 3;
+  // optional string a_remoteAddress = 3;
   bool has_a_remoteaddress() const;
   private:
   bool _internal_has_a_remoteaddress() const;
@@ -1027,9 +1018,6 @@ class RedirectHistoryEntryInfo final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.RedirectHistoryEntryInfo)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1215,7 +1203,7 @@ class InterceptionInfoArg final :
       ::protobuf::mozilla::ipc::PrincipalInfo* a_triggeringprincipalinfo);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_triggeringprincipalinfo();
 
-  // required bool a_fromThirdParty = 4;
+  // optional bool a_fromThirdParty = 4;
   bool has_a_fromthirdparty() const;
   private:
   bool _internal_has_a_fromthirdparty() const;
@@ -1231,9 +1219,6 @@ class InterceptionInfoArg final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.InterceptionInfoArg)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1505,7 +1490,7 @@ class LoadInfoArgs final :
   std::string* _internal_add_a_corsunsafeheaders();
   public:
 
-  // required string a_triggeringRemoteType = 6;
+  // optional string a_triggeringRemoteType = 6;
   bool has_a_triggeringremotetype() const;
   private:
   bool _internal_has_a_triggeringremotetype() const;
@@ -1613,7 +1598,7 @@ class LoadInfoArgs final :
   std::string* _internal_mutable_a_httpsupgradetelemetry();
   public:
 
-  // required string a_cspNonce = 55;
+  // optional string a_cspNonce = 55;
   bool has_a_cspnonce() const;
   private:
   bool _internal_has_a_cspnonce() const;
@@ -1631,7 +1616,7 @@ class LoadInfoArgs final :
   std::string* _internal_mutable_a_cspnonce();
   public:
 
-  // required string a_integrityMetadata = 56;
+  // optional string a_integrityMetadata = 56;
   bool has_a_integritymetadata() const;
   private:
   bool _internal_has_a_integritymetadata() const;
@@ -2009,7 +1994,7 @@ class LoadInfoArgs final :
       ::protobuf::mozilla::net::InterceptionInfoArg* a_interceptioninfo);
   ::protobuf::mozilla::net::InterceptionInfoArg* unsafe_arena_release_a_interceptioninfo();
 
-  // required uint32 a_securityFlags = 8;
+  // optional uint32 a_securityFlags = 8;
   bool has_a_securityflags() const;
   private:
   bool _internal_has_a_securityflags() const;
@@ -2022,7 +2007,7 @@ class LoadInfoArgs final :
   void _internal_set_a_securityflags(uint32_t value);
   public:
 
-  // required uint32 a_sandboxFlags = 9;
+  // optional uint32 a_sandboxFlags = 9;
   bool has_a_sandboxflags() const;
   private:
   bool _internal_has_a_sandboxflags() const;
@@ -2035,7 +2020,7 @@ class LoadInfoArgs final :
   void _internal_set_a_sandboxflags(uint32_t value);
   public:
 
-  // required uint64 a_triggeringWindowId = 11;
+  // optional uint64 a_triggeringWindowId = 11;
   bool has_a_triggeringwindowid() const;
   private:
   bool _internal_has_a_triggeringwindowid() const;
@@ -2048,7 +2033,7 @@ class LoadInfoArgs final :
   void _internal_set_a_triggeringwindowid(uint64_t value);
   public:
 
-  // required uint32 a_triggeringSandboxFlags = 10;
+  // optional uint32 a_triggeringSandboxFlags = 10;
   bool has_a_triggeringsandboxflags() const;
   private:
   bool _internal_has_a_triggeringsandboxflags() const;
@@ -2061,7 +2046,7 @@ class LoadInfoArgs final :
   void _internal_set_a_triggeringsandboxflags(uint32_t value);
   public:
 
-  // required uint32 a_triggeringFirstPartyClassificationFlags = 13;
+  // optional uint32 a_triggeringFirstPartyClassificationFlags = 13;
   bool has_a_triggeringfirstpartyclassificationflags() const;
   private:
   bool _internal_has_a_triggeringfirstpartyclassificationflags() const;
@@ -2074,7 +2059,7 @@ class LoadInfoArgs final :
   void _internal_set_a_triggeringfirstpartyclassificationflags(uint32_t value);
   public:
 
-  // required uint32 a_triggeringThirdPartyClassificationFlags = 14;
+  // optional uint32 a_triggeringThirdPartyClassificationFlags = 14;
   bool has_a_triggeringthirdpartyclassificationflags() const;
   private:
   bool _internal_has_a_triggeringthirdpartyclassificationflags() const;
@@ -2087,7 +2072,7 @@ class LoadInfoArgs final :
   void _internal_set_a_triggeringthirdpartyclassificationflags(uint32_t value);
   public:
 
-  // required uint32 a_tainting = 16;
+  // optional uint32 a_tainting = 16;
   bool has_a_tainting() const;
   private:
   bool _internal_has_a_tainting() const;
@@ -2100,7 +2085,7 @@ class LoadInfoArgs final :
   void _internal_set_a_tainting(uint32_t value);
   public:
 
-  // required bool a_triggeringStorageAccess = 12;
+  // optional bool a_triggeringStorageAccess = 12;
   bool has_a_triggeringstorageaccess() const;
   private:
   bool _internal_has_a_triggeringstorageaccess() const;
@@ -2113,7 +2098,7 @@ class LoadInfoArgs final :
   void _internal_set_a_triggeringstorageaccess(bool value);
   public:
 
-  // required bool a_blockAllMixedContent = 17;
+  // optional bool a_blockAllMixedContent = 17;
   bool has_a_blockallmixedcontent() const;
   private:
   bool _internal_has_a_blockallmixedcontent() const;
@@ -2126,7 +2111,7 @@ class LoadInfoArgs final :
   void _internal_set_a_blockallmixedcontent(bool value);
   public:
 
-  // required bool a_upgradeInsecureRequests = 18;
+  // optional bool a_upgradeInsecureRequests = 18;
   bool has_a_upgradeinsecurerequests() const;
   private:
   bool _internal_has_a_upgradeinsecurerequests() const;
@@ -2139,7 +2124,7 @@ class LoadInfoArgs final :
   void _internal_set_a_upgradeinsecurerequests(bool value);
   public:
 
-  // required bool a_browserUpgradeInsecureRequests = 19;
+  // optional bool a_browserUpgradeInsecureRequests = 19;
   bool has_a_browserupgradeinsecurerequests() const;
   private:
   bool _internal_has_a_browserupgradeinsecurerequests() const;
@@ -2152,7 +2137,7 @@ class LoadInfoArgs final :
   void _internal_set_a_browserupgradeinsecurerequests(bool value);
   public:
 
-  // required bool a_browserDidUpgradeInsecureRequests = 20;
+  // optional bool a_browserDidUpgradeInsecureRequests = 20;
   bool has_a_browserdidupgradeinsecurerequests() const;
   private:
   bool _internal_has_a_browserdidupgradeinsecurerequests() const;
@@ -2165,7 +2150,7 @@ class LoadInfoArgs final :
   void _internal_set_a_browserdidupgradeinsecurerequests(bool value);
   public:
 
-  // required bool a_browserWouldUpgradeInsecureRequests = 21;
+  // optional bool a_browserWouldUpgradeInsecureRequests = 21;
   bool has_a_browserwouldupgradeinsecurerequests() const;
   private:
   bool _internal_has_a_browserwouldupgradeinsecurerequests() const;
@@ -2178,7 +2163,7 @@ class LoadInfoArgs final :
   void _internal_set_a_browserwouldupgradeinsecurerequests(bool value);
   public:
 
-  // required bool a_forceAllowDataURI = 22;
+  // optional bool a_forceAllowDataURI = 22;
   bool has_a_forceallowdatauri() const;
   private:
   bool _internal_has_a_forceallowdatauri() const;
@@ -2191,7 +2176,7 @@ class LoadInfoArgs final :
   void _internal_set_a_forceallowdatauri(bool value);
   public:
 
-  // required bool a_allowInsecureRedirectToDataURI = 23;
+  // optional bool a_allowInsecureRedirectToDataURI = 23;
   bool has_a_allowinsecureredirecttodatauri() const;
   private:
   bool _internal_has_a_allowinsecureredirecttodatauri() const;
@@ -2204,7 +2189,7 @@ class LoadInfoArgs final :
   void _internal_set_a_allowinsecureredirecttodatauri(bool value);
   public:
 
-  // required uint64 a_innerWindowID = 27;
+  // optional uint64 a_innerWindowID = 27;
   bool has_a_innerwindowid() const;
   private:
   bool _internal_has_a_innerwindowid() const;
@@ -2217,7 +2202,7 @@ class LoadInfoArgs final :
   void _internal_set_a_innerwindowid(uint64_t value);
   public:
 
-  // required uint64 a_browsingContextID = 28;
+  // optional uint64 a_browsingContextID = 28;
   bool has_a_browsingcontextid() const;
   private:
   bool _internal_has_a_browsingcontextid() const;
@@ -2230,7 +2215,7 @@ class LoadInfoArgs final :
   void _internal_set_a_browsingcontextid(uint64_t value);
   public:
 
-  // required uint64 a_frameBrowsingContextID = 29;
+  // optional uint64 a_frameBrowsingContextID = 29;
   bool has_a_framebrowsingcontextid() const;
   private:
   bool _internal_has_a_framebrowsingcontextid() const;
@@ -2243,7 +2228,7 @@ class LoadInfoArgs final :
   void _internal_set_a_framebrowsingcontextid(uint64_t value);
   public:
 
-  // required bool a_skipContentPolicyCheckForWebRequest = 24;
+  // optional bool a_skipContentPolicyCheckForWebRequest = 24;
   bool has_a_skipcontentpolicycheckforwebrequest() const;
   private:
   bool _internal_has_a_skipcontentpolicycheckforwebrequest() const;
@@ -2256,7 +2241,7 @@ class LoadInfoArgs final :
   void _internal_set_a_skipcontentpolicycheckforwebrequest(bool value);
   public:
 
-  // required bool a_originalFrameSrcLoad = 25;
+  // optional bool a_originalFrameSrcLoad = 25;
   bool has_a_originalframesrcload() const;
   private:
   bool _internal_has_a_originalframesrcload() const;
@@ -2269,7 +2254,7 @@ class LoadInfoArgs final :
   void _internal_set_a_originalframesrcload(bool value);
   public:
 
-  // required bool a_forceInheritPrincipalDropped = 26;
+  // optional bool a_forceInheritPrincipalDropped = 26;
   bool has_a_forceinheritprincipaldropped() const;
   private:
   bool _internal_has_a_forceinheritprincipaldropped() const;
@@ -2282,7 +2267,7 @@ class LoadInfoArgs final :
   void _internal_set_a_forceinheritprincipaldropped(bool value);
   public:
 
-  // required bool a_initialSecurityCheckDone = 30;
+  // optional bool a_initialSecurityCheckDone = 30;
   bool has_a_initialsecuritycheckdone() const;
   private:
   bool _internal_has_a_initialsecuritycheckdone() const;
@@ -2295,7 +2280,7 @@ class LoadInfoArgs final :
   void _internal_set_a_initialsecuritycheckdone(bool value);
   public:
 
-  // required bool a_isInThirdPartyContext = 31;
+  // optional bool a_isInThirdPartyContext = 31;
   bool has_a_isinthirdpartycontext() const;
   private:
   bool _internal_has_a_isinthirdpartycontext() const;
@@ -2321,7 +2306,7 @@ class LoadInfoArgs final :
   void _internal_set_a_isthirdpartycontexttotopwindow(bool value);
   public:
 
-  // required bool a_isOn3PCBExceptionList = 33;
+  // optional bool a_isOn3PCBExceptionList = 33;
   bool has_a_ison3pcbexceptionlist() const;
   private:
   bool _internal_has_a_ison3pcbexceptionlist() const;
@@ -2334,7 +2319,7 @@ class LoadInfoArgs final :
   void _internal_set_a_ison3pcbexceptionlist(bool value);
   public:
 
-  // required bool a_isFormSubmission = 34;
+  // optional bool a_isFormSubmission = 34;
   bool has_a_isformsubmission() const;
   private:
   bool _internal_has_a_isformsubmission() const;
@@ -2347,7 +2332,7 @@ class LoadInfoArgs final :
   void _internal_set_a_isformsubmission(bool value);
   public:
 
-  // required bool a_isGETRequest = 35;
+  // optional bool a_isGETRequest = 35;
   bool has_a_isgetrequest() const;
   private:
   bool _internal_has_a_isgetrequest() const;
@@ -2360,7 +2345,7 @@ class LoadInfoArgs final :
   void _internal_set_a_isgetrequest(bool value);
   public:
 
-  // required bool a_sendCSPViolationEvents = 36;
+  // optional bool a_sendCSPViolationEvents = 36;
   bool has_a_sendcspviolationevents() const;
   private:
   bool _internal_has_a_sendcspviolationevents() const;
@@ -2373,7 +2358,7 @@ class LoadInfoArgs final :
   void _internal_set_a_sendcspviolationevents(bool value);
   public:
 
-  // required bool a_hasInjectedCookieForCookieBannerHandling = 40;
+  // optional bool a_hasInjectedCookieForCookieBannerHandling = 40;
   bool has_a_hasinjectedcookieforcookiebannerhandling() const;
   private:
   bool _internal_has_a_hasinjectedcookieforcookiebannerhandling() const;
@@ -2386,7 +2371,7 @@ class LoadInfoArgs final :
   void _internal_set_a_hasinjectedcookieforcookiebannerhandling(bool value);
   public:
 
-  // required bool a_forcePreflight = 48;
+  // optional bool a_forcePreflight = 48;
   bool has_a_forcepreflight() const;
   private:
   bool _internal_has_a_forcepreflight() const;
@@ -2399,7 +2384,7 @@ class LoadInfoArgs final :
   void _internal_set_a_forcepreflight(bool value);
   public:
 
-  // required bool a_isPreflight = 49;
+  // optional bool a_isPreflight = 49;
   bool has_a_ispreflight() const;
   private:
   bool _internal_has_a_ispreflight() const;
@@ -2412,7 +2397,7 @@ class LoadInfoArgs final :
   void _internal_set_a_ispreflight(bool value);
   public:
 
-  // required bool a_loadTriggeredFromExternal = 50;
+  // optional bool a_loadTriggeredFromExternal = 50;
   bool has_a_loadtriggeredfromexternal() const;
   private:
   bool _internal_has_a_loadtriggeredfromexternal() const;
@@ -2425,7 +2410,7 @@ class LoadInfoArgs final :
   void _internal_set_a_loadtriggeredfromexternal(bool value);
   public:
 
-  // required bool a_serviceWorkerTaintingSynthesized = 51;
+  // optional bool a_serviceWorkerTaintingSynthesized = 51;
   bool has_a_serviceworkertaintingsynthesized() const;
   private:
   bool _internal_has_a_serviceworkertaintingsynthesized() const;
@@ -2438,7 +2423,7 @@ class LoadInfoArgs final :
   void _internal_set_a_serviceworkertaintingsynthesized(bool value);
   public:
 
-  // required bool a_documentHasUserInteracted = 52;
+  // optional bool a_documentHasUserInteracted = 52;
   bool has_a_documenthasuserinteracted() const;
   private:
   bool _internal_has_a_documenthasuserinteracted() const;
@@ -2451,7 +2436,7 @@ class LoadInfoArgs final :
   void _internal_set_a_documenthasuserinteracted(bool value);
   public:
 
-  // required bool a_allowListFutureDocumentsCreatedFromThisRedirectChain = 53;
+  // optional bool a_allowListFutureDocumentsCreatedFromThisRedirectChain = 53;
   bool has_a_allowlistfuturedocumentscreatedfromthisredirectchain() const;
   private:
   bool _internal_has_a_allowlistfuturedocumentscreatedfromthisredirectchain() const;
@@ -2464,7 +2449,7 @@ class LoadInfoArgs final :
   void _internal_set_a_allowlistfuturedocumentscreatedfromthisredirectchain(bool value);
   public:
 
-  // required bool a_needForCheckingAntiTrackingHeuristic = 54;
+  // optional bool a_needForCheckingAntiTrackingHeuristic = 54;
   bool has_a_needforcheckingantitrackingheuristic() const;
   private:
   bool _internal_has_a_needforcheckingantitrackingheuristic() const;
@@ -2477,7 +2462,7 @@ class LoadInfoArgs final :
   void _internal_set_a_needforcheckingantitrackingheuristic(bool value);
   public:
 
-  // required bool a_skipContentSniffing = 57;
+  // optional bool a_skipContentSniffing = 57;
   bool has_a_skipcontentsniffing() const;
   private:
   bool _internal_has_a_skipcontentsniffing() const;
@@ -2490,7 +2475,7 @@ class LoadInfoArgs final :
   void _internal_set_a_skipcontentsniffing(bool value);
   public:
 
-  // required bool a_hstsStatus = 59;
+  // optional bool a_hstsStatus = 59;
   bool has_a_hstsstatus() const;
   private:
   bool _internal_has_a_hstsstatus() const;
@@ -2503,7 +2488,7 @@ class LoadInfoArgs final :
   void _internal_set_a_hstsstatus(bool value);
   public:
 
-  // required uint32 a_httpsOnlyStatus = 58;
+  // optional uint32 a_httpsOnlyStatus = 58;
   bool has_a_httpsonlystatus() const;
   private:
   bool _internal_has_a_httpsonlystatus() const;
@@ -2516,7 +2501,7 @@ class LoadInfoArgs final :
   void _internal_set_a_httpsonlystatus(uint32_t value);
   public:
 
-  // required bool a_hasValidUserGestureActivation = 60;
+  // optional bool a_hasValidUserGestureActivation = 60;
   bool has_a_hasvalidusergestureactivation() const;
   private:
   bool _internal_has_a_hasvalidusergestureactivation() const;
@@ -2529,7 +2514,7 @@ class LoadInfoArgs final :
   void _internal_set_a_hasvalidusergestureactivation(bool value);
   public:
 
-  // required bool a_textDirectiveUserActivation = 61;
+  // optional bool a_textDirectiveUserActivation = 61;
   bool has_a_textdirectiveuseractivation() const;
   private:
   bool _internal_has_a_textdirectiveuseractivation() const;
@@ -2542,7 +2527,7 @@ class LoadInfoArgs final :
   void _internal_set_a_textdirectiveuseractivation(bool value);
   public:
 
-  // required bool a_allowDeprecatedSystemRequests = 62;
+  // optional bool a_allowDeprecatedSystemRequests = 62;
   bool has_a_allowdeprecatedsystemrequests() const;
   private:
   bool _internal_has_a_allowdeprecatedsystemrequests() const;
@@ -2555,7 +2540,7 @@ class LoadInfoArgs final :
   void _internal_set_a_allowdeprecatedsystemrequests(bool value);
   public:
 
-  // required bool a_isInDevToolsContext = 63;
+  // optional bool a_isInDevToolsContext = 63;
   bool has_a_isindevtoolscontext() const;
   private:
   bool _internal_has_a_isindevtoolscontext() const;
@@ -2568,7 +2553,7 @@ class LoadInfoArgs final :
   void _internal_set_a_isindevtoolscontext(bool value);
   public:
 
-  // required bool a_parserCreatedScript = 64;
+  // optional bool a_parserCreatedScript = 64;
   bool has_a_parsercreatedscript() const;
   private:
   bool _internal_has_a_parsercreatedscript() const;
@@ -2581,7 +2566,7 @@ class LoadInfoArgs final :
   void _internal_set_a_parsercreatedscript(bool value);
   public:
 
-  // required bool a_isFromProcessingFrameAttributes = 66;
+  // optional bool a_isFromProcessingFrameAttributes = 66;
   bool has_a_isfromprocessingframeattributes() const;
   private:
   bool _internal_has_a_isfromprocessingframeattributes() const;
@@ -2594,7 +2579,7 @@ class LoadInfoArgs final :
   void _internal_set_a_isfromprocessingframeattributes(bool value);
   public:
 
-  // required bool a_isMediaRequest = 67;
+  // optional bool a_isMediaRequest = 67;
   bool has_a_ismediarequest() const;
   private:
   bool _internal_has_a_ismediarequest() const;
@@ -2607,7 +2592,7 @@ class LoadInfoArgs final :
   void _internal_set_a_ismediarequest(bool value);
   public:
 
-  // required bool a_isMediaInitialRequest = 68;
+  // optional bool a_isMediaInitialRequest = 68;
   bool has_a_ismediainitialrequest() const;
   private:
   bool _internal_has_a_ismediainitialrequest() const;
@@ -2620,7 +2605,7 @@ class LoadInfoArgs final :
   void _internal_set_a_ismediainitialrequest(bool value);
   public:
 
-  // required uint32 a_requestBlockingReason = 71;
+  // optional uint32 a_requestBlockingReason = 71;
   bool has_a_requestblockingreason() const;
   private:
   bool _internal_has_a_requestblockingreason() const;
@@ -2633,7 +2618,7 @@ class LoadInfoArgs final :
   void _internal_set_a_requestblockingreason(uint32_t value);
   public:
 
-  // required bool a_isFromObjectOrEmbed = 69;
+  // optional bool a_isFromObjectOrEmbed = 69;
   bool has_a_isfromobjectorembed() const;
   private:
   bool _internal_has_a_isfromobjectorembed() const;
@@ -2646,7 +2631,7 @@ class LoadInfoArgs final :
   void _internal_set_a_isfromobjectorembed(bool value);
   public:
 
-  // required bool a_isMetaRefresh = 77;
+  // optional bool a_isMetaRefresh = 77;
   bool has_a_ismetarefresh() const;
   private:
   bool _internal_has_a_ismetarefresh() const;
@@ -2659,7 +2644,7 @@ class LoadInfoArgs final :
   void _internal_set_a_ismetarefresh(bool value);
   public:
 
-  // required bool a_originTrialCoepCredentiallessEnabledForTopLevel = 79;
+  // optional bool a_originTrialCoepCredentiallessEnabledForTopLevel = 79;
   bool has_a_origintrialcoepcredentiallessenabledfortoplevel() const;
   private:
   bool _internal_has_a_origintrialcoepcredentiallessenabledfortoplevel() const;
@@ -2672,7 +2657,7 @@ class LoadInfoArgs final :
   void _internal_set_a_origintrialcoepcredentiallessenabledfortoplevel(bool value);
   public:
 
-  // required bool a_isNewWindowTarget = 82;
+  // optional bool a_isNewWindowTarget = 82;
   bool has_a_isnewwindowtarget() const;
   private:
   bool _internal_has_a_isnewwindowtarget() const;
@@ -3109,7 +3094,7 @@ class ParentLoadInfoForwarderArgs final :
       ::protobuf::mozilla::net::CookieJarSettingsArgs* a_cookiejarsettings);
   ::protobuf::mozilla::net::CookieJarSettingsArgs* unsafe_arena_release_a_cookiejarsettings();
 
-  // required uint32 a_tainting = 3;
+  // optional uint32 a_tainting = 3;
   bool has_a_tainting() const;
   private:
   bool _internal_has_a_tainting() const;
@@ -3122,7 +3107,7 @@ class ParentLoadInfoForwarderArgs final :
   void _internal_set_a_tainting(uint32_t value);
   public:
 
-  // required uint32 a_httpsOnlyStatus = 5;
+  // optional uint32 a_httpsOnlyStatus = 5;
   bool has_a_httpsonlystatus() const;
   private:
   bool _internal_has_a_httpsonlystatus() const;
@@ -3135,7 +3120,7 @@ class ParentLoadInfoForwarderArgs final :
   void _internal_set_a_httpsonlystatus(uint32_t value);
   public:
 
-  // required bool a_allowInsecureRedirectToDataURI = 1;
+  // optional bool a_allowInsecureRedirectToDataURI = 1;
   bool has_a_allowinsecureredirecttodatauri() const;
   private:
   bool _internal_has_a_allowinsecureredirecttodatauri() const;
@@ -3148,7 +3133,7 @@ class ParentLoadInfoForwarderArgs final :
   void _internal_set_a_allowinsecureredirecttodatauri(bool value);
   public:
 
-  // required bool a_skipContentSniffing = 4;
+  // optional bool a_skipContentSniffing = 4;
   bool has_a_skipcontentsniffing() const;
   private:
   bool _internal_has_a_skipcontentsniffing() const;
@@ -3161,7 +3146,7 @@ class ParentLoadInfoForwarderArgs final :
   void _internal_set_a_skipcontentsniffing(bool value);
   public:
 
-  // required bool a_hstsStatus = 8;
+  // optional bool a_hstsStatus = 8;
   bool has_a_hstsstatus() const;
   private:
   bool _internal_has_a_hstsstatus() const;
@@ -3174,7 +3159,7 @@ class ParentLoadInfoForwarderArgs final :
   void _internal_set_a_hstsstatus(bool value);
   public:
 
-  // required bool a_hasValidUserGestureActivation = 9;
+  // optional bool a_hasValidUserGestureActivation = 9;
   bool has_a_hasvalidusergestureactivation() const;
   private:
   bool _internal_has_a_hasvalidusergestureactivation() const;
@@ -3187,7 +3172,7 @@ class ParentLoadInfoForwarderArgs final :
   void _internal_set_a_hasvalidusergestureactivation(bool value);
   public:
 
-  // required bool a_textDirectiveUserActivation = 10;
+  // optional bool a_textDirectiveUserActivation = 10;
   bool has_a_textdirectiveuseractivation() const;
   private:
   bool _internal_has_a_textdirectiveuseractivation() const;
@@ -3200,7 +3185,7 @@ class ParentLoadInfoForwarderArgs final :
   void _internal_set_a_textdirectiveuseractivation(bool value);
   public:
 
-  // required bool a_allowDeprecatedSystemRequests = 11;
+  // optional bool a_allowDeprecatedSystemRequests = 11;
   bool has_a_allowdeprecatedsystemrequests() const;
   private:
   bool _internal_has_a_allowdeprecatedsystemrequests() const;
@@ -3213,7 +3198,7 @@ class ParentLoadInfoForwarderArgs final :
   void _internal_set_a_allowdeprecatedsystemrequests(bool value);
   public:
 
-  // required bool a_isInDevToolsContext = 12;
+  // optional bool a_isInDevToolsContext = 12;
   bool has_a_isindevtoolscontext() const;
   private:
   bool _internal_has_a_isindevtoolscontext() const;
@@ -3226,7 +3211,7 @@ class ParentLoadInfoForwarderArgs final :
   void _internal_set_a_isindevtoolscontext(bool value);
   public:
 
-  // required bool a_parserCreatedScript = 13;
+  // optional bool a_parserCreatedScript = 13;
   bool has_a_parsercreatedscript() const;
   private:
   bool _internal_has_a_parsercreatedscript() const;
@@ -3239,7 +3224,7 @@ class ParentLoadInfoForwarderArgs final :
   void _internal_set_a_parsercreatedscript(bool value);
   public:
 
-  // required uint64 a_triggeringWindowId = 16;
+  // optional uint64 a_triggeringWindowId = 16;
   bool has_a_triggeringwindowid() const;
   private:
   bool _internal_has_a_triggeringwindowid() const;
@@ -3252,7 +3237,7 @@ class ParentLoadInfoForwarderArgs final :
   void _internal_set_a_triggeringwindowid(uint64_t value);
   public:
 
-  // required uint32 a_triggeringSandboxFlags = 15;
+  // optional uint32 a_triggeringSandboxFlags = 15;
   bool has_a_triggeringsandboxflags() const;
   private:
   bool _internal_has_a_triggeringsandboxflags() const;
@@ -3265,7 +3250,7 @@ class ParentLoadInfoForwarderArgs final :
   void _internal_set_a_triggeringsandboxflags(uint32_t value);
   public:
 
-  // required bool a_triggeringStorageAccess = 17;
+  // optional bool a_triggeringStorageAccess = 17;
   bool has_a_triggeringstorageaccess() const;
   private:
   bool _internal_has_a_triggeringstorageaccess() const;
@@ -3278,7 +3263,7 @@ class ParentLoadInfoForwarderArgs final :
   void _internal_set_a_triggeringstorageaccess(bool value);
   public:
 
-  // required bool a_serviceWorkerTaintingSynthesized = 18;
+  // optional bool a_serviceWorkerTaintingSynthesized = 18;
   bool has_a_serviceworkertaintingsynthesized() const;
   private:
   bool _internal_has_a_serviceworkertaintingsynthesized() const;
@@ -3291,7 +3276,7 @@ class ParentLoadInfoForwarderArgs final :
   void _internal_set_a_serviceworkertaintingsynthesized(bool value);
   public:
 
-  // required bool a_documentHasUserInteracted = 19;
+  // optional bool a_documentHasUserInteracted = 19;
   bool has_a_documenthasuserinteracted() const;
   private:
   bool _internal_has_a_documenthasuserinteracted() const;
@@ -3304,7 +3289,7 @@ class ParentLoadInfoForwarderArgs final :
   void _internal_set_a_documenthasuserinteracted(bool value);
   public:
 
-  // required bool a_allowListFutureDocumentsCreatedFromThisRedirectChain = 20;
+  // optional bool a_allowListFutureDocumentsCreatedFromThisRedirectChain = 20;
   bool has_a_allowlistfuturedocumentscreatedfromthisredirectchain() const;
   private:
   bool _internal_has_a_allowlistfuturedocumentscreatedfromthisredirectchain() const;
@@ -3317,7 +3302,7 @@ class ParentLoadInfoForwarderArgs final :
   void _internal_set_a_allowlistfuturedocumentscreatedfromthisredirectchain(bool value);
   public:
 
-  // required uint32 a_requestBlockingReason = 23;
+  // optional uint32 a_requestBlockingReason = 23;
   bool has_a_requestblockingreason() const;
   private:
   bool _internal_has_a_requestblockingreason() const;
@@ -3330,7 +3315,7 @@ class ParentLoadInfoForwarderArgs final :
   void _internal_set_a_requestblockingreason(uint32_t value);
   public:
 
-  // required bool a_isMetaRefresh = 26;
+  // optional bool a_isMetaRefresh = 26;
   bool has_a_ismetarefresh() const;
   private:
   bool _internal_has_a_ismetarefresh() const;
@@ -3356,7 +3341,7 @@ class ParentLoadInfoForwarderArgs final :
   void _internal_set_a_isthirdpartycontexttotopwindow(bool value);
   public:
 
-  // required bool a_isInThirdPartyContext = 28;
+  // optional bool a_isInThirdPartyContext = 28;
   bool has_a_isinthirdpartycontext() const;
   private:
   bool _internal_has_a_isinthirdpartycontext() const;
@@ -3369,7 +3354,7 @@ class ParentLoadInfoForwarderArgs final :
   void _internal_set_a_isinthirdpartycontext(bool value);
   public:
 
-  // required bool a_isOn3PCBExceptionList = 29;
+  // optional bool a_isOn3PCBExceptionList = 29;
   bool has_a_ison3pcbexceptionlist() const;
   private:
   bool _internal_has_a_ison3pcbexceptionlist() const;
@@ -3601,7 +3586,7 @@ class ChildLoadInfoForwarderArgs final :
       ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* a_controller);
   ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* unsafe_arena_release_a_controller();
 
-  // required uint32 a_requestBlockingReason = 4;
+  // optional uint32 a_requestBlockingReason = 4;
   bool has_a_requestblockingreason() const;
   private:
   bool _internal_has_a_requestblockingreason() const;
@@ -4223,7 +4208,7 @@ class HttpChannelOpenArgs final :
   std::string* _internal_mutable_a_navigationstarttimestamp();
   public:
 
-  // required string a_requestMethod = 22;
+  // optional string a_requestMethod = 22;
   bool has_a_requestmethod() const;
   private:
   bool _internal_has_a_requestmethod() const;
@@ -4259,7 +4244,7 @@ class HttpChannelOpenArgs final :
   std::string* _internal_mutable_a_classofservice();
   public:
 
-  // required string a_entityID = 24;
+  // optional string a_entityID = 24;
   bool has_a_entityid() const;
   private:
   bool _internal_has_a_entityid() const;
@@ -4277,7 +4262,7 @@ class HttpChannelOpenArgs final :
   std::string* _internal_mutable_a_entityid();
   public:
 
-  // required string a_appCacheClientID = 25;
+  // optional string a_appCacheClientID = 25;
   bool has_a_appcacheclientid() const;
   private:
   bool _internal_has_a_appcacheclientid() const;
@@ -4295,7 +4280,7 @@ class HttpChannelOpenArgs final :
   std::string* _internal_mutable_a_appcacheclientid();
   public:
 
-  // required string a_contentTypeHint = 27;
+  // optional string a_contentTypeHint = 27;
   bool has_a_contenttypehint() const;
   private:
   bool _internal_has_a_contenttypehint() const;
@@ -4313,7 +4298,7 @@ class HttpChannelOpenArgs final :
   std::string* _internal_mutable_a_contenttypehint();
   public:
 
-  // required string a_integrityMetadata = 28;
+  // optional string a_integrityMetadata = 28;
   bool has_a_integritymetadata() const;
   private:
   bool _internal_has_a_integritymetadata() const;
@@ -4349,7 +4334,7 @@ class HttpChannelOpenArgs final :
   std::string* _internal_mutable_a_requestmode();
   public:
 
-  // required string a_classicScriptHintCharset = 53;
+  // optional string a_classicScriptHintCharset = 53;
   bool has_a_classicscripthintcharset() const;
   private:
   bool _internal_has_a_classicscripthintcharset() const;
@@ -4367,7 +4352,7 @@ class HttpChannelOpenArgs final :
   std::string* _internal_mutable_a_classicscripthintcharset();
   public:
 
-  // required string a_documentCharacterSet = 54;
+  // optional string a_documentCharacterSet = 54;
   bool has_a_documentcharacterset() const;
   private:
   bool _internal_has_a_documentcharacterset() const;
@@ -4385,7 +4370,7 @@ class HttpChannelOpenArgs final :
   std::string* _internal_mutable_a_documentcharacterset();
   public:
 
-  // required string a_initiatorType = 56;
+  // optional string a_initiatorType = 56;
   bool has_a_initiatortype() const;
   private:
   bool _internal_has_a_initiatortype() const;
@@ -4457,7 +4442,7 @@ class HttpChannelOpenArgs final :
       ::protobuf::mozilla::net::LoadInfoArgs* a_loadinfo);
   ::protobuf::mozilla::net::LoadInfoArgs* unsafe_arena_release_a_loadinfo();
 
-  // required uint64 a_startPos = 16;
+  // optional uint64 a_startPos = 16;
   bool has_a_startpos() const;
   private:
   bool _internal_has_a_startpos() const;
@@ -4470,7 +4455,7 @@ class HttpChannelOpenArgs final :
   void _internal_set_a_startpos(uint64_t value);
   public:
 
-  // required uint64 a_requestContextID = 17;
+  // optional uint64 a_requestContextID = 17;
   bool has_a_requestcontextid() const;
   private:
   bool _internal_has_a_requestcontextid() const;
@@ -4483,7 +4468,7 @@ class HttpChannelOpenArgs final :
   void _internal_set_a_requestcontextid(uint64_t value);
   public:
 
-  // required uint64 a_channelId = 18;
+  // optional uint64 a_channelId = 18;
   bool has_a_channelid() const;
   private:
   bool _internal_has_a_channelid() const;
@@ -4496,7 +4481,7 @@ class HttpChannelOpenArgs final :
   void _internal_set_a_channelid(uint64_t value);
   public:
 
-  // required uint64 a_contentWindowId = 19;
+  // optional uint64 a_contentWindowId = 19;
   bool has_a_contentwindowid() const;
   private:
   bool _internal_has_a_contentwindowid() const;
@@ -4509,7 +4494,7 @@ class HttpChannelOpenArgs final :
   void _internal_set_a_contentwindowid(uint64_t value);
   public:
 
-  // required uint64 a_browserId = 20;
+  // optional uint64 a_browserId = 20;
   bool has_a_browserid() const;
   private:
   bool _internal_has_a_browserid() const;
@@ -4522,7 +4507,7 @@ class HttpChannelOpenArgs final :
   void _internal_set_a_browserid(uint64_t value);
   public:
 
-  // required uint64 a_earlyHintPreloaderId = 21;
+  // optional uint64 a_earlyHintPreloaderId = 21;
   bool has_a_earlyhintpreloaderid() const;
   private:
   bool _internal_has_a_earlyhintpreloaderid() const;
@@ -4535,7 +4520,7 @@ class HttpChannelOpenArgs final :
   void _internal_set_a_earlyhintpreloaderid(uint64_t value);
   public:
 
-  // required uint32 a_loadFlags = 31;
+  // optional uint32 a_loadFlags = 31;
   bool has_a_loadflags() const;
   private:
   bool _internal_has_a_loadflags() const;
@@ -4548,7 +4533,7 @@ class HttpChannelOpenArgs final :
   void _internal_set_a_loadflags(uint32_t value);
   public:
 
-  // required uint32 a_thirdPartyFlags = 32;
+  // optional uint32 a_thirdPartyFlags = 32;
   bool has_a_thirdpartyflags() const;
   private:
   bool _internal_has_a_thirdpartyflags() const;
@@ -4561,7 +4546,7 @@ class HttpChannelOpenArgs final :
   void _internal_set_a_thirdpartyflags(uint32_t value);
   public:
 
-  // required uint32 a_tlsFlags = 33;
+  // optional uint32 a_tlsFlags = 33;
   bool has_a_tlsflags() const;
   private:
   bool _internal_has_a_tlsflags() const;
@@ -4574,7 +4559,7 @@ class HttpChannelOpenArgs final :
   void _internal_set_a_tlsflags(uint32_t value);
   public:
 
-  // required uint32 a_cacheKey = 34;
+  // optional uint32 a_cacheKey = 34;
   bool has_a_cachekey() const;
   private:
   bool _internal_has_a_cachekey() const;
@@ -4587,7 +4572,7 @@ class HttpChannelOpenArgs final :
   void _internal_set_a_cachekey(uint32_t value);
   public:
 
-  // required uint32 a_initialRwin = 35;
+  // optional uint32 a_initialRwin = 35;
   bool has_a_initialrwin() const;
   private:
   bool _internal_has_a_initialrwin() const;
@@ -4600,7 +4585,7 @@ class HttpChannelOpenArgs final :
   void _internal_set_a_initialrwin(uint32_t value);
   public:
 
-  // required uint32 a_redirectMode = 36;
+  // optional uint32 a_redirectMode = 36;
   bool has_a_redirectmode() const;
   private:
   bool _internal_has_a_redirectmode() const;
@@ -4613,7 +4598,7 @@ class HttpChannelOpenArgs final :
   void _internal_set_a_redirectmode(uint32_t value);
   public:
 
-  // required sint32 a_priority = 37;
+  // optional sint32 a_priority = 37;
   bool has_a_priority() const;
   private:
   bool _internal_has_a_priority() const;
@@ -4626,7 +4611,7 @@ class HttpChannelOpenArgs final :
   void _internal_set_a_priority(int32_t value);
   public:
 
-  // required bool a_uploadStreamHasHeaders = 38;
+  // optional bool a_uploadStreamHasHeaders = 38;
   bool has_a_uploadstreamhasheaders() const;
   private:
   bool _internal_has_a_uploadstreamhasheaders() const;
@@ -4639,7 +4624,7 @@ class HttpChannelOpenArgs final :
   void _internal_set_a_uploadstreamhasheaders(bool value);
   public:
 
-  // required bool a_allowSTS = 39;
+  // optional bool a_allowSTS = 39;
   bool has_a_allowsts() const;
   private:
   bool _internal_has_a_allowsts() const;
@@ -4652,7 +4637,7 @@ class HttpChannelOpenArgs final :
   void _internal_set_a_allowsts(bool value);
   public:
 
-  // required bool a_resumeAt = 40;
+  // optional bool a_resumeAt = 40;
   bool has_a_resumeat() const;
   private:
   bool _internal_has_a_resumeat() const;
@@ -4665,7 +4650,7 @@ class HttpChannelOpenArgs final :
   void _internal_set_a_resumeat(bool value);
   public:
 
-  // required bool a_allowSpdy = 41;
+  // optional bool a_allowSpdy = 41;
   bool has_a_allowspdy() const;
   private:
   bool _internal_has_a_allowspdy() const;
@@ -4678,7 +4663,7 @@ class HttpChannelOpenArgs final :
   void _internal_set_a_allowspdy(bool value);
   public:
 
-  // required bool a_allowHttp3 = 42;
+  // optional bool a_allowHttp3 = 42;
   bool has_a_allowhttp3() const;
   private:
   bool _internal_has_a_allowhttp3() const;
@@ -4691,7 +4676,7 @@ class HttpChannelOpenArgs final :
   void _internal_set_a_allowhttp3(bool value);
   public:
 
-  // required bool a_allowAltSvc = 43;
+  // optional bool a_allowAltSvc = 43;
   bool has_a_allowaltsvc() const;
   private:
   bool _internal_has_a_allowaltsvc() const;
@@ -4704,7 +4689,7 @@ class HttpChannelOpenArgs final :
   void _internal_set_a_allowaltsvc(bool value);
   public:
 
-  // required bool a_beConservative = 44;
+  // optional bool a_beConservative = 44;
   bool has_a_beconservative() const;
   private:
   bool _internal_has_a_beconservative() const;
@@ -4717,7 +4702,7 @@ class HttpChannelOpenArgs final :
   void _internal_set_a_beconservative(bool value);
   public:
 
-  // required bool a_bypassProxy = 45;
+  // optional bool a_bypassProxy = 45;
   bool has_a_bypassproxy() const;
   private:
   bool _internal_has_a_bypassproxy() const;
@@ -4730,7 +4715,7 @@ class HttpChannelOpenArgs final :
   void _internal_set_a_bypassproxy(bool value);
   public:
 
-  // required bool a_blockAuthPrompt = 46;
+  // optional bool a_blockAuthPrompt = 46;
   bool has_a_blockauthprompt() const;
   private:
   bool _internal_has_a_blockauthprompt() const;
@@ -4743,7 +4728,7 @@ class HttpChannelOpenArgs final :
   void _internal_set_a_blockauthprompt(bool value);
   public:
 
-  // required bool a_allowStaleCacheContent = 47;
+  // optional bool a_allowStaleCacheContent = 47;
   bool has_a_allowstalecachecontent() const;
   private:
   bool _internal_has_a_allowstalecachecontent() const;
@@ -4756,7 +4741,7 @@ class HttpChannelOpenArgs final :
   void _internal_set_a_allowstalecachecontent(bool value);
   public:
 
-  // required bool a_forceValidateCacheContent = 49;
+  // optional bool a_forceValidateCacheContent = 49;
   bool has_a_forcevalidatecachecontent() const;
   private:
   bool _internal_has_a_forcevalidatecachecontent() const;
@@ -4769,7 +4754,7 @@ class HttpChannelOpenArgs final :
   void _internal_set_a_forcevalidatecachecontent(bool value);
   public:
 
-  // required bool a_preferCacheLoadOverBypass = 50;
+  // optional bool a_preferCacheLoadOverBypass = 50;
   bool has_a_prefercacheloadoverbypass() const;
   private:
   bool _internal_has_a_prefercacheloadoverbypass() const;
@@ -4782,7 +4767,7 @@ class HttpChannelOpenArgs final :
   void _internal_set_a_prefercacheloadoverbypass(bool value);
   public:
 
-  // required uint32 a_redirectionLimit = 52;
+  // optional uint32 a_redirectionLimit = 52;
   bool has_a_redirectionlimit() const;
   private:
   bool _internal_has_a_redirectionlimit() const;
@@ -4795,7 +4780,7 @@ class HttpChannelOpenArgs final :
   void _internal_set_a_redirectionlimit(uint32_t value);
   public:
 
-  // required bool a_forceMainDocumentChannel = 51;
+  // optional bool a_forceMainDocumentChannel = 51;
   bool has_a_forcemaindocumentchannel() const;
   private:
   bool _internal_has_a_forcemaindocumentchannel() const;
@@ -4808,7 +4793,7 @@ class HttpChannelOpenArgs final :
   void _internal_set_a_forcemaindocumentchannel(bool value);
   public:
 
-  // required bool a_isUserAgentHeaderModified = 55;
+  // optional bool a_isUserAgentHeaderModified = 55;
   bool has_a_isuseragentheadermodified() const;
   private:
   bool _internal_has_a_isuseragentheadermodified() const;
@@ -5008,7 +4993,7 @@ class HttpChannelConnectArgs final :
   enum : int {
     kARegistrarIdFieldNumber = 1,
   };
-  // required uint32 a_registrarId = 1;
+  // optional uint32 a_registrarId = 1;
   bool has_a_registrarid() const;
   private:
   bool _internal_has_a_registrarid() const;
@@ -5344,7 +5329,7 @@ class ProxyInfoCloneArgs final :
     kATimeoutFieldNumber = 7,
     kAResolveFlagsFieldNumber = 8,
   };
-  // required string a_type = 1;
+  // optional string a_type = 1;
   bool has_a_type() const;
   private:
   bool _internal_has_a_type() const;
@@ -5362,7 +5347,7 @@ class ProxyInfoCloneArgs final :
   std::string* _internal_mutable_a_type();
   public:
 
-  // required string a_host = 2;
+  // optional string a_host = 2;
   bool has_a_host() const;
   private:
   bool _internal_has_a_host() const;
@@ -5380,7 +5365,7 @@ class ProxyInfoCloneArgs final :
   std::string* _internal_mutable_a_host();
   public:
 
-  // required string a_username = 4;
+  // optional string a_username = 4;
   bool has_a_username() const;
   private:
   bool _internal_has_a_username() const;
@@ -5398,7 +5383,7 @@ class ProxyInfoCloneArgs final :
   std::string* _internal_mutable_a_username();
   public:
 
-  // required string a_password = 5;
+  // optional string a_password = 5;
   bool has_a_password() const;
   private:
   bool _internal_has_a_password() const;
@@ -5416,7 +5401,7 @@ class ProxyInfoCloneArgs final :
   std::string* _internal_mutable_a_password();
   public:
 
-  // required string a_proxyAuthorizationHeader = 9;
+  // optional string a_proxyAuthorizationHeader = 9;
   bool has_a_proxyauthorizationheader() const;
   private:
   bool _internal_has_a_proxyauthorizationheader() const;
@@ -5434,7 +5419,7 @@ class ProxyInfoCloneArgs final :
   std::string* _internal_mutable_a_proxyauthorizationheader();
   public:
 
-  // required string a_connectionIsolationKey = 10;
+  // optional string a_connectionIsolationKey = 10;
   bool has_a_connectionisolationkey() const;
   private:
   bool _internal_has_a_connectionisolationkey() const;
@@ -5452,7 +5437,7 @@ class ProxyInfoCloneArgs final :
   std::string* _internal_mutable_a_connectionisolationkey();
   public:
 
-  // required sint32 a_port = 3;
+  // optional sint32 a_port = 3;
   bool has_a_port() const;
   private:
   bool _internal_has_a_port() const;
@@ -5465,7 +5450,7 @@ class ProxyInfoCloneArgs final :
   void _internal_set_a_port(int32_t value);
   public:
 
-  // required uint32 a_flags = 6;
+  // optional uint32 a_flags = 6;
   bool has_a_flags() const;
   private:
   bool _internal_has_a_flags() const;
@@ -5478,7 +5463,7 @@ class ProxyInfoCloneArgs final :
   void _internal_set_a_flags(uint32_t value);
   public:
 
-  // required uint32 a_timeout = 7;
+  // optional uint32 a_timeout = 7;
   bool has_a_timeout() const;
   private:
   bool _internal_has_a_timeout() const;
@@ -5491,7 +5476,7 @@ class ProxyInfoCloneArgs final :
   void _internal_set_a_timeout(uint32_t value);
   public:
 
-  // required uint32 a_resolveFlags = 8;
+  // optional uint32 a_resolveFlags = 8;
   bool has_a_resolveflags() const;
   private:
   bool _internal_has_a_resolveflags() const;
@@ -5507,9 +5492,6 @@ class ProxyInfoCloneArgs final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.ProxyInfoCloneArgs)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5691,7 +5673,7 @@ class HttpConnectionInfoCloneArgs final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::ProxyInfoCloneArgs >&
       a_proxyinfo() const;
 
-  // required string a_host = 1;
+  // optional string a_host = 1;
   bool has_a_host() const;
   private:
   bool _internal_has_a_host() const;
@@ -5709,7 +5691,7 @@ class HttpConnectionInfoCloneArgs final :
   std::string* _internal_mutable_a_host();
   public:
 
-  // required string a_npnToken = 3;
+  // optional string a_npnToken = 3;
   bool has_a_npntoken() const;
   private:
   bool _internal_has_a_npntoken() const;
@@ -5727,7 +5709,7 @@ class HttpConnectionInfoCloneArgs final :
   std::string* _internal_mutable_a_npntoken();
   public:
 
-  // required string a_username = 4;
+  // optional string a_username = 4;
   bool has_a_username() const;
   private:
   bool _internal_has_a_username() const;
@@ -5763,7 +5745,7 @@ class HttpConnectionInfoCloneArgs final :
   std::string* _internal_mutable_a_originattributes();
   public:
 
-  // required string a_routedHost = 7;
+  // optional string a_routedHost = 7;
   bool has_a_routedhost() const;
   private:
   bool _internal_has_a_routedhost() const;
@@ -5781,7 +5763,7 @@ class HttpConnectionInfoCloneArgs final :
   std::string* _internal_mutable_a_routedhost();
   public:
 
-  // required string a_topWindowOrigin = 23;
+  // optional string a_topWindowOrigin = 23;
   bool has_a_topwindoworigin() const;
   private:
   bool _internal_has_a_topwindoworigin() const;
@@ -5799,7 +5781,7 @@ class HttpConnectionInfoCloneArgs final :
   std::string* _internal_mutable_a_topwindoworigin();
   public:
 
-  // required string a_echConfig = 28;
+  // optional string a_echConfig = 28;
   bool has_a_echconfig() const;
   private:
   bool _internal_has_a_echconfig() const;
@@ -5817,7 +5799,7 @@ class HttpConnectionInfoCloneArgs final :
   std::string* _internal_mutable_a_echconfig();
   public:
 
-  // required sint32 a_port = 2;
+  // optional sint32 a_port = 2;
   bool has_a_port() const;
   private:
   bool _internal_has_a_port() const;
@@ -5830,7 +5812,7 @@ class HttpConnectionInfoCloneArgs final :
   void _internal_set_a_port(int32_t value);
   public:
 
-  // required sint32 a_routedPort = 8;
+  // optional sint32 a_routedPort = 8;
   bool has_a_routedport() const;
   private:
   bool _internal_has_a_routedport() const;
@@ -5843,7 +5825,7 @@ class HttpConnectionInfoCloneArgs final :
   void _internal_set_a_routedport(int32_t value);
   public:
 
-  // required bool a_endToEndSSL = 6;
+  // optional bool a_endToEndSSL = 6;
   bool has_a_endtoendssl() const;
   private:
   bool _internal_has_a_endtoendssl() const;
@@ -5856,7 +5838,7 @@ class HttpConnectionInfoCloneArgs final :
   void _internal_set_a_endtoendssl(bool value);
   public:
 
-  // required bool a_anonymous = 9;
+  // optional bool a_anonymous = 9;
   bool has_a_anonymous() const;
   private:
   bool _internal_has_a_anonymous() const;
@@ -5869,7 +5851,7 @@ class HttpConnectionInfoCloneArgs final :
   void _internal_set_a_anonymous(bool value);
   public:
 
-  // required bool a_aPrivate = 10;
+  // optional bool a_aPrivate = 10;
   bool has_a_aprivate() const;
   private:
   bool _internal_has_a_aprivate() const;
@@ -5882,7 +5864,7 @@ class HttpConnectionInfoCloneArgs final :
   void _internal_set_a_aprivate(bool value);
   public:
 
-  // required bool a_insecureScheme = 11;
+  // optional bool a_insecureScheme = 11;
   bool has_a_insecurescheme() const;
   private:
   bool _internal_has_a_insecurescheme() const;
@@ -5895,7 +5877,7 @@ class HttpConnectionInfoCloneArgs final :
   void _internal_set_a_insecurescheme(bool value);
   public:
 
-  // required bool a_noSpdy = 12;
+  // optional bool a_noSpdy = 12;
   bool has_a_nospdy() const;
   private:
   bool _internal_has_a_nospdy() const;
@@ -5908,7 +5890,7 @@ class HttpConnectionInfoCloneArgs final :
   void _internal_set_a_nospdy(bool value);
   public:
 
-  // required bool a_beConservative = 13;
+  // optional bool a_beConservative = 13;
   bool has_a_beconservative() const;
   private:
   bool _internal_has_a_beconservative() const;
@@ -5921,7 +5903,7 @@ class HttpConnectionInfoCloneArgs final :
   void _internal_set_a_beconservative(bool value);
   public:
 
-  // required bool a_bypassProxy = 14;
+  // optional bool a_bypassProxy = 14;
   bool has_a_bypassproxy() const;
   private:
   bool _internal_has_a_bypassproxy() const;
@@ -5934,7 +5916,7 @@ class HttpConnectionInfoCloneArgs final :
   void _internal_set_a_bypassproxy(bool value);
   public:
 
-  // required bool a_anonymousAllowClientCert = 15;
+  // optional bool a_anonymousAllowClientCert = 15;
   bool has_a_anonymousallowclientcert() const;
   private:
   bool _internal_has_a_anonymousallowclientcert() const;
@@ -5947,7 +5929,7 @@ class HttpConnectionInfoCloneArgs final :
   void _internal_set_a_anonymousallowclientcert(bool value);
   public:
 
-  // required uint32 a_tlsFlags = 17;
+  // optional uint32 a_tlsFlags = 17;
   bool has_a_tlsflags() const;
   private:
   bool _internal_has_a_tlsflags() const;
@@ -5960,7 +5942,7 @@ class HttpConnectionInfoCloneArgs final :
   void _internal_set_a_tlsflags(uint32_t value);
   public:
 
-  // required bool a_fallbackConnection = 16;
+  // optional bool a_fallbackConnection = 16;
   bool has_a_fallbackconnection() const;
   private:
   bool _internal_has_a_fallbackconnection() const;
@@ -5973,7 +5955,7 @@ class HttpConnectionInfoCloneArgs final :
   void _internal_set_a_fallbackconnection(bool value);
   public:
 
-  // required bool a_isolated = 18;
+  // optional bool a_isolated = 18;
   bool has_a_isolated() const;
   private:
   bool _internal_has_a_isolated() const;
@@ -5986,7 +5968,7 @@ class HttpConnectionInfoCloneArgs final :
   void _internal_set_a_isolated(bool value);
   public:
 
-  // required bool a_isTrrServiceChannel = 19;
+  // optional bool a_isTrrServiceChannel = 19;
   bool has_a_istrrservicechannel() const;
   private:
   bool _internal_has_a_istrrservicechannel() const;
@@ -5999,7 +5981,7 @@ class HttpConnectionInfoCloneArgs final :
   void _internal_set_a_istrrservicechannel(bool value);
   public:
 
-  // required bool a_isIPv4Disabled = 21;
+  // optional bool a_isIPv4Disabled = 21;
   bool has_a_isipv4disabled() const;
   private:
   bool _internal_has_a_isipv4disabled() const;
@@ -6012,7 +5994,7 @@ class HttpConnectionInfoCloneArgs final :
   void _internal_set_a_isipv4disabled(bool value);
   public:
 
-  // required uint32 a_trrMode = 20;
+  // optional uint32 a_trrMode = 20;
   bool has_a_trrmode() const;
   private:
   bool _internal_has_a_trrmode() const;
@@ -6025,7 +6007,7 @@ class HttpConnectionInfoCloneArgs final :
   void _internal_set_a_trrmode(uint32_t value);
   public:
 
-  // required bool a_isIPv6Disabled = 22;
+  // optional bool a_isIPv6Disabled = 22;
   bool has_a_isipv6disabled() const;
   private:
   bool _internal_has_a_isipv6disabled() const;
@@ -6038,7 +6020,7 @@ class HttpConnectionInfoCloneArgs final :
   void _internal_set_a_isipv6disabled(bool value);
   public:
 
-  // required bool a_isHttp3 = 24;
+  // optional bool a_isHttp3 = 24;
   bool has_a_ishttp3() const;
   private:
   bool _internal_has_a_ishttp3() const;
@@ -6051,7 +6033,7 @@ class HttpConnectionInfoCloneArgs final :
   void _internal_set_a_ishttp3(bool value);
   public:
 
-  // required bool a_webTransport = 25;
+  // optional bool a_webTransport = 25;
   bool has_a_webtransport() const;
   private:
   bool _internal_has_a_webtransport() const;
@@ -6064,7 +6046,7 @@ class HttpConnectionInfoCloneArgs final :
   void _internal_set_a_webtransport(bool value);
   public:
 
-  // required bool a_hasIPHintAddress = 27;
+  // optional bool a_hasIPHintAddress = 27;
   bool has_a_hasiphintaddress() const;
   private:
   bool _internal_has_a_hasiphintaddress() const;
@@ -6077,7 +6059,7 @@ class HttpConnectionInfoCloneArgs final :
   void _internal_set_a_hasiphintaddress(bool value);
   public:
 
-  // required uint64 a_webTransportId = 26;
+  // optional uint64 a_webTransportId = 26;
   bool has_a_webtransportid() const;
   private:
   bool _internal_has_a_webtransportid() const;
@@ -6093,9 +6075,6 @@ class HttpConnectionInfoCloneArgs final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.HttpConnectionInfoCloneArgs)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -6281,7 +6260,7 @@ class ConsoleReportCollected final :
   std::string* _internal_add_a_stringparams();
   public:
 
-  // required string a_category = 2;
+  // optional string a_category = 2;
   bool has_a_category() const;
   private:
   bool _internal_has_a_category() const;
@@ -6299,7 +6278,7 @@ class ConsoleReportCollected final :
   std::string* _internal_mutable_a_category();
   public:
 
-  // required string a_sourceFileURI = 4;
+  // optional string a_sourceFileURI = 4;
   bool has_a_sourcefileuri() const;
   private:
   bool _internal_has_a_sourcefileuri() const;
@@ -6317,7 +6296,7 @@ class ConsoleReportCollected final :
   std::string* _internal_mutable_a_sourcefileuri();
   public:
 
-  // required string a_messageName = 7;
+  // optional string a_messageName = 7;
   bool has_a_messagename() const;
   private:
   bool _internal_has_a_messagename() const;
@@ -6335,7 +6314,7 @@ class ConsoleReportCollected final :
   std::string* _internal_mutable_a_messagename();
   public:
 
-  // required uint32 a_errorFlags = 1;
+  // optional uint32 a_errorFlags = 1;
   bool has_a_errorflags() const;
   private:
   bool _internal_has_a_errorflags() const;
@@ -6348,7 +6327,7 @@ class ConsoleReportCollected final :
   void _internal_set_a_errorflags(uint32_t value);
   public:
 
-  // required uint32 a_propertiesFile = 3;
+  // optional uint32 a_propertiesFile = 3;
   bool has_a_propertiesfile() const;
   private:
   bool _internal_has_a_propertiesfile() const;
@@ -6361,7 +6340,7 @@ class ConsoleReportCollected final :
   void _internal_set_a_propertiesfile(uint32_t value);
   public:
 
-  // required uint32 a_lineNumber = 5;
+  // optional uint32 a_lineNumber = 5;
   bool has_a_linenumber() const;
   private:
   bool _internal_has_a_linenumber() const;
@@ -6374,7 +6353,7 @@ class ConsoleReportCollected final :
   void _internal_set_a_linenumber(uint32_t value);
   public:
 
-  // required uint32 a_columnNumber = 6;
+  // optional uint32 a_columnNumber = 6;
   bool has_a_columnnumber() const;
   private:
   bool _internal_has_a_columnnumber() const;
@@ -6390,9 +6369,6 @@ class ConsoleReportCollected final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.ConsoleReportCollected)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -6538,7 +6514,7 @@ class CookieStruct final :
     kASameSiteFieldNumber = 12,
     kASchemeMapFieldNumber = 13,
   };
-  // required string a_name = 1;
+  // optional string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -6556,7 +6532,7 @@ class CookieStruct final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required string a_value = 2;
+  // optional string a_value = 2;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -6574,7 +6550,7 @@ class CookieStruct final :
   std::string* _internal_mutable_a_value();
   public:
 
-  // required string a_host = 3;
+  // optional string a_host = 3;
   bool has_a_host() const;
   private:
   bool _internal_has_a_host() const;
@@ -6592,7 +6568,7 @@ class CookieStruct final :
   std::string* _internal_mutable_a_host();
   public:
 
-  // required string a_path = 4;
+  // optional string a_path = 4;
   bool has_a_path() const;
   private:
   bool _internal_has_a_path() const;
@@ -6610,7 +6586,7 @@ class CookieStruct final :
   std::string* _internal_mutable_a_path();
   public:
 
-  // required sint64 a_expiry = 5;
+  // optional sint64 a_expiry = 5;
   bool has_a_expiry() const;
   private:
   bool _internal_has_a_expiry() const;
@@ -6623,7 +6599,7 @@ class CookieStruct final :
   void _internal_set_a_expiry(int64_t value);
   public:
 
-  // required sint64 a_lastAccessed = 6;
+  // optional sint64 a_lastAccessed = 6;
   bool has_a_lastaccessed() const;
   private:
   bool _internal_has_a_lastaccessed() const;
@@ -6636,7 +6612,7 @@ class CookieStruct final :
   void _internal_set_a_lastaccessed(int64_t value);
   public:
 
-  // required sint64 a_creationTime = 7;
+  // optional sint64 a_creationTime = 7;
   bool has_a_creationtime() const;
   private:
   bool _internal_has_a_creationtime() const;
@@ -6649,7 +6625,7 @@ class CookieStruct final :
   void _internal_set_a_creationtime(int64_t value);
   public:
 
-  // required bool a_isHttpOnly = 8;
+  // optional bool a_isHttpOnly = 8;
   bool has_a_ishttponly() const;
   private:
   bool _internal_has_a_ishttponly() const;
@@ -6662,7 +6638,7 @@ class CookieStruct final :
   void _internal_set_a_ishttponly(bool value);
   public:
 
-  // required bool a_isSession = 9;
+  // optional bool a_isSession = 9;
   bool has_a_issession() const;
   private:
   bool _internal_has_a_issession() const;
@@ -6675,7 +6651,7 @@ class CookieStruct final :
   void _internal_set_a_issession(bool value);
   public:
 
-  // required bool a_isSecure = 10;
+  // optional bool a_isSecure = 10;
   bool has_a_issecure() const;
   private:
   bool _internal_has_a_issecure() const;
@@ -6688,7 +6664,7 @@ class CookieStruct final :
   void _internal_set_a_issecure(bool value);
   public:
 
-  // required bool a_isPartitioned = 11;
+  // optional bool a_isPartitioned = 11;
   bool has_a_ispartitioned() const;
   private:
   bool _internal_has_a_ispartitioned() const;
@@ -6701,7 +6677,7 @@ class CookieStruct final :
   void _internal_set_a_ispartitioned(bool value);
   public:
 
-  // required sint32 a_sameSite = 12;
+  // optional sint32 a_sameSite = 12;
   bool has_a_samesite() const;
   private:
   bool _internal_has_a_samesite() const;
@@ -6714,7 +6690,7 @@ class CookieStruct final :
   void _internal_set_a_samesite(int32_t value);
   public:
 
-  // required uint32 a_schemeMap = 13;
+  // optional uint32 a_schemeMap = 13;
   bool has_a_schememap() const;
   private:
   bool _internal_has_a_schememap() const;
@@ -6730,9 +6706,6 @@ class CookieStruct final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.CookieStruct)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -7040,7 +7013,7 @@ class DocumentCreationArgs final :
     kAUriModifiedFieldNumber = 2,
     kAIsEmbeddingBlockedErrorFieldNumber = 3,
   };
-  // required uint32 a_loadFlags = 1;
+  // optional uint32 a_loadFlags = 1;
   bool has_a_loadflags() const;
   private:
   bool _internal_has_a_loadflags() const;
@@ -7053,7 +7026,7 @@ class DocumentCreationArgs final :
   void _internal_set_a_loadflags(uint32_t value);
   public:
 
-  // required bool a_uriModified = 2;
+  // optional bool a_uriModified = 2;
   bool has_a_urimodified() const;
   private:
   bool _internal_has_a_urimodified() const;
@@ -7066,7 +7039,7 @@ class DocumentCreationArgs final :
   void _internal_set_a_urimodified(bool value);
   public:
 
-  // required bool a_isEmbeddingBlockedError = 3;
+  // optional bool a_isEmbeddingBlockedError = 3;
   bool has_a_isembeddingblockederror() const;
   private:
   bool _internal_has_a_isembeddingblockederror() const;
@@ -7082,9 +7055,6 @@ class DocumentCreationArgs final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.DocumentCreationArgs)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -7234,7 +7204,7 @@ class ObjectCreationArgs final :
   std::string* _internal_mutable_a_contentpolicytype();
   public:
 
-  // required uint64 a_embedderInnerWindowId = 2;
+  // optional uint64 a_embedderInnerWindowId = 2;
   bool has_a_embedderinnerwindowid() const;
   private:
   bool _internal_has_a_embedderinnerwindowid() const;
@@ -7247,7 +7217,7 @@ class ObjectCreationArgs final :
   void _internal_set_a_embedderinnerwindowid(uint64_t value);
   public:
 
-  // required uint32 a_loadFlags = 1;
+  // optional uint32 a_loadFlags = 1;
   bool has_a_loadflags() const;
   private:
   bool _internal_has_a_loadflags() const;
@@ -7260,7 +7230,7 @@ class ObjectCreationArgs final :
   void _internal_set_a_loadflags(uint32_t value);
   public:
 
-  // required bool a_isUrgentStart = 4;
+  // optional bool a_isUrgentStart = 4;
   bool has_a_isurgentstart() const;
   private:
   bool _internal_has_a_isurgentstart() const;
@@ -7276,9 +7246,6 @@ class ObjectCreationArgs final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.ObjectCreationArgs)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -7690,7 +7657,7 @@ class DocumentChannelCreationArgs final :
       ::protobuf::mozilla::net::DocumentChannelElementCreationArgs* a_elementcreationargs);
   ::protobuf::mozilla::net::DocumentChannelElementCreationArgs* unsafe_arena_release_a_elementcreationargs();
 
-  // required uint64 a_channelId = 3;
+  // optional uint64 a_channelId = 3;
   bool has_a_channelid() const;
   private:
   bool _internal_has_a_channelid() const;
@@ -7703,7 +7670,7 @@ class DocumentChannelCreationArgs final :
   void _internal_set_a_channelid(uint64_t value);
   public:
 
-  // required uint64 a_parentInitiatedNavigationEpoch = 8;
+  // optional uint64 a_parentInitiatedNavigationEpoch = 8;
   bool has_a_parentinitiatednavigationepoch() const;
   private:
   bool _internal_has_a_parentinitiatednavigationepoch() const;
@@ -7716,7 +7683,7 @@ class DocumentChannelCreationArgs final :
   void _internal_set_a_parentinitiatednavigationepoch(uint64_t value);
   public:
 
-  // required uint32 a_cacheKey = 4;
+  // optional uint32 a_cacheKey = 4;
   bool has_a_cachekey() const;
   private:
   bool _internal_has_a_cachekey() const;
@@ -7887,7 +7854,7 @@ class EarlyHintConnectArgs final :
   std::string* _internal_mutable_a_link();
   public:
 
-  // required uint64 a_earlyHintPreloaderId = 2;
+  // optional uint64 a_earlyHintPreloaderId = 2;
   bool has_a_earlyhintpreloaderid() const;
   private:
   bool _internal_has_a_earlyhintpreloaderid() const;
@@ -7903,9 +7870,6 @@ class EarlyHintConnectArgs final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.EarlyHintConnectArgs)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -8163,7 +8127,7 @@ class RedirectToRealChannelArgs final :
   std::string* _internal_mutable_a_timing();
   public:
 
-  // required string a_srcdocData = 17;
+  // optional string a_srcdocData = 17;
   bool has_a_srcdocdata() const;
   private:
   bool _internal_has_a_srcdocdata() const;
@@ -8271,7 +8235,7 @@ class RedirectToRealChannelArgs final :
       ::protobuf::mozilla::net::LoadInfoArgs* a_loadinfo);
   ::protobuf::mozilla::net::LoadInfoArgs* unsafe_arena_release_a_loadinfo();
 
-  // required uint32 a_registrarId = 1;
+  // optional uint32 a_registrarId = 1;
   bool has_a_registrarid() const;
   private:
   bool _internal_has_a_registrarid() const;
@@ -8284,7 +8248,7 @@ class RedirectToRealChannelArgs final :
   void _internal_set_a_registrarid(uint32_t value);
   public:
 
-  // required uint32 a_newLoadFlags = 3;
+  // optional uint32 a_newLoadFlags = 3;
   bool has_a_newloadflags() const;
   private:
   bool _internal_has_a_newloadflags() const;
@@ -8297,7 +8261,7 @@ class RedirectToRealChannelArgs final :
   void _internal_set_a_newloadflags(uint32_t value);
   public:
 
-  // required uint64 a_channelId = 6;
+  // optional uint64 a_channelId = 6;
   bool has_a_channelid() const;
   private:
   bool _internal_has_a_channelid() const;
@@ -8310,7 +8274,7 @@ class RedirectToRealChannelArgs final :
   void _internal_set_a_channelid(uint64_t value);
   public:
 
-  // required uint32 a_redirectMode = 8;
+  // optional uint32 a_redirectMode = 8;
   bool has_a_redirectmode() const;
   private:
   bool _internal_has_a_redirectmode() const;
@@ -8323,7 +8287,7 @@ class RedirectToRealChannelArgs final :
   void _internal_set_a_redirectmode(uint32_t value);
   public:
 
-  // required uint32 a_redirectFlags = 9;
+  // optional uint32 a_redirectFlags = 9;
   bool has_a_redirectflags() const;
   private:
   bool _internal_has_a_redirectflags() const;
@@ -8349,7 +8313,7 @@ class RedirectToRealChannelArgs final :
   void _internal_set_a_contentdisposition(uint32_t value);
   public:
 
-  // required uint32 a_loadStateExternalLoadFlags = 13;
+  // optional uint32 a_loadStateExternalLoadFlags = 13;
   bool has_a_loadstateexternalloadflags() const;
   private:
   bool _internal_has_a_loadstateexternalloadflags() const;
@@ -8362,7 +8326,7 @@ class RedirectToRealChannelArgs final :
   void _internal_set_a_loadstateexternalloadflags(uint32_t value);
   public:
 
-  // required uint32 a_loadStateInternalLoadFlags = 14;
+  // optional uint32 a_loadStateInternalLoadFlags = 14;
   bool has_a_loadstateinternalloadflags() const;
   private:
   bool _internal_has_a_loadstateinternalloadflags() const;
@@ -8375,7 +8339,7 @@ class RedirectToRealChannelArgs final :
   void _internal_set_a_loadstateinternalloadflags(uint32_t value);
   public:
 
-  // required uint32 a_loadStateLoadType = 15;
+  // optional uint32 a_loadStateLoadType = 15;
   bool has_a_loadstateloadtype() const;
   private:
   bool _internal_has_a_loadstateloadtype() const;
@@ -8388,7 +8352,7 @@ class RedirectToRealChannelArgs final :
   void _internal_set_a_loadstateloadtype(uint32_t value);
   public:
 
-  // required uint64 a_loadIdentifier = 20;
+  // optional uint64 a_loadIdentifier = 20;
   bool has_a_loadidentifier() const;
   private:
   bool _internal_has_a_loadidentifier() const;
@@ -8401,7 +8365,7 @@ class RedirectToRealChannelArgs final :
   void _internal_set_a_loadidentifier(uint64_t value);
   public:
 
-  // required uint32 a_earlyHintLinkType = 23;
+  // optional uint32 a_earlyHintLinkType = 23;
   bool has_a_earlyhintlinktype() const;
   private:
   bool _internal_has_a_earlyhintlinktype() const;
@@ -8417,9 +8381,6 @@ class RedirectToRealChannelArgs final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.RedirectToRealChannelArgs)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -9184,7 +9145,7 @@ class ResourceTimingStructArgs final :
   std::string* _internal_mutable_a_transactionpending();
   public:
 
-  // required uint64 a_transferSize = 13;
+  // optional uint64 a_transferSize = 13;
   bool has_a_transfersize() const;
   private:
   bool _internal_has_a_transfersize() const;
@@ -9197,7 +9158,7 @@ class ResourceTimingStructArgs final :
   void _internal_set_a_transfersize(uint64_t value);
   public:
 
-  // required uint64 a_encodedBodySize = 14;
+  // optional uint64 a_encodedBodySize = 14;
   bool has_a_encodedbodysize() const;
   private:
   bool _internal_has_a_encodedbodysize() const;
@@ -9360,7 +9321,7 @@ class HttpActivity final :
     kAPortFieldNumber = 2,
     kAEndToEndSSLFieldNumber = 3,
   };
-  // required string a_host = 1;
+  // optional string a_host = 1;
   bool has_a_host() const;
   private:
   bool _internal_has_a_host() const;
@@ -9378,7 +9339,7 @@ class HttpActivity final :
   std::string* _internal_mutable_a_host();
   public:
 
-  // required sint32 a_port = 2;
+  // optional sint32 a_port = 2;
   bool has_a_port() const;
   private:
   bool _internal_has_a_port() const;
@@ -9391,7 +9352,7 @@ class HttpActivity final :
   void _internal_set_a_port(int32_t value);
   public:
 
-  // required bool a_endToEndSSL = 3;
+  // optional bool a_endToEndSSL = 3;
   bool has_a_endtoendssl() const;
   private:
   bool _internal_has_a_endtoendssl() const;
@@ -9407,9 +9368,6 @@ class HttpActivity final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.HttpActivity)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -9543,7 +9501,7 @@ class HttpConnectionActivity final :
     kAHasECHFieldNumber = 5,
     kAIsHttp3FieldNumber = 6,
   };
-  // required string a_connInfoKey = 1;
+  // optional string a_connInfoKey = 1;
   bool has_a_conninfokey() const;
   private:
   bool _internal_has_a_conninfokey() const;
@@ -9561,7 +9519,7 @@ class HttpConnectionActivity final :
   std::string* _internal_mutable_a_conninfokey();
   public:
 
-  // required string a_host = 2;
+  // optional string a_host = 2;
   bool has_a_host() const;
   private:
   bool _internal_has_a_host() const;
@@ -9579,7 +9537,7 @@ class HttpConnectionActivity final :
   std::string* _internal_mutable_a_host();
   public:
 
-  // required sint32 a_port = 3;
+  // optional sint32 a_port = 3;
   bool has_a_port() const;
   private:
   bool _internal_has_a_port() const;
@@ -9592,7 +9550,7 @@ class HttpConnectionActivity final :
   void _internal_set_a_port(int32_t value);
   public:
 
-  // required bool a_ssl = 4;
+  // optional bool a_ssl = 4;
   bool has_a_ssl() const;
   private:
   bool _internal_has_a_ssl() const;
@@ -9605,7 +9563,7 @@ class HttpConnectionActivity final :
   void _internal_set_a_ssl(bool value);
   public:
 
-  // required bool a_hasECH = 5;
+  // optional bool a_hasECH = 5;
   bool has_a_hasech() const;
   private:
   bool _internal_has_a_hasech() const;
@@ -9618,7 +9576,7 @@ class HttpConnectionActivity final :
   void _internal_set_a_hasech(bool value);
   public:
 
-  // required bool a_isHttp3 = 6;
+  // optional bool a_isHttp3 = 6;
   bool has_a_ishttp3() const;
   private:
   bool _internal_has_a_ishttp3() const;
@@ -9634,9 +9592,6 @@ class HttpConnectionActivity final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.HttpConnectionActivity)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -9990,7 +9945,7 @@ class TransactionObserverResult final :
   std::string* _internal_mutable_a_closereason();
   public:
 
-  // required bool a_versionOk = 1;
+  // optional bool a_versionOk = 1;
   bool has_a_versionok() const;
   private:
   bool _internal_has_a_versionok() const;
@@ -10003,7 +9958,7 @@ class TransactionObserverResult final :
   void _internal_set_a_versionok(bool value);
   public:
 
-  // required bool a_authOk = 2;
+  // optional bool a_authOk = 2;
   bool has_a_authok() const;
   private:
   bool _internal_has_a_authok() const;
@@ -10019,9 +9974,6 @@ class TransactionObserverResult final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.TransactionObserverResult)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -10153,7 +10105,7 @@ class SpeculativeConnectionOverriderArgs final :
     kAIsFromPredictorFieldNumber = 3,
     kAAllow1918FieldNumber = 4,
   };
-  // required uint32 a_parallelSpeculativeConnectLimit = 1;
+  // optional uint32 a_parallelSpeculativeConnectLimit = 1;
   bool has_a_parallelspeculativeconnectlimit() const;
   private:
   bool _internal_has_a_parallelspeculativeconnectlimit() const;
@@ -10166,7 +10118,7 @@ class SpeculativeConnectionOverriderArgs final :
   void _internal_set_a_parallelspeculativeconnectlimit(uint32_t value);
   public:
 
-  // required bool a_ignoreIdle = 2;
+  // optional bool a_ignoreIdle = 2;
   bool has_a_ignoreidle() const;
   private:
   bool _internal_has_a_ignoreidle() const;
@@ -10179,7 +10131,7 @@ class SpeculativeConnectionOverriderArgs final :
   void _internal_set_a_ignoreidle(bool value);
   public:
 
-  // required bool a_isFromPredictor = 3;
+  // optional bool a_isFromPredictor = 3;
   bool has_a_isfrompredictor() const;
   private:
   bool _internal_has_a_isfrompredictor() const;
@@ -10192,7 +10144,7 @@ class SpeculativeConnectionOverriderArgs final :
   void _internal_set_a_isfrompredictor(bool value);
   public:
 
-  // required bool a_allow1918 = 4;
+  // optional bool a_allow1918 = 4;
   bool has_a_allow1918() const;
   private:
   bool _internal_has_a_allow1918() const;
@@ -10208,9 +10160,6 @@ class SpeculativeConnectionOverriderArgs final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.SpeculativeConnectionOverriderArgs)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -10345,7 +10294,7 @@ class GIOChannelOpenArgs final :
     kAStartPosFieldNumber = 2,
     kALoadFlagsFieldNumber = 6,
   };
-  // required string a_entityID = 3;
+  // optional string a_entityID = 3;
   bool has_a_entityid() const;
   private:
   bool _internal_has_a_entityid() const;
@@ -10417,7 +10366,7 @@ class GIOChannelOpenArgs final :
       ::protobuf::mozilla::net::LoadInfoArgs* a_loadinfo);
   ::protobuf::mozilla::net::LoadInfoArgs* unsafe_arena_release_a_loadinfo();
 
-  // required uint64 a_startPos = 2;
+  // optional uint64 a_startPos = 2;
   bool has_a_startpos() const;
   private:
   bool _internal_has_a_startpos() const;
@@ -10430,7 +10379,7 @@ class GIOChannelOpenArgs final :
   void _internal_set_a_startpos(uint64_t value);
   public:
 
-  // required uint32 a_loadFlags = 6;
+  // optional uint32 a_loadFlags = 6;
   bool has_a_loadflags() const;
   private:
   bool _internal_has_a_loadflags() const;
@@ -10580,7 +10529,7 @@ class GIOChannelConnectArgs final :
   enum : int {
     kAChannelIdFieldNumber = 1,
   };
-  // required uint32 a_channelId = 1;
+  // optional uint32 a_channelId = 1;
   bool has_a_channelid() const;
   private:
   bool _internal_has_a_channelid() const;
@@ -10948,7 +10897,7 @@ class FileChannelInfo final :
   std::string* _internal_mutable_a_originaluri();
   public:
 
-  // required string a_contentType = 5;
+  // optional string a_contentType = 5;
   bool has_a_contenttype() const;
   private:
   bool _internal_has_a_contenttype() const;
@@ -10984,7 +10933,7 @@ class FileChannelInfo final :
       ::protobuf::mozilla::net::LoadInfoArgs* a_loadinfo);
   ::protobuf::mozilla::net::LoadInfoArgs* unsafe_arena_release_a_loadinfo();
 
-  // required uint64 a_channelId = 6;
+  // optional uint64 a_channelId = 6;
   bool has_a_channelid() const;
   private:
   bool _internal_has_a_channelid() const;
@@ -10997,7 +10946,7 @@ class FileChannelInfo final :
   void _internal_set_a_channelid(uint64_t value);
   public:
 
-  // required uint32 a_loadFlags = 3;
+  // optional uint32 a_loadFlags = 3;
   bool has_a_loadflags() const;
   private:
   bool _internal_has_a_loadflags() const;
@@ -11013,9 +10962,6 @@ class FileChannelInfo final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.FileChannelInfo)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -11167,7 +11113,7 @@ class RemoteStreamInfo final :
   std::string* _internal_mutable_a_inputstream();
   public:
 
-  // required string a_contentType = 2;
+  // optional string a_contentType = 2;
   bool has_a_contenttype() const;
   private:
   bool _internal_has_a_contenttype() const;
@@ -11185,7 +11131,7 @@ class RemoteStreamInfo final :
   std::string* _internal_mutable_a_contenttype();
   public:
 
-  // required sint64 a_contentLength = 3;
+  // optional sint64 a_contentLength = 3;
   bool has_a_contentlength() const;
   private:
   bool _internal_has_a_contentlength() const;
@@ -11201,9 +11147,6 @@ class RemoteStreamInfo final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.RemoteStreamInfo)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -11316,7 +11259,7 @@ inline void CookiePermissionData::set_allocated_a_principalinfo(::protobuf::mozi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.CookiePermissionData.a_principalInfo)
 }
 
-// required uint32 a_cookiePermission = 2;
+// optional uint32 a_cookiePermission = 2;
 inline bool CookiePermissionData::_internal_has_a_cookiepermission() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11348,7 +11291,7 @@ inline void CookiePermissionData::set_a_cookiepermission(uint32_t value) {
 
 // CookieJarSettingsArgs
 
-// required uint32 a_cookieBehavior = 1;
+// optional uint32 a_cookieBehavior = 1;
 inline bool CookieJarSettingsArgs::_internal_has_a_cookiebehavior() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11376,7 +11319,7 @@ inline void CookieJarSettingsArgs::set_a_cookiebehavior(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.CookieJarSettingsArgs.a_cookieBehavior)
 }
 
-// required bool a_isFirstPartyIsolated = 2;
+// optional bool a_isFirstPartyIsolated = 2;
 inline bool CookieJarSettingsArgs::_internal_has_a_isfirstpartyisolated() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -11404,7 +11347,7 @@ inline void CookieJarSettingsArgs::set_a_isfirstpartyisolated(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.CookieJarSettingsArgs.a_isFirstPartyIsolated)
 }
 
-// required bool a_shouldResistFingerprinting = 3;
+// optional bool a_shouldResistFingerprinting = 3;
 inline bool CookieJarSettingsArgs::_internal_has_a_shouldresistfingerprinting() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -11432,7 +11375,7 @@ inline void CookieJarSettingsArgs::set_a_shouldresistfingerprinting(bool value) 
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.CookieJarSettingsArgs.a_shouldResistFingerprinting)
 }
 
-// required bool a_isOnContentBlockingAllowList = 4;
+// optional bool a_isOnContentBlockingAllowList = 4;
 inline bool CookieJarSettingsArgs::_internal_has_a_isoncontentblockingallowlist() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -11500,7 +11443,7 @@ CookieJarSettingsArgs::a_cookiepermissions() const {
   return _impl_.a_cookiepermissions_;
 }
 
-// required bool a_isFixed = 6;
+// optional bool a_isFixed = 6;
 inline bool CookieJarSettingsArgs::_internal_has_a_isfixed() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -11528,7 +11471,7 @@ inline void CookieJarSettingsArgs::set_a_isfixed(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.CookieJarSettingsArgs.a_isFixed)
 }
 
-// required string a_partitionKey = 7;
+// optional string a_partitionKey = 7;
 inline bool CookieJarSettingsArgs::_internal_has_a_partitionkey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11596,7 +11539,7 @@ inline void CookieJarSettingsArgs::set_allocated_a_partitionkey(std::string* a_p
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.CookieJarSettingsArgs.a_partitionKey)
 }
 
-// required bool a_hasFingerprintingRandomizationKey = 8;
+// optional bool a_hasFingerprintingRandomizationKey = 8;
 inline bool CookieJarSettingsArgs::_internal_has_a_hasfingerprintingrandomizationkey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -11671,7 +11614,7 @@ CookieJarSettingsArgs::mutable_a_fingerprintingrandomizationkey() {
   return _internal_mutable_a_fingerprintingrandomizationkey();
 }
 
-// required uint64 a_topLevelWindowContextId = 10;
+// optional uint64 a_topLevelWindowContextId = 10;
 inline bool CookieJarSettingsArgs::_internal_has_a_toplevelwindowcontextid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -11703,7 +11646,7 @@ inline void CookieJarSettingsArgs::set_a_toplevelwindowcontextid(uint64_t value)
 
 // PreferredAlternativeDataTypeParams
 
-// required string a_type = 1;
+// optional string a_type = 1;
 inline bool PreferredAlternativeDataTypeParams::_internal_has_a_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11771,7 +11714,7 @@ inline void PreferredAlternativeDataTypeParams::set_allocated_a_type(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PreferredAlternativeDataTypeParams.a_type)
 }
 
-// required string a_contentType = 2;
+// optional string a_contentType = 2;
 inline bool PreferredAlternativeDataTypeParams::_internal_has_a_contenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -12085,7 +12028,7 @@ inline void RedirectHistoryEntryInfo::set_allocated_a_referreruri(::protobuf::mo
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.RedirectHistoryEntryInfo.a_referrerUri)
 }
 
-// required string a_remoteAddress = 3;
+// optional string a_remoteAddress = 3;
 inline bool RedirectHistoryEntryInfo::_internal_has_a_remoteaddress() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12352,7 +12295,7 @@ InterceptionInfoArg::a_redirectchain() const {
   return _impl_.a_redirectchain_;
 }
 
-// required bool a_fromThirdParty = 4;
+// optional bool a_fromThirdParty = 4;
 inline bool InterceptionInfoArg::_internal_has_a_fromthirdparty() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -12819,7 +12762,7 @@ inline void LoadInfoArgs::set_allocated_a_resultprincipaluri(::protobuf::mozilla
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.LoadInfoArgs.a_resultPrincipalURI)
 }
 
-// required string a_triggeringRemoteType = 6;
+// optional string a_triggeringRemoteType = 6;
 inline bool LoadInfoArgs::_internal_has_a_triggeringremotetype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12955,7 +12898,7 @@ inline void LoadInfoArgs::set_allocated_a_sandboxednullprincipalid(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.LoadInfoArgs.a_sandboxedNullPrincipalID)
 }
 
-// required uint32 a_securityFlags = 8;
+// optional uint32 a_securityFlags = 8;
 inline bool LoadInfoArgs::_internal_has_a_securityflags() const {
   bool value = (_impl_._has_bits_[0] & 0x10000000u) != 0;
   return value;
@@ -12983,7 +12926,7 @@ inline void LoadInfoArgs::set_a_securityflags(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_securityFlags)
 }
 
-// required uint32 a_sandboxFlags = 9;
+// optional uint32 a_sandboxFlags = 9;
 inline bool LoadInfoArgs::_internal_has_a_sandboxflags() const {
   bool value = (_impl_._has_bits_[0] & 0x20000000u) != 0;
   return value;
@@ -13011,7 +12954,7 @@ inline void LoadInfoArgs::set_a_sandboxflags(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_sandboxFlags)
 }
 
-// required uint32 a_triggeringSandboxFlags = 10;
+// optional uint32 a_triggeringSandboxFlags = 10;
 inline bool LoadInfoArgs::_internal_has_a_triggeringsandboxflags() const {
   bool value = (_impl_._has_bits_[0] & 0x80000000u) != 0;
   return value;
@@ -13039,7 +12982,7 @@ inline void LoadInfoArgs::set_a_triggeringsandboxflags(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_triggeringSandboxFlags)
 }
 
-// required uint64 a_triggeringWindowId = 11;
+// optional uint64 a_triggeringWindowId = 11;
 inline bool LoadInfoArgs::_internal_has_a_triggeringwindowid() const {
   bool value = (_impl_._has_bits_[0] & 0x40000000u) != 0;
   return value;
@@ -13067,7 +13010,7 @@ inline void LoadInfoArgs::set_a_triggeringwindowid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_triggeringWindowId)
 }
 
-// required bool a_triggeringStorageAccess = 12;
+// optional bool a_triggeringStorageAccess = 12;
 inline bool LoadInfoArgs::_internal_has_a_triggeringstorageaccess() const {
   bool value = (_impl_._has_bits_[1] & 0x00000008u) != 0;
   return value;
@@ -13095,7 +13038,7 @@ inline void LoadInfoArgs::set_a_triggeringstorageaccess(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_triggeringStorageAccess)
 }
 
-// required uint32 a_triggeringFirstPartyClassificationFlags = 13;
+// optional uint32 a_triggeringFirstPartyClassificationFlags = 13;
 inline bool LoadInfoArgs::_internal_has_a_triggeringfirstpartyclassificationflags() const {
   bool value = (_impl_._has_bits_[1] & 0x00000001u) != 0;
   return value;
@@ -13123,7 +13066,7 @@ inline void LoadInfoArgs::set_a_triggeringfirstpartyclassificationflags(uint32_t
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_triggeringFirstPartyClassificationFlags)
 }
 
-// required uint32 a_triggeringThirdPartyClassificationFlags = 14;
+// optional uint32 a_triggeringThirdPartyClassificationFlags = 14;
 inline bool LoadInfoArgs::_internal_has_a_triggeringthirdpartyclassificationflags() const {
   bool value = (_impl_._has_bits_[1] & 0x00000002u) != 0;
   return value;
@@ -13219,7 +13162,7 @@ inline void LoadInfoArgs::set_allocated_a_contentpolicytype(std::string* a_conte
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.LoadInfoArgs.a_contentPolicyType)
 }
 
-// required uint32 a_tainting = 16;
+// optional uint32 a_tainting = 16;
 inline bool LoadInfoArgs::_internal_has_a_tainting() const {
   bool value = (_impl_._has_bits_[1] & 0x00000004u) != 0;
   return value;
@@ -13247,7 +13190,7 @@ inline void LoadInfoArgs::set_a_tainting(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_tainting)
 }
 
-// required bool a_blockAllMixedContent = 17;
+// optional bool a_blockAllMixedContent = 17;
 inline bool LoadInfoArgs::_internal_has_a_blockallmixedcontent() const {
   bool value = (_impl_._has_bits_[1] & 0x00000010u) != 0;
   return value;
@@ -13275,7 +13218,7 @@ inline void LoadInfoArgs::set_a_blockallmixedcontent(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_blockAllMixedContent)
 }
 
-// required bool a_upgradeInsecureRequests = 18;
+// optional bool a_upgradeInsecureRequests = 18;
 inline bool LoadInfoArgs::_internal_has_a_upgradeinsecurerequests() const {
   bool value = (_impl_._has_bits_[1] & 0x00000020u) != 0;
   return value;
@@ -13303,7 +13246,7 @@ inline void LoadInfoArgs::set_a_upgradeinsecurerequests(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_upgradeInsecureRequests)
 }
 
-// required bool a_browserUpgradeInsecureRequests = 19;
+// optional bool a_browserUpgradeInsecureRequests = 19;
 inline bool LoadInfoArgs::_internal_has_a_browserupgradeinsecurerequests() const {
   bool value = (_impl_._has_bits_[1] & 0x00000040u) != 0;
   return value;
@@ -13331,7 +13274,7 @@ inline void LoadInfoArgs::set_a_browserupgradeinsecurerequests(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_browserUpgradeInsecureRequests)
 }
 
-// required bool a_browserDidUpgradeInsecureRequests = 20;
+// optional bool a_browserDidUpgradeInsecureRequests = 20;
 inline bool LoadInfoArgs::_internal_has_a_browserdidupgradeinsecurerequests() const {
   bool value = (_impl_._has_bits_[1] & 0x00000080u) != 0;
   return value;
@@ -13359,7 +13302,7 @@ inline void LoadInfoArgs::set_a_browserdidupgradeinsecurerequests(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_browserDidUpgradeInsecureRequests)
 }
 
-// required bool a_browserWouldUpgradeInsecureRequests = 21;
+// optional bool a_browserWouldUpgradeInsecureRequests = 21;
 inline bool LoadInfoArgs::_internal_has_a_browserwouldupgradeinsecurerequests() const {
   bool value = (_impl_._has_bits_[1] & 0x00000100u) != 0;
   return value;
@@ -13387,7 +13330,7 @@ inline void LoadInfoArgs::set_a_browserwouldupgradeinsecurerequests(bool value) 
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_browserWouldUpgradeInsecureRequests)
 }
 
-// required bool a_forceAllowDataURI = 22;
+// optional bool a_forceAllowDataURI = 22;
 inline bool LoadInfoArgs::_internal_has_a_forceallowdatauri() const {
   bool value = (_impl_._has_bits_[1] & 0x00000200u) != 0;
   return value;
@@ -13415,7 +13358,7 @@ inline void LoadInfoArgs::set_a_forceallowdatauri(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_forceAllowDataURI)
 }
 
-// required bool a_allowInsecureRedirectToDataURI = 23;
+// optional bool a_allowInsecureRedirectToDataURI = 23;
 inline bool LoadInfoArgs::_internal_has_a_allowinsecureredirecttodatauri() const {
   bool value = (_impl_._has_bits_[1] & 0x00000400u) != 0;
   return value;
@@ -13443,7 +13386,7 @@ inline void LoadInfoArgs::set_a_allowinsecureredirecttodatauri(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_allowInsecureRedirectToDataURI)
 }
 
-// required bool a_skipContentPolicyCheckForWebRequest = 24;
+// optional bool a_skipContentPolicyCheckForWebRequest = 24;
 inline bool LoadInfoArgs::_internal_has_a_skipcontentpolicycheckforwebrequest() const {
   bool value = (_impl_._has_bits_[1] & 0x00004000u) != 0;
   return value;
@@ -13471,7 +13414,7 @@ inline void LoadInfoArgs::set_a_skipcontentpolicycheckforwebrequest(bool value) 
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_skipContentPolicyCheckForWebRequest)
 }
 
-// required bool a_originalFrameSrcLoad = 25;
+// optional bool a_originalFrameSrcLoad = 25;
 inline bool LoadInfoArgs::_internal_has_a_originalframesrcload() const {
   bool value = (_impl_._has_bits_[1] & 0x00008000u) != 0;
   return value;
@@ -13499,7 +13442,7 @@ inline void LoadInfoArgs::set_a_originalframesrcload(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_originalFrameSrcLoad)
 }
 
-// required bool a_forceInheritPrincipalDropped = 26;
+// optional bool a_forceInheritPrincipalDropped = 26;
 inline bool LoadInfoArgs::_internal_has_a_forceinheritprincipaldropped() const {
   bool value = (_impl_._has_bits_[1] & 0x00010000u) != 0;
   return value;
@@ -13527,7 +13470,7 @@ inline void LoadInfoArgs::set_a_forceinheritprincipaldropped(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_forceInheritPrincipalDropped)
 }
 
-// required uint64 a_innerWindowID = 27;
+// optional uint64 a_innerWindowID = 27;
 inline bool LoadInfoArgs::_internal_has_a_innerwindowid() const {
   bool value = (_impl_._has_bits_[1] & 0x00000800u) != 0;
   return value;
@@ -13555,7 +13498,7 @@ inline void LoadInfoArgs::set_a_innerwindowid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_innerWindowID)
 }
 
-// required uint64 a_browsingContextID = 28;
+// optional uint64 a_browsingContextID = 28;
 inline bool LoadInfoArgs::_internal_has_a_browsingcontextid() const {
   bool value = (_impl_._has_bits_[1] & 0x00001000u) != 0;
   return value;
@@ -13583,7 +13526,7 @@ inline void LoadInfoArgs::set_a_browsingcontextid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_browsingContextID)
 }
 
-// required uint64 a_frameBrowsingContextID = 29;
+// optional uint64 a_frameBrowsingContextID = 29;
 inline bool LoadInfoArgs::_internal_has_a_framebrowsingcontextid() const {
   bool value = (_impl_._has_bits_[1] & 0x00002000u) != 0;
   return value;
@@ -13611,7 +13554,7 @@ inline void LoadInfoArgs::set_a_framebrowsingcontextid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_frameBrowsingContextID)
 }
 
-// required bool a_initialSecurityCheckDone = 30;
+// optional bool a_initialSecurityCheckDone = 30;
 inline bool LoadInfoArgs::_internal_has_a_initialsecuritycheckdone() const {
   bool value = (_impl_._has_bits_[1] & 0x00020000u) != 0;
   return value;
@@ -13639,7 +13582,7 @@ inline void LoadInfoArgs::set_a_initialsecuritycheckdone(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_initialSecurityCheckDone)
 }
 
-// required bool a_isInThirdPartyContext = 31;
+// optional bool a_isInThirdPartyContext = 31;
 inline bool LoadInfoArgs::_internal_has_a_isinthirdpartycontext() const {
   bool value = (_impl_._has_bits_[1] & 0x00040000u) != 0;
   return value;
@@ -13695,7 +13638,7 @@ inline void LoadInfoArgs::set_a_isthirdpartycontexttotopwindow(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_isThirdPartyContextToTopWindow)
 }
 
-// required bool a_isOn3PCBExceptionList = 33;
+// optional bool a_isOn3PCBExceptionList = 33;
 inline bool LoadInfoArgs::_internal_has_a_ison3pcbexceptionlist() const {
   bool value = (_impl_._has_bits_[1] & 0x00100000u) != 0;
   return value;
@@ -13723,7 +13666,7 @@ inline void LoadInfoArgs::set_a_ison3pcbexceptionlist(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_isOn3PCBExceptionList)
 }
 
-// required bool a_isFormSubmission = 34;
+// optional bool a_isFormSubmission = 34;
 inline bool LoadInfoArgs::_internal_has_a_isformsubmission() const {
   bool value = (_impl_._has_bits_[1] & 0x00200000u) != 0;
   return value;
@@ -13751,7 +13694,7 @@ inline void LoadInfoArgs::set_a_isformsubmission(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_isFormSubmission)
 }
 
-// required bool a_isGETRequest = 35;
+// optional bool a_isGETRequest = 35;
 inline bool LoadInfoArgs::_internal_has_a_isgetrequest() const {
   bool value = (_impl_._has_bits_[1] & 0x00400000u) != 0;
   return value;
@@ -13779,7 +13722,7 @@ inline void LoadInfoArgs::set_a_isgetrequest(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_isGETRequest)
 }
 
-// required bool a_sendCSPViolationEvents = 36;
+// optional bool a_sendCSPViolationEvents = 36;
 inline bool LoadInfoArgs::_internal_has_a_sendcspviolationevents() const {
   bool value = (_impl_._has_bits_[1] & 0x00800000u) != 0;
   return value;
@@ -13955,7 +13898,7 @@ LoadInfoArgs::a_redirectchain() const {
   return _impl_.a_redirectchain_;
 }
 
-// required bool a_hasInjectedCookieForCookieBannerHandling = 40;
+// optional bool a_hasInjectedCookieForCookieBannerHandling = 40;
 inline bool LoadInfoArgs::_internal_has_a_hasinjectedcookieforcookiebannerhandling() const {
   bool value = (_impl_._has_bits_[1] & 0x01000000u) != 0;
   return value;
@@ -14542,7 +14485,7 @@ LoadInfoArgs::mutable_a_corsunsafeheaders() {
   return &_impl_.a_corsunsafeheaders_;
 }
 
-// required bool a_forcePreflight = 48;
+// optional bool a_forcePreflight = 48;
 inline bool LoadInfoArgs::_internal_has_a_forcepreflight() const {
   bool value = (_impl_._has_bits_[1] & 0x02000000u) != 0;
   return value;
@@ -14570,7 +14513,7 @@ inline void LoadInfoArgs::set_a_forcepreflight(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_forcePreflight)
 }
 
-// required bool a_isPreflight = 49;
+// optional bool a_isPreflight = 49;
 inline bool LoadInfoArgs::_internal_has_a_ispreflight() const {
   bool value = (_impl_._has_bits_[1] & 0x04000000u) != 0;
   return value;
@@ -14598,7 +14541,7 @@ inline void LoadInfoArgs::set_a_ispreflight(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_isPreflight)
 }
 
-// required bool a_loadTriggeredFromExternal = 50;
+// optional bool a_loadTriggeredFromExternal = 50;
 inline bool LoadInfoArgs::_internal_has_a_loadtriggeredfromexternal() const {
   bool value = (_impl_._has_bits_[1] & 0x08000000u) != 0;
   return value;
@@ -14626,7 +14569,7 @@ inline void LoadInfoArgs::set_a_loadtriggeredfromexternal(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_loadTriggeredFromExternal)
 }
 
-// required bool a_serviceWorkerTaintingSynthesized = 51;
+// optional bool a_serviceWorkerTaintingSynthesized = 51;
 inline bool LoadInfoArgs::_internal_has_a_serviceworkertaintingsynthesized() const {
   bool value = (_impl_._has_bits_[1] & 0x10000000u) != 0;
   return value;
@@ -14654,7 +14597,7 @@ inline void LoadInfoArgs::set_a_serviceworkertaintingsynthesized(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_serviceWorkerTaintingSynthesized)
 }
 
-// required bool a_documentHasUserInteracted = 52;
+// optional bool a_documentHasUserInteracted = 52;
 inline bool LoadInfoArgs::_internal_has_a_documenthasuserinteracted() const {
   bool value = (_impl_._has_bits_[1] & 0x20000000u) != 0;
   return value;
@@ -14682,7 +14625,7 @@ inline void LoadInfoArgs::set_a_documenthasuserinteracted(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_documentHasUserInteracted)
 }
 
-// required bool a_allowListFutureDocumentsCreatedFromThisRedirectChain = 53;
+// optional bool a_allowListFutureDocumentsCreatedFromThisRedirectChain = 53;
 inline bool LoadInfoArgs::_internal_has_a_allowlistfuturedocumentscreatedfromthisredirectchain() const {
   bool value = (_impl_._has_bits_[1] & 0x40000000u) != 0;
   return value;
@@ -14710,7 +14653,7 @@ inline void LoadInfoArgs::set_a_allowlistfuturedocumentscreatedfromthisredirectc
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_allowListFutureDocumentsCreatedFromThisRedirectChain)
 }
 
-// required bool a_needForCheckingAntiTrackingHeuristic = 54;
+// optional bool a_needForCheckingAntiTrackingHeuristic = 54;
 inline bool LoadInfoArgs::_internal_has_a_needforcheckingantitrackingheuristic() const {
   bool value = (_impl_._has_bits_[1] & 0x80000000u) != 0;
   return value;
@@ -14738,7 +14681,7 @@ inline void LoadInfoArgs::set_a_needforcheckingantitrackingheuristic(bool value)
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_needForCheckingAntiTrackingHeuristic)
 }
 
-// required string a_cspNonce = 55;
+// optional string a_cspNonce = 55;
 inline bool LoadInfoArgs::_internal_has_a_cspnonce() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -14806,7 +14749,7 @@ inline void LoadInfoArgs::set_allocated_a_cspnonce(std::string* a_cspnonce) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.LoadInfoArgs.a_cspNonce)
 }
 
-// required string a_integrityMetadata = 56;
+// optional string a_integrityMetadata = 56;
 inline bool LoadInfoArgs::_internal_has_a_integritymetadata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -14874,7 +14817,7 @@ inline void LoadInfoArgs::set_allocated_a_integritymetadata(std::string* a_integ
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.LoadInfoArgs.a_integrityMetadata)
 }
 
-// required bool a_skipContentSniffing = 57;
+// optional bool a_skipContentSniffing = 57;
 inline bool LoadInfoArgs::_internal_has_a_skipcontentsniffing() const {
   bool value = (_impl_._has_bits_[2] & 0x00000001u) != 0;
   return value;
@@ -14902,7 +14845,7 @@ inline void LoadInfoArgs::set_a_skipcontentsniffing(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_skipContentSniffing)
 }
 
-// required uint32 a_httpsOnlyStatus = 58;
+// optional uint32 a_httpsOnlyStatus = 58;
 inline bool LoadInfoArgs::_internal_has_a_httpsonlystatus() const {
   bool value = (_impl_._has_bits_[2] & 0x00000004u) != 0;
   return value;
@@ -14930,7 +14873,7 @@ inline void LoadInfoArgs::set_a_httpsonlystatus(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_httpsOnlyStatus)
 }
 
-// required bool a_hstsStatus = 59;
+// optional bool a_hstsStatus = 59;
 inline bool LoadInfoArgs::_internal_has_a_hstsstatus() const {
   bool value = (_impl_._has_bits_[2] & 0x00000002u) != 0;
   return value;
@@ -14958,7 +14901,7 @@ inline void LoadInfoArgs::set_a_hstsstatus(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_hstsStatus)
 }
 
-// required bool a_hasValidUserGestureActivation = 60;
+// optional bool a_hasValidUserGestureActivation = 60;
 inline bool LoadInfoArgs::_internal_has_a_hasvalidusergestureactivation() const {
   bool value = (_impl_._has_bits_[2] & 0x00000008u) != 0;
   return value;
@@ -14986,7 +14929,7 @@ inline void LoadInfoArgs::set_a_hasvalidusergestureactivation(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_hasValidUserGestureActivation)
 }
 
-// required bool a_textDirectiveUserActivation = 61;
+// optional bool a_textDirectiveUserActivation = 61;
 inline bool LoadInfoArgs::_internal_has_a_textdirectiveuseractivation() const {
   bool value = (_impl_._has_bits_[2] & 0x00000010u) != 0;
   return value;
@@ -15014,7 +14957,7 @@ inline void LoadInfoArgs::set_a_textdirectiveuseractivation(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_textDirectiveUserActivation)
 }
 
-// required bool a_allowDeprecatedSystemRequests = 62;
+// optional bool a_allowDeprecatedSystemRequests = 62;
 inline bool LoadInfoArgs::_internal_has_a_allowdeprecatedsystemrequests() const {
   bool value = (_impl_._has_bits_[2] & 0x00000020u) != 0;
   return value;
@@ -15042,7 +14985,7 @@ inline void LoadInfoArgs::set_a_allowdeprecatedsystemrequests(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_allowDeprecatedSystemRequests)
 }
 
-// required bool a_isInDevToolsContext = 63;
+// optional bool a_isInDevToolsContext = 63;
 inline bool LoadInfoArgs::_internal_has_a_isindevtoolscontext() const {
   bool value = (_impl_._has_bits_[2] & 0x00000040u) != 0;
   return value;
@@ -15070,7 +15013,7 @@ inline void LoadInfoArgs::set_a_isindevtoolscontext(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_isInDevToolsContext)
 }
 
-// required bool a_parserCreatedScript = 64;
+// optional bool a_parserCreatedScript = 64;
 inline bool LoadInfoArgs::_internal_has_a_parsercreatedscript() const {
   bool value = (_impl_._has_bits_[2] & 0x00000080u) != 0;
   return value;
@@ -15166,7 +15109,7 @@ inline void LoadInfoArgs::set_allocated_a_requestmode(std::string* a_requestmode
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.LoadInfoArgs.a_requestMode)
 }
 
-// required bool a_isFromProcessingFrameAttributes = 66;
+// optional bool a_isFromProcessingFrameAttributes = 66;
 inline bool LoadInfoArgs::_internal_has_a_isfromprocessingframeattributes() const {
   bool value = (_impl_._has_bits_[2] & 0x00000100u) != 0;
   return value;
@@ -15194,7 +15137,7 @@ inline void LoadInfoArgs::set_a_isfromprocessingframeattributes(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_isFromProcessingFrameAttributes)
 }
 
-// required bool a_isMediaRequest = 67;
+// optional bool a_isMediaRequest = 67;
 inline bool LoadInfoArgs::_internal_has_a_ismediarequest() const {
   bool value = (_impl_._has_bits_[2] & 0x00000200u) != 0;
   return value;
@@ -15222,7 +15165,7 @@ inline void LoadInfoArgs::set_a_ismediarequest(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_isMediaRequest)
 }
 
-// required bool a_isMediaInitialRequest = 68;
+// optional bool a_isMediaInitialRequest = 68;
 inline bool LoadInfoArgs::_internal_has_a_ismediainitialrequest() const {
   bool value = (_impl_._has_bits_[2] & 0x00000400u) != 0;
   return value;
@@ -15250,7 +15193,7 @@ inline void LoadInfoArgs::set_a_ismediainitialrequest(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_isMediaInitialRequest)
 }
 
-// required bool a_isFromObjectOrEmbed = 69;
+// optional bool a_isFromObjectOrEmbed = 69;
 inline bool LoadInfoArgs::_internal_has_a_isfromobjectorembed() const {
   bool value = (_impl_._has_bits_[2] & 0x00001000u) != 0;
   return value;
@@ -15368,7 +15311,7 @@ inline void LoadInfoArgs::set_allocated_a_cookiejarsettings(::protobuf::mozilla:
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.LoadInfoArgs.a_cookieJarSettings)
 }
 
-// required uint32 a_requestBlockingReason = 71;
+// optional uint32 a_requestBlockingReason = 71;
 inline bool LoadInfoArgs::_internal_has_a_requestblockingreason() const {
   bool value = (_impl_._has_bits_[2] & 0x00000800u) != 0;
   return value;
@@ -15755,7 +15698,7 @@ inline void LoadInfoArgs::set_allocated_a_overriddenfingerprintingsettings(std::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.LoadInfoArgs.a_overriddenFingerprintingSettings)
 }
 
-// required bool a_isMetaRefresh = 77;
+// optional bool a_isMetaRefresh = 77;
 inline bool LoadInfoArgs::_internal_has_a_ismetarefresh() const {
   bool value = (_impl_._has_bits_[2] & 0x00002000u) != 0;
   return value;
@@ -15851,7 +15794,7 @@ inline void LoadInfoArgs::set_allocated_a_loadingembedderpolicy(std::string* a_l
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.LoadInfoArgs.a_loadingEmbedderPolicy)
 }
 
-// required bool a_originTrialCoepCredentiallessEnabledForTopLevel = 79;
+// optional bool a_originTrialCoepCredentiallessEnabledForTopLevel = 79;
 inline bool LoadInfoArgs::_internal_has_a_origintrialcoepcredentiallessenabledfortoplevel() const {
   bool value = (_impl_._has_bits_[2] & 0x00004000u) != 0;
   return value;
@@ -16037,7 +15980,7 @@ inline void LoadInfoArgs::set_allocated_a_interceptioninfo(::protobuf::mozilla::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.LoadInfoArgs.a_interceptionInfo)
 }
 
-// required bool a_isNewWindowTarget = 82;
+// optional bool a_isNewWindowTarget = 82;
 inline bool LoadInfoArgs::_internal_has_a_isnewwindowtarget() const {
   bool value = (_impl_._has_bits_[2] & 0x00008000u) != 0;
   return value;
@@ -16137,7 +16080,7 @@ inline void LoadInfoArgs::set_allocated_a_usernavigationinvolvement(std::string*
 
 // ParentLoadInfoForwarderArgs
 
-// required bool a_allowInsecureRedirectToDataURI = 1;
+// optional bool a_allowInsecureRedirectToDataURI = 1;
 inline bool ParentLoadInfoForwarderArgs::_internal_has_a_allowinsecureredirecttodatauri() const {
   bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
   return value;
@@ -16252,7 +16195,7 @@ inline void ParentLoadInfoForwarderArgs::set_allocated_a_controller(::protobuf::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.ParentLoadInfoForwarderArgs.a_controller)
 }
 
-// required uint32 a_tainting = 3;
+// optional uint32 a_tainting = 3;
 inline bool ParentLoadInfoForwarderArgs::_internal_has_a_tainting() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
@@ -16280,7 +16223,7 @@ inline void ParentLoadInfoForwarderArgs::set_a_tainting(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ParentLoadInfoForwarderArgs.a_tainting)
 }
 
-// required bool a_skipContentSniffing = 4;
+// optional bool a_skipContentSniffing = 4;
 inline bool ParentLoadInfoForwarderArgs::_internal_has_a_skipcontentsniffing() const {
   bool value = (_impl_._has_bits_[0] & 0x00002000u) != 0;
   return value;
@@ -16308,7 +16251,7 @@ inline void ParentLoadInfoForwarderArgs::set_a_skipcontentsniffing(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ParentLoadInfoForwarderArgs.a_skipContentSniffing)
 }
 
-// required uint32 a_httpsOnlyStatus = 5;
+// optional uint32 a_httpsOnlyStatus = 5;
 inline bool ParentLoadInfoForwarderArgs::_internal_has_a_httpsonlystatus() const {
   bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
   return value;
@@ -16472,7 +16415,7 @@ inline void ParentLoadInfoForwarderArgs::set_allocated_a_httpsupgradetelemetry(s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.ParentLoadInfoForwarderArgs.a_httpsUpgradeTelemetry)
 }
 
-// required bool a_hstsStatus = 8;
+// optional bool a_hstsStatus = 8;
 inline bool ParentLoadInfoForwarderArgs::_internal_has_a_hstsstatus() const {
   bool value = (_impl_._has_bits_[0] & 0x00004000u) != 0;
   return value;
@@ -16500,7 +16443,7 @@ inline void ParentLoadInfoForwarderArgs::set_a_hstsstatus(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ParentLoadInfoForwarderArgs.a_hstsStatus)
 }
 
-// required bool a_hasValidUserGestureActivation = 9;
+// optional bool a_hasValidUserGestureActivation = 9;
 inline bool ParentLoadInfoForwarderArgs::_internal_has_a_hasvalidusergestureactivation() const {
   bool value = (_impl_._has_bits_[0] & 0x00008000u) != 0;
   return value;
@@ -16528,7 +16471,7 @@ inline void ParentLoadInfoForwarderArgs::set_a_hasvalidusergestureactivation(boo
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ParentLoadInfoForwarderArgs.a_hasValidUserGestureActivation)
 }
 
-// required bool a_textDirectiveUserActivation = 10;
+// optional bool a_textDirectiveUserActivation = 10;
 inline bool ParentLoadInfoForwarderArgs::_internal_has_a_textdirectiveuseractivation() const {
   bool value = (_impl_._has_bits_[0] & 0x00010000u) != 0;
   return value;
@@ -16556,7 +16499,7 @@ inline void ParentLoadInfoForwarderArgs::set_a_textdirectiveuseractivation(bool 
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ParentLoadInfoForwarderArgs.a_textDirectiveUserActivation)
 }
 
-// required bool a_allowDeprecatedSystemRequests = 11;
+// optional bool a_allowDeprecatedSystemRequests = 11;
 inline bool ParentLoadInfoForwarderArgs::_internal_has_a_allowdeprecatedsystemrequests() const {
   bool value = (_impl_._has_bits_[0] & 0x00020000u) != 0;
   return value;
@@ -16584,7 +16527,7 @@ inline void ParentLoadInfoForwarderArgs::set_a_allowdeprecatedsystemrequests(boo
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ParentLoadInfoForwarderArgs.a_allowDeprecatedSystemRequests)
 }
 
-// required bool a_isInDevToolsContext = 12;
+// optional bool a_isInDevToolsContext = 12;
 inline bool ParentLoadInfoForwarderArgs::_internal_has_a_isindevtoolscontext() const {
   bool value = (_impl_._has_bits_[0] & 0x00040000u) != 0;
   return value;
@@ -16612,7 +16555,7 @@ inline void ParentLoadInfoForwarderArgs::set_a_isindevtoolscontext(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ParentLoadInfoForwarderArgs.a_isInDevToolsContext)
 }
 
-// required bool a_parserCreatedScript = 13;
+// optional bool a_parserCreatedScript = 13;
 inline bool ParentLoadInfoForwarderArgs::_internal_has_a_parsercreatedscript() const {
   bool value = (_impl_._has_bits_[0] & 0x00080000u) != 0;
   return value;
@@ -16708,7 +16651,7 @@ inline void ParentLoadInfoForwarderArgs::set_allocated_a_requestmode(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.ParentLoadInfoForwarderArgs.a_requestMode)
 }
 
-// required uint32 a_triggeringSandboxFlags = 15;
+// optional uint32 a_triggeringSandboxFlags = 15;
 inline bool ParentLoadInfoForwarderArgs::_internal_has_a_triggeringsandboxflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00200000u) != 0;
   return value;
@@ -16736,7 +16679,7 @@ inline void ParentLoadInfoForwarderArgs::set_a_triggeringsandboxflags(uint32_t v
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ParentLoadInfoForwarderArgs.a_triggeringSandboxFlags)
 }
 
-// required uint64 a_triggeringWindowId = 16;
+// optional uint64 a_triggeringWindowId = 16;
 inline bool ParentLoadInfoForwarderArgs::_internal_has_a_triggeringwindowid() const {
   bool value = (_impl_._has_bits_[0] & 0x00100000u) != 0;
   return value;
@@ -16764,7 +16707,7 @@ inline void ParentLoadInfoForwarderArgs::set_a_triggeringwindowid(uint64_t value
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ParentLoadInfoForwarderArgs.a_triggeringWindowId)
 }
 
-// required bool a_triggeringStorageAccess = 17;
+// optional bool a_triggeringStorageAccess = 17;
 inline bool ParentLoadInfoForwarderArgs::_internal_has_a_triggeringstorageaccess() const {
   bool value = (_impl_._has_bits_[0] & 0x00400000u) != 0;
   return value;
@@ -16792,7 +16735,7 @@ inline void ParentLoadInfoForwarderArgs::set_a_triggeringstorageaccess(bool valu
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ParentLoadInfoForwarderArgs.a_triggeringStorageAccess)
 }
 
-// required bool a_serviceWorkerTaintingSynthesized = 18;
+// optional bool a_serviceWorkerTaintingSynthesized = 18;
 inline bool ParentLoadInfoForwarderArgs::_internal_has_a_serviceworkertaintingsynthesized() const {
   bool value = (_impl_._has_bits_[0] & 0x00800000u) != 0;
   return value;
@@ -16820,7 +16763,7 @@ inline void ParentLoadInfoForwarderArgs::set_a_serviceworkertaintingsynthesized(
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ParentLoadInfoForwarderArgs.a_serviceWorkerTaintingSynthesized)
 }
 
-// required bool a_documentHasUserInteracted = 19;
+// optional bool a_documentHasUserInteracted = 19;
 inline bool ParentLoadInfoForwarderArgs::_internal_has_a_documenthasuserinteracted() const {
   bool value = (_impl_._has_bits_[0] & 0x01000000u) != 0;
   return value;
@@ -16848,7 +16791,7 @@ inline void ParentLoadInfoForwarderArgs::set_a_documenthasuserinteracted(bool va
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ParentLoadInfoForwarderArgs.a_documentHasUserInteracted)
 }
 
-// required bool a_allowListFutureDocumentsCreatedFromThisRedirectChain = 20;
+// optional bool a_allowListFutureDocumentsCreatedFromThisRedirectChain = 20;
 inline bool ParentLoadInfoForwarderArgs::_internal_has_a_allowlistfuturedocumentscreatedfromthisredirectchain() const {
   bool value = (_impl_._has_bits_[0] & 0x02000000u) != 0;
   return value;
@@ -17034,7 +16977,7 @@ inline void ParentLoadInfoForwarderArgs::set_allocated_a_containerfeaturepolicyi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.ParentLoadInfoForwarderArgs.a_containerFeaturePolicyInfo)
 }
 
-// required uint32 a_requestBlockingReason = 23;
+// optional uint32 a_requestBlockingReason = 23;
 inline bool ParentLoadInfoForwarderArgs::_internal_has_a_requestblockingreason() const {
   bool value = (_impl_._has_bits_[0] & 0x04000000u) != 0;
   return value;
@@ -17198,7 +17141,7 @@ inline void ParentLoadInfoForwarderArgs::set_allocated_a_overriddenfingerprintin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.ParentLoadInfoForwarderArgs.a_overriddenFingerprintingSettings)
 }
 
-// required bool a_isMetaRefresh = 26;
+// optional bool a_isMetaRefresh = 26;
 inline bool ParentLoadInfoForwarderArgs::_internal_has_a_ismetarefresh() const {
   bool value = (_impl_._has_bits_[0] & 0x08000000u) != 0;
   return value;
@@ -17254,7 +17197,7 @@ inline void ParentLoadInfoForwarderArgs::set_a_isthirdpartycontexttotopwindow(bo
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ParentLoadInfoForwarderArgs.a_isThirdPartyContextToTopWindow)
 }
 
-// required bool a_isInThirdPartyContext = 28;
+// optional bool a_isInThirdPartyContext = 28;
 inline bool ParentLoadInfoForwarderArgs::_internal_has_a_isinthirdpartycontext() const {
   bool value = (_impl_._has_bits_[0] & 0x20000000u) != 0;
   return value;
@@ -17282,7 +17225,7 @@ inline void ParentLoadInfoForwarderArgs::set_a_isinthirdpartycontext(bool value)
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ParentLoadInfoForwarderArgs.a_isInThirdPartyContext)
 }
 
-// required bool a_isOn3PCBExceptionList = 29;
+// optional bool a_isOn3PCBExceptionList = 29;
 inline bool ParentLoadInfoForwarderArgs::_internal_has_a_ison3pcbexceptionlist() const {
   bool value = (_impl_._has_bits_[0] & 0x40000000u) != 0;
   return value;
@@ -17711,7 +17654,7 @@ inline void ChildLoadInfoForwarderArgs::set_allocated_a_controller(::protobuf::m
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.ChildLoadInfoForwarderArgs.a_controller)
 }
 
-// required uint32 a_requestBlockingReason = 4;
+// optional uint32 a_requestBlockingReason = 4;
 inline bool ChildLoadInfoForwarderArgs::_internal_has_a_requestblockingreason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -18814,7 +18757,7 @@ inline void HttpChannelOpenArgs::set_allocated_a_navigationstarttimestamp(std::s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOpenArgs.a_navigationStartTimeStamp)
 }
 
-// required uint64 a_startPos = 16;
+// optional uint64 a_startPos = 16;
 inline bool HttpChannelOpenArgs::_internal_has_a_startpos() const {
   bool value = (_impl_._has_bits_[0] & 0x08000000u) != 0;
   return value;
@@ -18842,7 +18785,7 @@ inline void HttpChannelOpenArgs::set_a_startpos(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.a_startPos)
 }
 
-// required uint64 a_requestContextID = 17;
+// optional uint64 a_requestContextID = 17;
 inline bool HttpChannelOpenArgs::_internal_has_a_requestcontextid() const {
   bool value = (_impl_._has_bits_[0] & 0x10000000u) != 0;
   return value;
@@ -18870,7 +18813,7 @@ inline void HttpChannelOpenArgs::set_a_requestcontextid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.a_requestContextID)
 }
 
-// required uint64 a_channelId = 18;
+// optional uint64 a_channelId = 18;
 inline bool HttpChannelOpenArgs::_internal_has_a_channelid() const {
   bool value = (_impl_._has_bits_[0] & 0x20000000u) != 0;
   return value;
@@ -18898,7 +18841,7 @@ inline void HttpChannelOpenArgs::set_a_channelid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.a_channelId)
 }
 
-// required uint64 a_contentWindowId = 19;
+// optional uint64 a_contentWindowId = 19;
 inline bool HttpChannelOpenArgs::_internal_has_a_contentwindowid() const {
   bool value = (_impl_._has_bits_[0] & 0x40000000u) != 0;
   return value;
@@ -18926,7 +18869,7 @@ inline void HttpChannelOpenArgs::set_a_contentwindowid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.a_contentWindowId)
 }
 
-// required uint64 a_browserId = 20;
+// optional uint64 a_browserId = 20;
 inline bool HttpChannelOpenArgs::_internal_has_a_browserid() const {
   bool value = (_impl_._has_bits_[0] & 0x80000000u) != 0;
   return value;
@@ -18954,7 +18897,7 @@ inline void HttpChannelOpenArgs::set_a_browserid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.a_browserId)
 }
 
-// required uint64 a_earlyHintPreloaderId = 21;
+// optional uint64 a_earlyHintPreloaderId = 21;
 inline bool HttpChannelOpenArgs::_internal_has_a_earlyhintpreloaderid() const {
   bool value = (_impl_._has_bits_[1] & 0x00000001u) != 0;
   return value;
@@ -18982,7 +18925,7 @@ inline void HttpChannelOpenArgs::set_a_earlyhintpreloaderid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.a_earlyHintPreloaderId)
 }
 
-// required string a_requestMethod = 22;
+// optional string a_requestMethod = 22;
 inline bool HttpChannelOpenArgs::_internal_has_a_requestmethod() const {
   bool value = (_impl_._has_bits_[0] & 0x00004000u) != 0;
   return value;
@@ -19118,7 +19061,7 @@ inline void HttpChannelOpenArgs::set_allocated_a_classofservice(std::string* a_c
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOpenArgs.a_classOfService)
 }
 
-// required string a_entityID = 24;
+// optional string a_entityID = 24;
 inline bool HttpChannelOpenArgs::_internal_has_a_entityid() const {
   bool value = (_impl_._has_bits_[0] & 0x00010000u) != 0;
   return value;
@@ -19186,7 +19129,7 @@ inline void HttpChannelOpenArgs::set_allocated_a_entityid(std::string* a_entityi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOpenArgs.a_entityID)
 }
 
-// required string a_appCacheClientID = 25;
+// optional string a_appCacheClientID = 25;
 inline bool HttpChannelOpenArgs::_internal_has_a_appcacheclientid() const {
   bool value = (_impl_._has_bits_[0] & 0x00020000u) != 0;
   return value;
@@ -19344,7 +19287,7 @@ inline void HttpChannelOpenArgs::set_allocated_a_preflightargs(::protobuf::mozil
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOpenArgs.a_preflightArgs)
 }
 
-// required string a_contentTypeHint = 27;
+// optional string a_contentTypeHint = 27;
 inline bool HttpChannelOpenArgs::_internal_has_a_contenttypehint() const {
   bool value = (_impl_._has_bits_[0] & 0x00040000u) != 0;
   return value;
@@ -19412,7 +19355,7 @@ inline void HttpChannelOpenArgs::set_allocated_a_contenttypehint(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOpenArgs.a_contentTypeHint)
 }
 
-// required string a_integrityMetadata = 28;
+// optional string a_integrityMetadata = 28;
 inline bool HttpChannelOpenArgs::_internal_has_a_integritymetadata() const {
   bool value = (_impl_._has_bits_[0] & 0x00080000u) != 0;
   return value;
@@ -19657,7 +19600,7 @@ inline void HttpChannelOpenArgs::set_allocated_a_loadinfo(::protobuf::mozilla::n
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOpenArgs.a_loadInfo)
 }
 
-// required uint32 a_loadFlags = 31;
+// optional uint32 a_loadFlags = 31;
 inline bool HttpChannelOpenArgs::_internal_has_a_loadflags() const {
   bool value = (_impl_._has_bits_[1] & 0x00000002u) != 0;
   return value;
@@ -19685,7 +19628,7 @@ inline void HttpChannelOpenArgs::set_a_loadflags(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.a_loadFlags)
 }
 
-// required uint32 a_thirdPartyFlags = 32;
+// optional uint32 a_thirdPartyFlags = 32;
 inline bool HttpChannelOpenArgs::_internal_has_a_thirdpartyflags() const {
   bool value = (_impl_._has_bits_[1] & 0x00000004u) != 0;
   return value;
@@ -19713,7 +19656,7 @@ inline void HttpChannelOpenArgs::set_a_thirdpartyflags(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.a_thirdPartyFlags)
 }
 
-// required uint32 a_tlsFlags = 33;
+// optional uint32 a_tlsFlags = 33;
 inline bool HttpChannelOpenArgs::_internal_has_a_tlsflags() const {
   bool value = (_impl_._has_bits_[1] & 0x00000008u) != 0;
   return value;
@@ -19741,7 +19684,7 @@ inline void HttpChannelOpenArgs::set_a_tlsflags(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.a_tlsFlags)
 }
 
-// required uint32 a_cacheKey = 34;
+// optional uint32 a_cacheKey = 34;
 inline bool HttpChannelOpenArgs::_internal_has_a_cachekey() const {
   bool value = (_impl_._has_bits_[1] & 0x00000010u) != 0;
   return value;
@@ -19769,7 +19712,7 @@ inline void HttpChannelOpenArgs::set_a_cachekey(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.a_cacheKey)
 }
 
-// required uint32 a_initialRwin = 35;
+// optional uint32 a_initialRwin = 35;
 inline bool HttpChannelOpenArgs::_internal_has_a_initialrwin() const {
   bool value = (_impl_._has_bits_[1] & 0x00000020u) != 0;
   return value;
@@ -19797,7 +19740,7 @@ inline void HttpChannelOpenArgs::set_a_initialrwin(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.a_initialRwin)
 }
 
-// required uint32 a_redirectMode = 36;
+// optional uint32 a_redirectMode = 36;
 inline bool HttpChannelOpenArgs::_internal_has_a_redirectmode() const {
   bool value = (_impl_._has_bits_[1] & 0x00000040u) != 0;
   return value;
@@ -19825,7 +19768,7 @@ inline void HttpChannelOpenArgs::set_a_redirectmode(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.a_redirectMode)
 }
 
-// required sint32 a_priority = 37;
+// optional sint32 a_priority = 37;
 inline bool HttpChannelOpenArgs::_internal_has_a_priority() const {
   bool value = (_impl_._has_bits_[1] & 0x00000080u) != 0;
   return value;
@@ -19853,7 +19796,7 @@ inline void HttpChannelOpenArgs::set_a_priority(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.a_priority)
 }
 
-// required bool a_uploadStreamHasHeaders = 38;
+// optional bool a_uploadStreamHasHeaders = 38;
 inline bool HttpChannelOpenArgs::_internal_has_a_uploadstreamhasheaders() const {
   bool value = (_impl_._has_bits_[1] & 0x00000100u) != 0;
   return value;
@@ -19881,7 +19824,7 @@ inline void HttpChannelOpenArgs::set_a_uploadstreamhasheaders(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.a_uploadStreamHasHeaders)
 }
 
-// required bool a_allowSTS = 39;
+// optional bool a_allowSTS = 39;
 inline bool HttpChannelOpenArgs::_internal_has_a_allowsts() const {
   bool value = (_impl_._has_bits_[1] & 0x00000200u) != 0;
   return value;
@@ -19909,7 +19852,7 @@ inline void HttpChannelOpenArgs::set_a_allowsts(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.a_allowSTS)
 }
 
-// required bool a_resumeAt = 40;
+// optional bool a_resumeAt = 40;
 inline bool HttpChannelOpenArgs::_internal_has_a_resumeat() const {
   bool value = (_impl_._has_bits_[1] & 0x00000400u) != 0;
   return value;
@@ -19937,7 +19880,7 @@ inline void HttpChannelOpenArgs::set_a_resumeat(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.a_resumeAt)
 }
 
-// required bool a_allowSpdy = 41;
+// optional bool a_allowSpdy = 41;
 inline bool HttpChannelOpenArgs::_internal_has_a_allowspdy() const {
   bool value = (_impl_._has_bits_[1] & 0x00000800u) != 0;
   return value;
@@ -19965,7 +19908,7 @@ inline void HttpChannelOpenArgs::set_a_allowspdy(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.a_allowSpdy)
 }
 
-// required bool a_allowHttp3 = 42;
+// optional bool a_allowHttp3 = 42;
 inline bool HttpChannelOpenArgs::_internal_has_a_allowhttp3() const {
   bool value = (_impl_._has_bits_[1] & 0x00001000u) != 0;
   return value;
@@ -19993,7 +19936,7 @@ inline void HttpChannelOpenArgs::set_a_allowhttp3(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.a_allowHttp3)
 }
 
-// required bool a_allowAltSvc = 43;
+// optional bool a_allowAltSvc = 43;
 inline bool HttpChannelOpenArgs::_internal_has_a_allowaltsvc() const {
   bool value = (_impl_._has_bits_[1] & 0x00002000u) != 0;
   return value;
@@ -20021,7 +19964,7 @@ inline void HttpChannelOpenArgs::set_a_allowaltsvc(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.a_allowAltSvc)
 }
 
-// required bool a_beConservative = 44;
+// optional bool a_beConservative = 44;
 inline bool HttpChannelOpenArgs::_internal_has_a_beconservative() const {
   bool value = (_impl_._has_bits_[1] & 0x00004000u) != 0;
   return value;
@@ -20049,7 +19992,7 @@ inline void HttpChannelOpenArgs::set_a_beconservative(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.a_beConservative)
 }
 
-// required bool a_bypassProxy = 45;
+// optional bool a_bypassProxy = 45;
 inline bool HttpChannelOpenArgs::_internal_has_a_bypassproxy() const {
   bool value = (_impl_._has_bits_[1] & 0x00008000u) != 0;
   return value;
@@ -20077,7 +20020,7 @@ inline void HttpChannelOpenArgs::set_a_bypassproxy(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.a_bypassProxy)
 }
 
-// required bool a_blockAuthPrompt = 46;
+// optional bool a_blockAuthPrompt = 46;
 inline bool HttpChannelOpenArgs::_internal_has_a_blockauthprompt() const {
   bool value = (_impl_._has_bits_[1] & 0x00010000u) != 0;
   return value;
@@ -20105,7 +20048,7 @@ inline void HttpChannelOpenArgs::set_a_blockauthprompt(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.a_blockAuthPrompt)
 }
 
-// required bool a_allowStaleCacheContent = 47;
+// optional bool a_allowStaleCacheContent = 47;
 inline bool HttpChannelOpenArgs::_internal_has_a_allowstalecachecontent() const {
   bool value = (_impl_._has_bits_[1] & 0x00020000u) != 0;
   return value;
@@ -20201,7 +20144,7 @@ inline void HttpChannelOpenArgs::set_allocated_a_requestmode(std::string* a_requ
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOpenArgs.a_requestMode)
 }
 
-// required bool a_forceValidateCacheContent = 49;
+// optional bool a_forceValidateCacheContent = 49;
 inline bool HttpChannelOpenArgs::_internal_has_a_forcevalidatecachecontent() const {
   bool value = (_impl_._has_bits_[1] & 0x00040000u) != 0;
   return value;
@@ -20229,7 +20172,7 @@ inline void HttpChannelOpenArgs::set_a_forcevalidatecachecontent(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.a_forceValidateCacheContent)
 }
 
-// required bool a_preferCacheLoadOverBypass = 50;
+// optional bool a_preferCacheLoadOverBypass = 50;
 inline bool HttpChannelOpenArgs::_internal_has_a_prefercacheloadoverbypass() const {
   bool value = (_impl_._has_bits_[1] & 0x00080000u) != 0;
   return value;
@@ -20257,7 +20200,7 @@ inline void HttpChannelOpenArgs::set_a_prefercacheloadoverbypass(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.a_preferCacheLoadOverBypass)
 }
 
-// required bool a_forceMainDocumentChannel = 51;
+// optional bool a_forceMainDocumentChannel = 51;
 inline bool HttpChannelOpenArgs::_internal_has_a_forcemaindocumentchannel() const {
   bool value = (_impl_._has_bits_[1] & 0x00200000u) != 0;
   return value;
@@ -20285,7 +20228,7 @@ inline void HttpChannelOpenArgs::set_a_forcemaindocumentchannel(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.a_forceMainDocumentChannel)
 }
 
-// required uint32 a_redirectionLimit = 52;
+// optional uint32 a_redirectionLimit = 52;
 inline bool HttpChannelOpenArgs::_internal_has_a_redirectionlimit() const {
   bool value = (_impl_._has_bits_[1] & 0x00100000u) != 0;
   return value;
@@ -20313,7 +20256,7 @@ inline void HttpChannelOpenArgs::set_a_redirectionlimit(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.a_redirectionLimit)
 }
 
-// required string a_classicScriptHintCharset = 53;
+// optional string a_classicScriptHintCharset = 53;
 inline bool HttpChannelOpenArgs::_internal_has_a_classicscripthintcharset() const {
   bool value = (_impl_._has_bits_[0] & 0x00200000u) != 0;
   return value;
@@ -20381,7 +20324,7 @@ inline void HttpChannelOpenArgs::set_allocated_a_classicscripthintcharset(std::s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOpenArgs.a_classicScriptHintCharset)
 }
 
-// required string a_documentCharacterSet = 54;
+// optional string a_documentCharacterSet = 54;
 inline bool HttpChannelOpenArgs::_internal_has_a_documentcharacterset() const {
   bool value = (_impl_._has_bits_[0] & 0x00400000u) != 0;
   return value;
@@ -20449,7 +20392,7 @@ inline void HttpChannelOpenArgs::set_allocated_a_documentcharacterset(std::strin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOpenArgs.a_documentCharacterSet)
 }
 
-// required bool a_isUserAgentHeaderModified = 55;
+// optional bool a_isUserAgentHeaderModified = 55;
 inline bool HttpChannelOpenArgs::_internal_has_a_isuseragentheadermodified() const {
   bool value = (_impl_._has_bits_[1] & 0x00400000u) != 0;
   return value;
@@ -20477,7 +20420,7 @@ inline void HttpChannelOpenArgs::set_a_isuseragentheadermodified(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOpenArgs.a_isUserAgentHeaderModified)
 }
 
-// required string a_initiatorType = 56;
+// optional string a_initiatorType = 56;
 inline bool HttpChannelOpenArgs::_internal_has_a_initiatortype() const {
   bool value = (_impl_._has_bits_[0] & 0x00800000u) != 0;
   return value;
@@ -20549,7 +20492,7 @@ inline void HttpChannelOpenArgs::set_allocated_a_initiatortype(std::string* a_in
 
 // HttpChannelConnectArgs
 
-// required uint32 a_registrarId = 1;
+// optional uint32 a_registrarId = 1;
 inline bool HttpChannelConnectArgs::_internal_has_a_registrarid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -20742,7 +20685,7 @@ inline HttpChannelCreationArgs::ContentCase HttpChannelCreationArgs::content_cas
 
 // ProxyInfoCloneArgs
 
-// required string a_type = 1;
+// optional string a_type = 1;
 inline bool ProxyInfoCloneArgs::_internal_has_a_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -20810,7 +20753,7 @@ inline void ProxyInfoCloneArgs::set_allocated_a_type(std::string* a_type) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.ProxyInfoCloneArgs.a_type)
 }
 
-// required string a_host = 2;
+// optional string a_host = 2;
 inline bool ProxyInfoCloneArgs::_internal_has_a_host() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -20878,7 +20821,7 @@ inline void ProxyInfoCloneArgs::set_allocated_a_host(std::string* a_host) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.ProxyInfoCloneArgs.a_host)
 }
 
-// required sint32 a_port = 3;
+// optional sint32 a_port = 3;
 inline bool ProxyInfoCloneArgs::_internal_has_a_port() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -20906,7 +20849,7 @@ inline void ProxyInfoCloneArgs::set_a_port(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ProxyInfoCloneArgs.a_port)
 }
 
-// required string a_username = 4;
+// optional string a_username = 4;
 inline bool ProxyInfoCloneArgs::_internal_has_a_username() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -20974,7 +20917,7 @@ inline void ProxyInfoCloneArgs::set_allocated_a_username(std::string* a_username
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.ProxyInfoCloneArgs.a_username)
 }
 
-// required string a_password = 5;
+// optional string a_password = 5;
 inline bool ProxyInfoCloneArgs::_internal_has_a_password() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -21042,7 +20985,7 @@ inline void ProxyInfoCloneArgs::set_allocated_a_password(std::string* a_password
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.ProxyInfoCloneArgs.a_password)
 }
 
-// required uint32 a_flags = 6;
+// optional uint32 a_flags = 6;
 inline bool ProxyInfoCloneArgs::_internal_has_a_flags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -21070,7 +21013,7 @@ inline void ProxyInfoCloneArgs::set_a_flags(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ProxyInfoCloneArgs.a_flags)
 }
 
-// required uint32 a_timeout = 7;
+// optional uint32 a_timeout = 7;
 inline bool ProxyInfoCloneArgs::_internal_has_a_timeout() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -21098,7 +21041,7 @@ inline void ProxyInfoCloneArgs::set_a_timeout(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ProxyInfoCloneArgs.a_timeout)
 }
 
-// required uint32 a_resolveFlags = 8;
+// optional uint32 a_resolveFlags = 8;
 inline bool ProxyInfoCloneArgs::_internal_has_a_resolveflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -21126,7 +21069,7 @@ inline void ProxyInfoCloneArgs::set_a_resolveflags(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ProxyInfoCloneArgs.a_resolveFlags)
 }
 
-// required string a_proxyAuthorizationHeader = 9;
+// optional string a_proxyAuthorizationHeader = 9;
 inline bool ProxyInfoCloneArgs::_internal_has_a_proxyauthorizationheader() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -21194,7 +21137,7 @@ inline void ProxyInfoCloneArgs::set_allocated_a_proxyauthorizationheader(std::st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.ProxyInfoCloneArgs.a_proxyAuthorizationHeader)
 }
 
-// required string a_connectionIsolationKey = 10;
+// optional string a_connectionIsolationKey = 10;
 inline bool ProxyInfoCloneArgs::_internal_has_a_connectionisolationkey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -21266,7 +21209,7 @@ inline void ProxyInfoCloneArgs::set_allocated_a_connectionisolationkey(std::stri
 
 // HttpConnectionInfoCloneArgs
 
-// required string a_host = 1;
+// optional string a_host = 1;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_a_host() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -21334,7 +21277,7 @@ inline void HttpConnectionInfoCloneArgs::set_allocated_a_host(std::string* a_hos
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.a_host)
 }
 
-// required sint32 a_port = 2;
+// optional sint32 a_port = 2;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_a_port() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -21362,7 +21305,7 @@ inline void HttpConnectionInfoCloneArgs::set_a_port(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.a_port)
 }
 
-// required string a_npnToken = 3;
+// optional string a_npnToken = 3;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_a_npntoken() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -21430,7 +21373,7 @@ inline void HttpConnectionInfoCloneArgs::set_allocated_a_npntoken(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.a_npnToken)
 }
 
-// required string a_username = 4;
+// optional string a_username = 4;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_a_username() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -21566,7 +21509,7 @@ inline void HttpConnectionInfoCloneArgs::set_allocated_a_originattributes(std::s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.a_originAttributes)
 }
 
-// required bool a_endToEndSSL = 6;
+// optional bool a_endToEndSSL = 6;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_a_endtoendssl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -21594,7 +21537,7 @@ inline void HttpConnectionInfoCloneArgs::set_a_endtoendssl(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.a_endToEndSSL)
 }
 
-// required string a_routedHost = 7;
+// optional string a_routedHost = 7;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_a_routedhost() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -21662,7 +21605,7 @@ inline void HttpConnectionInfoCloneArgs::set_allocated_a_routedhost(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.a_routedHost)
 }
 
-// required sint32 a_routedPort = 8;
+// optional sint32 a_routedPort = 8;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_a_routedport() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -21690,7 +21633,7 @@ inline void HttpConnectionInfoCloneArgs::set_a_routedport(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.a_routedPort)
 }
 
-// required bool a_anonymous = 9;
+// optional bool a_anonymous = 9;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_a_anonymous() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
@@ -21718,7 +21661,7 @@ inline void HttpConnectionInfoCloneArgs::set_a_anonymous(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.a_anonymous)
 }
 
-// required bool a_aPrivate = 10;
+// optional bool a_aPrivate = 10;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_a_aprivate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
   return value;
@@ -21746,7 +21689,7 @@ inline void HttpConnectionInfoCloneArgs::set_a_aprivate(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.a_aPrivate)
 }
 
-// required bool a_insecureScheme = 11;
+// optional bool a_insecureScheme = 11;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_a_insecurescheme() const {
   bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
   return value;
@@ -21774,7 +21717,7 @@ inline void HttpConnectionInfoCloneArgs::set_a_insecurescheme(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.a_insecureScheme)
 }
 
-// required bool a_noSpdy = 12;
+// optional bool a_noSpdy = 12;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_a_nospdy() const {
   bool value = (_impl_._has_bits_[0] & 0x00002000u) != 0;
   return value;
@@ -21802,7 +21745,7 @@ inline void HttpConnectionInfoCloneArgs::set_a_nospdy(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.a_noSpdy)
 }
 
-// required bool a_beConservative = 13;
+// optional bool a_beConservative = 13;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_a_beconservative() const {
   bool value = (_impl_._has_bits_[0] & 0x00004000u) != 0;
   return value;
@@ -21830,7 +21773,7 @@ inline void HttpConnectionInfoCloneArgs::set_a_beconservative(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.a_beConservative)
 }
 
-// required bool a_bypassProxy = 14;
+// optional bool a_bypassProxy = 14;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_a_bypassproxy() const {
   bool value = (_impl_._has_bits_[0] & 0x00008000u) != 0;
   return value;
@@ -21858,7 +21801,7 @@ inline void HttpConnectionInfoCloneArgs::set_a_bypassproxy(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.a_bypassProxy)
 }
 
-// required bool a_anonymousAllowClientCert = 15;
+// optional bool a_anonymousAllowClientCert = 15;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_a_anonymousallowclientcert() const {
   bool value = (_impl_._has_bits_[0] & 0x00010000u) != 0;
   return value;
@@ -21886,7 +21829,7 @@ inline void HttpConnectionInfoCloneArgs::set_a_anonymousallowclientcert(bool val
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.a_anonymousAllowClientCert)
 }
 
-// required bool a_fallbackConnection = 16;
+// optional bool a_fallbackConnection = 16;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_a_fallbackconnection() const {
   bool value = (_impl_._has_bits_[0] & 0x00040000u) != 0;
   return value;
@@ -21914,7 +21857,7 @@ inline void HttpConnectionInfoCloneArgs::set_a_fallbackconnection(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.a_fallbackConnection)
 }
 
-// required uint32 a_tlsFlags = 17;
+// optional uint32 a_tlsFlags = 17;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_a_tlsflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00020000u) != 0;
   return value;
@@ -21942,7 +21885,7 @@ inline void HttpConnectionInfoCloneArgs::set_a_tlsflags(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.a_tlsFlags)
 }
 
-// required bool a_isolated = 18;
+// optional bool a_isolated = 18;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_a_isolated() const {
   bool value = (_impl_._has_bits_[0] & 0x00080000u) != 0;
   return value;
@@ -21970,7 +21913,7 @@ inline void HttpConnectionInfoCloneArgs::set_a_isolated(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.a_isolated)
 }
 
-// required bool a_isTrrServiceChannel = 19;
+// optional bool a_isTrrServiceChannel = 19;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_a_istrrservicechannel() const {
   bool value = (_impl_._has_bits_[0] & 0x00100000u) != 0;
   return value;
@@ -21998,7 +21941,7 @@ inline void HttpConnectionInfoCloneArgs::set_a_istrrservicechannel(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.a_isTrrServiceChannel)
 }
 
-// required uint32 a_trrMode = 20;
+// optional uint32 a_trrMode = 20;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_a_trrmode() const {
   bool value = (_impl_._has_bits_[0] & 0x00400000u) != 0;
   return value;
@@ -22026,7 +21969,7 @@ inline void HttpConnectionInfoCloneArgs::set_a_trrmode(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.a_trrMode)
 }
 
-// required bool a_isIPv4Disabled = 21;
+// optional bool a_isIPv4Disabled = 21;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_a_isipv4disabled() const {
   bool value = (_impl_._has_bits_[0] & 0x00200000u) != 0;
   return value;
@@ -22054,7 +21997,7 @@ inline void HttpConnectionInfoCloneArgs::set_a_isipv4disabled(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.a_isIPv4Disabled)
 }
 
-// required bool a_isIPv6Disabled = 22;
+// optional bool a_isIPv6Disabled = 22;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_a_isipv6disabled() const {
   bool value = (_impl_._has_bits_[0] & 0x00800000u) != 0;
   return value;
@@ -22082,7 +22025,7 @@ inline void HttpConnectionInfoCloneArgs::set_a_isipv6disabled(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.a_isIPv6Disabled)
 }
 
-// required string a_topWindowOrigin = 23;
+// optional string a_topWindowOrigin = 23;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_a_topwindoworigin() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -22150,7 +22093,7 @@ inline void HttpConnectionInfoCloneArgs::set_allocated_a_topwindoworigin(std::st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.a_topWindowOrigin)
 }
 
-// required bool a_isHttp3 = 24;
+// optional bool a_isHttp3 = 24;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_a_ishttp3() const {
   bool value = (_impl_._has_bits_[0] & 0x01000000u) != 0;
   return value;
@@ -22178,7 +22121,7 @@ inline void HttpConnectionInfoCloneArgs::set_a_ishttp3(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.a_isHttp3)
 }
 
-// required bool a_webTransport = 25;
+// optional bool a_webTransport = 25;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_a_webtransport() const {
   bool value = (_impl_._has_bits_[0] & 0x02000000u) != 0;
   return value;
@@ -22206,7 +22149,7 @@ inline void HttpConnectionInfoCloneArgs::set_a_webtransport(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.a_webTransport)
 }
 
-// required uint64 a_webTransportId = 26;
+// optional uint64 a_webTransportId = 26;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_a_webtransportid() const {
   bool value = (_impl_._has_bits_[0] & 0x08000000u) != 0;
   return value;
@@ -22234,7 +22177,7 @@ inline void HttpConnectionInfoCloneArgs::set_a_webtransportid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.a_webTransportId)
 }
 
-// required bool a_hasIPHintAddress = 27;
+// optional bool a_hasIPHintAddress = 27;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_a_hasiphintaddress() const {
   bool value = (_impl_._has_bits_[0] & 0x04000000u) != 0;
   return value;
@@ -22262,7 +22205,7 @@ inline void HttpConnectionInfoCloneArgs::set_a_hasiphintaddress(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionInfoCloneArgs.a_hasIPHintAddress)
 }
 
-// required string a_echConfig = 28;
+// optional string a_echConfig = 28;
 inline bool HttpConnectionInfoCloneArgs::_internal_has_a_echconfig() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -22374,7 +22317,7 @@ HttpConnectionInfoCloneArgs::a_proxyinfo() const {
 
 // ConsoleReportCollected
 
-// required uint32 a_errorFlags = 1;
+// optional uint32 a_errorFlags = 1;
 inline bool ConsoleReportCollected::_internal_has_a_errorflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -22402,7 +22345,7 @@ inline void ConsoleReportCollected::set_a_errorflags(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ConsoleReportCollected.a_errorFlags)
 }
 
-// required string a_category = 2;
+// optional string a_category = 2;
 inline bool ConsoleReportCollected::_internal_has_a_category() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -22470,7 +22413,7 @@ inline void ConsoleReportCollected::set_allocated_a_category(std::string* a_cate
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.ConsoleReportCollected.a_category)
 }
 
-// required uint32 a_propertiesFile = 3;
+// optional uint32 a_propertiesFile = 3;
 inline bool ConsoleReportCollected::_internal_has_a_propertiesfile() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -22498,7 +22441,7 @@ inline void ConsoleReportCollected::set_a_propertiesfile(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ConsoleReportCollected.a_propertiesFile)
 }
 
-// required string a_sourceFileURI = 4;
+// optional string a_sourceFileURI = 4;
 inline bool ConsoleReportCollected::_internal_has_a_sourcefileuri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -22566,7 +22509,7 @@ inline void ConsoleReportCollected::set_allocated_a_sourcefileuri(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.ConsoleReportCollected.a_sourceFileURI)
 }
 
-// required uint32 a_lineNumber = 5;
+// optional uint32 a_lineNumber = 5;
 inline bool ConsoleReportCollected::_internal_has_a_linenumber() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -22594,7 +22537,7 @@ inline void ConsoleReportCollected::set_a_linenumber(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ConsoleReportCollected.a_lineNumber)
 }
 
-// required uint32 a_columnNumber = 6;
+// optional uint32 a_columnNumber = 6;
 inline bool ConsoleReportCollected::_internal_has_a_columnnumber() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -22622,7 +22565,7 @@ inline void ConsoleReportCollected::set_a_columnnumber(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ConsoleReportCollected.a_columnNumber)
 }
 
-// required string a_messageName = 7;
+// optional string a_messageName = 7;
 inline bool ConsoleReportCollected::_internal_has_a_messagename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -22769,7 +22712,7 @@ ConsoleReportCollected::mutable_a_stringparams() {
 
 // CookieStruct
 
-// required string a_name = 1;
+// optional string a_name = 1;
 inline bool CookieStruct::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -22837,7 +22780,7 @@ inline void CookieStruct::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.CookieStruct.a_name)
 }
 
-// required string a_value = 2;
+// optional string a_value = 2;
 inline bool CookieStruct::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -22905,7 +22848,7 @@ inline void CookieStruct::set_allocated_a_value(std::string* a_value) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.CookieStruct.a_value)
 }
 
-// required string a_host = 3;
+// optional string a_host = 3;
 inline bool CookieStruct::_internal_has_a_host() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -22973,7 +22916,7 @@ inline void CookieStruct::set_allocated_a_host(std::string* a_host) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.CookieStruct.a_host)
 }
 
-// required string a_path = 4;
+// optional string a_path = 4;
 inline bool CookieStruct::_internal_has_a_path() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -23041,7 +22984,7 @@ inline void CookieStruct::set_allocated_a_path(std::string* a_path) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.CookieStruct.a_path)
 }
 
-// required sint64 a_expiry = 5;
+// optional sint64 a_expiry = 5;
 inline bool CookieStruct::_internal_has_a_expiry() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -23069,7 +23012,7 @@ inline void CookieStruct::set_a_expiry(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.CookieStruct.a_expiry)
 }
 
-// required sint64 a_lastAccessed = 6;
+// optional sint64 a_lastAccessed = 6;
 inline bool CookieStruct::_internal_has_a_lastaccessed() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -23097,7 +23040,7 @@ inline void CookieStruct::set_a_lastaccessed(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.CookieStruct.a_lastAccessed)
 }
 
-// required sint64 a_creationTime = 7;
+// optional sint64 a_creationTime = 7;
 inline bool CookieStruct::_internal_has_a_creationtime() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -23125,7 +23068,7 @@ inline void CookieStruct::set_a_creationtime(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.CookieStruct.a_creationTime)
 }
 
-// required bool a_isHttpOnly = 8;
+// optional bool a_isHttpOnly = 8;
 inline bool CookieStruct::_internal_has_a_ishttponly() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -23153,7 +23096,7 @@ inline void CookieStruct::set_a_ishttponly(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.CookieStruct.a_isHttpOnly)
 }
 
-// required bool a_isSession = 9;
+// optional bool a_isSession = 9;
 inline bool CookieStruct::_internal_has_a_issession() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -23181,7 +23124,7 @@ inline void CookieStruct::set_a_issession(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.CookieStruct.a_isSession)
 }
 
-// required bool a_isSecure = 10;
+// optional bool a_isSecure = 10;
 inline bool CookieStruct::_internal_has_a_issecure() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -23209,7 +23152,7 @@ inline void CookieStruct::set_a_issecure(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.CookieStruct.a_isSecure)
 }
 
-// required bool a_isPartitioned = 11;
+// optional bool a_isPartitioned = 11;
 inline bool CookieStruct::_internal_has_a_ispartitioned() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
@@ -23237,7 +23180,7 @@ inline void CookieStruct::set_a_ispartitioned(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.CookieStruct.a_isPartitioned)
 }
 
-// required sint32 a_sameSite = 12;
+// optional sint32 a_sameSite = 12;
 inline bool CookieStruct::_internal_has_a_samesite() const {
   bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
   return value;
@@ -23265,7 +23208,7 @@ inline void CookieStruct::set_a_samesite(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.CookieStruct.a_sameSite)
 }
 
-// required uint32 a_schemeMap = 13;
+// optional uint32 a_schemeMap = 13;
 inline bool CookieStruct::_internal_has_a_schememap() const {
   bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
   return value;
@@ -23409,7 +23352,7 @@ CookieStructTable::a_cookies() const {
 
 // DocumentCreationArgs
 
-// required uint32 a_loadFlags = 1;
+// optional uint32 a_loadFlags = 1;
 inline bool DocumentCreationArgs::_internal_has_a_loadflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -23437,7 +23380,7 @@ inline void DocumentCreationArgs::set_a_loadflags(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.DocumentCreationArgs.a_loadFlags)
 }
 
-// required bool a_uriModified = 2;
+// optional bool a_uriModified = 2;
 inline bool DocumentCreationArgs::_internal_has_a_urimodified() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -23465,7 +23408,7 @@ inline void DocumentCreationArgs::set_a_urimodified(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.DocumentCreationArgs.a_uriModified)
 }
 
-// required bool a_isEmbeddingBlockedError = 3;
+// optional bool a_isEmbeddingBlockedError = 3;
 inline bool DocumentCreationArgs::_internal_has_a_isembeddingblockederror() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -23497,7 +23440,7 @@ inline void DocumentCreationArgs::set_a_isembeddingblockederror(bool value) {
 
 // ObjectCreationArgs
 
-// required uint32 a_loadFlags = 1;
+// optional uint32 a_loadFlags = 1;
 inline bool ObjectCreationArgs::_internal_has_a_loadflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -23525,7 +23468,7 @@ inline void ObjectCreationArgs::set_a_loadflags(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ObjectCreationArgs.a_loadFlags)
 }
 
-// required uint64 a_embedderInnerWindowId = 2;
+// optional uint64 a_embedderInnerWindowId = 2;
 inline bool ObjectCreationArgs::_internal_has_a_embedderinnerwindowid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -23621,7 +23564,7 @@ inline void ObjectCreationArgs::set_allocated_a_contentpolicytype(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.ObjectCreationArgs.a_contentPolicyType)
 }
 
-// required bool a_isUrgentStart = 4;
+// optional bool a_isUrgentStart = 4;
 inline bool ObjectCreationArgs::_internal_has_a_isurgentstart() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -23950,7 +23893,7 @@ inline void DocumentChannelCreationArgs::set_allocated_a_asyncopentime(std::stri
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.DocumentChannelCreationArgs.a_asyncOpenTime)
 }
 
-// required uint64 a_channelId = 3;
+// optional uint64 a_channelId = 3;
 inline bool DocumentChannelCreationArgs::_internal_has_a_channelid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -23978,7 +23921,7 @@ inline void DocumentChannelCreationArgs::set_a_channelid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.DocumentChannelCreationArgs.a_channelId)
 }
 
-// required uint32 a_cacheKey = 4;
+// optional uint32 a_cacheKey = 4;
 inline bool DocumentChannelCreationArgs::_internal_has_a_cachekey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -24251,7 +24194,7 @@ inline void DocumentChannelCreationArgs::set_allocated_a_elementcreationargs(::p
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.DocumentChannelCreationArgs.a_elementCreationArgs)
 }
 
-// required uint64 a_parentInitiatedNavigationEpoch = 8;
+// optional uint64 a_parentInitiatedNavigationEpoch = 8;
 inline bool DocumentChannelCreationArgs::_internal_has_a_parentinitiatednavigationepoch() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -24351,7 +24294,7 @@ inline void EarlyHintConnectArgs::set_allocated_a_link(std::string* a_link) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.EarlyHintConnectArgs.a_link)
 }
 
-// required uint64 a_earlyHintPreloaderId = 2;
+// optional uint64 a_earlyHintPreloaderId = 2;
 inline bool EarlyHintConnectArgs::_internal_has_a_earlyhintpreloaderid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -24383,7 +24326,7 @@ inline void EarlyHintConnectArgs::set_a_earlyhintpreloaderid(uint64_t value) {
 
 // RedirectToRealChannelArgs
 
-// required uint32 a_registrarId = 1;
+// optional uint32 a_registrarId = 1;
 inline bool RedirectToRealChannelArgs::_internal_has_a_registrarid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
   return value;
@@ -24479,7 +24422,7 @@ inline void RedirectToRealChannelArgs::set_allocated_a_uri(std::string* a_uri) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.RedirectToRealChannelArgs.a_uri)
 }
 
-// required uint32 a_newLoadFlags = 3;
+// optional uint32 a_newLoadFlags = 3;
 inline bool RedirectToRealChannelArgs::_internal_has_a_newloadflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
   return value;
@@ -24684,7 +24627,7 @@ inline void RedirectToRealChannelArgs::set_allocated_a_loadinfo(::protobuf::mozi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.RedirectToRealChannelArgs.a_loadInfo)
 }
 
-// required uint64 a_channelId = 6;
+// optional uint64 a_channelId = 6;
 inline bool RedirectToRealChannelArgs::_internal_has_a_channelid() const {
   bool value = (_impl_._has_bits_[0] & 0x00002000u) != 0;
   return value;
@@ -24780,7 +24723,7 @@ inline void RedirectToRealChannelArgs::set_allocated_a_originaluri(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.RedirectToRealChannelArgs.a_originalURI)
 }
 
-// required uint32 a_redirectMode = 8;
+// optional uint32 a_redirectMode = 8;
 inline bool RedirectToRealChannelArgs::_internal_has_a_redirectmode() const {
   bool value = (_impl_._has_bits_[0] & 0x00004000u) != 0;
   return value;
@@ -24808,7 +24751,7 @@ inline void RedirectToRealChannelArgs::set_a_redirectmode(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.RedirectToRealChannelArgs.a_redirectMode)
 }
 
-// required uint32 a_redirectFlags = 9;
+// optional uint32 a_redirectFlags = 9;
 inline bool RedirectToRealChannelArgs::_internal_has_a_redirectflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00008000u) != 0;
   return value;
@@ -25000,7 +24943,7 @@ inline void RedirectToRealChannelArgs::set_allocated_a_properties(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.RedirectToRealChannelArgs.a_properties)
 }
 
-// required uint32 a_loadStateExternalLoadFlags = 13;
+// optional uint32 a_loadStateExternalLoadFlags = 13;
 inline bool RedirectToRealChannelArgs::_internal_has_a_loadstateexternalloadflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00020000u) != 0;
   return value;
@@ -25028,7 +24971,7 @@ inline void RedirectToRealChannelArgs::set_a_loadstateexternalloadflags(uint32_t
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.RedirectToRealChannelArgs.a_loadStateExternalLoadFlags)
 }
 
-// required uint32 a_loadStateInternalLoadFlags = 14;
+// optional uint32 a_loadStateInternalLoadFlags = 14;
 inline bool RedirectToRealChannelArgs::_internal_has_a_loadstateinternalloadflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00040000u) != 0;
   return value;
@@ -25056,7 +24999,7 @@ inline void RedirectToRealChannelArgs::set_a_loadstateinternalloadflags(uint32_t
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.RedirectToRealChannelArgs.a_loadStateInternalLoadFlags)
 }
 
-// required uint32 a_loadStateLoadType = 15;
+// optional uint32 a_loadStateLoadType = 15;
 inline bool RedirectToRealChannelArgs::_internal_has_a_loadstateloadtype() const {
   bool value = (_impl_._has_bits_[0] & 0x00080000u) != 0;
   return value;
@@ -25152,7 +25095,7 @@ inline void RedirectToRealChannelArgs::set_allocated_a_timing(std::string* a_tim
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.RedirectToRealChannelArgs.a_timing)
 }
 
-// required string a_srcdocData = 17;
+// optional string a_srcdocData = 17;
 inline bool RedirectToRealChannelArgs::_internal_has_a_srcdocdata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -25356,7 +25299,7 @@ inline void RedirectToRealChannelArgs::set_allocated_a_loadingsessionhistoryinfo
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.RedirectToRealChannelArgs.a_loadingSessionHistoryInfo)
 }
 
-// required uint64 a_loadIdentifier = 20;
+// optional uint64 a_loadIdentifier = 20;
 inline bool RedirectToRealChannelArgs::_internal_has_a_loadidentifier() const {
   bool value = (_impl_._has_bits_[0] & 0x00100000u) != 0;
   return value;
@@ -25492,7 +25435,7 @@ RedirectToRealChannelArgs::a_earlyhints() const {
   return _impl_.a_earlyhints_;
 }
 
-// required uint32 a_earlyHintLinkType = 23;
+// optional uint32 a_earlyHintLinkType = 23;
 inline bool RedirectToRealChannelArgs::_internal_has_a_earlyhintlinktype() const {
   bool value = (_impl_._has_bits_[0] & 0x00200000u) != 0;
   return value;
@@ -27024,7 +26967,7 @@ inline void ResourceTimingStructArgs::set_allocated_a_redirectend(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.ResourceTimingStructArgs.a_redirectEnd)
 }
 
-// required uint64 a_transferSize = 13;
+// optional uint64 a_transferSize = 13;
 inline bool ResourceTimingStructArgs::_internal_has_a_transfersize() const {
   bool value = (_impl_._has_bits_[0] & 0x00008000u) != 0;
   return value;
@@ -27052,7 +26995,7 @@ inline void ResourceTimingStructArgs::set_a_transfersize(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ResourceTimingStructArgs.a_transferSize)
 }
 
-// required uint64 a_encodedBodySize = 14;
+// optional uint64 a_encodedBodySize = 14;
 inline bool ResourceTimingStructArgs::_internal_has_a_encodedbodysize() const {
   bool value = (_impl_._has_bits_[0] & 0x00010000u) != 0;
   return value;
@@ -27288,7 +27231,7 @@ inline void ResourceTimingStructArgs::set_allocated_a_transactionpending(std::st
 
 // HttpActivity
 
-// required string a_host = 1;
+// optional string a_host = 1;
 inline bool HttpActivity::_internal_has_a_host() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -27356,7 +27299,7 @@ inline void HttpActivity::set_allocated_a_host(std::string* a_host) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpActivity.a_host)
 }
 
-// required sint32 a_port = 2;
+// optional sint32 a_port = 2;
 inline bool HttpActivity::_internal_has_a_port() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -27384,7 +27327,7 @@ inline void HttpActivity::set_a_port(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpActivity.a_port)
 }
 
-// required bool a_endToEndSSL = 3;
+// optional bool a_endToEndSSL = 3;
 inline bool HttpActivity::_internal_has_a_endtoendssl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -27416,7 +27359,7 @@ inline void HttpActivity::set_a_endtoendssl(bool value) {
 
 // HttpConnectionActivity
 
-// required string a_connInfoKey = 1;
+// optional string a_connInfoKey = 1;
 inline bool HttpConnectionActivity::_internal_has_a_conninfokey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -27484,7 +27427,7 @@ inline void HttpConnectionActivity::set_allocated_a_conninfokey(std::string* a_c
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpConnectionActivity.a_connInfoKey)
 }
 
-// required string a_host = 2;
+// optional string a_host = 2;
 inline bool HttpConnectionActivity::_internal_has_a_host() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -27552,7 +27495,7 @@ inline void HttpConnectionActivity::set_allocated_a_host(std::string* a_host) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpConnectionActivity.a_host)
 }
 
-// required sint32 a_port = 3;
+// optional sint32 a_port = 3;
 inline bool HttpConnectionActivity::_internal_has_a_port() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -27580,7 +27523,7 @@ inline void HttpConnectionActivity::set_a_port(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionActivity.a_port)
 }
 
-// required bool a_ssl = 4;
+// optional bool a_ssl = 4;
 inline bool HttpConnectionActivity::_internal_has_a_ssl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -27608,7 +27551,7 @@ inline void HttpConnectionActivity::set_a_ssl(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionActivity.a_ssl)
 }
 
-// required bool a_hasECH = 5;
+// optional bool a_hasECH = 5;
 inline bool HttpConnectionActivity::_internal_has_a_hasech() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -27636,7 +27579,7 @@ inline void HttpConnectionActivity::set_a_hasech(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpConnectionActivity.a_hasECH)
 }
 
-// required bool a_isHttp3 = 6;
+// optional bool a_isHttp3 = 6;
 inline bool HttpConnectionActivity::_internal_has_a_ishttp3() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -27867,7 +27810,7 @@ inline HttpActivityArgs::ContentCase HttpActivityArgs::content_case() const {
 
 // TransactionObserverResult
 
-// required bool a_versionOk = 1;
+// optional bool a_versionOk = 1;
 inline bool TransactionObserverResult::_internal_has_a_versionok() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -27895,7 +27838,7 @@ inline void TransactionObserverResult::set_a_versionok(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.TransactionObserverResult.a_versionOk)
 }
 
-// required bool a_authOk = 2;
+// optional bool a_authOk = 2;
 inline bool TransactionObserverResult::_internal_has_a_authok() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -27995,7 +27938,7 @@ inline void TransactionObserverResult::set_allocated_a_closereason(std::string* 
 
 // SpeculativeConnectionOverriderArgs
 
-// required uint32 a_parallelSpeculativeConnectLimit = 1;
+// optional uint32 a_parallelSpeculativeConnectLimit = 1;
 inline bool SpeculativeConnectionOverriderArgs::_internal_has_a_parallelspeculativeconnectlimit() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -28023,7 +27966,7 @@ inline void SpeculativeConnectionOverriderArgs::set_a_parallelspeculativeconnect
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.SpeculativeConnectionOverriderArgs.a_parallelSpeculativeConnectLimit)
 }
 
-// required bool a_ignoreIdle = 2;
+// optional bool a_ignoreIdle = 2;
 inline bool SpeculativeConnectionOverriderArgs::_internal_has_a_ignoreidle() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -28051,7 +27994,7 @@ inline void SpeculativeConnectionOverriderArgs::set_a_ignoreidle(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.SpeculativeConnectionOverriderArgs.a_ignoreIdle)
 }
 
-// required bool a_isFromPredictor = 3;
+// optional bool a_isFromPredictor = 3;
 inline bool SpeculativeConnectionOverriderArgs::_internal_has_a_isfrompredictor() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -28079,7 +28022,7 @@ inline void SpeculativeConnectionOverriderArgs::set_a_isfrompredictor(bool value
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.SpeculativeConnectionOverriderArgs.a_isFromPredictor)
 }
 
-// required bool a_allow1918 = 4;
+// optional bool a_allow1918 = 4;
 inline bool SpeculativeConnectionOverriderArgs::_internal_has_a_allow1918() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -28198,7 +28141,7 @@ inline void GIOChannelOpenArgs::set_allocated_a_uri(::protobuf::mozilla::ipc::UR
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.GIOChannelOpenArgs.a_uri)
 }
 
-// required uint64 a_startPos = 2;
+// optional uint64 a_startPos = 2;
 inline bool GIOChannelOpenArgs::_internal_has_a_startpos() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -28226,7 +28169,7 @@ inline void GIOChannelOpenArgs::set_a_startpos(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.GIOChannelOpenArgs.a_startPos)
 }
 
-// required string a_entityID = 3;
+// optional string a_entityID = 3;
 inline bool GIOChannelOpenArgs::_internal_has_a_entityid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -28471,7 +28414,7 @@ inline void GIOChannelOpenArgs::set_allocated_a_loadinfo(::protobuf::mozilla::ne
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.GIOChannelOpenArgs.a_loadInfo)
 }
 
-// required uint32 a_loadFlags = 6;
+// optional uint32 a_loadFlags = 6;
 inline bool GIOChannelOpenArgs::_internal_has_a_loadflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -28503,7 +28446,7 @@ inline void GIOChannelOpenArgs::set_a_loadflags(uint32_t value) {
 
 // GIOChannelConnectArgs
 
-// required uint32 a_channelId = 1;
+// optional uint32 a_channelId = 1;
 inline bool GIOChannelConnectArgs::_internal_has_a_channelid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -28832,7 +28775,7 @@ inline void FileChannelInfo::set_allocated_a_originaluri(std::string* a_original
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.FileChannelInfo.a_originalURI)
 }
 
-// required uint32 a_loadFlags = 3;
+// optional uint32 a_loadFlags = 3;
 inline bool FileChannelInfo::_internal_has_a_loadflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -28950,7 +28893,7 @@ inline void FileChannelInfo::set_allocated_a_loadinfo(::protobuf::mozilla::net::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.FileChannelInfo.a_loadInfo)
 }
 
-// required string a_contentType = 5;
+// optional string a_contentType = 5;
 inline bool FileChannelInfo::_internal_has_a_contenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -29018,7 +28961,7 @@ inline void FileChannelInfo::set_allocated_a_contenttype(std::string* a_contentt
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.FileChannelInfo.a_contentType)
 }
 
-// required uint64 a_channelId = 6;
+// optional uint64 a_channelId = 6;
 inline bool FileChannelInfo::_internal_has_a_channelid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -29118,7 +29061,7 @@ inline void RemoteStreamInfo::set_allocated_a_inputstream(std::string* a_inputst
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.RemoteStreamInfo.a_inputStream)
 }
 
-// required string a_contentType = 2;
+// optional string a_contentType = 2;
 inline bool RemoteStreamInfo::_internal_has_a_contenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -29186,7 +29129,7 @@ inline void RemoteStreamInfo::set_allocated_a_contenttype(std::string* a_content
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.RemoteStreamInfo.a_contentType)
 }
 
-// required sint64 a_contentLength = 3;
+// optional sint64 a_contentLength = 3;
 inline bool RemoteStreamInfo::_internal_has_a_contentlength() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

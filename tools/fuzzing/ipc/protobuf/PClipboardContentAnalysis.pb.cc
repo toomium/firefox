@@ -99,7 +99,7 @@ class Msg_GetClipboard::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -214,7 +214,7 @@ const char* Msg_GetClipboard::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required uint64 a_aRequestingWindowContextId = 3;
+      // optional uint64 a_aRequestingWindowContextId = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_arequestingwindowcontextid(&has_bits);
@@ -266,7 +266,7 @@ uint8_t* Msg_GetClipboard::_InternalSerialize(
         2, this->_internal_a_awhichclipboard(), target);
   }
 
-  // required uint64 a_aRequestingWindowContextId = 3;
+  // optional uint64 a_aRequestingWindowContextId = 3;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(3, this->_internal_a_arequestingwindowcontextid(), target);
@@ -280,39 +280,15 @@ uint8_t* Msg_GetClipboard::_InternalSerialize(
   return target;
 }
 
-size_t Msg_GetClipboard::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.PClipboardContentAnalysis.Msg_GetClipboard)
-  size_t total_size = 0;
-
-  if (_internal_has_a_awhichclipboard()) {
-    // required bytes a_aWhichClipboard = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_awhichclipboard());
-  }
-
-  if (_internal_has_a_arequestingwindowcontextid()) {
-    // required uint64 a_aRequestingWindowContextId = 3;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_arequestingwindowcontextid());
-  }
-
-  return total_size;
-}
 size_t Msg_GetClipboard::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.PClipboardContentAnalysis.Msg_GetClipboard)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_aWhichClipboard = 2;
+  // required bytes a_aWhichClipboard = 2;
+  if (_internal_has_a_awhichclipboard()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_awhichclipboard());
-
-    // required uint64 a_aRequestingWindowContextId = 3;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_arequestingwindowcontextid());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -324,6 +300,12 @@ size_t Msg_GetClipboard::ByteSizeLong() const {
   for (int i = 0, n = _impl_.a_atypes_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
       _impl_.a_atypes_.Get(i));
+  }
+
+  // optional uint64 a_aRequestingWindowContextId = 3;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000002u) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_arequestingwindowcontextid());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -621,7 +603,7 @@ class Msg_GetAllClipboardDataSync::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -736,7 +718,7 @@ const char* Msg_GetAllClipboardDataSync::_InternalParse(const char* ptr, ::_pbi:
         } else
           goto handle_unusual;
         continue;
-      // required uint64 a_aRequestingWindowContextId = 3;
+      // optional uint64 a_aRequestingWindowContextId = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_arequestingwindowcontextid(&has_bits);
@@ -788,7 +770,7 @@ uint8_t* Msg_GetAllClipboardDataSync::_InternalSerialize(
         2, this->_internal_a_awhichclipboard(), target);
   }
 
-  // required uint64 a_aRequestingWindowContextId = 3;
+  // optional uint64 a_aRequestingWindowContextId = 3;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(3, this->_internal_a_arequestingwindowcontextid(), target);
@@ -802,39 +784,15 @@ uint8_t* Msg_GetAllClipboardDataSync::_InternalSerialize(
   return target;
 }
 
-size_t Msg_GetAllClipboardDataSync::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.PClipboardContentAnalysis.Msg_GetAllClipboardDataSync)
-  size_t total_size = 0;
-
-  if (_internal_has_a_awhichclipboard()) {
-    // required bytes a_aWhichClipboard = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_awhichclipboard());
-  }
-
-  if (_internal_has_a_arequestingwindowcontextid()) {
-    // required uint64 a_aRequestingWindowContextId = 3;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_arequestingwindowcontextid());
-  }
-
-  return total_size;
-}
 size_t Msg_GetAllClipboardDataSync::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.PClipboardContentAnalysis.Msg_GetAllClipboardDataSync)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_aWhichClipboard = 2;
+  // required bytes a_aWhichClipboard = 2;
+  if (_internal_has_a_awhichclipboard()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_awhichclipboard());
-
-    // required uint64 a_aRequestingWindowContextId = 3;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_arequestingwindowcontextid());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -846,6 +804,12 @@ size_t Msg_GetAllClipboardDataSync::ByteSizeLong() const {
   for (int i = 0, n = _impl_.a_atypes_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
       _impl_.a_atypes_.Get(i));
+  }
+
+  // optional uint64 a_aRequestingWindowContextId = 3;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000002u) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_arequestingwindowcontextid());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {

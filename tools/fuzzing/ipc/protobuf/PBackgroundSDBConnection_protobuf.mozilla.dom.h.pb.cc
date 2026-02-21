@@ -117,9 +117,6 @@ class SDBRequestOpenParams::_Internal {
   static void set_has_a_name(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 SDBRequestOpenParams::SDBRequestOpenParams(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -202,7 +199,7 @@ const char* SDBRequestOpenParams::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_name = 1;
+      // optional string a_name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_name();
@@ -242,7 +239,7 @@ uint8_t* SDBRequestOpenParams::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_name = 1;
+  // optional string a_name = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_name(), target);
@@ -260,15 +257,17 @@ size_t SDBRequestOpenParams::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.SDBRequestOpenParams)
   size_t total_size = 0;
 
-  // required string a_name = 1;
-  if (_internal_has_a_name()) {
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional string a_name = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_name());
   }
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -305,7 +304,6 @@ void SDBRequestOpenParams::CopyFrom(const SDBRequestOpenParams& from) {
 }
 
 bool SDBRequestOpenParams::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -333,9 +331,6 @@ class SDBRequestSeekParams::_Internal {
   using HasBits = decltype(std::declval<SDBRequestSeekParams>()._impl_._has_bits_);
   static void set_has_a_offset(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -404,7 +399,7 @@ const char* SDBRequestSeekParams::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint64 a_offset = 1;
+      // optional uint64 a_offset = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_offset(&has_bits);
@@ -444,7 +439,7 @@ uint8_t* SDBRequestSeekParams::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint64 a_offset = 1;
+  // optional uint64 a_offset = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_offset(), target);
@@ -462,13 +457,15 @@ size_t SDBRequestSeekParams::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.SDBRequestSeekParams)
   size_t total_size = 0;
 
-  // required uint64 a_offset = 1;
-  if (_internal_has_a_offset()) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_offset());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional uint64 a_offset = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_offset());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -505,7 +502,6 @@ void SDBRequestSeekParams::CopyFrom(const SDBRequestSeekParams& from) {
 }
 
 bool SDBRequestSeekParams::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -528,9 +524,6 @@ class SDBRequestReadParams::_Internal {
   using HasBits = decltype(std::declval<SDBRequestReadParams>()._impl_._has_bits_);
   static void set_has_a_size(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -599,7 +592,7 @@ const char* SDBRequestReadParams::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint64 a_size = 1;
+      // optional uint64 a_size = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_size(&has_bits);
@@ -639,7 +632,7 @@ uint8_t* SDBRequestReadParams::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint64 a_size = 1;
+  // optional uint64 a_size = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_size(), target);
@@ -657,13 +650,15 @@ size_t SDBRequestReadParams::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.SDBRequestReadParams)
   size_t total_size = 0;
 
-  // required uint64 a_size = 1;
-  if (_internal_has_a_size()) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_size());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional uint64 a_size = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_size());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -700,7 +695,6 @@ void SDBRequestReadParams::CopyFrom(const SDBRequestReadParams& from) {
 }
 
 bool SDBRequestReadParams::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -723,9 +717,6 @@ class SDBRequestWriteParams::_Internal {
   using HasBits = decltype(std::declval<SDBRequestWriteParams>()._impl_._has_bits_);
   static void set_has_a_data(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -809,7 +800,7 @@ const char* SDBRequestWriteParams::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_data = 1;
+      // optional string a_data = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_data();
@@ -849,7 +840,7 @@ uint8_t* SDBRequestWriteParams::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_data = 1;
+  // optional string a_data = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_data(), target);
@@ -867,15 +858,17 @@ size_t SDBRequestWriteParams::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.SDBRequestWriteParams)
   size_t total_size = 0;
 
-  // required string a_data = 1;
-  if (_internal_has_a_data()) {
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional string a_data = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_data());
   }
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -912,7 +905,6 @@ void SDBRequestWriteParams::CopyFrom(const SDBRequestWriteParams& from) {
 }
 
 bool SDBRequestWriteParams::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1545,38 +1537,6 @@ void SDBRequestParams::CopyFrom(const SDBRequestParams& from) {
 }
 
 bool SDBRequestParams::IsInitialized() const {
-  switch (content_case()) {
-    case kAMVSDBRequestOpenParams: {
-      if (_internal_has_a_mvsdbrequestopenparams()) {
-        if (!_impl_.content_.a_mvsdbrequestopenparams_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case kAMVSDBRequestSeekParams: {
-      if (_internal_has_a_mvsdbrequestseekparams()) {
-        if (!_impl_.content_.a_mvsdbrequestseekparams_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case kAMVSDBRequestReadParams: {
-      if (_internal_has_a_mvsdbrequestreadparams()) {
-        if (!_impl_.content_.a_mvsdbrequestreadparams_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case kAMVSDBRequestWriteParams: {
-      if (_internal_has_a_mvsdbrequestwriteparams()) {
-        if (!_impl_.content_.a_mvsdbrequestwriteparams_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case kAMVSDBRequestCloseParams: {
-      break;
-    }
-    case CONTENT_NOT_SET: {
-      break;
-    }
-  }
   return true;
 }
 

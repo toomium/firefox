@@ -333,7 +333,7 @@ class Msg_ReceiveMultiTouchInputEvent::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -430,7 +430,7 @@ const char* Msg_ReceiveMultiTouchInputEvent::_InternalParse(const char* ptr, ::_
         } else
           goto handle_unusual;
         continue;
-      // required bool a_aWantsCallback = 2;
+      // optional bool a_aWantsCallback = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_awantscallback(&has_bits);
@@ -476,7 +476,7 @@ uint8_t* Msg_ReceiveMultiTouchInputEvent::_InternalSerialize(
         1, this->_internal_a_aevent(), target);
   }
 
-  // required bool a_aWantsCallback = 2;
+  // optional bool a_aWantsCallback = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_awantscallback(), target);
@@ -490,43 +490,25 @@ uint8_t* Msg_ReceiveMultiTouchInputEvent::_InternalSerialize(
   return target;
 }
 
-size_t Msg_ReceiveMultiTouchInputEvent::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveMultiTouchInputEvent)
-  size_t total_size = 0;
-
-  if (_internal_has_a_aevent()) {
-    // required bytes a_aEvent = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_aevent());
-  }
-
-  if (_internal_has_a_awantscallback()) {
-    // required bool a_aWantsCallback = 2;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t Msg_ReceiveMultiTouchInputEvent::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveMultiTouchInputEvent)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_aEvent = 1;
+  // required bytes a_aEvent = 1;
+  if (_internal_has_a_aevent()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_aevent());
-
-    // required bool a_aWantsCallback = 2;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_aWantsCallback = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000002u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -897,7 +879,7 @@ class Msg_ReceiveMouseInputEvent::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -994,7 +976,7 @@ const char* Msg_ReceiveMouseInputEvent::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // required bool a_aWantsCallback = 2;
+      // optional bool a_aWantsCallback = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_awantscallback(&has_bits);
@@ -1040,7 +1022,7 @@ uint8_t* Msg_ReceiveMouseInputEvent::_InternalSerialize(
         1, this->_internal_a_aevent(), target);
   }
 
-  // required bool a_aWantsCallback = 2;
+  // optional bool a_aWantsCallback = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_awantscallback(), target);
@@ -1054,43 +1036,25 @@ uint8_t* Msg_ReceiveMouseInputEvent::_InternalSerialize(
   return target;
 }
 
-size_t Msg_ReceiveMouseInputEvent::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveMouseInputEvent)
-  size_t total_size = 0;
-
-  if (_internal_has_a_aevent()) {
-    // required bytes a_aEvent = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_aevent());
-  }
-
-  if (_internal_has_a_awantscallback()) {
-    // required bool a_aWantsCallback = 2;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t Msg_ReceiveMouseInputEvent::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveMouseInputEvent)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_aEvent = 1;
+  // required bytes a_aEvent = 1;
+  if (_internal_has_a_aevent()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_aevent());
-
-    // required bool a_aWantsCallback = 2;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_aWantsCallback = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000002u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1461,7 +1425,7 @@ class Msg_ReceivePanGestureInputEvent::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -1558,7 +1522,7 @@ const char* Msg_ReceivePanGestureInputEvent::_InternalParse(const char* ptr, ::_
         } else
           goto handle_unusual;
         continue;
-      // required bool a_aWantsCallback = 2;
+      // optional bool a_aWantsCallback = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_awantscallback(&has_bits);
@@ -1604,7 +1568,7 @@ uint8_t* Msg_ReceivePanGestureInputEvent::_InternalSerialize(
         1, this->_internal_a_aevent(), target);
   }
 
-  // required bool a_aWantsCallback = 2;
+  // optional bool a_aWantsCallback = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_awantscallback(), target);
@@ -1618,43 +1582,25 @@ uint8_t* Msg_ReceivePanGestureInputEvent::_InternalSerialize(
   return target;
 }
 
-size_t Msg_ReceivePanGestureInputEvent::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceivePanGestureInputEvent)
-  size_t total_size = 0;
-
-  if (_internal_has_a_aevent()) {
-    // required bytes a_aEvent = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_aevent());
-  }
-
-  if (_internal_has_a_awantscallback()) {
-    // required bool a_aWantsCallback = 2;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t Msg_ReceivePanGestureInputEvent::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceivePanGestureInputEvent)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_aEvent = 1;
+  // required bytes a_aEvent = 1;
+  if (_internal_has_a_aevent()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_aevent());
-
-    // required bool a_aWantsCallback = 2;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_aWantsCallback = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000002u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -2025,7 +1971,7 @@ class Msg_ReceivePinchGestureInputEvent::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -2122,7 +2068,7 @@ const char* Msg_ReceivePinchGestureInputEvent::_InternalParse(const char* ptr, :
         } else
           goto handle_unusual;
         continue;
-      // required bool a_aWantsCallback = 2;
+      // optional bool a_aWantsCallback = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_awantscallback(&has_bits);
@@ -2168,7 +2114,7 @@ uint8_t* Msg_ReceivePinchGestureInputEvent::_InternalSerialize(
         1, this->_internal_a_aevent(), target);
   }
 
-  // required bool a_aWantsCallback = 2;
+  // optional bool a_aWantsCallback = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_awantscallback(), target);
@@ -2182,43 +2128,25 @@ uint8_t* Msg_ReceivePinchGestureInputEvent::_InternalSerialize(
   return target;
 }
 
-size_t Msg_ReceivePinchGestureInputEvent::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceivePinchGestureInputEvent)
-  size_t total_size = 0;
-
-  if (_internal_has_a_aevent()) {
-    // required bytes a_aEvent = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_aevent());
-  }
-
-  if (_internal_has_a_awantscallback()) {
-    // required bool a_aWantsCallback = 2;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t Msg_ReceivePinchGestureInputEvent::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceivePinchGestureInputEvent)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_aEvent = 1;
+  // required bytes a_aEvent = 1;
+  if (_internal_has_a_aevent()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_aevent());
-
-    // required bool a_aWantsCallback = 2;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_aWantsCallback = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000002u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -2589,7 +2517,7 @@ class Msg_ReceiveTapGestureInputEvent::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -2686,7 +2614,7 @@ const char* Msg_ReceiveTapGestureInputEvent::_InternalParse(const char* ptr, ::_
         } else
           goto handle_unusual;
         continue;
-      // required bool a_aWantsCallback = 2;
+      // optional bool a_aWantsCallback = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_awantscallback(&has_bits);
@@ -2732,7 +2660,7 @@ uint8_t* Msg_ReceiveTapGestureInputEvent::_InternalSerialize(
         1, this->_internal_a_aevent(), target);
   }
 
-  // required bool a_aWantsCallback = 2;
+  // optional bool a_aWantsCallback = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_awantscallback(), target);
@@ -2746,43 +2674,25 @@ uint8_t* Msg_ReceiveTapGestureInputEvent::_InternalSerialize(
   return target;
 }
 
-size_t Msg_ReceiveTapGestureInputEvent::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveTapGestureInputEvent)
-  size_t total_size = 0;
-
-  if (_internal_has_a_aevent()) {
-    // required bytes a_aEvent = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_aevent());
-  }
-
-  if (_internal_has_a_awantscallback()) {
-    // required bool a_aWantsCallback = 2;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t Msg_ReceiveTapGestureInputEvent::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveTapGestureInputEvent)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_aEvent = 1;
+  // required bytes a_aEvent = 1;
+  if (_internal_has_a_aevent()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_aevent());
-
-    // required bool a_aWantsCallback = 2;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_aWantsCallback = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000002u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -3153,7 +3063,7 @@ class Msg_ReceiveScrollWheelInputEvent::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -3250,7 +3160,7 @@ const char* Msg_ReceiveScrollWheelInputEvent::_InternalParse(const char* ptr, ::
         } else
           goto handle_unusual;
         continue;
-      // required bool a_aWantsCallback = 2;
+      // optional bool a_aWantsCallback = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_awantscallback(&has_bits);
@@ -3296,7 +3206,7 @@ uint8_t* Msg_ReceiveScrollWheelInputEvent::_InternalSerialize(
         1, this->_internal_a_aevent(), target);
   }
 
-  // required bool a_aWantsCallback = 2;
+  // optional bool a_aWantsCallback = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_awantscallback(), target);
@@ -3310,43 +3220,25 @@ uint8_t* Msg_ReceiveScrollWheelInputEvent::_InternalSerialize(
   return target;
 }
 
-size_t Msg_ReceiveScrollWheelInputEvent::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveScrollWheelInputEvent)
-  size_t total_size = 0;
-
-  if (_internal_has_a_aevent()) {
-    // required bytes a_aEvent = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_aevent());
-  }
-
-  if (_internal_has_a_awantscallback()) {
-    // required bool a_aWantsCallback = 2;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t Msg_ReceiveScrollWheelInputEvent::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveScrollWheelInputEvent)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_aEvent = 1;
+  // required bytes a_aEvent = 1;
+  if (_internal_has_a_aevent()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_aevent());
-
-    // required bool a_aWantsCallback = 2;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_aWantsCallback = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000002u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -3717,7 +3609,7 @@ class Msg_ReceiveKeyboardInputEvent::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -3814,7 +3706,7 @@ const char* Msg_ReceiveKeyboardInputEvent::_InternalParse(const char* ptr, ::_pb
         } else
           goto handle_unusual;
         continue;
-      // required bool a_aWantsCallback = 2;
+      // optional bool a_aWantsCallback = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_awantscallback(&has_bits);
@@ -3860,7 +3752,7 @@ uint8_t* Msg_ReceiveKeyboardInputEvent::_InternalSerialize(
         1, this->_internal_a_aevent(), target);
   }
 
-  // required bool a_aWantsCallback = 2;
+  // optional bool a_aWantsCallback = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_awantscallback(), target);
@@ -3874,43 +3766,25 @@ uint8_t* Msg_ReceiveKeyboardInputEvent::_InternalSerialize(
   return target;
 }
 
-size_t Msg_ReceiveKeyboardInputEvent::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveKeyboardInputEvent)
-  size_t total_size = 0;
-
-  if (_internal_has_a_aevent()) {
-    // required bytes a_aEvent = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_aevent());
-  }
-
-  if (_internal_has_a_awantscallback()) {
-    // required bool a_aWantsCallback = 2;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t Msg_ReceiveKeyboardInputEvent::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveKeyboardInputEvent)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_aEvent = 1;
+  // required bytes a_aEvent = 1;
+  if (_internal_has_a_aevent()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_aevent());
-
-    // required bool a_aWantsCallback = 2;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_aWantsCallback = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000002u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -4848,7 +4722,7 @@ class Reply_ProcessUnhandledEvent::_Internal {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000000f) ^ 0x0000000f) != 0;
+    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
   }
 };
 
@@ -4992,7 +4866,7 @@ const char* Reply_ProcessUnhandledEvent::_InternalParse(const char* ptr, ::_pbi:
         } else
           goto handle_unusual;
         continue;
-      // required uint64 a_aOutFocusSequenceNumber = 3;
+      // optional uint64 a_aOutFocusSequenceNumber = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_aoutfocussequencenumber(&has_bits);
@@ -5053,7 +4927,7 @@ uint8_t* Reply_ProcessUnhandledEvent::_InternalSerialize(
         2, this->_internal_a_aouttargetguid(), target);
   }
 
-  // required uint64 a_aOutFocusSequenceNumber = 3;
+  // optional uint64 a_aOutFocusSequenceNumber = 3;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(3, this->_internal_a_aoutfocussequencenumber(), target);
@@ -5098,18 +4972,13 @@ size_t Reply_ProcessUnhandledEvent::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_aoutlayersid());
   }
 
-  if (_internal_has_a_aoutfocussequencenumber()) {
-    // required uint64 a_aOutFocusSequenceNumber = 3;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_aoutfocussequencenumber());
-  }
-
   return total_size;
 }
 size_t Reply_ProcessUnhandledEvent::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PAPZInputBridge.Reply_ProcessUnhandledEvent)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
     // required bytes a_aOutRefPoint = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -5125,15 +4994,18 @@ size_t Reply_ProcessUnhandledEvent::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_aoutlayersid());
 
-    // required uint64 a_aOutFocusSequenceNumber = 3;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_aoutfocussequencenumber());
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional uint64 a_aOutFocusSequenceNumber = 3;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000008u) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_aoutfocussequencenumber());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -5225,7 +5097,7 @@ class Msg_CallInputBlockCallback::_Internal {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -5313,7 +5185,7 @@ const char* Msg_CallInputBlockCallback::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint64 a_aInputBlockId = 1;
+      // optional uint64 a_aInputBlockId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_ainputblockid(&has_bits);
@@ -5362,7 +5234,7 @@ uint8_t* Msg_CallInputBlockCallback::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint64 a_aInputBlockId = 1;
+  // optional uint64 a_aInputBlockId = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_ainputblockid(), target);
@@ -5382,43 +5254,25 @@ uint8_t* Msg_CallInputBlockCallback::_InternalSerialize(
   return target;
 }
 
-size_t Msg_CallInputBlockCallback::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PAPZInputBridge.Msg_CallInputBlockCallback)
-  size_t total_size = 0;
-
-  if (_internal_has_a_ahandledresult()) {
-    // required bytes a_aHandledResult = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_ahandledresult());
-  }
-
-  if (_internal_has_a_ainputblockid()) {
-    // required uint64 a_aInputBlockId = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_ainputblockid());
-  }
-
-  return total_size;
-}
 size_t Msg_CallInputBlockCallback::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PAPZInputBridge.Msg_CallInputBlockCallback)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_aHandledResult = 2;
+  // required bytes a_aHandledResult = 2;
+  if (_internal_has_a_ahandledresult()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_ahandledresult());
-
-    // required uint64 a_aInputBlockId = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_ainputblockid());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional uint64 a_aInputBlockId = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000002u) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_ainputblockid());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -5508,7 +5362,7 @@ class Msg_HandleTap::_Internal {
     (*has_bits)[0] |= 16u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000002f) ^ 0x0000002f) != 0;
+    return ((has_bits[0] & 0x0000000f) ^ 0x0000000f) != 0;
   }
 };
 
@@ -5706,7 +5560,7 @@ const char* Msg_HandleTap::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // required uint64 a_aInputBlockId = 5;
+      // optional uint64 a_aInputBlockId = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_a_ainputblockid(&has_bits);
@@ -5779,7 +5633,7 @@ uint8_t* Msg_HandleTap::_InternalSerialize(
         4, this->_internal_a_aguid(), target);
   }
 
-  // required uint64 a_aInputBlockId = 5;
+  // optional uint64 a_aInputBlockId = 5;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(5, this->_internal_a_ainputblockid(), target);
@@ -5831,18 +5685,13 @@ size_t Msg_HandleTap::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_aguid());
   }
 
-  if (_internal_has_a_ainputblockid()) {
-    // required uint64 a_aInputBlockId = 5;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_ainputblockid());
-  }
-
   return total_size;
 }
 size_t Msg_HandleTap::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PAPZInputBridge.Msg_HandleTap)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000002f) ^ 0x0000002f) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
     // required bytes a_aType = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -5863,9 +5712,6 @@ size_t Msg_HandleTap::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_aguid());
 
-    // required uint64 a_aInputBlockId = 5;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_ainputblockid());
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
@@ -5873,14 +5719,21 @@ size_t Msg_HandleTap::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional bytes a_aDoubleTapToZoomMetrics = 6;
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000010u) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_adoubletaptozoommetrics());
-  }
+  if (cached_has_bits & 0x00000030u) {
+    // optional bytes a_aDoubleTapToZoomMetrics = 6;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+          this->_internal_a_adoubletaptozoommetrics());
+    }
 
+    // optional uint64 a_aInputBlockId = 5;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_ainputblockid());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }

@@ -308,9 +308,6 @@ void Msg___delete__::CopyFrom(const Msg___delete__& from) {
 
 bool Msg___delete__::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_info()) {
-    if (!_impl_.a_info_->IsInitialized()) return false;
-  }
   return true;
 }
 

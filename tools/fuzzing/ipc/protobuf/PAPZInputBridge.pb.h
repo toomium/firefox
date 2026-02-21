@@ -265,7 +265,7 @@ class Msg_ReceiveMultiTouchInputEvent final :
   std::string* _internal_mutable_a_aevent();
   public:
 
-  // required bool a_aWantsCallback = 2;
+  // optional bool a_aWantsCallback = 2;
   bool has_a_awantscallback() const;
   private:
   bool _internal_has_a_awantscallback() const;
@@ -281,9 +281,6 @@ class Msg_ReceiveMultiTouchInputEvent final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveMultiTouchInputEvent)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -600,7 +597,7 @@ class Msg_ReceiveMouseInputEvent final :
   std::string* _internal_mutable_a_aevent();
   public:
 
-  // required bool a_aWantsCallback = 2;
+  // optional bool a_aWantsCallback = 2;
   bool has_a_awantscallback() const;
   private:
   bool _internal_has_a_awantscallback() const;
@@ -616,9 +613,6 @@ class Msg_ReceiveMouseInputEvent final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveMouseInputEvent)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -935,7 +929,7 @@ class Msg_ReceivePanGestureInputEvent final :
   std::string* _internal_mutable_a_aevent();
   public:
 
-  // required bool a_aWantsCallback = 2;
+  // optional bool a_aWantsCallback = 2;
   bool has_a_awantscallback() const;
   private:
   bool _internal_has_a_awantscallback() const;
@@ -951,9 +945,6 @@ class Msg_ReceivePanGestureInputEvent final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceivePanGestureInputEvent)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1270,7 +1261,7 @@ class Msg_ReceivePinchGestureInputEvent final :
   std::string* _internal_mutable_a_aevent();
   public:
 
-  // required bool a_aWantsCallback = 2;
+  // optional bool a_aWantsCallback = 2;
   bool has_a_awantscallback() const;
   private:
   bool _internal_has_a_awantscallback() const;
@@ -1286,9 +1277,6 @@ class Msg_ReceivePinchGestureInputEvent final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceivePinchGestureInputEvent)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1605,7 +1593,7 @@ class Msg_ReceiveTapGestureInputEvent final :
   std::string* _internal_mutable_a_aevent();
   public:
 
-  // required bool a_aWantsCallback = 2;
+  // optional bool a_aWantsCallback = 2;
   bool has_a_awantscallback() const;
   private:
   bool _internal_has_a_awantscallback() const;
@@ -1621,9 +1609,6 @@ class Msg_ReceiveTapGestureInputEvent final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveTapGestureInputEvent)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1940,7 +1925,7 @@ class Msg_ReceiveScrollWheelInputEvent final :
   std::string* _internal_mutable_a_aevent();
   public:
 
-  // required bool a_aWantsCallback = 2;
+  // optional bool a_aWantsCallback = 2;
   bool has_a_awantscallback() const;
   private:
   bool _internal_has_a_awantscallback() const;
@@ -1956,9 +1941,6 @@ class Msg_ReceiveScrollWheelInputEvent final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveScrollWheelInputEvent)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2275,7 +2257,7 @@ class Msg_ReceiveKeyboardInputEvent final :
   std::string* _internal_mutable_a_aevent();
   public:
 
-  // required bool a_aWantsCallback = 2;
+  // optional bool a_aWantsCallback = 2;
   bool has_a_awantscallback() const;
   private:
   bool _internal_has_a_awantscallback() const;
@@ -2291,9 +2273,6 @@ class Msg_ReceiveKeyboardInputEvent final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveKeyboardInputEvent)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2985,7 +2964,7 @@ class Reply_ProcessUnhandledEvent final :
   std::string* _internal_mutable_a_aoutlayersid();
   public:
 
-  // required uint64 a_aOutFocusSequenceNumber = 3;
+  // optional uint64 a_aOutFocusSequenceNumber = 3;
   bool has_a_aoutfocussequencenumber() const;
   private:
   bool _internal_has_a_aoutfocussequencenumber() const;
@@ -3152,7 +3131,7 @@ class Msg_CallInputBlockCallback final :
   std::string* _internal_mutable_a_ahandledresult();
   public:
 
-  // required uint64 a_aInputBlockId = 1;
+  // optional uint64 a_aInputBlockId = 1;
   bool has_a_ainputblockid() const;
   private:
   bool _internal_has_a_ainputblockid() const;
@@ -3168,9 +3147,6 @@ class Msg_CallInputBlockCallback final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PAPZInputBridge.Msg_CallInputBlockCallback)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3393,7 +3369,7 @@ class Msg_HandleTap final :
   std::string* _internal_mutable_a_adoubletaptozoommetrics();
   public:
 
-  // required uint64 a_aInputBlockId = 5;
+  // optional uint64 a_aInputBlockId = 5;
   bool has_a_ainputblockid() const;
   private:
   bool _internal_has_a_ainputblockid() const;
@@ -3508,7 +3484,7 @@ inline void Msg_ReceiveMultiTouchInputEvent::set_allocated_a_aevent(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveMultiTouchInputEvent.a_aEvent)
 }
 
-// required bool a_aWantsCallback = 2;
+// optional bool a_aWantsCallback = 2;
 inline bool Msg_ReceiveMultiTouchInputEvent::_internal_has_a_awantscallback() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3748,7 +3724,7 @@ inline void Msg_ReceiveMouseInputEvent::set_allocated_a_aevent(std::string* a_ae
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveMouseInputEvent.a_aEvent)
 }
 
-// required bool a_aWantsCallback = 2;
+// optional bool a_aWantsCallback = 2;
 inline bool Msg_ReceiveMouseInputEvent::_internal_has_a_awantscallback() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3988,7 +3964,7 @@ inline void Msg_ReceivePanGestureInputEvent::set_allocated_a_aevent(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceivePanGestureInputEvent.a_aEvent)
 }
 
-// required bool a_aWantsCallback = 2;
+// optional bool a_aWantsCallback = 2;
 inline bool Msg_ReceivePanGestureInputEvent::_internal_has_a_awantscallback() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4228,7 +4204,7 @@ inline void Msg_ReceivePinchGestureInputEvent::set_allocated_a_aevent(std::strin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceivePinchGestureInputEvent.a_aEvent)
 }
 
-// required bool a_aWantsCallback = 2;
+// optional bool a_aWantsCallback = 2;
 inline bool Msg_ReceivePinchGestureInputEvent::_internal_has_a_awantscallback() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4468,7 +4444,7 @@ inline void Msg_ReceiveTapGestureInputEvent::set_allocated_a_aevent(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveTapGestureInputEvent.a_aEvent)
 }
 
-// required bool a_aWantsCallback = 2;
+// optional bool a_aWantsCallback = 2;
 inline bool Msg_ReceiveTapGestureInputEvent::_internal_has_a_awantscallback() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4708,7 +4684,7 @@ inline void Msg_ReceiveScrollWheelInputEvent::set_allocated_a_aevent(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveScrollWheelInputEvent.a_aEvent)
 }
 
-// required bool a_aWantsCallback = 2;
+// optional bool a_aWantsCallback = 2;
 inline bool Msg_ReceiveScrollWheelInputEvent::_internal_has_a_awantscallback() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4948,7 +4924,7 @@ inline void Msg_ReceiveKeyboardInputEvent::set_allocated_a_aevent(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveKeyboardInputEvent.a_aEvent)
 }
 
-// required bool a_aWantsCallback = 2;
+// optional bool a_aWantsCallback = 2;
 inline bool Msg_ReceiveKeyboardInputEvent::_internal_has_a_awantscallback() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5536,7 +5512,7 @@ inline void Reply_ProcessUnhandledEvent::set_allocated_a_aouttargetguid(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZInputBridge.Reply_ProcessUnhandledEvent.a_aOutTargetGuid)
 }
 
-// required uint64 a_aOutFocusSequenceNumber = 3;
+// optional uint64 a_aOutFocusSequenceNumber = 3;
 inline bool Reply_ProcessUnhandledEvent::_internal_has_a_aoutfocussequencenumber() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -5636,7 +5612,7 @@ inline void Reply_ProcessUnhandledEvent::set_allocated_a_aoutlayersid(std::strin
 
 // Msg_CallInputBlockCallback
 
-// required uint64 a_aInputBlockId = 1;
+// optional uint64 a_aInputBlockId = 1;
 inline bool Msg_CallInputBlockCallback::_internal_has_a_ainputblockid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6008,7 +5984,7 @@ inline void Msg_HandleTap::set_allocated_a_aguid(std::string* a_aguid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZInputBridge.Msg_HandleTap.a_aGuid)
 }
 
-// required uint64 a_aInputBlockId = 5;
+// optional uint64 a_aInputBlockId = 5;
 inline bool Msg_HandleTap::_internal_has_a_ainputblockid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;

@@ -196,7 +196,7 @@ class ScriptData final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_xdrdata();
 
-  // required string a_url = 1;
+  // optional string a_url = 1;
   bool has_a_url() const;
   private:
   bool _internal_has_a_url() const;
@@ -214,7 +214,7 @@ class ScriptData final :
   std::string* _internal_mutable_a_url();
   public:
 
-  // required string a_cachePath = 2;
+  // optional string a_cachePath = 2;
   bool has_a_cachepath() const;
   private:
   bool _internal_has_a_cachepath() const;
@@ -254,9 +254,6 @@ class ScriptData final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
@@ -282,7 +279,7 @@ class ScriptData final :
 #endif  // __GNUC__
 // ScriptData
 
-// required string a_url = 1;
+// optional string a_url = 1;
 inline bool ScriptData::_internal_has_a_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -350,7 +347,7 @@ inline void ScriptData::set_allocated_a_url(std::string* a_url) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.loader.ScriptData.a_url)
 }
 
-// required string a_cachePath = 2;
+// optional string a_cachePath = 2;
 inline bool ScriptData::_internal_has_a_cachepath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

@@ -23,7 +23,7 @@ message Msg_Destroy {
 }
 
 message Msg_NotifyResult {
-  required bool a_allow = 1;
+  optional bool a_allow = 1;
   repeated protobuf.mozilla.dom.PermissionChoice a_choices = 2;
 }
 

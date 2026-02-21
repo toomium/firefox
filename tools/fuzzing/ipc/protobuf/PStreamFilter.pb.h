@@ -1496,7 +1496,7 @@ class Msg_Error final :
   enum : int {
     kAErrorFieldNumber = 1,
   };
-  // required string a_error = 1;
+  // optional string a_error = 1;
   bool has_a_error() const;
   private:
   bool _internal_has_a_error() const;
@@ -2172,7 +2172,7 @@ Msg_Write::mutable_a_data() {
 
 // Msg_Error
 
-// required string a_error = 1;
+// optional string a_error = 1;
 inline bool Msg_Error::_internal_has_a_error() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

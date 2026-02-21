@@ -17,8 +17,8 @@ import "PTestDataStructuresCommon.proto";
 
 // Message declarations
 message Msg_PTestDataStructuresSubConstructor {
-  required sint64 a_actorid = 1;
-  required sint32 a_i = 2;
+  optional sint64 a_actorid = 1;
+  optional sint32 a_i = 2;
 }
 
 message Reply_PTestDataStructuresSubConstructor {

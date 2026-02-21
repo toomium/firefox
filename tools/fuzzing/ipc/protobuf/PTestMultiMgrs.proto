@@ -19,14 +19,14 @@ message Msg_OK {
 }
 
 message Msg_PTestMultiMgrsLeftConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
 }
 
 message Reply_PTestMultiMgrsLeftConstructor {
 }
 
 message Msg_PTestMultiMgrsRightConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
 }
 
 message Reply_PTestMultiMgrsRightConstructor {

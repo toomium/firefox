@@ -13,7 +13,7 @@ package protobuf.mozilla._ipdltest;
 
 // Structs and unions declarations
 message KeyValue {
-  required string a_key = 1;
+  optional string a_key = 1;
   required protobuf.mozilla._ipdltest.JSONVariant a_value = 2;
 }
 

@@ -798,7 +798,7 @@ class Msg_DeleteObjectStore final :
   enum : int {
     kAObjectStoreIdFieldNumber = 1,
   };
-  // required sint64 a_objectStoreId = 1;
+  // optional sint64 a_objectStoreId = 1;
   bool has_a_objectstoreid() const;
   private:
   bool _internal_has_a_objectstoreid() const;
@@ -941,7 +941,7 @@ class Msg_RenameObjectStore final :
     kANameFieldNumber = 2,
     kAObjectStoreIdFieldNumber = 1,
   };
-  // required string a_name = 2;
+  // optional string a_name = 2;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -959,7 +959,7 @@ class Msg_RenameObjectStore final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required sint64 a_objectStoreId = 1;
+  // optional sint64 a_objectStoreId = 1;
   bool has_a_objectstoreid() const;
   private:
   bool _internal_has_a_objectstoreid() const;
@@ -975,9 +975,6 @@ class Msg_RenameObjectStore final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.PBackgroundIDBVersionChangeTransaction.Msg_RenameObjectStore)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1124,7 +1121,7 @@ class Msg_CreateIndex final :
       ::protobuf::mozilla::dom::indexedDB::IndexMetadata* a_metadata);
   ::protobuf::mozilla::dom::indexedDB::IndexMetadata* unsafe_arena_release_a_metadata();
 
-  // required sint64 a_objectStoreId = 1;
+  // optional sint64 a_objectStoreId = 1;
   bool has_a_objectstoreid() const;
   private:
   bool _internal_has_a_objectstoreid() const;
@@ -1140,9 +1137,6 @@ class Msg_CreateIndex final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.PBackgroundIDBVersionChangeTransaction.Msg_CreateIndex)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1271,7 +1265,7 @@ class Msg_DeleteIndex final :
     kAObjectStoreIdFieldNumber = 1,
     kAIndexIdFieldNumber = 2,
   };
-  // required sint64 a_objectStoreId = 1;
+  // optional sint64 a_objectStoreId = 1;
   bool has_a_objectstoreid() const;
   private:
   bool _internal_has_a_objectstoreid() const;
@@ -1284,7 +1278,7 @@ class Msg_DeleteIndex final :
   void _internal_set_a_objectstoreid(int64_t value);
   public:
 
-  // required sint64 a_indexId = 2;
+  // optional sint64 a_indexId = 2;
   bool has_a_indexid() const;
   private:
   bool _internal_has_a_indexid() const;
@@ -1300,9 +1294,6 @@ class Msg_DeleteIndex final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.PBackgroundIDBVersionChangeTransaction.Msg_DeleteIndex)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1432,7 +1423,7 @@ class Msg_RenameIndex final :
     kAObjectStoreIdFieldNumber = 1,
     kAIndexIdFieldNumber = 2,
   };
-  // required string a_name = 3;
+  // optional string a_name = 3;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -1450,7 +1441,7 @@ class Msg_RenameIndex final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required sint64 a_objectStoreId = 1;
+  // optional sint64 a_objectStoreId = 1;
   bool has_a_objectstoreid() const;
   private:
   bool _internal_has_a_objectstoreid() const;
@@ -1463,7 +1454,7 @@ class Msg_RenameIndex final :
   void _internal_set_a_objectstoreid(int64_t value);
   public:
 
-  // required sint64 a_indexId = 2;
+  // optional sint64 a_indexId = 2;
   bool has_a_indexid() const;
   private:
   bool _internal_has_a_indexid() const;
@@ -1479,9 +1470,6 @@ class Msg_RenameIndex final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.PBackgroundIDBVersionChangeTransaction.Msg_RenameIndex)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1630,7 +1618,7 @@ class Msg_PBackgroundIDBCursorConstructor final :
       ::protobuf::mozilla::dom::indexedDB::OpenCursorParams* a_params);
   ::protobuf::mozilla::dom::indexedDB::OpenCursorParams* unsafe_arena_release_a_params();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -1643,7 +1631,7 @@ class Msg_PBackgroundIDBCursorConstructor final :
   void _internal_set_a_actorid(int64_t value);
   public:
 
-  // required sint64 a_requestId = 2;
+  // optional sint64 a_requestId = 2;
   bool has_a_requestid() const;
   private:
   bool _internal_has_a_requestid() const;
@@ -1659,9 +1647,6 @@ class Msg_PBackgroundIDBCursorConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.PBackgroundIDBVersionChangeTransaction.Msg_PBackgroundIDBCursorConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1934,7 +1919,7 @@ class Msg_PBackgroundIDBRequestConstructor final :
       ::protobuf::mozilla::dom::indexedDB::RequestParams* a_params);
   ::protobuf::mozilla::dom::indexedDB::RequestParams* unsafe_arena_release_a_params();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -1947,7 +1932,7 @@ class Msg_PBackgroundIDBRequestConstructor final :
   void _internal_set_a_actorid(int64_t value);
   public:
 
-  // required sint64 a_requestId = 2;
+  // optional sint64 a_requestId = 2;
   bool has_a_requestid() const;
   private:
   bool _internal_has_a_requestid() const;
@@ -1963,9 +1948,6 @@ class Msg_PBackgroundIDBRequestConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.PBackgroundIDBVersionChangeTransaction.Msg_PBackgroundIDBRequestConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2709,7 +2691,7 @@ inline void Msg_CreateObjectStore::set_allocated_a_metadata(::protobuf::mozilla:
 
 // Msg_DeleteObjectStore
 
-// required sint64 a_objectStoreId = 1;
+// optional sint64 a_objectStoreId = 1;
 inline bool Msg_DeleteObjectStore::_internal_has_a_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2741,7 +2723,7 @@ inline void Msg_DeleteObjectStore::set_a_objectstoreid(int64_t value) {
 
 // Msg_RenameObjectStore
 
-// required sint64 a_objectStoreId = 1;
+// optional sint64 a_objectStoreId = 1;
 inline bool Msg_RenameObjectStore::_internal_has_a_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2769,7 +2751,7 @@ inline void Msg_RenameObjectStore::set_a_objectstoreid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIDBVersionChangeTransaction.Msg_RenameObjectStore.a_objectStoreId)
 }
 
-// required string a_name = 2;
+// optional string a_name = 2;
 inline bool Msg_RenameObjectStore::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2841,7 +2823,7 @@ inline void Msg_RenameObjectStore::set_allocated_a_name(std::string* a_name) {
 
 // Msg_CreateIndex
 
-// required sint64 a_objectStoreId = 1;
+// optional sint64 a_objectStoreId = 1;
 inline bool Msg_CreateIndex::_internal_has_a_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2960,7 +2942,7 @@ inline void Msg_CreateIndex::set_allocated_a_metadata(::protobuf::mozilla::dom::
 
 // Msg_DeleteIndex
 
-// required sint64 a_objectStoreId = 1;
+// optional sint64 a_objectStoreId = 1;
 inline bool Msg_DeleteIndex::_internal_has_a_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2988,7 +2970,7 @@ inline void Msg_DeleteIndex::set_a_objectstoreid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIDBVersionChangeTransaction.Msg_DeleteIndex.a_objectStoreId)
 }
 
-// required sint64 a_indexId = 2;
+// optional sint64 a_indexId = 2;
 inline bool Msg_DeleteIndex::_internal_has_a_indexid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3020,7 +3002,7 @@ inline void Msg_DeleteIndex::set_a_indexid(int64_t value) {
 
 // Msg_RenameIndex
 
-// required sint64 a_objectStoreId = 1;
+// optional sint64 a_objectStoreId = 1;
 inline bool Msg_RenameIndex::_internal_has_a_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3048,7 +3030,7 @@ inline void Msg_RenameIndex::set_a_objectstoreid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIDBVersionChangeTransaction.Msg_RenameIndex.a_objectStoreId)
 }
 
-// required sint64 a_indexId = 2;
+// optional sint64 a_indexId = 2;
 inline bool Msg_RenameIndex::_internal_has_a_indexid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -3076,7 +3058,7 @@ inline void Msg_RenameIndex::set_a_indexid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIDBVersionChangeTransaction.Msg_RenameIndex.a_indexId)
 }
 
-// required string a_name = 3;
+// optional string a_name = 3;
 inline bool Msg_RenameIndex::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3148,7 +3130,7 @@ inline void Msg_RenameIndex::set_allocated_a_name(std::string* a_name) {
 
 // Msg_PBackgroundIDBCursorConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PBackgroundIDBCursorConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3176,7 +3158,7 @@ inline void Msg_PBackgroundIDBCursorConstructor::set_a_actorid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIDBVersionChangeTransaction.Msg_PBackgroundIDBCursorConstructor.a_actorid)
 }
 
-// required sint64 a_requestId = 2;
+// optional sint64 a_requestId = 2;
 inline bool Msg_PBackgroundIDBCursorConstructor::_internal_has_a_requestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -3299,7 +3281,7 @@ inline void Msg_PBackgroundIDBCursorConstructor::set_allocated_a_params(::protob
 
 // Msg_PBackgroundIDBRequestConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PBackgroundIDBRequestConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3327,7 +3309,7 @@ inline void Msg_PBackgroundIDBRequestConstructor::set_a_actorid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIDBVersionChangeTransaction.Msg_PBackgroundIDBRequestConstructor.a_actorid)
 }
 
-// required sint64 a_requestId = 2;
+// optional sint64 a_requestId = 2;
 inline bool Msg_PBackgroundIDBRequestConstructor::_internal_has_a_requestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

@@ -177,7 +177,7 @@ class IPCLockRequest final :
     kAIfAvailableFieldNumber = 3,
     kAStealFieldNumber = 4,
   };
-  // required string a_name = 1;
+  // optional string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -213,7 +213,7 @@ class IPCLockRequest final :
   std::string* _internal_mutable_a_lockmode();
   public:
 
-  // required bool a_ifAvailable = 3;
+  // optional bool a_ifAvailable = 3;
   bool has_a_ifavailable() const;
   private:
   bool _internal_has_a_ifavailable() const;
@@ -226,7 +226,7 @@ class IPCLockRequest final :
   void _internal_set_a_ifavailable(bool value);
   public:
 
-  // required bool a_steal = 4;
+  // optional bool a_steal = 4;
   bool has_a_steal() const;
   private:
   bool _internal_has_a_steal() const;
@@ -242,9 +242,6 @@ class IPCLockRequest final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.locks.IPCLockRequest)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -271,7 +268,7 @@ class IPCLockRequest final :
 #endif  // __GNUC__
 // IPCLockRequest
 
-// required string a_name = 1;
+// optional string a_name = 1;
 inline bool IPCLockRequest::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -407,7 +404,7 @@ inline void IPCLockRequest::set_allocated_a_lockmode(std::string* a_lockmode) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.locks.IPCLockRequest.a_lockMode)
 }
 
-// required bool a_ifAvailable = 3;
+// optional bool a_ifAvailable = 3;
 inline bool IPCLockRequest::_internal_has_a_ifavailable() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -435,7 +432,7 @@ inline void IPCLockRequest::set_a_ifavailable(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.locks.IPCLockRequest.a_ifAvailable)
 }
 
-// required bool a_steal = 4;
+// optional bool a_steal = 4;
 inline bool IPCLockRequest::_internal_has_a_steal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;

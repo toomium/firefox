@@ -371,7 +371,7 @@ class EncodeInitCompletionIPDL final :
     kAHardwareReasonFieldNumber = 3,
     kAHardwareFieldNumber = 2,
   };
-  // required string a_description = 1;
+  // optional string a_description = 1;
   bool has_a_description() const;
   private:
   bool _internal_has_a_description() const;
@@ -389,7 +389,7 @@ class EncodeInitCompletionIPDL final :
   std::string* _internal_mutable_a_description();
   public:
 
-  // required string a_hardwareReason = 3;
+  // optional string a_hardwareReason = 3;
   bool has_a_hardwarereason() const;
   private:
   bool _internal_has_a_hardwarereason() const;
@@ -407,7 +407,7 @@ class EncodeInitCompletionIPDL final :
   std::string* _internal_mutable_a_hardwarereason();
   public:
 
-  // required bool a_hardware = 2;
+  // optional bool a_hardware = 2;
   bool has_a_hardware() const;
   private:
   bool _internal_has_a_hardware() const;
@@ -423,9 +423,6 @@ class EncodeInitCompletionIPDL final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.EncodeInitCompletionIPDL)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -758,7 +755,7 @@ class EncodeCompletionIPDL final :
   std::string* _internal_mutable_a_samples();
   public:
 
-  // required uint32 a_ticketId = 2;
+  // optional uint32 a_ticketId = 2;
   bool has_a_ticketid() const;
   private:
   bool _internal_has_a_ticketid() const;
@@ -1150,7 +1147,7 @@ inline EncodedInputIPDL::ContentCase EncodedInputIPDL::content_case() const {
 
 // EncodeInitCompletionIPDL
 
-// required string a_description = 1;
+// optional string a_description = 1;
 inline bool EncodeInitCompletionIPDL::_internal_has_a_description() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1218,7 +1215,7 @@ inline void EncodeInitCompletionIPDL::set_allocated_a_description(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.EncodeInitCompletionIPDL.a_description)
 }
 
-// required bool a_hardware = 2;
+// optional bool a_hardware = 2;
 inline bool EncodeInitCompletionIPDL::_internal_has_a_hardware() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1246,7 +1243,7 @@ inline void EncodeInitCompletionIPDL::set_a_hardware(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.EncodeInitCompletionIPDL.a_hardware)
 }
 
-// required string a_hardwareReason = 3;
+// optional string a_hardwareReason = 3;
 inline bool EncodeInitCompletionIPDL::_internal_has_a_hardwarereason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1550,7 +1547,7 @@ inline void EncodeCompletionIPDL::set_allocated_a_samples(std::string* a_samples
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.EncodeCompletionIPDL.a_samples)
 }
 
-// required uint32 a_ticketId = 2;
+// optional uint32 a_ticketId = 2;
 inline bool EncodeCompletionIPDL::_internal_has_a_ticketid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

@@ -175,7 +175,7 @@ class RemoteVoice final :
     kALocalServiceFieldNumber = 4,
     kAQueuedFieldNumber = 5,
   };
-  // required string a_voiceURI = 1;
+  // optional string a_voiceURI = 1;
   bool has_a_voiceuri() const;
   private:
   bool _internal_has_a_voiceuri() const;
@@ -193,7 +193,7 @@ class RemoteVoice final :
   std::string* _internal_mutable_a_voiceuri();
   public:
 
-  // required string a_name = 2;
+  // optional string a_name = 2;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -211,7 +211,7 @@ class RemoteVoice final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required string a_lang = 3;
+  // optional string a_lang = 3;
   bool has_a_lang() const;
   private:
   bool _internal_has_a_lang() const;
@@ -229,7 +229,7 @@ class RemoteVoice final :
   std::string* _internal_mutable_a_lang();
   public:
 
-  // required bool a_localService = 4;
+  // optional bool a_localService = 4;
   bool has_a_localservice() const;
   private:
   bool _internal_has_a_localservice() const;
@@ -242,7 +242,7 @@ class RemoteVoice final :
   void _internal_set_a_localservice(bool value);
   public:
 
-  // required bool a_queued = 5;
+  // optional bool a_queued = 5;
   bool has_a_queued() const;
   private:
   bool _internal_has_a_queued() const;
@@ -258,9 +258,6 @@ class RemoteVoice final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.RemoteVoice)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -288,7 +285,7 @@ class RemoteVoice final :
 #endif  // __GNUC__
 // RemoteVoice
 
-// required string a_voiceURI = 1;
+// optional string a_voiceURI = 1;
 inline bool RemoteVoice::_internal_has_a_voiceuri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -356,7 +353,7 @@ inline void RemoteVoice::set_allocated_a_voiceuri(std::string* a_voiceuri) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteVoice.a_voiceURI)
 }
 
-// required string a_name = 2;
+// optional string a_name = 2;
 inline bool RemoteVoice::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -424,7 +421,7 @@ inline void RemoteVoice::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteVoice.a_name)
 }
 
-// required string a_lang = 3;
+// optional string a_lang = 3;
 inline bool RemoteVoice::_internal_has_a_lang() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -492,7 +489,7 @@ inline void RemoteVoice::set_allocated_a_lang(std::string* a_lang) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteVoice.a_lang)
 }
 
-// required bool a_localService = 4;
+// optional bool a_localService = 4;
 inline bool RemoteVoice::_internal_has_a_localservice() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -520,7 +517,7 @@ inline void RemoteVoice::set_a_localservice(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteVoice.a_localService)
 }
 
-// required bool a_queued = 5;
+// optional bool a_queued = 5;
 inline bool RemoteVoice::_internal_has_a_queued() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;

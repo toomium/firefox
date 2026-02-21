@@ -215,7 +215,7 @@ class LSSnapshotInitInfo final :
   std::string* _internal_mutable_a_loadstate();
   public:
 
-  // required sint64 a_usage = 4;
+  // optional sint64 a_usage = 4;
   bool has_a_usage() const;
   private:
   bool _internal_has_a_usage() const;
@@ -228,7 +228,7 @@ class LSSnapshotInitInfo final :
   void _internal_set_a_usage(int64_t value);
   public:
 
-  // required uint32 a_totalLength = 3;
+  // optional uint32 a_totalLength = 3;
   bool has_a_totallength() const;
   private:
   bool _internal_has_a_totallength() const;
@@ -241,7 +241,7 @@ class LSSnapshotInitInfo final :
   void _internal_set_a_totallength(uint32_t value);
   public:
 
-  // required bool a_addKeyToUnknownItems = 1;
+  // optional bool a_addKeyToUnknownItems = 1;
   bool has_a_addkeytounknownitems() const;
   private:
   bool _internal_has_a_addkeytounknownitems() const;
@@ -254,7 +254,7 @@ class LSSnapshotInitInfo final :
   void _internal_set_a_addkeytounknownitems(bool value);
   public:
 
-  // required bool a_hasOtherProcessDatabases = 7;
+  // optional bool a_hasOtherProcessDatabases = 7;
   bool has_a_hasotherprocessdatabases() const;
   private:
   bool _internal_has_a_hasotherprocessdatabases() const;
@@ -267,7 +267,7 @@ class LSSnapshotInitInfo final :
   void _internal_set_a_hasotherprocessdatabases(bool value);
   public:
 
-  // required bool a_hasOtherProcessObservers = 8;
+  // optional bool a_hasOtherProcessObservers = 8;
   bool has_a_hasotherprocessobservers() const;
   private:
   bool _internal_has_a_hasotherprocessobservers() const;
@@ -280,7 +280,7 @@ class LSSnapshotInitInfo final :
   void _internal_set_a_hasotherprocessobservers(bool value);
   public:
 
-  // required sint64 a_peakUsage = 5;
+  // optional sint64 a_peakUsage = 5;
   bool has_a_peakusage() const;
   private:
   bool _internal_has_a_peakusage() const;
@@ -296,9 +296,6 @@ class LSSnapshotInitInfo final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.LSSnapshotInitInfo)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -329,7 +326,7 @@ class LSSnapshotInitInfo final :
 #endif  // __GNUC__
 // LSSnapshotInitInfo
 
-// required bool a_addKeyToUnknownItems = 1;
+// optional bool a_addKeyToUnknownItems = 1;
 inline bool LSSnapshotInitInfo::_internal_has_a_addkeytounknownitems() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -394,7 +391,7 @@ LSSnapshotInitInfo::a_iteminfos() const {
   return _impl_.a_iteminfos_;
 }
 
-// required uint32 a_totalLength = 3;
+// optional uint32 a_totalLength = 3;
 inline bool LSSnapshotInitInfo::_internal_has_a_totallength() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -422,7 +419,7 @@ inline void LSSnapshotInitInfo::set_a_totallength(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSnapshotInitInfo.a_totalLength)
 }
 
-// required sint64 a_usage = 4;
+// optional sint64 a_usage = 4;
 inline bool LSSnapshotInitInfo::_internal_has_a_usage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -450,7 +447,7 @@ inline void LSSnapshotInitInfo::set_a_usage(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSnapshotInitInfo.a_usage)
 }
 
-// required sint64 a_peakUsage = 5;
+// optional sint64 a_peakUsage = 5;
 inline bool LSSnapshotInitInfo::_internal_has_a_peakusage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -546,7 +543,7 @@ inline void LSSnapshotInitInfo::set_allocated_a_loadstate(std::string* a_loadsta
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSSnapshotInitInfo.a_loadState)
 }
 
-// required bool a_hasOtherProcessDatabases = 7;
+// optional bool a_hasOtherProcessDatabases = 7;
 inline bool LSSnapshotInitInfo::_internal_has_a_hasotherprocessdatabases() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -574,7 +571,7 @@ inline void LSSnapshotInitInfo::set_a_hasotherprocessdatabases(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSnapshotInitInfo.a_hasOtherProcessDatabases)
 }
 
-// required bool a_hasOtherProcessObservers = 8;
+// optional bool a_hasOtherProcessObservers = 8;
 inline bool LSSnapshotInitInfo::_internal_has_a_hasotherprocessobservers() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;

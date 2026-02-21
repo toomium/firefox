@@ -642,9 +642,6 @@ class Msg_PTestDataStructuresSubConstructor::_Internal {
   static void set_has_a_i(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
-  }
 };
 
 Msg_PTestDataStructuresSubConstructor::Msg_PTestDataStructuresSubConstructor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -721,7 +718,7 @@ const char* Msg_PTestDataStructuresSubConstructor::_InternalParse(const char* pt
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint64 a_actorid = 1;
+      // optional sint64 a_actorid = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_actorid(&has_bits);
@@ -730,7 +727,7 @@ const char* Msg_PTestDataStructuresSubConstructor::_InternalParse(const char* pt
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_i = 2;
+      // optional sint32 a_i = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_i(&has_bits);
@@ -770,13 +767,13 @@ uint8_t* Msg_PTestDataStructuresSubConstructor::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_actorid(), target);
   }
 
-  // required sint32 a_i = 2;
+  // optional sint32 a_i = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_a_i(), target);
@@ -790,40 +787,27 @@ uint8_t* Msg_PTestDataStructuresSubConstructor::_InternalSerialize(
   return target;
 }
 
-size_t Msg_PTestDataStructuresSubConstructor::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla._ipdltest.PTestDataStructures.Msg_PTestDataStructuresSubConstructor)
-  size_t total_size = 0;
-
-  if (_internal_has_a_actorid()) {
-    // required sint64 a_actorid = 1;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
-  }
-
-  if (_internal_has_a_i()) {
-    // required sint32 a_i = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_i());
-  }
-
-  return total_size;
-}
 size_t Msg_PTestDataStructuresSubConstructor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestDataStructures.Msg_PTestDataStructuresSubConstructor)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required sint64 a_actorid = 1;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
-
-    // required sint32 a_i = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_i());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional sint64 a_actorid = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
+    }
+
+    // optional sint32 a_i = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_i());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -866,7 +850,6 @@ void Msg_PTestDataStructuresSubConstructor::CopyFrom(const Msg_PTestDataStructur
 }
 
 bool Msg_PTestDataStructuresSubConstructor::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -7148,9 +7131,6 @@ void Msg_TestStruct::CopyFrom(const Msg_TestStruct& from) {
 
 bool Msg_TestStruct::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_i()) {
-    if (!_impl_.a_i_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -7365,9 +7345,6 @@ void Reply_TestStruct::CopyFrom(const Reply_TestStruct& from) {
 
 bool Reply_TestStruct::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_o()) {
-    if (!_impl_.a_o_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -7582,9 +7559,6 @@ void Msg_TestStructWithArrays::CopyFrom(const Msg_TestStructWithArrays& from) {
 
 bool Msg_TestStructWithArrays::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_i()) {
-    if (!_impl_.a_i_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -7799,9 +7773,6 @@ void Reply_TestStructWithArrays::CopyFrom(const Reply_TestStructWithArrays& from
 
 bool Reply_TestStructWithArrays::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_o()) {
-    if (!_impl_.a_o_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -8016,9 +7987,6 @@ void Msg_TestStructWithActors::CopyFrom(const Msg_TestStructWithActors& from) {
 
 bool Msg_TestStructWithActors::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_i()) {
-    if (!_impl_.a_i_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -8233,9 +8201,6 @@ void Reply_TestStructWithActors::CopyFrom(const Reply_TestStructWithActors& from
 
 bool Reply_TestStructWithActors::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_o()) {
-    if (!_impl_.a_o_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -8450,9 +8415,6 @@ void Msg_TestStructs::CopyFrom(const Msg_TestStructs& from) {
 
 bool Msg_TestStructs::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_i()) {
-    if (!_impl_.a_i_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -8667,9 +8629,6 @@ void Reply_TestStructs::CopyFrom(const Reply_TestStructs& from) {
 
 bool Reply_TestStructs::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_o()) {
-    if (!_impl_.a_o_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -9117,21 +9076,6 @@ void Msg_TestUnionWithStructs::CopyFrom(const Msg_TestUnionWithStructs& from) {
 
 bool Msg_TestUnionWithStructs::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_i1()) {
-    if (!_impl_.a_i1_->IsInitialized()) return false;
-  }
-  if (_internal_has_a_i2()) {
-    if (!_impl_.a_i2_->IsInitialized()) return false;
-  }
-  if (_internal_has_a_i3()) {
-    if (!_impl_.a_i3_->IsInitialized()) return false;
-  }
-  if (_internal_has_a_i4()) {
-    if (!_impl_.a_i4_->IsInitialized()) return false;
-  }
-  if (_internal_has_a_i5()) {
-    if (!_impl_.a_i5_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -9584,21 +9528,6 @@ void Reply_TestUnionWithStructs::CopyFrom(const Reply_TestUnionWithStructs& from
 
 bool Reply_TestUnionWithStructs::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_o1()) {
-    if (!_impl_.a_o1_->IsInitialized()) return false;
-  }
-  if (_internal_has_a_o2()) {
-    if (!_impl_.a_o2_->IsInitialized()) return false;
-  }
-  if (_internal_has_a_o3()) {
-    if (!_impl_.a_o3_->IsInitialized()) return false;
-  }
-  if (_internal_has_a_o4()) {
-    if (!_impl_.a_o4_->IsInitialized()) return false;
-  }
-  if (_internal_has_a_o5()) {
-    if (!_impl_.a_o5_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -9818,9 +9747,6 @@ void Msg_TestStructWithUnions::CopyFrom(const Msg_TestStructWithUnions& from) {
 
 bool Msg_TestStructWithUnions::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_i()) {
-    if (!_impl_.a_i_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -10035,9 +9961,6 @@ void Reply_TestStructWithUnions::CopyFrom(const Reply_TestStructWithUnions& from
 
 bool Reply_TestStructWithUnions::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_o()) {
-    if (!_impl_.a_o_->IsInitialized()) return false;
-  }
   return true;
 }
 

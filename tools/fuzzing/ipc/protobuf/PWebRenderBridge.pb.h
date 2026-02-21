@@ -523,7 +523,7 @@ class Reply_EnsureConnected final :
   std::string* _internal_mutable_a_maybeidnamespace();
   public:
 
-  // required string a_error = 3;
+  // optional string a_error = 3;
   bool has_a_error() const;
   private:
   bool _internal_has_a_error() const;
@@ -1304,7 +1304,7 @@ class Msg_SetDisplayList final :
   std::string* _internal_mutable_a_txnstarttime();
   public:
 
-  // required string a_txnURL = 10;
+  // optional string a_txnURL = 10;
   bool has_a_txnurl() const;
   private:
   bool _internal_has_a_txnurl() const;
@@ -1340,7 +1340,7 @@ class Msg_SetDisplayList final :
   std::string* _internal_mutable_a_fwdtime();
   public:
 
-  // required uint64 a_fwdTransactionId = 3;
+  // optional uint64 a_fwdTransactionId = 3;
   bool has_a_fwdtransactionid() const;
   private:
   bool _internal_has_a_fwdtransactionid() const;
@@ -1353,7 +1353,7 @@ class Msg_SetDisplayList final :
   void _internal_set_a_fwdtransactionid(uint64_t value);
   public:
 
-  // required bool a_containsSVGGroup = 5;
+  // optional bool a_containsSVGGroup = 5;
   bool has_a_containssvggroup() const;
   private:
   bool _internal_has_a_containssvggroup() const;
@@ -1366,7 +1366,7 @@ class Msg_SetDisplayList final :
   void _internal_set_a_containssvggroup(bool value);
   public:
 
-  // required bool a_renderOffscreen = 13;
+  // optional bool a_renderOffscreen = 13;
   bool has_a_renderoffscreen() const;
   private:
   bool _internal_has_a_renderoffscreen() const;
@@ -1702,7 +1702,7 @@ class Msg_EmptyTransaction final :
   std::string* _internal_mutable_a_txnstarttime();
   public:
 
-  // required string a_txnURL = 10;
+  // optional string a_txnURL = 10;
   bool has_a_txnurl() const;
   private:
   bool _internal_has_a_txnurl() const;
@@ -1738,7 +1738,7 @@ class Msg_EmptyTransaction final :
   std::string* _internal_mutable_a_fwdtime();
   public:
 
-  // required uint64 a_fwdTransactionId = 4;
+  // optional uint64 a_fwdTransactionId = 4;
   bool has_a_fwdtransactionid() const;
   private:
   bool _internal_has_a_fwdtransactionid() const;
@@ -2568,7 +2568,7 @@ class Reply_GetSnapshot final :
   enum : int {
     kAANeedsYFlipFieldNumber = 1,
   };
-  // required bool a_aNeedsYFlip = 1;
+  // optional bool a_aNeedsYFlip = 1;
   bool has_a_aneedsyflip() const;
   private:
   bool _internal_has_a_aneedsyflip() const;
@@ -2958,7 +2958,7 @@ class Msg_SetDefaultClearColor final :
   enum : int {
     kAAColorFieldNumber = 1,
   };
-  // required uint32 a_aColor = 1;
+  // optional uint32 a_aColor = 1;
   bool has_a_acolor() const;
   private:
   bool _internal_has_a_acolor() const;
@@ -3496,7 +3496,7 @@ class Msg_StartCaptureSequence final :
     kAAPathFieldNumber = 1,
     kAAFlagsFieldNumber = 2,
   };
-  // required string a_aPath = 1;
+  // optional string a_aPath = 1;
   bool has_a_apath() const;
   private:
   bool _internal_has_a_apath() const;
@@ -3514,7 +3514,7 @@ class Msg_StartCaptureSequence final :
   std::string* _internal_mutable_a_apath();
   public:
 
-  // required uint32 a_aFlags = 2;
+  // optional uint32 a_aFlags = 2;
   bool has_a_aflags() const;
   private:
   bool _internal_has_a_aflags() const;
@@ -3530,9 +3530,6 @@ class Msg_StartCaptureSequence final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PWebRenderBridge.Msg_StartCaptureSequence)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4057,7 +4054,7 @@ class Msg_SetConfirmedTargetAPZC final :
   std::string* _internal_add_a_atargets();
   public:
 
-  // required uint64 a_aInputBlockId = 1;
+  // optional uint64 a_aInputBlockId = 1;
   bool has_a_ainputblockid() const;
   private:
   bool _internal_has_a_ainputblockid() const;
@@ -4719,7 +4716,7 @@ class Msg_GetAnimationValue final :
   enum : int {
     kAACompositorAnimationsIdFieldNumber = 1,
   };
-  // required uint64 a_aCompositorAnimationsId = 1;
+  // optional uint64 a_aCompositorAnimationsId = 1;
   bool has_a_acompositoranimationsid() const;
   private:
   bool _internal_has_a_acompositoranimationsid() const;
@@ -5028,7 +5025,7 @@ class Msg_SetAsyncScrollOffset final :
   std::string* _internal_mutable_a_scrollid();
   public:
 
-  // required float a_x = 2;
+  // optional float a_x = 2;
   bool has_a_x() const;
   private:
   bool _internal_has_a_x() const;
@@ -5041,7 +5038,7 @@ class Msg_SetAsyncScrollOffset final :
   void _internal_set_a_x(float value);
   public:
 
-  // required float a_y = 3;
+  // optional float a_y = 3;
   bool has_a_y() const;
   private:
   bool _internal_has_a_y() const;
@@ -5057,9 +5054,6 @@ class Msg_SetAsyncScrollOffset final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PWebRenderBridge.Msg_SetAsyncScrollOffset)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5331,7 +5325,7 @@ class Msg_SetAsyncZoom final :
   std::string* _internal_mutable_a_scrollid();
   public:
 
-  // required float a_zoom = 2;
+  // optional float a_zoom = 2;
   bool has_a_zoom() const;
   private:
   bool _internal_has_a_zoom() const;
@@ -5347,9 +5341,6 @@ class Msg_SetAsyncZoom final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PWebRenderBridge.Msg_SetAsyncZoom)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -6391,7 +6382,7 @@ class Reply_EndWheelTransaction final :
   enum : int {
     kAUnusedFieldNumber = 1,
   };
-  // required bool a_unused = 1;
+  // optional bool a_unused = 1;
   bool has_a_unused() const;
   private:
   bool _internal_has_a_unused() const;
@@ -7512,7 +7503,7 @@ inline void Reply_EnsureConnected::set_allocated_a_maybeidnamespace(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PWebRenderBridge.Reply_EnsureConnected.a_maybeIdNamespace)
 }
 
-// required string a_error = 3;
+// optional string a_error = 3;
 inline bool Reply_EnsureConnected::_internal_has_a_error() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -7952,7 +7943,7 @@ Msg_SetDisplayList::a_todestroy() const {
   return _impl_.a_todestroy_;
 }
 
-// required uint64 a_fwdTransactionId = 3;
+// optional uint64 a_fwdTransactionId = 3;
 inline bool Msg_SetDisplayList::_internal_has_a_fwdtransactionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -8048,7 +8039,7 @@ inline void Msg_SetDisplayList::set_allocated_a_transactionid(std::string* a_tra
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PWebRenderBridge.Msg_SetDisplayList.a_transactionId)
 }
 
-// required bool a_containsSVGGroup = 5;
+// optional bool a_containsSVGGroup = 5;
 inline bool Msg_SetDisplayList::_internal_has_a_containssvggroup() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -8348,7 +8339,7 @@ inline void Msg_SetDisplayList::set_allocated_a_txnstarttime(std::string* a_txns
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PWebRenderBridge.Msg_SetDisplayList.a_txnStartTime)
 }
 
-// required string a_txnURL = 10;
+// optional string a_txnURL = 10;
 inline bool Msg_SetDisplayList::_internal_has_a_txnurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -8559,7 +8550,7 @@ Msg_SetDisplayList::mutable_a_payloads() {
   return &_impl_.a_payloads_;
 }
 
-// required bool a_renderOffscreen = 13;
+// optional bool a_renderOffscreen = 13;
 inline bool Msg_SetDisplayList::_internal_has_a_renderoffscreen() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
@@ -8764,7 +8755,7 @@ Msg_EmptyTransaction::a_todestroy() const {
   return _impl_.a_todestroy_;
 }
 
-// required uint64 a_fwdTransactionId = 4;
+// optional uint64 a_fwdTransactionId = 4;
 inline bool Msg_EmptyTransaction::_internal_has_a_fwdtransactionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -9132,7 +9123,7 @@ inline void Msg_EmptyTransaction::set_allocated_a_txnstarttime(std::string* a_tx
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PWebRenderBridge.Msg_EmptyTransaction.a_txnStartTime)
 }
 
-// required string a_txnURL = 10;
+// optional string a_txnURL = 10;
 inline bool Msg_EmptyTransaction::_internal_has_a_txnurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -9821,7 +9812,7 @@ inline void Msg_GetSnapshot::set_allocated_a_texture(std::string* a_texture) {
 
 // Reply_GetSnapshot
 
-// required bool a_aNeedsYFlip = 1;
+// optional bool a_aNeedsYFlip = 1;
 inline bool Reply_GetSnapshot::_internal_has_a_aneedsyflip() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9861,7 +9852,7 @@ inline void Reply_GetSnapshot::set_a_aneedsyflip(bool value) {
 
 // Msg_SetDefaultClearColor
 
-// required uint32 a_aColor = 1;
+// optional uint32 a_aColor = 1;
 inline bool Msg_SetDefaultClearColor::_internal_has_a_acolor() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9973,7 +9964,7 @@ inline void Msg_ScheduleComposite::set_allocated_a_areasons(std::string* a_areas
 
 // Msg_StartCaptureSequence
 
-// required string a_aPath = 1;
+// optional string a_aPath = 1;
 inline bool Msg_StartCaptureSequence::_internal_has_a_apath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10041,7 +10032,7 @@ inline void Msg_StartCaptureSequence::set_allocated_a_apath(std::string* a_apath
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PWebRenderBridge.Msg_StartCaptureSequence.a_aPath)
 }
 
-// required uint32 a_aFlags = 2;
+// optional uint32 a_aFlags = 2;
 inline bool Msg_StartCaptureSequence::_internal_has_a_aflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -10085,7 +10076,7 @@ inline void Msg_StartCaptureSequence::set_a_aflags(uint32_t value) {
 
 // Msg_SetConfirmedTargetAPZC
 
-// required uint64 a_aInputBlockId = 1;
+// optional uint64 a_aInputBlockId = 1;
 inline bool Msg_SetConfirmedTargetAPZC::_internal_has_a_ainputblockid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10276,7 +10267,7 @@ inline void Msg_SetTestSampleTime::set_allocated_a_sampletime(std::string* a_sam
 
 // Msg_GetAnimationValue
 
-// required uint64 a_aCompositorAnimationsId = 1;
+// optional uint64 a_aCompositorAnimationsId = 1;
 inline bool Msg_GetAnimationValue::_internal_has_a_acompositoranimationsid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10467,7 +10458,7 @@ inline void Msg_SetAsyncScrollOffset::set_allocated_a_scrollid(std::string* a_sc
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PWebRenderBridge.Msg_SetAsyncScrollOffset.a_scrollId)
 }
 
-// required float a_x = 2;
+// optional float a_x = 2;
 inline bool Msg_SetAsyncScrollOffset::_internal_has_a_x() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -10495,7 +10486,7 @@ inline void Msg_SetAsyncScrollOffset::set_a_x(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PWebRenderBridge.Msg_SetAsyncScrollOffset.a_x)
 }
 
-// required float a_y = 3;
+// optional float a_y = 3;
 inline bool Msg_SetAsyncScrollOffset::_internal_has_a_y() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -10599,7 +10590,7 @@ inline void Msg_SetAsyncZoom::set_allocated_a_scrollid(std::string* a_scrollid) 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PWebRenderBridge.Msg_SetAsyncZoom.a_scrollId)
 }
 
-// required float a_zoom = 2;
+// optional float a_zoom = 2;
 inline bool Msg_SetAsyncZoom::_internal_has_a_zoom() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -10795,7 +10786,7 @@ inline void Reply_GetFrameUniformity::set_allocated_a_data(std::string* a_data) 
 
 // Reply_EndWheelTransaction
 
-// required bool a_unused = 1;
+// optional bool a_unused = 1;
 inline bool Reply_EndWheelTransaction::_internal_has_a_unused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

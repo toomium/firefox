@@ -407,9 +407,6 @@ class SDBRequestReadResponse::_Internal {
   static void set_has_a_data(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 SDBRequestReadResponse::SDBRequestReadResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -492,7 +489,7 @@ const char* SDBRequestReadResponse::_InternalParse(const char* ptr, ::_pbi::Pars
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_data = 1;
+      // optional string a_data = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_data();
@@ -532,7 +529,7 @@ uint8_t* SDBRequestReadResponse::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_data = 1;
+  // optional string a_data = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_data(), target);
@@ -550,15 +547,17 @@ size_t SDBRequestReadResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.SDBRequestReadResponse)
   size_t total_size = 0;
 
-  // required string a_data = 1;
-  if (_internal_has_a_data()) {
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional string a_data = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_data());
   }
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -595,7 +594,6 @@ void SDBRequestReadResponse::CopyFrom(const SDBRequestReadResponse& from) {
 }
 
 bool SDBRequestReadResponse::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1409,32 +1407,6 @@ void SDBRequestResponse::CopyFrom(const SDBRequestResponse& from) {
 }
 
 bool SDBRequestResponse::IsInitialized() const {
-  switch (content_case()) {
-    case kAMVnsresult: {
-      break;
-    }
-    case kAMVSDBRequestOpenResponse: {
-      break;
-    }
-    case kAMVSDBRequestSeekResponse: {
-      break;
-    }
-    case kAMVSDBRequestReadResponse: {
-      if (_internal_has_a_mvsdbrequestreadresponse()) {
-        if (!_impl_.content_.a_mvsdbrequestreadresponse_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case kAMVSDBRequestWriteResponse: {
-      break;
-    }
-    case kAMVSDBRequestCloseResponse: {
-      break;
-    }
-    case CONTENT_NOT_SET: {
-      break;
-    }
-  }
   return true;
 }
 

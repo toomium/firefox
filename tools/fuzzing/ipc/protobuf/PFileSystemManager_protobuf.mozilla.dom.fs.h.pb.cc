@@ -410,7 +410,7 @@ class FileSystemEntryMetadata::_Internal {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
   }
 };
 
@@ -536,7 +536,7 @@ const char* FileSystemEntryMetadata::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required bool a_directory = 3;
+      // optional bool a_directory = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_directory(&has_bits);
@@ -588,7 +588,7 @@ uint8_t* FileSystemEntryMetadata::_InternalSerialize(
         2, this->_internal_a_entryname(), target);
   }
 
-  // required bool a_directory = 3;
+  // optional bool a_directory = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_directory(), target);
@@ -620,18 +620,13 @@ size_t FileSystemEntryMetadata::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_entryname());
   }
 
-  if (_internal_has_a_directory()) {
-    // required bool a_directory = 3;
-    total_size += 1 + 1;
-  }
-
   return total_size;
 }
 size_t FileSystemEntryMetadata::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.fs.FileSystemEntryMetadata)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
     // required bytes a_entryId = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -642,15 +637,18 @@ size_t FileSystemEntryMetadata::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_entryname());
 
-    // required bool a_directory = 3;
-    total_size += 1 + 1;
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_directory = 3;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000004u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1029,7 +1027,7 @@ class FileSystemGetHandleRequest::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -1121,7 +1119,7 @@ const char* FileSystemGetHandleRequest::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // required bool a_create = 2;
+      // optional bool a_create = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_create(&has_bits);
@@ -1168,7 +1166,7 @@ uint8_t* FileSystemGetHandleRequest::_InternalSerialize(
         _Internal::a_handle(this).GetCachedSize(), target, stream);
   }
 
-  // required bool a_create = 2;
+  // optional bool a_create = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_create(), target);
@@ -1182,43 +1180,25 @@ uint8_t* FileSystemGetHandleRequest::_InternalSerialize(
   return target;
 }
 
-size_t FileSystemGetHandleRequest::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.fs.FileSystemGetHandleRequest)
-  size_t total_size = 0;
-
-  if (_internal_has_a_handle()) {
-    // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_handle = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_handle_);
-  }
-
-  if (_internal_has_a_create()) {
-    // required bool a_create = 2;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t FileSystemGetHandleRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.fs.FileSystemGetHandleRequest)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_handle = 1;
+  // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_handle = 1;
+  if (_internal_has_a_handle()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_handle_);
-
-    // required bool a_create = 2;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_create = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000002u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -4139,7 +4119,7 @@ class FileSystemGetWritableRequest::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -4236,7 +4216,7 @@ const char* FileSystemGetWritableRequest::_InternalParse(const char* ptr, ::_pbi
         } else
           goto handle_unusual;
         continue;
-      // required bool a_keepData = 2;
+      // optional bool a_keepData = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_keepdata(&has_bits);
@@ -4282,7 +4262,7 @@ uint8_t* FileSystemGetWritableRequest::_InternalSerialize(
         1, this->_internal_a_entryid(), target);
   }
 
-  // required bool a_keepData = 2;
+  // optional bool a_keepData = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_keepdata(), target);
@@ -4296,43 +4276,25 @@ uint8_t* FileSystemGetWritableRequest::_InternalSerialize(
   return target;
 }
 
-size_t FileSystemGetWritableRequest::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.fs.FileSystemGetWritableRequest)
-  size_t total_size = 0;
-
-  if (_internal_has_a_entryid()) {
-    // required bytes a_entryId = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_entryid());
-  }
-
-  if (_internal_has_a_keepdata()) {
-    // required bool a_keepData = 2;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t FileSystemGetWritableRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.fs.FileSystemGetWritableRequest)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_entryId = 1;
+  // required bytes a_entryId = 1;
+  if (_internal_has_a_entryid()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_entryid());
-
-    // required bool a_keepData = 2;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_keepData = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000002u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -5981,7 +5943,7 @@ class FileSystemRemoveEntryRequest::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -6073,7 +6035,7 @@ const char* FileSystemRemoveEntryRequest::_InternalParse(const char* ptr, ::_pbi
         } else
           goto handle_unusual;
         continue;
-      // required bool a_recursive = 2;
+      // optional bool a_recursive = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_recursive(&has_bits);
@@ -6120,7 +6082,7 @@ uint8_t* FileSystemRemoveEntryRequest::_InternalSerialize(
         _Internal::a_handle(this).GetCachedSize(), target, stream);
   }
 
-  // required bool a_recursive = 2;
+  // optional bool a_recursive = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_recursive(), target);
@@ -6134,43 +6096,25 @@ uint8_t* FileSystemRemoveEntryRequest::_InternalSerialize(
   return target;
 }
 
-size_t FileSystemRemoveEntryRequest::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.fs.FileSystemRemoveEntryRequest)
-  size_t total_size = 0;
-
-  if (_internal_has_a_handle()) {
-    // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_handle = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_handle_);
-  }
-
-  if (_internal_has_a_recursive()) {
-    // required bool a_recursive = 2;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t FileSystemRemoveEntryRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.fs.FileSystemRemoveEntryRequest)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_handle = 1;
+  // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_handle = 1;
+  if (_internal_has_a_handle()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_handle_);
-
-    // required bool a_recursive = 2;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_recursive = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000002u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();

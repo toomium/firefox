@@ -20,8 +20,8 @@ message IntDouble {
 }
 
 message SIntDouble {
-  required sint32 a_i = 1;
-  required double a_d = 2;
+  optional sint32 a_i = 1;
+  optional double a_d = 2;
 }
 
 message IntDoubleArrays {
@@ -39,7 +39,7 @@ message IntDoubleArrays {
 }
 
 message SIntDoubleArrays {
-  required sint32 a_i = 1;
+  optional sint32 a_i = 1;
   repeated sint32 a_ai = 2;
   repeated double a_ad = 3;
 }
@@ -63,7 +63,7 @@ message Actors {
 }
 
 message SActors {
-  required sint32 a_i = 1;
+  optional sint32 a_i = 1;
   repeated sint32 a_ai = 2;
   repeated bytes a_ap = 3;
 }
@@ -87,7 +87,7 @@ message Unions {
 }
 
 message Structs {
-  required sint32 a_i = 1;
+  optional sint32 a_i = 1;
   repeated sint32 a_ai = 2;
   repeated bytes a_ap = 3;
   repeated protobuf.mozilla._foo.SActors a_aa = 4;
@@ -116,7 +116,7 @@ message WithStructs {
 }
 
 message WithUnions {
-  required sint32 a_i = 1;
+  optional sint32 a_i = 1;
   repeated sint32 a_ai = 2;
   repeated bytes a_ap = 3;
   repeated protobuf.mozilla._foo.Actors a_aa = 4;
@@ -124,15 +124,15 @@ message WithUnions {
 }
 
 message CommonAttrs {
-  required bool a_dummy = 1;
+  optional bool a_dummy = 1;
 }
 
 message FooAttrs {
-  required sint32 a_dummy = 1;
+  optional sint32 a_dummy = 1;
 }
 
 message BarAttrs {
-  required float a_dummy = 1;
+  optional float a_dummy = 1;
 }
 
 message SpecificAttrs {
@@ -160,7 +160,7 @@ message Op {
 }
 
 message ShmemStruct {
-  required sint32 a_i = 1;
+  optional sint32 a_i = 1;
   required bytes a_mem = 2;
 }
 

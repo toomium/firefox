@@ -88,9 +88,6 @@ class UDPAddressInfo::_Internal {
   static void set_has_a_port(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
-  }
 };
 
 UDPAddressInfo::UDPAddressInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -177,7 +174,7 @@ const char* UDPAddressInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_addr = 1;
+      // optional string a_addr = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_addr();
@@ -186,7 +183,7 @@ const char* UDPAddressInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_port = 2;
+      // optional uint32 a_port = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_port(&has_bits);
@@ -226,13 +223,13 @@ uint8_t* UDPAddressInfo::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_addr = 1;
+  // optional string a_addr = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_addr(), target);
   }
 
-  // required uint32 a_port = 2;
+  // optional uint32 a_port = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_port(), target);
@@ -246,44 +243,29 @@ uint8_t* UDPAddressInfo::_InternalSerialize(
   return target;
 }
 
-size_t UDPAddressInfo::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.UDPAddressInfo)
-  size_t total_size = 0;
-
-  if (_internal_has_a_addr()) {
-    // required string a_addr = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_addr());
-  }
-
-  if (_internal_has_a_port()) {
-    // required uint32 a_port = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_port());
-  }
-
-  return total_size;
-}
 size_t UDPAddressInfo::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.UDPAddressInfo)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string a_addr = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_addr());
-
-    // required uint32 a_port = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_port());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional string a_addr = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_addr());
+    }
+
+    // optional uint32 a_port = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_port());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -326,7 +308,6 @@ void UDPAddressInfo::CopyFrom(const UDPAddressInfo& from) {
 }
 
 bool UDPAddressInfo::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -617,20 +598,6 @@ void UDPSocketAddr::CopyFrom(const UDPSocketAddr& from) {
 }
 
 bool UDPSocketAddr::IsInitialized() const {
-  switch (content_case()) {
-    case kAMVUDPAddressInfo: {
-      if (_internal_has_a_mvudpaddressinfo()) {
-        if (!_impl_.content_.a_mvudpaddressinfo_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case kAMVNetAddr: {
-      break;
-    }
-    case CONTENT_NOT_SET: {
-      break;
-    }
-  }
   return true;
 }
 

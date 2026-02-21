@@ -182,7 +182,7 @@ class Msg_MaybeUpdateSize final :
     kASizeFieldNumber = 1,
     kATruncateFieldNumber = 2,
   };
-  // required sint64 a_size = 1;
+  // optional sint64 a_size = 1;
   bool has_a_size() const;
   private:
   bool _internal_has_a_size() const;
@@ -195,7 +195,7 @@ class Msg_MaybeUpdateSize final :
   void _internal_set_a_size(int64_t value);
   public:
 
-  // required bool a_truncate = 2;
+  // optional bool a_truncate = 2;
   bool has_a_truncate() const;
   private:
   bool _internal_has_a_truncate() const;
@@ -211,9 +211,6 @@ class Msg_MaybeUpdateSize final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.quota.PRemoteQuotaObject.Msg_MaybeUpdateSize)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -341,7 +338,7 @@ class Reply_MaybeUpdateSize final :
   enum : int {
     kAResultFieldNumber = 1,
   };
-  // required bool a_result = 1;
+  // optional bool a_result = 1;
   bool has_a_result() const;
   private:
   bool _internal_has_a_result() const;
@@ -380,7 +377,7 @@ class Reply_MaybeUpdateSize final :
 #endif  // __GNUC__
 // Msg_MaybeUpdateSize
 
-// required sint64 a_size = 1;
+// optional sint64 a_size = 1;
 inline bool Msg_MaybeUpdateSize::_internal_has_a_size() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -408,7 +405,7 @@ inline void Msg_MaybeUpdateSize::set_a_size(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.PRemoteQuotaObject.Msg_MaybeUpdateSize.a_size)
 }
 
-// required bool a_truncate = 2;
+// optional bool a_truncate = 2;
 inline bool Msg_MaybeUpdateSize::_internal_has_a_truncate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -440,7 +437,7 @@ inline void Msg_MaybeUpdateSize::set_a_truncate(bool value) {
 
 // Reply_MaybeUpdateSize
 
-// required bool a_result = 1;
+// optional bool a_result = 1;
 inline bool Reply_MaybeUpdateSize::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

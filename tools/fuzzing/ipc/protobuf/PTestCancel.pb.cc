@@ -1998,9 +1998,6 @@ class Reply_CheckChild::_Internal {
   static void set_has_a_reply(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Reply_CheckChild::Reply_CheckChild(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2068,7 +2065,7 @@ const char* Reply_CheckChild::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 a_reply = 1;
+      // optional uint32 a_reply = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_reply(&has_bits);
@@ -2108,7 +2105,7 @@ uint8_t* Reply_CheckChild::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 a_reply = 1;
+  // optional uint32 a_reply = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_reply(), target);
@@ -2126,13 +2123,15 @@ size_t Reply_CheckChild::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_CheckChild)
   size_t total_size = 0;
 
-  // required uint32 a_reply = 1;
-  if (_internal_has_a_reply()) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_reply());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional uint32 a_reply = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_reply());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -2169,7 +2168,6 @@ void Reply_CheckChild::CopyFrom(const Reply_CheckChild& from) {
 }
 
 bool Reply_CheckChild::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -2341,9 +2339,6 @@ class Reply_CheckParent::_Internal {
   static void set_has_a_reply(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Reply_CheckParent::Reply_CheckParent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2411,7 +2406,7 @@ const char* Reply_CheckParent::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 a_reply = 1;
+      // optional uint32 a_reply = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_reply(&has_bits);
@@ -2451,7 +2446,7 @@ uint8_t* Reply_CheckParent::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 a_reply = 1;
+  // optional uint32 a_reply = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_reply(), target);
@@ -2469,13 +2464,15 @@ size_t Reply_CheckParent::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_CheckParent)
   size_t total_size = 0;
 
-  // required uint32 a_reply = 1;
-  if (_internal_has_a_reply()) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_reply());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional uint32 a_reply = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_reply());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -2512,7 +2509,6 @@ void Reply_CheckParent::CopyFrom(const Reply_CheckParent& from) {
 }
 
 bool Reply_CheckParent::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 

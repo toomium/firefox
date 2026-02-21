@@ -261,7 +261,7 @@ class WidgetCompositorOptions final :
   std::string* _internal_mutable_a_surfacesize();
   public:
 
-  // required uint64 a_innerWindowId = 6;
+  // optional uint64 a_innerWindowId = 6;
   bool has_a_innerwindowid() const;
   private:
   bool _internal_has_a_innerwindowid() const;
@@ -274,7 +274,7 @@ class WidgetCompositorOptions final :
   void _internal_set_a_innerwindowid(uint64_t value);
   public:
 
-  // required bool a_useExternalSurfaceSize = 4;
+  // optional bool a_useExternalSurfaceSize = 4;
   bool has_a_useexternalsurfacesize() const;
   private:
   bool _internal_has_a_useexternalsurfacesize() const;
@@ -980,7 +980,7 @@ inline void WidgetCompositorOptions::set_allocated_a_options(std::string* a_opti
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.WidgetCompositorOptions.a_options)
 }
 
-// required bool a_useExternalSurfaceSize = 4;
+// optional bool a_useExternalSurfaceSize = 4;
 inline bool WidgetCompositorOptions::_internal_has_a_useexternalsurfacesize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -1076,7 +1076,7 @@ inline void WidgetCompositorOptions::set_allocated_a_surfacesize(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.WidgetCompositorOptions.a_surfaceSize)
 }
 
-// required uint64 a_innerWindowId = 6;
+// optional uint64 a_innerWindowId = 6;
 inline bool WidgetCompositorOptions::_internal_has_a_innerwindowid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;

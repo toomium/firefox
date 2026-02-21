@@ -361,9 +361,6 @@ class Msg_Init::_Internal {
   static void set_has_a_aisreadyforbackgroundprocessing(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000006) ^ 0x00000006) != 0;
-  }
 };
 
 void Msg_Init::clear_a_vars() {
@@ -485,7 +482,7 @@ const char* Msg_Init::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
         } else
           goto handle_unusual;
         continue;
-      // required bool a_canRecordReleaseTelemetry = 3;
+      // optional bool a_canRecordReleaseTelemetry = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_canrecordreleasetelemetry(&has_bits);
@@ -494,7 +491,7 @@ const char* Msg_Init::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
         } else
           goto handle_unusual;
         continue;
-      // required bool a_aIsReadyForBackgroundProcessing = 4;
+      // optional bool a_aIsReadyForBackgroundProcessing = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_a_aisreadyforbackgroundprocessing(&has_bits);
@@ -548,13 +545,13 @@ uint8_t* Msg_Init::_InternalSerialize(
         2, this->_internal_a_sandboxbroker(), target);
   }
 
-  // required bool a_canRecordReleaseTelemetry = 3;
+  // optional bool a_canRecordReleaseTelemetry = 3;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_canrecordreleasetelemetry(), target);
   }
 
-  // required bool a_aIsReadyForBackgroundProcessing = 4;
+  // optional bool a_aIsReadyForBackgroundProcessing = 4;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_a_aisreadyforbackgroundprocessing(), target);
@@ -568,36 +565,10 @@ uint8_t* Msg_Init::_InternalSerialize(
   return target;
 }
 
-size_t Msg_Init::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.PRDD.Msg_Init)
-  size_t total_size = 0;
-
-  if (_internal_has_a_canrecordreleasetelemetry()) {
-    // required bool a_canRecordReleaseTelemetry = 3;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_aisreadyforbackgroundprocessing()) {
-    // required bool a_aIsReadyForBackgroundProcessing = 4;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t Msg_Init::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.PRDD.Msg_Init)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000006) ^ 0x00000006) == 0) {  // All required fields are present.
-    // required bool a_canRecordReleaseTelemetry = 3;
-    total_size += 1 + 1;
-
-    // required bool a_aIsReadyForBackgroundProcessing = 4;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -609,14 +580,26 @@ size_t Msg_Init::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // optional bytes a_sandboxBroker = 2;
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_sandboxbroker());
-  }
+  if (cached_has_bits & 0x00000007u) {
+    // optional bytes a_sandboxBroker = 2;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+          this->_internal_a_sandboxbroker());
+    }
 
+    // optional bool a_canRecordReleaseTelemetry = 3;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool a_aIsReadyForBackgroundProcessing = 4;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 + 1;
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -663,7 +646,6 @@ void Msg_Init::CopyFrom(const Msg_Init& from) {
 }
 
 bool Msg_Init::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_vars_))
     return false;
   return true;
@@ -1220,9 +1202,6 @@ class Msg_RequestMemoryReport::_Internal {
   static void set_has_a_dmdfile(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000000e) ^ 0x0000000e) != 0;
-  }
 };
 
 Msg_RequestMemoryReport::Msg_RequestMemoryReport(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1319,7 +1298,7 @@ const char* Msg_RequestMemoryReport::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 a_generation = 1;
+      // optional uint32 a_generation = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_generation(&has_bits);
@@ -1328,7 +1307,7 @@ const char* Msg_RequestMemoryReport::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required bool a_anonymize = 2;
+      // optional bool a_anonymize = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_anonymize(&has_bits);
@@ -1337,7 +1316,7 @@ const char* Msg_RequestMemoryReport::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required bool a_minimizeMemoryUsage = 3;
+      // optional bool a_minimizeMemoryUsage = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_minimizememoryusage(&has_bits);
@@ -1386,19 +1365,19 @@ uint8_t* Msg_RequestMemoryReport::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 a_generation = 1;
+  // optional uint32 a_generation = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_generation(), target);
   }
 
-  // required bool a_anonymize = 2;
+  // optional bool a_anonymize = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_anonymize(), target);
   }
 
-  // required bool a_minimizeMemoryUsage = 3;
+  // optional bool a_minimizeMemoryUsage = 3;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_minimizememoryusage(), target);
@@ -1418,56 +1397,39 @@ uint8_t* Msg_RequestMemoryReport::_InternalSerialize(
   return target;
 }
 
-size_t Msg_RequestMemoryReport::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.PRDD.Msg_RequestMemoryReport)
-  size_t total_size = 0;
-
-  if (_internal_has_a_generation()) {
-    // required uint32 a_generation = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_generation());
-  }
-
-  if (_internal_has_a_anonymize()) {
-    // required bool a_anonymize = 2;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_minimizememoryusage()) {
-    // required bool a_minimizeMemoryUsage = 3;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t Msg_RequestMemoryReport::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.PRDD.Msg_RequestMemoryReport)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000000e) ^ 0x0000000e) == 0) {  // All required fields are present.
-    // required uint32 a_generation = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_generation());
-
-    // required bool a_anonymize = 2;
-    total_size += 1 + 1;
-
-    // required bool a_minimizeMemoryUsage = 3;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional bytes a_DMDFile = 4;
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_dmdfile());
-  }
+  if (cached_has_bits & 0x0000000fu) {
+    // optional bytes a_DMDFile = 4;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+          this->_internal_a_dmdfile());
+    }
 
+    // optional uint32 a_generation = 1;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_generation());
+    }
+
+    // optional bool a_anonymize = 2;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool a_minimizeMemoryUsage = 3;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += 1 + 1;
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -1516,7 +1478,6 @@ void Msg_RequestMemoryReport::CopyFrom(const Msg_RequestMemoryReport& from) {
 }
 
 bool Msg_RequestMemoryReport::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1550,9 +1511,6 @@ class Reply_RequestMemoryReport::_Internal {
   using HasBits = decltype(std::declval<Reply_RequestMemoryReport>()._impl_._has_bits_);
   static void set_has_a_ageneration(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -1621,7 +1579,7 @@ const char* Reply_RequestMemoryReport::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 a_aGeneration = 1;
+      // optional uint32 a_aGeneration = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_ageneration(&has_bits);
@@ -1661,7 +1619,7 @@ uint8_t* Reply_RequestMemoryReport::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 a_aGeneration = 1;
+  // optional uint32 a_aGeneration = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_ageneration(), target);
@@ -1679,13 +1637,15 @@ size_t Reply_RequestMemoryReport::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.PRDD.Reply_RequestMemoryReport)
   size_t total_size = 0;
 
-  // required uint32 a_aGeneration = 1;
-  if (_internal_has_a_ageneration()) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_ageneration());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional uint32 a_aGeneration = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_ageneration());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1722,7 +1682,6 @@ void Reply_RequestMemoryReport::CopyFrom(const Reply_RequestMemoryReport& from) 
 }
 
 bool Reply_RequestMemoryReport::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1937,9 +1896,6 @@ void Msg_PreferenceUpdate::CopyFrom(const Msg_PreferenceUpdate& from) {
 
 bool Msg_PreferenceUpdate::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_pref()) {
-    if (!_impl_.a_pref_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -2188,7 +2144,7 @@ class Msg_InitVideoBridge::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
   }
 };
 
@@ -2305,7 +2261,7 @@ const char* Msg_InitVideoBridge::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // required bool a_createHardwareDevice = 2;
+      // optional bool a_createHardwareDevice = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_createhardwaredevice(&has_bits);
@@ -2359,7 +2315,7 @@ uint8_t* Msg_InitVideoBridge::_InternalSerialize(
         1, this->_internal_a_endpoint(), target);
   }
 
-  // required bool a_createHardwareDevice = 2;
+  // optional bool a_createHardwareDevice = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_createhardwaredevice(), target);
@@ -2398,18 +2354,13 @@ size_t Msg_InitVideoBridge::RequiredFieldsByteSizeFallback() const {
         *_impl_.a_contentdevicedata_);
   }
 
-  if (_internal_has_a_createhardwaredevice()) {
-    // required bool a_createHardwareDevice = 2;
-    total_size += 1 + 1;
-  }
-
   return total_size;
 }
 size_t Msg_InitVideoBridge::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.PRDD.Msg_InitVideoBridge)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
     // required bytes a_endpoint = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -2420,15 +2371,18 @@ size_t Msg_InitVideoBridge::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_contentdevicedata_);
 
-    // required bool a_createHardwareDevice = 2;
-    total_size += 1 + 1;
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_createHardwareDevice = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000004u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -3027,9 +2981,6 @@ class Reply_TestTriggerMetrics::_Internal {
   static void set_has_a_unused(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Reply_TestTriggerMetrics::Reply_TestTriggerMetrics(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -3097,7 +3048,7 @@ const char* Reply_TestTriggerMetrics::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_unused = 1;
+      // optional bool a_unused = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_unused(&has_bits);
@@ -3137,7 +3088,7 @@ uint8_t* Reply_TestTriggerMetrics::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_unused = 1;
+  // optional bool a_unused = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_unused(), target);
@@ -3155,13 +3106,15 @@ size_t Reply_TestTriggerMetrics::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.PRDD.Reply_TestTriggerMetrics)
   size_t total_size = 0;
 
-  // required bool a_unused = 1;
-  if (_internal_has_a_unused()) {
-    total_size += 1 + 1;
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_unused = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -3198,7 +3151,6 @@ void Reply_TestTriggerMetrics::CopyFrom(const Reply_TestTriggerMetrics& from) {
 }
 
 bool Reply_TestTriggerMetrics::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -3778,9 +3730,6 @@ void Msg_AddMemoryReport::CopyFrom(const Msg_AddMemoryReport& from) {
 
 bool Msg_AddMemoryReport::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_areport()) {
-    if (!_impl_.a_areport_->IsInitialized()) return false;
-  }
   return true;
 }
 

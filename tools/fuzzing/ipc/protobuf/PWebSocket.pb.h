@@ -258,7 +258,7 @@ class Msg_AsyncOpen final :
   std::string* _internal_mutable_a_auri();
   public:
 
-  // required string a_aOrigin = 2;
+  // optional string a_aOrigin = 2;
   bool has_a_aorigin() const;
   private:
   bool _internal_has_a_aorigin() const;
@@ -294,7 +294,7 @@ class Msg_AsyncOpen final :
   std::string* _internal_mutable_a_aoriginattributes();
   public:
 
-  // required string a_aProtocol = 5;
+  // optional string a_aProtocol = 5;
   bool has_a_aprotocol() const;
   private:
   bool _internal_has_a_aprotocol() const;
@@ -330,7 +330,7 @@ class Msg_AsyncOpen final :
   std::string* _internal_mutable_a_aprovider();
   public:
 
-  // required string a_aNegotiatedExtensions = 13;
+  // optional string a_aNegotiatedExtensions = 13;
   bool has_a_anegotiatedextensions() const;
   private:
   bool _internal_has_a_anegotiatedextensions() const;
@@ -366,7 +366,7 @@ class Msg_AsyncOpen final :
       ::protobuf::mozilla::net::LoadInfoArgs* a_aloadinfoargs);
   ::protobuf::mozilla::net::LoadInfoArgs* unsafe_arena_release_a_aloadinfoargs();
 
-  // required uint64 a_aInnerWindowID = 4;
+  // optional uint64 a_aInnerWindowID = 4;
   bool has_a_ainnerwindowid() const;
   private:
   bool _internal_has_a_ainnerwindowid() const;
@@ -379,7 +379,7 @@ class Msg_AsyncOpen final :
   void _internal_set_a_ainnerwindowid(uint64_t value);
   public:
 
-  // required uint32 a_aPingInterval = 7;
+  // optional uint32 a_aPingInterval = 7;
   bool has_a_apinginterval() const;
   private:
   bool _internal_has_a_apinginterval() const;
@@ -392,7 +392,7 @@ class Msg_AsyncOpen final :
   void _internal_set_a_apinginterval(uint32_t value);
   public:
 
-  // required bool a_aSecure = 6;
+  // optional bool a_aSecure = 6;
   bool has_a_asecure() const;
   private:
   bool _internal_has_a_asecure() const;
@@ -405,7 +405,7 @@ class Msg_AsyncOpen final :
   void _internal_set_a_asecure(bool value);
   public:
 
-  // required bool a_aClientSetPingInterval = 8;
+  // optional bool a_aClientSetPingInterval = 8;
   bool has_a_aclientsetpinginterval() const;
   private:
   bool _internal_has_a_aclientsetpinginterval() const;
@@ -418,7 +418,7 @@ class Msg_AsyncOpen final :
   void _internal_set_a_aclientsetpinginterval(bool value);
   public:
 
-  // required bool a_aClientSetPingTimeout = 10;
+  // optional bool a_aClientSetPingTimeout = 10;
   bool has_a_aclientsetpingtimeout() const;
   private:
   bool _internal_has_a_aclientsetpingtimeout() const;
@@ -431,7 +431,7 @@ class Msg_AsyncOpen final :
   void _internal_set_a_aclientsetpingtimeout(bool value);
   public:
 
-  // required uint32 a_aPingTimeout = 9;
+  // optional uint32 a_aPingTimeout = 9;
   bool has_a_apingtimeout() const;
   private:
   bool _internal_has_a_apingtimeout() const;
@@ -589,7 +589,7 @@ class Msg_Close final :
     kAReasonFieldNumber = 2,
     kACodeFieldNumber = 1,
   };
-  // required string a_reason = 2;
+  // optional string a_reason = 2;
   bool has_a_reason() const;
   private:
   bool _internal_has_a_reason() const;
@@ -607,7 +607,7 @@ class Msg_Close final :
   std::string* _internal_mutable_a_reason();
   public:
 
-  // required uint32 a_code = 1;
+  // optional uint32 a_code = 1;
   bool has_a_code() const;
   private:
   bool _internal_has_a_code() const;
@@ -623,9 +623,6 @@ class Msg_Close final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PWebSocket.Msg_Close)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -753,7 +750,7 @@ class Msg_SendMsg final :
   enum : int {
     kAAMsgFieldNumber = 1,
   };
-  // required string a_aMsg = 1;
+  // optional string a_aMsg = 1;
   bool has_a_amsg() const;
   private:
   bool _internal_has_a_amsg() const;
@@ -900,7 +897,7 @@ class Msg_SendBinaryMsg final :
   enum : int {
     kAAMsgFieldNumber = 1,
   };
-  // required string a_aMsg = 1;
+  // optional string a_aMsg = 1;
   bool has_a_amsg() const;
   private:
   bool _internal_has_a_amsg() const;
@@ -1066,7 +1063,7 @@ class Msg_SendBinaryStream final :
       ::protobuf::mozilla::ipc::IPCStream* a_astream);
   ::protobuf::mozilla::ipc::IPCStream* unsafe_arena_release_a_astream();
 
-  // required uint32 a_aLength = 2;
+  // optional uint32 a_aLength = 2;
   bool has_a_alength() const;
   private:
   bool _internal_has_a_alength() const;
@@ -1082,9 +1079,6 @@ class Msg_SendBinaryStream final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PWebSocket.Msg_SendBinaryStream)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1340,7 +1334,7 @@ class Msg_OnStart final :
     kAAHttpChannelIdFieldNumber = 5,
     kAAEncryptedFieldNumber = 4,
   };
-  // required string a_aProtocol = 1;
+  // optional string a_aProtocol = 1;
   bool has_a_aprotocol() const;
   private:
   bool _internal_has_a_aprotocol() const;
@@ -1358,7 +1352,7 @@ class Msg_OnStart final :
   std::string* _internal_mutable_a_aprotocol();
   public:
 
-  // required string a_aExtensions = 2;
+  // optional string a_aExtensions = 2;
   bool has_a_aextensions() const;
   private:
   bool _internal_has_a_aextensions() const;
@@ -1376,7 +1370,7 @@ class Msg_OnStart final :
   std::string* _internal_mutable_a_aextensions();
   public:
 
-  // required string a_aEffectiveURL = 3;
+  // optional string a_aEffectiveURL = 3;
   bool has_a_aeffectiveurl() const;
   private:
   bool _internal_has_a_aeffectiveurl() const;
@@ -1394,7 +1388,7 @@ class Msg_OnStart final :
   std::string* _internal_mutable_a_aeffectiveurl();
   public:
 
-  // required uint64 a_aHttpChannelId = 5;
+  // optional uint64 a_aHttpChannelId = 5;
   bool has_a_ahttpchannelid() const;
   private:
   bool _internal_has_a_ahttpchannelid() const;
@@ -1407,7 +1401,7 @@ class Msg_OnStart final :
   void _internal_set_a_ahttpchannelid(uint64_t value);
   public:
 
-  // required bool a_aEncrypted = 4;
+  // optional bool a_aEncrypted = 4;
   bool has_a_aencrypted() const;
   private:
   bool _internal_has_a_aencrypted() const;
@@ -1423,9 +1417,6 @@ class Msg_OnStart final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PWebSocket.Msg_OnStart)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1704,7 +1695,7 @@ class Msg_OnMessageAvailable final :
     kAAMsgFieldNumber = 1,
     kAAMoreDataFieldNumber = 2,
   };
-  // required string a_aMsg = 1;
+  // optional string a_aMsg = 1;
   bool has_a_amsg() const;
   private:
   bool _internal_has_a_amsg() const;
@@ -1722,7 +1713,7 @@ class Msg_OnMessageAvailable final :
   std::string* _internal_mutable_a_amsg();
   public:
 
-  // required bool a_aMoreData = 2;
+  // optional bool a_aMoreData = 2;
   bool has_a_amoredata() const;
   private:
   bool _internal_has_a_amoredata() const;
@@ -1738,9 +1729,6 @@ class Msg_OnMessageAvailable final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PWebSocket.Msg_OnMessageAvailable)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1869,7 +1857,7 @@ class Msg_OnBinaryMessageAvailable final :
     kAAMsgFieldNumber = 1,
     kAAMoreDataFieldNumber = 2,
   };
-  // required string a_aMsg = 1;
+  // optional string a_aMsg = 1;
   bool has_a_amsg() const;
   private:
   bool _internal_has_a_amsg() const;
@@ -1887,7 +1875,7 @@ class Msg_OnBinaryMessageAvailable final :
   std::string* _internal_mutable_a_amsg();
   public:
 
-  // required bool a_aMoreData = 2;
+  // optional bool a_aMoreData = 2;
   bool has_a_amoredata() const;
   private:
   bool _internal_has_a_amoredata() const;
@@ -1903,9 +1891,6 @@ class Msg_OnBinaryMessageAvailable final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PWebSocket.Msg_OnBinaryMessageAvailable)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2033,7 +2018,7 @@ class Msg_OnAcknowledge final :
   enum : int {
     kAASizeFieldNumber = 1,
   };
-  // required uint32 a_aSize = 1;
+  // optional uint32 a_aSize = 1;
   bool has_a_asize() const;
   private:
   bool _internal_has_a_asize() const;
@@ -2176,7 +2161,7 @@ class Msg_OnServerClose final :
     kAAReasonFieldNumber = 2,
     kACodeFieldNumber = 1,
   };
-  // required string a_aReason = 2;
+  // optional string a_aReason = 2;
   bool has_a_areason() const;
   private:
   bool _internal_has_a_areason() const;
@@ -2194,7 +2179,7 @@ class Msg_OnServerClose final :
   std::string* _internal_mutable_a_areason();
   public:
 
-  // required uint32 a_code = 1;
+  // optional uint32 a_code = 1;
   bool has_a_code() const;
   private:
   bool _internal_has_a_code() const;
@@ -2210,9 +2195,6 @@ class Msg_OnServerClose final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PWebSocket.Msg_OnServerClose)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2553,7 +2535,7 @@ inline void Msg_AsyncOpen::set_allocated_a_auri(std::string* a_auri) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebSocket.Msg_AsyncOpen.a_aURI)
 }
 
-// required string a_aOrigin = 2;
+// optional string a_aOrigin = 2;
 inline bool Msg_AsyncOpen::_internal_has_a_aorigin() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2689,7 +2671,7 @@ inline void Msg_AsyncOpen::set_allocated_a_aoriginattributes(std::string* a_aori
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebSocket.Msg_AsyncOpen.a_aOriginAttributes)
 }
 
-// required uint64 a_aInnerWindowID = 4;
+// optional uint64 a_aInnerWindowID = 4;
 inline bool Msg_AsyncOpen::_internal_has_a_ainnerwindowid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -2717,7 +2699,7 @@ inline void Msg_AsyncOpen::set_a_ainnerwindowid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocket.Msg_AsyncOpen.a_aInnerWindowID)
 }
 
-// required string a_aProtocol = 5;
+// optional string a_aProtocol = 5;
 inline bool Msg_AsyncOpen::_internal_has_a_aprotocol() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -2785,7 +2767,7 @@ inline void Msg_AsyncOpen::set_allocated_a_aprotocol(std::string* a_aprotocol) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebSocket.Msg_AsyncOpen.a_aProtocol)
 }
 
-// required bool a_aSecure = 6;
+// optional bool a_aSecure = 6;
 inline bool Msg_AsyncOpen::_internal_has_a_asecure() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -2813,7 +2795,7 @@ inline void Msg_AsyncOpen::set_a_asecure(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocket.Msg_AsyncOpen.a_aSecure)
 }
 
-// required uint32 a_aPingInterval = 7;
+// optional uint32 a_aPingInterval = 7;
 inline bool Msg_AsyncOpen::_internal_has_a_apinginterval() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -2841,7 +2823,7 @@ inline void Msg_AsyncOpen::set_a_apinginterval(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocket.Msg_AsyncOpen.a_aPingInterval)
 }
 
-// required bool a_aClientSetPingInterval = 8;
+// optional bool a_aClientSetPingInterval = 8;
 inline bool Msg_AsyncOpen::_internal_has_a_aclientsetpinginterval() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
@@ -2869,7 +2851,7 @@ inline void Msg_AsyncOpen::set_a_aclientsetpinginterval(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocket.Msg_AsyncOpen.a_aClientSetPingInterval)
 }
 
-// required uint32 a_aPingTimeout = 9;
+// optional uint32 a_aPingTimeout = 9;
 inline bool Msg_AsyncOpen::_internal_has_a_apingtimeout() const {
   bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
   return value;
@@ -2897,7 +2879,7 @@ inline void Msg_AsyncOpen::set_a_apingtimeout(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocket.Msg_AsyncOpen.a_aPingTimeout)
 }
 
-// required bool a_aClientSetPingTimeout = 10;
+// optional bool a_aClientSetPingTimeout = 10;
 inline bool Msg_AsyncOpen::_internal_has_a_aclientsetpingtimeout() const {
   bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
   return value;
@@ -3080,7 +3062,7 @@ inline void Msg_AsyncOpen::set_allocated_a_aprovider(std::string* a_aprovider) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebSocket.Msg_AsyncOpen.a_aProvider)
 }
 
-// required string a_aNegotiatedExtensions = 13;
+// optional string a_aNegotiatedExtensions = 13;
 inline bool Msg_AsyncOpen::_internal_has_a_anegotiatedextensions() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -3152,7 +3134,7 @@ inline void Msg_AsyncOpen::set_allocated_a_anegotiatedextensions(std::string* a_
 
 // Msg_Close
 
-// required uint32 a_code = 1;
+// optional uint32 a_code = 1;
 inline bool Msg_Close::_internal_has_a_code() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3180,7 +3162,7 @@ inline void Msg_Close::set_a_code(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocket.Msg_Close.a_code)
 }
 
-// required string a_reason = 2;
+// optional string a_reason = 2;
 inline bool Msg_Close::_internal_has_a_reason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3252,7 +3234,7 @@ inline void Msg_Close::set_allocated_a_reason(std::string* a_reason) {
 
 // Msg_SendMsg
 
-// required string a_aMsg = 1;
+// optional string a_aMsg = 1;
 inline bool Msg_SendMsg::_internal_has_a_amsg() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3324,7 +3306,7 @@ inline void Msg_SendMsg::set_allocated_a_amsg(std::string* a_amsg) {
 
 // Msg_SendBinaryMsg
 
-// required string a_aMsg = 1;
+// optional string a_aMsg = 1;
 inline bool Msg_SendBinaryMsg::_internal_has_a_amsg() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3483,7 +3465,7 @@ inline void Msg_SendBinaryStream::set_allocated_a_astream(::protobuf::mozilla::i
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebSocket.Msg_SendBinaryStream.a_aStream)
 }
 
-// required uint32 a_aLength = 2;
+// optional uint32 a_aLength = 2;
 inline bool Msg_SendBinaryStream::_internal_has_a_alength() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3519,7 +3501,7 @@ inline void Msg_SendBinaryStream::set_a_alength(uint32_t value) {
 
 // Msg_OnStart
 
-// required string a_aProtocol = 1;
+// optional string a_aProtocol = 1;
 inline bool Msg_OnStart::_internal_has_a_aprotocol() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3587,7 +3569,7 @@ inline void Msg_OnStart::set_allocated_a_aprotocol(std::string* a_aprotocol) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebSocket.Msg_OnStart.a_aProtocol)
 }
 
-// required string a_aExtensions = 2;
+// optional string a_aExtensions = 2;
 inline bool Msg_OnStart::_internal_has_a_aextensions() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3655,7 +3637,7 @@ inline void Msg_OnStart::set_allocated_a_aextensions(std::string* a_aextensions)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebSocket.Msg_OnStart.a_aExtensions)
 }
 
-// required string a_aEffectiveURL = 3;
+// optional string a_aEffectiveURL = 3;
 inline bool Msg_OnStart::_internal_has_a_aeffectiveurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -3723,7 +3705,7 @@ inline void Msg_OnStart::set_allocated_a_aeffectiveurl(std::string* a_aeffective
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebSocket.Msg_OnStart.a_aEffectiveURL)
 }
 
-// required bool a_aEncrypted = 4;
+// optional bool a_aEncrypted = 4;
 inline bool Msg_OnStart::_internal_has_a_aencrypted() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -3751,7 +3733,7 @@ inline void Msg_OnStart::set_a_aencrypted(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocket.Msg_OnStart.a_aEncrypted)
 }
 
-// required uint64 a_aHttpChannelId = 5;
+// optional uint64 a_aHttpChannelId = 5;
 inline bool Msg_OnStart::_internal_has_a_ahttpchannelid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -3855,7 +3837,7 @@ inline void Msg_OnStop::set_allocated_a_astatuscode(std::string* a_astatuscode) 
 
 // Msg_OnMessageAvailable
 
-// required string a_aMsg = 1;
+// optional string a_aMsg = 1;
 inline bool Msg_OnMessageAvailable::_internal_has_a_amsg() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3923,7 +3905,7 @@ inline void Msg_OnMessageAvailable::set_allocated_a_amsg(std::string* a_amsg) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebSocket.Msg_OnMessageAvailable.a_aMsg)
 }
 
-// required bool a_aMoreData = 2;
+// optional bool a_aMoreData = 2;
 inline bool Msg_OnMessageAvailable::_internal_has_a_amoredata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3955,7 +3937,7 @@ inline void Msg_OnMessageAvailable::set_a_amoredata(bool value) {
 
 // Msg_OnBinaryMessageAvailable
 
-// required string a_aMsg = 1;
+// optional string a_aMsg = 1;
 inline bool Msg_OnBinaryMessageAvailable::_internal_has_a_amsg() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4023,7 +4005,7 @@ inline void Msg_OnBinaryMessageAvailable::set_allocated_a_amsg(std::string* a_am
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebSocket.Msg_OnBinaryMessageAvailable.a_aMsg)
 }
 
-// required bool a_aMoreData = 2;
+// optional bool a_aMoreData = 2;
 inline bool Msg_OnBinaryMessageAvailable::_internal_has_a_amoredata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4055,7 +4037,7 @@ inline void Msg_OnBinaryMessageAvailable::set_a_amoredata(bool value) {
 
 // Msg_OnAcknowledge
 
-// required uint32 a_aSize = 1;
+// optional uint32 a_aSize = 1;
 inline bool Msg_OnAcknowledge::_internal_has_a_asize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4087,7 +4069,7 @@ inline void Msg_OnAcknowledge::set_a_asize(uint32_t value) {
 
 // Msg_OnServerClose
 
-// required uint32 a_code = 1;
+// optional uint32 a_code = 1;
 inline bool Msg_OnServerClose::_internal_has_a_code() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4115,7 +4097,7 @@ inline void Msg_OnServerClose::set_a_code(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocket.Msg_OnServerClose.a_code)
 }
 
-// required string a_aReason = 2;
+// optional string a_aReason = 2;
 inline bool Msg_OnServerClose::_internal_has_a_areason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

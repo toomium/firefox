@@ -1732,7 +1732,7 @@ class Reply_Shutdown final :
   enum : int {
     kAUnusedFieldNumber = 1,
   };
-  // required bool a_unused = 1;
+  // optional bool a_unused = 1;
   bool has_a_unused() const;
   private:
   bool _internal_has_a_unused() const;
@@ -2675,7 +2675,7 @@ inline void Reply_Drain::set_allocated_a_result(::protobuf::mozilla::DecodeResul
 
 // Reply_Shutdown
 
-// required bool a_unused = 1;
+// optional bool a_unused = 1;
 inline bool Reply_Shutdown::_internal_has_a_unused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

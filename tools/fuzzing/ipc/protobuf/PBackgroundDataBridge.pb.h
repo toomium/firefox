@@ -191,7 +191,7 @@ class Msg_OnTransportAndData final :
     kAOffsetFieldNumber = 1,
     kACountFieldNumber = 2,
   };
-  // required string a_data = 3;
+  // optional string a_data = 3;
   bool has_a_data() const;
   private:
   bool _internal_has_a_data() const;
@@ -227,7 +227,7 @@ class Msg_OnTransportAndData final :
   std::string* _internal_mutable_a_ondataavailablestart();
   public:
 
-  // required uint64 a_offset = 1;
+  // optional uint64 a_offset = 1;
   bool has_a_offset() const;
   private:
   bool _internal_has_a_offset() const;
@@ -240,7 +240,7 @@ class Msg_OnTransportAndData final :
   void _internal_set_a_offset(uint64_t value);
   public:
 
-  // required uint32 a_count = 2;
+  // optional uint32 a_count = 2;
   bool has_a_count() const;
   private:
   bool _internal_has_a_count() const;
@@ -256,9 +256,6 @@ class Msg_OnTransportAndData final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnTransportAndData)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -763,7 +760,7 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_OnTransportAndData
 
-// required uint64 a_offset = 1;
+// optional uint64 a_offset = 1;
 inline bool Msg_OnTransportAndData::_internal_has_a_offset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -791,7 +788,7 @@ inline void Msg_OnTransportAndData::set_a_offset(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnTransportAndData.a_offset)
 }
 
-// required uint32 a_count = 2;
+// optional uint32 a_count = 2;
 inline bool Msg_OnTransportAndData::_internal_has_a_count() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -819,7 +816,7 @@ inline void Msg_OnTransportAndData::set_a_count(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnTransportAndData.a_count)
 }
 
-// required string a_data = 3;
+// optional string a_data = 3;
 inline bool Msg_OnTransportAndData::_internal_has_a_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

@@ -194,7 +194,7 @@ class Msg_PGMPVideoDecoderConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -460,7 +460,7 @@ class Msg_PGMPVideoEncoderConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -727,7 +727,7 @@ class Msg_PChromiumCDMConstructor final :
     kAAKeySystemFieldNumber = 2,
     kAActoridFieldNumber = 1,
   };
-  // required string a_aKeySystem = 2;
+  // optional string a_aKeySystem = 2;
   bool has_a_akeysystem() const;
   private:
   bool _internal_has_a_akeysystem() const;
@@ -745,7 +745,7 @@ class Msg_PChromiumCDMConstructor final :
   std::string* _internal_mutable_a_akeysystem();
   public:
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -761,9 +761,6 @@ class Msg_PChromiumCDMConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPContent.Msg_PChromiumCDMConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -912,7 +909,7 @@ class Reply_PChromiumCDMConstructor final :
 #endif  // __GNUC__
 // Msg_PGMPVideoDecoderConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PGMPVideoDecoderConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -948,7 +945,7 @@ inline void Msg_PGMPVideoDecoderConstructor::set_a_actorid(int64_t value) {
 
 // Msg_PGMPVideoEncoderConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PGMPVideoEncoderConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -984,7 +981,7 @@ inline void Msg_PGMPVideoEncoderConstructor::set_a_actorid(int64_t value) {
 
 // Msg_PChromiumCDMConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PChromiumCDMConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1012,7 +1009,7 @@ inline void Msg_PChromiumCDMConstructor::set_a_actorid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPContent.Msg_PChromiumCDMConstructor.a_actorid)
 }
 
-// required string a_aKeySystem = 2;
+// optional string a_aKeySystem = 2;
 inline bool Msg_PChromiumCDMConstructor::_internal_has_a_akeysystem() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

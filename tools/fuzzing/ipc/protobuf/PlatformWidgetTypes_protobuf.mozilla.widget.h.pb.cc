@@ -76,7 +76,7 @@ class GtkCompositorWidgetInitData::_Internal {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000000f) ^ 0x0000000f) != 0;
+    return ((has_bits[0] & 0x00000005) ^ 0x00000005) != 0;
   }
 };
 
@@ -211,7 +211,7 @@ const char* GtkCompositorWidgetInitData::_InternalParse(const char* ptr, ::_pbi:
         } else
           goto handle_unusual;
         continue;
-      // required string a_XDisplayString = 2;
+      // optional string a_XDisplayString = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_xdisplaystring();
@@ -220,7 +220,7 @@ const char* GtkCompositorWidgetInitData::_InternalParse(const char* ptr, ::_pbi:
         } else
           goto handle_unusual;
         continue;
-      // required bool a_IsX11Display = 3;
+      // optional bool a_IsX11Display = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_isx11display(&has_bits);
@@ -275,13 +275,13 @@ uint8_t* GtkCompositorWidgetInitData::_InternalSerialize(
         1, this->_internal_a_xwindow(), target);
   }
 
-  // required string a_XDisplayString = 2;
+  // optional string a_XDisplayString = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_xdisplaystring(), target);
   }
 
-  // required bool a_IsX11Display = 3;
+  // optional bool a_IsX11Display = 3;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_isx11display(), target);
@@ -312,23 +312,11 @@ size_t GtkCompositorWidgetInitData::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_xwindow());
   }
 
-  if (_internal_has_a_xdisplaystring()) {
-    // required string a_XDisplayString = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_xdisplaystring());
-  }
-
   if (_internal_has_a_initialclientsize()) {
     // required bytes a_InitialClientSize = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_initialclientsize());
-  }
-
-  if (_internal_has_a_isx11display()) {
-    // required bool a_IsX11Display = 3;
-    total_size += 1 + 1;
   }
 
   return total_size;
@@ -337,24 +325,16 @@ size_t GtkCompositorWidgetInitData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.widget.GtkCompositorWidgetInitData)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x00000005) ^ 0x00000005) == 0) {  // All required fields are present.
     // required bytes a_XWindow = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_xwindow());
 
-    // required string a_XDisplayString = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_xdisplaystring());
-
     // required bytes a_InitialClientSize = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_initialclientsize());
-
-    // required bool a_IsX11Display = 3;
-    total_size += 1 + 1;
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -362,6 +342,19 @@ size_t GtkCompositorWidgetInitData::ByteSizeLong() const {
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional string a_XDisplayString = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000002u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_xdisplaystring());
+  }
+
+  // optional bool a_IsX11Display = 3;
+  if (cached_has_bits & 0x00000008u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();

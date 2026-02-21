@@ -12,13 +12,13 @@ package protobuf.mozilla.net;
 
 // Structs and unions declarations
 message DNSRecord {
-  required string a_canonicalName = 1;
+  optional string a_canonicalName = 1;
   repeated bytes a_addrs = 2;
-  required double a_trrFetchDuration = 3;
-  required double a_trrFetchDurationNetworkOnly = 4;
-  required bool a_isTRR = 5;
+  optional double a_trrFetchDuration = 3;
+  optional double a_trrFetchDurationNetworkOnly = 4;
+  optional bool a_isTRR = 5;
   required bytes a_effectiveTRRMode = 6;
-  required uint32 a_ttl = 7;
+  optional uint32 a_ttl = 7;
   required bytes a_lastUpdate = 8;
 }
 

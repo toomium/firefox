@@ -1047,7 +1047,7 @@ class DelegatedCredentialInfoArg final :
     kASchemeFieldNumber = 1,
     kAAuthKeyBitsFieldNumber = 2,
   };
-  // required uint32 a_scheme = 1;
+  // optional uint32 a_scheme = 1;
   bool has_a_scheme() const;
   private:
   bool _internal_has_a_scheme() const;
@@ -1060,7 +1060,7 @@ class DelegatedCredentialInfoArg final :
   void _internal_set_a_scheme(uint32_t value);
   public:
 
-  // required uint32 a_authKeyBits = 2;
+  // optional uint32 a_authKeyBits = 2;
   bool has_a_authkeybits() const;
   private:
   bool _internal_has_a_authkeybits() const;
@@ -1076,9 +1076,6 @@ class DelegatedCredentialInfoArg final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.psm.DelegatedCredentialInfoArg)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1636,7 +1633,7 @@ inline IPCClientCertObject::ContentCase IPCClientCertObject::content_case() cons
 
 // DelegatedCredentialInfoArg
 
-// required uint32 a_scheme = 1;
+// optional uint32 a_scheme = 1;
 inline bool DelegatedCredentialInfoArg::_internal_has_a_scheme() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1664,7 +1661,7 @@ inline void DelegatedCredentialInfoArg::set_a_scheme(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.DelegatedCredentialInfoArg.a_scheme)
 }
 
-// required uint32 a_authKeyBits = 2;
+// optional uint32 a_authKeyBits = 2;
 inline bool DelegatedCredentialInfoArg::_internal_has_a_authkeybits() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

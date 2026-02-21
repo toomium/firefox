@@ -458,7 +458,7 @@ class Msg_Blocked final :
   enum : int {
     kACurrentVersionFieldNumber = 1,
   };
-  // required uint64 a_currentVersion = 1;
+  // optional uint64 a_currentVersion = 1;
   bool has_a_currentversion() const;
   private:
   bool _internal_has_a_currentversion() const;
@@ -592,7 +592,7 @@ inline void Msg___delete__::set_allocated_a_response(::protobuf::mozilla::dom::i
 
 // Msg_Blocked
 
-// required uint64 a_currentVersion = 1;
+// optional uint64 a_currentVersion = 1;
 inline bool Msg_Blocked::_internal_has_a_currentversion() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

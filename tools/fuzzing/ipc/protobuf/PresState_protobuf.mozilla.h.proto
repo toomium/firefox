@@ -19,7 +19,7 @@ message SelectContentData {
 }
 
 message CheckedContentData {
-  required bool a_checked = 1;
+  optional bool a_checked = 1;
 }
 
 message FileContentData {
@@ -30,8 +30,8 @@ message FileContentData {
 }
 
 message TextContentData {
-  required string a_value = 1;
-  required bool a_lastValueChangeWasInteractive = 2;
+  optional string a_value = 1;
+  optional bool a_lastValueChangeWasInteractive = 2;
 }
 
 message PresContentData {
@@ -51,9 +51,9 @@ message PresContentData {
 message PresState {
   required protobuf.mozilla.PresContentData a_contentData = 1;
   required bytes a_scrollState = 2;
-  required bool a_allowScrollOriginDowngrade = 3;
-  required float a_resolution = 4;
-  required bool a_disabledSet = 5;
-  required bool a_disabled = 6;
-  required bool a_droppedDown = 7;
+  optional bool a_allowScrollOriginDowngrade = 3;
+  optional float a_resolution = 4;
+  optional bool a_disabledSet = 5;
+  optional bool a_disabled = 6;
+  optional bool a_droppedDown = 7;
 }

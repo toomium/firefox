@@ -20,7 +20,7 @@ message Msg_DeleteMe {
 }
 
 message Msg_PBackgroundSDBRequestConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
   required protobuf.mozilla.dom.SDBRequestParams a_params = 2;
 }
 

@@ -324,7 +324,7 @@ class Msg_OnStartRequest final :
       ::protobuf::mozilla::net::HttpChannelAltDataStream* a_altdata);
   ::protobuf::mozilla::net::HttpChannelAltDataStream* unsafe_arena_release_a_altdata();
 
-  // required bool a_useResponseHead = 2;
+  // optional bool a_useResponseHead = 2;
   bool has_a_useresponsehead() const;
   private:
   bool _internal_has_a_useresponsehead() const;
@@ -516,7 +516,7 @@ class Msg_OnTransportAndData final :
   std::string* _internal_mutable_a_transportstatus();
   public:
 
-  // required string a_data = 5;
+  // optional string a_data = 5;
   bool has_a_data() const;
   private:
   bool _internal_has_a_data() const;
@@ -552,7 +552,7 @@ class Msg_OnTransportAndData final :
   std::string* _internal_mutable_a_ondataavailablestart();
   public:
 
-  // required uint64 a_offset = 3;
+  // optional uint64 a_offset = 3;
   bool has_a_offset() const;
   private:
   bool _internal_has_a_offset() const;
@@ -565,7 +565,7 @@ class Msg_OnTransportAndData final :
   void _internal_set_a_offset(uint64_t value);
   public:
 
-  // required uint32 a_count = 4;
+  // optional uint32 a_count = 4;
   bool has_a_count() const;
   private:
   bool _internal_has_a_count() const;
@@ -578,7 +578,7 @@ class Msg_OnTransportAndData final :
   void _internal_set_a_count(uint32_t value);
   public:
 
-  // required bool a_dataFromSocketProcess = 6;
+  // optional bool a_dataFromSocketProcess = 6;
   bool has_a_datafromsocketprocess() const;
   private:
   bool _internal_has_a_datafromsocketprocess() const;
@@ -843,7 +843,7 @@ class Msg_OnStopRequest final :
       ::protobuf::mozilla::net::ResourceTimingStructArgs* a_timing);
   ::protobuf::mozilla::net::ResourceTimingStructArgs* unsafe_arena_release_a_timing();
 
-  // required bool a_fromSocketProcess = 6;
+  // optional bool a_fromSocketProcess = 6;
   bool has_a_fromsocketprocess() const;
   private:
   bool _internal_has_a_fromsocketprocess() const;
@@ -1141,7 +1141,7 @@ class Msg_OnProgress final :
     kAProgressFieldNumber = 1,
     kAProgressMaxFieldNumber = 2,
   };
-  // required sint64 a_progress = 1;
+  // optional sint64 a_progress = 1;
   bool has_a_progress() const;
   private:
   bool _internal_has_a_progress() const;
@@ -1154,7 +1154,7 @@ class Msg_OnProgress final :
   void _internal_set_a_progress(int64_t value);
   public:
 
-  // required sint64 a_progressMax = 2;
+  // optional sint64 a_progressMax = 2;
   bool has_a_progressmax() const;
   private:
   bool _internal_has_a_progressmax() const;
@@ -1170,9 +1170,6 @@ class Msg_OnProgress final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PHttpBackgroundChannel.Msg_OnProgress)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1595,7 +1592,7 @@ class Msg_NotifyClassificationFlags final :
     kAAClassificationFlagsFieldNumber = 1,
     kAAIsThirdPartyFieldNumber = 2,
   };
-  // required uint32 a_aClassificationFlags = 1;
+  // optional uint32 a_aClassificationFlags = 1;
   bool has_a_aclassificationflags() const;
   private:
   bool _internal_has_a_aclassificationflags() const;
@@ -1608,7 +1605,7 @@ class Msg_NotifyClassificationFlags final :
   void _internal_set_a_aclassificationflags(uint32_t value);
   public:
 
-  // required bool a_aIsThirdParty = 2;
+  // optional bool a_aIsThirdParty = 2;
   bool has_a_aisthirdparty() const;
   private:
   bool _internal_has_a_aisthirdparty() const;
@@ -1624,9 +1621,6 @@ class Msg_NotifyClassificationFlags final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PHttpBackgroundChannel.Msg_NotifyClassificationFlags)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2532,7 +2526,7 @@ inline void Msg_OnStartRequest::set_allocated_a_responsehead(std::string* a_resp
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpBackgroundChannel.Msg_OnStartRequest.a_responseHead)
 }
 
-// required bool a_useResponseHead = 2;
+// optional bool a_useResponseHead = 2;
 inline bool Msg_OnStartRequest::_internal_has_a_useresponsehead() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -3010,7 +3004,7 @@ inline void Msg_OnTransportAndData::set_allocated_a_transportstatus(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpBackgroundChannel.Msg_OnTransportAndData.a_transportStatus)
 }
 
-// required uint64 a_offset = 3;
+// optional uint64 a_offset = 3;
 inline bool Msg_OnTransportAndData::_internal_has_a_offset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -3038,7 +3032,7 @@ inline void Msg_OnTransportAndData::set_a_offset(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpBackgroundChannel.Msg_OnTransportAndData.a_offset)
 }
 
-// required uint32 a_count = 4;
+// optional uint32 a_count = 4;
 inline bool Msg_OnTransportAndData::_internal_has_a_count() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -3066,7 +3060,7 @@ inline void Msg_OnTransportAndData::set_a_count(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpBackgroundChannel.Msg_OnTransportAndData.a_count)
 }
 
-// required string a_data = 5;
+// optional string a_data = 5;
 inline bool Msg_OnTransportAndData::_internal_has_a_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -3134,7 +3128,7 @@ inline void Msg_OnTransportAndData::set_allocated_a_data(std::string* a_data) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpBackgroundChannel.Msg_OnTransportAndData.a_data)
 }
 
-// required bool a_dataFromSocketProcess = 6;
+// optional bool a_dataFromSocketProcess = 6;
 inline bool Msg_OnTransportAndData::_internal_has_a_datafromsocketprocess() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -3562,7 +3556,7 @@ Msg_OnStopRequest::a_consolereport() const {
   return _impl_.a_consolereport_;
 }
 
-// required bool a_fromSocketProcess = 6;
+// optional bool a_fromSocketProcess = 6;
 inline bool Msg_OnStopRequest::_internal_has_a_fromsocketprocess() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -3703,7 +3697,7 @@ Msg_OnConsoleReport::a_consolereport() const {
 
 // Msg_OnProgress
 
-// required sint64 a_progress = 1;
+// optional sint64 a_progress = 1;
 inline bool Msg_OnProgress::_internal_has_a_progress() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3731,7 +3725,7 @@ inline void Msg_OnProgress::set_a_progress(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpBackgroundChannel.Msg_OnProgress.a_progress)
 }
 
-// required sint64 a_progressMax = 2;
+// optional sint64 a_progressMax = 2;
 inline bool Msg_OnProgress::_internal_has_a_progressmax() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3907,7 +3901,7 @@ inline void Msg_OnAfterLastPart::set_allocated_a_astatus(std::string* a_astatus)
 
 // Msg_NotifyClassificationFlags
 
-// required uint32 a_aClassificationFlags = 1;
+// optional uint32 a_aClassificationFlags = 1;
 inline bool Msg_NotifyClassificationFlags::_internal_has_a_aclassificationflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3935,7 +3929,7 @@ inline void Msg_NotifyClassificationFlags::set_a_aclassificationflags(uint32_t v
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpBackgroundChannel.Msg_NotifyClassificationFlags.a_aClassificationFlags)
 }
 
-// required bool a_aIsThirdParty = 2;
+// optional bool a_aIsThirdParty = 2;
 inline bool Msg_NotifyClassificationFlags::_internal_has_a_aisthirdparty() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

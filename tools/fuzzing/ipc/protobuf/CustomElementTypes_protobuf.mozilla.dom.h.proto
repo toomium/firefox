@@ -19,7 +19,7 @@ message IPCFormDataValue {
 }
 
 message FormDataTuple {
-  required string a_name = 1;
+  optional string a_name = 1;
   required protobuf.mozilla.dom.IPCFormDataValue a_value = 2;
 }
 

@@ -521,7 +521,7 @@ class Msg_SetPersistFlags final :
   enum : int {
     kAANewFlagsFieldNumber = 1,
   };
-  // required uint32 a_aNewFlags = 1;
+  // optional uint32 a_aNewFlags = 1;
   bool has_a_anewflags() const;
   private:
   bool _internal_has_a_anewflags() const;
@@ -663,7 +663,7 @@ class Msg_PWebBrowserPersistResourcesConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -933,7 +933,7 @@ class Msg_PWebBrowserPersistSerializeConstructor final :
     kAAEncoderFlagsFieldNumber = 4,
     kAAWrapColumnFieldNumber = 5,
   };
-  // required string a_aRequestedContentType = 3;
+  // optional string a_aRequestedContentType = 3;
   bool has_a_arequestedcontenttype() const;
   private:
   bool _internal_has_a_arequestedcontenttype() const;
@@ -969,7 +969,7 @@ class Msg_PWebBrowserPersistSerializeConstructor final :
       ::protobuf::mozilla::WebBrowserPersistURIMap* a_amap);
   ::protobuf::mozilla::WebBrowserPersistURIMap* unsafe_arena_release_a_amap();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -982,7 +982,7 @@ class Msg_PWebBrowserPersistSerializeConstructor final :
   void _internal_set_a_actorid(int64_t value);
   public:
 
-  // required uint32 a_aEncoderFlags = 4;
+  // optional uint32 a_aEncoderFlags = 4;
   bool has_a_aencoderflags() const;
   private:
   bool _internal_has_a_aencoderflags() const;
@@ -995,7 +995,7 @@ class Msg_PWebBrowserPersistSerializeConstructor final :
   void _internal_set_a_aencoderflags(uint32_t value);
   public:
 
-  // required uint32 a_aWrapColumn = 5;
+  // optional uint32 a_aWrapColumn = 5;
   bool has_a_awrapcolumn() const;
   private:
   bool _internal_has_a_awrapcolumn() const;
@@ -1011,9 +1011,6 @@ class Msg_PWebBrowserPersistSerializeConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1663,7 +1660,7 @@ inline void Msg_InitFailure::set_allocated_a_astatus(std::string* a_astatus) {
 
 // Msg_SetPersistFlags
 
-// required uint32 a_aNewFlags = 1;
+// optional uint32 a_aNewFlags = 1;
 inline bool Msg_SetPersistFlags::_internal_has_a_anewflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1695,7 +1692,7 @@ inline void Msg_SetPersistFlags::set_a_anewflags(uint32_t value) {
 
 // Msg_PWebBrowserPersistResourcesConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PWebBrowserPersistResourcesConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1731,7 +1728,7 @@ inline void Msg_PWebBrowserPersistResourcesConstructor::set_a_actorid(int64_t va
 
 // Msg_PWebBrowserPersistSerializeConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PWebBrowserPersistSerializeConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1846,7 +1843,7 @@ inline void Msg_PWebBrowserPersistSerializeConstructor::set_allocated_a_amap(::p
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.a_aMap)
 }
 
-// required string a_aRequestedContentType = 3;
+// optional string a_aRequestedContentType = 3;
 inline bool Msg_PWebBrowserPersistSerializeConstructor::_internal_has_a_arequestedcontenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1914,7 +1911,7 @@ inline void Msg_PWebBrowserPersistSerializeConstructor::set_allocated_a_arequest
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.a_aRequestedContentType)
 }
 
-// required uint32 a_aEncoderFlags = 4;
+// optional uint32 a_aEncoderFlags = 4;
 inline bool Msg_PWebBrowserPersistSerializeConstructor::_internal_has_a_aencoderflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1942,7 +1939,7 @@ inline void Msg_PWebBrowserPersistSerializeConstructor::set_a_aencoderflags(uint
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.a_aEncoderFlags)
 }
 
-// required uint32 a_aWrapColumn = 5;
+// optional uint32 a_aWrapColumn = 5;
 inline bool Msg_PWebBrowserPersistSerializeConstructor::_internal_has_a_awrapcolumn() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;

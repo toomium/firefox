@@ -833,9 +833,6 @@ class Reply_RequestStateDelete::_Internal {
   static void set_has_a_result(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Reply_RequestStateDelete::Reply_RequestStateDelete(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -903,7 +900,7 @@ const char* Reply_RequestStateDelete::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_result = 1;
+      // optional bool a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_result(&has_bits);
@@ -943,7 +940,7 @@ uint8_t* Reply_RequestStateDelete::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_result = 1;
+  // optional bool a_result = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_result(), target);
@@ -961,13 +958,15 @@ size_t Reply_RequestStateDelete::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestStateDelete)
   size_t total_size = 0;
 
-  // required bool a_result = 1;
-  if (_internal_has_a_result()) {
-    total_size += 1 + 1;
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_result = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1004,7 +1003,6 @@ void Reply_RequestStateDelete::CopyFrom(const Reply_RequestStateDelete& from) {
 }
 
 bool Reply_RequestStateDelete::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -7533,9 +7531,6 @@ class Reply_RequestHasPendingProposals::_Internal {
   static void set_has_a_result(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Reply_RequestHasPendingProposals::Reply_RequestHasPendingProposals(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -7603,7 +7598,7 @@ const char* Reply_RequestHasPendingProposals::_InternalParse(const char* ptr, ::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_result = 1;
+      // optional bool a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_result(&has_bits);
@@ -7643,7 +7638,7 @@ uint8_t* Reply_RequestHasPendingProposals::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_result = 1;
+  // optional bool a_result = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_result(), target);
@@ -7661,13 +7656,15 @@ size_t Reply_RequestHasPendingProposals::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestHasPendingProposals)
   size_t total_size = 0;
 
-  // required bool a_result = 1;
-  if (_internal_has_a_result()) {
-    total_size += 1 + 1;
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_result = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -7704,7 +7701,6 @@ void Reply_RequestHasPendingProposals::CopyFrom(const Reply_RequestHasPendingPro
 }
 
 bool Reply_RequestHasPendingProposals::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -7955,9 +7951,6 @@ class Reply_RequestClearPendingProposals::_Internal {
   static void set_has_a_result(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Reply_RequestClearPendingProposals::Reply_RequestClearPendingProposals(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -8025,7 +8018,7 @@ const char* Reply_RequestClearPendingProposals::_InternalParse(const char* ptr, 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_result = 1;
+      // optional bool a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_result(&has_bits);
@@ -8065,7 +8058,7 @@ uint8_t* Reply_RequestClearPendingProposals::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_result = 1;
+  // optional bool a_result = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_result(), target);
@@ -8083,13 +8076,15 @@ size_t Reply_RequestClearPendingProposals::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestClearPendingProposals)
   size_t total_size = 0;
 
-  // required bool a_result = 1;
-  if (_internal_has_a_result()) {
-    total_size += 1 + 1;
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_result = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -8126,7 +8121,6 @@ void Reply_RequestClearPendingProposals::CopyFrom(const Reply_RequestClearPendin
 }
 
 bool Reply_RequestClearPendingProposals::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -8377,9 +8371,6 @@ class Reply_RequestHasPendingCommit::_Internal {
   static void set_has_a_result(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Reply_RequestHasPendingCommit::Reply_RequestHasPendingCommit(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -8447,7 +8438,7 @@ const char* Reply_RequestHasPendingCommit::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_result = 1;
+      // optional bool a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_result(&has_bits);
@@ -8487,7 +8478,7 @@ uint8_t* Reply_RequestHasPendingCommit::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_result = 1;
+  // optional bool a_result = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_result(), target);
@@ -8505,13 +8496,15 @@ size_t Reply_RequestHasPendingCommit::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestHasPendingCommit)
   size_t total_size = 0;
 
-  // required bool a_result = 1;
-  if (_internal_has_a_result()) {
-    total_size += 1 + 1;
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_result = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -8548,7 +8541,6 @@ void Reply_RequestHasPendingCommit::CopyFrom(const Reply_RequestHasPendingCommit
 }
 
 bool Reply_RequestHasPendingCommit::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -8799,9 +8791,6 @@ class Reply_RequestClearPendingCommit::_Internal {
   static void set_has_a_result(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Reply_RequestClearPendingCommit::Reply_RequestClearPendingCommit(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -8869,7 +8858,7 @@ const char* Reply_RequestClearPendingCommit::_InternalParse(const char* ptr, ::_
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_result = 1;
+      // optional bool a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_result(&has_bits);
@@ -8909,7 +8898,7 @@ uint8_t* Reply_RequestClearPendingCommit::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_result = 1;
+  // optional bool a_result = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_result(), target);
@@ -8927,13 +8916,15 @@ size_t Reply_RequestClearPendingCommit::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestClearPendingCommit)
   size_t total_size = 0;
 
-  // required bool a_result = 1;
-  if (_internal_has_a_result()) {
-    total_size += 1 + 1;
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_result = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -8970,7 +8961,6 @@ void Reply_RequestClearPendingCommit::CopyFrom(const Reply_RequestClearPendingCo
 }
 
 bool Reply_RequestClearPendingCommit::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -9438,9 +9428,6 @@ class Msg_RequestExportSecret::_Internal {
   static void set_has_a_len(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_RequestExportSecret::Msg_RequestExportSecret(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -9588,7 +9575,7 @@ const char* Msg_RequestExportSecret::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required uint64 a_len = 5;
+      // optional uint64 a_len = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_a_len(&has_bits);
@@ -9652,7 +9639,7 @@ uint8_t* Msg_RequestExportSecret::_InternalSerialize(
   }
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint64 a_len = 5;
+  // optional uint64 a_len = 5;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(5, this->_internal_a_len(), target);
@@ -9670,10 +9657,6 @@ size_t Msg_RequestExportSecret::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret)
   size_t total_size = 0;
 
-  // required uint64 a_len = 5;
-  if (_internal_has_a_len()) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_len());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -9712,6 +9695,12 @@ size_t Msg_RequestExportSecret::ByteSizeLong() const {
     total_size += 1 *
                   ::_pbi::FromIntSize(this->_internal_a_content_size());
     total_size += data_size;
+  }
+
+  // optional uint64 a_len = 5;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_len());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -9753,7 +9742,6 @@ void Msg_RequestExportSecret::CopyFrom(const Msg_RequestExportSecret& from) {
 }
 
 bool Msg_RequestExportSecret::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 

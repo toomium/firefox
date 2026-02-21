@@ -24,10 +24,10 @@ message Reply___delete__ {
 
 message Msg_VibrateHaptic {
   required bytes a_aHandle = 1;
-  required uint32 a_aHapticIndex = 2;
-  required double a_aIntensity = 3;
-  required double a_aDuration = 4;
-  required uint32 a_aPromiseID = 5;
+  optional uint32 a_aHapticIndex = 2;
+  optional double a_aIntensity = 3;
+  optional double a_aDuration = 4;
+  optional uint32 a_aPromiseID = 5;
 }
 
 message Msg_StopVibrateHaptic {
@@ -36,11 +36,11 @@ message Msg_StopVibrateHaptic {
 
 message Msg_LightIndicatorColor {
   required bytes a_aHandle = 1;
-  required uint32 a_aLightColorIndex = 2;
-  required uint32 a_aRed = 3;
-  required uint32 a_aGreen = 4;
-  required uint32 a_aBlue = 5;
-  required uint32 a_aPromiseID = 6;
+  optional uint32 a_aLightColorIndex = 2;
+  optional uint32 a_aRed = 3;
+  optional uint32 a_aGreen = 4;
+  optional uint32 a_aBlue = 5;
+  optional uint32 a_aPromiseID = 6;
 }
 
 message Msg_RequestAllGamepads {
@@ -55,7 +55,7 @@ message Msg_GamepadUpdate {
 }
 
 message Msg_ReplyGamepadPromise {
-  required uint32 a_aPromiseID = 1;
+  optional uint32 a_aPromiseID = 1;
 }
 
 // Parameter mappings stats:

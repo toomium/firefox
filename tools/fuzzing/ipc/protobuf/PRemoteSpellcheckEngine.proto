@@ -30,11 +30,11 @@ message Reply_CheckAsync {
 }
 
 message Msg_SetDictionary {
-  required string a_aDictionary = 1;
+  optional string a_aDictionary = 1;
 }
 
 message Reply_SetDictionary {
-  required bool a_success = 1;
+  optional bool a_success = 1;
 }
 
 message Msg_SetDictionaries {
@@ -42,12 +42,12 @@ message Msg_SetDictionaries {
 }
 
 message Reply_SetDictionaries {
-  required bool a_success = 1;
+  optional bool a_success = 1;
 }
 
 message Msg_Suggest {
-  required string a_aWord = 1;
-  required uint32 a_aCount = 2;
+  optional string a_aWord = 1;
+  optional uint32 a_aCount = 2;
 }
 
 message Reply_Suggest {
@@ -59,8 +59,8 @@ message Msg_SetDictionaryFromList {
 }
 
 message Reply_SetDictionaryFromList {
-  required bool a_aSuccess = 1;
-  required string a_aDictionary = 2;
+  optional bool a_aSuccess = 1;
+  optional string a_aDictionary = 2;
 }
 
 // Parameter mappings stats:

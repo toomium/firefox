@@ -293,9 +293,6 @@ class Reply_Try_Success_CustomErr_QmIpcFail::_Internal {
   static void set_has_a_trydidnotreturn(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Reply_Try_Success_CustomErr_QmIpcFail::Reply_Try_Success_CustomErr_QmIpcFail(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -363,7 +360,7 @@ const char* Reply_Try_Success_CustomErr_QmIpcFail::_InternalParse(const char* pt
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_tryDidNotReturn = 1;
+      // optional bool a_tryDidNotReturn = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_trydidnotreturn(&has_bits);
@@ -403,7 +400,7 @@ uint8_t* Reply_Try_Success_CustomErr_QmIpcFail::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_tryDidNotReturn = 1;
+  // optional bool a_tryDidNotReturn = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_trydidnotreturn(), target);
@@ -421,13 +418,15 @@ size_t Reply_Try_Success_CustomErr_QmIpcFail::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.quota.PQuotaTest.Reply_Try_Success_CustomErr_QmIpcFail)
   size_t total_size = 0;
 
-  // required bool a_tryDidNotReturn = 1;
-  if (_internal_has_a_trydidnotreturn()) {
-    total_size += 1 + 1;
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_tryDidNotReturn = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -464,7 +463,6 @@ void Reply_Try_Success_CustomErr_QmIpcFail::CopyFrom(const Reply_Try_Success_Cus
 }
 
 bool Reply_Try_Success_CustomErr_QmIpcFail::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -636,9 +634,6 @@ class Reply_Try_Success_CustomErr_IpcFail::_Internal {
   static void set_has_a_trydidnotreturn(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Reply_Try_Success_CustomErr_IpcFail::Reply_Try_Success_CustomErr_IpcFail(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -706,7 +701,7 @@ const char* Reply_Try_Success_CustomErr_IpcFail::_InternalParse(const char* ptr,
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_tryDidNotReturn = 1;
+      // optional bool a_tryDidNotReturn = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_trydidnotreturn(&has_bits);
@@ -746,7 +741,7 @@ uint8_t* Reply_Try_Success_CustomErr_IpcFail::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_tryDidNotReturn = 1;
+  // optional bool a_tryDidNotReturn = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_trydidnotreturn(), target);
@@ -764,13 +759,15 @@ size_t Reply_Try_Success_CustomErr_IpcFail::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.quota.PQuotaTest.Reply_Try_Success_CustomErr_IpcFail)
   size_t total_size = 0;
 
-  // required bool a_tryDidNotReturn = 1;
-  if (_internal_has_a_trydidnotreturn()) {
-    total_size += 1 + 1;
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_tryDidNotReturn = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -807,7 +804,6 @@ void Reply_Try_Success_CustomErr_IpcFail::CopyFrom(const Reply_Try_Success_Custo
 }
 
 bool Reply_Try_Success_CustomErr_IpcFail::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -979,9 +975,6 @@ class Reply_TryInspect_Success_CustomErr_QmIpcFail::_Internal {
   static void set_has_a_trydidnotreturn(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Reply_TryInspect_Success_CustomErr_QmIpcFail::Reply_TryInspect_Success_CustomErr_QmIpcFail(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1049,7 +1042,7 @@ const char* Reply_TryInspect_Success_CustomErr_QmIpcFail::_InternalParse(const c
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_tryDidNotReturn = 1;
+      // optional bool a_tryDidNotReturn = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_trydidnotreturn(&has_bits);
@@ -1089,7 +1082,7 @@ uint8_t* Reply_TryInspect_Success_CustomErr_QmIpcFail::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_tryDidNotReturn = 1;
+  // optional bool a_tryDidNotReturn = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_trydidnotreturn(), target);
@@ -1107,13 +1100,15 @@ size_t Reply_TryInspect_Success_CustomErr_QmIpcFail::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.quota.PQuotaTest.Reply_TryInspect_Success_CustomErr_QmIpcFail)
   size_t total_size = 0;
 
-  // required bool a_tryDidNotReturn = 1;
-  if (_internal_has_a_trydidnotreturn()) {
-    total_size += 1 + 1;
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_tryDidNotReturn = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1150,7 +1145,6 @@ void Reply_TryInspect_Success_CustomErr_QmIpcFail::CopyFrom(const Reply_TryInspe
 }
 
 bool Reply_TryInspect_Success_CustomErr_QmIpcFail::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1322,9 +1316,6 @@ class Reply_TryInspect_Success_CustomErr_IpcFail::_Internal {
   static void set_has_a_trydidnotreturn(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Reply_TryInspect_Success_CustomErr_IpcFail::Reply_TryInspect_Success_CustomErr_IpcFail(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1392,7 +1383,7 @@ const char* Reply_TryInspect_Success_CustomErr_IpcFail::_InternalParse(const cha
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_tryDidNotReturn = 1;
+      // optional bool a_tryDidNotReturn = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_trydidnotreturn(&has_bits);
@@ -1432,7 +1423,7 @@ uint8_t* Reply_TryInspect_Success_CustomErr_IpcFail::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_tryDidNotReturn = 1;
+  // optional bool a_tryDidNotReturn = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_trydidnotreturn(), target);
@@ -1450,13 +1441,15 @@ size_t Reply_TryInspect_Success_CustomErr_IpcFail::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.quota.PQuotaTest.Reply_TryInspect_Success_CustomErr_IpcFail)
   size_t total_size = 0;
 
-  // required bool a_tryDidNotReturn = 1;
-  if (_internal_has_a_trydidnotreturn()) {
-    total_size += 1 + 1;
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_tryDidNotReturn = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1493,7 +1486,6 @@ void Reply_TryInspect_Success_CustomErr_IpcFail::CopyFrom(const Reply_TryInspect
 }
 
 bool Reply_TryInspect_Success_CustomErr_IpcFail::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 

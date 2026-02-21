@@ -18,7 +18,7 @@ message FileSystemFileResponse {
 }
 
 message FileSystemDirectoryResponse {
-  required string a_realPath = 1;
+  optional string a_realPath = 1;
 }
 
 message FileSystemDirectoryListingResponseFile {
@@ -26,7 +26,7 @@ message FileSystemDirectoryListingResponseFile {
 }
 
 message FileSystemDirectoryListingResponseDirectory {
-  required string a_directoryRealPath = 1;
+  optional string a_directoryRealPath = 1;
 }
 
 message FileSystemDirectoryListingResponseData {

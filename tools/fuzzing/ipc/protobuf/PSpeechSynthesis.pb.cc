@@ -385,9 +385,6 @@ void Msg_VoiceAdded::CopyFrom(const Msg_VoiceAdded& from) {
 
 bool Msg_VoiceAdded::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_avoice()) {
-    if (!_impl_.a_avoice_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -410,9 +407,6 @@ class Msg_VoiceRemoved::_Internal {
   using HasBits = decltype(std::declval<Msg_VoiceRemoved>()._impl_._has_bits_);
   static void set_has_a_auri(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -496,7 +490,7 @@ const char* Msg_VoiceRemoved::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aUri = 1;
+      // optional string a_aUri = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_auri();
@@ -536,7 +530,7 @@ uint8_t* Msg_VoiceRemoved::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aUri = 1;
+  // optional string a_aUri = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_auri(), target);
@@ -554,15 +548,17 @@ size_t Msg_VoiceRemoved::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PSpeechSynthesis.Msg_VoiceRemoved)
   size_t total_size = 0;
 
-  // required string a_aUri = 1;
-  if (_internal_has_a_auri()) {
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional string a_aUri = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_auri());
   }
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -599,7 +595,6 @@ void Msg_VoiceRemoved::CopyFrom(const Msg_VoiceRemoved& from) {
 }
 
 bool Msg_VoiceRemoved::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -630,9 +625,6 @@ class Msg_SetDefaultVoice::_Internal {
   }
   static void set_has_a_aisdefault(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
   }
 };
 
@@ -720,7 +712,7 @@ const char* Msg_SetDefaultVoice::_InternalParse(const char* ptr, ::_pbi::ParseCo
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aUri = 1;
+      // optional string a_aUri = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_auri();
@@ -729,7 +721,7 @@ const char* Msg_SetDefaultVoice::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // required bool a_aIsDefault = 2;
+      // optional bool a_aIsDefault = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_aisdefault(&has_bits);
@@ -769,13 +761,13 @@ uint8_t* Msg_SetDefaultVoice::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aUri = 1;
+  // optional string a_aUri = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_auri(), target);
   }
 
-  // required bool a_aIsDefault = 2;
+  // optional bool a_aIsDefault = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_aisdefault(), target);
@@ -789,44 +781,29 @@ uint8_t* Msg_SetDefaultVoice::_InternalSerialize(
   return target;
 }
 
-size_t Msg_SetDefaultVoice::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PSpeechSynthesis.Msg_SetDefaultVoice)
-  size_t total_size = 0;
-
-  if (_internal_has_a_auri()) {
-    // required string a_aUri = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_auri());
-  }
-
-  if (_internal_has_a_aisdefault()) {
-    // required bool a_aIsDefault = 2;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t Msg_SetDefaultVoice::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PSpeechSynthesis.Msg_SetDefaultVoice)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string a_aUri = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_auri());
-
-    // required bool a_aIsDefault = 2;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional string a_aUri = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_auri());
+    }
+
+    // optional bool a_aIsDefault = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 + 1;
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -869,7 +846,6 @@ void Msg_SetDefaultVoice::CopyFrom(const Msg_SetDefaultVoice& from) {
 }
 
 bool Msg_SetDefaultVoice::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -898,9 +874,6 @@ class Msg_IsSpeakingChanged::_Internal {
   using HasBits = decltype(std::declval<Msg_IsSpeakingChanged>()._impl_._has_bits_);
   static void set_has_a_aisspeaking(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -969,7 +942,7 @@ const char* Msg_IsSpeakingChanged::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_aIsSpeaking = 1;
+      // optional bool a_aIsSpeaking = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_aisspeaking(&has_bits);
@@ -1009,7 +982,7 @@ uint8_t* Msg_IsSpeakingChanged::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_aIsSpeaking = 1;
+  // optional bool a_aIsSpeaking = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_aisspeaking(), target);
@@ -1027,13 +1000,15 @@ size_t Msg_IsSpeakingChanged::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PSpeechSynthesis.Msg_IsSpeakingChanged)
   size_t total_size = 0;
 
-  // required bool a_aIsSpeaking = 1;
-  if (_internal_has_a_aisspeaking()) {
-    total_size += 1 + 1;
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_aIsSpeaking = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1070,7 +1045,6 @@ void Msg_IsSpeakingChanged::CopyFrom(const Msg_IsSpeakingChanged& from) {
 }
 
 bool Msg_IsSpeakingChanged::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1242,9 +1216,6 @@ class Msg_NotifyVoicesError::_Internal {
   static void set_has_a_aerror(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_NotifyVoicesError::Msg_NotifyVoicesError(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1327,7 +1298,7 @@ const char* Msg_NotifyVoicesError::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aError = 1;
+      // optional string a_aError = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_aerror();
@@ -1367,7 +1338,7 @@ uint8_t* Msg_NotifyVoicesError::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aError = 1;
+  // optional string a_aError = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_aerror(), target);
@@ -1385,15 +1356,17 @@ size_t Msg_NotifyVoicesError::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PSpeechSynthesis.Msg_NotifyVoicesError)
   size_t total_size = 0;
 
-  // required string a_aError = 1;
-  if (_internal_has_a_aerror()) {
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional string a_aError = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_aerror());
   }
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1430,7 +1403,6 @@ void Msg_NotifyVoicesError::CopyFrom(const Msg_NotifyVoicesError& from) {
 }
 
 bool Msg_NotifyVoicesError::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1458,9 +1430,6 @@ class Msg_InitialVoicesAndState::_Internal {
   using HasBits = decltype(std::declval<Msg_InitialVoicesAndState>()._impl_._has_bits_);
   static void set_has_a_aisspeaking(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -1567,7 +1536,7 @@ const char* Msg_InitialVoicesAndState::_InternalParse(const char* ptr, ::_pbi::P
         } else
           goto handle_unusual;
         continue;
-      // required bool a_aIsSpeaking = 3;
+      // optional bool a_aIsSpeaking = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_aisspeaking(&has_bits);
@@ -1621,7 +1590,7 @@ uint8_t* Msg_InitialVoicesAndState::_InternalSerialize(
   }
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_aIsSpeaking = 3;
+  // optional bool a_aIsSpeaking = 3;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_aisspeaking(), target);
@@ -1639,10 +1608,6 @@ size_t Msg_InitialVoicesAndState::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState)
   size_t total_size = 0;
 
-  // required bool a_aIsSpeaking = 3;
-  if (_internal_has_a_aisspeaking()) {
-    total_size += 1 + 1;
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1660,6 +1625,12 @@ size_t Msg_InitialVoicesAndState::ByteSizeLong() const {
   for (int i = 0, n = _impl_.a_adefaults_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
       _impl_.a_adefaults_.Get(i));
+  }
+
+  // optional bool a_aIsSpeaking = 3;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 + 1;
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1699,9 +1670,6 @@ void Msg_InitialVoicesAndState::CopyFrom(const Msg_InitialVoicesAndState& from) 
 }
 
 bool Msg_InitialVoicesAndState::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_avoices_))
-    return false;
   return true;
 }
 
@@ -2044,9 +2012,6 @@ class Msg_PSpeechSynthesisRequestConstructor::_Internal {
   static void set_has_a_ashouldresistfingerprinting(HasBits* has_bits) {
     (*has_bits)[0] |= 128u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x000000ff) ^ 0x000000ff) != 0;
-  }
 };
 
 Msg_PSpeechSynthesisRequestConstructor::Msg_PSpeechSynthesisRequestConstructor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2185,7 +2150,7 @@ const char* Msg_PSpeechSynthesisRequestConstructor::_InternalParse(const char* p
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint64 a_actorid = 1;
+      // optional sint64 a_actorid = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_actorid(&has_bits);
@@ -2194,7 +2159,7 @@ const char* Msg_PSpeechSynthesisRequestConstructor::_InternalParse(const char* p
         } else
           goto handle_unusual;
         continue;
-      // required string a_aText = 2;
+      // optional string a_aText = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_atext();
@@ -2203,7 +2168,7 @@ const char* Msg_PSpeechSynthesisRequestConstructor::_InternalParse(const char* p
         } else
           goto handle_unusual;
         continue;
-      // required string a_aUri = 3;
+      // optional string a_aUri = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_auri();
@@ -2212,7 +2177,7 @@ const char* Msg_PSpeechSynthesisRequestConstructor::_InternalParse(const char* p
         } else
           goto handle_unusual;
         continue;
-      // required string a_aLang = 4;
+      // optional string a_aLang = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_alang();
@@ -2221,7 +2186,7 @@ const char* Msg_PSpeechSynthesisRequestConstructor::_InternalParse(const char* p
         } else
           goto handle_unusual;
         continue;
-      // required float a_aVolume = 5;
+      // optional float a_aVolume = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 45)) {
           _Internal::set_has_a_avolume(&has_bits);
@@ -2230,7 +2195,7 @@ const char* Msg_PSpeechSynthesisRequestConstructor::_InternalParse(const char* p
         } else
           goto handle_unusual;
         continue;
-      // required float a_aRate = 6;
+      // optional float a_aRate = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 53)) {
           _Internal::set_has_a_arate(&has_bits);
@@ -2239,7 +2204,7 @@ const char* Msg_PSpeechSynthesisRequestConstructor::_InternalParse(const char* p
         } else
           goto handle_unusual;
         continue;
-      // required float a_aPitch = 7;
+      // optional float a_aPitch = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 61)) {
           _Internal::set_has_a_apitch(&has_bits);
@@ -2248,7 +2213,7 @@ const char* Msg_PSpeechSynthesisRequestConstructor::_InternalParse(const char* p
         } else
           goto handle_unusual;
         continue;
-      // required bool a_aShouldResistFingerprinting = 8;
+      // optional bool a_aShouldResistFingerprinting = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
           _Internal::set_has_a_ashouldresistfingerprinting(&has_bits);
@@ -2288,49 +2253,49 @@ uint8_t* Msg_PSpeechSynthesisRequestConstructor::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_actorid(), target);
   }
 
-  // required string a_aText = 2;
+  // optional string a_aText = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_atext(), target);
   }
 
-  // required string a_aUri = 3;
+  // optional string a_aUri = 3;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_auri(), target);
   }
 
-  // required string a_aLang = 4;
+  // optional string a_aLang = 4;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_a_alang(), target);
   }
 
-  // required float a_aVolume = 5;
+  // optional float a_aVolume = 5;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(5, this->_internal_a_avolume(), target);
   }
 
-  // required float a_aRate = 6;
+  // optional float a_aRate = 6;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(6, this->_internal_a_arate(), target);
   }
 
-  // required float a_aPitch = 7;
+  // optional float a_aPitch = 7;
   if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(7, this->_internal_a_apitch(), target);
   }
 
-  // required bool a_aShouldResistFingerprinting = 8;
+  // optional bool a_aShouldResistFingerprinting = 8;
   if (cached_has_bits & 0x00000080u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(8, this->_internal_a_ashouldresistfingerprinting(), target);
@@ -2344,100 +2309,63 @@ uint8_t* Msg_PSpeechSynthesisRequestConstructor::_InternalSerialize(
   return target;
 }
 
-size_t Msg_PSpeechSynthesisRequestConstructor::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor)
-  size_t total_size = 0;
-
-  if (_internal_has_a_atext()) {
-    // required string a_aText = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_atext());
-  }
-
-  if (_internal_has_a_auri()) {
-    // required string a_aUri = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_auri());
-  }
-
-  if (_internal_has_a_alang()) {
-    // required string a_aLang = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_alang());
-  }
-
-  if (_internal_has_a_actorid()) {
-    // required sint64 a_actorid = 1;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
-  }
-
-  if (_internal_has_a_avolume()) {
-    // required float a_aVolume = 5;
-    total_size += 1 + 4;
-  }
-
-  if (_internal_has_a_arate()) {
-    // required float a_aRate = 6;
-    total_size += 1 + 4;
-  }
-
-  if (_internal_has_a_apitch()) {
-    // required float a_aPitch = 7;
-    total_size += 1 + 4;
-  }
-
-  if (_internal_has_a_ashouldresistfingerprinting()) {
-    // required bool a_aShouldResistFingerprinting = 8;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t Msg_PSpeechSynthesisRequestConstructor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x000000ff) ^ 0x000000ff) == 0) {  // All required fields are present.
-    // required string a_aText = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_atext());
-
-    // required string a_aUri = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_auri());
-
-    // required string a_aLang = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_alang());
-
-    // required sint64 a_actorid = 1;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
-
-    // required float a_aVolume = 5;
-    total_size += 1 + 4;
-
-    // required float a_aRate = 6;
-    total_size += 1 + 4;
-
-    // required float a_aPitch = 7;
-    total_size += 1 + 4;
-
-    // required bool a_aShouldResistFingerprinting = 8;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x000000ffu) {
+    // optional string a_aText = 2;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_atext());
+    }
+
+    // optional string a_aUri = 3;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_auri());
+    }
+
+    // optional string a_aLang = 4;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_alang());
+    }
+
+    // optional sint64 a_actorid = 1;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
+    }
+
+    // optional float a_aVolume = 5;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += 1 + 4;
+    }
+
+    // optional float a_aRate = 6;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += 1 + 4;
+    }
+
+    // optional float a_aPitch = 7;
+    if (cached_has_bits & 0x00000040u) {
+      total_size += 1 + 4;
+    }
+
+    // optional bool a_aShouldResistFingerprinting = 8;
+    if (cached_has_bits & 0x00000080u) {
+      total_size += 1 + 1;
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -2498,7 +2426,6 @@ void Msg_PSpeechSynthesisRequestConstructor::CopyFrom(const Msg_PSpeechSynthesis
 }
 
 bool Msg_PSpeechSynthesisRequestConstructor::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 

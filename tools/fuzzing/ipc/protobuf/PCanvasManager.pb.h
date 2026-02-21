@@ -206,7 +206,7 @@ class Msg_PCanvasConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -472,7 +472,7 @@ class Msg_PWebGLConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -738,7 +738,7 @@ class Msg_PWebGPUConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -1004,7 +1004,7 @@ class Msg_Initialize final :
   enum : int {
     kAAManagerIdFieldNumber = 1,
   };
-  // required uint32 a_aManagerId = 1;
+  // optional uint32 a_aManagerId = 1;
   bool has_a_amanagerid() const;
   private:
   bool _internal_has_a_amanagerid() const;
@@ -1203,7 +1203,7 @@ class Msg_GetSnapshot final :
   std::string* _internal_mutable_a_commandencoderid();
   public:
 
-  // required uint32 a_aManagerId = 1;
+  // optional uint32 a_aManagerId = 1;
   bool has_a_amanagerid() const;
   private:
   bool _internal_has_a_amanagerid() const;
@@ -1219,9 +1219,6 @@ class Msg_GetSnapshot final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1395,7 +1392,7 @@ class Reply_GetSnapshot final :
 #endif  // __GNUC__
 // Msg_PCanvasConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PCanvasConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1431,7 +1428,7 @@ inline void Msg_PCanvasConstructor::set_a_actorid(int64_t value) {
 
 // Msg_PWebGLConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PWebGLConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1467,7 +1464,7 @@ inline void Msg_PWebGLConstructor::set_a_actorid(int64_t value) {
 
 // Msg_PWebGPUConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PWebGPUConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1503,7 +1500,7 @@ inline void Msg_PWebGPUConstructor::set_a_actorid(int64_t value) {
 
 // Msg_Initialize
 
-// required uint32 a_aManagerId = 1;
+// optional uint32 a_aManagerId = 1;
 inline bool Msg_Initialize::_internal_has_a_amanagerid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1535,7 +1532,7 @@ inline void Msg_Initialize::set_a_amanagerid(uint32_t value) {
 
 // Msg_GetSnapshot
 
-// required uint32 a_aManagerId = 1;
+// optional uint32 a_aManagerId = 1;
 inline bool Msg_GetSnapshot::_internal_has_a_amanagerid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;

@@ -20,27 +20,27 @@ message Msg_SessionStoreUpdate {
   optional string a_aDocShellCaps = 1;
   optional bool a_aPrivateMode = 2;
   required bytes a_aZoom = 3;
-  required bool a_aNeedCollectSHistory = 4;
-  required uint32 a_aEpoch = 5;
+  optional bool a_aNeedCollectSHistory = 4;
+  optional uint32 a_aEpoch = 5;
 }
 
 message Msg_IncrementalSessionStoreUpdate {
   required bytes a_aBrowsingContext = 1;
   optional protobuf.mozilla.dom.sessionstore.FormData a_aFormData = 2;
   optional bytes a_aScrollPosition = 3;
-  required uint32 a_aEpoch = 4;
+  optional uint32 a_aEpoch = 4;
 }
 
 message Msg_ResetSessionStore {
   required bytes a_aBrowsingContext = 1;
-  required uint32 a_aEpoch = 2;
+  optional uint32 a_aEpoch = 2;
 }
 
 message Msg_FlushTabState {
 }
 
 message Reply_FlushTabState {
-  required bool a_aHadContext = 1;
+  optional bool a_aHadContext = 1;
 }
 
 message Msg___delete__ {

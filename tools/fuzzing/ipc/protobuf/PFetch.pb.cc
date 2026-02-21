@@ -404,9 +404,6 @@ class Msg_AbortFetchOp::_Internal {
   static void set_has_a_aforceabort(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_AbortFetchOp::Msg_AbortFetchOp(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -474,7 +471,7 @@ const char* Msg_AbortFetchOp::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_aForceAbort = 1;
+      // optional bool a_aForceAbort = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_aforceabort(&has_bits);
@@ -514,7 +511,7 @@ uint8_t* Msg_AbortFetchOp::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_aForceAbort = 1;
+  // optional bool a_aForceAbort = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_aforceabort(), target);
@@ -532,13 +529,15 @@ size_t Msg_AbortFetchOp::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PFetch.Msg_AbortFetchOp)
   size_t total_size = 0;
 
-  // required bool a_aForceAbort = 1;
-  if (_internal_has_a_aforceabort()) {
-    total_size += 1 + 1;
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_aForceAbort = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -575,7 +574,6 @@ void Msg_AbortFetchOp::CopyFrom(const Msg_AbortFetchOp& from) {
 }
 
 bool Msg_AbortFetchOp::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1349,8 +1347,6 @@ void Msg_OnFlushConsoleReport::CopyFrom(const Msg_OnFlushConsoleReport& from) {
 }
 
 bool Msg_OnFlushConsoleReport::IsInitialized() const {
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_areports_))
-    return false;
   return true;
 }
 
@@ -1372,9 +1368,6 @@ class Msg_OnCSPViolationEvent::_Internal {
   using HasBits = decltype(std::declval<Msg_OnCSPViolationEvent>()._impl_._has_bits_);
   static void set_has_a_ajson(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -1458,7 +1451,7 @@ const char* Msg_OnCSPViolationEvent::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aJSON = 1;
+      // optional string a_aJSON = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_ajson();
@@ -1498,7 +1491,7 @@ uint8_t* Msg_OnCSPViolationEvent::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aJSON = 1;
+  // optional string a_aJSON = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_ajson(), target);
@@ -1516,15 +1509,17 @@ size_t Msg_OnCSPViolationEvent::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PFetch.Msg_OnCSPViolationEvent)
   size_t total_size = 0;
 
-  // required string a_aJSON = 1;
-  if (_internal_has_a_ajson()) {
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional string a_aJSON = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_ajson());
   }
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1561,7 +1556,6 @@ void Msg_OnCSPViolationEvent::CopyFrom(const Msg_OnCSPViolationEvent& from) {
 }
 
 bool Msg_OnCSPViolationEvent::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1807,9 +1801,6 @@ class Msg_OnNotifyNetworkMonitorAlternateStack::_Internal {
   static void set_has_a_achannelid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_OnNotifyNetworkMonitorAlternateStack::Msg_OnNotifyNetworkMonitorAlternateStack(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1877,7 +1868,7 @@ const char* Msg_OnNotifyNetworkMonitorAlternateStack::_InternalParse(const char*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint64 a_aChannelID = 1;
+      // optional uint64 a_aChannelID = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_achannelid(&has_bits);
@@ -1917,7 +1908,7 @@ uint8_t* Msg_OnNotifyNetworkMonitorAlternateStack::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint64 a_aChannelID = 1;
+  // optional uint64 a_aChannelID = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_achannelid(), target);
@@ -1935,13 +1926,15 @@ size_t Msg_OnNotifyNetworkMonitorAlternateStack::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PFetch.Msg_OnNotifyNetworkMonitorAlternateStack)
   size_t total_size = 0;
 
-  // required uint64 a_aChannelID = 1;
-  if (_internal_has_a_achannelid()) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_achannelid());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional uint64 a_aChannelID = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_achannelid());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1978,7 +1971,6 @@ void Msg_OnNotifyNetworkMonitorAlternateStack::CopyFrom(const Msg_OnNotifyNetwor
 }
 
 bool Msg_OnNotifyNetworkMonitorAlternateStack::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 

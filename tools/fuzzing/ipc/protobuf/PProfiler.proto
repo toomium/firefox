@@ -21,7 +21,7 @@ message Msg_Start {
 }
 
 message Reply_Start {
-  required bool a_unused = 1;
+  optional bool a_unused = 1;
 }
 
 message Msg_EnsureStarted {
@@ -29,49 +29,49 @@ message Msg_EnsureStarted {
 }
 
 message Reply_EnsureStarted {
-  required bool a_unused = 1;
+  optional bool a_unused = 1;
 }
 
 message Msg_Stop {
 }
 
 message Reply_Stop {
-  required bool a_unused = 1;
+  optional bool a_unused = 1;
 }
 
 message Msg_Pause {
 }
 
 message Reply_Pause {
-  required bool a_unused = 1;
+  optional bool a_unused = 1;
 }
 
 message Msg_Resume {
 }
 
 message Reply_Resume {
-  required bool a_unused = 1;
+  optional bool a_unused = 1;
 }
 
 message Msg_PauseSampling {
 }
 
 message Reply_PauseSampling {
-  required bool a_unused = 1;
+  optional bool a_unused = 1;
 }
 
 message Msg_ResumeSampling {
 }
 
 message Reply_ResumeSampling {
-  required bool a_unused = 1;
+  optional bool a_unused = 1;
 }
 
 message Msg_WaitOnePeriodicSampling {
 }
 
 message Reply_WaitOnePeriodicSampling {
-  required bool a_sampled = 1;
+  optional bool a_sampled = 1;
 }
 
 message Msg_AwaitNextChunkManagerUpdate {

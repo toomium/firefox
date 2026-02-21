@@ -14,8 +14,8 @@ import "IPCStream.proto";
 
 // Structs and unions declarations
 message UDPAddressInfo {
-  required string a_addr = 1;
-  required uint32 a_port = 2;
+  optional string a_addr = 1;
+  optional uint32 a_port = 2;
 }
 
 message UDPSocketAddr {

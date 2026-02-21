@@ -244,7 +244,7 @@ class D3D11DeviceStatus final :
   std::string* _internal_mutable_a_formatoptions();
   public:
 
-  // required bool a_isWARP = 1;
+  // optional bool a_isWARP = 1;
   bool has_a_iswarp() const;
   private:
   bool _internal_has_a_iswarp() const;
@@ -257,7 +257,7 @@ class D3D11DeviceStatus final :
   void _internal_set_a_iswarp(bool value);
   public:
 
-  // required bool a_textureSharingWorks = 2;
+  // optional bool a_textureSharingWorks = 2;
   bool has_a_texturesharingworks() const;
   private:
   bool _internal_has_a_texturesharingworks() const;
@@ -270,7 +270,7 @@ class D3D11DeviceStatus final :
   void _internal_set_a_texturesharingworks(bool value);
   public:
 
-  // required uint32 a_featureLevel = 3;
+  // optional uint32 a_featureLevel = 3;
   bool has_a_featurelevel() const;
   private:
   bool _internal_has_a_featurelevel() const;
@@ -283,7 +283,7 @@ class D3D11DeviceStatus final :
   void _internal_set_a_featurelevel(uint32_t value);
   public:
 
-  // required sint32 a_sequenceNumber = 5;
+  // optional sint32 a_sequenceNumber = 5;
   bool has_a_sequencenumber() const;
   private:
   bool _internal_has_a_sequencenumber() const;
@@ -877,7 +877,7 @@ class FeatureFailure final :
   std::string* _internal_mutable_a_status();
   public:
 
-  // required string a_message = 2;
+  // optional string a_message = 2;
   bool has_a_message() const;
   private:
   bool _internal_has_a_message() const;
@@ -895,7 +895,7 @@ class FeatureFailure final :
   std::string* _internal_mutable_a_message();
   public:
 
-  // required string a_failureId = 3;
+  // optional string a_failureId = 3;
   bool has_a_failureid() const;
   private:
   bool _internal_has_a_failureid() const;
@@ -916,9 +916,6 @@ class FeatureFailure final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.FeatureFailure)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1746,7 +1743,7 @@ class GfxVarUpdate final :
       ::protobuf::mozilla::gfx::GfxVarValue* a_value);
   ::protobuf::mozilla::gfx::GfxVarValue* unsafe_arena_release_a_value();
 
-  // required uint32 a_index = 1;
+  // optional uint32 a_index = 1;
   bool has_a_index() const;
   private:
   bool _internal_has_a_index() const;
@@ -1762,9 +1759,6 @@ class GfxVarUpdate final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.GfxVarUpdate)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1894,7 +1888,7 @@ class GfxInfoFeatureStatus final :
     kAFeatureFieldNumber = 1,
     kAStatusFieldNumber = 2,
   };
-  // required string a_failureId = 3;
+  // optional string a_failureId = 3;
   bool has_a_failureid() const;
   private:
   bool _internal_has_a_failureid() const;
@@ -1912,7 +1906,7 @@ class GfxInfoFeatureStatus final :
   std::string* _internal_mutable_a_failureid();
   public:
 
-  // required sint32 a_feature = 1;
+  // optional sint32 a_feature = 1;
   bool has_a_feature() const;
   private:
   bool _internal_has_a_feature() const;
@@ -1925,7 +1919,7 @@ class GfxInfoFeatureStatus final :
   void _internal_set_a_feature(int32_t value);
   public:
 
-  // required sint32 a_status = 2;
+  // optional sint32 a_status = 2;
   bool has_a_status() const;
   private:
   bool _internal_has_a_status() const;
@@ -1941,9 +1935,6 @@ class GfxInfoFeatureStatus final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.GfxInfoFeatureStatus)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1969,7 +1960,7 @@ class GfxInfoFeatureStatus final :
 #endif  // __GNUC__
 // D3D11DeviceStatus
 
-// required bool a_isWARP = 1;
+// optional bool a_isWARP = 1;
 inline bool D3D11DeviceStatus::_internal_has_a_iswarp() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1997,7 +1988,7 @@ inline void D3D11DeviceStatus::set_a_iswarp(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.D3D11DeviceStatus.a_isWARP)
 }
 
-// required bool a_textureSharingWorks = 2;
+// optional bool a_textureSharingWorks = 2;
 inline bool D3D11DeviceStatus::_internal_has_a_texturesharingworks() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -2025,7 +2016,7 @@ inline void D3D11DeviceStatus::set_a_texturesharingworks(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.D3D11DeviceStatus.a_textureSharingWorks)
 }
 
-// required uint32 a_featureLevel = 3;
+// optional uint32 a_featureLevel = 3;
 inline bool D3D11DeviceStatus::_internal_has_a_featurelevel() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -2121,7 +2112,7 @@ inline void D3D11DeviceStatus::set_allocated_a_adapter(std::string* a_adapter) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.D3D11DeviceStatus.a_adapter)
 }
 
-// required sint32 a_sequenceNumber = 5;
+// optional sint32 a_sequenceNumber = 5;
 inline bool D3D11DeviceStatus::_internal_has_a_sequencenumber() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -2864,7 +2855,7 @@ inline void FeatureFailure::set_allocated_a_status(std::string* a_status) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.FeatureFailure.a_status)
 }
 
-// required string a_message = 2;
+// optional string a_message = 2;
 inline bool FeatureFailure::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2932,7 +2923,7 @@ inline void FeatureFailure::set_allocated_a_message(std::string* a_message) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.FeatureFailure.a_message)
 }
 
-// required string a_failureId = 3;
+// optional string a_failureId = 3;
 inline bool FeatureFailure::_internal_has_a_failureid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -3953,7 +3944,7 @@ inline GfxVarValue::ContentCase GfxVarValue::content_case() const {
 
 // GfxVarUpdate
 
-// required uint32 a_index = 1;
+// optional uint32 a_index = 1;
 inline bool GfxVarUpdate::_internal_has_a_index() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4075,7 +4066,7 @@ inline void GfxVarUpdate::set_allocated_a_value(::protobuf::mozilla::gfx::GfxVar
 
 // GfxInfoFeatureStatus
 
-// required sint32 a_feature = 1;
+// optional sint32 a_feature = 1;
 inline bool GfxInfoFeatureStatus::_internal_has_a_feature() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4103,7 +4094,7 @@ inline void GfxInfoFeatureStatus::set_a_feature(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxInfoFeatureStatus.a_feature)
 }
 
-// required sint32 a_status = 2;
+// optional sint32 a_status = 2;
 inline bool GfxInfoFeatureStatus::_internal_has_a_status() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -4131,7 +4122,7 @@ inline void GfxInfoFeatureStatus::set_a_status(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxInfoFeatureStatus.a_status)
 }
 
-// required string a_failureId = 3;
+// optional string a_failureId = 3;
 inline bool GfxInfoFeatureStatus::_internal_has_a_failureid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

@@ -18,7 +18,7 @@ import "RemoteWorkerTypes.proto";
 
 // Message declarations
 message Msg_PRemoteWorkerConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
   required protobuf.mozilla.dom.RemoteWorkerData a_data = 2;
   required bytes a_childEp = 3;
 }

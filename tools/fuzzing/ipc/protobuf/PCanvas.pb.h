@@ -1200,7 +1200,7 @@ class Msg_SnapshotExternalCanvas final :
   std::string* _internal_mutable_a_acanvasid();
   public:
 
-  // required uint64 a_aSyncId = 1;
+  // optional uint64 a_aSyncId = 1;
   bool has_a_asyncid() const;
   private:
   bool _internal_has_a_asyncid() const;
@@ -1213,7 +1213,7 @@ class Msg_SnapshotExternalCanvas final :
   void _internal_set_a_asyncid(uint64_t value);
   public:
 
-  // required uint32 a_aManagerId = 2;
+  // optional uint32 a_aManagerId = 2;
   bool has_a_amanagerid() const;
   private:
   bool _internal_has_a_amanagerid() const;
@@ -1229,9 +1229,6 @@ class Msg_SnapshotExternalCanvas final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PCanvas.Msg_SnapshotExternalCanvas)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2449,7 +2446,7 @@ class Reply_SnapshotShmem final :
   enum : int {
     kAASuccessFieldNumber = 1,
   };
-  // required bool a_aSuccess = 1;
+  // optional bool a_aSuccess = 1;
   bool has_a_asuccess() const;
   private:
   bool _internal_has_a_asuccess() const;
@@ -3278,7 +3275,7 @@ inline void Msg_SetDataSurfaceBuffer::set_allocated_a_abufferhandle(std::string*
 
 // Msg_SnapshotExternalCanvas
 
-// required uint64 a_aSyncId = 1;
+// optional uint64 a_aSyncId = 1;
 inline bool Msg_SnapshotExternalCanvas::_internal_has_a_asyncid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3306,7 +3303,7 @@ inline void Msg_SnapshotExternalCanvas::set_a_asyncid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PCanvas.Msg_SnapshotExternalCanvas.a_aSyncId)
 }
 
-// required uint32 a_aManagerId = 2;
+// optional uint32 a_aManagerId = 2;
 inline bool Msg_SnapshotExternalCanvas::_internal_has_a_amanagerid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -3717,7 +3714,7 @@ inline void Msg_SnapshotShmem::set_allocated_a_ashmemhandle(std::string* a_ashme
 
 // Reply_SnapshotShmem
 
-// required bool a_aSuccess = 1;
+// optional bool a_aSuccess = 1;
 inline bool Reply_SnapshotShmem::_internal_has_a_asuccess() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

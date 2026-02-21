@@ -20,15 +20,15 @@ message Msg_DeleteMe {
 
 message Msg_GetFileReferences {
   required bytes a_persistenceType = 1;
-  required string a_origin = 2;
-  required string a_databaseName = 3;
-  required sint64 a_fileId = 4;
+  optional string a_origin = 2;
+  optional string a_databaseName = 3;
+  optional sint64 a_fileId = 4;
 }
 
 message Reply_GetFileReferences {
-  required sint32 a_refCnt = 1;
-  required sint32 a_dBRefCnt = 2;
-  required bool a_result = 3;
+  optional sint32 a_refCnt = 1;
+  optional sint32 a_dBRefCnt = 2;
+  optional bool a_result = 3;
 }
 
 message Msg_DoMaintenance {

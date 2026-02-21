@@ -21,14 +21,14 @@ import "PerformanceTimingTypes.proto";
 message FetchOpArgs {
   required protobuf.mozilla.dom.IPCInternalRequest a_request = 1;
   required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
-  required string a_workerScript = 3;
+  optional string a_workerScript = 3;
   required protobuf.mozilla.dom.IPCClientInfo a_clientInfo = 4;
   optional protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_controller = 5;
   optional protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 6;
-  required bool a_needOnDataAvailable = 7;
-  required bool a_hasCSPEventListener = 8;
-  required uint64 a_associatedBrowsingContextID = 9;
-  required bool a_isThirdPartyContext = 10;
-  required bool a_isWorkerRequest = 11;
-  required bool a_isOn3PCBExceptionList = 12;
+  optional bool a_needOnDataAvailable = 7;
+  optional bool a_hasCSPEventListener = 8;
+  optional uint64 a_associatedBrowsingContextID = 9;
+  optional bool a_isThirdPartyContext = 10;
+  optional bool a_isWorkerRequest = 11;
+  optional bool a_isOn3PCBExceptionList = 12;
 }

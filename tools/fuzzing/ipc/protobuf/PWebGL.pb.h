@@ -1194,7 +1194,7 @@ class Msg_DispatchCommands final :
   std::string* _internal_mutable_a_commands();
   public:
 
-  // required uint64 a_size = 2;
+  // optional uint64 a_size = 2;
   bool has_a_size() const;
   private:
   bool _internal_has_a_size() const;
@@ -1210,9 +1210,6 @@ class Msg_DispatchCommands final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_DispatchCommands)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1917,7 +1914,7 @@ class Msg_TexImage final :
   std::string* _internal_mutable_a_src();
   public:
 
-  // required uint32 a_level = 1;
+  // optional uint32 a_level = 1;
   bool has_a_level() const;
   private:
   bool _internal_has_a_level() const;
@@ -1930,7 +1927,7 @@ class Msg_TexImage final :
   void _internal_set_a_level(uint32_t value);
   public:
 
-  // required uint32 a_respecFormat = 2;
+  // optional uint32 a_respecFormat = 2;
   bool has_a_respecformat() const;
   private:
   bool _internal_has_a_respecformat() const;
@@ -2081,7 +2078,7 @@ class Msg_GetBufferSubData final :
     kAByteSizeFieldNumber = 3,
     kATargetFieldNumber = 1,
   };
-  // required uint64 a_srcByteOffset = 2;
+  // optional uint64 a_srcByteOffset = 2;
   bool has_a_srcbyteoffset() const;
   private:
   bool _internal_has_a_srcbyteoffset() const;
@@ -2094,7 +2091,7 @@ class Msg_GetBufferSubData final :
   void _internal_set_a_srcbyteoffset(uint64_t value);
   public:
 
-  // required uint64 a_byteSize = 3;
+  // optional uint64 a_byteSize = 3;
   bool has_a_bytesize() const;
   private:
   bool _internal_has_a_bytesize() const;
@@ -2107,7 +2104,7 @@ class Msg_GetBufferSubData final :
   void _internal_set_a_bytesize(uint64_t value);
   public:
 
-  // required uint32 a_target = 1;
+  // optional uint32 a_target = 1;
   bool has_a_target() const;
   private:
   bool _internal_has_a_target() const;
@@ -2123,9 +2120,6 @@ class Msg_GetBufferSubData final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_GetBufferSubData)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2989,7 +2983,7 @@ class Msg_CheckFramebufferStatus final :
   enum : int {
     kATargetFieldNumber = 1,
   };
-  // required uint32 a_target = 1;
+  // optional uint32 a_target = 1;
   bool has_a_target() const;
   private:
   bool _internal_has_a_target() const;
@@ -3131,7 +3125,7 @@ class Reply_CheckFramebufferStatus final :
   enum : int {
     kARetFieldNumber = 1,
   };
-  // required uint32 a_ret = 1;
+  // optional uint32 a_ret = 1;
   bool has_a_ret() const;
   private:
   bool _internal_has_a_ret() const;
@@ -3275,7 +3269,7 @@ class Msg_ClientWaitSync final :
     kATimeoutFieldNumber = 3,
     kAFlagsFieldNumber = 2,
   };
-  // required uint64 a_id = 1;
+  // optional uint64 a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -3288,7 +3282,7 @@ class Msg_ClientWaitSync final :
   void _internal_set_a_id(uint64_t value);
   public:
 
-  // required uint64 a_timeout = 3;
+  // optional uint64 a_timeout = 3;
   bool has_a_timeout() const;
   private:
   bool _internal_has_a_timeout() const;
@@ -3301,7 +3295,7 @@ class Msg_ClientWaitSync final :
   void _internal_set_a_timeout(uint64_t value);
   public:
 
-  // required uint32 a_flags = 2;
+  // optional uint32 a_flags = 2;
   bool has_a_flags() const;
   private:
   bool _internal_has_a_flags() const;
@@ -3317,9 +3311,6 @@ class Msg_ClientWaitSync final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_ClientWaitSync)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3448,7 +3439,7 @@ class Reply_ClientWaitSync final :
   enum : int {
     kARetFieldNumber = 1,
   };
-  // required uint32 a_ret = 1;
+  // optional uint32 a_ret = 1;
   bool has_a_ret() const;
   private:
   bool _internal_has_a_ret() const;
@@ -3609,7 +3600,7 @@ class Msg_CreateOpaqueFramebuffer final :
   std::string* _internal_mutable_a_options();
   public:
 
-  // required uint64 a_id = 1;
+  // optional uint64 a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -3625,9 +3616,6 @@ class Msg_CreateOpaqueFramebuffer final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_CreateOpaqueFramebuffer)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3755,7 +3743,7 @@ class Reply_CreateOpaqueFramebuffer final :
   enum : int {
     kARetFieldNumber = 1,
   };
-  // required bool a_ret = 1;
+  // optional bool a_ret = 1;
   bool has_a_ret() const;
   private:
   bool _internal_has_a_ret() const;
@@ -4417,7 +4405,7 @@ class Msg_GetBufferParameter final :
     kATargetFieldNumber = 1,
     kAPnameFieldNumber = 2,
   };
-  // required uint32 a_target = 1;
+  // optional uint32 a_target = 1;
   bool has_a_target() const;
   private:
   bool _internal_has_a_target() const;
@@ -4430,7 +4418,7 @@ class Msg_GetBufferParameter final :
   void _internal_set_a_target(uint32_t value);
   public:
 
-  // required uint32 a_pname = 2;
+  // optional uint32 a_pname = 2;
   bool has_a_pname() const;
   private:
   bool _internal_has_a_pname() const;
@@ -4446,9 +4434,6 @@ class Msg_GetBufferParameter final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_GetBufferParameter)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4718,7 +4703,7 @@ class Msg_GetCompileResult final :
   enum : int {
     kAIdFieldNumber = 1,
   };
-  // required uint64 a_id = 1;
+  // optional uint64 a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -5131,7 +5116,7 @@ class Reply_GetError final :
   enum : int {
     kARetFieldNumber = 1,
   };
-  // required uint32 a_ret = 1;
+  // optional uint32 a_ret = 1;
   bool has_a_ret() const;
   private:
   bool _internal_has_a_ret() const;
@@ -5292,7 +5277,7 @@ class Msg_GetFragDataLocation final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required uint64 a_id = 1;
+  // optional uint64 a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -5308,9 +5293,6 @@ class Msg_GetFragDataLocation final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_GetFragDataLocation)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5438,7 +5420,7 @@ class Reply_GetFragDataLocation final :
   enum : int {
     kARetFieldNumber = 1,
   };
-  // required sint32 a_ret = 1;
+  // optional sint32 a_ret = 1;
   bool has_a_ret() const;
   private:
   bool _internal_has_a_ret() const;
@@ -5582,7 +5564,7 @@ class Msg_GetFramebufferAttachmentParameter final :
     kAAttachmentFieldNumber = 2,
     kAPnameFieldNumber = 3,
   };
-  // required uint64 a_id = 1;
+  // optional uint64 a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -5595,7 +5577,7 @@ class Msg_GetFramebufferAttachmentParameter final :
   void _internal_set_a_id(uint64_t value);
   public:
 
-  // required uint32 a_attachment = 2;
+  // optional uint32 a_attachment = 2;
   bool has_a_attachment() const;
   private:
   bool _internal_has_a_attachment() const;
@@ -5608,7 +5590,7 @@ class Msg_GetFramebufferAttachmentParameter final :
   void _internal_set_a_attachment(uint32_t value);
   public:
 
-  // required uint32 a_pname = 3;
+  // optional uint32 a_pname = 3;
   bool has_a_pname() const;
   private:
   bool _internal_has_a_pname() const;
@@ -5624,9 +5606,6 @@ class Msg_GetFramebufferAttachmentParameter final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_GetFramebufferAttachmentParameter)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5898,7 +5877,7 @@ class Msg_GetFrontBuffer final :
     kAFbFieldNumber = 1,
     kAVrFieldNumber = 2,
   };
-  // required uint64 a_fb = 1;
+  // optional uint64 a_fb = 1;
   bool has_a_fb() const;
   private:
   bool _internal_has_a_fb() const;
@@ -5911,7 +5890,7 @@ class Msg_GetFrontBuffer final :
   void _internal_set_a_fb(uint64_t value);
   public:
 
-  // required bool a_vr = 2;
+  // optional bool a_vr = 2;
   bool has_a_vr() const;
   private:
   bool _internal_has_a_vr() const;
@@ -5927,9 +5906,6 @@ class Msg_GetFrontBuffer final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_GetFrontBuffer)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -6205,7 +6181,7 @@ class Msg_GetIndexedParameter final :
     kATargetFieldNumber = 1,
     kAIndexFieldNumber = 2,
   };
-  // required uint32 a_target = 1;
+  // optional uint32 a_target = 1;
   bool has_a_target() const;
   private:
   bool _internal_has_a_target() const;
@@ -6218,7 +6194,7 @@ class Msg_GetIndexedParameter final :
   void _internal_set_a_target(uint32_t value);
   public:
 
-  // required uint32 a_index = 2;
+  // optional uint32 a_index = 2;
   bool has_a_index() const;
   private:
   bool _internal_has_a_index() const;
@@ -6234,9 +6210,6 @@ class Msg_GetIndexedParameter final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_GetIndexedParameter)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -6508,7 +6481,7 @@ class Msg_GetInternalformatParameter final :
     kAInternalFormatFieldNumber = 2,
     kAPnameFieldNumber = 3,
   };
-  // required uint32 a_target = 1;
+  // optional uint32 a_target = 1;
   bool has_a_target() const;
   private:
   bool _internal_has_a_target() const;
@@ -6521,7 +6494,7 @@ class Msg_GetInternalformatParameter final :
   void _internal_set_a_target(uint32_t value);
   public:
 
-  // required uint32 a_internalFormat = 2;
+  // optional uint32 a_internalFormat = 2;
   bool has_a_internalformat() const;
   private:
   bool _internal_has_a_internalformat() const;
@@ -6534,7 +6507,7 @@ class Msg_GetInternalformatParameter final :
   void _internal_set_a_internalformat(uint32_t value);
   public:
 
-  // required uint32 a_pname = 3;
+  // optional uint32 a_pname = 3;
   bool has_a_pname() const;
   private:
   bool _internal_has_a_pname() const;
@@ -6550,9 +6523,6 @@ class Msg_GetInternalformatParameter final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_GetInternalformatParameter)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -6828,7 +6798,7 @@ class Msg_GetLinkResult final :
   enum : int {
     kAIdFieldNumber = 1,
   };
-  // required uint64 a_id = 1;
+  // optional uint64 a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -7117,7 +7087,7 @@ class Msg_GetNumber final :
   enum : int {
     kAPnameFieldNumber = 1,
   };
-  // required uint32 a_pname = 1;
+  // optional uint32 a_pname = 1;
   bool has_a_pname() const;
   private:
   bool _internal_has_a_pname() const;
@@ -7402,7 +7372,7 @@ class Msg_GetQueryParameter final :
     kAIdFieldNumber = 1,
     kAPnameFieldNumber = 2,
   };
-  // required uint64 a_id = 1;
+  // optional uint64 a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -7415,7 +7385,7 @@ class Msg_GetQueryParameter final :
   void _internal_set_a_id(uint64_t value);
   public:
 
-  // required uint32 a_pname = 2;
+  // optional uint32 a_pname = 2;
   bool has_a_pname() const;
   private:
   bool _internal_has_a_pname() const;
@@ -7431,9 +7401,6 @@ class Msg_GetQueryParameter final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_GetQueryParameter)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -7704,7 +7671,7 @@ class Msg_GetRenderbufferParameter final :
     kAIdFieldNumber = 1,
     kAPnameFieldNumber = 2,
   };
-  // required uint64 a_id = 1;
+  // optional uint64 a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -7717,7 +7684,7 @@ class Msg_GetRenderbufferParameter final :
   void _internal_set_a_id(uint64_t value);
   public:
 
-  // required uint32 a_pname = 2;
+  // optional uint32 a_pname = 2;
   bool has_a_pname() const;
   private:
   bool _internal_has_a_pname() const;
@@ -7733,9 +7700,6 @@ class Msg_GetRenderbufferParameter final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_GetRenderbufferParameter)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -8006,7 +7970,7 @@ class Msg_GetSamplerParameter final :
     kAIdFieldNumber = 1,
     kAPnameFieldNumber = 2,
   };
-  // required uint64 a_id = 1;
+  // optional uint64 a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -8019,7 +7983,7 @@ class Msg_GetSamplerParameter final :
   void _internal_set_a_id(uint64_t value);
   public:
 
-  // required uint32 a_pname = 2;
+  // optional uint32 a_pname = 2;
   bool has_a_pname() const;
   private:
   bool _internal_has_a_pname() const;
@@ -8035,9 +7999,6 @@ class Msg_GetSamplerParameter final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_GetSamplerParameter)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -8307,7 +8268,7 @@ class Msg_GetString final :
   enum : int {
     kAPnameFieldNumber = 1,
   };
-  // required uint32 a_pname = 1;
+  // optional uint32 a_pname = 1;
   bool has_a_pname() const;
   private:
   bool _internal_has_a_pname() const;
@@ -8597,7 +8558,7 @@ class Msg_GetTexParameter final :
     kAIdFieldNumber = 1,
     kAPnameFieldNumber = 2,
   };
-  // required uint64 a_id = 1;
+  // optional uint64 a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -8610,7 +8571,7 @@ class Msg_GetTexParameter final :
   void _internal_set_a_id(uint64_t value);
   public:
 
-  // required uint32 a_pname = 2;
+  // optional uint32 a_pname = 2;
   bool has_a_pname() const;
   private:
   bool _internal_has_a_pname() const;
@@ -8626,9 +8587,6 @@ class Msg_GetTexParameter final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_GetTexParameter)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -8899,7 +8857,7 @@ class Msg_GetUniform final :
     kAIdFieldNumber = 1,
     kALocFieldNumber = 2,
   };
-  // required uint64 a_id = 1;
+  // optional uint64 a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -8912,7 +8870,7 @@ class Msg_GetUniform final :
   void _internal_set_a_id(uint64_t value);
   public:
 
-  // required uint32 a_loc = 2;
+  // optional uint32 a_loc = 2;
   bool has_a_loc() const;
   private:
   bool _internal_has_a_loc() const;
@@ -8928,9 +8886,6 @@ class Msg_GetUniform final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_GetUniform)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -9206,7 +9161,7 @@ class Msg_GetVertexAttrib final :
     kAIndexFieldNumber = 1,
     kAPnameFieldNumber = 2,
   };
-  // required uint32 a_index = 1;
+  // optional uint32 a_index = 1;
   bool has_a_index() const;
   private:
   bool _internal_has_a_index() const;
@@ -9219,7 +9174,7 @@ class Msg_GetVertexAttrib final :
   void _internal_set_a_index(uint32_t value);
   public:
 
-  // required uint32 a_pname = 2;
+  // optional uint32 a_pname = 2;
   bool has_a_pname() const;
   private:
   bool _internal_has_a_pname() const;
@@ -9235,9 +9190,6 @@ class Msg_GetVertexAttrib final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_GetVertexAttrib)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -9755,7 +9707,7 @@ class Msg_ValidateProgram final :
   enum : int {
     kAIdFieldNumber = 1,
   };
-  // required uint64 a_id = 1;
+  // optional uint64 a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -9897,7 +9849,7 @@ class Reply_ValidateProgram final :
   enum : int {
     kARetFieldNumber = 1,
   };
-  // required bool a_ret = 1;
+  // optional bool a_ret = 1;
   bool has_a_ret() const;
   private:
   bool _internal_has_a_ret() const;
@@ -10333,7 +10285,7 @@ class Msg_OnSyncComplete final :
   enum : int {
     kAIdFieldNumber = 1,
   };
-  // required uint64 a_id = 1;
+  // optional uint64 a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -10800,7 +10752,7 @@ inline void Msg_DispatchCommands::set_allocated_a_commands(std::string* a_comman
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_DispatchCommands.a_commands)
 }
 
-// required uint64 a_size = 2;
+// optional uint64 a_size = 2;
 inline bool Msg_DispatchCommands::_internal_has_a_size() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -10916,7 +10868,7 @@ inline void Reply_Ping::set_allocated_a_ok(std::string* a_ok) {
 
 // Msg_TexImage
 
-// required uint32 a_level = 1;
+// optional uint32 a_level = 1;
 inline bool Msg_TexImage::_internal_has_a_level() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -10944,7 +10896,7 @@ inline void Msg_TexImage::set_a_level(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_level)
 }
 
-// required uint32 a_respecFormat = 2;
+// optional uint32 a_respecFormat = 2;
 inline bool Msg_TexImage::_internal_has_a_respecformat() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -11180,7 +11132,7 @@ inline void Msg_TexImage::set_allocated_a_src(std::string* a_src) {
 
 // Msg_GetBufferSubData
 
-// required uint32 a_target = 1;
+// optional uint32 a_target = 1;
 inline bool Msg_GetBufferSubData::_internal_has_a_target() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -11208,7 +11160,7 @@ inline void Msg_GetBufferSubData::set_a_target(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetBufferSubData.a_target)
 }
 
-// required uint64 a_srcByteOffset = 2;
+// optional uint64 a_srcByteOffset = 2;
 inline bool Msg_GetBufferSubData::_internal_has_a_srcbyteoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11236,7 +11188,7 @@ inline void Msg_GetBufferSubData::set_a_srcbyteoffset(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetBufferSubData.a_srcByteOffset)
 }
 
-// required uint64 a_byteSize = 3;
+// optional uint64 a_byteSize = 3;
 inline bool Msg_GetBufferSubData::_internal_has_a_bytesize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11647,7 +11599,7 @@ inline void Reply_ReadPixels::set_allocated_a_ret(std::string* a_ret) {
 
 // Msg_CheckFramebufferStatus
 
-// required uint32 a_target = 1;
+// optional uint32 a_target = 1;
 inline bool Msg_CheckFramebufferStatus::_internal_has_a_target() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11679,7 +11631,7 @@ inline void Msg_CheckFramebufferStatus::set_a_target(uint32_t value) {
 
 // Reply_CheckFramebufferStatus
 
-// required uint32 a_ret = 1;
+// optional uint32 a_ret = 1;
 inline bool Reply_CheckFramebufferStatus::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11711,7 +11663,7 @@ inline void Reply_CheckFramebufferStatus::set_a_ret(uint32_t value) {
 
 // Msg_ClientWaitSync
 
-// required uint64 a_id = 1;
+// optional uint64 a_id = 1;
 inline bool Msg_ClientWaitSync::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11739,7 +11691,7 @@ inline void Msg_ClientWaitSync::set_a_id(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_ClientWaitSync.a_id)
 }
 
-// required uint32 a_flags = 2;
+// optional uint32 a_flags = 2;
 inline bool Msg_ClientWaitSync::_internal_has_a_flags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -11767,7 +11719,7 @@ inline void Msg_ClientWaitSync::set_a_flags(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_ClientWaitSync.a_flags)
 }
 
-// required uint64 a_timeout = 3;
+// optional uint64 a_timeout = 3;
 inline bool Msg_ClientWaitSync::_internal_has_a_timeout() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11799,7 +11751,7 @@ inline void Msg_ClientWaitSync::set_a_timeout(uint64_t value) {
 
 // Reply_ClientWaitSync
 
-// required uint32 a_ret = 1;
+// optional uint32 a_ret = 1;
 inline bool Reply_ClientWaitSync::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11831,7 +11783,7 @@ inline void Reply_ClientWaitSync::set_a_ret(uint32_t value) {
 
 // Msg_CreateOpaqueFramebuffer
 
-// required uint64 a_id = 1;
+// optional uint64 a_id = 1;
 inline bool Msg_CreateOpaqueFramebuffer::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11931,7 +11883,7 @@ inline void Msg_CreateOpaqueFramebuffer::set_allocated_a_options(std::string* a_
 
 // Reply_CreateOpaqueFramebuffer
 
-// required bool a_ret = 1;
+// optional bool a_ret = 1;
 inline bool Reply_CreateOpaqueFramebuffer::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12047,7 +11999,7 @@ inline void Reply_DrawingBufferSize::set_allocated_a_ret(std::string* a_ret) {
 
 // Msg_GetBufferParameter
 
-// required uint32 a_target = 1;
+// optional uint32 a_target = 1;
 inline bool Msg_GetBufferParameter::_internal_has_a_target() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12075,7 +12027,7 @@ inline void Msg_GetBufferParameter::set_a_target(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetBufferParameter.a_target)
 }
 
-// required uint32 a_pname = 2;
+// optional uint32 a_pname = 2;
 inline bool Msg_GetBufferParameter::_internal_has_a_pname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -12139,7 +12091,7 @@ inline void Reply_GetBufferParameter::set_a_ret(double value) {
 
 // Msg_GetCompileResult
 
-// required uint64 a_id = 1;
+// optional uint64 a_id = 1;
 inline bool Msg_GetCompileResult::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12247,7 +12199,7 @@ inline void Reply_GetCompileResult::set_allocated_a_ret(std::string* a_ret) {
 
 // Reply_GetError
 
-// required uint32 a_ret = 1;
+// optional uint32 a_ret = 1;
 inline bool Reply_GetError::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12279,7 +12231,7 @@ inline void Reply_GetError::set_a_ret(uint32_t value) {
 
 // Msg_GetFragDataLocation
 
-// required uint64 a_id = 1;
+// optional uint64 a_id = 1;
 inline bool Msg_GetFragDataLocation::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -12379,7 +12331,7 @@ inline void Msg_GetFragDataLocation::set_allocated_a_name(std::string* a_name) {
 
 // Reply_GetFragDataLocation
 
-// required sint32 a_ret = 1;
+// optional sint32 a_ret = 1;
 inline bool Reply_GetFragDataLocation::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12411,7 +12363,7 @@ inline void Reply_GetFragDataLocation::set_a_ret(int32_t value) {
 
 // Msg_GetFramebufferAttachmentParameter
 
-// required uint64 a_id = 1;
+// optional uint64 a_id = 1;
 inline bool Msg_GetFramebufferAttachmentParameter::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12439,7 +12391,7 @@ inline void Msg_GetFramebufferAttachmentParameter::set_a_id(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetFramebufferAttachmentParameter.a_id)
 }
 
-// required uint32 a_attachment = 2;
+// optional uint32 a_attachment = 2;
 inline bool Msg_GetFramebufferAttachmentParameter::_internal_has_a_attachment() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -12467,7 +12419,7 @@ inline void Msg_GetFramebufferAttachmentParameter::set_a_attachment(uint32_t val
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetFramebufferAttachmentParameter.a_attachment)
 }
 
-// required uint32 a_pname = 3;
+// optional uint32 a_pname = 3;
 inline bool Msg_GetFramebufferAttachmentParameter::_internal_has_a_pname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -12531,7 +12483,7 @@ inline void Reply_GetFramebufferAttachmentParameter::set_a_ret(double value) {
 
 // Msg_GetFrontBuffer
 
-// required uint64 a_fb = 1;
+// optional uint64 a_fb = 1;
 inline bool Msg_GetFrontBuffer::_internal_has_a_fb() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12559,7 +12511,7 @@ inline void Msg_GetFrontBuffer::set_a_fb(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetFrontBuffer.a_fb)
 }
 
-// required bool a_vr = 2;
+// optional bool a_vr = 2;
 inline bool Msg_GetFrontBuffer::_internal_has_a_vr() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -12663,7 +12615,7 @@ inline void Reply_GetFrontBuffer::set_allocated_a_ret(std::string* a_ret) {
 
 // Msg_GetIndexedParameter
 
-// required uint32 a_target = 1;
+// optional uint32 a_target = 1;
 inline bool Msg_GetIndexedParameter::_internal_has_a_target() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12691,7 +12643,7 @@ inline void Msg_GetIndexedParameter::set_a_target(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetIndexedParameter.a_target)
 }
 
-// required uint32 a_index = 2;
+// optional uint32 a_index = 2;
 inline bool Msg_GetIndexedParameter::_internal_has_a_index() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -12755,7 +12707,7 @@ inline void Reply_GetIndexedParameter::set_a_ret(double value) {
 
 // Msg_GetInternalformatParameter
 
-// required uint32 a_target = 1;
+// optional uint32 a_target = 1;
 inline bool Msg_GetInternalformatParameter::_internal_has_a_target() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12783,7 +12735,7 @@ inline void Msg_GetInternalformatParameter::set_a_target(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetInternalformatParameter.a_target)
 }
 
-// required uint32 a_internalFormat = 2;
+// optional uint32 a_internalFormat = 2;
 inline bool Msg_GetInternalformatParameter::_internal_has_a_internalformat() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -12811,7 +12763,7 @@ inline void Msg_GetInternalformatParameter::set_a_internalformat(uint32_t value)
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetInternalformatParameter.a_internalFormat)
 }
 
-// required uint32 a_pname = 3;
+// optional uint32 a_pname = 3;
 inline bool Msg_GetInternalformatParameter::_internal_has_a_pname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -12915,7 +12867,7 @@ inline void Reply_GetInternalformatParameter::set_allocated_a_ret(std::string* a
 
 // Msg_GetLinkResult
 
-// required uint64 a_id = 1;
+// optional uint64 a_id = 1;
 inline bool Msg_GetLinkResult::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -13019,7 +12971,7 @@ inline void Reply_GetLinkResult::set_allocated_a_ret(std::string* a_ret) {
 
 // Msg_GetNumber
 
-// required uint32 a_pname = 1;
+// optional uint32 a_pname = 1;
 inline bool Msg_GetNumber::_internal_has_a_pname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -13083,7 +13035,7 @@ inline void Reply_GetNumber::set_a_ret(double value) {
 
 // Msg_GetQueryParameter
 
-// required uint64 a_id = 1;
+// optional uint64 a_id = 1;
 inline bool Msg_GetQueryParameter::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -13111,7 +13063,7 @@ inline void Msg_GetQueryParameter::set_a_id(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetQueryParameter.a_id)
 }
 
-// required uint32 a_pname = 2;
+// optional uint32 a_pname = 2;
 inline bool Msg_GetQueryParameter::_internal_has_a_pname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -13175,7 +13127,7 @@ inline void Reply_GetQueryParameter::set_a_ret(double value) {
 
 // Msg_GetRenderbufferParameter
 
-// required uint64 a_id = 1;
+// optional uint64 a_id = 1;
 inline bool Msg_GetRenderbufferParameter::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -13203,7 +13155,7 @@ inline void Msg_GetRenderbufferParameter::set_a_id(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetRenderbufferParameter.a_id)
 }
 
-// required uint32 a_pname = 2;
+// optional uint32 a_pname = 2;
 inline bool Msg_GetRenderbufferParameter::_internal_has_a_pname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -13267,7 +13219,7 @@ inline void Reply_GetRenderbufferParameter::set_a_ret(double value) {
 
 // Msg_GetSamplerParameter
 
-// required uint64 a_id = 1;
+// optional uint64 a_id = 1;
 inline bool Msg_GetSamplerParameter::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -13295,7 +13247,7 @@ inline void Msg_GetSamplerParameter::set_a_id(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetSamplerParameter.a_id)
 }
 
-// required uint32 a_pname = 2;
+// optional uint32 a_pname = 2;
 inline bool Msg_GetSamplerParameter::_internal_has_a_pname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -13359,7 +13311,7 @@ inline void Reply_GetSamplerParameter::set_a_ret(double value) {
 
 // Msg_GetString
 
-// required uint32 a_pname = 1;
+// optional uint32 a_pname = 1;
 inline bool Msg_GetString::_internal_has_a_pname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -13463,7 +13415,7 @@ inline void Reply_GetString::set_allocated_a_ret(std::string* a_ret) {
 
 // Msg_GetTexParameter
 
-// required uint64 a_id = 1;
+// optional uint64 a_id = 1;
 inline bool Msg_GetTexParameter::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -13491,7 +13443,7 @@ inline void Msg_GetTexParameter::set_a_id(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetTexParameter.a_id)
 }
 
-// required uint32 a_pname = 2;
+// optional uint32 a_pname = 2;
 inline bool Msg_GetTexParameter::_internal_has_a_pname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -13555,7 +13507,7 @@ inline void Reply_GetTexParameter::set_a_ret(double value) {
 
 // Msg_GetUniform
 
-// required uint64 a_id = 1;
+// optional uint64 a_id = 1;
 inline bool Msg_GetUniform::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -13583,7 +13535,7 @@ inline void Msg_GetUniform::set_a_id(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetUniform.a_id)
 }
 
-// required uint32 a_loc = 2;
+// optional uint32 a_loc = 2;
 inline bool Msg_GetUniform::_internal_has_a_loc() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -13687,7 +13639,7 @@ inline void Reply_GetUniform::set_allocated_a_ret(std::string* a_ret) {
 
 // Msg_GetVertexAttrib
 
-// required uint32 a_index = 1;
+// optional uint32 a_index = 1;
 inline bool Msg_GetVertexAttrib::_internal_has_a_index() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -13715,7 +13667,7 @@ inline void Msg_GetVertexAttrib::set_a_index(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetVertexAttrib.a_index)
 }
 
-// required uint32 a_pname = 2;
+// optional uint32 a_pname = 2;
 inline bool Msg_GetVertexAttrib::_internal_has_a_pname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -13787,7 +13739,7 @@ inline void Reply_GetVertexAttrib::set_a_ret(double value) {
 
 // Msg_ValidateProgram
 
-// required uint64 a_id = 1;
+// optional uint64 a_id = 1;
 inline bool Msg_ValidateProgram::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -13819,7 +13771,7 @@ inline void Msg_ValidateProgram::set_a_id(uint64_t value) {
 
 // Reply_ValidateProgram
 
-// required bool a_ret = 1;
+// optional bool a_ret = 1;
 inline bool Reply_ValidateProgram::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -13995,7 +13947,7 @@ inline void Msg_OnContextLoss::set_allocated_a_areason(std::string* a_areason) {
 
 // Msg_OnSyncComplete
 
-// required uint64 a_id = 1;
+// optional uint64 a_id = 1;
 inline bool Msg_OnSyncComplete::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

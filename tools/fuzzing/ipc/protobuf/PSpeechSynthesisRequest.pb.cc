@@ -1106,9 +1106,6 @@ class Msg_SetAudioOutputVolume::_Internal {
   static void set_has_a_avolume(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_SetAudioOutputVolume::Msg_SetAudioOutputVolume(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1176,7 +1173,7 @@ const char* Msg_SetAudioOutputVolume::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required float a_aVolume = 1;
+      // optional float a_aVolume = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 13)) {
           _Internal::set_has_a_avolume(&has_bits);
@@ -1216,7 +1213,7 @@ uint8_t* Msg_SetAudioOutputVolume::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required float a_aVolume = 1;
+  // optional float a_aVolume = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(1, this->_internal_a_avolume(), target);
@@ -1234,13 +1231,15 @@ size_t Msg_SetAudioOutputVolume::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_SetAudioOutputVolume)
   size_t total_size = 0;
 
-  // required float a_aVolume = 1;
-  if (_internal_has_a_avolume()) {
-    total_size += 1 + 4;
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional float a_aVolume = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 + 4;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1277,7 +1276,6 @@ void Msg_SetAudioOutputVolume::CopyFrom(const Msg_SetAudioOutputVolume& from) {
 }
 
 bool Msg_SetAudioOutputVolume::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1306,9 +1304,6 @@ class Msg_OnEnd::_Internal {
   }
   static void set_has_a_acharindex(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
   }
 };
 
@@ -1388,7 +1383,7 @@ const char* Msg_OnEnd::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_aIsError = 1;
+      // optional bool a_aIsError = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_aiserror(&has_bits);
@@ -1397,7 +1392,7 @@ const char* Msg_OnEnd::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // required float a_aElapsedTime = 2;
+      // optional float a_aElapsedTime = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 21)) {
           _Internal::set_has_a_aelapsedtime(&has_bits);
@@ -1406,7 +1401,7 @@ const char* Msg_OnEnd::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_aCharIndex = 3;
+      // optional uint32 a_aCharIndex = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_acharindex(&has_bits);
@@ -1446,19 +1441,19 @@ uint8_t* Msg_OnEnd::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_aIsError = 1;
+  // optional bool a_aIsError = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_aiserror(), target);
   }
 
-  // required float a_aElapsedTime = 2;
+  // optional float a_aElapsedTime = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(2, this->_internal_a_aelapsedtime(), target);
   }
 
-  // required uint32 a_aCharIndex = 3;
+  // optional uint32 a_aCharIndex = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_acharindex(), target);
@@ -1472,48 +1467,32 @@ uint8_t* Msg_OnEnd::_InternalSerialize(
   return target;
 }
 
-size_t Msg_OnEnd::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnEnd)
-  size_t total_size = 0;
-
-  if (_internal_has_a_aiserror()) {
-    // required bool a_aIsError = 1;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_aelapsedtime()) {
-    // required float a_aElapsedTime = 2;
-    total_size += 1 + 4;
-  }
-
-  if (_internal_has_a_acharindex()) {
-    // required uint32 a_aCharIndex = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acharindex());
-  }
-
-  return total_size;
-}
 size_t Msg_OnEnd::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnEnd)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bool a_aIsError = 1;
-    total_size += 1 + 1;
-
-    // required float a_aElapsedTime = 2;
-    total_size += 1 + 4;
-
-    // required uint32 a_aCharIndex = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acharindex());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    // optional bool a_aIsError = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 + 1;
+    }
+
+    // optional float a_aElapsedTime = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 + 4;
+    }
+
+    // optional uint32 a_aCharIndex = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acharindex());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -1559,7 +1538,6 @@ void Msg_OnEnd::CopyFrom(const Msg_OnEnd& from) {
 }
 
 bool Msg_OnEnd::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1587,9 +1565,6 @@ class Msg_OnStart::_Internal {
   using HasBits = decltype(std::declval<Msg_OnStart>()._impl_._has_bits_);
   static void set_has_a_auri(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -1673,7 +1648,7 @@ const char* Msg_OnStart::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aUri = 1;
+      // optional string a_aUri = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_auri();
@@ -1713,7 +1688,7 @@ uint8_t* Msg_OnStart::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aUri = 1;
+  // optional string a_aUri = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_auri(), target);
@@ -1731,15 +1706,17 @@ size_t Msg_OnStart::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnStart)
   size_t total_size = 0;
 
-  // required string a_aUri = 1;
-  if (_internal_has_a_auri()) {
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional string a_aUri = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_auri());
   }
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1776,7 +1753,6 @@ void Msg_OnStart::CopyFrom(const Msg_OnStart& from) {
 }
 
 bool Msg_OnStart::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1807,9 +1783,6 @@ class Msg_OnPause::_Internal {
   }
   static void set_has_a_acharindex(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
   }
 };
 
@@ -1887,7 +1860,7 @@ const char* Msg_OnPause::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required float a_aElapsedTime = 1;
+      // optional float a_aElapsedTime = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 13)) {
           _Internal::set_has_a_aelapsedtime(&has_bits);
@@ -1896,7 +1869,7 @@ const char* Msg_OnPause::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_aCharIndex = 2;
+      // optional uint32 a_aCharIndex = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_acharindex(&has_bits);
@@ -1936,13 +1909,13 @@ uint8_t* Msg_OnPause::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required float a_aElapsedTime = 1;
+  // optional float a_aElapsedTime = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(1, this->_internal_a_aelapsedtime(), target);
   }
 
-  // required uint32 a_aCharIndex = 2;
+  // optional uint32 a_aCharIndex = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_acharindex(), target);
@@ -1956,40 +1929,27 @@ uint8_t* Msg_OnPause::_InternalSerialize(
   return target;
 }
 
-size_t Msg_OnPause::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnPause)
-  size_t total_size = 0;
-
-  if (_internal_has_a_aelapsedtime()) {
-    // required float a_aElapsedTime = 1;
-    total_size += 1 + 4;
-  }
-
-  if (_internal_has_a_acharindex()) {
-    // required uint32 a_aCharIndex = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acharindex());
-  }
-
-  return total_size;
-}
 size_t Msg_OnPause::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnPause)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required float a_aElapsedTime = 1;
-    total_size += 1 + 4;
-
-    // required uint32 a_aCharIndex = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acharindex());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional float a_aElapsedTime = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 + 4;
+    }
+
+    // optional uint32 a_aCharIndex = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acharindex());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -2032,7 +1992,6 @@ void Msg_OnPause::CopyFrom(const Msg_OnPause& from) {
 }
 
 bool Msg_OnPause::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -2063,9 +2022,6 @@ class Msg_OnResume::_Internal {
   }
   static void set_has_a_acharindex(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
   }
 };
 
@@ -2143,7 +2099,7 @@ const char* Msg_OnResume::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required float a_aElapsedTime = 1;
+      // optional float a_aElapsedTime = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 13)) {
           _Internal::set_has_a_aelapsedtime(&has_bits);
@@ -2152,7 +2108,7 @@ const char* Msg_OnResume::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_aCharIndex = 2;
+      // optional uint32 a_aCharIndex = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_acharindex(&has_bits);
@@ -2192,13 +2148,13 @@ uint8_t* Msg_OnResume::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required float a_aElapsedTime = 1;
+  // optional float a_aElapsedTime = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(1, this->_internal_a_aelapsedtime(), target);
   }
 
-  // required uint32 a_aCharIndex = 2;
+  // optional uint32 a_aCharIndex = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_acharindex(), target);
@@ -2212,40 +2168,27 @@ uint8_t* Msg_OnResume::_InternalSerialize(
   return target;
 }
 
-size_t Msg_OnResume::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnResume)
-  size_t total_size = 0;
-
-  if (_internal_has_a_aelapsedtime()) {
-    // required float a_aElapsedTime = 1;
-    total_size += 1 + 4;
-  }
-
-  if (_internal_has_a_acharindex()) {
-    // required uint32 a_aCharIndex = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acharindex());
-  }
-
-  return total_size;
-}
 size_t Msg_OnResume::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnResume)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required float a_aElapsedTime = 1;
-    total_size += 1 + 4;
-
-    // required uint32 a_aCharIndex = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acharindex());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional float a_aElapsedTime = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 + 4;
+    }
+
+    // optional uint32 a_aCharIndex = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acharindex());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -2288,7 +2231,6 @@ void Msg_OnResume::CopyFrom(const Msg_OnResume& from) {
 }
 
 bool Msg_OnResume::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -2328,9 +2270,6 @@ class Msg_OnBoundary::_Internal {
   }
   static void set_has_a_argc(HasBits* has_bits) {
     (*has_bits)[0] |= 16u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000001f) ^ 0x0000001f) != 0;
   }
 };
 
@@ -2430,7 +2369,7 @@ const char* Msg_OnBoundary::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aName = 1;
+      // optional string a_aName = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_aname();
@@ -2439,7 +2378,7 @@ const char* Msg_OnBoundary::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required float a_aElapsedTime = 2;
+      // optional float a_aElapsedTime = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 21)) {
           _Internal::set_has_a_aelapsedtime(&has_bits);
@@ -2448,7 +2387,7 @@ const char* Msg_OnBoundary::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_aCharIndex = 3;
+      // optional uint32 a_aCharIndex = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_acharindex(&has_bits);
@@ -2457,7 +2396,7 @@ const char* Msg_OnBoundary::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_aCharLength = 4;
+      // optional uint32 a_aCharLength = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_a_acharlength(&has_bits);
@@ -2466,7 +2405,7 @@ const char* Msg_OnBoundary::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_argc = 5;
+      // optional uint32 a_argc = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_a_argc(&has_bits);
@@ -2506,31 +2445,31 @@ uint8_t* Msg_OnBoundary::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aName = 1;
+  // optional string a_aName = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_aname(), target);
   }
 
-  // required float a_aElapsedTime = 2;
+  // optional float a_aElapsedTime = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(2, this->_internal_a_aelapsedtime(), target);
   }
 
-  // required uint32 a_aCharIndex = 3;
+  // optional uint32 a_aCharIndex = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_acharindex(), target);
   }
 
-  // required uint32 a_aCharLength = 4;
+  // optional uint32 a_aCharLength = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(4, this->_internal_a_acharlength(), target);
   }
 
-  // required uint32 a_argc = 5;
+  // optional uint32 a_argc = 5;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(5, this->_internal_a_argc(), target);
@@ -2544,68 +2483,44 @@ uint8_t* Msg_OnBoundary::_InternalSerialize(
   return target;
 }
 
-size_t Msg_OnBoundary::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnBoundary)
-  size_t total_size = 0;
-
-  if (_internal_has_a_aname()) {
-    // required string a_aName = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_aname());
-  }
-
-  if (_internal_has_a_aelapsedtime()) {
-    // required float a_aElapsedTime = 2;
-    total_size += 1 + 4;
-  }
-
-  if (_internal_has_a_acharindex()) {
-    // required uint32 a_aCharIndex = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acharindex());
-  }
-
-  if (_internal_has_a_acharlength()) {
-    // required uint32 a_aCharLength = 4;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acharlength());
-  }
-
-  if (_internal_has_a_argc()) {
-    // required uint32 a_argc = 5;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_argc());
-  }
-
-  return total_size;
-}
 size_t Msg_OnBoundary::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnBoundary)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
-    // required string a_aName = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_aname());
-
-    // required float a_aElapsedTime = 2;
-    total_size += 1 + 4;
-
-    // required uint32 a_aCharIndex = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acharindex());
-
-    // required uint32 a_aCharLength = 4;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acharlength());
-
-    // required uint32 a_argc = 5;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_argc());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000001fu) {
+    // optional string a_aName = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_aname());
+    }
+
+    // optional float a_aElapsedTime = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 + 4;
+    }
+
+    // optional uint32 a_aCharIndex = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acharindex());
+    }
+
+    // optional uint32 a_aCharLength = 4;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acharlength());
+    }
+
+    // optional uint32 a_argc = 5;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_argc());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -2657,7 +2572,6 @@ void Msg_OnBoundary::CopyFrom(const Msg_OnBoundary& from) {
 }
 
 bool Msg_OnBoundary::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -2697,9 +2611,6 @@ class Msg_OnMark::_Internal {
   }
   static void set_has_a_acharindex(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
   }
 };
 
@@ -2795,7 +2706,7 @@ const char* Msg_OnMark::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aName = 1;
+      // optional string a_aName = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_aname();
@@ -2804,7 +2715,7 @@ const char* Msg_OnMark::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // required float a_aElapsedTime = 2;
+      // optional float a_aElapsedTime = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 21)) {
           _Internal::set_has_a_aelapsedtime(&has_bits);
@@ -2813,7 +2724,7 @@ const char* Msg_OnMark::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_aCharIndex = 3;
+      // optional uint32 a_aCharIndex = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_acharindex(&has_bits);
@@ -2853,19 +2764,19 @@ uint8_t* Msg_OnMark::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aName = 1;
+  // optional string a_aName = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_aname(), target);
   }
 
-  // required float a_aElapsedTime = 2;
+  // optional float a_aElapsedTime = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(2, this->_internal_a_aelapsedtime(), target);
   }
 
-  // required uint32 a_aCharIndex = 3;
+  // optional uint32 a_aCharIndex = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_acharindex(), target);
@@ -2879,52 +2790,34 @@ uint8_t* Msg_OnMark::_InternalSerialize(
   return target;
 }
 
-size_t Msg_OnMark::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnMark)
-  size_t total_size = 0;
-
-  if (_internal_has_a_aname()) {
-    // required string a_aName = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_aname());
-  }
-
-  if (_internal_has_a_aelapsedtime()) {
-    // required float a_aElapsedTime = 2;
-    total_size += 1 + 4;
-  }
-
-  if (_internal_has_a_acharindex()) {
-    // required uint32 a_aCharIndex = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acharindex());
-  }
-
-  return total_size;
-}
 size_t Msg_OnMark::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnMark)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required string a_aName = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_aname());
-
-    // required float a_aElapsedTime = 2;
-    total_size += 1 + 4;
-
-    // required uint32 a_aCharIndex = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acharindex());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    // optional string a_aName = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_aname());
+    }
+
+    // optional float a_aElapsedTime = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 + 4;
+    }
+
+    // optional uint32 a_aCharIndex = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acharindex());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -2970,7 +2863,6 @@ void Msg_OnMark::CopyFrom(const Msg_OnMark& from) {
 }
 
 bool Msg_OnMark::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 

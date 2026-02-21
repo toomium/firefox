@@ -17,7 +17,7 @@ import "RandomAccessStreamParams.proto";
 message FileSystemEntryMetadata {
   required bytes a_entryId = 1;
   required bytes a_entryName = 2;
-  required bool a_directory = 3;
+  optional bool a_directory = 3;
 }
 
 message FileSystemChildMetadata {
@@ -27,7 +27,7 @@ message FileSystemChildMetadata {
 
 message FileSystemGetHandleRequest {
   required protobuf.mozilla.dom.fs.FileSystemChildMetadata a_handle = 1;
-  required bool a_create = 2;
+  optional bool a_create = 2;
 }
 
 message FileSystemGetHandleResponse {
@@ -91,7 +91,7 @@ message FileSystemGetAccessHandleResponse {
 
 message FileSystemGetWritableRequest {
   required bytes a_entryId = 1;
-  required bool a_keepData = 2;
+  optional bool a_keepData = 2;
 }
 
 message FileSystemWritableFileStreamProperties {
@@ -128,7 +128,7 @@ message FileSystemResolveResponse {
 
 message FileSystemRemoveEntryRequest {
   required protobuf.mozilla.dom.fs.FileSystemChildMetadata a_handle = 1;
-  required bool a_recursive = 2;
+  optional bool a_recursive = 2;
 }
 
 message FileSystemRemoveEntryResponse {

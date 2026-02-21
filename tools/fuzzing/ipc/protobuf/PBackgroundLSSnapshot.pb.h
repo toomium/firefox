@@ -1704,7 +1704,7 @@ class Msg_LoadValueAndMoreItems final :
   enum : int {
     kAKeyFieldNumber = 1,
   };
-  // required string a_key = 1;
+  // optional string a_key = 1;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -2294,7 +2294,7 @@ class Msg_IncreasePeakUsage final :
   enum : int {
     kAMinSizeFieldNumber = 1,
   };
-  // required sint64 a_minSize = 1;
+  // optional sint64 a_minSize = 1;
   bool has_a_minsize() const;
   private:
   bool _internal_has_a_minsize() const;
@@ -2436,7 +2436,7 @@ class Reply_IncreasePeakUsage final :
   enum : int {
     kASizeFieldNumber = 1,
   };
-  // required sint64 a_size = 1;
+  // optional sint64 a_size = 1;
   bool has_a_size() const;
   private:
   bool _internal_has_a_size() const;
@@ -3039,7 +3039,7 @@ Msg_SyncCheckpointAndNotify::a_writeandnotifyinfos() const {
 
 // Msg_LoadValueAndMoreItems
 
-// required string a_key = 1;
+// optional string a_key = 1;
 inline bool Msg_LoadValueAndMoreItems::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3303,7 +3303,7 @@ Reply_LoadKeys::mutable_a_keys() {
 
 // Msg_IncreasePeakUsage
 
-// required sint64 a_minSize = 1;
+// optional sint64 a_minSize = 1;
 inline bool Msg_IncreasePeakUsage::_internal_has_a_minsize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3335,7 +3335,7 @@ inline void Msg_IncreasePeakUsage::set_a_minsize(int64_t value) {
 
 // Reply_IncreasePeakUsage
 
-// required sint64 a_size = 1;
+// optional sint64 a_size = 1;
 inline bool Reply_IncreasePeakUsage::_internal_has_a_size() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

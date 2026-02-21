@@ -21,7 +21,7 @@ message Msg_DeleteMe {
 }
 
 message Msg_Continue {
-  required sint64 a_requestId = 1;
+  optional sint64 a_requestId = 1;
   required protobuf.mozilla.dom.indexedDB.CursorRequestParams a_params = 2;
   required bytes a_currentKey = 3;
   required bytes a_currentObjectStoreKey = 4;

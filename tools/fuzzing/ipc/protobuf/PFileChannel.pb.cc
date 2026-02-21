@@ -603,9 +603,6 @@ class Msg_SetChannelIdForRedirect::_Internal {
   static void set_has_a_achannelid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_SetChannelIdForRedirect::Msg_SetChannelIdForRedirect(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -673,7 +670,7 @@ const char* Msg_SetChannelIdForRedirect::_InternalParse(const char* ptr, ::_pbi:
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint64 a_aChannelId = 1;
+      // optional uint64 a_aChannelId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_achannelid(&has_bits);
@@ -713,7 +710,7 @@ uint8_t* Msg_SetChannelIdForRedirect::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint64 a_aChannelId = 1;
+  // optional uint64 a_aChannelId = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_achannelid(), target);
@@ -731,13 +728,15 @@ size_t Msg_SetChannelIdForRedirect::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PFileChannel.Msg_SetChannelIdForRedirect)
   size_t total_size = 0;
 
-  // required uint64 a_aChannelId = 1;
-  if (_internal_has_a_achannelid()) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_achannelid());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional uint64 a_aChannelId = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_achannelid());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -774,7 +773,6 @@ void Msg_SetChannelIdForRedirect::CopyFrom(const Msg_SetChannelIdForRedirect& fr
 }
 
 bool Msg_SetChannelIdForRedirect::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 

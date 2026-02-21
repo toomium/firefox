@@ -183,7 +183,7 @@ class MIDIPortInfo final :
     kAVersionFieldNumber = 4,
     kATypeFieldNumber = 5,
   };
-  // required string a_id = 1;
+  // optional string a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -201,7 +201,7 @@ class MIDIPortInfo final :
   std::string* _internal_mutable_a_id();
   public:
 
-  // required string a_name = 2;
+  // optional string a_name = 2;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -219,7 +219,7 @@ class MIDIPortInfo final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required string a_manufacturer = 3;
+  // optional string a_manufacturer = 3;
   bool has_a_manufacturer() const;
   private:
   bool _internal_has_a_manufacturer() const;
@@ -237,7 +237,7 @@ class MIDIPortInfo final :
   std::string* _internal_mutable_a_manufacturer();
   public:
 
-  // required string a_version = 4;
+  // optional string a_version = 4;
   bool has_a_version() const;
   private:
   bool _internal_has_a_version() const;
@@ -255,7 +255,7 @@ class MIDIPortInfo final :
   std::string* _internal_mutable_a_version();
   public:
 
-  // required uint32 a_type = 5;
+  // optional uint32 a_type = 5;
   bool has_a_type() const;
   private:
   bool _internal_has_a_type() const;
@@ -271,9 +271,6 @@ class MIDIPortInfo final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.MIDIPortInfo)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -618,7 +615,7 @@ class MIDIPortList final :
 #endif  // __GNUC__
 // MIDIPortInfo
 
-// required string a_id = 1;
+// optional string a_id = 1;
 inline bool MIDIPortInfo::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -686,7 +683,7 @@ inline void MIDIPortInfo::set_allocated_a_id(std::string* a_id) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.MIDIPortInfo.a_id)
 }
 
-// required string a_name = 2;
+// optional string a_name = 2;
 inline bool MIDIPortInfo::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -754,7 +751,7 @@ inline void MIDIPortInfo::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.MIDIPortInfo.a_name)
 }
 
-// required string a_manufacturer = 3;
+// optional string a_manufacturer = 3;
 inline bool MIDIPortInfo::_internal_has_a_manufacturer() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -822,7 +819,7 @@ inline void MIDIPortInfo::set_allocated_a_manufacturer(std::string* a_manufactur
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.MIDIPortInfo.a_manufacturer)
 }
 
-// required string a_version = 4;
+// optional string a_version = 4;
 inline bool MIDIPortInfo::_internal_has_a_version() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -890,7 +887,7 @@ inline void MIDIPortInfo::set_allocated_a_version(std::string* a_version) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.MIDIPortInfo.a_version)
 }
 
-// required uint32 a_type = 5;
+// optional uint32 a_type = 5;
 inline bool MIDIPortInfo::_internal_has_a_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;

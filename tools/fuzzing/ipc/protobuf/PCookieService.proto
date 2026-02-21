@@ -17,24 +17,24 @@ import "NeckoChannelParams.proto";
 
 // Message declarations
 message Msg_SetCookies {
-  required string a_baseDomain = 1;
+  optional string a_baseDomain = 1;
   required bytes a_attrs = 2;
   optional bytes a_host = 3;
-  required bool a_fromHttp = 4;
-  required bool a_isThirdParty = 5;
+  optional bool a_fromHttp = 4;
+  optional bool a_isThirdParty = 5;
   repeated protobuf.mozilla.net.CookieStruct a_cookies = 6;
 }
 
 message Msg_GetCookieList {
   optional bytes a_host = 1;
-  required bool a_isForeign = 2;
-  required bool a_isThirdPartyTrackingResource = 3;
-  required bool a_isThirdPartySocialTrackingResource = 4;
-  required bool a_firstPartyStorageAccessPermissionGranted = 5;
-  required uint32 a_rejectedReason = 6;
-  required bool a_isSafeTopLevelNav = 7;
-  required bool a_isSameSiteForeign = 8;
-  required bool a_hadCrossSiteRedirects = 9;
+  optional bool a_isForeign = 2;
+  optional bool a_isThirdPartyTrackingResource = 3;
+  optional bool a_isThirdPartySocialTrackingResource = 4;
+  optional bool a_firstPartyStorageAccessPermissionGranted = 5;
+  optional uint32 a_rejectedReason = 6;
+  optional bool a_isSafeTopLevelNav = 7;
+  optional bool a_isSameSiteForeign = 8;
+  optional bool a_hadCrossSiteRedirects = 9;
   repeated bytes a_attrsList = 10;
 }
 

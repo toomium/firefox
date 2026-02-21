@@ -290,8 +290,6 @@ void Msg___delete__::CopyFrom(const Msg___delete__& from) {
 
 bool Msg___delete__::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_aproxyinfo_))
-    return false;
   return true;
 }
 

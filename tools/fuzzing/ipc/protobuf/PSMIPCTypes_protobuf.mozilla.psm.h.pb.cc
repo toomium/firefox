@@ -1320,9 +1320,6 @@ class DelegatedCredentialInfoArg::_Internal {
   static void set_has_a_authkeybits(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
-  }
 };
 
 DelegatedCredentialInfoArg::DelegatedCredentialInfoArg(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1399,7 +1396,7 @@ const char* DelegatedCredentialInfoArg::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 a_scheme = 1;
+      // optional uint32 a_scheme = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_scheme(&has_bits);
@@ -1408,7 +1405,7 @@ const char* DelegatedCredentialInfoArg::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_authKeyBits = 2;
+      // optional uint32 a_authKeyBits = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_authkeybits(&has_bits);
@@ -1448,13 +1445,13 @@ uint8_t* DelegatedCredentialInfoArg::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 a_scheme = 1;
+  // optional uint32 a_scheme = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_scheme(), target);
   }
 
-  // required uint32 a_authKeyBits = 2;
+  // optional uint32 a_authKeyBits = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_authkeybits(), target);
@@ -1468,40 +1465,27 @@ uint8_t* DelegatedCredentialInfoArg::_InternalSerialize(
   return target;
 }
 
-size_t DelegatedCredentialInfoArg::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.psm.DelegatedCredentialInfoArg)
-  size_t total_size = 0;
-
-  if (_internal_has_a_scheme()) {
-    // required uint32 a_scheme = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_scheme());
-  }
-
-  if (_internal_has_a_authkeybits()) {
-    // required uint32 a_authKeyBits = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_authkeybits());
-  }
-
-  return total_size;
-}
 size_t DelegatedCredentialInfoArg::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.psm.DelegatedCredentialInfoArg)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required uint32 a_scheme = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_scheme());
-
-    // required uint32 a_authKeyBits = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_authkeybits());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional uint32 a_scheme = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_scheme());
+    }
+
+    // optional uint32 a_authKeyBits = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_authkeybits());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -1544,7 +1528,6 @@ void DelegatedCredentialInfoArg::CopyFrom(const DelegatedCredentialInfoArg& from
 }
 
 bool DelegatedCredentialInfoArg::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 

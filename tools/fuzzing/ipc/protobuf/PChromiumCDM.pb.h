@@ -336,7 +336,7 @@ class Msg_Init final :
     kAAAllowDistinctiveIdentifierFieldNumber = 1,
     kAAAllowPersistentStateFieldNumber = 2,
   };
-  // required bool a_aAllowDistinctiveIdentifier = 1;
+  // optional bool a_aAllowDistinctiveIdentifier = 1;
   bool has_a_aallowdistinctiveidentifier() const;
   private:
   bool _internal_has_a_aallowdistinctiveidentifier() const;
@@ -349,7 +349,7 @@ class Msg_Init final :
   void _internal_set_a_aallowdistinctiveidentifier(bool value);
   public:
 
-  // required bool a_aAllowPersistentState = 2;
+  // optional bool a_aAllowPersistentState = 2;
   bool has_a_aallowpersistentstate() const;
   private:
   bool _internal_has_a_aallowpersistentstate() const;
@@ -365,9 +365,6 @@ class Msg_Init final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PChromiumCDM.Msg_Init)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -495,7 +492,7 @@ class Reply_Init final :
   enum : int {
     kAASuccessFieldNumber = 1,
   };
-  // required bool a_aSuccess = 1;
+  // optional bool a_aSuccess = 1;
   bool has_a_asuccess() const;
   private:
   bool _internal_has_a_asuccess() const;
@@ -656,7 +653,7 @@ class Msg_GetStatusForPolicy final :
   std::string* _internal_mutable_a_aminhdcpversion();
   public:
 
-  // required uint32 a_aPromiseId = 1;
+  // optional uint32 a_aPromiseId = 1;
   bool has_a_apromiseid() const;
   private:
   bool _internal_has_a_apromiseid() const;
@@ -672,9 +669,6 @@ class Msg_GetStatusForPolicy final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PChromiumCDM.Msg_GetStatusForPolicy)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -825,7 +819,7 @@ class Msg_SetServerCertificate final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_aservercert();
 
-  // required uint32 a_aPromiseId = 1;
+  // optional uint32 a_aPromiseId = 1;
   bool has_a_apromiseid() const;
   private:
   bool _internal_has_a_apromiseid() const;
@@ -993,7 +987,7 @@ class Msg_CreateSessionAndGenerateRequest final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_ainitdata();
 
-  // required uint32 a_aPromiseId = 1;
+  // optional uint32 a_aPromiseId = 1;
   bool has_a_apromiseid() const;
   private:
   bool _internal_has_a_apromiseid() const;
@@ -1006,7 +1000,7 @@ class Msg_CreateSessionAndGenerateRequest final :
   void _internal_set_a_apromiseid(uint32_t value);
   public:
 
-  // required uint32 a_aSessionType = 2;
+  // optional uint32 a_aSessionType = 2;
   bool has_a_asessiontype() const;
   private:
   bool _internal_has_a_asessiontype() const;
@@ -1019,7 +1013,7 @@ class Msg_CreateSessionAndGenerateRequest final :
   void _internal_set_a_asessiontype(uint32_t value);
   public:
 
-  // required uint32 a_aInitDataType = 3;
+  // optional uint32 a_aInitDataType = 3;
   bool has_a_ainitdatatype() const;
   private:
   bool _internal_has_a_ainitdatatype() const;
@@ -1035,9 +1029,6 @@ class Msg_CreateSessionAndGenerateRequest final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PChromiumCDM.Msg_CreateSessionAndGenerateRequest)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1169,7 +1160,7 @@ class Msg_LoadSession final :
     kAAPromiseIdFieldNumber = 1,
     kAASessionTypeFieldNumber = 2,
   };
-  // required string a_aSessionId = 3;
+  // optional string a_aSessionId = 3;
   bool has_a_asessionid() const;
   private:
   bool _internal_has_a_asessionid() const;
@@ -1187,7 +1178,7 @@ class Msg_LoadSession final :
   std::string* _internal_mutable_a_asessionid();
   public:
 
-  // required uint32 a_aPromiseId = 1;
+  // optional uint32 a_aPromiseId = 1;
   bool has_a_apromiseid() const;
   private:
   bool _internal_has_a_apromiseid() const;
@@ -1200,7 +1191,7 @@ class Msg_LoadSession final :
   void _internal_set_a_apromiseid(uint32_t value);
   public:
 
-  // required uint32 a_aSessionType = 2;
+  // optional uint32 a_aSessionType = 2;
   bool has_a_asessiontype() const;
   private:
   bool _internal_has_a_asessiontype() const;
@@ -1216,9 +1207,6 @@ class Msg_LoadSession final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PChromiumCDM.Msg_LoadSession)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1371,7 +1359,7 @@ class Msg_UpdateSession final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_aresponse();
 
-  // required string a_aSessionId = 2;
+  // optional string a_aSessionId = 2;
   bool has_a_asessionid() const;
   private:
   bool _internal_has_a_asessionid() const;
@@ -1389,7 +1377,7 @@ class Msg_UpdateSession final :
   std::string* _internal_mutable_a_asessionid();
   public:
 
-  // required uint32 a_aPromiseId = 1;
+  // optional uint32 a_aPromiseId = 1;
   bool has_a_apromiseid() const;
   private:
   bool _internal_has_a_apromiseid() const;
@@ -1405,9 +1393,6 @@ class Msg_UpdateSession final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PChromiumCDM.Msg_UpdateSession)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1537,7 +1522,7 @@ class Msg_CloseSession final :
     kAASessionIdFieldNumber = 2,
     kAAPromiseIdFieldNumber = 1,
   };
-  // required string a_aSessionId = 2;
+  // optional string a_aSessionId = 2;
   bool has_a_asessionid() const;
   private:
   bool _internal_has_a_asessionid() const;
@@ -1555,7 +1540,7 @@ class Msg_CloseSession final :
   std::string* _internal_mutable_a_asessionid();
   public:
 
-  // required uint32 a_aPromiseId = 1;
+  // optional uint32 a_aPromiseId = 1;
   bool has_a_apromiseid() const;
   private:
   bool _internal_has_a_apromiseid() const;
@@ -1571,9 +1556,6 @@ class Msg_CloseSession final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PChromiumCDM.Msg_CloseSession)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1702,7 +1684,7 @@ class Msg_RemoveSession final :
     kAASessionIdFieldNumber = 2,
     kAAPromiseIdFieldNumber = 1,
   };
-  // required string a_aSessionId = 2;
+  // optional string a_aSessionId = 2;
   bool has_a_asessionid() const;
   private:
   bool _internal_has_a_asessionid() const;
@@ -1720,7 +1702,7 @@ class Msg_RemoveSession final :
   std::string* _internal_mutable_a_asessionid();
   public:
 
-  // required uint32 a_aPromiseId = 1;
+  // optional uint32 a_aPromiseId = 1;
   bool has_a_apromiseid() const;
   private:
   bool _internal_has_a_apromiseid() const;
@@ -1736,9 +1718,6 @@ class Msg_RemoveSession final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PChromiumCDM.Msg_RemoveSession)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1868,7 +1847,7 @@ class Msg_CompleteQueryOutputProtectionStatus final :
     kAALinkMaskFieldNumber = 2,
     kAAProtectionMaskFieldNumber = 3,
   };
-  // required bool a_aSuccess = 1;
+  // optional bool a_aSuccess = 1;
   bool has_a_asuccess() const;
   private:
   bool _internal_has_a_asuccess() const;
@@ -1881,7 +1860,7 @@ class Msg_CompleteQueryOutputProtectionStatus final :
   void _internal_set_a_asuccess(bool value);
   public:
 
-  // required uint32 a_aLinkMask = 2;
+  // optional uint32 a_aLinkMask = 2;
   bool has_a_alinkmask() const;
   private:
   bool _internal_has_a_alinkmask() const;
@@ -1894,7 +1873,7 @@ class Msg_CompleteQueryOutputProtectionStatus final :
   void _internal_set_a_alinkmask(uint32_t value);
   public:
 
-  // required uint32 a_aProtectionMask = 3;
+  // optional uint32 a_aProtectionMask = 3;
   bool has_a_aprotectionmask() const;
   private:
   bool _internal_has_a_aprotectionmask() const;
@@ -1910,9 +1889,6 @@ class Msg_CompleteQueryOutputProtectionStatus final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PChromiumCDM.Msg_CompleteQueryOutputProtectionStatus)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2060,7 +2036,7 @@ class Msg_Decrypt final :
       ::protobuf::mozilla::gmp::CDMInputBuffer* a_abuffer);
   ::protobuf::mozilla::gmp::CDMInputBuffer* unsafe_arena_release_a_abuffer();
 
-  // required uint32 a_aId = 1;
+  // optional uint32 a_aId = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -2076,9 +2052,6 @@ class Msg_Decrypt final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PChromiumCDM.Msg_Decrypt)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3516,7 +3489,7 @@ class Msg_OnResolvePromiseWithKeyStatus final :
     kAAPromiseIdFieldNumber = 1,
     kAAKeyStatusFieldNumber = 2,
   };
-  // required uint32 a_aPromiseId = 1;
+  // optional uint32 a_aPromiseId = 1;
   bool has_a_apromiseid() const;
   private:
   bool _internal_has_a_apromiseid() const;
@@ -3529,7 +3502,7 @@ class Msg_OnResolvePromiseWithKeyStatus final :
   void _internal_set_a_apromiseid(uint32_t value);
   public:
 
-  // required uint32 a_aKeyStatus = 2;
+  // optional uint32 a_aKeyStatus = 2;
   bool has_a_akeystatus() const;
   private:
   bool _internal_has_a_akeystatus() const;
@@ -3545,9 +3518,6 @@ class Msg_OnResolvePromiseWithKeyStatus final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnResolvePromiseWithKeyStatus)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3676,7 +3646,7 @@ class Msg_OnResolveNewSessionPromise final :
     kAASessionIdFieldNumber = 2,
     kAAPromiseIdFieldNumber = 1,
   };
-  // required string a_aSessionId = 2;
+  // optional string a_aSessionId = 2;
   bool has_a_asessionid() const;
   private:
   bool _internal_has_a_asessionid() const;
@@ -3694,7 +3664,7 @@ class Msg_OnResolveNewSessionPromise final :
   std::string* _internal_mutable_a_asessionid();
   public:
 
-  // required uint32 a_aPromiseId = 1;
+  // optional uint32 a_aPromiseId = 1;
   bool has_a_apromiseid() const;
   private:
   bool _internal_has_a_apromiseid() const;
@@ -3710,9 +3680,6 @@ class Msg_OnResolveNewSessionPromise final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnResolveNewSessionPromise)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3840,7 +3807,7 @@ class Msg_OnResolvePromise final :
   enum : int {
     kAAPromiseIdFieldNumber = 1,
   };
-  // required uint32 a_aPromiseId = 1;
+  // optional uint32 a_aPromiseId = 1;
   bool has_a_apromiseid() const;
   private:
   bool _internal_has_a_apromiseid() const;
@@ -3985,7 +3952,7 @@ class Msg_OnRejectPromise final :
     kAAExceptionFieldNumber = 2,
     kAASystemCodeFieldNumber = 3,
   };
-  // required string a_aErrorMessage = 4;
+  // optional string a_aErrorMessage = 4;
   bool has_a_aerrormessage() const;
   private:
   bool _internal_has_a_aerrormessage() const;
@@ -4003,7 +3970,7 @@ class Msg_OnRejectPromise final :
   std::string* _internal_mutable_a_aerrormessage();
   public:
 
-  // required uint32 a_aPromiseId = 1;
+  // optional uint32 a_aPromiseId = 1;
   bool has_a_apromiseid() const;
   private:
   bool _internal_has_a_apromiseid() const;
@@ -4016,7 +3983,7 @@ class Msg_OnRejectPromise final :
   void _internal_set_a_apromiseid(uint32_t value);
   public:
 
-  // required uint32 a_aException = 2;
+  // optional uint32 a_aException = 2;
   bool has_a_aexception() const;
   private:
   bool _internal_has_a_aexception() const;
@@ -4029,7 +3996,7 @@ class Msg_OnRejectPromise final :
   void _internal_set_a_aexception(uint32_t value);
   public:
 
-  // required uint32 a_aSystemCode = 3;
+  // optional uint32 a_aSystemCode = 3;
   bool has_a_asystemcode() const;
   private:
   bool _internal_has_a_asystemcode() const;
@@ -4045,9 +4012,6 @@ class Msg_OnRejectPromise final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnRejectPromise)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4201,7 +4165,7 @@ class Msg_OnSessionMessage final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_amessage();
 
-  // required string a_aSessionId = 1;
+  // optional string a_aSessionId = 1;
   bool has_a_asessionid() const;
   private:
   bool _internal_has_a_asessionid() const;
@@ -4219,7 +4183,7 @@ class Msg_OnSessionMessage final :
   std::string* _internal_mutable_a_asessionid();
   public:
 
-  // required uint32 a_aMessageType = 2;
+  // optional uint32 a_aMessageType = 2;
   bool has_a_amessagetype() const;
   private:
   bool _internal_has_a_amessagetype() const;
@@ -4235,9 +4199,6 @@ class Msg_OnSessionMessage final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnSessionMessage)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4385,7 +4346,7 @@ class Msg_OnSessionKeysChange final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::gmp::CDMKeyInformation >&
       a_akeysinfo() const;
 
-  // required string a_aSessionId = 1;
+  // optional string a_aSessionId = 1;
   bool has_a_asessionid() const;
   private:
   bool _internal_has_a_asessionid() const;
@@ -4534,7 +4495,7 @@ class Msg_OnExpirationChange final :
     kAASessionIdFieldNumber = 1,
     kAASecondsSinceEpochFieldNumber = 2,
   };
-  // required string a_aSessionId = 1;
+  // optional string a_aSessionId = 1;
   bool has_a_asessionid() const;
   private:
   bool _internal_has_a_asessionid() const;
@@ -4552,7 +4513,7 @@ class Msg_OnExpirationChange final :
   std::string* _internal_mutable_a_asessionid();
   public:
 
-  // required double a_aSecondsSinceEpoch = 2;
+  // optional double a_aSecondsSinceEpoch = 2;
   bool has_a_asecondssinceepoch() const;
   private:
   bool _internal_has_a_asecondssinceepoch() const;
@@ -4568,9 +4529,6 @@ class Msg_OnExpirationChange final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnExpirationChange)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4698,7 +4656,7 @@ class Msg_OnSessionClosed final :
   enum : int {
     kAASessionIdFieldNumber = 1,
   };
-  // required string a_aSessionId = 1;
+  // optional string a_aSessionId = 1;
   bool has_a_asessionid() const;
   private:
   bool _internal_has_a_asessionid() const;
@@ -4970,7 +4928,7 @@ class Msg_ResolveLoadSessionPromise final :
     kAAPromiseIdFieldNumber = 1,
     kAASuccessfulFieldNumber = 2,
   };
-  // required uint32 a_aPromiseId = 1;
+  // optional uint32 a_aPromiseId = 1;
   bool has_a_apromiseid() const;
   private:
   bool _internal_has_a_apromiseid() const;
@@ -4983,7 +4941,7 @@ class Msg_ResolveLoadSessionPromise final :
   void _internal_set_a_apromiseid(uint32_t value);
   public:
 
-  // required bool a_aSuccessful = 2;
+  // optional bool a_aSuccessful = 2;
   bool has_a_asuccessful() const;
   private:
   bool _internal_has_a_asuccessful() const;
@@ -4999,9 +4957,6 @@ class Msg_ResolveLoadSessionPromise final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PChromiumCDM.Msg_ResolveLoadSessionPromise)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5149,7 +5104,7 @@ class Msg_Decrypted final :
   std::string* _internal_mutable_a_adecrypteddata();
   public:
 
-  // required uint32 a_aId = 1;
+  // optional uint32 a_aId = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -5162,7 +5117,7 @@ class Msg_Decrypted final :
   void _internal_set_a_aid(uint32_t value);
   public:
 
-  // required uint32 a_aStatus = 2;
+  // optional uint32 a_aStatus = 2;
   bool has_a_astatus() const;
   private:
   bool _internal_has_a_astatus() const;
@@ -5178,9 +5133,6 @@ class Msg_Decrypted final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PChromiumCDM.Msg_Decrypted)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5310,7 +5262,7 @@ class Msg_DecryptFailed final :
     kAAIdFieldNumber = 1,
     kAAStatusFieldNumber = 2,
   };
-  // required uint32 a_aId = 1;
+  // optional uint32 a_aId = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -5323,7 +5275,7 @@ class Msg_DecryptFailed final :
   void _internal_set_a_aid(uint32_t value);
   public:
 
-  // required uint32 a_aStatus = 2;
+  // optional uint32 a_aStatus = 2;
   bool has_a_astatus() const;
   private:
   bool _internal_has_a_astatus() const;
@@ -5339,9 +5291,6 @@ class Msg_DecryptFailed final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PChromiumCDM.Msg_DecryptFailed)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5469,7 +5418,7 @@ class Msg_OnDecoderInitDone final :
   enum : int {
     kAAStatusFieldNumber = 1,
   };
-  // required uint32 a_aStatus = 1;
+  // optional uint32 a_aStatus = 1;
   bool has_a_astatus() const;
   private:
   bool _internal_has_a_astatus() const;
@@ -5952,7 +5901,7 @@ class Msg_DecodeFailed final :
   enum : int {
     kAAStatusFieldNumber = 1,
   };
-  // required uint32 a_aStatus = 1;
+  // optional uint32 a_aStatus = 1;
   bool has_a_astatus() const;
   private:
   bool _internal_has_a_astatus() const;
@@ -6487,7 +6436,7 @@ class Msg_IncreaseShmemPoolSize final :
 #endif  // __GNUC__
 // Msg_Init
 
-// required bool a_aAllowDistinctiveIdentifier = 1;
+// optional bool a_aAllowDistinctiveIdentifier = 1;
 inline bool Msg_Init::_internal_has_a_aallowdistinctiveidentifier() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6515,7 +6464,7 @@ inline void Msg_Init::set_a_aallowdistinctiveidentifier(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_Init.a_aAllowDistinctiveIdentifier)
 }
 
-// required bool a_aAllowPersistentState = 2;
+// optional bool a_aAllowPersistentState = 2;
 inline bool Msg_Init::_internal_has_a_aallowpersistentstate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6547,7 +6496,7 @@ inline void Msg_Init::set_a_aallowpersistentstate(bool value) {
 
 // Reply_Init
 
-// required bool a_aSuccess = 1;
+// optional bool a_aSuccess = 1;
 inline bool Reply_Init::_internal_has_a_asuccess() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6579,7 +6528,7 @@ inline void Reply_Init::set_a_asuccess(bool value) {
 
 // Msg_GetStatusForPolicy
 
-// required uint32 a_aPromiseId = 1;
+// optional uint32 a_aPromiseId = 1;
 inline bool Msg_GetStatusForPolicy::_internal_has_a_apromiseid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6679,7 +6628,7 @@ inline void Msg_GetStatusForPolicy::set_allocated_a_aminhdcpversion(std::string*
 
 // Msg_SetServerCertificate
 
-// required uint32 a_aPromiseId = 1;
+// optional uint32 a_aPromiseId = 1;
 inline bool Msg_SetServerCertificate::_internal_has_a_apromiseid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6758,7 +6707,7 @@ Msg_SetServerCertificate::mutable_a_aservercert() {
 
 // Msg_CreateSessionAndGenerateRequest
 
-// required uint32 a_aPromiseId = 1;
+// optional uint32 a_aPromiseId = 1;
 inline bool Msg_CreateSessionAndGenerateRequest::_internal_has_a_apromiseid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6786,7 +6735,7 @@ inline void Msg_CreateSessionAndGenerateRequest::set_a_apromiseid(uint32_t value
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_CreateSessionAndGenerateRequest.a_aPromiseId)
 }
 
-// required uint32 a_aSessionType = 2;
+// optional uint32 a_aSessionType = 2;
 inline bool Msg_CreateSessionAndGenerateRequest::_internal_has_a_asessiontype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6814,7 +6763,7 @@ inline void Msg_CreateSessionAndGenerateRequest::set_a_asessiontype(uint32_t val
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_CreateSessionAndGenerateRequest.a_aSessionType)
 }
 
-// required uint32 a_aInitDataType = 3;
+// optional uint32 a_aInitDataType = 3;
 inline bool Msg_CreateSessionAndGenerateRequest::_internal_has_a_ainitdatatype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -6893,7 +6842,7 @@ Msg_CreateSessionAndGenerateRequest::mutable_a_ainitdata() {
 
 // Msg_LoadSession
 
-// required uint32 a_aPromiseId = 1;
+// optional uint32 a_aPromiseId = 1;
 inline bool Msg_LoadSession::_internal_has_a_apromiseid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6921,7 +6870,7 @@ inline void Msg_LoadSession::set_a_apromiseid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_LoadSession.a_aPromiseId)
 }
 
-// required uint32 a_aSessionType = 2;
+// optional uint32 a_aSessionType = 2;
 inline bool Msg_LoadSession::_internal_has_a_asessiontype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -6949,7 +6898,7 @@ inline void Msg_LoadSession::set_a_asessiontype(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_LoadSession.a_aSessionType)
 }
 
-// required string a_aSessionId = 3;
+// optional string a_aSessionId = 3;
 inline bool Msg_LoadSession::_internal_has_a_asessionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7021,7 +6970,7 @@ inline void Msg_LoadSession::set_allocated_a_asessionid(std::string* a_asessioni
 
 // Msg_UpdateSession
 
-// required uint32 a_aPromiseId = 1;
+// optional uint32 a_aPromiseId = 1;
 inline bool Msg_UpdateSession::_internal_has_a_apromiseid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7049,7 +6998,7 @@ inline void Msg_UpdateSession::set_a_apromiseid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_UpdateSession.a_aPromiseId)
 }
 
-// required string a_aSessionId = 2;
+// optional string a_aSessionId = 2;
 inline bool Msg_UpdateSession::_internal_has_a_asessionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7168,7 +7117,7 @@ Msg_UpdateSession::mutable_a_aresponse() {
 
 // Msg_CloseSession
 
-// required uint32 a_aPromiseId = 1;
+// optional uint32 a_aPromiseId = 1;
 inline bool Msg_CloseSession::_internal_has_a_apromiseid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7196,7 +7145,7 @@ inline void Msg_CloseSession::set_a_apromiseid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_CloseSession.a_aPromiseId)
 }
 
-// required string a_aSessionId = 2;
+// optional string a_aSessionId = 2;
 inline bool Msg_CloseSession::_internal_has_a_asessionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7268,7 +7217,7 @@ inline void Msg_CloseSession::set_allocated_a_asessionid(std::string* a_asession
 
 // Msg_RemoveSession
 
-// required uint32 a_aPromiseId = 1;
+// optional uint32 a_aPromiseId = 1;
 inline bool Msg_RemoveSession::_internal_has_a_apromiseid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7296,7 +7245,7 @@ inline void Msg_RemoveSession::set_a_apromiseid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_RemoveSession.a_aPromiseId)
 }
 
-// required string a_aSessionId = 2;
+// optional string a_aSessionId = 2;
 inline bool Msg_RemoveSession::_internal_has_a_asessionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7368,7 +7317,7 @@ inline void Msg_RemoveSession::set_allocated_a_asessionid(std::string* a_asessio
 
 // Msg_CompleteQueryOutputProtectionStatus
 
-// required bool a_aSuccess = 1;
+// optional bool a_aSuccess = 1;
 inline bool Msg_CompleteQueryOutputProtectionStatus::_internal_has_a_asuccess() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7396,7 +7345,7 @@ inline void Msg_CompleteQueryOutputProtectionStatus::set_a_asuccess(bool value) 
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_CompleteQueryOutputProtectionStatus.a_aSuccess)
 }
 
-// required uint32 a_aLinkMask = 2;
+// optional uint32 a_aLinkMask = 2;
 inline bool Msg_CompleteQueryOutputProtectionStatus::_internal_has_a_alinkmask() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7424,7 +7373,7 @@ inline void Msg_CompleteQueryOutputProtectionStatus::set_a_alinkmask(uint32_t va
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_CompleteQueryOutputProtectionStatus.a_aLinkMask)
 }
 
-// required uint32 a_aProtectionMask = 3;
+// optional uint32 a_aProtectionMask = 3;
 inline bool Msg_CompleteQueryOutputProtectionStatus::_internal_has_a_aprotectionmask() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -7456,7 +7405,7 @@ inline void Msg_CompleteQueryOutputProtectionStatus::set_a_aprotectionmask(uint3
 
 // Msg_Decrypt
 
-// required uint32 a_aId = 1;
+// optional uint32 a_aId = 1;
 inline bool Msg_Decrypt::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7857,7 +7806,7 @@ inline void Msg_GiveBuffer::set_allocated_a_ashmem(std::string* a_ashmem) {
 
 // Msg_OnResolvePromiseWithKeyStatus
 
-// required uint32 a_aPromiseId = 1;
+// optional uint32 a_aPromiseId = 1;
 inline bool Msg_OnResolvePromiseWithKeyStatus::_internal_has_a_apromiseid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7885,7 +7834,7 @@ inline void Msg_OnResolvePromiseWithKeyStatus::set_a_apromiseid(uint32_t value) 
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnResolvePromiseWithKeyStatus.a_aPromiseId)
 }
 
-// required uint32 a_aKeyStatus = 2;
+// optional uint32 a_aKeyStatus = 2;
 inline bool Msg_OnResolvePromiseWithKeyStatus::_internal_has_a_akeystatus() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7917,7 +7866,7 @@ inline void Msg_OnResolvePromiseWithKeyStatus::set_a_akeystatus(uint32_t value) 
 
 // Msg_OnResolveNewSessionPromise
 
-// required uint32 a_aPromiseId = 1;
+// optional uint32 a_aPromiseId = 1;
 inline bool Msg_OnResolveNewSessionPromise::_internal_has_a_apromiseid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7945,7 +7894,7 @@ inline void Msg_OnResolveNewSessionPromise::set_a_apromiseid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnResolveNewSessionPromise.a_aPromiseId)
 }
 
-// required string a_aSessionId = 2;
+// optional string a_aSessionId = 2;
 inline bool Msg_OnResolveNewSessionPromise::_internal_has_a_asessionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8017,7 +7966,7 @@ inline void Msg_OnResolveNewSessionPromise::set_allocated_a_asessionid(std::stri
 
 // Msg_OnResolvePromise
 
-// required uint32 a_aPromiseId = 1;
+// optional uint32 a_aPromiseId = 1;
 inline bool Msg_OnResolvePromise::_internal_has_a_apromiseid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8049,7 +7998,7 @@ inline void Msg_OnResolvePromise::set_a_apromiseid(uint32_t value) {
 
 // Msg_OnRejectPromise
 
-// required uint32 a_aPromiseId = 1;
+// optional uint32 a_aPromiseId = 1;
 inline bool Msg_OnRejectPromise::_internal_has_a_apromiseid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8077,7 +8026,7 @@ inline void Msg_OnRejectPromise::set_a_apromiseid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnRejectPromise.a_aPromiseId)
 }
 
-// required uint32 a_aException = 2;
+// optional uint32 a_aException = 2;
 inline bool Msg_OnRejectPromise::_internal_has_a_aexception() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -8105,7 +8054,7 @@ inline void Msg_OnRejectPromise::set_a_aexception(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnRejectPromise.a_aException)
 }
 
-// required uint32 a_aSystemCode = 3;
+// optional uint32 a_aSystemCode = 3;
 inline bool Msg_OnRejectPromise::_internal_has_a_asystemcode() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -8133,7 +8082,7 @@ inline void Msg_OnRejectPromise::set_a_asystemcode(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnRejectPromise.a_aSystemCode)
 }
 
-// required string a_aErrorMessage = 4;
+// optional string a_aErrorMessage = 4;
 inline bool Msg_OnRejectPromise::_internal_has_a_aerrormessage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8205,7 +8154,7 @@ inline void Msg_OnRejectPromise::set_allocated_a_aerrormessage(std::string* a_ae
 
 // Msg_OnSessionMessage
 
-// required string a_aSessionId = 1;
+// optional string a_aSessionId = 1;
 inline bool Msg_OnSessionMessage::_internal_has_a_asessionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8273,7 +8222,7 @@ inline void Msg_OnSessionMessage::set_allocated_a_asessionid(std::string* a_ases
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnSessionMessage.a_aSessionId)
 }
 
-// required uint32 a_aMessageType = 2;
+// optional uint32 a_aMessageType = 2;
 inline bool Msg_OnSessionMessage::_internal_has_a_amessagetype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8352,7 +8301,7 @@ Msg_OnSessionMessage::mutable_a_amessage() {
 
 // Msg_OnSessionKeysChange
 
-// required string a_aSessionId = 1;
+// optional string a_aSessionId = 1;
 inline bool Msg_OnSessionKeysChange::_internal_has_a_asessionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8461,7 +8410,7 @@ Msg_OnSessionKeysChange::a_akeysinfo() const {
 
 // Msg_OnExpirationChange
 
-// required string a_aSessionId = 1;
+// optional string a_aSessionId = 1;
 inline bool Msg_OnExpirationChange::_internal_has_a_asessionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8529,7 +8478,7 @@ inline void Msg_OnExpirationChange::set_allocated_a_asessionid(std::string* a_as
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PChromiumCDM.Msg_OnExpirationChange.a_aSessionId)
 }
 
-// required double a_aSecondsSinceEpoch = 2;
+// optional double a_aSecondsSinceEpoch = 2;
 inline bool Msg_OnExpirationChange::_internal_has_a_asecondssinceepoch() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8561,7 +8510,7 @@ inline void Msg_OnExpirationChange::set_a_asecondssinceepoch(double value) {
 
 // Msg_OnSessionClosed
 
-// required string a_aSessionId = 1;
+// optional string a_aSessionId = 1;
 inline bool Msg_OnSessionClosed::_internal_has_a_asessionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8637,7 +8586,7 @@ inline void Msg_OnSessionClosed::set_allocated_a_asessionid(std::string* a_asess
 
 // Msg_ResolveLoadSessionPromise
 
-// required uint32 a_aPromiseId = 1;
+// optional uint32 a_aPromiseId = 1;
 inline bool Msg_ResolveLoadSessionPromise::_internal_has_a_apromiseid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8665,7 +8614,7 @@ inline void Msg_ResolveLoadSessionPromise::set_a_apromiseid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_ResolveLoadSessionPromise.a_aPromiseId)
 }
 
-// required bool a_aSuccessful = 2;
+// optional bool a_aSuccessful = 2;
 inline bool Msg_ResolveLoadSessionPromise::_internal_has_a_asuccessful() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8697,7 +8646,7 @@ inline void Msg_ResolveLoadSessionPromise::set_a_asuccessful(bool value) {
 
 // Msg_Decrypted
 
-// required uint32 a_aId = 1;
+// optional uint32 a_aId = 1;
 inline bool Msg_Decrypted::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8725,7 +8674,7 @@ inline void Msg_Decrypted::set_a_aid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_Decrypted.a_aId)
 }
 
-// required uint32 a_aStatus = 2;
+// optional uint32 a_aStatus = 2;
 inline bool Msg_Decrypted::_internal_has_a_astatus() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -8825,7 +8774,7 @@ inline void Msg_Decrypted::set_allocated_a_adecrypteddata(std::string* a_adecryp
 
 // Msg_DecryptFailed
 
-// required uint32 a_aId = 1;
+// optional uint32 a_aId = 1;
 inline bool Msg_DecryptFailed::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8853,7 +8802,7 @@ inline void Msg_DecryptFailed::set_a_aid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PChromiumCDM.Msg_DecryptFailed.a_aId)
 }
 
-// required uint32 a_aStatus = 2;
+// optional uint32 a_aStatus = 2;
 inline bool Msg_DecryptFailed::_internal_has_a_astatus() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8885,7 +8834,7 @@ inline void Msg_DecryptFailed::set_a_astatus(uint32_t value) {
 
 // Msg_OnDecoderInitDone
 
-// required uint32 a_aStatus = 1;
+// optional uint32 a_aStatus = 1;
 inline bool Msg_OnDecoderInitDone::_internal_has_a_astatus() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9214,7 +9163,7 @@ Msg_DecodedData::mutable_a_adata() {
 
 // Msg_DecodeFailed
 
-// required uint32 a_aStatus = 1;
+// optional uint32 a_aStatus = 1;
 inline bool Msg_DecodeFailed::_internal_has_a_astatus() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

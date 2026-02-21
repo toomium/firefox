@@ -214,7 +214,7 @@ class GMPLaunchResult final :
   std::string* _internal_mutable_a_pid();
   public:
 
-  // required string a_displayName = 4;
+  // optional string a_displayName = 4;
   bool has_a_displayname() const;
   private:
   bool _internal_has_a_displayname() const;
@@ -268,7 +268,7 @@ class GMPLaunchResult final :
   std::string* _internal_mutable_a_result();
   public:
 
-  // required string a_errorDescription = 7;
+  // optional string a_errorDescription = 7;
   bool has_a_errordescription() const;
   private:
   bool _internal_has_a_errordescription() const;
@@ -286,7 +286,7 @@ class GMPLaunchResult final :
   std::string* _internal_mutable_a_errordescription();
   public:
 
-  // required uint32 a_pluginId = 1;
+  // optional uint32 a_pluginId = 1;
   bool has_a_pluginid() const;
   private:
   bool _internal_has_a_pluginid() const;
@@ -334,7 +334,7 @@ class GMPLaunchResult final :
 #endif  // __GNUC__
 // GMPLaunchResult
 
-// required uint32 a_pluginId = 1;
+// optional uint32 a_pluginId = 1;
 inline bool GMPLaunchResult::_internal_has_a_pluginid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -498,7 +498,7 @@ inline void GMPLaunchResult::set_allocated_a_pid(std::string* a_pid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.GMPLaunchResult.a_pid)
 }
 
-// required string a_displayName = 4;
+// optional string a_displayName = 4;
 inline bool GMPLaunchResult::_internal_has_a_displayname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -702,7 +702,7 @@ inline void GMPLaunchResult::set_allocated_a_result(std::string* a_result) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.GMPLaunchResult.a_result)
 }
 
-// required string a_errorDescription = 7;
+// optional string a_errorDescription = 7;
 inline bool GMPLaunchResult::_internal_has_a_errordescription() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;

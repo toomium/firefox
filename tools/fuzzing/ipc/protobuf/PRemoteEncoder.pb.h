@@ -1637,7 +1637,7 @@ class Msg_ReleaseTicket final :
   enum : int {
     kATicketIdFieldNumber = 1,
   };
-  // required uint32 a_ticketId = 1;
+  // optional uint32 a_ticketId = 1;
   bool has_a_ticketid() const;
   private:
   bool _internal_has_a_ticketid() const;
@@ -1903,7 +1903,7 @@ class Reply_Shutdown final :
   enum : int {
     kAUnusedFieldNumber = 1,
   };
-  // required bool a_unused = 1;
+  // optional bool a_unused = 1;
   bool has_a_unused() const;
   private:
   bool _internal_has_a_unused() const;
@@ -2045,7 +2045,7 @@ class Msg_SetBitrate final :
   enum : int {
     kAABitsPerSecFieldNumber = 1,
   };
-  // required uint32 a_aBitsPerSec = 1;
+  // optional uint32 a_aBitsPerSec = 1;
   bool has_a_abitspersec() const;
   private:
   bool _internal_has_a_abitspersec() const;
@@ -3071,7 +3071,7 @@ inline void Reply_Drain::set_allocated_a_result(::protobuf::mozilla::EncodeResul
 
 // Msg_ReleaseTicket
 
-// required uint32 a_ticketId = 1;
+// optional uint32 a_ticketId = 1;
 inline bool Msg_ReleaseTicket::_internal_has_a_ticketid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3107,7 +3107,7 @@ inline void Msg_ReleaseTicket::set_a_ticketid(uint32_t value) {
 
 // Reply_Shutdown
 
-// required bool a_unused = 1;
+// optional bool a_unused = 1;
 inline bool Reply_Shutdown::_internal_has_a_unused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3139,7 +3139,7 @@ inline void Reply_Shutdown::set_a_unused(bool value) {
 
 // Msg_SetBitrate
 
-// required uint32 a_aBitsPerSec = 1;
+// optional uint32 a_aBitsPerSec = 1;
 inline bool Msg_SetBitrate::_internal_has_a_abitspersec() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

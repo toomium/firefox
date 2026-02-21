@@ -106,9 +106,6 @@ class BatteryInformation::_Internal {
   static void set_has_a_remainingtime(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
-  }
 };
 
 BatteryInformation::BatteryInformation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -187,7 +184,7 @@ const char* BatteryInformation::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required double a_level = 1;
+      // optional double a_level = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 9)) {
           _Internal::set_has_a_level(&has_bits);
@@ -196,7 +193,7 @@ const char* BatteryInformation::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // required bool a_charging = 2;
+      // optional bool a_charging = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_charging(&has_bits);
@@ -205,7 +202,7 @@ const char* BatteryInformation::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // required double a_remainingTime = 3;
+      // optional double a_remainingTime = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 25)) {
           _Internal::set_has_a_remainingtime(&has_bits);
@@ -245,19 +242,19 @@ uint8_t* BatteryInformation::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required double a_level = 1;
+  // optional double a_level = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(1, this->_internal_a_level(), target);
   }
 
-  // required bool a_charging = 2;
+  // optional bool a_charging = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_charging(), target);
   }
 
-  // required double a_remainingTime = 3;
+  // optional double a_remainingTime = 3;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(3, this->_internal_a_remainingtime(), target);
@@ -271,48 +268,32 @@ uint8_t* BatteryInformation::_InternalSerialize(
   return target;
 }
 
-size_t BatteryInformation::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.hal.BatteryInformation)
-  size_t total_size = 0;
-
-  if (_internal_has_a_level()) {
-    // required double a_level = 1;
-    total_size += 1 + 8;
-  }
-
-  if (_internal_has_a_remainingtime()) {
-    // required double a_remainingTime = 3;
-    total_size += 1 + 8;
-  }
-
-  if (_internal_has_a_charging()) {
-    // required bool a_charging = 2;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t BatteryInformation::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal.BatteryInformation)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required double a_level = 1;
-    total_size += 1 + 8;
-
-    // required double a_remainingTime = 3;
-    total_size += 1 + 8;
-
-    // required bool a_charging = 2;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    // optional double a_level = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 + 8;
+    }
+
+    // optional double a_remainingTime = 3;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 + 8;
+    }
+
+    // optional bool a_charging = 2;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 + 1;
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -358,7 +339,6 @@ void BatteryInformation::CopyFrom(const BatteryInformation& from) {
 }
 
 bool BatteryInformation::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -723,9 +703,6 @@ class NetworkInformation::_Internal {
   static void set_has_a_dhcpgateway(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
-  }
 };
 
 NetworkInformation::NetworkInformation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -804,7 +781,7 @@ const char* NetworkInformation::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 a_type = 1;
+      // optional uint32 a_type = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_type(&has_bits);
@@ -813,7 +790,7 @@ const char* NetworkInformation::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // required bool a_isWifi = 2;
+      // optional bool a_isWifi = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_iswifi(&has_bits);
@@ -822,7 +799,7 @@ const char* NetworkInformation::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_dhcpGateway = 3;
+      // optional uint32 a_dhcpGateway = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_dhcpgateway(&has_bits);
@@ -862,19 +839,19 @@ uint8_t* NetworkInformation::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 a_type = 1;
+  // optional uint32 a_type = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_type(), target);
   }
 
-  // required bool a_isWifi = 2;
+  // optional bool a_isWifi = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_iswifi(), target);
   }
 
-  // required uint32 a_dhcpGateway = 3;
+  // optional uint32 a_dhcpGateway = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_dhcpgateway(), target);
@@ -888,48 +865,32 @@ uint8_t* NetworkInformation::_InternalSerialize(
   return target;
 }
 
-size_t NetworkInformation::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.hal.NetworkInformation)
-  size_t total_size = 0;
-
-  if (_internal_has_a_type()) {
-    // required uint32 a_type = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_type());
-  }
-
-  if (_internal_has_a_iswifi()) {
-    // required bool a_isWifi = 2;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_dhcpgateway()) {
-    // required uint32 a_dhcpGateway = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_dhcpgateway());
-  }
-
-  return total_size;
-}
 size_t NetworkInformation::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal.NetworkInformation)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required uint32 a_type = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_type());
-
-    // required bool a_isWifi = 2;
-    total_size += 1 + 1;
-
-    // required uint32 a_dhcpGateway = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_dhcpgateway());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    // optional uint32 a_type = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_type());
+    }
+
+    // optional bool a_isWifi = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 + 1;
+    }
+
+    // optional uint32 a_dhcpGateway = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_dhcpgateway());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -975,7 +936,6 @@ void NetworkInformation::CopyFrom(const NetworkInformation& from) {
 }
 
 bool NetworkInformation::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1009,9 +969,6 @@ class WakeLockInformation::_Internal {
   }
   static void set_has_a_numhidden(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
   }
 };
 
@@ -1111,7 +1068,7 @@ const char* WakeLockInformation::_InternalParse(const char* ptr, ::_pbi::ParseCo
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_topic = 1;
+      // optional string a_topic = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_topic();
@@ -1120,7 +1077,7 @@ const char* WakeLockInformation::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_numLocks = 2;
+      // optional uint32 a_numLocks = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_numlocks(&has_bits);
@@ -1129,7 +1086,7 @@ const char* WakeLockInformation::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_numHidden = 3;
+      // optional uint32 a_numHidden = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_numhidden(&has_bits);
@@ -1185,19 +1142,19 @@ uint8_t* WakeLockInformation::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_topic = 1;
+  // optional string a_topic = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_topic(), target);
   }
 
-  // required uint32 a_numLocks = 2;
+  // optional uint32 a_numLocks = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_numlocks(), target);
   }
 
-  // required uint32 a_numHidden = 3;
+  // optional uint32 a_numHidden = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_numhidden(), target);
@@ -1217,48 +1174,10 @@ uint8_t* WakeLockInformation::_InternalSerialize(
   return target;
 }
 
-size_t WakeLockInformation::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.hal.WakeLockInformation)
-  size_t total_size = 0;
-
-  if (_internal_has_a_topic()) {
-    // required string a_topic = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_topic());
-  }
-
-  if (_internal_has_a_numlocks()) {
-    // required uint32 a_numLocks = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_numlocks());
-  }
-
-  if (_internal_has_a_numhidden()) {
-    // required uint32 a_numHidden = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_numhidden());
-  }
-
-  return total_size;
-}
 size_t WakeLockInformation::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal.WakeLockInformation)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required string a_topic = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_topic());
-
-    // required uint32 a_numLocks = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_numlocks());
-
-    // required uint32 a_numHidden = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_numhidden());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1272,6 +1191,26 @@ size_t WakeLockInformation::ByteSizeLong() const {
     total_size += data_size;
   }
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    // optional string a_topic = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_topic());
+    }
+
+    // optional uint32 a_numLocks = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_numlocks());
+    }
+
+    // optional uint32 a_numHidden = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_numhidden());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -1318,7 +1257,6 @@ void WakeLockInformation::CopyFrom(const WakeLockInformation& from) {
 }
 
 bool WakeLockInformation::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 

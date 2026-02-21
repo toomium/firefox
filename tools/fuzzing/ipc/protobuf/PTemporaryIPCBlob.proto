@@ -32,7 +32,7 @@ message Msg_OperationFailed {
 }
 
 message Msg_OperationDone {
-  required string a_aContentType = 1;
+  optional string a_aContentType = 1;
   required bytes a_aFD = 2;
 }
 

@@ -21,11 +21,11 @@ message Msg_AllowToClose {
 }
 
 message Msg_PBackgroundLSSnapshotConstructor {
-  required sint64 a_actorid = 1;
-  required string a_documentURI = 2;
-  required string a_key = 3;
-  required bool a_increasePeakUsage = 4;
-  required sint64 a_minSize = 5;
+  optional sint64 a_actorid = 1;
+  optional string a_documentURI = 2;
+  optional string a_key = 3;
+  optional bool a_increasePeakUsage = 4;
+  optional sint64 a_minSize = 5;
 }
 
 message Reply_PBackgroundLSSnapshotConstructor {

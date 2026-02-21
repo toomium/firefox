@@ -12,14 +12,14 @@ package protobuf.mozilla.dom;
 
 // Structs and unions declarations
 message IPCServerTiming {
-  required string a_name = 1;
-  required double a_duration = 2;
-  required string a_description = 3;
+  optional string a_name = 1;
+  optional double a_duration = 2;
+  optional string a_description = 3;
 }
 
 message IPCPerformanceTimingData {
   repeated protobuf.mozilla.dom.IPCServerTiming a_serverTiming = 1;
-  required string a_nextHopProtocol = 2;
+  optional string a_nextHopProtocol = 2;
   required bytes a_asyncOpen = 3;
   required bytes a_redirectStart = 4;
   required bytes a_redirectEnd = 5;
@@ -38,17 +38,17 @@ message IPCPerformanceTimingData {
   required bytes a_workerResponseEnd = 18;
   required bytes a_zeroTime = 19;
   required bytes a_fetchStart = 20;
-  required uint64 a_encodedBodySize = 21;
-  required uint64 a_transferSize = 22;
-  required uint64 a_decodedBodySize = 23;
-  required uint32 a_responseStatus = 24;
-  required uint32 a_redirectCount = 25;
-  required bool a_renderBlocking = 26;
-  required string a_contentType = 27;
-  required bool a_allRedirectsSameOrigin = 28;
-  required bool a_allRedirectsPassTAO = 29;
-  required bool a_secureConnection = 30;
+  optional uint64 a_encodedBodySize = 21;
+  optional uint64 a_transferSize = 22;
+  optional uint64 a_decodedBodySize = 23;
+  optional uint32 a_responseStatus = 24;
+  optional uint32 a_redirectCount = 25;
+  optional bool a_renderBlocking = 26;
+  optional string a_contentType = 27;
+  optional bool a_allRedirectsSameOrigin = 28;
+  optional bool a_allRedirectsPassTAO = 29;
+  optional bool a_secureConnection = 30;
   required bytes a_bodyInfoAccessAllowed = 31;
-  required bool a_timingAllowed = 32;
-  required bool a_initialized = 33;
+  optional bool a_timingAllowed = 32;
+  optional bool a_initialized = 33;
 }

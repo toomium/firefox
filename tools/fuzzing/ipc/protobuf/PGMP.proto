@@ -22,14 +22,14 @@ message Msg_InitCrashReporter {
 }
 
 message Msg_PGMPTimerConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
 }
 
 message Reply_PGMPTimerConstructor {
 }
 
 message Msg_PGMPStorageConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
 }
 
 message Reply_PGMPStorageConstructor {
@@ -46,18 +46,18 @@ message Msg_CrashPluginNow {
 }
 
 message Msg_StartPlugin {
-  required string a_adapter = 1;
+  optional string a_adapter = 1;
 }
 
 message Reply_StartPlugin {
 }
 
 message Msg_ProvideStorageId {
-  required string a_storageId = 1;
+  optional string a_storageId = 1;
 }
 
 message Msg_PreloadLibs {
-  required string a_libs = 1;
+  optional string a_libs = 1;
 }
 
 message Msg_CloseActive {
@@ -86,14 +86,14 @@ message Msg_TestTriggerMetrics {
 }
 
 message Reply_TestTriggerMetrics {
-  required bool a_unused = 1;
+  optional bool a_unused = 1;
 }
 
 message Msg_Shutdown {
 }
 
 message Reply_Shutdown {
-  required string a_profile = 1;
+  optional string a_profile = 1;
 }
 
 // Parameter mappings stats:

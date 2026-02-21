@@ -35,15 +35,15 @@ import "PContent_protobuf.h.proto";
 
 // Structs and unions declarations
 message SystemFontListEntry {
-  required string a_pattern = 1;
-  required bool a_appFontFamily = 2;
+  optional string a_pattern = 1;
+  optional bool a_appFontFamily = 2;
 }
 
 message SystemFontOptions {
-  required sint32 a_antialias = 1;
-  required sint32 a_subpixelOrder = 2;
-  required sint32 a_hintStyle = 3;
-  required sint32 a_lcdFilter = 4;
+  optional sint32 a_antialias = 1;
+  optional sint32 a_subpixelOrder = 2;
+  optional sint32 a_hintStyle = 3;
+  optional sint32 a_lcdFilter = 4;
 }
 
 message SystemFontList {
@@ -59,9 +59,9 @@ message SystemParameterValue {
 }
 
 message ClipboardCapabilities {
-  required bool a_supportsSelectionClipboard = 1;
-  required bool a_supportsFindClipboard = 2;
-  required bool a_supportsSelectionCache = 3;
+  optional bool a_supportsSelectionClipboard = 1;
+  optional bool a_supportsFindClipboard = 2;
+  optional bool a_supportsSelectionCache = 3;
 }
 
 message FileDescOrError {
@@ -72,7 +72,7 @@ message FileDescOrError {
 }
 
 message DomainPolicyClone {
-  required bool a_active = 1;
+  optional bool a_active = 1;
   repeated bytes a_blocklist = 2;
   repeated bytes a_allowlist = 3;
   repeated bytes a_superBlocklist = 4;
@@ -80,12 +80,12 @@ message DomainPolicyClone {
 }
 
 message AndroidSystemInfo {
-  required string a_device = 1;
-  required string a_manufacturer = 2;
-  required string a_release_version = 3;
-  required string a_hardware = 4;
-  required uint32 a_sdk_version = 5;
-  required bool a_isTablet = 6;
+  optional string a_device = 1;
+  optional string a_manufacturer = 2;
+  optional string a_release_version = 3;
+  optional string a_hardware = 4;
+  optional uint32 a_sdk_version = 5;
+  optional bool a_isTablet = 6;
 }
 
 message GetFilesResponseSuccess {
@@ -104,26 +104,26 @@ message GetFilesResponseResult {
 }
 
 message BlobURLRegistrationData {
-  required string a_url = 1;
+  optional string a_url = 1;
   required protobuf.mozilla.dom.IPCBlob a_blob = 2;
   required bytes a_principal = 3;
-  required string a_partitionKey = 4;
-  required bool a_revoked = 5;
+  optional string a_partitionKey = 4;
+  optional bool a_revoked = 5;
 }
 
 message JSWindowActorEventDecl {
-  required string a_name = 1;
-  required bool a_capture = 2;
-  required bool a_systemGroup = 3;
-  required bool a_allowUntrusted = 4;
+  optional string a_name = 1;
+  optional bool a_capture = 2;
+  optional bool a_systemGroup = 3;
+  optional bool a_allowUntrusted = 4;
   optional bool a_passive = 5;
-  required bool a_createActor = 6;
+  optional bool a_createActor = 6;
 }
 
 message JSWindowActorInfo {
-  required string a_name = 1;
-  required bool a_allFrames = 2;
-  required bool a_loadInDevToolsLoader = 3;
+  optional string a_name = 1;
+  optional bool a_allFrames = 2;
+  optional bool a_loadInDevToolsLoader = 3;
   optional string a_url = 4;
   repeated protobuf.mozilla.dom.JSWindowActorEventDecl a_events = 5;
   repeated string a_observers = 6;
@@ -133,39 +133,39 @@ message JSWindowActorInfo {
 }
 
 message JSProcessActorInfo {
-  required string a_name = 1;
-  required bool a_isESModule = 2;
-  required bool a_loadInDevToolsLoader = 3;
+  optional string a_name = 1;
+  optional bool a_isESModule = 2;
+  optional bool a_loadInDevToolsLoader = 3;
   optional string a_url = 4;
   repeated string a_observers = 5;
   repeated string a_remoteTypes = 6;
 }
 
 message GMPAPITags {
-  required string a_api = 1;
+  optional string a_api = 1;
   repeated string a_tags = 2;
 }
 
 message GMPCapabilityData {
-  required string a_name = 1;
-  required string a_version = 2;
+  optional string a_name = 1;
+  optional string a_version = 2;
   repeated protobuf.mozilla.dom.GMPAPITags a_capabilities = 3;
 }
 
 message L10nFileSourceDescriptor {
-  required string a_name = 1;
-  required string a_metasource = 2;
+  optional string a_name = 1;
+  optional string a_metasource = 2;
   repeated string a_locales = 3;
-  required string a_prePath = 4;
+  optional string a_prePath = 4;
   repeated string a_index = 5;
 }
 
 message XPCOMInitData {
-  required bool a_isOffline = 1;
-  required bool a_isConnected = 2;
-  required sint32 a_captivePortalState = 3;
-  required bool a_isLangRTL = 4;
-  required bool a_haveBidiKeyboards = 5;
+  optional bool a_isOffline = 1;
+  optional bool a_isConnected = 2;
+  optional sint32 a_captivePortalState = 3;
+  optional bool a_isLangRTL = 4;
+  optional bool a_haveBidiKeyboards = 5;
   repeated string a_dictionaries = 6;
   required protobuf.mozilla.dom.ClipboardCapabilities a_clipboardCaps = 7;
   required protobuf.mozilla.dom.DomainPolicyClone a_domainPolicy = 8;
@@ -178,37 +178,37 @@ message XPCOMInitData {
   repeated protobuf.mozilla.dom.L10nFileSourceDescriptor a_l10nFileSources = 15;
   repeated bytes a_dynamicScalarDefs = 16;
   required bytes a_perfStatsMask = 17;
-  required string a_trrDomain = 18;
+  optional string a_trrDomain = 18;
   required bytes a_trrMode = 19;
   required bytes a_trrModeFromPref = 20;
 }
 
 message VisitedQueryResult {
   optional bytes a_uri = 1;
-  required bool a_visited = 2;
+  optional bool a_visited = 2;
 }
 
 message StringBundleDescriptor {
-  required string a_bundleURL = 1;
+  optional string a_bundleURL = 1;
   required bytes a_mapHandle = 2;
 }
 
 message IPCURLClassifierFeature {
-  required string a_featureName = 1;
+  optional string a_featureName = 1;
   repeated string a_tables = 2;
 }
 
 message PostMessageData {
   required bytes a_source = 1;
-  required string a_origin = 2;
-  required string a_targetOrigin = 3;
+  optional string a_origin = 2;
+  optional string a_targetOrigin = 3;
   optional bytes a_targetOriginURI = 4;
   optional bytes a_callerPrincipal = 5;
   optional bytes a_subjectPrincipal = 6;
   optional bytes a_callerURI = 7;
-  required bool a_isFromPrivateWindow = 8;
-  required string a_scriptLocation = 9;
-  required uint64 a_innerWindowId = 10;
+  optional bool a_isFromPrivateWindow = 8;
+  optional string a_scriptLocation = 9;
+  optional uint64 a_innerWindowId = 10;
 }
 
 message SyncedContextInitializer {
@@ -220,7 +220,7 @@ message SyncedContextInitializer {
 
 message OriginAgentClusterInitializer {
   required bytes a_principal = 1;
-  required bool a_useOriginAgentCluster = 2;
+  optional bool a_useOriginAgentCluster = 2;
 }
 
 message BlobURLDataRequestResult {
@@ -231,8 +231,8 @@ message BlobURLDataRequestResult {
 }
 
 message TextRecognitionQuad {
-  required float a_confidence = 1;
-  required string a_string = 2;
+  optional float a_confidence = 1;
+  optional string a_string = 2;
   repeated bytes a_points = 3;
 }
 
@@ -260,6 +260,6 @@ message ClipboardReadRequestOrError {
 }
 
 message BroadcastBlobURLUnregistrationRequest {
-  required string a_url = 1;
+  optional string a_url = 1;
   optional bytes a_principal = 2;
 }

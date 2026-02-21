@@ -60,8 +60,8 @@ message Msg_InitCompleted {
 
 message Msg_Init {
   optional bytes a_sandboxBroker = 1;
-  required bool a_canRecordReleaseTelemetry = 2;
-  required bool a_aIsReadyForBackgroundProcessing = 3;
+  optional bool a_canRecordReleaseTelemetry = 2;
+  optional bool a_aIsReadyForBackgroundProcessing = 3;
 }
 
 message Msg_InitProfiler {
@@ -69,14 +69,14 @@ message Msg_InitProfiler {
 }
 
 message Msg_RequestMemoryReport {
-  required uint32 a_generation = 1;
-  required bool a_anonymize = 2;
-  required bool a_minimizeMemoryUsage = 3;
+  optional uint32 a_generation = 1;
+  optional bool a_anonymize = 2;
+  optional bool a_minimizeMemoryUsage = 3;
   optional bytes a_DMDFile = 4;
 }
 
 message Reply_RequestMemoryReport {
-  required uint32 a_aGeneration = 1;
+  optional uint32 a_aGeneration = 1;
 }
 
 message Msg_PreferenceUpdate {
@@ -94,7 +94,7 @@ message Msg_TestTriggerMetrics {
 }
 
 message Reply_TestTriggerMetrics {
-  required bool a_unused = 1;
+  optional bool a_unused = 1;
 }
 
 message Msg_TestTelemetryProbes {

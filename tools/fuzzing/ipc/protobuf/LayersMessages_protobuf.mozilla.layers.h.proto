@@ -54,10 +54,10 @@ message Animatable {
 message AnimationSegment {
   required protobuf.mozilla.layers.Animatable a_startState = 1;
   required protobuf.mozilla.layers.Animatable a_endState = 2;
-  required float a_startPortion = 3;
-  required float a_endPortion = 4;
-  required uint32 a_startComposite = 5;
-  required uint32 a_endComposite = 6;
+  optional float a_startPortion = 3;
+  optional float a_endPortion = 4;
+  optional uint32 a_startComposite = 5;
+  optional uint32 a_endComposite = 6;
   optional bytes a_sampleFn = 7;
 }
 
@@ -83,7 +83,7 @@ message TransformData {
   required bytes a_origin = 1;
   required bytes a_transformOrigin = 2;
   required bytes a_bounds = 3;
-  required sint32 a_appUnitsPerDevPixel = 4;
+  optional sint32 a_appUnitsPerDevPixel = 4;
   optional protobuf.mozilla.layers.MotionPathData a_motionPathData = 5;
   optional protobuf.mozilla.layers.PartialPrerenderData a_partialPrerenderData = 6;
 }
@@ -101,17 +101,17 @@ message Animation {
   required bytes a_holdTime = 5;
   required bytes a_duration = 6;
   repeated protobuf.mozilla.layers.AnimationSegment a_segments = 7;
-  required float a_iterations = 8;
-  required float a_iterationStart = 9;
-  required uint32 a_direction = 10;
-  required uint32 a_fillMode = 11;
+  optional float a_iterations = 8;
+  optional float a_iterationStart = 9;
+  optional uint32 a_direction = 10;
+  optional uint32 a_fillMode = 11;
   required bytes a_property = 12;
-  required float a_playbackRate = 13;
-  required float a_previousPlaybackRate = 14;
+  optional float a_playbackRate = 13;
+  optional float a_previousPlaybackRate = 14;
   optional bytes a_easingFunction = 15;
-  required uint32 a_iterationComposite = 16;
-  required bool a_isNotPlaying = 17;
-  required bool a_isNotAnimating = 18;
+  optional uint32 a_iterationComposite = 16;
+  optional bool a_isNotPlaying = 17;
+  optional bool a_isNotAnimating = 18;
   required protobuf.mozilla.layers.Animatable a_baseStyle = 19;
   optional protobuf.mozilla.layers.TransformData a_transformData = 20;
   optional uint64 a_replacedTransitionId = 21;
@@ -120,13 +120,13 @@ message Animation {
 
 message CompositorAnimations {
   repeated protobuf.mozilla.layers.Animation a_animations = 1;
-  required uint64 a_id = 2;
+  optional uint64 a_id = 2;
 }
 
 message UntrustedShmemSection {
   required bytes a_shmem = 1;
-  required uint32 a_offset = 2;
-  required uint32 a_size = 3;
+  optional uint32 a_offset = 2;
+  optional uint32 a_size = 3;
 }
 
 message CrossProcessSemaphoreDescriptor {
@@ -154,9 +154,9 @@ message TimedTexture {
   required bytes a_texture = 1;
   required bytes a_timeStamp = 2;
   required bytes a_picture = 3;
-  required uint32 a_frameID = 4;
-  required uint32 a_producerID = 5;
-  required bool a_readLocked = 6;
+  optional uint32 a_frameID = 4;
+  optional uint32 a_producerID = 5;
+  optional bool a_readLocked = 6;
 }
 
 message OpUseTexture {
@@ -177,8 +177,8 @@ message OpEnableRemoteTexturePushCallback {
 }
 
 message OpNotifyNotUsed {
-  required uint64 a_TextureId = 1;
-  required uint64 a_fwdTransactionId = 2;
+  optional uint64 a_TextureId = 1;
+  optional uint64 a_fwdTransactionId = 2;
 }
 
 message CompositableOperationDetail {
@@ -212,8 +212,8 @@ message ImageCompositeNotification {
   required bytes a_compositable = 1;
   required bytes a_imageTimeStamp = 2;
   required bytes a_firstCompositeTimeStamp = 3;
-  required uint32 a_frameID = 4;
-  required uint32 a_producerID = 5;
+  optional uint32 a_frameID = 4;
+  optional uint32 a_producerID = 5;
 }
 
 message AsyncParentMessageData {

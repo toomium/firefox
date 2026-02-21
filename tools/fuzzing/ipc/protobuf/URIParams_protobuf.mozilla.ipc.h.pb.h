@@ -216,7 +216,7 @@ class SimpleURIParams final :
   enum : int {
     kASpecFieldNumber = 1,
   };
-  // required string a_spec = 1;
+  // optional string a_spec = 1;
   bool has_a_spec() const;
   private:
   bool _internal_has_a_spec() const;
@@ -363,7 +363,7 @@ class DefaultURIParams final :
   enum : int {
     kASpecFieldNumber = 1,
   };
-  // required string a_spec = 1;
+  // optional string a_spec = 1;
   bool has_a_spec() const;
   private:
   bool _internal_has_a_spec() const;
@@ -511,7 +511,7 @@ class StandardURLSegment final :
     kAPositionFieldNumber = 1,
     kALengthFieldNumber = 2,
   };
-  // required uint32 a_position = 1;
+  // optional uint32 a_position = 1;
   bool has_a_position() const;
   private:
   bool _internal_has_a_position() const;
@@ -524,7 +524,7 @@ class StandardURLSegment final :
   void _internal_set_a_position(uint32_t value);
   public:
 
-  // required sint32 a_length = 2;
+  // optional sint32 a_length = 2;
   bool has_a_length() const;
   private:
   bool _internal_has_a_length() const;
@@ -540,9 +540,6 @@ class StandardURLSegment final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.StandardURLSegment)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -687,7 +684,7 @@ class StandardURLParams final :
     kASupportsFileURLFieldNumber = 17,
     kAIsSubstitutingFieldNumber = 18,
   };
-  // required string a_spec = 4;
+  // optional string a_spec = 4;
   bool has_a_spec() const;
   private:
   bool _internal_has_a_spec() const;
@@ -921,7 +918,7 @@ class StandardURLParams final :
       ::protobuf::mozilla::ipc::StandardURLSegment* a_ref);
   ::protobuf::mozilla::ipc::StandardURLSegment* unsafe_arena_release_a_ref();
 
-  // required uint32 a_urlType = 1;
+  // optional uint32 a_urlType = 1;
   bool has_a_urltype() const;
   private:
   bool _internal_has_a_urltype() const;
@@ -934,7 +931,7 @@ class StandardURLParams final :
   void _internal_set_a_urltype(uint32_t value);
   public:
 
-  // required sint32 a_port = 2;
+  // optional sint32 a_port = 2;
   bool has_a_port() const;
   private:
   bool _internal_has_a_port() const;
@@ -947,7 +944,7 @@ class StandardURLParams final :
   void _internal_set_a_port(int32_t value);
   public:
 
-  // required sint32 a_defaultPort = 3;
+  // optional sint32 a_defaultPort = 3;
   bool has_a_defaultport() const;
   private:
   bool _internal_has_a_defaultport() const;
@@ -960,7 +957,7 @@ class StandardURLParams final :
   void _internal_set_a_defaultport(int32_t value);
   public:
 
-  // required bool a_supportsFileURL = 17;
+  // optional bool a_supportsFileURL = 17;
   bool has_a_supportsfileurl() const;
   private:
   bool _internal_has_a_supportsfileurl() const;
@@ -973,7 +970,7 @@ class StandardURLParams final :
   void _internal_set_a_supportsfileurl(bool value);
   public:
 
-  // required bool a_isSubstituting = 18;
+  // optional bool a_isSubstituting = 18;
   bool has_a_issubstituting() const;
   private:
   bool _internal_has_a_issubstituting() const;
@@ -1137,7 +1134,7 @@ class JARURIParams final :
     kAJarFileFieldNumber = 1,
     kAJarEntryFieldNumber = 2,
   };
-  // required string a_charset = 3;
+  // optional string a_charset = 3;
   bool has_a_charset() const;
   private:
   bool _internal_has_a_charset() const;
@@ -1331,7 +1328,7 @@ class IconURIParams final :
     kAIconScaleFieldNumber = 6,
     kAIconDarkFieldNumber = 7,
   };
-  // required string a_contentType = 3;
+  // optional string a_contentType = 3;
   bool has_a_contenttype() const;
   private:
   bool _internal_has_a_contenttype() const;
@@ -1349,7 +1346,7 @@ class IconURIParams final :
   std::string* _internal_mutable_a_contenttype();
   public:
 
-  // required string a_fileName = 4;
+  // optional string a_fileName = 4;
   bool has_a_filename() const;
   private:
   bool _internal_has_a_filename() const;
@@ -1367,7 +1364,7 @@ class IconURIParams final :
   std::string* _internal_mutable_a_filename();
   public:
 
-  // required string a_stockIcon = 5;
+  // optional string a_stockIcon = 5;
   bool has_a_stockicon() const;
   private:
   bool _internal_has_a_stockicon() const;
@@ -1403,7 +1400,7 @@ class IconURIParams final :
       ::protobuf::mozilla::ipc::URIParams* a_uri);
   ::protobuf::mozilla::ipc::URIParams* unsafe_arena_release_a_uri();
 
-  // required uint32 a_size = 2;
+  // optional uint32 a_size = 2;
   bool has_a_size() const;
   private:
   bool _internal_has_a_size() const;
@@ -1416,7 +1413,7 @@ class IconURIParams final :
   void _internal_set_a_size(uint32_t value);
   public:
 
-  // required uint32 a_iconScale = 6;
+  // optional uint32 a_iconScale = 6;
   bool has_a_iconscale() const;
   private:
   bool _internal_has_a_iconscale() const;
@@ -1445,9 +1442,6 @@ class IconURIParams final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.IconURIParams)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1599,7 +1593,7 @@ class HostObjectURIParams final :
       ::protobuf::mozilla::ipc::SimpleURIParams* a_simpleparams);
   ::protobuf::mozilla::ipc::SimpleURIParams* unsafe_arena_release_a_simpleparams();
 
-  // required bool a_revoked = 2;
+  // optional bool a_revoked = 2;
   bool has_a_revoked() const;
   private:
   bool _internal_has_a_revoked() const;
@@ -1615,9 +1609,6 @@ class HostObjectURIParams final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.HostObjectURIParams)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2677,7 +2668,7 @@ class SubstitutingJARURIParams final :
 #endif  // __GNUC__
 // SimpleURIParams
 
-// required string a_spec = 1;
+// optional string a_spec = 1;
 inline bool SimpleURIParams::_internal_has_a_spec() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2749,7 +2740,7 @@ inline void SimpleURIParams::set_allocated_a_spec(std::string* a_spec) {
 
 // DefaultURIParams
 
-// required string a_spec = 1;
+// optional string a_spec = 1;
 inline bool DefaultURIParams::_internal_has_a_spec() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2821,7 +2812,7 @@ inline void DefaultURIParams::set_allocated_a_spec(std::string* a_spec) {
 
 // StandardURLSegment
 
-// required uint32 a_position = 1;
+// optional uint32 a_position = 1;
 inline bool StandardURLSegment::_internal_has_a_position() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2849,7 +2840,7 @@ inline void StandardURLSegment::set_a_position(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.StandardURLSegment.a_position)
 }
 
-// required sint32 a_length = 2;
+// optional sint32 a_length = 2;
 inline bool StandardURLSegment::_internal_has_a_length() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2881,7 +2872,7 @@ inline void StandardURLSegment::set_a_length(int32_t value) {
 
 // StandardURLParams
 
-// required uint32 a_urlType = 1;
+// optional uint32 a_urlType = 1;
 inline bool StandardURLParams::_internal_has_a_urltype() const {
   bool value = (_impl_._has_bits_[0] & 0x00002000u) != 0;
   return value;
@@ -2909,7 +2900,7 @@ inline void StandardURLParams::set_a_urltype(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.StandardURLParams.a_urlType)
 }
 
-// required sint32 a_port = 2;
+// optional sint32 a_port = 2;
 inline bool StandardURLParams::_internal_has_a_port() const {
   bool value = (_impl_._has_bits_[0] & 0x00004000u) != 0;
   return value;
@@ -2937,7 +2928,7 @@ inline void StandardURLParams::set_a_port(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.StandardURLParams.a_port)
 }
 
-// required sint32 a_defaultPort = 3;
+// optional sint32 a_defaultPort = 3;
 inline bool StandardURLParams::_internal_has_a_defaultport() const {
   bool value = (_impl_._has_bits_[0] & 0x00008000u) != 0;
   return value;
@@ -2965,7 +2956,7 @@ inline void StandardURLParams::set_a_defaultport(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.StandardURLParams.a_defaultPort)
 }
 
-// required string a_spec = 4;
+// optional string a_spec = 4;
 inline bool StandardURLParams::_internal_has_a_spec() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4113,7 +4104,7 @@ inline void StandardURLParams::set_allocated_a_ref(::protobuf::mozilla::ipc::Sta
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.StandardURLParams.a_ref)
 }
 
-// required bool a_supportsFileURL = 17;
+// optional bool a_supportsFileURL = 17;
 inline bool StandardURLParams::_internal_has_a_supportsfileurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00010000u) != 0;
   return value;
@@ -4141,7 +4132,7 @@ inline void StandardURLParams::set_a_supportsfileurl(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.StandardURLParams.a_supportsFileURL)
 }
 
-// required bool a_isSubstituting = 18;
+// optional bool a_isSubstituting = 18;
 inline bool StandardURLParams::_internal_has_a_issubstituting() const {
   bool value = (_impl_._has_bits_[0] & 0x00020000u) != 0;
   return value;
@@ -4353,7 +4344,7 @@ inline void JARURIParams::set_allocated_a_jarentry(::protobuf::mozilla::ipc::URI
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.JARURIParams.a_jarEntry)
 }
 
-// required string a_charset = 3;
+// optional string a_charset = 3;
 inline bool JARURIParams::_internal_has_a_charset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4515,7 +4506,7 @@ inline void IconURIParams::set_allocated_a_uri(::protobuf::mozilla::ipc::URIPara
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.IconURIParams.a_uri)
 }
 
-// required uint32 a_size = 2;
+// optional uint32 a_size = 2;
 inline bool IconURIParams::_internal_has_a_size() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -4543,7 +4534,7 @@ inline void IconURIParams::set_a_size(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.IconURIParams.a_size)
 }
 
-// required string a_contentType = 3;
+// optional string a_contentType = 3;
 inline bool IconURIParams::_internal_has_a_contenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4611,7 +4602,7 @@ inline void IconURIParams::set_allocated_a_contenttype(std::string* a_contenttyp
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.IconURIParams.a_contentType)
 }
 
-// required string a_fileName = 4;
+// optional string a_fileName = 4;
 inline bool IconURIParams::_internal_has_a_filename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4679,7 +4670,7 @@ inline void IconURIParams::set_allocated_a_filename(std::string* a_filename) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.IconURIParams.a_fileName)
 }
 
-// required string a_stockIcon = 5;
+// optional string a_stockIcon = 5;
 inline bool IconURIParams::_internal_has_a_stockicon() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -4747,7 +4738,7 @@ inline void IconURIParams::set_allocated_a_stockicon(std::string* a_stockicon) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.IconURIParams.a_stockIcon)
 }
 
-// required uint32 a_iconScale = 6;
+// optional uint32 a_iconScale = 6;
 inline bool IconURIParams::_internal_has_a_iconscale() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -4897,7 +4888,7 @@ inline void HostObjectURIParams::set_allocated_a_simpleparams(::protobuf::mozill
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.HostObjectURIParams.a_simpleParams)
 }
 
-// required bool a_revoked = 2;
+// optional bool a_revoked = 2;
 inline bool HostObjectURIParams::_internal_has_a_revoked() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

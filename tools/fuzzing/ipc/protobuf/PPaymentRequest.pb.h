@@ -746,7 +746,7 @@ class Msg_ChangeShippingAddress final :
     kAARequestIdFieldNumber = 1,
     kAAAddressFieldNumber = 2,
   };
-  // required string a_aRequestId = 1;
+  // optional string a_aRequestId = 1;
   bool has_a_arequestid() const;
   private:
   bool _internal_has_a_arequestid() const;
@@ -785,9 +785,6 @@ class Msg_ChangeShippingAddress final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PPaymentRequest.Msg_ChangeShippingAddress)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -916,7 +913,7 @@ class Msg_ChangeShippingOption final :
     kAARequestIdFieldNumber = 1,
     kAAOptionFieldNumber = 2,
   };
-  // required string a_aRequestId = 1;
+  // optional string a_aRequestId = 1;
   bool has_a_arequestid() const;
   private:
   bool _internal_has_a_arequestid() const;
@@ -934,7 +931,7 @@ class Msg_ChangeShippingOption final :
   std::string* _internal_mutable_a_arequestid();
   public:
 
-  // required string a_aOption = 2;
+  // optional string a_aOption = 2;
   bool has_a_aoption() const;
   private:
   bool _internal_has_a_aoption() const;
@@ -955,9 +952,6 @@ class Msg_ChangeShippingOption final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PPaymentRequest.Msg_ChangeShippingOption)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1088,7 +1082,7 @@ class Msg_ChangePayerDetail final :
     kAAPayerEmailFieldNumber = 3,
     kAAPayerPhoneFieldNumber = 4,
   };
-  // required string a_aRequestId = 1;
+  // optional string a_aRequestId = 1;
   bool has_a_arequestid() const;
   private:
   bool _internal_has_a_arequestid() const;
@@ -1106,7 +1100,7 @@ class Msg_ChangePayerDetail final :
   std::string* _internal_mutable_a_arequestid();
   public:
 
-  // required string a_aPayerName = 2;
+  // optional string a_aPayerName = 2;
   bool has_a_apayername() const;
   private:
   bool _internal_has_a_apayername() const;
@@ -1124,7 +1118,7 @@ class Msg_ChangePayerDetail final :
   std::string* _internal_mutable_a_apayername();
   public:
 
-  // required string a_aPayerEmail = 3;
+  // optional string a_aPayerEmail = 3;
   bool has_a_apayeremail() const;
   private:
   bool _internal_has_a_apayeremail() const;
@@ -1142,7 +1136,7 @@ class Msg_ChangePayerDetail final :
   std::string* _internal_mutable_a_apayeremail();
   public:
 
-  // required string a_aPayerPhone = 4;
+  // optional string a_aPayerPhone = 4;
   bool has_a_apayerphone() const;
   private:
   bool _internal_has_a_apayerphone() const;
@@ -1163,9 +1157,6 @@ class Msg_ChangePayerDetail final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PPaymentRequest.Msg_ChangePayerDetail)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1297,7 +1288,7 @@ class Msg_ChangePaymentMethod final :
     kAAMethodNameFieldNumber = 2,
     kAAMethodDetailsFieldNumber = 3,
   };
-  // required string a_aRequestId = 1;
+  // optional string a_aRequestId = 1;
   bool has_a_arequestid() const;
   private:
   bool _internal_has_a_arequestid() const;
@@ -1315,7 +1306,7 @@ class Msg_ChangePaymentMethod final :
   std::string* _internal_mutable_a_arequestid();
   public:
 
-  // required string a_aMethodName = 2;
+  // optional string a_aMethodName = 2;
   bool has_a_amethodname() const;
   private:
   bool _internal_has_a_amethodname() const;
@@ -1354,9 +1345,6 @@ class Msg_ChangePaymentMethod final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PPaymentRequest.Msg_ChangePaymentMethod)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1572,7 +1560,7 @@ inline void Msg_RespondPayment::set_allocated_a_aresponse(::protobuf::mozilla::d
 
 // Msg_ChangeShippingAddress
 
-// required string a_aRequestId = 1;
+// optional string a_aRequestId = 1;
 inline bool Msg_ChangeShippingAddress::_internal_has_a_arequestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1731,7 +1719,7 @@ inline void Msg_ChangeShippingAddress::set_allocated_a_aaddress(::protobuf::mozi
 
 // Msg_ChangeShippingOption
 
-// required string a_aRequestId = 1;
+// optional string a_aRequestId = 1;
 inline bool Msg_ChangeShippingOption::_internal_has_a_arequestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1799,7 +1787,7 @@ inline void Msg_ChangeShippingOption::set_allocated_a_arequestid(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PPaymentRequest.Msg_ChangeShippingOption.a_aRequestId)
 }
 
-// required string a_aOption = 2;
+// optional string a_aOption = 2;
 inline bool Msg_ChangeShippingOption::_internal_has_a_aoption() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1871,7 +1859,7 @@ inline void Msg_ChangeShippingOption::set_allocated_a_aoption(std::string* a_aop
 
 // Msg_ChangePayerDetail
 
-// required string a_aRequestId = 1;
+// optional string a_aRequestId = 1;
 inline bool Msg_ChangePayerDetail::_internal_has_a_arequestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1939,7 +1927,7 @@ inline void Msg_ChangePayerDetail::set_allocated_a_arequestid(std::string* a_are
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PPaymentRequest.Msg_ChangePayerDetail.a_aRequestId)
 }
 
-// required string a_aPayerName = 2;
+// optional string a_aPayerName = 2;
 inline bool Msg_ChangePayerDetail::_internal_has_a_apayername() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2007,7 +1995,7 @@ inline void Msg_ChangePayerDetail::set_allocated_a_apayername(std::string* a_apa
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PPaymentRequest.Msg_ChangePayerDetail.a_aPayerName)
 }
 
-// required string a_aPayerEmail = 3;
+// optional string a_aPayerEmail = 3;
 inline bool Msg_ChangePayerDetail::_internal_has_a_apayeremail() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2075,7 +2063,7 @@ inline void Msg_ChangePayerDetail::set_allocated_a_apayeremail(std::string* a_ap
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PPaymentRequest.Msg_ChangePayerDetail.a_aPayerEmail)
 }
 
-// required string a_aPayerPhone = 4;
+// optional string a_aPayerPhone = 4;
 inline bool Msg_ChangePayerDetail::_internal_has_a_apayerphone() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -2147,7 +2135,7 @@ inline void Msg_ChangePayerDetail::set_allocated_a_apayerphone(std::string* a_ap
 
 // Msg_ChangePaymentMethod
 
-// required string a_aRequestId = 1;
+// optional string a_aRequestId = 1;
 inline bool Msg_ChangePaymentMethod::_internal_has_a_arequestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2215,7 +2203,7 @@ inline void Msg_ChangePaymentMethod::set_allocated_a_arequestid(std::string* a_a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PPaymentRequest.Msg_ChangePaymentMethod.a_aRequestId)
 }
 
-// required string a_aMethodName = 2;
+// optional string a_aMethodName = 2;
 inline bool Msg_ChangePaymentMethod::_internal_has_a_amethodname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

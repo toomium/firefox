@@ -276,7 +276,7 @@ class Msg_ZoomToRect final :
   std::string* _internal_mutable_a_azoomtarget();
   public:
 
-  // required uint32 a_Flags = 3;
+  // optional uint32 a_Flags = 3;
   bool has_a_flags() const;
   private:
   bool _internal_has_a_flags() const;
@@ -424,7 +424,7 @@ class Msg_ContentReceivedInputBlock final :
     kAAInputBlockIdFieldNumber = 1,
     kAPreventDefaultFieldNumber = 2,
   };
-  // required uint64 a_aInputBlockId = 1;
+  // optional uint64 a_aInputBlockId = 1;
   bool has_a_ainputblockid() const;
   private:
   bool _internal_has_a_ainputblockid() const;
@@ -437,7 +437,7 @@ class Msg_ContentReceivedInputBlock final :
   void _internal_set_a_ainputblockid(uint64_t value);
   public:
 
-  // required bool a_PreventDefault = 2;
+  // optional bool a_PreventDefault = 2;
   bool has_a_preventdefault() const;
   private:
   bool _internal_has_a_preventdefault() const;
@@ -453,9 +453,6 @@ class Msg_ContentReceivedInputBlock final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PAPZCTreeManager.Msg_ContentReceivedInputBlock)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -608,7 +605,7 @@ class Msg_SetTargetAPZC final :
   std::string* _internal_add_a_targets();
   public:
 
-  // required uint64 a_aInputBlockId = 1;
+  // optional uint64 a_aInputBlockId = 1;
   bool has_a_ainputblockid() const;
   private:
   bool _internal_has_a_ainputblockid() const;
@@ -1065,7 +1062,7 @@ class Msg_SetDPI final :
   enum : int {
     kAADpiValueFieldNumber = 1,
   };
-  // required float a_aDpiValue = 1;
+  // optional float a_aDpiValue = 1;
   bool has_a_adpivalue() const;
   private:
   bool _internal_has_a_adpivalue() const;
@@ -1232,7 +1229,7 @@ class Msg_SetAllowedTouchBehavior final :
   std::string* _internal_add_a_avalues();
   public:
 
-  // required uint64 a_aInputBlockId = 1;
+  // optional uint64 a_aInputBlockId = 1;
   bool has_a_ainputblockid() const;
   private:
   bool _internal_has_a_ainputblockid() const;
@@ -1862,7 +1859,7 @@ class Msg_SetLongTapEnabled final :
   enum : int {
     kAATapGestureEnabledFieldNumber = 1,
   };
-  // required bool a_aTapGestureEnabled = 1;
+  // optional bool a_aTapGestureEnabled = 1;
   bool has_a_atapgestureenabled() const;
   private:
   bool _internal_has_a_atapgestureenabled() const;
@@ -2023,7 +2020,7 @@ class Msg_SetBrowserGestureResponse final :
   std::string* _internal_mutable_a_aresponse();
   public:
 
-  // required uint64 a_aInputBlockId = 1;
+  // optional uint64 a_aInputBlockId = 1;
   bool has_a_ainputblockid() const;
   private:
   bool _internal_has_a_ainputblockid() const;
@@ -2039,9 +2036,6 @@ class Msg_SetBrowserGestureResponse final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PAPZCTreeManager.Msg_SetBrowserGestureResponse)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2813,7 +2807,7 @@ class Msg_NotifyScaleGestureComplete final :
   std::string* _internal_mutable_a_ascrollid();
   public:
 
-  // required float a_aScale = 2;
+  // optional float a_aScale = 2;
   bool has_a_ascale() const;
   private:
   bool _internal_has_a_ascale() const;
@@ -2829,9 +2823,6 @@ class Msg_NotifyScaleGestureComplete final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PAPZCTreeManager.Msg_NotifyScaleGestureComplete)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2992,7 +2983,7 @@ inline void Msg_ZoomToRect::set_allocated_a_azoomtarget(std::string* a_azoomtarg
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZCTreeManager.Msg_ZoomToRect.a_aZoomTarget)
 }
 
-// required uint32 a_Flags = 3;
+// optional uint32 a_Flags = 3;
 inline bool Msg_ZoomToRect::_internal_has_a_flags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -3024,7 +3015,7 @@ inline void Msg_ZoomToRect::set_a_flags(uint32_t value) {
 
 // Msg_ContentReceivedInputBlock
 
-// required uint64 a_aInputBlockId = 1;
+// optional uint64 a_aInputBlockId = 1;
 inline bool Msg_ContentReceivedInputBlock::_internal_has_a_ainputblockid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3052,7 +3043,7 @@ inline void Msg_ContentReceivedInputBlock::set_a_ainputblockid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZCTreeManager.Msg_ContentReceivedInputBlock.a_aInputBlockId)
 }
 
-// required bool a_PreventDefault = 2;
+// optional bool a_PreventDefault = 2;
 inline bool Msg_ContentReceivedInputBlock::_internal_has_a_preventdefault() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3084,7 +3075,7 @@ inline void Msg_ContentReceivedInputBlock::set_a_preventdefault(bool value) {
 
 // Msg_SetTargetAPZC
 
-// required uint64 a_aInputBlockId = 1;
+// optional uint64 a_aInputBlockId = 1;
 inline bool Msg_SetTargetAPZC::_internal_has_a_ainputblockid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3403,7 +3394,7 @@ inline void Msg_SetKeyboardMap::set_allocated_a_akeyboardmap(std::string* a_akey
 
 // Msg_SetDPI
 
-// required float a_aDpiValue = 1;
+// optional float a_aDpiValue = 1;
 inline bool Msg_SetDPI::_internal_has_a_adpivalue() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3435,7 +3426,7 @@ inline void Msg_SetDPI::set_a_adpivalue(float value) {
 
 // Msg_SetAllowedTouchBehavior
 
-// required uint64 a_aInputBlockId = 1;
+// optional uint64 a_aInputBlockId = 1;
 inline bool Msg_SetAllowedTouchBehavior::_internal_has_a_ainputblockid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3894,7 +3885,7 @@ inline void Msg_StopAutoscroll::set_allocated_a_aguid(std::string* a_aguid) {
 
 // Msg_SetLongTapEnabled
 
-// required bool a_aTapGestureEnabled = 1;
+// optional bool a_aTapGestureEnabled = 1;
 inline bool Msg_SetLongTapEnabled::_internal_has_a_atapgestureenabled() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3926,7 +3917,7 @@ inline void Msg_SetLongTapEnabled::set_a_atapgestureenabled(bool value) {
 
 // Msg_SetBrowserGestureResponse
 
-// required uint64 a_aInputBlockId = 1;
+// optional uint64 a_aInputBlockId = 1;
 inline bool Msg_SetBrowserGestureResponse::_internal_has_a_ainputblockid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4518,7 +4509,7 @@ inline void Msg_NotifyScaleGestureComplete::set_allocated_a_ascrollid(std::strin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZCTreeManager.Msg_NotifyScaleGestureComplete.a_aScrollId)
 }
 
-// required float a_aScale = 2;
+// optional float a_aScale = 2;
 inline bool Msg_NotifyScaleGestureComplete::_internal_has_a_ascale() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

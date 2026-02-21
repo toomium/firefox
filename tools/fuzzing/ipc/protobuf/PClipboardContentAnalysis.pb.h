@@ -228,7 +228,7 @@ class Msg_GetClipboard final :
   std::string* _internal_mutable_a_awhichclipboard();
   public:
 
-  // required uint64 a_aRequestingWindowContextId = 3;
+  // optional uint64 a_aRequestingWindowContextId = 3;
   bool has_a_arequestingwindowcontextid() const;
   private:
   bool _internal_has_a_arequestingwindowcontextid() const;
@@ -244,9 +244,6 @@ class Msg_GetClipboard final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PClipboardContentAnalysis.Msg_GetClipboard)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -566,7 +563,7 @@ class Msg_GetAllClipboardDataSync final :
   std::string* _internal_mutable_a_awhichclipboard();
   public:
 
-  // required uint64 a_aRequestingWindowContextId = 3;
+  // optional uint64 a_aRequestingWindowContextId = 3;
   bool has_a_arequestingwindowcontextid() const;
   private:
   bool _internal_has_a_arequestingwindowcontextid() const;
@@ -582,9 +579,6 @@ class Msg_GetAllClipboardDataSync final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PClipboardContentAnalysis.Msg_GetAllClipboardDataSync)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -900,7 +894,7 @@ inline void Msg_GetClipboard::set_allocated_a_awhichclipboard(std::string* a_awh
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PClipboardContentAnalysis.Msg_GetClipboard.a_aWhichClipboard)
 }
 
-// required uint64 a_aRequestingWindowContextId = 3;
+// optional uint64 a_aRequestingWindowContextId = 3;
 inline bool Msg_GetClipboard::_internal_has_a_arequestingwindowcontextid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1166,7 +1160,7 @@ inline void Msg_GetAllClipboardDataSync::set_allocated_a_awhichclipboard(std::st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PClipboardContentAnalysis.Msg_GetAllClipboardDataSync.a_aWhichClipboard)
 }
 
-// required uint64 a_aRequestingWindowContextId = 3;
+// optional uint64 a_aRequestingWindowContextId = 3;
 inline bool Msg_GetAllClipboardDataSync::_internal_has_a_arequestingwindowcontextid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

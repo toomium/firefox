@@ -273,7 +273,7 @@ class WebAuthnAuthenticatorSelection final :
     kAUserVerificationRequirementFieldNumber = 2,
     kAAuthenticatorAttachmentFieldNumber = 3,
   };
-  // required string a_residentKey = 1;
+  // optional string a_residentKey = 1;
   bool has_a_residentkey() const;
   private:
   bool _internal_has_a_residentkey() const;
@@ -291,7 +291,7 @@ class WebAuthnAuthenticatorSelection final :
   std::string* _internal_mutable_a_residentkey();
   public:
 
-  // required string a_userVerificationRequirement = 2;
+  // optional string a_userVerificationRequirement = 2;
   bool has_a_userverificationrequirement() const;
   private:
   bool _internal_has_a_userverificationrequirement() const;
@@ -330,9 +330,6 @@ class WebAuthnAuthenticatorSelection final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.WebAuthnAuthenticatorSelection)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -484,7 +481,7 @@ class WebAuthnScopedCredential final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_id();
 
-  // required uint32 a_transports = 2;
+  // optional uint32 a_transports = 2;
   bool has_a_transports() const;
   private:
   bool _internal_has_a_transports() const;
@@ -646,7 +643,7 @@ class WebAuthnExtensionCredProtect final :
   std::string* _internal_mutable_a_policy();
   public:
 
-  // required bool a_required = 2;
+  // optional bool a_required = 2;
   bool has_a_required() const;
   private:
   bool _internal_has_a_required() const;
@@ -662,9 +659,6 @@ class WebAuthnExtensionCredProtect final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.WebAuthnExtensionCredProtect)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -792,7 +786,7 @@ class WebAuthnExtensionCredProps final :
   enum : int {
     kACredPropsFieldNumber = 1,
   };
-  // required bool a_credProps = 1;
+  // optional bool a_credProps = 1;
   bool has_a_credprops() const;
   private:
   bool _internal_has_a_credprops() const;
@@ -934,7 +928,7 @@ class WebAuthnExtensionHmacSecret final :
   enum : int {
     kAHmacCreateSecretFieldNumber = 1,
   };
-  // required bool a_hmacCreateSecret = 1;
+  // optional bool a_hmacCreateSecret = 1;
   bool has_a_hmaccreatesecret() const;
   private:
   bool _internal_has_a_hmaccreatesecret() const;
@@ -1242,7 +1236,7 @@ class WebAuthnExtensionMinPinLength final :
   enum : int {
     kAMinPinLengthFieldNumber = 1,
   };
-  // required bool a_minPinLength = 1;
+  // optional bool a_minPinLength = 1;
   bool has_a_minpinlength() const;
   private:
   bool _internal_has_a_minpinlength() const;
@@ -1422,7 +1416,7 @@ class WebAuthnExtensionPrf final :
       ::protobuf::mozilla::dom::WebAuthnExtensionPrfValues* a_eval);
   ::protobuf::mozilla::dom::WebAuthnExtensionPrfValues* unsafe_arena_release_a_eval();
 
-  // required bool a_evalByCredentialMaybe = 2;
+  // optional bool a_evalByCredentialMaybe = 2;
   bool has_a_evalbycredentialmaybe() const;
   private:
   bool _internal_has_a_evalbycredentialmaybe() const;
@@ -1612,7 +1606,7 @@ class WebAuthnExtensionPrfValues final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_second();
 
-  // required bool a_secondMaybe = 2;
+  // optional bool a_secondMaybe = 2;
   bool has_a_secondmaybe() const;
   private:
   bool _internal_has_a_secondmaybe() const;
@@ -2200,7 +2194,7 @@ class WebAuthnExtensionResultAppId final :
   enum : int {
     kAAppIdFieldNumber = 1,
   };
-  // required bool a_AppId = 1;
+  // optional bool a_AppId = 1;
   bool has_a_appid() const;
   private:
   bool _internal_has_a_appid() const;
@@ -2342,7 +2336,7 @@ class WebAuthnExtensionResultCredProps final :
   enum : int {
     kARkFieldNumber = 1,
   };
-  // required bool a_rk = 1;
+  // optional bool a_rk = 1;
   bool has_a_rk() const;
   private:
   bool _internal_has_a_rk() const;
@@ -2484,7 +2478,7 @@ class WebAuthnExtensionResultHmacSecret final :
   enum : int {
     kAHmacCreateSecretFieldNumber = 1,
   };
-  // required bool a_hmacCreateSecret = 1;
+  // optional bool a_hmacCreateSecret = 1;
   bool has_a_hmaccreatesecret() const;
   private:
   bool _internal_has_a_hmaccreatesecret() const;
@@ -2650,7 +2644,7 @@ class WebAuthnExtensionResultLargeBlob final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_blob();
 
-  // required bool a_flag = 1;
+  // optional bool a_flag = 1;
   bool has_a_flag() const;
   private:
   bool _internal_has_a_flag() const;
@@ -2663,7 +2657,7 @@ class WebAuthnExtensionResultLargeBlob final :
   void _internal_set_a_flag(bool value);
   public:
 
-  // required bool a_written = 3;
+  // optional bool a_written = 3;
   bool has_a_written() const;
   private:
   bool _internal_has_a_written() const;
@@ -2679,9 +2673,6 @@ class WebAuthnExtensionResultLargeBlob final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.WebAuthnExtensionResultLargeBlob)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3223,7 +3214,7 @@ class WebAuthnMakeCredentialRpInfo final :
   enum : int {
     kANameFieldNumber = 1,
   };
-  // required string a_Name = 1;
+  // optional string a_Name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -3394,7 +3385,7 @@ class WebAuthnMakeCredentialUserInfo final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_id();
 
-  // required string a_Name = 2;
+  // optional string a_Name = 2;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -3412,7 +3403,7 @@ class WebAuthnMakeCredentialUserInfo final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required string a_DisplayName = 3;
+  // optional string a_DisplayName = 3;
   bool has_a_displayname() const;
   private:
   bool _internal_has_a_displayname() const;
@@ -3433,9 +3424,6 @@ class WebAuthnMakeCredentialUserInfo final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3564,7 +3552,7 @@ class CoseAlg final :
   enum : int {
     kAAlgFieldNumber = 1,
   };
-  // required sint64 a_alg = 1;
+  // optional sint64 a_alg = 1;
   bool has_a_alg() const;
   private:
   bool _internal_has_a_alg() const;
@@ -3791,7 +3779,7 @@ class WebAuthnMakeCredentialInfo final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::WebAuthnExtension >&
       a_extensions() const;
 
-  // required string a_RpId = 1;
+  // optional string a_RpId = 1;
   bool has_a_rpid() const;
   private:
   bool _internal_has_a_rpid() const;
@@ -3809,7 +3797,7 @@ class WebAuthnMakeCredentialInfo final :
   std::string* _internal_mutable_a_rpid();
   public:
 
-  // required string a_attestationConveyancePreference = 10;
+  // optional string a_attestationConveyancePreference = 10;
   bool has_a_attestationconveyancepreference() const;
   private:
   bool _internal_has_a_attestationconveyancepreference() const;
@@ -3881,7 +3869,7 @@ class WebAuthnMakeCredentialInfo final :
       ::protobuf::mozilla::dom::WebAuthnAuthenticatorSelection* a_authenticatorselection);
   ::protobuf::mozilla::dom::WebAuthnAuthenticatorSelection* unsafe_arena_release_a_authenticatorselection();
 
-  // required uint32 a_TimeoutMS = 3;
+  // optional uint32 a_TimeoutMS = 3;
   bool has_a_timeoutms() const;
   private:
   bool _internal_has_a_timeoutms() const;
@@ -4126,7 +4114,7 @@ class WebAuthnMakeCredentialResult final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::WebAuthnExtensionResult >&
       a_extensions() const;
 
-  // required string a_ClientDataJSON = 1;
+  // optional string a_ClientDataJSON = 1;
   bool has_a_clientdatajson() const;
   private:
   bool _internal_has_a_clientdatajson() const;
@@ -4546,7 +4534,7 @@ class WebAuthnGetAssertionInfo final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::WebAuthnExtension >&
       a_extensions() const;
 
-  // required string a_RpId = 1;
+  // optional string a_RpId = 1;
   bool has_a_rpid() const;
   private:
   bool _internal_has_a_rpid() const;
@@ -4582,7 +4570,7 @@ class WebAuthnGetAssertionInfo final :
   std::string* _internal_mutable_a_appid();
   public:
 
-  // required string a_userVerificationRequirement = 7;
+  // optional string a_userVerificationRequirement = 7;
   bool has_a_userverificationrequirement() const;
   private:
   bool _internal_has_a_userverificationrequirement() const;
@@ -4600,7 +4588,7 @@ class WebAuthnGetAssertionInfo final :
   std::string* _internal_mutable_a_userverificationrequirement();
   public:
 
-  // required uint32 a_TimeoutMS = 4;
+  // optional uint32 a_TimeoutMS = 4;
   bool has_a_timeoutms() const;
   private:
   bool _internal_has_a_timeoutms() const;
@@ -4613,7 +4601,7 @@ class WebAuthnGetAssertionInfo final :
   void _internal_set_a_timeoutms(uint32_t value);
   public:
 
-  // required bool a_ConditionallyMediated = 8;
+  // optional bool a_ConditionallyMediated = 8;
   bool has_a_conditionallymediated() const;
   private:
   bool _internal_has_a_conditionallymediated() const;
@@ -4629,9 +4617,6 @@ class WebAuthnGetAssertionInfo final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.WebAuthnGetAssertionInfo)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4877,7 +4862,7 @@ class WebAuthnGetAssertionResult final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_userhandle();
 
-  // required string a_ClientDataJSON = 1;
+  // optional string a_ClientDataJSON = 1;
   bool has_a_clientdatajson() const;
   private:
   bool _internal_has_a_clientdatajson() const;
@@ -5130,7 +5115,7 @@ class WebAuthnGetAssertionResponse final :
 #endif  // __GNUC__
 // WebAuthnAuthenticatorSelection
 
-// required string a_residentKey = 1;
+// optional string a_residentKey = 1;
 inline bool WebAuthnAuthenticatorSelection::_internal_has_a_residentkey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5198,7 +5183,7 @@ inline void WebAuthnAuthenticatorSelection::set_allocated_a_residentkey(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebAuthnAuthenticatorSelection.a_residentKey)
 }
 
-// required string a_userVerificationRequirement = 2;
+// optional string a_userVerificationRequirement = 2;
 inline bool WebAuthnAuthenticatorSelection::_internal_has_a_userverificationrequirement() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5385,7 +5370,7 @@ WebAuthnScopedCredential::mutable_a_id() {
   return _internal_mutable_a_id();
 }
 
-// required uint32 a_transports = 2;
+// optional uint32 a_transports = 2;
 inline bool WebAuthnScopedCredential::_internal_has_a_transports() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5485,7 +5470,7 @@ inline void WebAuthnExtensionCredProtect::set_allocated_a_policy(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebAuthnExtensionCredProtect.a_policy)
 }
 
-// required bool a_required = 2;
+// optional bool a_required = 2;
 inline bool WebAuthnExtensionCredProtect::_internal_has_a_required() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5517,7 +5502,7 @@ inline void WebAuthnExtensionCredProtect::set_a_required(bool value) {
 
 // WebAuthnExtensionCredProps
 
-// required bool a_credProps = 1;
+// optional bool a_credProps = 1;
 inline bool WebAuthnExtensionCredProps::_internal_has_a_credprops() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5549,7 +5534,7 @@ inline void WebAuthnExtensionCredProps::set_a_credprops(bool value) {
 
 // WebAuthnExtensionHmacSecret
 
-// required bool a_hmacCreateSecret = 1;
+// optional bool a_hmacCreateSecret = 1;
 inline bool WebAuthnExtensionHmacSecret::_internal_has_a_hmaccreatesecret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5660,7 +5645,7 @@ WebAuthnExtensionLargeBlob::mutable_a_write() {
 
 // WebAuthnExtensionMinPinLength
 
-// required bool a_minPinLength = 1;
+// optional bool a_minPinLength = 1;
 inline bool WebAuthnExtensionMinPinLength::_internal_has_a_minpinlength() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5782,7 +5767,7 @@ inline void WebAuthnExtensionPrf::set_allocated_a_eval(::protobuf::mozilla::dom:
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebAuthnExtensionPrf.a_eval)
 }
 
-// required bool a_evalByCredentialMaybe = 2;
+// optional bool a_evalByCredentialMaybe = 2;
 inline bool WebAuthnExtensionPrf::_internal_has_a_evalbycredentialmaybe() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5901,7 +5886,7 @@ WebAuthnExtensionPrfValues::mutable_a_first() {
   return _internal_mutable_a_first();
 }
 
-// required bool a_secondMaybe = 2;
+// optional bool a_secondMaybe = 2;
 inline bool WebAuthnExtensionPrfValues::_internal_has_a_secondmaybe() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6578,7 +6563,7 @@ inline WebAuthnExtension::ContentCase WebAuthnExtension::content_case() const {
 
 // WebAuthnExtensionResultAppId
 
-// required bool a_AppId = 1;
+// optional bool a_AppId = 1;
 inline bool WebAuthnExtensionResultAppId::_internal_has_a_appid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6610,7 +6595,7 @@ inline void WebAuthnExtensionResultAppId::set_a_appid(bool value) {
 
 // WebAuthnExtensionResultCredProps
 
-// required bool a_rk = 1;
+// optional bool a_rk = 1;
 inline bool WebAuthnExtensionResultCredProps::_internal_has_a_rk() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6642,7 +6627,7 @@ inline void WebAuthnExtensionResultCredProps::set_a_rk(bool value) {
 
 // WebAuthnExtensionResultHmacSecret
 
-// required bool a_hmacCreateSecret = 1;
+// optional bool a_hmacCreateSecret = 1;
 inline bool WebAuthnExtensionResultHmacSecret::_internal_has_a_hmaccreatesecret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6674,7 +6659,7 @@ inline void WebAuthnExtensionResultHmacSecret::set_a_hmaccreatesecret(bool value
 
 // WebAuthnExtensionResultLargeBlob
 
-// required bool a_flag = 1;
+// optional bool a_flag = 1;
 inline bool WebAuthnExtensionResultLargeBlob::_internal_has_a_flag() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6749,7 +6734,7 @@ WebAuthnExtensionResultLargeBlob::mutable_a_blob() {
   return _internal_mutable_a_blob();
 }
 
-// required bool a_written = 3;
+// optional bool a_written = 3;
 inline bool WebAuthnExtensionResultLargeBlob::_internal_has_a_written() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7286,7 +7271,7 @@ inline WebAuthnExtensionResult::ContentCase WebAuthnExtensionResult::content_cas
 
 // WebAuthnMakeCredentialRpInfo
 
-// required string a_Name = 1;
+// optional string a_Name = 1;
 inline bool WebAuthnMakeCredentialRpInfo::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7405,7 +7390,7 @@ WebAuthnMakeCredentialUserInfo::mutable_a_id() {
   return _internal_mutable_a_id();
 }
 
-// required string a_Name = 2;
+// optional string a_Name = 2;
 inline bool WebAuthnMakeCredentialUserInfo::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7473,7 +7458,7 @@ inline void WebAuthnMakeCredentialUserInfo::set_allocated_a_name(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo.a_Name)
 }
 
-// required string a_DisplayName = 3;
+// optional string a_DisplayName = 3;
 inline bool WebAuthnMakeCredentialUserInfo::_internal_has_a_displayname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7545,7 +7530,7 @@ inline void WebAuthnMakeCredentialUserInfo::set_allocated_a_displayname(std::str
 
 // CoseAlg
 
-// required sint64 a_alg = 1;
+// optional sint64 a_alg = 1;
 inline bool CoseAlg::_internal_has_a_alg() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7577,7 +7562,7 @@ inline void CoseAlg::set_a_alg(int64_t value) {
 
 // WebAuthnMakeCredentialInfo
 
-// required string a_RpId = 1;
+// optional string a_RpId = 1;
 inline bool WebAuthnMakeCredentialInfo::_internal_has_a_rpid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7692,7 +7677,7 @@ WebAuthnMakeCredentialInfo::mutable_a_challenge() {
   return _internal_mutable_a_challenge();
 }
 
-// required uint32 a_TimeoutMS = 3;
+// optional uint32 a_TimeoutMS = 3;
 inline bool WebAuthnMakeCredentialInfo::_internal_has_a_timeoutms() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -8110,7 +8095,7 @@ inline void WebAuthnMakeCredentialInfo::set_allocated_a_authenticatorselection(:
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebAuthnMakeCredentialInfo.a_AuthenticatorSelection)
 }
 
-// required string a_attestationConveyancePreference = 10;
+// optional string a_attestationConveyancePreference = 10;
 inline bool WebAuthnMakeCredentialInfo::_internal_has_a_attestationconveyancepreference() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8182,7 +8167,7 @@ inline void WebAuthnMakeCredentialInfo::set_allocated_a_attestationconveyancepre
 
 // WebAuthnMakeCredentialResult
 
-// required string a_ClientDataJSON = 1;
+// optional string a_ClientDataJSON = 1;
 inline bool WebAuthnMakeCredentialResult::_internal_has_a_clientdatajson() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8695,7 +8680,7 @@ inline WebAuthnMakeCredentialResponse::ContentCase WebAuthnMakeCredentialRespons
 
 // WebAuthnGetAssertionInfo
 
-// required string a_RpId = 1;
+// optional string a_RpId = 1;
 inline bool WebAuthnGetAssertionInfo::_internal_has_a_rpid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8878,7 +8863,7 @@ WebAuthnGetAssertionInfo::mutable_a_challenge() {
   return _internal_mutable_a_challenge();
 }
 
-// required uint32 a_TimeoutMS = 4;
+// optional uint32 a_TimeoutMS = 4;
 inline bool WebAuthnGetAssertionInfo::_internal_has_a_timeoutms() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -8986,7 +8971,7 @@ WebAuthnGetAssertionInfo::a_extensions() const {
   return _impl_.a_extensions_;
 }
 
-// required string a_userVerificationRequirement = 7;
+// optional string a_userVerificationRequirement = 7;
 inline bool WebAuthnGetAssertionInfo::_internal_has_a_userverificationrequirement() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -9054,7 +9039,7 @@ inline void WebAuthnGetAssertionInfo::set_allocated_a_userverificationrequiremen
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebAuthnGetAssertionInfo.a_userVerificationRequirement)
 }
 
-// required bool a_ConditionallyMediated = 8;
+// optional bool a_ConditionallyMediated = 8;
 inline bool WebAuthnGetAssertionInfo::_internal_has_a_conditionallymediated() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -9086,7 +9071,7 @@ inline void WebAuthnGetAssertionInfo::set_a_conditionallymediated(bool value) {
 
 // WebAuthnGetAssertionResult
 
-// required string a_ClientDataJSON = 1;
+// optional string a_ClientDataJSON = 1;
 inline bool WebAuthnGetAssertionResult::_internal_has_a_clientdatajson() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

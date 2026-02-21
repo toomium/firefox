@@ -564,9 +564,6 @@ void Reply_RequestRegister::CopyFrom(const Reply_RequestRegister& from) {
 
 bool Reply_RequestRegister::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_response()) {
-    if (!_impl_.a_response_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -998,9 +995,6 @@ void Reply_RequestSign::CopyFrom(const Reply_RequestSign& from) {
 
 bool Reply_RequestSign::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_response()) {
-    if (!_impl_.a_response_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -1172,9 +1166,6 @@ class Reply_RequestIsUVPAA::_Internal {
   static void set_has_a_available(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Reply_RequestIsUVPAA::Reply_RequestIsUVPAA(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1242,7 +1233,7 @@ const char* Reply_RequestIsUVPAA::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_available = 1;
+      // optional bool a_available = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_available(&has_bits);
@@ -1282,7 +1273,7 @@ uint8_t* Reply_RequestIsUVPAA::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_available = 1;
+  // optional bool a_available = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_available(), target);
@@ -1300,13 +1291,15 @@ size_t Reply_RequestIsUVPAA::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PWebAuthnTransaction.Reply_RequestIsUVPAA)
   size_t total_size = 0;
 
-  // required bool a_available = 1;
-  if (_internal_has_a_available()) {
-    total_size += 1 + 1;
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_available = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1343,7 +1336,6 @@ void Reply_RequestIsUVPAA::CopyFrom(const Reply_RequestIsUVPAA& from) {
 }
 
 bool Reply_RequestIsUVPAA::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 

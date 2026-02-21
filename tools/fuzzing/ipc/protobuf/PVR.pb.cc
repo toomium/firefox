@@ -1105,9 +1105,6 @@ void Msg_PreferenceUpdate::CopyFrom(const Msg_PreferenceUpdate& from) {
 
 bool Msg_PreferenceUpdate::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_pref()) {
-    if (!_impl_.a_pref_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -1130,9 +1127,6 @@ class Msg_OpenVRControllerActionPathToVR::_Internal {
   using HasBits = decltype(std::declval<Msg_OpenVRControllerActionPathToVR>()._impl_._has_bits_);
   static void set_has_a_apath(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -1216,7 +1210,7 @@ const char* Msg_OpenVRControllerActionPathToVR::_InternalParse(const char* ptr, 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aPath = 1;
+      // optional string a_aPath = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_apath();
@@ -1256,7 +1250,7 @@ uint8_t* Msg_OpenVRControllerActionPathToVR::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aPath = 1;
+  // optional string a_aPath = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_apath(), target);
@@ -1274,15 +1268,17 @@ size_t Msg_OpenVRControllerActionPathToVR::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerActionPathToVR)
   size_t total_size = 0;
 
-  // required string a_aPath = 1;
-  if (_internal_has_a_apath()) {
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional string a_aPath = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_apath());
   }
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1319,7 +1315,6 @@ void Msg_OpenVRControllerActionPathToVR::CopyFrom(const Msg_OpenVRControllerActi
 }
 
 bool Msg_OpenVRControllerActionPathToVR::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1352,7 +1347,7 @@ class Msg_OpenVRControllerManifestPathToVR::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -1465,7 +1460,7 @@ const char* Msg_OpenVRControllerManifestPathToVR::_InternalParse(const char* ptr
         } else
           goto handle_unusual;
         continue;
-      // required string a_aPath = 2;
+      // optional string a_aPath = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_apath();
@@ -1511,7 +1506,7 @@ uint8_t* Msg_OpenVRControllerManifestPathToVR::_InternalSerialize(
         1, this->_internal_a_atype(), target);
   }
 
-  // required string a_aPath = 2;
+  // optional string a_aPath = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_apath(), target);
@@ -1525,47 +1520,27 @@ uint8_t* Msg_OpenVRControllerManifestPathToVR::_InternalSerialize(
   return target;
 }
 
-size_t Msg_OpenVRControllerManifestPathToVR::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerManifestPathToVR)
-  size_t total_size = 0;
-
-  if (_internal_has_a_atype()) {
-    // required bytes a_aType = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_atype());
-  }
-
-  if (_internal_has_a_apath()) {
-    // required string a_aPath = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_apath());
-  }
-
-  return total_size;
-}
 size_t Msg_OpenVRControllerManifestPathToVR::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerManifestPathToVR)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_aType = 1;
+  // required bytes a_aType = 1;
+  if (_internal_has_a_atype()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_atype());
-
-    // required string a_aPath = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_apath());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional string a_aPath = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000002u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_apath());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1649,9 +1624,6 @@ class Msg_RequestMemoryReport::_Internal {
   }
   static void set_has_a_dmdfile(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000000e) ^ 0x0000000e) != 0;
   }
 };
 
@@ -1749,7 +1721,7 @@ const char* Msg_RequestMemoryReport::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 a_generation = 1;
+      // optional uint32 a_generation = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_generation(&has_bits);
@@ -1758,7 +1730,7 @@ const char* Msg_RequestMemoryReport::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required bool a_anonymize = 2;
+      // optional bool a_anonymize = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_anonymize(&has_bits);
@@ -1767,7 +1739,7 @@ const char* Msg_RequestMemoryReport::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required bool a_minimizeMemoryUsage = 3;
+      // optional bool a_minimizeMemoryUsage = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_minimizememoryusage(&has_bits);
@@ -1816,19 +1788,19 @@ uint8_t* Msg_RequestMemoryReport::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 a_generation = 1;
+  // optional uint32 a_generation = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_generation(), target);
   }
 
-  // required bool a_anonymize = 2;
+  // optional bool a_anonymize = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_anonymize(), target);
   }
 
-  // required bool a_minimizeMemoryUsage = 3;
+  // optional bool a_minimizeMemoryUsage = 3;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_minimizememoryusage(), target);
@@ -1848,56 +1820,39 @@ uint8_t* Msg_RequestMemoryReport::_InternalSerialize(
   return target;
 }
 
-size_t Msg_RequestMemoryReport::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.gfx.PVR.Msg_RequestMemoryReport)
-  size_t total_size = 0;
-
-  if (_internal_has_a_generation()) {
-    // required uint32 a_generation = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_generation());
-  }
-
-  if (_internal_has_a_anonymize()) {
-    // required bool a_anonymize = 2;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_minimizememoryusage()) {
-    // required bool a_minimizeMemoryUsage = 3;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t Msg_RequestMemoryReport::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PVR.Msg_RequestMemoryReport)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000000e) ^ 0x0000000e) == 0) {  // All required fields are present.
-    // required uint32 a_generation = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_generation());
-
-    // required bool a_anonymize = 2;
-    total_size += 1 + 1;
-
-    // required bool a_minimizeMemoryUsage = 3;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional bytes a_DMDFile = 4;
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_dmdfile());
-  }
+  if (cached_has_bits & 0x0000000fu) {
+    // optional bytes a_DMDFile = 4;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+          this->_internal_a_dmdfile());
+    }
 
+    // optional uint32 a_generation = 1;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_generation());
+    }
+
+    // optional bool a_anonymize = 2;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool a_minimizeMemoryUsage = 3;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += 1 + 1;
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -1946,7 +1901,6 @@ void Msg_RequestMemoryReport::CopyFrom(const Msg_RequestMemoryReport& from) {
 }
 
 bool Msg_RequestMemoryReport::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1980,9 +1934,6 @@ class Reply_RequestMemoryReport::_Internal {
   using HasBits = decltype(std::declval<Reply_RequestMemoryReport>()._impl_._has_bits_);
   static void set_has_a_ageneration(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -2051,7 +2002,7 @@ const char* Reply_RequestMemoryReport::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 a_aGeneration = 1;
+      // optional uint32 a_aGeneration = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_ageneration(&has_bits);
@@ -2091,7 +2042,7 @@ uint8_t* Reply_RequestMemoryReport::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 a_aGeneration = 1;
+  // optional uint32 a_aGeneration = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_ageneration(), target);
@@ -2109,13 +2060,15 @@ size_t Reply_RequestMemoryReport::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PVR.Reply_RequestMemoryReport)
   size_t total_size = 0;
 
-  // required uint32 a_aGeneration = 1;
-  if (_internal_has_a_ageneration()) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_ageneration());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional uint32 a_aGeneration = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_ageneration());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -2152,7 +2105,6 @@ void Reply_RequestMemoryReport::CopyFrom(const Reply_RequestMemoryReport& from) 
 }
 
 bool Reply_RequestMemoryReport::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -2324,9 +2276,6 @@ class Msg_OpenVRControllerActionPathToParent::_Internal {
   static void set_has_a_apath(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_OpenVRControllerActionPathToParent::Msg_OpenVRControllerActionPathToParent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2409,7 +2358,7 @@ const char* Msg_OpenVRControllerActionPathToParent::_InternalParse(const char* p
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aPath = 1;
+      // optional string a_aPath = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_apath();
@@ -2449,7 +2398,7 @@ uint8_t* Msg_OpenVRControllerActionPathToParent::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aPath = 1;
+  // optional string a_aPath = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_apath(), target);
@@ -2467,15 +2416,17 @@ size_t Msg_OpenVRControllerActionPathToParent::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerActionPathToParent)
   size_t total_size = 0;
 
-  // required string a_aPath = 1;
-  if (_internal_has_a_apath()) {
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional string a_aPath = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_apath());
   }
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -2512,7 +2463,6 @@ void Msg_OpenVRControllerActionPathToParent::CopyFrom(const Msg_OpenVRController
 }
 
 bool Msg_OpenVRControllerActionPathToParent::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -2545,7 +2495,7 @@ class Msg_OpenVRControllerManifestPathToParent::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -2658,7 +2608,7 @@ const char* Msg_OpenVRControllerManifestPathToParent::_InternalParse(const char*
         } else
           goto handle_unusual;
         continue;
-      // required string a_aPath = 2;
+      // optional string a_aPath = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_apath();
@@ -2704,7 +2654,7 @@ uint8_t* Msg_OpenVRControllerManifestPathToParent::_InternalSerialize(
         1, this->_internal_a_atype(), target);
   }
 
-  // required string a_aPath = 2;
+  // optional string a_aPath = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_apath(), target);
@@ -2718,47 +2668,27 @@ uint8_t* Msg_OpenVRControllerManifestPathToParent::_InternalSerialize(
   return target;
 }
 
-size_t Msg_OpenVRControllerManifestPathToParent::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerManifestPathToParent)
-  size_t total_size = 0;
-
-  if (_internal_has_a_atype()) {
-    // required bytes a_aType = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_atype());
-  }
-
-  if (_internal_has_a_apath()) {
-    // required string a_aPath = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_apath());
-  }
-
-  return total_size;
-}
 size_t Msg_OpenVRControllerManifestPathToParent::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerManifestPathToParent)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_aType = 1;
+  // required bytes a_aType = 1;
+  if (_internal_has_a_atype()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_atype());
-
-    // required string a_aPath = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_apath());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional string a_aPath = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000002u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_apath());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -3242,9 +3172,6 @@ void Msg_AddMemoryReport::CopyFrom(const Msg_AddMemoryReport& from) {
 
 bool Msg_AddMemoryReport::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_areport()) {
-    if (!_impl_.a_areport_->IsInitialized()) return false;
-  }
   return true;
 }
 

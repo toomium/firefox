@@ -176,7 +176,7 @@ class CStringKeyValue final :
     kAKeyFieldNumber = 1,
     kAValueFieldNumber = 2,
   };
-  // required string a_key = 1;
+  // optional string a_key = 1;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -194,7 +194,7 @@ class CStringKeyValue final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // required string a_value = 2;
+  // optional string a_value = 2;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -215,9 +215,6 @@ class CStringKeyValue final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.embedding.CStringKeyValue)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -478,7 +475,7 @@ class PrintData final :
   std::string* _internal_mutable_a_remoteprintjob();
   public:
 
-  // required string a_title = 23;
+  // optional string a_title = 23;
   bool has_a_title() const;
   private:
   bool _internal_has_a_title() const;
@@ -496,7 +493,7 @@ class PrintData final :
   std::string* _internal_mutable_a_title();
   public:
 
-  // required string a_docURL = 24;
+  // optional string a_docURL = 24;
   bool has_a_docurl() const;
   private:
   bool _internal_has_a_docurl() const;
@@ -514,7 +511,7 @@ class PrintData final :
   std::string* _internal_mutable_a_docurl();
   public:
 
-  // required string a_headerStrLeft = 25;
+  // optional string a_headerStrLeft = 25;
   bool has_a_headerstrleft() const;
   private:
   bool _internal_has_a_headerstrleft() const;
@@ -532,7 +529,7 @@ class PrintData final :
   std::string* _internal_mutable_a_headerstrleft();
   public:
 
-  // required string a_headerStrCenter = 26;
+  // optional string a_headerStrCenter = 26;
   bool has_a_headerstrcenter() const;
   private:
   bool _internal_has_a_headerstrcenter() const;
@@ -550,7 +547,7 @@ class PrintData final :
   std::string* _internal_mutable_a_headerstrcenter();
   public:
 
-  // required string a_headerStrRight = 27;
+  // optional string a_headerStrRight = 27;
   bool has_a_headerstrright() const;
   private:
   bool _internal_has_a_headerstrright() const;
@@ -568,7 +565,7 @@ class PrintData final :
   std::string* _internal_mutable_a_headerstrright();
   public:
 
-  // required string a_footerStrLeft = 28;
+  // optional string a_footerStrLeft = 28;
   bool has_a_footerstrleft() const;
   private:
   bool _internal_has_a_footerstrleft() const;
@@ -586,7 +583,7 @@ class PrintData final :
   std::string* _internal_mutable_a_footerstrleft();
   public:
 
-  // required string a_footerStrCenter = 29;
+  // optional string a_footerStrCenter = 29;
   bool has_a_footerstrcenter() const;
   private:
   bool _internal_has_a_footerstrcenter() const;
@@ -604,7 +601,7 @@ class PrintData final :
   std::string* _internal_mutable_a_footerstrcenter();
   public:
 
-  // required string a_footerStrRight = 30;
+  // optional string a_footerStrRight = 30;
   bool has_a_footerstrright() const;
   private:
   bool _internal_has_a_footerstrright() const;
@@ -622,7 +619,7 @@ class PrintData final :
   std::string* _internal_mutable_a_footerstrright();
   public:
 
-  // required string a_paperId = 33;
+  // optional string a_paperId = 33;
   bool has_a_paperid() const;
   private:
   bool _internal_has_a_paperid() const;
@@ -640,7 +637,7 @@ class PrintData final :
   std::string* _internal_mutable_a_paperid();
   public:
 
-  // required string a_driverName = 49;
+  // optional string a_driverName = 49;
   bool has_a_drivername() const;
   private:
   bool _internal_has_a_drivername() const;
@@ -658,7 +655,7 @@ class PrintData final :
   std::string* _internal_mutable_a_drivername();
   public:
 
-  // required string a_deviceName = 50;
+  // optional string a_deviceName = 50;
   bool has_a_devicename() const;
   private:
   bool _internal_has_a_devicename() const;
@@ -676,7 +673,7 @@ class PrintData final :
   std::string* _internal_mutable_a_devicename();
   public:
 
-  // required string a_disposition = 53;
+  // optional string a_disposition = 53;
   bool has_a_disposition() const;
   private:
   bool _internal_has_a_disposition() const;
@@ -694,7 +691,7 @@ class PrintData final :
   std::string* _internal_mutable_a_disposition();
   public:
 
-  // required double a_edgeTop = 2;
+  // optional double a_edgeTop = 2;
   bool has_a_edgetop() const;
   private:
   bool _internal_has_a_edgetop() const;
@@ -707,7 +704,7 @@ class PrintData final :
   void _internal_set_a_edgetop(double value);
   public:
 
-  // required double a_edgeLeft = 3;
+  // optional double a_edgeLeft = 3;
   bool has_a_edgeleft() const;
   private:
   bool _internal_has_a_edgeleft() const;
@@ -720,7 +717,7 @@ class PrintData final :
   void _internal_set_a_edgeleft(double value);
   public:
 
-  // required double a_edgeBottom = 4;
+  // optional double a_edgeBottom = 4;
   bool has_a_edgebottom() const;
   private:
   bool _internal_has_a_edgebottom() const;
@@ -733,7 +730,7 @@ class PrintData final :
   void _internal_set_a_edgebottom(double value);
   public:
 
-  // required double a_edgeRight = 5;
+  // optional double a_edgeRight = 5;
   bool has_a_edgeright() const;
   private:
   bool _internal_has_a_edgeright() const;
@@ -746,7 +743,7 @@ class PrintData final :
   void _internal_set_a_edgeright(double value);
   public:
 
-  // required double a_marginTop = 6;
+  // optional double a_marginTop = 6;
   bool has_a_margintop() const;
   private:
   bool _internal_has_a_margintop() const;
@@ -759,7 +756,7 @@ class PrintData final :
   void _internal_set_a_margintop(double value);
   public:
 
-  // required double a_marginLeft = 7;
+  // optional double a_marginLeft = 7;
   bool has_a_marginleft() const;
   private:
   bool _internal_has_a_marginleft() const;
@@ -772,7 +769,7 @@ class PrintData final :
   void _internal_set_a_marginleft(double value);
   public:
 
-  // required double a_marginBottom = 8;
+  // optional double a_marginBottom = 8;
   bool has_a_marginbottom() const;
   private:
   bool _internal_has_a_marginbottom() const;
@@ -785,7 +782,7 @@ class PrintData final :
   void _internal_set_a_marginbottom(double value);
   public:
 
-  // required double a_marginRight = 9;
+  // optional double a_marginRight = 9;
   bool has_a_marginright() const;
   private:
   bool _internal_has_a_marginright() const;
@@ -798,7 +795,7 @@ class PrintData final :
   void _internal_set_a_marginright(double value);
   public:
 
-  // required double a_unwriteableMarginTop = 10;
+  // optional double a_unwriteableMarginTop = 10;
   bool has_a_unwriteablemargintop() const;
   private:
   bool _internal_has_a_unwriteablemargintop() const;
@@ -811,7 +808,7 @@ class PrintData final :
   void _internal_set_a_unwriteablemargintop(double value);
   public:
 
-  // required double a_unwriteableMarginLeft = 11;
+  // optional double a_unwriteableMarginLeft = 11;
   bool has_a_unwriteablemarginleft() const;
   private:
   bool _internal_has_a_unwriteablemarginleft() const;
@@ -824,7 +821,7 @@ class PrintData final :
   void _internal_set_a_unwriteablemarginleft(double value);
   public:
 
-  // required double a_unwriteableMarginBottom = 12;
+  // optional double a_unwriteableMarginBottom = 12;
   bool has_a_unwriteablemarginbottom() const;
   private:
   bool _internal_has_a_unwriteablemarginbottom() const;
@@ -837,7 +834,7 @@ class PrintData final :
   void _internal_set_a_unwriteablemarginbottom(double value);
   public:
 
-  // required double a_unwriteableMarginRight = 13;
+  // optional double a_unwriteableMarginRight = 13;
   bool has_a_unwriteablemarginright() const;
   private:
   bool _internal_has_a_unwriteablemarginright() const;
@@ -850,7 +847,7 @@ class PrintData final :
   void _internal_set_a_unwriteablemarginright(double value);
   public:
 
-  // required double a_scaling = 14;
+  // optional double a_scaling = 14;
   bool has_a_scaling() const;
   private:
   bool _internal_has_a_scaling() const;
@@ -863,7 +860,7 @@ class PrintData final :
   void _internal_set_a_scaling(double value);
   public:
 
-  // required bool a_printBGColors = 15;
+  // optional bool a_printBGColors = 15;
   bool has_a_printbgcolors() const;
   private:
   bool _internal_has_a_printbgcolors() const;
@@ -876,7 +873,7 @@ class PrintData final :
   void _internal_set_a_printbgcolors(bool value);
   public:
 
-  // required bool a_printBGImages = 16;
+  // optional bool a_printBGImages = 16;
   bool has_a_printbgimages() const;
   private:
   bool _internal_has_a_printbgimages() const;
@@ -889,7 +886,7 @@ class PrintData final :
   void _internal_set_a_printbgimages(bool value);
   public:
 
-  // required bool a_honorPageRuleMargins = 17;
+  // optional bool a_honorPageRuleMargins = 17;
   bool has_a_honorpagerulemargins() const;
   private:
   bool _internal_has_a_honorpagerulemargins() const;
@@ -902,7 +899,7 @@ class PrintData final :
   void _internal_set_a_honorpagerulemargins(bool value);
   public:
 
-  // required bool a_usePageRuleSizeAsPaperSize = 18;
+  // optional bool a_usePageRuleSizeAsPaperSize = 18;
   bool has_a_usepagerulesizeaspapersize() const;
   private:
   bool _internal_has_a_usepagerulesizeaspapersize() const;
@@ -915,7 +912,7 @@ class PrintData final :
   void _internal_set_a_usepagerulesizeaspapersize(bool value);
   public:
 
-  // required bool a_ignoreUnwriteableMargins = 19;
+  // optional bool a_ignoreUnwriteableMargins = 19;
   bool has_a_ignoreunwriteablemargins() const;
   private:
   bool _internal_has_a_ignoreunwriteablemargins() const;
@@ -928,7 +925,7 @@ class PrintData final :
   void _internal_set_a_ignoreunwriteablemargins(bool value);
   public:
 
-  // required bool a_showMarginGuides = 20;
+  // optional bool a_showMarginGuides = 20;
   bool has_a_showmarginguides() const;
   private:
   bool _internal_has_a_showmarginguides() const;
@@ -941,7 +938,7 @@ class PrintData final :
   void _internal_set_a_showmarginguides(bool value);
   public:
 
-  // required bool a_printSelectionOnly = 21;
+  // optional bool a_printSelectionOnly = 21;
   bool has_a_printselectiononly() const;
   private:
   bool _internal_has_a_printselectiononly() const;
@@ -954,7 +951,7 @@ class PrintData final :
   void _internal_set_a_printselectiononly(bool value);
   public:
 
-  // required bool a_printSilent = 31;
+  // optional bool a_printSilent = 31;
   bool has_a_printsilent() const;
   private:
   bool _internal_has_a_printsilent() const;
@@ -967,7 +964,7 @@ class PrintData final :
   void _internal_set_a_printsilent(bool value);
   public:
 
-  // required double a_paperWidth = 34;
+  // optional double a_paperWidth = 34;
   bool has_a_paperwidth() const;
   private:
   bool _internal_has_a_paperwidth() const;
@@ -980,7 +977,7 @@ class PrintData final :
   void _internal_set_a_paperwidth(double value);
   public:
 
-  // required double a_paperHeight = 35;
+  // optional double a_paperHeight = 35;
   bool has_a_paperheight() const;
   private:
   bool _internal_has_a_paperheight() const;
@@ -993,7 +990,7 @@ class PrintData final :
   void _internal_set_a_paperheight(double value);
   public:
 
-  // required sint32 a_paperSizeUnit = 36;
+  // optional sint32 a_paperSizeUnit = 36;
   bool has_a_papersizeunit() const;
   private:
   bool _internal_has_a_papersizeunit() const;
@@ -1006,7 +1003,7 @@ class PrintData final :
   void _internal_set_a_papersizeunit(int32_t value);
   public:
 
-  // required bool a_shrinkToFit = 32;
+  // optional bool a_shrinkToFit = 32;
   bool has_a_shrinktofit() const;
   private:
   bool _internal_has_a_shrinktofit() const;
@@ -1019,7 +1016,7 @@ class PrintData final :
   void _internal_set_a_shrinktofit(bool value);
   public:
 
-  // required bool a_printReversed = 37;
+  // optional bool a_printReversed = 37;
   bool has_a_printreversed() const;
   private:
   bool _internal_has_a_printreversed() const;
@@ -1032,7 +1029,7 @@ class PrintData final :
   void _internal_set_a_printreversed(bool value);
   public:
 
-  // required bool a_printInColor = 38;
+  // optional bool a_printInColor = 38;
   bool has_a_printincolor() const;
   private:
   bool _internal_has_a_printincolor() const;
@@ -1045,7 +1042,7 @@ class PrintData final :
   void _internal_set_a_printincolor(bool value);
   public:
 
-  // required bool a_isInitializedFromPrinter = 47;
+  // optional bool a_isInitializedFromPrinter = 47;
   bool has_a_isinitializedfromprinter() const;
   private:
   bool _internal_has_a_isinitializedfromprinter() const;
@@ -1058,7 +1055,7 @@ class PrintData final :
   void _internal_set_a_isinitializedfromprinter(bool value);
   public:
 
-  // required sint32 a_orientation = 39;
+  // optional sint32 a_orientation = 39;
   bool has_a_orientation() const;
   private:
   bool _internal_has_a_orientation() const;
@@ -1071,7 +1068,7 @@ class PrintData final :
   void _internal_set_a_orientation(int32_t value);
   public:
 
-  // required sint32 a_numCopies = 40;
+  // optional sint32 a_numCopies = 40;
   bool has_a_numcopies() const;
   private:
   bool _internal_has_a_numcopies() const;
@@ -1084,7 +1081,7 @@ class PrintData final :
   void _internal_set_a_numcopies(int32_t value);
   public:
 
-  // required sint32 a_numPagesPerSheet = 41;
+  // optional sint32 a_numPagesPerSheet = 41;
   bool has_a_numpagespersheet() const;
   private:
   bool _internal_has_a_numpagespersheet() const;
@@ -1097,7 +1094,7 @@ class PrintData final :
   void _internal_set_a_numpagespersheet(int32_t value);
   public:
 
-  // required sint32 a_outputDestination = 42;
+  // optional sint32 a_outputDestination = 42;
   bool has_a_outputdestination() const;
   private:
   bool _internal_has_a_outputdestination() const;
@@ -1110,7 +1107,7 @@ class PrintData final :
   void _internal_set_a_outputdestination(int32_t value);
   public:
 
-  // required sint32 a_outputFormat = 43;
+  // optional sint32 a_outputFormat = 43;
   bool has_a_outputformat() const;
   private:
   bool _internal_has_a_outputformat() const;
@@ -1123,7 +1120,7 @@ class PrintData final :
   void _internal_set_a_outputformat(int32_t value);
   public:
 
-  // required sint32 a_printPageDelay = 44;
+  // optional sint32 a_printPageDelay = 44;
   bool has_a_printpagedelay() const;
   private:
   bool _internal_has_a_printpagedelay() const;
@@ -1136,7 +1133,7 @@ class PrintData final :
   void _internal_set_a_printpagedelay(int32_t value);
   public:
 
-  // required sint32 a_resolution = 45;
+  // optional sint32 a_resolution = 45;
   bool has_a_resolution() const;
   private:
   bool _internal_has_a_resolution() const;
@@ -1149,7 +1146,7 @@ class PrintData final :
   void _internal_set_a_resolution(int32_t value);
   public:
 
-  // required sint32 a_duplex = 46;
+  // optional sint32 a_duplex = 46;
   bool has_a_duplex() const;
   private:
   bool _internal_has_a_duplex() const;
@@ -1162,7 +1159,7 @@ class PrintData final :
   void _internal_set_a_duplex(int32_t value);
   public:
 
-  // required bool a_isInitializedFromPrefs = 48;
+  // optional bool a_isInitializedFromPrefs = 48;
   bool has_a_isinitializedfromprefs() const;
   private:
   bool _internal_has_a_isinitializedfromprefs() const;
@@ -1175,7 +1172,7 @@ class PrintData final :
   void _internal_set_a_isinitializedfromprefs(bool value);
   public:
 
-  // required uint32 a_destination = 54;
+  // optional uint32 a_destination = 54;
   bool has_a_destination() const;
   private:
   bool _internal_has_a_destination() const;
@@ -1191,9 +1188,6 @@ class PrintData final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.embedding.PrintData)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1270,7 +1264,7 @@ class PrintData final :
 #endif  // __GNUC__
 // CStringKeyValue
 
-// required string a_key = 1;
+// optional string a_key = 1;
 inline bool CStringKeyValue::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1338,7 +1332,7 @@ inline void CStringKeyValue::set_allocated_a_key(std::string* a_key) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.CStringKeyValue.a_key)
 }
 
-// required string a_value = 2;
+// optional string a_value = 2;
 inline bool CStringKeyValue::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1478,7 +1472,7 @@ inline void PrintData::set_allocated_a_remoteprintjob(std::string* a_remoteprint
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_remotePrintJob)
 }
 
-// required double a_edgeTop = 2;
+// optional double a_edgeTop = 2;
 inline bool PrintData::_internal_has_a_edgetop() const {
   bool value = (_impl_._has_bits_[0] & 0x00002000u) != 0;
   return value;
@@ -1506,7 +1500,7 @@ inline void PrintData::set_a_edgetop(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_edgeTop)
 }
 
-// required double a_edgeLeft = 3;
+// optional double a_edgeLeft = 3;
 inline bool PrintData::_internal_has_a_edgeleft() const {
   bool value = (_impl_._has_bits_[0] & 0x00004000u) != 0;
   return value;
@@ -1534,7 +1528,7 @@ inline void PrintData::set_a_edgeleft(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_edgeLeft)
 }
 
-// required double a_edgeBottom = 4;
+// optional double a_edgeBottom = 4;
 inline bool PrintData::_internal_has_a_edgebottom() const {
   bool value = (_impl_._has_bits_[0] & 0x00008000u) != 0;
   return value;
@@ -1562,7 +1556,7 @@ inline void PrintData::set_a_edgebottom(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_edgeBottom)
 }
 
-// required double a_edgeRight = 5;
+// optional double a_edgeRight = 5;
 inline bool PrintData::_internal_has_a_edgeright() const {
   bool value = (_impl_._has_bits_[0] & 0x00010000u) != 0;
   return value;
@@ -1590,7 +1584,7 @@ inline void PrintData::set_a_edgeright(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_edgeRight)
 }
 
-// required double a_marginTop = 6;
+// optional double a_marginTop = 6;
 inline bool PrintData::_internal_has_a_margintop() const {
   bool value = (_impl_._has_bits_[0] & 0x00020000u) != 0;
   return value;
@@ -1618,7 +1612,7 @@ inline void PrintData::set_a_margintop(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_marginTop)
 }
 
-// required double a_marginLeft = 7;
+// optional double a_marginLeft = 7;
 inline bool PrintData::_internal_has_a_marginleft() const {
   bool value = (_impl_._has_bits_[0] & 0x00040000u) != 0;
   return value;
@@ -1646,7 +1640,7 @@ inline void PrintData::set_a_marginleft(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_marginLeft)
 }
 
-// required double a_marginBottom = 8;
+// optional double a_marginBottom = 8;
 inline bool PrintData::_internal_has_a_marginbottom() const {
   bool value = (_impl_._has_bits_[0] & 0x00080000u) != 0;
   return value;
@@ -1674,7 +1668,7 @@ inline void PrintData::set_a_marginbottom(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_marginBottom)
 }
 
-// required double a_marginRight = 9;
+// optional double a_marginRight = 9;
 inline bool PrintData::_internal_has_a_marginright() const {
   bool value = (_impl_._has_bits_[0] & 0x00100000u) != 0;
   return value;
@@ -1702,7 +1696,7 @@ inline void PrintData::set_a_marginright(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_marginRight)
 }
 
-// required double a_unwriteableMarginTop = 10;
+// optional double a_unwriteableMarginTop = 10;
 inline bool PrintData::_internal_has_a_unwriteablemargintop() const {
   bool value = (_impl_._has_bits_[0] & 0x00200000u) != 0;
   return value;
@@ -1730,7 +1724,7 @@ inline void PrintData::set_a_unwriteablemargintop(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_unwriteableMarginTop)
 }
 
-// required double a_unwriteableMarginLeft = 11;
+// optional double a_unwriteableMarginLeft = 11;
 inline bool PrintData::_internal_has_a_unwriteablemarginleft() const {
   bool value = (_impl_._has_bits_[0] & 0x00400000u) != 0;
   return value;
@@ -1758,7 +1752,7 @@ inline void PrintData::set_a_unwriteablemarginleft(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_unwriteableMarginLeft)
 }
 
-// required double a_unwriteableMarginBottom = 12;
+// optional double a_unwriteableMarginBottom = 12;
 inline bool PrintData::_internal_has_a_unwriteablemarginbottom() const {
   bool value = (_impl_._has_bits_[0] & 0x00800000u) != 0;
   return value;
@@ -1786,7 +1780,7 @@ inline void PrintData::set_a_unwriteablemarginbottom(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_unwriteableMarginBottom)
 }
 
-// required double a_unwriteableMarginRight = 13;
+// optional double a_unwriteableMarginRight = 13;
 inline bool PrintData::_internal_has_a_unwriteablemarginright() const {
   bool value = (_impl_._has_bits_[0] & 0x01000000u) != 0;
   return value;
@@ -1814,7 +1808,7 @@ inline void PrintData::set_a_unwriteablemarginright(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_unwriteableMarginRight)
 }
 
-// required double a_scaling = 14;
+// optional double a_scaling = 14;
 inline bool PrintData::_internal_has_a_scaling() const {
   bool value = (_impl_._has_bits_[0] & 0x02000000u) != 0;
   return value;
@@ -1842,7 +1836,7 @@ inline void PrintData::set_a_scaling(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_scaling)
 }
 
-// required bool a_printBGColors = 15;
+// optional bool a_printBGColors = 15;
 inline bool PrintData::_internal_has_a_printbgcolors() const {
   bool value = (_impl_._has_bits_[0] & 0x04000000u) != 0;
   return value;
@@ -1870,7 +1864,7 @@ inline void PrintData::set_a_printbgcolors(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_printBGColors)
 }
 
-// required bool a_printBGImages = 16;
+// optional bool a_printBGImages = 16;
 inline bool PrintData::_internal_has_a_printbgimages() const {
   bool value = (_impl_._has_bits_[0] & 0x08000000u) != 0;
   return value;
@@ -1898,7 +1892,7 @@ inline void PrintData::set_a_printbgimages(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_printBGImages)
 }
 
-// required bool a_honorPageRuleMargins = 17;
+// optional bool a_honorPageRuleMargins = 17;
 inline bool PrintData::_internal_has_a_honorpagerulemargins() const {
   bool value = (_impl_._has_bits_[0] & 0x10000000u) != 0;
   return value;
@@ -1926,7 +1920,7 @@ inline void PrintData::set_a_honorpagerulemargins(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_honorPageRuleMargins)
 }
 
-// required bool a_usePageRuleSizeAsPaperSize = 18;
+// optional bool a_usePageRuleSizeAsPaperSize = 18;
 inline bool PrintData::_internal_has_a_usepagerulesizeaspapersize() const {
   bool value = (_impl_._has_bits_[0] & 0x20000000u) != 0;
   return value;
@@ -1954,7 +1948,7 @@ inline void PrintData::set_a_usepagerulesizeaspapersize(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_usePageRuleSizeAsPaperSize)
 }
 
-// required bool a_ignoreUnwriteableMargins = 19;
+// optional bool a_ignoreUnwriteableMargins = 19;
 inline bool PrintData::_internal_has_a_ignoreunwriteablemargins() const {
   bool value = (_impl_._has_bits_[0] & 0x40000000u) != 0;
   return value;
@@ -1982,7 +1976,7 @@ inline void PrintData::set_a_ignoreunwriteablemargins(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_ignoreUnwriteableMargins)
 }
 
-// required bool a_showMarginGuides = 20;
+// optional bool a_showMarginGuides = 20;
 inline bool PrintData::_internal_has_a_showmarginguides() const {
   bool value = (_impl_._has_bits_[0] & 0x80000000u) != 0;
   return value;
@@ -2010,7 +2004,7 @@ inline void PrintData::set_a_showmarginguides(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_showMarginGuides)
 }
 
-// required bool a_printSelectionOnly = 21;
+// optional bool a_printSelectionOnly = 21;
 inline bool PrintData::_internal_has_a_printselectiononly() const {
   bool value = (_impl_._has_bits_[1] & 0x00000001u) != 0;
   return value;
@@ -2085,7 +2079,7 @@ PrintData::mutable_a_pageranges() {
   return _internal_mutable_a_pageranges();
 }
 
-// required string a_title = 23;
+// optional string a_title = 23;
 inline bool PrintData::_internal_has_a_title() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2153,7 +2147,7 @@ inline void PrintData::set_allocated_a_title(std::string* a_title) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_title)
 }
 
-// required string a_docURL = 24;
+// optional string a_docURL = 24;
 inline bool PrintData::_internal_has_a_docurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2221,7 +2215,7 @@ inline void PrintData::set_allocated_a_docurl(std::string* a_docurl) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_docURL)
 }
 
-// required string a_headerStrLeft = 25;
+// optional string a_headerStrLeft = 25;
 inline bool PrintData::_internal_has_a_headerstrleft() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -2289,7 +2283,7 @@ inline void PrintData::set_allocated_a_headerstrleft(std::string* a_headerstrlef
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_headerStrLeft)
 }
 
-// required string a_headerStrCenter = 26;
+// optional string a_headerStrCenter = 26;
 inline bool PrintData::_internal_has_a_headerstrcenter() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -2357,7 +2351,7 @@ inline void PrintData::set_allocated_a_headerstrcenter(std::string* a_headerstrc
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_headerStrCenter)
 }
 
-// required string a_headerStrRight = 27;
+// optional string a_headerStrRight = 27;
 inline bool PrintData::_internal_has_a_headerstrright() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -2425,7 +2419,7 @@ inline void PrintData::set_allocated_a_headerstrright(std::string* a_headerstrri
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_headerStrRight)
 }
 
-// required string a_footerStrLeft = 28;
+// optional string a_footerStrLeft = 28;
 inline bool PrintData::_internal_has_a_footerstrleft() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -2493,7 +2487,7 @@ inline void PrintData::set_allocated_a_footerstrleft(std::string* a_footerstrlef
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_footerStrLeft)
 }
 
-// required string a_footerStrCenter = 29;
+// optional string a_footerStrCenter = 29;
 inline bool PrintData::_internal_has_a_footerstrcenter() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -2561,7 +2555,7 @@ inline void PrintData::set_allocated_a_footerstrcenter(std::string* a_footerstrc
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_footerStrCenter)
 }
 
-// required string a_footerStrRight = 30;
+// optional string a_footerStrRight = 30;
 inline bool PrintData::_internal_has_a_footerstrright() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -2629,7 +2623,7 @@ inline void PrintData::set_allocated_a_footerstrright(std::string* a_footerstrri
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_footerStrRight)
 }
 
-// required bool a_printSilent = 31;
+// optional bool a_printSilent = 31;
 inline bool PrintData::_internal_has_a_printsilent() const {
   bool value = (_impl_._has_bits_[1] & 0x00000002u) != 0;
   return value;
@@ -2657,7 +2651,7 @@ inline void PrintData::set_a_printsilent(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_printSilent)
 }
 
-// required bool a_shrinkToFit = 32;
+// optional bool a_shrinkToFit = 32;
 inline bool PrintData::_internal_has_a_shrinktofit() const {
   bool value = (_impl_._has_bits_[1] & 0x00000020u) != 0;
   return value;
@@ -2685,7 +2679,7 @@ inline void PrintData::set_a_shrinktofit(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_shrinkToFit)
 }
 
-// required string a_paperId = 33;
+// optional string a_paperId = 33;
 inline bool PrintData::_internal_has_a_paperid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -2753,7 +2747,7 @@ inline void PrintData::set_allocated_a_paperid(std::string* a_paperid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_paperId)
 }
 
-// required double a_paperWidth = 34;
+// optional double a_paperWidth = 34;
 inline bool PrintData::_internal_has_a_paperwidth() const {
   bool value = (_impl_._has_bits_[1] & 0x00000004u) != 0;
   return value;
@@ -2781,7 +2775,7 @@ inline void PrintData::set_a_paperwidth(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_paperWidth)
 }
 
-// required double a_paperHeight = 35;
+// optional double a_paperHeight = 35;
 inline bool PrintData::_internal_has_a_paperheight() const {
   bool value = (_impl_._has_bits_[1] & 0x00000008u) != 0;
   return value;
@@ -2809,7 +2803,7 @@ inline void PrintData::set_a_paperheight(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_paperHeight)
 }
 
-// required sint32 a_paperSizeUnit = 36;
+// optional sint32 a_paperSizeUnit = 36;
 inline bool PrintData::_internal_has_a_papersizeunit() const {
   bool value = (_impl_._has_bits_[1] & 0x00000010u) != 0;
   return value;
@@ -2837,7 +2831,7 @@ inline void PrintData::set_a_papersizeunit(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_paperSizeUnit)
 }
 
-// required bool a_printReversed = 37;
+// optional bool a_printReversed = 37;
 inline bool PrintData::_internal_has_a_printreversed() const {
   bool value = (_impl_._has_bits_[1] & 0x00000040u) != 0;
   return value;
@@ -2865,7 +2859,7 @@ inline void PrintData::set_a_printreversed(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_printReversed)
 }
 
-// required bool a_printInColor = 38;
+// optional bool a_printInColor = 38;
 inline bool PrintData::_internal_has_a_printincolor() const {
   bool value = (_impl_._has_bits_[1] & 0x00000080u) != 0;
   return value;
@@ -2893,7 +2887,7 @@ inline void PrintData::set_a_printincolor(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_printInColor)
 }
 
-// required sint32 a_orientation = 39;
+// optional sint32 a_orientation = 39;
 inline bool PrintData::_internal_has_a_orientation() const {
   bool value = (_impl_._has_bits_[1] & 0x00000200u) != 0;
   return value;
@@ -2921,7 +2915,7 @@ inline void PrintData::set_a_orientation(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_orientation)
 }
 
-// required sint32 a_numCopies = 40;
+// optional sint32 a_numCopies = 40;
 inline bool PrintData::_internal_has_a_numcopies() const {
   bool value = (_impl_._has_bits_[1] & 0x00000400u) != 0;
   return value;
@@ -2949,7 +2943,7 @@ inline void PrintData::set_a_numcopies(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_numCopies)
 }
 
-// required sint32 a_numPagesPerSheet = 41;
+// optional sint32 a_numPagesPerSheet = 41;
 inline bool PrintData::_internal_has_a_numpagespersheet() const {
   bool value = (_impl_._has_bits_[1] & 0x00000800u) != 0;
   return value;
@@ -2977,7 +2971,7 @@ inline void PrintData::set_a_numpagespersheet(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_numPagesPerSheet)
 }
 
-// required sint32 a_outputDestination = 42;
+// optional sint32 a_outputDestination = 42;
 inline bool PrintData::_internal_has_a_outputdestination() const {
   bool value = (_impl_._has_bits_[1] & 0x00001000u) != 0;
   return value;
@@ -3005,7 +2999,7 @@ inline void PrintData::set_a_outputdestination(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_outputDestination)
 }
 
-// required sint32 a_outputFormat = 43;
+// optional sint32 a_outputFormat = 43;
 inline bool PrintData::_internal_has_a_outputformat() const {
   bool value = (_impl_._has_bits_[1] & 0x00002000u) != 0;
   return value;
@@ -3033,7 +3027,7 @@ inline void PrintData::set_a_outputformat(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_outputFormat)
 }
 
-// required sint32 a_printPageDelay = 44;
+// optional sint32 a_printPageDelay = 44;
 inline bool PrintData::_internal_has_a_printpagedelay() const {
   bool value = (_impl_._has_bits_[1] & 0x00004000u) != 0;
   return value;
@@ -3061,7 +3055,7 @@ inline void PrintData::set_a_printpagedelay(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_printPageDelay)
 }
 
-// required sint32 a_resolution = 45;
+// optional sint32 a_resolution = 45;
 inline bool PrintData::_internal_has_a_resolution() const {
   bool value = (_impl_._has_bits_[1] & 0x00008000u) != 0;
   return value;
@@ -3089,7 +3083,7 @@ inline void PrintData::set_a_resolution(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_resolution)
 }
 
-// required sint32 a_duplex = 46;
+// optional sint32 a_duplex = 46;
 inline bool PrintData::_internal_has_a_duplex() const {
   bool value = (_impl_._has_bits_[1] & 0x00010000u) != 0;
   return value;
@@ -3117,7 +3111,7 @@ inline void PrintData::set_a_duplex(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_duplex)
 }
 
-// required bool a_isInitializedFromPrinter = 47;
+// optional bool a_isInitializedFromPrinter = 47;
 inline bool PrintData::_internal_has_a_isinitializedfromprinter() const {
   bool value = (_impl_._has_bits_[1] & 0x00000100u) != 0;
   return value;
@@ -3145,7 +3139,7 @@ inline void PrintData::set_a_isinitializedfromprinter(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_isInitializedFromPrinter)
 }
 
-// required bool a_isInitializedFromPrefs = 48;
+// optional bool a_isInitializedFromPrefs = 48;
 inline bool PrintData::_internal_has_a_isinitializedfromprefs() const {
   bool value = (_impl_._has_bits_[1] & 0x00020000u) != 0;
   return value;
@@ -3173,7 +3167,7 @@ inline void PrintData::set_a_isinitializedfromprefs(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_isInitializedFromPrefs)
 }
 
-// required string a_driverName = 49;
+// optional string a_driverName = 49;
 inline bool PrintData::_internal_has_a_drivername() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
@@ -3241,7 +3235,7 @@ inline void PrintData::set_allocated_a_drivername(std::string* a_drivername) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_driverName)
 }
 
-// required string a_deviceName = 50;
+// optional string a_deviceName = 50;
 inline bool PrintData::_internal_has_a_devicename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
   return value;
@@ -3396,7 +3390,7 @@ PrintData::a_gtkprintsettings() const {
   return _impl_.a_gtkprintsettings_;
 }
 
-// required string a_disposition = 53;
+// optional string a_disposition = 53;
 inline bool PrintData::_internal_has_a_disposition() const {
   bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
   return value;
@@ -3464,7 +3458,7 @@ inline void PrintData::set_allocated_a_disposition(std::string* a_disposition) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_disposition)
 }
 
-// required uint32 a_destination = 54;
+// optional uint32 a_destination = 54;
 inline bool PrintData::_internal_has_a_destination() const {
   bool value = (_impl_._has_bits_[1] & 0x00040000u) != 0;
   return value;

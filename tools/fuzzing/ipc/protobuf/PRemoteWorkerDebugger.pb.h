@@ -343,7 +343,7 @@ class Msg_PostMessageToDebugger final :
   enum : int {
     kAAMessageFieldNumber = 1,
   };
-  // required string a_aMessage = 1;
+  // optional string a_aMessage = 1;
   bool has_a_amessage() const;
   private:
   bool _internal_has_a_amessage() const;
@@ -885,7 +885,7 @@ class Msg_AddWindowID final :
   enum : int {
     kAAWindowIDFieldNumber = 1,
   };
-  // required uint64 a_aWindowID = 1;
+  // optional uint64 a_aWindowID = 1;
   bool has_a_awindowid() const;
   private:
   bool _internal_has_a_awindowid() const;
@@ -1027,7 +1027,7 @@ class Msg_RemoveWindowID final :
   enum : int {
     kAAWindowIDFieldNumber = 1,
   };
-  // required uint64 a_aWindowID = 1;
+  // optional uint64 a_aWindowID = 1;
   bool has_a_awindowid() const;
   private:
   bool _internal_has_a_awindowid() const;
@@ -1417,7 +1417,7 @@ class Msg_Initialize final :
   enum : int {
     kAAURLFieldNumber = 1,
   };
-  // required string a_aURL = 1;
+  // optional string a_aURL = 1;
   bool has_a_aurl() const;
   private:
   bool _internal_has_a_aurl() const;
@@ -1564,7 +1564,7 @@ class Msg_PostMessage final :
   enum : int {
     kAAMessageFieldNumber = 1,
   };
-  // required string a_aMessage = 1;
+  // optional string a_aMessage = 1;
   bool has_a_amessage() const;
   private:
   bool _internal_has_a_amessage() const;
@@ -1711,7 +1711,7 @@ class Msg_SetDebuggerReady final :
   enum : int {
     kAAReadyFieldNumber = 1,
   };
-  // required bool a_aReady = 1;
+  // optional bool a_aReady = 1;
   bool has_a_aready() const;
   private:
   bool _internal_has_a_aready() const;
@@ -1754,7 +1754,7 @@ class Msg_SetDebuggerReady final :
 
 // Msg_PostMessageToDebugger
 
-// required string a_aMessage = 1;
+// optional string a_aMessage = 1;
 inline bool Msg_PostMessageToDebugger::_internal_has_a_amessage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1925,7 +1925,7 @@ inline void Msg_ReportErrorToDebugger::set_allocated_a_aerrorinfo(::protobuf::mo
 
 // Msg_AddWindowID
 
-// required uint64 a_aWindowID = 1;
+// optional uint64 a_aWindowID = 1;
 inline bool Msg_AddWindowID::_internal_has_a_awindowid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1957,7 +1957,7 @@ inline void Msg_AddWindowID::set_a_awindowid(uint64_t value) {
 
 // Msg_RemoveWindowID
 
-// required uint64 a_aWindowID = 1;
+// optional uint64 a_aWindowID = 1;
 inline bool Msg_RemoveWindowID::_internal_has_a_awindowid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1997,7 +1997,7 @@ inline void Msg_RemoveWindowID::set_a_awindowid(uint64_t value) {
 
 // Msg_Initialize
 
-// required string a_aURL = 1;
+// optional string a_aURL = 1;
 inline bool Msg_Initialize::_internal_has_a_aurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2069,7 +2069,7 @@ inline void Msg_Initialize::set_allocated_a_aurl(std::string* a_aurl) {
 
 // Msg_PostMessage
 
-// required string a_aMessage = 1;
+// optional string a_aMessage = 1;
 inline bool Msg_PostMessage::_internal_has_a_amessage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2141,7 +2141,7 @@ inline void Msg_PostMessage::set_allocated_a_amessage(std::string* a_amessage) {
 
 // Msg_SetDebuggerReady
 
-// required bool a_aReady = 1;
+// optional bool a_aReady = 1;
 inline bool Msg_SetDebuggerReady::_internal_has_a_aready() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

@@ -16,7 +16,7 @@ package protobuf.mozilla._ipdltest.PTestMultiMgrsLeft;
 
 // Message declarations
 message Msg_PTestMultiMgrsBottomConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
 }
 
 message Reply_PTestMultiMgrsBottomConstructor {

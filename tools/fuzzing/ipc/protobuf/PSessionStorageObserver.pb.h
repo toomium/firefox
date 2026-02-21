@@ -560,7 +560,7 @@ class Msg_Observe final :
     kAOriginAttributesPatternFieldNumber = 2,
     kAOriginScopeFieldNumber = 3,
   };
-  // required string a_topic = 1;
+  // optional string a_topic = 1;
   bool has_a_topic() const;
   private:
   bool _internal_has_a_topic() const;
@@ -578,7 +578,7 @@ class Msg_Observe final :
   std::string* _internal_mutable_a_topic();
   public:
 
-  // required string a_originAttributesPattern = 2;
+  // optional string a_originAttributesPattern = 2;
   bool has_a_originattributespattern() const;
   private:
   bool _internal_has_a_originattributespattern() const;
@@ -596,7 +596,7 @@ class Msg_Observe final :
   std::string* _internal_mutable_a_originattributespattern();
   public:
 
-  // required string a_originScope = 3;
+  // optional string a_originScope = 3;
   bool has_a_originscope() const;
   private:
   bool _internal_has_a_originscope() const;
@@ -617,9 +617,6 @@ class Msg_Observe final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -657,7 +654,7 @@ class Msg_Observe final :
 
 // Msg_Observe
 
-// required string a_topic = 1;
+// optional string a_topic = 1;
 inline bool Msg_Observe::_internal_has_a_topic() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -725,7 +722,7 @@ inline void Msg_Observe::set_allocated_a_topic(std::string* a_topic) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.a_topic)
 }
 
-// required string a_originAttributesPattern = 2;
+// optional string a_originAttributesPattern = 2;
 inline bool Msg_Observe::_internal_has_a_originattributespattern() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -793,7 +790,7 @@ inline void Msg_Observe::set_allocated_a_originattributespattern(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.a_originAttributesPattern)
 }
 
-// required string a_originScope = 3;
+// optional string a_originScope = 3;
 inline bool Msg_Observe::_internal_has_a_originscope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

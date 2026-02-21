@@ -26,12 +26,12 @@ message Msg_Init {
   required protobuf.mozilla.gfx.DevicePrefs a_devicePrefs = 2;
   repeated protobuf.mozilla.gfx.LayerTreeIdMapping a_mapping = 3;
   repeated protobuf.mozilla.gfx.GfxInfoFeatureStatus a_features = 4;
-  required uint32 a_wrNamespace = 5;
+  optional uint32 a_wrNamespace = 5;
 }
 
 message Msg_InitCompositorManager {
   required bytes a_endpoint = 1;
-  required uint32 a_aNamespace = 2;
+  optional uint32 a_aNamespace = 2;
 }
 
 message Msg_InitVsyncBridge {
@@ -87,7 +87,7 @@ message Msg_NotifyBatteryInfo {
 message Msg_NewContentCompositorManager {
   required bytes a_endpoint = 1;
   required bytes a_childId = 2;
-  required uint32 a_aNamespace = 3;
+  optional uint32 a_aNamespace = 3;
 }
 
 message Msg_NewContentImageBridge {
@@ -127,32 +127,32 @@ message Msg_SimulateDeviceReset {
 }
 
 message Msg_NotifyGpuObservers {
-  required string a_aTopic = 1;
+  optional string a_aTopic = 1;
 }
 
 message Msg_RequestMemoryReport {
-  required uint32 a_generation = 1;
-  required bool a_anonymize = 2;
-  required bool a_minimizeMemoryUsage = 3;
+  optional uint32 a_generation = 1;
+  optional bool a_anonymize = 2;
+  optional bool a_minimizeMemoryUsage = 3;
   optional bytes a_DMDFile = 4;
 }
 
 message Reply_RequestMemoryReport {
-  required uint32 a_aGeneration = 1;
+  optional uint32 a_aGeneration = 1;
 }
 
 message Msg_ShutdownVR {
 }
 
 message Msg_UpdatePerfStatsCollectionMask {
-  required uint64 a_aMask = 1;
+  optional uint64 a_aMask = 1;
 }
 
 message Msg_CollectPerfStatsJSON {
 }
 
 message Reply_CollectPerfStatsJSON {
-  required string a_aStats = 1;
+  optional string a_aStats = 1;
 }
 
 message Msg_FlushFOGData {
@@ -166,7 +166,7 @@ message Msg_TestTriggerMetrics {
 }
 
 message Reply_TestTriggerMetrics {
-  required bool a_unused = 1;
+  optional bool a_unused = 1;
 }
 
 message Msg_CrashProcess {
@@ -177,12 +177,12 @@ message Msg_InitComplete {
 }
 
 message Msg_ReportCheckerboard {
-  required uint32 a_severity = 1;
-  required string a_log = 2;
+  optional uint32 a_severity = 1;
+  optional string a_log = 2;
 }
 
 message Msg_GraphicsError {
-  required string a_aError = 1;
+  optional string a_aError = 1;
 }
 
 message Msg_InitCrashReporter {
@@ -196,7 +196,7 @@ message Msg_ShutdownVRProcess {
 }
 
 message Msg_NotifyUiObservers {
-  required string a_aTopic = 1;
+  optional string a_aTopic = 1;
 }
 
 message Msg_AccumulateChildHistograms {
@@ -244,7 +244,7 @@ message Msg_NotifyDisableRemoteCanvas {
 }
 
 message Msg_FlushMemory {
-  required string a_reason = 1;
+  optional string a_reason = 1;
 }
 
 message Msg_AddMemoryReport {
@@ -258,7 +258,7 @@ message Msg_UpdateFeature {
 
 message Msg_UsedFallback {
   required bytes a_aFallback = 1;
-  required string a_message = 2;
+  optional string a_message = 2;
 }
 
 message Msg_BHRThreadHang {

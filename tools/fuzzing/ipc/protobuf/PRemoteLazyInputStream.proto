@@ -21,8 +21,8 @@ message Msg_Clone {
 }
 
 message Msg_StreamNeeded {
-  required uint64 a_aStart = 1;
-  required uint64 a_aLength = 2;
+  optional uint64 a_aStart = 1;
+  optional uint64 a_aLength = 2;
 }
 
 message Reply_StreamNeeded {
@@ -33,7 +33,7 @@ message Msg_LengthNeeded {
 }
 
 message Reply_LengthNeeded {
-  required sint64 a_length = 1;
+  optional sint64 a_length = 1;
 }
 
 message Msg_Goodbye {

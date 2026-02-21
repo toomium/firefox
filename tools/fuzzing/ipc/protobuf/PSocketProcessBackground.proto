@@ -19,26 +19,26 @@ import "PSMIPCTypes.proto";
 message Msg_InitVerifySSLServerCert {
   required bytes a_aEndpoint = 1;
   repeated protobuf.mozilla.psm.ByteArray a_aPeerCertChain = 2;
-  required string a_aHostName = 3;
-  required sint32 a_aPort = 4;
+  optional string a_aHostName = 3;
+  optional sint32 a_aPort = 4;
   required bytes a_aOriginAttributes = 5;
   optional protobuf.mozilla.psm.ByteArray a_aStapledOCSPResponse = 6;
   optional protobuf.mozilla.psm.ByteArray a_aSctsFromTLSExtension = 7;
   optional protobuf.mozilla.psm.DelegatedCredentialInfoArg a_aDcInfo = 8;
-  required uint32 a_aProviderFlags = 9;
-  required uint32 a_aCertVerifierFlags = 10;
+  optional uint32 a_aProviderFlags = 9;
+  optional uint32 a_aCertVerifierFlags = 10;
 }
 
 message Msg_InitSelectTLSClientAuthCert {
   required bytes a_aEndpoint = 1;
-  required string a_aHostName = 2;
+  optional string a_aHostName = 2;
   required bytes a_aOriginAttributes = 3;
-  required sint32 a_aPort = 4;
-  required uint32 a_aProviderFlags = 5;
-  required uint32 a_aProviderTlsFlags = 6;
+  optional sint32 a_aPort = 4;
+  optional uint32 a_aProviderFlags = 5;
+  optional uint32 a_aProviderTlsFlags = 6;
   required protobuf.mozilla.psm.ByteArray a_aServerCertBytes = 7;
   repeated protobuf.mozilla.psm.ByteArray a_aCANames = 8;
-  required uint64 a_aBrowserId = 9;
+  optional uint64 a_aBrowserId = 9;
 }
 
 message Msg_InitIPCClientCerts {
@@ -47,7 +47,7 @@ message Msg_InitIPCClientCerts {
 
 message Msg_InitWebSocketConnection {
   required bytes a_aEndpoint = 1;
-  required uint32 a_aListenerId = 2;
+  optional uint32 a_aListenerId = 2;
 }
 
 // Parameter mappings stats:

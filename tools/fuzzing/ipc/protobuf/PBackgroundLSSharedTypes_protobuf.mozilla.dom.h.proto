@@ -17,7 +17,7 @@ import "ProtocolTypes.proto";
 message LSRequestCommonParams {
   required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
   required protobuf.mozilla.ipc.PrincipalInfo a_storagePrincipalInfo = 2;
-  required string a_originKey = 3;
+  optional string a_originKey = 3;
 }
 
 message LSRequestPreloadDatastoreParams {
@@ -63,6 +63,6 @@ message LSSimpleRequestParams {
 }
 
 message LSItemInfo {
-  required string a_key = 1;
+  optional string a_key = 1;
   required bytes a_value = 2;
 }

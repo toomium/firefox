@@ -202,7 +202,7 @@ class ContentSecurityPolicy final :
     kADeliveredViaMetaTagFlagFieldNumber = 3,
     kAHasRequireTrustedTypesForDirectiveFieldNumber = 4,
   };
-  // required string a_policy = 1;
+  // optional string a_policy = 1;
   bool has_a_policy() const;
   private:
   bool _internal_has_a_policy() const;
@@ -220,7 +220,7 @@ class ContentSecurityPolicy final :
   std::string* _internal_mutable_a_policy();
   public:
 
-  // required bool a_reportOnlyFlag = 2;
+  // optional bool a_reportOnlyFlag = 2;
   bool has_a_reportonlyflag() const;
   private:
   bool _internal_has_a_reportonlyflag() const;
@@ -233,7 +233,7 @@ class ContentSecurityPolicy final :
   void _internal_set_a_reportonlyflag(bool value);
   public:
 
-  // required bool a_deliveredViaMetaTagFlag = 3;
+  // optional bool a_deliveredViaMetaTagFlag = 3;
   bool has_a_deliveredviametatagflag() const;
   private:
   bool _internal_has_a_deliveredviametatagflag() const;
@@ -246,7 +246,7 @@ class ContentSecurityPolicy final :
   void _internal_set_a_deliveredviametatagflag(bool value);
   public:
 
-  // required bool a_hasRequireTrustedTypesForDirective = 4;
+  // optional bool a_hasRequireTrustedTypesForDirective = 4;
   bool has_a_hasrequiretrustedtypesfordirective() const;
   private:
   bool _internal_has_a_hasrequiretrustedtypesfordirective() const;
@@ -262,9 +262,6 @@ class ContentSecurityPolicy final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.ContentSecurityPolicy)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -416,7 +413,7 @@ class ContentPrincipalInfo final :
   std::string* _internal_mutable_a_attrs();
   public:
 
-  // required string a_originNoSuffix = 2;
+  // optional string a_originNoSuffix = 2;
   bool has_a_originnosuffix() const;
   private:
   bool _internal_has_a_originnosuffix() const;
@@ -434,7 +431,7 @@ class ContentPrincipalInfo final :
   std::string* _internal_mutable_a_originnosuffix();
   public:
 
-  // required string a_spec = 3;
+  // optional string a_spec = 3;
   bool has_a_spec() const;
   private:
   bool _internal_has_a_spec() const;
@@ -470,7 +467,7 @@ class ContentPrincipalInfo final :
   std::string* _internal_mutable_a_domain();
   public:
 
-  // required string a_baseDomain = 5;
+  // optional string a_baseDomain = 5;
   bool has_a_basedomain() const;
   private:
   bool _internal_has_a_basedomain() const;
@@ -491,9 +488,6 @@ class ContentPrincipalInfo final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.ContentPrincipalInfo)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -767,7 +761,7 @@ class NullPrincipalInfo final :
   std::string* _internal_mutable_a_attrs();
   public:
 
-  // required string a_spec = 2;
+  // optional string a_spec = 2;
   bool has_a_spec() const;
   private:
   bool _internal_has_a_spec() const;
@@ -788,9 +782,6 @@ class NullPrincipalInfo final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.NullPrincipalInfo)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1338,7 +1329,7 @@ class CSPInfo final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::ipc::ContentSecurityPolicy >&
       a_policyinfos() const;
 
-  // required string a_selfURISpec = 3;
+  // optional string a_selfURISpec = 3;
   bool has_a_selfurispec() const;
   private:
   bool _internal_has_a_selfurispec() const;
@@ -1356,7 +1347,7 @@ class CSPInfo final :
   std::string* _internal_mutable_a_selfurispec();
   public:
 
-  // required string a_referrer = 4;
+  // optional string a_referrer = 4;
   bool has_a_referrer() const;
   private:
   bool _internal_has_a_referrer() const;
@@ -1410,7 +1401,7 @@ class CSPInfo final :
       ::protobuf::mozilla::ipc::PrincipalInfo* a_requestprincipalinfo);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_requestprincipalinfo();
 
-  // required uint64 a_innerWindowID = 5;
+  // optional uint64 a_innerWindowID = 5;
   bool has_a_innerwindowid() const;
   private:
   bool _internal_has_a_innerwindowid() const;
@@ -1423,7 +1414,7 @@ class CSPInfo final :
   void _internal_set_a_innerwindowid(uint64_t value);
   public:
 
-  // required bool a_skipAllowInlineStyleCheck = 7;
+  // optional bool a_skipAllowInlineStyleCheck = 7;
   bool has_a_skipallowinlinestylecheck() const;
   private:
   bool _internal_has_a_skipallowinlinestylecheck() const;
@@ -1597,7 +1588,7 @@ class WebTransportHash final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_value();
 
-  // required string a_algorithm = 1;
+  // optional string a_algorithm = 1;
   bool has_a_algorithm() const;
   private:
   bool _internal_has_a_algorithm() const;
@@ -1642,7 +1633,7 @@ class WebTransportHash final :
 #endif  // __GNUC__
 // ContentSecurityPolicy
 
-// required string a_policy = 1;
+// optional string a_policy = 1;
 inline bool ContentSecurityPolicy::_internal_has_a_policy() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1710,7 +1701,7 @@ inline void ContentSecurityPolicy::set_allocated_a_policy(std::string* a_policy)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.ContentSecurityPolicy.a_policy)
 }
 
-// required bool a_reportOnlyFlag = 2;
+// optional bool a_reportOnlyFlag = 2;
 inline bool ContentSecurityPolicy::_internal_has_a_reportonlyflag() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1738,7 +1729,7 @@ inline void ContentSecurityPolicy::set_a_reportonlyflag(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.ContentSecurityPolicy.a_reportOnlyFlag)
 }
 
-// required bool a_deliveredViaMetaTagFlag = 3;
+// optional bool a_deliveredViaMetaTagFlag = 3;
 inline bool ContentSecurityPolicy::_internal_has_a_deliveredviametatagflag() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1766,7 +1757,7 @@ inline void ContentSecurityPolicy::set_a_deliveredviametatagflag(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.ContentSecurityPolicy.a_deliveredViaMetaTagFlag)
 }
 
-// required bool a_hasRequireTrustedTypesForDirective = 4;
+// optional bool a_hasRequireTrustedTypesForDirective = 4;
 inline bool ContentSecurityPolicy::_internal_has_a_hasrequiretrustedtypesfordirective() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1866,7 +1857,7 @@ inline void ContentPrincipalInfo::set_allocated_a_attrs(std::string* a_attrs) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.ContentPrincipalInfo.a_attrs)
 }
 
-// required string a_originNoSuffix = 2;
+// optional string a_originNoSuffix = 2;
 inline bool ContentPrincipalInfo::_internal_has_a_originnosuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1934,7 +1925,7 @@ inline void ContentPrincipalInfo::set_allocated_a_originnosuffix(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.ContentPrincipalInfo.a_originNoSuffix)
 }
 
-// required string a_spec = 3;
+// optional string a_spec = 3;
 inline bool ContentPrincipalInfo::_internal_has_a_spec() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2070,7 +2061,7 @@ inline void ContentPrincipalInfo::set_allocated_a_domain(std::string* a_domain) 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.ContentPrincipalInfo.a_domain)
 }
 
-// required string a_baseDomain = 5;
+// optional string a_baseDomain = 5;
 inline bool ContentPrincipalInfo::_internal_has_a_basedomain() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -2214,7 +2205,7 @@ inline void NullPrincipalInfo::set_allocated_a_attrs(std::string* a_attrs) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.NullPrincipalInfo.a_attrs)
 }
 
-// required string a_spec = 2;
+// optional string a_spec = 2;
 inline bool NullPrincipalInfo::_internal_has_a_spec() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2837,7 +2828,7 @@ inline void CSPInfo::set_allocated_a_requestprincipalinfo(::protobuf::mozilla::i
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.CSPInfo.a_requestPrincipalInfo)
 }
 
-// required string a_selfURISpec = 3;
+// optional string a_selfURISpec = 3;
 inline bool CSPInfo::_internal_has_a_selfurispec() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2905,7 +2896,7 @@ inline void CSPInfo::set_allocated_a_selfurispec(std::string* a_selfurispec) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.CSPInfo.a_selfURISpec)
 }
 
-// required string a_referrer = 4;
+// optional string a_referrer = 4;
 inline bool CSPInfo::_internal_has_a_referrer() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2973,7 +2964,7 @@ inline void CSPInfo::set_allocated_a_referrer(std::string* a_referrer) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.CSPInfo.a_referrer)
 }
 
-// required uint64 a_innerWindowID = 5;
+// optional uint64 a_innerWindowID = 5;
 inline bool CSPInfo::_internal_has_a_innerwindowid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -3069,7 +3060,7 @@ inline void CSPInfo::set_allocated_a_requiretrustedtypesfordirectivestate(std::s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.CSPInfo.a_requireTrustedTypesForDirectiveState)
 }
 
-// required bool a_skipAllowInlineStyleCheck = 7;
+// optional bool a_skipAllowInlineStyleCheck = 7;
 inline bool CSPInfo::_internal_has_a_skipallowinlinestylecheck() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -3101,7 +3092,7 @@ inline void CSPInfo::set_a_skipallowinlinestylecheck(bool value) {
 
 // WebTransportHash
 
-// required string a_algorithm = 1;
+// optional string a_algorithm = 1;
 inline bool WebTransportHash::_internal_has_a_algorithm() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

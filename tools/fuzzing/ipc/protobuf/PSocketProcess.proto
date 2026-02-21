@@ -53,7 +53,7 @@ message Msg_RecordDiscardedData {
 }
 
 message Msg_PWebrtcTCPSocketConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
   optional bytes a_tabId = 2;
 }
 
@@ -62,11 +62,11 @@ message Reply_PWebrtcTCPSocketConstructor {
 
 message Msg_ObserveHttpActivity {
   required protobuf.mozilla.net.HttpActivityArgs a_aActivityArgs = 1;
-  required uint32 a_aActivityType = 2;
-  required uint32 a_aActivitySubtype = 3;
+  optional uint32 a_aActivityType = 2;
+  optional uint32 a_aActivitySubtype = 3;
   required bytes a_aTimestamp = 4;
-  required uint64 a_aExtraSizeData = 5;
-  required string a_aExtraStringData = 6;
+  optional uint64 a_aExtraSizeData = 5;
+  optional string a_aExtraStringData = 6;
 }
 
 message Msg_InitSocketBackground {
@@ -74,16 +74,16 @@ message Msg_InitSocketBackground {
 }
 
 message Msg_PAltServiceConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
 }
 
 message Reply_PAltServiceConstructor {
 }
 
 message Msg_PProxyConfigLookupConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
   optional bytes a_aUri = 2;
-  required uint32 a_aFlags = 3;
+  optional uint32 a_aFlags = 3;
 }
 
 message Reply_PProxyConfigLookupConstructor {
@@ -94,7 +94,7 @@ message Msg_ExcludeHttp2OrHttp3 {
 }
 
 message Msg_OnConsoleMessage {
-  required string a_aMessage = 1;
+  optional string a_aMessage = 1;
 }
 
 message Msg_FOGData {
@@ -110,22 +110,22 @@ message Msg_PreferenceUpdate {
 }
 
 message Msg_RequestMemoryReport {
-  required uint32 a_generation = 1;
-  required bool a_anonymize = 2;
-  required bool a_minimizeMemoryUsage = 3;
+  optional uint32 a_generation = 1;
+  optional bool a_anonymize = 2;
+  optional bool a_minimizeMemoryUsage = 3;
   optional bytes a_DMDFile = 4;
 }
 
 message Reply_RequestMemoryReport {
-  required uint32 a_aGeneration = 1;
+  optional uint32 a_aGeneration = 1;
 }
 
 message Msg_SetOffline {
-  required bool a_offline = 1;
+  optional bool a_offline = 1;
 }
 
 message Msg_SetConnectivity {
-  required bool a_connectivity = 1;
+  optional bool a_connectivity = 1;
 }
 
 message Msg_InitLinuxSandbox {
@@ -145,14 +145,14 @@ message Msg_SocketProcessTelemetryPing {
 }
 
 message Msg_PHttpTransactionConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
 }
 
 message Reply_PHttpTransactionConstructor {
 }
 
 message Msg_PHttpConnectionMgrConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
   required protobuf.mozilla.net.HttpHandlerInitArgs a_aArgs = 2;
 }
 
@@ -160,34 +160,34 @@ message Reply_PHttpConnectionMgrConstructor {
 }
 
 message Msg_UpdateDeviceModelId {
-  required string a_aModelId = 1;
+  optional string a_aModelId = 1;
 }
 
 message Msg_OnHttpActivityDistributorActivated {
-  required bool a_aIsActivated = 1;
+  optional bool a_aIsActivated = 1;
 }
 
 message Msg_OnHttpActivityDistributorObserveProxyResponse {
-  required bool a_aIsEnabled = 1;
+  optional bool a_aIsEnabled = 1;
 }
 
 message Msg_OnHttpActivityDistributorObserveConnection {
-  required bool a_aIsEnabled = 1;
+  optional bool a_aIsEnabled = 1;
 }
 
 message Msg_PInputChannelThrottleQueueConstructor {
-  required sint64 a_actorid = 1;
-  required uint32 a_meanBytesPerSecond = 2;
-  required uint32 a_maxBytesPerSecond = 3;
+  optional sint64 a_actorid = 1;
+  optional uint32 a_meanBytesPerSecond = 2;
+  optional uint32 a_maxBytesPerSecond = 3;
 }
 
 message Reply_PInputChannelThrottleQueueConstructor {
 }
 
 message Msg_PAltSvcTransactionConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
   required protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_aConnInfo = 2;
-  required uint32 a_aCaps = 3;
+  optional uint32 a_aCaps = 3;
 }
 
 message Reply_PAltSvcTransactionConstructor {
@@ -201,9 +201,9 @@ message Reply_ClearSessionCache {
 }
 
 message Msg_PTRRServiceConstructor {
-  required sint64 a_actorid = 1;
-  required bool a_aCaptiveIsPassed = 2;
-  required bool a_aParentalControlEnabled = 3;
+  optional sint64 a_actorid = 1;
+  optional bool a_aCaptiveIsPassed = 2;
+  optional bool a_aParentalControlEnabled = 3;
   repeated string a_aDNSSuffixList = 4;
 }
 
@@ -211,15 +211,15 @@ message Reply_PTRRServiceConstructor {
 }
 
 message Msg_PNativeDNSResolverOverrideConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
 }
 
 message Reply_PNativeDNSResolverOverrideConstructor {
 }
 
 message Msg_NotifyObserver {
-  required string a_aTopic = 1;
-  required string a_aData = 2;
+  optional string a_aTopic = 1;
+  optional string a_aData = 2;
 }
 
 message Msg_GetSocketData {
@@ -271,7 +271,7 @@ message Msg_TestTriggerMetrics {
 }
 
 message Reply_TestTriggerMetrics {
-  required bool a_unused = 1;
+  optional bool a_unused = 1;
 }
 
 message Msg_AddNetAddrOverride {
@@ -283,11 +283,11 @@ message Msg_ClearNetAddrOverrides {
 }
 
 message Msg_PDNSRequestConstructor {
-  required sint64 a_actorid = 1;
-  required string a_hostName = 2;
-  required string a_trrServer = 3;
-  required sint32 a_port = 4;
-  required uint32 a_type = 5;
+  optional sint64 a_actorid = 1;
+  optional string a_hostName = 2;
+  optional string a_trrServer = 3;
+  optional sint32 a_port = 4;
+  optional uint32 a_type = 5;
   required bytes a_originAttributes = 6;
   required bytes a_flags = 7;
 }

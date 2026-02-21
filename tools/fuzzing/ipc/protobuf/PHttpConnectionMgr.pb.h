@@ -610,7 +610,7 @@ class Msg_UpdateCurrentBrowserId final :
   enum : int {
     kAAIdFieldNumber = 1,
   };
-  // required uint64 a_aId = 1;
+  // optional uint64 a_aId = 1;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -771,7 +771,7 @@ class Msg_AddTransaction final :
   std::string* _internal_mutable_a_atrans();
   public:
 
-  // required sint32 a_aPriority = 2;
+  // optional sint32 a_aPriority = 2;
   bool has_a_apriority() const;
   private:
   bool _internal_has_a_apriority() const;
@@ -787,9 +787,6 @@ class Msg_AddTransaction final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PHttpConnectionMgr.Msg_AddTransaction)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -955,7 +952,7 @@ class Msg_AddTransactionWithStickyConn final :
   std::string* _internal_mutable_a_atranswithstickyconn();
   public:
 
-  // required sint32 a_aPriority = 2;
+  // optional sint32 a_aPriority = 2;
   bool has_a_apriority() const;
   private:
   bool _internal_has_a_apriority() const;
@@ -1121,7 +1118,7 @@ class Msg_RescheduleTransaction final :
   std::string* _internal_mutable_a_atrans();
   public:
 
-  // required sint32 a_aPriority = 2;
+  // optional sint32 a_aPriority = 2;
   bool has_a_apriority() const;
   private:
   bool _internal_has_a_apriority() const;
@@ -1137,9 +1134,6 @@ class Msg_RescheduleTransaction final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PHttpConnectionMgr.Msg_RescheduleTransaction)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1665,7 +1659,7 @@ class Msg_SpeculativeConnect final :
       ::protobuf::mozilla::net::SpeculativeConnectionOverriderArgs* a_aoverriderargs);
   ::protobuf::mozilla::net::SpeculativeConnectionOverriderArgs* unsafe_arena_release_a_aoverriderargs();
 
-  // required uint32 a_aCaps = 3;
+  // optional uint32 a_aCaps = 3;
   bool has_a_acaps() const;
   private:
   bool _internal_has_a_acaps() const;
@@ -1678,7 +1672,7 @@ class Msg_SpeculativeConnect final :
   void _internal_set_a_acaps(uint32_t value);
   public:
 
-  // required bool a_aFetchHTTPSRR = 5;
+  // optional bool a_aFetchHTTPSRR = 5;
   bool has_a_afetchhttpsrr() const;
   private:
   bool _internal_has_a_afetchhttpsrr() const;
@@ -1694,9 +1688,6 @@ class Msg_SpeculativeConnect final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PHttpConnectionMgr.Msg_SpeculativeConnect)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1846,7 +1837,7 @@ class Msg_StartWebSocketConnection final :
   std::string* _internal_mutable_a_atranswithstickyconn();
   public:
 
-  // required uint32 a_aListenerId = 2;
+  // optional uint32 a_aListenerId = 2;
   bool has_a_alistenerid() const;
   private:
   bool _internal_has_a_alistenerid() const;
@@ -1862,9 +1853,6 @@ class Msg_StartWebSocketConnection final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PHttpConnectionMgr.Msg_StartWebSocketConnection)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1988,7 +1976,7 @@ inline void Msg_DoShiftReloadConnectionCleanupWithConnInfo::set_allocated_a_aarg
 
 // Msg_UpdateCurrentBrowserId
 
-// required uint64 a_aId = 1;
+// optional uint64 a_aId = 1;
 inline bool Msg_UpdateCurrentBrowserId::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2088,7 +2076,7 @@ inline void Msg_AddTransaction::set_allocated_a_atrans(std::string* a_atrans) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpConnectionMgr.Msg_AddTransaction.a_aTrans)
 }
 
-// required sint32 a_aPriority = 2;
+// optional sint32 a_aPriority = 2;
 inline bool Msg_AddTransaction::_internal_has_a_apriority() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2188,7 +2176,7 @@ inline void Msg_AddTransactionWithStickyConn::set_allocated_a_atrans(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpConnectionMgr.Msg_AddTransactionWithStickyConn.a_aTrans)
 }
 
-// required sint32 a_aPriority = 2;
+// optional sint32 a_aPriority = 2;
 inline bool Msg_AddTransactionWithStickyConn::_internal_has_a_apriority() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2356,7 +2344,7 @@ inline void Msg_RescheduleTransaction::set_allocated_a_atrans(std::string* a_atr
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpConnectionMgr.Msg_RescheduleTransaction.a_aTrans)
 }
 
-// required sint32 a_aPriority = 2;
+// optional sint32 a_aPriority = 2;
 inline bool Msg_RescheduleTransaction::_internal_has_a_apriority() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2842,7 +2830,7 @@ inline void Msg_SpeculativeConnect::set_allocated_a_aoverriderargs(::protobuf::m
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpConnectionMgr.Msg_SpeculativeConnect.a_aOverriderArgs)
 }
 
-// required uint32 a_aCaps = 3;
+// optional uint32 a_aCaps = 3;
 inline bool Msg_SpeculativeConnect::_internal_has_a_acaps() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -2938,7 +2926,7 @@ inline void Msg_SpeculativeConnect::set_allocated_a_atrans(std::string* a_atrans
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpConnectionMgr.Msg_SpeculativeConnect.a_aTrans)
 }
 
-// required bool a_aFetchHTTPSRR = 5;
+// optional bool a_aFetchHTTPSRR = 5;
 inline bool Msg_SpeculativeConnect::_internal_has_a_afetchhttpsrr() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -3038,7 +3026,7 @@ inline void Msg_StartWebSocketConnection::set_allocated_a_atranswithstickyconn(s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpConnectionMgr.Msg_StartWebSocketConnection.a_aTransWithStickyConn)
 }
 
-// required uint32 a_aListenerId = 2;
+// optional uint32 a_aListenerId = 2;
 inline bool Msg_StartWebSocketConnection::_internal_has_a_alistenerid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

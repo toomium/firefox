@@ -37,35 +37,35 @@ message Msg_PreferenceUpdate {
 }
 
 message Msg_OpenVRControllerActionPathToVR {
-  required string a_aPath = 1;
+  optional string a_aPath = 1;
 }
 
 message Msg_OpenVRControllerManifestPathToVR {
   required bytes a_aType = 1;
-  required string a_aPath = 2;
+  optional string a_aPath = 2;
 }
 
 message Msg_RequestMemoryReport {
-  required uint32 a_generation = 1;
-  required bool a_anonymize = 2;
-  required bool a_minimizeMemoryUsage = 3;
+  optional uint32 a_generation = 1;
+  optional bool a_anonymize = 2;
+  optional bool a_minimizeMemoryUsage = 3;
   optional bytes a_DMDFile = 4;
 }
 
 message Reply_RequestMemoryReport {
-  required uint32 a_aGeneration = 1;
+  optional uint32 a_aGeneration = 1;
 }
 
 message Msg_InitComplete {
 }
 
 message Msg_OpenVRControllerActionPathToParent {
-  required string a_aPath = 1;
+  optional string a_aPath = 1;
 }
 
 message Msg_OpenVRControllerManifestPathToParent {
   required bytes a_aType = 1;
-  required string a_aPath = 2;
+  optional string a_aPath = 2;
 }
 
 message Msg_InitCrashReporter {

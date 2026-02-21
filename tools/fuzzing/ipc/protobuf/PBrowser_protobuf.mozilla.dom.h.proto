@@ -24,31 +24,31 @@ import "PBackgroundSharedTypes.proto";
 // Structs and unions declarations
 message WebProgressData {
   required bytes a_browsingContext = 1;
-  required uint32 a_loadType = 2;
+  optional uint32 a_loadType = 2;
 }
 
 message RequestData {
   optional bytes a_requestURI = 1;
   optional bytes a_originalRequestURI = 2;
-  required string a_matchedList = 3;
-  required string a_canceledReason = 4;
+  optional string a_matchedList = 3;
+  optional string a_canceledReason = 4;
 }
 
 message WebProgressStateChangeData {
-  required bool a_isNavigating = 1;
-  required bool a_mayEnableCharacterEncodingMenu = 2;
-  required string a_contentType = 3;
-  required string a_charset = 4;
+  optional bool a_isNavigating = 1;
+  optional bool a_mayEnableCharacterEncodingMenu = 2;
+  optional string a_contentType = 3;
+  optional string a_charset = 4;
   optional bytes a_documentURI = 5;
 }
 
 message WebProgressLocationChangeData {
-  required bool a_isNavigating = 1;
-  required bool a_isSyntheticDocument = 2;
-  required bool a_mayEnableCharacterEncodingMenu = 3;
-  required string a_contentType = 4;
-  required string a_title = 5;
-  required string a_charset = 6;
+  optional bool a_isNavigating = 1;
+  optional bool a_isSyntheticDocument = 2;
+  optional bool a_mayEnableCharacterEncodingMenu = 3;
+  optional string a_contentType = 4;
+  optional string a_title = 5;
+  optional string a_charset = 6;
   optional bytes a_documentURI = 7;
   optional bytes a_contentPrincipal = 8;
   optional bytes a_contentPartitionedPrincipal = 9;
@@ -58,11 +58,11 @@ message WebProgressLocationChangeData {
 }
 
 message PrintPreviewResultInfo {
-  required uint32 a_sheetCount = 1;
-  required uint32 a_totalPageCount = 2;
-  required bool a_isEmpty = 3;
-  required bool a_hasSelection = 4;
-  required bool a_hasSelfSelection = 5;
+  optional uint32 a_sheetCount = 1;
+  optional uint32 a_totalPageCount = 2;
+  optional bool a_isEmpty = 3;
+  optional bool a_hasSelection = 4;
+  optional bool a_hasSelfSelection = 5;
   optional bool a_printLandscape = 6;
   optional float a_pageWidth = 7;
   optional float a_pageHeight = 8;

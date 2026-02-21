@@ -540,7 +540,7 @@ class AdvanceParams final :
   enum : int {
     kACountFieldNumber = 1,
   };
-  // required uint32 a_count = 1;
+  // optional uint32 a_count = 1;
   bool has_a_count() const;
   private:
   bool _internal_has_a_count() const;
@@ -2577,7 +2577,7 @@ inline void ContinuePrimaryKeyParams::set_allocated_a_primarykey(std::string* a_
 
 // AdvanceParams
 
-// required uint32 a_count = 1;
+// optional uint32 a_count = 1;
 inline bool AdvanceParams::_internal_has_a_count() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

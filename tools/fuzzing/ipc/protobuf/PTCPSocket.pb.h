@@ -218,7 +218,7 @@ class Msg_Open final :
     kAUseSSLFieldNumber = 3,
     kAUseArrayBuffersFieldNumber = 4,
   };
-  // required string a_host = 1;
+  // optional string a_host = 1;
   bool has_a_host() const;
   private:
   bool _internal_has_a_host() const;
@@ -236,7 +236,7 @@ class Msg_Open final :
   std::string* _internal_mutable_a_host();
   public:
 
-  // required uint32 a_port = 2;
+  // optional uint32 a_port = 2;
   bool has_a_port() const;
   private:
   bool _internal_has_a_port() const;
@@ -249,7 +249,7 @@ class Msg_Open final :
   void _internal_set_a_port(uint32_t value);
   public:
 
-  // required bool a_useSSL = 3;
+  // optional bool a_useSSL = 3;
   bool has_a_usessl() const;
   private:
   bool _internal_has_a_usessl() const;
@@ -262,7 +262,7 @@ class Msg_Open final :
   void _internal_set_a_usessl(bool value);
   public:
 
-  // required bool a_useArrayBuffers = 4;
+  // optional bool a_useArrayBuffers = 4;
   bool has_a_usearraybuffers() const;
   private:
   bool _internal_has_a_usearraybuffers() const;
@@ -278,9 +278,6 @@ class Msg_Open final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PTCPSocket.Msg_Open)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1055,7 +1052,7 @@ class Msg_Callback final :
     kADataFieldNumber = 2,
     kAReadyStateFieldNumber = 3,
   };
-  // required string a_type = 1;
+  // optional string a_type = 1;
   bool has_a_type() const;
   private:
   bool _internal_has_a_type() const;
@@ -1091,7 +1088,7 @@ class Msg_Callback final :
       ::protobuf::CallbackData* a_data);
   ::protobuf::CallbackData* unsafe_arena_release_a_data();
 
-  // required uint32 a_readyState = 3;
+  // optional uint32 a_readyState = 3;
   bool has_a_readystate() const;
   private:
   bool _internal_has_a_readystate() const;
@@ -1107,9 +1104,6 @@ class Msg_Callback final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PTCPSocket.Msg_Callback)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1239,7 +1233,7 @@ class Msg_UpdateBufferedAmount final :
     kABufferedAmountFieldNumber = 1,
     kATrackingNumberFieldNumber = 2,
   };
-  // required uint32 a_bufferedAmount = 1;
+  // optional uint32 a_bufferedAmount = 1;
   bool has_a_bufferedamount() const;
   private:
   bool _internal_has_a_bufferedamount() const;
@@ -1252,7 +1246,7 @@ class Msg_UpdateBufferedAmount final :
   void _internal_set_a_bufferedamount(uint32_t value);
   public:
 
-  // required uint32 a_trackingNumber = 2;
+  // optional uint32 a_trackingNumber = 2;
   bool has_a_trackingnumber() const;
   private:
   bool _internal_has_a_trackingnumber() const;
@@ -1268,9 +1262,6 @@ class Msg_UpdateBufferedAmount final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PTCPSocket.Msg_UpdateBufferedAmount)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1667,7 +1658,7 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_Open
 
-// required string a_host = 1;
+// optional string a_host = 1;
 inline bool Msg_Open::_internal_has_a_host() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1735,7 +1726,7 @@ inline void Msg_Open::set_allocated_a_host(std::string* a_host) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PTCPSocket.Msg_Open.a_host)
 }
 
-// required uint32 a_port = 2;
+// optional uint32 a_port = 2;
 inline bool Msg_Open::_internal_has_a_port() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1763,7 +1754,7 @@ inline void Msg_Open::set_a_port(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTCPSocket.Msg_Open.a_port)
 }
 
-// required bool a_useSSL = 3;
+// optional bool a_useSSL = 3;
 inline bool Msg_Open::_internal_has_a_usessl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1791,7 +1782,7 @@ inline void Msg_Open::set_a_usessl(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTCPSocket.Msg_Open.a_useSSL)
 }
 
-// required bool a_useArrayBuffers = 4;
+// optional bool a_useArrayBuffers = 4;
 inline bool Msg_Open::_internal_has_a_usearraybuffers() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1930,7 +1921,7 @@ inline void Msg_Data::set_allocated_a_data(::protobuf::SendableData* a_data) {
 
 // Msg_Callback
 
-// required string a_type = 1;
+// optional string a_type = 1;
 inline bool Msg_Callback::_internal_has_a_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2085,7 +2076,7 @@ inline void Msg_Callback::set_allocated_a_data(::protobuf::CallbackData* a_data)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PTCPSocket.Msg_Callback.a_data)
 }
 
-// required uint32 a_readyState = 3;
+// optional uint32 a_readyState = 3;
 inline bool Msg_Callback::_internal_has_a_readystate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2117,7 +2108,7 @@ inline void Msg_Callback::set_a_readystate(uint32_t value) {
 
 // Msg_UpdateBufferedAmount
 
-// required uint32 a_bufferedAmount = 1;
+// optional uint32 a_bufferedAmount = 1;
 inline bool Msg_UpdateBufferedAmount::_internal_has_a_bufferedamount() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2145,7 +2136,7 @@ inline void Msg_UpdateBufferedAmount::set_a_bufferedamount(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTCPSocket.Msg_UpdateBufferedAmount.a_bufferedAmount)
 }
 
-// required uint32 a_trackingNumber = 2;
+// optional uint32 a_trackingNumber = 2;
 inline bool Msg_UpdateBufferedAmount::_internal_has_a_trackingnumber() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

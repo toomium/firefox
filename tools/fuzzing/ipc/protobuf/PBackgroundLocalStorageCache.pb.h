@@ -318,7 +318,7 @@ class Msg_Notify final :
     kAOldValueFieldNumber = 3,
     kANewValueFieldNumber = 4,
   };
-  // required string a_documentURI = 1;
+  // optional string a_documentURI = 1;
   bool has_a_documenturi() const;
   private:
   bool _internal_has_a_documenturi() const;
@@ -336,7 +336,7 @@ class Msg_Notify final :
   std::string* _internal_mutable_a_documenturi();
   public:
 
-  // required string a_key = 2;
+  // optional string a_key = 2;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -354,7 +354,7 @@ class Msg_Notify final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // required string a_oldValue = 3;
+  // optional string a_oldValue = 3;
   bool has_a_oldvalue() const;
   private:
   bool _internal_has_a_oldvalue() const;
@@ -372,7 +372,7 @@ class Msg_Notify final :
   std::string* _internal_mutable_a_oldvalue();
   public:
 
-  // required string a_newValue = 4;
+  // optional string a_newValue = 4;
   bool has_a_newvalue() const;
   private:
   bool _internal_has_a_newvalue() const;
@@ -393,9 +393,6 @@ class Msg_Notify final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBackgroundLocalStorageCache.Msg_Notify)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -531,7 +528,7 @@ class Msg_Observe final :
     kACachePrincipalInfoFieldNumber = 2,
     kAPrivateBrowsingIdFieldNumber = 3,
   };
-  // required string a_documentURI = 4;
+  // optional string a_documentURI = 4;
   bool has_a_documenturi() const;
   private:
   bool _internal_has_a_documenturi() const;
@@ -549,7 +546,7 @@ class Msg_Observe final :
   std::string* _internal_mutable_a_documenturi();
   public:
 
-  // required string a_key = 5;
+  // optional string a_key = 5;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -567,7 +564,7 @@ class Msg_Observe final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // required string a_oldValue = 6;
+  // optional string a_oldValue = 6;
   bool has_a_oldvalue() const;
   private:
   bool _internal_has_a_oldvalue() const;
@@ -585,7 +582,7 @@ class Msg_Observe final :
   std::string* _internal_mutable_a_oldvalue();
   public:
 
-  // required string a_newValue = 7;
+  // optional string a_newValue = 7;
   bool has_a_newvalue() const;
   private:
   bool _internal_has_a_newvalue() const;
@@ -639,7 +636,7 @@ class Msg_Observe final :
       ::protobuf::mozilla::ipc::PrincipalInfo* a_cacheprincipalinfo);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_cacheprincipalinfo();
 
-  // required uint32 a_privateBrowsingId = 3;
+  // optional uint32 a_privateBrowsingId = 3;
   bool has_a_privatebrowsingid() const;
   private:
   bool _internal_has_a_privatebrowsingid() const;
@@ -939,7 +936,7 @@ class Reply___delete__ final :
 
 // Msg_Notify
 
-// required string a_documentURI = 1;
+// optional string a_documentURI = 1;
 inline bool Msg_Notify::_internal_has_a_documenturi() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1007,7 +1004,7 @@ inline void Msg_Notify::set_allocated_a_documenturi(std::string* a_documenturi) 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundLocalStorageCache.Msg_Notify.a_documentURI)
 }
 
-// required string a_key = 2;
+// optional string a_key = 2;
 inline bool Msg_Notify::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1075,7 +1072,7 @@ inline void Msg_Notify::set_allocated_a_key(std::string* a_key) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundLocalStorageCache.Msg_Notify.a_key)
 }
 
-// required string a_oldValue = 3;
+// optional string a_oldValue = 3;
 inline bool Msg_Notify::_internal_has_a_oldvalue() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1143,7 +1140,7 @@ inline void Msg_Notify::set_allocated_a_oldvalue(std::string* a_oldvalue) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundLocalStorageCache.Msg_Notify.a_oldValue)
 }
 
-// required string a_newValue = 4;
+// optional string a_newValue = 4;
 inline bool Msg_Notify::_internal_has_a_newvalue() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1389,7 +1386,7 @@ inline void Msg_Observe::set_allocated_a_cacheprincipalinfo(::protobuf::mozilla:
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundLocalStorageCache.Msg_Observe.a_cachePrincipalInfo)
 }
 
-// required uint32 a_privateBrowsingId = 3;
+// optional uint32 a_privateBrowsingId = 3;
 inline bool Msg_Observe::_internal_has_a_privatebrowsingid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -1417,7 +1414,7 @@ inline void Msg_Observe::set_a_privatebrowsingid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLocalStorageCache.Msg_Observe.a_privateBrowsingId)
 }
 
-// required string a_documentURI = 4;
+// optional string a_documentURI = 4;
 inline bool Msg_Observe::_internal_has_a_documenturi() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1485,7 +1482,7 @@ inline void Msg_Observe::set_allocated_a_documenturi(std::string* a_documenturi)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundLocalStorageCache.Msg_Observe.a_documentURI)
 }
 
-// required string a_key = 5;
+// optional string a_key = 5;
 inline bool Msg_Observe::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1553,7 +1550,7 @@ inline void Msg_Observe::set_allocated_a_key(std::string* a_key) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundLocalStorageCache.Msg_Observe.a_key)
 }
 
-// required string a_oldValue = 6;
+// optional string a_oldValue = 6;
 inline bool Msg_Observe::_internal_has_a_oldvalue() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1621,7 +1618,7 @@ inline void Msg_Observe::set_allocated_a_oldvalue(std::string* a_oldvalue) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundLocalStorageCache.Msg_Observe.a_oldValue)
 }
 
-// required string a_newValue = 7;
+// optional string a_newValue = 7;
 inline bool Msg_Observe::_internal_has_a_newvalue() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;

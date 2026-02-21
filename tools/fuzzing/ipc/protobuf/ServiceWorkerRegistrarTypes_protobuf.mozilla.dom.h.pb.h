@@ -182,7 +182,7 @@ class ServiceWorkerRegistrationData final :
     kACurrentWorkerActivatedTimeFieldNumber = 8,
     kALastUpdateTimeFieldNumber = 9,
   };
-  // required string a_scope = 1;
+  // optional string a_scope = 1;
   bool has_a_scope() const;
   private:
   bool _internal_has_a_scope() const;
@@ -200,7 +200,7 @@ class ServiceWorkerRegistrationData final :
   std::string* _internal_mutable_a_scope();
   public:
 
-  // required string a_currentWorkerURL = 2;
+  // optional string a_currentWorkerURL = 2;
   bool has_a_currentworkerurl() const;
   private:
   bool _internal_has_a_currentworkerurl() const;
@@ -218,7 +218,7 @@ class ServiceWorkerRegistrationData final :
   std::string* _internal_mutable_a_currentworkerurl();
   public:
 
-  // required string a_cacheName = 4;
+  // optional string a_cacheName = 4;
   bool has_a_cachename() const;
   private:
   bool _internal_has_a_cachename() const;
@@ -272,7 +272,7 @@ class ServiceWorkerRegistrationData final :
       ::protobuf::mozilla::dom::IPCNavigationPreloadState* a_navigationpreloadstate);
   ::protobuf::mozilla::dom::IPCNavigationPreloadState* unsafe_arena_release_a_navigationpreloadstate();
 
-  // required bool a_currentWorkerHandlesFetch = 3;
+  // optional bool a_currentWorkerHandlesFetch = 3;
   bool has_a_currentworkerhandlesfetch() const;
   private:
   bool _internal_has_a_currentworkerhandlesfetch() const;
@@ -285,7 +285,7 @@ class ServiceWorkerRegistrationData final :
   void _internal_set_a_currentworkerhandlesfetch(bool value);
   public:
 
-  // required uint32 a_updateViaCache = 6;
+  // optional uint32 a_updateViaCache = 6;
   bool has_a_updateviacache() const;
   private:
   bool _internal_has_a_updateviacache() const;
@@ -298,7 +298,7 @@ class ServiceWorkerRegistrationData final :
   void _internal_set_a_updateviacache(uint32_t value);
   public:
 
-  // required sint64 a_currentWorkerInstalledTime = 7;
+  // optional sint64 a_currentWorkerInstalledTime = 7;
   bool has_a_currentworkerinstalledtime() const;
   private:
   bool _internal_has_a_currentworkerinstalledtime() const;
@@ -311,7 +311,7 @@ class ServiceWorkerRegistrationData final :
   void _internal_set_a_currentworkerinstalledtime(int64_t value);
   public:
 
-  // required sint64 a_currentWorkerActivatedTime = 8;
+  // optional sint64 a_currentWorkerActivatedTime = 8;
   bool has_a_currentworkeractivatedtime() const;
   private:
   bool _internal_has_a_currentworkeractivatedtime() const;
@@ -324,7 +324,7 @@ class ServiceWorkerRegistrationData final :
   void _internal_set_a_currentworkeractivatedtime(int64_t value);
   public:
 
-  // required sint64 a_lastUpdateTime = 9;
+  // optional sint64 a_lastUpdateTime = 9;
   bool has_a_lastupdatetime() const;
   private:
   bool _internal_has_a_lastupdatetime() const;
@@ -375,7 +375,7 @@ class ServiceWorkerRegistrationData final :
 #endif  // __GNUC__
 // ServiceWorkerRegistrationData
 
-// required string a_scope = 1;
+// optional string a_scope = 1;
 inline bool ServiceWorkerRegistrationData::_internal_has_a_scope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -443,7 +443,7 @@ inline void ServiceWorkerRegistrationData::set_allocated_a_scope(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_scope)
 }
 
-// required string a_currentWorkerURL = 2;
+// optional string a_currentWorkerURL = 2;
 inline bool ServiceWorkerRegistrationData::_internal_has_a_currentworkerurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -511,7 +511,7 @@ inline void ServiceWorkerRegistrationData::set_allocated_a_currentworkerurl(std:
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_currentWorkerURL)
 }
 
-// required bool a_currentWorkerHandlesFetch = 3;
+// optional bool a_currentWorkerHandlesFetch = 3;
 inline bool ServiceWorkerRegistrationData::_internal_has_a_currentworkerhandlesfetch() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -539,7 +539,7 @@ inline void ServiceWorkerRegistrationData::set_a_currentworkerhandlesfetch(bool 
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_currentWorkerHandlesFetch)
 }
 
-// required string a_cacheName = 4;
+// optional string a_cacheName = 4;
 inline bool ServiceWorkerRegistrationData::_internal_has_a_cachename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -694,7 +694,7 @@ inline void ServiceWorkerRegistrationData::set_allocated_a_principal(::protobuf:
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_principal)
 }
 
-// required uint32 a_updateViaCache = 6;
+// optional uint32 a_updateViaCache = 6;
 inline bool ServiceWorkerRegistrationData::_internal_has_a_updateviacache() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -722,7 +722,7 @@ inline void ServiceWorkerRegistrationData::set_a_updateviacache(uint32_t value) 
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_updateViaCache)
 }
 
-// required sint64 a_currentWorkerInstalledTime = 7;
+// optional sint64 a_currentWorkerInstalledTime = 7;
 inline bool ServiceWorkerRegistrationData::_internal_has_a_currentworkerinstalledtime() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -750,7 +750,7 @@ inline void ServiceWorkerRegistrationData::set_a_currentworkerinstalledtime(int6
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_currentWorkerInstalledTime)
 }
 
-// required sint64 a_currentWorkerActivatedTime = 8;
+// optional sint64 a_currentWorkerActivatedTime = 8;
 inline bool ServiceWorkerRegistrationData::_internal_has_a_currentworkeractivatedtime() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -778,7 +778,7 @@ inline void ServiceWorkerRegistrationData::set_a_currentworkeractivatedtime(int6
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_currentWorkerActivatedTime)
 }
 
-// required sint64 a_lastUpdateTime = 9;
+// optional sint64 a_lastUpdateTime = 9;
 inline bool ServiceWorkerRegistrationData::_internal_has_a_lastupdatetime() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;

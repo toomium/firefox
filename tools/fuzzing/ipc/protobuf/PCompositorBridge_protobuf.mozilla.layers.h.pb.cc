@@ -98,7 +98,7 @@ class FrameStats::_Internal {
     (*has_bits)[0] |= 256u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00001fff) ^ 0x00001fff) != 0;
+    return ((has_bits[0] & 0x000000ff) ^ 0x000000ff) != 0;
   }
 };
 
@@ -380,7 +380,7 @@ const char* FrameStats::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_contentFrameTime = 5;
+      // optional sint32 a_contentFrameTime = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_a_contentframetime(&has_bits);
@@ -389,7 +389,7 @@ const char* FrameStats::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // required double a_resourceUploadTime = 6;
+      // optional double a_resourceUploadTime = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 49)) {
           _Internal::set_has_a_resourceuploadtime(&has_bits);
@@ -398,7 +398,7 @@ const char* FrameStats::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // required double a_gpuCacheUploadTime = 7;
+      // optional double a_gpuCacheUploadTime = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 57)) {
           _Internal::set_has_a_gpucacheuploadtime(&has_bits);
@@ -443,7 +443,7 @@ const char* FrameStats::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_skippedComposites = 12;
+      // optional uint32 a_skippedComposites = 12;
       case 12:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 96)) {
           _Internal::set_has_a_skippedcomposites(&has_bits);
@@ -452,7 +452,7 @@ const char* FrameStats::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // required string a_url = 13;
+      // optional string a_url = 13;
       case 13:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 106)) {
           auto str = _internal_mutable_a_url();
@@ -516,19 +516,19 @@ uint8_t* FrameStats::_InternalSerialize(
         4, this->_internal_a_compositeend(), target);
   }
 
-  // required sint32 a_contentFrameTime = 5;
+  // optional sint32 a_contentFrameTime = 5;
   if (cached_has_bits & 0x00000800u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(5, this->_internal_a_contentframetime(), target);
   }
 
-  // required double a_resourceUploadTime = 6;
+  // optional double a_resourceUploadTime = 6;
   if (cached_has_bits & 0x00000200u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(6, this->_internal_a_resourceuploadtime(), target);
   }
 
-  // required double a_gpuCacheUploadTime = 7;
+  // optional double a_gpuCacheUploadTime = 7;
   if (cached_has_bits & 0x00000400u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(7, this->_internal_a_gpucacheuploadtime(), target);
@@ -558,13 +558,13 @@ uint8_t* FrameStats::_InternalSerialize(
         11, this->_internal_a_scenebuilttime(), target);
   }
 
-  // required uint32 a_skippedComposites = 12;
+  // optional uint32 a_skippedComposites = 12;
   if (cached_has_bits & 0x00001000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(12, this->_internal_a_skippedcomposites(), target);
   }
 
-  // required string a_url = 13;
+  // optional string a_url = 13;
   if (cached_has_bits & 0x00000100u) {
     target = stream->WriteStringMaybeAliased(
         13, this->_internal_a_url(), target);
@@ -638,40 +638,13 @@ size_t FrameStats::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_scenebuilttime());
   }
 
-  if (_internal_has_a_url()) {
-    // required string a_url = 13;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_url());
-  }
-
-  if (_internal_has_a_resourceuploadtime()) {
-    // required double a_resourceUploadTime = 6;
-    total_size += 1 + 8;
-  }
-
-  if (_internal_has_a_gpucacheuploadtime()) {
-    // required double a_gpuCacheUploadTime = 7;
-    total_size += 1 + 8;
-  }
-
-  if (_internal_has_a_contentframetime()) {
-    // required sint32 a_contentFrameTime = 5;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_contentframetime());
-  }
-
-  if (_internal_has_a_skippedcomposites()) {
-    // required uint32 a_skippedComposites = 12;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_skippedcomposites());
-  }
-
   return total_size;
 }
 size_t FrameStats::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.FrameStats)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00001fff) ^ 0x00001fff) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x000000ff) ^ 0x000000ff) == 0) {  // All required fields are present.
     // required bytes a_id = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -712,23 +685,6 @@ size_t FrameStats::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_scenebuilttime());
 
-    // required string a_url = 13;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_url());
-
-    // required double a_resourceUploadTime = 6;
-    total_size += 1 + 8;
-
-    // required double a_gpuCacheUploadTime = 7;
-    total_size += 1 + 8;
-
-    // required sint32 a_contentFrameTime = 5;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_contentframetime());
-
-    // required uint32 a_skippedComposites = 12;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_skippedcomposites());
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
@@ -736,6 +692,36 @@ size_t FrameStats::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00001f00u) {
+    // optional string a_url = 13;
+    if (cached_has_bits & 0x00000100u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_url());
+    }
+
+    // optional double a_resourceUploadTime = 6;
+    if (cached_has_bits & 0x00000200u) {
+      total_size += 1 + 8;
+    }
+
+    // optional double a_gpuCacheUploadTime = 7;
+    if (cached_has_bits & 0x00000400u) {
+      total_size += 1 + 8;
+    }
+
+    // optional sint32 a_contentFrameTime = 5;
+    if (cached_has_bits & 0x00000800u) {
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_contentframetime());
+    }
+
+    // optional uint32 a_skippedComposites = 12;
+    if (cached_has_bits & 0x00001000u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_skippedcomposites());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }

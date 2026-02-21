@@ -563,9 +563,6 @@ void Msg_MIDIPortListUpdate::CopyFrom(const Msg_MIDIPortListUpdate& from) {
 
 bool Msg_MIDIPortListUpdate::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_aportlist()) {
-    if (!_impl_.a_aportlist_->IsInitialized()) return false;
-  }
   return true;
 }
 

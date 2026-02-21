@@ -735,7 +735,7 @@ class Msg_OperationDone final :
     kAAContentTypeFieldNumber = 1,
     kAAFDFieldNumber = 2,
   };
-  // required string a_aContentType = 1;
+  // optional string a_aContentType = 1;
   bool has_a_acontenttype() const;
   private:
   bool _internal_has_a_acontenttype() const;
@@ -774,9 +774,6 @@ class Msg_OperationDone final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PTemporaryIPCBlob.Msg_OperationDone)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -972,7 +969,7 @@ inline void Msg___delete__::set_allocated_a_abloborerror(::protobuf::mozilla::do
 
 // Msg_OperationDone
 
-// required string a_aContentType = 1;
+// optional string a_aContentType = 1;
 inline bool Msg_OperationDone::_internal_has_a_acontenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

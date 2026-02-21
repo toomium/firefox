@@ -183,7 +183,7 @@ class LookAndFeelFont final :
     kAItalicFieldNumber = 5,
     kAWeightFieldNumber = 4,
   };
-  // required string a_name = 2;
+  // optional string a_name = 2;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -201,7 +201,7 @@ class LookAndFeelFont final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required float a_size = 3;
+  // optional float a_size = 3;
   bool has_a_size() const;
   private:
   bool _internal_has_a_size() const;
@@ -214,7 +214,7 @@ class LookAndFeelFont final :
   void _internal_set_a_size(float value);
   public:
 
-  // required bool a_haveFont = 1;
+  // optional bool a_haveFont = 1;
   bool has_a_havefont() const;
   private:
   bool _internal_has_a_havefont() const;
@@ -227,7 +227,7 @@ class LookAndFeelFont final :
   void _internal_set_a_havefont(bool value);
   public:
 
-  // required bool a_italic = 5;
+  // optional bool a_italic = 5;
   bool has_a_italic() const;
   private:
   bool _internal_has_a_italic() const;
@@ -240,7 +240,7 @@ class LookAndFeelFont final :
   void _internal_set_a_italic(bool value);
   public:
 
-  // required float a_weight = 4;
+  // optional float a_weight = 4;
   bool has_a_weight() const;
   private:
   bool _internal_has_a_weight() const;
@@ -256,9 +256,6 @@ class LookAndFeelFont final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.widget.LookAndFeelFont)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -620,7 +617,7 @@ class LookAndFeelTables final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_darkcolormap();
 
-  // required uint32 a_passwordChar = 11;
+  // optional uint32 a_passwordChar = 11;
   bool has_a_passwordchar() const;
   private:
   bool _internal_has_a_passwordchar() const;
@@ -633,7 +630,7 @@ class LookAndFeelTables final :
   void _internal_set_a_passwordchar(uint32_t value);
   public:
 
-  // required bool a_passwordEcho = 12;
+  // optional bool a_passwordEcho = 12;
   bool has_a_passwordecho() const;
   private:
   bool _internal_has_a_passwordecho() const;
@@ -649,9 +646,6 @@ class LookAndFeelTables final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.widget.LookAndFeelTables)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -833,7 +827,7 @@ class FullLookAndFeel final :
 #endif  // __GNUC__
 // LookAndFeelFont
 
-// required bool a_haveFont = 1;
+// optional bool a_haveFont = 1;
 inline bool LookAndFeelFont::_internal_has_a_havefont() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -861,7 +855,7 @@ inline void LookAndFeelFont::set_a_havefont(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.widget.LookAndFeelFont.a_haveFont)
 }
 
-// required string a_name = 2;
+// optional string a_name = 2;
 inline bool LookAndFeelFont::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -929,7 +923,7 @@ inline void LookAndFeelFont::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.widget.LookAndFeelFont.a_name)
 }
 
-// required float a_size = 3;
+// optional float a_size = 3;
 inline bool LookAndFeelFont::_internal_has_a_size() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -957,7 +951,7 @@ inline void LookAndFeelFont::set_a_size(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.widget.LookAndFeelFont.a_size)
 }
 
-// required float a_weight = 4;
+// optional float a_weight = 4;
 inline bool LookAndFeelFont::_internal_has_a_weight() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -985,7 +979,7 @@ inline void LookAndFeelFont::set_a_weight(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.widget.LookAndFeelFont.a_weight)
 }
 
-// required bool a_italic = 5;
+// optional bool a_italic = 5;
 inline bool LookAndFeelFont::_internal_has_a_italic() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1536,7 +1530,7 @@ LookAndFeelTables::mutable_a_darkcolormap() {
   return _internal_mutable_a_darkcolormap();
 }
 
-// required uint32 a_passwordChar = 11;
+// optional uint32 a_passwordChar = 11;
 inline bool LookAndFeelTables::_internal_has_a_passwordchar() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1564,7 +1558,7 @@ inline void LookAndFeelTables::set_a_passwordchar(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.widget.LookAndFeelTables.a_passwordChar)
 }
 
-// required bool a_passwordEcho = 12;
+// optional bool a_passwordEcho = 12;
 inline bool LookAndFeelTables::_internal_has_a_passwordecho() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

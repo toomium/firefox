@@ -197,7 +197,7 @@ class GtkCompositorWidgetInitData final :
   std::string* _internal_mutable_a_xwindow();
   public:
 
-  // required string a_XDisplayString = 2;
+  // optional string a_XDisplayString = 2;
   bool has_a_xdisplaystring() const;
   private:
   bool _internal_has_a_xdisplaystring() const;
@@ -233,7 +233,7 @@ class GtkCompositorWidgetInitData final :
   std::string* _internal_mutable_a_initialclientsize();
   public:
 
-  // required bool a_IsX11Display = 3;
+  // optional bool a_IsX11Display = 3;
   bool has_a_isx11display() const;
   private:
   bool _internal_has_a_isx11display() const;
@@ -531,7 +531,7 @@ inline void GtkCompositorWidgetInitData::set_allocated_a_xwindow(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.widget.GtkCompositorWidgetInitData.a_XWindow)
 }
 
-// required string a_XDisplayString = 2;
+// optional string a_XDisplayString = 2;
 inline bool GtkCompositorWidgetInitData::_internal_has_a_xdisplaystring() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -599,7 +599,7 @@ inline void GtkCompositorWidgetInitData::set_allocated_a_xdisplaystring(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.widget.GtkCompositorWidgetInitData.a_XDisplayString)
 }
 
-// required bool a_IsX11Display = 3;
+// optional bool a_IsX11Display = 3;
 inline bool GtkCompositorWidgetInitData::_internal_has_a_isx11display() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;

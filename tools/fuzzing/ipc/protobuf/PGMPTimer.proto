@@ -16,12 +16,12 @@ package protobuf.mozilla.gmp.PGMPTimer;
 
 // Message declarations
 message Msg_TimerExpired {
-  required uint32 a_aTimerId = 1;
+  optional uint32 a_aTimerId = 1;
 }
 
 message Msg_SetTimer {
-  required uint32 a_aTimerId = 1;
-  required uint32 a_aTimeoutMs = 2;
+  optional uint32 a_aTimerId = 1;
+  optional uint32 a_aTimeoutMs = 2;
 }
 
 message Msg___delete__ {

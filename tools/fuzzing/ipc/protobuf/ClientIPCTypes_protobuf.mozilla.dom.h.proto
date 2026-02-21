@@ -22,7 +22,7 @@ message ClientSourceConstructorArgs {
   required bytes a_type = 3;
   required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 4;
   required bytes a_creationTime = 5;
-  required string a_url = 6;
+  optional string a_url = 6;
   required bytes a_frameType = 7;
 }
 
@@ -32,7 +32,7 @@ message IPCClientInfo {
   required bytes a_type = 3;
   required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 4;
   required bytes a_creationTime = 5;
-  required string a_url = 6;
+  optional string a_url = 6;
   required bytes a_frameType = 7;
   optional protobuf.mozilla.ipc.CSPInfo a_cspInfo = 8;
   optional protobuf.mozilla.ipc.CSPInfo a_preloadCspInfo = 9;
@@ -42,7 +42,7 @@ message IPCClientWindowState {
   required bytes a_visibilityState = 1;
   required bytes a_lastFocusTime = 2;
   required bytes a_storageAccess = 3;
-  required bool a_focused = 4;
+  optional bool a_focused = 4;
 }
 
 message IPCClientWorkerState {
@@ -69,7 +69,7 @@ message PostMessageSource {
 }
 
 message ClientSourceExecutionReadyArgs {
-  required string a_url = 1;
+  optional string a_url = 1;
   required bytes a_frameType = 2;
 }
 
@@ -83,8 +83,8 @@ message ClientFocusArgs {
 
 message ClientNavigateArgs {
   required protobuf.mozilla.dom.IPCClientInfo a_target = 1;
-  required string a_url = 2;
-  required string a_baseURL = 3;
+  optional string a_url = 2;
+  optional string a_baseURL = 3;
   required protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_serviceWorker = 4;
 }
 
@@ -96,7 +96,7 @@ message ClientPostMessageArgs {
 message ClientMatchAllArgs {
   required protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_serviceWorker = 1;
   required bytes a_type = 2;
-  required bool a_includeUncontrolled = 3;
+  optional bool a_includeUncontrolled = 3;
 }
 
 message ClientClaimArgs {
@@ -111,8 +111,8 @@ message ClientGetInfoAndStateArgs {
 message ClientOpenWindowArgs {
   required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
   optional protobuf.mozilla.ipc.CSPInfo a_cspInfo = 2;
-  required string a_url = 3;
-  required string a_baseURL = 4;
+  optional string a_url = 3;
+  optional string a_baseURL = 4;
 }
 
 message ClientEvictBFCacheArgs {
@@ -138,8 +138,8 @@ message ClientList {
 
 message ClientNavigateOpConstructorArgs {
   required bytes a_target = 1;
-  required string a_url = 2;
-  required string a_baseURL = 3;
+  optional string a_url = 2;
+  optional string a_baseURL = 3;
 }
 
 message ClientOpResult {

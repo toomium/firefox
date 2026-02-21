@@ -342,7 +342,7 @@ class Msg_PBackgroundSDBRequestConstructor final :
       ::protobuf::mozilla::dom::SDBRequestParams* a_params);
   ::protobuf::mozilla::dom::SDBRequestParams* unsafe_arena_release_a_params();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -358,9 +358,6 @@ class Msg_PBackgroundSDBRequestConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBackgroundSDBConnection.Msg_PBackgroundSDBRequestConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1009,7 +1006,7 @@ class Msg_Closed final :
 
 // Msg_PBackgroundSDBRequestConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PBackgroundSDBRequestConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

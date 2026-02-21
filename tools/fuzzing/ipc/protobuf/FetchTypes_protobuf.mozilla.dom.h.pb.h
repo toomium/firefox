@@ -220,7 +220,7 @@ class HeadersEntry final :
     kANameFieldNumber = 1,
     kAValueFieldNumber = 2,
   };
-  // required string a_name = 1;
+  // optional string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -238,7 +238,7 @@ class HeadersEntry final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required string a_value = 2;
+  // optional string a_value = 2;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -259,9 +259,6 @@ class HeadersEntry final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.HeadersEntry)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1160,7 +1157,7 @@ class IPCInternalRequest final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::RedirectHistoryEntryInfo >&
       a_interceptionredirectchain() const;
 
-  // required string a_method = 1;
+  // optional string a_method = 1;
   bool has_a_method() const;
   private:
   bool _internal_has_a_method() const;
@@ -1196,7 +1193,7 @@ class IPCInternalRequest final :
   std::string* _internal_mutable_a_headersguard();
   public:
 
-  // required string a_preferredAlternativeDataType = 7;
+  // optional string a_preferredAlternativeDataType = 7;
   bool has_a_preferredalternativedatatype() const;
   private:
   bool _internal_has_a_preferredalternativedatatype() const;
@@ -1232,7 +1229,7 @@ class IPCInternalRequest final :
   std::string* _internal_mutable_a_contentpolicytype();
   public:
 
-  // required string a_referrer = 10;
+  // optional string a_referrer = 10;
   bool has_a_referrer() const;
   private:
   bool _internal_has_a_referrer() const;
@@ -1376,7 +1373,7 @@ class IPCInternalRequest final :
   std::string* _internal_mutable_a_requestpriority();
   public:
 
-  // required string a_integrity = 18;
+  // optional string a_integrity = 18;
   bool has_a_integrity() const;
   private:
   bool _internal_has_a_integrity() const;
@@ -1394,7 +1391,7 @@ class IPCInternalRequest final :
   std::string* _internal_mutable_a_integrity();
   public:
 
-  // required string a_fragment = 20;
+  // optional string a_fragment = 20;
   bool has_a_fragment() const;
   private:
   bool _internal_has_a_fragment() const;
@@ -1502,7 +1499,7 @@ class IPCInternalRequest final :
       ::protobuf::mozilla::ipc::PrincipalInfo* a_interceptiontriggeringprincipalinfo);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_interceptiontriggeringprincipalinfo();
 
-  // required sint64 a_bodySize = 6;
+  // optional sint64 a_bodySize = 6;
   bool has_a_bodysize() const;
   private:
   bool _internal_has_a_bodysize() const;
@@ -1515,7 +1512,7 @@ class IPCInternalRequest final :
   void _internal_set_a_bodysize(int64_t value);
   public:
 
-  // required sint32 a_internalPriority = 9;
+  // optional sint32 a_internalPriority = 9;
   bool has_a_internalpriority() const;
   private:
   bool _internal_has_a_internalpriority() const;
@@ -1528,7 +1525,7 @@ class IPCInternalRequest final :
   void _internal_set_a_internalpriority(int32_t value);
   public:
 
-  // required bool a_keepalive = 19;
+  // optional bool a_keepalive = 19;
   bool has_a_keepalive() const;
   private:
   bool _internal_has_a_keepalive() const;
@@ -1541,7 +1538,7 @@ class IPCInternalRequest final :
   void _internal_set_a_keepalive(bool value);
   public:
 
-  // required bool a_interceptionFromThirdParty = 25;
+  // optional bool a_interceptionFromThirdParty = 25;
   bool has_a_interceptionfromthirdparty() const;
   private:
   bool _internal_has_a_interceptionfromthirdparty() const;
@@ -1783,7 +1780,7 @@ class InternalResponseMetadata final :
   std::string* _internal_mutable_a_type();
   public:
 
-  // required string a_statusText = 4;
+  // optional string a_statusText = 4;
   bool has_a_statustext() const;
   private:
   bool _internal_has_a_statustext() const;
@@ -1837,7 +1834,7 @@ class InternalResponseMetadata final :
   std::string* _internal_mutable_a_errorcode();
   public:
 
-  // required string a_alternativeDataType = 8;
+  // optional string a_alternativeDataType = 8;
   bool has_a_alternativedatatype() const;
   private:
   bool _internal_has_a_alternativedatatype() const;
@@ -1873,7 +1870,7 @@ class InternalResponseMetadata final :
   std::string* _internal_mutable_a_securityinfo();
   public:
 
-  // required string a_bodyBlobURISpec = 11;
+  // optional string a_bodyBlobURISpec = 11;
   bool has_a_bodybloburispec() const;
   private:
   bool _internal_has_a_bodybloburispec() const;
@@ -1891,7 +1888,7 @@ class InternalResponseMetadata final :
   std::string* _internal_mutable_a_bodybloburispec();
   public:
 
-  // required string a_bodyLocalPath = 12;
+  // optional string a_bodyLocalPath = 12;
   bool has_a_bodylocalpath() const;
   private:
   bool _internal_has_a_bodylocalpath() const;
@@ -1945,7 +1942,7 @@ class InternalResponseMetadata final :
       ::protobuf::mozilla::ipc::PrincipalInfo* a_principalinfo);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_principalinfo();
 
-  // required uint32 a_status = 3;
+  // optional uint32 a_status = 3;
   bool has_a_status() const;
   private:
   bool _internal_has_a_status() const;
@@ -2159,7 +2156,7 @@ class ParentToParentInternalResponse final :
       ::protobuf::mozilla::dom::ParentToParentStream* a_alternativebody);
   ::protobuf::mozilla::dom::ParentToParentStream* unsafe_arena_release_a_alternativebody();
 
-  // required sint64 a_bodySize = 3;
+  // optional sint64 a_bodySize = 3;
   bool has_a_bodysize() const;
   private:
   bool _internal_has_a_bodysize() const;
@@ -2175,9 +2172,6 @@ class ParentToParentInternalResponse final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.ParentToParentInternalResponse)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2364,7 +2358,7 @@ class ParentToChildInternalResponse final :
       ::protobuf::mozilla::dom::ParentToChildStream* a_alternativebody);
   ::protobuf::mozilla::dom::ParentToChildStream* unsafe_arena_release_a_alternativebody();
 
-  // required sint64 a_bodySize = 3;
+  // optional sint64 a_bodySize = 3;
   bool has_a_bodysize() const;
   private:
   bool _internal_has_a_bodysize() const;
@@ -2380,9 +2374,6 @@ class ParentToChildInternalResponse final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.ParentToChildInternalResponse)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2569,7 +2560,7 @@ class ChildToParentInternalResponse final :
       ::protobuf::mozilla::dom::ChildToParentStream* a_alternativebody);
   ::protobuf::mozilla::dom::ChildToParentStream* unsafe_arena_release_a_alternativebody();
 
-  // required sint64 a_bodySize = 3;
+  // optional sint64 a_bodySize = 3;
   bool has_a_bodysize() const;
   private:
   bool _internal_has_a_bodysize() const;
@@ -2585,9 +2576,6 @@ class ChildToParentInternalResponse final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.ChildToParentInternalResponse)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2719,7 +2707,7 @@ class ResponseTiming final :
     kAEntryNameFieldNumber = 3,
     kATimingDataFieldNumber = 1,
   };
-  // required string a_initiatorType = 2;
+  // optional string a_initiatorType = 2;
   bool has_a_initiatortype() const;
   private:
   bool _internal_has_a_initiatortype() const;
@@ -2737,7 +2725,7 @@ class ResponseTiming final :
   std::string* _internal_mutable_a_initiatortype();
   public:
 
-  // required string a_entryName = 3;
+  // optional string a_entryName = 3;
   bool has_a_entryname() const;
   private:
   bool _internal_has_a_entryname() const;
@@ -2776,9 +2764,6 @@ class ResponseTiming final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.ResponseTiming)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2951,7 +2936,7 @@ class ResponseEndArgs final :
 #endif  // __GNUC__
 // HeadersEntry
 
-// required string a_name = 1;
+// optional string a_name = 1;
 inline bool HeadersEntry::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3019,7 +3004,7 @@ inline void HeadersEntry::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.HeadersEntry.a_name)
 }
 
-// required string a_value = 2;
+// optional string a_value = 2;
 inline bool HeadersEntry::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3645,7 +3630,7 @@ inline BodyStreamVariant::ContentCase BodyStreamVariant::content_case() const {
 
 // IPCInternalRequest
 
-// required string a_method = 1;
+// optional string a_method = 1;
 inline bool IPCInternalRequest::_internal_has_a_method() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3986,7 +3971,7 @@ inline void IPCInternalRequest::set_allocated_a_body(::protobuf::mozilla::dom::B
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCInternalRequest.a_body)
 }
 
-// required sint64 a_bodySize = 6;
+// optional sint64 a_bodySize = 6;
 inline bool IPCInternalRequest::_internal_has_a_bodysize() const {
   bool value = (_impl_._has_bits_[0] & 0x00080000u) != 0;
   return value;
@@ -4014,7 +3999,7 @@ inline void IPCInternalRequest::set_a_bodysize(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCInternalRequest.a_bodySize)
 }
 
-// required string a_preferredAlternativeDataType = 7;
+// optional string a_preferredAlternativeDataType = 7;
 inline bool IPCInternalRequest::_internal_has_a_preferredalternativedatatype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -4150,7 +4135,7 @@ inline void IPCInternalRequest::set_allocated_a_contentpolicytype(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCInternalRequest.a_contentPolicyType)
 }
 
-// required sint32 a_internalPriority = 9;
+// optional sint32 a_internalPriority = 9;
 inline bool IPCInternalRequest::_internal_has_a_internalpriority() const {
   bool value = (_impl_._has_bits_[0] & 0x00100000u) != 0;
   return value;
@@ -4178,7 +4163,7 @@ inline void IPCInternalRequest::set_a_internalpriority(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCInternalRequest.a_internalPriority)
 }
 
-// required string a_referrer = 10;
+// optional string a_referrer = 10;
 inline bool IPCInternalRequest::_internal_has_a_referrer() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -4722,7 +4707,7 @@ inline void IPCInternalRequest::set_allocated_a_requestpriority(std::string* a_r
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCInternalRequest.a_requestPriority)
 }
 
-// required string a_integrity = 18;
+// optional string a_integrity = 18;
 inline bool IPCInternalRequest::_internal_has_a_integrity() const {
   bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
   return value;
@@ -4790,7 +4775,7 @@ inline void IPCInternalRequest::set_allocated_a_integrity(std::string* a_integri
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCInternalRequest.a_integrity)
 }
 
-// required bool a_keepalive = 19;
+// optional bool a_keepalive = 19;
 inline bool IPCInternalRequest::_internal_has_a_keepalive() const {
   bool value = (_impl_._has_bits_[0] & 0x00200000u) != 0;
   return value;
@@ -4818,7 +4803,7 @@ inline void IPCInternalRequest::set_a_keepalive(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCInternalRequest.a_keepalive)
 }
 
-// required string a_fragment = 20;
+// optional string a_fragment = 20;
 inline bool IPCInternalRequest::_internal_has_a_fragment() const {
   bool value = (_impl_._has_bits_[0] & 0x00002000u) != 0;
   return value;
@@ -5165,7 +5150,7 @@ IPCInternalRequest::a_interceptionredirectchain() const {
   return _impl_.a_interceptionredirectchain_;
 }
 
-// required bool a_interceptionFromThirdParty = 25;
+// optional bool a_interceptionFromThirdParty = 25;
 inline bool IPCInternalRequest::_internal_has_a_interceptionfromthirdparty() const {
   bool value = (_impl_._has_bits_[0] & 0x00400000u) != 0;
   return value;
@@ -5408,7 +5393,7 @@ InternalResponseMetadata::mutable_a_urllist() {
   return &_impl_.a_urllist_;
 }
 
-// required uint32 a_status = 3;
+// optional uint32 a_status = 3;
 inline bool InternalResponseMetadata::_internal_has_a_status() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
@@ -5436,7 +5421,7 @@ inline void InternalResponseMetadata::set_a_status(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.InternalResponseMetadata.a_status)
 }
 
-// required string a_statusText = 4;
+// optional string a_statusText = 4;
 inline bool InternalResponseMetadata::_internal_has_a_statustext() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5680,7 +5665,7 @@ inline void InternalResponseMetadata::set_allocated_a_errorcode(std::string* a_e
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.InternalResponseMetadata.a_errorCode)
 }
 
-// required string a_alternativeDataType = 8;
+// optional string a_alternativeDataType = 8;
 inline bool InternalResponseMetadata::_internal_has_a_alternativedatatype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -5903,7 +5888,7 @@ inline void InternalResponseMetadata::set_allocated_a_principalinfo(::protobuf::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.InternalResponseMetadata.a_principalInfo)
 }
 
-// required string a_bodyBlobURISpec = 11;
+// optional string a_bodyBlobURISpec = 11;
 inline bool InternalResponseMetadata::_internal_has_a_bodybloburispec() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -5971,7 +5956,7 @@ inline void InternalResponseMetadata::set_allocated_a_bodybloburispec(std::strin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.InternalResponseMetadata.a_bodyBlobURISpec)
 }
 
-// required string a_bodyLocalPath = 12;
+// optional string a_bodyLocalPath = 12;
 inline bool InternalResponseMetadata::_internal_has_a_bodylocalpath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -6291,7 +6276,7 @@ inline void ParentToParentInternalResponse::set_allocated_a_body(::protobuf::moz
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ParentToParentInternalResponse.a_body)
 }
 
-// required sint64 a_bodySize = 3;
+// optional sint64 a_bodySize = 3;
 inline bool ParentToParentInternalResponse::_internal_has_a_bodysize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -6593,7 +6578,7 @@ inline void ParentToChildInternalResponse::set_allocated_a_body(::protobuf::mozi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ParentToChildInternalResponse.a_body)
 }
 
-// required sint64 a_bodySize = 3;
+// optional sint64 a_bodySize = 3;
 inline bool ParentToChildInternalResponse::_internal_has_a_bodysize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -6895,7 +6880,7 @@ inline void ChildToParentInternalResponse::set_allocated_a_body(::protobuf::mozi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ChildToParentInternalResponse.a_body)
 }
 
-// required sint64 a_bodySize = 3;
+// optional sint64 a_bodySize = 3;
 inline bool ChildToParentInternalResponse::_internal_has_a_bodysize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -7104,7 +7089,7 @@ inline void ResponseTiming::set_allocated_a_timingdata(::protobuf::mozilla::dom:
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ResponseTiming.a_timingData)
 }
 
-// required string a_initiatorType = 2;
+// optional string a_initiatorType = 2;
 inline bool ResponseTiming::_internal_has_a_initiatortype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7172,7 +7157,7 @@ inline void ResponseTiming::set_allocated_a_initiatortype(std::string* a_initiat
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ResponseTiming.a_initiatorType)
 }
 
-// required string a_entryName = 3;
+// optional string a_entryName = 3;
 inline bool ResponseTiming::_internal_has_a_entryname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

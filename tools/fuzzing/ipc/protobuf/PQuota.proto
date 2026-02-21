@@ -25,7 +25,7 @@ message Reply___delete__ {
 }
 
 message Msg_PQuotaRequestConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
   required protobuf.mozilla.dom.quota.RequestParams a_params = 2;
 }
 
@@ -118,7 +118,7 @@ message Reply_InitializePersistentOrigin {
 message Msg_InitializeTemporaryOrigin {
   required bytes a_persistenceType = 1;
   required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
-  required bool a_createIfNonExistent = 3;
+  optional bool a_createIfNonExistent = 3;
 }
 
 message Reply_InitializeTemporaryOrigin {
@@ -138,7 +138,7 @@ message Msg_InitializeTemporaryClient {
   required bytes a_persistenceType = 1;
   required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
   required bytes a_clientType = 3;
-  required bool a_createIfNonExistent = 4;
+  optional bool a_createIfNonExistent = 4;
 }
 
 message Reply_InitializeTemporaryClient {
@@ -153,7 +153,7 @@ message Reply_InitializeTemporaryStorage {
 }
 
 message Msg_GetUsage {
-  required bool a_getAll = 1;
+  optional bool a_getAll = 1;
   required bytes a_parentEndpoint = 2;
 }
 
@@ -279,7 +279,7 @@ message Msg_AbortOperationsForProcess {
 }
 
 message Msg_SetThumbnailPrivateIdentityId {
-  required uint32 a_aThumbnailPrivateIdentityId = 1;
+  optional uint32 a_aThumbnailPrivateIdentityId = 1;
 }
 
 // Parameter mappings stats:

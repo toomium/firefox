@@ -381,7 +381,7 @@ class Reply_Unregister final :
   std::string* _internal_mutable_a_arv();
   public:
 
-  // required bool a_aSuccess = 1;
+  // optional bool a_aSuccess = 1;
   bool has_a_asuccess() const;
   private:
   bool _internal_has_a_asuccess() const;
@@ -397,9 +397,6 @@ class Reply_Unregister final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PServiceWorkerRegistration.Reply_Unregister)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -527,7 +524,7 @@ class Msg_Update final :
   enum : int {
     kAANewestWorkerScriptUrlFieldNumber = 1,
   };
-  // required string a_aNewestWorkerScriptUrl = 1;
+  // optional string a_aNewestWorkerScriptUrl = 1;
   bool has_a_anewestworkerscripturl() const;
   private:
   bool _internal_has_a_anewestworkerscripturl() const;
@@ -821,7 +818,7 @@ class Msg_GetNotifications final :
   enum : int {
     kAATagFieldNumber = 1,
   };
-  // required string a_aTag = 1;
+  // optional string a_aTag = 1;
   bool has_a_atag() const;
   private:
   bool _internal_has_a_atag() const;
@@ -1115,7 +1112,7 @@ class Msg_SetNavigationPreloadEnabled final :
   enum : int {
     kAAEnabledFieldNumber = 1,
   };
-  // required bool a_aEnabled = 1;
+  // optional bool a_aEnabled = 1;
   bool has_a_aenabled() const;
   private:
   bool _internal_has_a_aenabled() const;
@@ -1257,7 +1254,7 @@ class Reply_SetNavigationPreloadEnabled final :
   enum : int {
     kAASuccessFieldNumber = 1,
   };
-  // required bool a_aSuccess = 1;
+  // optional bool a_aSuccess = 1;
   bool has_a_asuccess() const;
   private:
   bool _internal_has_a_asuccess() const;
@@ -1399,7 +1396,7 @@ class Msg_SetNavigationPreloadHeader final :
   enum : int {
     kAAHeaderFieldNumber = 1,
   };
-  // required string a_aHeader = 1;
+  // optional string a_aHeader = 1;
   bool has_a_aheader() const;
   private:
   bool _internal_has_a_aheader() const;
@@ -1546,7 +1543,7 @@ class Reply_SetNavigationPreloadHeader final :
   enum : int {
     kAASuccessFieldNumber = 1,
   };
-  // required bool a_aSuccess = 1;
+  // optional bool a_aSuccess = 1;
   bool has_a_asuccess() const;
   private:
   bool _internal_has_a_asuccess() const;
@@ -2379,7 +2376,7 @@ class Reply___delete__ final :
 
 // Reply_Unregister
 
-// required bool a_aSuccess = 1;
+// optional bool a_aSuccess = 1;
 inline bool Reply_Unregister::_internal_has_a_asuccess() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2479,7 +2476,7 @@ inline void Reply_Unregister::set_allocated_a_arv(std::string* a_arv) {
 
 // Msg_Update
 
-// required string a_aNewestWorkerScriptUrl = 1;
+// optional string a_aNewestWorkerScriptUrl = 1;
 inline bool Msg_Update::_internal_has_a_anewestworkerscripturl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2642,7 +2639,7 @@ inline void Reply_Update::set_allocated_a_aresult(::protobuf::mozilla::dom::IPCS
 
 // Msg_GetNotifications
 
-// required string a_aTag = 1;
+// optional string a_aTag = 1;
 inline bool Msg_GetNotifications::_internal_has_a_atag() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2805,7 +2802,7 @@ inline void Reply_GetNotifications::set_allocated_a_aresult(::protobuf::mozilla:
 
 // Msg_SetNavigationPreloadEnabled
 
-// required bool a_aEnabled = 1;
+// optional bool a_aEnabled = 1;
 inline bool Msg_SetNavigationPreloadEnabled::_internal_has_a_aenabled() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2837,7 +2834,7 @@ inline void Msg_SetNavigationPreloadEnabled::set_a_aenabled(bool value) {
 
 // Reply_SetNavigationPreloadEnabled
 
-// required bool a_aSuccess = 1;
+// optional bool a_aSuccess = 1;
 inline bool Reply_SetNavigationPreloadEnabled::_internal_has_a_asuccess() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2869,7 +2866,7 @@ inline void Reply_SetNavigationPreloadEnabled::set_a_asuccess(bool value) {
 
 // Msg_SetNavigationPreloadHeader
 
-// required string a_aHeader = 1;
+// optional string a_aHeader = 1;
 inline bool Msg_SetNavigationPreloadHeader::_internal_has_a_aheader() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2941,7 +2938,7 @@ inline void Msg_SetNavigationPreloadHeader::set_allocated_a_aheader(std::string*
 
 // Reply_SetNavigationPreloadHeader
 
-// required bool a_aSuccess = 1;
+// optional bool a_aSuccess = 1;
 inline bool Reply_SetNavigationPreloadHeader::_internal_has_a_asuccess() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

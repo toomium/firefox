@@ -108,7 +108,7 @@ class WidgetCompositorOptions::_Internal {
     (*has_bits)[0] |= 16u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000003f) ^ 0x0000003f) != 0;
+    return ((has_bits[0] & 0x0000000f) ^ 0x0000000f) != 0;
   }
 };
 
@@ -287,7 +287,7 @@ const char* WidgetCompositorOptions::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required bool a_useExternalSurfaceSize = 4;
+      // optional bool a_useExternalSurfaceSize = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_a_useexternalsurfacesize(&has_bits);
@@ -305,7 +305,7 @@ const char* WidgetCompositorOptions::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required uint64 a_innerWindowId = 6;
+      // optional uint64 a_innerWindowId = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
           _Internal::set_has_a_innerwindowid(&has_bits);
@@ -363,7 +363,7 @@ uint8_t* WidgetCompositorOptions::_InternalSerialize(
         3, this->_internal_a_options(), target);
   }
 
-  // required bool a_useExternalSurfaceSize = 4;
+  // optional bool a_useExternalSurfaceSize = 4;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_a_useexternalsurfacesize(), target);
@@ -375,7 +375,7 @@ uint8_t* WidgetCompositorOptions::_InternalSerialize(
         5, this->_internal_a_surfacesize(), target);
   }
 
-  // required uint64 a_innerWindowId = 6;
+  // optional uint64 a_innerWindowId = 6;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(6, this->_internal_a_innerwindowid(), target);
@@ -421,23 +421,13 @@ size_t WidgetCompositorOptions::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_surfacesize());
   }
 
-  if (_internal_has_a_innerwindowid()) {
-    // required uint64 a_innerWindowId = 6;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_innerwindowid());
-  }
-
-  if (_internal_has_a_useexternalsurfacesize()) {
-    // required bool a_useExternalSurfaceSize = 4;
-    total_size += 1 + 1;
-  }
-
   return total_size;
 }
 size_t WidgetCompositorOptions::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.WidgetCompositorOptions)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000003f) ^ 0x0000003f) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
     // required bytes a_scale = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -458,12 +448,6 @@ size_t WidgetCompositorOptions::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_surfacesize());
 
-    // required uint64 a_innerWindowId = 6;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_innerwindowid());
-
-    // required bool a_useExternalSurfaceSize = 4;
-    total_size += 1 + 1;
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
@@ -471,6 +455,19 @@ size_t WidgetCompositorOptions::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000030u) {
+    // optional uint64 a_innerWindowId = 6;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_innerwindowid());
+    }
+
+    // optional bool a_useExternalSurfaceSize = 4;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += 1 + 1;
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }

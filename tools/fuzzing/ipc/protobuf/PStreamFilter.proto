@@ -47,7 +47,7 @@ message Msg_Closed {
 }
 
 message Msg_Error {
-  required string a_error = 1;
+  optional string a_error = 1;
 }
 
 message Msg_FlushData {

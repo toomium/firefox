@@ -346,7 +346,7 @@ class Msg_GetFileReferences final :
   std::string* _internal_mutable_a_persistencetype();
   public:
 
-  // required string a_origin = 2;
+  // optional string a_origin = 2;
   bool has_a_origin() const;
   private:
   bool _internal_has_a_origin() const;
@@ -364,7 +364,7 @@ class Msg_GetFileReferences final :
   std::string* _internal_mutable_a_origin();
   public:
 
-  // required string a_databaseName = 3;
+  // optional string a_databaseName = 3;
   bool has_a_databasename() const;
   private:
   bool _internal_has_a_databasename() const;
@@ -382,7 +382,7 @@ class Msg_GetFileReferences final :
   std::string* _internal_mutable_a_databasename();
   public:
 
-  // required sint64 a_fileId = 4;
+  // optional sint64 a_fileId = 4;
   bool has_a_fileid() const;
   private:
   bool _internal_has_a_fileid() const;
@@ -398,9 +398,6 @@ class Msg_GetFileReferences final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -532,7 +529,7 @@ class Reply_GetFileReferences final :
     kADBRefCntFieldNumber = 2,
     kAResultFieldNumber = 3,
   };
-  // required sint32 a_refCnt = 1;
+  // optional sint32 a_refCnt = 1;
   bool has_a_refcnt() const;
   private:
   bool _internal_has_a_refcnt() const;
@@ -545,7 +542,7 @@ class Reply_GetFileReferences final :
   void _internal_set_a_refcnt(int32_t value);
   public:
 
-  // required sint32 a_dBRefCnt = 2;
+  // optional sint32 a_dBRefCnt = 2;
   bool has_a_dbrefcnt() const;
   private:
   bool _internal_has_a_dbrefcnt() const;
@@ -558,7 +555,7 @@ class Reply_GetFileReferences final :
   void _internal_set_a_dbrefcnt(int32_t value);
   public:
 
-  // required bool a_result = 3;
+  // optional bool a_result = 3;
   bool has_a_result() const;
   private:
   bool _internal_has_a_result() const;
@@ -574,9 +571,6 @@ class Reply_GetFileReferences final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_GetFileReferences)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1193,7 +1187,7 @@ inline void Msg_GetFileReferences::set_allocated_a_persistencetype(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.a_persistenceType)
 }
 
-// required string a_origin = 2;
+// optional string a_origin = 2;
 inline bool Msg_GetFileReferences::_internal_has_a_origin() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1261,7 +1255,7 @@ inline void Msg_GetFileReferences::set_allocated_a_origin(std::string* a_origin)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.a_origin)
 }
 
-// required string a_databaseName = 3;
+// optional string a_databaseName = 3;
 inline bool Msg_GetFileReferences::_internal_has_a_databasename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1329,7 +1323,7 @@ inline void Msg_GetFileReferences::set_allocated_a_databasename(std::string* a_d
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.a_databaseName)
 }
 
-// required sint64 a_fileId = 4;
+// optional sint64 a_fileId = 4;
 inline bool Msg_GetFileReferences::_internal_has_a_fileid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1361,7 +1355,7 @@ inline void Msg_GetFileReferences::set_a_fileid(int64_t value) {
 
 // Reply_GetFileReferences
 
-// required sint32 a_refCnt = 1;
+// optional sint32 a_refCnt = 1;
 inline bool Reply_GetFileReferences::_internal_has_a_refcnt() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1389,7 +1383,7 @@ inline void Reply_GetFileReferences::set_a_refcnt(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_GetFileReferences.a_refCnt)
 }
 
-// required sint32 a_dBRefCnt = 2;
+// optional sint32 a_dBRefCnt = 2;
 inline bool Reply_GetFileReferences::_internal_has_a_dbrefcnt() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1417,7 +1411,7 @@ inline void Reply_GetFileReferences::set_a_dbrefcnt(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_GetFileReferences.a_dBRefCnt)
 }
 
-// required bool a_result = 3;
+// optional bool a_result = 3;
 inline bool Reply_GetFileReferences::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

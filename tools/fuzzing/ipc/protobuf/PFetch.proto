@@ -27,7 +27,7 @@ message Msg_FetchOp {
 }
 
 message Msg_AbortFetchOp {
-  required bool a_aForceAbort = 1;
+  optional bool a_aForceAbort = 1;
 }
 
 message Msg_OnResponseAvailableInternal {
@@ -46,7 +46,7 @@ message Msg_OnFlushConsoleReport {
 }
 
 message Msg_OnCSPViolationEvent {
-  required string a_aJSON = 1;
+  optional string a_aJSON = 1;
 }
 
 message Msg_OnReportPerformanceTiming {
@@ -54,7 +54,7 @@ message Msg_OnReportPerformanceTiming {
 }
 
 message Msg_OnNotifyNetworkMonitorAlternateStack {
-  required uint64 a_aChannelID = 1;
+  optional uint64 a_aChannelID = 1;
 }
 
 message Msg___delete__ {

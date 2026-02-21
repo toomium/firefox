@@ -14,13 +14,13 @@ import "DocAccessibleTypes.proto";
 
 // Structs and unions declarations
 message AccessibleData {
-  required uint64 a_ID = 1;
+  optional uint64 a_ID = 1;
   required bytes a_Role = 2;
-  required uint64 a_ParentID = 3;
-  required uint32 a_IndexInParent = 4;
+  optional uint64 a_ParentID = 3;
+  optional uint32 a_IndexInParent = 4;
   required bytes a_Type = 5;
   required bytes a_GenericTypes = 6;
-  required uint32 a_RoleMapEntryIndex = 7;
+  optional uint32 a_RoleMapEntryIndex = 7;
   optional bytes a_CacheFields = 8;
 }
 
@@ -31,28 +31,28 @@ message CacheEventData {
 
 message ShowEventData {
   repeated protobuf.mozilla.a11y.AccessibleData a_NewTree = 1;
-  required bool a_EventSuppressed = 2;
-  required bool a_Complete = 3;
-  required bool a_FromUser = 4;
+  optional bool a_EventSuppressed = 2;
+  optional bool a_Complete = 3;
+  optional bool a_FromUser = 4;
 }
 
 message HideEventData {
-  required uint64 a_ID = 1;
-  required bool a_IsFromUserInput = 2;
+  optional uint64 a_ID = 1;
+  optional bool a_IsFromUserInput = 2;
 }
 
 message ReorderEventData {
-  required uint64 a_ID = 1;
-  required uint32 a_Type = 2;
+  optional uint64 a_ID = 1;
+  optional uint32 a_Type = 2;
 }
 
 message TextChangeEventData {
-  required uint64 a_ID = 1;
-  required string a_Str = 2;
-  required sint32 a_Start = 3;
-  required uint32 a_Len = 4;
-  required bool a_IsInsert = 5;
-  required bool a_FromUser = 6;
+  optional uint64 a_ID = 1;
+  optional string a_Str = 2;
+  optional sint32 a_Start = 3;
+  optional uint32 a_Len = 4;
+  optional bool a_IsInsert = 5;
+  optional bool a_FromUser = 6;
 }
 
 message MutationEventData {
@@ -66,8 +66,8 @@ message MutationEventData {
 }
 
 message TextRangeData {
-  required uint64 a_StartID = 1;
-  required uint64 a_EndID = 2;
-  required sint32 a_StartOffset = 3;
-  required sint32 a_EndOffset = 4;
+  optional uint64 a_StartID = 1;
+  optional uint64 a_EndID = 2;
+  optional sint32 a_StartOffset = 3;
+  optional sint32 a_EndOffset = 4;
 }

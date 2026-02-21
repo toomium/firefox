@@ -70,7 +70,7 @@ class NetworkAddressArg::_Internal {
     (*has_bits)[0] |= 32u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000003f) ^ 0x0000003f) != 0;
+    return ((has_bits[0] & 0x0000000f) ^ 0x0000000f) != 0;
   }
 };
 
@@ -238,7 +238,7 @@ const char* NetworkAddressArg::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required bool a_resolvedByTRR = 3;
+      // optional bool a_resolvedByTRR = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_resolvedbytrr(&has_bits);
@@ -265,7 +265,7 @@ const char* NetworkAddressArg::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required bool a_echConfigUsed = 6;
+      // optional bool a_echConfigUsed = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
           _Internal::set_has_a_echconfigused(&has_bits);
@@ -317,7 +317,7 @@ uint8_t* NetworkAddressArg::_InternalSerialize(
         2, this->_internal_a_peeraddr(), target);
   }
 
-  // required bool a_resolvedByTRR = 3;
+  // optional bool a_resolvedByTRR = 3;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_resolvedbytrr(), target);
@@ -335,7 +335,7 @@ uint8_t* NetworkAddressArg::_InternalSerialize(
         5, this->_internal_a_trrskipreason(), target);
   }
 
-  // required bool a_echConfigUsed = 6;
+  // optional bool a_echConfigUsed = 6;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(6, this->_internal_a_echconfigused(), target);
@@ -381,23 +381,13 @@ size_t NetworkAddressArg::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_trrskipreason());
   }
 
-  if (_internal_has_a_resolvedbytrr()) {
-    // required bool a_resolvedByTRR = 3;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_echconfigused()) {
-    // required bool a_echConfigUsed = 6;
-    total_size += 1 + 1;
-  }
-
   return total_size;
 }
 size_t NetworkAddressArg::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.NetworkAddressArg)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000003f) ^ 0x0000003f) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
     // required bytes a_selfAddr = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -418,12 +408,6 @@ size_t NetworkAddressArg::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_trrskipreason());
 
-    // required bool a_resolvedByTRR = 3;
-    total_size += 1 + 1;
-
-    // required bool a_echConfigUsed = 6;
-    total_size += 1 + 1;
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
@@ -431,6 +415,19 @@ size_t NetworkAddressArg::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000030u) {
+    // optional bool a_resolvedByTRR = 3;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool a_echConfigUsed = 6;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += 1 + 1;
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }

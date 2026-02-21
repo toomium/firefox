@@ -214,7 +214,7 @@ class ProfilerInitParams final :
   std::string* _internal_add_a_filters();
   public:
 
-  // required bool a_enabled = 1;
+  // optional bool a_enabled = 1;
   bool has_a_enabled() const;
   private:
   bool _internal_has_a_enabled() const;
@@ -227,7 +227,7 @@ class ProfilerInitParams final :
   void _internal_set_a_enabled(bool value);
   public:
 
-  // required uint32 a_entries = 2;
+  // optional uint32 a_entries = 2;
   bool has_a_entries() const;
   private:
   bool _internal_has_a_entries() const;
@@ -253,7 +253,7 @@ class ProfilerInitParams final :
   void _internal_set_a_duration(double value);
   public:
 
-  // required double a_interval = 4;
+  // optional double a_interval = 4;
   bool has_a_interval() const;
   private:
   bool _internal_has_a_interval() const;
@@ -266,7 +266,7 @@ class ProfilerInitParams final :
   void _internal_set_a_interval(double value);
   public:
 
-  // required uint64 a_activeTabID = 6;
+  // optional uint64 a_activeTabID = 6;
   bool has_a_activetabid() const;
   private:
   bool _internal_has_a_activetabid() const;
@@ -279,7 +279,7 @@ class ProfilerInitParams final :
   void _internal_set_a_activetabid(uint64_t value);
   public:
 
-  // required uint32 a_features = 5;
+  // optional uint32 a_features = 5;
   bool has_a_features() const;
   private:
   bool _internal_has_a_features() const;
@@ -295,9 +295,6 @@ class ProfilerInitParams final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ProfilerInitParams)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -449,7 +446,7 @@ class ProfileBufferChunkMetadata final :
   std::string* _internal_mutable_a_donetimestamp();
   public:
 
-  // required uint32 a_bufferBytes = 2;
+  // optional uint32 a_bufferBytes = 2;
   bool has_a_bufferbytes() const;
   private:
   bool _internal_has_a_bufferbytes() const;
@@ -465,9 +462,6 @@ class ProfileBufferChunkMetadata final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ProfileBufferChunkMetadata)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -634,7 +628,7 @@ class ProfileBufferChunkManagerUpdate final :
   std::string* _internal_mutable_a_oldestdonetimestamp();
   public:
 
-  // required uint64 a_unreleasedBytes = 1;
+  // optional uint64 a_unreleasedBytes = 1;
   bool has_a_unreleasedbytes() const;
   private:
   bool _internal_has_a_unreleasedbytes() const;
@@ -647,7 +641,7 @@ class ProfileBufferChunkManagerUpdate final :
   void _internal_set_a_unreleasedbytes(uint64_t value);
   public:
 
-  // required uint64 a_releasedBytes = 2;
+  // optional uint64 a_releasedBytes = 2;
   bool has_a_releasedbytes() const;
   private:
   bool _internal_has_a_releasedbytes() const;
@@ -663,9 +657,6 @@ class ProfileBufferChunkManagerUpdate final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ProfileBufferChunkManagerUpdate)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -796,7 +787,7 @@ class GatherProfileProgress final :
     kAProgressLocationFieldNumber = 2,
     kAProgressProportionValueUnderlyingTypeFieldNumber = 1,
   };
-  // required string a_progressLocation = 2;
+  // optional string a_progressLocation = 2;
   bool has_a_progresslocation() const;
   private:
   bool _internal_has_a_progresslocation() const;
@@ -814,7 +805,7 @@ class GatherProfileProgress final :
   std::string* _internal_mutable_a_progresslocation();
   public:
 
-  // required uint32 a_progressProportionValueUnderlyingType = 1;
+  // optional uint32 a_progressProportionValueUnderlyingType = 1;
   bool has_a_progressproportionvalueunderlyingtype() const;
   private:
   bool _internal_has_a_progressproportionvalueunderlyingtype() const;
@@ -830,9 +821,6 @@ class GatherProfileProgress final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.GatherProfileProgress)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1024,7 +1012,7 @@ class IPCProfileAndAdditionalInformation final :
 #endif  // __GNUC__
 // ProfilerInitParams
 
-// required bool a_enabled = 1;
+// optional bool a_enabled = 1;
 inline bool ProfilerInitParams::_internal_has_a_enabled() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1052,7 +1040,7 @@ inline void ProfilerInitParams::set_a_enabled(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ProfilerInitParams.a_enabled)
 }
 
-// required uint32 a_entries = 2;
+// optional uint32 a_entries = 2;
 inline bool ProfilerInitParams::_internal_has_a_entries() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1108,7 +1096,7 @@ inline void ProfilerInitParams::set_a_duration(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ProfilerInitParams.a_duration)
 }
 
-// required double a_interval = 4;
+// optional double a_interval = 4;
 inline bool ProfilerInitParams::_internal_has_a_interval() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1136,7 +1124,7 @@ inline void ProfilerInitParams::set_a_interval(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ProfilerInitParams.a_interval)
 }
 
-// required uint32 a_features = 5;
+// optional uint32 a_features = 5;
 inline bool ProfilerInitParams::_internal_has_a_features() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -1164,7 +1152,7 @@ inline void ProfilerInitParams::set_a_features(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ProfilerInitParams.a_features)
 }
 
-// required uint64 a_activeTabID = 6;
+// optional uint64 a_activeTabID = 6;
 inline bool ProfilerInitParams::_internal_has_a_activetabid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -1339,7 +1327,7 @@ inline void ProfileBufferChunkMetadata::set_allocated_a_donetimestamp(std::strin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ProfileBufferChunkMetadata.a_doneTimeStamp)
 }
 
-// required uint32 a_bufferBytes = 2;
+// optional uint32 a_bufferBytes = 2;
 inline bool ProfileBufferChunkMetadata::_internal_has_a_bufferbytes() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1371,7 +1359,7 @@ inline void ProfileBufferChunkMetadata::set_a_bufferbytes(uint32_t value) {
 
 // ProfileBufferChunkManagerUpdate
 
-// required uint64 a_unreleasedBytes = 1;
+// optional uint64 a_unreleasedBytes = 1;
 inline bool ProfileBufferChunkManagerUpdate::_internal_has_a_unreleasedbytes() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1399,7 +1387,7 @@ inline void ProfileBufferChunkManagerUpdate::set_a_unreleasedbytes(uint64_t valu
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ProfileBufferChunkManagerUpdate.a_unreleasedBytes)
 }
 
-// required uint64 a_releasedBytes = 2;
+// optional uint64 a_releasedBytes = 2;
 inline bool ProfileBufferChunkManagerUpdate::_internal_has_a_releasedbytes() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1539,7 +1527,7 @@ ProfileBufferChunkManagerUpdate::a_newlyreleasedchunks() const {
 
 // GatherProfileProgress
 
-// required uint32 a_progressProportionValueUnderlyingType = 1;
+// optional uint32 a_progressProportionValueUnderlyingType = 1;
 inline bool GatherProfileProgress::_internal_has_a_progressproportionvalueunderlyingtype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1567,7 +1555,7 @@ inline void GatherProfileProgress::set_a_progressproportionvalueunderlyingtype(u
   // @@protoc_insertion_point(field_set:protobuf.mozilla.GatherProfileProgress.a_progressProportionValueUnderlyingType)
 }
 
-// required string a_progressLocation = 2;
+// optional string a_progressLocation = 2;
 inline bool GatherProfileProgress::_internal_has_a_progresslocation() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

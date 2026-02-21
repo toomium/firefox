@@ -590,9 +590,6 @@ void Msg_NotifyBatteryChange::CopyFrom(const Msg_NotifyBatteryChange& from) {
 
 bool Msg_NotifyBatteryChange::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_abatteryinfo()) {
-    if (!_impl_.a_abatteryinfo_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -807,9 +804,6 @@ void Msg_NotifyNetworkChange::CopyFrom(const Msg_NotifyNetworkChange& from) {
 
 bool Msg_NotifyNetworkChange::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_anetworkinfo()) {
-    if (!_impl_.a_anetworkinfo_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -1024,9 +1018,6 @@ void Msg_NotifyWakeLockChange::CopyFrom(const Msg_NotifyWakeLockChange& from) {
 
 bool Msg_NotifyWakeLockChange::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_awakelockinfo()) {
-    if (!_impl_.a_awakelockinfo_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -2230,9 +2221,6 @@ void Reply_GetCurrentBatteryInformation::CopyFrom(const Reply_GetCurrentBatteryI
 
 bool Reply_GetCurrentBatteryInformation::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_abatteryinfo()) {
-    if (!_impl_.a_abatteryinfo_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -2891,9 +2879,6 @@ void Reply_GetCurrentNetworkInformation::CopyFrom(const Reply_GetCurrentNetworkI
 
 bool Reply_GetCurrentNetworkInformation::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_anetworkinfo()) {
-    if (!_impl_.a_anetworkinfo_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -2924,7 +2909,7 @@ class Msg_ModifyWakeLock::_Internal {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
+    return ((has_bits[0] & 0x00000006) ^ 0x00000006) != 0;
   }
 };
 
@@ -3046,7 +3031,7 @@ const char* Msg_ModifyWakeLock::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aTopic = 1;
+      // optional string a_aTopic = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_atopic();
@@ -3104,7 +3089,7 @@ uint8_t* Msg_ModifyWakeLock::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aTopic = 1;
+  // optional string a_aTopic = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_atopic(), target);
@@ -3134,13 +3119,6 @@ size_t Msg_ModifyWakeLock::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.hal_sandbox.PHal.Msg_ModifyWakeLock)
   size_t total_size = 0;
 
-  if (_internal_has_a_atopic()) {
-    // required string a_aTopic = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_atopic());
-  }
-
   if (_internal_has_a_alockadjust()) {
     // required bytes a_aLockAdjust = 2;
     total_size += 1 +
@@ -3161,12 +3139,7 @@ size_t Msg_ModifyWakeLock::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal_sandbox.PHal.Msg_ModifyWakeLock)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required string a_aTopic = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_atopic());
-
+  if (((_impl_._has_bits_[0] & 0x00000006) ^ 0x00000006) == 0) {  // All required fields are present.
     // required bytes a_aLockAdjust = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -3183,6 +3156,14 @@ size_t Msg_ModifyWakeLock::ByteSizeLong() const {
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional string a_aTopic = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_atopic());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -3561,9 +3542,6 @@ class Msg_GetWakeLockInfo::_Internal {
   static void set_has_a_atopic(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_GetWakeLockInfo::Msg_GetWakeLockInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -3646,7 +3624,7 @@ const char* Msg_GetWakeLockInfo::_InternalParse(const char* ptr, ::_pbi::ParseCo
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aTopic = 1;
+      // optional string a_aTopic = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_atopic();
@@ -3686,7 +3664,7 @@ uint8_t* Msg_GetWakeLockInfo::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aTopic = 1;
+  // optional string a_aTopic = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_atopic(), target);
@@ -3704,15 +3682,17 @@ size_t Msg_GetWakeLockInfo::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal_sandbox.PHal.Msg_GetWakeLockInfo)
   size_t total_size = 0;
 
-  // required string a_aTopic = 1;
-  if (_internal_has_a_atopic()) {
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional string a_aTopic = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_atopic());
   }
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -3749,7 +3729,6 @@ void Msg_GetWakeLockInfo::CopyFrom(const Msg_GetWakeLockInfo& from) {
 }
 
 bool Msg_GetWakeLockInfo::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -3969,9 +3948,6 @@ void Reply_GetWakeLockInfo::CopyFrom(const Reply_GetWakeLockInfo& from) {
 
 bool Reply_GetWakeLockInfo::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_awakelockinfo()) {
-    if (!_impl_.a_awakelockinfo_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -4577,9 +4553,6 @@ class Msg_PerformHapticFeedback::_Internal {
   static void set_has_a_atype(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_PerformHapticFeedback::Msg_PerformHapticFeedback(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -4647,7 +4620,7 @@ const char* Msg_PerformHapticFeedback::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint32 a_aType = 1;
+      // optional sint32 a_aType = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_atype(&has_bits);
@@ -4687,7 +4660,7 @@ uint8_t* Msg_PerformHapticFeedback::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required sint32 a_aType = 1;
+  // optional sint32 a_aType = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_a_atype(), target);
@@ -4705,13 +4678,15 @@ size_t Msg_PerformHapticFeedback::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal_sandbox.PHal.Msg_PerformHapticFeedback)
   size_t total_size = 0;
 
-  // required sint32 a_aType = 1;
-  if (_internal_has_a_atype()) {
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_atype());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional sint32 a_aType = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_atype());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -4748,7 +4723,6 @@ void Msg_PerformHapticFeedback::CopyFrom(const Msg_PerformHapticFeedback& from) 
 }
 
 bool Msg_PerformHapticFeedback::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 

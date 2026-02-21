@@ -297,9 +297,6 @@ class Msg_RegisterMDNSHostname::_Internal {
   static void set_has_a_address(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
-  }
 };
 
 Msg_RegisterMDNSHostname::Msg_RegisterMDNSHostname(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -402,7 +399,7 @@ const char* Msg_RegisterMDNSHostname::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_hostname = 1;
+      // optional string a_hostname = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_hostname();
@@ -411,7 +408,7 @@ const char* Msg_RegisterMDNSHostname::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required string a_address = 2;
+      // optional string a_address = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_address();
@@ -451,13 +448,13 @@ uint8_t* Msg_RegisterMDNSHostname::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_hostname = 1;
+  // optional string a_hostname = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_hostname(), target);
   }
 
-  // required string a_address = 2;
+  // optional string a_address = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_address(), target);
@@ -471,48 +468,31 @@ uint8_t* Msg_RegisterMDNSHostname::_InternalSerialize(
   return target;
 }
 
-size_t Msg_RegisterMDNSHostname::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.PStunAddrsRequest.Msg_RegisterMDNSHostname)
-  size_t total_size = 0;
-
-  if (_internal_has_a_hostname()) {
-    // required string a_hostname = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_hostname());
-  }
-
-  if (_internal_has_a_address()) {
-    // required string a_address = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_address());
-  }
-
-  return total_size;
-}
 size_t Msg_RegisterMDNSHostname::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PStunAddrsRequest.Msg_RegisterMDNSHostname)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string a_hostname = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_hostname());
-
-    // required string a_address = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_address());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional string a_hostname = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_hostname());
+    }
+
+    // optional string a_address = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_address());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -554,7 +534,6 @@ void Msg_RegisterMDNSHostname::CopyFrom(const Msg_RegisterMDNSHostname& from) {
 }
 
 bool Msg_RegisterMDNSHostname::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -586,9 +565,6 @@ class Msg_QueryMDNSHostname::_Internal {
   using HasBits = decltype(std::declval<Msg_QueryMDNSHostname>()._impl_._has_bits_);
   static void set_has_a_hostname(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -672,7 +648,7 @@ const char* Msg_QueryMDNSHostname::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_hostname = 1;
+      // optional string a_hostname = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_hostname();
@@ -712,7 +688,7 @@ uint8_t* Msg_QueryMDNSHostname::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_hostname = 1;
+  // optional string a_hostname = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_hostname(), target);
@@ -730,15 +706,17 @@ size_t Msg_QueryMDNSHostname::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PStunAddrsRequest.Msg_QueryMDNSHostname)
   size_t total_size = 0;
 
-  // required string a_hostname = 1;
-  if (_internal_has_a_hostname()) {
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional string a_hostname = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_hostname());
   }
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -775,7 +753,6 @@ void Msg_QueryMDNSHostname::CopyFrom(const Msg_QueryMDNSHostname& from) {
 }
 
 bool Msg_QueryMDNSHostname::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -803,9 +780,6 @@ class Msg_UnregisterMDNSHostname::_Internal {
   using HasBits = decltype(std::declval<Msg_UnregisterMDNSHostname>()._impl_._has_bits_);
   static void set_has_a_hostname(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -889,7 +863,7 @@ const char* Msg_UnregisterMDNSHostname::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_hostname = 1;
+      // optional string a_hostname = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_hostname();
@@ -929,7 +903,7 @@ uint8_t* Msg_UnregisterMDNSHostname::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_hostname = 1;
+  // optional string a_hostname = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_hostname(), target);
@@ -947,15 +921,17 @@ size_t Msg_UnregisterMDNSHostname::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PStunAddrsRequest.Msg_UnregisterMDNSHostname)
   size_t total_size = 0;
 
-  // required string a_hostname = 1;
-  if (_internal_has_a_hostname()) {
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // optional string a_hostname = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_hostname());
   }
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -992,7 +968,6 @@ void Msg_UnregisterMDNSHostname::CopyFrom(const Msg_UnregisterMDNSHostname& from
 }
 
 bool Msg_UnregisterMDNSHostname::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1321,7 +1296,7 @@ class Msg_OnMDNSQueryComplete::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000002) ^ 0x00000002) != 0;
   }
 };
 
@@ -1425,7 +1400,7 @@ const char* Msg_OnMDNSQueryComplete::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_hostname = 1;
+      // optional string a_hostname = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_hostname();
@@ -1474,7 +1449,7 @@ uint8_t* Msg_OnMDNSQueryComplete::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_hostname = 1;
+  // optional string a_hostname = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_hostname(), target);
@@ -1494,47 +1469,27 @@ uint8_t* Msg_OnMDNSQueryComplete::_InternalSerialize(
   return target;
 }
 
-size_t Msg_OnMDNSQueryComplete::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.PStunAddrsRequest.Msg_OnMDNSQueryComplete)
-  size_t total_size = 0;
-
-  if (_internal_has_a_hostname()) {
-    // required string a_hostname = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_hostname());
-  }
-
-  if (_internal_has_a_address()) {
-    // required bytes a_address = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_address());
-  }
-
-  return total_size;
-}
 size_t Msg_OnMDNSQueryComplete::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PStunAddrsRequest.Msg_OnMDNSQueryComplete)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string a_hostname = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_hostname());
-
-    // required bytes a_address = 2;
+  // required bytes a_address = 2;
+  if (_internal_has_a_address()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_address());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional string a_hostname = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_hostname());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();

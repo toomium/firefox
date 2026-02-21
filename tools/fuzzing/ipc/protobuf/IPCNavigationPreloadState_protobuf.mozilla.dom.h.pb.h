@@ -172,7 +172,7 @@ class IPCNavigationPreloadState final :
     kAHeaderValueFieldNumber = 2,
     kAEnabledFieldNumber = 1,
   };
-  // required string a_headerValue = 2;
+  // optional string a_headerValue = 2;
   bool has_a_headervalue() const;
   private:
   bool _internal_has_a_headervalue() const;
@@ -190,7 +190,7 @@ class IPCNavigationPreloadState final :
   std::string* _internal_mutable_a_headervalue();
   public:
 
-  // required bool a_enabled = 1;
+  // optional bool a_enabled = 1;
   bool has_a_enabled() const;
   private:
   bool _internal_has_a_enabled() const;
@@ -206,9 +206,6 @@ class IPCNavigationPreloadState final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCNavigationPreloadState)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -233,7 +230,7 @@ class IPCNavigationPreloadState final :
 #endif  // __GNUC__
 // IPCNavigationPreloadState
 
-// required bool a_enabled = 1;
+// optional bool a_enabled = 1;
 inline bool IPCNavigationPreloadState::_internal_has_a_enabled() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -261,7 +258,7 @@ inline void IPCNavigationPreloadState::set_a_enabled(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCNavigationPreloadState.a_enabled)
 }
 
-// required string a_headerValue = 2;
+// optional string a_headerValue = 2;
 inline bool IPCNavigationPreloadState::_internal_has_a_headervalue() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

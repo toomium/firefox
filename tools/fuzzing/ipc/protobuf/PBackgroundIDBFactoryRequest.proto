@@ -25,7 +25,7 @@ message Reply___delete__ {
 }
 
 message Msg_Blocked {
-  required uint64 a_currentVersion = 1;
+  optional uint64 a_currentVersion = 1;
 }
 
 // Parameter mappings stats:

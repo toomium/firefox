@@ -25,9 +25,9 @@ message Reply___delete__ {
 }
 
 message Msg_Observe {
-  required string a_topic = 1;
-  required string a_originAttributesPattern = 2;
-  required string a_originScope = 3;
+  optional string a_topic = 1;
+  optional string a_originAttributesPattern = 2;
+  optional string a_originScope = 3;
 }
 
 // Parameter mappings stats:

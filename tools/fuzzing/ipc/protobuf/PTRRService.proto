@@ -18,14 +18,14 @@ import "PSMIPCTypes.proto";
 
 // Message declarations
 message Msg_NotifyNetworkConnectivityServiceObservers {
-  required string a_aTopic = 1;
+  optional string a_aTopic = 1;
 }
 
 message Msg_InitTRRConnectionInfo {
 }
 
 message Msg_SetConfirmationState {
-  required uint32 a_aNewState = 1;
+  optional uint32 a_aNewState = 1;
 }
 
 message Msg___delete__ {
@@ -39,15 +39,15 @@ message Msg_UpdatePlatformDNSInformation {
 }
 
 message Msg_UpdateParentalControlEnabled {
-  required bool a_aEnabled = 1;
+  optional bool a_aEnabled = 1;
 }
 
 message Msg_ClearDNSCache {
-  required bool a_aTrrToo = 1;
+  optional bool a_aTrrToo = 1;
 }
 
 message Msg_SetDetectedTrrURI {
-  required string a_aURI = 1;
+  optional string a_aURI = 1;
 }
 
 message Msg_SetDefaultTRRConnectionInfo {

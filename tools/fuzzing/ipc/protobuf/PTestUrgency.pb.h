@@ -342,7 +342,7 @@ class Reply_Test1 final :
   enum : int {
     kAResultFieldNumber = 1,
   };
-  // required uint32 a_result = 1;
+  // optional uint32 a_result = 1;
   bool has_a_result() const;
   private:
   bool _internal_has_a_result() const;
@@ -732,7 +732,7 @@ class Reply_Test3 final :
   enum : int {
     kAResultFieldNumber = 1,
   };
-  // required uint32 a_result = 1;
+  // optional uint32 a_result = 1;
   bool has_a_result() const;
   private:
   bool _internal_has_a_result() const;
@@ -1370,7 +1370,7 @@ class Reply_Reply1 final :
   enum : int {
     kAResultFieldNumber = 1,
   };
-  // required uint32 a_result = 1;
+  // optional uint32 a_result = 1;
   bool has_a_result() const;
   private:
   bool _internal_has_a_result() const;
@@ -1636,7 +1636,7 @@ class Reply_Reply2 final :
   enum : int {
     kAResultFieldNumber = 1,
   };
-  // required uint32 a_result = 1;
+  // optional uint32 a_result = 1;
   bool has_a_result() const;
   private:
   bool _internal_has_a_result() const;
@@ -1679,7 +1679,7 @@ class Reply_Reply2 final :
 
 // Reply_Test1
 
-// required uint32 a_result = 1;
+// optional uint32 a_result = 1;
 inline bool Reply_Test1::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1719,7 +1719,7 @@ inline void Reply_Test1::set_a_result(uint32_t value) {
 
 // Reply_Test3
 
-// required uint32 a_result = 1;
+// optional uint32 a_result = 1;
 inline bool Reply_Test3::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1767,7 +1767,7 @@ inline void Reply_Test3::set_a_result(uint32_t value) {
 
 // Reply_Reply1
 
-// required uint32 a_result = 1;
+// optional uint32 a_result = 1;
 inline bool Reply_Reply1::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1803,7 +1803,7 @@ inline void Reply_Reply1::set_a_result(uint32_t value) {
 
 // Reply_Reply2
 
-// required uint32 a_result = 1;
+// optional uint32 a_result = 1;
 inline bool Reply_Reply2::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

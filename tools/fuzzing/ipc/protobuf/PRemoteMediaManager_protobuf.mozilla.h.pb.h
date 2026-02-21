@@ -193,7 +193,7 @@ class VideoDecoderInfoIPDL final :
   std::string* _internal_mutable_a_videoinfo();
   public:
 
-  // required float a_framerate = 2;
+  // optional float a_framerate = 2;
   bool has_a_framerate() const;
   private:
   bool _internal_has_a_framerate() const;
@@ -209,9 +209,6 @@ class VideoDecoderInfoIPDL final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.VideoDecoderInfoIPDL)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -489,7 +486,7 @@ inline void VideoDecoderInfoIPDL::set_allocated_a_videoinfo(std::string* a_video
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.VideoDecoderInfoIPDL.a_videoInfo)
 }
 
-// required float a_framerate = 2;
+// optional float a_framerate = 2;
 inline bool VideoDecoderInfoIPDL::_internal_has_a_framerate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

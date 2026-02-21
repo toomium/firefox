@@ -294,7 +294,7 @@ class Msg_GetFileReferences::_Internal {
     (*has_bits)[0] |= 8u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000000f) ^ 0x0000000f) != 0;
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -429,7 +429,7 @@ const char* Msg_GetFileReferences::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // required string a_origin = 2;
+      // optional string a_origin = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_origin();
@@ -438,7 +438,7 @@ const char* Msg_GetFileReferences::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // required string a_databaseName = 3;
+      // optional string a_databaseName = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_databasename();
@@ -447,7 +447,7 @@ const char* Msg_GetFileReferences::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // required sint64 a_fileId = 4;
+      // optional sint64 a_fileId = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_a_fileid(&has_bits);
@@ -493,19 +493,19 @@ uint8_t* Msg_GetFileReferences::_InternalSerialize(
         1, this->_internal_a_persistencetype(), target);
   }
 
-  // required string a_origin = 2;
+  // optional string a_origin = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_origin(), target);
   }
 
-  // required string a_databaseName = 3;
+  // optional string a_databaseName = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_databasename(), target);
   }
 
-  // required sint64 a_fileId = 4;
+  // optional sint64 a_fileId = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(4, this->_internal_a_fileid(), target);
@@ -519,68 +519,42 @@ uint8_t* Msg_GetFileReferences::_InternalSerialize(
   return target;
 }
 
-size_t Msg_GetFileReferences::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences)
-  size_t total_size = 0;
-
-  if (_internal_has_a_persistencetype()) {
-    // required bytes a_persistenceType = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_persistencetype());
-  }
-
-  if (_internal_has_a_origin()) {
-    // required string a_origin = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_origin());
-  }
-
-  if (_internal_has_a_databasename()) {
-    // required string a_databaseName = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_databasename());
-  }
-
-  if (_internal_has_a_fileid()) {
-    // required sint64 a_fileId = 4;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_fileid());
-  }
-
-  return total_size;
-}
 size_t Msg_GetFileReferences::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required bytes a_persistenceType = 1;
+  // required bytes a_persistenceType = 1;
+  if (_internal_has_a_persistencetype()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_persistencetype());
-
-    // required string a_origin = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_origin());
-
-    // required string a_databaseName = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_databasename());
-
-    // required sint64 a_fileId = 4;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_fileid());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000000eu) {
+    // optional string a_origin = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_origin());
+    }
+
+    // optional string a_databaseName = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_databasename());
+    }
+
+    // optional sint64 a_fileId = 4;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_fileid());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -673,9 +647,6 @@ class Reply_GetFileReferences::_Internal {
   static void set_has_a_result(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
-  }
 };
 
 Reply_GetFileReferences::Reply_GetFileReferences(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -754,7 +725,7 @@ const char* Reply_GetFileReferences::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint32 a_refCnt = 1;
+      // optional sint32 a_refCnt = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_refcnt(&has_bits);
@@ -763,7 +734,7 @@ const char* Reply_GetFileReferences::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_dBRefCnt = 2;
+      // optional sint32 a_dBRefCnt = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_dbrefcnt(&has_bits);
@@ -772,7 +743,7 @@ const char* Reply_GetFileReferences::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required bool a_result = 3;
+      // optional bool a_result = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_result(&has_bits);
@@ -812,19 +783,19 @@ uint8_t* Reply_GetFileReferences::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required sint32 a_refCnt = 1;
+  // optional sint32 a_refCnt = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_a_refcnt(), target);
   }
 
-  // required sint32 a_dBRefCnt = 2;
+  // optional sint32 a_dBRefCnt = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_a_dbrefcnt(), target);
   }
 
-  // required bool a_result = 3;
+  // optional bool a_result = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_result(), target);
@@ -838,48 +809,32 @@ uint8_t* Reply_GetFileReferences::_InternalSerialize(
   return target;
 }
 
-size_t Reply_GetFileReferences::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_GetFileReferences)
-  size_t total_size = 0;
-
-  if (_internal_has_a_refcnt()) {
-    // required sint32 a_refCnt = 1;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_refcnt());
-  }
-
-  if (_internal_has_a_dbrefcnt()) {
-    // required sint32 a_dBRefCnt = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_dbrefcnt());
-  }
-
-  if (_internal_has_a_result()) {
-    // required bool a_result = 3;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t Reply_GetFileReferences::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_GetFileReferences)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required sint32 a_refCnt = 1;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_refcnt());
-
-    // required sint32 a_dBRefCnt = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_dbrefcnt());
-
-    // required bool a_result = 3;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    // optional sint32 a_refCnt = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_refcnt());
+    }
+
+    // optional sint32 a_dBRefCnt = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_dbrefcnt());
+    }
+
+    // optional bool a_result = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 + 1;
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -925,7 +880,6 @@ void Reply_GetFileReferences::CopyFrom(const Reply_GetFileReferences& from) {
 }
 
 bool Reply_GetFileReferences::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 

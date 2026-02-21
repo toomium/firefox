@@ -17,10 +17,10 @@ import public "PTCPSocket_protobuf.h.proto";
 
 // Message declarations
 message Msg_Open {
-  required string a_host = 1;
-  required uint32 a_port = 2;
-  required bool a_useSSL = 3;
-  required bool a_useArrayBuffers = 4;
+  optional string a_host = 1;
+  optional uint32 a_port = 2;
+  optional bool a_useSSL = 3;
+  optional bool a_useArrayBuffers = 4;
 }
 
 message Msg_Data {
@@ -40,14 +40,14 @@ message Msg_Close {
 }
 
 message Msg_Callback {
-  required string a_type = 1;
+  optional string a_type = 1;
   required protobuf.CallbackData a_data = 2;
-  required uint32 a_readyState = 3;
+  optional uint32 a_readyState = 3;
 }
 
 message Msg_UpdateBufferedAmount {
-  required uint32 a_bufferedAmount = 1;
-  required uint32 a_trackingNumber = 2;
+  optional uint32 a_bufferedAmount = 1;
+  optional uint32 a_trackingNumber = 2;
 }
 
 message Msg_RequestDelete {

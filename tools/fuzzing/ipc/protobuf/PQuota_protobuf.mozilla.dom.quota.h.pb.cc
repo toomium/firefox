@@ -1144,7 +1144,7 @@ class ClearResetOriginParams::_Internal {
     (*has_bits)[0] |= 16u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000001f) ^ 0x0000001f) != 0;
+    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
   }
 };
 
@@ -1293,7 +1293,7 @@ const char* ClearResetOriginParams::_InternalParse(const char* ptr, ::_pbi::Pars
         } else
           goto handle_unusual;
         continue;
-      // required bool a_persistenceTypeIsExplicit = 3;
+      // optional bool a_persistenceTypeIsExplicit = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_persistencetypeisexplicit(&has_bits);
@@ -1311,7 +1311,7 @@ const char* ClearResetOriginParams::_InternalParse(const char* ptr, ::_pbi::Pars
         } else
           goto handle_unusual;
         continue;
-      // required bool a_clientTypeIsExplicit = 5;
+      // optional bool a_clientTypeIsExplicit = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_a_clienttypeisexplicit(&has_bits);
@@ -1364,7 +1364,7 @@ uint8_t* ClearResetOriginParams::_InternalSerialize(
         2, this->_internal_a_persistencetype(), target);
   }
 
-  // required bool a_persistenceTypeIsExplicit = 3;
+  // optional bool a_persistenceTypeIsExplicit = 3;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_persistencetypeisexplicit(), target);
@@ -1376,7 +1376,7 @@ uint8_t* ClearResetOriginParams::_InternalSerialize(
         4, this->_internal_a_clienttype(), target);
   }
 
-  // required bool a_clientTypeIsExplicit = 5;
+  // optional bool a_clientTypeIsExplicit = 5;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_a_clienttypeisexplicit(), target);
@@ -1415,23 +1415,13 @@ size_t ClearResetOriginParams::RequiredFieldsByteSizeFallback() const {
         *_impl_.a_principalinfo_);
   }
 
-  if (_internal_has_a_persistencetypeisexplicit()) {
-    // required bool a_persistenceTypeIsExplicit = 3;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_clienttypeisexplicit()) {
-    // required bool a_clientTypeIsExplicit = 5;
-    total_size += 1 + 1;
-  }
-
   return total_size;
 }
 size_t ClearResetOriginParams::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.quota.ClearResetOriginParams)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
     // required bytes a_persistenceType = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -1447,12 +1437,6 @@ size_t ClearResetOriginParams::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_principalinfo_);
 
-    // required bool a_persistenceTypeIsExplicit = 3;
-    total_size += 1 + 1;
-
-    // required bool a_clientTypeIsExplicit = 5;
-    total_size += 1 + 1;
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
@@ -1460,6 +1444,19 @@ size_t ClearResetOriginParams::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000018u) {
+    // optional bool a_persistenceTypeIsExplicit = 3;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool a_clientTypeIsExplicit = 5;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += 1 + 1;
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }

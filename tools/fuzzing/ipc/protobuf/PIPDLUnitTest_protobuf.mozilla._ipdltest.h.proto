@@ -12,10 +12,10 @@ package protobuf.mozilla._ipdltest;
 
 // Structs and unions declarations
 message TestPartResult {
-  required bool a_failed = 1;
-  required bool a_fatal = 2;
-  required string a_filename = 3;
-  required sint32 a_lineNumber = 4;
-  required string a_summary = 5;
-  required string a_message = 6;
+  optional bool a_failed = 1;
+  optional bool a_fatal = 2;
+  optional string a_filename = 3;
+  optional sint32 a_lineNumber = 4;
+  optional string a_summary = 5;
+  optional string a_message = 6;
 }

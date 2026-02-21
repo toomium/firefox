@@ -330,7 +330,7 @@ class Msg___delete__ final :
     kAAContentTypeFieldNumber = 1,
     kAAStatusFieldNumber = 2,
   };
-  // required string a_aContentType = 1;
+  // optional string a_aContentType = 1;
   bool has_a_acontenttype() const;
   private:
   bool _internal_has_a_acontenttype() const;
@@ -369,9 +369,6 @@ class Msg___delete__ final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PWebBrowserPersistSerialize.Msg___delete__)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -571,7 +568,7 @@ Msg_WriteData::mutable_a_adata() {
 
 // Msg___delete__
 
-// required string a_aContentType = 1;
+// optional string a_aContentType = 1;
 inline bool Msg___delete__::_internal_has_a_acontenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

@@ -16,7 +16,7 @@ package protobuf.mozilla.net.PAltDataOutputStream;
 
 // Message declarations
 message Msg_WriteData {
-  required string a_data = 1;
+  optional string a_data = 1;
 }
 
 message Msg_Close {

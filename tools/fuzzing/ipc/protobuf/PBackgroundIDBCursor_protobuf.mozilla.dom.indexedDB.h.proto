@@ -23,7 +23,7 @@ message ContinuePrimaryKeyParams {
 }
 
 message AdvanceParams {
-  required uint32 a_count = 1;
+  optional uint32 a_count = 1;
 }
 
 message CursorRequestParams {

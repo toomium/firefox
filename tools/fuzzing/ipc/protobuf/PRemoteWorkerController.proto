@@ -34,11 +34,11 @@ message Msg_SetServiceWorkerSkipWaitingFlag {
 }
 
 message Reply_SetServiceWorkerSkipWaitingFlag {
-  required bool a_aOk = 1;
+  optional bool a_aOk = 1;
 }
 
 message Msg_PFetchEventOpConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
   required protobuf.mozilla.dom.ParentToParentServiceWorkerFetchEventOpArgs a_aArgs = 2;
 }
 
@@ -55,7 +55,7 @@ message Msg_Shutdown {
 }
 
 message Reply_Shutdown {
-  required bool a_aOk = 1;
+  optional bool a_aOk = 1;
 }
 
 message Msg_ExecServiceWorkerOp {

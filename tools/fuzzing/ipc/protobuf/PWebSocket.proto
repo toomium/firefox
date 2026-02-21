@@ -19,47 +19,47 @@ import "NeckoChannelParams.proto";
 // Message declarations
 message Msg_AsyncOpen {
   optional bytes a_aURI = 1;
-  required string a_aOrigin = 2;
+  optional string a_aOrigin = 2;
   required bytes a_aOriginAttributes = 3;
-  required uint64 a_aInnerWindowID = 4;
-  required string a_aProtocol = 5;
-  required bool a_aSecure = 6;
-  required uint32 a_aPingInterval = 7;
-  required bool a_aClientSetPingInterval = 8;
-  required uint32 a_aPingTimeout = 9;
-  required bool a_aClientSetPingTimeout = 10;
+  optional uint64 a_aInnerWindowID = 4;
+  optional string a_aProtocol = 5;
+  optional bool a_aSecure = 6;
+  optional uint32 a_aPingInterval = 7;
+  optional bool a_aClientSetPingInterval = 8;
+  optional uint32 a_aPingTimeout = 9;
+  optional bool a_aClientSetPingTimeout = 10;
   required protobuf.mozilla.net.LoadInfoArgs a_aLoadInfoArgs = 11;
   optional bytes a_aProvider = 12;
-  required string a_aNegotiatedExtensions = 13;
+  optional string a_aNegotiatedExtensions = 13;
 }
 
 message Msg_Close {
-  required uint32 a_code = 1;
-  required string a_reason = 2;
+  optional uint32 a_code = 1;
+  optional string a_reason = 2;
 }
 
 message Msg_SendMsg {
-  required string a_aMsg = 1;
+  optional string a_aMsg = 1;
 }
 
 message Msg_SendBinaryMsg {
-  required string a_aMsg = 1;
+  optional string a_aMsg = 1;
 }
 
 message Msg_SendBinaryStream {
   required protobuf.mozilla.ipc.IPCStream a_aStream = 1;
-  required uint32 a_aLength = 2;
+  optional uint32 a_aLength = 2;
 }
 
 message Msg_DeleteSelf {
 }
 
 message Msg_OnStart {
-  required string a_aProtocol = 1;
-  required string a_aExtensions = 2;
-  required string a_aEffectiveURL = 3;
-  required bool a_aEncrypted = 4;
-  required uint64 a_aHttpChannelId = 5;
+  optional string a_aProtocol = 1;
+  optional string a_aExtensions = 2;
+  optional string a_aEffectiveURL = 3;
+  optional bool a_aEncrypted = 4;
+  optional uint64 a_aHttpChannelId = 5;
 }
 
 message Msg_OnStop {
@@ -67,22 +67,22 @@ message Msg_OnStop {
 }
 
 message Msg_OnMessageAvailable {
-  required string a_aMsg = 1;
-  required bool a_aMoreData = 2;
+  optional string a_aMsg = 1;
+  optional bool a_aMoreData = 2;
 }
 
 message Msg_OnBinaryMessageAvailable {
-  required string a_aMsg = 1;
-  required bool a_aMoreData = 2;
+  optional string a_aMsg = 1;
+  optional bool a_aMoreData = 2;
 }
 
 message Msg_OnAcknowledge {
-  required uint32 a_aSize = 1;
+  optional uint32 a_aSize = 1;
 }
 
 message Msg_OnServerClose {
-  required uint32 a_code = 1;
-  required string a_aReason = 2;
+  optional uint32 a_code = 1;
+  optional string a_aReason = 2;
 }
 
 message Msg___delete__ {

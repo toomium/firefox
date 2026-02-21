@@ -340,7 +340,7 @@ class Msg_Unregister final :
     kAScopeFieldNumber = 2,
     kAPrincipalInfoFieldNumber = 1,
   };
-  // required string a_scope = 2;
+  // optional string a_scope = 2;
   bool has_a_scope() const;
   private:
   bool _internal_has_a_scope() const;
@@ -379,9 +379,6 @@ class Msg_Unregister final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PServiceWorkerManager.Msg_Unregister)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -510,7 +507,7 @@ class Msg_PropagateUnregister final :
     kAScopeFieldNumber = 2,
     kAPrincipalInfoFieldNumber = 1,
   };
-  // required string a_scope = 2;
+  // optional string a_scope = 2;
   bool has_a_scope() const;
   private:
   bool _internal_has_a_scope() const;
@@ -549,9 +546,6 @@ class Msg_PropagateUnregister final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PServiceWorkerManager.Msg_PropagateUnregister)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1002,7 +996,7 @@ inline void Msg_Unregister::set_allocated_a_principalinfo(::protobuf::mozilla::i
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PServiceWorkerManager.Msg_Unregister.a_principalInfo)
 }
 
-// required string a_scope = 2;
+// optional string a_scope = 2;
 inline bool Msg_Unregister::_internal_has_a_scope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1161,7 +1155,7 @@ inline void Msg_PropagateUnregister::set_allocated_a_principalinfo(::protobuf::m
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PServiceWorkerManager.Msg_PropagateUnregister.a_principalInfo)
 }
 
-// required string a_scope = 2;
+// optional string a_scope = 2;
 inline bool Msg_PropagateUnregister::_internal_has_a_scope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

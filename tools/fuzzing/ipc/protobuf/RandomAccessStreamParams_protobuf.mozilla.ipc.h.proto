@@ -15,7 +15,7 @@ import "IPCQuotaObject.proto";
 // Structs and unions declarations
 message FileRandomAccessStreamParams {
   required bytes a_fileDescriptor = 1;
-  required sint32 a_behaviorFlags = 2;
+  optional sint32 a_behaviorFlags = 2;
 }
 
 message LimitingFileRandomAccessStreamParams {

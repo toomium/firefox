@@ -194,7 +194,7 @@ class Msg_WriteData final :
   enum : int {
     kADataFieldNumber = 1,
   };
-  // required string a_data = 1;
+  // optional string a_data = 1;
   bool has_a_data() const;
   private:
   bool _internal_has_a_data() const;
@@ -904,7 +904,7 @@ class Msg_DeleteSelf final :
 #endif  // __GNUC__
 // Msg_WriteData
 
-// required string a_data = 1;
+// optional string a_data = 1;
 inline bool Msg_WriteData::_internal_has_a_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

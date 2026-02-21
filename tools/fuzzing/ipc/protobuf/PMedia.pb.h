@@ -210,7 +210,7 @@ class Msg_GetPrincipalKey final :
       ::protobuf::mozilla::ipc::PrincipalInfo* a_aprincipal);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_aprincipal();
 
-  // required bool a_aPersist = 2;
+  // optional bool a_aPersist = 2;
   bool has_a_apersist() const;
   private:
   bool _internal_has_a_apersist() const;
@@ -226,9 +226,6 @@ class Msg_GetPrincipalKey final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.media.PMedia.Msg_GetPrincipalKey)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -356,7 +353,7 @@ class Reply_GetPrincipalKey final :
   enum : int {
     kAAKeyFieldNumber = 1,
   };
-  // required string a_aKey = 1;
+  // optional string a_aKey = 1;
   bool has_a_akey() const;
   private:
   bool _internal_has_a_akey() const;
@@ -504,7 +501,7 @@ class Msg_SanitizeOriginKeys final :
     kAASinceWhenFieldNumber = 1,
     kAAOnlyPrivateBrowsingFieldNumber = 2,
   };
-  // required uint64 a_aSinceWhen = 1;
+  // optional uint64 a_aSinceWhen = 1;
   bool has_a_asincewhen() const;
   private:
   bool _internal_has_a_asincewhen() const;
@@ -517,7 +514,7 @@ class Msg_SanitizeOriginKeys final :
   void _internal_set_a_asincewhen(uint64_t value);
   public:
 
-  // required bool a_aOnlyPrivateBrowsing = 2;
+  // optional bool a_aOnlyPrivateBrowsing = 2;
   bool has_a_aonlyprivatebrowsing() const;
   private:
   bool _internal_has_a_aonlyprivatebrowsing() const;
@@ -533,9 +530,6 @@ class Msg_SanitizeOriginKeys final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.media.PMedia.Msg_SanitizeOriginKeys)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -895,7 +889,7 @@ inline void Msg_GetPrincipalKey::set_allocated_a_aprincipal(::protobuf::mozilla:
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.media.PMedia.Msg_GetPrincipalKey.a_aPrincipal)
 }
 
-// required bool a_aPersist = 2;
+// optional bool a_aPersist = 2;
 inline bool Msg_GetPrincipalKey::_internal_has_a_apersist() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -927,7 +921,7 @@ inline void Msg_GetPrincipalKey::set_a_apersist(bool value) {
 
 // Reply_GetPrincipalKey
 
-// required string a_aKey = 1;
+// optional string a_aKey = 1;
 inline bool Reply_GetPrincipalKey::_internal_has_a_akey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -999,7 +993,7 @@ inline void Reply_GetPrincipalKey::set_allocated_a_akey(std::string* a_akey) {
 
 // Msg_SanitizeOriginKeys
 
-// required uint64 a_aSinceWhen = 1;
+// optional uint64 a_aSinceWhen = 1;
 inline bool Msg_SanitizeOriginKeys::_internal_has_a_asincewhen() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1027,7 +1021,7 @@ inline void Msg_SanitizeOriginKeys::set_a_asincewhen(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.media.PMedia.Msg_SanitizeOriginKeys.a_aSinceWhen)
 }
 
-// required bool a_aOnlyPrivateBrowsing = 2;
+// optional bool a_aOnlyPrivateBrowsing = 2;
 inline bool Msg_SanitizeOriginKeys::_internal_has_a_aonlyprivatebrowsing() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

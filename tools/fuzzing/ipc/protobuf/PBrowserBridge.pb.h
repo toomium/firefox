@@ -291,7 +291,7 @@ class Msg_RequestFocus final :
   std::string* _internal_mutable_a_acallertype();
   public:
 
-  // required bool a_canRaise = 1;
+  // optional bool a_canRaise = 1;
   bool has_a_canraise() const;
   private:
   bool _internal_has_a_canraise() const;
@@ -307,9 +307,6 @@ class Msg_RequestFocus final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBrowserBridge.Msg_RequestFocus)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -438,7 +435,7 @@ class Msg_MoveFocus final :
     kAForwardFieldNumber = 1,
     kAForDocumentNavigationFieldNumber = 2,
   };
-  // required bool a_forward = 1;
+  // optional bool a_forward = 1;
   bool has_a_forward() const;
   private:
   bool _internal_has_a_forward() const;
@@ -451,7 +448,7 @@ class Msg_MoveFocus final :
   void _internal_set_a_forward(bool value);
   public:
 
-  // required bool a_forDocumentNavigation = 2;
+  // optional bool a_forDocumentNavigation = 2;
   bool has_a_fordocumentnavigation() const;
   private:
   bool _internal_has_a_fordocumentnavigation() const;
@@ -467,9 +464,6 @@ class Msg_MoveFocus final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBrowserBridge.Msg_MoveFocus)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -820,7 +814,7 @@ class Msg_ScrollRectIntoView final :
   std::string* _internal_mutable_a_ascrollflags();
   public:
 
-  // required sint32 a_aAppUnitsPerDevPixel = 5;
+  // optional sint32 a_aAppUnitsPerDevPixel = 5;
   bool has_a_aappunitsperdevpixel() const;
   private:
   bool _internal_has_a_aappunitsperdevpixel() const;
@@ -1926,7 +1920,7 @@ class Msg_ResumeLoad final :
   enum : int {
     kAAPendingSwitchIDFieldNumber = 1,
   };
-  // required uint64 a_aPendingSwitchID = 1;
+  // optional uint64 a_aPendingSwitchID = 1;
   bool has_a_apendingswitchid() const;
   private:
   bool _internal_has_a_apendingswitchid() const;
@@ -2532,7 +2526,7 @@ class Msg_RenderLayers final :
   enum : int {
     kAAEnabledFieldNumber = 1,
   };
-  // required bool a_aEnabled = 1;
+  // optional bool a_aEnabled = 1;
   bool has_a_aenabled() const;
   private:
   bool _internal_has_a_aenabled() const;
@@ -2969,7 +2963,7 @@ class Msg_NavigateByKey final :
     kAAForwardFieldNumber = 1,
     kAAForDocumentNavigationFieldNumber = 2,
   };
-  // required bool a_aForward = 1;
+  // optional bool a_aForward = 1;
   bool has_a_aforward() const;
   private:
   bool _internal_has_a_aforward() const;
@@ -2982,7 +2976,7 @@ class Msg_NavigateByKey final :
   void _internal_set_a_aforward(bool value);
   public:
 
-  // required bool a_aForDocumentNavigation = 2;
+  // optional bool a_aForDocumentNavigation = 2;
   bool has_a_afordocumentnavigation() const;
   private:
   bool _internal_has_a_afordocumentnavigation() const;
@@ -2998,9 +2992,6 @@ class Msg_NavigateByKey final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBrowserBridge.Msg_NavigateByKey)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3275,7 +3266,7 @@ class Msg_Activate final :
   enum : int {
     kAAActionIdFieldNumber = 1,
   };
-  // required uint64 a_aActionId = 1;
+  // optional uint64 a_aActionId = 1;
   bool has_a_aactionid() const;
   private:
   bool _internal_has_a_aactionid() const;
@@ -3418,7 +3409,7 @@ class Msg_Deactivate final :
     kAAActionIdFieldNumber = 2,
     kAAWindowLoweringFieldNumber = 1,
   };
-  // required uint64 a_aActionId = 2;
+  // optional uint64 a_aActionId = 2;
   bool has_a_aactionid() const;
   private:
   bool _internal_has_a_aactionid() const;
@@ -3431,7 +3422,7 @@ class Msg_Deactivate final :
   void _internal_set_a_aactionid(uint64_t value);
   public:
 
-  // required bool a_aWindowLowering = 1;
+  // optional bool a_aWindowLowering = 1;
   bool has_a_awindowlowering() const;
   private:
   bool _internal_has_a_awindowlowering() const;
@@ -3447,9 +3438,6 @@ class Msg_Deactivate final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBrowserBridge.Msg_Deactivate)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3867,7 +3855,7 @@ class Msg_SetEmbedderAccessible final :
   std::string* _internal_mutable_a_adoc();
   public:
 
-  // required uint64 a_aID = 2;
+  // optional uint64 a_aID = 2;
   bool has_a_aid() const;
   private:
   bool _internal_has_a_aid() const;
@@ -3883,9 +3871,6 @@ class Msg_SetEmbedderAccessible final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBrowserBridge.Msg_SetEmbedderAccessible)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3910,7 +3895,7 @@ class Msg_SetEmbedderAccessible final :
 #endif  // __GNUC__
 // Msg_RequestFocus
 
-// required bool a_canRaise = 1;
+// optional bool a_canRaise = 1;
 inline bool Msg_RequestFocus::_internal_has_a_canraise() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4010,7 +3995,7 @@ inline void Msg_RequestFocus::set_allocated_a_acallertype(std::string* a_acaller
 
 // Msg_MoveFocus
 
-// required bool a_forward = 1;
+// optional bool a_forward = 1;
 inline bool Msg_MoveFocus::_internal_has_a_forward() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4038,7 +4023,7 @@ inline void Msg_MoveFocus::set_a_forward(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_MoveFocus.a_forward)
 }
 
-// required bool a_forDocumentNavigation = 2;
+// optional bool a_forDocumentNavigation = 2;
 inline bool Msg_MoveFocus::_internal_has_a_fordocumentnavigation() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4414,7 +4399,7 @@ inline void Msg_ScrollRectIntoView::set_allocated_a_ascrollflags(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.a_aScrollFlags)
 }
 
-// required sint32 a_aAppUnitsPerDevPixel = 5;
+// optional sint32 a_aAppUnitsPerDevPixel = 5;
 inline bool Msg_ScrollRectIntoView::_internal_has_a_aappunitsperdevpixel() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -4746,7 +4731,7 @@ inline void Msg_LoadURL::set_allocated_a_aloadstate(std::string* a_aloadstate) {
 
 // Msg_ResumeLoad
 
-// required uint64 a_aPendingSwitchID = 1;
+// optional uint64 a_aPendingSwitchID = 1;
 inline bool Msg_ResumeLoad::_internal_has_a_apendingswitchid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5081,7 +5066,7 @@ inline void Msg_UpdateDimensions::set_allocated_a_size(std::string* a_size) {
 
 // Msg_RenderLayers
 
-// required bool a_aEnabled = 1;
+// optional bool a_aEnabled = 1;
 inline bool Msg_RenderLayers::_internal_has_a_aenabled() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5276,7 +5261,7 @@ inline void Msg_UpdateRemotePrintSettings::set_allocated_a_aprintdata(::protobuf
 
 // Msg_NavigateByKey
 
-// required bool a_aForward = 1;
+// optional bool a_aForward = 1;
 inline bool Msg_NavigateByKey::_internal_has_a_aforward() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5304,7 +5289,7 @@ inline void Msg_NavigateByKey::set_a_aforward(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_NavigateByKey.a_aForward)
 }
 
-// required bool a_aForDocumentNavigation = 2;
+// optional bool a_aForDocumentNavigation = 2;
 inline bool Msg_NavigateByKey::_internal_has_a_afordocumentnavigation() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5408,7 +5393,7 @@ inline void Msg_DispatchSynthesizedMouseEvent::set_allocated_a_event(std::string
 
 // Msg_Activate
 
-// required uint64 a_aActionId = 1;
+// optional uint64 a_aActionId = 1;
 inline bool Msg_Activate::_internal_has_a_aactionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5440,7 +5425,7 @@ inline void Msg_Activate::set_a_aactionid(uint64_t value) {
 
 // Msg_Deactivate
 
-// required bool a_aWindowLowering = 1;
+// optional bool a_aWindowLowering = 1;
 inline bool Msg_Deactivate::_internal_has_a_awindowlowering() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5468,7 +5453,7 @@ inline void Msg_Deactivate::set_a_awindowlowering(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_Deactivate.a_aWindowLowering)
 }
 
-// required uint64 a_aActionId = 2;
+// optional uint64 a_aActionId = 2;
 inline bool Msg_Deactivate::_internal_has_a_aactionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5644,7 +5629,7 @@ inline void Msg_SetEmbedderAccessible::set_allocated_a_adoc(std::string* a_adoc)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_SetEmbedderAccessible.a_aDoc)
 }
 
-// required uint64 a_aID = 2;
+// optional uint64 a_aID = 2;
 inline bool Msg_SetEmbedderAccessible::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

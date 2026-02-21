@@ -198,7 +198,7 @@ class PopupIPCTabContext final :
   std::string* _internal_mutable_a_opener();
   public:
 
-  // required uint64 a_chromeOuterWindowID = 2;
+  // optional uint64 a_chromeOuterWindowID = 2;
   bool has_a_chromeouterwindowid() const;
   private:
   bool _internal_has_a_chromeouterwindowid() const;
@@ -214,9 +214,6 @@ class PopupIPCTabContext final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PopupIPCTabContext)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -345,7 +342,7 @@ class FrameIPCTabContext final :
     kAChromeOuterWindowIDFieldNumber = 1,
     kAMaxTouchPointsFieldNumber = 2,
   };
-  // required uint64 a_chromeOuterWindowID = 1;
+  // optional uint64 a_chromeOuterWindowID = 1;
   bool has_a_chromeouterwindowid() const;
   private:
   bool _internal_has_a_chromeouterwindowid() const;
@@ -358,7 +355,7 @@ class FrameIPCTabContext final :
   void _internal_set_a_chromeouterwindowid(uint64_t value);
   public:
 
-  // required uint32 a_maxTouchPoints = 2;
+  // optional uint32 a_maxTouchPoints = 2;
   bool has_a_maxtouchpoints() const;
   private:
   bool _internal_has_a_maxtouchpoints() const;
@@ -374,9 +371,6 @@ class FrameIPCTabContext final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.FrameIPCTabContext)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -654,7 +648,7 @@ inline void PopupIPCTabContext::set_allocated_a_opener(std::string* a_opener) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PopupIPCTabContext.a_opener)
 }
 
-// required uint64 a_chromeOuterWindowID = 2;
+// optional uint64 a_chromeOuterWindowID = 2;
 inline bool PopupIPCTabContext::_internal_has_a_chromeouterwindowid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -686,7 +680,7 @@ inline void PopupIPCTabContext::set_a_chromeouterwindowid(uint64_t value) {
 
 // FrameIPCTabContext
 
-// required uint64 a_chromeOuterWindowID = 1;
+// optional uint64 a_chromeOuterWindowID = 1;
 inline bool FrameIPCTabContext::_internal_has_a_chromeouterwindowid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -714,7 +708,7 @@ inline void FrameIPCTabContext::set_a_chromeouterwindowid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FrameIPCTabContext.a_chromeOuterWindowID)
 }
 
-// required uint32 a_maxTouchPoints = 2;
+// optional uint32 a_maxTouchPoints = 2;
 inline bool FrameIPCTabContext::_internal_has_a_maxtouchpoints() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

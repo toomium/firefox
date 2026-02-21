@@ -67,9 +67,6 @@ class IPCIdentityCredential::_Internal {
   static void set_has_a_token(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 IPCIdentityCredential::IPCIdentityCredential(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -172,7 +169,7 @@ const char* IPCIdentityCredential::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_id = 1;
+      // optional string a_id = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_id();
@@ -221,7 +218,7 @@ uint8_t* IPCIdentityCredential::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_id = 1;
+  // optional string a_id = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_id(), target);
@@ -245,24 +242,27 @@ size_t IPCIdentityCredential::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCIdentityCredential)
   size_t total_size = 0;
 
-  // required string a_id = 1;
-  if (_internal_has_a_id()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_id());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional string a_token = 2;
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000002u) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_token());
-  }
+  if (cached_has_bits & 0x00000003u) {
+    // optional string a_id = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_id());
+    }
 
+    // optional string a_token = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_token());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -304,7 +304,6 @@ void IPCIdentityCredential::CopyFrom(const IPCIdentityCredential& from) {
 }
 
 bool IPCIdentityCredential::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -598,20 +597,6 @@ void WebIdentityGetCredentialResponse::CopyFrom(const WebIdentityGetCredentialRe
 }
 
 bool WebIdentityGetCredentialResponse::IsInitialized() const {
-  switch (content_case()) {
-    case kAMVnsresult: {
-      break;
-    }
-    case kAMVIPCIdentityCredential: {
-      if (_internal_has_a_mvipcidentitycredential()) {
-        if (!_impl_.content_.a_mvipcidentitycredential_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case CONTENT_NOT_SET: {
-      break;
-    }
-  }
   return true;
 }
 

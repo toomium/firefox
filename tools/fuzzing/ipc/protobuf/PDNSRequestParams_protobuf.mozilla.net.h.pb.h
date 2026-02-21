@@ -206,7 +206,7 @@ class DNSRecord final :
   std::string* _internal_add_a_addrs();
   public:
 
-  // required string a_canonicalName = 1;
+  // optional string a_canonicalName = 1;
   bool has_a_canonicalname() const;
   private:
   bool _internal_has_a_canonicalname() const;
@@ -260,7 +260,7 @@ class DNSRecord final :
   std::string* _internal_mutable_a_lastupdate();
   public:
 
-  // required double a_trrFetchDuration = 3;
+  // optional double a_trrFetchDuration = 3;
   bool has_a_trrfetchduration() const;
   private:
   bool _internal_has_a_trrfetchduration() const;
@@ -273,7 +273,7 @@ class DNSRecord final :
   void _internal_set_a_trrfetchduration(double value);
   public:
 
-  // required double a_trrFetchDurationNetworkOnly = 4;
+  // optional double a_trrFetchDurationNetworkOnly = 4;
   bool has_a_trrfetchdurationnetworkonly() const;
   private:
   bool _internal_has_a_trrfetchdurationnetworkonly() const;
@@ -286,7 +286,7 @@ class DNSRecord final :
   void _internal_set_a_trrfetchdurationnetworkonly(double value);
   public:
 
-  // required bool a_isTRR = 5;
+  // optional bool a_isTRR = 5;
   bool has_a_istrr() const;
   private:
   bool _internal_has_a_istrr() const;
@@ -299,7 +299,7 @@ class DNSRecord final :
   void _internal_set_a_istrr(bool value);
   public:
 
-  // required uint32 a_ttl = 7;
+  // optional uint32 a_ttl = 7;
   bool has_a_ttl() const;
   private:
   bool _internal_has_a_ttl() const;
@@ -555,7 +555,7 @@ class DNSRequestResponse final :
 #endif  // __GNUC__
 // DNSRecord
 
-// required string a_canonicalName = 1;
+// optional string a_canonicalName = 1;
 inline bool DNSRecord::_internal_has_a_canonicalname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -698,7 +698,7 @@ DNSRecord::mutable_a_addrs() {
   return &_impl_.a_addrs_;
 }
 
-// required double a_trrFetchDuration = 3;
+// optional double a_trrFetchDuration = 3;
 inline bool DNSRecord::_internal_has_a_trrfetchduration() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -726,7 +726,7 @@ inline void DNSRecord::set_a_trrfetchduration(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.DNSRecord.a_trrFetchDuration)
 }
 
-// required double a_trrFetchDurationNetworkOnly = 4;
+// optional double a_trrFetchDurationNetworkOnly = 4;
 inline bool DNSRecord::_internal_has_a_trrfetchdurationnetworkonly() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -754,7 +754,7 @@ inline void DNSRecord::set_a_trrfetchdurationnetworkonly(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.DNSRecord.a_trrFetchDurationNetworkOnly)
 }
 
-// required bool a_isTRR = 5;
+// optional bool a_isTRR = 5;
 inline bool DNSRecord::_internal_has_a_istrr() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -850,7 +850,7 @@ inline void DNSRecord::set_allocated_a_effectivetrrmode(std::string* a_effective
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.DNSRecord.a_effectiveTRRMode)
 }
 
-// required uint32 a_ttl = 7;
+// optional uint32 a_ttl = 7;
 inline bool DNSRecord::_internal_has_a_ttl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;

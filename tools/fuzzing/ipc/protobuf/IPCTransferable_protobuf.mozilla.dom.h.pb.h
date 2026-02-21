@@ -1197,7 +1197,7 @@ class IPCTransferableDataItem final :
     kAFlavorFieldNumber = 1,
     kADataFieldNumber = 2,
   };
-  // required string a_flavor = 1;
+  // optional string a_flavor = 1;
   bool has_a_flavor() const;
   private:
   bool _internal_has_a_flavor() const;
@@ -1236,9 +1236,6 @@ class IPCTransferableDataItem final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCTransferableDataItem)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1792,7 +1789,7 @@ class IPCTransferable final :
       ::protobuf::mozilla::net::CookieJarSettingsArgs* a_cookiejarsettings);
   ::protobuf::mozilla::net::CookieJarSettingsArgs* unsafe_arena_release_a_cookiejarsettings();
 
-  // required bool a_isPrivateData = 2;
+  // optional bool a_isPrivateData = 2;
   bool has_a_isprivatedata() const;
   private:
   bool _internal_has_a_isprivatedata() const;
@@ -2620,7 +2617,7 @@ inline IPCTransferableDataType::ContentCase IPCTransferableDataType::content_cas
 
 // IPCTransferableDataItem
 
-// required string a_flavor = 1;
+// optional string a_flavor = 1;
 inline bool IPCTransferableDataItem::_internal_has_a_flavor() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3080,7 +3077,7 @@ inline void IPCTransferable::set_allocated_a_data(::protobuf::mozilla::dom::IPCT
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferable.a_data)
 }
 
-// required bool a_isPrivateData = 2;
+// optional bool a_isPrivateData = 2;
 inline bool IPCTransferable::_internal_has_a_isprivatedata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;

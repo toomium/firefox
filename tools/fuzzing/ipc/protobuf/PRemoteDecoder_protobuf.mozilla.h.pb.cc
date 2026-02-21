@@ -377,7 +377,7 @@ class InitCompletionIPDL::_Internal {
     (*has_bits)[0] |= 128u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x000000ff) ^ 0x000000ff) != 0;
+    return ((has_bits[0] & 0x00000021) ^ 0x00000021) != 0;
   }
 };
 
@@ -572,7 +572,7 @@ const char* InitCompletionIPDL::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // required string a_decoderDescription = 2;
+      // optional string a_decoderDescription = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_decoderdescription();
@@ -581,7 +581,7 @@ const char* InitCompletionIPDL::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // required string a_decoderProcessName = 3;
+      // optional string a_decoderProcessName = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_decoderprocessname();
@@ -590,7 +590,7 @@ const char* InitCompletionIPDL::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // required string a_decoderCodecName = 4;
+      // optional string a_decoderCodecName = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_decodercodecname();
@@ -599,7 +599,7 @@ const char* InitCompletionIPDL::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // required bool a_hardware = 5;
+      // optional bool a_hardware = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_a_hardware(&has_bits);
@@ -608,7 +608,7 @@ const char* InitCompletionIPDL::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // required string a_hardwareReason = 6;
+      // optional string a_hardwareReason = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           auto str = _internal_mutable_a_hardwarereason();
@@ -626,7 +626,7 @@ const char* InitCompletionIPDL::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // required bool a_shouldDecoderAlwaysBeRecycled = 8;
+      // optional bool a_shouldDecoderAlwaysBeRecycled = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
           _Internal::set_has_a_shoulddecoderalwaysberecycled(&has_bits);
@@ -672,31 +672,31 @@ uint8_t* InitCompletionIPDL::_InternalSerialize(
         1, this->_internal_a_type(), target);
   }
 
-  // required string a_decoderDescription = 2;
+  // optional string a_decoderDescription = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_decoderdescription(), target);
   }
 
-  // required string a_decoderProcessName = 3;
+  // optional string a_decoderProcessName = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_decoderprocessname(), target);
   }
 
-  // required string a_decoderCodecName = 4;
+  // optional string a_decoderCodecName = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_a_decodercodecname(), target);
   }
 
-  // required bool a_hardware = 5;
+  // optional bool a_hardware = 5;
   if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_a_hardware(), target);
   }
 
-  // required string a_hardwareReason = 6;
+  // optional string a_hardwareReason = 6;
   if (cached_has_bits & 0x00000010u) {
     target = stream->WriteStringMaybeAliased(
         6, this->_internal_a_hardwarereason(), target);
@@ -708,7 +708,7 @@ uint8_t* InitCompletionIPDL::_InternalSerialize(
         7, this->_internal_a_conversion(), target);
   }
 
-  // required bool a_shouldDecoderAlwaysBeRecycled = 8;
+  // optional bool a_shouldDecoderAlwaysBeRecycled = 8;
   if (cached_has_bits & 0x00000080u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(8, this->_internal_a_shoulddecoderalwaysberecycled(), target);
@@ -733,49 +733,11 @@ size_t InitCompletionIPDL::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_type());
   }
 
-  if (_internal_has_a_decoderdescription()) {
-    // required string a_decoderDescription = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_decoderdescription());
-  }
-
-  if (_internal_has_a_decoderprocessname()) {
-    // required string a_decoderProcessName = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_decoderprocessname());
-  }
-
-  if (_internal_has_a_decodercodecname()) {
-    // required string a_decoderCodecName = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_decodercodecname());
-  }
-
-  if (_internal_has_a_hardwarereason()) {
-    // required string a_hardwareReason = 6;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_hardwarereason());
-  }
-
   if (_internal_has_a_conversion()) {
     // required bytes a_conversion = 7;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_conversion());
-  }
-
-  if (_internal_has_a_hardware()) {
-    // required bool a_hardware = 5;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_shoulddecoderalwaysberecycled()) {
-    // required bool a_shouldDecoderAlwaysBeRecycled = 8;
-    total_size += 1 + 1;
   }
 
   return total_size;
@@ -784,42 +746,16 @@ size_t InitCompletionIPDL::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.InitCompletionIPDL)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x000000ff) ^ 0x000000ff) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x00000021) ^ 0x00000021) == 0) {  // All required fields are present.
     // required bytes a_type = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_type());
 
-    // required string a_decoderDescription = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_decoderdescription());
-
-    // required string a_decoderProcessName = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_decoderprocessname());
-
-    // required string a_decoderCodecName = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_decodercodecname());
-
-    // required string a_hardwareReason = 6;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_hardwarereason());
-
     // required bytes a_conversion = 7;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_conversion());
-
-    // required bool a_hardware = 5;
-    total_size += 1 + 1;
-
-    // required bool a_shouldDecoderAlwaysBeRecycled = 8;
-    total_size += 1 + 1;
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -828,6 +764,49 @@ size_t InitCompletionIPDL::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000001eu) {
+    // optional string a_decoderDescription = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_decoderdescription());
+    }
+
+    // optional string a_decoderProcessName = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_decoderprocessname());
+    }
+
+    // optional string a_decoderCodecName = 4;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_decodercodecname());
+    }
+
+    // optional string a_hardwareReason = 6;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_hardwarereason());
+    }
+
+  }
+  if (cached_has_bits & 0x000000c0u) {
+    // optional bool a_hardware = 5;
+    if (cached_has_bits & 0x00000040u) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool a_shouldDecoderAlwaysBeRecycled = 8;
+    if (cached_has_bits & 0x00000080u) {
+      total_size += 1 + 1;
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }

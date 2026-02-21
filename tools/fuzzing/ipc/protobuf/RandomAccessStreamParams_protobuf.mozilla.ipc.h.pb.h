@@ -199,7 +199,7 @@ class FileRandomAccessStreamParams final :
   std::string* _internal_mutable_a_filedescriptor();
   public:
 
-  // required sint32 a_behaviorFlags = 2;
+  // optional sint32 a_behaviorFlags = 2;
   bool has_a_behaviorflags() const;
   private:
   bool _internal_has_a_behaviorflags() const;
@@ -215,9 +215,6 @@ class FileRandomAccessStreamParams final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.FileRandomAccessStreamParams)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -665,7 +662,7 @@ inline void FileRandomAccessStreamParams::set_allocated_a_filedescriptor(std::st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.FileRandomAccessStreamParams.a_fileDescriptor)
 }
 
-// required sint32 a_behaviorFlags = 2;
+// optional sint32 a_behaviorFlags = 2;
 inline bool FileRandomAccessStreamParams::_internal_has_a_behaviorflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

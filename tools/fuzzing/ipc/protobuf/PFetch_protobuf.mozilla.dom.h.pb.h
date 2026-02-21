@@ -188,7 +188,7 @@ class FetchOpArgs final :
     kAIsWorkerRequestFieldNumber = 11,
     kAIsOn3PCBExceptionListFieldNumber = 12,
   };
-  // required string a_workerScript = 3;
+  // optional string a_workerScript = 3;
   bool has_a_workerscript() const;
   private:
   bool _internal_has_a_workerscript() const;
@@ -296,7 +296,7 @@ class FetchOpArgs final :
       ::protobuf::mozilla::net::CookieJarSettingsArgs* a_cookiejarsettings);
   ::protobuf::mozilla::net::CookieJarSettingsArgs* unsafe_arena_release_a_cookiejarsettings();
 
-  // required uint64 a_associatedBrowsingContextID = 9;
+  // optional uint64 a_associatedBrowsingContextID = 9;
   bool has_a_associatedbrowsingcontextid() const;
   private:
   bool _internal_has_a_associatedbrowsingcontextid() const;
@@ -309,7 +309,7 @@ class FetchOpArgs final :
   void _internal_set_a_associatedbrowsingcontextid(uint64_t value);
   public:
 
-  // required bool a_needOnDataAvailable = 7;
+  // optional bool a_needOnDataAvailable = 7;
   bool has_a_needondataavailable() const;
   private:
   bool _internal_has_a_needondataavailable() const;
@@ -322,7 +322,7 @@ class FetchOpArgs final :
   void _internal_set_a_needondataavailable(bool value);
   public:
 
-  // required bool a_hasCSPEventListener = 8;
+  // optional bool a_hasCSPEventListener = 8;
   bool has_a_hascspeventlistener() const;
   private:
   bool _internal_has_a_hascspeventlistener() const;
@@ -335,7 +335,7 @@ class FetchOpArgs final :
   void _internal_set_a_hascspeventlistener(bool value);
   public:
 
-  // required bool a_isThirdPartyContext = 10;
+  // optional bool a_isThirdPartyContext = 10;
   bool has_a_isthirdpartycontext() const;
   private:
   bool _internal_has_a_isthirdpartycontext() const;
@@ -348,7 +348,7 @@ class FetchOpArgs final :
   void _internal_set_a_isthirdpartycontext(bool value);
   public:
 
-  // required bool a_isWorkerRequest = 11;
+  // optional bool a_isWorkerRequest = 11;
   bool has_a_isworkerrequest() const;
   private:
   bool _internal_has_a_isworkerrequest() const;
@@ -361,7 +361,7 @@ class FetchOpArgs final :
   void _internal_set_a_isworkerrequest(bool value);
   public:
 
-  // required bool a_isOn3PCBExceptionList = 12;
+  // optional bool a_isOn3PCBExceptionList = 12;
   bool has_a_ison3pcbexceptionlist() const;
   private:
   bool _internal_has_a_ison3pcbexceptionlist() const;
@@ -588,7 +588,7 @@ inline void FetchOpArgs::set_allocated_a_principalinfo(::protobuf::mozilla::ipc:
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FetchOpArgs.a_principalInfo)
 }
 
-// required string a_workerScript = 3;
+// optional string a_workerScript = 3;
 inline bool FetchOpArgs::_internal_has_a_workerscript() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -917,7 +917,7 @@ inline void FetchOpArgs::set_allocated_a_cookiejarsettings(::protobuf::mozilla::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FetchOpArgs.a_cookieJarSettings)
 }
 
-// required bool a_needOnDataAvailable = 7;
+// optional bool a_needOnDataAvailable = 7;
 inline bool FetchOpArgs::_internal_has_a_needondataavailable() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -945,7 +945,7 @@ inline void FetchOpArgs::set_a_needondataavailable(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FetchOpArgs.a_needOnDataAvailable)
 }
 
-// required bool a_hasCSPEventListener = 8;
+// optional bool a_hasCSPEventListener = 8;
 inline bool FetchOpArgs::_internal_has_a_hascspeventlistener() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -973,7 +973,7 @@ inline void FetchOpArgs::set_a_hascspeventlistener(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FetchOpArgs.a_hasCSPEventListener)
 }
 
-// required uint64 a_associatedBrowsingContextID = 9;
+// optional uint64 a_associatedBrowsingContextID = 9;
 inline bool FetchOpArgs::_internal_has_a_associatedbrowsingcontextid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -1001,7 +1001,7 @@ inline void FetchOpArgs::set_a_associatedbrowsingcontextid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FetchOpArgs.a_associatedBrowsingContextID)
 }
 
-// required bool a_isThirdPartyContext = 10;
+// optional bool a_isThirdPartyContext = 10;
 inline bool FetchOpArgs::_internal_has_a_isthirdpartycontext() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -1029,7 +1029,7 @@ inline void FetchOpArgs::set_a_isthirdpartycontext(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FetchOpArgs.a_isThirdPartyContext)
 }
 
-// required bool a_isWorkerRequest = 11;
+// optional bool a_isWorkerRequest = 11;
 inline bool FetchOpArgs::_internal_has_a_isworkerrequest() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
@@ -1057,7 +1057,7 @@ inline void FetchOpArgs::set_a_isworkerrequest(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FetchOpArgs.a_isWorkerRequest)
 }
 
-// required bool a_isOn3PCBExceptionList = 12;
+// optional bool a_isOn3PCBExceptionList = 12;
 inline bool FetchOpArgs::_internal_has_a_ison3pcbexceptionlist() const {
   bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
   return value;

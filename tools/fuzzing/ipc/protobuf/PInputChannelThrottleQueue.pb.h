@@ -182,7 +182,7 @@ class Msg_RecordRead final :
   enum : int {
     kAABytesReadFieldNumber = 1,
   };
-  // required uint32 a_aBytesRead = 1;
+  // optional uint32 a_aBytesRead = 1;
   bool has_a_abytesread() const;
   private:
   bool _internal_has_a_abytesread() const;
@@ -469,7 +469,7 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_RecordRead
 
-// required uint32 a_aBytesRead = 1;
+// optional uint32 a_aBytesRead = 1;
 inline bool Msg_RecordRead::_internal_has_a_abytesread() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

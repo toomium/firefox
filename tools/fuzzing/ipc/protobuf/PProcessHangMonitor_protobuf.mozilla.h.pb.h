@@ -189,7 +189,7 @@ class SlowScriptData final :
   std::string* _internal_mutable_a_tabid();
   public:
 
-  // required string a_filename = 2;
+  // optional string a_filename = 2;
   bool has_a_filename() const;
   private:
   bool _internal_has_a_filename() const;
@@ -207,7 +207,7 @@ class SlowScriptData final :
   std::string* _internal_mutable_a_filename();
   public:
 
-  // required string a_addonId = 3;
+  // optional string a_addonId = 3;
   bool has_a_addonid() const;
   private:
   bool _internal_has_a_addonid() const;
@@ -225,7 +225,7 @@ class SlowScriptData final :
   std::string* _internal_mutable_a_addonid();
   public:
 
-  // required double a_duration = 4;
+  // optional double a_duration = 4;
   bool has_a_duration() const;
   private:
   bool _internal_has_a_duration() const;
@@ -241,9 +241,6 @@ class SlowScriptData final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.SlowScriptData)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -338,7 +335,7 @@ inline void SlowScriptData::set_allocated_a_tabid(std::string* a_tabid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.SlowScriptData.a_tabId)
 }
 
-// required string a_filename = 2;
+// optional string a_filename = 2;
 inline bool SlowScriptData::_internal_has_a_filename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -406,7 +403,7 @@ inline void SlowScriptData::set_allocated_a_filename(std::string* a_filename) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.SlowScriptData.a_filename)
 }
 
-// required string a_addonId = 3;
+// optional string a_addonId = 3;
 inline bool SlowScriptData::_internal_has_a_addonid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -474,7 +471,7 @@ inline void SlowScriptData::set_allocated_a_addonid(std::string* a_addonid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.SlowScriptData.a_addonId)
 }
 
-// required double a_duration = 4;
+// optional double a_duration = 4;
 inline bool SlowScriptData::_internal_has_a_duration() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;

@@ -182,7 +182,7 @@ class JSActorMessageMeta final :
     kAKindFieldNumber = 4,
     kAQueryIdFieldNumber = 3,
   };
-  // required string a_actorName = 1;
+  // optional string a_actorName = 1;
   bool has_a_actorname() const;
   private:
   bool _internal_has_a_actorname() const;
@@ -200,7 +200,7 @@ class JSActorMessageMeta final :
   std::string* _internal_mutable_a_actorname();
   public:
 
-  // required string a_messageName = 2;
+  // optional string a_messageName = 2;
   bool has_a_messagename() const;
   private:
   bool _internal_has_a_messagename() const;
@@ -236,7 +236,7 @@ class JSActorMessageMeta final :
   std::string* _internal_mutable_a_kind();
   public:
 
-  // required uint64 a_queryId = 3;
+  // optional uint64 a_queryId = 3;
   bool has_a_queryid() const;
   private:
   bool _internal_has_a_queryid() const;
@@ -252,9 +252,6 @@ class JSActorMessageMeta final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.JSActorMessageMeta)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -386,7 +383,7 @@ class IPCWebShareData final :
     kATextFieldNumber = 2,
     kAUrlFieldNumber = 3,
   };
-  // required string a_title = 1;
+  // optional string a_title = 1;
   bool has_a_title() const;
   private:
   bool _internal_has_a_title() const;
@@ -404,7 +401,7 @@ class IPCWebShareData final :
   std::string* _internal_mutable_a_title();
   public:
 
-  // required string a_text = 2;
+  // optional string a_text = 2;
   bool has_a_text() const;
   private:
   bool _internal_has_a_text() const;
@@ -444,9 +441,6 @@ class IPCWebShareData final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
@@ -471,7 +465,7 @@ class IPCWebShareData final :
 #endif  // __GNUC__
 // JSActorMessageMeta
 
-// required string a_actorName = 1;
+// optional string a_actorName = 1;
 inline bool JSActorMessageMeta::_internal_has_a_actorname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -539,7 +533,7 @@ inline void JSActorMessageMeta::set_allocated_a_actorname(std::string* a_actorna
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.JSActorMessageMeta.a_actorName)
 }
 
-// required string a_messageName = 2;
+// optional string a_messageName = 2;
 inline bool JSActorMessageMeta::_internal_has_a_messagename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -607,7 +601,7 @@ inline void JSActorMessageMeta::set_allocated_a_messagename(std::string* a_messa
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.JSActorMessageMeta.a_messageName)
 }
 
-// required uint64 a_queryId = 3;
+// optional uint64 a_queryId = 3;
 inline bool JSActorMessageMeta::_internal_has_a_queryid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -707,7 +701,7 @@ inline void JSActorMessageMeta::set_allocated_a_kind(std::string* a_kind) {
 
 // IPCWebShareData
 
-// required string a_title = 1;
+// optional string a_title = 1;
 inline bool IPCWebShareData::_internal_has_a_title() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -775,7 +769,7 @@ inline void IPCWebShareData::set_allocated_a_title(std::string* a_title) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCWebShareData.a_title)
 }
 
-// required string a_text = 2;
+// optional string a_text = 2;
 inline bool IPCWebShareData::_internal_has_a_text() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

@@ -929,7 +929,7 @@ class ClearResetOriginParams final :
       ::protobuf::mozilla::ipc::PrincipalInfo* a_principalinfo);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_principalinfo();
 
-  // required bool a_persistenceTypeIsExplicit = 3;
+  // optional bool a_persistenceTypeIsExplicit = 3;
   bool has_a_persistencetypeisexplicit() const;
   private:
   bool _internal_has_a_persistencetypeisexplicit() const;
@@ -942,7 +942,7 @@ class ClearResetOriginParams final :
   void _internal_set_a_persistencetypeisexplicit(bool value);
   public:
 
-  // required bool a_clientTypeIsExplicit = 5;
+  // optional bool a_clientTypeIsExplicit = 5;
   bool has_a_clienttypeisexplicit() const;
   private:
   bool _internal_has_a_clienttypeisexplicit() const;
@@ -2332,7 +2332,7 @@ inline void ClearResetOriginParams::set_allocated_a_persistencetype(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.quota.ClearResetOriginParams.a_persistenceType)
 }
 
-// required bool a_persistenceTypeIsExplicit = 3;
+// optional bool a_persistenceTypeIsExplicit = 3;
 inline bool ClearResetOriginParams::_internal_has_a_persistencetypeisexplicit() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -2428,7 +2428,7 @@ inline void ClearResetOriginParams::set_allocated_a_clienttype(std::string* a_cl
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.quota.ClearResetOriginParams.a_clientType)
 }
 
-// required bool a_clientTypeIsExplicit = 5;
+// optional bool a_clientTypeIsExplicit = 5;
 inline bool ClearResetOriginParams::_internal_has_a_clienttypeisexplicit() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;

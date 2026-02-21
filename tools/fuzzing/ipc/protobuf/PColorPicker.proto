@@ -19,11 +19,11 @@ message Msg_Open {
 }
 
 message Msg_Update {
-  required string a_color = 1;
+  optional string a_color = 1;
 }
 
 message Msg___delete__ {
-  required string a_color = 1;
+  optional string a_color = 1;
 }
 
 message Reply___delete__ {

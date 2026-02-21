@@ -280,7 +280,7 @@ class IPCPaymentMethodData final :
     kASupportedMethodsFieldNumber = 1,
     kADataFieldNumber = 2,
   };
-  // required string a_supportedMethods = 1;
+  // optional string a_supportedMethods = 1;
   bool has_a_supportedmethods() const;
   private:
   bool _internal_has_a_supportedmethods() const;
@@ -298,7 +298,7 @@ class IPCPaymentMethodData final :
   std::string* _internal_mutable_a_supportedmethods();
   public:
 
-  // required string a_data = 2;
+  // optional string a_data = 2;
   bool has_a_data() const;
   private:
   bool _internal_has_a_data() const;
@@ -319,9 +319,6 @@ class IPCPaymentMethodData final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCPaymentMethodData)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -450,7 +447,7 @@ class IPCPaymentCurrencyAmount final :
     kACurrencyFieldNumber = 1,
     kAValueFieldNumber = 2,
   };
-  // required string a_currency = 1;
+  // optional string a_currency = 1;
   bool has_a_currency() const;
   private:
   bool _internal_has_a_currency() const;
@@ -468,7 +465,7 @@ class IPCPaymentCurrencyAmount final :
   std::string* _internal_mutable_a_currency();
   public:
 
-  // required string a_value = 2;
+  // optional string a_value = 2;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -489,9 +486,6 @@ class IPCPaymentCurrencyAmount final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCPaymentCurrencyAmount)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -621,7 +615,7 @@ class IPCPaymentItem final :
     kAAmountFieldNumber = 2,
     kAPendingFieldNumber = 3,
   };
-  // required string a_label = 1;
+  // optional string a_label = 1;
   bool has_a_label() const;
   private:
   bool _internal_has_a_label() const;
@@ -657,7 +651,7 @@ class IPCPaymentItem final :
       ::protobuf::mozilla::dom::IPCPaymentCurrencyAmount* a_amount);
   ::protobuf::mozilla::dom::IPCPaymentCurrencyAmount* unsafe_arena_release_a_amount();
 
-  // required bool a_pending = 3;
+  // optional bool a_pending = 3;
   bool has_a_pending() const;
   private:
   bool _internal_has_a_pending() const;
@@ -673,9 +667,6 @@ class IPCPaymentItem final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCPaymentItem)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -826,7 +817,7 @@ class IPCPaymentDetailsModifier final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCPaymentItem >&
       a_additionaldisplayitems() const;
 
-  // required string a_supportedMethods = 1;
+  // optional string a_supportedMethods = 1;
   bool has_a_supportedmethods() const;
   private:
   bool _internal_has_a_supportedmethods() const;
@@ -844,7 +835,7 @@ class IPCPaymentDetailsModifier final :
   std::string* _internal_mutable_a_supportedmethods();
   public:
 
-  // required string a_data = 4;
+  // optional string a_data = 4;
   bool has_a_data() const;
   private:
   bool _internal_has_a_data() const;
@@ -880,7 +871,7 @@ class IPCPaymentDetailsModifier final :
       ::protobuf::mozilla::dom::IPCPaymentItem* a_total);
   ::protobuf::mozilla::dom::IPCPaymentItem* unsafe_arena_release_a_total();
 
-  // required bool a_additionalDisplayItemsPassed = 5;
+  // optional bool a_additionalDisplayItemsPassed = 5;
   bool has_a_additionaldisplayitemspassed() const;
   private:
   bool _internal_has_a_additionaldisplayitemspassed() const;
@@ -896,9 +887,6 @@ class IPCPaymentDetailsModifier final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCPaymentDetailsModifier)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1032,7 +1020,7 @@ class IPCPaymentShippingOption final :
     kAAmountFieldNumber = 3,
     kASelectedFieldNumber = 4,
   };
-  // required string a_id = 1;
+  // optional string a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -1050,7 +1038,7 @@ class IPCPaymentShippingOption final :
   std::string* _internal_mutable_a_id();
   public:
 
-  // required string a_label = 2;
+  // optional string a_label = 2;
   bool has_a_label() const;
   private:
   bool _internal_has_a_label() const;
@@ -1086,7 +1074,7 @@ class IPCPaymentShippingOption final :
       ::protobuf::mozilla::dom::IPCPaymentCurrencyAmount* a_amount);
   ::protobuf::mozilla::dom::IPCPaymentCurrencyAmount* unsafe_arena_release_a_amount();
 
-  // required bool a_selected = 4;
+  // optional bool a_selected = 4;
   bool has_a_selected() const;
   private:
   bool _internal_has_a_selected() const;
@@ -1102,9 +1090,6 @@ class IPCPaymentShippingOption final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCPaymentShippingOption)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1296,7 +1281,7 @@ class IPCPaymentDetails final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCPaymentDetailsModifier >&
       a_modifiers() const;
 
-  // required string a_id = 1;
+  // optional string a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -1314,7 +1299,7 @@ class IPCPaymentDetails final :
   std::string* _internal_mutable_a_id();
   public:
 
-  // required string a_error = 6;
+  // optional string a_error = 6;
   bool has_a_error() const;
   private:
   bool _internal_has_a_error() const;
@@ -1332,7 +1317,7 @@ class IPCPaymentDetails final :
   std::string* _internal_mutable_a_error();
   public:
 
-  // required string a_shippingAddressErrors = 7;
+  // optional string a_shippingAddressErrors = 7;
   bool has_a_shippingaddresserrors() const;
   private:
   bool _internal_has_a_shippingaddresserrors() const;
@@ -1350,7 +1335,7 @@ class IPCPaymentDetails final :
   std::string* _internal_mutable_a_shippingaddresserrors();
   public:
 
-  // required string a_payerErrors = 8;
+  // optional string a_payerErrors = 8;
   bool has_a_payererrors() const;
   private:
   bool _internal_has_a_payererrors() const;
@@ -1368,7 +1353,7 @@ class IPCPaymentDetails final :
   std::string* _internal_mutable_a_payererrors();
   public:
 
-  // required string a_paymentMethodErrors = 9;
+  // optional string a_paymentMethodErrors = 9;
   bool has_a_paymentmethoderrors() const;
   private:
   bool _internal_has_a_paymentmethoderrors() const;
@@ -1407,9 +1392,6 @@ class IPCPaymentDetails final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCPaymentDetails)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1549,7 +1531,7 @@ class IPCPaymentOptions final :
     kARequestShippingFieldNumber = 4,
     kARequestBillingAddressFieldNumber = 5,
   };
-  // required string a_shippingType = 6;
+  // optional string a_shippingType = 6;
   bool has_a_shippingtype() const;
   private:
   bool _internal_has_a_shippingtype() const;
@@ -1567,7 +1549,7 @@ class IPCPaymentOptions final :
   std::string* _internal_mutable_a_shippingtype();
   public:
 
-  // required bool a_requestPayerName = 1;
+  // optional bool a_requestPayerName = 1;
   bool has_a_requestpayername() const;
   private:
   bool _internal_has_a_requestpayername() const;
@@ -1580,7 +1562,7 @@ class IPCPaymentOptions final :
   void _internal_set_a_requestpayername(bool value);
   public:
 
-  // required bool a_requestPayerEmail = 2;
+  // optional bool a_requestPayerEmail = 2;
   bool has_a_requestpayeremail() const;
   private:
   bool _internal_has_a_requestpayeremail() const;
@@ -1593,7 +1575,7 @@ class IPCPaymentOptions final :
   void _internal_set_a_requestpayeremail(bool value);
   public:
 
-  // required bool a_requestPayerPhone = 3;
+  // optional bool a_requestPayerPhone = 3;
   bool has_a_requestpayerphone() const;
   private:
   bool _internal_has_a_requestpayerphone() const;
@@ -1606,7 +1588,7 @@ class IPCPaymentOptions final :
   void _internal_set_a_requestpayerphone(bool value);
   public:
 
-  // required bool a_requestShipping = 4;
+  // optional bool a_requestShipping = 4;
   bool has_a_requestshipping() const;
   private:
   bool _internal_has_a_requestshipping() const;
@@ -1619,7 +1601,7 @@ class IPCPaymentOptions final :
   void _internal_set_a_requestshipping(bool value);
   public:
 
-  // required bool a_requestBillingAddress = 5;
+  // optional bool a_requestBillingAddress = 5;
   bool has_a_requestbillingaddress() const;
   private:
   bool _internal_has_a_requestbillingaddress() const;
@@ -1635,9 +1617,6 @@ class IPCPaymentOptions final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCPaymentOptions)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1793,7 +1772,7 @@ class IPCPaymentCreateActionRequest final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCPaymentMethodData >&
       a_methoddata() const;
 
-  // required string a_requestId = 2;
+  // optional string a_requestId = 2;
   bool has_a_requestid() const;
   private:
   bool _internal_has_a_requestid() const;
@@ -1829,7 +1808,7 @@ class IPCPaymentCreateActionRequest final :
   std::string* _internal_mutable_a_toplevelprincipal();
   public:
 
-  // required string a_shippingOption = 7;
+  // optional string a_shippingOption = 7;
   bool has_a_shippingoption() const;
   private:
   bool _internal_has_a_shippingoption() const;
@@ -1883,7 +1862,7 @@ class IPCPaymentCreateActionRequest final :
       ::protobuf::mozilla::dom::IPCPaymentOptions* a_options);
   ::protobuf::mozilla::dom::IPCPaymentOptions* unsafe_arena_release_a_options();
 
-  // required uint64 a_topOuterWindowId = 1;
+  // optional uint64 a_topOuterWindowId = 1;
   bool has_a_topouterwindowid() const;
   private:
   bool _internal_has_a_topouterwindowid() const;
@@ -2034,7 +2013,7 @@ class IPCPaymentCanMakeActionRequest final :
   enum : int {
     kARequestIdFieldNumber = 1,
   };
-  // required string a_requestId = 1;
+  // optional string a_requestId = 1;
   bool has_a_requestid() const;
   private:
   bool _internal_has_a_requestid() const;
@@ -2182,7 +2161,7 @@ class IPCPaymentShowActionRequest final :
     kARequestIdFieldNumber = 1,
     kAIsUpdatingFieldNumber = 2,
   };
-  // required string a_requestId = 1;
+  // optional string a_requestId = 1;
   bool has_a_requestid() const;
   private:
   bool _internal_has_a_requestid() const;
@@ -2200,7 +2179,7 @@ class IPCPaymentShowActionRequest final :
   std::string* _internal_mutable_a_requestid();
   public:
 
-  // required bool a_isUpdating = 2;
+  // optional bool a_isUpdating = 2;
   bool has_a_isupdating() const;
   private:
   bool _internal_has_a_isupdating() const;
@@ -2216,9 +2195,6 @@ class IPCPaymentShowActionRequest final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCPaymentShowActionRequest)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2346,7 +2322,7 @@ class IPCPaymentAbortActionRequest final :
   enum : int {
     kARequestIdFieldNumber = 1,
   };
-  // required string a_requestId = 1;
+  // optional string a_requestId = 1;
   bool has_a_requestid() const;
   private:
   bool _internal_has_a_requestid() const;
@@ -2494,7 +2470,7 @@ class IPCPaymentCompleteActionRequest final :
     kARequestIdFieldNumber = 1,
     kACompleteStatusFieldNumber = 2,
   };
-  // required string a_requestId = 1;
+  // optional string a_requestId = 1;
   bool has_a_requestid() const;
   private:
   bool _internal_has_a_requestid() const;
@@ -2512,7 +2488,7 @@ class IPCPaymentCompleteActionRequest final :
   std::string* _internal_mutable_a_requestid();
   public:
 
-  // required string a_completeStatus = 2;
+  // optional string a_completeStatus = 2;
   bool has_a_completestatus() const;
   private:
   bool _internal_has_a_completestatus() const;
@@ -2533,9 +2509,6 @@ class IPCPaymentCompleteActionRequest final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCPaymentCompleteActionRequest)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2665,7 +2638,7 @@ class IPCPaymentUpdateActionRequest final :
     kAShippingOptionFieldNumber = 3,
     kADetailsFieldNumber = 2,
   };
-  // required string a_requestId = 1;
+  // optional string a_requestId = 1;
   bool has_a_requestid() const;
   private:
   bool _internal_has_a_requestid() const;
@@ -2683,7 +2656,7 @@ class IPCPaymentUpdateActionRequest final :
   std::string* _internal_mutable_a_requestid();
   public:
 
-  // required string a_shippingOption = 3;
+  // optional string a_shippingOption = 3;
   bool has_a_shippingoption() const;
   private:
   bool _internal_has_a_shippingoption() const;
@@ -2722,9 +2695,6 @@ class IPCPaymentUpdateActionRequest final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCPaymentUpdateActionRequest)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2853,7 +2823,7 @@ class IPCPaymentCloseActionRequest final :
   enum : int {
     kARequestIdFieldNumber = 1,
   };
-  // required string a_requestId = 1;
+  // optional string a_requestId = 1;
   bool has_a_requestid() const;
   private:
   bool _internal_has_a_requestid() const;
@@ -3004,7 +2974,7 @@ class IPCPaymentRetryActionRequest final :
     kAPaymentMethodErrorsFieldNumber = 4,
     kAShippingAddressErrorsFieldNumber = 5,
   };
-  // required string a_requestId = 1;
+  // optional string a_requestId = 1;
   bool has_a_requestid() const;
   private:
   bool _internal_has_a_requestid() const;
@@ -3022,7 +2992,7 @@ class IPCPaymentRetryActionRequest final :
   std::string* _internal_mutable_a_requestid();
   public:
 
-  // required string a_error = 2;
+  // optional string a_error = 2;
   bool has_a_error() const;
   private:
   bool _internal_has_a_error() const;
@@ -3040,7 +3010,7 @@ class IPCPaymentRetryActionRequest final :
   std::string* _internal_mutable_a_error();
   public:
 
-  // required string a_payerErrors = 3;
+  // optional string a_payerErrors = 3;
   bool has_a_payererrors() const;
   private:
   bool _internal_has_a_payererrors() const;
@@ -3058,7 +3028,7 @@ class IPCPaymentRetryActionRequest final :
   std::string* _internal_mutable_a_payererrors();
   public:
 
-  // required string a_paymentMethodErrors = 4;
+  // optional string a_paymentMethodErrors = 4;
   bool has_a_paymentmethoderrors() const;
   private:
   bool _internal_has_a_paymentmethoderrors() const;
@@ -3076,7 +3046,7 @@ class IPCPaymentRetryActionRequest final :
   std::string* _internal_mutable_a_paymentmethoderrors();
   public:
 
-  // required string a_shippingAddressErrors = 5;
+  // optional string a_shippingAddressErrors = 5;
   bool has_a_shippingaddresserrors() const;
   private:
   bool _internal_has_a_shippingaddresserrors() const;
@@ -3097,9 +3067,6 @@ class IPCPaymentRetryActionRequest final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCPaymentRetryActionRequest)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3548,7 +3515,7 @@ class IPCPaymentCanMakeActionResponse final :
     kARequestIdFieldNumber = 1,
     kAResultFieldNumber = 2,
   };
-  // required string a_requestId = 1;
+  // optional string a_requestId = 1;
   bool has_a_requestid() const;
   private:
   bool _internal_has_a_requestid() const;
@@ -3566,7 +3533,7 @@ class IPCPaymentCanMakeActionResponse final :
   std::string* _internal_mutable_a_requestid();
   public:
 
-  // required bool a_result = 2;
+  // optional bool a_result = 2;
   bool has_a_result() const;
   private:
   bool _internal_has_a_result() const;
@@ -3582,9 +3549,6 @@ class IPCPaymentCanMakeActionResponse final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCPaymentCanMakeActionResponse)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3746,7 +3710,7 @@ class IPCPaymentAddress final :
   std::string* _internal_add_a_addressline();
   public:
 
-  // required string a_country = 1;
+  // optional string a_country = 1;
   bool has_a_country() const;
   private:
   bool _internal_has_a_country() const;
@@ -3764,7 +3728,7 @@ class IPCPaymentAddress final :
   std::string* _internal_mutable_a_country();
   public:
 
-  // required string a_region = 3;
+  // optional string a_region = 3;
   bool has_a_region() const;
   private:
   bool _internal_has_a_region() const;
@@ -3782,7 +3746,7 @@ class IPCPaymentAddress final :
   std::string* _internal_mutable_a_region();
   public:
 
-  // required string a_regionCode = 4;
+  // optional string a_regionCode = 4;
   bool has_a_regioncode() const;
   private:
   bool _internal_has_a_regioncode() const;
@@ -3800,7 +3764,7 @@ class IPCPaymentAddress final :
   std::string* _internal_mutable_a_regioncode();
   public:
 
-  // required string a_city = 5;
+  // optional string a_city = 5;
   bool has_a_city() const;
   private:
   bool _internal_has_a_city() const;
@@ -3818,7 +3782,7 @@ class IPCPaymentAddress final :
   std::string* _internal_mutable_a_city();
   public:
 
-  // required string a_dependentLocality = 6;
+  // optional string a_dependentLocality = 6;
   bool has_a_dependentlocality() const;
   private:
   bool _internal_has_a_dependentlocality() const;
@@ -3836,7 +3800,7 @@ class IPCPaymentAddress final :
   std::string* _internal_mutable_a_dependentlocality();
   public:
 
-  // required string a_postalCode = 7;
+  // optional string a_postalCode = 7;
   bool has_a_postalcode() const;
   private:
   bool _internal_has_a_postalcode() const;
@@ -3854,7 +3818,7 @@ class IPCPaymentAddress final :
   std::string* _internal_mutable_a_postalcode();
   public:
 
-  // required string a_sortingCode = 8;
+  // optional string a_sortingCode = 8;
   bool has_a_sortingcode() const;
   private:
   bool _internal_has_a_sortingcode() const;
@@ -3872,7 +3836,7 @@ class IPCPaymentAddress final :
   std::string* _internal_mutable_a_sortingcode();
   public:
 
-  // required string a_organization = 9;
+  // optional string a_organization = 9;
   bool has_a_organization() const;
   private:
   bool _internal_has_a_organization() const;
@@ -3890,7 +3854,7 @@ class IPCPaymentAddress final :
   std::string* _internal_mutable_a_organization();
   public:
 
-  // required string a_recipient = 10;
+  // optional string a_recipient = 10;
   bool has_a_recipient() const;
   private:
   bool _internal_has_a_recipient() const;
@@ -3908,7 +3872,7 @@ class IPCPaymentAddress final :
   std::string* _internal_mutable_a_recipient();
   public:
 
-  // required string a_phone = 11;
+  // optional string a_phone = 11;
   bool has_a_phone() const;
   private:
   bool _internal_has_a_phone() const;
@@ -3929,9 +3893,6 @@ class IPCPaymentAddress final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCPaymentAddress)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4068,7 +4029,7 @@ class IPCGeneralResponse final :
   enum : int {
     kADataFieldNumber = 1,
   };
-  // required string a_data = 1;
+  // optional string a_data = 1;
   bool has_a_data() const;
   private:
   bool _internal_has_a_data() const;
@@ -4220,7 +4181,7 @@ class IPCBasicCardResponse final :
     kACardSecurityCodeFieldNumber = 5,
     kABillingAddressFieldNumber = 6,
   };
-  // required string a_cardholderName = 1;
+  // optional string a_cardholderName = 1;
   bool has_a_cardholdername() const;
   private:
   bool _internal_has_a_cardholdername() const;
@@ -4238,7 +4199,7 @@ class IPCBasicCardResponse final :
   std::string* _internal_mutable_a_cardholdername();
   public:
 
-  // required string a_cardNumber = 2;
+  // optional string a_cardNumber = 2;
   bool has_a_cardnumber() const;
   private:
   bool _internal_has_a_cardnumber() const;
@@ -4256,7 +4217,7 @@ class IPCBasicCardResponse final :
   std::string* _internal_mutable_a_cardnumber();
   public:
 
-  // required string a_expiryMonth = 3;
+  // optional string a_expiryMonth = 3;
   bool has_a_expirymonth() const;
   private:
   bool _internal_has_a_expirymonth() const;
@@ -4274,7 +4235,7 @@ class IPCBasicCardResponse final :
   std::string* _internal_mutable_a_expirymonth();
   public:
 
-  // required string a_expiryYear = 4;
+  // optional string a_expiryYear = 4;
   bool has_a_expiryyear() const;
   private:
   bool _internal_has_a_expiryyear() const;
@@ -4292,7 +4253,7 @@ class IPCBasicCardResponse final :
   std::string* _internal_mutable_a_expiryyear();
   public:
 
-  // required string a_cardSecurityCode = 5;
+  // optional string a_cardSecurityCode = 5;
   bool has_a_cardsecuritycode() const;
   private:
   bool _internal_has_a_cardsecuritycode() const;
@@ -4331,9 +4292,6 @@ class IPCBasicCardResponse final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCBasicCardResponse)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4656,7 +4614,7 @@ class IPCPaymentShowActionResponse final :
     kADataFieldNumber = 4,
     kAStatusFieldNumber = 2,
   };
-  // required string a_requestId = 1;
+  // optional string a_requestId = 1;
   bool has_a_requestid() const;
   private:
   bool _internal_has_a_requestid() const;
@@ -4674,7 +4632,7 @@ class IPCPaymentShowActionResponse final :
   std::string* _internal_mutable_a_requestid();
   public:
 
-  // required string a_methodName = 3;
+  // optional string a_methodName = 3;
   bool has_a_methodname() const;
   private:
   bool _internal_has_a_methodname() const;
@@ -4692,7 +4650,7 @@ class IPCPaymentShowActionResponse final :
   std::string* _internal_mutable_a_methodname();
   public:
 
-  // required string a_payerName = 5;
+  // optional string a_payerName = 5;
   bool has_a_payername() const;
   private:
   bool _internal_has_a_payername() const;
@@ -4710,7 +4668,7 @@ class IPCPaymentShowActionResponse final :
   std::string* _internal_mutable_a_payername();
   public:
 
-  // required string a_payerEmail = 6;
+  // optional string a_payerEmail = 6;
   bool has_a_payeremail() const;
   private:
   bool _internal_has_a_payeremail() const;
@@ -4728,7 +4686,7 @@ class IPCPaymentShowActionResponse final :
   std::string* _internal_mutable_a_payeremail();
   public:
 
-  // required string a_payerPhone = 7;
+  // optional string a_payerPhone = 7;
   bool has_a_payerphone() const;
   private:
   bool _internal_has_a_payerphone() const;
@@ -4764,7 +4722,7 @@ class IPCPaymentShowActionResponse final :
       ::protobuf::mozilla::dom::IPCPaymentResponseData* a_data);
   ::protobuf::mozilla::dom::IPCPaymentResponseData* unsafe_arena_release_a_data();
 
-  // required uint32 a_status = 2;
+  // optional uint32 a_status = 2;
   bool has_a_status() const;
   private:
   bool _internal_has_a_status() const;
@@ -4780,9 +4738,6 @@ class IPCPaymentShowActionResponse final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCPaymentShowActionResponse)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4916,7 +4871,7 @@ class IPCPaymentAbortActionResponse final :
     kARequestIdFieldNumber = 1,
     kAIsSucceededFieldNumber = 2,
   };
-  // required string a_requestId = 1;
+  // optional string a_requestId = 1;
   bool has_a_requestid() const;
   private:
   bool _internal_has_a_requestid() const;
@@ -4934,7 +4889,7 @@ class IPCPaymentAbortActionResponse final :
   std::string* _internal_mutable_a_requestid();
   public:
 
-  // required bool a_isSucceeded = 2;
+  // optional bool a_isSucceeded = 2;
   bool has_a_issucceeded() const;
   private:
   bool _internal_has_a_issucceeded() const;
@@ -4950,9 +4905,6 @@ class IPCPaymentAbortActionResponse final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCPaymentAbortActionResponse)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5081,7 +5033,7 @@ class IPCPaymentCompleteActionResponse final :
     kARequestIdFieldNumber = 1,
     kAIsCompletedFieldNumber = 2,
   };
-  // required string a_requestId = 1;
+  // optional string a_requestId = 1;
   bool has_a_requestid() const;
   private:
   bool _internal_has_a_requestid() const;
@@ -5099,7 +5051,7 @@ class IPCPaymentCompleteActionResponse final :
   std::string* _internal_mutable_a_requestid();
   public:
 
-  // required bool a_isCompleted = 2;
+  // optional bool a_isCompleted = 2;
   bool has_a_iscompleted() const;
   private:
   bool _internal_has_a_iscompleted() const;
@@ -5115,9 +5067,6 @@ class IPCPaymentCompleteActionResponse final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCPaymentCompleteActionResponse)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5474,7 +5423,7 @@ class IPCGeneralChangeDetails final :
   enum : int {
     kADetailsFieldNumber = 1,
   };
-  // required string a_details = 1;
+  // optional string a_details = 1;
   bool has_a_details() const;
   private:
   bool _internal_has_a_details() const;
@@ -5850,7 +5799,7 @@ class IPCMethodChangeDetails final :
 #endif  // __GNUC__
 // IPCPaymentMethodData
 
-// required string a_supportedMethods = 1;
+// optional string a_supportedMethods = 1;
 inline bool IPCPaymentMethodData::_internal_has_a_supportedmethods() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5918,7 +5867,7 @@ inline void IPCPaymentMethodData::set_allocated_a_supportedmethods(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentMethodData.a_supportedMethods)
 }
 
-// required string a_data = 2;
+// optional string a_data = 2;
 inline bool IPCPaymentMethodData::_internal_has_a_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5990,7 +5939,7 @@ inline void IPCPaymentMethodData::set_allocated_a_data(std::string* a_data) {
 
 // IPCPaymentCurrencyAmount
 
-// required string a_currency = 1;
+// optional string a_currency = 1;
 inline bool IPCPaymentCurrencyAmount::_internal_has_a_currency() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6058,7 +6007,7 @@ inline void IPCPaymentCurrencyAmount::set_allocated_a_currency(std::string* a_cu
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentCurrencyAmount.a_currency)
 }
 
-// required string a_value = 2;
+// optional string a_value = 2;
 inline bool IPCPaymentCurrencyAmount::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6130,7 +6079,7 @@ inline void IPCPaymentCurrencyAmount::set_allocated_a_value(std::string* a_value
 
 // IPCPaymentItem
 
-// required string a_label = 1;
+// optional string a_label = 1;
 inline bool IPCPaymentItem::_internal_has_a_label() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6288,7 +6237,7 @@ inline void IPCPaymentItem::set_allocated_a_amount(::protobuf::mozilla::dom::IPC
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentItem.a_amount)
 }
 
-// required bool a_pending = 3;
+// optional bool a_pending = 3;
 inline bool IPCPaymentItem::_internal_has_a_pending() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -6320,7 +6269,7 @@ inline void IPCPaymentItem::set_a_pending(bool value) {
 
 // IPCPaymentDetailsModifier
 
-// required string a_supportedMethods = 1;
+// optional string a_supportedMethods = 1;
 inline bool IPCPaymentDetailsModifier::_internal_has_a_supportedmethods() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6518,7 +6467,7 @@ IPCPaymentDetailsModifier::a_additionaldisplayitems() const {
   return _impl_.a_additionaldisplayitems_;
 }
 
-// required string a_data = 4;
+// optional string a_data = 4;
 inline bool IPCPaymentDetailsModifier::_internal_has_a_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6586,7 +6535,7 @@ inline void IPCPaymentDetailsModifier::set_allocated_a_data(std::string* a_data)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentDetailsModifier.a_data)
 }
 
-// required bool a_additionalDisplayItemsPassed = 5;
+// optional bool a_additionalDisplayItemsPassed = 5;
 inline bool IPCPaymentDetailsModifier::_internal_has_a_additionaldisplayitemspassed() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -6618,7 +6567,7 @@ inline void IPCPaymentDetailsModifier::set_a_additionaldisplayitemspassed(bool v
 
 // IPCPaymentShippingOption
 
-// required string a_id = 1;
+// optional string a_id = 1;
 inline bool IPCPaymentShippingOption::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6686,7 +6635,7 @@ inline void IPCPaymentShippingOption::set_allocated_a_id(std::string* a_id) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentShippingOption.a_id)
 }
 
-// required string a_label = 2;
+// optional string a_label = 2;
 inline bool IPCPaymentShippingOption::_internal_has_a_label() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6844,7 +6793,7 @@ inline void IPCPaymentShippingOption::set_allocated_a_amount(::protobuf::mozilla
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentShippingOption.a_amount)
 }
 
-// required bool a_selected = 4;
+// optional bool a_selected = 4;
 inline bool IPCPaymentShippingOption::_internal_has_a_selected() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -6876,7 +6825,7 @@ inline void IPCPaymentShippingOption::set_a_selected(bool value) {
 
 // IPCPaymentDetails
 
-// required string a_id = 1;
+// optional string a_id = 1;
 inline bool IPCPaymentDetails::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7154,7 +7103,7 @@ IPCPaymentDetails::a_modifiers() const {
   return _impl_.a_modifiers_;
 }
 
-// required string a_error = 6;
+// optional string a_error = 6;
 inline bool IPCPaymentDetails::_internal_has_a_error() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7222,7 +7171,7 @@ inline void IPCPaymentDetails::set_allocated_a_error(std::string* a_error) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentDetails.a_error)
 }
 
-// required string a_shippingAddressErrors = 7;
+// optional string a_shippingAddressErrors = 7;
 inline bool IPCPaymentDetails::_internal_has_a_shippingaddresserrors() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -7290,7 +7239,7 @@ inline void IPCPaymentDetails::set_allocated_a_shippingaddresserrors(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentDetails.a_shippingAddressErrors)
 }
 
-// required string a_payerErrors = 8;
+// optional string a_payerErrors = 8;
 inline bool IPCPaymentDetails::_internal_has_a_payererrors() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -7358,7 +7307,7 @@ inline void IPCPaymentDetails::set_allocated_a_payererrors(std::string* a_payere
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentDetails.a_payerErrors)
 }
 
-// required string a_paymentMethodErrors = 9;
+// optional string a_paymentMethodErrors = 9;
 inline bool IPCPaymentDetails::_internal_has_a_paymentmethoderrors() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -7430,7 +7379,7 @@ inline void IPCPaymentDetails::set_allocated_a_paymentmethoderrors(std::string* 
 
 // IPCPaymentOptions
 
-// required bool a_requestPayerName = 1;
+// optional bool a_requestPayerName = 1;
 inline bool IPCPaymentOptions::_internal_has_a_requestpayername() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7458,7 +7407,7 @@ inline void IPCPaymentOptions::set_a_requestpayername(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentOptions.a_requestPayerName)
 }
 
-// required bool a_requestPayerEmail = 2;
+// optional bool a_requestPayerEmail = 2;
 inline bool IPCPaymentOptions::_internal_has_a_requestpayeremail() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -7486,7 +7435,7 @@ inline void IPCPaymentOptions::set_a_requestpayeremail(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentOptions.a_requestPayerEmail)
 }
 
-// required bool a_requestPayerPhone = 3;
+// optional bool a_requestPayerPhone = 3;
 inline bool IPCPaymentOptions::_internal_has_a_requestpayerphone() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -7514,7 +7463,7 @@ inline void IPCPaymentOptions::set_a_requestpayerphone(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentOptions.a_requestPayerPhone)
 }
 
-// required bool a_requestShipping = 4;
+// optional bool a_requestShipping = 4;
 inline bool IPCPaymentOptions::_internal_has_a_requestshipping() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -7542,7 +7491,7 @@ inline void IPCPaymentOptions::set_a_requestshipping(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentOptions.a_requestShipping)
 }
 
-// required bool a_requestBillingAddress = 5;
+// optional bool a_requestBillingAddress = 5;
 inline bool IPCPaymentOptions::_internal_has_a_requestbillingaddress() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -7570,7 +7519,7 @@ inline void IPCPaymentOptions::set_a_requestbillingaddress(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentOptions.a_requestBillingAddress)
 }
 
-// required string a_shippingType = 6;
+// optional string a_shippingType = 6;
 inline bool IPCPaymentOptions::_internal_has_a_shippingtype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7642,7 +7591,7 @@ inline void IPCPaymentOptions::set_allocated_a_shippingtype(std::string* a_shipp
 
 // IPCPaymentCreateActionRequest
 
-// required uint64 a_topOuterWindowId = 1;
+// optional uint64 a_topOuterWindowId = 1;
 inline bool IPCPaymentCreateActionRequest::_internal_has_a_topouterwindowid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -7670,7 +7619,7 @@ inline void IPCPaymentCreateActionRequest::set_a_topouterwindowid(uint64_t value
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentCreateActionRequest.a_topOuterWindowId)
 }
 
-// required string a_requestId = 2;
+// optional string a_requestId = 2;
 inline bool IPCPaymentCreateActionRequest::_internal_has_a_requestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8026,7 +7975,7 @@ inline void IPCPaymentCreateActionRequest::set_allocated_a_options(::protobuf::m
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentCreateActionRequest.a_options)
 }
 
-// required string a_shippingOption = 7;
+// optional string a_shippingOption = 7;
 inline bool IPCPaymentCreateActionRequest::_internal_has_a_shippingoption() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -8098,7 +8047,7 @@ inline void IPCPaymentCreateActionRequest::set_allocated_a_shippingoption(std::s
 
 // IPCPaymentCanMakeActionRequest
 
-// required string a_requestId = 1;
+// optional string a_requestId = 1;
 inline bool IPCPaymentCanMakeActionRequest::_internal_has_a_requestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8170,7 +8119,7 @@ inline void IPCPaymentCanMakeActionRequest::set_allocated_a_requestid(std::strin
 
 // IPCPaymentShowActionRequest
 
-// required string a_requestId = 1;
+// optional string a_requestId = 1;
 inline bool IPCPaymentShowActionRequest::_internal_has_a_requestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8238,7 +8187,7 @@ inline void IPCPaymentShowActionRequest::set_allocated_a_requestid(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentShowActionRequest.a_requestId)
 }
 
-// required bool a_isUpdating = 2;
+// optional bool a_isUpdating = 2;
 inline bool IPCPaymentShowActionRequest::_internal_has_a_isupdating() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8270,7 +8219,7 @@ inline void IPCPaymentShowActionRequest::set_a_isupdating(bool value) {
 
 // IPCPaymentAbortActionRequest
 
-// required string a_requestId = 1;
+// optional string a_requestId = 1;
 inline bool IPCPaymentAbortActionRequest::_internal_has_a_requestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8342,7 +8291,7 @@ inline void IPCPaymentAbortActionRequest::set_allocated_a_requestid(std::string*
 
 // IPCPaymentCompleteActionRequest
 
-// required string a_requestId = 1;
+// optional string a_requestId = 1;
 inline bool IPCPaymentCompleteActionRequest::_internal_has_a_requestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8410,7 +8359,7 @@ inline void IPCPaymentCompleteActionRequest::set_allocated_a_requestid(std::stri
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentCompleteActionRequest.a_requestId)
 }
 
-// required string a_completeStatus = 2;
+// optional string a_completeStatus = 2;
 inline bool IPCPaymentCompleteActionRequest::_internal_has_a_completestatus() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8482,7 +8431,7 @@ inline void IPCPaymentCompleteActionRequest::set_allocated_a_completestatus(std:
 
 // IPCPaymentUpdateActionRequest
 
-// required string a_requestId = 1;
+// optional string a_requestId = 1;
 inline bool IPCPaymentUpdateActionRequest::_internal_has_a_requestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8640,7 +8589,7 @@ inline void IPCPaymentUpdateActionRequest::set_allocated_a_details(::protobuf::m
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentUpdateActionRequest.a_details)
 }
 
-// required string a_shippingOption = 3;
+// optional string a_shippingOption = 3;
 inline bool IPCPaymentUpdateActionRequest::_internal_has_a_shippingoption() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8712,7 +8661,7 @@ inline void IPCPaymentUpdateActionRequest::set_allocated_a_shippingoption(std::s
 
 // IPCPaymentCloseActionRequest
 
-// required string a_requestId = 1;
+// optional string a_requestId = 1;
 inline bool IPCPaymentCloseActionRequest::_internal_has_a_requestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8784,7 +8733,7 @@ inline void IPCPaymentCloseActionRequest::set_allocated_a_requestid(std::string*
 
 // IPCPaymentRetryActionRequest
 
-// required string a_requestId = 1;
+// optional string a_requestId = 1;
 inline bool IPCPaymentRetryActionRequest::_internal_has_a_requestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8852,7 +8801,7 @@ inline void IPCPaymentRetryActionRequest::set_allocated_a_requestid(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentRetryActionRequest.a_requestId)
 }
 
-// required string a_error = 2;
+// optional string a_error = 2;
 inline bool IPCPaymentRetryActionRequest::_internal_has_a_error() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8920,7 +8869,7 @@ inline void IPCPaymentRetryActionRequest::set_allocated_a_error(std::string* a_e
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentRetryActionRequest.a_error)
 }
 
-// required string a_payerErrors = 3;
+// optional string a_payerErrors = 3;
 inline bool IPCPaymentRetryActionRequest::_internal_has_a_payererrors() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -8988,7 +8937,7 @@ inline void IPCPaymentRetryActionRequest::set_allocated_a_payererrors(std::strin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentRetryActionRequest.a_payerErrors)
 }
 
-// required string a_paymentMethodErrors = 4;
+// optional string a_paymentMethodErrors = 4;
 inline bool IPCPaymentRetryActionRequest::_internal_has_a_paymentmethoderrors() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -9056,7 +9005,7 @@ inline void IPCPaymentRetryActionRequest::set_allocated_a_paymentmethoderrors(st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentRetryActionRequest.a_paymentMethodErrors)
 }
 
-// required string a_shippingAddressErrors = 5;
+// optional string a_shippingAddressErrors = 5;
 inline bool IPCPaymentRetryActionRequest::_internal_has_a_shippingaddresserrors() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -9733,7 +9682,7 @@ inline IPCPaymentActionRequest::ContentCase IPCPaymentActionRequest::content_cas
 
 // IPCPaymentCanMakeActionResponse
 
-// required string a_requestId = 1;
+// optional string a_requestId = 1;
 inline bool IPCPaymentCanMakeActionResponse::_internal_has_a_requestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9801,7 +9750,7 @@ inline void IPCPaymentCanMakeActionResponse::set_allocated_a_requestid(std::stri
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentCanMakeActionResponse.a_requestId)
 }
 
-// required bool a_result = 2;
+// optional bool a_result = 2;
 inline bool IPCPaymentCanMakeActionResponse::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -9833,7 +9782,7 @@ inline void IPCPaymentCanMakeActionResponse::set_a_result(bool value) {
 
 // IPCPaymentAddress
 
-// required string a_country = 1;
+// optional string a_country = 1;
 inline bool IPCPaymentAddress::_internal_has_a_country() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9976,7 +9925,7 @@ IPCPaymentAddress::mutable_a_addressline() {
   return &_impl_.a_addressline_;
 }
 
-// required string a_region = 3;
+// optional string a_region = 3;
 inline bool IPCPaymentAddress::_internal_has_a_region() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -10044,7 +9993,7 @@ inline void IPCPaymentAddress::set_allocated_a_region(std::string* a_region) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentAddress.a_region)
 }
 
-// required string a_regionCode = 4;
+// optional string a_regionCode = 4;
 inline bool IPCPaymentAddress::_internal_has_a_regioncode() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -10112,7 +10061,7 @@ inline void IPCPaymentAddress::set_allocated_a_regioncode(std::string* a_regionc
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentAddress.a_regionCode)
 }
 
-// required string a_city = 5;
+// optional string a_city = 5;
 inline bool IPCPaymentAddress::_internal_has_a_city() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -10180,7 +10129,7 @@ inline void IPCPaymentAddress::set_allocated_a_city(std::string* a_city) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentAddress.a_city)
 }
 
-// required string a_dependentLocality = 6;
+// optional string a_dependentLocality = 6;
 inline bool IPCPaymentAddress::_internal_has_a_dependentlocality() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -10248,7 +10197,7 @@ inline void IPCPaymentAddress::set_allocated_a_dependentlocality(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentAddress.a_dependentLocality)
 }
 
-// required string a_postalCode = 7;
+// optional string a_postalCode = 7;
 inline bool IPCPaymentAddress::_internal_has_a_postalcode() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -10316,7 +10265,7 @@ inline void IPCPaymentAddress::set_allocated_a_postalcode(std::string* a_postalc
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentAddress.a_postalCode)
 }
 
-// required string a_sortingCode = 8;
+// optional string a_sortingCode = 8;
 inline bool IPCPaymentAddress::_internal_has_a_sortingcode() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -10384,7 +10333,7 @@ inline void IPCPaymentAddress::set_allocated_a_sortingcode(std::string* a_sortin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentAddress.a_sortingCode)
 }
 
-// required string a_organization = 9;
+// optional string a_organization = 9;
 inline bool IPCPaymentAddress::_internal_has_a_organization() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -10452,7 +10401,7 @@ inline void IPCPaymentAddress::set_allocated_a_organization(std::string* a_organ
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentAddress.a_organization)
 }
 
-// required string a_recipient = 10;
+// optional string a_recipient = 10;
 inline bool IPCPaymentAddress::_internal_has_a_recipient() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -10520,7 +10469,7 @@ inline void IPCPaymentAddress::set_allocated_a_recipient(std::string* a_recipien
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentAddress.a_recipient)
 }
 
-// required string a_phone = 11;
+// optional string a_phone = 11;
 inline bool IPCPaymentAddress::_internal_has_a_phone() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -10592,7 +10541,7 @@ inline void IPCPaymentAddress::set_allocated_a_phone(std::string* a_phone) {
 
 // IPCGeneralResponse
 
-// required string a_data = 1;
+// optional string a_data = 1;
 inline bool IPCGeneralResponse::_internal_has_a_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10664,7 +10613,7 @@ inline void IPCGeneralResponse::set_allocated_a_data(std::string* a_data) {
 
 // IPCBasicCardResponse
 
-// required string a_cardholderName = 1;
+// optional string a_cardholderName = 1;
 inline bool IPCBasicCardResponse::_internal_has_a_cardholdername() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10732,7 +10681,7 @@ inline void IPCBasicCardResponse::set_allocated_a_cardholdername(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCBasicCardResponse.a_cardholderName)
 }
 
-// required string a_cardNumber = 2;
+// optional string a_cardNumber = 2;
 inline bool IPCBasicCardResponse::_internal_has_a_cardnumber() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -10800,7 +10749,7 @@ inline void IPCBasicCardResponse::set_allocated_a_cardnumber(std::string* a_card
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCBasicCardResponse.a_cardNumber)
 }
 
-// required string a_expiryMonth = 3;
+// optional string a_expiryMonth = 3;
 inline bool IPCBasicCardResponse::_internal_has_a_expirymonth() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -10868,7 +10817,7 @@ inline void IPCBasicCardResponse::set_allocated_a_expirymonth(std::string* a_exp
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCBasicCardResponse.a_expiryMonth)
 }
 
-// required string a_expiryYear = 4;
+// optional string a_expiryYear = 4;
 inline bool IPCBasicCardResponse::_internal_has_a_expiryyear() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -10936,7 +10885,7 @@ inline void IPCBasicCardResponse::set_allocated_a_expiryyear(std::string* a_expi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCBasicCardResponse.a_expiryYear)
 }
 
-// required string a_cardSecurityCode = 5;
+// optional string a_cardSecurityCode = 5;
 inline bool IPCBasicCardResponse::_internal_has_a_cardsecuritycode() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -11259,7 +11208,7 @@ inline IPCPaymentResponseData::ContentCase IPCPaymentResponseData::content_case(
 
 // IPCPaymentShowActionResponse
 
-// required string a_requestId = 1;
+// optional string a_requestId = 1;
 inline bool IPCPaymentShowActionResponse::_internal_has_a_requestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11327,7 +11276,7 @@ inline void IPCPaymentShowActionResponse::set_allocated_a_requestid(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentShowActionResponse.a_requestId)
 }
 
-// required uint32 a_status = 2;
+// optional uint32 a_status = 2;
 inline bool IPCPaymentShowActionResponse::_internal_has_a_status() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -11355,7 +11304,7 @@ inline void IPCPaymentShowActionResponse::set_a_status(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentShowActionResponse.a_status)
 }
 
-// required string a_methodName = 3;
+// optional string a_methodName = 3;
 inline bool IPCPaymentShowActionResponse::_internal_has_a_methodname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11513,7 +11462,7 @@ inline void IPCPaymentShowActionResponse::set_allocated_a_data(::protobuf::mozil
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentShowActionResponse.a_data)
 }
 
-// required string a_payerName = 5;
+// optional string a_payerName = 5;
 inline bool IPCPaymentShowActionResponse::_internal_has_a_payername() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -11581,7 +11530,7 @@ inline void IPCPaymentShowActionResponse::set_allocated_a_payername(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentShowActionResponse.a_payerName)
 }
 
-// required string a_payerEmail = 6;
+// optional string a_payerEmail = 6;
 inline bool IPCPaymentShowActionResponse::_internal_has_a_payeremail() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -11649,7 +11598,7 @@ inline void IPCPaymentShowActionResponse::set_allocated_a_payeremail(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentShowActionResponse.a_payerEmail)
 }
 
-// required string a_payerPhone = 7;
+// optional string a_payerPhone = 7;
 inline bool IPCPaymentShowActionResponse::_internal_has_a_payerphone() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -11721,7 +11670,7 @@ inline void IPCPaymentShowActionResponse::set_allocated_a_payerphone(std::string
 
 // IPCPaymentAbortActionResponse
 
-// required string a_requestId = 1;
+// optional string a_requestId = 1;
 inline bool IPCPaymentAbortActionResponse::_internal_has_a_requestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11789,7 +11738,7 @@ inline void IPCPaymentAbortActionResponse::set_allocated_a_requestid(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentAbortActionResponse.a_requestId)
 }
 
-// required bool a_isSucceeded = 2;
+// optional bool a_isSucceeded = 2;
 inline bool IPCPaymentAbortActionResponse::_internal_has_a_issucceeded() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11821,7 +11770,7 @@ inline void IPCPaymentAbortActionResponse::set_a_issucceeded(bool value) {
 
 // IPCPaymentCompleteActionResponse
 
-// required string a_requestId = 1;
+// optional string a_requestId = 1;
 inline bool IPCPaymentCompleteActionResponse::_internal_has_a_requestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11889,7 +11838,7 @@ inline void IPCPaymentCompleteActionResponse::set_allocated_a_requestid(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentCompleteActionResponse.a_requestId)
 }
 
-// required bool a_isCompleted = 2;
+// optional bool a_isCompleted = 2;
 inline bool IPCPaymentCompleteActionResponse::_internal_has_a_iscompleted() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -12230,7 +12179,7 @@ inline IPCPaymentActionResponse::ContentCase IPCPaymentActionResponse::content_c
 
 // IPCGeneralChangeDetails
 
-// required string a_details = 1;
+// optional string a_details = 1;
 inline bool IPCGeneralChangeDetails::_internal_has_a_details() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

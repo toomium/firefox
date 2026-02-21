@@ -176,7 +176,7 @@ class TestPartResult final :
     kAFatalFieldNumber = 2,
     kALineNumberFieldNumber = 4,
   };
-  // required string a_filename = 3;
+  // optional string a_filename = 3;
   bool has_a_filename() const;
   private:
   bool _internal_has_a_filename() const;
@@ -194,7 +194,7 @@ class TestPartResult final :
   std::string* _internal_mutable_a_filename();
   public:
 
-  // required string a_summary = 5;
+  // optional string a_summary = 5;
   bool has_a_summary() const;
   private:
   bool _internal_has_a_summary() const;
@@ -212,7 +212,7 @@ class TestPartResult final :
   std::string* _internal_mutable_a_summary();
   public:
 
-  // required string a_message = 6;
+  // optional string a_message = 6;
   bool has_a_message() const;
   private:
   bool _internal_has_a_message() const;
@@ -230,7 +230,7 @@ class TestPartResult final :
   std::string* _internal_mutable_a_message();
   public:
 
-  // required bool a_failed = 1;
+  // optional bool a_failed = 1;
   bool has_a_failed() const;
   private:
   bool _internal_has_a_failed() const;
@@ -243,7 +243,7 @@ class TestPartResult final :
   void _internal_set_a_failed(bool value);
   public:
 
-  // required bool a_fatal = 2;
+  // optional bool a_fatal = 2;
   bool has_a_fatal() const;
   private:
   bool _internal_has_a_fatal() const;
@@ -256,7 +256,7 @@ class TestPartResult final :
   void _internal_set_a_fatal(bool value);
   public:
 
-  // required sint32 a_lineNumber = 4;
+  // optional sint32 a_lineNumber = 4;
   bool has_a_linenumber() const;
   private:
   bool _internal_has_a_linenumber() const;
@@ -272,9 +272,6 @@ class TestPartResult final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.TestPartResult)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -303,7 +300,7 @@ class TestPartResult final :
 #endif  // __GNUC__
 // TestPartResult
 
-// required bool a_failed = 1;
+// optional bool a_failed = 1;
 inline bool TestPartResult::_internal_has_a_failed() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -331,7 +328,7 @@ inline void TestPartResult::set_a_failed(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.TestPartResult.a_failed)
 }
 
-// required bool a_fatal = 2;
+// optional bool a_fatal = 2;
 inline bool TestPartResult::_internal_has_a_fatal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -359,7 +356,7 @@ inline void TestPartResult::set_a_fatal(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.TestPartResult.a_fatal)
 }
 
-// required string a_filename = 3;
+// optional string a_filename = 3;
 inline bool TestPartResult::_internal_has_a_filename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -427,7 +424,7 @@ inline void TestPartResult::set_allocated_a_filename(std::string* a_filename) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.TestPartResult.a_filename)
 }
 
-// required sint32 a_lineNumber = 4;
+// optional sint32 a_lineNumber = 4;
 inline bool TestPartResult::_internal_has_a_linenumber() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -455,7 +452,7 @@ inline void TestPartResult::set_a_linenumber(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.TestPartResult.a_lineNumber)
 }
 
-// required string a_summary = 5;
+// optional string a_summary = 5;
 inline bool TestPartResult::_internal_has_a_summary() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -523,7 +520,7 @@ inline void TestPartResult::set_allocated_a_summary(std::string* a_summary) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.TestPartResult.a_summary)
 }
 
-// required string a_message = 6;
+// optional string a_message = 6;
 inline bool TestPartResult::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

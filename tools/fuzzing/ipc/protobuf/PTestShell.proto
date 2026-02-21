@@ -22,12 +22,12 @@ message Reply___delete__ {
 }
 
 message Msg_ExecuteCommand {
-  required string a_aCommand = 1;
+  optional string a_aCommand = 1;
 }
 
 message Msg_PTestShellCommandConstructor {
-  required sint64 a_actorid = 1;
-  required string a_aCommand = 2;
+  optional sint64 a_actorid = 1;
+  optional string a_aCommand = 2;
 }
 
 message Reply_PTestShellCommandConstructor {

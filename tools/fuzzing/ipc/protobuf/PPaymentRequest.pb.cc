@@ -888,7 +888,7 @@ class Msg_ChangeShippingAddress::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000002) ^ 0x00000002) != 0;
   }
 };
 
@@ -992,7 +992,7 @@ const char* Msg_ChangeShippingAddress::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aRequestId = 1;
+      // optional string a_aRequestId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_arequestid();
@@ -1040,7 +1040,7 @@ uint8_t* Msg_ChangeShippingAddress::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aRequestId = 1;
+  // optional string a_aRequestId = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_arequestid(), target);
@@ -1061,47 +1061,27 @@ uint8_t* Msg_ChangeShippingAddress::_InternalSerialize(
   return target;
 }
 
-size_t Msg_ChangeShippingAddress::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PPaymentRequest.Msg_ChangeShippingAddress)
-  size_t total_size = 0;
-
-  if (_internal_has_a_arequestid()) {
-    // required string a_aRequestId = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_arequestid());
-  }
-
-  if (_internal_has_a_aaddress()) {
-    // required .protobuf.mozilla.dom.IPCPaymentAddress a_aAddress = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_aaddress_);
-  }
-
-  return total_size;
-}
 size_t Msg_ChangeShippingAddress::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PPaymentRequest.Msg_ChangeShippingAddress)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string a_aRequestId = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_arequestid());
-
-    // required .protobuf.mozilla.dom.IPCPaymentAddress a_aAddress = 2;
+  // required .protobuf.mozilla.dom.IPCPaymentAddress a_aAddress = 2;
+  if (_internal_has_a_aaddress()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_aaddress_);
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional string a_aRequestId = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_arequestid());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1146,9 +1126,6 @@ void Msg_ChangeShippingAddress::CopyFrom(const Msg_ChangeShippingAddress& from) 
 
 bool Msg_ChangeShippingAddress::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_aaddress()) {
-    if (!_impl_.a_aaddress_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -1180,9 +1157,6 @@ class Msg_ChangeShippingOption::_Internal {
   }
   static void set_has_a_aoption(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
   }
 };
 
@@ -1286,7 +1260,7 @@ const char* Msg_ChangeShippingOption::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aRequestId = 1;
+      // optional string a_aRequestId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_arequestid();
@@ -1295,7 +1269,7 @@ const char* Msg_ChangeShippingOption::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required string a_aOption = 2;
+      // optional string a_aOption = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_aoption();
@@ -1335,13 +1309,13 @@ uint8_t* Msg_ChangeShippingOption::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aRequestId = 1;
+  // optional string a_aRequestId = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_arequestid(), target);
   }
 
-  // required string a_aOption = 2;
+  // optional string a_aOption = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_aoption(), target);
@@ -1355,48 +1329,31 @@ uint8_t* Msg_ChangeShippingOption::_InternalSerialize(
   return target;
 }
 
-size_t Msg_ChangeShippingOption::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PPaymentRequest.Msg_ChangeShippingOption)
-  size_t total_size = 0;
-
-  if (_internal_has_a_arequestid()) {
-    // required string a_aRequestId = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_arequestid());
-  }
-
-  if (_internal_has_a_aoption()) {
-    // required string a_aOption = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_aoption());
-  }
-
-  return total_size;
-}
 size_t Msg_ChangeShippingOption::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PPaymentRequest.Msg_ChangeShippingOption)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string a_aRequestId = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_arequestid());
-
-    // required string a_aOption = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_aoption());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional string a_aRequestId = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_arequestid());
+    }
+
+    // optional string a_aOption = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_aoption());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -1438,7 +1395,6 @@ void Msg_ChangeShippingOption::CopyFrom(const Msg_ChangeShippingOption& from) {
 }
 
 bool Msg_ChangeShippingOption::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1479,9 +1435,6 @@ class Msg_ChangePayerDetail::_Internal {
   }
   static void set_has_a_apayerphone(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000000f) ^ 0x0000000f) != 0;
   }
 };
 
@@ -1621,7 +1574,7 @@ const char* Msg_ChangePayerDetail::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aRequestId = 1;
+      // optional string a_aRequestId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_arequestid();
@@ -1630,7 +1583,7 @@ const char* Msg_ChangePayerDetail::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // required string a_aPayerName = 2;
+      // optional string a_aPayerName = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_apayername();
@@ -1639,7 +1592,7 @@ const char* Msg_ChangePayerDetail::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // required string a_aPayerEmail = 3;
+      // optional string a_aPayerEmail = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_apayeremail();
@@ -1648,7 +1601,7 @@ const char* Msg_ChangePayerDetail::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // required string a_aPayerPhone = 4;
+      // optional string a_aPayerPhone = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_apayerphone();
@@ -1688,25 +1641,25 @@ uint8_t* Msg_ChangePayerDetail::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aRequestId = 1;
+  // optional string a_aRequestId = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_arequestid(), target);
   }
 
-  // required string a_aPayerName = 2;
+  // optional string a_aPayerName = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_apayername(), target);
   }
 
-  // required string a_aPayerEmail = 3;
+  // optional string a_aPayerEmail = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_apayeremail(), target);
   }
 
-  // required string a_aPayerPhone = 4;
+  // optional string a_aPayerPhone = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_a_apayerphone(), target);
@@ -1720,72 +1673,45 @@ uint8_t* Msg_ChangePayerDetail::_InternalSerialize(
   return target;
 }
 
-size_t Msg_ChangePayerDetail::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PPaymentRequest.Msg_ChangePayerDetail)
-  size_t total_size = 0;
-
-  if (_internal_has_a_arequestid()) {
-    // required string a_aRequestId = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_arequestid());
-  }
-
-  if (_internal_has_a_apayername()) {
-    // required string a_aPayerName = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_apayername());
-  }
-
-  if (_internal_has_a_apayeremail()) {
-    // required string a_aPayerEmail = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_apayeremail());
-  }
-
-  if (_internal_has_a_apayerphone()) {
-    // required string a_aPayerPhone = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_apayerphone());
-  }
-
-  return total_size;
-}
 size_t Msg_ChangePayerDetail::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PPaymentRequest.Msg_ChangePayerDetail)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required string a_aRequestId = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_arequestid());
-
-    // required string a_aPayerName = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_apayername());
-
-    // required string a_aPayerEmail = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_apayeremail());
-
-    // required string a_aPayerPhone = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_apayerphone());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000000fu) {
+    // optional string a_aRequestId = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_arequestid());
+    }
+
+    // optional string a_aPayerName = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_apayername());
+    }
+
+    // optional string a_aPayerEmail = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_apayeremail());
+    }
+
+    // optional string a_aPayerPhone = 4;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_apayerphone());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -1833,7 +1759,6 @@ void Msg_ChangePayerDetail::CopyFrom(const Msg_ChangePayerDetail& from) {
 }
 
 bool Msg_ChangePayerDetail::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1882,7 +1807,7 @@ class Msg_ChangePaymentMethod::_Internal {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
+    return ((has_bits[0] & 0x00000004) ^ 0x00000004) != 0;
   }
 };
 
@@ -2004,7 +1929,7 @@ const char* Msg_ChangePaymentMethod::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aRequestId = 1;
+      // optional string a_aRequestId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_arequestid();
@@ -2013,7 +1938,7 @@ const char* Msg_ChangePaymentMethod::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required string a_aMethodName = 2;
+      // optional string a_aMethodName = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_amethodname();
@@ -2061,13 +1986,13 @@ uint8_t* Msg_ChangePaymentMethod::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aRequestId = 1;
+  // optional string a_aRequestId = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_arequestid(), target);
   }
 
-  // required string a_aMethodName = 2;
+  // optional string a_aMethodName = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_amethodname(), target);
@@ -2088,60 +2013,37 @@ uint8_t* Msg_ChangePaymentMethod::_InternalSerialize(
   return target;
 }
 
-size_t Msg_ChangePaymentMethod::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PPaymentRequest.Msg_ChangePaymentMethod)
-  size_t total_size = 0;
-
-  if (_internal_has_a_arequestid()) {
-    // required string a_aRequestId = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_arequestid());
-  }
-
-  if (_internal_has_a_amethodname()) {
-    // required string a_aMethodName = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_amethodname());
-  }
-
-  if (_internal_has_a_amethoddetails()) {
-    // required .protobuf.mozilla.dom.IPCMethodChangeDetails a_aMethodDetails = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_amethoddetails_);
-  }
-
-  return total_size;
-}
 size_t Msg_ChangePaymentMethod::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PPaymentRequest.Msg_ChangePaymentMethod)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required string a_aRequestId = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_arequestid());
-
-    // required string a_aMethodName = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_amethodname());
-
-    // required .protobuf.mozilla.dom.IPCMethodChangeDetails a_aMethodDetails = 3;
+  // required .protobuf.mozilla.dom.IPCMethodChangeDetails a_aMethodDetails = 3;
+  if (_internal_has_a_amethoddetails()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_amethoddetails_);
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional string a_aRequestId = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_arequestid());
+    }
+
+    // optional string a_aMethodName = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_amethodname());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }

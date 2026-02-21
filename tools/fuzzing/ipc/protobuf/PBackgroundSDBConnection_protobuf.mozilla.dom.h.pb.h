@@ -191,7 +191,7 @@ class SDBRequestOpenParams final :
   enum : int {
     kANameFieldNumber = 1,
   };
-  // required string a_name = 1;
+  // optional string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -338,7 +338,7 @@ class SDBRequestSeekParams final :
   enum : int {
     kAOffsetFieldNumber = 1,
   };
-  // required uint64 a_offset = 1;
+  // optional uint64 a_offset = 1;
   bool has_a_offset() const;
   private:
   bool _internal_has_a_offset() const;
@@ -480,7 +480,7 @@ class SDBRequestReadParams final :
   enum : int {
     kASizeFieldNumber = 1,
   };
-  // required uint64 a_size = 1;
+  // optional uint64 a_size = 1;
   bool has_a_size() const;
   private:
   bool _internal_has_a_size() const;
@@ -622,7 +622,7 @@ class SDBRequestWriteParams final :
   enum : int {
     kADataFieldNumber = 1,
   };
-  // required string a_data = 1;
+  // optional string a_data = 1;
   bool has_a_data() const;
   private:
   bool _internal_has_a_data() const;
@@ -1041,7 +1041,7 @@ class SDBRequestParams final :
 #endif  // __GNUC__
 // SDBRequestOpenParams
 
-// required string a_name = 1;
+// optional string a_name = 1;
 inline bool SDBRequestOpenParams::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1113,7 +1113,7 @@ inline void SDBRequestOpenParams::set_allocated_a_name(std::string* a_name) {
 
 // SDBRequestSeekParams
 
-// required uint64 a_offset = 1;
+// optional uint64 a_offset = 1;
 inline bool SDBRequestSeekParams::_internal_has_a_offset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1145,7 +1145,7 @@ inline void SDBRequestSeekParams::set_a_offset(uint64_t value) {
 
 // SDBRequestReadParams
 
-// required uint64 a_size = 1;
+// optional uint64 a_size = 1;
 inline bool SDBRequestReadParams::_internal_has_a_size() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1177,7 +1177,7 @@ inline void SDBRequestReadParams::set_a_size(uint64_t value) {
 
 // SDBRequestWriteParams
 
-// required string a_data = 1;
+// optional string a_data = 1;
 inline bool SDBRequestWriteParams::_internal_has_a_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

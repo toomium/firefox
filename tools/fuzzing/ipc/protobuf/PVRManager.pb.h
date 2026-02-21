@@ -267,7 +267,7 @@ class Msg_PVRLayerConstructor final :
     kAADisplayIDFieldNumber = 2,
     kAAGroupFieldNumber = 3,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -280,7 +280,7 @@ class Msg_PVRLayerConstructor final :
   void _internal_set_a_actorid(int64_t value);
   public:
 
-  // required uint32 a_aDisplayID = 2;
+  // optional uint32 a_aDisplayID = 2;
   bool has_a_adisplayid() const;
   private:
   bool _internal_has_a_adisplayid() const;
@@ -293,7 +293,7 @@ class Msg_PVRLayerConstructor final :
   void _internal_set_a_adisplayid(uint32_t value);
   public:
 
-  // required uint32 a_aGroup = 3;
+  // optional uint32 a_aGroup = 3;
   bool has_a_agroup() const;
   private:
   bool _internal_has_a_agroup() const;
@@ -309,9 +309,6 @@ class Msg_PVRLayerConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PVRManager.Msg_PVRLayerConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -813,7 +810,7 @@ class Msg_SetGroupMask final :
     kAADisplayIDFieldNumber = 1,
     kAAGroupMaskFieldNumber = 2,
   };
-  // required uint32 a_aDisplayID = 1;
+  // optional uint32 a_aDisplayID = 1;
   bool has_a_adisplayid() const;
   private:
   bool _internal_has_a_adisplayid() const;
@@ -826,7 +823,7 @@ class Msg_SetGroupMask final :
   void _internal_set_a_adisplayid(uint32_t value);
   public:
 
-  // required uint32 a_aGroupMask = 2;
+  // optional uint32 a_aGroupMask = 2;
   bool has_a_agroupmask() const;
   private:
   bool _internal_has_a_agroupmask() const;
@@ -842,9 +839,6 @@ class Msg_SetGroupMask final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PVRManager.Msg_SetGroupMask)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -972,7 +966,7 @@ class Msg_SetHaveEventListener final :
   enum : int {
     kAAHaveEventListenerFieldNumber = 1,
   };
-  // required bool a_aHaveEventListener = 1;
+  // optional bool a_aHaveEventListener = 1;
   bool has_a_ahaveeventlistener() const;
   private:
   bool _internal_has_a_ahaveeventlistener() const;
@@ -1384,7 +1378,7 @@ class Msg_VibrateHaptic final :
   std::string* _internal_mutable_a_agamepadhandle();
   public:
 
-  // required double a_aIntensity = 3;
+  // optional double a_aIntensity = 3;
   bool has_a_aintensity() const;
   private:
   bool _internal_has_a_aintensity() const;
@@ -1397,7 +1391,7 @@ class Msg_VibrateHaptic final :
   void _internal_set_a_aintensity(double value);
   public:
 
-  // required uint32 a_aHapticIndex = 2;
+  // optional uint32 a_aHapticIndex = 2;
   bool has_a_ahapticindex() const;
   private:
   bool _internal_has_a_ahapticindex() const;
@@ -1410,7 +1404,7 @@ class Msg_VibrateHaptic final :
   void _internal_set_a_ahapticindex(uint32_t value);
   public:
 
-  // required uint32 a_aPromiseID = 5;
+  // optional uint32 a_aPromiseID = 5;
   bool has_a_apromiseid() const;
   private:
   bool _internal_has_a_apromiseid() const;
@@ -1423,7 +1417,7 @@ class Msg_VibrateHaptic final :
   void _internal_set_a_apromiseid(uint32_t value);
   public:
 
-  // required double a_aDuration = 4;
+  // optional double a_aDuration = 4;
   bool has_a_aduration() const;
   private:
   bool _internal_has_a_aduration() const;
@@ -1439,9 +1433,6 @@ class Msg_VibrateHaptic final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1719,7 +1710,7 @@ class Msg_StartVRNavigation final :
   enum : int {
     kAADeviceIDFieldNumber = 1,
   };
-  // required uint32 a_aDeviceID = 1;
+  // optional uint32 a_aDeviceID = 1;
   bool has_a_adeviceid() const;
   private:
   bool _internal_has_a_adeviceid() const;
@@ -1880,7 +1871,7 @@ class Msg_StopVRNavigation final :
   std::string* _internal_mutable_a_aduration();
   public:
 
-  // required uint32 a_aDeviceID = 1;
+  // optional uint32 a_aDeviceID = 1;
   bool has_a_adeviceid() const;
   private:
   bool _internal_has_a_adeviceid() const;
@@ -1896,9 +1887,6 @@ class Msg_StopVRNavigation final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PVRManager.Msg_StopVRNavigation)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2842,7 +2830,7 @@ class Msg_ReplyGamepadVibrateHaptic final :
   enum : int {
     kAAPromiseIDFieldNumber = 1,
   };
-  // required uint32 a_aPromiseID = 1;
+  // optional uint32 a_aPromiseID = 1;
   bool has_a_apromiseid() const;
   private:
   bool _internal_has_a_apromiseid() const;
@@ -2984,7 +2972,7 @@ class Msg_NotifyPuppetCommandBufferCompleted final :
   enum : int {
     kAASuccessFieldNumber = 1,
   };
-  // required bool a_aSuccess = 1;
+  // optional bool a_aSuccess = 1;
   bool has_a_asuccess() const;
   private:
   bool _internal_has_a_asuccess() const;
@@ -3395,7 +3383,7 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_PVRLayerConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PVRLayerConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3423,7 +3411,7 @@ inline void Msg_PVRLayerConstructor::set_a_actorid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_PVRLayerConstructor.a_actorid)
 }
 
-// required uint32 a_aDisplayID = 2;
+// optional uint32 a_aDisplayID = 2;
 inline bool Msg_PVRLayerConstructor::_internal_has_a_adisplayid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3451,7 +3439,7 @@ inline void Msg_PVRLayerConstructor::set_a_adisplayid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_PVRLayerConstructor.a_aDisplayID)
 }
 
-// required uint32 a_aGroup = 3;
+// optional uint32 a_aGroup = 3;
 inline bool Msg_PVRLayerConstructor::_internal_has_a_agroup() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -3495,7 +3483,7 @@ inline void Msg_PVRLayerConstructor::set_a_agroup(uint32_t value) {
 
 // Msg_SetGroupMask
 
-// required uint32 a_aDisplayID = 1;
+// optional uint32 a_aDisplayID = 1;
 inline bool Msg_SetGroupMask::_internal_has_a_adisplayid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3523,7 +3511,7 @@ inline void Msg_SetGroupMask::set_a_adisplayid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_SetGroupMask.a_aDisplayID)
 }
 
-// required uint32 a_aGroupMask = 2;
+// optional uint32 a_aGroupMask = 2;
 inline bool Msg_SetGroupMask::_internal_has_a_agroupmask() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3555,7 +3543,7 @@ inline void Msg_SetGroupMask::set_a_agroupmask(uint32_t value) {
 
 // Msg_SetHaveEventListener
 
-// required bool a_aHaveEventListener = 1;
+// optional bool a_aHaveEventListener = 1;
 inline bool Msg_SetHaveEventListener::_internal_has_a_ahaveeventlistener() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3663,7 +3651,7 @@ inline void Msg_VibrateHaptic::set_allocated_a_agamepadhandle(std::string* a_aga
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.a_aGamepadHandle)
 }
 
-// required uint32 a_aHapticIndex = 2;
+// optional uint32 a_aHapticIndex = 2;
 inline bool Msg_VibrateHaptic::_internal_has_a_ahapticindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -3691,7 +3679,7 @@ inline void Msg_VibrateHaptic::set_a_ahapticindex(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.a_aHapticIndex)
 }
 
-// required double a_aIntensity = 3;
+// optional double a_aIntensity = 3;
 inline bool Msg_VibrateHaptic::_internal_has_a_aintensity() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3719,7 +3707,7 @@ inline void Msg_VibrateHaptic::set_a_aintensity(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.a_aIntensity)
 }
 
-// required double a_aDuration = 4;
+// optional double a_aDuration = 4;
 inline bool Msg_VibrateHaptic::_internal_has_a_aduration() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -3747,7 +3735,7 @@ inline void Msg_VibrateHaptic::set_a_aduration(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.a_aDuration)
 }
 
-// required uint32 a_aPromiseID = 5;
+// optional uint32 a_aPromiseID = 5;
 inline bool Msg_VibrateHaptic::_internal_has_a_apromiseid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -3851,7 +3839,7 @@ inline void Msg_StopVibrateHaptic::set_allocated_a_agamepadhandle(std::string* a
 
 // Msg_StartVRNavigation
 
-// required uint32 a_aDeviceID = 1;
+// optional uint32 a_aDeviceID = 1;
 inline bool Msg_StartVRNavigation::_internal_has_a_adeviceid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3883,7 +3871,7 @@ inline void Msg_StartVRNavigation::set_a_adeviceid(uint32_t value) {
 
 // Msg_StopVRNavigation
 
-// required uint32 a_aDeviceID = 1;
+// optional uint32 a_aDeviceID = 1;
 inline bool Msg_StopVRNavigation::_internal_has_a_adeviceid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4190,7 +4178,7 @@ inline void Msg_UpdateRuntimeCapabilities::set_allocated_a_acapabilities(std::st
 
 // Msg_ReplyGamepadVibrateHaptic
 
-// required uint32 a_aPromiseID = 1;
+// optional uint32 a_aPromiseID = 1;
 inline bool Msg_ReplyGamepadVibrateHaptic::_internal_has_a_apromiseid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4222,7 +4210,7 @@ inline void Msg_ReplyGamepadVibrateHaptic::set_a_apromiseid(uint32_t value) {
 
 // Msg_NotifyPuppetCommandBufferCompleted
 
-// required bool a_aSuccess = 1;
+// optional bool a_aSuccess = 1;
 inline bool Msg_NotifyPuppetCommandBufferCompleted::_internal_has_a_asuccess() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

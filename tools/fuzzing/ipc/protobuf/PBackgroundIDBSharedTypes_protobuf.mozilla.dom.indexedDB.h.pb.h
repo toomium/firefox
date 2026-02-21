@@ -357,7 +357,7 @@ class SerializedKeyRange final :
   std::string* _internal_mutable_a_upper();
   public:
 
-  // required bool a_lowerOpen = 3;
+  // optional bool a_lowerOpen = 3;
   bool has_a_loweropen() const;
   private:
   bool _internal_has_a_loweropen() const;
@@ -370,7 +370,7 @@ class SerializedKeyRange final :
   void _internal_set_a_loweropen(bool value);
   public:
 
-  // required bool a_upperOpen = 4;
+  // optional bool a_upperOpen = 4;
   bool has_a_upperopen() const;
   private:
   bool _internal_has_a_upperopen() const;
@@ -383,7 +383,7 @@ class SerializedKeyRange final :
   void _internal_set_a_upperopen(bool value);
   public:
 
-  // required bool a_isOnly = 5;
+  // optional bool a_isOnly = 5;
   bool has_a_isonly() const;
   private:
   bool _internal_has_a_isonly() const;
@@ -925,7 +925,7 @@ class SerializedStructuredCloneReadInfo final :
   std::string* _internal_mutable_a_data();
   public:
 
-  // required bool a_hasPreprocessInfo = 3;
+  // optional bool a_hasPreprocessInfo = 3;
   bool has_a_haspreprocessinfo() const;
   private:
   bool _internal_has_a_haspreprocessinfo() const;
@@ -941,9 +941,6 @@ class SerializedStructuredCloneReadInfo final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1091,7 +1088,7 @@ class SerializedStructuredCloneWriteInfo final :
   std::string* _internal_mutable_a_data();
   public:
 
-  // required uint64 a_offsetToKeyProp = 2;
+  // optional uint64 a_offsetToKeyProp = 2;
   bool has_a_offsettokeyprop() const;
   private:
   bool _internal_has_a_offsettokeyprop() const;
@@ -1107,9 +1104,6 @@ class SerializedStructuredCloneWriteInfo final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneWriteInfo)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1275,7 +1269,7 @@ class IndexUpdateInfo final :
   std::string* _internal_mutable_a_localizedvalue();
   public:
 
-  // required sint64 a_indexId = 1;
+  // optional sint64 a_indexId = 1;
   bool has_a_indexid() const;
   private:
   bool _internal_has_a_indexid() const;
@@ -1424,7 +1418,7 @@ class DatabaseMetadata final :
     kAPersistenceTypeFieldNumber = 3,
     kAVersionFieldNumber = 2,
   };
-  // required string a_name = 1;
+  // optional string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -1460,7 +1454,7 @@ class DatabaseMetadata final :
   std::string* _internal_mutable_a_persistencetype();
   public:
 
-  // required uint64 a_version = 2;
+  // optional uint64 a_version = 2;
   bool has_a_version() const;
   private:
   bool _internal_has_a_version() const;
@@ -1476,9 +1470,6 @@ class DatabaseMetadata final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.DatabaseMetadata)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1610,7 +1601,7 @@ class ObjectStoreMetadata final :
     kAIdFieldNumber = 1,
     kAAutoIncrementFieldNumber = 4,
   };
-  // required string a_name = 2;
+  // optional string a_name = 2;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -1646,7 +1637,7 @@ class ObjectStoreMetadata final :
   std::string* _internal_mutable_a_keypath();
   public:
 
-  // required sint64 a_id = 1;
+  // optional sint64 a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -1659,7 +1650,7 @@ class ObjectStoreMetadata final :
   void _internal_set_a_id(int64_t value);
   public:
 
-  // required bool a_autoIncrement = 4;
+  // optional bool a_autoIncrement = 4;
   bool has_a_autoincrement() const;
   private:
   bool _internal_has_a_autoincrement() const;
@@ -1675,9 +1666,6 @@ class ObjectStoreMetadata final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.ObjectStoreMetadata)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1813,7 +1801,7 @@ class IndexMetadata final :
     kAMultiEntryFieldNumber = 6,
     kAAutoLocaleFieldNumber = 7,
   };
-  // required string a_name = 2;
+  // optional string a_name = 2;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -1849,7 +1837,7 @@ class IndexMetadata final :
   std::string* _internal_mutable_a_keypath();
   public:
 
-  // required string a_locale = 4;
+  // optional string a_locale = 4;
   bool has_a_locale() const;
   private:
   bool _internal_has_a_locale() const;
@@ -1867,7 +1855,7 @@ class IndexMetadata final :
   std::string* _internal_mutable_a_locale();
   public:
 
-  // required sint64 a_id = 1;
+  // optional sint64 a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -1880,7 +1868,7 @@ class IndexMetadata final :
   void _internal_set_a_id(int64_t value);
   public:
 
-  // required bool a_unique = 5;
+  // optional bool a_unique = 5;
   bool has_a_unique() const;
   private:
   bool _internal_has_a_unique() const;
@@ -1893,7 +1881,7 @@ class IndexMetadata final :
   void _internal_set_a_unique(bool value);
   public:
 
-  // required bool a_multiEntry = 6;
+  // optional bool a_multiEntry = 6;
   bool has_a_multientry() const;
   private:
   bool _internal_has_a_multientry() const;
@@ -1906,7 +1894,7 @@ class IndexMetadata final :
   void _internal_set_a_multientry(bool value);
   public:
 
-  // required bool a_autoLocale = 7;
+  // optional bool a_autoLocale = 7;
   bool has_a_autolocale() const;
   private:
   bool _internal_has_a_autolocale() const;
@@ -1922,9 +1910,6 @@ class IndexMetadata final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.IndexMetadata)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2429,7 +2414,7 @@ class CommonOpenCursorParams final :
       ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* a_optionalkeyrange);
   ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* unsafe_arena_release_a_optionalkeyrange();
 
-  // required sint64 a_objectStoreId = 1;
+  // optional sint64 a_objectStoreId = 1;
   bool has_a_objectstoreid() const;
   private:
   bool _internal_has_a_objectstoreid() const;
@@ -2445,9 +2430,6 @@ class CommonOpenCursorParams final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.CommonOpenCursorParams)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2889,7 +2871,7 @@ class CommonIndexOpenCursorParams final :
       ::protobuf::mozilla::dom::indexedDB::CommonOpenCursorParams* a_commonparams);
   ::protobuf::mozilla::dom::indexedDB::CommonOpenCursorParams* unsafe_arena_release_a_commonparams();
 
-  // required sint64 a_indexId = 2;
+  // optional sint64 a_indexId = 2;
   bool has_a_indexid() const;
   private:
   bool _internal_has_a_indexid() const;
@@ -2905,9 +2887,6 @@ class CommonIndexOpenCursorParams final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.CommonIndexOpenCursorParams)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3804,7 +3783,7 @@ class ObjectStoreAddPutParams final :
       ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneWriteInfo* a_cloneinfo);
   ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneWriteInfo* unsafe_arena_release_a_cloneinfo();
 
-  // required sint64 a_objectStoreId = 1;
+  // optional sint64 a_objectStoreId = 1;
   bool has_a_objectstoreid() const;
   private:
   bool _internal_has_a_objectstoreid() const;
@@ -4266,7 +4245,7 @@ class ObjectStoreGetParams final :
       ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* a_keyrange);
   ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* unsafe_arena_release_a_keyrange();
 
-  // required sint64 a_objectStoreId = 1;
+  // optional sint64 a_objectStoreId = 1;
   bool has_a_objectstoreid() const;
   private:
   bool _internal_has_a_objectstoreid() const;
@@ -4282,9 +4261,6 @@ class ObjectStoreGetParams final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.ObjectStoreGetParams)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4431,7 +4407,7 @@ class ObjectStoreGetKeyParams final :
       ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* a_keyrange);
   ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* unsafe_arena_release_a_keyrange();
 
-  // required sint64 a_objectStoreId = 1;
+  // optional sint64 a_objectStoreId = 1;
   bool has_a_objectstoreid() const;
   private:
   bool _internal_has_a_objectstoreid() const;
@@ -4447,9 +4423,6 @@ class ObjectStoreGetKeyParams final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.ObjectStoreGetKeyParams)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4597,7 +4570,7 @@ class ObjectStoreGetAllParams final :
       ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* a_optionalkeyrange);
   ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* unsafe_arena_release_a_optionalkeyrange();
 
-  // required sint64 a_objectStoreId = 1;
+  // optional sint64 a_objectStoreId = 1;
   bool has_a_objectstoreid() const;
   private:
   bool _internal_has_a_objectstoreid() const;
@@ -4610,7 +4583,7 @@ class ObjectStoreGetAllParams final :
   void _internal_set_a_objectstoreid(int64_t value);
   public:
 
-  // required uint32 a_limit = 3;
+  // optional uint32 a_limit = 3;
   bool has_a_limit() const;
   private:
   bool _internal_has_a_limit() const;
@@ -4626,9 +4599,6 @@ class ObjectStoreGetAllParams final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.ObjectStoreGetAllParams)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4777,7 +4747,7 @@ class ObjectStoreGetAllKeysParams final :
       ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* a_optionalkeyrange);
   ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* unsafe_arena_release_a_optionalkeyrange();
 
-  // required sint64 a_objectStoreId = 1;
+  // optional sint64 a_objectStoreId = 1;
   bool has_a_objectstoreid() const;
   private:
   bool _internal_has_a_objectstoreid() const;
@@ -4790,7 +4760,7 @@ class ObjectStoreGetAllKeysParams final :
   void _internal_set_a_objectstoreid(int64_t value);
   public:
 
-  // required uint32 a_limit = 3;
+  // optional uint32 a_limit = 3;
   bool has_a_limit() const;
   private:
   bool _internal_has_a_limit() const;
@@ -4806,9 +4776,6 @@ class ObjectStoreGetAllKeysParams final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.ObjectStoreGetAllKeysParams)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4956,7 +4923,7 @@ class ObjectStoreDeleteParams final :
       ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* a_keyrange);
   ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* unsafe_arena_release_a_keyrange();
 
-  // required sint64 a_objectStoreId = 1;
+  // optional sint64 a_objectStoreId = 1;
   bool has_a_objectstoreid() const;
   private:
   bool _internal_has_a_objectstoreid() const;
@@ -4972,9 +4939,6 @@ class ObjectStoreDeleteParams final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.ObjectStoreDeleteParams)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5102,7 +5066,7 @@ class ObjectStoreClearParams final :
   enum : int {
     kAObjectStoreIdFieldNumber = 1,
   };
-  // required sint64 a_objectStoreId = 1;
+  // optional sint64 a_objectStoreId = 1;
   bool has_a_objectstoreid() const;
   private:
   bool _internal_has_a_objectstoreid() const;
@@ -5263,7 +5227,7 @@ class ObjectStoreCountParams final :
       ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* a_optionalkeyrange);
   ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* unsafe_arena_release_a_optionalkeyrange();
 
-  // required sint64 a_objectStoreId = 1;
+  // optional sint64 a_objectStoreId = 1;
   bool has_a_objectstoreid() const;
   private:
   bool _internal_has_a_objectstoreid() const;
@@ -5426,7 +5390,7 @@ class IndexGetParams final :
       ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* a_keyrange);
   ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* unsafe_arena_release_a_keyrange();
 
-  // required sint64 a_objectStoreId = 1;
+  // optional sint64 a_objectStoreId = 1;
   bool has_a_objectstoreid() const;
   private:
   bool _internal_has_a_objectstoreid() const;
@@ -5439,7 +5403,7 @@ class IndexGetParams final :
   void _internal_set_a_objectstoreid(int64_t value);
   public:
 
-  // required sint64 a_indexId = 2;
+  // optional sint64 a_indexId = 2;
   bool has_a_indexid() const;
   private:
   bool _internal_has_a_indexid() const;
@@ -5455,9 +5419,6 @@ class IndexGetParams final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.IndexGetParams)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5606,7 +5567,7 @@ class IndexGetKeyParams final :
       ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* a_keyrange);
   ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* unsafe_arena_release_a_keyrange();
 
-  // required sint64 a_objectStoreId = 1;
+  // optional sint64 a_objectStoreId = 1;
   bool has_a_objectstoreid() const;
   private:
   bool _internal_has_a_objectstoreid() const;
@@ -5619,7 +5580,7 @@ class IndexGetKeyParams final :
   void _internal_set_a_objectstoreid(int64_t value);
   public:
 
-  // required sint64 a_indexId = 2;
+  // optional sint64 a_indexId = 2;
   bool has_a_indexid() const;
   private:
   bool _internal_has_a_indexid() const;
@@ -5635,9 +5596,6 @@ class IndexGetKeyParams final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.IndexGetKeyParams)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5787,7 +5745,7 @@ class IndexGetAllParams final :
       ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* a_optionalkeyrange);
   ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* unsafe_arena_release_a_optionalkeyrange();
 
-  // required sint64 a_objectStoreId = 1;
+  // optional sint64 a_objectStoreId = 1;
   bool has_a_objectstoreid() const;
   private:
   bool _internal_has_a_objectstoreid() const;
@@ -5800,7 +5758,7 @@ class IndexGetAllParams final :
   void _internal_set_a_objectstoreid(int64_t value);
   public:
 
-  // required sint64 a_indexId = 2;
+  // optional sint64 a_indexId = 2;
   bool has_a_indexid() const;
   private:
   bool _internal_has_a_indexid() const;
@@ -5813,7 +5771,7 @@ class IndexGetAllParams final :
   void _internal_set_a_indexid(int64_t value);
   public:
 
-  // required uint32 a_limit = 4;
+  // optional uint32 a_limit = 4;
   bool has_a_limit() const;
   private:
   bool _internal_has_a_limit() const;
@@ -5829,9 +5787,6 @@ class IndexGetAllParams final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.IndexGetAllParams)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5982,7 +5937,7 @@ class IndexGetAllKeysParams final :
       ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* a_optionalkeyrange);
   ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* unsafe_arena_release_a_optionalkeyrange();
 
-  // required sint64 a_objectStoreId = 1;
+  // optional sint64 a_objectStoreId = 1;
   bool has_a_objectstoreid() const;
   private:
   bool _internal_has_a_objectstoreid() const;
@@ -5995,7 +5950,7 @@ class IndexGetAllKeysParams final :
   void _internal_set_a_objectstoreid(int64_t value);
   public:
 
-  // required sint64 a_indexId = 2;
+  // optional sint64 a_indexId = 2;
   bool has_a_indexid() const;
   private:
   bool _internal_has_a_indexid() const;
@@ -6008,7 +5963,7 @@ class IndexGetAllKeysParams final :
   void _internal_set_a_indexid(int64_t value);
   public:
 
-  // required uint32 a_limit = 4;
+  // optional uint32 a_limit = 4;
   bool has_a_limit() const;
   private:
   bool _internal_has_a_limit() const;
@@ -6024,9 +5979,6 @@ class IndexGetAllKeysParams final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.IndexGetAllKeysParams)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -6176,7 +6128,7 @@ class IndexCountParams final :
       ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* a_optionalkeyrange);
   ::protobuf::mozilla::dom::indexedDB::SerializedKeyRange* unsafe_arena_release_a_optionalkeyrange();
 
-  // required sint64 a_objectStoreId = 1;
+  // optional sint64 a_objectStoreId = 1;
   bool has_a_objectstoreid() const;
   private:
   bool _internal_has_a_objectstoreid() const;
@@ -6189,7 +6141,7 @@ class IndexCountParams final :
   void _internal_set_a_objectstoreid(int64_t value);
   public:
 
-  // required sint64 a_indexId = 2;
+  // optional sint64 a_indexId = 2;
   bool has_a_indexid() const;
   private:
   bool _internal_has_a_indexid() const;
@@ -6205,9 +6157,6 @@ class IndexCountParams final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.IndexCountParams)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -6806,7 +6755,7 @@ class LoggingInfo final :
   std::string* _internal_mutable_a_backgroundchildloggingid();
   public:
 
-  // required sint64 a_nextTransactionSerialNumber = 2;
+  // optional sint64 a_nextTransactionSerialNumber = 2;
   bool has_a_nexttransactionserialnumber() const;
   private:
   bool _internal_has_a_nexttransactionserialnumber() const;
@@ -6819,7 +6768,7 @@ class LoggingInfo final :
   void _internal_set_a_nexttransactionserialnumber(int64_t value);
   public:
 
-  // required sint64 a_nextVersionChangeTransactionSerialNumber = 3;
+  // optional sint64 a_nextVersionChangeTransactionSerialNumber = 3;
   bool has_a_nextversionchangetransactionserialnumber() const;
   private:
   bool _internal_has_a_nextversionchangetransactionserialnumber() const;
@@ -6832,7 +6781,7 @@ class LoggingInfo final :
   void _internal_set_a_nextversionchangetransactionserialnumber(int64_t value);
   public:
 
-  // required uint64 a_nextRequestSerialNumber = 4;
+  // optional uint64 a_nextRequestSerialNumber = 4;
   bool has_a_nextrequestserialnumber() const;
   private:
   bool _internal_has_a_nextrequestserialnumber() const;
@@ -6848,9 +6797,6 @@ class LoggingInfo final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.LoggingInfo)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -7013,7 +6959,7 @@ inline void SerializedKeyRange::set_allocated_a_upper(std::string* a_upper) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.SerializedKeyRange.a_upper)
 }
 
-// required bool a_lowerOpen = 3;
+// optional bool a_lowerOpen = 3;
 inline bool SerializedKeyRange::_internal_has_a_loweropen() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -7041,7 +6987,7 @@ inline void SerializedKeyRange::set_a_loweropen(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.SerializedKeyRange.a_lowerOpen)
 }
 
-// required bool a_upperOpen = 4;
+// optional bool a_upperOpen = 4;
 inline bool SerializedKeyRange::_internal_has_a_upperopen() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -7069,7 +7015,7 @@ inline void SerializedKeyRange::set_a_upperopen(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.SerializedKeyRange.a_upperOpen)
 }
 
-// required bool a_isOnly = 5;
+// optional bool a_isOnly = 5;
 inline bool SerializedKeyRange::_internal_has_a_isonly() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -7527,7 +7473,7 @@ SerializedStructuredCloneReadInfo::a_files() const {
   return _impl_.a_files_;
 }
 
-// required bool a_hasPreprocessInfo = 3;
+// optional bool a_hasPreprocessInfo = 3;
 inline bool SerializedStructuredCloneReadInfo::_internal_has_a_haspreprocessinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7627,7 +7573,7 @@ inline void SerializedStructuredCloneWriteInfo::set_allocated_a_data(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneWriteInfo.a_data)
 }
 
-// required uint64 a_offsetToKeyProp = 2;
+// optional uint64 a_offsetToKeyProp = 2;
 inline bool SerializedStructuredCloneWriteInfo::_internal_has_a_offsettokeyprop() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7659,7 +7605,7 @@ inline void SerializedStructuredCloneWriteInfo::set_a_offsettokeyprop(uint64_t v
 
 // IndexUpdateInfo
 
-// required sint64 a_indexId = 1;
+// optional sint64 a_indexId = 1;
 inline bool IndexUpdateInfo::_internal_has_a_indexid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -7827,7 +7773,7 @@ inline void IndexUpdateInfo::set_allocated_a_localizedvalue(std::string* a_local
 
 // DatabaseMetadata
 
-// required string a_name = 1;
+// optional string a_name = 1;
 inline bool DatabaseMetadata::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7895,7 +7841,7 @@ inline void DatabaseMetadata::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.DatabaseMetadata.a_name)
 }
 
-// required uint64 a_version = 2;
+// optional uint64 a_version = 2;
 inline bool DatabaseMetadata::_internal_has_a_version() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -7995,7 +7941,7 @@ inline void DatabaseMetadata::set_allocated_a_persistencetype(std::string* a_per
 
 // ObjectStoreMetadata
 
-// required sint64 a_id = 1;
+// optional sint64 a_id = 1;
 inline bool ObjectStoreMetadata::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -8023,7 +7969,7 @@ inline void ObjectStoreMetadata::set_a_id(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.ObjectStoreMetadata.a_id)
 }
 
-// required string a_name = 2;
+// optional string a_name = 2;
 inline bool ObjectStoreMetadata::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8159,7 +8105,7 @@ inline void ObjectStoreMetadata::set_allocated_a_keypath(std::string* a_keypath)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.ObjectStoreMetadata.a_keyPath)
 }
 
-// required bool a_autoIncrement = 4;
+// optional bool a_autoIncrement = 4;
 inline bool ObjectStoreMetadata::_internal_has_a_autoincrement() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -8191,7 +8137,7 @@ inline void ObjectStoreMetadata::set_a_autoincrement(bool value) {
 
 // IndexMetadata
 
-// required sint64 a_id = 1;
+// optional sint64 a_id = 1;
 inline bool IndexMetadata::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -8219,7 +8165,7 @@ inline void IndexMetadata::set_a_id(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexMetadata.a_id)
 }
 
-// required string a_name = 2;
+// optional string a_name = 2;
 inline bool IndexMetadata::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8355,7 +8301,7 @@ inline void IndexMetadata::set_allocated_a_keypath(std::string* a_keypath) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.IndexMetadata.a_keyPath)
 }
 
-// required string a_locale = 4;
+// optional string a_locale = 4;
 inline bool IndexMetadata::_internal_has_a_locale() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -8423,7 +8369,7 @@ inline void IndexMetadata::set_allocated_a_locale(std::string* a_locale) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.IndexMetadata.a_locale)
 }
 
-// required bool a_unique = 5;
+// optional bool a_unique = 5;
 inline bool IndexMetadata::_internal_has_a_unique() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -8451,7 +8397,7 @@ inline void IndexMetadata::set_a_unique(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexMetadata.a_unique)
 }
 
-// required bool a_multiEntry = 6;
+// optional bool a_multiEntry = 6;
 inline bool IndexMetadata::_internal_has_a_multientry() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -8479,7 +8425,7 @@ inline void IndexMetadata::set_a_multientry(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexMetadata.a_multiEntry)
 }
 
-// required bool a_autoLocale = 7;
+// optional bool a_autoLocale = 7;
 inline bool IndexMetadata::_internal_has_a_autolocale() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -8779,7 +8725,7 @@ ObjectStoreSpec::a_indexes() const {
 
 // CommonOpenCursorParams
 
-// required sint64 a_objectStoreId = 1;
+// optional sint64 a_objectStoreId = 1;
 inline bool CommonOpenCursorParams::_internal_has_a_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -9247,7 +9193,7 @@ inline void CommonIndexOpenCursorParams::set_allocated_a_commonparams(::protobuf
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.CommonIndexOpenCursorParams.a_commonParams)
 }
 
-// required sint64 a_indexId = 2;
+// optional sint64 a_indexId = 2;
 inline bool CommonIndexOpenCursorParams::_internal_has_a_indexid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -9916,7 +9862,7 @@ inline void FileAddInfo::set_allocated_a_type(std::string* a_type) {
 
 // ObjectStoreAddPutParams
 
-// required sint64 a_objectStoreId = 1;
+// optional sint64 a_objectStoreId = 1;
 inline bool ObjectStoreAddPutParams::_internal_has_a_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -10374,7 +10320,7 @@ inline void ObjectStorePutParams::set_allocated_a_commonparams(::protobuf::mozil
 
 // ObjectStoreGetParams
 
-// required sint64 a_objectStoreId = 1;
+// optional sint64 a_objectStoreId = 1;
 inline bool ObjectStoreGetParams::_internal_has_a_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -10496,7 +10442,7 @@ inline void ObjectStoreGetParams::set_allocated_a_keyrange(::protobuf::mozilla::
 
 // ObjectStoreGetKeyParams
 
-// required sint64 a_objectStoreId = 1;
+// optional sint64 a_objectStoreId = 1;
 inline bool ObjectStoreGetKeyParams::_internal_has_a_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -10618,7 +10564,7 @@ inline void ObjectStoreGetKeyParams::set_allocated_a_keyrange(::protobuf::mozill
 
 // ObjectStoreGetAllParams
 
-// required sint64 a_objectStoreId = 1;
+// optional sint64 a_objectStoreId = 1;
 inline bool ObjectStoreGetAllParams::_internal_has_a_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -10736,7 +10682,7 @@ inline void ObjectStoreGetAllParams::set_allocated_a_optionalkeyrange(::protobuf
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.ObjectStoreGetAllParams.a_optionalKeyRange)
 }
 
-// required uint32 a_limit = 3;
+// optional uint32 a_limit = 3;
 inline bool ObjectStoreGetAllParams::_internal_has_a_limit() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -10768,7 +10714,7 @@ inline void ObjectStoreGetAllParams::set_a_limit(uint32_t value) {
 
 // ObjectStoreGetAllKeysParams
 
-// required sint64 a_objectStoreId = 1;
+// optional sint64 a_objectStoreId = 1;
 inline bool ObjectStoreGetAllKeysParams::_internal_has_a_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -10886,7 +10832,7 @@ inline void ObjectStoreGetAllKeysParams::set_allocated_a_optionalkeyrange(::prot
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.ObjectStoreGetAllKeysParams.a_optionalKeyRange)
 }
 
-// required uint32 a_limit = 3;
+// optional uint32 a_limit = 3;
 inline bool ObjectStoreGetAllKeysParams::_internal_has_a_limit() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -10918,7 +10864,7 @@ inline void ObjectStoreGetAllKeysParams::set_a_limit(uint32_t value) {
 
 // ObjectStoreDeleteParams
 
-// required sint64 a_objectStoreId = 1;
+// optional sint64 a_objectStoreId = 1;
 inline bool ObjectStoreDeleteParams::_internal_has_a_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11040,7 +10986,7 @@ inline void ObjectStoreDeleteParams::set_allocated_a_keyrange(::protobuf::mozill
 
 // ObjectStoreClearParams
 
-// required sint64 a_objectStoreId = 1;
+// optional sint64 a_objectStoreId = 1;
 inline bool ObjectStoreClearParams::_internal_has_a_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11072,7 +11018,7 @@ inline void ObjectStoreClearParams::set_a_objectstoreid(int64_t value) {
 
 // ObjectStoreCountParams
 
-// required sint64 a_objectStoreId = 1;
+// optional sint64 a_objectStoreId = 1;
 inline bool ObjectStoreCountParams::_internal_has_a_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11194,7 +11140,7 @@ inline void ObjectStoreCountParams::set_allocated_a_optionalkeyrange(::protobuf:
 
 // IndexGetParams
 
-// required sint64 a_objectStoreId = 1;
+// optional sint64 a_objectStoreId = 1;
 inline bool IndexGetParams::_internal_has_a_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11222,7 +11168,7 @@ inline void IndexGetParams::set_a_objectstoreid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexGetParams.a_objectStoreId)
 }
 
-// required sint64 a_indexId = 2;
+// optional sint64 a_indexId = 2;
 inline bool IndexGetParams::_internal_has_a_indexid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -11344,7 +11290,7 @@ inline void IndexGetParams::set_allocated_a_keyrange(::protobuf::mozilla::dom::i
 
 // IndexGetKeyParams
 
-// required sint64 a_objectStoreId = 1;
+// optional sint64 a_objectStoreId = 1;
 inline bool IndexGetKeyParams::_internal_has_a_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11372,7 +11318,7 @@ inline void IndexGetKeyParams::set_a_objectstoreid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexGetKeyParams.a_objectStoreId)
 }
 
-// required sint64 a_indexId = 2;
+// optional sint64 a_indexId = 2;
 inline bool IndexGetKeyParams::_internal_has_a_indexid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -11494,7 +11440,7 @@ inline void IndexGetKeyParams::set_allocated_a_keyrange(::protobuf::mozilla::dom
 
 // IndexGetAllParams
 
-// required sint64 a_objectStoreId = 1;
+// optional sint64 a_objectStoreId = 1;
 inline bool IndexGetAllParams::_internal_has_a_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11522,7 +11468,7 @@ inline void IndexGetAllParams::set_a_objectstoreid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexGetAllParams.a_objectStoreId)
 }
 
-// required sint64 a_indexId = 2;
+// optional sint64 a_indexId = 2;
 inline bool IndexGetAllParams::_internal_has_a_indexid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -11640,7 +11586,7 @@ inline void IndexGetAllParams::set_allocated_a_optionalkeyrange(::protobuf::mozi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.IndexGetAllParams.a_optionalKeyRange)
 }
 
-// required uint32 a_limit = 4;
+// optional uint32 a_limit = 4;
 inline bool IndexGetAllParams::_internal_has_a_limit() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -11672,7 +11618,7 @@ inline void IndexGetAllParams::set_a_limit(uint32_t value) {
 
 // IndexGetAllKeysParams
 
-// required sint64 a_objectStoreId = 1;
+// optional sint64 a_objectStoreId = 1;
 inline bool IndexGetAllKeysParams::_internal_has_a_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11700,7 +11646,7 @@ inline void IndexGetAllKeysParams::set_a_objectstoreid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexGetAllKeysParams.a_objectStoreId)
 }
 
-// required sint64 a_indexId = 2;
+// optional sint64 a_indexId = 2;
 inline bool IndexGetAllKeysParams::_internal_has_a_indexid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -11818,7 +11764,7 @@ inline void IndexGetAllKeysParams::set_allocated_a_optionalkeyrange(::protobuf::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.IndexGetAllKeysParams.a_optionalKeyRange)
 }
 
-// required uint32 a_limit = 4;
+// optional uint32 a_limit = 4;
 inline bool IndexGetAllKeysParams::_internal_has_a_limit() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -11850,7 +11796,7 @@ inline void IndexGetAllKeysParams::set_a_limit(uint32_t value) {
 
 // IndexCountParams
 
-// required sint64 a_objectStoreId = 1;
+// optional sint64 a_objectStoreId = 1;
 inline bool IndexCountParams::_internal_has_a_objectstoreid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11878,7 +11824,7 @@ inline void IndexCountParams::set_a_objectstoreid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexCountParams.a_objectStoreId)
 }
 
-// required sint64 a_indexId = 2;
+// optional sint64 a_indexId = 2;
 inline bool IndexCountParams::_internal_has_a_indexid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -13117,7 +13063,7 @@ inline void LoggingInfo::set_allocated_a_backgroundchildloggingid(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.LoggingInfo.a_backgroundChildLoggingId)
 }
 
-// required sint64 a_nextTransactionSerialNumber = 2;
+// optional sint64 a_nextTransactionSerialNumber = 2;
 inline bool LoggingInfo::_internal_has_a_nexttransactionserialnumber() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -13145,7 +13091,7 @@ inline void LoggingInfo::set_a_nexttransactionserialnumber(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.LoggingInfo.a_nextTransactionSerialNumber)
 }
 
-// required sint64 a_nextVersionChangeTransactionSerialNumber = 3;
+// optional sint64 a_nextVersionChangeTransactionSerialNumber = 3;
 inline bool LoggingInfo::_internal_has_a_nextversionchangetransactionserialnumber() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -13173,7 +13119,7 @@ inline void LoggingInfo::set_a_nextversionchangetransactionserialnumber(int64_t 
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.LoggingInfo.a_nextVersionChangeTransactionSerialNumber)
 }
 
-// required uint64 a_nextRequestSerialNumber = 4;
+// optional uint64 a_nextRequestSerialNumber = 4;
 inline bool LoggingInfo::_internal_has_a_nextrequestserialnumber() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;

@@ -344,7 +344,7 @@ class Msg_PTestDataStructuresSubConstructor final :
     kAActoridFieldNumber = 1,
     kAIFieldNumber = 2,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -357,7 +357,7 @@ class Msg_PTestDataStructuresSubConstructor final :
   void _internal_set_a_actorid(int64_t value);
   public:
 
-  // required sint32 a_i = 2;
+  // optional sint32 a_i = 2;
   bool has_a_i() const;
   private:
   bool _internal_has_a_i() const;
@@ -373,9 +373,6 @@ class Msg_PTestDataStructuresSubConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.PTestDataStructures.Msg_PTestDataStructuresSubConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -6958,7 +6955,7 @@ class Reply_TestNsIntRegion final :
 #endif  // __GNUC__
 // Msg_PTestDataStructuresSubConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PTestDataStructuresSubConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6986,7 +6983,7 @@ inline void Msg_PTestDataStructuresSubConstructor::set_a_actorid(int64_t value) 
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestDataStructures.Msg_PTestDataStructuresSubConstructor.a_actorid)
 }
 
-// required sint32 a_i = 2;
+// optional sint32 a_i = 2;
 inline bool Msg_PTestDataStructuresSubConstructor::_internal_has_a_i() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

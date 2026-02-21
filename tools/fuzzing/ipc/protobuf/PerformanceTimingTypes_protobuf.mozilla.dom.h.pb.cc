@@ -103,9 +103,6 @@ class IPCServerTiming::_Internal {
   static void set_has_a_description(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
-  }
 };
 
 IPCServerTiming::IPCServerTiming(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -212,7 +209,7 @@ const char* IPCServerTiming::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_name = 1;
+      // optional string a_name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_name();
@@ -221,7 +218,7 @@ const char* IPCServerTiming::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required double a_duration = 2;
+      // optional double a_duration = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 17)) {
           _Internal::set_has_a_duration(&has_bits);
@@ -230,7 +227,7 @@ const char* IPCServerTiming::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required string a_description = 3;
+      // optional string a_description = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_description();
@@ -270,19 +267,19 @@ uint8_t* IPCServerTiming::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_name = 1;
+  // optional string a_name = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_name(), target);
   }
 
-  // required double a_duration = 2;
+  // optional double a_duration = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(2, this->_internal_a_duration(), target);
   }
 
-  // required string a_description = 3;
+  // optional string a_description = 3;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_description(), target);
@@ -296,56 +293,36 @@ uint8_t* IPCServerTiming::_InternalSerialize(
   return target;
 }
 
-size_t IPCServerTiming::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.IPCServerTiming)
-  size_t total_size = 0;
-
-  if (_internal_has_a_name()) {
-    // required string a_name = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_name());
-  }
-
-  if (_internal_has_a_description()) {
-    // required string a_description = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_description());
-  }
-
-  if (_internal_has_a_duration()) {
-    // required double a_duration = 2;
-    total_size += 1 + 8;
-  }
-
-  return total_size;
-}
 size_t IPCServerTiming::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCServerTiming)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required string a_name = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_name());
-
-    // required string a_description = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_description());
-
-    // required double a_duration = 2;
-    total_size += 1 + 8;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    // optional string a_name = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_name());
+    }
+
+    // optional string a_description = 3;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_description());
+    }
+
+    // optional double a_duration = 2;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 + 8;
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -391,7 +368,6 @@ void IPCServerTiming::CopyFrom(const IPCServerTiming& from) {
 }
 
 bool IPCServerTiming::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -519,7 +495,7 @@ class IPCPerformanceTimingData::_Internal {
     (*has_bits)[0] |= 2147483648u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0xffffffff) ^ 0xffffffff) != 0;
+    return ((has_bits[0] & 0x0017fffe) ^ 0x0017fffe) != 0;
   }
 };
 
@@ -1021,7 +997,7 @@ const char* IPCPerformanceTimingData::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required string a_nextHopProtocol = 2;
+      // optional string a_nextHopProtocol = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_nexthopprotocol();
@@ -1192,7 +1168,7 @@ const char* IPCPerformanceTimingData::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required uint64 a_encodedBodySize = 21;
+      // optional uint64 a_encodedBodySize = 21;
       case 21:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 168)) {
           _Internal::set_has_a_encodedbodysize(&has_bits);
@@ -1201,7 +1177,7 @@ const char* IPCPerformanceTimingData::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required uint64 a_transferSize = 22;
+      // optional uint64 a_transferSize = 22;
       case 22:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 176)) {
           _Internal::set_has_a_transfersize(&has_bits);
@@ -1210,7 +1186,7 @@ const char* IPCPerformanceTimingData::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required uint64 a_decodedBodySize = 23;
+      // optional uint64 a_decodedBodySize = 23;
       case 23:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 184)) {
           _Internal::set_has_a_decodedbodysize(&has_bits);
@@ -1219,7 +1195,7 @@ const char* IPCPerformanceTimingData::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_responseStatus = 24;
+      // optional uint32 a_responseStatus = 24;
       case 24:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 192)) {
           _Internal::set_has_a_responsestatus(&has_bits);
@@ -1228,7 +1204,7 @@ const char* IPCPerformanceTimingData::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_redirectCount = 25;
+      // optional uint32 a_redirectCount = 25;
       case 25:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 200)) {
           _Internal::set_has_a_redirectcount(&has_bits);
@@ -1237,7 +1213,7 @@ const char* IPCPerformanceTimingData::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required bool a_renderBlocking = 26;
+      // optional bool a_renderBlocking = 26;
       case 26:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 208)) {
           _Internal::set_has_a_renderblocking(&has_bits);
@@ -1246,7 +1222,7 @@ const char* IPCPerformanceTimingData::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required string a_contentType = 27;
+      // optional string a_contentType = 27;
       case 27:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 218)) {
           auto str = _internal_mutable_a_contenttype();
@@ -1255,7 +1231,7 @@ const char* IPCPerformanceTimingData::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required bool a_allRedirectsSameOrigin = 28;
+      // optional bool a_allRedirectsSameOrigin = 28;
       case 28:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 224)) {
           _Internal::set_has_a_allredirectssameorigin(&has_bits);
@@ -1264,7 +1240,7 @@ const char* IPCPerformanceTimingData::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required bool a_allRedirectsPassTAO = 29;
+      // optional bool a_allRedirectsPassTAO = 29;
       case 29:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 232)) {
           _Internal::set_has_a_allredirectspasstao(&has_bits);
@@ -1273,7 +1249,7 @@ const char* IPCPerformanceTimingData::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required bool a_secureConnection = 30;
+      // optional bool a_secureConnection = 30;
       case 30:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 240)) {
           _Internal::set_has_a_secureconnection(&has_bits);
@@ -1291,7 +1267,7 @@ const char* IPCPerformanceTimingData::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required bool a_timingAllowed = 32;
+      // optional bool a_timingAllowed = 32;
       case 32:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 0)) {
           _Internal::set_has_a_timingallowed(&has_bits);
@@ -1300,7 +1276,7 @@ const char* IPCPerformanceTimingData::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required bool a_initialized = 33;
+      // optional bool a_initialized = 33;
       case 33:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_initialized(&has_bits);
@@ -1348,7 +1324,7 @@ uint8_t* IPCPerformanceTimingData::_InternalSerialize(
   }
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_nextHopProtocol = 2;
+  // optional string a_nextHopProtocol = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_nexthopprotocol(), target);
@@ -1462,61 +1438,61 @@ uint8_t* IPCPerformanceTimingData::_InternalSerialize(
         20, this->_internal_a_fetchstart(), target);
   }
 
-  // required uint64 a_encodedBodySize = 21;
+  // optional uint64 a_encodedBodySize = 21;
   if (cached_has_bits & 0x00200000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(21, this->_internal_a_encodedbodysize(), target);
   }
 
-  // required uint64 a_transferSize = 22;
+  // optional uint64 a_transferSize = 22;
   if (cached_has_bits & 0x00400000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(22, this->_internal_a_transfersize(), target);
   }
 
-  // required uint64 a_decodedBodySize = 23;
+  // optional uint64 a_decodedBodySize = 23;
   if (cached_has_bits & 0x00800000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(23, this->_internal_a_decodedbodysize(), target);
   }
 
-  // required uint32 a_responseStatus = 24;
+  // optional uint32 a_responseStatus = 24;
   if (cached_has_bits & 0x01000000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(24, this->_internal_a_responsestatus(), target);
   }
 
-  // required uint32 a_redirectCount = 25;
+  // optional uint32 a_redirectCount = 25;
   if (cached_has_bits & 0x02000000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(25, this->_internal_a_redirectcount(), target);
   }
 
-  // required bool a_renderBlocking = 26;
+  // optional bool a_renderBlocking = 26;
   if (cached_has_bits & 0x04000000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(26, this->_internal_a_renderblocking(), target);
   }
 
-  // required string a_contentType = 27;
+  // optional string a_contentType = 27;
   if (cached_has_bits & 0x00080000u) {
     target = stream->WriteStringMaybeAliased(
         27, this->_internal_a_contenttype(), target);
   }
 
-  // required bool a_allRedirectsSameOrigin = 28;
+  // optional bool a_allRedirectsSameOrigin = 28;
   if (cached_has_bits & 0x08000000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(28, this->_internal_a_allredirectssameorigin(), target);
   }
 
-  // required bool a_allRedirectsPassTAO = 29;
+  // optional bool a_allRedirectsPassTAO = 29;
   if (cached_has_bits & 0x10000000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(29, this->_internal_a_allredirectspasstao(), target);
   }
 
-  // required bool a_secureConnection = 30;
+  // optional bool a_secureConnection = 30;
   if (cached_has_bits & 0x20000000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(30, this->_internal_a_secureconnection(), target);
@@ -1528,13 +1504,13 @@ uint8_t* IPCPerformanceTimingData::_InternalSerialize(
         31, this->_internal_a_bodyinfoaccessallowed(), target);
   }
 
-  // required bool a_timingAllowed = 32;
+  // optional bool a_timingAllowed = 32;
   if (cached_has_bits & 0x40000000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(32, this->_internal_a_timingallowed(), target);
   }
 
-  // required bool a_initialized = 33;
+  // optional bool a_initialized = 33;
   if (cached_has_bits & 0x80000000u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(33, this->_internal_a_initialized(), target);
@@ -1551,13 +1527,6 @@ uint8_t* IPCPerformanceTimingData::_InternalSerialize(
 size_t IPCPerformanceTimingData::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.IPCPerformanceTimingData)
   size_t total_size = 0;
-
-  if (_internal_has_a_nexthopprotocol()) {
-    // required string a_nextHopProtocol = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_nexthopprotocol());
-  }
 
   if (_internal_has_a_asyncopen()) {
     // required bytes a_asyncOpen = 3;
@@ -1685,83 +1654,11 @@ size_t IPCPerformanceTimingData::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_fetchstart());
   }
 
-  if (_internal_has_a_contenttype()) {
-    // required string a_contentType = 27;
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_contenttype());
-  }
-
   if (_internal_has_a_bodyinfoaccessallowed()) {
     // required bytes a_bodyInfoAccessAllowed = 31;
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_bodyinfoaccessallowed());
-  }
-
-  if (_internal_has_a_encodedbodysize()) {
-    // required uint64 a_encodedBodySize = 21;
-    total_size += 2 +
-      ::_pbi::WireFormatLite::UInt64Size(
-        this->_internal_a_encodedbodysize());
-  }
-
-  if (_internal_has_a_transfersize()) {
-    // required uint64 a_transferSize = 22;
-    total_size += 2 +
-      ::_pbi::WireFormatLite::UInt64Size(
-        this->_internal_a_transfersize());
-  }
-
-  if (_internal_has_a_decodedbodysize()) {
-    // required uint64 a_decodedBodySize = 23;
-    total_size += 2 +
-      ::_pbi::WireFormatLite::UInt64Size(
-        this->_internal_a_decodedbodysize());
-  }
-
-  if (_internal_has_a_responsestatus()) {
-    // required uint32 a_responseStatus = 24;
-    total_size += 2 +
-      ::_pbi::WireFormatLite::UInt32Size(
-        this->_internal_a_responsestatus());
-  }
-
-  if (_internal_has_a_redirectcount()) {
-    // required uint32 a_redirectCount = 25;
-    total_size += 2 +
-      ::_pbi::WireFormatLite::UInt32Size(
-        this->_internal_a_redirectcount());
-  }
-
-  if (_internal_has_a_renderblocking()) {
-    // required bool a_renderBlocking = 26;
-    total_size += 2 + 1;
-  }
-
-  if (_internal_has_a_allredirectssameorigin()) {
-    // required bool a_allRedirectsSameOrigin = 28;
-    total_size += 2 + 1;
-  }
-
-  if (_internal_has_a_allredirectspasstao()) {
-    // required bool a_allRedirectsPassTAO = 29;
-    total_size += 2 + 1;
-  }
-
-  if (_internal_has_a_secureconnection()) {
-    // required bool a_secureConnection = 30;
-    total_size += 2 + 1;
-  }
-
-  if (_internal_has_a_timingallowed()) {
-    // required bool a_timingAllowed = 32;
-    total_size += 2 + 1;
-  }
-
-  if (_internal_has_a_initialized()) {
-    // required bool a_initialized = 33;
-    total_size += 2 + 1;
   }
 
   return total_size;
@@ -1770,12 +1667,7 @@ size_t IPCPerformanceTimingData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCPerformanceTimingData)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0xffffffff) ^ 0xffffffff) == 0) {  // All required fields are present.
-    // required string a_nextHopProtocol = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_nexthopprotocol());
-
+  if (((_impl_._has_bits_[0] & 0x0017fffe) ^ 0x0017fffe) == 0) {  // All required fields are present.
     // required bytes a_asyncOpen = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -1866,58 +1758,10 @@ size_t IPCPerformanceTimingData::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_fetchstart());
 
-    // required string a_contentType = 27;
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_contenttype());
-
     // required bytes a_bodyInfoAccessAllowed = 31;
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_bodyinfoaccessallowed());
-
-    // required uint64 a_encodedBodySize = 21;
-    total_size += 2 +
-      ::_pbi::WireFormatLite::UInt64Size(
-        this->_internal_a_encodedbodysize());
-
-    // required uint64 a_transferSize = 22;
-    total_size += 2 +
-      ::_pbi::WireFormatLite::UInt64Size(
-        this->_internal_a_transfersize());
-
-    // required uint64 a_decodedBodySize = 23;
-    total_size += 2 +
-      ::_pbi::WireFormatLite::UInt64Size(
-        this->_internal_a_decodedbodysize());
-
-    // required uint32 a_responseStatus = 24;
-    total_size += 2 +
-      ::_pbi::WireFormatLite::UInt32Size(
-        this->_internal_a_responsestatus());
-
-    // required uint32 a_redirectCount = 25;
-    total_size += 2 +
-      ::_pbi::WireFormatLite::UInt32Size(
-        this->_internal_a_redirectcount());
-
-    // required bool a_renderBlocking = 26;
-    total_size += 2 + 1;
-
-    // required bool a_allRedirectsSameOrigin = 28;
-    total_size += 2 + 1;
-
-    // required bool a_allRedirectsPassTAO = 29;
-    total_size += 2 + 1;
-
-    // required bool a_secureConnection = 30;
-    total_size += 2 + 1;
-
-    // required bool a_timingAllowed = 32;
-    total_size += 2 + 1;
-
-    // required bool a_initialized = 33;
-    total_size += 2 + 1;
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -1933,6 +1777,90 @@ size_t IPCPerformanceTimingData::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
+  // optional string a_nextHopProtocol = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_nexthopprotocol());
+  }
+
+  // optional string a_contentType = 27;
+  if (cached_has_bits & 0x00080000u) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_contenttype());
+  }
+
+  if (cached_has_bits & 0x00e00000u) {
+    // optional uint64 a_encodedBodySize = 21;
+    if (cached_has_bits & 0x00200000u) {
+      total_size += 2 +
+        ::_pbi::WireFormatLite::UInt64Size(
+          this->_internal_a_encodedbodysize());
+    }
+
+    // optional uint64 a_transferSize = 22;
+    if (cached_has_bits & 0x00400000u) {
+      total_size += 2 +
+        ::_pbi::WireFormatLite::UInt64Size(
+          this->_internal_a_transfersize());
+    }
+
+    // optional uint64 a_decodedBodySize = 23;
+    if (cached_has_bits & 0x00800000u) {
+      total_size += 2 +
+        ::_pbi::WireFormatLite::UInt64Size(
+          this->_internal_a_decodedbodysize());
+    }
+
+  }
+  if (cached_has_bits & 0xff000000u) {
+    // optional uint32 a_responseStatus = 24;
+    if (cached_has_bits & 0x01000000u) {
+      total_size += 2 +
+        ::_pbi::WireFormatLite::UInt32Size(
+          this->_internal_a_responsestatus());
+    }
+
+    // optional uint32 a_redirectCount = 25;
+    if (cached_has_bits & 0x02000000u) {
+      total_size += 2 +
+        ::_pbi::WireFormatLite::UInt32Size(
+          this->_internal_a_redirectcount());
+    }
+
+    // optional bool a_renderBlocking = 26;
+    if (cached_has_bits & 0x04000000u) {
+      total_size += 2 + 1;
+    }
+
+    // optional bool a_allRedirectsSameOrigin = 28;
+    if (cached_has_bits & 0x08000000u) {
+      total_size += 2 + 1;
+    }
+
+    // optional bool a_allRedirectsPassTAO = 29;
+    if (cached_has_bits & 0x10000000u) {
+      total_size += 2 + 1;
+    }
+
+    // optional bool a_secureConnection = 30;
+    if (cached_has_bits & 0x20000000u) {
+      total_size += 2 + 1;
+    }
+
+    // optional bool a_timingAllowed = 32;
+    if (cached_has_bits & 0x40000000u) {
+      total_size += 2 + 1;
+    }
+
+    // optional bool a_initialized = 33;
+    if (cached_has_bits & 0x80000000u) {
+      total_size += 2 + 1;
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -2074,8 +2002,6 @@ void IPCPerformanceTimingData::CopyFrom(const IPCPerformanceTimingData& from) {
 
 bool IPCPerformanceTimingData::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_servertiming_))
-    return false;
   return true;
 }
 

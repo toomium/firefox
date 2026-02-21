@@ -270,7 +270,7 @@ class HttpChannelOnStartRequestArgs final :
   std::string* _internal_mutable_a_overridereferrerinfo();
   public:
 
-  // required string a_altDataType = 5;
+  // optional string a_altDataType = 5;
   bool has_a_altdatatype() const;
   private:
   bool _internal_has_a_altdatatype() const;
@@ -396,7 +396,7 @@ class HttpChannelOnStartRequestArgs final :
   std::string* _internal_mutable_a_openerpolicy();
   public:
 
-  // required string a_protocolVersion = 33;
+  // optional string a_protocolVersion = 33;
   bool has_a_protocolversion() const;
   private:
   bool _internal_has_a_protocolversion() const;
@@ -450,7 +450,7 @@ class HttpChannelOnStartRequestArgs final :
       ::protobuf::mozilla::net::ParentLoadInfoForwarderArgs* a_loadinfoforwarder);
   ::protobuf::mozilla::net::ParentLoadInfoForwarderArgs* unsafe_arena_release_a_loadinfoforwarder();
 
-  // required uint64 a_cacheEntryId = 3;
+  // optional uint64 a_cacheEntryId = 3;
   bool has_a_cacheentryid() const;
   private:
   bool _internal_has_a_cacheentryid() const;
@@ -463,7 +463,7 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_cacheentryid(uint64_t value);
   public:
 
-  // required sint64 a_altDataLength = 4;
+  // optional sint64 a_altDataLength = 4;
   bool has_a_altdatalength() const;
   private:
   bool _internal_has_a_altdatalength() const;
@@ -476,7 +476,7 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_altdatalength(int64_t value);
   public:
 
-  // required uint32 a_cacheFetchCount = 14;
+  // optional uint32 a_cacheFetchCount = 14;
   bool has_a_cachefetchcount() const;
   private:
   bool _internal_has_a_cachefetchcount() const;
@@ -489,7 +489,7 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_cachefetchcount(uint32_t value);
   public:
 
-  // required uint32 a_cacheExpirationTime = 15;
+  // optional uint32 a_cacheExpirationTime = 15;
   bool has_a_cacheexpirationtime() const;
   private:
   bool _internal_has_a_cacheexpirationtime() const;
@@ -502,7 +502,7 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_cacheexpirationtime(uint32_t value);
   public:
 
-  // required uint32 a_cacheKey = 16;
+  // optional uint32 a_cacheKey = 16;
   bool has_a_cachekey() const;
   private:
   bool _internal_has_a_cachekey() const;
@@ -528,7 +528,7 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_multipartid(uint32_t value);
   public:
 
-  // required bool a_isFromCache = 18;
+  // optional bool a_isFromCache = 18;
   bool has_a_isfromcache() const;
   private:
   bool _internal_has_a_isfromcache() const;
@@ -541,7 +541,7 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_isfromcache(bool value);
   public:
 
-  // required bool a_isRacing = 19;
+  // optional bool a_isRacing = 19;
   bool has_a_isracing() const;
   private:
   bool _internal_has_a_isracing() const;
@@ -554,7 +554,7 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_isracing(bool value);
   public:
 
-  // required bool a_cacheEntryAvailable = 20;
+  // optional bool a_cacheEntryAvailable = 20;
   bool has_a_cacheentryavailable() const;
   private:
   bool _internal_has_a_cacheentryavailable() const;
@@ -567,7 +567,7 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_cacheentryavailable(bool value);
   public:
 
-  // required bool a_deliveringAltData = 21;
+  // optional bool a_deliveringAltData = 21;
   bool has_a_deliveringaltdata() const;
   private:
   bool _internal_has_a_deliveringaltdata() const;
@@ -580,7 +580,7 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_deliveringaltdata(bool value);
   public:
 
-  // required bool a_applyConversion = 22;
+  // optional bool a_applyConversion = 22;
   bool has_a_applyconversion() const;
   private:
   bool _internal_has_a_applyconversion() const;
@@ -593,7 +593,7 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_applyconversion(bool value);
   public:
 
-  // required bool a_isResolvedByTRR = 23;
+  // optional bool a_isResolvedByTRR = 23;
   bool has_a_isresolvedbytrr() const;
   private:
   bool _internal_has_a_isresolvedbytrr() const;
@@ -606,7 +606,7 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_isresolvedbytrr(bool value);
   public:
 
-  // required bool a_allRedirectsSameOrigin = 24;
+  // optional bool a_allRedirectsSameOrigin = 24;
   bool has_a_allredirectssameorigin() const;
   private:
   bool _internal_has_a_allredirectssameorigin() const;
@@ -619,7 +619,7 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_allredirectssameorigin(bool value);
   public:
 
-  // required bool a_isFirstPartOfMultiPart = 25;
+  // optional bool a_isFirstPartOfMultiPart = 25;
   bool has_a_isfirstpartofmultipart() const;
   private:
   bool _internal_has_a_isfirstpartofmultipart() const;
@@ -632,7 +632,7 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_isfirstpartofmultipart(bool value);
   public:
 
-  // required bool a_isLastPartOfMultiPart = 26;
+  // optional bool a_isLastPartOfMultiPart = 26;
   bool has_a_islastpartofmultipart() const;
   private:
   bool _internal_has_a_islastpartofmultipart() const;
@@ -645,7 +645,7 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_islastpartofmultipart(bool value);
   public:
 
-  // required bool a_shouldWaitForOnStartRequestSent = 28;
+  // optional bool a_shouldWaitForOnStartRequestSent = 28;
   bool has_a_shouldwaitforonstartrequestsent() const;
   private:
   bool _internal_has_a_shouldwaitforonstartrequestsent() const;
@@ -658,7 +658,7 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_shouldwaitforonstartrequestsent(bool value);
   public:
 
-  // required bool a_dataFromSocketProcess = 29;
+  // optional bool a_dataFromSocketProcess = 29;
   bool has_a_datafromsocketprocess() const;
   private:
   bool _internal_has_a_datafromsocketprocess() const;
@@ -671,7 +671,7 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_datafromsocketprocess(bool value);
   public:
 
-  // required bool a_hasHTTPSRR = 30;
+  // optional bool a_hasHTTPSRR = 30;
   bool has_a_hashttpsrr() const;
   private:
   bool _internal_has_a_hashttpsrr() const;
@@ -684,7 +684,7 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_hashttpsrr(bool value);
   public:
 
-  // required bool a_isProxyUsed = 31;
+  // optional bool a_isProxyUsed = 31;
   bool has_a_isproxyused() const;
   private:
   bool _internal_has_a_isproxyused() const;
@@ -697,7 +697,7 @@ class HttpChannelOnStartRequestArgs final :
   void _internal_set_a_isproxyused(bool value);
   public:
 
-  // required uint32 a_redirectCount = 32;
+  // optional uint32 a_redirectCount = 32;
   bool has_a_redirectcount() const;
   private:
   bool _internal_has_a_redirectcount() const;
@@ -1054,7 +1054,7 @@ inline void HttpChannelOnStartRequestArgs::set_allocated_a_overridereferrerinfo(
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_overrideReferrerInfo)
 }
 
-// required uint64 a_cacheEntryId = 3;
+// optional uint64 a_cacheEntryId = 3;
 inline bool HttpChannelOnStartRequestArgs::_internal_has_a_cacheentryid() const {
   bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
   return value;
@@ -1082,7 +1082,7 @@ inline void HttpChannelOnStartRequestArgs::set_a_cacheentryid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_cacheEntryId)
 }
 
-// required sint64 a_altDataLength = 4;
+// optional sint64 a_altDataLength = 4;
 inline bool HttpChannelOnStartRequestArgs::_internal_has_a_altdatalength() const {
   bool value = (_impl_._has_bits_[0] & 0x00002000u) != 0;
   return value;
@@ -1110,7 +1110,7 @@ inline void HttpChannelOnStartRequestArgs::set_a_altdatalength(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_altDataLength)
 }
 
-// required string a_altDataType = 5;
+// optional string a_altDataType = 5;
 inline bool HttpChannelOnStartRequestArgs::_internal_has_a_altdatatype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1767,7 +1767,7 @@ inline void HttpChannelOnStartRequestArgs::set_allocated_a_trrskipreason(std::st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_trrSkipReason)
 }
 
-// required uint32 a_cacheFetchCount = 14;
+// optional uint32 a_cacheFetchCount = 14;
 inline bool HttpChannelOnStartRequestArgs::_internal_has_a_cachefetchcount() const {
   bool value = (_impl_._has_bits_[0] & 0x00004000u) != 0;
   return value;
@@ -1795,7 +1795,7 @@ inline void HttpChannelOnStartRequestArgs::set_a_cachefetchcount(uint32_t value)
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_cacheFetchCount)
 }
 
-// required uint32 a_cacheExpirationTime = 15;
+// optional uint32 a_cacheExpirationTime = 15;
 inline bool HttpChannelOnStartRequestArgs::_internal_has_a_cacheexpirationtime() const {
   bool value = (_impl_._has_bits_[0] & 0x00008000u) != 0;
   return value;
@@ -1823,7 +1823,7 @@ inline void HttpChannelOnStartRequestArgs::set_a_cacheexpirationtime(uint32_t va
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_cacheExpirationTime)
 }
 
-// required uint32 a_cacheKey = 16;
+// optional uint32 a_cacheKey = 16;
 inline bool HttpChannelOnStartRequestArgs::_internal_has_a_cachekey() const {
   bool value = (_impl_._has_bits_[0] & 0x00010000u) != 0;
   return value;
@@ -1879,7 +1879,7 @@ inline void HttpChannelOnStartRequestArgs::set_a_multipartid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_multiPartID)
 }
 
-// required bool a_isFromCache = 18;
+// optional bool a_isFromCache = 18;
 inline bool HttpChannelOnStartRequestArgs::_internal_has_a_isfromcache() const {
   bool value = (_impl_._has_bits_[0] & 0x00040000u) != 0;
   return value;
@@ -1907,7 +1907,7 @@ inline void HttpChannelOnStartRequestArgs::set_a_isfromcache(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_isFromCache)
 }
 
-// required bool a_isRacing = 19;
+// optional bool a_isRacing = 19;
 inline bool HttpChannelOnStartRequestArgs::_internal_has_a_isracing() const {
   bool value = (_impl_._has_bits_[0] & 0x00080000u) != 0;
   return value;
@@ -1935,7 +1935,7 @@ inline void HttpChannelOnStartRequestArgs::set_a_isracing(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_isRacing)
 }
 
-// required bool a_cacheEntryAvailable = 20;
+// optional bool a_cacheEntryAvailable = 20;
 inline bool HttpChannelOnStartRequestArgs::_internal_has_a_cacheentryavailable() const {
   bool value = (_impl_._has_bits_[0] & 0x00100000u) != 0;
   return value;
@@ -1963,7 +1963,7 @@ inline void HttpChannelOnStartRequestArgs::set_a_cacheentryavailable(bool value)
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_cacheEntryAvailable)
 }
 
-// required bool a_deliveringAltData = 21;
+// optional bool a_deliveringAltData = 21;
 inline bool HttpChannelOnStartRequestArgs::_internal_has_a_deliveringaltdata() const {
   bool value = (_impl_._has_bits_[0] & 0x00200000u) != 0;
   return value;
@@ -1991,7 +1991,7 @@ inline void HttpChannelOnStartRequestArgs::set_a_deliveringaltdata(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_deliveringAltData)
 }
 
-// required bool a_applyConversion = 22;
+// optional bool a_applyConversion = 22;
 inline bool HttpChannelOnStartRequestArgs::_internal_has_a_applyconversion() const {
   bool value = (_impl_._has_bits_[0] & 0x00400000u) != 0;
   return value;
@@ -2019,7 +2019,7 @@ inline void HttpChannelOnStartRequestArgs::set_a_applyconversion(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_applyConversion)
 }
 
-// required bool a_isResolvedByTRR = 23;
+// optional bool a_isResolvedByTRR = 23;
 inline bool HttpChannelOnStartRequestArgs::_internal_has_a_isresolvedbytrr() const {
   bool value = (_impl_._has_bits_[0] & 0x00800000u) != 0;
   return value;
@@ -2047,7 +2047,7 @@ inline void HttpChannelOnStartRequestArgs::set_a_isresolvedbytrr(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_isResolvedByTRR)
 }
 
-// required bool a_allRedirectsSameOrigin = 24;
+// optional bool a_allRedirectsSameOrigin = 24;
 inline bool HttpChannelOnStartRequestArgs::_internal_has_a_allredirectssameorigin() const {
   bool value = (_impl_._has_bits_[0] & 0x01000000u) != 0;
   return value;
@@ -2075,7 +2075,7 @@ inline void HttpChannelOnStartRequestArgs::set_a_allredirectssameorigin(bool val
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_allRedirectsSameOrigin)
 }
 
-// required bool a_isFirstPartOfMultiPart = 25;
+// optional bool a_isFirstPartOfMultiPart = 25;
 inline bool HttpChannelOnStartRequestArgs::_internal_has_a_isfirstpartofmultipart() const {
   bool value = (_impl_._has_bits_[0] & 0x02000000u) != 0;
   return value;
@@ -2103,7 +2103,7 @@ inline void HttpChannelOnStartRequestArgs::set_a_isfirstpartofmultipart(bool val
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_isFirstPartOfMultiPart)
 }
 
-// required bool a_isLastPartOfMultiPart = 26;
+// optional bool a_isLastPartOfMultiPart = 26;
 inline bool HttpChannelOnStartRequestArgs::_internal_has_a_islastpartofmultipart() const {
   bool value = (_impl_._has_bits_[0] & 0x04000000u) != 0;
   return value;
@@ -2199,7 +2199,7 @@ inline void HttpChannelOnStartRequestArgs::set_allocated_a_openerpolicy(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_openerPolicy)
 }
 
-// required bool a_shouldWaitForOnStartRequestSent = 28;
+// optional bool a_shouldWaitForOnStartRequestSent = 28;
 inline bool HttpChannelOnStartRequestArgs::_internal_has_a_shouldwaitforonstartrequestsent() const {
   bool value = (_impl_._has_bits_[0] & 0x08000000u) != 0;
   return value;
@@ -2227,7 +2227,7 @@ inline void HttpChannelOnStartRequestArgs::set_a_shouldwaitforonstartrequestsent
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_shouldWaitForOnStartRequestSent)
 }
 
-// required bool a_dataFromSocketProcess = 29;
+// optional bool a_dataFromSocketProcess = 29;
 inline bool HttpChannelOnStartRequestArgs::_internal_has_a_datafromsocketprocess() const {
   bool value = (_impl_._has_bits_[0] & 0x10000000u) != 0;
   return value;
@@ -2255,7 +2255,7 @@ inline void HttpChannelOnStartRequestArgs::set_a_datafromsocketprocess(bool valu
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_dataFromSocketProcess)
 }
 
-// required bool a_hasHTTPSRR = 30;
+// optional bool a_hasHTTPSRR = 30;
 inline bool HttpChannelOnStartRequestArgs::_internal_has_a_hashttpsrr() const {
   bool value = (_impl_._has_bits_[0] & 0x20000000u) != 0;
   return value;
@@ -2283,7 +2283,7 @@ inline void HttpChannelOnStartRequestArgs::set_a_hashttpsrr(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_hasHTTPSRR)
 }
 
-// required bool a_isProxyUsed = 31;
+// optional bool a_isProxyUsed = 31;
 inline bool HttpChannelOnStartRequestArgs::_internal_has_a_isproxyused() const {
   bool value = (_impl_._has_bits_[0] & 0x40000000u) != 0;
   return value;
@@ -2311,7 +2311,7 @@ inline void HttpChannelOnStartRequestArgs::set_a_isproxyused(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_isProxyUsed)
 }
 
-// required uint32 a_redirectCount = 32;
+// optional uint32 a_redirectCount = 32;
 inline bool HttpChannelOnStartRequestArgs::_internal_has_a_redirectcount() const {
   bool value = (_impl_._has_bits_[0] & 0x80000000u) != 0;
   return value;
@@ -2339,7 +2339,7 @@ inline void HttpChannelOnStartRequestArgs::set_a_redirectcount(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_redirectCount)
 }
 
-// required string a_protocolVersion = 33;
+// optional string a_protocolVersion = 33;
 inline bool HttpChannelOnStartRequestArgs::_internal_has_a_protocolversion() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;

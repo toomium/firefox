@@ -765,7 +765,7 @@ class Msg_SetDictionary final :
   enum : int {
     kAADictionaryFieldNumber = 1,
   };
-  // required string a_aDictionary = 1;
+  // optional string a_aDictionary = 1;
   bool has_a_adictionary() const;
   private:
   bool _internal_has_a_adictionary() const;
@@ -912,7 +912,7 @@ class Reply_SetDictionary final :
   enum : int {
     kASuccessFieldNumber = 1,
   };
-  // required bool a_success = 1;
+  // optional bool a_success = 1;
   bool has_a_success() const;
   private:
   bool _internal_has_a_success() const;
@@ -1206,7 +1206,7 @@ class Reply_SetDictionaries final :
   enum : int {
     kASuccessFieldNumber = 1,
   };
-  // required bool a_success = 1;
+  // optional bool a_success = 1;
   bool has_a_success() const;
   private:
   bool _internal_has_a_success() const;
@@ -1349,7 +1349,7 @@ class Msg_Suggest final :
     kAAWordFieldNumber = 1,
     kAACountFieldNumber = 2,
   };
-  // required string a_aWord = 1;
+  // optional string a_aWord = 1;
   bool has_a_aword() const;
   private:
   bool _internal_has_a_aword() const;
@@ -1367,7 +1367,7 @@ class Msg_Suggest final :
   std::string* _internal_mutable_a_aword();
   public:
 
-  // required uint32 a_aCount = 2;
+  // optional uint32 a_aCount = 2;
   bool has_a_acount() const;
   private:
   bool _internal_has_a_acount() const;
@@ -1383,9 +1383,6 @@ class Msg_Suggest final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_Suggest)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1818,7 +1815,7 @@ class Reply_SetDictionaryFromList final :
     kAADictionaryFieldNumber = 2,
     kAASuccessFieldNumber = 1,
   };
-  // required string a_aDictionary = 2;
+  // optional string a_aDictionary = 2;
   bool has_a_adictionary() const;
   private:
   bool _internal_has_a_adictionary() const;
@@ -1836,7 +1833,7 @@ class Reply_SetDictionaryFromList final :
   std::string* _internal_mutable_a_adictionary();
   public:
 
-  // required bool a_aSuccess = 1;
+  // optional bool a_aSuccess = 1;
   bool has_a_asuccess() const;
   private:
   bool _internal_has_a_asuccess() const;
@@ -1852,9 +1849,6 @@ class Reply_SetDictionaryFromList final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaryFromList)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2017,7 +2011,7 @@ Reply_CheckAsync::mutable_a_aismisspelled() {
 
 // Msg_SetDictionary
 
-// required string a_aDictionary = 1;
+// optional string a_aDictionary = 1;
 inline bool Msg_SetDictionary::_internal_has_a_adictionary() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2089,7 +2083,7 @@ inline void Msg_SetDictionary::set_allocated_a_adictionary(std::string* a_adicti
 
 // Reply_SetDictionary
 
-// required bool a_success = 1;
+// optional bool a_success = 1;
 inline bool Reply_SetDictionary::_internal_has_a_success() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2200,7 +2194,7 @@ Msg_SetDictionaries::mutable_a_adictionaries() {
 
 // Reply_SetDictionaries
 
-// required bool a_success = 1;
+// optional bool a_success = 1;
 inline bool Reply_SetDictionaries::_internal_has_a_success() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2232,7 +2226,7 @@ inline void Reply_SetDictionaries::set_a_success(bool value) {
 
 // Msg_Suggest
 
-// required string a_aWord = 1;
+// optional string a_aWord = 1;
 inline bool Msg_Suggest::_internal_has_a_aword() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2300,7 +2294,7 @@ inline void Msg_Suggest::set_allocated_a_aword(std::string* a_aword) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_Suggest.a_aWord)
 }
 
-// required uint32 a_aCount = 2;
+// optional uint32 a_aCount = 2;
 inline bool Msg_Suggest::_internal_has_a_acount() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2490,7 +2484,7 @@ Msg_SetDictionaryFromList::mutable_a_alist() {
 
 // Reply_SetDictionaryFromList
 
-// required bool a_aSuccess = 1;
+// optional bool a_aSuccess = 1;
 inline bool Reply_SetDictionaryFromList::_internal_has_a_asuccess() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2518,7 +2512,7 @@ inline void Reply_SetDictionaryFromList::set_a_asuccess(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaryFromList.a_aSuccess)
 }
 
-// required string a_aDictionary = 2;
+// optional string a_aDictionary = 2;
 inline bool Reply_SetDictionaryFromList::_internal_has_a_adictionary() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

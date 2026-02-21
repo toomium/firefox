@@ -27,7 +27,7 @@ message Msg_DeviceActionWithAck {
 }
 
 message Reply_DeviceActionWithAck {
-  required bool a_dummy = 1;
+  optional bool a_dummy = 1;
 }
 
 message Msg_TextureAction {
@@ -78,7 +78,7 @@ message Msg_AdapterRequestDevice {
 }
 
 message Reply_AdapterRequestDevice {
-  required bool a_success = 1;
+  optional bool a_success = 1;
 }
 
 message Msg_AdapterDrop {
@@ -88,8 +88,8 @@ message Msg_AdapterDrop {
 message Msg_DeviceCreateShaderModule {
   required bytes a_selfId = 1;
   required bytes a_bufferId = 2;
-  required string a_label = 3;
-  required string a_code = 4;
+  optional string a_label = 3;
+  optional string a_code = 4;
 }
 
 message Reply_DeviceCreateShaderModule {
@@ -99,9 +99,9 @@ message Reply_DeviceCreateShaderModule {
 message Msg_BufferMap {
   required bytes a_deviceId = 1;
   required bytes a_bufferId = 2;
-  required uint32 a_aMode = 3;
-  required uint64 a_offset = 4;
-  required uint64 a_size = 5;
+  optional uint32 a_aMode = 3;
+  optional uint64 a_offset = 4;
+  optional uint64 a_size = 5;
 }
 
 message Reply_BufferMap {
@@ -111,7 +111,7 @@ message Reply_BufferMap {
 message Msg_BufferUnmap {
   required bytes a_deviceId = 1;
   required bytes a_bufferId = 2;
-  required bool a_flush = 3;
+  optional bool a_flush = 3;
 }
 
 message Msg_BufferDestroy {
@@ -222,7 +222,7 @@ message Msg_DeviceCreateSwapChain {
   required bytes a_desc = 3;
   repeated bytes a_bufferIds = 4;
   required bytes a_ownerId = 5;
-  required bool a_useExternalTextureInSwapChain = 6;
+  optional bool a_useExternalTextureInSwapChain = 6;
 }
 
 message Msg_SwapChainPresent {
@@ -254,18 +254,18 @@ message Reply_DevicePopErrorScope {
 message Msg_ReportError {
   required bytes a_selfId = 1;
   required bytes a_aType = 2;
-  required string a_message = 3;
+  optional string a_message = 3;
 }
 
 message Msg_UncapturedError {
   optional bytes a_aDeviceId = 1;
-  required string a_message = 2;
+  optional string a_message = 2;
 }
 
 message Msg_DeviceLost {
   required bytes a_aDeviceId = 1;
   optional uint32 a_reason = 2;
-  required string a_message = 3;
+  optional string a_message = 3;
 }
 
 message Msg___delete__ {

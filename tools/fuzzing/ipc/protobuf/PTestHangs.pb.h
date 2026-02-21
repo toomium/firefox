@@ -205,7 +205,7 @@ class Msg_Hang final :
   std::string* _internal_mutable_a_timeout();
   public:
 
-  // required uint32 a_hangMode = 1;
+  // optional uint32 a_hangMode = 1;
   bool has_a_hangmode() const;
   private:
   bool _internal_has_a_hangmode() const;
@@ -221,9 +221,6 @@ class Msg_Hang final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.PTestHangs.Msg_Hang)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -475,7 +472,7 @@ class Msg_Start final :
   enum : int {
     kAHangModeFieldNumber = 1,
   };
-  // required uint32 a_hangMode = 1;
+  // optional uint32 a_hangMode = 1;
   bool has_a_hangmode() const;
   private:
   bool _internal_has_a_hangmode() const;
@@ -617,7 +614,7 @@ class Reply_Start final :
   enum : int {
     kADetectedHangFieldNumber = 1,
   };
-  // required bool a_detectedHang = 1;
+  // optional bool a_detectedHang = 1;
   bool has_a_detectedhang() const;
   private:
   bool _internal_has_a_detectedhang() const;
@@ -656,7 +653,7 @@ class Reply_Start final :
 #endif  // __GNUC__
 // Msg_Hang
 
-// required uint32 a_hangMode = 1;
+// optional uint32 a_hangMode = 1;
 inline bool Msg_Hang::_internal_has_a_hangmode() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -760,7 +757,7 @@ inline void Msg_Hang::set_allocated_a_timeout(std::string* a_timeout) {
 
 // Msg_Start
 
-// required uint32 a_hangMode = 1;
+// optional uint32 a_hangMode = 1;
 inline bool Msg_Start::_internal_has_a_hangmode() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -792,7 +789,7 @@ inline void Msg_Start::set_a_hangmode(uint32_t value) {
 
 // Reply_Start
 
-// required bool a_detectedHang = 1;
+// optional bool a_detectedHang = 1;
 inline bool Reply_Start::_internal_has_a_detectedhang() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

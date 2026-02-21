@@ -330,7 +330,7 @@ class DeleteDatabaseRequestResponse final :
   enum : int {
     kAPreviousVersionFieldNumber = 1,
   };
-  // required uint64 a_previousVersion = 1;
+  // optional uint64 a_previousVersion = 1;
   bool has_a_previousversion() const;
   private:
   bool _internal_has_a_previousversion() const;
@@ -648,7 +648,7 @@ inline void OpenDatabaseRequestResponse::set_allocated_a_database(std::string* a
 
 // DeleteDatabaseRequestResponse
 
-// required uint64 a_previousVersion = 1;
+// optional uint64 a_previousVersion = 1;
 inline bool DeleteDatabaseRequestResponse::_internal_has_a_previousversion() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

@@ -532,7 +532,7 @@ class Msg_ReportFramesDropped final :
   std::string* _internal_mutable_a_ahandle();
   public:
 
-  // required uint32 a_aFrames = 2;
+  // optional uint32 a_aFrames = 2;
   bool has_a_aframes() const;
   private:
   bool _internal_has_a_aframes() const;
@@ -548,9 +548,6 @@ class Msg_ReportFramesDropped final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PImageBridge.Msg_ReportFramesDropped)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -716,7 +713,7 @@ class Msg_Update final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::layers::OpDestroy >&
       a_todestroy() const;
 
-  // required uint64 a_fwdTransactionId = 3;
+  // optional uint64 a_fwdTransactionId = 3;
   bool has_a_fwdtransactionid() const;
   private:
   bool _internal_has_a_fwdtransactionid() const;
@@ -1080,7 +1077,7 @@ class Msg_PTextureConstructor final :
       ::protobuf::mozilla::layers::ReadLockDescriptor* a_areadlock);
   ::protobuf::mozilla::layers::ReadLockDescriptor* unsafe_arena_release_a_areadlock();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -1093,7 +1090,7 @@ class Msg_PTextureConstructor final :
   void _internal_set_a_actorid(int64_t value);
   public:
 
-  // required uint64 a_aSerial = 6;
+  // optional uint64 a_aSerial = 6;
   bool has_a_aserial() const;
   private:
   bool _internal_has_a_aserial() const;
@@ -1368,7 +1365,7 @@ class Msg_PMediaSystemResourceManagerConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -2122,7 +2119,7 @@ inline void Msg_ReportFramesDropped::set_allocated_a_ahandle(std::string* a_ahan
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PImageBridge.Msg_ReportFramesDropped.a_aHandle)
 }
 
-// required uint32 a_aFrames = 2;
+// optional uint32 a_aFrames = 2;
 inline bool Msg_ReportFramesDropped::_internal_has_a_aframes() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2228,7 +2225,7 @@ Msg_Update::a_todestroy() const {
   return _impl_.a_todestroy_;
 }
 
-// required uint64 a_fwdTransactionId = 3;
+// optional uint64 a_fwdTransactionId = 3;
 inline bool Msg_Update::_internal_has_a_fwdtransactionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2264,7 +2261,7 @@ inline void Msg_Update::set_a_fwdtransactionid(uint64_t value) {
 
 // Msg_PTextureConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PTextureConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -2602,7 +2599,7 @@ inline void Msg_PTextureConstructor::set_allocated_a_atextureflags(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.a_aTextureFlags)
 }
 
-// required uint64 a_aSerial = 6;
+// optional uint64 a_aSerial = 6;
 inline bool Msg_PTextureConstructor::_internal_has_a_aserial() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -2706,7 +2703,7 @@ inline void Msg_PTextureConstructor::set_allocated_a_aexternalimageid(std::strin
 
 // Msg_PMediaSystemResourceManagerConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PMediaSystemResourceManagerConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

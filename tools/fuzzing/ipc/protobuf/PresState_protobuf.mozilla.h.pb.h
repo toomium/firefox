@@ -369,7 +369,7 @@ class CheckedContentData final :
   enum : int {
     kACheckedFieldNumber = 1,
   };
-  // required bool a_checked = 1;
+  // optional bool a_checked = 1;
   bool has_a_checked() const;
   private:
   bool _internal_has_a_checked() const;
@@ -697,7 +697,7 @@ class TextContentData final :
     kAValueFieldNumber = 1,
     kALastValueChangeWasInteractiveFieldNumber = 2,
   };
-  // required string a_value = 1;
+  // optional string a_value = 1;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -715,7 +715,7 @@ class TextContentData final :
   std::string* _internal_mutable_a_value();
   public:
 
-  // required bool a_lastValueChangeWasInteractive = 2;
+  // optional bool a_lastValueChangeWasInteractive = 2;
   bool has_a_lastvaluechangewasinteractive() const;
   private:
   bool _internal_has_a_lastvaluechangewasinteractive() const;
@@ -731,9 +731,6 @@ class TextContentData final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.TextContentData)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1324,7 +1321,7 @@ class PresState final :
       ::protobuf::mozilla::PresContentData* a_contentdata);
   ::protobuf::mozilla::PresContentData* unsafe_arena_release_a_contentdata();
 
-  // required float a_resolution = 4;
+  // optional float a_resolution = 4;
   bool has_a_resolution() const;
   private:
   bool _internal_has_a_resolution() const;
@@ -1337,7 +1334,7 @@ class PresState final :
   void _internal_set_a_resolution(float value);
   public:
 
-  // required bool a_allowScrollOriginDowngrade = 3;
+  // optional bool a_allowScrollOriginDowngrade = 3;
   bool has_a_allowscrollorigindowngrade() const;
   private:
   bool _internal_has_a_allowscrollorigindowngrade() const;
@@ -1350,7 +1347,7 @@ class PresState final :
   void _internal_set_a_allowscrollorigindowngrade(bool value);
   public:
 
-  // required bool a_disabledSet = 5;
+  // optional bool a_disabledSet = 5;
   bool has_a_disabledset() const;
   private:
   bool _internal_has_a_disabledset() const;
@@ -1363,7 +1360,7 @@ class PresState final :
   void _internal_set_a_disabledset(bool value);
   public:
 
-  // required bool a_disabled = 6;
+  // optional bool a_disabled = 6;
   bool has_a_disabled() const;
   private:
   bool _internal_has_a_disabled() const;
@@ -1376,7 +1373,7 @@ class PresState final :
   void _internal_set_a_disabled(bool value);
   public:
 
-  // required bool a_droppedDown = 7;
+  // optional bool a_droppedDown = 7;
   bool has_a_droppeddown() const;
   private:
   bool _internal_has_a_droppeddown() const;
@@ -1550,7 +1547,7 @@ SelectContentData::mutable_a_values() {
 
 // CheckedContentData
 
-// required bool a_checked = 1;
+// optional bool a_checked = 1;
 inline bool CheckedContentData::_internal_has_a_checked() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1749,7 +1746,7 @@ inline FileContentData::ContentCase FileContentData::content_case() const {
 
 // TextContentData
 
-// required string a_value = 1;
+// optional string a_value = 1;
 inline bool TextContentData::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1817,7 +1814,7 @@ inline void TextContentData::set_allocated_a_value(std::string* a_value) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.TextContentData.a_value)
 }
 
-// required bool a_lastValueChangeWasInteractive = 2;
+// optional bool a_lastValueChangeWasInteractive = 2;
 inline bool TextContentData::_internal_has_a_lastvaluechangewasinteractive() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2503,7 +2500,7 @@ inline void PresState::set_allocated_a_scrollstate(std::string* a_scrollstate) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PresState.a_scrollState)
 }
 
-// required bool a_allowScrollOriginDowngrade = 3;
+// optional bool a_allowScrollOriginDowngrade = 3;
 inline bool PresState::_internal_has_a_allowscrollorigindowngrade() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -2531,7 +2528,7 @@ inline void PresState::set_a_allowscrollorigindowngrade(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PresState.a_allowScrollOriginDowngrade)
 }
 
-// required float a_resolution = 4;
+// optional float a_resolution = 4;
 inline bool PresState::_internal_has_a_resolution() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2559,7 +2556,7 @@ inline void PresState::set_a_resolution(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PresState.a_resolution)
 }
 
-// required bool a_disabledSet = 5;
+// optional bool a_disabledSet = 5;
 inline bool PresState::_internal_has_a_disabledset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -2587,7 +2584,7 @@ inline void PresState::set_a_disabledset(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PresState.a_disabledSet)
 }
 
-// required bool a_disabled = 6;
+// optional bool a_disabled = 6;
 inline bool PresState::_internal_has_a_disabled() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -2615,7 +2612,7 @@ inline void PresState::set_a_disabled(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PresState.a_disabled)
 }
 
-// required bool a_droppedDown = 7;
+// optional bool a_droppedDown = 7;
 inline bool PresState::_internal_has_a_droppeddown() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;

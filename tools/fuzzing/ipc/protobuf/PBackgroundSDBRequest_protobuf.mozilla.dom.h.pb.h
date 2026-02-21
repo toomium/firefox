@@ -439,7 +439,7 @@ class SDBRequestReadResponse final :
   enum : int {
     kADataFieldNumber = 1,
   };
-  // required string a_data = 1;
+  // optional string a_data = 1;
   bool has_a_data() const;
   private:
   bool _internal_has_a_data() const;
@@ -1012,7 +1012,7 @@ class SDBRequestResponse final :
 
 // SDBRequestReadResponse
 
-// required string a_data = 1;
+// optional string a_data = 1;
 inline bool SDBRequestReadResponse::_internal_has_a_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

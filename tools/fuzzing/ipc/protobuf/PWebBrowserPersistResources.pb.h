@@ -188,7 +188,7 @@ class Msg_VisitResource final :
     kAAURIFieldNumber = 1,
     kAAContentPolicyTypeFieldNumber = 2,
   };
-  // required string a_aURI = 1;
+  // optional string a_aURI = 1;
   bool has_a_auri() const;
   private:
   bool _internal_has_a_auri() const;
@@ -227,9 +227,6 @@ class Msg_VisitResource final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PWebBrowserPersistResources.Msg_VisitResource)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -819,7 +816,7 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_VisitResource
 
-// required string a_aURI = 1;
+// optional string a_aURI = 1;
 inline bool Msg_VisitResource::_internal_has_a_auri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

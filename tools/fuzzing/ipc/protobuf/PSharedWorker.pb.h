@@ -982,7 +982,7 @@ class Msg_NotifyLock final :
   enum : int {
     kAACreatedFieldNumber = 1,
   };
-  // required bool a_aCreated = 1;
+  // optional bool a_aCreated = 1;
   bool has_a_acreated() const;
   private:
   bool _internal_has_a_acreated() const;
@@ -1124,7 +1124,7 @@ class Msg_NotifyWebTransport final :
   enum : int {
     kAACreatedFieldNumber = 1,
   };
-  // required bool a_aCreated = 1;
+  // optional bool a_aCreated = 1;
   bool has_a_acreated() const;
   private:
   bool _internal_has_a_acreated() const;
@@ -1646,7 +1646,7 @@ inline void Msg_Error::set_allocated_a_value(::protobuf::mozilla::dom::ErrorValu
 
 // Msg_NotifyLock
 
-// required bool a_aCreated = 1;
+// optional bool a_aCreated = 1;
 inline bool Msg_NotifyLock::_internal_has_a_acreated() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1678,7 +1678,7 @@ inline void Msg_NotifyLock::set_a_acreated(bool value) {
 
 // Msg_NotifyWebTransport
 
-// required bool a_aCreated = 1;
+// optional bool a_aCreated = 1;
 inline bool Msg_NotifyWebTransport::_internal_has_a_acreated() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

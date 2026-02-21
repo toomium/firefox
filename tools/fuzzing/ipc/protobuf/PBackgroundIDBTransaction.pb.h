@@ -647,7 +647,7 @@ class Msg_PBackgroundIDBCursorConstructor final :
       ::protobuf::mozilla::dom::indexedDB::OpenCursorParams* a_params);
   ::protobuf::mozilla::dom::indexedDB::OpenCursorParams* unsafe_arena_release_a_params();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -660,7 +660,7 @@ class Msg_PBackgroundIDBCursorConstructor final :
   void _internal_set_a_actorid(int64_t value);
   public:
 
-  // required sint64 a_requestId = 2;
+  // optional sint64 a_requestId = 2;
   bool has_a_requestid() const;
   private:
   bool _internal_has_a_requestid() const;
@@ -676,9 +676,6 @@ class Msg_PBackgroundIDBCursorConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.PBackgroundIDBTransaction.Msg_PBackgroundIDBCursorConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -951,7 +948,7 @@ class Msg_PBackgroundIDBRequestConstructor final :
       ::protobuf::mozilla::dom::indexedDB::RequestParams* a_params);
   ::protobuf::mozilla::dom::indexedDB::RequestParams* unsafe_arena_release_a_params();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -964,7 +961,7 @@ class Msg_PBackgroundIDBRequestConstructor final :
   void _internal_set_a_actorid(int64_t value);
   public:
 
-  // required sint64 a_requestId = 2;
+  // optional sint64 a_requestId = 2;
   bool has_a_requestid() const;
   private:
   bool _internal_has_a_requestid() const;
@@ -980,9 +977,6 @@ class Msg_PBackgroundIDBRequestConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.PBackgroundIDBTransaction.Msg_PBackgroundIDBRequestConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1635,7 +1629,7 @@ inline void Msg_Abort::set_allocated_a_resultcode(std::string* a_resultcode) {
 
 // Msg_PBackgroundIDBCursorConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PBackgroundIDBCursorConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1663,7 +1657,7 @@ inline void Msg_PBackgroundIDBCursorConstructor::set_a_actorid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIDBTransaction.Msg_PBackgroundIDBCursorConstructor.a_actorid)
 }
 
-// required sint64 a_requestId = 2;
+// optional sint64 a_requestId = 2;
 inline bool Msg_PBackgroundIDBCursorConstructor::_internal_has_a_requestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1786,7 +1780,7 @@ inline void Msg_PBackgroundIDBCursorConstructor::set_allocated_a_params(::protob
 
 // Msg_PBackgroundIDBRequestConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PBackgroundIDBRequestConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1814,7 +1808,7 @@ inline void Msg_PBackgroundIDBRequestConstructor::set_a_actorid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIDBTransaction.Msg_PBackgroundIDBRequestConstructor.a_actorid)
 }
 
-// required sint64 a_requestId = 2;
+// optional sint64 a_requestId = 2;
 inline bool Msg_PBackgroundIDBRequestConstructor::_internal_has_a_requestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

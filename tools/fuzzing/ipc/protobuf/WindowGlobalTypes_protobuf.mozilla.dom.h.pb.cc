@@ -91,7 +91,7 @@ class WindowGlobalInit::_Internal {
     (*has_bits)[0] |= 16u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x000007e1) ^ 0x000007e1) != 0;
+    return ((has_bits[0] & 0x00000021) ^ 0x00000021) != 0;
   }
 };
 
@@ -326,7 +326,7 @@ const char* WindowGlobalInit::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required bool a_isInitialDocument = 5;
+      // optional bool a_isInitialDocument = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_a_isinitialdocument(&has_bits);
@@ -335,7 +335,7 @@ const char* WindowGlobalInit::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required bool a_blockAllMixedContent = 6;
+      // optional bool a_blockAllMixedContent = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
           _Internal::set_has_a_blockallmixedcontent(&has_bits);
@@ -344,7 +344,7 @@ const char* WindowGlobalInit::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required bool a_upgradeInsecureRequests = 7;
+      // optional bool a_upgradeInsecureRequests = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
           _Internal::set_has_a_upgradeinsecurerequests(&has_bits);
@@ -353,7 +353,7 @@ const char* WindowGlobalInit::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_sandboxFlags = 8;
+      // optional uint32 a_sandboxFlags = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
           _Internal::set_has_a_sandboxflags(&has_bits);
@@ -370,7 +370,7 @@ const char* WindowGlobalInit::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_httpsOnlyStatus = 10;
+      // optional uint32 a_httpsOnlyStatus = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 80)) {
           _Internal::set_has_a_httpsonlystatus(&has_bits);
@@ -443,25 +443,25 @@ uint8_t* WindowGlobalInit::_InternalSerialize(
         4, this->_internal_a_documenturi(), target);
   }
 
-  // required bool a_isInitialDocument = 5;
+  // optional bool a_isInitialDocument = 5;
   if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_a_isinitialdocument(), target);
   }
 
-  // required bool a_blockAllMixedContent = 6;
+  // optional bool a_blockAllMixedContent = 6;
   if (cached_has_bits & 0x00000080u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(6, this->_internal_a_blockallmixedcontent(), target);
   }
 
-  // required bool a_upgradeInsecureRequests = 7;
+  // optional bool a_upgradeInsecureRequests = 7;
   if (cached_has_bits & 0x00000100u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(7, this->_internal_a_upgradeinsecurerequests(), target);
   }
 
-  // required uint32 a_sandboxFlags = 8;
+  // optional uint32 a_sandboxFlags = 8;
   if (cached_has_bits & 0x00000200u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(8, this->_internal_a_sandboxflags(), target);
@@ -474,7 +474,7 @@ uint8_t* WindowGlobalInit::_InternalSerialize(
         _Internal::a_cookiejarsettings(this).GetCachedSize(), target, stream);
   }
 
-  // required uint32 a_httpsOnlyStatus = 10;
+  // optional uint32 a_httpsOnlyStatus = 10;
   if (cached_has_bits & 0x00000400u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(10, this->_internal_a_httpsonlystatus(), target);
@@ -512,38 +512,13 @@ size_t WindowGlobalInit::RequiredFieldsByteSizeFallback() const {
         *_impl_.a_cookiejarsettings_);
   }
 
-  if (_internal_has_a_isinitialdocument()) {
-    // required bool a_isInitialDocument = 5;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_blockallmixedcontent()) {
-    // required bool a_blockAllMixedContent = 6;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_upgradeinsecurerequests()) {
-    // required bool a_upgradeInsecureRequests = 7;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_sandboxflags()) {
-    // required uint32 a_sandboxFlags = 8;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_sandboxflags());
-  }
-
-  if (_internal_has_a_httpsonlystatus()) {
-    // required uint32 a_httpsOnlyStatus = 10;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_httpsonlystatus());
-  }
-
   return total_size;
 }
 size_t WindowGlobalInit::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.WindowGlobalInit)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x000007e1) ^ 0x000007e1) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x00000021) ^ 0x00000021) == 0) {  // All required fields are present.
     // required bytes a_context = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -553,21 +528,6 @@ size_t WindowGlobalInit::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_cookiejarsettings_);
-
-    // required bool a_isInitialDocument = 5;
-    total_size += 1 + 1;
-
-    // required bool a_blockAllMixedContent = 6;
-    total_size += 1 + 1;
-
-    // required bool a_upgradeInsecureRequests = 7;
-    total_size += 1 + 1;
-
-    // required uint32 a_sandboxFlags = 8;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_sandboxflags());
-
-    // required uint32 a_httpsOnlyStatus = 10;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_httpsonlystatus());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -604,6 +564,35 @@ size_t WindowGlobalInit::ByteSizeLong() const {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_a_securityinfo());
+    }
+
+  }
+  if (cached_has_bits & 0x000000c0u) {
+    // optional bool a_isInitialDocument = 5;
+    if (cached_has_bits & 0x00000040u) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool a_blockAllMixedContent = 6;
+    if (cached_has_bits & 0x00000080u) {
+      total_size += 1 + 1;
+    }
+
+  }
+  if (cached_has_bits & 0x00000700u) {
+    // optional bool a_upgradeInsecureRequests = 7;
+    if (cached_has_bits & 0x00000100u) {
+      total_size += 1 + 1;
+    }
+
+    // optional uint32 a_sandboxFlags = 8;
+    if (cached_has_bits & 0x00000200u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_sandboxflags());
+    }
+
+    // optional uint32 a_httpsOnlyStatus = 10;
+    if (cached_has_bits & 0x00000400u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_httpsonlystatus());
     }
 
   }

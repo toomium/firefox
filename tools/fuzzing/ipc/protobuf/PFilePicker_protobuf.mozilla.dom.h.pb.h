@@ -345,7 +345,7 @@ class InputDirectory final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCBlob >&
       a_blobsinwebkitdirectory() const;
 
-  // required string a_directoryPath = 1;
+  // optional string a_directoryPath = 1;
   bool has_a_directorypath() const;
   private:
   bool _internal_has_a_directorypath() const;
@@ -638,7 +638,7 @@ InputBlobs::a_blobs() const {
 
 // InputDirectory
 
-// required string a_directoryPath = 1;
+// optional string a_directoryPath = 1;
 inline bool InputDirectory::_internal_has_a_directorypath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

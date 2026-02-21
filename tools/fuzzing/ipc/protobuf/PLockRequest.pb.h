@@ -204,7 +204,7 @@ class Msg_Resolve final :
   std::string* _internal_mutable_a_amode();
   public:
 
-  // required bool a_aIsAvailable = 2;
+  // optional bool a_aIsAvailable = 2;
   bool has_a_aisavailable() const;
   private:
   bool _internal_has_a_aisavailable() const;
@@ -220,9 +220,6 @@ class Msg_Resolve final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.locks.PLockRequest.Msg_Resolve)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -350,7 +347,7 @@ class Msg___delete__ final :
   enum : int {
     kAAAbortedFieldNumber = 1,
   };
-  // required bool a_aAborted = 1;
+  // optional bool a_aAborted = 1;
   bool has_a_aaborted() const;
   private:
   bool _internal_has_a_aaborted() const;
@@ -581,7 +578,7 @@ inline void Msg_Resolve::set_allocated_a_amode(std::string* a_amode) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.locks.PLockRequest.Msg_Resolve.a_aMode)
 }
 
-// required bool a_aIsAvailable = 2;
+// optional bool a_aIsAvailable = 2;
 inline bool Msg_Resolve::_internal_has_a_aisavailable() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -613,7 +610,7 @@ inline void Msg_Resolve::set_a_aisavailable(bool value) {
 
 // Msg___delete__
 
-// required bool a_aAborted = 1;
+// optional bool a_aAborted = 1;
 inline bool Msg___delete__::_internal_has_a_aaborted() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

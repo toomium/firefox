@@ -488,7 +488,7 @@ class Msg_PLockRequestConstructor final :
       ::protobuf::mozilla::dom::locks::IPCLockRequest* a_arequest);
   ::protobuf::mozilla::dom::locks::IPCLockRequest* unsafe_arena_release_a_arequest();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -504,9 +504,6 @@ class Msg_PLockRequestConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.locks.PLockManager.Msg_PLockRequestConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -979,7 +976,7 @@ inline void Reply_Query::set_allocated_a_snapshot(std::string* a_snapshot) {
 
 // Msg_PLockRequestConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PLockRequestConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

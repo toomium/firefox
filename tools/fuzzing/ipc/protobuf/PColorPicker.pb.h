@@ -310,7 +310,7 @@ class Msg_Update final :
   enum : int {
     kAColorFieldNumber = 1,
   };
-  // required string a_color = 1;
+  // optional string a_color = 1;
   bool has_a_color() const;
   private:
   bool _internal_has_a_color() const;
@@ -457,7 +457,7 @@ class Msg___delete__ final :
   enum : int {
     kAColorFieldNumber = 1,
   };
-  // required string a_color = 1;
+  // optional string a_color = 1;
   bool has_a_color() const;
   private:
   bool _internal_has_a_color() const;
@@ -629,7 +629,7 @@ class Reply___delete__ final :
 
 // Msg_Update
 
-// required string a_color = 1;
+// optional string a_color = 1;
 inline bool Msg_Update::_internal_has_a_color() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -701,7 +701,7 @@ inline void Msg_Update::set_allocated_a_color(std::string* a_color) {
 
 // Msg___delete__
 
-// required string a_color = 1;
+// optional string a_color = 1;
 inline bool Msg___delete__::_internal_has_a_color() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

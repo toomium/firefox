@@ -235,7 +235,7 @@ class Msg_PCompositorBridgeConstructor final :
       ::protobuf::mozilla::layers::CompositorBridgeOptions* a_options);
   ::protobuf::mozilla::layers::CompositorBridgeOptions* unsafe_arena_release_a_options();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -251,9 +251,6 @@ class Msg_PCompositorBridgeConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PCompositorManager.Msg_PCompositorBridgeConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1679,7 +1676,7 @@ class Msg_NotifyWebRenderError final :
 #endif  // __GNUC__
 // Msg_PCompositorBridgeConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PCompositorBridgeConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

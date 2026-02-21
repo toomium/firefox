@@ -44,9 +44,9 @@ message Msg_UnloadLayersWhileInterruptingJS {
 message Msg_CancelContentJSExecutionIfRunning {
   required bytes a_tabId = 1;
   required bytes a_aNavigationType = 2;
-  required sint32 a_aNavigationIndex = 3;
+  optional sint32 a_aNavigationIndex = 3;
   optional string a_aNavigationURI = 4;
-  required sint32 a_aEpoch = 5;
+  optional sint32 a_aEpoch = 5;
 }
 
 message Msg_SetMainThreadQoSPriority {

@@ -457,9 +457,6 @@ void Msg_Error::CopyFrom(const Msg_Error& from) {
 
 bool Msg_Error::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_avalue()) {
-    if (!_impl_.a_avalue_->IsInitialized()) return false;
-  }
   return true;
 }
 

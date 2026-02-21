@@ -230,7 +230,7 @@ class MediaDataIPDL final :
   std::string* _internal_mutable_a_duration();
   public:
 
-  // required sint64 a_offset = 1;
+  // optional sint64 a_offset = 1;
   bool has_a_offset() const;
   private:
   bool _internal_has_a_offset() const;
@@ -243,7 +243,7 @@ class MediaDataIPDL final :
   void _internal_set_a_offset(int64_t value);
   public:
 
-  // required bool a_keyframe = 5;
+  // optional bool a_keyframe = 5;
   bool has_a_keyframe() const;
   private:
   bool _internal_has_a_keyframe() const;
@@ -532,7 +532,7 @@ class CryptoInfo final :
 #endif  // __GNUC__
 // MediaDataIPDL
 
-// required sint64 a_offset = 1;
+// optional sint64 a_offset = 1;
 inline bool MediaDataIPDL::_internal_has_a_offset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -764,7 +764,7 @@ inline void MediaDataIPDL::set_allocated_a_duration(std::string* a_duration) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.MediaDataIPDL.a_duration)
 }
 
-// required bool a_keyframe = 5;
+// optional bool a_keyframe = 5;
 inline bool MediaDataIPDL::_internal_has_a_keyframe() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;

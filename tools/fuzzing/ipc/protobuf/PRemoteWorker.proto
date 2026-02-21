@@ -19,7 +19,7 @@ import "RemoteWorkerTypes.proto";
 
 // Message declarations
 message Msg_Created {
-  required bool a_aStatus = 1;
+  optional bool a_aStatus = 1;
 }
 
 message Msg_Error {
@@ -27,11 +27,11 @@ message Msg_Error {
 }
 
 message Msg_NotifyLock {
-  required bool a_aCreated = 1;
+  optional bool a_aCreated = 1;
 }
 
 message Msg_NotifyWebTransport {
-  required bool a_aCreated = 1;
+  optional bool a_aCreated = 1;
 }
 
 message Msg_Close {
@@ -41,11 +41,11 @@ message Msg_SetServiceWorkerSkipWaitingFlag {
 }
 
 message Reply_SetServiceWorkerSkipWaitingFlag {
-  required bool a_aOk = 1;
+  optional bool a_aOk = 1;
 }
 
 message Msg_PFetchEventOpProxyConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
   required protobuf.mozilla.dom.ParentToChildServiceWorkerFetchEventOpArgs a_aArgs = 2;
 }
 

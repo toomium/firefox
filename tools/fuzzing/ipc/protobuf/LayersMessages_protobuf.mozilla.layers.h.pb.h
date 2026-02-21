@@ -1441,7 +1441,7 @@ class AnimationSegment final :
       ::protobuf::mozilla::layers::Animatable* a_endstate);
   ::protobuf::mozilla::layers::Animatable* unsafe_arena_release_a_endstate();
 
-  // required float a_startPortion = 3;
+  // optional float a_startPortion = 3;
   bool has_a_startportion() const;
   private:
   bool _internal_has_a_startportion() const;
@@ -1454,7 +1454,7 @@ class AnimationSegment final :
   void _internal_set_a_startportion(float value);
   public:
 
-  // required float a_endPortion = 4;
+  // optional float a_endPortion = 4;
   bool has_a_endportion() const;
   private:
   bool _internal_has_a_endportion() const;
@@ -1467,7 +1467,7 @@ class AnimationSegment final :
   void _internal_set_a_endportion(float value);
   public:
 
-  // required uint32 a_startComposite = 5;
+  // optional uint32 a_startComposite = 5;
   bool has_a_startcomposite() const;
   private:
   bool _internal_has_a_startcomposite() const;
@@ -1480,7 +1480,7 @@ class AnimationSegment final :
   void _internal_set_a_startcomposite(uint32_t value);
   public:
 
-  // required uint32 a_endComposite = 6;
+  // optional uint32 a_endComposite = 6;
   bool has_a_endcomposite() const;
   private:
   bool _internal_has_a_endcomposite() const;
@@ -2232,7 +2232,7 @@ class TransformData final :
       ::protobuf::mozilla::layers::PartialPrerenderData* a_partialprerenderdata);
   ::protobuf::mozilla::layers::PartialPrerenderData* unsafe_arena_release_a_partialprerenderdata();
 
-  // required sint32 a_appUnitsPerDevPixel = 4;
+  // optional sint32 a_appUnitsPerDevPixel = 4;
   bool has_a_appunitsperdevpixel() const;
   private:
   bool _internal_has_a_appunitsperdevpixel() const;
@@ -2789,7 +2789,7 @@ class Animation final :
       ::protobuf::mozilla::layers::ScrollTimelineOptions* a_scrolltimelineoptions);
   ::protobuf::mozilla::layers::ScrollTimelineOptions* unsafe_arena_release_a_scrolltimelineoptions();
 
-  // required float a_iterations = 8;
+  // optional float a_iterations = 8;
   bool has_a_iterations() const;
   private:
   bool _internal_has_a_iterations() const;
@@ -2802,7 +2802,7 @@ class Animation final :
   void _internal_set_a_iterations(float value);
   public:
 
-  // required float a_iterationStart = 9;
+  // optional float a_iterationStart = 9;
   bool has_a_iterationstart() const;
   private:
   bool _internal_has_a_iterationstart() const;
@@ -2815,7 +2815,7 @@ class Animation final :
   void _internal_set_a_iterationstart(float value);
   public:
 
-  // required uint32 a_direction = 10;
+  // optional uint32 a_direction = 10;
   bool has_a_direction() const;
   private:
   bool _internal_has_a_direction() const;
@@ -2828,7 +2828,7 @@ class Animation final :
   void _internal_set_a_direction(uint32_t value);
   public:
 
-  // required uint32 a_fillMode = 11;
+  // optional uint32 a_fillMode = 11;
   bool has_a_fillmode() const;
   private:
   bool _internal_has_a_fillmode() const;
@@ -2841,7 +2841,7 @@ class Animation final :
   void _internal_set_a_fillmode(uint32_t value);
   public:
 
-  // required float a_playbackRate = 13;
+  // optional float a_playbackRate = 13;
   bool has_a_playbackrate() const;
   private:
   bool _internal_has_a_playbackrate() const;
@@ -2854,7 +2854,7 @@ class Animation final :
   void _internal_set_a_playbackrate(float value);
   public:
 
-  // required float a_previousPlaybackRate = 14;
+  // optional float a_previousPlaybackRate = 14;
   bool has_a_previousplaybackrate() const;
   private:
   bool _internal_has_a_previousplaybackrate() const;
@@ -2867,7 +2867,7 @@ class Animation final :
   void _internal_set_a_previousplaybackrate(float value);
   public:
 
-  // required uint32 a_iterationComposite = 16;
+  // optional uint32 a_iterationComposite = 16;
   bool has_a_iterationcomposite() const;
   private:
   bool _internal_has_a_iterationcomposite() const;
@@ -2880,7 +2880,7 @@ class Animation final :
   void _internal_set_a_iterationcomposite(uint32_t value);
   public:
 
-  // required bool a_isNotPlaying = 17;
+  // optional bool a_isNotPlaying = 17;
   bool has_a_isnotplaying() const;
   private:
   bool _internal_has_a_isnotplaying() const;
@@ -2893,7 +2893,7 @@ class Animation final :
   void _internal_set_a_isnotplaying(bool value);
   public:
 
-  // required bool a_isNotAnimating = 18;
+  // optional bool a_isNotAnimating = 18;
   bool has_a_isnotanimating() const;
   private:
   bool _internal_has_a_isnotanimating() const;
@@ -3091,7 +3091,7 @@ class CompositorAnimations final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::layers::Animation >&
       a_animations() const;
 
-  // required uint64 a_id = 2;
+  // optional uint64 a_id = 2;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -3254,7 +3254,7 @@ class UntrustedShmemSection final :
   std::string* _internal_mutable_a_shmem();
   public:
 
-  // required uint32 a_offset = 2;
+  // optional uint32 a_offset = 2;
   bool has_a_offset() const;
   private:
   bool _internal_has_a_offset() const;
@@ -3267,7 +3267,7 @@ class UntrustedShmemSection final :
   void _internal_set_a_offset(uint32_t value);
   public:
 
-  // required uint32 a_size = 3;
+  // optional uint32 a_size = 3;
   bool has_a_size() const;
   private:
   bool _internal_has_a_size() const;
@@ -3283,9 +3283,6 @@ class UntrustedShmemSection final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.UntrustedShmemSection)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4143,7 +4140,7 @@ class TimedTexture final :
   std::string* _internal_mutable_a_picture();
   public:
 
-  // required uint32 a_frameID = 4;
+  // optional uint32 a_frameID = 4;
   bool has_a_frameid() const;
   private:
   bool _internal_has_a_frameid() const;
@@ -4156,7 +4153,7 @@ class TimedTexture final :
   void _internal_set_a_frameid(uint32_t value);
   public:
 
-  // required uint32 a_producerID = 5;
+  // optional uint32 a_producerID = 5;
   bool has_a_producerid() const;
   private:
   bool _internal_has_a_producerid() const;
@@ -4169,7 +4166,7 @@ class TimedTexture final :
   void _internal_set_a_producerid(uint32_t value);
   public:
 
-  // required bool a_readLocked = 6;
+  // optional bool a_readLocked = 6;
   bool has_a_readlocked() const;
   private:
   bool _internal_has_a_readlocked() const;
@@ -4866,7 +4863,7 @@ class OpNotifyNotUsed final :
     kATextureIdFieldNumber = 1,
     kAFwdTransactionIdFieldNumber = 2,
   };
-  // required uint64 a_TextureId = 1;
+  // optional uint64 a_TextureId = 1;
   bool has_a_textureid() const;
   private:
   bool _internal_has_a_textureid() const;
@@ -4879,7 +4876,7 @@ class OpNotifyNotUsed final :
   void _internal_set_a_textureid(uint64_t value);
   public:
 
-  // required uint64 a_fwdTransactionId = 2;
+  // optional uint64 a_fwdTransactionId = 2;
   bool has_a_fwdtransactionid() const;
   private:
   bool _internal_has_a_fwdtransactionid() const;
@@ -4895,9 +4892,6 @@ class OpNotifyNotUsed final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.OpNotifyNotUsed)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5859,7 +5853,7 @@ class ImageCompositeNotification final :
   std::string* _internal_mutable_a_firstcompositetimestamp();
   public:
 
-  // required uint32 a_frameID = 4;
+  // optional uint32 a_frameID = 4;
   bool has_a_frameid() const;
   private:
   bool _internal_has_a_frameid() const;
@@ -5872,7 +5866,7 @@ class ImageCompositeNotification final :
   void _internal_set_a_frameid(uint32_t value);
   public:
 
-  // required uint32 a_producerID = 5;
+  // optional uint32 a_producerID = 5;
   bool has_a_producerid() const;
   private:
   bool _internal_has_a_producerid() const;
@@ -8011,7 +8005,7 @@ inline void AnimationSegment::set_allocated_a_endstate(::protobuf::mozilla::laye
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.AnimationSegment.a_endState)
 }
 
-// required float a_startPortion = 3;
+// optional float a_startPortion = 3;
 inline bool AnimationSegment::_internal_has_a_startportion() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -8039,7 +8033,7 @@ inline void AnimationSegment::set_a_startportion(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.AnimationSegment.a_startPortion)
 }
 
-// required float a_endPortion = 4;
+// optional float a_endPortion = 4;
 inline bool AnimationSegment::_internal_has_a_endportion() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -8067,7 +8061,7 @@ inline void AnimationSegment::set_a_endportion(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.AnimationSegment.a_endPortion)
 }
 
-// required uint32 a_startComposite = 5;
+// optional uint32 a_startComposite = 5;
 inline bool AnimationSegment::_internal_has_a_startcomposite() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -8095,7 +8089,7 @@ inline void AnimationSegment::set_a_startcomposite(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.AnimationSegment.a_startComposite)
 }
 
-// required uint32 a_endComposite = 6;
+// optional uint32 a_endComposite = 6;
 inline bool AnimationSegment::_internal_has_a_endcomposite() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -9230,7 +9224,7 @@ inline void TransformData::set_allocated_a_bounds(std::string* a_bounds) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.TransformData.a_bounds)
 }
 
-// required sint32 a_appUnitsPerDevPixel = 4;
+// optional sint32 a_appUnitsPerDevPixel = 4;
 inline bool TransformData::_internal_has_a_appunitsperdevpixel() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -10030,7 +10024,7 @@ Animation::a_segments() const {
   return _impl_.a_segments_;
 }
 
-// required float a_iterations = 8;
+// optional float a_iterations = 8;
 inline bool Animation::_internal_has_a_iterations() const {
   bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
   return value;
@@ -10058,7 +10052,7 @@ inline void Animation::set_a_iterations(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.Animation.a_iterations)
 }
 
-// required float a_iterationStart = 9;
+// optional float a_iterationStart = 9;
 inline bool Animation::_internal_has_a_iterationstart() const {
   bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
   return value;
@@ -10086,7 +10080,7 @@ inline void Animation::set_a_iterationstart(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.Animation.a_iterationStart)
 }
 
-// required uint32 a_direction = 10;
+// optional uint32 a_direction = 10;
 inline bool Animation::_internal_has_a_direction() const {
   bool value = (_impl_._has_bits_[0] & 0x00002000u) != 0;
   return value;
@@ -10114,7 +10108,7 @@ inline void Animation::set_a_direction(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.Animation.a_direction)
 }
 
-// required uint32 a_fillMode = 11;
+// optional uint32 a_fillMode = 11;
 inline bool Animation::_internal_has_a_fillmode() const {
   bool value = (_impl_._has_bits_[0] & 0x00004000u) != 0;
   return value;
@@ -10210,7 +10204,7 @@ inline void Animation::set_allocated_a_property(std::string* a_property) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.Animation.a_property)
 }
 
-// required float a_playbackRate = 13;
+// optional float a_playbackRate = 13;
 inline bool Animation::_internal_has_a_playbackrate() const {
   bool value = (_impl_._has_bits_[0] & 0x00008000u) != 0;
   return value;
@@ -10238,7 +10232,7 @@ inline void Animation::set_a_playbackrate(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.Animation.a_playbackRate)
 }
 
-// required float a_previousPlaybackRate = 14;
+// optional float a_previousPlaybackRate = 14;
 inline bool Animation::_internal_has_a_previousplaybackrate() const {
   bool value = (_impl_._has_bits_[0] & 0x00010000u) != 0;
   return value;
@@ -10334,7 +10328,7 @@ inline void Animation::set_allocated_a_easingfunction(std::string* a_easingfunct
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.Animation.a_easingFunction)
 }
 
-// required uint32 a_iterationComposite = 16;
+// optional uint32 a_iterationComposite = 16;
 inline bool Animation::_internal_has_a_iterationcomposite() const {
   bool value = (_impl_._has_bits_[0] & 0x00020000u) != 0;
   return value;
@@ -10362,7 +10356,7 @@ inline void Animation::set_a_iterationcomposite(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.Animation.a_iterationComposite)
 }
 
-// required bool a_isNotPlaying = 17;
+// optional bool a_isNotPlaying = 17;
 inline bool Animation::_internal_has_a_isnotplaying() const {
   bool value = (_impl_._has_bits_[0] & 0x00040000u) != 0;
   return value;
@@ -10390,7 +10384,7 @@ inline void Animation::set_a_isnotplaying(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.Animation.a_isNotPlaying)
 }
 
-// required bool a_isNotAnimating = 18;
+// optional bool a_isNotAnimating = 18;
 inline bool Animation::_internal_has_a_isnotanimating() const {
   bool value = (_impl_._has_bits_[0] & 0x00080000u) != 0;
   return value;
@@ -10760,7 +10754,7 @@ CompositorAnimations::a_animations() const {
   return _impl_.a_animations_;
 }
 
-// required uint64 a_id = 2;
+// optional uint64 a_id = 2;
 inline bool CompositorAnimations::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10860,7 +10854,7 @@ inline void UntrustedShmemSection::set_allocated_a_shmem(std::string* a_shmem) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.UntrustedShmemSection.a_shmem)
 }
 
-// required uint32 a_offset = 2;
+// optional uint32 a_offset = 2;
 inline bool UntrustedShmemSection::_internal_has_a_offset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -10888,7 +10882,7 @@ inline void UntrustedShmemSection::set_a_offset(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.UntrustedShmemSection.a_offset)
 }
 
-// required uint32 a_size = 3;
+// optional uint32 a_size = 3;
 inline bool UntrustedShmemSection::_internal_has_a_size() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -11655,7 +11649,7 @@ inline void TimedTexture::set_allocated_a_picture(std::string* a_picture) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.TimedTexture.a_picture)
 }
 
-// required uint32 a_frameID = 4;
+// optional uint32 a_frameID = 4;
 inline bool TimedTexture::_internal_has_a_frameid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -11683,7 +11677,7 @@ inline void TimedTexture::set_a_frameid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.TimedTexture.a_frameID)
 }
 
-// required uint32 a_producerID = 5;
+// optional uint32 a_producerID = 5;
 inline bool TimedTexture::_internal_has_a_producerid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -11711,7 +11705,7 @@ inline void TimedTexture::set_a_producerid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.TimedTexture.a_producerID)
 }
 
-// required bool a_readLocked = 6;
+// optional bool a_readLocked = 6;
 inline bool TimedTexture::_internal_has_a_readlocked() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -12271,7 +12265,7 @@ inline void OpEnableRemoteTexturePushCallback::set_allocated_a_textureflags(std:
 
 // OpNotifyNotUsed
 
-// required uint64 a_TextureId = 1;
+// optional uint64 a_TextureId = 1;
 inline bool OpNotifyNotUsed::_internal_has_a_textureid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12299,7 +12293,7 @@ inline void OpNotifyNotUsed::set_a_textureid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpNotifyNotUsed.a_TextureId)
 }
 
-// required uint64 a_fwdTransactionId = 2;
+// optional uint64 a_fwdTransactionId = 2;
 inline bool OpNotifyNotUsed::_internal_has_a_fwdtransactionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -13387,7 +13381,7 @@ inline void ImageCompositeNotification::set_allocated_a_firstcompositetimestamp(
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.ImageCompositeNotification.a_firstCompositeTimeStamp)
 }
 
-// required uint32 a_frameID = 4;
+// optional uint32 a_frameID = 4;
 inline bool ImageCompositeNotification::_internal_has_a_frameid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -13415,7 +13409,7 @@ inline void ImageCompositeNotification::set_a_frameid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.ImageCompositeNotification.a_frameID)
 }
 
-// required uint32 a_producerID = 5;
+// optional uint32 a_producerID = 5;
 inline bool ImageCompositeNotification::_internal_has_a_producerid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;

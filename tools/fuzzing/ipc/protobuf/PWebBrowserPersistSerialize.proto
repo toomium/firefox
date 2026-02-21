@@ -20,7 +20,7 @@ message Msg_WriteData {
 }
 
 message Msg___delete__ {
-  required string a_aContentType = 1;
+  optional string a_aContentType = 1;
   required bytes a_aStatus = 2;
 }
 

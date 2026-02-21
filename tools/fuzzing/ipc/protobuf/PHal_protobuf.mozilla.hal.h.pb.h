@@ -185,7 +185,7 @@ class BatteryInformation final :
     kARemainingTimeFieldNumber = 3,
     kAChargingFieldNumber = 2,
   };
-  // required double a_level = 1;
+  // optional double a_level = 1;
   bool has_a_level() const;
   private:
   bool _internal_has_a_level() const;
@@ -198,7 +198,7 @@ class BatteryInformation final :
   void _internal_set_a_level(double value);
   public:
 
-  // required double a_remainingTime = 3;
+  // optional double a_remainingTime = 3;
   bool has_a_remainingtime() const;
   private:
   bool _internal_has_a_remainingtime() const;
@@ -211,7 +211,7 @@ class BatteryInformation final :
   void _internal_set_a_remainingtime(double value);
   public:
 
-  // required bool a_charging = 2;
+  // optional bool a_charging = 2;
   bool has_a_charging() const;
   private:
   bool _internal_has_a_charging() const;
@@ -227,9 +227,6 @@ class BatteryInformation final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.hal.BatteryInformation)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -554,7 +551,7 @@ class NetworkInformation final :
     kAIsWifiFieldNumber = 2,
     kADhcpGatewayFieldNumber = 3,
   };
-  // required uint32 a_type = 1;
+  // optional uint32 a_type = 1;
   bool has_a_type() const;
   private:
   bool _internal_has_a_type() const;
@@ -567,7 +564,7 @@ class NetworkInformation final :
   void _internal_set_a_type(uint32_t value);
   public:
 
-  // required bool a_isWifi = 2;
+  // optional bool a_isWifi = 2;
   bool has_a_iswifi() const;
   private:
   bool _internal_has_a_iswifi() const;
@@ -580,7 +577,7 @@ class NetworkInformation final :
   void _internal_set_a_iswifi(bool value);
   public:
 
-  // required uint32 a_dhcpGateway = 3;
+  // optional uint32 a_dhcpGateway = 3;
   bool has_a_dhcpgateway() const;
   private:
   bool _internal_has_a_dhcpgateway() const;
@@ -596,9 +593,6 @@ class NetworkInformation final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.hal.NetworkInformation)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -752,7 +746,7 @@ class WakeLockInformation final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
       mutable_a_lockingprocesses();
 
-  // required string a_topic = 1;
+  // optional string a_topic = 1;
   bool has_a_topic() const;
   private:
   bool _internal_has_a_topic() const;
@@ -770,7 +764,7 @@ class WakeLockInformation final :
   std::string* _internal_mutable_a_topic();
   public:
 
-  // required uint32 a_numLocks = 2;
+  // optional uint32 a_numLocks = 2;
   bool has_a_numlocks() const;
   private:
   bool _internal_has_a_numlocks() const;
@@ -783,7 +777,7 @@ class WakeLockInformation final :
   void _internal_set_a_numlocks(uint32_t value);
   public:
 
-  // required uint32 a_numHidden = 3;
+  // optional uint32 a_numHidden = 3;
   bool has_a_numhidden() const;
   private:
   bool _internal_has_a_numhidden() const;
@@ -799,9 +793,6 @@ class WakeLockInformation final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.hal.WakeLockInformation)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -828,7 +819,7 @@ class WakeLockInformation final :
 #endif  // __GNUC__
 // BatteryInformation
 
-// required double a_level = 1;
+// optional double a_level = 1;
 inline bool BatteryInformation::_internal_has_a_level() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -856,7 +847,7 @@ inline void BatteryInformation::set_a_level(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.hal.BatteryInformation.a_level)
 }
 
-// required bool a_charging = 2;
+// optional bool a_charging = 2;
 inline bool BatteryInformation::_internal_has_a_charging() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -884,7 +875,7 @@ inline void BatteryInformation::set_a_charging(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.hal.BatteryInformation.a_charging)
 }
 
-// required double a_remainingTime = 3;
+// optional double a_remainingTime = 3;
 inline bool BatteryInformation::_internal_has_a_remainingtime() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1103,7 +1094,7 @@ SensorData::mutable_a_values() {
 
 // NetworkInformation
 
-// required uint32 a_type = 1;
+// optional uint32 a_type = 1;
 inline bool NetworkInformation::_internal_has_a_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1131,7 +1122,7 @@ inline void NetworkInformation::set_a_type(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.hal.NetworkInformation.a_type)
 }
 
-// required bool a_isWifi = 2;
+// optional bool a_isWifi = 2;
 inline bool NetworkInformation::_internal_has_a_iswifi() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1159,7 +1150,7 @@ inline void NetworkInformation::set_a_iswifi(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.hal.NetworkInformation.a_isWifi)
 }
 
-// required uint32 a_dhcpGateway = 3;
+// optional uint32 a_dhcpGateway = 3;
 inline bool NetworkInformation::_internal_has_a_dhcpgateway() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1191,7 +1182,7 @@ inline void NetworkInformation::set_a_dhcpgateway(uint32_t value) {
 
 // WakeLockInformation
 
-// required string a_topic = 1;
+// optional string a_topic = 1;
 inline bool WakeLockInformation::_internal_has_a_topic() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1259,7 +1250,7 @@ inline void WakeLockInformation::set_allocated_a_topic(std::string* a_topic) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.hal.WakeLockInformation.a_topic)
 }
 
-// required uint32 a_numLocks = 2;
+// optional uint32 a_numLocks = 2;
 inline bool WakeLockInformation::_internal_has_a_numlocks() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1287,7 +1278,7 @@ inline void WakeLockInformation::set_a_numlocks(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.hal.WakeLockInformation.a_numLocks)
 }
 
-// required uint32 a_numHidden = 3;
+// optional uint32 a_numHidden = 3;
 inline bool WakeLockInformation::_internal_has_a_numhidden() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

@@ -965,9 +965,6 @@ void Reply_Init::CopyFrom(const Reply_Init& from) {
 
 bool Reply_Init::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_result()) {
-    if (!_impl_.a_result_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -1396,9 +1393,6 @@ void Reply_Encode::CopyFrom(const Reply_Encode& from) {
 
 bool Reply_Encode::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_result()) {
-    if (!_impl_.a_result_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -2193,9 +2187,6 @@ void Reply_Drain::CopyFrom(const Reply_Drain& from) {
 
 bool Reply_Drain::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_result()) {
-    if (!_impl_.a_result_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -2218,9 +2209,6 @@ class Msg_ReleaseTicket::_Internal {
   using HasBits = decltype(std::declval<Msg_ReleaseTicket>()._impl_._has_bits_);
   static void set_has_a_ticketid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -2289,7 +2277,7 @@ const char* Msg_ReleaseTicket::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 a_ticketId = 1;
+      // optional uint32 a_ticketId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_ticketid(&has_bits);
@@ -2329,7 +2317,7 @@ uint8_t* Msg_ReleaseTicket::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 a_ticketId = 1;
+  // optional uint32 a_ticketId = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_ticketid(), target);
@@ -2347,13 +2335,15 @@ size_t Msg_ReleaseTicket::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.PRemoteEncoder.Msg_ReleaseTicket)
   size_t total_size = 0;
 
-  // required uint32 a_ticketId = 1;
-  if (_internal_has_a_ticketid()) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_ticketid());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional uint32 a_ticketId = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_ticketid());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -2390,7 +2380,6 @@ void Msg_ReleaseTicket::CopyFrom(const Msg_ReleaseTicket& from) {
 }
 
 bool Msg_ReleaseTicket::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -2562,9 +2551,6 @@ class Reply_Shutdown::_Internal {
   static void set_has_a_unused(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Reply_Shutdown::Reply_Shutdown(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2632,7 +2618,7 @@ const char* Reply_Shutdown::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_unused = 1;
+      // optional bool a_unused = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_unused(&has_bits);
@@ -2672,7 +2658,7 @@ uint8_t* Reply_Shutdown::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_unused = 1;
+  // optional bool a_unused = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_unused(), target);
@@ -2690,13 +2676,15 @@ size_t Reply_Shutdown::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.PRemoteEncoder.Reply_Shutdown)
   size_t total_size = 0;
 
-  // required bool a_unused = 1;
-  if (_internal_has_a_unused()) {
-    total_size += 1 + 1;
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bool a_unused = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -2733,7 +2721,6 @@ void Reply_Shutdown::CopyFrom(const Reply_Shutdown& from) {
 }
 
 bool Reply_Shutdown::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -2756,9 +2743,6 @@ class Msg_SetBitrate::_Internal {
   using HasBits = decltype(std::declval<Msg_SetBitrate>()._impl_._has_bits_);
   static void set_has_a_abitspersec(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -2827,7 +2811,7 @@ const char* Msg_SetBitrate::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 a_aBitsPerSec = 1;
+      // optional uint32 a_aBitsPerSec = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_abitspersec(&has_bits);
@@ -2867,7 +2851,7 @@ uint8_t* Msg_SetBitrate::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 a_aBitsPerSec = 1;
+  // optional uint32 a_aBitsPerSec = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_abitspersec(), target);
@@ -2885,13 +2869,15 @@ size_t Msg_SetBitrate::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.PRemoteEncoder.Msg_SetBitrate)
   size_t total_size = 0;
 
-  // required uint32 a_aBitsPerSec = 1;
-  if (_internal_has_a_abitspersec()) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_abitspersec());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional uint32 a_aBitsPerSec = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_abitspersec());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -2928,7 +2914,6 @@ void Msg_SetBitrate::CopyFrom(const Msg_SetBitrate& from) {
 }
 
 bool Msg_SetBitrate::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 

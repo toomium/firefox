@@ -236,7 +236,7 @@ class Msg_FillHandlerInfo final :
     kAAOverrideTypeFieldNumber = 2,
     kAAHandlerInfoDataFieldNumber = 1,
   };
-  // required string a_aOverrideType = 2;
+  // optional string a_aOverrideType = 2;
   bool has_a_aoverridetype() const;
   private:
   bool _internal_has_a_aoverridetype() const;
@@ -275,9 +275,6 @@ class Msg_FillHandlerInfo final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PHandlerService.Msg_FillHandlerInfo)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -552,7 +549,7 @@ class Msg_ExistsForProtocolOS final :
   enum : int {
     kAAProtocolSchemeFieldNumber = 1,
   };
-  // required string a_aProtocolScheme = 1;
+  // optional string a_aProtocolScheme = 1;
   bool has_a_aprotocolscheme() const;
   private:
   bool _internal_has_a_aprotocolscheme() const;
@@ -699,7 +696,7 @@ class Reply_ExistsForProtocolOS final :
   enum : int {
     kAExistsFieldNumber = 1,
   };
-  // required bool a_exists = 1;
+  // optional bool a_exists = 1;
   bool has_a_exists() const;
   private:
   bool _internal_has_a_exists() const;
@@ -841,7 +838,7 @@ class Msg_ExistsForProtocol final :
   enum : int {
     kAAProtocolSchemeFieldNumber = 1,
   };
-  // required string a_aProtocolScheme = 1;
+  // optional string a_aProtocolScheme = 1;
   bool has_a_aprotocolscheme() const;
   private:
   bool _internal_has_a_aprotocolscheme() const;
@@ -988,7 +985,7 @@ class Reply_ExistsForProtocol final :
   enum : int {
     kAExistsFieldNumber = 1,
   };
-  // required bool a_exists = 1;
+  // optional bool a_exists = 1;
   bool has_a_exists() const;
   private:
   bool _internal_has_a_exists() const;
@@ -1277,7 +1274,7 @@ class Reply_Exists final :
   enum : int {
     kAExistsFieldNumber = 1,
   };
-  // required bool a_exists = 1;
+  // optional bool a_exists = 1;
   bool has_a_exists() const;
   private:
   bool _internal_has_a_exists() const;
@@ -1419,7 +1416,7 @@ class Msg_GetTypeFromExtension final :
   enum : int {
     kAAFileExtensionFieldNumber = 1,
   };
-  // required string a_aFileExtension = 1;
+  // optional string a_aFileExtension = 1;
   bool has_a_afileextension() const;
   private:
   bool _internal_has_a_afileextension() const;
@@ -1566,7 +1563,7 @@ class Reply_GetTypeFromExtension final :
   enum : int {
     kATypeFieldNumber = 1,
   };
-  // required string a_type = 1;
+  // optional string a_type = 1;
   bool has_a_type() const;
   private:
   bool _internal_has_a_type() const;
@@ -1714,7 +1711,7 @@ class Msg_GetMIMEInfoFromOS final :
     kAAMIMETypeFieldNumber = 1,
     kAAExtensionFieldNumber = 2,
   };
-  // required string a_aMIMEType = 1;
+  // optional string a_aMIMEType = 1;
   bool has_a_amimetype() const;
   private:
   bool _internal_has_a_amimetype() const;
@@ -1732,7 +1729,7 @@ class Msg_GetMIMEInfoFromOS final :
   std::string* _internal_mutable_a_amimetype();
   public:
 
-  // required string a_aExtension = 2;
+  // optional string a_aExtension = 2;
   bool has_a_aextension() const;
   private:
   bool _internal_has_a_aextension() const;
@@ -1753,9 +1750,6 @@ class Msg_GetMIMEInfoFromOS final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PHandlerService.Msg_GetMIMEInfoFromOS)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1921,7 +1915,7 @@ class Reply_GetMIMEInfoFromOS final :
       ::protobuf::mozilla::dom::HandlerInfo* a_handlerinfodata);
   ::protobuf::mozilla::dom::HandlerInfo* unsafe_arena_release_a_handlerinfodata();
 
-  // required bool a_found = 3;
+  // optional bool a_found = 3;
   bool has_a_found() const;
   private:
   bool _internal_has_a_found() const;
@@ -2068,7 +2062,7 @@ class Msg_GetApplicationDescription final :
   enum : int {
     kAASchemeFieldNumber = 1,
   };
-  // required string a_aScheme = 1;
+  // optional string a_aScheme = 1;
   bool has_a_ascheme() const;
   private:
   bool _internal_has_a_ascheme() const;
@@ -2234,7 +2228,7 @@ class Reply_GetApplicationDescription final :
   std::string* _internal_mutable_a_rv();
   public:
 
-  // required string a_description = 2;
+  // optional string a_description = 2;
   bool has_a_description() const;
   private:
   bool _internal_has_a_description() const;
@@ -2255,9 +2249,6 @@ class Reply_GetApplicationDescription final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PHandlerService.Reply_GetApplicationDescription)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2617,7 +2608,7 @@ inline void Msg_FillHandlerInfo::set_allocated_a_ahandlerinfodata(::protobuf::mo
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PHandlerService.Msg_FillHandlerInfo.a_aHandlerInfoData)
 }
 
-// required string a_aOverrideType = 2;
+// optional string a_aOverrideType = 2;
 inline bool Msg_FillHandlerInfo::_internal_has_a_aoverridetype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2780,7 +2771,7 @@ inline void Reply_FillHandlerInfo::set_allocated_a_handlerinfodata(::protobuf::m
 
 // Msg_ExistsForProtocolOS
 
-// required string a_aProtocolScheme = 1;
+// optional string a_aProtocolScheme = 1;
 inline bool Msg_ExistsForProtocolOS::_internal_has_a_aprotocolscheme() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2852,7 +2843,7 @@ inline void Msg_ExistsForProtocolOS::set_allocated_a_aprotocolscheme(std::string
 
 // Reply_ExistsForProtocolOS
 
-// required bool a_exists = 1;
+// optional bool a_exists = 1;
 inline bool Reply_ExistsForProtocolOS::_internal_has_a_exists() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2884,7 +2875,7 @@ inline void Reply_ExistsForProtocolOS::set_a_exists(bool value) {
 
 // Msg_ExistsForProtocol
 
-// required string a_aProtocolScheme = 1;
+// optional string a_aProtocolScheme = 1;
 inline bool Msg_ExistsForProtocol::_internal_has_a_aprotocolscheme() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2956,7 +2947,7 @@ inline void Msg_ExistsForProtocol::set_allocated_a_aprotocolscheme(std::string* 
 
 // Reply_ExistsForProtocol
 
-// required bool a_exists = 1;
+// optional bool a_exists = 1;
 inline bool Reply_ExistsForProtocol::_internal_has_a_exists() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3079,7 +3070,7 @@ inline void Msg_Exists::set_allocated_a_ahandlerinfo(::protobuf::mozilla::dom::H
 
 // Reply_Exists
 
-// required bool a_exists = 1;
+// optional bool a_exists = 1;
 inline bool Reply_Exists::_internal_has_a_exists() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3111,7 +3102,7 @@ inline void Reply_Exists::set_a_exists(bool value) {
 
 // Msg_GetTypeFromExtension
 
-// required string a_aFileExtension = 1;
+// optional string a_aFileExtension = 1;
 inline bool Msg_GetTypeFromExtension::_internal_has_a_afileextension() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3183,7 +3174,7 @@ inline void Msg_GetTypeFromExtension::set_allocated_a_afileextension(std::string
 
 // Reply_GetTypeFromExtension
 
-// required string a_type = 1;
+// optional string a_type = 1;
 inline bool Reply_GetTypeFromExtension::_internal_has_a_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3255,7 +3246,7 @@ inline void Reply_GetTypeFromExtension::set_allocated_a_type(std::string* a_type
 
 // Msg_GetMIMEInfoFromOS
 
-// required string a_aMIMEType = 1;
+// optional string a_aMIMEType = 1;
 inline bool Msg_GetMIMEInfoFromOS::_internal_has_a_amimetype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3323,7 +3314,7 @@ inline void Msg_GetMIMEInfoFromOS::set_allocated_a_amimetype(std::string* a_amim
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PHandlerService.Msg_GetMIMEInfoFromOS.a_aMIMEType)
 }
 
-// required string a_aExtension = 2;
+// optional string a_aExtension = 2;
 inline bool Msg_GetMIMEInfoFromOS::_internal_has_a_aextension() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3550,7 +3541,7 @@ inline void Reply_GetMIMEInfoFromOS::set_allocated_a_handlerinfodata(::protobuf:
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PHandlerService.Reply_GetMIMEInfoFromOS.a_handlerInfoData)
 }
 
-// required bool a_found = 3;
+// optional bool a_found = 3;
 inline bool Reply_GetMIMEInfoFromOS::_internal_has_a_found() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -3582,7 +3573,7 @@ inline void Reply_GetMIMEInfoFromOS::set_a_found(bool value) {
 
 // Msg_GetApplicationDescription
 
-// required string a_aScheme = 1;
+// optional string a_aScheme = 1;
 inline bool Msg_GetApplicationDescription::_internal_has_a_ascheme() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3722,7 +3713,7 @@ inline void Reply_GetApplicationDescription::set_allocated_a_rv(std::string* a_r
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PHandlerService.Reply_GetApplicationDescription.a_rv)
 }
 
-// required string a_description = 2;
+// optional string a_description = 2;
 inline bool Reply_GetApplicationDescription::_internal_has_a_description() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

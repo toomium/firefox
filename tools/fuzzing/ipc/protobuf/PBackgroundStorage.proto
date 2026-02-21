@@ -19,9 +19,9 @@ message Msg_DeleteMe {
 }
 
 message Msg_Preload {
-  required string a_originSuffix = 1;
-  required string a_originNoSuffix = 2;
-  required uint32 a_alreadyLoadedCount = 3;
+  optional string a_originSuffix = 1;
+  optional string a_originNoSuffix = 2;
+  optional uint32 a_alreadyLoadedCount = 3;
 }
 
 message Reply_Preload {
@@ -31,38 +31,38 @@ message Reply_Preload {
 }
 
 message Msg_AsyncPreload {
-  required string a_originSuffix = 1;
-  required string a_originNoSuffix = 2;
-  required bool a_priority = 3;
+  optional string a_originSuffix = 1;
+  optional string a_originNoSuffix = 2;
+  optional bool a_priority = 3;
 }
 
 message Msg_AsyncGetUsage {
-  required string a_scope = 1;
+  optional string a_scope = 1;
 }
 
 message Msg_AsyncAddItem {
-  required string a_originSuffix = 1;
-  required string a_originNoSuffix = 2;
-  required string a_key = 3;
-  required string a_value = 4;
+  optional string a_originSuffix = 1;
+  optional string a_originNoSuffix = 2;
+  optional string a_key = 3;
+  optional string a_value = 4;
 }
 
 message Msg_AsyncUpdateItem {
-  required string a_originSuffix = 1;
-  required string a_originNoSuffix = 2;
-  required string a_key = 3;
-  required string a_value = 4;
+  optional string a_originSuffix = 1;
+  optional string a_originNoSuffix = 2;
+  optional string a_key = 3;
+  optional string a_value = 4;
 }
 
 message Msg_AsyncRemoveItem {
-  required string a_originSuffix = 1;
-  required string a_originNoSuffix = 2;
-  required string a_key = 3;
+  optional string a_originSuffix = 1;
+  optional string a_originNoSuffix = 2;
+  optional string a_key = 3;
 }
 
 message Msg_AsyncClear {
-  required string a_originSuffix = 1;
-  required string a_originNoSuffix = 2;
+  optional string a_originSuffix = 1;
+  optional string a_originNoSuffix = 2;
 }
 
 message Msg_AsyncFlush {
@@ -75,7 +75,7 @@ message Msg_ClearAll {
 }
 
 message Msg_ClearMatchingOrigin {
-  required string a_originNoSuffix = 1;
+  optional string a_originNoSuffix = 1;
 }
 
 message Msg_ClearMatchingOriginAttributes {
@@ -89,9 +89,9 @@ message Reply___delete__ {
 }
 
 message Msg_Observe {
-  required string a_topic = 1;
-  required string a_originAttributesPattern = 2;
-  required string a_originScope = 3;
+  optional string a_topic = 1;
+  optional string a_originAttributesPattern = 2;
+  optional string a_originScope = 3;
 }
 
 message Msg_OriginsHavingData {
@@ -99,21 +99,21 @@ message Msg_OriginsHavingData {
 }
 
 message Msg_LoadItem {
-  required string a_originSuffix = 1;
-  required string a_originNoSuffix = 2;
-  required string a_key = 3;
-  required string a_value = 4;
+  optional string a_originSuffix = 1;
+  optional string a_originNoSuffix = 2;
+  optional string a_key = 3;
+  optional string a_value = 4;
 }
 
 message Msg_LoadDone {
-  required string a_originSuffix = 1;
-  required string a_originNoSuffix = 2;
+  optional string a_originSuffix = 1;
+  optional string a_originNoSuffix = 2;
   required bytes a_rv = 3;
 }
 
 message Msg_LoadUsage {
-  required string a_scope = 1;
-  required sint64 a_usage = 2;
+  optional string a_scope = 1;
+  optional sint64 a_usage = 2;
 }
 
 message Msg_Error {

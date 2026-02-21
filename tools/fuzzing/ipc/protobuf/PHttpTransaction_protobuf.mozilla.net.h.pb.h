@@ -250,7 +250,7 @@ class NetworkAddressArg final :
   std::string* _internal_mutable_a_trrskipreason();
   public:
 
-  // required bool a_resolvedByTRR = 3;
+  // optional bool a_resolvedByTRR = 3;
   bool has_a_resolvedbytrr() const;
   private:
   bool _internal_has_a_resolvedbytrr() const;
@@ -263,7 +263,7 @@ class NetworkAddressArg final :
   void _internal_set_a_resolvedbytrr(bool value);
   public:
 
-  // required bool a_echConfigUsed = 6;
+  // optional bool a_echConfigUsed = 6;
   bool has_a_echconfigused() const;
   private:
   bool _internal_has_a_echconfigused() const;
@@ -446,7 +446,7 @@ inline void NetworkAddressArg::set_allocated_a_peeraddr(std::string* a_peeraddr)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.NetworkAddressArg.a_peerAddr)
 }
 
-// required bool a_resolvedByTRR = 3;
+// optional bool a_resolvedByTRR = 3;
 inline bool NetworkAddressArg::_internal_has_a_resolvedbytrr() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -610,7 +610,7 @@ inline void NetworkAddressArg::set_allocated_a_trrskipreason(std::string* a_trrs
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.NetworkAddressArg.a_trrSkipReason)
 }
 
-// required bool a_echConfigUsed = 6;
+// optional bool a_echConfigUsed = 6;
 inline bool NetworkAddressArg::_internal_has_a_echconfigused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;

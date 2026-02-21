@@ -651,7 +651,7 @@ class OpPushExternalImageForTexture final :
   std::string* _internal_mutable_a_texture();
   public:
 
-  // required bool a_isUpdate = 4;
+  // optional bool a_isUpdate = 4;
   bool has_a_isupdate() const;
   private:
   bool _internal_has_a_isupdate() const;
@@ -2104,7 +2104,7 @@ class OffsetRange final :
     kAStartFieldNumber = 2,
     kALengthFieldNumber = 3,
   };
-  // required uint32 a_source = 1;
+  // optional uint32 a_source = 1;
   bool has_a_source() const;
   private:
   bool _internal_has_a_source() const;
@@ -2117,7 +2117,7 @@ class OffsetRange final :
   void _internal_set_a_source(uint32_t value);
   public:
 
-  // required uint32 a_start = 2;
+  // optional uint32 a_start = 2;
   bool has_a_start() const;
   private:
   bool _internal_has_a_start() const;
@@ -2130,7 +2130,7 @@ class OffsetRange final :
   void _internal_set_a_start(uint32_t value);
   public:
 
-  // required uint32 a_length = 3;
+  // optional uint32 a_length = 3;
   bool has_a_length() const;
   private:
   bool _internal_has_a_length() const;
@@ -2146,9 +2146,6 @@ class OffsetRange final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.OffsetRange)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2334,7 +2331,7 @@ class OpAddImage final :
       ::protobuf::mozilla::layers::OffsetRange* a_bytes);
   ::protobuf::mozilla::layers::OffsetRange* unsafe_arena_release_a_bytes();
 
-  // required uint32 a_tiling = 3;
+  // optional uint32 a_tiling = 3;
   bool has_a_tiling() const;
   private:
   bool _internal_has_a_tiling() const;
@@ -2558,7 +2555,7 @@ class OpAddBlobImage final :
       ::protobuf::mozilla::layers::OffsetRange* a_bytes);
   ::protobuf::mozilla::layers::OffsetRange* unsafe_arena_release_a_bytes();
 
-  // required uint32 a_tiling = 4;
+  // optional uint32 a_tiling = 4;
   bool has_a_tiling() const;
   private:
   bool _internal_has_a_tiling() const;
@@ -4113,7 +4110,7 @@ class OpAddRawFont final :
       ::protobuf::mozilla::layers::OffsetRange* a_bytes);
   ::protobuf::mozilla::layers::OffsetRange* unsafe_arena_release_a_bytes();
 
-  // required uint32 a_fontIndex = 2;
+  // optional uint32 a_fontIndex = 2;
   bool has_a_fontindex() const;
   private:
   bool _internal_has_a_fontindex() const;
@@ -4298,7 +4295,7 @@ class OpAddFontDescriptor final :
       ::protobuf::mozilla::layers::OffsetRange* a_bytes);
   ::protobuf::mozilla::layers::OffsetRange* unsafe_arena_release_a_bytes();
 
-  // required uint32 a_fontIndex = 2;
+  // optional uint32 a_fontIndex = 2;
   bool has_a_fontindex() const;
   private:
   bool _internal_has_a_fontindex() const;
@@ -4687,7 +4684,7 @@ class OpAddFontInstance final :
       ::protobuf::mozilla::layers::OffsetRange* a_variations);
   ::protobuf::mozilla::layers::OffsetRange* unsafe_arena_release_a_variations();
 
-  // required float a_glyphSize = 6;
+  // optional float a_glyphSize = 6;
   bool has_a_glyphsize() const;
   private:
   bool _internal_has_a_glyphsize() const;
@@ -5812,7 +5809,7 @@ inline void OpPushExternalImageForTexture::set_allocated_a_texture(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpPushExternalImageForTexture.a_texture)
 }
 
-// required bool a_isUpdate = 4;
+// optional bool a_isUpdate = 4;
 inline bool OpPushExternalImageForTexture::_internal_has_a_isupdate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -7226,7 +7223,7 @@ inline WebRenderParentCommand::ContentCase WebRenderParentCommand::content_case(
 
 // OffsetRange
 
-// required uint32 a_source = 1;
+// optional uint32 a_source = 1;
 inline bool OffsetRange::_internal_has_a_source() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7254,7 +7251,7 @@ inline void OffsetRange::set_a_source(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OffsetRange.a_source)
 }
 
-// required uint32 a_start = 2;
+// optional uint32 a_start = 2;
 inline bool OffsetRange::_internal_has_a_start() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7282,7 +7279,7 @@ inline void OffsetRange::set_a_start(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OffsetRange.a_start)
 }
 
-// required uint32 a_length = 3;
+// optional uint32 a_length = 3;
 inline bool OffsetRange::_internal_has_a_length() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -7472,7 +7469,7 @@ inline void OpAddImage::set_allocated_a_bytes(::protobuf::mozilla::layers::Offse
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpAddImage.a_bytes)
 }
 
-// required uint32 a_tiling = 3;
+// optional uint32 a_tiling = 3;
 inline bool OpAddImage::_internal_has_a_tiling() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -7798,7 +7795,7 @@ inline void OpAddBlobImage::set_allocated_a_visiblerect(std::string* a_visiblere
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpAddBlobImage.a_visibleRect)
 }
 
-// required uint32 a_tiling = 4;
+// optional uint32 a_tiling = 4;
 inline bool OpAddBlobImage::_internal_has_a_tiling() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -9220,7 +9217,7 @@ inline void OpAddRawFont::set_allocated_a_bytes(::protobuf::mozilla::layers::Off
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpAddRawFont.a_bytes)
 }
 
-// required uint32 a_fontIndex = 2;
+// optional uint32 a_fontIndex = 2;
 inline bool OpAddRawFont::_internal_has_a_fontindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -9410,7 +9407,7 @@ inline void OpAddFontDescriptor::set_allocated_a_bytes(::protobuf::mozilla::laye
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpAddFontDescriptor.a_bytes)
 }
 
-// required uint32 a_fontIndex = 2;
+// optional uint32 a_fontIndex = 2;
 inline bool OpAddFontDescriptor::_internal_has_a_fontindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -9944,7 +9941,7 @@ inline void OpAddFontInstance::set_allocated_a_fontkey(std::string* a_fontkey) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpAddFontInstance.a_fontKey)
 }
 
-// required float a_glyphSize = 6;
+// optional float a_glyphSize = 6;
 inline bool OpAddFontInstance::_internal_has_a_glyphsize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;

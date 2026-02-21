@@ -231,7 +231,7 @@ class Msg_Cancel final :
   std::string* _internal_mutable_a_status();
   public:
 
-  // required string a_reason = 2;
+  // optional string a_reason = 2;
   bool has_a_reason() const;
   private:
   bool _internal_has_a_reason() const;
@@ -252,9 +252,6 @@ class Msg_Cancel final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PDocumentChannel.Msg_Cancel)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -815,7 +812,7 @@ class Msg_DisconnectChildListeners final :
   std::string* _internal_mutable_a_aloadgroupreason();
   public:
 
-  // required bool a_aContinueNavigating = 3;
+  // optional bool a_aContinueNavigating = 3;
   bool has_a_acontinuenavigating() const;
   private:
   bool _internal_has_a_acontinuenavigating() const;
@@ -1518,7 +1515,7 @@ inline void Msg_Cancel::set_allocated_a_status(std::string* a_status) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PDocumentChannel.Msg_Cancel.a_status)
 }
 
-// required string a_reason = 2;
+// optional string a_reason = 2;
 inline bool Msg_Cancel::_internal_has_a_reason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1806,7 +1803,7 @@ inline void Msg_DisconnectChildListeners::set_allocated_a_aloadgroupreason(std::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PDocumentChannel.Msg_DisconnectChildListeners.a_aLoadGroupReason)
 }
 
-// required bool a_aContinueNavigating = 3;
+// optional bool a_aContinueNavigating = 3;
 inline bool Msg_DisconnectChildListeners::_internal_has_a_acontinuenavigating() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

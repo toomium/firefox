@@ -1039,9 +1039,6 @@ class Msg_DeleteObjectStore::_Internal {
   static void set_has_a_objectstoreid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_DeleteObjectStore::Msg_DeleteObjectStore(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1109,7 +1106,7 @@ const char* Msg_DeleteObjectStore::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint64 a_objectStoreId = 1;
+      // optional sint64 a_objectStoreId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_objectstoreid(&has_bits);
@@ -1149,7 +1146,7 @@ uint8_t* Msg_DeleteObjectStore::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required sint64 a_objectStoreId = 1;
+  // optional sint64 a_objectStoreId = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_objectstoreid(), target);
@@ -1167,13 +1164,15 @@ size_t Msg_DeleteObjectStore::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.indexedDB.PBackgroundIDBVersionChangeTransaction.Msg_DeleteObjectStore)
   size_t total_size = 0;
 
-  // required sint64 a_objectStoreId = 1;
-  if (_internal_has_a_objectstoreid()) {
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_objectstoreid());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional sint64 a_objectStoreId = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_objectstoreid());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1210,7 +1209,6 @@ void Msg_DeleteObjectStore::CopyFrom(const Msg_DeleteObjectStore& from) {
 }
 
 bool Msg_DeleteObjectStore::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1236,9 +1234,6 @@ class Msg_RenameObjectStore::_Internal {
   }
   static void set_has_a_name(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
   }
 };
 
@@ -1326,7 +1321,7 @@ const char* Msg_RenameObjectStore::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint64 a_objectStoreId = 1;
+      // optional sint64 a_objectStoreId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_objectstoreid(&has_bits);
@@ -1335,7 +1330,7 @@ const char* Msg_RenameObjectStore::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // required string a_name = 2;
+      // optional string a_name = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_name();
@@ -1375,13 +1370,13 @@ uint8_t* Msg_RenameObjectStore::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required sint64 a_objectStoreId = 1;
+  // optional sint64 a_objectStoreId = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_objectstoreid(), target);
   }
 
-  // required string a_name = 2;
+  // optional string a_name = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_name(), target);
@@ -1395,44 +1390,29 @@ uint8_t* Msg_RenameObjectStore::_InternalSerialize(
   return target;
 }
 
-size_t Msg_RenameObjectStore::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.indexedDB.PBackgroundIDBVersionChangeTransaction.Msg_RenameObjectStore)
-  size_t total_size = 0;
-
-  if (_internal_has_a_name()) {
-    // required string a_name = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_name());
-  }
-
-  if (_internal_has_a_objectstoreid()) {
-    // required sint64 a_objectStoreId = 1;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_objectstoreid());
-  }
-
-  return total_size;
-}
 size_t Msg_RenameObjectStore::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.indexedDB.PBackgroundIDBVersionChangeTransaction.Msg_RenameObjectStore)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string a_name = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_name());
-
-    // required sint64 a_objectStoreId = 1;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_objectstoreid());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional string a_name = 2;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_name());
+    }
+
+    // optional sint64 a_objectStoreId = 1;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_objectstoreid());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -1475,7 +1455,6 @@ void Msg_RenameObjectStore::CopyFrom(const Msg_RenameObjectStore& from) {
 }
 
 bool Msg_RenameObjectStore::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1510,7 +1489,7 @@ class Msg_CreateIndex::_Internal {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -1598,7 +1577,7 @@ const char* Msg_CreateIndex::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint64 a_objectStoreId = 1;
+      // optional sint64 a_objectStoreId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_objectstoreid(&has_bits);
@@ -1646,7 +1625,7 @@ uint8_t* Msg_CreateIndex::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required sint64 a_objectStoreId = 1;
+  // optional sint64 a_objectStoreId = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_objectstoreid(), target);
@@ -1667,43 +1646,25 @@ uint8_t* Msg_CreateIndex::_InternalSerialize(
   return target;
 }
 
-size_t Msg_CreateIndex::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.indexedDB.PBackgroundIDBVersionChangeTransaction.Msg_CreateIndex)
-  size_t total_size = 0;
-
-  if (_internal_has_a_metadata()) {
-    // required .protobuf.mozilla.dom.indexedDB.IndexMetadata a_metadata = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_metadata_);
-  }
-
-  if (_internal_has_a_objectstoreid()) {
-    // required sint64 a_objectStoreId = 1;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_objectstoreid());
-  }
-
-  return total_size;
-}
 size_t Msg_CreateIndex::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.indexedDB.PBackgroundIDBVersionChangeTransaction.Msg_CreateIndex)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required .protobuf.mozilla.dom.indexedDB.IndexMetadata a_metadata = 2;
+  // required .protobuf.mozilla.dom.indexedDB.IndexMetadata a_metadata = 2;
+  if (_internal_has_a_metadata()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_metadata_);
-
-    // required sint64 a_objectStoreId = 1;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_objectstoreid());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional sint64 a_objectStoreId = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000002u) {
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_objectstoreid());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1783,9 +1744,6 @@ class Msg_DeleteIndex::_Internal {
   static void set_has_a_indexid(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
-  }
 };
 
 Msg_DeleteIndex::Msg_DeleteIndex(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1862,7 +1820,7 @@ const char* Msg_DeleteIndex::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint64 a_objectStoreId = 1;
+      // optional sint64 a_objectStoreId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_objectstoreid(&has_bits);
@@ -1871,7 +1829,7 @@ const char* Msg_DeleteIndex::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required sint64 a_indexId = 2;
+      // optional sint64 a_indexId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_indexid(&has_bits);
@@ -1911,13 +1869,13 @@ uint8_t* Msg_DeleteIndex::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required sint64 a_objectStoreId = 1;
+  // optional sint64 a_objectStoreId = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_objectstoreid(), target);
   }
 
-  // required sint64 a_indexId = 2;
+  // optional sint64 a_indexId = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(2, this->_internal_a_indexid(), target);
@@ -1931,40 +1889,27 @@ uint8_t* Msg_DeleteIndex::_InternalSerialize(
   return target;
 }
 
-size_t Msg_DeleteIndex::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.indexedDB.PBackgroundIDBVersionChangeTransaction.Msg_DeleteIndex)
-  size_t total_size = 0;
-
-  if (_internal_has_a_objectstoreid()) {
-    // required sint64 a_objectStoreId = 1;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_objectstoreid());
-  }
-
-  if (_internal_has_a_indexid()) {
-    // required sint64 a_indexId = 2;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_indexid());
-  }
-
-  return total_size;
-}
 size_t Msg_DeleteIndex::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.indexedDB.PBackgroundIDBVersionChangeTransaction.Msg_DeleteIndex)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required sint64 a_objectStoreId = 1;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_objectstoreid());
-
-    // required sint64 a_indexId = 2;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_indexid());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional sint64 a_objectStoreId = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_objectstoreid());
+    }
+
+    // optional sint64 a_indexId = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_indexid());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -2007,7 +1952,6 @@ void Msg_DeleteIndex::CopyFrom(const Msg_DeleteIndex& from) {
 }
 
 bool Msg_DeleteIndex::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -2041,9 +1985,6 @@ class Msg_RenameIndex::_Internal {
   }
   static void set_has_a_name(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
   }
 };
 
@@ -2139,7 +2080,7 @@ const char* Msg_RenameIndex::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint64 a_objectStoreId = 1;
+      // optional sint64 a_objectStoreId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_objectstoreid(&has_bits);
@@ -2148,7 +2089,7 @@ const char* Msg_RenameIndex::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required sint64 a_indexId = 2;
+      // optional sint64 a_indexId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_indexid(&has_bits);
@@ -2157,7 +2098,7 @@ const char* Msg_RenameIndex::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required string a_name = 3;
+      // optional string a_name = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_name();
@@ -2197,19 +2138,19 @@ uint8_t* Msg_RenameIndex::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required sint64 a_objectStoreId = 1;
+  // optional sint64 a_objectStoreId = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_objectstoreid(), target);
   }
 
-  // required sint64 a_indexId = 2;
+  // optional sint64 a_indexId = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(2, this->_internal_a_indexid(), target);
   }
 
-  // required string a_name = 3;
+  // optional string a_name = 3;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_name(), target);
@@ -2223,52 +2164,34 @@ uint8_t* Msg_RenameIndex::_InternalSerialize(
   return target;
 }
 
-size_t Msg_RenameIndex::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.indexedDB.PBackgroundIDBVersionChangeTransaction.Msg_RenameIndex)
-  size_t total_size = 0;
-
-  if (_internal_has_a_name()) {
-    // required string a_name = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_name());
-  }
-
-  if (_internal_has_a_objectstoreid()) {
-    // required sint64 a_objectStoreId = 1;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_objectstoreid());
-  }
-
-  if (_internal_has_a_indexid()) {
-    // required sint64 a_indexId = 2;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_indexid());
-  }
-
-  return total_size;
-}
 size_t Msg_RenameIndex::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.indexedDB.PBackgroundIDBVersionChangeTransaction.Msg_RenameIndex)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required string a_name = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_name());
-
-    // required sint64 a_objectStoreId = 1;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_objectstoreid());
-
-    // required sint64 a_indexId = 2;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_indexid());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    // optional string a_name = 3;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_name());
+    }
+
+    // optional sint64 a_objectStoreId = 1;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_objectstoreid());
+    }
+
+    // optional sint64 a_indexId = 2;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_indexid());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -2314,7 +2237,6 @@ void Msg_RenameIndex::CopyFrom(const Msg_RenameIndex& from) {
 }
 
 bool Msg_RenameIndex::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -2357,7 +2279,7 @@ class Msg_PBackgroundIDBCursorConstructor::_Internal {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -2453,7 +2375,7 @@ const char* Msg_PBackgroundIDBCursorConstructor::_InternalParse(const char* ptr,
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint64 a_actorid = 1;
+      // optional sint64 a_actorid = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_actorid(&has_bits);
@@ -2462,7 +2384,7 @@ const char* Msg_PBackgroundIDBCursorConstructor::_InternalParse(const char* ptr,
         } else
           goto handle_unusual;
         continue;
-      // required sint64 a_requestId = 2;
+      // optional sint64 a_requestId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_requestid(&has_bits);
@@ -2510,13 +2432,13 @@ uint8_t* Msg_PBackgroundIDBCursorConstructor::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_actorid(), target);
   }
 
-  // required sint64 a_requestId = 2;
+  // optional sint64 a_requestId = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(2, this->_internal_a_requestid(), target);
@@ -2537,52 +2459,33 @@ uint8_t* Msg_PBackgroundIDBCursorConstructor::_InternalSerialize(
   return target;
 }
 
-size_t Msg_PBackgroundIDBCursorConstructor::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.indexedDB.PBackgroundIDBVersionChangeTransaction.Msg_PBackgroundIDBCursorConstructor)
-  size_t total_size = 0;
-
-  if (_internal_has_a_params()) {
-    // required .protobuf.mozilla.dom.indexedDB.OpenCursorParams a_params = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_params_);
-  }
-
-  if (_internal_has_a_actorid()) {
-    // required sint64 a_actorid = 1;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
-  }
-
-  if (_internal_has_a_requestid()) {
-    // required sint64 a_requestId = 2;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_requestid());
-  }
-
-  return total_size;
-}
 size_t Msg_PBackgroundIDBCursorConstructor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.indexedDB.PBackgroundIDBVersionChangeTransaction.Msg_PBackgroundIDBCursorConstructor)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required .protobuf.mozilla.dom.indexedDB.OpenCursorParams a_params = 3;
+  // required .protobuf.mozilla.dom.indexedDB.OpenCursorParams a_params = 3;
+  if (_internal_has_a_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_params_);
-
-    // required sint64 a_actorid = 1;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
-
-    // required sint64 a_requestId = 2;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_requestid());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000006u) {
+    // optional sint64 a_actorid = 1;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
+    }
+
+    // optional sint64 a_requestId = 2;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_requestid());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -2817,7 +2720,7 @@ class Msg_PBackgroundIDBRequestConstructor::_Internal {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -2913,7 +2816,7 @@ const char* Msg_PBackgroundIDBRequestConstructor::_InternalParse(const char* ptr
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint64 a_actorid = 1;
+      // optional sint64 a_actorid = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_actorid(&has_bits);
@@ -2922,7 +2825,7 @@ const char* Msg_PBackgroundIDBRequestConstructor::_InternalParse(const char* ptr
         } else
           goto handle_unusual;
         continue;
-      // required sint64 a_requestId = 2;
+      // optional sint64 a_requestId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_requestid(&has_bits);
@@ -2970,13 +2873,13 @@ uint8_t* Msg_PBackgroundIDBRequestConstructor::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_actorid(), target);
   }
 
-  // required sint64 a_requestId = 2;
+  // optional sint64 a_requestId = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(2, this->_internal_a_requestid(), target);
@@ -2997,52 +2900,33 @@ uint8_t* Msg_PBackgroundIDBRequestConstructor::_InternalSerialize(
   return target;
 }
 
-size_t Msg_PBackgroundIDBRequestConstructor::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.indexedDB.PBackgroundIDBVersionChangeTransaction.Msg_PBackgroundIDBRequestConstructor)
-  size_t total_size = 0;
-
-  if (_internal_has_a_params()) {
-    // required .protobuf.mozilla.dom.indexedDB.RequestParams a_params = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_params_);
-  }
-
-  if (_internal_has_a_actorid()) {
-    // required sint64 a_actorid = 1;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
-  }
-
-  if (_internal_has_a_requestid()) {
-    // required sint64 a_requestId = 2;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_requestid());
-  }
-
-  return total_size;
-}
 size_t Msg_PBackgroundIDBRequestConstructor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.indexedDB.PBackgroundIDBVersionChangeTransaction.Msg_PBackgroundIDBRequestConstructor)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required .protobuf.mozilla.dom.indexedDB.RequestParams a_params = 3;
+  // required .protobuf.mozilla.dom.indexedDB.RequestParams a_params = 3;
+  if (_internal_has_a_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_params_);
-
-    // required sint64 a_actorid = 1;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
-
-    // required sint64 a_requestId = 2;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_requestid());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000006u) {
+    // optional sint64 a_actorid = 1;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
+    }
+
+    // optional sint64 a_requestId = 2;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_requestid());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }

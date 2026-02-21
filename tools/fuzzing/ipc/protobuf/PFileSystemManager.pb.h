@@ -3488,7 +3488,7 @@ class Msg_PFileSystemWritableFileStreamConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -5837,7 +5837,7 @@ inline void Reply_RenameEntry::set_allocated_a_response(::protobuf::mozilla::dom
 
 // Msg_PFileSystemWritableFileStreamConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PFileSystemWritableFileStreamConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

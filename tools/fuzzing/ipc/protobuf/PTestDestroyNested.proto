@@ -16,7 +16,7 @@ package protobuf.mozilla._ipdltest.PTestDestroyNested;
 
 // Message declarations
 message Msg_PTestDestroyNestedSubConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
 }
 
 message Reply_PTestDestroyNestedSubConstructor {

@@ -381,7 +381,7 @@ class CookieSubscription final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required string a_url = 2;
+  // optional string a_url = 2;
   bool has_a_url() const;
   private:
   bool _internal_has_a_url() const;
@@ -650,7 +650,7 @@ inline void CookieSubscription::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.CookieSubscription.a_name)
 }
 
-// required string a_url = 2;
+// optional string a_url = 2;
 inline bool CookieSubscription::_internal_has_a_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

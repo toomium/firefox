@@ -19,8 +19,8 @@ import "GMPTypes.proto";
 message Msg_InitEncode {
   required bytes a_aCodecSettings = 1;
   repeated uint32 a_aCodecSpecific = 2;
-  required sint32 a_aNumberOfCores = 3;
-  required uint32 a_aMaxPayloadSize = 4;
+  optional sint32 a_aNumberOfCores = 3;
+  optional uint32 a_aMaxPayloadSize = 4;
 }
 
 message Msg_GiveShmem {
@@ -35,17 +35,17 @@ message Msg_Encode {
 }
 
 message Msg_SetChannelParameters {
-  required uint32 a_aPacketLoss = 1;
-  required uint32 a_aRTT = 2;
+  optional uint32 a_aPacketLoss = 1;
+  optional uint32 a_aRTT = 2;
 }
 
 message Msg_SetRates {
-  required uint32 a_aNewBitRate = 1;
-  required uint32 a_aFrameRate = 2;
+  optional uint32 a_aNewBitRate = 1;
+  optional uint32 a_aFrameRate = 2;
 }
 
 message Msg_SetPeriodicKeyFrames {
-  required bool a_aEnable = 1;
+  optional bool a_aEnable = 1;
 }
 
 message Msg___delete__ {

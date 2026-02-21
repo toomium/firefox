@@ -37,7 +37,7 @@ message Msg_ParentAsyncMessages {
 
 message Msg_ObserveLayersUpdate {
   required bytes a_aLayersId = 1;
-  required bool a_aActive = 2;
+  optional bool a_aActive = 2;
 }
 
 message Msg_CompositorOptionsChanged {
@@ -57,7 +57,7 @@ message Reply___delete__ {
 }
 
 message Msg_PCompositorWidgetConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
   required protobuf.mozilla.widget.CompositorWidgetInitData a_aInitData = 2;
 }
 
@@ -72,7 +72,7 @@ message Reply_Initialize {
 }
 
 message Msg_PAPZConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
   required bytes a_layersId = 2;
 }
 
@@ -80,7 +80,7 @@ message Reply_PAPZConstructor {
 }
 
 message Msg_PAPZCTreeManagerConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
   required bytes a_layersId = 2;
 }
 
@@ -162,15 +162,15 @@ message Msg_ForcePresent {
 }
 
 message Msg_StartFrameTimeRecording {
-  required sint32 a_bufferSize = 1;
+  optional sint32 a_bufferSize = 1;
 }
 
 message Reply_StartFrameTimeRecording {
-  required uint32 a_startIndex = 1;
+  optional uint32 a_startIndex = 1;
 }
 
 message Msg_StopFrameTimeRecording {
-  required uint32 a_startIndex = 1;
+  optional uint32 a_startIndex = 1;
 }
 
 message Reply_StopFrameTimeRecording {
@@ -178,13 +178,13 @@ message Reply_StopFrameTimeRecording {
 }
 
 message Msg_PTextureConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
   required protobuf.mozilla.layers.SurfaceDescriptor a_aSharedData = 2;
   required protobuf.mozilla.layers.ReadLockDescriptor a_aReadLock = 3;
   required bytes a_aBackend = 4;
   required bytes a_aTextureFlags = 5;
   required bytes a_id = 6;
-  required uint64 a_aSerial = 7;
+  optional uint64 a_aSerial = 7;
   required bytes a_aExternalImageId = 8;
 }
 
@@ -198,7 +198,7 @@ message Reply_SyncWithCompositor {
 }
 
 message Msg_PWebRenderBridgeConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
   required bytes a_pipelineId = 2;
   required bytes a_aSize = 3;
   required bytes a_aKind = 4;
@@ -208,11 +208,11 @@ message Reply_PWebRenderBridgeConstructor {
 }
 
 message Msg_CheckContentOnlyTDR {
-  required uint32 a_sequenceNum = 1;
+  optional uint32 a_sequenceNum = 1;
 }
 
 message Reply_CheckContentOnlyTDR {
-  required bool a_isContentOnlyTDR = 1;
+  optional bool a_isContentOnlyTDR = 1;
 }
 
 message Msg_BeginRecording {
@@ -220,7 +220,7 @@ message Msg_BeginRecording {
 }
 
 message Reply_BeginRecording {
-  required bool a_success = 1;
+  optional bool a_success = 1;
 }
 
 message Msg_EndRecording {
@@ -234,7 +234,7 @@ message Msg_RequestFxrOutput {
 }
 
 message Msg_DynamicToolbarOffsetChanged {
-  required sint32 a_aOffset = 1;
+  optional sint32 a_aOffset = 1;
 }
 
 // Parameter mappings stats:

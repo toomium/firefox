@@ -225,9 +225,6 @@ class NodeIdParts::_Internal {
   static void set_has_a_mgmpname(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
-  }
 };
 
 NodeIdParts::NodeIdParts(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -348,7 +345,7 @@ const char* NodeIdParts::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_mOrigin = 1;
+      // optional string a_mOrigin = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_morigin();
@@ -357,7 +354,7 @@ const char* NodeIdParts::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // required string a_mTopLevelOrigin = 2;
+      // optional string a_mTopLevelOrigin = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_mtoplevelorigin();
@@ -366,7 +363,7 @@ const char* NodeIdParts::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // required string a_mGMPName = 3;
+      // optional string a_mGMPName = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_mgmpname();
@@ -406,19 +403,19 @@ uint8_t* NodeIdParts::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_mOrigin = 1;
+  // optional string a_mOrigin = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_morigin(), target);
   }
 
-  // required string a_mTopLevelOrigin = 2;
+  // optional string a_mTopLevelOrigin = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_mtoplevelorigin(), target);
   }
 
-  // required string a_mGMPName = 3;
+  // optional string a_mGMPName = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_mgmpname(), target);
@@ -432,60 +429,38 @@ uint8_t* NodeIdParts::_InternalSerialize(
   return target;
 }
 
-size_t NodeIdParts::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.gmp.NodeIdParts)
-  size_t total_size = 0;
-
-  if (_internal_has_a_morigin()) {
-    // required string a_mOrigin = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_morigin());
-  }
-
-  if (_internal_has_a_mtoplevelorigin()) {
-    // required string a_mTopLevelOrigin = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_mtoplevelorigin());
-  }
-
-  if (_internal_has_a_mgmpname()) {
-    // required string a_mGMPName = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_mgmpname());
-  }
-
-  return total_size;
-}
 size_t NodeIdParts::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gmp.NodeIdParts)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required string a_mOrigin = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_morigin());
-
-    // required string a_mTopLevelOrigin = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_mtoplevelorigin());
-
-    // required string a_mGMPName = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_mgmpname());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    // optional string a_mOrigin = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_morigin());
+    }
+
+    // optional string a_mTopLevelOrigin = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_mtoplevelorigin());
+    }
+
+    // optional string a_mGMPName = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_mgmpname());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -530,7 +505,6 @@ void NodeIdParts::CopyFrom(const NodeIdParts& from) {
 }
 
 bool NodeIdParts::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -828,20 +802,6 @@ void NodeIdVariant::CopyFrom(const NodeIdVariant& from) {
 }
 
 bool NodeIdVariant::IsInitialized() const {
-  switch (content_case()) {
-    case kAMVnsCString: {
-      break;
-    }
-    case kAMVNodeIdParts: {
-      if (_internal_has_a_mvnodeidparts()) {
-        if (!_impl_.content_.a_mvnodeidparts_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case CONTENT_NOT_SET: {
-      break;
-    }
-  }
   return true;
 }
 
@@ -890,7 +850,7 @@ class GMPVideoEncodedFrameData::_Internal {
     (*has_bits)[0] |= 256u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x000001ff) ^ 0x000001ff) != 0;
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -999,7 +959,7 @@ const char* GMPVideoEncodedFrameData::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 a_mEncodedWidth = 1;
+      // optional uint32 a_mEncodedWidth = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_mencodedwidth(&has_bits);
@@ -1008,7 +968,7 @@ const char* GMPVideoEncodedFrameData::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_mEncodedHeight = 2;
+      // optional uint32 a_mEncodedHeight = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_mencodedheight(&has_bits);
@@ -1017,7 +977,7 @@ const char* GMPVideoEncodedFrameData::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required uint64 a_mTimestamp = 3;
+      // optional uint64 a_mTimestamp = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_mtimestamp(&has_bits);
@@ -1026,7 +986,7 @@ const char* GMPVideoEncodedFrameData::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required uint64 a_mDuration = 4;
+      // optional uint64 a_mDuration = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_a_mduration(&has_bits);
@@ -1035,7 +995,7 @@ const char* GMPVideoEncodedFrameData::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_mFrameType = 5;
+      // optional uint32 a_mFrameType = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_a_mframetype(&has_bits);
@@ -1044,7 +1004,7 @@ const char* GMPVideoEncodedFrameData::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_mSize = 6;
+      // optional uint32 a_mSize = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
           _Internal::set_has_a_msize(&has_bits);
@@ -1053,7 +1013,7 @@ const char* GMPVideoEncodedFrameData::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_mTemporalLayerId = 7;
+      // optional sint32 a_mTemporalLayerId = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
           _Internal::set_has_a_mtemporallayerid(&has_bits);
@@ -1071,7 +1031,7 @@ const char* GMPVideoEncodedFrameData::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required bool a_mCompleteFrame = 9;
+      // optional bool a_mCompleteFrame = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 72)) {
           _Internal::set_has_a_mcompleteframe(&has_bits);
@@ -1111,43 +1071,43 @@ uint8_t* GMPVideoEncodedFrameData::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 a_mEncodedWidth = 1;
+  // optional uint32 a_mEncodedWidth = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_mencodedwidth(), target);
   }
 
-  // required uint32 a_mEncodedHeight = 2;
+  // optional uint32 a_mEncodedHeight = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_mencodedheight(), target);
   }
 
-  // required uint64 a_mTimestamp = 3;
+  // optional uint64 a_mTimestamp = 3;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(3, this->_internal_a_mtimestamp(), target);
   }
 
-  // required uint64 a_mDuration = 4;
+  // optional uint64 a_mDuration = 4;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(4, this->_internal_a_mduration(), target);
   }
 
-  // required uint32 a_mFrameType = 5;
+  // optional uint32 a_mFrameType = 5;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(5, this->_internal_a_mframetype(), target);
   }
 
-  // required uint32 a_mSize = 6;
+  // optional uint32 a_mSize = 6;
   if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(6, this->_internal_a_msize(), target);
   }
 
-  // required sint32 a_mTemporalLayerId = 7;
+  // optional sint32 a_mTemporalLayerId = 7;
   if (cached_has_bits & 0x00000080u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(7, this->_internal_a_mtemporallayerid(), target);
@@ -1159,7 +1119,7 @@ uint8_t* GMPVideoEncodedFrameData::_InternalSerialize(
         8, this->_internal_a_mbuffertype(), target);
   }
 
-  // required bool a_mCompleteFrame = 9;
+  // optional bool a_mCompleteFrame = 9;
   if (cached_has_bits & 0x00000100u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(9, this->_internal_a_mcompleteframe(), target);
@@ -1173,99 +1133,62 @@ uint8_t* GMPVideoEncodedFrameData::_InternalSerialize(
   return target;
 }
 
-size_t GMPVideoEncodedFrameData::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.gmp.GMPVideoEncodedFrameData)
-  size_t total_size = 0;
-
-  if (_internal_has_a_mbuffertype()) {
-    // required bytes a_mBufferType = 8;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_mbuffertype());
-  }
-
-  if (_internal_has_a_mencodedwidth()) {
-    // required uint32 a_mEncodedWidth = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mencodedwidth());
-  }
-
-  if (_internal_has_a_mencodedheight()) {
-    // required uint32 a_mEncodedHeight = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mencodedheight());
-  }
-
-  if (_internal_has_a_mtimestamp()) {
-    // required uint64 a_mTimestamp = 3;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_mtimestamp());
-  }
-
-  if (_internal_has_a_mduration()) {
-    // required uint64 a_mDuration = 4;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_mduration());
-  }
-
-  if (_internal_has_a_mframetype()) {
-    // required uint32 a_mFrameType = 5;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mframetype());
-  }
-
-  if (_internal_has_a_msize()) {
-    // required uint32 a_mSize = 6;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_msize());
-  }
-
-  if (_internal_has_a_mtemporallayerid()) {
-    // required sint32 a_mTemporalLayerId = 7;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mtemporallayerid());
-  }
-
-  if (_internal_has_a_mcompleteframe()) {
-    // required bool a_mCompleteFrame = 9;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t GMPVideoEncodedFrameData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gmp.GMPVideoEncodedFrameData)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x000001ff) ^ 0x000001ff) == 0) {  // All required fields are present.
-    // required bytes a_mBufferType = 8;
+  // required bytes a_mBufferType = 8;
+  if (_internal_has_a_mbuffertype()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_mbuffertype());
-
-    // required uint32 a_mEncodedWidth = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mencodedwidth());
-
-    // required uint32 a_mEncodedHeight = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mencodedheight());
-
-    // required uint64 a_mTimestamp = 3;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_mtimestamp());
-
-    // required uint64 a_mDuration = 4;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_mduration());
-
-    // required uint32 a_mFrameType = 5;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mframetype());
-
-    // required uint32 a_mSize = 6;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_msize());
-
-    // required sint32 a_mTemporalLayerId = 7;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mtemporallayerid());
-
-    // required bool a_mCompleteFrame = 9;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x000000feu) {
+    // optional uint32 a_mEncodedWidth = 1;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mencodedwidth());
+    }
+
+    // optional uint32 a_mEncodedHeight = 2;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mencodedheight());
+    }
+
+    // optional uint64 a_mTimestamp = 3;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_mtimestamp());
+    }
+
+    // optional uint64 a_mDuration = 4;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_mduration());
+    }
+
+    // optional uint32 a_mFrameType = 5;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mframetype());
+    }
+
+    // optional uint32 a_mSize = 6;
+    if (cached_has_bits & 0x00000040u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_msize());
+    }
+
+    // optional sint32 a_mTemporalLayerId = 7;
+    if (cached_has_bits & 0x00000080u) {
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mtemporallayerid());
+    }
+
+  }
+  // optional bool a_mCompleteFrame = 9;
+  if (cached_has_bits & 0x00000100u) {
+    total_size += 1 + 1;
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -1371,9 +1294,6 @@ class GMPPlaneData::_Internal {
   static void set_has_a_mstride(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
-  }
 };
 
 GMPPlaneData::GMPPlaneData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1452,7 +1372,7 @@ const char* GMPPlaneData::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint32 a_mOffset = 1;
+      // optional sint32 a_mOffset = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_moffset(&has_bits);
@@ -1461,7 +1381,7 @@ const char* GMPPlaneData::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_mSize = 2;
+      // optional sint32 a_mSize = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_msize(&has_bits);
@@ -1470,7 +1390,7 @@ const char* GMPPlaneData::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_mStride = 3;
+      // optional sint32 a_mStride = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_mstride(&has_bits);
@@ -1510,19 +1430,19 @@ uint8_t* GMPPlaneData::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required sint32 a_mOffset = 1;
+  // optional sint32 a_mOffset = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_a_moffset(), target);
   }
 
-  // required sint32 a_mSize = 2;
+  // optional sint32 a_mSize = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_a_msize(), target);
   }
 
-  // required sint32 a_mStride = 3;
+  // optional sint32 a_mStride = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_a_mstride(), target);
@@ -1536,48 +1456,32 @@ uint8_t* GMPPlaneData::_InternalSerialize(
   return target;
 }
 
-size_t GMPPlaneData::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.gmp.GMPPlaneData)
-  size_t total_size = 0;
-
-  if (_internal_has_a_moffset()) {
-    // required sint32 a_mOffset = 1;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_moffset());
-  }
-
-  if (_internal_has_a_msize()) {
-    // required sint32 a_mSize = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_msize());
-  }
-
-  if (_internal_has_a_mstride()) {
-    // required sint32 a_mStride = 3;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mstride());
-  }
-
-  return total_size;
-}
 size_t GMPPlaneData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gmp.GMPPlaneData)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required sint32 a_mOffset = 1;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_moffset());
-
-    // required sint32 a_mSize = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_msize());
-
-    // required sint32 a_mStride = 3;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mstride());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    // optional sint32 a_mOffset = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_moffset());
+    }
+
+    // optional sint32 a_mSize = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_msize());
+    }
+
+    // optional sint32 a_mStride = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mstride());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -1623,7 +1527,6 @@ void GMPPlaneData::CopyFrom(const GMPPlaneData& from) {
 }
 
 bool GMPPlaneData::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1677,7 +1580,7 @@ class GMPVideoi420FrameData::_Internal {
     (*has_bits)[0] |= 128u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x000000bf) ^ 0x000000bf) != 0;
+    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
   }
 };
 
@@ -1829,7 +1732,7 @@ const char* GMPVideoi420FrameData::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_mWidth = 4;
+      // optional sint32 a_mWidth = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_a_mwidth(&has_bits);
@@ -1838,7 +1741,7 @@ const char* GMPVideoi420FrameData::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_mHeight = 5;
+      // optional sint32 a_mHeight = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_a_mheight(&has_bits);
@@ -1847,7 +1750,7 @@ const char* GMPVideoi420FrameData::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // required uint64 a_mTimestamp = 6;
+      // optional uint64 a_mTimestamp = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
           _Internal::set_has_a_mtimestamp(&has_bits);
@@ -1865,7 +1768,7 @@ const char* GMPVideoi420FrameData::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // required uint64 a_mDuration = 8;
+      // optional uint64 a_mDuration = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
           _Internal::set_has_a_mduration(&has_bits);
@@ -1926,19 +1829,19 @@ uint8_t* GMPVideoi420FrameData::_InternalSerialize(
         _Internal::a_mvplane(this).GetCachedSize(), target, stream);
   }
 
-  // required sint32 a_mWidth = 4;
+  // optional sint32 a_mWidth = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(4, this->_internal_a_mwidth(), target);
   }
 
-  // required sint32 a_mHeight = 5;
+  // optional sint32 a_mHeight = 5;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(5, this->_internal_a_mheight(), target);
   }
 
-  // required uint64 a_mTimestamp = 6;
+  // optional uint64 a_mTimestamp = 6;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(6, this->_internal_a_mtimestamp(), target);
@@ -1950,7 +1853,7 @@ uint8_t* GMPVideoi420FrameData::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(7, this->_internal_a_mupdatedtimestamp(), target);
   }
 
-  // required uint64 a_mDuration = 8;
+  // optional uint64 a_mDuration = 8;
   if (cached_has_bits & 0x00000080u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(8, this->_internal_a_mduration(), target);
@@ -1989,33 +1892,13 @@ size_t GMPVideoi420FrameData::RequiredFieldsByteSizeFallback() const {
         *_impl_.a_mvplane_);
   }
 
-  if (_internal_has_a_mwidth()) {
-    // required sint32 a_mWidth = 4;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mwidth());
-  }
-
-  if (_internal_has_a_mheight()) {
-    // required sint32 a_mHeight = 5;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mheight());
-  }
-
-  if (_internal_has_a_mtimestamp()) {
-    // required uint64 a_mTimestamp = 6;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_mtimestamp());
-  }
-
-  if (_internal_has_a_mduration()) {
-    // required uint64 a_mDuration = 8;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_mduration());
-  }
-
   return total_size;
 }
 size_t GMPVideoi420FrameData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gmp.GMPVideoi420FrameData)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x000000bf) ^ 0x000000bf) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
     // required .protobuf.mozilla.gmp.GMPPlaneData a_mYPlane = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -2031,18 +1914,6 @@ size_t GMPVideoi420FrameData::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_mvplane_);
 
-    // required sint32 a_mWidth = 4;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mwidth());
-
-    // required sint32 a_mHeight = 5;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mheight());
-
-    // required uint64 a_mTimestamp = 6;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_mtimestamp());
-
-    // required uint64 a_mDuration = 8;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_mduration());
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
@@ -2050,12 +1921,34 @@ size_t GMPVideoi420FrameData::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional uint64 a_mUpdatedTimestamp = 7;
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000040u) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_mupdatedtimestamp());
-  }
+  if (cached_has_bits & 0x000000f8u) {
+    // optional sint32 a_mWidth = 4;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mwidth());
+    }
 
+    // optional sint32 a_mHeight = 5;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mheight());
+    }
+
+    // optional uint64 a_mTimestamp = 6;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_mtimestamp());
+    }
+
+    // optional uint64 a_mUpdatedTimestamp = 7;
+    if (cached_has_bits & 0x00000040u) {
+      total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_mupdatedtimestamp());
+    }
+
+    // optional uint64 a_mDuration = 8;
+    if (cached_has_bits & 0x00000080u) {
+      total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_mduration());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -2120,15 +2013,6 @@ void GMPVideoi420FrameData::CopyFrom(const GMPVideoi420FrameData& from) {
 
 bool GMPVideoi420FrameData::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_myplane()) {
-    if (!_impl_.a_myplane_->IsInitialized()) return false;
-  }
-  if (_internal_has_a_muplane()) {
-    if (!_impl_.a_muplane_->IsInitialized()) return false;
-  }
-  if (_internal_has_a_mvplane()) {
-    if (!_impl_.a_mvplane_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -2173,7 +2057,7 @@ class CDMInputBuffer::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000003f) ^ 0x0000003f) != 0;
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
   }
 };
 
@@ -2350,7 +2234,7 @@ const char* CDMInputBuffer::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required sint64 a_mTimestamp = 4;
+      // optional sint64 a_mTimestamp = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_a_mtimestamp(&has_bits);
@@ -2359,7 +2243,7 @@ const char* CDMInputBuffer::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required sint64 a_mDuration = 5;
+      // optional sint64 a_mDuration = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_a_mduration(&has_bits);
@@ -2400,7 +2284,7 @@ const char* CDMInputBuffer::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_mCryptByteBlock = 8;
+      // optional uint32 a_mCryptByteBlock = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
           _Internal::set_has_a_mcryptbyteblock(&has_bits);
@@ -2409,7 +2293,7 @@ const char* CDMInputBuffer::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_mSkipByteBlock = 9;
+      // optional uint32 a_mSkipByteBlock = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 72)) {
           _Internal::set_has_a_mskipbyteblock(&has_bits);
@@ -2476,13 +2360,13 @@ uint8_t* CDMInputBuffer::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_miv(i), target);
   }
 
-  // required sint64 a_mTimestamp = 4;
+  // optional sint64 a_mTimestamp = 4;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(4, this->_internal_a_mtimestamp(), target);
   }
 
-  // required sint64 a_mDuration = 5;
+  // optional sint64 a_mDuration = 5;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(5, this->_internal_a_mduration(), target);
@@ -2500,13 +2384,13 @@ uint8_t* CDMInputBuffer::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(7, this->_internal_a_mcipherbytes(i), target);
   }
 
-  // required uint32 a_mCryptByteBlock = 8;
+  // optional uint32 a_mCryptByteBlock = 8;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(8, this->_internal_a_mcryptbyteblock(), target);
   }
 
-  // required uint32 a_mSkipByteBlock = 9;
+  // optional uint32 a_mSkipByteBlock = 9;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(9, this->_internal_a_mskipbyteblock(), target);
@@ -2544,33 +2428,13 @@ size_t CDMInputBuffer::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_mencryptionscheme());
   }
 
-  if (_internal_has_a_mtimestamp()) {
-    // required sint64 a_mTimestamp = 4;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_mtimestamp());
-  }
-
-  if (_internal_has_a_mduration()) {
-    // required sint64 a_mDuration = 5;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_mduration());
-  }
-
-  if (_internal_has_a_mcryptbyteblock()) {
-    // required uint32 a_mCryptByteBlock = 8;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mcryptbyteblock());
-  }
-
-  if (_internal_has_a_mskipbyteblock()) {
-    // required uint32 a_mSkipByteBlock = 9;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mskipbyteblock());
-  }
-
   return total_size;
 }
 size_t CDMInputBuffer::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gmp.CDMInputBuffer)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000003f) ^ 0x0000003f) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
     // required bytes a_mData = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -2580,18 +2444,6 @@ size_t CDMInputBuffer::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_mencryptionscheme());
-
-    // required sint64 a_mTimestamp = 4;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_mtimestamp());
-
-    // required sint64 a_mDuration = 5;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_mduration());
-
-    // required uint32 a_mCryptByteBlock = 8;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mcryptbyteblock());
-
-    // required uint32 a_mSkipByteBlock = 9;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mskipbyteblock());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -2636,6 +2488,29 @@ size_t CDMInputBuffer::ByteSizeLong() const {
     total_size += data_size;
   }
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000003cu) {
+    // optional sint64 a_mTimestamp = 4;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_mtimestamp());
+    }
+
+    // optional sint64 a_mDuration = 5;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_mduration());
+    }
+
+    // optional uint32 a_mCryptByteBlock = 8;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mcryptbyteblock());
+    }
+
+    // optional uint32 a_mSkipByteBlock = 9;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mskipbyteblock());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -2753,7 +2628,7 @@ class CDMVideoDecoderConfig::_Internal {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000003f) ^ 0x0000003f) != 0;
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
   }
 };
 
@@ -2859,7 +2734,7 @@ const char* CDMVideoDecoderConfig::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 a_mCodec = 1;
+      // optional uint32 a_mCodec = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_mcodec(&has_bits);
@@ -2868,7 +2743,7 @@ const char* CDMVideoDecoderConfig::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_mProfile = 2;
+      // optional uint32 a_mProfile = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_mprofile(&has_bits);
@@ -2877,7 +2752,7 @@ const char* CDMVideoDecoderConfig::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_mFormat = 3;
+      // optional uint32 a_mFormat = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_mformat(&has_bits);
@@ -2886,7 +2761,7 @@ const char* CDMVideoDecoderConfig::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_mImageWidth = 4;
+      // optional sint32 a_mImageWidth = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_a_mimagewidth(&has_bits);
@@ -2895,7 +2770,7 @@ const char* CDMVideoDecoderConfig::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_mImageHeight = 5;
+      // optional sint32 a_mImageHeight = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_a_mimageheight(&has_bits);
@@ -2960,31 +2835,31 @@ uint8_t* CDMVideoDecoderConfig::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 a_mCodec = 1;
+  // optional uint32 a_mCodec = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_mcodec(), target);
   }
 
-  // required uint32 a_mProfile = 2;
+  // optional uint32 a_mProfile = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_mprofile(), target);
   }
 
-  // required uint32 a_mFormat = 3;
+  // optional uint32 a_mFormat = 3;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_mformat(), target);
   }
 
-  // required sint32 a_mImageWidth = 4;
+  // optional sint32 a_mImageWidth = 4;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(4, this->_internal_a_mimagewidth(), target);
   }
 
-  // required sint32 a_mImageHeight = 5;
+  // optional sint32 a_mImageHeight = 5;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(5, this->_internal_a_mimageheight(), target);
@@ -3010,71 +2885,15 @@ uint8_t* CDMVideoDecoderConfig::_InternalSerialize(
   return target;
 }
 
-size_t CDMVideoDecoderConfig::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.gmp.CDMVideoDecoderConfig)
-  size_t total_size = 0;
-
-  if (_internal_has_a_mencryptionscheme()) {
-    // required bytes a_mEncryptionScheme = 7;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_mencryptionscheme());
-  }
-
-  if (_internal_has_a_mcodec()) {
-    // required uint32 a_mCodec = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mcodec());
-  }
-
-  if (_internal_has_a_mprofile()) {
-    // required uint32 a_mProfile = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mprofile());
-  }
-
-  if (_internal_has_a_mformat()) {
-    // required uint32 a_mFormat = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mformat());
-  }
-
-  if (_internal_has_a_mimagewidth()) {
-    // required sint32 a_mImageWidth = 4;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mimagewidth());
-  }
-
-  if (_internal_has_a_mimageheight()) {
-    // required sint32 a_mImageHeight = 5;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mimageheight());
-  }
-
-  return total_size;
-}
 size_t CDMVideoDecoderConfig::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gmp.CDMVideoDecoderConfig)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000003f) ^ 0x0000003f) == 0) {  // All required fields are present.
-    // required bytes a_mEncryptionScheme = 7;
+  // required bytes a_mEncryptionScheme = 7;
+  if (_internal_has_a_mencryptionscheme()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_mencryptionscheme());
-
-    // required uint32 a_mCodec = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mcodec());
-
-    // required uint32 a_mProfile = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mprofile());
-
-    // required uint32 a_mFormat = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mformat());
-
-    // required sint32 a_mImageWidth = 4;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mimagewidth());
-
-    // required sint32 a_mImageHeight = 5;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mimageheight());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -3089,6 +2908,34 @@ size_t CDMVideoDecoderConfig::ByteSizeLong() const {
     total_size += data_size;
   }
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x0000003eu) {
+    // optional uint32 a_mCodec = 1;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mcodec());
+    }
+
+    // optional uint32 a_mProfile = 2;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mprofile());
+    }
+
+    // optional uint32 a_mFormat = 3;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mformat());
+    }
+
+    // optional sint32 a_mImageWidth = 4;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mimagewidth());
+    }
+
+    // optional sint32 a_mImageHeight = 5;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mimageheight());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -3182,9 +3029,6 @@ class CDMKeyInformation::_Internal {
   }
   static void set_has_a_msystemcode(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
   }
 };
 
@@ -3282,7 +3126,7 @@ const char* CDMKeyInformation::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_mStatus = 2;
+      // optional uint32 a_mStatus = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_mstatus(&has_bits);
@@ -3291,7 +3135,7 @@ const char* CDMKeyInformation::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_mSystemCode = 3;
+      // optional uint32 a_mSystemCode = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_msystemcode(&has_bits);
@@ -3337,13 +3181,13 @@ uint8_t* CDMKeyInformation::_InternalSerialize(
   }
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 a_mStatus = 2;
+  // optional uint32 a_mStatus = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_mstatus(), target);
   }
 
-  // required uint32 a_mSystemCode = 3;
+  // optional uint32 a_mSystemCode = 3;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_msystemcode(), target);
@@ -3357,36 +3201,10 @@ uint8_t* CDMKeyInformation::_InternalSerialize(
   return target;
 }
 
-size_t CDMKeyInformation::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.gmp.CDMKeyInformation)
-  size_t total_size = 0;
-
-  if (_internal_has_a_mstatus()) {
-    // required uint32 a_mStatus = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mstatus());
-  }
-
-  if (_internal_has_a_msystemcode()) {
-    // required uint32 a_mSystemCode = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_msystemcode());
-  }
-
-  return total_size;
-}
 size_t CDMKeyInformation::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gmp.CDMKeyInformation)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required uint32 a_mStatus = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mstatus());
-
-    // required uint32 a_mSystemCode = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_msystemcode());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3400,6 +3218,19 @@ size_t CDMKeyInformation::ByteSizeLong() const {
     total_size += data_size;
   }
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional uint32 a_mStatus = 2;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mstatus());
+    }
+
+    // optional uint32 a_mSystemCode = 3;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_msystemcode());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -3443,7 +3274,6 @@ void CDMKeyInformation::CopyFrom(const CDMKeyInformation& from) {
 }
 
 bool CDMKeyInformation::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -3475,9 +3305,6 @@ class CDMVideoPlane::_Internal {
   }
   static void set_has_a_mstride(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
   }
 };
 
@@ -3555,7 +3382,7 @@ const char* CDMVideoPlane::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 a_mPlaneOffset = 1;
+      // optional uint32 a_mPlaneOffset = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_mplaneoffset(&has_bits);
@@ -3564,7 +3391,7 @@ const char* CDMVideoPlane::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_mStride = 2;
+      // optional uint32 a_mStride = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_mstride(&has_bits);
@@ -3604,13 +3431,13 @@ uint8_t* CDMVideoPlane::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 a_mPlaneOffset = 1;
+  // optional uint32 a_mPlaneOffset = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_mplaneoffset(), target);
   }
 
-  // required uint32 a_mStride = 2;
+  // optional uint32 a_mStride = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_mstride(), target);
@@ -3624,40 +3451,27 @@ uint8_t* CDMVideoPlane::_InternalSerialize(
   return target;
 }
 
-size_t CDMVideoPlane::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.gmp.CDMVideoPlane)
-  size_t total_size = 0;
-
-  if (_internal_has_a_mplaneoffset()) {
-    // required uint32 a_mPlaneOffset = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mplaneoffset());
-  }
-
-  if (_internal_has_a_mstride()) {
-    // required uint32 a_mStride = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mstride());
-  }
-
-  return total_size;
-}
 size_t CDMVideoPlane::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gmp.CDMVideoPlane)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required uint32 a_mPlaneOffset = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mplaneoffset());
-
-    // required uint32 a_mStride = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mstride());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional uint32 a_mPlaneOffset = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mplaneoffset());
+    }
+
+    // optional uint32 a_mStride = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mstride());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -3700,7 +3514,6 @@ void CDMVideoPlane::CopyFrom(const CDMVideoPlane& from) {
 }
 
 bool CDMVideoPlane::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -3754,7 +3567,7 @@ class CDMVideoFrame::_Internal {
     (*has_bits)[0] |= 64u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x000000ff) ^ 0x000000ff) != 0;
+    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
   }
 };
 
@@ -3882,7 +3695,7 @@ const char* CDMVideoFrame::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 a_mFormat = 1;
+      // optional uint32 a_mFormat = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_mformat(&has_bits);
@@ -3891,7 +3704,7 @@ const char* CDMVideoFrame::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_mImageWidth = 2;
+      // optional sint32 a_mImageWidth = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_mimagewidth(&has_bits);
@@ -3900,7 +3713,7 @@ const char* CDMVideoFrame::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_mImageHeight = 3;
+      // optional sint32 a_mImageHeight = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_mimageheight(&has_bits);
@@ -3933,7 +3746,7 @@ const char* CDMVideoFrame::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // required sint64 a_mTimestamp = 7;
+      // optional sint64 a_mTimestamp = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
           _Internal::set_has_a_mtimestamp(&has_bits);
@@ -3942,7 +3755,7 @@ const char* CDMVideoFrame::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // required sint64 a_mDuration = 8;
+      // optional sint64 a_mDuration = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
           _Internal::set_has_a_mduration(&has_bits);
@@ -3982,19 +3795,19 @@ uint8_t* CDMVideoFrame::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 a_mFormat = 1;
+  // optional uint32 a_mFormat = 1;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_mformat(), target);
   }
 
-  // required sint32 a_mImageWidth = 2;
+  // optional sint32 a_mImageWidth = 2;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_a_mimagewidth(), target);
   }
 
-  // required sint32 a_mImageHeight = 3;
+  // optional sint32 a_mImageHeight = 3;
   if (cached_has_bits & 0x00000080u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_a_mimageheight(), target);
@@ -4021,13 +3834,13 @@ uint8_t* CDMVideoFrame::_InternalSerialize(
         _Internal::a_mvplane(this).GetCachedSize(), target, stream);
   }
 
-  // required sint64 a_mTimestamp = 7;
+  // optional sint64 a_mTimestamp = 7;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(7, this->_internal_a_mtimestamp(), target);
   }
 
-  // required sint64 a_mDuration = 8;
+  // optional sint64 a_mDuration = 8;
   if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(8, this->_internal_a_mduration(), target);
@@ -4066,38 +3879,13 @@ size_t CDMVideoFrame::RequiredFieldsByteSizeFallback() const {
         *_impl_.a_mvplane_);
   }
 
-  if (_internal_has_a_mformat()) {
-    // required uint32 a_mFormat = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mformat());
-  }
-
-  if (_internal_has_a_mimagewidth()) {
-    // required sint32 a_mImageWidth = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mimagewidth());
-  }
-
-  if (_internal_has_a_mtimestamp()) {
-    // required sint64 a_mTimestamp = 7;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_mtimestamp());
-  }
-
-  if (_internal_has_a_mduration()) {
-    // required sint64 a_mDuration = 8;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_mduration());
-  }
-
-  if (_internal_has_a_mimageheight()) {
-    // required sint32 a_mImageHeight = 3;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mimageheight());
-  }
-
   return total_size;
 }
 size_t CDMVideoFrame::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gmp.CDMVideoFrame)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x000000ff) ^ 0x000000ff) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
     // required .protobuf.mozilla.gmp.CDMVideoPlane a_mYPlane = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -4113,21 +3901,6 @@ size_t CDMVideoFrame::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_mvplane_);
 
-    // required uint32 a_mFormat = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mformat());
-
-    // required sint32 a_mImageWidth = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mimagewidth());
-
-    // required sint64 a_mTimestamp = 7;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_mtimestamp());
-
-    // required sint64 a_mDuration = 8;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_mduration());
-
-    // required sint32 a_mImageHeight = 3;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mimageheight());
-
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
@@ -4135,6 +3908,34 @@ size_t CDMVideoFrame::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x000000f8u) {
+    // optional uint32 a_mFormat = 1;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_mformat());
+    }
+
+    // optional sint32 a_mImageWidth = 2;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mimagewidth());
+    }
+
+    // optional sint64 a_mTimestamp = 7;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_mtimestamp());
+    }
+
+    // optional sint64 a_mDuration = 8;
+    if (cached_has_bits & 0x00000040u) {
+      total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_mduration());
+    }
+
+    // optional sint32 a_mImageHeight = 3;
+    if (cached_has_bits & 0x00000080u) {
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mimageheight());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -4199,15 +4000,6 @@ void CDMVideoFrame::CopyFrom(const CDMVideoFrame& from) {
 
 bool CDMVideoFrame::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_myplane()) {
-    if (!_impl_.a_myplane_->IsInitialized()) return false;
-  }
-  if (_internal_has_a_muplane()) {
-    if (!_impl_.a_muplane_->IsInitialized()) return false;
-  }
-  if (_internal_has_a_mvplane()) {
-    if (!_impl_.a_mvplane_->IsInitialized()) return false;
-  }
   return true;
 }
 

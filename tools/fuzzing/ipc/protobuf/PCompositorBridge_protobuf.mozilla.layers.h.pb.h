@@ -331,7 +331,7 @@ class FrameStats final :
   std::string* _internal_mutable_a_scenebuilttime();
   public:
 
-  // required string a_url = 13;
+  // optional string a_url = 13;
   bool has_a_url() const;
   private:
   bool _internal_has_a_url() const;
@@ -349,7 +349,7 @@ class FrameStats final :
   std::string* _internal_mutable_a_url();
   public:
 
-  // required double a_resourceUploadTime = 6;
+  // optional double a_resourceUploadTime = 6;
   bool has_a_resourceuploadtime() const;
   private:
   bool _internal_has_a_resourceuploadtime() const;
@@ -362,7 +362,7 @@ class FrameStats final :
   void _internal_set_a_resourceuploadtime(double value);
   public:
 
-  // required double a_gpuCacheUploadTime = 7;
+  // optional double a_gpuCacheUploadTime = 7;
   bool has_a_gpucacheuploadtime() const;
   private:
   bool _internal_has_a_gpucacheuploadtime() const;
@@ -375,7 +375,7 @@ class FrameStats final :
   void _internal_set_a_gpucacheuploadtime(double value);
   public:
 
-  // required sint32 a_contentFrameTime = 5;
+  // optional sint32 a_contentFrameTime = 5;
   bool has_a_contentframetime() const;
   private:
   bool _internal_has_a_contentframetime() const;
@@ -388,7 +388,7 @@ class FrameStats final :
   void _internal_set_a_contentframetime(int32_t value);
   public:
 
-  // required uint32 a_skippedComposites = 12;
+  // optional uint32 a_skippedComposites = 12;
   bool has_a_skippedcomposites() const;
   private:
   bool _internal_has_a_skippedcomposites() const;
@@ -714,7 +714,7 @@ inline void FrameStats::set_allocated_a_compositeend(std::string* a_compositeend
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.FrameStats.a_compositeEnd)
 }
 
-// required sint32 a_contentFrameTime = 5;
+// optional sint32 a_contentFrameTime = 5;
 inline bool FrameStats::_internal_has_a_contentframetime() const {
   bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
   return value;
@@ -742,7 +742,7 @@ inline void FrameStats::set_a_contentframetime(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameStats.a_contentFrameTime)
 }
 
-// required double a_resourceUploadTime = 6;
+// optional double a_resourceUploadTime = 6;
 inline bool FrameStats::_internal_has_a_resourceuploadtime() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -770,7 +770,7 @@ inline void FrameStats::set_a_resourceuploadtime(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameStats.a_resourceUploadTime)
 }
 
-// required double a_gpuCacheUploadTime = 7;
+// optional double a_gpuCacheUploadTime = 7;
 inline bool FrameStats::_internal_has_a_gpucacheuploadtime() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
@@ -1070,7 +1070,7 @@ inline void FrameStats::set_allocated_a_scenebuilttime(std::string* a_scenebuilt
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.FrameStats.a_sceneBuiltTime)
 }
 
-// required uint32 a_skippedComposites = 12;
+// optional uint32 a_skippedComposites = 12;
 inline bool FrameStats::_internal_has_a_skippedcomposites() const {
   bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
   return value;
@@ -1098,7 +1098,7 @@ inline void FrameStats::set_a_skippedcomposites(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameStats.a_skippedComposites)
 }
 
-// required string a_url = 13;
+// optional string a_url = 13;
 inline bool FrameStats::_internal_has_a_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;

@@ -180,7 +180,7 @@ class LSSimpleRequestPreloadedResponse final :
   enum : int {
     kAPreloadedFieldNumber = 1,
   };
-  // required bool a_preloaded = 1;
+  // optional bool a_preloaded = 1;
   bool has_a_preloaded() const;
   private:
   bool _internal_has_a_preloaded() const;
@@ -572,7 +572,7 @@ class LSSimpleRequestResponse final :
 #endif  // __GNUC__
 // LSSimpleRequestPreloadedResponse
 
-// required bool a_preloaded = 1;
+// optional bool a_preloaded = 1;
 inline bool LSSimpleRequestPreloadedResponse::_internal_has_a_preloaded() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

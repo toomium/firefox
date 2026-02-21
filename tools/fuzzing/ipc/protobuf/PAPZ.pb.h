@@ -794,7 +794,7 @@ class Msg_UpdateOverscrollVelocity final :
   std::string* _internal_mutable_a_aguid();
   public:
 
-  // required float a_aX = 2;
+  // optional float a_aX = 2;
   bool has_a_ax() const;
   private:
   bool _internal_has_a_ax() const;
@@ -807,7 +807,7 @@ class Msg_UpdateOverscrollVelocity final :
   void _internal_set_a_ax(float value);
   public:
 
-  // required float a_aY = 3;
+  // optional float a_aY = 3;
   bool has_a_ay() const;
   private:
   bool _internal_has_a_ay() const;
@@ -820,7 +820,7 @@ class Msg_UpdateOverscrollVelocity final :
   void _internal_set_a_ay(float value);
   public:
 
-  // required bool a_aIsRootContent = 4;
+  // optional bool a_aIsRootContent = 4;
   bool has_a_aisrootcontent() const;
   private:
   bool _internal_has_a_aisrootcontent() const;
@@ -836,9 +836,6 @@ class Msg_UpdateOverscrollVelocity final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PAPZ.Msg_UpdateOverscrollVelocity)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -989,7 +986,7 @@ class Msg_UpdateOverscrollOffset final :
   std::string* _internal_mutable_a_aguid();
   public:
 
-  // required float a_aX = 2;
+  // optional float a_aX = 2;
   bool has_a_ax() const;
   private:
   bool _internal_has_a_ax() const;
@@ -1002,7 +999,7 @@ class Msg_UpdateOverscrollOffset final :
   void _internal_set_a_ax(float value);
   public:
 
-  // required float a_aY = 3;
+  // optional float a_aY = 3;
   bool has_a_ay() const;
   private:
   bool _internal_has_a_ay() const;
@@ -1015,7 +1012,7 @@ class Msg_UpdateOverscrollOffset final :
   void _internal_set_a_ay(float value);
   public:
 
-  // required bool a_aIsRootContent = 4;
+  // optional bool a_aIsRootContent = 4;
   bool has_a_aisrootcontent() const;
   private:
   bool _internal_has_a_aisrootcontent() const;
@@ -1031,9 +1028,6 @@ class Msg_UpdateOverscrollOffset final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PAPZ.Msg_UpdateOverscrollOffset)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1306,7 +1300,7 @@ class Msg_NotifyMozMouseScrollEvent final :
   std::string* _internal_mutable_a_ascrollid();
   public:
 
-  // required string a_aEvent = 2;
+  // optional string a_aEvent = 2;
   bool has_a_aevent() const;
   private:
   bool _internal_has_a_aevent() const;
@@ -1327,9 +1321,6 @@ class Msg_NotifyMozMouseScrollEvent final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PAPZ.Msg_NotifyMozMouseScrollEvent)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1509,7 +1500,7 @@ class Msg_NotifyAPZStateChange final :
   void _internal_set_a_ainputblockid(uint64_t value);
   public:
 
-  // required sint32 a_aArg = 3;
+  // optional sint32 a_aArg = 3;
   bool has_a_aarg() const;
   private:
   bool _internal_has_a_aarg() const;
@@ -1819,7 +1810,7 @@ class Msg_NotifyAsyncScrollbarDragInitiated final :
   std::string* _internal_mutable_a_adirection();
   public:
 
-  // required uint64 a_aDragBlockId = 1;
+  // optional uint64 a_aDragBlockId = 1;
   bool has_a_adragblockid() const;
   private:
   bool _internal_has_a_adragblockid() const;
@@ -2508,7 +2499,7 @@ inline void Msg_UpdateOverscrollVelocity::set_allocated_a_aguid(std::string* a_a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZ.Msg_UpdateOverscrollVelocity.a_aGuid)
 }
 
-// required float a_aX = 2;
+// optional float a_aX = 2;
 inline bool Msg_UpdateOverscrollVelocity::_internal_has_a_ax() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2536,7 +2527,7 @@ inline void Msg_UpdateOverscrollVelocity::set_a_ax(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZ.Msg_UpdateOverscrollVelocity.a_aX)
 }
 
-// required float a_aY = 3;
+// optional float a_aY = 3;
 inline bool Msg_UpdateOverscrollVelocity::_internal_has_a_ay() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2564,7 +2555,7 @@ inline void Msg_UpdateOverscrollVelocity::set_a_ay(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZ.Msg_UpdateOverscrollVelocity.a_aY)
 }
 
-// required bool a_aIsRootContent = 4;
+// optional bool a_aIsRootContent = 4;
 inline bool Msg_UpdateOverscrollVelocity::_internal_has_a_aisrootcontent() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -2664,7 +2655,7 @@ inline void Msg_UpdateOverscrollOffset::set_allocated_a_aguid(std::string* a_agu
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZ.Msg_UpdateOverscrollOffset.a_aGuid)
 }
 
-// required float a_aX = 2;
+// optional float a_aX = 2;
 inline bool Msg_UpdateOverscrollOffset::_internal_has_a_ax() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2692,7 +2683,7 @@ inline void Msg_UpdateOverscrollOffset::set_a_ax(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZ.Msg_UpdateOverscrollOffset.a_aX)
 }
 
-// required float a_aY = 3;
+// optional float a_aY = 3;
 inline bool Msg_UpdateOverscrollOffset::_internal_has_a_ay() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2720,7 +2711,7 @@ inline void Msg_UpdateOverscrollOffset::set_a_ay(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZ.Msg_UpdateOverscrollOffset.a_aY)
 }
 
-// required bool a_aIsRootContent = 4;
+// optional bool a_aIsRootContent = 4;
 inline bool Msg_UpdateOverscrollOffset::_internal_has_a_aisrootcontent() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -2824,7 +2815,7 @@ inline void Msg_NotifyMozMouseScrollEvent::set_allocated_a_ascrollid(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZ.Msg_NotifyMozMouseScrollEvent.a_aScrollId)
 }
 
-// required string a_aEvent = 2;
+// optional string a_aEvent = 2;
 inline bool Msg_NotifyMozMouseScrollEvent::_internal_has_a_aevent() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3032,7 +3023,7 @@ inline void Msg_NotifyAPZStateChange::set_allocated_a_achange(std::string* a_ach
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZ.Msg_NotifyAPZStateChange.a_aChange)
 }
 
-// required sint32 a_aArg = 3;
+// optional sint32 a_aArg = 3;
 inline bool Msg_NotifyAPZStateChange::_internal_has_a_aarg() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -3096,7 +3087,7 @@ inline void Msg_NotifyAPZStateChange::set_a_ainputblockid(uint64_t value) {
 
 // Msg_NotifyAsyncScrollbarDragInitiated
 
-// required uint64 a_aDragBlockId = 1;
+// optional uint64 a_aDragBlockId = 1;
 inline bool Msg_NotifyAsyncScrollbarDragInitiated::_internal_has_a_adragblockid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

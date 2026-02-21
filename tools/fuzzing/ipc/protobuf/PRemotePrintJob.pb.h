@@ -359,7 +359,7 @@ class Msg_InitializePrint final :
     kAAStartPageFieldNumber = 2,
     kAAEndPageFieldNumber = 3,
   };
-  // required string a_aDocumentTitle = 1;
+  // optional string a_aDocumentTitle = 1;
   bool has_a_adocumenttitle() const;
   private:
   bool _internal_has_a_adocumenttitle() const;
@@ -377,7 +377,7 @@ class Msg_InitializePrint final :
   std::string* _internal_mutable_a_adocumenttitle();
   public:
 
-  // required sint32 a_aStartPage = 2;
+  // optional sint32 a_aStartPage = 2;
   bool has_a_astartpage() const;
   private:
   bool _internal_has_a_astartpage() const;
@@ -390,7 +390,7 @@ class Msg_InitializePrint final :
   void _internal_set_a_astartpage(int32_t value);
   public:
 
-  // required sint32 a_aEndPage = 3;
+  // optional sint32 a_aEndPage = 3;
   bool has_a_aendpage() const;
   private:
   bool _internal_has_a_aendpage() const;
@@ -406,9 +406,6 @@ class Msg_InitializePrint final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layout.PRemotePrintJob.Msg_InitializePrint)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -561,7 +558,7 @@ class Msg_ProcessPage final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
       mutable_a_adeps();
 
-  // required sint32 a_aWidthInPoints = 1;
+  // optional sint32 a_aWidthInPoints = 1;
   bool has_a_awidthinpoints() const;
   private:
   bool _internal_has_a_awidthinpoints() const;
@@ -574,7 +571,7 @@ class Msg_ProcessPage final :
   void _internal_set_a_awidthinpoints(int32_t value);
   public:
 
-  // required sint32 a_aHeightInPoints = 2;
+  // optional sint32 a_aHeightInPoints = 2;
   bool has_a_aheightinpoints() const;
   private:
   bool _internal_has_a_aheightinpoints() const;
@@ -590,9 +587,6 @@ class Msg_ProcessPage final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layout.PRemotePrintJob.Msg_ProcessPage)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -848,7 +842,7 @@ class Msg_ProgressChange final :
     kAACurTotalProgressFieldNumber = 3,
     kAAMaxTotalProgressFieldNumber = 4,
   };
-  // required sint64 a_aCurSelfProgress = 1;
+  // optional sint64 a_aCurSelfProgress = 1;
   bool has_a_acurselfprogress() const;
   private:
   bool _internal_has_a_acurselfprogress() const;
@@ -861,7 +855,7 @@ class Msg_ProgressChange final :
   void _internal_set_a_acurselfprogress(int64_t value);
   public:
 
-  // required sint64 a_aMaxSelfProgress = 2;
+  // optional sint64 a_aMaxSelfProgress = 2;
   bool has_a_amaxselfprogress() const;
   private:
   bool _internal_has_a_amaxselfprogress() const;
@@ -874,7 +868,7 @@ class Msg_ProgressChange final :
   void _internal_set_a_amaxselfprogress(int64_t value);
   public:
 
-  // required sint64 a_aCurTotalProgress = 3;
+  // optional sint64 a_aCurTotalProgress = 3;
   bool has_a_acurtotalprogress() const;
   private:
   bool _internal_has_a_acurtotalprogress() const;
@@ -887,7 +881,7 @@ class Msg_ProgressChange final :
   void _internal_set_a_acurtotalprogress(int64_t value);
   public:
 
-  // required sint64 a_aMaxTotalProgress = 4;
+  // optional sint64 a_aMaxTotalProgress = 4;
   bool has_a_amaxtotalprogress() const;
   private:
   bool _internal_has_a_amaxtotalprogress() const;
@@ -903,9 +897,6 @@ class Msg_ProgressChange final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layout.PRemotePrintJob.Msg_ProgressChange)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1716,7 +1707,7 @@ inline void Msg_AbortPrint::set_allocated_a_arv(std::string* a_arv) {
 
 // Msg_InitializePrint
 
-// required string a_aDocumentTitle = 1;
+// optional string a_aDocumentTitle = 1;
 inline bool Msg_InitializePrint::_internal_has_a_adocumenttitle() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1784,7 +1775,7 @@ inline void Msg_InitializePrint::set_allocated_a_adocumenttitle(std::string* a_a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layout.PRemotePrintJob.Msg_InitializePrint.a_aDocumentTitle)
 }
 
-// required sint32 a_aStartPage = 2;
+// optional sint32 a_aStartPage = 2;
 inline bool Msg_InitializePrint::_internal_has_a_astartpage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1812,7 +1803,7 @@ inline void Msg_InitializePrint::set_a_astartpage(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layout.PRemotePrintJob.Msg_InitializePrint.a_aStartPage)
 }
 
-// required sint32 a_aEndPage = 3;
+// optional sint32 a_aEndPage = 3;
 inline bool Msg_InitializePrint::_internal_has_a_aendpage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1844,7 +1835,7 @@ inline void Msg_InitializePrint::set_a_aendpage(int32_t value) {
 
 // Msg_ProcessPage
 
-// required sint32 a_aWidthInPoints = 1;
+// optional sint32 a_aWidthInPoints = 1;
 inline bool Msg_ProcessPage::_internal_has_a_awidthinpoints() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1872,7 +1863,7 @@ inline void Msg_ProcessPage::set_a_awidthinpoints(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layout.PRemotePrintJob.Msg_ProcessPage.a_aWidthInPoints)
 }
 
-// required sint32 a_aHeightInPoints = 2;
+// optional sint32 a_aHeightInPoints = 2;
 inline bool Msg_ProcessPage::_internal_has_a_aheightinpoints() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1955,7 +1946,7 @@ Msg_ProcessPage::mutable_a_adeps() {
 
 // Msg_ProgressChange
 
-// required sint64 a_aCurSelfProgress = 1;
+// optional sint64 a_aCurSelfProgress = 1;
 inline bool Msg_ProgressChange::_internal_has_a_acurselfprogress() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1983,7 +1974,7 @@ inline void Msg_ProgressChange::set_a_acurselfprogress(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layout.PRemotePrintJob.Msg_ProgressChange.a_aCurSelfProgress)
 }
 
-// required sint64 a_aMaxSelfProgress = 2;
+// optional sint64 a_aMaxSelfProgress = 2;
 inline bool Msg_ProgressChange::_internal_has_a_amaxselfprogress() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2011,7 +2002,7 @@ inline void Msg_ProgressChange::set_a_amaxselfprogress(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layout.PRemotePrintJob.Msg_ProgressChange.a_aMaxSelfProgress)
 }
 
-// required sint64 a_aCurTotalProgress = 3;
+// optional sint64 a_aCurTotalProgress = 3;
 inline bool Msg_ProgressChange::_internal_has_a_acurtotalprogress() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2039,7 +2030,7 @@ inline void Msg_ProgressChange::set_a_acurtotalprogress(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layout.PRemotePrintJob.Msg_ProgressChange.a_aCurTotalProgress)
 }
 
-// required sint64 a_aMaxTotalProgress = 4;
+// optional sint64 a_aMaxTotalProgress = 4;
 inline bool Msg_ProgressChange::_internal_has_a_amaxtotalprogress() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;

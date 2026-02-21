@@ -229,7 +229,7 @@ class Msg_Created final :
   enum : int {
     kAAStatusFieldNumber = 1,
   };
-  // required bool a_aStatus = 1;
+  // optional bool a_aStatus = 1;
   bool has_a_astatus() const;
   private:
   bool _internal_has_a_astatus() const;
@@ -518,7 +518,7 @@ class Msg_NotifyLock final :
   enum : int {
     kAACreatedFieldNumber = 1,
   };
-  // required bool a_aCreated = 1;
+  // optional bool a_aCreated = 1;
   bool has_a_acreated() const;
   private:
   bool _internal_has_a_acreated() const;
@@ -660,7 +660,7 @@ class Msg_NotifyWebTransport final :
   enum : int {
     kAACreatedFieldNumber = 1,
   };
-  // required bool a_aCreated = 1;
+  // optional bool a_aCreated = 1;
   bool has_a_acreated() const;
   private:
   bool _internal_has_a_acreated() const;
@@ -1050,7 +1050,7 @@ class Reply_SetServiceWorkerSkipWaitingFlag final :
   enum : int {
     kAAOkFieldNumber = 1,
   };
-  // required bool a_aOk = 1;
+  // optional bool a_aOk = 1;
   bool has_a_aok() const;
   private:
   bool _internal_has_a_aok() const;
@@ -1211,7 +1211,7 @@ class Msg_PFetchEventOpProxyConstructor final :
       ::protobuf::mozilla::dom::ParentToChildServiceWorkerFetchEventOpArgs* a_aargs);
   ::protobuf::mozilla::dom::ParentToChildServiceWorkerFetchEventOpArgs* unsafe_arena_release_a_aargs();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -1227,9 +1227,6 @@ class Msg_PFetchEventOpProxyConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PRemoteWorker.Msg_PFetchEventOpProxyConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2067,7 +2064,7 @@ class Reply_ExecServiceWorkerOp final :
 #endif  // __GNUC__
 // Msg_Created
 
-// required bool a_aStatus = 1;
+// optional bool a_aStatus = 1;
 inline bool Msg_Created::_internal_has_a_astatus() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2190,7 +2187,7 @@ inline void Msg_Error::set_allocated_a_avalue(::protobuf::mozilla::dom::ErrorVal
 
 // Msg_NotifyLock
 
-// required bool a_aCreated = 1;
+// optional bool a_aCreated = 1;
 inline bool Msg_NotifyLock::_internal_has_a_acreated() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2222,7 +2219,7 @@ inline void Msg_NotifyLock::set_a_acreated(bool value) {
 
 // Msg_NotifyWebTransport
 
-// required bool a_aCreated = 1;
+// optional bool a_aCreated = 1;
 inline bool Msg_NotifyWebTransport::_internal_has_a_acreated() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2262,7 +2259,7 @@ inline void Msg_NotifyWebTransport::set_a_acreated(bool value) {
 
 // Reply_SetServiceWorkerSkipWaitingFlag
 
-// required bool a_aOk = 1;
+// optional bool a_aOk = 1;
 inline bool Reply_SetServiceWorkerSkipWaitingFlag::_internal_has_a_aok() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2294,7 +2291,7 @@ inline void Reply_SetServiceWorkerSkipWaitingFlag::set_a_aok(bool value) {
 
 // Msg_PFetchEventOpProxyConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PFetchEventOpProxyConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

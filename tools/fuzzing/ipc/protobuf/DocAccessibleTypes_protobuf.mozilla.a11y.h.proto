@@ -12,6 +12,6 @@ package protobuf.mozilla.a11y;
 
 // Structs and unions declarations
 message CacheData {
-  required uint64 a_ID = 1;
+  optional uint64 a_ID = 1;
   optional bytes a_Fields = 2;
 }

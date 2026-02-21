@@ -376,7 +376,7 @@ class Pref final :
     kAIsLockedFieldNumber = 2,
     kAIsSanitizedFieldNumber = 3,
   };
-  // required string a_name = 1;
+  // optional string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -430,7 +430,7 @@ class Pref final :
       ::protobuf::mozilla::dom::PrefValue* a_uservalue);
   ::protobuf::mozilla::dom::PrefValue* unsafe_arena_release_a_uservalue();
 
-  // required bool a_isLocked = 2;
+  // optional bool a_isLocked = 2;
   bool has_a_islocked() const;
   private:
   bool _internal_has_a_islocked() const;
@@ -443,7 +443,7 @@ class Pref final :
   void _internal_set_a_islocked(bool value);
   public:
 
-  // required bool a_isSanitized = 3;
+  // optional bool a_isSanitized = 3;
   bool has_a_issanitized() const;
   private:
   bool _internal_has_a_issanitized() const;
@@ -459,9 +459,6 @@ class Pref final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.Pref)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -655,7 +652,7 @@ inline PrefValue::ContentCase PrefValue::content_case() const {
 
 // Pref
 
-// required string a_name = 1;
+// optional string a_name = 1;
 inline bool Pref::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -723,7 +720,7 @@ inline void Pref::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.Pref.a_name)
 }
 
-// required bool a_isLocked = 2;
+// optional bool a_isLocked = 2;
 inline bool Pref::_internal_has_a_islocked() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -751,7 +748,7 @@ inline void Pref::set_a_islocked(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.Pref.a_isLocked)
 }
 
-// required bool a_isSanitized = 3;
+// optional bool a_isSanitized = 3;
 inline bool Pref::_internal_has_a_issanitized() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;

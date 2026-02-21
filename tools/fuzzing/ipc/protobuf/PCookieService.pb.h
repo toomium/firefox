@@ -234,7 +234,7 @@ class Msg_SetCookies final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::CookieStruct >&
       a_cookies() const;
 
-  // required string a_baseDomain = 1;
+  // optional string a_baseDomain = 1;
   bool has_a_basedomain() const;
   private:
   bool _internal_has_a_basedomain() const;
@@ -288,7 +288,7 @@ class Msg_SetCookies final :
   std::string* _internal_mutable_a_host();
   public:
 
-  // required bool a_fromHttp = 4;
+  // optional bool a_fromHttp = 4;
   bool has_a_fromhttp() const;
   private:
   bool _internal_has_a_fromhttp() const;
@@ -301,7 +301,7 @@ class Msg_SetCookies final :
   void _internal_set_a_fromhttp(bool value);
   public:
 
-  // required bool a_isThirdParty = 5;
+  // optional bool a_isThirdParty = 5;
   bool has_a_isthirdparty() const;
   private:
   bool _internal_has_a_isthirdparty() const;
@@ -317,9 +317,6 @@ class Msg_SetCookies final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PCookieService.Msg_SetCookies)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -502,7 +499,7 @@ class Msg_GetCookieList final :
   std::string* _internal_mutable_a_host();
   public:
 
-  // required bool a_isForeign = 2;
+  // optional bool a_isForeign = 2;
   bool has_a_isforeign() const;
   private:
   bool _internal_has_a_isforeign() const;
@@ -515,7 +512,7 @@ class Msg_GetCookieList final :
   void _internal_set_a_isforeign(bool value);
   public:
 
-  // required bool a_isThirdPartyTrackingResource = 3;
+  // optional bool a_isThirdPartyTrackingResource = 3;
   bool has_a_isthirdpartytrackingresource() const;
   private:
   bool _internal_has_a_isthirdpartytrackingresource() const;
@@ -528,7 +525,7 @@ class Msg_GetCookieList final :
   void _internal_set_a_isthirdpartytrackingresource(bool value);
   public:
 
-  // required bool a_isThirdPartySocialTrackingResource = 4;
+  // optional bool a_isThirdPartySocialTrackingResource = 4;
   bool has_a_isthirdpartysocialtrackingresource() const;
   private:
   bool _internal_has_a_isthirdpartysocialtrackingresource() const;
@@ -541,7 +538,7 @@ class Msg_GetCookieList final :
   void _internal_set_a_isthirdpartysocialtrackingresource(bool value);
   public:
 
-  // required bool a_firstPartyStorageAccessPermissionGranted = 5;
+  // optional bool a_firstPartyStorageAccessPermissionGranted = 5;
   bool has_a_firstpartystorageaccesspermissiongranted() const;
   private:
   bool _internal_has_a_firstpartystorageaccesspermissiongranted() const;
@@ -554,7 +551,7 @@ class Msg_GetCookieList final :
   void _internal_set_a_firstpartystorageaccesspermissiongranted(bool value);
   public:
 
-  // required uint32 a_rejectedReason = 6;
+  // optional uint32 a_rejectedReason = 6;
   bool has_a_rejectedreason() const;
   private:
   bool _internal_has_a_rejectedreason() const;
@@ -567,7 +564,7 @@ class Msg_GetCookieList final :
   void _internal_set_a_rejectedreason(uint32_t value);
   public:
 
-  // required bool a_isSafeTopLevelNav = 7;
+  // optional bool a_isSafeTopLevelNav = 7;
   bool has_a_issafetoplevelnav() const;
   private:
   bool _internal_has_a_issafetoplevelnav() const;
@@ -580,7 +577,7 @@ class Msg_GetCookieList final :
   void _internal_set_a_issafetoplevelnav(bool value);
   public:
 
-  // required bool a_isSameSiteForeign = 8;
+  // optional bool a_isSameSiteForeign = 8;
   bool has_a_issamesiteforeign() const;
   private:
   bool _internal_has_a_issamesiteforeign() const;
@@ -593,7 +590,7 @@ class Msg_GetCookieList final :
   void _internal_set_a_issamesiteforeign(bool value);
   public:
 
-  // required bool a_hadCrossSiteRedirects = 9;
+  // optional bool a_hadCrossSiteRedirects = 9;
   bool has_a_hadcrosssiteredirects() const;
   private:
   bool _internal_has_a_hadcrosssiteredirects() const;
@@ -609,9 +606,6 @@ class Msg_GetCookieList final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PCookieService.Msg_GetCookieList)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1860,7 +1854,7 @@ class Msg_AddCookie final :
 #endif  // __GNUC__
 // Msg_SetCookies
 
-// required string a_baseDomain = 1;
+// optional string a_baseDomain = 1;
 inline bool Msg_SetCookies::_internal_has_a_basedomain() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2064,7 +2058,7 @@ inline void Msg_SetCookies::set_allocated_a_host(std::string* a_host) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PCookieService.Msg_SetCookies.a_host)
 }
 
-// required bool a_fromHttp = 4;
+// optional bool a_fromHttp = 4;
 inline bool Msg_SetCookies::_internal_has_a_fromhttp() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -2092,7 +2086,7 @@ inline void Msg_SetCookies::set_a_fromhttp(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_SetCookies.a_fromHttp)
 }
 
-// required bool a_isThirdParty = 5;
+// optional bool a_isThirdParty = 5;
 inline bool Msg_SetCookies::_internal_has_a_isthirdparty() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -2229,7 +2223,7 @@ inline void Msg_GetCookieList::set_allocated_a_host(std::string* a_host) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_host)
 }
 
-// required bool a_isForeign = 2;
+// optional bool a_isForeign = 2;
 inline bool Msg_GetCookieList::_internal_has_a_isforeign() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2257,7 +2251,7 @@ inline void Msg_GetCookieList::set_a_isforeign(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_isForeign)
 }
 
-// required bool a_isThirdPartyTrackingResource = 3;
+// optional bool a_isThirdPartyTrackingResource = 3;
 inline bool Msg_GetCookieList::_internal_has_a_isthirdpartytrackingresource() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2285,7 +2279,7 @@ inline void Msg_GetCookieList::set_a_isthirdpartytrackingresource(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_isThirdPartyTrackingResource)
 }
 
-// required bool a_isThirdPartySocialTrackingResource = 4;
+// optional bool a_isThirdPartySocialTrackingResource = 4;
 inline bool Msg_GetCookieList::_internal_has_a_isthirdpartysocialtrackingresource() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -2313,7 +2307,7 @@ inline void Msg_GetCookieList::set_a_isthirdpartysocialtrackingresource(bool val
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_isThirdPartySocialTrackingResource)
 }
 
-// required bool a_firstPartyStorageAccessPermissionGranted = 5;
+// optional bool a_firstPartyStorageAccessPermissionGranted = 5;
 inline bool Msg_GetCookieList::_internal_has_a_firstpartystorageaccesspermissiongranted() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -2341,7 +2335,7 @@ inline void Msg_GetCookieList::set_a_firstpartystorageaccesspermissiongranted(bo
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_firstPartyStorageAccessPermissionGranted)
 }
 
-// required uint32 a_rejectedReason = 6;
+// optional uint32 a_rejectedReason = 6;
 inline bool Msg_GetCookieList::_internal_has_a_rejectedreason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -2369,7 +2363,7 @@ inline void Msg_GetCookieList::set_a_rejectedreason(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_rejectedReason)
 }
 
-// required bool a_isSafeTopLevelNav = 7;
+// optional bool a_isSafeTopLevelNav = 7;
 inline bool Msg_GetCookieList::_internal_has_a_issafetoplevelnav() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -2397,7 +2391,7 @@ inline void Msg_GetCookieList::set_a_issafetoplevelnav(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_isSafeTopLevelNav)
 }
 
-// required bool a_isSameSiteForeign = 8;
+// optional bool a_isSameSiteForeign = 8;
 inline bool Msg_GetCookieList::_internal_has_a_issamesiteforeign() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -2425,7 +2419,7 @@ inline void Msg_GetCookieList::set_a_issamesiteforeign(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_isSameSiteForeign)
 }
 
-// required bool a_hadCrossSiteRedirects = 9;
+// optional bool a_hadCrossSiteRedirects = 9;
 inline bool Msg_GetCookieList::_internal_has_a_hadcrosssiteredirects() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;

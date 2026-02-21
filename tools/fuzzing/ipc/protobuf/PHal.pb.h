@@ -2126,7 +2126,7 @@ class Msg_ModifyWakeLock final :
     kAALockAdjustFieldNumber = 2,
     kAAHiddenAdjustFieldNumber = 3,
   };
-  // required string a_aTopic = 1;
+  // optional string a_aTopic = 1;
   bool has_a_atopic() const;
   private:
   bool _internal_has_a_atopic() const;
@@ -2562,7 +2562,7 @@ class Msg_GetWakeLockInfo final :
   enum : int {
     kAATopicFieldNumber = 1,
   };
-  // required string a_aTopic = 1;
+  // optional string a_aTopic = 1;
   bool has_a_atopic() const;
   private:
   bool _internal_has_a_atopic() const;
@@ -3274,7 +3274,7 @@ class Msg_PerformHapticFeedback final :
   enum : int {
     kAATypeFieldNumber = 1,
   };
-  // required sint32 a_aType = 1;
+  // optional sint32 a_aType = 1;
   bool has_a_atype() const;
   private:
   bool _internal_has_a_atype() const;
@@ -4766,7 +4766,7 @@ inline void Reply_GetCurrentNetworkInformation::set_allocated_a_anetworkinfo(::p
 
 // Msg_ModifyWakeLock
 
-// required string a_aTopic = 1;
+// optional string a_aTopic = 1;
 inline bool Msg_ModifyWakeLock::_internal_has_a_atopic() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4982,7 +4982,7 @@ inline void Msg_ModifyWakeLock::set_allocated_a_ahiddenadjust(std::string* a_ahi
 
 // Msg_GetWakeLockInfo
 
-// required string a_aTopic = 1;
+// optional string a_aTopic = 1;
 inline bool Msg_GetWakeLockInfo::_internal_has_a_atopic() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5293,7 +5293,7 @@ inline void Reply_LockScreenOrientation::set_allocated_a_result(std::string* a_r
 
 // Msg_PerformHapticFeedback
 
-// required sint32 a_aType = 1;
+// optional sint32 a_aType = 1;
 inline bool Msg_PerformHapticFeedback::_internal_has_a_atype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

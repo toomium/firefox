@@ -126,9 +126,6 @@ class HttpHandlerInitArgs::_Internal {
   static void set_has_a_mdevicemodelid(HasBits* has_bits) {
     (*has_bits)[0] |= 2048u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000fff) ^ 0x00000fff) != 0;
-  }
 };
 
 HttpHandlerInitArgs::HttpHandlerInitArgs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -413,7 +410,7 @@ const char* HttpHandlerInitArgs::_InternalParse(const char* ptr, ::_pbi::ParseCo
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_mLegacyAppName = 1;
+      // optional string a_mLegacyAppName = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_mlegacyappname();
@@ -422,7 +419,7 @@ const char* HttpHandlerInitArgs::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // required string a_mLegacyAppVersion = 2;
+      // optional string a_mLegacyAppVersion = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_mlegacyappversion();
@@ -431,7 +428,7 @@ const char* HttpHandlerInitArgs::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // required string a_mPlatform = 3;
+      // optional string a_mPlatform = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_mplatform();
@@ -440,7 +437,7 @@ const char* HttpHandlerInitArgs::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // required string a_mOscpu = 4;
+      // optional string a_mOscpu = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_moscpu();
@@ -449,7 +446,7 @@ const char* HttpHandlerInitArgs::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // required string a_mMisc = 5;
+      // optional string a_mMisc = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_a_mmisc();
@@ -458,7 +455,7 @@ const char* HttpHandlerInitArgs::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // required string a_mProduct = 6;
+      // optional string a_mProduct = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           auto str = _internal_mutable_a_mproduct();
@@ -467,7 +464,7 @@ const char* HttpHandlerInitArgs::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // required string a_mProductSub = 7;
+      // optional string a_mProductSub = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           auto str = _internal_mutable_a_mproductsub();
@@ -476,7 +473,7 @@ const char* HttpHandlerInitArgs::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // required string a_mAppName = 8;
+      // optional string a_mAppName = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
           auto str = _internal_mutable_a_mappname();
@@ -485,7 +482,7 @@ const char* HttpHandlerInitArgs::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // required string a_mAppVersion = 9;
+      // optional string a_mAppVersion = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
           auto str = _internal_mutable_a_mappversion();
@@ -494,7 +491,7 @@ const char* HttpHandlerInitArgs::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // required string a_mCompatFirefox = 10;
+      // optional string a_mCompatFirefox = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 82)) {
           auto str = _internal_mutable_a_mcompatfirefox();
@@ -503,7 +500,7 @@ const char* HttpHandlerInitArgs::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // required string a_mCompatDevice = 11;
+      // optional string a_mCompatDevice = 11;
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 90)) {
           auto str = _internal_mutable_a_mcompatdevice();
@@ -512,7 +509,7 @@ const char* HttpHandlerInitArgs::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // required string a_mDeviceModelId = 12;
+      // optional string a_mDeviceModelId = 12;
       case 12:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 98)) {
           auto str = _internal_mutable_a_mdevicemodelid();
@@ -552,73 +549,73 @@ uint8_t* HttpHandlerInitArgs::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_mLegacyAppName = 1;
+  // optional string a_mLegacyAppName = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_mlegacyappname(), target);
   }
 
-  // required string a_mLegacyAppVersion = 2;
+  // optional string a_mLegacyAppVersion = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_mlegacyappversion(), target);
   }
 
-  // required string a_mPlatform = 3;
+  // optional string a_mPlatform = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_mplatform(), target);
   }
 
-  // required string a_mOscpu = 4;
+  // optional string a_mOscpu = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_a_moscpu(), target);
   }
 
-  // required string a_mMisc = 5;
+  // optional string a_mMisc = 5;
   if (cached_has_bits & 0x00000010u) {
     target = stream->WriteStringMaybeAliased(
         5, this->_internal_a_mmisc(), target);
   }
 
-  // required string a_mProduct = 6;
+  // optional string a_mProduct = 6;
   if (cached_has_bits & 0x00000020u) {
     target = stream->WriteStringMaybeAliased(
         6, this->_internal_a_mproduct(), target);
   }
 
-  // required string a_mProductSub = 7;
+  // optional string a_mProductSub = 7;
   if (cached_has_bits & 0x00000040u) {
     target = stream->WriteStringMaybeAliased(
         7, this->_internal_a_mproductsub(), target);
   }
 
-  // required string a_mAppName = 8;
+  // optional string a_mAppName = 8;
   if (cached_has_bits & 0x00000080u) {
     target = stream->WriteStringMaybeAliased(
         8, this->_internal_a_mappname(), target);
   }
 
-  // required string a_mAppVersion = 9;
+  // optional string a_mAppVersion = 9;
   if (cached_has_bits & 0x00000100u) {
     target = stream->WriteStringMaybeAliased(
         9, this->_internal_a_mappversion(), target);
   }
 
-  // required string a_mCompatFirefox = 10;
+  // optional string a_mCompatFirefox = 10;
   if (cached_has_bits & 0x00000200u) {
     target = stream->WriteStringMaybeAliased(
         10, this->_internal_a_mcompatfirefox(), target);
   }
 
-  // required string a_mCompatDevice = 11;
+  // optional string a_mCompatDevice = 11;
   if (cached_has_bits & 0x00000400u) {
     target = stream->WriteStringMaybeAliased(
         11, this->_internal_a_mcompatdevice(), target);
   }
 
-  // required string a_mDeviceModelId = 12;
+  // optional string a_mDeviceModelId = 12;
   if (cached_has_bits & 0x00000800u) {
     target = stream->WriteStringMaybeAliased(
         12, this->_internal_a_mdevicemodelid(), target);
@@ -632,168 +629,103 @@ uint8_t* HttpHandlerInitArgs::_InternalSerialize(
   return target;
 }
 
-size_t HttpHandlerInitArgs::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.HttpHandlerInitArgs)
-  size_t total_size = 0;
-
-  if (_internal_has_a_mlegacyappname()) {
-    // required string a_mLegacyAppName = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_mlegacyappname());
-  }
-
-  if (_internal_has_a_mlegacyappversion()) {
-    // required string a_mLegacyAppVersion = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_mlegacyappversion());
-  }
-
-  if (_internal_has_a_mplatform()) {
-    // required string a_mPlatform = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_mplatform());
-  }
-
-  if (_internal_has_a_moscpu()) {
-    // required string a_mOscpu = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_moscpu());
-  }
-
-  if (_internal_has_a_mmisc()) {
-    // required string a_mMisc = 5;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_mmisc());
-  }
-
-  if (_internal_has_a_mproduct()) {
-    // required string a_mProduct = 6;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_mproduct());
-  }
-
-  if (_internal_has_a_mproductsub()) {
-    // required string a_mProductSub = 7;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_mproductsub());
-  }
-
-  if (_internal_has_a_mappname()) {
-    // required string a_mAppName = 8;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_mappname());
-  }
-
-  if (_internal_has_a_mappversion()) {
-    // required string a_mAppVersion = 9;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_mappversion());
-  }
-
-  if (_internal_has_a_mcompatfirefox()) {
-    // required string a_mCompatFirefox = 10;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_mcompatfirefox());
-  }
-
-  if (_internal_has_a_mcompatdevice()) {
-    // required string a_mCompatDevice = 11;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_mcompatdevice());
-  }
-
-  if (_internal_has_a_mdevicemodelid()) {
-    // required string a_mDeviceModelId = 12;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_mdevicemodelid());
-  }
-
-  return total_size;
-}
 size_t HttpHandlerInitArgs::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.HttpHandlerInitArgs)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000fff) ^ 0x00000fff) == 0) {  // All required fields are present.
-    // required string a_mLegacyAppName = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_mlegacyappname());
-
-    // required string a_mLegacyAppVersion = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_mlegacyappversion());
-
-    // required string a_mPlatform = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_mplatform());
-
-    // required string a_mOscpu = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_moscpu());
-
-    // required string a_mMisc = 5;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_mmisc());
-
-    // required string a_mProduct = 6;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_mproduct());
-
-    // required string a_mProductSub = 7;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_mproductsub());
-
-    // required string a_mAppName = 8;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_mappname());
-
-    // required string a_mAppVersion = 9;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_mappversion());
-
-    // required string a_mCompatFirefox = 10;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_mcompatfirefox());
-
-    // required string a_mCompatDevice = 11;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_mcompatdevice());
-
-    // required string a_mDeviceModelId = 12;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_mdevicemodelid());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x000000ffu) {
+    // optional string a_mLegacyAppName = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_mlegacyappname());
+    }
+
+    // optional string a_mLegacyAppVersion = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_mlegacyappversion());
+    }
+
+    // optional string a_mPlatform = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_mplatform());
+    }
+
+    // optional string a_mOscpu = 4;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_moscpu());
+    }
+
+    // optional string a_mMisc = 5;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_mmisc());
+    }
+
+    // optional string a_mProduct = 6;
+    if (cached_has_bits & 0x00000020u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_mproduct());
+    }
+
+    // optional string a_mProductSub = 7;
+    if (cached_has_bits & 0x00000040u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_mproductsub());
+    }
+
+    // optional string a_mAppName = 8;
+    if (cached_has_bits & 0x00000080u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_mappname());
+    }
+
+  }
+  if (cached_has_bits & 0x00000f00u) {
+    // optional string a_mAppVersion = 9;
+    if (cached_has_bits & 0x00000100u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_mappversion());
+    }
+
+    // optional string a_mCompatFirefox = 10;
+    if (cached_has_bits & 0x00000200u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_mcompatfirefox());
+    }
+
+    // optional string a_mCompatDevice = 11;
+    if (cached_has_bits & 0x00000400u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_mcompatdevice());
+    }
+
+    // optional string a_mDeviceModelId = 12;
+    if (cached_has_bits & 0x00000800u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_a_mdevicemodelid());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -867,7 +799,6 @@ void HttpHandlerInitArgs::CopyFrom(const HttpHandlerInitArgs& from) {
 }
 
 bool HttpHandlerInitArgs::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -942,9 +873,6 @@ class SocketDataArgs::_Internal {
   }
   static void set_has_a_totalrecv(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
   }
 };
 
@@ -1026,7 +954,7 @@ const char* SocketDataArgs::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint64 a_totalSent = 1;
+      // optional uint64 a_totalSent = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_totalsent(&has_bits);
@@ -1035,7 +963,7 @@ const char* SocketDataArgs::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required uint64 a_totalRecv = 2;
+      // optional uint64 a_totalRecv = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_totalrecv(&has_bits);
@@ -1089,13 +1017,13 @@ uint8_t* SocketDataArgs::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint64 a_totalSent = 1;
+  // optional uint64 a_totalSent = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_totalsent(), target);
   }
 
-  // required uint64 a_totalRecv = 2;
+  // optional uint64 a_totalRecv = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(2, this->_internal_a_totalrecv(), target);
@@ -1115,36 +1043,10 @@ uint8_t* SocketDataArgs::_InternalSerialize(
   return target;
 }
 
-size_t SocketDataArgs::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.SocketDataArgs)
-  size_t total_size = 0;
-
-  if (_internal_has_a_totalsent()) {
-    // required uint64 a_totalSent = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_totalsent());
-  }
-
-  if (_internal_has_a_totalrecv()) {
-    // required uint64 a_totalRecv = 2;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_totalrecv());
-  }
-
-  return total_size;
-}
 size_t SocketDataArgs::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.SocketDataArgs)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required uint64 a_totalSent = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_totalsent());
-
-    // required uint64 a_totalRecv = 2;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_totalrecv());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1157,6 +1059,19 @@ size_t SocketDataArgs::ByteSizeLong() const {
       _impl_.a_info_.Get(i));
   }
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional uint64 a_totalSent = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_totalsent());
+    }
+
+    // optional uint64 a_totalRecv = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_totalrecv());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -1200,7 +1115,6 @@ void SocketDataArgs::CopyFrom(const SocketDataArgs& from) {
 }
 
 bool SocketDataArgs::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1238,9 +1152,6 @@ class SocketPorcessInitAttributes::_Internal {
   }
   static void set_has_a_msandboxbroker(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000000e) ^ 0x0000000e) != 0;
   }
 };
 
@@ -1336,7 +1247,7 @@ const char* SocketPorcessInitAttributes::_InternalParse(const char* ptr, ::_pbi:
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_mOffline = 1;
+      // optional bool a_mOffline = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_a_moffline(&has_bits);
@@ -1345,7 +1256,7 @@ const char* SocketPorcessInitAttributes::_InternalParse(const char* ptr, ::_pbi:
         } else
           goto handle_unusual;
         continue;
-      // required bool a_mConnectivity = 2;
+      // optional bool a_mConnectivity = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_mconnectivity(&has_bits);
@@ -1354,7 +1265,7 @@ const char* SocketPorcessInitAttributes::_InternalParse(const char* ptr, ::_pbi:
         } else
           goto handle_unusual;
         continue;
-      // required bool a_mInitSandbox = 3;
+      // optional bool a_mInitSandbox = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_minitsandbox(&has_bits);
@@ -1403,19 +1314,19 @@ uint8_t* SocketPorcessInitAttributes::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_mOffline = 1;
+  // optional bool a_mOffline = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_moffline(), target);
   }
 
-  // required bool a_mConnectivity = 2;
+  // optional bool a_mConnectivity = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_mconnectivity(), target);
   }
 
-  // required bool a_mInitSandbox = 3;
+  // optional bool a_mInitSandbox = 3;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_minitsandbox(), target);
@@ -1435,56 +1346,39 @@ uint8_t* SocketPorcessInitAttributes::_InternalSerialize(
   return target;
 }
 
-size_t SocketPorcessInitAttributes::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.SocketPorcessInitAttributes)
-  size_t total_size = 0;
-
-  if (_internal_has_a_moffline()) {
-    // required bool a_mOffline = 1;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_mconnectivity()) {
-    // required bool a_mConnectivity = 2;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_minitsandbox()) {
-    // required bool a_mInitSandbox = 3;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t SocketPorcessInitAttributes::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.SocketPorcessInitAttributes)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000000e) ^ 0x0000000e) == 0) {  // All required fields are present.
-    // required bool a_mOffline = 1;
-    total_size += 1 + 1;
-
-    // required bool a_mConnectivity = 2;
-    total_size += 1 + 1;
-
-    // required bool a_mInitSandbox = 3;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional bytes a_mSandboxBroker = 4;
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_msandboxbroker());
-  }
+  if (cached_has_bits & 0x0000000fu) {
+    // optional bytes a_mSandboxBroker = 4;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+          this->_internal_a_msandboxbroker());
+    }
 
+    // optional bool a_mOffline = 1;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool a_mConnectivity = 2;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool a_mInitSandbox = 3;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += 1 + 1;
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -1533,7 +1427,6 @@ void SocketPorcessInitAttributes::CopyFrom(const SocketPorcessInitAttributes& fr
 }
 
 bool SocketPorcessInitAttributes::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 

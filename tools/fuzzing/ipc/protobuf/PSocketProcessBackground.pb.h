@@ -232,7 +232,7 @@ class Msg_InitVerifySSLServerCert final :
   std::string* _internal_mutable_a_aendpoint();
   public:
 
-  // required string a_aHostName = 3;
+  // optional string a_aHostName = 3;
   bool has_a_ahostname() const;
   private:
   bool _internal_has_a_ahostname() const;
@@ -322,7 +322,7 @@ class Msg_InitVerifySSLServerCert final :
       ::protobuf::mozilla::psm::DelegatedCredentialInfoArg* a_adcinfo);
   ::protobuf::mozilla::psm::DelegatedCredentialInfoArg* unsafe_arena_release_a_adcinfo();
 
-  // required sint32 a_aPort = 4;
+  // optional sint32 a_aPort = 4;
   bool has_a_aport() const;
   private:
   bool _internal_has_a_aport() const;
@@ -335,7 +335,7 @@ class Msg_InitVerifySSLServerCert final :
   void _internal_set_a_aport(int32_t value);
   public:
 
-  // required uint32 a_aProviderFlags = 9;
+  // optional uint32 a_aProviderFlags = 9;
   bool has_a_aproviderflags() const;
   private:
   bool _internal_has_a_aproviderflags() const;
@@ -348,7 +348,7 @@ class Msg_InitVerifySSLServerCert final :
   void _internal_set_a_aproviderflags(uint32_t value);
   public:
 
-  // required uint32 a_aCertVerifierFlags = 10;
+  // optional uint32 a_aCertVerifierFlags = 10;
   bool has_a_acertverifierflags() const;
   private:
   bool _internal_has_a_acertverifierflags() const;
@@ -546,7 +546,7 @@ class Msg_InitSelectTLSClientAuthCert final :
   std::string* _internal_mutable_a_aendpoint();
   public:
 
-  // required string a_aHostName = 2;
+  // optional string a_aHostName = 2;
   bool has_a_ahostname() const;
   private:
   bool _internal_has_a_ahostname() const;
@@ -600,7 +600,7 @@ class Msg_InitSelectTLSClientAuthCert final :
       ::protobuf::mozilla::psm::ByteArray* a_aservercertbytes);
   ::protobuf::mozilla::psm::ByteArray* unsafe_arena_release_a_aservercertbytes();
 
-  // required sint32 a_aPort = 4;
+  // optional sint32 a_aPort = 4;
   bool has_a_aport() const;
   private:
   bool _internal_has_a_aport() const;
@@ -613,7 +613,7 @@ class Msg_InitSelectTLSClientAuthCert final :
   void _internal_set_a_aport(int32_t value);
   public:
 
-  // required uint32 a_aProviderFlags = 5;
+  // optional uint32 a_aProviderFlags = 5;
   bool has_a_aproviderflags() const;
   private:
   bool _internal_has_a_aproviderflags() const;
@@ -626,7 +626,7 @@ class Msg_InitSelectTLSClientAuthCert final :
   void _internal_set_a_aproviderflags(uint32_t value);
   public:
 
-  // required uint64 a_aBrowserId = 9;
+  // optional uint64 a_aBrowserId = 9;
   bool has_a_abrowserid() const;
   private:
   bool _internal_has_a_abrowserid() const;
@@ -639,7 +639,7 @@ class Msg_InitSelectTLSClientAuthCert final :
   void _internal_set_a_abrowserid(uint64_t value);
   public:
 
-  // required uint32 a_aProviderTlsFlags = 6;
+  // optional uint32 a_aProviderTlsFlags = 6;
   bool has_a_aprovidertlsflags() const;
   private:
   bool _internal_has_a_aprovidertlsflags() const;
@@ -958,7 +958,7 @@ class Msg_InitWebSocketConnection final :
   std::string* _internal_mutable_a_aendpoint();
   public:
 
-  // required uint32 a_aListenerId = 2;
+  // optional uint32 a_aListenerId = 2;
   bool has_a_alistenerid() const;
   private:
   bool _internal_has_a_alistenerid() const;
@@ -974,9 +974,6 @@ class Msg_InitWebSocketConnection final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcessBackground.Msg_InitWebSocketConnection)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1106,7 +1103,7 @@ Msg_InitVerifySSLServerCert::a_apeercertchain() const {
   return _impl_.a_apeercertchain_;
 }
 
-// required string a_aHostName = 3;
+// optional string a_aHostName = 3;
 inline bool Msg_InitVerifySSLServerCert::_internal_has_a_ahostname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1174,7 +1171,7 @@ inline void Msg_InitVerifySSLServerCert::set_allocated_a_ahostname(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcessBackground.Msg_InitVerifySSLServerCert.a_aHostName)
 }
 
-// required sint32 a_aPort = 4;
+// optional sint32 a_aPort = 4;
 inline bool Msg_InitVerifySSLServerCert::_internal_has_a_aport() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -1531,7 +1528,7 @@ inline void Msg_InitVerifySSLServerCert::set_allocated_a_adcinfo(::protobuf::moz
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcessBackground.Msg_InitVerifySSLServerCert.a_aDcInfo)
 }
 
-// required uint32 a_aProviderFlags = 9;
+// optional uint32 a_aProviderFlags = 9;
 inline bool Msg_InitVerifySSLServerCert::_internal_has_a_aproviderflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -1559,7 +1556,7 @@ inline void Msg_InitVerifySSLServerCert::set_a_aproviderflags(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcessBackground.Msg_InitVerifySSLServerCert.a_aProviderFlags)
 }
 
-// required uint32 a_aCertVerifierFlags = 10;
+// optional uint32 a_aCertVerifierFlags = 10;
 inline bool Msg_InitVerifySSLServerCert::_internal_has_a_acertverifierflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -1659,7 +1656,7 @@ inline void Msg_InitSelectTLSClientAuthCert::set_allocated_a_aendpoint(std::stri
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcessBackground.Msg_InitSelectTLSClientAuthCert.a_aEndpoint)
 }
 
-// required string a_aHostName = 2;
+// optional string a_aHostName = 2;
 inline bool Msg_InitSelectTLSClientAuthCert::_internal_has_a_ahostname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1795,7 +1792,7 @@ inline void Msg_InitSelectTLSClientAuthCert::set_allocated_a_aoriginattributes(s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcessBackground.Msg_InitSelectTLSClientAuthCert.a_aOriginAttributes)
 }
 
-// required sint32 a_aPort = 4;
+// optional sint32 a_aPort = 4;
 inline bool Msg_InitSelectTLSClientAuthCert::_internal_has_a_aport() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -1823,7 +1820,7 @@ inline void Msg_InitSelectTLSClientAuthCert::set_a_aport(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcessBackground.Msg_InitSelectTLSClientAuthCert.a_aPort)
 }
 
-// required uint32 a_aProviderFlags = 5;
+// optional uint32 a_aProviderFlags = 5;
 inline bool Msg_InitSelectTLSClientAuthCert::_internal_has_a_aproviderflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -1851,7 +1848,7 @@ inline void Msg_InitSelectTLSClientAuthCert::set_a_aproviderflags(uint32_t value
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcessBackground.Msg_InitSelectTLSClientAuthCert.a_aProviderFlags)
 }
 
-// required uint32 a_aProviderTlsFlags = 6;
+// optional uint32 a_aProviderTlsFlags = 6;
 inline bool Msg_InitSelectTLSClientAuthCert::_internal_has_a_aprovidertlsflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -2003,7 +2000,7 @@ Msg_InitSelectTLSClientAuthCert::a_acanames() const {
   return _impl_.a_acanames_;
 }
 
-// required uint64 a_aBrowserId = 9;
+// optional uint64 a_aBrowserId = 9;
 inline bool Msg_InitSelectTLSClientAuthCert::_internal_has_a_abrowserid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -2175,7 +2172,7 @@ inline void Msg_InitWebSocketConnection::set_allocated_a_aendpoint(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcessBackground.Msg_InitWebSocketConnection.a_aEndpoint)
 }
 
-// required uint32 a_aListenerId = 2;
+// optional uint32 a_aListenerId = 2;
 inline bool Msg_InitWebSocketConnection::_internal_has_a_alistenerid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

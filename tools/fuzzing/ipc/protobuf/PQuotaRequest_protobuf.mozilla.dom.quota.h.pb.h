@@ -194,7 +194,7 @@ class StorageNameResponse final :
   enum : int {
     kANameFieldNumber = 1,
   };
-  // required string a_name = 1;
+  // optional string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -488,7 +488,7 @@ class PersistedResponse final :
   enum : int {
     kAPersistedFieldNumber = 1,
   };
-  // required bool a_persisted = 1;
+  // optional bool a_persisted = 1;
   bool has_a_persisted() const;
   private:
   bool _internal_has_a_persisted() const;
@@ -755,7 +755,7 @@ class EstimateResponse final :
     kAUsageFieldNumber = 1,
     kALimitFieldNumber = 2,
   };
-  // required uint64 a_usage = 1;
+  // optional uint64 a_usage = 1;
   bool has_a_usage() const;
   private:
   bool _internal_has_a_usage() const;
@@ -768,7 +768,7 @@ class EstimateResponse final :
   void _internal_set_a_usage(uint64_t value);
   public:
 
-  // required uint64 a_limit = 2;
+  // optional uint64 a_limit = 2;
   bool has_a_limit() const;
   private:
   bool _internal_has_a_limit() const;
@@ -784,9 +784,6 @@ class EstimateResponse final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.quota.EstimateResponse)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1084,7 +1081,7 @@ class RequestResponse final :
 #endif  // __GNUC__
 // StorageNameResponse
 
-// required string a_name = 1;
+// optional string a_name = 1;
 inline bool StorageNameResponse::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1228,7 +1225,7 @@ inline void GetFullOriginMetadataResponse::set_allocated_a_maybefulloriginmetada
 
 // PersistedResponse
 
-// required bool a_persisted = 1;
+// optional bool a_persisted = 1;
 inline bool PersistedResponse::_internal_has_a_persisted() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1264,7 +1261,7 @@ inline void PersistedResponse::set_a_persisted(bool value) {
 
 // EstimateResponse
 
-// required uint64 a_usage = 1;
+// optional uint64 a_usage = 1;
 inline bool EstimateResponse::_internal_has_a_usage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1292,7 +1289,7 @@ inline void EstimateResponse::set_a_usage(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.EstimateResponse.a_usage)
 }
 
-// required uint64 a_limit = 2;
+// optional uint64 a_limit = 2;
 inline bool EstimateResponse::_internal_has_a_limit() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

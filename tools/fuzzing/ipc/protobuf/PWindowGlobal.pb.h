@@ -662,7 +662,7 @@ class Msg_MakeFrameLocal final :
   std::string* _internal_mutable_a_aframecontext();
   public:
 
-  // required uint64 a_aSwitchId = 2;
+  // optional uint64 a_aSwitchId = 2;
   bool has_a_aswitchid() const;
   private:
   bool _internal_has_a_aswitchid() const;
@@ -678,9 +678,6 @@ class Msg_MakeFrameLocal final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWindowGlobal.Msg_MakeFrameLocal)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1018,7 +1015,7 @@ class Reply_MakeFrameRemote final :
   enum : int {
     kASuccessFieldNumber = 1,
   };
-  // required bool a_success = 1;
+  // optional bool a_success = 1;
   bool has_a_success() const;
   private:
   bool _internal_has_a_success() const;
@@ -1199,7 +1196,7 @@ class Msg_DrawSnapshot final :
   std::string* _internal_mutable_a_abackgroundcolor();
   public:
 
-  // required float a_aScale = 2;
+  // optional float a_aScale = 2;
   bool has_a_ascale() const;
   private:
   bool _internal_has_a_ascale() const;
@@ -1212,7 +1209,7 @@ class Msg_DrawSnapshot final :
   void _internal_set_a_ascale(float value);
   public:
 
-  // required uint32 a_aFlags = 4;
+  // optional uint32 a_aFlags = 4;
   bool has_a_aflags() const;
   private:
   bool _internal_has_a_aflags() const;
@@ -1228,9 +1225,6 @@ class Msg_DrawSnapshot final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWindowGlobal.Msg_DrawSnapshot)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1507,7 +1501,7 @@ class Msg_DispatchSecurityPolicyViolation final :
   enum : int {
     kAAViolationEventJSONFieldNumber = 1,
   };
-  // required string a_aViolationEventJSON = 1;
+  // optional string a_aViolationEventJSON = 1;
   bool has_a_aviolationeventjson() const;
   private:
   bool _internal_has_a_aviolationeventjson() const;
@@ -2196,7 +2190,7 @@ class Reply_RestoreDocShellState final :
   enum : int {
     kASuccessFieldNumber = 1,
   };
-  // required bool a_success = 1;
+  // optional bool a_success = 1;
   bool has_a_success() const;
   private:
   bool _internal_has_a_success() const;
@@ -2485,7 +2479,7 @@ class Reply_RestoreTabContent final :
   enum : int {
     kASuccessFieldNumber = 1,
   };
-  // required bool a_success = 1;
+  // optional bool a_success = 1;
   bool has_a_success() const;
   private:
   bool _internal_has_a_success() const;
@@ -2852,7 +2846,7 @@ class Msg_LoadURI final :
   std::string* _internal_mutable_a_aloadstate();
   public:
 
-  // required bool a_aSetNavigating = 3;
+  // optional bool a_aSetNavigating = 3;
   bool has_a_asetnavigating() const;
   private:
   bool _internal_has_a_asetnavigating() const;
@@ -3460,7 +3454,7 @@ class Msg_UpdateDocumentHasLoaded final :
   enum : int {
     kAADocumentHasLoadedFieldNumber = 1,
   };
-  // required bool a_aDocumentHasLoaded = 1;
+  // optional bool a_aDocumentHasLoaded = 1;
   bool has_a_adocumenthasloaded() const;
   private:
   bool _internal_has_a_adocumenthasloaded() const;
@@ -3602,7 +3596,7 @@ class Msg_UpdateDocumentHasUserInteracted final :
   enum : int {
     kAADocumentHasUserInteractedFieldNumber = 1,
   };
-  // required bool a_aDocumentHasUserInteracted = 1;
+  // optional bool a_aDocumentHasUserInteracted = 1;
   bool has_a_adocumenthasuserinteracted() const;
   private:
   bool _internal_has_a_adocumenthasuserinteracted() const;
@@ -3744,7 +3738,7 @@ class Msg_UpdateSandboxFlags final :
   enum : int {
     kAASandboxFlagsFieldNumber = 1,
   };
-  // required uint32 a_aSandboxFlags = 1;
+  // optional uint32 a_aSandboxFlags = 1;
   bool has_a_asandboxflags() const;
   private:
   bool _internal_has_a_asandboxflags() const;
@@ -3887,7 +3881,7 @@ class Msg_UpdateDocumentCspSettings final :
     kAABlockAllMixedContentFieldNumber = 1,
     kAAUpgradeInsecureRequestsFieldNumber = 2,
   };
-  // required bool a_aBlockAllMixedContent = 1;
+  // optional bool a_aBlockAllMixedContent = 1;
   bool has_a_ablockallmixedcontent() const;
   private:
   bool _internal_has_a_ablockallmixedcontent() const;
@@ -3900,7 +3894,7 @@ class Msg_UpdateDocumentCspSettings final :
   void _internal_set_a_ablockallmixedcontent(bool value);
   public:
 
-  // required bool a_aUpgradeInsecureRequests = 2;
+  // optional bool a_aUpgradeInsecureRequests = 2;
   bool has_a_aupgradeinsecurerequests() const;
   private:
   bool _internal_has_a_aupgradeinsecurerequests() const;
@@ -3916,9 +3910,6 @@ class Msg_UpdateDocumentCspSettings final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWindowGlobal.Msg_UpdateDocumentCspSettings)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4193,7 +4184,7 @@ class Msg_UpdateDocumentTitle final :
   enum : int {
     kAATitleFieldNumber = 1,
   };
-  // required string a_aTitle = 1;
+  // optional string a_aTitle = 1;
   bool has_a_atitle() const;
   private:
   bool _internal_has_a_atitle() const;
@@ -4487,7 +4478,7 @@ class Msg_UpdateHttpsOnlyStatus final :
   enum : int {
     kAAHttpsOnlyStatusFieldNumber = 1,
   };
-  // required uint32 a_aHttpsOnlyStatus = 1;
+  // optional uint32 a_aHttpsOnlyStatus = 1;
   bool has_a_ahttpsonlystatus() const;
   private:
   bool _internal_has_a_ahttpsonlystatus() const;
@@ -4629,7 +4620,7 @@ class Msg_SetIsInitialDocument final :
   enum : int {
     kAAIsInitialDocumentFieldNumber = 1,
   };
-  // required bool a_aIsInitialDocument = 1;
+  // optional bool a_aIsInitialDocument = 1;
   bool has_a_aisinitialdocument() const;
   private:
   bool _internal_has_a_aisinitialdocument() const;
@@ -5189,7 +5180,7 @@ class Reply_GetContentBlockingEvents final :
   enum : int {
     kAEventsFieldNumber = 1,
   };
-  // required uint32 a_events = 1;
+  // optional uint32 a_events = 1;
   bool has_a_events() const;
   private:
   bool _internal_has_a_events() const;
@@ -5497,7 +5488,7 @@ class Msg_CheckPermitUnload final :
   std::string* _internal_mutable_a_aaction();
   public:
 
-  // required bool a_aHasInProcessBlocker = 1;
+  // optional bool a_aHasInProcessBlocker = 1;
   bool has_a_ahasinprocessblocker() const;
   private:
   bool _internal_has_a_ahasinprocessblocker() const;
@@ -5513,9 +5504,6 @@ class Msg_CheckPermitUnload final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWindowGlobal.Msg_CheckPermitUnload)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5643,7 +5631,7 @@ class Reply_CheckPermitUnload final :
   enum : int {
     kAPermitUnloadFieldNumber = 1,
   };
-  // required bool a_permitUnload = 1;
+  // optional bool a_permitUnload = 1;
   bool has_a_permitunload() const;
   private:
   bool _internal_has_a_permitunload() const;
@@ -6204,7 +6192,7 @@ class Msg_UpdateBFCacheStatus final :
     kAAOnFlagsFieldNumber = 1,
     kAAOffFlagsFieldNumber = 2,
   };
-  // required uint32 a_aOnFlags = 1;
+  // optional uint32 a_aOnFlags = 1;
   bool has_a_aonflags() const;
   private:
   bool _internal_has_a_aonflags() const;
@@ -6217,7 +6205,7 @@ class Msg_UpdateBFCacheStatus final :
   void _internal_set_a_aonflags(uint32_t value);
   public:
 
-  // required uint32 a_aOffFlags = 2;
+  // optional uint32 a_aOffFlags = 2;
   bool has_a_aoffflags() const;
   private:
   bool _internal_has_a_aoffflags() const;
@@ -6233,9 +6221,6 @@ class Msg_UpdateBFCacheStatus final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWindowGlobal.Msg_UpdateBFCacheStatus)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -6363,7 +6348,7 @@ class Msg_UpdateActivePeerConnectionStatus final :
   enum : int {
     kAAIsAddedFieldNumber = 1,
   };
-  // required bool a_aIsAdded = 1;
+  // optional bool a_aIsAdded = 1;
   bool has_a_aisadded() const;
   private:
   bool _internal_has_a_aisadded() const;
@@ -7042,7 +7027,7 @@ class Msg_GetStorageAccessPermission final :
   enum : int {
     kAAIncludeIdentityCredentialFieldNumber = 1,
   };
-  // required bool a_aIncludeIdentityCredential = 1;
+  // optional bool a_aIncludeIdentityCredential = 1;
   bool has_a_aincludeidentitycredential() const;
   private:
   bool _internal_has_a_aincludeidentitycredential() const;
@@ -7184,7 +7169,7 @@ class Reply_GetStorageAccessPermission final :
   enum : int {
     kAPermissionActionFieldNumber = 1,
   };
-  // required uint32 a_permission_action = 1;
+  // optional uint32 a_permission_action = 1;
   bool has_a_permission_action() const;
   private:
   bool _internal_has_a_permission_action() const;
@@ -7349,7 +7334,7 @@ class Msg_SetCookies final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::CookieStruct >&
       a_cookies() const;
 
-  // required string a_baseDomain = 1;
+  // optional string a_baseDomain = 1;
   bool has_a_basedomain() const;
   private:
   bool _internal_has_a_basedomain() const;
@@ -7403,7 +7388,7 @@ class Msg_SetCookies final :
   std::string* _internal_mutable_a_host();
   public:
 
-  // required bool a_fromHttp = 4;
+  // optional bool a_fromHttp = 4;
   bool has_a_fromhttp() const;
   private:
   bool _internal_has_a_fromhttp() const;
@@ -7416,7 +7401,7 @@ class Msg_SetCookies final :
   void _internal_set_a_fromhttp(bool value);
   public:
 
-  // required bool a_isThirdParty = 5;
+  // optional bool a_isThirdParty = 5;
   bool has_a_isthirdparty() const;
   private:
   bool _internal_has_a_isthirdparty() const;
@@ -7432,9 +7417,6 @@ class Msg_SetCookies final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWindowGlobal.Msg_SetCookies)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -7814,7 +7796,7 @@ class Msg_PWebAuthnTransactionConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -8080,7 +8062,7 @@ class Msg_PWebIdentityConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -8347,7 +8329,7 @@ class Msg_NotifyPermissionChange final :
     kATypeFieldNumber = 1,
     kAPermissionFieldNumber = 2,
   };
-  // required string a_type = 1;
+  // optional string a_type = 1;
   bool has_a_type() const;
   private:
   bool _internal_has_a_type() const;
@@ -8365,7 +8347,7 @@ class Msg_NotifyPermissionChange final :
   std::string* _internal_mutable_a_type();
   public:
 
-  // required uint32 a_permission = 2;
+  // optional uint32 a_permission = 2;
   bool has_a_permission() const;
   private:
   bool _internal_has_a_permission() const;
@@ -8381,9 +8363,6 @@ class Msg_NotifyPermissionChange final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWindowGlobal.Msg_NotifyPermissionChange)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -8484,7 +8463,7 @@ inline void Msg_MakeFrameLocal::set_allocated_a_aframecontext(std::string* a_afr
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWindowGlobal.Msg_MakeFrameLocal.a_aFrameContext)
 }
 
-// required uint64 a_aSwitchId = 2;
+// optional uint64 a_aSwitchId = 2;
 inline bool Msg_MakeFrameLocal::_internal_has_a_aswitchid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8792,7 +8771,7 @@ inline void Msg_MakeFrameRemote::set_allocated_a_alayersid(std::string* a_alayer
 
 // Reply_MakeFrameRemote
 
-// required bool a_success = 1;
+// optional bool a_success = 1;
 inline bool Reply_MakeFrameRemote::_internal_has_a_success() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8892,7 +8871,7 @@ inline void Msg_DrawSnapshot::set_allocated_a_arect(std::string* a_arect) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWindowGlobal.Msg_DrawSnapshot.a_aRect)
 }
 
-// required float a_aScale = 2;
+// optional float a_aScale = 2;
 inline bool Msg_DrawSnapshot::_internal_has_a_ascale() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -8988,7 +8967,7 @@ inline void Msg_DrawSnapshot::set_allocated_a_abackgroundcolor(std::string* a_ab
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWindowGlobal.Msg_DrawSnapshot.a_aBackgroundColor)
 }
 
-// required uint32 a_aFlags = 4;
+// optional uint32 a_aFlags = 4;
 inline bool Msg_DrawSnapshot::_internal_has_a_aflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -9092,7 +9071,7 @@ inline void Reply_DrawSnapshot::set_allocated_a_retval(std::string* a_retval) {
 
 // Msg_DispatchSecurityPolicyViolation
 
-// required string a_aViolationEventJSON = 1;
+// optional string a_aViolationEventJSON = 1;
 inline bool Msg_DispatchSecurityPolicyViolation::_internal_has_a_aviolationeventjson() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9335,7 +9314,7 @@ inline void Msg_RestoreDocShellState::set_allocated_a_astate(::protobuf::mozilla
 
 // Reply_RestoreDocShellState
 
-// required bool a_success = 1;
+// optional bool a_success = 1;
 inline bool Reply_RestoreDocShellState::_internal_has_a_success() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9439,7 +9418,7 @@ inline void Msg_RestoreTabContent::set_allocated_a_adata(std::string* a_adata) {
 
 // Reply_RestoreTabContent
 
-// required bool a_success = 1;
+// optional bool a_success = 1;
 inline bool Reply_RestoreTabContent::_internal_has_a_success() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9872,7 +9851,7 @@ inline void Msg_LoadURI::set_allocated_a_aloadstate(std::string* a_aloadstate) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWindowGlobal.Msg_LoadURI.a_aLoadState)
 }
 
-// required bool a_aSetNavigating = 3;
+// optional bool a_aSetNavigating = 3;
 inline bool Msg_LoadURI::_internal_has_a_asetnavigating() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -10188,7 +10167,7 @@ inline void Msg_UpdateDocumentPrincipal::set_allocated_a_astorageprincipal(std::
 
 // Msg_UpdateDocumentHasLoaded
 
-// required bool a_aDocumentHasLoaded = 1;
+// optional bool a_aDocumentHasLoaded = 1;
 inline bool Msg_UpdateDocumentHasLoaded::_internal_has_a_adocumenthasloaded() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10220,7 +10199,7 @@ inline void Msg_UpdateDocumentHasLoaded::set_a_adocumenthasloaded(bool value) {
 
 // Msg_UpdateDocumentHasUserInteracted
 
-// required bool a_aDocumentHasUserInteracted = 1;
+// optional bool a_aDocumentHasUserInteracted = 1;
 inline bool Msg_UpdateDocumentHasUserInteracted::_internal_has_a_adocumenthasuserinteracted() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10252,7 +10231,7 @@ inline void Msg_UpdateDocumentHasUserInteracted::set_a_adocumenthasuserinteracte
 
 // Msg_UpdateSandboxFlags
 
-// required uint32 a_aSandboxFlags = 1;
+// optional uint32 a_aSandboxFlags = 1;
 inline bool Msg_UpdateSandboxFlags::_internal_has_a_asandboxflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10284,7 +10263,7 @@ inline void Msg_UpdateSandboxFlags::set_a_asandboxflags(uint32_t value) {
 
 // Msg_UpdateDocumentCspSettings
 
-// required bool a_aBlockAllMixedContent = 1;
+// optional bool a_aBlockAllMixedContent = 1;
 inline bool Msg_UpdateDocumentCspSettings::_internal_has_a_ablockallmixedcontent() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10312,7 +10291,7 @@ inline void Msg_UpdateDocumentCspSettings::set_a_ablockallmixedcontent(bool valu
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWindowGlobal.Msg_UpdateDocumentCspSettings.a_aBlockAllMixedContent)
 }
 
-// required bool a_aUpgradeInsecureRequests = 2;
+// optional bool a_aUpgradeInsecureRequests = 2;
 inline bool Msg_UpdateDocumentCspSettings::_internal_has_a_aupgradeinsecurerequests() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -10435,7 +10414,7 @@ inline void Msg_UpdateCookieJarSettings::set_allocated_a_cookiejarsettings(::pro
 
 // Msg_UpdateDocumentTitle
 
-// required string a_aTitle = 1;
+// optional string a_aTitle = 1;
 inline bool Msg_UpdateDocumentTitle::_internal_has_a_atitle() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10579,7 +10558,7 @@ inline void Msg_UpdateDocumentSecurityInfo::set_allocated_a_asecurityinfo(std::s
 
 // Msg_UpdateHttpsOnlyStatus
 
-// required uint32 a_aHttpsOnlyStatus = 1;
+// optional uint32 a_aHttpsOnlyStatus = 1;
 inline bool Msg_UpdateHttpsOnlyStatus::_internal_has_a_ahttpsonlystatus() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10611,7 +10590,7 @@ inline void Msg_UpdateHttpsOnlyStatus::set_a_ahttpsonlystatus(uint32_t value) {
 
 // Msg_SetIsInitialDocument
 
-// required bool a_aIsInitialDocument = 1;
+// optional bool a_aIsInitialDocument = 1;
 inline bool Msg_SetIsInitialDocument::_internal_has_a_aisinitialdocument() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10810,7 +10789,7 @@ inline void Reply_Share::set_allocated_a_rv(std::string* a_rv) {
 
 // Reply_GetContentBlockingEvents
 
-// required uint32 a_events = 1;
+// optional uint32 a_events = 1;
 inline bool Reply_GetContentBlockingEvents::_internal_has_a_events() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10933,7 +10912,7 @@ inline void Msg_SetClientInfo::set_allocated_a_aclientinfo(::protobuf::mozilla::
 
 // Msg_CheckPermitUnload
 
-// required bool a_aHasInProcessBlocker = 1;
+// optional bool a_aHasInProcessBlocker = 1;
 inline bool Msg_CheckPermitUnload::_internal_has_a_ahasinprocessblocker() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11033,7 +11012,7 @@ inline void Msg_CheckPermitUnload::set_allocated_a_aaction(std::string* a_aactio
 
 // Reply_CheckPermitUnload
 
-// required bool a_permitUnload = 1;
+// optional bool a_permitUnload = 1;
 inline bool Reply_CheckPermitUnload::_internal_has_a_permitunload() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11213,7 +11192,7 @@ inline void Msg_AccumulatePageUseCounters::set_allocated_a_ausecounters(std::str
 
 // Msg_UpdateBFCacheStatus
 
-// required uint32 a_aOnFlags = 1;
+// optional uint32 a_aOnFlags = 1;
 inline bool Msg_UpdateBFCacheStatus::_internal_has_a_aonflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11241,7 +11220,7 @@ inline void Msg_UpdateBFCacheStatus::set_a_aonflags(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWindowGlobal.Msg_UpdateBFCacheStatus.a_aOnFlags)
 }
 
-// required uint32 a_aOffFlags = 2;
+// optional uint32 a_aOffFlags = 2;
 inline bool Msg_UpdateBFCacheStatus::_internal_has_a_aoffflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11273,7 +11252,7 @@ inline void Msg_UpdateBFCacheStatus::set_a_aoffflags(uint32_t value) {
 
 // Msg_UpdateActivePeerConnectionStatus
 
-// required bool a_aIsAdded = 1;
+// optional bool a_aIsAdded = 1;
 inline bool Msg_UpdateActivePeerConnectionStatus::_internal_has_a_aisadded() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11417,7 +11396,7 @@ inline void Msg_SetDocumentDomain::set_allocated_a_adomain(std::string* a_adomai
 
 // Msg_GetStorageAccessPermission
 
-// required bool a_aIncludeIdentityCredential = 1;
+// optional bool a_aIncludeIdentityCredential = 1;
 inline bool Msg_GetStorageAccessPermission::_internal_has_a_aincludeidentitycredential() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11449,7 +11428,7 @@ inline void Msg_GetStorageAccessPermission::set_a_aincludeidentitycredential(boo
 
 // Reply_GetStorageAccessPermission
 
-// required uint32 a_permission_action = 1;
+// optional uint32 a_permission_action = 1;
 inline bool Reply_GetStorageAccessPermission::_internal_has_a_permission_action() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11481,7 +11460,7 @@ inline void Reply_GetStorageAccessPermission::set_a_permission_action(uint32_t v
 
 // Msg_SetCookies
 
-// required string a_baseDomain = 1;
+// optional string a_baseDomain = 1;
 inline bool Msg_SetCookies::_internal_has_a_basedomain() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11685,7 +11664,7 @@ inline void Msg_SetCookies::set_allocated_a_host(std::string* a_host) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWindowGlobal.Msg_SetCookies.a_host)
 }
 
-// required bool a_fromHttp = 4;
+// optional bool a_fromHttp = 4;
 inline bool Msg_SetCookies::_internal_has_a_fromhttp() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -11713,7 +11692,7 @@ inline void Msg_SetCookies::set_a_fromhttp(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWindowGlobal.Msg_SetCookies.a_fromHttp)
 }
 
-// required bool a_isThirdParty = 5;
+// optional bool a_isThirdParty = 5;
 inline bool Msg_SetCookies::_internal_has_a_isthirdparty() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -11790,7 +11769,7 @@ Msg_SetCookies::a_cookies() const {
 
 // Msg_PWebAuthnTransactionConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PWebAuthnTransactionConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11826,7 +11805,7 @@ inline void Msg_PWebAuthnTransactionConstructor::set_a_actorid(int64_t value) {
 
 // Msg_PWebIdentityConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PWebIdentityConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11862,7 +11841,7 @@ inline void Msg_PWebIdentityConstructor::set_a_actorid(int64_t value) {
 
 // Msg_NotifyPermissionChange
 
-// required string a_type = 1;
+// optional string a_type = 1;
 inline bool Msg_NotifyPermissionChange::_internal_has_a_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11930,7 +11909,7 @@ inline void Msg_NotifyPermissionChange::set_allocated_a_type(std::string* a_type
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWindowGlobal.Msg_NotifyPermissionChange.a_type)
 }
 
-// required uint32 a_permission = 2;
+// optional uint32 a_permission = 2;
 inline bool Msg_NotifyPermissionChange::_internal_has_a_permission() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

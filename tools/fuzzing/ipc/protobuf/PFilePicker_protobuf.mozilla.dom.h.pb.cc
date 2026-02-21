@@ -269,9 +269,6 @@ class InputDirectory::_Internal {
   static void set_has_a_directorypath(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 void InputDirectory::clear_a_blobsinwebkitdirectory() {
@@ -361,7 +358,7 @@ const char* InputDirectory::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_directoryPath = 1;
+      // optional string a_directoryPath = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_directorypath();
@@ -414,7 +411,7 @@ uint8_t* InputDirectory::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_directoryPath = 1;
+  // optional string a_directoryPath = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_directorypath(), target);
@@ -440,12 +437,6 @@ size_t InputDirectory::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.InputDirectory)
   size_t total_size = 0;
 
-  // required string a_directoryPath = 1;
-  if (_internal_has_a_directorypath()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_directorypath());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -455,6 +446,14 @@ size_t InputDirectory::ByteSizeLong() const {
   for (const auto& msg : this->_impl_.a_blobsinwebkitdirectory_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  // optional string a_directoryPath = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_directorypath());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -493,7 +492,6 @@ void InputDirectory::CopyFrom(const InputDirectory& from) {
 }
 
 bool InputDirectory::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_blobsinwebkitdirectory_))
     return false;
   return true;

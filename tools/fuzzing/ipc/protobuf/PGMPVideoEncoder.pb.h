@@ -266,7 +266,7 @@ class Msg_InitEncode final :
   std::string* _internal_mutable_a_acodecsettings();
   public:
 
-  // required sint32 a_aNumberOfCores = 3;
+  // optional sint32 a_aNumberOfCores = 3;
   bool has_a_anumberofcores() const;
   private:
   bool _internal_has_a_anumberofcores() const;
@@ -279,7 +279,7 @@ class Msg_InitEncode final :
   void _internal_set_a_anumberofcores(int32_t value);
   public:
 
-  // required uint32 a_aMaxPayloadSize = 4;
+  // optional uint32 a_aMaxPayloadSize = 4;
   bool has_a_amaxpayloadsize() const;
   private:
   bool _internal_has_a_amaxpayloadsize() const;
@@ -295,9 +295,6 @@ class Msg_InitEncode final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -795,7 +792,7 @@ class Msg_SetChannelParameters final :
     kAAPacketLossFieldNumber = 1,
     kAARTTFieldNumber = 2,
   };
-  // required uint32 a_aPacketLoss = 1;
+  // optional uint32 a_aPacketLoss = 1;
   bool has_a_apacketloss() const;
   private:
   bool _internal_has_a_apacketloss() const;
@@ -808,7 +805,7 @@ class Msg_SetChannelParameters final :
   void _internal_set_a_apacketloss(uint32_t value);
   public:
 
-  // required uint32 a_aRTT = 2;
+  // optional uint32 a_aRTT = 2;
   bool has_a_artt() const;
   private:
   bool _internal_has_a_artt() const;
@@ -824,9 +821,6 @@ class Msg_SetChannelParameters final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetChannelParameters)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -955,7 +949,7 @@ class Msg_SetRates final :
     kAANewBitRateFieldNumber = 1,
     kAAFrameRateFieldNumber = 2,
   };
-  // required uint32 a_aNewBitRate = 1;
+  // optional uint32 a_aNewBitRate = 1;
   bool has_a_anewbitrate() const;
   private:
   bool _internal_has_a_anewbitrate() const;
@@ -968,7 +962,7 @@ class Msg_SetRates final :
   void _internal_set_a_anewbitrate(uint32_t value);
   public:
 
-  // required uint32 a_aFrameRate = 2;
+  // optional uint32 a_aFrameRate = 2;
   bool has_a_aframerate() const;
   private:
   bool _internal_has_a_aframerate() const;
@@ -984,9 +978,6 @@ class Msg_SetRates final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetRates)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1114,7 +1105,7 @@ class Msg_SetPeriodicKeyFrames final :
   enum : int {
     kAAEnableFieldNumber = 1,
   };
-  // required bool a_aEnable = 1;
+  // optional bool a_aEnable = 1;
   bool has_a_aenable() const;
   private:
   bool _internal_has_a_aenable() const;
@@ -2323,7 +2314,7 @@ Msg_InitEncode::mutable_a_acodecspecific() {
   return _internal_mutable_a_acodecspecific();
 }
 
-// required sint32 a_aNumberOfCores = 3;
+// optional sint32 a_aNumberOfCores = 3;
 inline bool Msg_InitEncode::_internal_has_a_anumberofcores() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2351,7 +2342,7 @@ inline void Msg_InitEncode::set_a_anumberofcores(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.a_aNumberOfCores)
 }
 
-// required uint32 a_aMaxPayloadSize = 4;
+// optional uint32 a_aMaxPayloadSize = 4;
 inline bool Msg_InitEncode::_internal_has_a_amaxpayloadsize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2736,7 +2727,7 @@ Msg_Encode::mutable_a_aframetypes() {
 
 // Msg_SetChannelParameters
 
-// required uint32 a_aPacketLoss = 1;
+// optional uint32 a_aPacketLoss = 1;
 inline bool Msg_SetChannelParameters::_internal_has_a_apacketloss() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2764,7 +2755,7 @@ inline void Msg_SetChannelParameters::set_a_apacketloss(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetChannelParameters.a_aPacketLoss)
 }
 
-// required uint32 a_aRTT = 2;
+// optional uint32 a_aRTT = 2;
 inline bool Msg_SetChannelParameters::_internal_has_a_artt() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2796,7 +2787,7 @@ inline void Msg_SetChannelParameters::set_a_artt(uint32_t value) {
 
 // Msg_SetRates
 
-// required uint32 a_aNewBitRate = 1;
+// optional uint32 a_aNewBitRate = 1;
 inline bool Msg_SetRates::_internal_has_a_anewbitrate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2824,7 +2815,7 @@ inline void Msg_SetRates::set_a_anewbitrate(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetRates.a_aNewBitRate)
 }
 
-// required uint32 a_aFrameRate = 2;
+// optional uint32 a_aFrameRate = 2;
 inline bool Msg_SetRates::_internal_has_a_aframerate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2856,7 +2847,7 @@ inline void Msg_SetRates::set_a_aframerate(uint32_t value) {
 
 // Msg_SetPeriodicKeyFrames
 
-// required bool a_aEnable = 1;
+// optional bool a_aEnable = 1;
 inline bool Msg_SetPeriodicKeyFrames::_internal_has_a_aenable() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

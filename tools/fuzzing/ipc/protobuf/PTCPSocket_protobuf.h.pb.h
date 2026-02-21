@@ -179,7 +179,7 @@ class TCPError final :
     kAMessageFieldNumber = 2,
     kAErrorCodeFieldNumber = 3,
   };
-  // required string a_name = 1;
+  // optional string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -197,7 +197,7 @@ class TCPError final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required string a_message = 2;
+  // optional string a_message = 2;
   bool has_a_message() const;
   private:
   bool _internal_has_a_message() const;
@@ -236,9 +236,6 @@ class TCPError final :
   // @@protoc_insertion_point(class_scope:protobuf.TCPError)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -808,7 +805,7 @@ class CallbackData final :
 #endif  // __GNUC__
 // TCPError
 
-// required string a_name = 1;
+// optional string a_name = 1;
 inline bool TCPError::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -876,7 +873,7 @@ inline void TCPError::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.TCPError.a_name)
 }
 
-// required string a_message = 2;
+// optional string a_message = 2;
 inline bool TCPError::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

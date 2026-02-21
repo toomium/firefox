@@ -28,7 +28,7 @@ message Msg_Close {
 }
 
 message Msg_PBackgroundIDBDatabaseFileConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
   required protobuf.mozilla.dom.IPCBlob a_blob = 2;
 }
 
@@ -36,7 +36,7 @@ message Reply_PBackgroundIDBDatabaseFileConstructor {
 }
 
 message Msg_PBackgroundIDBTransactionConstructor {
-  required sint64 a_actorid = 1;
+  optional sint64 a_actorid = 1;
   repeated string a_objectStoreNames = 2;
   required bytes a_mode = 3;
   required bytes a_durability = 4;
@@ -52,7 +52,7 @@ message Reply___delete__ {
 }
 
 message Msg_VersionChange {
-  required uint64 a_oldVersion = 1;
+  optional uint64 a_oldVersion = 1;
   optional uint64 a_newVersion = 2;
 }
 
@@ -63,11 +63,11 @@ message Msg_CloseAfterInvalidationComplete {
 }
 
 message Msg_PBackgroundIDBVersionChangeTransactionConstructor {
-  required sint64 a_actorid = 1;
-  required uint64 a_currentVersion = 2;
-  required uint64 a_requestedVersion = 3;
-  required sint64 a_nextObjectStoreId = 4;
-  required sint64 a_nextIndexId = 5;
+  optional sint64 a_actorid = 1;
+  optional uint64 a_currentVersion = 2;
+  optional uint64 a_requestedVersion = 3;
+  optional sint64 a_nextObjectStoreId = 4;
+  optional sint64 a_nextIndexId = 5;
 }
 
 message Reply_PBackgroundIDBVersionChangeTransactionConstructor {

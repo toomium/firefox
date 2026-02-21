@@ -351,7 +351,7 @@ class FileSystemDirectoryResponse final :
   enum : int {
     kARealPathFieldNumber = 1,
   };
-  // required string a_realPath = 1;
+  // optional string a_realPath = 1;
   bool has_a_realpath() const;
   private:
   bool _internal_has_a_realpath() const;
@@ -645,7 +645,7 @@ class FileSystemDirectoryListingResponseDirectory final :
   enum : int {
     kADirectoryRealPathFieldNumber = 1,
   };
-  // required string a_directoryRealPath = 1;
+  // optional string a_directoryRealPath = 1;
   bool has_a_directoryrealpath() const;
   private:
   bool _internal_has_a_directoryrealpath() const;
@@ -1655,7 +1655,7 @@ inline void FileSystemFileResponse::set_allocated_a_blob(::protobuf::mozilla::do
 
 // FileSystemDirectoryResponse
 
-// required string a_realPath = 1;
+// optional string a_realPath = 1;
 inline bool FileSystemDirectoryResponse::_internal_has_a_realpath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1818,7 +1818,7 @@ inline void FileSystemDirectoryListingResponseFile::set_allocated_a_blob(::proto
 
 // FileSystemDirectoryListingResponseDirectory
 
-// required string a_directoryRealPath = 1;
+// optional string a_directoryRealPath = 1;
 inline bool FileSystemDirectoryListingResponseDirectory::_internal_has_a_directoryrealpath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

@@ -27,7 +27,7 @@ message OpPushExternalImageForTexture {
   required bytes a_externalImageId = 1;
   required bytes a_key = 2;
   required bytes a_texture = 3;
-  required bool a_isUpdate = 4;
+  optional bool a_isUpdate = 4;
 }
 
 message OpAddCompositorAnimations {
@@ -73,15 +73,15 @@ message WebRenderParentCommand {
 }
 
 message OffsetRange {
-  required uint32 a_source = 1;
-  required uint32 a_start = 2;
-  required uint32 a_length = 3;
+  optional uint32 a_source = 1;
+  optional uint32 a_start = 2;
+  optional uint32 a_length = 3;
 }
 
 message OpAddImage {
   required bytes a_descriptor = 1;
   required protobuf.mozilla.layers.OffsetRange a_bytes = 2;
-  required uint32 a_tiling = 3;
+  optional uint32 a_tiling = 3;
   required bytes a_key = 4;
 }
 
@@ -89,7 +89,7 @@ message OpAddBlobImage {
   required bytes a_descriptor = 1;
   required protobuf.mozilla.layers.OffsetRange a_bytes = 2;
   required bytes a_visibleRect = 3;
-  required uint32 a_tiling = 4;
+  optional uint32 a_tiling = 4;
   required bytes a_key = 5;
 }
 
@@ -136,13 +136,13 @@ message OpDeleteBlobImage {
 
 message OpAddRawFont {
   required protobuf.mozilla.layers.OffsetRange a_bytes = 1;
-  required uint32 a_fontIndex = 2;
+  optional uint32 a_fontIndex = 2;
   required bytes a_key = 3;
 }
 
 message OpAddFontDescriptor {
   required protobuf.mozilla.layers.OffsetRange a_bytes = 1;
-  required uint32 a_fontIndex = 2;
+  optional uint32 a_fontIndex = 2;
   required bytes a_key = 3;
 }
 
@@ -156,7 +156,7 @@ message OpAddFontInstance {
   required protobuf.mozilla.layers.OffsetRange a_variations = 3;
   required bytes a_instanceKey = 4;
   required bytes a_fontKey = 5;
-  required float a_glyphSize = 6;
+  optional float a_glyphSize = 6;
 }
 
 message OpDeleteFontInstance {

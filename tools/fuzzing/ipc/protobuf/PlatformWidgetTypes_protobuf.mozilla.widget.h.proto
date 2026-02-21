@@ -15,8 +15,8 @@ import "HeadlessWidgetTypes.proto";
 // Structs and unions declarations
 message GtkCompositorWidgetInitData {
   required bytes a_XWindow = 1;
-  required string a_XDisplayString = 2;
-  required bool a_IsX11Display = 3;
+  optional string a_XDisplayString = 2;
+  optional bool a_IsX11Display = 3;
   required bytes a_InitialClientSize = 4;
 }
 

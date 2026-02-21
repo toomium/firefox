@@ -29,7 +29,7 @@ message Msg_Notify {
 
 message Msg_RefMessageDelivered {
   required bytes a_messageID = 1;
-  required uint32 a_actorsOnSamePid = 2;
+  optional uint32 a_actorsOnSamePid = 2;
 }
 
 message Msg___delete__ {

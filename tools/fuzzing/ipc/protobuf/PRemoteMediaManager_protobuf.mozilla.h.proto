@@ -16,7 +16,7 @@ import "PMediaDecoderParams.proto";
 // Structs and unions declarations
 message VideoDecoderInfoIPDL {
   required bytes a_videoInfo = 1;
-  required float a_framerate = 2;
+  optional float a_framerate = 2;
 }
 
 message RemoteDecoderInfoIPDL {

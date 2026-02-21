@@ -36,11 +36,11 @@ message Msg_Error {
 }
 
 message Msg_NotifyLock {
-  required bool a_aCreated = 1;
+  optional bool a_aCreated = 1;
 }
 
 message Msg_NotifyWebTransport {
-  required bool a_aCreated = 1;
+  optional bool a_aCreated = 1;
 }
 
 message Msg_Terminate {

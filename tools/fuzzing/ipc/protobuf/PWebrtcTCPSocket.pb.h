@@ -208,7 +208,7 @@ class Msg_AsyncOpen final :
     kAALocalPortFieldNumber = 4,
     kAAUseTlsFieldNumber = 5,
   };
-  // required string a_aHost = 1;
+  // optional string a_aHost = 1;
   bool has_a_ahost() const;
   private:
   bool _internal_has_a_ahost() const;
@@ -226,7 +226,7 @@ class Msg_AsyncOpen final :
   std::string* _internal_mutable_a_ahost();
   public:
 
-  // required string a_aLocalAddress = 3;
+  // optional string a_aLocalAddress = 3;
   bool has_a_alocaladdress() const;
   private:
   bool _internal_has_a_alocaladdress() const;
@@ -262,7 +262,7 @@ class Msg_AsyncOpen final :
       ::protobuf::mozilla::net::WebrtcProxyConfig* a_aproxyconfig);
   ::protobuf::mozilla::net::WebrtcProxyConfig* unsafe_arena_release_a_aproxyconfig();
 
-  // required sint32 a_aPort = 2;
+  // optional sint32 a_aPort = 2;
   bool has_a_aport() const;
   private:
   bool _internal_has_a_aport() const;
@@ -275,7 +275,7 @@ class Msg_AsyncOpen final :
   void _internal_set_a_aport(int32_t value);
   public:
 
-  // required sint32 a_aLocalPort = 4;
+  // optional sint32 a_aLocalPort = 4;
   bool has_a_alocalport() const;
   private:
   bool _internal_has_a_alocalport() const;
@@ -288,7 +288,7 @@ class Msg_AsyncOpen final :
   void _internal_set_a_alocalport(int32_t value);
   public:
 
-  // required bool a_aUseTls = 5;
+  // optional bool a_aUseTls = 5;
   bool has_a_ausetls() const;
   private:
   bool _internal_has_a_ausetls() const;
@@ -304,9 +304,6 @@ class Msg_AsyncOpen final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -859,7 +856,7 @@ class Msg_OnConnected final :
   enum : int {
     kAAProxyTypeFieldNumber = 1,
   };
-  // required string a_aProxyType = 1;
+  // optional string a_aProxyType = 1;
   bool has_a_aproxytype() const;
   private:
   bool _internal_has_a_aproxytype() const;
@@ -1301,7 +1298,7 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_AsyncOpen
 
-// required string a_aHost = 1;
+// optional string a_aHost = 1;
 inline bool Msg_AsyncOpen::_internal_has_a_ahost() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1369,7 +1366,7 @@ inline void Msg_AsyncOpen::set_allocated_a_ahost(std::string* a_ahost) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aHost)
 }
 
-// required sint32 a_aPort = 2;
+// optional sint32 a_aPort = 2;
 inline bool Msg_AsyncOpen::_internal_has_a_aport() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1397,7 +1394,7 @@ inline void Msg_AsyncOpen::set_a_aport(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aPort)
 }
 
-// required string a_aLocalAddress = 3;
+// optional string a_aLocalAddress = 3;
 inline bool Msg_AsyncOpen::_internal_has_a_alocaladdress() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1465,7 +1462,7 @@ inline void Msg_AsyncOpen::set_allocated_a_alocaladdress(std::string* a_alocalad
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aLocalAddress)
 }
 
-// required sint32 a_aLocalPort = 4;
+// optional sint32 a_aLocalPort = 4;
 inline bool Msg_AsyncOpen::_internal_has_a_alocalport() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -1493,7 +1490,7 @@ inline void Msg_AsyncOpen::set_a_alocalport(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aLocalPort)
 }
 
-// required bool a_aUseTls = 5;
+// optional bool a_aUseTls = 5;
 inline bool Msg_AsyncOpen::_internal_has_a_ausetls() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -1739,7 +1736,7 @@ inline void Msg_OnClose::set_allocated_a_areason(std::string* a_areason) {
 
 // Msg_OnConnected
 
-// required string a_aProxyType = 1;
+// optional string a_aProxyType = 1;
 inline bool Msg_OnConnected::_internal_has_a_aproxytype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

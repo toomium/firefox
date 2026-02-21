@@ -55,7 +55,7 @@ message Msg_Loaded {
 }
 
 message Msg_LoadValueAndMoreItems {
-  required string a_key = 1;
+  optional string a_key = 1;
 }
 
 message Reply_LoadValueAndMoreItems {
@@ -71,11 +71,11 @@ message Reply_LoadKeys {
 }
 
 message Msg_IncreasePeakUsage {
-  required sint64 a_minSize = 1;
+  optional sint64 a_minSize = 1;
 }
 
 message Reply_IncreasePeakUsage {
-  required sint64 a_size = 1;
+  optional sint64 a_size = 1;
 }
 
 message Msg_MarkDirty {

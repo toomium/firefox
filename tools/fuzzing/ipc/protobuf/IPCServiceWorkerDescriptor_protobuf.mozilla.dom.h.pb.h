@@ -179,7 +179,7 @@ class IPCServiceWorkerDescriptor final :
     kARegistrationVersionFieldNumber = 3,
     kAHandlesFetchFieldNumber = 8,
   };
-  // required string a_scope = 5;
+  // optional string a_scope = 5;
   bool has_a_scope() const;
   private:
   bool _internal_has_a_scope() const;
@@ -197,7 +197,7 @@ class IPCServiceWorkerDescriptor final :
   std::string* _internal_mutable_a_scope();
   public:
 
-  // required string a_scriptURL = 6;
+  // optional string a_scriptURL = 6;
   bool has_a_scripturl() const;
   private:
   bool _internal_has_a_scripturl() const;
@@ -251,7 +251,7 @@ class IPCServiceWorkerDescriptor final :
       ::protobuf::mozilla::ipc::PrincipalInfo* a_principalinfo);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_principalinfo();
 
-  // required uint64 a_id = 1;
+  // optional uint64 a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -264,7 +264,7 @@ class IPCServiceWorkerDescriptor final :
   void _internal_set_a_id(uint64_t value);
   public:
 
-  // required uint64 a_registrationId = 2;
+  // optional uint64 a_registrationId = 2;
   bool has_a_registrationid() const;
   private:
   bool _internal_has_a_registrationid() const;
@@ -277,7 +277,7 @@ class IPCServiceWorkerDescriptor final :
   void _internal_set_a_registrationid(uint64_t value);
   public:
 
-  // required uint64 a_registrationVersion = 3;
+  // optional uint64 a_registrationVersion = 3;
   bool has_a_registrationversion() const;
   private:
   bool _internal_has_a_registrationversion() const;
@@ -290,7 +290,7 @@ class IPCServiceWorkerDescriptor final :
   void _internal_set_a_registrationversion(uint64_t value);
   public:
 
-  // required bool a_handlesFetch = 8;
+  // optional bool a_handlesFetch = 8;
   bool has_a_handlesfetch() const;
   private:
   bool _internal_has_a_handlesfetch() const;
@@ -339,7 +339,7 @@ class IPCServiceWorkerDescriptor final :
 #endif  // __GNUC__
 // IPCServiceWorkerDescriptor
 
-// required uint64 a_id = 1;
+// optional uint64 a_id = 1;
 inline bool IPCServiceWorkerDescriptor::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -367,7 +367,7 @@ inline void IPCServiceWorkerDescriptor::set_a_id(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCServiceWorkerDescriptor.a_id)
 }
 
-// required uint64 a_registrationId = 2;
+// optional uint64 a_registrationId = 2;
 inline bool IPCServiceWorkerDescriptor::_internal_has_a_registrationid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -395,7 +395,7 @@ inline void IPCServiceWorkerDescriptor::set_a_registrationid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCServiceWorkerDescriptor.a_registrationId)
 }
 
-// required uint64 a_registrationVersion = 3;
+// optional uint64 a_registrationVersion = 3;
 inline bool IPCServiceWorkerDescriptor::_internal_has_a_registrationversion() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -510,7 +510,7 @@ inline void IPCServiceWorkerDescriptor::set_allocated_a_principalinfo(::protobuf
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCServiceWorkerDescriptor.a_principalInfo)
 }
 
-// required string a_scope = 5;
+// optional string a_scope = 5;
 inline bool IPCServiceWorkerDescriptor::_internal_has_a_scope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -578,7 +578,7 @@ inline void IPCServiceWorkerDescriptor::set_allocated_a_scope(std::string* a_sco
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCServiceWorkerDescriptor.a_scope)
 }
 
-// required string a_scriptURL = 6;
+// optional string a_scriptURL = 6;
 inline bool IPCServiceWorkerDescriptor::_internal_has_a_scripturl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -714,7 +714,7 @@ inline void IPCServiceWorkerDescriptor::set_allocated_a_state(std::string* a_sta
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCServiceWorkerDescriptor.a_state)
 }
 
-// required bool a_handlesFetch = 8;
+// optional bool a_handlesFetch = 8;
 inline bool IPCServiceWorkerDescriptor::_internal_has_a_handlesfetch() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;

@@ -13,8 +13,8 @@ package protobuf;
 
 // Structs and unions declarations
 message TCPError {
-  required string a_name = 1;
-  required string a_message = 2;
+  optional string a_name = 1;
+  optional string a_message = 2;
   required bytes a_errorCode = 3;
 }
 

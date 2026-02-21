@@ -19,8 +19,8 @@ import "IPCServiceWorkerRegistrationDescriptor.proto";
 // Message declarations
 message Msg_Register {
   required protobuf.mozilla.dom.IPCClientInfo a_aClientInfo = 1;
-  required string a_aScopeURL = 2;
-  required string a_aScriptURL = 3;
+  optional string a_aScopeURL = 2;
+  optional string a_aScriptURL = 3;
   required bytes a_aUpdateViaCache = 4;
 }
 
@@ -30,7 +30,7 @@ message Reply_Register {
 
 message Msg_GetRegistration {
   required protobuf.mozilla.dom.IPCClientInfo a_aClientInfo = 1;
-  required string a_aURL = 2;
+  optional string a_aURL = 2;
 }
 
 message Reply_GetRegistration {

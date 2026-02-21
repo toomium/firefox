@@ -194,7 +194,7 @@ class Msg_OnStartRequest final :
   enum : int {
     kAEntityIDFieldNumber = 1,
   };
-  // required string a_entityID = 1;
+  // optional string a_entityID = 1;
   bool has_a_entityid() const;
   private:
   bool _internal_has_a_entityid() const;
@@ -343,7 +343,7 @@ class Msg_OnDataAvailable final :
     kAOffsetFieldNumber = 2,
     kACountFieldNumber = 3,
   };
-  // required string a_data = 1;
+  // optional string a_data = 1;
   bool has_a_data() const;
   private:
   bool _internal_has_a_data() const;
@@ -361,7 +361,7 @@ class Msg_OnDataAvailable final :
   std::string* _internal_mutable_a_data();
   public:
 
-  // required uint64 a_offset = 2;
+  // optional uint64 a_offset = 2;
   bool has_a_offset() const;
   private:
   bool _internal_has_a_offset() const;
@@ -374,7 +374,7 @@ class Msg_OnDataAvailable final :
   void _internal_set_a_offset(uint64_t value);
   public:
 
-  // required uint32 a_count = 3;
+  // optional uint32 a_count = 3;
   bool has_a_count() const;
   private:
   bool _internal_has_a_count() const;
@@ -390,9 +390,6 @@ class Msg_OnDataAvailable final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnDataAvailable)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -960,7 +957,7 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_OnStartRequest
 
-// required string a_entityID = 1;
+// optional string a_entityID = 1;
 inline bool Msg_OnStartRequest::_internal_has_a_entityid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1032,7 +1029,7 @@ inline void Msg_OnStartRequest::set_allocated_a_entityid(std::string* a_entityid
 
 // Msg_OnDataAvailable
 
-// required string a_data = 1;
+// optional string a_data = 1;
 inline bool Msg_OnDataAvailable::_internal_has_a_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1100,7 +1097,7 @@ inline void Msg_OnDataAvailable::set_allocated_a_data(std::string* a_data) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnDataAvailable.a_data)
 }
 
-// required uint64 a_offset = 2;
+// optional uint64 a_offset = 2;
 inline bool Msg_OnDataAvailable::_internal_has_a_offset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1128,7 +1125,7 @@ inline void Msg_OnDataAvailable::set_a_offset(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnDataAvailable.a_offset)
 }
 
-// required uint32 a_count = 3;
+// optional uint32 a_count = 3;
 inline bool Msg_OnDataAvailable::_internal_has_a_count() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

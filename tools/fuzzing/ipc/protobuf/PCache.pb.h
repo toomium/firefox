@@ -213,7 +213,7 @@ class Msg_PCacheOpConstructor final :
       ::protobuf::mozilla::dom::cache::CacheOpArgs* a_aopargs);
   ::protobuf::mozilla::dom::cache::CacheOpArgs* unsafe_arena_release_a_aopargs();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -229,9 +229,6 @@ class Msg_PCacheOpConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.cache.PCache.Msg_PCacheOpConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -752,7 +749,7 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_PCacheOpConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PCacheOpConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

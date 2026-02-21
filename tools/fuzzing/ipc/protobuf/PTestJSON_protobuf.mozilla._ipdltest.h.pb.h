@@ -184,7 +184,7 @@ class KeyValue final :
     kAKeyFieldNumber = 1,
     kAValueFieldNumber = 2,
   };
-  // required string a_key = 1;
+  // optional string a_key = 1;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -223,9 +223,6 @@ class KeyValue final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.KeyValue)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -869,7 +866,7 @@ class JSONVariant final :
 #endif  // __GNUC__
 // KeyValue
 
-// required string a_key = 1;
+// optional string a_key = 1;
 inline bool KeyValue::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

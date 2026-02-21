@@ -477,7 +477,7 @@ class Msg_VibrateHaptic final :
   std::string* _internal_mutable_a_ahandle();
   public:
 
-  // required double a_aIntensity = 3;
+  // optional double a_aIntensity = 3;
   bool has_a_aintensity() const;
   private:
   bool _internal_has_a_aintensity() const;
@@ -490,7 +490,7 @@ class Msg_VibrateHaptic final :
   void _internal_set_a_aintensity(double value);
   public:
 
-  // required uint32 a_aHapticIndex = 2;
+  // optional uint32 a_aHapticIndex = 2;
   bool has_a_ahapticindex() const;
   private:
   bool _internal_has_a_ahapticindex() const;
@@ -503,7 +503,7 @@ class Msg_VibrateHaptic final :
   void _internal_set_a_ahapticindex(uint32_t value);
   public:
 
-  // required uint32 a_aPromiseID = 5;
+  // optional uint32 a_aPromiseID = 5;
   bool has_a_apromiseid() const;
   private:
   bool _internal_has_a_apromiseid() const;
@@ -516,7 +516,7 @@ class Msg_VibrateHaptic final :
   void _internal_set_a_apromiseid(uint32_t value);
   public:
 
-  // required double a_aDuration = 4;
+  // optional double a_aDuration = 4;
   bool has_a_aduration() const;
   private:
   bool _internal_has_a_aduration() const;
@@ -532,9 +532,6 @@ class Msg_VibrateHaptic final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PGamepadEventChannel.Msg_VibrateHaptic)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -835,7 +832,7 @@ class Msg_LightIndicatorColor final :
   std::string* _internal_mutable_a_ahandle();
   public:
 
-  // required uint32 a_aLightColorIndex = 2;
+  // optional uint32 a_aLightColorIndex = 2;
   bool has_a_alightcolorindex() const;
   private:
   bool _internal_has_a_alightcolorindex() const;
@@ -848,7 +845,7 @@ class Msg_LightIndicatorColor final :
   void _internal_set_a_alightcolorindex(uint32_t value);
   public:
 
-  // required uint32 a_aRed = 3;
+  // optional uint32 a_aRed = 3;
   bool has_a_ared() const;
   private:
   bool _internal_has_a_ared() const;
@@ -861,7 +858,7 @@ class Msg_LightIndicatorColor final :
   void _internal_set_a_ared(uint32_t value);
   public:
 
-  // required uint32 a_aGreen = 4;
+  // optional uint32 a_aGreen = 4;
   bool has_a_agreen() const;
   private:
   bool _internal_has_a_agreen() const;
@@ -874,7 +871,7 @@ class Msg_LightIndicatorColor final :
   void _internal_set_a_agreen(uint32_t value);
   public:
 
-  // required uint32 a_aBlue = 5;
+  // optional uint32 a_aBlue = 5;
   bool has_a_ablue() const;
   private:
   bool _internal_has_a_ablue() const;
@@ -887,7 +884,7 @@ class Msg_LightIndicatorColor final :
   void _internal_set_a_ablue(uint32_t value);
   public:
 
-  // required uint32 a_aPromiseID = 6;
+  // optional uint32 a_aPromiseID = 6;
   bool has_a_apromiseid() const;
   private:
   bool _internal_has_a_apromiseid() const;
@@ -903,9 +900,6 @@ class Msg_LightIndicatorColor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PGamepadEventChannel.Msg_LightIndicatorColor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1454,7 +1448,7 @@ class Msg_ReplyGamepadPromise final :
   enum : int {
     kAAPromiseIDFieldNumber = 1,
   };
-  // required uint32 a_aPromiseID = 1;
+  // optional uint32 a_aPromiseID = 1;
   bool has_a_apromiseid() const;
   private:
   bool _internal_has_a_apromiseid() const;
@@ -1569,7 +1563,7 @@ inline void Msg_VibrateHaptic::set_allocated_a_ahandle(std::string* a_ahandle) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PGamepadEventChannel.Msg_VibrateHaptic.a_aHandle)
 }
 
-// required uint32 a_aHapticIndex = 2;
+// optional uint32 a_aHapticIndex = 2;
 inline bool Msg_VibrateHaptic::_internal_has_a_ahapticindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1597,7 +1591,7 @@ inline void Msg_VibrateHaptic::set_a_ahapticindex(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PGamepadEventChannel.Msg_VibrateHaptic.a_aHapticIndex)
 }
 
-// required double a_aIntensity = 3;
+// optional double a_aIntensity = 3;
 inline bool Msg_VibrateHaptic::_internal_has_a_aintensity() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1625,7 +1619,7 @@ inline void Msg_VibrateHaptic::set_a_aintensity(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PGamepadEventChannel.Msg_VibrateHaptic.a_aIntensity)
 }
 
-// required double a_aDuration = 4;
+// optional double a_aDuration = 4;
 inline bool Msg_VibrateHaptic::_internal_has_a_aduration() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -1653,7 +1647,7 @@ inline void Msg_VibrateHaptic::set_a_aduration(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PGamepadEventChannel.Msg_VibrateHaptic.a_aDuration)
 }
 
-// required uint32 a_aPromiseID = 5;
+// optional uint32 a_aPromiseID = 5;
 inline bool Msg_VibrateHaptic::_internal_has_a_apromiseid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1825,7 +1819,7 @@ inline void Msg_LightIndicatorColor::set_allocated_a_ahandle(std::string* a_ahan
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PGamepadEventChannel.Msg_LightIndicatorColor.a_aHandle)
 }
 
-// required uint32 a_aLightColorIndex = 2;
+// optional uint32 a_aLightColorIndex = 2;
 inline bool Msg_LightIndicatorColor::_internal_has_a_alightcolorindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1853,7 +1847,7 @@ inline void Msg_LightIndicatorColor::set_a_alightcolorindex(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PGamepadEventChannel.Msg_LightIndicatorColor.a_aLightColorIndex)
 }
 
-// required uint32 a_aRed = 3;
+// optional uint32 a_aRed = 3;
 inline bool Msg_LightIndicatorColor::_internal_has_a_ared() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1881,7 +1875,7 @@ inline void Msg_LightIndicatorColor::set_a_ared(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PGamepadEventChannel.Msg_LightIndicatorColor.a_aRed)
 }
 
-// required uint32 a_aGreen = 4;
+// optional uint32 a_aGreen = 4;
 inline bool Msg_LightIndicatorColor::_internal_has_a_agreen() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1909,7 +1903,7 @@ inline void Msg_LightIndicatorColor::set_a_agreen(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PGamepadEventChannel.Msg_LightIndicatorColor.a_aGreen)
 }
 
-// required uint32 a_aBlue = 5;
+// optional uint32 a_aBlue = 5;
 inline bool Msg_LightIndicatorColor::_internal_has_a_ablue() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -1937,7 +1931,7 @@ inline void Msg_LightIndicatorColor::set_a_ablue(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PGamepadEventChannel.Msg_LightIndicatorColor.a_aBlue)
 }
 
-// required uint32 a_aPromiseID = 6;
+// optional uint32 a_aPromiseID = 6;
 inline bool Msg_LightIndicatorColor::_internal_has_a_apromiseid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -2105,7 +2099,7 @@ inline void Msg_GamepadUpdate::set_allocated_a_agamepadevent(::protobuf::mozilla
 
 // Msg_ReplyGamepadPromise
 
-// required uint32 a_aPromiseID = 1;
+// optional uint32 a_aPromiseID = 1;
 inline bool Msg_ReplyGamepadPromise::_internal_has_a_apromiseid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

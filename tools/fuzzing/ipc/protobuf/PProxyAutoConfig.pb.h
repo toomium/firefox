@@ -185,7 +185,7 @@ class Msg_ConfigurePAC final :
     kAAIncludePathFieldNumber = 3,
     kAAExtraHeapSizeFieldNumber = 4,
   };
-  // required string a_aPACURI = 1;
+  // optional string a_aPACURI = 1;
   bool has_a_apacuri() const;
   private:
   bool _internal_has_a_apacuri() const;
@@ -203,7 +203,7 @@ class Msg_ConfigurePAC final :
   std::string* _internal_mutable_a_apacuri();
   public:
 
-  // required string a_aPACScriptData = 2;
+  // optional string a_aPACScriptData = 2;
   bool has_a_apacscriptdata() const;
   private:
   bool _internal_has_a_apacscriptdata() const;
@@ -221,7 +221,7 @@ class Msg_ConfigurePAC final :
   std::string* _internal_mutable_a_apacscriptdata();
   public:
 
-  // required bool a_aIncludePath = 3;
+  // optional bool a_aIncludePath = 3;
   bool has_a_aincludepath() const;
   private:
   bool _internal_has_a_aincludepath() const;
@@ -234,7 +234,7 @@ class Msg_ConfigurePAC final :
   void _internal_set_a_aincludepath(bool value);
   public:
 
-  // required uint32 a_aExtraHeapSize = 4;
+  // optional uint32 a_aExtraHeapSize = 4;
   bool has_a_aextraheapsize() const;
   private:
   bool _internal_has_a_aextraheapsize() const;
@@ -250,9 +250,6 @@ class Msg_ConfigurePAC final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -383,7 +380,7 @@ class Msg_GetProxyForURI final :
     kAATestURIFieldNumber = 1,
     kAATestHostFieldNumber = 2,
   };
-  // required string a_aTestURI = 1;
+  // optional string a_aTestURI = 1;
   bool has_a_atesturi() const;
   private:
   bool _internal_has_a_atesturi() const;
@@ -401,7 +398,7 @@ class Msg_GetProxyForURI final :
   std::string* _internal_mutable_a_atesturi();
   public:
 
-  // required string a_aTestHost = 2;
+  // optional string a_aTestHost = 2;
   bool has_a_atesthost() const;
   private:
   bool _internal_has_a_atesthost() const;
@@ -422,9 +419,6 @@ class Msg_GetProxyForURI final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -571,7 +565,7 @@ class Reply_GetProxyForURI final :
   std::string* _internal_mutable_a_astatus();
   public:
 
-  // required string a_aResult = 2;
+  // optional string a_aResult = 2;
   bool has_a_aresult() const;
   private:
   bool _internal_has_a_aresult() const;
@@ -592,9 +586,6 @@ class Reply_GetProxyForURI final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -619,7 +610,7 @@ class Reply_GetProxyForURI final :
 #endif  // __GNUC__
 // Msg_ConfigurePAC
 
-// required string a_aPACURI = 1;
+// optional string a_aPACURI = 1;
 inline bool Msg_ConfigurePAC::_internal_has_a_apacuri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -687,7 +678,7 @@ inline void Msg_ConfigurePAC::set_allocated_a_apacuri(std::string* a_apacuri) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.a_aPACURI)
 }
 
-// required string a_aPACScriptData = 2;
+// optional string a_aPACScriptData = 2;
 inline bool Msg_ConfigurePAC::_internal_has_a_apacscriptdata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -755,7 +746,7 @@ inline void Msg_ConfigurePAC::set_allocated_a_apacscriptdata(std::string* a_apac
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.a_aPACScriptData)
 }
 
-// required bool a_aIncludePath = 3;
+// optional bool a_aIncludePath = 3;
 inline bool Msg_ConfigurePAC::_internal_has_a_aincludepath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -783,7 +774,7 @@ inline void Msg_ConfigurePAC::set_a_aincludepath(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.a_aIncludePath)
 }
 
-// required uint32 a_aExtraHeapSize = 4;
+// optional uint32 a_aExtraHeapSize = 4;
 inline bool Msg_ConfigurePAC::_internal_has_a_aextraheapsize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -815,7 +806,7 @@ inline void Msg_ConfigurePAC::set_a_aextraheapsize(uint32_t value) {
 
 // Msg_GetProxyForURI
 
-// required string a_aTestURI = 1;
+// optional string a_aTestURI = 1;
 inline bool Msg_GetProxyForURI::_internal_has_a_atesturi() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -883,7 +874,7 @@ inline void Msg_GetProxyForURI::set_allocated_a_atesturi(std::string* a_atesturi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI.a_aTestURI)
 }
 
-// required string a_aTestHost = 2;
+// optional string a_aTestHost = 2;
 inline bool Msg_GetProxyForURI::_internal_has_a_atesthost() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1023,7 +1014,7 @@ inline void Reply_GetProxyForURI::set_allocated_a_astatus(std::string* a_astatus
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI.a_aStatus)
 }
 
-// required string a_aResult = 2;
+// optional string a_aResult = 2;
 inline bool Reply_GetProxyForURI::_internal_has_a_aresult() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

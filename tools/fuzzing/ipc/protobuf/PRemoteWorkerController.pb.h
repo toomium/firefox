@@ -871,7 +871,7 @@ class Reply_SetServiceWorkerSkipWaitingFlag final :
   enum : int {
     kAAOkFieldNumber = 1,
   };
-  // required bool a_aOk = 1;
+  // optional bool a_aOk = 1;
   bool has_a_aok() const;
   private:
   bool _internal_has_a_aok() const;
@@ -1032,7 +1032,7 @@ class Msg_PFetchEventOpConstructor final :
       ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* a_aargs);
   ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* unsafe_arena_release_a_aargs();
 
-  // required sint64 a_actorid = 1;
+  // optional sint64 a_actorid = 1;
   bool has_a_actorid() const;
   private:
   bool _internal_has_a_actorid() const;
@@ -1048,9 +1048,6 @@ class Msg_PFetchEventOpConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PRemoteWorkerController.Msg_PFetchEventOpConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1674,7 +1671,7 @@ class Reply_Shutdown final :
   enum : int {
     kAAOkFieldNumber = 1,
   };
-  // required bool a_aOk = 1;
+  // optional bool a_aOk = 1;
   bool has_a_aok() const;
   private:
   bool _internal_has_a_aok() const;
@@ -2114,7 +2111,7 @@ inline void Msg_ErrorReceived::set_allocated_a_aerror(::protobuf::mozilla::dom::
 
 // Reply_SetServiceWorkerSkipWaitingFlag
 
-// required bool a_aOk = 1;
+// optional bool a_aOk = 1;
 inline bool Reply_SetServiceWorkerSkipWaitingFlag::_internal_has_a_aok() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2146,7 +2143,7 @@ inline void Reply_SetServiceWorkerSkipWaitingFlag::set_a_aok(bool value) {
 
 // Msg_PFetchEventOpConstructor
 
-// required sint64 a_actorid = 1;
+// optional sint64 a_actorid = 1;
 inline bool Msg_PFetchEventOpConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2281,7 +2278,7 @@ inline void Msg_PFetchEventOpConstructor::set_allocated_a_aargs(::protobuf::mozi
 
 // Reply_Shutdown
 
-// required bool a_aOk = 1;
+// optional bool a_aOk = 1;
 inline bool Reply_Shutdown::_internal_has_a_aok() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

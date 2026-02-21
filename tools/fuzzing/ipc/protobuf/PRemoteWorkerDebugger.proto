@@ -20,7 +20,7 @@ message Msg_Unregister {
 }
 
 message Msg_PostMessageToDebugger {
-  required string a_aMessage = 1;
+  optional string a_aMessage = 1;
 }
 
 message Msg_ReportErrorToDebugger {
@@ -34,11 +34,11 @@ message Msg_SetAsClosed {
 }
 
 message Msg_AddWindowID {
-  required uint64 a_aWindowID = 1;
+  optional uint64 a_aWindowID = 1;
 }
 
 message Msg_RemoveWindowID {
-  required uint64 a_aWindowID = 1;
+  optional uint64 a_aWindowID = 1;
 }
 
 message Msg_RegisterDone {
@@ -48,15 +48,15 @@ message Msg_UnregisterDone {
 }
 
 message Msg_Initialize {
-  required string a_aURL = 1;
+  optional string a_aURL = 1;
 }
 
 message Msg_PostMessage {
-  required string a_aMessage = 1;
+  optional string a_aMessage = 1;
 }
 
 message Msg_SetDebuggerReady {
-  required bool a_aReady = 1;
+  optional bool a_aReady = 1;
 }
 
 // Parameter mappings stats:
