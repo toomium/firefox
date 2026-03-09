@@ -8,18 +8,16 @@ import ipdl.type
 from ipdl.protobuf import mapping
 
 USE_PROTO3 = False
-USE_LITE_RUNTIME = (os.getenv('FUZZING_SNAPSHOT_LPM_DEBUG') == None)
+USE_LITE_RUNTIME = False
 
 
 _NL = ast.Comment("")
 
 class ConvertToProto:
-    def convert(self, tu) -> dict[str, ast.File]:
-        """returns |[ proto : File ]| representing the
-        converted form of |tu|"""
-
-        files = _GenerateProtobufCode(tu).lower(tu)
-        return files
+    def convert(self, ipdl_ast) -> dict[str, ast.File]:
+        # returns list of protobuf AST's which are the translated form of the provided IPDL AST
+        proto_asts = IpdlToProtoAst(ipdl_ast).convertAST(ipdl_ast)
+        return proto_asts
 
     def genProto(self, file : ast.File, ipdlname) -> str:
         return ipdl.lower._DISCLAIMER.ws + f"// Generated from {ipdlname}\n\n" + generator.Generator().generate(file)
@@ -36,7 +34,6 @@ def getNamespace(sep : str, namespaces: list[ipdl.ast.Namespace], addParent=True
     return sep.join(parts)
 
 
-
 def getProtobufVarName(name: str):
     # append "a_" as prefix to avoid reserved names like "descriptor"
     return "a_" + name
@@ -47,6 +44,7 @@ def getUnionArrayMemberType(name: str):
 
 def getUnionEnumName(name: str):
     # name is protobuf variable name
+    # protobuf's naming for union enum's is weird, so we just took the original code, such that we're on the safe side
     # analogue to protoc behaviours, see: https://github.com/protocolbuffers/protobuf/blob/main/src/google/protobuf/compiler/cpp/helpers.cc
     result = ""
     cap_next = True
@@ -66,26 +64,29 @@ def getUnionEnumName(name: str):
         else:
             cap_next = True
     return "k" + result
-    # parts = name.split('_')
-    # ret = "k"
-    # for part in parts:
-    #     ret += part[0].upper() + part[1:]
-    # return ret
 
 
-class _GenerateProtobufCode(ipdl.ast.Visitor):
+class IpdlToProtoAst(ipdl.ast.Visitor):
     """Creates protobuf ast for given ipdl ast."""
 
     def __init__(self, tu : ipdl.ast.TranslationUnit):
         self.typeVisitor = mapping.ProtobufTypeMapper()
         self.name = tu.name
-        self.messages : list[ast.Message] = []
-        self.namespacedStructsAndUnions : dict[str, list[ast.Message]] = {}
+        self.messageCount = 0
+
+        # the AST's we translate into
         self.namespacedHeaders : dict[str, ast.File] = {}
         self.mainProtofile : ast.File = ast.File()
+
+        # translated messages and structs/unions (which are divided into namespaces)
+        self.messages : list[ast.Message] = []
+        self.namespacedStructsAndUnions : dict[str, list[ast.Message]] = {}
+
+        # all import statements
         self.imports : list[ast.Import] = []
 
-    def lower(self, tu):
+    # main method
+    def convertAST(self, tu):
         tu.accept(self)
         file_list : dict[str, ast.File] = dict()
         file_list["main"] = self.mainProtofile
@@ -112,6 +113,8 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         gen_msgs = []
         send_msg = ast.Message(md.prettyMsgName())
         field_num = 1
+
+        self.messageCount += 1
 
         # check if msg is constructor
         if str(md.prettyMsgName()).endswith("Constructor"):
@@ -178,7 +181,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                 field_number += 1
                 oneof_elements.append(field)
 
-        one_of.elements.extend(oneof_elements)    
+        one_of.elements.extend(oneof_elements)
         new_union.elements.append(one_of)
         return new_union
 
@@ -187,7 +190,6 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
 
 
     def buildMainProtofile(self, mf : ast.File, tu : ipdl.ast.TranslationUnit):
-        # import all namespaced proto files publicly
         if USE_PROTO3:
             mf.syntax = "proto3"
         else:
@@ -204,6 +206,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
             self.addElement(mf, package)
             self.addNL(mf)
 
+        # import all namespaced proto files publicly
         self.addComment(mf, "// Importing all namespaced protobuf children headers")
         for ns in self.namespacedHeaders.keys():
             mf.file_elements.append(ast.Import(name=f"{self.name}_{ns}.h.proto", public=True))
@@ -225,6 +228,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
 
         # add stats about parameters
         self.addComment(mf, "// Parameter mappings stats:")
+        self.addComment(mf, f"// Number of messages in this file {self.messageCount}")
         self.addComment(mf, f"// Total parameters in this file {self.typeVisitor.getParamCount()}")
         self.addComment(mf, f"// Parameter types:{self.typeVisitor.getCounters()}")
         self.addComment(mf, f"// Simple mappings performed: {self.typeVisitor.getScalarMappings()}")
